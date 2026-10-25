@@ -27,6 +27,9 @@ export function withUser<T>(handler: Handler<T>) {
     try {
       const body = await handler({ userId, req })
       const res = NextResponse.json(body ?? { ok: true })
+      // Ответ персональный. Next по умолчанию ставит `public, max-age=0,
+      // must-revalidate` — разделяемому кэшу такое хранить нечего.
+      res.headers.set('cache-control', 'no-store, private')
       if (setCookie) res.cookies.set(SESSION_COOKIE, await signSession(userId), cookieOptions)
       return res
     } catch (e) {
