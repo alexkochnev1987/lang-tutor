@@ -33,12 +33,13 @@ pnpm dev
 
 ### Что должно быть видно сразу
 
-- экран «Сегодня» с заглушкой программы;
-- блок «Проверка синтеза речи» — кнопки должны произносить польские слова;
-- переключатели языка интерфейса (ru / uk / en) и темы.
+- экран «Сегодня»: день программы, правило дня, раскладка минут, слова дня
+  с озвучкой;
+- кнопка «Начать» ведёт в занятие — показ слова, озвучка, проверка перевода;
+- переключатели языка интерфейса (ru / uk / en) и оформления (7 палитр × 3 темы).
 
-Если переключение языка и темы работает и сохраняется после перезагрузки —
-значит IndexedDB и i18n поднялись правильно.
+Если занятие проходится до конца и после перезагрузки счётчик дня
+сдвинулся — значит IndexedDB, FSRS и контент поднялись правильно.
 
 ---
 
@@ -88,7 +89,9 @@ NEXT_PUBLIC_COURSE_ID=pl-b1-ru
 | `pnpm build` | продакшен-сборка → `apps/web/out/` |
 | `pnpm start` | локальный просмотр собранной статики |
 | `pnpm typecheck` | проверка типов во всех пакетах |
-| `pnpm validate` | валидатор графа грамматики |
+| `pnpm validate` | валидатор графа грамматики и программы |
+| `pnpm content` | пересобрать программу и словарь |
+| `pnpm --filter @polski/engine test` | 22 теста движка: FSRS, mastery, готовность |
 
 ---
 
@@ -101,6 +104,7 @@ polski-b1/
 │   ├── lib/             db (Dexie), auth, speech, i18n
 │   ├── messages/        переводы интерфейса: ru, uk, en
 │   └── public/          манифест, иконки, контент-пакеты
+├── packages/engine/     FSRS, mastery-модель, генератор занятия. ЯЗЫКОНЕЗАВИСИМ
 ├── packages/ui/         дизайн-система. ТОЛЬКО здесь живут Tailwind-классы
 ├── content/pl-b1-ru/    учебный контент: грамматика, словарь, программа
 ├── scripts/             валидаторы контента
@@ -178,7 +182,7 @@ export default {
   assetPrefix: isGhPages ? '/polski-b1/' : '',
   images: { unoptimized: true },
   trailingSlash: true,
-  transpilePackages: ['@polski/ui'],
+  transpilePackages: ['@polski/ui', '@polski/engine'],
 }
 ```
 
@@ -202,7 +206,7 @@ rsync -av apps/web/out/ user@server:/var/www/polski-b1/
 ☐ HTTPS — иначе не работают ни service worker, ни установка PWA
 ☐ NEXT_PUBLIC_GOOGLE_CLIENT_ID задан на хостинге И проект пересобран
 ☐ боевой домен добавлен в Authorized JavaScript origins в Google Console
-☐ иконки 192/512 и maskable-512 лежат в public/ (сейчас только SVG)
+☐ иконки 192/512, maskable-512 и apple-touch-icon лежат в public/ — ✅ есть
 ☐ pnpm validate проходит
 ☐ pnpm typecheck проходит
 ☐ проверено на ширине 320px (iPhone SE) — нижняя граница вёрстки

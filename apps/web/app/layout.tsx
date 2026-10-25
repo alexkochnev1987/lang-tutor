@@ -8,6 +8,15 @@ export const metadata: Metadata = {
   title: 'Polski B1',
   description: 'Подготовка к государственному экзамену по польскому языку B1',
   manifest: '/manifest.webmanifest',
+  icons: {
+    icon: [
+      { url: '/icon.svg', type: 'image/svg+xml' },
+      { url: '/icon-192.png', sizes: '192x192', type: 'image/png' },
+      { url: '/icon-512.png', sizes: '512x512', type: 'image/png' },
+    ],
+    // iOS не читает manifest: без этого на домашний экран уедет скриншот страницы
+    apple: '/apple-touch-icon.png',
+  },
   appleWebApp: { capable: true, statusBarStyle: 'default', title: 'Polski B1' },
 }
 
