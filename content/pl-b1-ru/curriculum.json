@@ -194,7 +194,8 @@
    },
    "totalSec": 900,
    "expectedOutcome": "Определён входной трек: A0, A2 или B1−. Программа подстроена под результат.",
-   "interferenceRisk": null
+   "interferenceRisk": null,
+   "lexemeIds": []
   },
   {
    "day": 2,
@@ -229,7 +230,15 @@
    },
    "totalSec": 900,
    "expectedOutcome": "Правило «Глагол «быть» в настоящем» введено и отработано на теме «Человек».",
-   "interferenceRisk": 5
+   "interferenceRisk": 5,
+   "lexemeIds": [
+    "pl.uroda",
+    "pl.rodzina",
+    "pl.bielizna",
+    "pl.grzeczny",
+    "pl.imie",
+    "pl.nazwisko"
+   ]
   },
   {
    "day": 3,
@@ -264,7 +273,15 @@
    },
    "totalSec": 900,
    "expectedOutcome": "Правило «III спряжение: -am, -asz» введено и отработано на теме «Человек».",
-   "interferenceRisk": 2
+   "interferenceRisk": 2,
+   "lexemeIds": [
+    "pl.wiek",
+    "pl.zawod",
+    "pl.wyksztalcenie",
+    "pl.maz",
+    "pl.zona",
+    "pl.dziecko"
+   ]
   },
   {
    "day": 4,
@@ -302,7 +319,15 @@
    },
    "totalSec": 900,
    "expectedOutcome": "Правило «Алфавит и орфография» введено и отработано на теме «Человек».",
-   "interferenceRisk": 4
+   "interferenceRisk": 4,
+   "lexemeIds": [
+    "pl.rodzice",
+    "pl.brat",
+    "pl.siostra",
+    "pl.wysoki",
+    "pl.niski",
+    "pl.szczuply"
+   ]
   },
   {
    "day": 5,
@@ -339,7 +364,15 @@
    },
    "totalSec": 900,
    "expectedOutcome": "Правило «Род существительного» введено и отработано на теме «Человек».",
-   "interferenceRisk": 3
+   "interferenceRisk": 3,
+   "lexemeIds": [
+    "pl.wesoly",
+    "pl.smutny",
+    "pl.mily",
+    "pl.niesmialy",
+    "pl.i",
+    "pl.a"
+   ]
   },
   {
    "day": 6,
@@ -375,7 +408,12 @@
    },
    "totalSec": 900,
    "expectedOutcome": "Правила недели отработаны на новом материале, без ввода нового.",
-   "interferenceRisk": null
+   "interferenceRisk": null,
+   "lexemeIds": [
+    "pl.ale",
+    "pl.oraz",
+    "pl.lub"
+   ]
   },
   {
    "day": 7,
@@ -410,7 +448,8 @@
    },
    "totalSec": 900,
    "expectedOutcome": "Проверено усвоение правил и лексики недели. Ошибки поставлены в очередь на пересдачу.",
-   "interferenceRisk": null
+   "interferenceRisk": null,
+   "lexemeIds": []
   },
   {
    "day": 8,
@@ -446,7 +485,15 @@
    },
    "totalSec": 900,
    "expectedOutcome": "Правило «Одушевлённость существительных м. р.» введено и отработано на теме «Дом и жильё».",
-   "interferenceRisk": 1
+   "interferenceRisk": 1,
+   "lexemeIds": [
+    "pl.dywan",
+    "pl.krzeslo",
+    "pl.lustro",
+    "pl.pukac",
+    "pl.wygodny",
+    "pl.mieszkanie"
+   ]
   },
   {
    "day": 9,
@@ -483,7 +530,15 @@
    },
    "totalSec": 900,
    "expectedOutcome": "Правило «Ударение» введено и отработано на теме «Дом и жильё».",
-   "interferenceRisk": 5
+   "interferenceRisk": 5,
+   "lexemeIds": [
+    "pl.dom",
+    "pl.pokoj",
+    "pl.kuchnia",
+    "pl.lazienka",
+    "pl.pietro",
+    "pl.winda"
+   ]
   },
   {
    "day": 10,
@@ -520,7 +575,15 @@
    },
    "totalSec": 900,
    "expectedOutcome": "Правило «IV спряжение: -em, -esz» введено и отработано на теме «Дом и жильё».",
-   "interferenceRisk": 2
+   "interferenceRisk": 2,
+   "lexemeIds": [
+    "pl.meble",
+    "pl.szafa",
+    "pl.lozko",
+    "pl.czynsz",
+    "pl.oplata",
+    "pl.albo"
+   ]
   },
   {
    "day": 11,
@@ -557,7 +620,15 @@
    },
    "totalSec": 900,
    "expectedOutcome": "Правило «Множественное число, именительный» введено и отработано на теме «Дом и жильё».",
-   "interferenceRisk": 3
+   "interferenceRisk": 3,
+   "lexemeIds": [
+    "pl.czy",
+    "pl.ze",
+    "pl.zeby",
+    "pl.poniewaz",
+    "pl.bo",
+    "pl.dlatego"
+   ]
   },
   {
    "day": 12,
@@ -595,7 +666,15 @@
    },
    "totalSec": 900,
    "expectedOutcome": "Правило «Именительный падеж» введено и отработано на теме «Дом и жильё».",
-   "interferenceRisk": 1
+   "interferenceRisk": 1,
+   "lexemeIds": [
+    "pl.kiedy",
+    "pl.gdy",
+    "pl.ktory",
+    "pl.jaki",
+    "pl.jesli",
+    "pl.jezeli"
+   ]
   },
   {
    "day": 13,
@@ -632,7 +711,12 @@
    },
    "totalSec": 900,
    "expectedOutcome": "Правила недели отработаны на новом материале, без ввода нового.",
-   "interferenceRisk": null
+   "interferenceRisk": null,
+   "lexemeIds": [
+    "pl.gdyby",
+    "pl.w",
+    "pl.na"
+   ]
   },
   {
    "day": 14,
@@ -668,7 +752,8 @@
    },
    "totalSec": 900,
    "expectedOutcome": "Проверено усвоение правил и лексики недели. Ошибки поставлены в очередь на пересдачу.",
-   "interferenceRisk": null
+   "interferenceRisk": null,
+   "lexemeIds": []
   },
   {
    "day": 15,
@@ -706,7 +791,15 @@
    },
    "totalSec": 900,
    "expectedOutcome": "Правило «Творительный падеж» введено и отработано на теме «Повседневная жизнь».",
-   "interferenceRisk": 2
+   "interferenceRisk": 2,
+   "lexemeIds": [
+    "pl.rzecz",
+    "pl.zegar",
+    "pl.czas",
+    "pl.godzina",
+    "pl.zapomniec",
+    "pl.rano"
+   ]
   },
   {
    "day": 16,
@@ -744,7 +837,15 @@
    },
    "totalSec": 900,
    "expectedOutcome": "Правило «Указательные местоимения» введено и отработано на теме «Повседневная жизнь».",
-   "interferenceRisk": 2
+   "interferenceRisk": 2,
+   "lexemeIds": [
+    "pl.jutro",
+    "pl.tydzien",
+    "pl.miesiac",
+    "pl.poniedzialek",
+    "pl.sroda",
+    "pl.piatek"
+   ]
   },
   {
    "day": 17,
@@ -782,7 +883,15 @@
    },
    "totalSec": 900,
    "expectedOutcome": "Правило «Творительный: глаголы и предлоги» введено и отработано на теме «Повседневная жизнь».",
-   "interferenceRisk": 3
+   "interferenceRisk": 3,
+   "lexemeIds": [
+    "pl.sobota",
+    "pl.niedziela",
+    "pl.wieczor",
+    "pl.poludnie",
+    "pl.klucz",
+    "pl.do"
+   ]
   },
   {
    "day": 18,
@@ -820,7 +929,15 @@
    },
    "totalSec": 900,
    "expectedOutcome": "Правило «Количественные 1–4» введено и отработано на теме «Повседневная жизнь».",
-   "interferenceRisk": 3
+   "interferenceRisk": 3,
+   "lexemeIds": [
+    "pl.z",
+    "pl.od",
+    "pl.bez",
+    "pl.dla",
+    "pl.obok",
+    "pl.przy"
+   ]
   },
   {
    "day": 19,
@@ -858,7 +975,15 @@
    },
    "totalSec": 900,
    "expectedOutcome": "Правило «Порядковые числительные» введено и отработано на теме «Повседневная жизнь».",
-   "interferenceRisk": 2
+   "interferenceRisk": 2,
+   "lexemeIds": [
+    "pl.przed",
+    "pl.za",
+    "pl.pod",
+    "pl.nad",
+    "pl.miedzy",
+    "pl.przez"
+   ]
   },
   {
    "day": 20,
@@ -895,7 +1020,12 @@
    },
    "totalSec": 900,
    "expectedOutcome": "Правила недели отработаны на новом материале, без ввода нового.",
-   "interferenceRisk": null
+   "interferenceRisk": null,
+   "lexemeIds": [
+    "pl.o",
+    "pl.po",
+    "pl.nikt"
+   ]
   },
   {
    "day": 21,
@@ -931,7 +1061,8 @@
    },
    "totalSec": 900,
    "expectedOutcome": "Проверено усвоение правил и лексики недели. Ошибки поставлены в очередь на пересдачу.",
-   "interferenceRisk": null
+   "interferenceRisk": null,
+   "lexemeIds": []
   },
   {
    "day": 22,
@@ -969,7 +1100,15 @@
    },
    "totalSec": 900,
    "expectedOutcome": "Правило «Вопросительные местоимения» введено и отработано на теме «Досуг».",
-   "interferenceRisk": 3
+   "interferenceRisk": 3,
+   "lexemeIds": [
+    "pl.lyzwy",
+    "pl.wolny-czas",
+    "pl.film",
+    "pl.ksiazka",
+    "pl.wystawa",
+    "pl.muzeum"
+   ]
   },
   {
    "day": 23,
@@ -1007,7 +1146,15 @@
    },
    "totalSec": 900,
    "expectedOutcome": "Правило «Вопросительные предложения» введено и отработано на теме «Досуг».",
-   "interferenceRisk": 3
+   "interferenceRisk": 3,
+   "lexemeIds": [
+    "pl.koncert",
+    "pl.zainteresowanie",
+    "pl.plywac",
+    "pl.biegac",
+    "pl.taniec",
+    "pl.nic"
+   ]
   },
   {
    "day": 24,
@@ -1045,7 +1192,15 @@
    },
    "totalSec": 900,
    "expectedOutcome": "Правило «Сложносочинённые предложения» введено и отработано на теме «Досуг».",
-   "interferenceRisk": 3
+   "interferenceRisk": 3,
+   "lexemeIds": [
+    "pl.ktos",
+    "pl.cos",
+    "pl.bardzo",
+    "pl.zawsze",
+    "pl.nigdy",
+    "pl.czesto"
+   ]
   },
   {
    "day": 25,
@@ -1083,7 +1238,15 @@
    },
    "totalSec": 900,
    "expectedOutcome": "Правило «Притяжательные местоимения» введено и отработано на теме «Досуг».",
-   "interferenceRisk": 2
+   "interferenceRisk": 2,
+   "lexemeIds": [
+    "pl.czasem",
+    "pl.juz",
+    "pl.jeszcze",
+    "pl.tylko",
+    "pl.tez",
+    "pl.takze"
+   ]
   },
   {
    "day": 26,
@@ -1122,7 +1285,15 @@
    },
    "totalSec": 900,
    "expectedOutcome": "Правило «Прошедшее время, ед. ч.» введено и отработано на теме «Досуг».",
-   "interferenceRisk": 4
+   "interferenceRisk": 4,
+   "lexemeIds": [
+    "pl.teraz",
+    "pl.potem",
+    "pl.wczoraj",
+    "pl.dzisiaj",
+    "pl.zaraz",
+    "pl.moze"
+   ]
   },
   {
    "day": 27,
@@ -1159,7 +1330,12 @@
    },
    "totalSec": 900,
    "expectedOutcome": "Правила недели отработаны на новом материале, без ввода нового.",
-   "interferenceRisk": null
+   "interferenceRisk": null,
+   "lexemeIds": [
+    "pl.trzeba",
+    "pl.mozna",
+    "pl.wolno"
+   ]
   },
   {
    "day": 28,
@@ -1194,7 +1370,8 @@
    },
    "totalSec": 900,
    "expectedOutcome": "Обновлён прогноз по всем пяти модулям. Слабейший получает приоритет в следующем цикле.",
-   "interferenceRisk": null
+   "interferenceRisk": null,
+   "lexemeIds": []
   },
   {
    "day": 29,
@@ -1232,7 +1409,16 @@
    },
    "totalSec": 900,
    "expectedOutcome": "Правило «Вид глагола — понятие» введено и отработано на теме «Путешествия».",
-   "interferenceRisk": 1
+   "interferenceRisk": 1,
+   "lexemeIds": [
+    "pl.dworzec",
+    "pl.podroz",
+    "pl.pociag",
+    "pl.samolot",
+    "pl.samochod",
+    "pl.autobus",
+    "pl.lotnisko"
+   ]
   },
   {
    "day": 30,
@@ -1270,7 +1456,16 @@
    },
    "totalSec": 900,
    "expectedOutcome": "Правило «Образование совершенного вида» введено и отработано на теме «Путешествия».",
-   "interferenceRisk": 3
+   "interferenceRisk": 3,
+   "lexemeIds": [
+    "pl.bilet",
+    "pl.bagaz",
+    "pl.walizka",
+    "pl.wycieczka",
+    "pl.nocleg",
+    "pl.opoznienie",
+    "pl.robic"
+   ]
   },
   {
    "day": 31,
@@ -1307,7 +1502,16 @@
    },
    "totalSec": 900,
    "expectedOutcome": "Правило «Будущее простое» введено и отработано на теме «Путешествия».",
-   "interferenceRisk": 1
+   "interferenceRisk": 1,
+   "lexemeIds": [
+    "pl.mowic",
+    "pl.czytac",
+    "pl.pisac",
+    "pl.widziec",
+    "pl.slyszec",
+    "pl.sluchac",
+    "pl.szukac"
+   ]
   },
   {
    "day": 32,
@@ -1345,7 +1549,16 @@
    },
    "totalSec": 900,
    "expectedOutcome": "Правило «Употребление вида» введено и отработано на теме «Путешествия».",
-   "interferenceRisk": 2
+   "interferenceRisk": 2,
+   "lexemeIds": [
+    "pl.potrzebowac",
+    "pl.uzywac",
+    "pl.uczyc-sie",
+    "pl.bac-sie",
+    "pl.podobac-sie",
+    "pl.pomagac",
+    "pl.dziekowac"
+   ]
   },
   {
    "day": 33,
@@ -1383,7 +1596,16 @@
    },
    "totalSec": 900,
    "expectedOutcome": "Правило «Будущее сложное» введено и отработано на теме «Путешествия».",
-   "interferenceRisk": 4
+   "interferenceRisk": 4,
+   "lexemeIds": [
+    "pl.przeszkadzac",
+    "pl.interesowac-sie",
+    "pl.zajmowac-sie",
+    "pl.czekac",
+    "pl.pytac",
+    "pl.prosic",
+    "pl.dzwonic"
+   ]
   },
   {
    "day": 34,
@@ -1420,7 +1642,13 @@
    },
    "totalSec": 900,
    "expectedOutcome": "Правила недели отработаны на новом материале, без ввода нового.",
-   "interferenceRisk": null
+   "interferenceRisk": null,
+   "lexemeIds": [
+    "pl.isc",
+    "pl.jechac",
+    "pl.chodzic",
+    "pl.przychodzic"
+   ]
   },
   {
    "day": 35,
@@ -1456,7 +1684,8 @@
    },
    "totalSec": 900,
    "expectedOutcome": "Проверено усвоение правил и лексики недели. Ошибки поставлены в очередь на пересдачу.",
-   "interferenceRisk": null
+   "interferenceRisk": null,
+   "lexemeIds": []
   },
   {
    "day": 36,
@@ -1494,7 +1723,16 @@
    },
    "totalSec": 900,
    "expectedOutcome": "Правило «I спряжение: -ę, -esz» введено и отработано на теме «Общество».",
-   "interferenceRisk": 3
+   "interferenceRisk": 3,
+   "lexemeIds": [
+    "pl.zakaz",
+    "pl.panstwo",
+    "pl.obywatel",
+    "pl.urzad",
+    "pl.podanie",
+    "pl.pozwolenie",
+    "pl.pobyt"
+   ]
   },
   {
    "day": 37,
@@ -1532,7 +1770,16 @@
    },
    "totalSec": 900,
    "expectedOutcome": "Правило «II спряжение: -ę, -isz/-ysz» введено и отработано на теме «Общество».",
-   "interferenceRisk": 3
+   "interferenceRisk": 3,
+   "lexemeIds": [
+    "pl.policja",
+    "pl.wybory",
+    "pl.podatek",
+    "pl.wychodzic",
+    "pl.wracac",
+    "pl.kupowac",
+    "pl.sprzedawac"
+   ]
   },
   {
    "day": 38,
@@ -1570,7 +1817,16 @@
    },
    "totalSec": 900,
    "expectedOutcome": "Правило «Повелительное наклонение» введено и отработано на теме «Общество».",
-   "interferenceRisk": 3
+   "interferenceRisk": 3,
+   "lexemeIds": [
+    "pl.placic",
+    "pl.jesc",
+    "pl.pic",
+    "pl.gotowac",
+    "pl.spac",
+    "pl.wstawac",
+    "pl.pracowac"
+   ]
   },
   {
    "day": 39,
@@ -1608,7 +1864,16 @@
    },
    "totalSec": 900,
    "expectedOutcome": "Правило «Повелительное через niech» введено и отработано на теме «Общество».",
-   "interferenceRisk": 3
+   "interferenceRisk": 3,
+   "lexemeIds": [
+    "pl.odpoczywac",
+    "pl.mieszkac",
+    "pl.wynajmowac",
+    "pl.zaczynac",
+    "pl.konczyc",
+    "pl.otwierac",
+    "pl.zamykac"
+   ]
   },
   {
    "day": 40,
@@ -1647,7 +1912,16 @@
    },
    "totalSec": 900,
    "expectedOutcome": "Правило «Возвратные глаголы и позиция się» введено и отработано на теме «Общество».",
-   "interferenceRisk": 5
+   "interferenceRisk": 5,
+   "lexemeIds": [
+    "pl.brac",
+    "pl.dawac",
+    "pl.wiedziec",
+    "pl.znac",
+    "pl.umiec",
+    "pl.moc",
+    "pl.chciec"
+   ]
   },
   {
    "day": 41,
@@ -1684,7 +1958,13 @@
    },
    "totalSec": 900,
    "expectedOutcome": "Правила недели отработаны на новом материале, без ввода нового.",
-   "interferenceRisk": null
+   "interferenceRisk": null,
+   "lexemeIds": [
+    "pl.musiec",
+    "pl.lubic",
+    "pl.kochac",
+    "pl.myslec"
+   ]
   },
   {
    "day": 42,
@@ -1720,7 +2000,8 @@
    },
    "totalSec": 900,
    "expectedOutcome": "Проверено усвоение правил и лексики недели. Ошибки поставлены в очередь на пересдачу.",
-   "interferenceRisk": null
+   "interferenceRisk": null,
+   "lexemeIds": []
   },
   {
    "day": 43,
@@ -1758,7 +2039,16 @@
    },
    "totalSec": 900,
    "expectedOutcome": "Правило «Нерегулярные глаголы» введено и отработано на теме «Здоровье».",
-   "interferenceRisk": 3
+   "interferenceRisk": 3,
+   "lexemeIds": [
+    "pl.czaszka",
+    "pl.nagly",
+    "pl.zdrowie",
+    "pl.lekarz",
+    "pl.szpital",
+    "pl.apteka",
+    "pl.lekarstwo"
+   ]
   },
   {
    "day": 44,
@@ -1796,7 +2086,16 @@
    },
    "totalSec": 900,
    "expectedOutcome": "Правило «Нерегулярные глаголы» введено и отработано на теме «Здоровье».",
-   "interferenceRisk": 3
+   "interferenceRisk": 3,
+   "lexemeIds": [
+    "pl.recepta",
+    "pl.bol",
+    "pl.goraczka",
+    "pl.przeziebienie",
+    "pl.glowa",
+    "pl.reka",
+    "pl.noga"
+   ]
   },
   {
    "day": 45,
@@ -1835,7 +2134,14 @@
    },
    "totalSec": 900,
    "expectedOutcome": "Правило «Мужско-личный род» введено и отработано на теме «Здоровье».",
-   "interferenceRisk": 5
+   "interferenceRisk": 5,
+   "lexemeIds": [
+    "pl.rozumiec",
+    "pl.pamietac",
+    "pl.zapominac",
+    "pl.spotykac-sie",
+    "pl.rozmawiac"
+   ]
   },
   {
    "day": 46,
@@ -1874,7 +2180,8 @@
    },
    "totalSec": 900,
    "expectedOutcome": "Правило «Мужско-личный род» введено и отработано на теме «Здоровье».",
-   "interferenceRisk": 5
+   "interferenceRisk": 5,
+   "lexemeIds": []
   },
   {
    "day": 47,
@@ -1912,7 +2219,8 @@
    },
    "totalSec": 900,
    "expectedOutcome": "Правило «Винительный падеж» введено и отработано на теме «Здоровье».",
-   "interferenceRisk": 2
+   "interferenceRisk": 2,
+   "lexemeIds": []
   },
   {
    "day": 48,
@@ -1949,7 +2257,8 @@
    },
    "totalSec": 900,
    "expectedOutcome": "Правила недели отработаны на новом материале, без ввода нового.",
-   "interferenceRisk": null
+   "interferenceRisk": null,
+   "lexemeIds": []
   },
   {
    "day": 49,
@@ -1985,7 +2294,8 @@
    },
    "totalSec": 900,
    "expectedOutcome": "Проверено усвоение правил и лексики недели. Ошибки поставлены в очередь на пересдачу.",
-   "interferenceRisk": null
+   "interferenceRisk": null,
+   "lexemeIds": []
   },
   {
    "day": 50,
@@ -2023,7 +2333,16 @@
    },
    "totalSec": 900,
    "expectedOutcome": "Правило «Винительный с предлогами» введено и отработано на теме «Образование».",
-   "interferenceRisk": 4
+   "interferenceRisk": 4,
+   "lexemeIds": [
+    "pl.zdanie",
+    "pl.szkola",
+    "pl.uczen",
+    "pl.nauczyciel",
+    "pl.lekcja",
+    "pl.egzamin",
+    "pl.ocena"
+   ]
   },
   {
    "day": 51,
@@ -2061,7 +2380,12 @@
    },
    "totalSec": 900,
    "expectedOutcome": "Правило «Родительный падеж — формы» введено и отработано на теме «Образование».",
-   "interferenceRisk": 3
+   "interferenceRisk": 3,
+   "lexemeIds": [
+    "pl.zeszyt",
+    "pl.uniwersytet",
+    "pl.studia"
+   ]
   },
   {
    "day": 52,
@@ -2099,7 +2423,8 @@
    },
    "totalSec": 900,
    "expectedOutcome": "Правило «Родительный падеж — формы» введено и отработано на теме «Образование».",
-   "interferenceRisk": 3
+   "interferenceRisk": 3,
+   "lexemeIds": []
   },
   {
    "day": 53,
@@ -2138,7 +2463,8 @@
    },
    "totalSec": 900,
    "expectedOutcome": "Правило «Родительный при отрицании» введено и отработано на теме «Образование».",
-   "interferenceRisk": 4
+   "interferenceRisk": 4,
+   "lexemeIds": []
   },
   {
    "day": 54,
@@ -2176,7 +2502,8 @@
    },
    "totalSec": 900,
    "expectedOutcome": "Правило «Родительный с предлогами» введено и отработано на теме «Образование».",
-   "interferenceRisk": 4
+   "interferenceRisk": 4,
+   "lexemeIds": []
   },
   {
    "day": 55,
@@ -2213,7 +2540,8 @@
    },
    "totalSec": 900,
    "expectedOutcome": "Правила недели отработаны на новом материале, без ввода нового.",
-   "interferenceRisk": null
+   "interferenceRisk": null,
+   "lexemeIds": []
   },
   {
    "day": 56,
@@ -2248,7 +2576,8 @@
    },
    "totalSec": 900,
    "expectedOutcome": "Обновлён прогноз по всем пяти модулям. Слабейший получает приоритет в следующем цикле.",
-   "interferenceRisk": null
+   "interferenceRisk": null,
+   "lexemeIds": []
   },
   {
    "day": 57,
@@ -2286,7 +2615,16 @@
    },
    "totalSec": 900,
    "expectedOutcome": "Правило «Неопределённые и отрицательные местоимения» введено и отработано на теме «Работа».",
-   "interferenceRisk": 1
+   "interferenceRisk": 1,
+   "lexemeIds": [
+    "pl.pensja",
+    "pl.zaklad",
+    "pl.praca",
+    "pl.pracownik",
+    "pl.szef",
+    "pl.biuro",
+    "pl.umowa"
+   ]
   },
   {
    "day": 58,
@@ -2324,7 +2662,13 @@
    },
    "totalSec": 900,
    "expectedOutcome": "Правило «Отрицательные предложения» введено и отработано на теме «Работа».",
-   "interferenceRisk": 2
+   "interferenceRisk": 2,
+   "lexemeIds": [
+    "pl.urlop",
+    "pl.zarobki",
+    "pl.rozmowa-o-prace",
+    "pl.doswiadczenie"
+   ]
   },
   {
    "day": 59,
@@ -2363,7 +2707,8 @@
    },
    "totalSec": 900,
    "expectedOutcome": "Правило «Глаголы с родительным» введено и отработано на теме «Работа».",
-   "interferenceRisk": 5
+   "interferenceRisk": 5,
+   "lexemeIds": []
   },
   {
    "day": 60,
@@ -2402,7 +2747,8 @@
    },
    "totalSec": 900,
    "expectedOutcome": "Правило «Глаголы с родительным» введено и отработано на теме «Работа».",
-   "interferenceRisk": 5
+   "interferenceRisk": 5,
+   "lexemeIds": []
   },
   {
    "day": 61,
@@ -2441,7 +2787,8 @@
    },
    "totalSec": 900,
    "expectedOutcome": "Правило «Склонение прилагательных» введено и отработано на теме «Работа».",
-   "interferenceRisk": 3
+   "interferenceRisk": 3,
+   "lexemeIds": []
   },
   {
    "day": 62,
@@ -2478,7 +2825,8 @@
    },
    "totalSec": 900,
    "expectedOutcome": "Правила недели отработаны на новом материале, без ввода нового.",
-   "interferenceRisk": null
+   "interferenceRisk": null,
+   "lexemeIds": []
   },
   {
    "day": 63,
@@ -2514,7 +2862,8 @@
    },
    "totalSec": 900,
    "expectedOutcome": "Проверено усвоение правил и лексики недели. Ошибки поставлены в очередь на пересдачу.",
-   "interferenceRisk": null
+   "interferenceRisk": null,
+   "lexemeIds": []
   },
   {
    "day": 64,
@@ -2553,7 +2902,16 @@
    },
    "totalSec": 900,
    "expectedOutcome": "Правило «Склонение прилагательных» введено и отработано на теме «Покупки».",
-   "interferenceRisk": 3
+   "interferenceRisk": 3,
+   "lexemeIds": [
+    "pl.sklep",
+    "pl.puszka",
+    "pl.zakupy",
+    "pl.cena",
+    "pl.pieniadze",
+    "pl.rachunek",
+    "pl.paragon"
+   ]
   },
   {
    "day": 65,
@@ -2592,7 +2950,14 @@
    },
    "totalSec": 900,
    "expectedOutcome": "Правило «Степени сравнения прилагательных» введено и отработано на теме «Покупки».",
-   "interferenceRisk": 3
+   "interferenceRisk": 3,
+   "lexemeIds": [
+    "pl.kasa",
+    "pl.tani",
+    "pl.drogi",
+    "pl.promocja",
+    "pl.kilogram"
+   ]
   },
   {
    "day": 66,
@@ -2631,7 +2996,8 @@
    },
    "totalSec": 900,
    "expectedOutcome": "Правило «Степени сравнения прилагательных» введено и отработано на теме «Покупки».",
-   "interferenceRisk": 3
+   "interferenceRisk": 3,
+   "lexemeIds": []
   },
   {
    "day": 67,
@@ -2669,7 +3035,8 @@
    },
    "totalSec": 900,
    "expectedOutcome": "Правило «Наречия и их степени сравнения» введено и отработано на теме «Покупки».",
-   "interferenceRisk": 3
+   "interferenceRisk": 3,
+   "lexemeIds": []
   },
   {
    "day": 68,
@@ -2708,7 +3075,8 @@
    },
    "totalSec": 900,
    "expectedOutcome": "Правило «Дата и время» введено и отработано на теме «Покупки».",
-   "interferenceRisk": 3
+   "interferenceRisk": 3,
+   "lexemeIds": []
   },
   {
    "day": 69,
@@ -2745,7 +3113,8 @@
    },
    "totalSec": 900,
    "expectedOutcome": "Правила недели отработаны на новом материале, без ввода нового.",
-   "interferenceRisk": null
+   "interferenceRisk": null,
+   "lexemeIds": []
   },
   {
    "day": 70,
@@ -2781,7 +3150,8 @@
    },
    "totalSec": 900,
    "expectedOutcome": "Проверено усвоение правил и лексики недели. Ошибки поставлены в очередь на пересдачу.",
-   "interferenceRisk": null
+   "interferenceRisk": null,
+   "lexemeIds": []
   },
   {
    "day": 71,
@@ -2820,7 +3190,16 @@
    },
    "totalSec": 900,
    "expectedOutcome": "Правило «Дата и время» введено и отработано на теме «Еда и напитки».",
-   "interferenceRisk": 3
+   "interferenceRisk": 3,
+   "lexemeIds": [
+    "pl.owoce",
+    "pl.dynia",
+    "pl.kawior",
+    "pl.czerstwy",
+    "pl.jedzenie",
+    "pl.chleb",
+    "pl.mieso"
+   ]
   },
   {
    "day": 72,
@@ -2859,7 +3238,16 @@
    },
    "totalSec": 900,
    "expectedOutcome": "Правило «Родительный множественного» введено и отработано на теме «Еда и напитки».",
-   "interferenceRisk": 3
+   "interferenceRisk": 3,
+   "lexemeIds": [
+    "pl.warzywa",
+    "pl.ser",
+    "pl.mleko",
+    "pl.herbata",
+    "pl.kawa",
+    "pl.zupa",
+    "pl.sniadanie"
+   ]
   },
   {
    "day": 73,
@@ -2898,7 +3286,12 @@
    },
    "totalSec": 900,
    "expectedOutcome": "Правило «Родительный множественного» введено и отработано на теме «Еда и напитки».",
-   "interferenceRisk": 3
+   "interferenceRisk": 3,
+   "lexemeIds": [
+    "pl.obiad",
+    "pl.kolacja",
+    "pl.restauracja"
+   ]
   },
   {
    "day": 74,
@@ -2936,7 +3329,8 @@
    },
    "totalSec": 900,
    "expectedOutcome": "Правило «Количественные от 5» введено и отработано на теме «Еда и напитки».",
-   "interferenceRisk": 2
+   "interferenceRisk": 2,
+   "lexemeIds": []
   },
   {
    "day": 75,
@@ -2974,7 +3368,8 @@
    },
    "totalSec": 900,
    "expectedOutcome": "Правило «Количественные от 5» введено и отработано на теме «Еда и напитки».",
-   "interferenceRisk": 2
+   "interferenceRisk": 2,
+   "lexemeIds": []
   },
   {
    "day": 76,
@@ -3011,7 +3406,8 @@
    },
    "totalSec": 900,
    "expectedOutcome": "Правила недели отработаны на новом материале, без ввода нового.",
-   "interferenceRisk": null
+   "interferenceRisk": null,
+   "lexemeIds": []
   },
   {
    "day": 77,
@@ -3047,7 +3443,8 @@
    },
    "totalSec": 900,
    "expectedOutcome": "Проверено усвоение правил и лексики недели. Ошибки поставлены в очередь на пересдачу.",
-   "interferenceRisk": null
+   "interferenceRisk": null,
+   "lexemeIds": []
   },
   {
    "day": 78,
@@ -3085,7 +3482,16 @@
    },
    "totalSec": 900,
    "expectedOutcome": "Правило «Родительный после количества» введено и отработано на теме «Услуги».",
-   "interferenceRisk": 2
+   "interferenceRisk": 2,
+   "lexemeIds": [
+    "pl.list",
+    "pl.poczta",
+    "pl.bank",
+    "pl.konto",
+    "pl.przelew",
+    "pl.biblioteka",
+    "pl.fryzjer"
+   ]
   },
   {
    "day": 79,
@@ -3123,7 +3529,11 @@
    },
    "totalSec": 900,
    "expectedOutcome": "Правило «Родительный после количества» введено и отработано на теме «Услуги».",
-   "interferenceRisk": 2
+   "interferenceRisk": 2,
+   "lexemeIds": [
+    "pl.pralnia",
+    "pl.naprawa"
+   ]
   },
   {
    "day": 80,
@@ -3162,7 +3572,8 @@
    },
    "totalSec": 900,
    "expectedOutcome": "Правило «Предложный падеж» введено и отработано на теме «Услуги».",
-   "interferenceRisk": 4
+   "interferenceRisk": 4,
+   "lexemeIds": []
   },
   {
    "day": 81,
@@ -3201,7 +3612,8 @@
    },
    "totalSec": 900,
    "expectedOutcome": "Правило «Предложный падеж» введено и отработано на теме «Услуги».",
-   "interferenceRisk": 4
+   "interferenceRisk": 4,
+   "lexemeIds": []
   },
   {
    "day": 82,
@@ -3239,7 +3651,8 @@
    },
    "totalSec": 900,
    "expectedOutcome": "Правило «Предложный с предлогами» введено и отработано на теме «Услуги».",
-   "interferenceRisk": 4
+   "interferenceRisk": 4,
+   "lexemeIds": []
   },
   {
    "day": 83,
@@ -3276,7 +3689,8 @@
    },
    "totalSec": 900,
    "expectedOutcome": "Правила недели отработаны на новом материале, без ввода нового.",
-   "interferenceRisk": null
+   "interferenceRisk": null,
+   "lexemeIds": []
   },
   {
    "day": 84,
@@ -3311,7 +3725,8 @@
    },
    "totalSec": 900,
    "expectedOutcome": "Обновлён прогноз по всем пяти модулям. Слабейший получает приоритет в следующем цикле.",
-   "interferenceRisk": null
+   "interferenceRisk": null,
+   "lexemeIds": []
   },
   {
    "day": 85,
@@ -3349,7 +3764,15 @@
    },
    "totalSec": 900,
    "expectedOutcome": "Правило «Звательный падеж» введено и отработано на теме «Места».",
-   "interferenceRisk": 5
+   "interferenceRisk": 5,
+   "lexemeIds": [
+    "pl.miasto",
+    "pl.pamietnik",
+    "pl.miejsce",
+    "pl.ulica",
+    "pl.plac",
+    "pl.kosciol"
+   ]
   },
   {
    "day": 86,
@@ -3387,7 +3810,14 @@
    },
    "totalSec": 900,
    "expectedOutcome": "Правило «Дательный падеж» введено и отработано на теме «Места».",
-   "interferenceRisk": 3
+   "interferenceRisk": 3,
+   "lexemeIds": [
+    "pl.zamek",
+    "pl.rynek",
+    "pl.most",
+    "pl.zabytek",
+    "pl.centrum"
+   ]
   },
   {
    "day": 87,
@@ -3425,7 +3855,8 @@
    },
    "totalSec": 900,
    "expectedOutcome": "Правило «Дательный падеж» введено и отработано на теме «Места».",
-   "interferenceRisk": 3
+   "interferenceRisk": 3,
+   "lexemeIds": []
   },
   {
    "day": 88,
@@ -3463,7 +3894,8 @@
    },
    "totalSec": 900,
    "expectedOutcome": "Правило «Глаголы с дательным» введено и отработано на теме «Места».",
-   "interferenceRisk": 2
+   "interferenceRisk": 2,
+   "lexemeIds": []
   },
   {
    "day": 89,
@@ -3500,7 +3932,8 @@
    },
    "totalSec": 900,
    "expectedOutcome": "Правило «Возвратное местоимение siebie» введено и отработано на теме «Места».",
-   "interferenceRisk": 3
+   "interferenceRisk": 3,
+   "lexemeIds": []
   },
   {
    "day": 90,
@@ -3537,7 +3970,8 @@
    },
    "totalSec": 900,
    "expectedOutcome": "Правила недели отработаны на новом материале, без ввода нового.",
-   "interferenceRisk": null
+   "interferenceRisk": null,
+   "lexemeIds": []
   },
   {
    "day": 91,
@@ -3573,7 +4007,8 @@
    },
    "totalSec": 900,
    "expectedOutcome": "Проверено усвоение правил и лексики недели. Ошибки поставлены в очередь на пересдачу.",
-   "interferenceRisk": null
+   "interferenceRisk": null,
+   "lexemeIds": []
   },
   {
    "day": 92,
@@ -3612,7 +4047,15 @@
    },
    "totalSec": 900,
    "expectedOutcome": "Правило «Личные местоимения» введено и отработано на теме «Природа».",
-   "interferenceRisk": 4
+   "interferenceRisk": 4,
+   "lexemeIds": [
+    "pl.ogrod",
+    "pl.pogoda",
+    "pl.deszcz",
+    "pl.snieg",
+    "pl.slonce",
+    "pl.wiatr"
+   ]
   },
   {
    "day": 93,
@@ -3651,7 +4094,15 @@
    },
    "totalSec": 900,
    "expectedOutcome": "Правило «Личные местоимения» введено и отработано на теме «Природа».",
-   "interferenceRisk": 4
+   "interferenceRisk": 4,
+   "lexemeIds": [
+    "pl.las",
+    "pl.rzeka",
+    "pl.morze",
+    "pl.gora",
+    "pl.drzewo",
+    "pl.wiosna"
+   ]
   },
   {
    "day": 94,
@@ -3690,7 +4141,10 @@
    },
    "totalSec": 900,
    "expectedOutcome": "Правило «Вежливые формы Pan/Pani/Państwo» введено и отработано на теме «Природа».",
-   "interferenceRisk": 5
+   "interferenceRisk": 5,
+   "lexemeIds": [
+    "pl.jesien"
+   ]
   },
   {
    "day": 95,
@@ -3729,7 +4183,8 @@
    },
    "totalSec": 900,
    "expectedOutcome": "Правило «Стили: формальный, неформальный, разговорный» введено и отработано на теме «Природа».",
-   "interferenceRisk": 3
+   "interferenceRisk": 3,
+   "lexemeIds": []
   },
   {
    "day": 96,
@@ -3767,7 +4222,8 @@
    },
    "totalSec": 900,
    "expectedOutcome": "Правило «Стилистические средства» введено и отработано на теме «Природа».",
-   "interferenceRisk": 1
+   "interferenceRisk": 1,
+   "lexemeIds": []
   },
   {
    "day": 97,
@@ -3804,7 +4260,8 @@
    },
    "totalSec": 900,
    "expectedOutcome": "Правила недели отработаны на новом материале, без ввода нового.",
-   "interferenceRisk": null
+   "interferenceRisk": null,
+   "lexemeIds": []
   },
   {
    "day": 98,
@@ -3840,7 +4297,8 @@
    },
    "totalSec": 900,
    "expectedOutcome": "Проверено усвоение правил и лексики недели. Ошибки поставлены в очередь на пересдачу.",
-   "interferenceRisk": null
+   "interferenceRisk": null,
+   "lexemeIds": []
   },
   {
    "day": 99,
@@ -3879,7 +4337,15 @@
    },
    "totalSec": 900,
    "expectedOutcome": "Правило «Мужско-личные числительные» введено и отработано на теме «Традиции и праздники».",
-   "interferenceRisk": 5
+   "interferenceRisk": 5,
+   "lexemeIds": [
+    "pl.swieto",
+    "pl.wielkanoc",
+    "pl.boze-narodzenie",
+    "pl.wigilia",
+    "pl.prezent",
+    "pl.zyczenia"
+   ]
   },
   {
    "day": 100,
@@ -3918,7 +4384,12 @@
    },
    "totalSec": 900,
    "expectedOutcome": "Правило «Мужско-личные числительные» введено и отработано на теме «Традиции и праздники».",
-   "interferenceRisk": 5
+   "interferenceRisk": 5,
+   "lexemeIds": [
+    "pl.urodziny",
+    "pl.slub",
+    "pl.zwyczaj"
+   ]
   },
   {
    "day": 101,
@@ -3957,7 +4428,8 @@
    },
    "totalSec": 900,
    "expectedOutcome": "Правило «Управление глаголов» введено и отработано на теме «Традиции и праздники».",
-   "interferenceRisk": 5
+   "interferenceRisk": 5,
+   "lexemeIds": []
   },
   {
    "day": 102,
@@ -3996,7 +4468,8 @@
    },
    "totalSec": 900,
    "expectedOutcome": "Правило «Управление глаголов» введено и отработано на теме «Традиции и праздники».",
-   "interferenceRisk": 5
+   "interferenceRisk": 5,
+   "lexemeIds": []
   },
   {
    "day": 103,
@@ -4035,7 +4508,8 @@
    },
    "totalSec": 900,
    "expectedOutcome": "Правило «Прошедшее время, мн. ч.» введено и отработано на теме «Традиции и праздники».",
-   "interferenceRisk": 5
+   "interferenceRisk": 5,
+   "lexemeIds": []
   },
   {
    "day": 104,
@@ -4072,7 +4546,8 @@
    },
    "totalSec": 900,
    "expectedOutcome": "Правила недели отработаны на новом материале, без ввода нового.",
-   "interferenceRisk": null
+   "interferenceRisk": null,
+   "lexemeIds": []
   },
   {
    "day": 105,
@@ -4108,7 +4583,8 @@
    },
    "totalSec": 900,
    "expectedOutcome": "Проверено усвоение правил и лексики недели. Ошибки поставлены в очередь на пересдачу.",
-   "interferenceRisk": null
+   "interferenceRisk": null,
+   "lexemeIds": []
   },
   {
    "day": 106,
@@ -4147,7 +4623,15 @@
    },
    "totalSec": 900,
    "expectedOutcome": "Правило «Прошедшее время, мн. ч.» введено и отработано на теме «Общие темы».",
-   "interferenceRisk": 5
+   "interferenceRisk": 5,
+   "lexemeIds": [
+    "pl.sprawa",
+    "pl.zycie",
+    "pl.problem",
+    "pl.powod",
+    "pl.wydarzenie",
+    "pl.wiadomosc"
+   ]
   },
   {
    "day": 107,
@@ -4186,7 +4670,15 @@
    },
    "totalSec": 900,
    "expectedOutcome": "Правило «Сослагательное наклонение» введено и отработано на теме «Общие темы».",
-   "interferenceRisk": 5
+   "interferenceRisk": 5,
+   "lexemeIds": [
+    "pl.telewizja",
+    "pl.gazeta",
+    "pl.internet",
+    "pl.zmiana",
+    "pl.mozliwosc",
+    "pl.sposob"
+   ]
   },
   {
    "day": 108,
@@ -4225,7 +4717,8 @@
    },
    "totalSec": 900,
    "expectedOutcome": "Правило «Сослагательное наклонение» введено и отработано на теме «Общие темы».",
-   "interferenceRisk": 5
+   "interferenceRisk": 5,
+   "lexemeIds": []
   },
   {
    "day": 109,
@@ -4264,7 +4757,8 @@
    },
    "totalSec": 900,
    "expectedOutcome": "Правило «Придаточные с że и żeby» введено и отработано на теме «Общие темы».",
-   "interferenceRisk": 4
+   "interferenceRisk": 4,
+   "lexemeIds": []
   },
   {
    "day": 110,
@@ -4302,7 +4796,8 @@
    },
    "totalSec": 900,
    "expectedOutcome": "Правило «Придаточные причины и времени» введено и отработано на теме «Общие темы».",
-   "interferenceRisk": 2
+   "interferenceRisk": 2,
+   "lexemeIds": []
   },
   {
    "day": 111,
@@ -4339,7 +4834,8 @@
    },
    "totalSec": 900,
    "expectedOutcome": "Правила недели отработаны на новом материале, без ввода нового.",
-   "interferenceRisk": null
+   "interferenceRisk": null,
+   "lexemeIds": []
   },
   {
    "day": 112,
@@ -4374,7 +4870,8 @@
    },
    "totalSec": 900,
    "expectedOutcome": "Обновлён прогноз по всем пяти модулям. Слабейший получает приоритет в следующем цикле.",
-   "interferenceRisk": null
+   "interferenceRisk": null,
+   "lexemeIds": []
   },
   {
    "day": 113,
@@ -4413,7 +4910,8 @@
    },
    "totalSec": 900,
    "expectedOutcome": "Правило «Условные предложения» введено и отработано на теме «Человек».",
-   "interferenceRisk": 4
+   "interferenceRisk": 4,
+   "lexemeIds": []
   },
   {
    "day": 114,
@@ -4452,7 +4950,8 @@
    },
    "totalSec": 900,
    "expectedOutcome": "Правило «Условные предложения» введено и отработано на теме «Человек».",
-   "interferenceRisk": 4
+   "interferenceRisk": 4,
+   "lexemeIds": []
   },
   {
    "day": 115,
@@ -4490,7 +4989,8 @@
    },
    "totalSec": 900,
    "expectedOutcome": "Правило «Конструкция im… tym…» введено и отработано на теме «Человек».",
-   "interferenceRisk": 1
+   "interferenceRisk": 1,
+   "lexemeIds": []
   },
   {
    "day": 116,
@@ -4529,7 +5029,8 @@
    },
    "totalSec": 900,
    "expectedOutcome": "Правило «Относительные придаточные» введено и отработано на теме «Человек».",
-   "interferenceRisk": 3
+   "interferenceRisk": 3,
+   "lexemeIds": []
   },
   {
    "day": 117,
@@ -4568,7 +5069,8 @@
    },
    "totalSec": 900,
    "expectedOutcome": "Правило «Относительные придаточные» введено и отработано на теме «Человек».",
-   "interferenceRisk": 3
+   "interferenceRisk": 3,
+   "lexemeIds": []
   },
   {
    "day": 118,
@@ -4605,7 +5107,8 @@
    },
    "totalSec": 900,
    "expectedOutcome": "Правила недели отработаны на новом материале, без ввода нового.",
-   "interferenceRisk": null
+   "interferenceRisk": null,
+   "lexemeIds": []
   },
   {
    "day": 119,
@@ -4641,7 +5144,8 @@
    },
    "totalSec": 900,
    "expectedOutcome": "Проверено усвоение правил и лексики недели. Ошибки поставлены в очередь на пересдачу.",
-   "interferenceRisk": null
+   "interferenceRisk": null,
+   "lexemeIds": []
   },
   {
    "day": 120,
@@ -4679,7 +5183,8 @@
    },
    "totalSec": 900,
    "expectedOutcome": "Правило «Подвижные окончания» введено и отработано на теме «Дом и жильё».",
-   "interferenceRisk": 3
+   "interferenceRisk": 3,
+   "lexemeIds": []
   },
   {
    "day": 121,
@@ -4717,7 +5222,8 @@
    },
    "totalSec": 900,
    "expectedOutcome": "Правило «Подвижные окончания» введено и отработано на теме «Дом и жильё».",
-   "interferenceRisk": 3
+   "interferenceRisk": 3,
+   "lexemeIds": []
   },
   {
    "day": 122,
@@ -4755,7 +5261,8 @@
    },
    "totalSec": 900,
    "expectedOutcome": "Правило «Подвижные окончания» введено и отработано на теме «Дом и жильё».",
-   "interferenceRisk": 3
+   "interferenceRisk": 3,
+   "lexemeIds": []
   },
   {
    "day": 123,
@@ -4793,7 +5300,8 @@
    },
    "totalSec": 900,
    "expectedOutcome": "Правило «Подвижные окончания» введено и отработано на теме «Дом и жильё».",
-   "interferenceRisk": 3
+   "interferenceRisk": 3,
+   "lexemeIds": []
   },
   {
    "day": 124,
@@ -4831,7 +5339,8 @@
    },
    "totalSec": 900,
    "expectedOutcome": "Правило «Подвижные окончания» введено и отработано на теме «Дом и жильё».",
-   "interferenceRisk": 3
+   "interferenceRisk": 3,
+   "lexemeIds": []
   },
   {
    "day": 125,
@@ -4868,7 +5377,8 @@
    },
    "totalSec": 900,
    "expectedOutcome": "Правила недели отработаны на новом материале, без ввода нового.",
-   "interferenceRisk": null
+   "interferenceRisk": null,
+   "lexemeIds": []
   },
   {
    "day": 126,
@@ -4904,7 +5414,8 @@
    },
    "totalSec": 900,
    "expectedOutcome": "Проверено усвоение правил и лексики недели. Ошибки поставлены в очередь на пересдачу.",
-   "interferenceRisk": null
+   "interferenceRisk": null,
+   "lexemeIds": []
   },
   {
    "day": 127,
@@ -4942,7 +5453,8 @@
    },
    "totalSec": 900,
    "expectedOutcome": "Правило «Подвижные окончания» введено и отработано на теме «Повседневная жизнь».",
-   "interferenceRisk": 3
+   "interferenceRisk": 3,
+   "lexemeIds": []
   },
   {
    "day": 128,
@@ -4980,7 +5492,8 @@
    },
    "totalSec": 900,
    "expectedOutcome": "Правило «Подвижные окончания» введено и отработано на теме «Повседневная жизнь».",
-   "interferenceRisk": 3
+   "interferenceRisk": 3,
+   "lexemeIds": []
   },
   {
    "day": 129,
@@ -5018,7 +5531,8 @@
    },
    "totalSec": 900,
    "expectedOutcome": "Правило «Подвижные окончания» введено и отработано на теме «Повседневная жизнь».",
-   "interferenceRisk": 3
+   "interferenceRisk": 3,
+   "lexemeIds": []
   },
   {
    "day": 130,
@@ -5056,7 +5570,8 @@
    },
    "totalSec": 900,
    "expectedOutcome": "Правило «Подвижные окончания» введено и отработано на теме «Повседневная жизнь».",
-   "interferenceRisk": 3
+   "interferenceRisk": 3,
+   "lexemeIds": []
   },
   {
    "day": 131,
@@ -5094,7 +5609,8 @@
    },
    "totalSec": 900,
    "expectedOutcome": "Правило «Подвижные окончания» введено и отработано на теме «Повседневная жизнь».",
-   "interferenceRisk": 3
+   "interferenceRisk": 3,
+   "lexemeIds": []
   },
   {
    "day": 132,
@@ -5131,7 +5647,8 @@
    },
    "totalSec": 900,
    "expectedOutcome": "Правила недели отработаны на новом материале, без ввода нового.",
-   "interferenceRisk": null
+   "interferenceRisk": null,
+   "lexemeIds": []
   },
   {
    "day": 133,
@@ -5167,7 +5684,8 @@
    },
    "totalSec": 900,
    "expectedOutcome": "Проверено усвоение правил и лексики недели. Ошибки поставлены в очередь на пересдачу.",
-   "interferenceRisk": null
+   "interferenceRisk": null,
+   "lexemeIds": []
   },
   {
    "day": 134,
@@ -5205,7 +5723,8 @@
    },
    "totalSec": 900,
    "expectedOutcome": "Правило «Подвижные окончания» введено и отработано на теме «Досуг».",
-   "interferenceRisk": 3
+   "interferenceRisk": 3,
+   "lexemeIds": []
   },
   {
    "day": 135,
@@ -5243,7 +5762,8 @@
    },
    "totalSec": 900,
    "expectedOutcome": "Правило «Подвижные окончания» введено и отработано на теме «Досуг».",
-   "interferenceRisk": 3
+   "interferenceRisk": 3,
+   "lexemeIds": []
   },
   {
    "day": 136,
@@ -5281,7 +5801,8 @@
    },
    "totalSec": 900,
    "expectedOutcome": "Правило «Подвижные окончания» введено и отработано на теме «Досуг».",
-   "interferenceRisk": 3
+   "interferenceRisk": 3,
+   "lexemeIds": []
   },
   {
    "day": 137,
@@ -5319,7 +5840,8 @@
    },
    "totalSec": 900,
    "expectedOutcome": "Правило «Подвижные окончания» введено и отработано на теме «Досуг».",
-   "interferenceRisk": 3
+   "interferenceRisk": 3,
+   "lexemeIds": []
   },
   {
    "day": 138,
@@ -5357,7 +5879,8 @@
    },
    "totalSec": 900,
    "expectedOutcome": "Правило «Подвижные окончания» введено и отработано на теме «Досуг».",
-   "interferenceRisk": 3
+   "interferenceRisk": 3,
+   "lexemeIds": []
   },
   {
    "day": 139,
@@ -5394,7 +5917,8 @@
    },
    "totalSec": 900,
    "expectedOutcome": "Правила недели отработаны на новом материале, без ввода нового.",
-   "interferenceRisk": null
+   "interferenceRisk": null,
+   "lexemeIds": []
   },
   {
    "day": 140,
@@ -5429,7 +5953,8 @@
    },
    "totalSec": 900,
    "expectedOutcome": "Обновлён прогноз по всем пяти модулям. Слабейший получает приоритет в следующем цикле.",
-   "interferenceRisk": null
+   "interferenceRisk": null,
+   "lexemeIds": []
   },
   {
    "day": 141,
@@ -5465,7 +5990,8 @@
    },
    "totalSec": 900,
    "expectedOutcome": "Закрепление пройденного на новой лексике.",
-   "interferenceRisk": null
+   "interferenceRisk": null,
+   "lexemeIds": []
   },
   {
    "day": 142,
@@ -5501,7 +6027,8 @@
    },
    "totalSec": 900,
    "expectedOutcome": "Закрепление пройденного на новой лексике.",
-   "interferenceRisk": null
+   "interferenceRisk": null,
+   "lexemeIds": []
   },
   {
    "day": 143,
@@ -5537,7 +6064,8 @@
    },
    "totalSec": 900,
    "expectedOutcome": "Закрепление пройденного на новой лексике.",
-   "interferenceRisk": null
+   "interferenceRisk": null,
+   "lexemeIds": []
   },
   {
    "day": 144,
@@ -5573,7 +6101,8 @@
    },
    "totalSec": 900,
    "expectedOutcome": "Закрепление пройденного на новой лексике.",
-   "interferenceRisk": null
+   "interferenceRisk": null,
+   "lexemeIds": []
   },
   {
    "day": 145,
@@ -5609,7 +6138,8 @@
    },
    "totalSec": 900,
    "expectedOutcome": "Закрепление пройденного на новой лексике.",
-   "interferenceRisk": null
+   "interferenceRisk": null,
+   "lexemeIds": []
   },
   {
    "day": 146,
@@ -5646,7 +6176,8 @@
    },
    "totalSec": 900,
    "expectedOutcome": "Правила недели отработаны на новом материале, без ввода нового.",
-   "interferenceRisk": null
+   "interferenceRisk": null,
+   "lexemeIds": []
   },
   {
    "day": 147,
@@ -5682,7 +6213,8 @@
    },
    "totalSec": 900,
    "expectedOutcome": "Проверено усвоение правил и лексики недели. Ошибки поставлены в очередь на пересдачу.",
-   "interferenceRisk": null
+   "interferenceRisk": null,
+   "lexemeIds": []
   },
   {
    "day": 148,
@@ -5718,7 +6250,8 @@
    },
    "totalSec": 900,
    "expectedOutcome": "Закрепление пройденного на новой лексике.",
-   "interferenceRisk": null
+   "interferenceRisk": null,
+   "lexemeIds": []
   },
   {
    "day": 149,
@@ -5754,7 +6287,8 @@
    },
    "totalSec": 900,
    "expectedOutcome": "Закрепление пройденного на новой лексике.",
-   "interferenceRisk": null
+   "interferenceRisk": null,
+   "lexemeIds": []
   },
   {
    "day": 150,
@@ -5790,7 +6324,8 @@
    },
    "totalSec": 900,
    "expectedOutcome": "Закрепление пройденного на новой лексике.",
-   "interferenceRisk": null
+   "interferenceRisk": null,
+   "lexemeIds": []
   },
   {
    "day": 151,
@@ -5826,7 +6361,8 @@
    },
    "totalSec": 900,
    "expectedOutcome": "Закрепление пройденного на новой лексике.",
-   "interferenceRisk": null
+   "interferenceRisk": null,
+   "lexemeIds": []
   },
   {
    "day": 152,
@@ -5862,7 +6398,8 @@
    },
    "totalSec": 900,
    "expectedOutcome": "Закрепление пройденного на новой лексике.",
-   "interferenceRisk": null
+   "interferenceRisk": null,
+   "lexemeIds": []
   },
   {
    "day": 153,
@@ -5899,7 +6436,8 @@
    },
    "totalSec": 900,
    "expectedOutcome": "Правила недели отработаны на новом материале, без ввода нового.",
-   "interferenceRisk": null
+   "interferenceRisk": null,
+   "lexemeIds": []
   },
   {
    "day": 154,
@@ -5935,7 +6473,8 @@
    },
    "totalSec": 900,
    "expectedOutcome": "Проверено усвоение правил и лексики недели. Ошибки поставлены в очередь на пересдачу.",
-   "interferenceRisk": null
+   "interferenceRisk": null,
+   "lexemeIds": []
   },
   {
    "day": 155,
@@ -5971,7 +6510,8 @@
    },
    "totalSec": 900,
    "expectedOutcome": "Закрепление пройденного на новой лексике.",
-   "interferenceRisk": null
+   "interferenceRisk": null,
+   "lexemeIds": []
   },
   {
    "day": 156,
@@ -6007,7 +6547,8 @@
    },
    "totalSec": 900,
    "expectedOutcome": "Закрепление пройденного на новой лексике.",
-   "interferenceRisk": null
+   "interferenceRisk": null,
+   "lexemeIds": []
   },
   {
    "day": 157,
@@ -6043,7 +6584,8 @@
    },
    "totalSec": 900,
    "expectedOutcome": "Закрепление пройденного на новой лексике.",
-   "interferenceRisk": null
+   "interferenceRisk": null,
+   "lexemeIds": []
   },
   {
    "day": 158,
@@ -6079,7 +6621,8 @@
    },
    "totalSec": 900,
    "expectedOutcome": "Закрепление пройденного на новой лексике.",
-   "interferenceRisk": null
+   "interferenceRisk": null,
+   "lexemeIds": []
   },
   {
    "day": 159,
@@ -6115,7 +6658,8 @@
    },
    "totalSec": 900,
    "expectedOutcome": "Закрепление пройденного на новой лексике.",
-   "interferenceRisk": null
+   "interferenceRisk": null,
+   "lexemeIds": []
   },
   {
    "day": 160,
@@ -6152,7 +6696,8 @@
    },
    "totalSec": 900,
    "expectedOutcome": "Правила недели отработаны на новом материале, без ввода нового.",
-   "interferenceRisk": null
+   "interferenceRisk": null,
+   "lexemeIds": []
   },
   {
    "day": 161,
@@ -6188,7 +6733,8 @@
    },
    "totalSec": 900,
    "expectedOutcome": "Проверено усвоение правил и лексики недели. Ошибки поставлены в очередь на пересдачу.",
-   "interferenceRisk": null
+   "interferenceRisk": null,
+   "lexemeIds": []
   },
   {
    "day": 162,
@@ -6224,7 +6770,8 @@
    },
    "totalSec": 900,
    "expectedOutcome": "Закрепление пройденного на новой лексике.",
-   "interferenceRisk": null
+   "interferenceRisk": null,
+   "lexemeIds": []
   },
   {
    "day": 163,
@@ -6260,7 +6807,8 @@
    },
    "totalSec": 900,
    "expectedOutcome": "Закрепление пройденного на новой лексике.",
-   "interferenceRisk": null
+   "interferenceRisk": null,
+   "lexemeIds": []
   },
   {
    "day": 164,
@@ -6296,7 +6844,8 @@
    },
    "totalSec": 900,
    "expectedOutcome": "Закрепление пройденного на новой лексике.",
-   "interferenceRisk": null
+   "interferenceRisk": null,
+   "lexemeIds": []
   },
   {
    "day": 165,
@@ -6332,7 +6881,8 @@
    },
    "totalSec": 900,
    "expectedOutcome": "Закрепление пройденного на новой лексике.",
-   "interferenceRisk": null
+   "interferenceRisk": null,
+   "lexemeIds": []
   },
   {
    "day": 166,
@@ -6368,7 +6918,8 @@
    },
    "totalSec": 900,
    "expectedOutcome": "Закрепление пройденного на новой лексике.",
-   "interferenceRisk": null
+   "interferenceRisk": null,
+   "lexemeIds": []
   },
   {
    "day": 167,
@@ -6405,7 +6956,8 @@
    },
    "totalSec": 900,
    "expectedOutcome": "Правила недели отработаны на новом материале, без ввода нового.",
-   "interferenceRisk": null
+   "interferenceRisk": null,
+   "lexemeIds": []
   },
   {
    "day": 168,
@@ -6440,7 +6992,8 @@
    },
    "totalSec": 900,
    "expectedOutcome": "Обновлён прогноз по всем пяти модулям. Слабейший получает приоритет в следующем цикле.",
-   "interferenceRisk": null
+   "interferenceRisk": null,
+   "lexemeIds": []
   },
   {
    "day": 169,
@@ -6476,7 +7029,8 @@
    },
    "totalSec": 900,
    "expectedOutcome": "Закрепление пройденного на новой лексике.",
-   "interferenceRisk": null
+   "interferenceRisk": null,
+   "lexemeIds": []
   },
   {
    "day": 170,
@@ -6512,7 +7066,8 @@
    },
    "totalSec": 900,
    "expectedOutcome": "Закрепление пройденного на новой лексике.",
-   "interferenceRisk": null
+   "interferenceRisk": null,
+   "lexemeIds": []
   },
   {
    "day": 171,
@@ -6548,7 +7103,8 @@
    },
    "totalSec": 900,
    "expectedOutcome": "Закрепление пройденного на новой лексике.",
-   "interferenceRisk": null
+   "interferenceRisk": null,
+   "lexemeIds": []
   },
   {
    "day": 172,
@@ -6584,7 +7140,8 @@
    },
    "totalSec": 900,
    "expectedOutcome": "Закрепление пройденного на новой лексике.",
-   "interferenceRisk": null
+   "interferenceRisk": null,
+   "lexemeIds": []
   },
   {
    "day": 173,
@@ -6620,7 +7177,8 @@
    },
    "totalSec": 900,
    "expectedOutcome": "Закрепление пройденного на новой лексике.",
-   "interferenceRisk": null
+   "interferenceRisk": null,
+   "lexemeIds": []
   },
   {
    "day": 174,
@@ -6657,7 +7215,8 @@
    },
    "totalSec": 900,
    "expectedOutcome": "Правила недели отработаны на новом материале, без ввода нового.",
-   "interferenceRisk": null
+   "interferenceRisk": null,
+   "lexemeIds": []
   },
   {
    "day": 175,
@@ -6693,7 +7252,8 @@
    },
    "totalSec": 900,
    "expectedOutcome": "Проверено усвоение правил и лексики недели. Ошибки поставлены в очередь на пересдачу.",
-   "interferenceRisk": null
+   "interferenceRisk": null,
+   "lexemeIds": []
   },
   {
    "day": 176,
@@ -6729,7 +7289,8 @@
    },
    "totalSec": 900,
    "expectedOutcome": "Закрепление пройденного на новой лексике.",
-   "interferenceRisk": null
+   "interferenceRisk": null,
+   "lexemeIds": []
   },
   {
    "day": 177,
@@ -6765,7 +7326,8 @@
    },
    "totalSec": 900,
    "expectedOutcome": "Закрепление пройденного на новой лексике.",
-   "interferenceRisk": null
+   "interferenceRisk": null,
+   "lexemeIds": []
   },
   {
    "day": 178,
@@ -6801,7 +7363,8 @@
    },
    "totalSec": 900,
    "expectedOutcome": "Закрепление пройденного на новой лексике.",
-   "interferenceRisk": null
+   "interferenceRisk": null,
+   "lexemeIds": []
   },
   {
    "day": 179,
@@ -6837,7 +7400,8 @@
    },
    "totalSec": 900,
    "expectedOutcome": "Закрепление пройденного на новой лексике.",
-   "interferenceRisk": null
+   "interferenceRisk": null,
+   "lexemeIds": []
   },
   {
    "day": 180,
@@ -6873,7 +7437,8 @@
    },
    "totalSec": 900,
    "expectedOutcome": "Закрепление пройденного на новой лексике.",
-   "interferenceRisk": null
+   "interferenceRisk": null,
+   "lexemeIds": []
   },
   {
    "day": 181,
@@ -6910,7 +7475,8 @@
    },
    "totalSec": 900,
    "expectedOutcome": "Правила недели отработаны на новом материале, без ввода нового.",
-   "interferenceRisk": null
+   "interferenceRisk": null,
+   "lexemeIds": []
   },
   {
    "day": 182,
@@ -6945,7 +7511,8 @@
    },
    "totalSec": 900,
    "expectedOutcome": "Вердикт по каждому из 5 модулей: готов / не готов. Критерий — ≥65% дважды подряд.",
-   "interferenceRisk": null
+   "interferenceRisk": null,
+   "lexemeIds": []
   }
  ]
 }

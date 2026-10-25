@@ -1,37 +1,23 @@
 /**
- * Вход через Google Identity Services.
+ * Вход через Google Identity Services — клиентская половина.
  *
- * ВАЖНО, что это сейчас даёт и чего не даёт.
+ * Задача этого файла ровно одна: получить у Google ID-токен и отдать его
+ * наверх. Ничего из токена здесь не читается и нигде не сохраняется —
+ * подпись может проверить только сервер, а payload без проверки подписи
+ * не доказательство личности.
  *
- * Бэкенда нет, все данные лежат локально в IndexedDB. Поэтому вход здесь —
- * НЕ защита: защищать нечего, авторизовывать нечего. Он нужен для двух
- * вещей:
- *   1. показать, кто вошёл, и разделить локальные профили на одном устройстве;
- *   2. заготовка под синхронизацию — когда появится сервер, тот же ID-токен
- *      уйдёт на него и будет проверен по-настоящему.
+ * Дальше токен уходит в POST /api/auth/google, сервер сверяет подпись с
+ * ключами Google, проверяет `aud` и выдаёт свою httpOnly-сессию. Имя и
+ * аватар приходят уже из нашей базы.
  *
- * ID-токен НЕ проверяется криптографически на клиенте: подпись может
- * проверить только сервер. Payload читается ради имени и аватара и не
- * является доказательством личности. Когда появится бэкенд — токен уходит
- * на /auth/google, сервер валидирует его у Google и выдаёт свою сессию.
- *
- * Скрипт грузится лениво, только при открытии окна входа: тот, кто не
- * входит, не платит ничем, и офлайн работает как обычно.
+ * Скрипт грузится лениво, при открытии окна входа: тот, кто не входит,
+ * не платит ничем.
  */
 
 export const GOOGLE_CLIENT_ID = process.env.NEXT_PUBLIC_GOOGLE_CLIENT_ID ?? ''
 export const googleAuthEnabled = Boolean(GOOGLE_CLIENT_ID)
 
 const SCRIPT_SRC = 'https://accounts.google.com/gsi/client'
-
-export interface GoogleProfile {
-  sub: string
-  email?: string
-  name?: string
-  picture?: string
-  idToken: string
-  expiresAt: number
-}
 
 interface ButtonOptions {
   theme?: 'outline' | 'filled_blue' | 'filled_black'
@@ -84,44 +70,20 @@ function loadScript(): Promise<GoogleIdentity> {
   return scriptPromise
 }
 
-/** Читает payload JWT. НЕ проверяет подпись — это может только сервер. */
-function decodeIdToken(idToken: string): GoogleProfile | null {
-  try {
-    const [, payload] = idToken.split('.')
-    const json = atob(payload.replace(/-/g, '+').replace(/_/g, '/'))
-    const claims = JSON.parse(decodeURIComponent(escape(json)))
-    if (!claims.sub) return null
-    return {
-      sub: claims.sub,
-      email: claims.email,
-      name: claims.name,
-      picture: claims.picture,
-      idToken,
-      expiresAt: (claims.exp ?? 0) * 1000,
-    }
-  } catch {
-    return null
-  }
-}
-
 /**
- * Рисует официальную кнопку Google в `parent` и вызывает `onProfile`,
- * когда пользователь выбрал аккаунт.
+ * Рисует официальную кнопку Google в `parent` и отдаёт ID-токен, когда
+ * пользователь выбрал аккаунт. Проверять токен — задача сервера.
  */
 export async function renderGoogleButton(
   parent: HTMLElement,
-  onProfile: (profile: GoogleProfile) => void,
+  onCredential: (idToken: string) => void,
   options: ButtonOptions = {},
 ): Promise<void> {
   if (!googleAuthEnabled) throw new Error('google_auth_not_configured')
   const google = await loadScript()
   google.accounts.id.initialize({
     client_id: GOOGLE_CLIENT_ID,
-    callback: (res) => {
-      if (!res.credential) return
-      const profile = decodeIdToken(res.credential)
-      if (profile) onProfile(profile)
-    },
+    callback: (res) => { if (res.credential) onCredential(res.credential) },
     cancel_on_tap_outside: true,
   })
   parent.replaceChildren()

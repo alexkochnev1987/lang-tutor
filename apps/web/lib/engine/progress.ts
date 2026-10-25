@@ -4,7 +4,7 @@
  */
 import { State } from 'ts-fsrs'
 import { decayed, estimateModuleReadiness, evaluate, type ModuleScore } from '@polski/engine'
-import { db } from '@/lib/db/dexie'
+import { loadState } from '@/lib/data/store'
 import { COURSE_ID, loadCurriculum, loadGrammarRules, loadVocabulary } from '@/lib/content/curriculum'
 import { PASS_RULE } from './session'
 
@@ -38,12 +38,11 @@ export async function loadProgress(): Promise<Progress> {
   const [curriculum, vocab, grammar] = await Promise.all([
     loadCurriculum(), loadVocabulary(), loadGrammarRules(),
   ])
-  const [items, masteryRows, sessions, mockRows] = await Promise.all([
-    db.studyItems.where('courseId').equals(COURSE_ID).toArray(),
-    db.ruleMastery.toArray(),
-    db.lessonSessions.filter((s) => Boolean(s.completedAt)).toArray(),
-    db.moduleReadiness.where('courseId').equals(COURSE_ID).toArray(),
-  ])
+  const state = await loadState()
+  const items = state.studyItems
+  const masteryRows = state.mastery
+  const sessions = state.sessions.filter((s) => s.completedAt)
+  const mockRows = state.readiness
 
   const mastery = masteryRows.map((r) => ({
     grammarRuleId: r.grammarRuleId, mastery: r.mastery,

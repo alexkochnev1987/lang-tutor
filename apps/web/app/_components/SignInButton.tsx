@@ -7,45 +7,49 @@ import {
   disableGoogleAutoSelect,
   googleAuthEnabled,
   renderGoogleButton,
-  type GoogleProfile,
 } from '@/lib/auth/google'
-import { db } from '@/lib/db/dexie'
-import { useLiveQuery } from 'dexie-react-hooks'
+import { signInWithGoogle, signOut, useAppState } from '@/lib/data/store'
 
-const PROFILE_KEY = 'googleProfile'
-
+/**
+ * Вход через Google.
+ *
+ * Без входа приложение работает: сервер выдаёт гостевую сессию, и
+ * прогресс всё равно пишется в базу. Вход нужен, чтобы этот прогресс
+ * нашёлся на другом устройстве — и чтобы не потерялся вместе с cookie.
+ *
+ * ID-токен здесь не хранится и не разбирается: он уходит на сервер,
+ * тот проверяет подпись и ставит свою httpOnly-сессию.
+ */
 export function SignInButton() {
   const t = useTranslations('auth')
   const [open, setOpen] = useState(false)
   const [error, setError] = useState<string | null>(null)
   const slot = useRef<HTMLDivElement>(null)
-
-  // R12: querier только читает
-  const row = useLiveQuery(() => db.settings.get(PROFILE_KEY), [])
-  const profile = row?.value as GoogleProfile | undefined
+  const user = useAppState()?.user
 
   // Скрипт Google грузится при открытии окна, а не на старте приложения
   useEffect(() => {
     if (!open || !googleAuthEnabled || !slot.current) return
     let cancelled = false
-    renderGoogleButton(slot.current, (p) => {
+    renderGoogleButton(slot.current, (idToken) => {
       if (cancelled) return
-      void db.settings.put({ key: PROFILE_KEY, value: p })
-      setOpen(false)
+      signInWithGoogle(idToken)
+        .then(() => setOpen(false))
+        .catch(() => setError('unavailable'))
     }).catch(() => { if (!cancelled) setError('unavailable') })
     return () => { cancelled = true }
   }, [open])
 
-  async function signOut() {
+  async function handleSignOut() {
     disableGoogleAutoSelect()
-    await db.settings.delete(PROFILE_KEY)
+    await signOut()
   }
 
-  if (profile) {
+  if (user?.signedIn) {
     return (
       <Row gap="sm">
-        <span className="text-sm text-muted">{profile.name ?? profile.email}</span>
-        <Button variant="ghost" size="sm" onClick={signOut}>{t('signOut')}</Button>
+        <span className="text-sm text-muted">{user.name ?? user.email}</span>
+        <Button variant="ghost" size="sm" onClick={handleSignOut}>{t('signOut')}</Button>
       </Row>
     )
   }

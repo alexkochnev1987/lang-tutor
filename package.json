@@ -5,13 +5,18 @@
   "description": "Подготовка к государственному экзамену по польскому языку B1",
   "packageManager": "pnpm@9.15.0",
   "scripts": {
-    "dev": "node scripts/sync-content.mjs && pnpm --filter @polski/web dev",
-    "build": "node scripts/sync-content.mjs && pnpm --filter @polski/web build && node scripts/stamp-sw.mjs",
+    "dev": "node scripts/sync-content.mjs && node scripts/stamp-sw.mjs && pnpm --filter @polski/web dev",
+    "build": "node scripts/sync-content.mjs && node scripts/stamp-sw.mjs && pnpm --filter @polski/web build",
     "start": "pnpm --filter @polski/web start",
     "lint": "pnpm -r lint",
     "typecheck": "pnpm -r typecheck",
-    "content": "node scripts/build-curriculum.mjs && node scripts/sync-content.mjs",
-    "validate": "node scripts/validate-grammar.mjs && node scripts/build-curriculum.mjs"
+    "content": "node scripts/build-curriculum.mjs && node scripts/build-vocabulary.mjs && node scripts/sync-content.mjs",
+    "db:up": "docker compose up -d",
+    "db:down": "docker compose down",
+    "db:generate": "pnpm --filter @polski/web exec drizzle-kit generate",
+    "db:migrate": "pnpm --filter @polski/web exec drizzle-kit migrate",
+    "db:studio": "pnpm --filter @polski/web exec drizzle-kit studio",
+    "validate": "node scripts/validate-grammar.mjs && node scripts/build-curriculum.mjs && node scripts/build-vocabulary.mjs"
   },
   "devDependencies": {
     "typescript": "^5.9.0"

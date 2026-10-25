@@ -41,7 +41,8 @@ export default function TodayPage() {
 
       <footer className="mx-auto w-full max-w-2xl px-4 py-6">
         <p className="text-xs text-muted">
-          Данные хранятся только в этом браузере. Бэкенда нет.
+          Прогресс сохраняется на сервере. Войдите через Google, чтобы он
+          нашёлся на другом устройстве.
         </p>
       </footer>
 

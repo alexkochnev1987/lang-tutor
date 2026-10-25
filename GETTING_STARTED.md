@@ -2,9 +2,9 @@
 
 Всё, что нужно, чтобы поднять проект локально и выложить его в сеть.
 
-Бэкенда нет: на выходе статика. Значит деплой — это «положить папку на
-хостинг», без серверов, БД и переменных окружения на проде (кроме одной,
-которая вшивается в бандл при сборке).
+Прогресс пользователя живёт в **Postgres** (локально — Docker, на проде —
+Neon через Vercel). Контент курса остаётся статическими JSON и в базу не
+попадает.
 
 ---
 
@@ -14,6 +14,7 @@
 |---|---|---|
 | Node.js | **≥ 20.9** (требование Next 16) | `node -v` |
 | pnpm | **9.x** | `pnpm -v` |
+| Docker | любой свежий — только для локальной базы | `docker info` |
 
 Если pnpm нет: `corepack enable && corepack prepare pnpm@9.15.0 --activate`
 
@@ -24,10 +25,17 @@
 ```bash
 cd polski-b1
 pnpm install
+pnpm db:up          # поднимет Postgres в Docker на порту 5433
+cp apps/web/.env.example apps/web/.env.local
+pnpm db:migrate     # создаст таблицы
 pnpm dev
 ```
 
 Откроется на **http://localhost:3000**.
+
+В `.env.local` обязательно заполнить `SESSION_SECRET`
+(`openssl rand -base64 32`) — без него в dev будет предупреждение в
+логе, а прод-сборка откажется стартовать.
 
 Другой порт: `pnpm --filter @polski/web dev --port 3100`
 
@@ -48,15 +56,23 @@ pnpm dev
 Файл `apps/web/.env.local` (создаётся копией `.env.example`).
 
 ```ini
+DATABASE_URL=postgres://polski:polski@localhost:5433/polski
+DATABASE_URL_UNPOOLED=        # только для миграций на Neon
+SESSION_SECRET=               # openssl rand -base64 32
 NEXT_PUBLIC_GOOGLE_CLIENT_ID=
 NEXT_PUBLIC_COURSE_ID=pl-b1-ru
 ```
 
-Обе переменные **публичные** (`NEXT_PUBLIC_`) — они вшиваются в бандл и
-видны в браузере. Это нормально: Client ID не секрет.
+`NEXT_PUBLIC_*` — публичные: вшиваются в бандл и видны в браузере. Это
+нормально, Client ID не секрет. Остальные три **серверные** и в браузер
+не попадают.
 
-⚠️ **Client Secret сюда класть не нужно и нельзя.** Поток полностью
-клиентский, бэкенда нет. Секрет понадобится только когда появится сервер.
+⚠️ **Client Secret не нужен и здесь.** ID-токен проверяется по публичным
+ключам Google (`jose` + JWKS), обмена кодом на токен нет.
+
+⚠️ Смена `SESSION_SECRET` разлогинивает всех. У гостей без привязанного
+Google-аккаунта вместе с сессией теряется и доступ к своему прогрессу —
+строка в базе остаётся, но найти её больше нечем.
 
 ⚠️ Переменные `NEXT_PUBLIC_*` подставляются **на этапе сборки**, а не в
 рантайме. Поменяли — нужно пересобрать.
@@ -77,7 +93,8 @@ NEXT_PUBLIC_COURSE_ID=pl-b1-ru
 
 **Что вход сейчас даёт:** показывает, кто вошёл, и разделяет локальные
 профили. Данные всё равно лежат только в этом браузере. Это заготовка под
-будущую синхронизацию — см. `docs/ARCHITECTURE.md` §7bis.
+будущую синхронизацию — см. `docs/DEPLOY_VERCEL_DB.md`, там расписано,
+что именно нужно доделать, чтобы вход стал настоящим.
 
 ---
 
@@ -86,12 +103,16 @@ NEXT_PUBLIC_COURSE_ID=pl-b1-ru
 | Команда | Что делает |
 |---|---|
 | `pnpm dev` | дев-сервер с hot reload |
-| `pnpm build` | продакшен-сборка → `apps/web/out/`, затем штамповка версии в `sw.js` |
-| `pnpm start` | локальный просмотр собранной статики |
+| `pnpm build` | контент → штамповка `sw.js` → прод-сборка Next |
+| `pnpm start` | прод-сервер локально (`next start`) |
+| `pnpm db:up` / `db:down` | поднять/остановить локальный Postgres в Docker |
+| `pnpm db:generate` | сгенерировать миграцию по изменённой схеме |
+| `pnpm db:migrate` | применить миграции |
+| `pnpm db:studio` | веб-просмотр содержимого базы |
 | `pnpm typecheck` | проверка типов во всех пакетах |
 | `pnpm validate` | валидатор графа грамматики и программы |
 | `pnpm content` | пересобрать программу и словарь |
-| `pnpm --filter @polski/engine test` | 42 теста движка: FSRS, mastery, готовность, упражнения |
+| `pnpm --filter @polski/engine test` | 47 тестов движка: FSRS, mastery, готовность, упражнения |
 | `node scripts/build-morphology.mjs <sgjp.tab.gz>` | пересобрать парадигмы из словаря SGJP |
 
 ---
@@ -100,15 +121,18 @@ NEXT_PUBLIC_COURSE_ID=pl-b1-ru
 
 ```
 polski-b1/
-├── apps/web/            Next 16, App Router, output: 'export'
-│   ├── app/             страницы и layout
-│   ├── lib/             db (Dexie), auth, speech, i18n
+├── apps/web/            Next 16, App Router, серверный режим
+│   ├── app/             страницы, layout и app/api/* — роуты данных
+│   ├── drizzle/         сгенерированные SQL-миграции
+│   ├── lib/db/          схема Postgres, драйвер, lib/data — стор на клиенте
+│   ├── lib/auth/        сессия (jose) и кнопка Google
 │   ├── messages/        переводы интерфейса: ru, uk, en
 │   └── public/          манифест, иконки, контент-пакеты
 ├── packages/engine/     FSRS, mastery-модель, генератор занятия. ЯЗЫКОНЕЗАВИСИМ
 ├── packages/ui/         дизайн-система. ТОЛЬКО здесь живут Tailwind-классы
 ├── content/pl-b1-ru/    учебный контент: грамматика, словарь, программа
-├── scripts/             валидаторы контента
+├── docker-compose.yml   локальный Postgres для разработки
+├── scripts/             сборка контента, штамповка service worker
 ├── tools/               tts-test.html — ручная проверка синтеза речи
 └── docs/                вся документация и план
 ```
@@ -117,89 +141,89 @@ polski-b1/
 
 ---
 
-## 6. Деплой
+## 6. Деплой на Vercel
 
-Сборка кладёт готовый сайт в `apps/web/out/`. Это обычные HTML, CSS и JS —
-хостится где угодно.
+Сборка больше не статическая: нужны серверные роуты (`app/api/*`) и
+база. Netlify/Cloudflare Pages/GitHub Pages из прошлой версии этого
+раздела больше не подходят — они отдают статику.
 
-```bash
-pnpm build
-# → apps/web/out/
-```
-
-### Vercel
-
-```bash
-npx vercel
-```
-
-Настройки в проекте Vercel:
+### 6.1. Проект
 
 | Поле | Значение |
 |---|---|
-| Framework Preset | Next.js |
-| Root Directory | `polski-b1` |
-| Build Command | `pnpm build` |
-| Output Directory | `apps/web/out` |
-| Install Command | `pnpm install` |
+| Framework Preset | **Next.js** |
+| Root Directory | **`apps/web`** — там лежит `next.config.ts`, по нему Vercel и опознаёт Next |
+| Include files outside Root Directory | **включить** |
+| Build Command | **`cd ../.. && pnpm build`** (Override) |
+| Output Directory | не трогать |
+| Install Command | не трогать |
+| Node.js Version | 20.x или выше |
 
-Переменную `NEXT_PUBLIC_GOOGLE_CLIENT_ID` добавить в **Settings →
-Environment Variables** и **пересобрать** — она попадает в бандл только при
-сборке.
+⚠️ Переопределить Build Command обязательно. Корень проекта — `apps/web`,
+и без этого Vercel запустит голый `next build`, пропустив два шага из
+корневого `pnpm build`:
 
-### Netlify
+- `scripts/sync-content.mjs` — кладёт `content/<курс>/*.json` в `public/`.
+  Без него приложение собирается, но на проде нет ни программы, ни
+  словаря: экран «Сегодня» не находит контент;
+- `scripts/stamp-sw.mjs` — собирает `public/sw.js` из шаблона. Без него
+  service worker уедет с плейсхолдерами `__BUILD_ID__`/`__COURSE_ID__`:
+  прекэш пойдёт по несуществующим URL, а версия кэша перестанет меняться
+  между деплоями.
 
-`netlify.toml` в корне `polski-b1`:
+Чекбокс «Include files outside» нужен по той же причине: `content/` и
+`scripts/` лежат выше корня проекта.
 
-```toml
-[build]
-  base    = "polski-b1"
-  command = "pnpm build"
-  publish = "apps/web/out"
+### 6.2. База
 
-[build.environment]
-  NODE_VERSION = "20"
-```
+**Storage → Create Database → Neon → Connect to project.** Vercel сам
+добавит `DATABASE_URL` и `DATABASE_URL_UNPOOLED` во все окружения.
 
-### Cloudflare Pages
+Код выбирает драйвер по хосту в `DATABASE_URL` (`lib/db/pg.ts`): Neon
+по HTTP на проде, обычный `pg` по TCP для локального Docker. Менять
+ничего не нужно.
 
-| Поле | Значение |
-|---|---|
-| Build command | `pnpm build` |
-| Build output directory | `apps/web/out` |
-| Root directory | `polski-b1` |
-
-### GitHub Pages
-
-Работает, но есть нюанс. Если сайт живёт не в корне домена
-(`username.github.io/polski-b1`), нужен `basePath`:
-
-```ts
-// next.config.ts
-const isGhPages = process.env.GITHUB_PAGES === 'true'
-export default {
-  output: 'export',
-  basePath: isGhPages ? '/polski-b1' : '',
-  assetPrefix: isGhPages ? '/polski-b1/' : '',
-  images: { unoptimized: true },
-  trailingSlash: true,
-  transpilePackages: ['@polski/ui', '@polski/engine'],
-}
-```
-
-И положить `.nojekyll` в `out/`, иначе GitHub выкинет папки на `_`.
-
-### Любой статический хостинг / nginx
+Миграции на прод-базу накатываются с машины:
 
 ```bash
-pnpm build
-rsync -av apps/web/out/ user@server:/var/www/polski-b1/
+vercel env pull apps/web/.env.local   # заберёт строки Neon
+pnpm db:migrate                       # пойдёт по DATABASE_URL_UNPOOLED
 ```
 
-Благодаря `trailingSlash: true` каждая страница — это `папка/index.html`,
-поэтому особые rewrite-правила не нужны.
+⚠️ Для миграций нужна именно unpooled-строка: pooler Neon не держит
+сессионные блокировки, на которых работает DDL.
 
----
+### 6.3. Переменные окружения
+
+| Переменная | Откуда | Окружения |
+|---|---|---|
+| `DATABASE_URL`, `DATABASE_URL_UNPOOLED` | добавит интеграция Neon | все |
+| `SESSION_SECRET` | `openssl rand -base64 32` | все |
+| `NEXT_PUBLIC_COURSE_ID` | `pl-b1-ru` | все |
+| `NEXT_PUBLIC_GOOGLE_CLIENT_ID` | Google Cloud Console | все |
+
+⚠️ `NEXT_PUBLIC_*` вшиваются **при сборке**. Добавили или поменяли —
+нужен редеплой, перезапуска мало.
+
+### 6.4. Google
+
+В **Authorized JavaScript origins** добавить все адреса, откуда будет
+открываться приложение: `http://localhost:3000`, прод-домен и домены
+превью. Иначе на превью кнопка входа отвалится с `origin_mismatch`.
+
+Пока `NEXT_PUBLIC_GOOGLE_CLIENT_ID` пуст, кнопка входа просто скрыта:
+приложение работает на гостевой сессии, прогресс пишется в базу и живёт,
+пока цела cookie в этом браузере.
+
+### 6.5. Проверка после деплоя
+
+```
+☐ https://<домен>/api/state/ отвечает 200 и ставит cookie pb1_session
+☐ https://<домен>/sw.js содержит хеш коммита, а не __BUILD_ID__
+☐ Экран «Сегодня» показывает день программы и слова дня
+☐ Занятие проходится, после перезагрузки день сдвинулся
+☐ Вход через Google работает, в users появился google_sub
+```
 
 ## 7. Чек-лист перед продакшеном
 
@@ -208,12 +232,17 @@ rsync -av apps/web/out/ user@server:/var/www/polski-b1/
 ☐ NEXT_PUBLIC_GOOGLE_CLIENT_ID задан на хостинге И проект пересобран
 ☐ боевой домен добавлен в Authorized JavaScript origins в Google Console
 ☐ иконки 192/512, maskable-512 и apple-touch-icon лежат в public/ — ✅ есть
+☐ SESSION_SECRET задан на хостинге (без него прод-сборка не стартует)
+☐ миграции накатаны на прод-базу: pnpm db:migrate
 ☐ pnpm validate проходит
 ☐ pnpm typecheck проходит
 ☐ проверено на ширине 320px (iPhone SE) — нижняя граница вёрстки
 ☐ проверено, что тема не моргает при загрузке
-☐ офлайн: выключить сеть и открыть /progress/ — должно работать
 ```
+
+⚠️ Пункта про офлайн здесь больше нет. С переездом данных в Postgres
+занятие офлайн не проходится: без сети приложение покажет оболочку из
+кэша, но прогресс читать и писать будет нечем (`PLAN.md` D23).
 
 ---
 
@@ -226,8 +255,10 @@ rsync -av apps/web/out/ user@server:/var/www/polski-b1/
 | **Озвучка зависла** | Известная болячка Chrome: очередь встаёт, `speaking` остаётся `true`. Лечится `speechSynthesis.cancel()`. Проверить изолированно можно в `tools/tts-test.html` |
 | **Кнопки Google нет** | `NEXT_PUBLIC_GOOGLE_CLIENT_ID` пуст или проект не пересобран после его добавления |
 | **`origin_mismatch` от Google** | Домен не добавлен в Authorized JavaScript origins. Порт тоже имеет значение: `localhost:3000` ≠ `localhost:3100` |
-| **Тема моргает светлой при загрузке** | Не отработал блокирующий скрипт в `<head>` — он читает тему из `localStorage` синхронно, потому что IndexedDB до первого кадра не успевает |
+| **Тема моргает светлой при загрузке** | Не отработал блокирующий скрипт в `<head>` — он читает тему из `localStorage` синхронно, потому что ответ сервера до первого кадра не успевает |
+| **503 `database_unavailable` на всех экранах** | Не задан `DATABASE_URL` либо база не поднята: `pnpm db:up` и `docker compose ps` |
+| **Прогресс исчез после смены `SESSION_SECRET`** | Старая cookie больше не проходит проверку подписи. У гостя это потеря доступа к своей строке; у вошедшего через Google — нет, его найдут по `google_sub` |
 | **`pnpm test` зелёный, а `pnpm typecheck` красный** | Vitest не типизирует код, он только исполняет. Строгие ошибки (`noUncheckedIndexedAccess`) ловит только `tsc`. Гонять оба |
-| **Офлайн не работает** | Проверить `apps/web/out/sw.js`: в нём должна стоять версия, а не `__BUILD_ID__`. Штамповку делает `scripts/stamp-sw.mjs` последним шагом `pnpm build` |
+| **`/sw.js` отдаётся с `__BUILD_ID__`** | Не отработал `scripts/stamp-sw.mjs`. Он собирает `public/sw.js` из `sw.template.js` ПЕРЕД `next build`; на Vercel для этого нужен Build Command `cd ../.. && pnpm build` |
 | **После деплоя у пользователей старый кэш** | Не сменилась версия SW. На Vercel её даёт `VERCEL_GIT_COMMIT_SHA`; локально — timestamp |
 | **Сборка падает на типах** | `pnpm typecheck` покажет подробности. Next правит `tsconfig.json` при первой сборке — это нормально |

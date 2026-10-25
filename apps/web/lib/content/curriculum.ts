@@ -1,11 +1,15 @@
 /**
  * Загрузка языкового пакета.
  *
- * Бэкенда нет: пакет — статические JSON в /public/content/<courseId>/.
- * Качается один раз, кладётся в IndexedDB и дальше работает офлайн.
- * Перекачка только при смене contentVersion.
+ * Контент курса — статические JSON в /public/content/<courseId>/. В базу
+ * он не попадает (R3): языковые пакеты версионируются вместе с кодом, а
+ * в Postgres лежат только данные пользователя.
+ *
+ * Кэш — только в памяти вкладки. Повторную загрузку между визитами берут
+ * на себя HTTP-кэш и service worker; дублировать их ещё одним хранилищем
+ * незачем.
  */
-import { db } from '@/lib/db/dexie'
+import { loadState } from '@/lib/data/store'
 
 export const COURSE_ID = process.env.NEXT_PUBLIC_COURSE_ID ?? 'pl-b1-ru'
 
@@ -86,20 +90,22 @@ export interface GrammarRule {
   teachingNote?: string
 }
 
-const cacheKey = (file: string) => `${COURSE_ID}/${file}`
+const memo = new Map<string, Promise<unknown>>()
 
-async function loadPack<T>(file: string): Promise<T> {
-  const key = cacheKey(file)
-  const cached = await db.contentCache.get(key)
-  if (cached) return cached.payload as T
-
-  const res = await fetch(`/content/${COURSE_ID}/${file}`)
-  if (!res.ok) throw new Error(`content_unavailable:${file}`)
-  const payload = (await res.json()) as T
-
-  const version = (payload as { version?: string }).version ?? 'unknown'
-  await db.contentCache.put({ key, version, payload })
-  return payload
+function loadPack<T>(file: string): Promise<T> {
+  const key = `${COURSE_ID}/${file}`
+  let hit = memo.get(key)
+  if (!hit) {
+    hit = fetch(`/content/${key}`).then((res) => {
+      if (!res.ok) throw new Error(`content_unavailable:${file}`)
+      return res.json()
+    }).catch((e) => {
+      memo.delete(key)   // не кэшируем неудачу: следующая попытка должна пойти в сеть
+      throw e
+    })
+    memo.set(key, hit)
+  }
+  return hit as Promise<T>
 }
 
 export const loadCurriculum = () => loadPack<Curriculum>('curriculum.json')
@@ -128,10 +134,8 @@ export async function loadGrammarRules(): Promise<Map<string, GrammarRule>> {
  * что при этом происходит с очередью повторений.
  */
 export async function currentDayNumber(totalDays: number): Promise<number> {
-  const course = await db.userCourses.get(COURSE_ID)
+  const { course, sessions } = await loadState()
   if (!course) return 1
-  const sessions = await db.lessonSessions
-    .filter((s) => Boolean(s.completedAt))
-    .toArray()
-  return Math.min(totalDays, sessions.length + 1)
+  const completed = sessions.filter((s) => s.completedAt).length
+  return Math.min(totalDays, completed + 1)
 }

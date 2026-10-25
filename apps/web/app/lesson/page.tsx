@@ -9,8 +9,10 @@ import {
   type CurriculumDay, type Lexeme,
 } from '@/lib/content/curriculum'
 import { exercisesForRule, exercisesForWord } from '@/lib/engine/exercises'
-import { buildTodayLesson, ensureLexemeCards, recordAnswer, Rating } from '@/lib/engine/session'
-import { db } from '@/lib/db/dexie'
+import {
+  buildTodayLesson, ensureLexemeCards, recordAnswer, recordRuleAttempt, Rating,
+} from '@/lib/engine/session'
+import { saveLessonSession } from '@/lib/data/store'
 import { ExerciseView, SpeakIcon } from '@/app/_components/ExerciseView'
 import { Diagnostic } from '@/app/_components/Diagnostic'
 import { EmptyDay } from '@/app/_components/EmptyDay'
@@ -81,22 +83,7 @@ export default function LessonPage() {
     }
     // грамматика идёт в mastery-модель, а не в FSRS — RESEARCH.md §7.3
     for (const ruleId of ex.grammarRuleIds) {
-      const row = await db.ruleMastery.get(ruleId)
-      const prev = row ?? {
-        grammarRuleId: ruleId, mastery: 0, attempts: 0, correct: 0, recentWindow: [],
-      }
-      const { applyAttempt } = await import('@polski/engine')
-      const next = applyAttempt(
-        { ...prev, lastPracticedAt: row?.lastPracticedAt?.getTime() ?? null },
-        { correct: r.correct, exerciseDifficulty: ex.difficulty, at: Date.now() },
-      )
-      await db.ruleMastery.put({
-        grammarRuleId: ruleId, mastery: next.mastery,
-        attempts: next.attempts, correct: next.correct,
-        recentWindow: [...prev.recentWindow.slice(-9),
-          { correct: r.correct, weight: ex.difficulty, at: Date.now() }],
-        lastPracticedAt: new Date(),
-      })
+      await recordRuleAttempt(ruleId, r.correct, ex.difficulty)
     }
   }
 
@@ -108,7 +95,8 @@ export default function LessonPage() {
 
   async function finish() {
     if (day) {
-      await db.lessonSessions.add({
+      await saveLessonSession({
+        id: crypto.randomUUID(),
         dayNumber: day.day, startedAt: new Date(startedAt.current),
         completedAt: new Date(), plannedBudgetMs: day.totalSec * 1000,
         actualMs: Date.now() - startedAt.current,
@@ -120,23 +108,8 @@ export default function LessonPage() {
 
   if (!day) return <Screen><Centered><p className="text-muted">Загрузка…</p></Centered></Screen>
 
-  if (special === 'diagnostic') {
-    return (
-      <Screen>
-        <Centered>
-          <Diagnostic day={day.day} onDone={() => setDone(true)} />
-        </Centered>
-      </Screen>
-    )
-  }
-  if (special === 'empty') {
-    return (
-      <Screen>
-        <Centered><EmptyDay day={day} onDone={() => setDone(true)} /></Centered>
-      </Screen>
-    )
-  }
-
+  // Порядок важен: done проверяется ДО спец-экранов. Иначе после
+  // onDone() рендер снова уходит в диагностику и она виснет на «Сохраняю…».
   if (done) {
     const pct = stats.total ? Math.round((stats.correct / stats.total) * 100) : 0
     return (
@@ -160,6 +133,23 @@ export default function LessonPage() {
             </Stack>
           </Card>
         </Centered>
+      </Screen>
+    )
+  }
+
+  if (special === 'diagnostic') {
+    return (
+      <Screen>
+        <Centered>
+          <Diagnostic day={day.day} onDone={() => setDone(true)} />
+        </Centered>
+      </Screen>
+    )
+  }
+  if (special === 'empty') {
+    return (
+      <Screen>
+        <Centered><EmptyDay day={day} onDone={() => setDone(true)} /></Centered>
       </Screen>
     )
   }

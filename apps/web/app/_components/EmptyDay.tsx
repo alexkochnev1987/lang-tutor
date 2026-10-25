@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 import { Button, Card, Stack } from '@polski/ui'
-import { db } from '@/lib/db/dexie'
+import { saveLessonSession } from '@/lib/data/store'
 import type { CurriculumDay } from '@/lib/content/curriculum'
 
 const TITLE: Partial<Record<CurriculumDay['kind'], string>> = {
@@ -26,7 +26,8 @@ export function EmptyDay({ day, onDone }: { day: CurriculumDay; onDone: () => vo
 
   async function skip() {
     setBusy(true)
-    await db.lessonSessions.add({
+    await saveLessonSession({
+      id: crypto.randomUUID(),
       dayNumber: day.day, startedAt: new Date(), completedAt: new Date(),
       plannedBudgetMs: day.totalSec * 1000, actualMs: 0,
       itemsReviewed: 0, itemsCorrect: 0,

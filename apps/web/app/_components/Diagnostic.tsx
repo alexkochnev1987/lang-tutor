@@ -2,8 +2,7 @@
 
 import { useState } from 'react'
 import { Button, Card, OptionRow, Stack } from '@polski/ui'
-import { db } from '@/lib/db/dexie'
-import { COURSE_ID } from '@/lib/content/curriculum'
+import { saveLessonSession, startCourse } from '@/lib/data/store'
 
 type Track = 'a0' | 'a2' | 'b1-minus'
 
@@ -30,21 +29,25 @@ const TRACKS: { id: Track; title: string; desc: string }[] = [
 export function Diagnostic({ day, onDone }: { day: number; onDone: () => void }) {
   const [picked, setPicked] = useState<Track | null>(null)
   const [saving, setSaving] = useState(false)
+  const [error, setError] = useState<string | null>(null)
 
   async function save() {
     if (!picked) return
     setSaving(true)
-    await db.userCourses.put({
-      courseId: COURSE_ID,
-      startedAt: new Date(),
-      entryTrack: picked,
-      dailyBudgetMinutes: 15,
-    })
-    await db.lessonSessions.add({
-      dayNumber: day, startedAt: new Date(), completedAt: new Date(),
-      plannedBudgetMs: 900_000, actualMs: 0, itemsReviewed: 0, itemsCorrect: 0,
-    })
-    onDone()
+    try {
+      await startCourse(picked)
+      await saveLessonSession({
+        id: crypto.randomUUID(),
+        dayNumber: day, startedAt: new Date(), completedAt: new Date(),
+        plannedBudgetMs: 900_000, actualMs: 0, itemsReviewed: 0, itemsCorrect: 0,
+      })
+      onDone()
+    } catch (e) {
+      // Кнопка обязана разблокироваться: иначе экран навсегда
+      // застревает на «Сохраняю…», как это уже было.
+      setSaving(false)
+      setError(e instanceof Error ? e.message : 'save_failed')
+    }
   }
 
   return (
@@ -72,6 +75,10 @@ export function Diagnostic({ day, onDone }: { day: number; onDone: () => void })
         <Button size="lg" full disabled={!picked || saving} onClick={save}>
           {saving ? 'Сохраняю…' : 'Начать программу'}
         </Button>
+
+        {error && (
+          <p className="text-xs text-bad">Не удалось сохранить: {error}</p>
+        )}
 
         <p className="text-xs text-muted">
           Честно: 15 минут в день за полгода — это 45 часов. С абсолютного

@@ -1,0 +1,29 @@
+# Локальный Postgres — чтобы гонять прод-сборку (`pnpm build && pnpm start`)
+# на настоящей базе, не трогая прод и не завися от сети.
+#
+#   docker compose up -d          поднять
+#   docker compose down           остановить (данные сохранятся)
+#   docker compose down -v        остановить и стереть данные
+#
+# Строка подключения уже лежит в apps/web/.env.example.
+services:
+  db:
+    image: postgres:17-alpine
+    container_name: polski-b1-db
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: polski
+      POSTGRES_PASSWORD: polski
+      POSTGRES_DB: polski
+    ports:
+      - '5433:5432'   # 5433, чтобы не конфликтовать с уже установленным Postgres
+    volumes:
+      - polski-db:/var/lib/postgresql/data
+    healthcheck:
+      test: ['CMD-SHELL', 'pg_isready -U polski']
+      interval: 5s
+      timeout: 3s
+      retries: 10
+
+volumes:
+  polski-db:

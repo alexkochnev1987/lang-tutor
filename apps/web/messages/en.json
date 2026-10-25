@@ -58,7 +58,7 @@
     "signIn": "Sign in",
     "signOut": "Sign out",
     "signedInAs": "Signed in as {name}",
-    "localOnly": "Data stays on this device. Sign-in is groundwork for future sync.",
+    "localOnly": "Your progress is already saved on the server. Signing in lets you pick it up on another device.",
     "unavailable": "Google sign-in is not configured"
   },
   "errors": {
