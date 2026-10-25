@@ -78,6 +78,28 @@ describe('очередь повторений', () => {
     const q = buildQueue({ scheduler: s, items, now: NOW, budgetSec: 180 })
     expect(newItemAllowance(10, q, 180)).toBeLessThan(10)
   })
+
+  it('отмеченные «знаю» в очередь не попадают', () => {
+    const s = createScheduler()
+    const items = Array.from({ length: 10 }, (_, i) => maturedAndDue(s, `i${i}`, 30))
+    const suspended = new Set(['i0', 'i1', 'i2'])
+    const q = buildQueue({ scheduler: s, items, now: NOW, budgetSec: 600, suspendedRefIds: suspended })
+    expect(q.due).toHaveLength(7)
+    expect(q.due.map((i) => i.refId)).not.toContain('i0')
+  })
+
+  it('снятие отметки возвращает карточку с прежним сроком', () => {
+    const s = createScheduler()
+    const items = Array.from({ length: 3 }, (_, i) => maturedAndDue(s, `i${i}`, 30))
+    const hidden = buildQueue({
+      scheduler: s, items, now: NOW, budgetSec: 600, suspendedRefIds: new Set(['i1']) })
+    const restored = buildQueue({ scheduler: s, items, now: NOW, budgetSec: 600 })
+    const before = items.find((i) => i.refId === 'i1')!
+    expect(hidden.due.map((i) => i.refId)).not.toContain('i1')
+    expect(restored.due.map((i) => i.refId)).toContain('i1')
+    expect(before.card.due.getTime()).toBe(
+      restored.due.find((i) => i.refId === 'i1')!.card.due.getTime())
+  })
 })
 
 describe('модель освоения грамматики', () => {
@@ -224,6 +246,28 @@ describe('генератор занятия', () => {
     })
     const exams = lesson.activities.filter((a) => a.kind === 'exam-task')
     expect(exams).toHaveLength(2)
+  })
+
+  it('слова, отмеченные «знаю», не вводятся как новые', () => {
+    const s = createScheduler()
+    const lesson = generateLesson({
+      scheduler: s, plan, items: [], mastery: [],
+      moduleScores: scores, passRule: PL_B1, now: NOW,
+      suspendedRefIds: new Set(['pl.a', 'pl.b']),
+    })
+    const words = lesson.activities.find((a) => a.kind === 'new-words')
+    expect(words?.refIds).toEqual(['pl.c'])
+  })
+
+  it('когда все слова дня отмечены «знаю», блока новых слов нет', () => {
+    const s = createScheduler()
+    const lesson = generateLesson({
+      scheduler: s, plan, items: [], mastery: [],
+      moduleScores: scores, passRule: PL_B1, now: NOW,
+      suspendedRefIds: new Set(['pl.a', 'pl.b', 'pl.c']),
+    })
+    expect(lesson.activities.some((a) => a.kind === 'new-words')).toBe(false)
+    expect(lesson.notes.join(' ')).not.toContain('Новые слова пропущены')
   })
 
   it('слабые правила вытесняют правило дня из практики', () => {

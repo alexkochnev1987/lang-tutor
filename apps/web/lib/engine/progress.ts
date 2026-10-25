@@ -77,9 +77,15 @@ export async function loadProgress(): Promise<Progress> {
   for (const m of mockRows) if (m.lastMockScore != null) mockScores[m.moduleId] = m.lastMockScore
 
   // зрелыми считаем карточки, вышедшие из фазы заучивания
-  const known = items.filter((i) => i.state === State.Review).length
+  const markedKnown = new Set(
+    state.lexemeStatus.filter((l) => l.status === 'known').map((l) => l.lexemeId))
+  const CARDS_PER_LEXEME = 2
+  const matured = items.filter(
+    (i) => i.state === State.Review && !markedKnown.has(i.refId)).length
+  const known = matured + markedKnown.size * CARDS_PER_LEXEME
   const learning = items.filter(
-    (i) => i.state === State.Learning || i.state === State.Relearning).length
+    (i) => (i.state === State.Learning || i.state === State.Relearning)
+      && !markedKnown.has(i.refId)).length
 
   const scores = estimateModuleReadiness({
     mastery, ruleModules, lexemesKnown: known,
@@ -101,7 +107,9 @@ export async function loadProgress(): Promise<Progress> {
   }
 
   const all = mastery.map(toProgress)
-  const daysCompleted = sessions.length
+  const programDays = new Set(
+    sessions.filter((s) => s.kind === 'day').map((s) => s.dayNumber))
+  const daysCompleted = programDays.size
 
   // ── время ───────────────────────────────────────────────────────────
   const spentMs = sessions.reduce((sum, s) => sum + (s.actualMs ?? 0), 0)

@@ -44,6 +44,7 @@ export interface LessonInput {
   passRule: PassRule
   now: Date
   masteryConfig?: MasteryConfig
+  suspendedRefIds?: ReadonlySet<string>
 }
 
 export type ActivityKind =
@@ -74,13 +75,15 @@ export interface Lesson {
 }
 
 export function generateLesson(input: LessonInput): Lesson {
-  const { scheduler, plan, items, mastery, moduleScores, passRule, now } = input
+  const {
+    scheduler, plan, items, mastery, moduleScores, passRule, now, suspendedRefIds,
+  } = input
   const b = plan.timeBudgetSec
   const notes: string[] = []
   const activities: Activity[] = []
 
   // ── 1. Повторения, с потолком по бюджету ────────────────────────────
-  const queue = buildQueue({ scheduler, items, now, budgetSec: b.review })
+  const queue = buildQueue({ scheduler, items, now, budgetSec: b.review, suspendedRefIds })
   if (queue.due.length) {
     activities.push({
       kind: 'review',
@@ -125,18 +128,23 @@ export function generateLesson(input: LessonInput): Lesson {
   }
 
   // ── 4. Новые слова — сколько реально потянем ────────────────────────
-  const allowance = newItemAllowance(plan.newWordCount, queue, b.review)
-  if (allowance > 0 && plan.lexemeIds.length) {
+  const fresh = suspendedRefIds
+    ? plan.lexemeIds.filter((id) => !suspendedRefIds.has(id))
+    : plan.lexemeIds
+  const skipped = plan.lexemeIds.length - fresh.length
+  const wanted = Math.max(0, plan.newWordCount - skipped)
+  const allowance = Math.min(fresh.length, newItemAllowance(wanted, queue, b.review))
+  if (allowance > 0) {
     activities.push({
       kind: 'new-words',
       budgetSec: allowance * 20,
-      refIds: plan.lexemeIds.slice(0, allowance),
+      refIds: fresh.slice(0, allowance),
       reason: `${allowance} новых слов`,
     })
-    if (allowance < plan.newWordCount) {
-      notes.push(`Новых слов урезано: ${plan.newWordCount} → ${allowance}, нагрузка высокая`)
+    if (allowance < wanted) {
+      notes.push(`Новых слов урезано: ${wanted} → ${allowance}, нагрузка высокая`)
     }
-  } else if (plan.newWordCount > 0) {
+  } else if (wanted > 0) {
     notes.push('Новые слова пропущены: бюджет занят повторениями')
   }
 

@@ -22,6 +22,7 @@ export interface QueueInput {
   now: Date
   /** Сколько секунд отведено на повторение в этот день */
   budgetSec: number
+  suspendedRefIds?: ReadonlySet<string>
 }
 
 export interface QueueResult {
@@ -40,9 +41,13 @@ export interface QueueResult {
 /** Во сколько раз превышение бюджета считается завалом. */
 const BACKLOG_FACTOR = 3
 
-export function buildQueue({ scheduler, items, now, budgetSec }: QueueInput): QueueResult {
+export function buildQueue({
+  scheduler, items, now, budgetSec, suspendedRefIds,
+}: QueueInput): QueueResult {
   const dueAll = items.filter(
-    (i) => i.card.state !== State.New && i.card.due.getTime() <= now.getTime())
+    (i) => i.card.state !== State.New
+      && i.card.due.getTime() <= now.getTime()
+      && !suspendedRefIds?.has(i.refId))
 
   // Срочность = насколько вероятно, что элемент уже забыт.
   // Это важнее давности: карточка, просроченная на месяц, но лёгкая,

@@ -79,16 +79,19 @@ export interface Lexeme {
 export interface GrammarRule {
   id: string
   category: string
-  title: { pl: string; ru: string }
+  title: Record<string, string>
   summary: string
+  summaryI18n?: Record<string, string>
   prerequisites: string[]
   difficulty: number
   interferenceRu: number
-  examples: { pl: string; ru: string }[]
+  examples: Record<string, string>[]
   pitfallsForRu?: string[]
+  pitfallsI18n?: Record<string, string[]>
   examModules: string[]
   exerciseKinds: string[]
   teachingNote?: string
+  teachingNoteI18n?: Record<string, string>
 }
 
 const memo = new Map<string, Promise<unknown>>()
@@ -142,6 +145,7 @@ export async function loadGrammarRules(): Promise<Map<string, GrammarRule>> {
 export async function currentDayNumber(totalDays: number): Promise<number> {
   const { course, sessions } = await loadState()
   if (!course) return 1
-  const completed = sessions.filter((s) => s.completedAt).length
-  return Math.min(totalDays, completed + 1)
+  const done = new Set(
+    sessions.filter((s) => s.completedAt && s.kind === 'day').map((s) => s.dayNumber))
+  return Math.min(totalDays, done.size + 1)
 }

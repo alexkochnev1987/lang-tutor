@@ -13,7 +13,8 @@ export const runtime = 'nodejs'
 export const dynamic = 'force-dynamic'
 
 const ALLOWED = new Set([
-  'uiLanguage', 'sourceLanguage', 'theme', 'dailyBudgetMinutes', 'ttsVoiceURI', 'ttsRate',
+  'uiLanguage', 'sourceLanguage', 'ruleLanguage',
+  'theme', 'dailyBudgetMinutes', 'ttsVoiceURI', 'ttsRate',
 ])
 
 export const PATCH = withUser(async ({ userId, req }) => {

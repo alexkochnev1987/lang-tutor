@@ -16,8 +16,8 @@
 import { useSyncExternalStore } from 'react'
 import {
   DEFAULT_SETTINGS,
-  type AppState, type LessonSessionRow, type RuleMasteryRow,
-  type Settings, type StudyItemRow,
+  type AppState, type LessonSessionRow, type LexemeStatusRow,
+  type RuleMasteryRow, type Settings, type StudyItemRow,
 } from './types'
 
 let snapshot: AppState | null = null
@@ -57,6 +57,7 @@ function parse(raw: Record<string, unknown>): AppState {
       ...s, startedAt: date(s.startedAt), completedAt: maybeDate(s.completedAt),
     })),
     personalDict: (r.personalDict ?? []).map((w) => ({ ...w, createdAt: date(w.createdAt) })),
+    lexemeStatus: (r.lexemeStatus ?? []).map((l) => ({ ...l, markedAt: date(l.markedAt) })),
   }
 }
 
@@ -197,6 +198,27 @@ export async function saveLessonSession(s: LessonSessionRow): Promise<void> {
     console.error('[lesson]', e)
     void refresh()
   }
+}
+
+export async function setLexemeKnown(lexemeId: string, known: boolean): Promise<void> {
+  const row: LexemeStatusRow = {
+    lexemeId, status: known ? 'known' : 'active', markedAt: new Date(),
+  }
+  patch((s) => ({
+    ...s,
+    lexemeStatus: [...s.lexemeStatus.filter((l) => l.lexemeId !== lexemeId), row],
+  }))
+  try {
+    await request('/api/lexeme/', { method: 'POST', body: JSON.stringify(row) })
+  } catch (e) {
+    console.error('[lexeme]', e)
+    void refresh()
+  }
+}
+
+export function knownLexemeIds(state: AppState | null): ReadonlySet<string> {
+  return new Set(
+    (state?.lexemeStatus ?? []).filter((l) => l.status === 'known').map((l) => l.lexemeId))
 }
 
 export async function signInWithGoogle(idToken: string): Promise<void> {

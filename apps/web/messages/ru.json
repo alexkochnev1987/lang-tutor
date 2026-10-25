@@ -7,7 +7,8 @@
     "today": "Сегодня",
     "plan": "Программа",
     "dictionary": "Словарь",
-    "progress": "Прогресс"
+    "progress": "Прогресс",
+    "grammar": "Грамматика"
   },
   "today": {
     "title": "Занятие на сегодня",
@@ -52,7 +53,8 @@
     "appearance": "Оформление",
     "appearanceHint": "Выберите тему и цветовую палитру",
     "palette": "Палитра",
-    "done": "Готово"
+    "done": "Готово",
+    "ruleLanguage": "Язык правил"
   },
   "auth": {
     "signIn": "Войти",

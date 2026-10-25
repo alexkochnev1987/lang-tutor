@@ -104,6 +104,15 @@ export const ruleMastery = pgTable('rule_mastery', {
   updatedAt: timestamp('updated_at', { withTimezone: true }).notNull().defaultNow(),
 }, (t) => [primaryKey({ columns: [t.userId, t.grammarRuleId] })])
 
+export const lexemeStatus = pgTable('lexeme_status', {
+  userId: text('user_id').notNull().references(() => users.id, { onDelete: 'cascade' }),
+  courseId: text('course_id').notNull(),
+  lexemeId: text('lexeme_id').notNull(),
+  status: text('status').notNull(),
+  markedAt: timestamp('marked_at', { withTimezone: true }).notNull().defaultNow(),
+  updatedAt: timestamp('updated_at', { withTimezone: true }).notNull().defaultNow(),
+}, (t) => [primaryKey({ columns: [t.userId, t.courseId, t.lexemeId] })])
+
 /** Готовность по модулям экзамена: порог 50% считается по каждому отдельно */
 export const moduleReadiness = pgTable('module_readiness', {
   userId: text('user_id').notNull().references(() => users.id, { onDelete: 'cascade' }),
@@ -140,6 +149,7 @@ export const lessonSessions = pgTable('lesson_sessions', {
   userId: text('user_id').notNull().references(() => users.id, { onDelete: 'cascade' }),
   courseId: text('course_id').notNull(),
   dayNumber: integer('day_number').notNull(),
+  kind: text('kind').notNull().default('day'),
   startedAt: timestamp('started_at', { withTimezone: true }).notNull(),
   completedAt: timestamp('completed_at', { withTimezone: true }),
   plannedBudgetMs: integer('planned_budget_ms').notNull(),

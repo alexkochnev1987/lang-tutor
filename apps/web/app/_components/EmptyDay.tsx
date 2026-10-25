@@ -28,7 +28,7 @@ export function EmptyDay({ day, onDone }: { day: CurriculumDay; onDone: () => vo
     setBusy(true)
     await saveLessonSession({
       id: crypto.randomUUID(),
-      dayNumber: day.day, startedAt: new Date(), completedAt: new Date(),
+      dayNumber: day.day, kind: 'day', startedAt: new Date(), completedAt: new Date(),
       plannedBudgetMs: day.totalSec * 1000, actualMs: 0,
       itemsReviewed: 0, itemsCorrect: 0,
     })

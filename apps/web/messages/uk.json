@@ -7,7 +7,8 @@
     "today": "Сьогодні",
     "plan": "Програма",
     "dictionary": "Словник",
-    "progress": "Прогрес"
+    "progress": "Прогрес",
+    "grammar": "Граматика"
   },
   "today": {
     "title": "Заняття на сьогодні",
@@ -52,7 +53,8 @@
     "appearance": "Оформлення",
     "appearanceHint": "Оберіть тему та кольорову палітру",
     "palette": "Палітра",
-    "done": "Готово"
+    "done": "Готово",
+    "ruleLanguage": "Мова правил"
   },
   "auth": {
     "signIn": "Увійти",

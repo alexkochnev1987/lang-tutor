@@ -7,7 +7,8 @@
     "today": "Today",
     "plan": "Plan",
     "dictionary": "Dictionary",
-    "progress": "Progress"
+    "progress": "Progress",
+    "grammar": "Grammar"
   },
   "today": {
     "title": "Today's lesson",
@@ -52,7 +53,8 @@
     "appearance": "Appearance",
     "appearanceHint": "Pick a theme and a colour palette",
     "palette": "Palette",
-    "done": "Done"
+    "done": "Done",
+    "ruleLanguage": "Rule language"
   },
   "auth": {
     "signIn": "Sign in",

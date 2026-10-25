@@ -5,8 +5,10 @@ import { usePathname } from 'next/navigation'
 import { useTranslations } from 'next-intl'
 
 const TABS = [
-  { href: '/',         key: 'today',    icon: '📅' },
-  { href: '/progress', key: 'progress', icon: '📊' },
+  { href: '/',           key: 'today',      icon: '📅' },
+  { href: '/dictionary', key: 'dictionary', icon: '🔤' },
+  { href: '/grammar',    key: 'grammar',    icon: '📘' },
+  { href: '/progress',   key: 'progress',   icon: '📊' },
 ] as const
 
 /**

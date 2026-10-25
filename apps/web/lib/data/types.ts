@@ -47,15 +47,24 @@ export interface ModuleReadinessRow {
   lastMockAt: Date | null
 }
 
+export type SessionKind = 'day' | 'grammar' | 'words'
+
 export interface LessonSessionRow {
   id: string
   dayNumber: number
+  kind: SessionKind
   startedAt: Date
   completedAt: Date | null
   plannedBudgetMs: number
   actualMs: number | null
   itemsReviewed: number
   itemsCorrect: number
+}
+
+export interface LexemeStatusRow {
+  lexemeId: string
+  status: 'known' | 'active'
+  markedAt: Date
 }
 
 export interface PersonalWordRow {
@@ -87,6 +96,7 @@ export interface SessionUser {
 export interface Settings {
   uiLanguage: string      // язык интерфейса
   sourceLanguage: string  // язык переводов слов — может отличаться от UI
+  ruleLanguage: string
   theme: 'light' | 'dark' | 'system'
   dailyBudgetMinutes: number
   ttsVoiceURI: string | null
@@ -96,6 +106,7 @@ export interface Settings {
 export const DEFAULT_SETTINGS: Settings = {
   uiLanguage: 'ru',
   sourceLanguage: 'ru',
+  ruleLanguage: 'ru',
   theme: 'system',
   dailyBudgetMinutes: 15,
   ttsVoiceURI: null,
@@ -112,4 +123,5 @@ export interface AppState {
   readiness: ModuleReadinessRow[]
   sessions: LessonSessionRow[]
   personalDict: PersonalWordRow[]
+  lexemeStatus: LexemeStatusRow[]
 }

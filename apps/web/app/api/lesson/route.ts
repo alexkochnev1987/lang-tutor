@@ -11,6 +11,7 @@ const COURSE_ID = process.env.NEXT_PUBLIC_COURSE_ID ?? 'pl-b1-ru'
 interface Body {
   id: string
   dayNumber: number
+  kind?: 'day' | 'grammar' | 'words'
   startedAt: string
   completedAt?: string
   plannedBudgetMs: number
@@ -28,6 +29,7 @@ export const POST = withUser(async ({ userId, req }) => {
     userId,
     courseId: COURSE_ID,
     dayNumber: b.dayNumber,
+    kind: b.kind ?? 'day',
     startedAt: new Date(b.startedAt),
     completedAt: b.completedAt ? new Date(b.completedAt) : null,
     plannedBudgetMs: b.plannedBudgetMs,

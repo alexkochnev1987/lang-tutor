@@ -38,7 +38,7 @@ export function Diagnostic({ day, onDone }: { day: number; onDone: () => void })
       await startCourse(picked)
       await saveLessonSession({
         id: crypto.randomUUID(),
-        dayNumber: day, startedAt: new Date(), completedAt: new Date(),
+        dayNumber: day, kind: 'day', startedAt: new Date(), completedAt: new Date(),
         plannedBudgetMs: 900_000, actualMs: 0, itemsReviewed: 0, itemsCorrect: 0,
       })
       onDone()

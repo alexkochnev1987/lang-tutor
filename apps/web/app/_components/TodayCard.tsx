@@ -3,13 +3,9 @@
 import { useEffect, useState } from 'react'
 import Link from 'next/link'
 import { useTranslations } from 'next-intl'
-import { State } from 'ts-fsrs'
 import { Button, Card, Row, Stack } from '@polski/ui'
-import {
-  loadCurriculum, loadGrammarRules, loadVocabulary, currentDayNumber,
-  type CurriculumDay, type GrammarRule, type Lexeme,
-} from '@/lib/content/curriculum'
-import { useAppState } from '@/lib/data/store'
+import { STAGE_TITLE, buildTodayPlan, type Stage, type TodayPlan } from '@/lib/engine/plan'
+import type { CurriculumDay } from '@/lib/content/curriculum'
 import { WordRow } from './WordRow'
 
 const KIND_LABEL: Record<CurriculumDay['kind'], string> = {
@@ -21,156 +17,133 @@ const KIND_LABEL: Record<CurriculumDay['kind'], string> = {
   final: 'Итоговая оценка',
 }
 
-const BLOCK_LABEL: Record<string, string> = {
-  review: 'Повторение',
-  newGrammar: 'Новая грамматика',
-  practice: 'Практика',
-  exam: 'Экзаменационное задание',
-  analysis: 'Разбор ошибок',
+function stageSummary(stage: Stage, plan: TodayPlan): string {
+  const exercises = stage.steps.filter((s) => s.kind === 'exercise').length
+  if (stage.id === 'words') {
+    const parts: string[] = []
+    if (plan.reviewCount) parts.push(`${plan.reviewCount} на повторение`)
+    if (plan.newWords.length) parts.push(`${plan.newWords.length} новых`)
+    return parts.join(' · ') || 'нет заданий'
+  }
+  if (stage.id === 'analysis') return 'по ошибкам занятия'
+  if (!exercises) return 'нет заданий'
+  return `${exercises} заданий`
 }
 
 export function TodayCard() {
   const t = useTranslations()
-  const [day, setDay] = useState<CurriculumDay | null>(null)
-  const [total, setTotal] = useState(182)
-  const [rule, setRule] = useState<GrammarRule | null>(null)
-  const [words, setWords] = useState<Lexeme[]>([])
+  const [plan, setPlan] = useState<TodayPlan | null>(null)
   const [error, setError] = useState(false)
-
-  /**
-   * Сколько карточек подошло по сроку. Считается из того же состояния,
-   * что и очередь занятия, поэтому цифра не разъезжается с тем, что
-   * человек увидит внутри: FSRS возвращает слово через свой интервал, и
-   * до занятия полезно знать, что возврат будет.
-   */
-  const state = useAppState()
-  const due = state
-    ? state.studyItems.filter((i) =>
-        i.kind !== 'rule-card'
-        // State.New исключается так же, как в buildQueue: карточка,
-        // которую ещё ни разу не показали, — это не повторение, и
-        // счётчик не должен обещать больше, чем будет в занятии
-        && i.state !== State.New
-        && i.due <= new Date()).length
-    : 0
 
   useEffect(() => {
     let alive = true
-    ;(async () => {
-      try {
-        const c = await loadCurriculum()
-        const n = await currentDayNumber(c.stats.totalDays)
-        const d = c.days[n - 1]
-        if (!alive) return
-        setTotal(c.stats.totalDays)
-        setDay(d)
-        if (d.grammarRuleIds.length) {
-          const rules = await loadGrammarRules()
-          if (alive) setRule(rules.get(d.grammarRuleIds[0]) ?? null)
-        }
-        if (d.lexemeIds?.length) {
-          const vocab = await loadVocabulary()
-          if (alive) setWords(d.lexemeIds.map((id) => vocab.get(id)).filter(Boolean) as Lexeme[])
-        }
-      } catch {
-        if (alive) setError(true)
-      }
-    })()
+    buildTodayPlan()
+      .then((p) => { if (alive) setPlan(p) })
+      .catch(() => { if (alive) setError(true) })
     return () => { alive = false }
   }, [])
 
   if (error) {
     return <Card><p className="text-sm text-danger">{t('errors.generic')}</p></Card>
   }
-  if (!day) {
+  if (!plan) {
     return <Card><p className="text-sm text-muted">{t('common.loading')}</p></Card>
   }
 
-  const blocks = Object.entries(day.timeBudgetSec).filter(([, s]) => s > 0)
+  const { day } = plan
+  const minutes = Math.max(1, Math.round(plan.estimatedSec / 60))
+  const grammar = plan.stages.find((s) => s.id === 'grammar')
 
   return (
-    <Card>
-      <Stack gap="md">
-        <Stack gap="none">
-          <Row gap="sm" justify="between">
-            <span className="text-xs tracking-wide text-muted uppercase">
-              {t('today.day', { day: day.day, total })}
-            </span>
-            <span className="rounded-pill bg-soft2 px-2 py-0.5 text-xs text-accent-ink">
-              {KIND_LABEL[day.kind]}
-            </span>
-          </Row>
-          <h1 className="text-xl font-semibold">{day.topic}</h1>
-          <span className="text-sm text-muted">
-            Неделя {day.week} · {day.phaseTitle} · тема «{day.themeRu}»
-          </span>
-        </Stack>
-
-        {rule && (
-          <Stack gap="xs" className="rounded-card bg-soft p-3">
+    <Stack gap="lg">
+      <Card>
+        <Stack gap="md">
+          <Stack gap="none">
             <Row gap="sm" justify="between">
-              <strong className="text-sm">{rule.title.pl}</strong>
-              {rule.interferenceRu >= 4 && (
-                <span className="rounded-pill bg-warn-bg px-2 py-0.5 text-xs text-warn-ink">
-                  русский мешает
-                </span>
-              )}
+              <span className="text-xs tracking-wide text-muted uppercase">
+                {t('today.day', { day: plan.dayNumber, total: plan.totalDays })}
+              </span>
+              <span className="rounded-pill bg-soft2 px-2 py-0.5 text-xs text-accent-ink">
+                {KIND_LABEL[day.kind]}
+              </span>
             </Row>
-            <p className="text-sm text-muted">{rule.summary}</p>
-            {rule.examples[0] && (
-              <p className="text-sm">
-                <span className="text-accent-ink">{rule.examples[0].pl}</span>
-                <span className="text-muted"> — {rule.examples[0].ru}</span>
-              </p>
-            )}
+            <h1 className="text-xl font-semibold">{day.topic}</h1>
+            <span className="text-sm text-muted">
+              Неделя {day.week} · {day.phaseTitle} · тема «{day.themeRu}»
+            </span>
           </Stack>
-        )}
 
-        {due > 0 && (
-          <Row gap="sm" justify="between"
-               className="rounded-card bg-soft2 px-3 py-2">
-            <span className="text-sm text-accent-ink">Вернулось на повторение</span>
-            <span className="text-sm font-semibold tabular-nums text-accent-ink">
-              {due}
-            </span>
-          </Row>
-        )}
-
-        <Stack gap="xs">
-          {blocks.map(([name, sec]) => (
-            <Row key={name} gap="sm" justify="between">
-              <span className="text-sm text-muted">{BLOCK_LABEL[name] ?? name}</span>
-              <span className="text-sm tabular-nums">{Math.round(sec / 60)} мин</span>
+          {plan.deferredCount > 0 && (
+            <Row gap="sm" justify="between" className="rounded-card bg-soft2 px-3 py-2">
+              <span className="text-sm text-accent-ink">Не поместилось в бюджет</span>
+              <span className="text-sm font-semibold tabular-nums text-accent-ink">
+                {plan.deferredCount}
+              </span>
             </Row>
-          ))}
-        </Stack>
+          )}
 
-        {words.length > 0 && (
           <Stack gap="xs">
-            <span className="text-xs tracking-wide text-muted uppercase">
-              Слова дня · {words.length}
-            </span>
-            <div className="rounded-card border border-line">
-              <div className="px-3">
-                {words.map((w) => <WordRow key={w.id} word={w} />)}
-              </div>
+            {plan.stages.map((s) => (
+              <Row key={s.id} gap="sm" justify="between">
+                <span className="text-sm text-muted">{STAGE_TITLE[s.id]}</span>
+                <span className="text-sm tabular-nums">
+                  {s.missingContent ? '—' : stageSummary(s, plan)}
+                </span>
+              </Row>
+            ))}
+          </Stack>
+
+          {plan.stages.filter((s) => s.missingContent).map((s) => (
+            <p key={s.id} className="rounded-card bg-warn-bg px-3 py-2 text-xs text-warn-ink">
+              {STAGE_TITLE[s.id]} — {s.missingContent}
+            </p>
+          ))}
+
+          <Link href="/lesson" className="w-full">
+            <Button size="lg" full>
+              {day.kind === 'diagnostic'
+                ? 'Пройти диагностику'
+                : t('today.start', { minutes })}
+            </Button>
+          </Link>
+
+          <p className="text-xs text-muted">{day.expectedOutcome}</p>
+        </Stack>
+      </Card>
+
+      {grammar?.rule && (
+        <Card>
+          <Stack gap="md">
+            <Stack gap="none">
+              <span className="text-xs tracking-wide text-muted uppercase">Правило дня</span>
+              <strong className="text-base">{grammar.rule.titlePl}</strong>
+              <span className="text-sm text-muted">{grammar.rule.title}</span>
+            </Stack>
+            <p className="text-sm text-muted">{grammar.rule.summary}</p>
+            <Link href="/grammar" className="w-full">
+              <Button variant="outline" full>Тренажёр грамматики</Button>
+            </Link>
+          </Stack>
+        </Card>
+      )}
+
+      {plan.newWords.length > 0 && (
+        <Card>
+          <Stack gap="md">
+            <Row gap="sm" justify="between">
+              <span className="text-xs tracking-wide text-muted uppercase">
+                Слова дня · {plan.newWords.length}
+              </span>
+              <Link href="/dictionary" className="text-sm text-muted hover:text-ink">
+                Весь словарь →
+              </Link>
+            </Row>
+            <div className="-my-2">
+              {plan.newWords.map((w) => <WordRow key={w.id} word={w} />)}
             </div>
           </Stack>
-        )}
-
-        {/* Кнопка ведёт в занятие ВСЕГДА. Дни без слов и правил —
-            диагностика, срезы, контрольные — обрабатываются там
-            отдельными экранами, а не выключенной кнопкой. */}
-        <Link href="/lesson" className="w-full">
-          <Button size="lg" full>
-            {day.kind === 'diagnostic'
-              ? 'Пройти диагностику'
-              : t('today.start', { minutes: Math.round(day.totalSec / 60) })}
-          </Button>
-        </Link>
-
-        <p className="text-xs text-muted">{day.expectedOutcome}</p>
-      </Stack>
-    </Card>
+        </Card>
+      )}
+    </Stack>
   )
 }

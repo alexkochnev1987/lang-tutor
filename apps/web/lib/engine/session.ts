@@ -11,7 +11,7 @@ import {
   type DayPlan, type Grade, type Lesson, type ModuleScore,
   type PassRule, type RuleMastery, type StudyItem, type StudyItemKind,
 } from '@polski/engine'
-import { loadState, saveAnswer, saveMastery } from '@/lib/data/store'
+import { knownLexemeIds, loadState, saveAnswer, saveMastery } from '@/lib/data/store'
 import type { RuleMasteryRow, StudyItemRow } from '@/lib/data/types'
 import { type CurriculumDay } from '@/lib/content/curriculum'
 
@@ -68,8 +68,8 @@ export async function loadModuleScores(): Promise<ModuleScore[]> {
 }
 
 export async function buildTodayLesson(day: CurriculumDay): Promise<Lesson> {
-  const [items, mastery, moduleScores] = await Promise.all([
-    loadStudyItems(), loadMastery(), loadModuleScores(),
+  const [items, mastery, moduleScores, state] = await Promise.all([
+    loadStudyItems(), loadMastery(), loadModuleScores(), loadState(),
   ])
   const plan: DayPlan = {
     day: day.day, kind: day.kind,
@@ -80,6 +80,7 @@ export async function buildTodayLesson(day: CurriculumDay): Promise<Lesson> {
   return generateLesson({
     scheduler, plan, items, mastery, moduleScores,
     passRule: PASS_RULE, now: new Date(),
+    suspendedRefIds: knownLexemeIds(state),
   })
 }
 
