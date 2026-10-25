@@ -233,6 +233,105 @@ export function gapFill(
 }
 
 // ─────────────────────────────────────────────────────────────────────
+// Sentence-based exercises: pre-authored content from the language pack
+// ─────────────────────────────────────────────────────────────────────
+
+const GAP_MARK = '␣␣␣'
+
+export const SENTENCE_ATTEMPTS = 3
+
+export interface SentenceGapLike {
+  id: string
+  /** Contains exactly one `___` gap */
+  sentence: string
+  answers: string[]
+  /** Hand-vetted to be ungrammatical in this context — a random paradigm
+   *  form can't guarantee that: it sometimes fits the sentence too. */
+  distractors?: string[]
+  translation?: string
+}
+
+export function sentenceChoice(
+  item: SentenceGapLike, paradigmForms: readonly string[], ctx: ExerciseContext,
+  ruleIds: string[] = [],
+): ChoiceExercise | null {
+  const answer = item.answers[0]
+  if (!answer) return null
+  const banned = new Set(item.answers.map((a) => a.toLowerCase()))
+  const pool = [...(item.distractors ?? []), ...shuffle(paradigmForms, ctx.seed)]
+  const distractors: string[] = []
+  for (const d of pool) {
+    if (banned.has(d.toLowerCase()) || distractors.includes(d)) continue
+    distractors.push(d)
+    if (distractors.length === 3) break
+  }
+  if (distractors.length < 3) return null
+  return {
+    id: `ex.sgap.${item.id}.choice`,
+    kind: 'sentence-choice',
+    mode: 'choice',
+    difficulty: 3,
+    grammarRuleIds: ruleIds,
+    moduleId: 'grammar',
+    estimatedSec: 15,
+    attemptsAllowed: SENTENCE_ATTEMPTS,
+    instruction: 'Выберите слово в пропуск',
+    prompt: item.sentence.replace('___', GAP_MARK),
+    options: shuffle([answer, ...distractors], ctx.seed + 1),
+    answer,
+    explanation: item.translation,
+  }
+}
+
+export function sentenceTyped(
+  item: SentenceGapLike, ruleIds: string[] = [],
+): TypedExercise | null {
+  if (!item.answers.length) return null
+  return {
+    id: `ex.sgap.${item.id}.typed`,
+    kind: 'sentence-typed',
+    mode: 'typed',
+    difficulty: 4,
+    grammarRuleIds: ruleIds,
+    moduleId: 'grammar',
+    estimatedSec: 20,
+    attemptsAllowed: SENTENCE_ATTEMPTS,
+    instruction: 'Впишите слово в пропуск',
+    prompt: item.sentence.replace('___', GAP_MARK),
+    accepted: [...item.answers],
+    explanation: item.translation,
+  }
+}
+
+export interface SentenceResponseLike {
+  id: string
+  question: string
+  answers: string[]
+  instruction?: string
+  translation?: string
+}
+
+export function sentenceWrite(
+  item: SentenceResponseLike, ruleIds: string[] = [],
+): TypedExercise | null {
+  if (!item.answers.length) return null
+  return {
+    id: `ex.swrite.${item.id}`,
+    kind: 'sentence-write',
+    mode: 'typed',
+    difficulty: 5,
+    grammarRuleIds: ruleIds,
+    moduleId: 'grammar',
+    estimatedSec: 40,
+    attemptsAllowed: SENTENCE_ATTEMPTS,
+    instruction: item.instruction ?? 'Напишите ответ целым предложением',
+    prompt: item.question,
+    accepted: [...item.answers],
+    explanation: item.translation,
+  }
+}
+
+// ─────────────────────────────────────────────────────────────────────
 // Проверка ответа
 // ─────────────────────────────────────────────────────────────────────
 
@@ -245,6 +344,10 @@ export interface CheckResult {
 
 /** Нормализация для сравнения: регистр и лишние пробелы. Диакритика — НЕТ. */
 const norm = (s: string) => s.trim().toLowerCase().replace(/\s+/g, ' ')
+
+/** Full sentences also forgive punctuation: the exam grades word forms. */
+const normSentence = (s: string) =>
+  norm(s).replace(/[.,!?…;:„”"']+/g, ' ').replace(/\s+/g, ' ').trim()
 
 /** Снятие диакритики — только чтобы отличить её потерю от другой ошибки. */
 const DIACRITIC_MAP: Record<string, string> = {
@@ -267,16 +370,18 @@ export function check(ex: Exercise, answer: string): CheckResult {
     }
   }
   // typed
-  const a = norm(answer)
-  if (ex.accepted.some((x) => norm(x) === a)) {
+  const normT = ex.kind === 'sentence-write' ? normSentence : norm
+  const a = normT(answer)
+  if (ex.accepted.some((x) => normT(x) === a)) {
     return { correct: true, expected: ex.accepted[0]! }
   }
   // диакритика потеряна — отдельная ошибка: на экзамене её засчитывают как ошибку,
   // но учащемуся полезно знать, что форму он выбрал верно
-  if (ex.accepted.some((x) => stripDiacritics(norm(x)) === stripDiacritics(a))) {
+  if (ex.accepted.some((x) => stripDiacritics(normT(x)) === stripDiacritics(a))) {
     return { correct: false, errorKind: 'diacritic', expected: ex.accepted[0]! }
   }
-  const close = ex.accepted.some((x) => levenshtein(norm(x), a) <= 1)
+  const typoBudget = ex.kind === 'sentence-write' ? 2 : 1
+  const close = ex.accepted.some((x) => levenshtein(normT(x), a) <= typoBudget)
   return {
     correct: false,
     errorKind: close ? 'typo' : 'wrong-form',

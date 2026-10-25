@@ -5,7 +5,7 @@ import Link from 'next/link'
 import { Button, Card, Row, Screen, Stack } from '@polski/ui'
 import type { CheckResult, Exercise } from '@polski/engine'
 import {
-  buildAnalysisSteps, buildTodayPlan, STAGE_TITLE,
+  buildAnalysisSteps, buildTodayPlan, hasAltMode, otherDrillMode, STAGE_TITLE, withDrillMode,
   type Mistake, type Stage, type StageId, type Step, type TodayPlan,
 } from '@/lib/engine/plan'
 import { ensureLexemeCards, recordAnswer, recordRuleAttempt, Rating } from '@/lib/engine/session'
@@ -89,6 +89,16 @@ export default function LessonPage() {
     for (const ruleId of ex.grammarRuleIds) {
       await recordRuleAttempt(ruleId, r.correct, ex.difficulty)
     }
+  }
+
+  function switchKind() {
+    const cur = slots[i]
+    if (cur?.kind !== 'step') return
+    const mode = otherDrillMode(cur.step)
+    if (!mode) return
+    // disliking the kind, not the sentence — so the rest of the task switches too
+    setSlots((prev) => prev.map((s, idx) => (
+      idx < i || s.kind !== 'step' ? s : { ...s, step: withDrillMode(s.step, mode) })))
   }
 
   function skipWord(lexemeId: string) {
@@ -237,6 +247,16 @@ export default function LessonPage() {
             />
             <Row gap="sm" justify="center">
               {slot.step.rule && <RuleSheet rule={slot.step.rule} />}
+              {!canAdvance && hasAltMode(slot.step) && (
+                <button
+                  type="button"
+                  onClick={switchKind}
+                  className="inline-flex min-h-10 items-center gap-1.5 rounded-card bg-soft px-3 text-sm text-muted hover:bg-soft2 hover:text-ink"
+                >
+                  <span aria-hidden>🎲</span>
+                  Другой вид задания
+                </button>
+              )}
             </Row>
             {canAdvance && (
               <Button size="lg" full onClick={next}>
