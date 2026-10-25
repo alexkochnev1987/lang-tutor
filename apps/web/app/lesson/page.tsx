@@ -8,18 +8,18 @@ import {
   currentDayNumber, loadCurriculum, loadMorphology, loadVocabulary,
   type CurriculumDay, type Lexeme,
 } from '@/lib/content/curriculum'
-import { exercisesForRule, exercisesForWord } from '@/lib/engine/exercises'
+import { exerciseForReview, exercisesForRule, exercisesForWord } from '@/lib/engine/exercises'
 import {
   buildTodayLesson, ensureLexemeCards, recordAnswer, recordRuleAttempt, Rating,
 } from '@/lib/engine/session'
-import { saveLessonSession } from '@/lib/data/store'
+import { loadState, saveLessonSession } from '@/lib/data/store'
 import { ExerciseView, SpeakIcon } from '@/app/_components/ExerciseView'
 import { Diagnostic } from '@/app/_components/Diagnostic'
 import { EmptyDay } from '@/app/_components/EmptyDay'
 
 type Step =
   | { phase: 'intro'; word: Lexeme }
-  | { phase: 'exercise'; ex: Exercise }
+  | { phase: 'exercise'; ex: Exercise; review?: boolean }
 
 export default function LessonPage() {
   const [day, setDay] = useState<CurriculumDay | null>(null)
@@ -38,8 +38,8 @@ export default function LessonPage() {
       const c = await loadCurriculum()
       const n = await currentDayNumber(c.stats.totalDays)
       const d = c.days[n - 1]!
-      const [lesson, vocab, morph] = await Promise.all([
-        buildTodayLesson(d), loadVocabulary(), loadMorphology(),
+      const [lesson, vocab, morph, state] = await Promise.all([
+        buildTodayLesson(d), loadVocabulary(), loadMorphology(), loadState(),
       ])
       if (!alive) return
 
@@ -48,12 +48,29 @@ export default function LessonPage() {
       const newWords = newIds.map((id) => vocab.get(id)).filter(Boolean) as Lexeme[]
 
       const built: Step[] = []
-      // 1. новые слова: показ → упражнения
+
+      // 1. Повторения — первыми. Очередь, отложенная «на потом», копится
+      //    и превращается в завал: FSRS рассчитывает, что карточку
+      //    покажут в день, когда она подошла по сроку.
+      const reviewIds = lesson.activities.find((a) => a.kind === 'review')?.refIds ?? []
+      const byId = new Map(state.studyItems.map((i) => [i.id, i]))
+      for (const itemId of reviewIds) {
+        const item = byId.get(itemId)
+        // карточки правил повторяются через грамматические упражнения,
+        // а не через перевод слова
+        if (!item || item.kind === 'rule-card') continue
+        const word = vocab.get(item.refId)
+        if (!word) continue
+        const ex = exerciseForReview(word, item.kind, item.reps, all)
+        if (ex) built.push({ phase: 'exercise', ex, review: true })
+      }
+
+      // 2. новые слова: показ → упражнения
       for (const w of newWords) {
         built.push({ phase: 'intro', word: w })
         for (const ex of exercisesForWord(w, all)) built.push({ phase: 'exercise', ex })
       }
-      // 2. грамматика дня — на уже введённой лексике
+      // 3. грамматика дня — на уже введённой лексике
       const known = newWords.length ? newWords : all.slice(0, 20)
       for (const ruleId of d.grammarRuleIds) {
         for (const ex of exercisesForRule(ruleId, known, morph, 3)) {
@@ -175,6 +192,11 @@ export default function LessonPage() {
           /* R13: key обязателен — иначе стейт предыдущего упражнения
              переживёт смену задания и заблокирует ввод */
           <Stack gap="md">
+            {step.review && (
+              <p className="text-center text-xs uppercase tracking-wide text-muted">
+                Повторение
+              </p>
+            )}
             <ExerciseView
               key={`${i}-${step.ex.id}`}
               exercise={step.ex}

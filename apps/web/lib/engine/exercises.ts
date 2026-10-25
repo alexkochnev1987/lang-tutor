@@ -11,6 +11,7 @@ import {
 } from '@polski/engine'
 import { labelTag, RULE_TO_TAGS, resolveTag } from '@/lib/lang-pl/tags'
 import type { Lexeme, Paradigm } from '@/lib/content/curriculum'
+import type { StudyItemKind } from '@/lib/data/types'
 
 const hash = (s: string) => [...s].reduce((h, c) => (Math.imul(h, 31) + c.charCodeAt(0)) | 0, 7) >>> 0
 
@@ -40,6 +41,34 @@ export function exercisesForWord(word: Lexeme, pool: Lexeme[]): Exercise[] {
     out.push(spelling(word, { seed: seed + 13 }))
   }
   return out
+}
+
+/**
+ * Упражнение на повторение уже введённого слова.
+ *
+ * Два отличия от первого знакомства:
+ *
+ * 1. Тип определяется карточкой, а не словом. Узнавание (pl → ru) и
+ *    воспроизведение (ru → pl) — разные карточки с разными кривыми
+ *    забывания, и повторять надо ровно ту, которая подошла по сроку.
+ * 2. **Примеры каждый раз новые.** Сид сдвигается на число повторений,
+ *    поэтому дистракторы и выбранная форма меняются от раза к разу.
+ *    Иначе человек запоминает не слово, а расположение правильного
+ *    варианта в списке.
+ */
+export function exerciseForReview(
+  word: Lexeme, kind: StudyItemKind, reps: number, pool: Lexeme[],
+): Exercise | null {
+  // 101 — просто нечётный множитель: даёт заметно разные сиды на
+  // соседних повторениях, а не сдвиг на единицу
+  const seed = hash(word.id) + reps * 101
+
+  if (kind === 'lexeme-production') {
+    return translateProduction(word, pool.map((p) => p.lemma), { seed })
+  }
+  // ложный друг и на повторении идёт контрастом: это самая дорогая ошибка
+  return falseFriendContrast(word, { seed })
+    ?? translateRecognition(word, pool.map((p) => p.translation), { seed })
 }
 
 /** Грамматические упражнения по правилу — на лексике, которую уже знают. */

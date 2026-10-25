@@ -3,11 +3,13 @@
 import { useEffect, useState } from 'react'
 import Link from 'next/link'
 import { useTranslations } from 'next-intl'
+import { State } from 'ts-fsrs'
 import { Button, Card, Row, Stack } from '@polski/ui'
 import {
   loadCurriculum, loadGrammarRules, loadVocabulary, currentDayNumber,
   type CurriculumDay, type GrammarRule, type Lexeme,
 } from '@/lib/content/curriculum'
+import { useAppState } from '@/lib/data/store'
 import { WordRow } from './WordRow'
 
 const KIND_LABEL: Record<CurriculumDay['kind'], string> = {
@@ -34,6 +36,23 @@ export function TodayCard() {
   const [rule, setRule] = useState<GrammarRule | null>(null)
   const [words, setWords] = useState<Lexeme[]>([])
   const [error, setError] = useState(false)
+
+  /**
+   * Сколько карточек подошло по сроку. Считается из того же состояния,
+   * что и очередь занятия, поэтому цифра не разъезжается с тем, что
+   * человек увидит внутри: FSRS возвращает слово через свой интервал, и
+   * до занятия полезно знать, что возврат будет.
+   */
+  const state = useAppState()
+  const due = state
+    ? state.studyItems.filter((i) =>
+        i.kind !== 'rule-card'
+        // State.New исключается так же, как в buildQueue: карточка,
+        // которую ещё ни разу не показали, — это не повторение, и
+        // счётчик не должен обещать больше, чем будет в занятии
+        && i.state !== State.New
+        && i.due <= new Date()).length
+    : 0
 
   useEffect(() => {
     let alive = true
@@ -105,6 +124,16 @@ export function TodayCard() {
               </p>
             )}
           </Stack>
+        )}
+
+        {due > 0 && (
+          <Row gap="sm" justify="between"
+               className="rounded-card bg-soft2 px-3 py-2">
+            <span className="text-sm text-accent-ink">Вернулось на повторение</span>
+            <span className="text-sm font-semibold tabular-nums text-accent-ink">
+              {due}
+            </span>
+          </Row>
         )}
 
         <Stack gap="xs">
