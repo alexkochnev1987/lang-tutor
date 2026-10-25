@@ -3,25 +3,20 @@
 import { useEffect, useRef, useState } from 'react'
 import { Button, Card, OptionRow, Row, Stack } from '@polski/ui'
 import { check, type CheckResult, type Exercise } from '@polski/engine'
-import { NoVoiceForLanguage, speak, warmUpSpeech } from '@/lib/speech/tts'
-
-let warmed = false
+import { usePronounce } from '@/lib/speech/usePronounce'
 
 export function SpeakIcon({ text, size = 'md' }: { text: string; size?: 'sm' | 'md' }) {
-  const [err, setErr] = useState(false)
+  const { pronounce, message } = usePronounce()
   const cls = size === 'sm' ? 'size-9 text-base' : 'size-12 text-xl'
   return (
     <button
       type="button"
       aria-label={`Произнести ${text}`}
-      onClick={async () => {
-        if (!warmed) { warmUpSpeech(); warmed = true }
-        try { await speak(text, { lang: 'pl-PL' }) }
-        catch (e) { setErr(e instanceof NoVoiceForLanguage) }
-      }}
+      title={message ?? undefined}
+      onClick={() => pronounce(text)}
       className={`flex shrink-0 items-center justify-center rounded-pill bg-soft hover:bg-soft2 ${cls}`}
     >
-      {err ? '🔇' : '🔊'}
+      {message ? '🔇' : '🔊'}
     </button>
   )
 }

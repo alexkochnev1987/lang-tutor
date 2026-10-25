@@ -1,11 +1,8 @@
 'use client'
 
-import { useState } from 'react'
 import { Row } from '@polski/ui'
-import { NoVoiceForLanguage, speak, warmUpSpeech } from '@/lib/speech/tts'
+import { usePronounce } from '@/lib/speech/usePronounce'
 import type { Lexeme } from '@/lib/content/curriculum'
-
-let warmed = false
 
 const BADGE: Record<Lexeme['transparency'], { text: string; cls: string } | null> = {
   transparent: null,
@@ -15,18 +12,8 @@ const BADGE: Record<Lexeme['transparency'], { text: string; cls: string } | null
 }
 
 export function WordRow({ word }: { word: Lexeme }) {
-  const [err, setErr] = useState(false)
+  const { pronounce, message } = usePronounce()
   const badge = BADGE[word.transparency]
-
-  async function pronounce() {
-    if (!warmed) { warmUpSpeech(); warmed = true }
-    setErr(false)
-    try {
-      await speak(word.lemma, { lang: 'pl-PL' })
-    } catch (e) {
-      setErr(e instanceof NoVoiceForLanguage)
-    }
-  }
 
   return (
     <div className="border-b border-line py-2 last:border-0">
@@ -34,11 +21,11 @@ export function WordRow({ word }: { word: Lexeme }) {
         <Row gap="sm">
           <button
             type="button"
-            onClick={pronounce}
+            onClick={() => pronounce(word.lemma)}
             aria-label={`Произнести ${word.lemma}`}
             className="flex size-9 shrink-0 items-center justify-center rounded-pill bg-soft text-base hover:bg-soft2"
           >
-            🔊
+            {message ? '🔇' : '🔊'}
           </button>
           <div>
             <div className="text-base font-medium">{word.lemma}</div>
@@ -66,7 +53,7 @@ export function WordRow({ word }: { word: Lexeme }) {
       {word.government && (
         <p className="mt-1 ml-12 text-xs text-muted">управление: {word.government}</p>
       )}
-      {err && <p className="mt-1 ml-12 text-xs text-danger">нет польского голоса</p>}
+      {message && <p role="status" className="mt-1 ml-12 text-xs text-danger">{message}</p>}
     </div>
   )
 }
