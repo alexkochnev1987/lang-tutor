@@ -20,28 +20,28 @@
   }
  },
  "stats": {
-  "total": 327,
+  "total": 784,
   "byTransparency": {
    "false-friend": 35,
-   "transparent": 146,
-   "partial": 71,
-   "opaque": 75
+   "transparent": 333,
+   "partial": 194,
+   "opaque": 222
   },
   "byPriority": {
    "critical": 35,
    "high": 119,
-   "normal": 173
+   "normal": 630
   },
-  "totalCostSec": 30177,
-  "totalCostHours": 8.4,
-  "vocabBudgetSec": 56436,
-  "vocabBudgetHours": 15.7,
-  "capacityAtThisMix": 611,
-  "placedInDays": 327,
+  "totalCostSec": 54167,
+  "totalCostHours": 15,
+  "vocabBudgetSec": 188120,
+  "vocabBudgetHours": 52.3,
+  "capacityAtThisMix": 2722,
+  "placedInDays": 784,
   "slotsTotal": 804,
-  "slotsFilled": 327,
+  "slotsFilled": 784,
   "daysWanting": 155,
-  "daysFilled": 58
+  "daysFilled": 148
  },
  "items": [
   {
@@ -3619,6 +3619,4119 @@
    "translation": "способ",
    "transparency": "transparent",
    "themeId": "7.16",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.czlowiek",
+   "lemma": "człowiek",
+   "pos": "noun",
+   "translation": "человек",
+   "transparency": "transparent",
+   "themeId": "7.1",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.osoba",
+   "lemma": "osoba",
+   "pos": "noun",
+   "translation": "человек, лицо",
+   "transparency": "partial",
+   "themeId": "7.1",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.mezczyzna",
+   "lemma": "mężczyzna",
+   "pos": "noun",
+   "translation": "мужчина",
+   "transparency": "transparent",
+   "themeId": "7.1",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.kobieta",
+   "lemma": "kobieta",
+   "pos": "noun",
+   "translation": "женщина",
+   "transparency": "opaque",
+   "themeId": "7.1",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.dziewczyna",
+   "lemma": "dziewczyna",
+   "pos": "noun",
+   "translation": "девушка",
+   "transparency": "transparent",
+   "themeId": "7.1",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.chlopak",
+   "lemma": "chłopak",
+   "pos": "noun",
+   "translation": "парень",
+   "transparency": "partial",
+   "themeId": "7.1",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.mlody",
+   "lemma": "młody",
+   "pos": "adj",
+   "translation": "молодой",
+   "transparency": "transparent",
+   "themeId": "7.1",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.starszy",
+   "lemma": "starszy",
+   "pos": "adj",
+   "translation": "пожилой; старший",
+   "transparency": "partial",
+   "themeId": "7.1",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.charakter",
+   "lemma": "charakter",
+   "pos": "noun",
+   "translation": "характер",
+   "transparency": "transparent",
+   "themeId": "7.1",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.leniwy",
+   "lemma": "leniwy",
+   "pos": "adj",
+   "translation": "ленивый",
+   "transparency": "transparent",
+   "themeId": "7.1",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.madry",
+   "lemma": "mądry",
+   "pos": "adj",
+   "translation": "умный",
+   "transparency": "partial",
+   "themeId": "7.1",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.odwazny",
+   "lemma": "odważny",
+   "pos": "adj",
+   "translation": "смелый",
+   "transparency": "transparent",
+   "themeId": "7.1",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.spokojny",
+   "lemma": "spokojny",
+   "pos": "adj",
+   "translation": "спокойный",
+   "transparency": "transparent",
+   "themeId": "7.1",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.wlosy",
+   "lemma": "włosy",
+   "pos": "noun",
+   "translation": "волосы",
+   "transparency": "transparent",
+   "themeId": "7.1",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.twarz",
+   "lemma": "twarz",
+   "pos": "noun",
+   "translation": "лицо",
+   "transparency": "opaque",
+   "themeId": "7.1",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.okulary",
+   "lemma": "okulary",
+   "pos": "noun",
+   "translation": "очки",
+   "transparency": "opaque",
+   "themeId": "7.1",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.sasiad",
+   "lemma": "sąsiad",
+   "pos": "noun",
+   "translation": "сосед",
+   "transparency": "transparent",
+   "themeId": "7.1",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.babcia",
+   "lemma": "babcia",
+   "pos": "noun",
+   "translation": "бабушка",
+   "transparency": "transparent",
+   "themeId": "7.1",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.dziadek",
+   "lemma": "dziadek",
+   "pos": "noun",
+   "translation": "дедушка",
+   "transparency": "transparent",
+   "themeId": "7.1",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.corka",
+   "lemma": "córka",
+   "pos": "noun",
+   "translation": "дочь",
+   "transparency": "opaque",
+   "themeId": "7.1",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.syn",
+   "lemma": "syn",
+   "pos": "noun",
+   "translation": "сын",
+   "transparency": "transparent",
+   "themeId": "7.1",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.znajomy",
+   "lemma": "znajomy",
+   "pos": "noun",
+   "translation": "знакомый",
+   "transparency": "transparent",
+   "themeId": "7.1",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.blok",
+   "lemma": "blok",
+   "pos": "noun",
+   "translation": "многоквартирный дом",
+   "transparency": "partial",
+   "themeId": "7.2",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.parter",
+   "lemma": "parter",
+   "pos": "noun",
+   "translation": "первый этаж",
+   "transparency": "partial",
+   "themeId": "7.2",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.schody",
+   "lemma": "schody",
+   "pos": "noun",
+   "translation": "лестница",
+   "transparency": "partial",
+   "themeId": "7.2",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.drzwi",
+   "lemma": "drzwi",
+   "pos": "noun",
+   "translation": "дверь",
+   "transparency": "transparent",
+   "themeId": "7.2",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.okno",
+   "lemma": "okno",
+   "pos": "noun",
+   "translation": "окно",
+   "transparency": "transparent",
+   "themeId": "7.2",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.sciana",
+   "lemma": "ściana",
+   "pos": "noun",
+   "translation": "стена",
+   "transparency": "transparent",
+   "themeId": "7.2",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.podloga",
+   "lemma": "podłoga",
+   "pos": "noun",
+   "translation": "пол",
+   "transparency": "opaque",
+   "themeId": "7.2",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.sufit",
+   "lemma": "sufit",
+   "pos": "noun",
+   "translation": "потолок",
+   "transparency": "opaque",
+   "themeId": "7.2",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.balkon",
+   "lemma": "balkon",
+   "pos": "noun",
+   "translation": "балкон",
+   "transparency": "transparent",
+   "themeId": "7.2",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.lodowka",
+   "lemma": "lodówka",
+   "pos": "noun",
+   "translation": "холодильник",
+   "transparency": "opaque",
+   "themeId": "7.2",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.pralka",
+   "lemma": "pralka",
+   "pos": "noun",
+   "translation": "стиральная машина",
+   "transparency": "opaque",
+   "themeId": "7.2",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.prysznic",
+   "lemma": "prysznic",
+   "pos": "noun",
+   "translation": "душ",
+   "transparency": "opaque",
+   "themeId": "7.2",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.recznik",
+   "lemma": "ręcznik",
+   "pos": "noun",
+   "translation": "полотенце",
+   "transparency": "partial",
+   "themeId": "7.2",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.poduszka",
+   "lemma": "poduszka",
+   "pos": "noun",
+   "translation": "подушка",
+   "transparency": "transparent",
+   "themeId": "7.2",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.koc",
+   "lemma": "koc",
+   "pos": "noun",
+   "translation": "одеяло, плед",
+   "transparency": "opaque",
+   "themeId": "7.2",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.remont",
+   "lemma": "remont",
+   "pos": "noun",
+   "translation": "ремонт",
+   "transparency": "transparent",
+   "themeId": "7.2",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.sprzatac",
+   "lemma": "sprzątać",
+   "pos": "verb",
+   "translation": "убирать",
+   "transparency": "opaque",
+   "themeId": "7.2",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.porzadek",
+   "lemma": "porządek",
+   "pos": "noun",
+   "translation": "порядок",
+   "transparency": "transparent",
+   "themeId": "7.2",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.dzien",
+   "lemma": "dzień",
+   "pos": "noun",
+   "translation": "день",
+   "transparency": "transparent",
+   "themeId": "7.3",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.noc",
+   "lemma": "noc",
+   "pos": "noun",
+   "translation": "ночь",
+   "transparency": "transparent",
+   "themeId": "7.3",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.wtorek",
+   "lemma": "wtorek",
+   "pos": "noun",
+   "translation": "вторник",
+   "transparency": "transparent",
+   "themeId": "7.3",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.czwartek",
+   "lemma": "czwartek",
+   "pos": "noun",
+   "translation": "четверг",
+   "transparency": "transparent",
+   "themeId": "7.3",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.weekend",
+   "lemma": "weekend",
+   "pos": "noun",
+   "translation": "выходные",
+   "transparency": "opaque",
+   "themeId": "7.3",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.budzik",
+   "lemma": "budzik",
+   "pos": "noun",
+   "translation": "будильник",
+   "transparency": "partial",
+   "themeId": "7.3",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.spozniac-sie",
+   "lemma": "spóźniać się",
+   "pos": "verb",
+   "translation": "опаздывать",
+   "transparency": "opaque",
+   "themeId": "7.3",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.zdazyc",
+   "lemma": "zdążyć",
+   "pos": "verb",
+   "translation": "успеть",
+   "transparency": "opaque",
+   "themeId": "7.3",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.zalatwic",
+   "lemma": "załatwić",
+   "pos": "verb",
+   "translation": "уладить, оформить",
+   "transparency": "opaque",
+   "themeId": "7.3",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.codziennie",
+   "lemma": "codziennie",
+   "pos": "adv",
+   "translation": "ежедневно",
+   "transparency": "partial",
+   "themeId": "7.3",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.zwykle",
+   "lemma": "zwykle",
+   "pos": "adv",
+   "translation": "обычно",
+   "transparency": "partial",
+   "themeId": "7.3",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.rzadko",
+   "lemma": "rzadko",
+   "pos": "adv",
+   "translation": "редко",
+   "transparency": "transparent",
+   "themeId": "7.3",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.chwila",
+   "lemma": "chwila",
+   "pos": "noun",
+   "translation": "момент, минутка",
+   "transparency": "partial",
+   "themeId": "7.3",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.termin",
+   "lemma": "termin",
+   "pos": "noun",
+   "translation": "срок",
+   "transparency": "partial",
+   "themeId": "7.3",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.spotkanie",
+   "lemma": "spotkanie",
+   "pos": "noun",
+   "translation": "встреча",
+   "transparency": "opaque",
+   "themeId": "7.3",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.plan",
+   "lemma": "plan",
+   "pos": "noun",
+   "translation": "план",
+   "transparency": "transparent",
+   "themeId": "7.3",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.obowiazek",
+   "lemma": "obowiązek",
+   "pos": "noun",
+   "translation": "обязанность",
+   "transparency": "partial",
+   "themeId": "7.3",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.hobby",
+   "lemma": "hobby",
+   "pos": "noun",
+   "translation": "хобби",
+   "transparency": "transparent",
+   "themeId": "7.4",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.sport",
+   "lemma": "sport",
+   "pos": "noun",
+   "translation": "спорт",
+   "transparency": "transparent",
+   "themeId": "7.4",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.silownia",
+   "lemma": "siłownia",
+   "pos": "noun",
+   "translation": "тренажёрный зал",
+   "transparency": "opaque",
+   "themeId": "7.4",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.rower",
+   "lemma": "rower",
+   "pos": "noun",
+   "translation": "велосипед",
+   "transparency": "opaque",
+   "themeId": "7.4",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.narty",
+   "lemma": "narty",
+   "pos": "noun",
+   "translation": "лыжи",
+   "transparency": "opaque",
+   "themeId": "7.4",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.basen",
+   "lemma": "basen",
+   "pos": "noun",
+   "translation": "бассейн",
+   "transparency": "transparent",
+   "themeId": "7.4",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.teatr",
+   "lemma": "teatr",
+   "pos": "noun",
+   "translation": "театр",
+   "transparency": "transparent",
+   "themeId": "7.4",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.kino",
+   "lemma": "kino",
+   "pos": "noun",
+   "translation": "кино",
+   "transparency": "transparent",
+   "themeId": "7.4",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.aktor",
+   "lemma": "aktor",
+   "pos": "noun",
+   "translation": "актёр",
+   "transparency": "transparent",
+   "themeId": "7.4",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.przedstawienie",
+   "lemma": "przedstawienie",
+   "pos": "noun",
+   "translation": "спектакль",
+   "transparency": "partial",
+   "themeId": "7.4",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.gra",
+   "lemma": "gra",
+   "pos": "noun",
+   "translation": "игра",
+   "transparency": "transparent",
+   "themeId": "7.4",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.grac",
+   "lemma": "grać",
+   "pos": "verb",
+   "translation": "играть",
+   "transparency": "transparent",
+   "themeId": "7.4",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.spiewac",
+   "lemma": "śpiewać",
+   "pos": "verb",
+   "translation": "петь",
+   "transparency": "partial",
+   "themeId": "7.4",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.tanczyc",
+   "lemma": "tańczyć",
+   "pos": "verb",
+   "translation": "танцевать",
+   "transparency": "transparent",
+   "themeId": "7.4",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.spacer",
+   "lemma": "spacer",
+   "pos": "noun",
+   "translation": "прогулка",
+   "transparency": "opaque",
+   "themeId": "7.4",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.zbierac",
+   "lemma": "zbierać",
+   "pos": "verb",
+   "translation": "собирать",
+   "transparency": "transparent",
+   "themeId": "7.4",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.fotografia",
+   "lemma": "fotografia",
+   "pos": "noun",
+   "translation": "фотография",
+   "transparency": "transparent",
+   "themeId": "7.4",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.podrozowac",
+   "lemma": "podróżować",
+   "pos": "verb",
+   "translation": "путешествовать",
+   "transparency": "partial",
+   "themeId": "7.5",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.pasazer",
+   "lemma": "pasażer",
+   "pos": "noun",
+   "translation": "пассажир",
+   "transparency": "transparent",
+   "themeId": "7.5",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.peron",
+   "lemma": "peron",
+   "pos": "noun",
+   "translation": "платформа",
+   "transparency": "partial",
+   "themeId": "7.5",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.rozklad-jazdy",
+   "lemma": "rozkład jazdy",
+   "pos": "noun",
+   "translation": "расписание",
+   "transparency": "opaque",
+   "themeId": "7.5",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.kierowca",
+   "lemma": "kierowca",
+   "pos": "noun",
+   "translation": "водитель",
+   "transparency": "opaque",
+   "themeId": "7.5",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.benzyna",
+   "lemma": "benzyna",
+   "pos": "noun",
+   "translation": "бензин",
+   "transparency": "transparent",
+   "themeId": "7.5",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.droga",
+   "lemma": "droga",
+   "pos": "noun",
+   "translation": "дорога",
+   "transparency": "transparent",
+   "themeId": "7.5",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.mapa",
+   "lemma": "mapa",
+   "pos": "noun",
+   "translation": "карта",
+   "transparency": "partial",
+   "themeId": "7.5",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.hotel",
+   "lemma": "hotel",
+   "pos": "noun",
+   "translation": "гостиница",
+   "transparency": "transparent",
+   "themeId": "7.5",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.rezerwacja",
+   "lemma": "rezerwacja",
+   "pos": "noun",
+   "translation": "бронирование",
+   "transparency": "partial",
+   "themeId": "7.5",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.paszport",
+   "lemma": "paszport",
+   "pos": "noun",
+   "translation": "паспорт",
+   "transparency": "transparent",
+   "themeId": "7.5",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.granica",
+   "lemma": "granica",
+   "pos": "noun",
+   "translation": "граница",
+   "transparency": "transparent",
+   "themeId": "7.5",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.zwiedzac",
+   "lemma": "zwiedzać",
+   "pos": "verb",
+   "translation": "осматривать, ходить по достопримечательностям",
+   "transparency": "opaque",
+   "themeId": "7.5",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.przewodnik",
+   "lemma": "przewodnik",
+   "pos": "noun",
+   "translation": "гид; путеводитель",
+   "transparency": "partial",
+   "themeId": "7.5",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.plaza",
+   "lemma": "plaża",
+   "pos": "noun",
+   "translation": "пляж",
+   "transparency": "transparent",
+   "themeId": "7.5",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.wyjazd",
+   "lemma": "wyjazd",
+   "pos": "noun",
+   "translation": "отъезд, поездка",
+   "transparency": "partial",
+   "themeId": "7.5",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.przyjazd",
+   "lemma": "przyjazd",
+   "pos": "noun",
+   "translation": "приезд",
+   "transparency": "transparent",
+   "themeId": "7.5",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.rzad",
+   "lemma": "rząd",
+   "pos": "noun",
+   "translation": "правительство",
+   "transparency": "opaque",
+   "themeId": "7.6",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.prezydent",
+   "lemma": "prezydent",
+   "pos": "noun",
+   "translation": "президент",
+   "transparency": "transparent",
+   "themeId": "7.6",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.minister",
+   "lemma": "minister",
+   "pos": "noun",
+   "translation": "министр",
+   "transparency": "transparent",
+   "themeId": "7.6",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.prawo",
+   "lemma": "prawo",
+   "pos": "noun",
+   "translation": "право; закон",
+   "transparency": "transparent",
+   "themeId": "7.6",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.ustawa",
+   "lemma": "ustawa",
+   "pos": "noun",
+   "translation": "закон",
+   "transparency": "opaque",
+   "themeId": "7.6",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.sad",
+   "lemma": "sąd",
+   "pos": "noun",
+   "translation": "суд",
+   "transparency": "transparent",
+   "themeId": "7.6",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.obywatelstwo",
+   "lemma": "obywatelstwo",
+   "pos": "noun",
+   "translation": "гражданство",
+   "transparency": "opaque",
+   "themeId": "7.6",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.cudzoziemiec",
+   "lemma": "cudzoziemiec",
+   "pos": "noun",
+   "translation": "иностранец",
+   "transparency": "partial",
+   "themeId": "7.6",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.dowod-osobisty",
+   "lemma": "dowód osobisty",
+   "pos": "noun",
+   "translation": "удостоверение личности",
+   "transparency": "opaque",
+   "themeId": "7.6",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.formularz",
+   "lemma": "formularz",
+   "pos": "noun",
+   "translation": "бланк",
+   "transparency": "partial",
+   "themeId": "7.6",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.wniosek",
+   "lemma": "wniosek",
+   "pos": "noun",
+   "translation": "заявление; вывод",
+   "transparency": "opaque",
+   "themeId": "7.6",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.urzednik",
+   "lemma": "urzędnik",
+   "pos": "noun",
+   "translation": "чиновник",
+   "transparency": "partial",
+   "themeId": "7.6",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.kolejka",
+   "lemma": "kolejka",
+   "pos": "noun",
+   "translation": "очередь",
+   "transparency": "opaque",
+   "themeId": "7.6",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.spoleczenstwo",
+   "lemma": "społeczeństwo",
+   "pos": "noun",
+   "translation": "общество",
+   "transparency": "opaque",
+   "themeId": "7.6",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.choroba",
+   "lemma": "choroba",
+   "pos": "noun",
+   "translation": "болезнь",
+   "transparency": "partial",
+   "themeId": "7.7",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.chory",
+   "lemma": "chory",
+   "pos": "adj",
+   "translation": "больной",
+   "transparency": "partial",
+   "themeId": "7.7",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.zdrowy",
+   "lemma": "zdrowy",
+   "pos": "adj",
+   "translation": "здоровый",
+   "transparency": "transparent",
+   "themeId": "7.7",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.kaszel",
+   "lemma": "kaszel",
+   "pos": "noun",
+   "translation": "кашель",
+   "transparency": "transparent",
+   "themeId": "7.7",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.katar",
+   "lemma": "katar",
+   "pos": "noun",
+   "translation": "насморк",
+   "transparency": "opaque",
+   "themeId": "7.7",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.grypa",
+   "lemma": "grypa",
+   "pos": "noun",
+   "translation": "грипп",
+   "transparency": "transparent",
+   "themeId": "7.7",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.gardlo",
+   "lemma": "gardło",
+   "pos": "noun",
+   "translation": "горло",
+   "transparency": "transparent",
+   "themeId": "7.7",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.brzuch",
+   "lemma": "brzuch",
+   "pos": "noun",
+   "translation": "живот",
+   "transparency": "opaque",
+   "themeId": "7.7",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.serce",
+   "lemma": "serce",
+   "pos": "noun",
+   "translation": "сердце",
+   "transparency": "transparent",
+   "themeId": "7.7",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.plecy",
+   "lemma": "plecy",
+   "pos": "noun",
+   "translation": "спина",
+   "transparency": "partial",
+   "themeId": "7.7",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.zab",
+   "lemma": "ząb",
+   "pos": "noun",
+   "translation": "зуб",
+   "transparency": "transparent",
+   "themeId": "7.7",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.dentysta",
+   "lemma": "dentysta",
+   "pos": "noun",
+   "translation": "стоматолог",
+   "transparency": "transparent",
+   "themeId": "7.7",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.pielegniarka",
+   "lemma": "pielęgniarka",
+   "pos": "noun",
+   "translation": "медсестра",
+   "transparency": "opaque",
+   "themeId": "7.7",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.badanie",
+   "lemma": "badanie",
+   "pos": "noun",
+   "translation": "обследование",
+   "transparency": "partial",
+   "themeId": "7.7",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.tabletka",
+   "lemma": "tabletka",
+   "pos": "noun",
+   "translation": "таблетка",
+   "transparency": "transparent",
+   "themeId": "7.7",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.leczyc",
+   "lemma": "leczyć",
+   "pos": "verb",
+   "translation": "лечить",
+   "transparency": "transparent",
+   "themeId": "7.7",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.bolec",
+   "lemma": "boleć",
+   "pos": "verb",
+   "translation": "болеть (о части тела)",
+   "transparency": "transparent",
+   "themeId": "7.7",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.czuc-sie",
+   "lemma": "czuć się",
+   "pos": "verb",
+   "translation": "чувствовать себя",
+   "transparency": "transparent",
+   "themeId": "7.7",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.wyklad",
+   "lemma": "wykład",
+   "pos": "noun",
+   "translation": "лекция",
+   "transparency": "opaque",
+   "themeId": "7.8",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.zajecia",
+   "lemma": "zajęcia",
+   "pos": "noun",
+   "translation": "занятия",
+   "transparency": "partial",
+   "themeId": "7.8",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.cwiczenia",
+   "lemma": "ćwiczenia",
+   "pos": "noun",
+   "translation": "практические занятия",
+   "transparency": "partial",
+   "themeId": "7.8",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.wydzial",
+   "lemma": "wydział",
+   "pos": "noun",
+   "translation": "факультет",
+   "transparency": "partial",
+   "themeId": "7.8",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.student",
+   "lemma": "student",
+   "pos": "noun",
+   "translation": "студент",
+   "transparency": "transparent",
+   "themeId": "7.8",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.dyplom",
+   "lemma": "dyplom",
+   "pos": "noun",
+   "translation": "диплом",
+   "transparency": "transparent",
+   "themeId": "7.8",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.stypendium",
+   "lemma": "stypendium",
+   "pos": "noun",
+   "translation": "стипендия",
+   "transparency": "transparent",
+   "themeId": "7.8",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.podrecznik",
+   "lemma": "podręcznik",
+   "pos": "noun",
+   "translation": "учебник",
+   "transparency": "opaque",
+   "themeId": "7.8",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.notatka",
+   "lemma": "notatka",
+   "pos": "noun",
+   "translation": "запись, конспект",
+   "transparency": "partial",
+   "themeId": "7.8",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.zadanie",
+   "lemma": "zadanie",
+   "pos": "noun",
+   "translation": "задание",
+   "transparency": "transparent",
+   "themeId": "7.8",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.sprawdzian",
+   "lemma": "sprawdzian",
+   "pos": "noun",
+   "translation": "контрольная",
+   "transparency": "opaque",
+   "themeId": "7.8",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.nauka",
+   "lemma": "nauka",
+   "pos": "noun",
+   "translation": "учёба; наука",
+   "transparency": "partial",
+   "themeId": "7.8",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.kurs",
+   "lemma": "kurs",
+   "pos": "noun",
+   "translation": "курс",
+   "transparency": "transparent",
+   "themeId": "7.8",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.wiedza",
+   "lemma": "wiedza",
+   "pos": "noun",
+   "translation": "знания",
+   "transparency": "partial",
+   "themeId": "7.8",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.umiejetnosc",
+   "lemma": "umiejętność",
+   "pos": "noun",
+   "translation": "умение, навык",
+   "transparency": "partial",
+   "themeId": "7.8",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.stanowisko",
+   "lemma": "stanowisko",
+   "pos": "noun",
+   "translation": "должность",
+   "transparency": "opaque",
+   "themeId": "7.9",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.etat",
+   "lemma": "etat",
+   "pos": "noun",
+   "translation": "ставка, полная занятость",
+   "transparency": "partial",
+   "themeId": "7.9",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.nadgodziny",
+   "lemma": "nadgodziny",
+   "pos": "noun",
+   "translation": "сверхурочные",
+   "transparency": "opaque",
+   "themeId": "7.9",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.awans",
+   "lemma": "awans",
+   "pos": "noun",
+   "translation": "повышение",
+   "transparency": "partial",
+   "themeId": "7.9",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.firma",
+   "lemma": "firma",
+   "pos": "noun",
+   "translation": "фирма",
+   "transparency": "transparent",
+   "themeId": "7.9",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.klient",
+   "lemma": "klient",
+   "pos": "noun",
+   "translation": "клиент",
+   "transparency": "transparent",
+   "themeId": "7.9",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.projekt",
+   "lemma": "projekt",
+   "pos": "noun",
+   "translation": "проект",
+   "transparency": "transparent",
+   "themeId": "7.9",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.zyciorys",
+   "lemma": "życiorys",
+   "pos": "noun",
+   "translation": "резюме",
+   "transparency": "opaque",
+   "themeId": "7.9",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.zatrudnienie",
+   "lemma": "zatrudnienie",
+   "pos": "noun",
+   "translation": "трудоустройство",
+   "transparency": "opaque",
+   "themeId": "7.9",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.bezrobocie",
+   "lemma": "bezrobocie",
+   "pos": "noun",
+   "translation": "безработица",
+   "transparency": "partial",
+   "themeId": "7.9",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.emerytura",
+   "lemma": "emerytura",
+   "pos": "noun",
+   "translation": "пенсия",
+   "transparency": "opaque",
+   "themeId": "7.9",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.zwolnienie",
+   "lemma": "zwolnienie",
+   "pos": "noun",
+   "translation": "увольнение; больничный",
+   "transparency": "partial",
+   "themeId": "7.9",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.obowiazki",
+   "lemma": "obowiązki",
+   "pos": "noun",
+   "translation": "обязанности",
+   "transparency": "partial",
+   "themeId": "7.9",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.wynagrodzenie",
+   "lemma": "wynagrodzenie",
+   "pos": "noun",
+   "translation": "оплата труда",
+   "transparency": "opaque",
+   "themeId": "7.9",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.sprzedawca",
+   "lemma": "sprzedawca",
+   "pos": "noun",
+   "translation": "продавец",
+   "transparency": "transparent",
+   "themeId": "7.10",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.klientka",
+   "lemma": "klientka",
+   "pos": "noun",
+   "translation": "покупательница",
+   "transparency": "transparent",
+   "themeId": "7.10",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.wozek",
+   "lemma": "wózek",
+   "pos": "noun",
+   "translation": "тележка",
+   "transparency": "partial",
+   "themeId": "7.10",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.polka",
+   "lemma": "półka",
+   "pos": "noun",
+   "translation": "полка",
+   "transparency": "transparent",
+   "themeId": "7.10",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.torba",
+   "lemma": "torba",
+   "pos": "noun",
+   "translation": "сумка",
+   "transparency": "partial",
+   "themeId": "7.10",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.opakowanie",
+   "lemma": "opakowanie",
+   "pos": "noun",
+   "translation": "упаковка",
+   "transparency": "partial",
+   "themeId": "7.10",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.rabat",
+   "lemma": "rabat",
+   "pos": "noun",
+   "translation": "скидка",
+   "transparency": "partial",
+   "themeId": "7.10",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.wyprzedaz",
+   "lemma": "wyprzedaż",
+   "pos": "noun",
+   "translation": "распродажа",
+   "transparency": "partial",
+   "themeId": "7.10",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.zwrot",
+   "lemma": "zwrot",
+   "pos": "noun",
+   "translation": "возврат",
+   "transparency": "partial",
+   "themeId": "7.10",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.gwarancja",
+   "lemma": "gwarancja",
+   "pos": "noun",
+   "translation": "гарантия",
+   "transparency": "transparent",
+   "themeId": "7.10",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.gotowka",
+   "lemma": "gotówka",
+   "pos": "noun",
+   "translation": "наличные",
+   "transparency": "opaque",
+   "themeId": "7.10",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.reszta",
+   "lemma": "reszta",
+   "pos": "noun",
+   "translation": "сдача; остальное",
+   "transparency": "partial",
+   "themeId": "7.10",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.kosztowac",
+   "lemma": "kosztować",
+   "pos": "verb",
+   "translation": "стоить",
+   "transparency": "partial",
+   "themeId": "7.10",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.wydawac",
+   "lemma": "wydawać",
+   "pos": "verb",
+   "translation": "тратить; выдавать",
+   "transparency": "partial",
+   "themeId": "7.10",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.woda",
+   "lemma": "woda",
+   "pos": "noun",
+   "translation": "вода",
+   "transparency": "transparent",
+   "themeId": "7.11",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.sok",
+   "lemma": "sok",
+   "pos": "noun",
+   "translation": "сок",
+   "transparency": "transparent",
+   "themeId": "7.11",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.piwo",
+   "lemma": "piwo",
+   "pos": "noun",
+   "translation": "пиво",
+   "transparency": "transparent",
+   "themeId": "7.11",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.wino",
+   "lemma": "wino",
+   "pos": "noun",
+   "translation": "вино",
+   "transparency": "transparent",
+   "themeId": "7.11",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.cukier",
+   "lemma": "cukier",
+   "pos": "noun",
+   "translation": "сахар",
+   "transparency": "partial",
+   "themeId": "7.11",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.sol",
+   "lemma": "sól",
+   "pos": "noun",
+   "translation": "соль",
+   "transparency": "transparent",
+   "themeId": "7.11",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.maslo",
+   "lemma": "masło",
+   "pos": "noun",
+   "translation": "сливочное масло",
+   "transparency": "transparent",
+   "themeId": "7.11",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.jajko",
+   "lemma": "jajko",
+   "pos": "noun",
+   "translation": "яйцо",
+   "transparency": "partial",
+   "themeId": "7.11",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.ryba",
+   "lemma": "ryba",
+   "pos": "noun",
+   "translation": "рыба",
+   "transparency": "transparent",
+   "themeId": "7.11",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.kurczak",
+   "lemma": "kurczak",
+   "pos": "noun",
+   "translation": "курица",
+   "transparency": "partial",
+   "themeId": "7.11",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.ziemniak",
+   "lemma": "ziemniak",
+   "pos": "noun",
+   "translation": "картофель",
+   "transparency": "opaque",
+   "themeId": "7.11",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.pomidor",
+   "lemma": "pomidor",
+   "pos": "noun",
+   "translation": "помидор",
+   "transparency": "transparent",
+   "themeId": "7.11",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.ogorek",
+   "lemma": "ogórek",
+   "pos": "noun",
+   "translation": "огурец",
+   "transparency": "transparent",
+   "themeId": "7.11",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.jablko",
+   "lemma": "jabłko",
+   "pos": "noun",
+   "translation": "яблоко",
+   "transparency": "transparent",
+   "themeId": "7.11",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.ciasto",
+   "lemma": "ciasto",
+   "pos": "noun",
+   "translation": "пирог, тесто",
+   "transparency": "partial",
+   "themeId": "7.11",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.lody",
+   "lemma": "lody",
+   "pos": "noun",
+   "translation": "мороженое",
+   "transparency": "opaque",
+   "themeId": "7.11",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.smaczny",
+   "lemma": "smaczny",
+   "pos": "adj",
+   "translation": "вкусный",
+   "transparency": "opaque",
+   "themeId": "7.11",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.slodki",
+   "lemma": "słodki",
+   "pos": "adj",
+   "translation": "сладкий",
+   "transparency": "transparent",
+   "themeId": "7.11",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.slony",
+   "lemma": "słony",
+   "pos": "adj",
+   "translation": "солёный",
+   "transparency": "transparent",
+   "themeId": "7.11",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.kwasny",
+   "lemma": "kwaśny",
+   "pos": "adj",
+   "translation": "кислый",
+   "transparency": "partial",
+   "themeId": "7.11",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.usluga",
+   "lemma": "usługa",
+   "pos": "noun",
+   "translation": "услуга",
+   "transparency": "transparent",
+   "themeId": "7.12",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.kelner",
+   "lemma": "kelner",
+   "pos": "noun",
+   "translation": "официант",
+   "transparency": "opaque",
+   "themeId": "7.12",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.warsztat",
+   "lemma": "warsztat",
+   "pos": "noun",
+   "translation": "мастерская",
+   "transparency": "partial",
+   "themeId": "7.12",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.naprawic",
+   "lemma": "naprawić",
+   "pos": "verb",
+   "translation": "починить",
+   "transparency": "partial",
+   "themeId": "7.12",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.reklamacja",
+   "lemma": "reklamacja",
+   "pos": "noun",
+   "translation": "претензия, рекламация",
+   "transparency": "partial",
+   "themeId": "7.12",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.dostawa",
+   "lemma": "dostawa",
+   "pos": "noun",
+   "translation": "доставка",
+   "transparency": "transparent",
+   "themeId": "7.12",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.kurier",
+   "lemma": "kurier",
+   "pos": "noun",
+   "translation": "курьер",
+   "transparency": "transparent",
+   "themeId": "7.12",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.przesylka",
+   "lemma": "przesyłka",
+   "pos": "noun",
+   "translation": "посылка",
+   "transparency": "partial",
+   "themeId": "7.12",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.znaczek",
+   "lemma": "znaczek",
+   "pos": "noun",
+   "translation": "марка",
+   "transparency": "opaque",
+   "themeId": "7.12",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.koperta",
+   "lemma": "koperta",
+   "pos": "noun",
+   "translation": "конверт",
+   "transparency": "opaque",
+   "themeId": "7.12",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.kantor",
+   "lemma": "kantor",
+   "pos": "noun",
+   "translation": "обменный пункт",
+   "transparency": "opaque",
+   "themeId": "7.12",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.wymiana",
+   "lemma": "wymiana",
+   "pos": "noun",
+   "translation": "обмен",
+   "transparency": "partial",
+   "themeId": "7.12",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.kredyt",
+   "lemma": "kredyt",
+   "pos": "noun",
+   "translation": "кредит",
+   "transparency": "transparent",
+   "themeId": "7.12",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.oszczednosci",
+   "lemma": "oszczędności",
+   "pos": "noun",
+   "translation": "сбережения",
+   "transparency": "opaque",
+   "themeId": "7.12",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.dzielnica",
+   "lemma": "dzielnica",
+   "pos": "noun",
+   "translation": "район города",
+   "transparency": "partial",
+   "themeId": "7.13",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.osiedle",
+   "lemma": "osiedle",
+   "pos": "noun",
+   "translation": "жилой массив",
+   "transparency": "opaque",
+   "themeId": "7.13",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.skrzyzowanie",
+   "lemma": "skrzyżowanie",
+   "pos": "noun",
+   "translation": "перекрёсток",
+   "transparency": "opaque",
+   "themeId": "7.13",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.przystanek",
+   "lemma": "przystanek",
+   "pos": "noun",
+   "translation": "остановка",
+   "transparency": "opaque",
+   "themeId": "7.13",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.chodnik",
+   "lemma": "chodnik",
+   "pos": "noun",
+   "translation": "тротуар",
+   "transparency": "opaque",
+   "themeId": "7.13",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.parking",
+   "lemma": "parking",
+   "pos": "noun",
+   "translation": "парковка",
+   "transparency": "transparent",
+   "themeId": "7.13",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.park",
+   "lemma": "park",
+   "pos": "noun",
+   "translation": "парк",
+   "transparency": "transparent",
+   "themeId": "7.13",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.wies",
+   "lemma": "wieś",
+   "pos": "noun",
+   "translation": "деревня",
+   "transparency": "partial",
+   "themeId": "7.13",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.okolica",
+   "lemma": "okolica",
+   "pos": "noun",
+   "translation": "окрестности",
+   "transparency": "partial",
+   "themeId": "7.13",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.kierunek",
+   "lemma": "kierunek",
+   "pos": "noun",
+   "translation": "направление",
+   "transparency": "opaque",
+   "themeId": "7.13",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.prosto",
+   "lemma": "prosto",
+   "pos": "adv",
+   "translation": "прямо",
+   "transparency": "partial",
+   "themeId": "7.13",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.blisko",
+   "lemma": "blisko",
+   "pos": "adv",
+   "translation": "близко",
+   "transparency": "transparent",
+   "themeId": "7.13",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.daleko",
+   "lemma": "daleko",
+   "pos": "adv",
+   "translation": "далеко",
+   "transparency": "transparent",
+   "themeId": "7.13",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.naprzeciwko",
+   "lemma": "naprzeciwko",
+   "pos": "adv",
+   "translation": "напротив",
+   "transparency": "partial",
+   "themeId": "7.13",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.niebo",
+   "lemma": "niebo",
+   "pos": "noun",
+   "translation": "небо",
+   "transparency": "transparent",
+   "themeId": "7.14",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.chmura",
+   "lemma": "chmura",
+   "pos": "noun",
+   "translation": "туча, облако",
+   "transparency": "partial",
+   "themeId": "7.14",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.mroz",
+   "lemma": "mróz",
+   "pos": "noun",
+   "translation": "мороз",
+   "transparency": "transparent",
+   "themeId": "7.14",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.upal",
+   "lemma": "upał",
+   "pos": "noun",
+   "translation": "жара",
+   "transparency": "opaque",
+   "themeId": "7.14",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.temperatura",
+   "lemma": "temperatura",
+   "pos": "noun",
+   "translation": "температура",
+   "transparency": "transparent",
+   "themeId": "7.14",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.burza",
+   "lemma": "burza",
+   "pos": "noun",
+   "translation": "гроза",
+   "transparency": "partial",
+   "themeId": "7.14",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.mgla",
+   "lemma": "mgła",
+   "pos": "noun",
+   "translation": "туман",
+   "transparency": "partial",
+   "themeId": "7.14",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.lisc",
+   "lemma": "liść",
+   "pos": "noun",
+   "translation": "лист",
+   "transparency": "transparent",
+   "themeId": "7.14",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.kwiat",
+   "lemma": "kwiat",
+   "pos": "noun",
+   "translation": "цветок",
+   "transparency": "partial",
+   "themeId": "7.14",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.trawa",
+   "lemma": "trawa",
+   "pos": "noun",
+   "translation": "трава",
+   "transparency": "transparent",
+   "themeId": "7.14",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.zwierze",
+   "lemma": "zwierzę",
+   "pos": "noun",
+   "translation": "животное",
+   "transparency": "partial",
+   "themeId": "7.14",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.pies",
+   "lemma": "pies",
+   "pos": "noun",
+   "translation": "собака",
+   "transparency": "opaque",
+   "themeId": "7.14",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.kot",
+   "lemma": "kot",
+   "pos": "noun",
+   "translation": "кот",
+   "transparency": "transparent",
+   "themeId": "7.14",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.ptak",
+   "lemma": "ptak",
+   "pos": "noun",
+   "translation": "птица",
+   "transparency": "partial",
+   "themeId": "7.14",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.jezioro",
+   "lemma": "jezioro",
+   "pos": "noun",
+   "translation": "озеро",
+   "transparency": "transparent",
+   "themeId": "7.14",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.lato",
+   "lemma": "lato",
+   "pos": "noun",
+   "translation": "лето",
+   "transparency": "transparent",
+   "themeId": "7.14",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.zima",
+   "lemma": "zima",
+   "pos": "noun",
+   "translation": "зима",
+   "transparency": "transparent",
+   "themeId": "7.14",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.tradycja",
+   "lemma": "tradycja",
+   "pos": "noun",
+   "translation": "традиция",
+   "transparency": "transparent",
+   "themeId": "7.15",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.sylwester",
+   "lemma": "Sylwester",
+   "pos": "noun",
+   "translation": "новогодняя ночь",
+   "transparency": "opaque",
+   "themeId": "7.15",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.nowy-rok",
+   "lemma": "Nowy Rok",
+   "pos": "noun",
+   "translation": "Новый год",
+   "transparency": "transparent",
+   "themeId": "7.15",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.choinka",
+   "lemma": "choinka",
+   "pos": "noun",
+   "translation": "ёлка",
+   "transparency": "opaque",
+   "themeId": "7.15",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.koleda",
+   "lemma": "kolęda",
+   "pos": "noun",
+   "translation": "рождественская песня",
+   "transparency": "opaque",
+   "themeId": "7.15",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.imieniny",
+   "lemma": "imieniny",
+   "pos": "noun",
+   "translation": "именины",
+   "transparency": "transparent",
+   "themeId": "7.15",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.rocznica",
+   "lemma": "rocznica",
+   "pos": "noun",
+   "translation": "годовщина",
+   "transparency": "partial",
+   "themeId": "7.15",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.gosc",
+   "lemma": "gość",
+   "pos": "noun",
+   "translation": "гость",
+   "transparency": "transparent",
+   "themeId": "7.15",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.zaprosic",
+   "lemma": "zaprosić",
+   "pos": "verb",
+   "translation": "пригласить",
+   "transparency": "partial",
+   "themeId": "7.15",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.zyczyc",
+   "lemma": "życzyć",
+   "pos": "verb",
+   "translation": "желать",
+   "transparency": "partial",
+   "themeId": "7.15",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.obchodzic",
+   "lemma": "obchodzić",
+   "pos": "verb",
+   "translation": "отмечать (праздник)",
+   "transparency": "partial",
+   "themeId": "7.15",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.przyjecie",
+   "lemma": "przyjęcie",
+   "pos": "noun",
+   "translation": "приём, вечеринка",
+   "transparency": "partial",
+   "themeId": "7.15",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.temat",
+   "lemma": "temat",
+   "pos": "noun",
+   "translation": "тема",
+   "transparency": "transparent",
+   "themeId": "7.16",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.pytanie",
+   "lemma": "pytanie",
+   "pos": "noun",
+   "translation": "вопрос",
+   "transparency": "opaque",
+   "themeId": "7.16",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.odpowiedz",
+   "lemma": "odpowiedź",
+   "pos": "noun",
+   "translation": "ответ",
+   "transparency": "partial",
+   "themeId": "7.16",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.przyklad",
+   "lemma": "przykład",
+   "pos": "noun",
+   "translation": "пример",
+   "transparency": "opaque",
+   "themeId": "7.16",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.roznica",
+   "lemma": "różnica",
+   "pos": "noun",
+   "translation": "разница",
+   "transparency": "transparent",
+   "themeId": "7.16",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.znaczenie",
+   "lemma": "znaczenie",
+   "pos": "noun",
+   "translation": "значение",
+   "transparency": "transparent",
+   "themeId": "7.16",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.cel",
+   "lemma": "cel",
+   "pos": "noun",
+   "translation": "цель",
+   "transparency": "transparent",
+   "themeId": "7.16",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.wynik",
+   "lemma": "wynik",
+   "pos": "noun",
+   "translation": "результат",
+   "transparency": "opaque",
+   "themeId": "7.16",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.skutek",
+   "lemma": "skutek",
+   "pos": "noun",
+   "translation": "последствие",
+   "transparency": "opaque",
+   "themeId": "7.16",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.warunek",
+   "lemma": "warunek",
+   "pos": "noun",
+   "translation": "условие",
+   "transparency": "opaque",
+   "themeId": "7.16",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.uwaga",
+   "lemma": "uwaga",
+   "pos": "noun",
+   "translation": "внимание; замечание",
+   "transparency": "partial",
+   "themeId": "7.16",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.opinia",
+   "lemma": "opinia",
+   "pos": "noun",
+   "translation": "мнение",
+   "transparency": "transparent",
+   "themeId": "7.16",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.prawda",
+   "lemma": "prawda",
+   "pos": "noun",
+   "translation": "правда",
+   "transparency": "transparent",
+   "themeId": "7.16",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.zgoda",
+   "lemma": "zgoda",
+   "pos": "noun",
+   "translation": "согласие",
+   "transparency": "partial",
+   "themeId": "7.16",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.wnuk",
+   "lemma": "wnuk",
+   "pos": "noun",
+   "translation": "внук",
+   "transparency": "transparent",
+   "themeId": "7.1",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.wujek",
+   "lemma": "wujek",
+   "pos": "noun",
+   "translation": "дядя",
+   "transparency": "opaque",
+   "themeId": "7.1",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.ciocia",
+   "lemma": "ciocia",
+   "pos": "noun",
+   "translation": "тётя",
+   "transparency": "opaque",
+   "themeId": "7.1",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.kuzyn",
+   "lemma": "kuzyn",
+   "pos": "noun",
+   "translation": "двоюродный брат",
+   "transparency": "transparent",
+   "themeId": "7.1",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.malzenstwo",
+   "lemma": "małżeństwo",
+   "pos": "noun",
+   "translation": "брак, супружество",
+   "transparency": "opaque",
+   "themeId": "7.1",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.rozwod",
+   "lemma": "rozwód",
+   "pos": "noun",
+   "translation": "развод",
+   "transparency": "transparent",
+   "themeId": "7.1",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.przyjaciolka",
+   "lemma": "przyjaciółka",
+   "pos": "noun",
+   "translation": "подруга",
+   "transparency": "partial",
+   "themeId": "7.1",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.pracowity",
+   "lemma": "pracowity",
+   "pos": "adj",
+   "translation": "трудолюбивый",
+   "transparency": "partial",
+   "themeId": "7.1",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.wzrost",
+   "lemma": "wzrost",
+   "pos": "noun",
+   "translation": "рост (человека)",
+   "transparency": "partial",
+   "themeId": "7.1",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.broda",
+   "lemma": "broda",
+   "pos": "noun",
+   "translation": "борода; подбородок",
+   "transparency": "partial",
+   "themeId": "7.1",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.adres",
+   "lemma": "adres",
+   "pos": "noun",
+   "translation": "адрес",
+   "transparency": "transparent",
+   "themeId": "7.2",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.piwnica",
+   "lemma": "piwnica",
+   "pos": "noun",
+   "translation": "подвал",
+   "transparency": "opaque",
+   "themeId": "7.2",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.strych",
+   "lemma": "strych",
+   "pos": "noun",
+   "translation": "чердак",
+   "transparency": "opaque",
+   "themeId": "7.2",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.garaz",
+   "lemma": "garaż",
+   "pos": "noun",
+   "translation": "гараж",
+   "transparency": "transparent",
+   "themeId": "7.2",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.kaucja",
+   "lemma": "kaucja",
+   "pos": "noun",
+   "translation": "залог при аренде",
+   "transparency": "partial",
+   "themeId": "7.2",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.wlasciciel",
+   "lemma": "właściciel",
+   "pos": "noun",
+   "translation": "владелец",
+   "transparency": "opaque",
+   "themeId": "7.2",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.lokator",
+   "lemma": "lokator",
+   "pos": "noun",
+   "translation": "жилец",
+   "transparency": "partial",
+   "themeId": "7.2",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.przeprowadzka",
+   "lemma": "przeprowadzka",
+   "pos": "noun",
+   "translation": "переезд",
+   "transparency": "opaque",
+   "themeId": "7.2",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.kanapa",
+   "lemma": "kanapa",
+   "pos": "noun",
+   "translation": "диван",
+   "transparency": "opaque",
+   "themeId": "7.2",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.fotel",
+   "lemma": "fotel",
+   "pos": "noun",
+   "translation": "кресло",
+   "transparency": "opaque",
+   "themeId": "7.2",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.lampa",
+   "lemma": "lampa",
+   "pos": "noun",
+   "translation": "лампа",
+   "transparency": "transparent",
+   "themeId": "7.2",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.zarowka",
+   "lemma": "żarówka",
+   "pos": "noun",
+   "translation": "лампочка",
+   "transparency": "opaque",
+   "themeId": "7.2",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.kran",
+   "lemma": "kran",
+   "pos": "noun",
+   "translation": "кран",
+   "transparency": "transparent",
+   "themeId": "7.2",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.piekarnik",
+   "lemma": "piekarnik",
+   "pos": "noun",
+   "translation": "духовка",
+   "transparency": "opaque",
+   "themeId": "7.2",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.talerz",
+   "lemma": "talerz",
+   "pos": "noun",
+   "translation": "тарелка",
+   "transparency": "transparent",
+   "themeId": "7.2",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.kubek",
+   "lemma": "kubek",
+   "pos": "noun",
+   "translation": "кружка",
+   "transparency": "opaque",
+   "themeId": "7.2",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.szklanka",
+   "lemma": "szklanka",
+   "pos": "noun",
+   "translation": "стакан",
+   "transparency": "partial",
+   "themeId": "7.2",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.widelec",
+   "lemma": "widelec",
+   "pos": "noun",
+   "translation": "вилка",
+   "transparency": "opaque",
+   "themeId": "7.2",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.lyzka",
+   "lemma": "łyżka",
+   "pos": "noun",
+   "translation": "ложка",
+   "transparency": "transparent",
+   "themeId": "7.2",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.naczynia",
+   "lemma": "naczynia",
+   "pos": "noun",
+   "translation": "посуда",
+   "transparency": "opaque",
+   "themeId": "7.2",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.styczen",
+   "lemma": "styczeń",
+   "pos": "noun",
+   "translation": "январь",
+   "transparency": "opaque",
+   "themeId": "7.3",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.luty",
+   "lemma": "luty",
+   "pos": "noun",
+   "translation": "февраль",
+   "transparency": "opaque",
+   "themeId": "7.3",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.marzec",
+   "lemma": "marzec",
+   "pos": "noun",
+   "translation": "март",
+   "transparency": "partial",
+   "themeId": "7.3",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.kwiecien",
+   "lemma": "kwiecień",
+   "pos": "noun",
+   "translation": "апрель",
+   "transparency": "opaque",
+   "themeId": "7.3",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.maj",
+   "lemma": "maj",
+   "pos": "noun",
+   "translation": "май",
+   "transparency": "transparent",
+   "themeId": "7.3",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.czerwiec",
+   "lemma": "czerwiec",
+   "pos": "noun",
+   "translation": "июнь",
+   "transparency": "opaque",
+   "themeId": "7.3",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.lipiec",
+   "lemma": "lipiec",
+   "pos": "noun",
+   "translation": "июль",
+   "transparency": "opaque",
+   "themeId": "7.3",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.sierpien",
+   "lemma": "sierpień",
+   "pos": "noun",
+   "translation": "август",
+   "transparency": "opaque",
+   "themeId": "7.3",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.wrzesien",
+   "lemma": "wrzesień",
+   "pos": "noun",
+   "translation": "сентябрь",
+   "transparency": "opaque",
+   "themeId": "7.3",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.pazdziernik",
+   "lemma": "październik",
+   "pos": "noun",
+   "translation": "октябрь",
+   "transparency": "opaque",
+   "themeId": "7.3",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.listopad",
+   "lemma": "listopad",
+   "pos": "noun",
+   "translation": "ноябрь",
+   "transparency": "opaque",
+   "themeId": "7.3",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.grudzien",
+   "lemma": "grudzień",
+   "pos": "noun",
+   "translation": "декабрь",
+   "transparency": "opaque",
+   "themeId": "7.3",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.popoludnie",
+   "lemma": "popołudnie",
+   "pos": "noun",
+   "translation": "вторая половина дня",
+   "transparency": "opaque",
+   "themeId": "7.3",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.polnoc",
+   "lemma": "północ",
+   "pos": "noun",
+   "translation": "полночь; север",
+   "transparency": "partial",
+   "themeId": "7.3",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.kwadrans",
+   "lemma": "kwadrans",
+   "pos": "noun",
+   "translation": "четверть часа",
+   "transparency": "opaque",
+   "themeId": "7.3",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.minuta",
+   "lemma": "minuta",
+   "pos": "noun",
+   "translation": "минута",
+   "transparency": "transparent",
+   "themeId": "7.3",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.zegarek",
+   "lemma": "zegarek",
+   "pos": "noun",
+   "translation": "часы (наручные)",
+   "transparency": "partial",
+   "themeId": "7.3",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.kalendarz",
+   "lemma": "kalendarz",
+   "pos": "noun",
+   "translation": "календарь",
+   "transparency": "transparent",
+   "themeId": "7.3",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.data",
+   "lemma": "data",
+   "pos": "noun",
+   "translation": "дата",
+   "transparency": "transparent",
+   "themeId": "7.3",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.myc-sie",
+   "lemma": "myć się",
+   "pos": "verb",
+   "translation": "мыться",
+   "transparency": "transparent",
+   "themeId": "7.3",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.zmeczony",
+   "lemma": "zmęczony",
+   "pos": "adj",
+   "translation": "усталый",
+   "transparency": "opaque",
+   "themeId": "7.3",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.smieci",
+   "lemma": "śmieci",
+   "pos": "noun",
+   "translation": "мусор",
+   "transparency": "opaque",
+   "themeId": "7.3",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.pilka-nozna",
+   "lemma": "piłka nożna",
+   "pos": "noun",
+   "translation": "футбол",
+   "transparency": "opaque",
+   "themeId": "7.4",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.mecz",
+   "lemma": "mecz",
+   "pos": "noun",
+   "translation": "матч",
+   "transparency": "transparent",
+   "themeId": "7.4",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.kibic",
+   "lemma": "kibic",
+   "pos": "noun",
+   "translation": "болельщик",
+   "transparency": "opaque",
+   "themeId": "7.4",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.druzyna",
+   "lemma": "drużyna",
+   "pos": "noun",
+   "translation": "команда",
+   "transparency": "partial",
+   "themeId": "7.4",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.trener",
+   "lemma": "trener",
+   "pos": "noun",
+   "translation": "тренер",
+   "transparency": "transparent",
+   "themeId": "7.4",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.bieganie",
+   "lemma": "bieganie",
+   "pos": "noun",
+   "translation": "бег",
+   "transparency": "partial",
+   "themeId": "7.4",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.wedkarstwo",
+   "lemma": "wędkarstwo",
+   "pos": "noun",
+   "translation": "рыбалка",
+   "transparency": "opaque",
+   "themeId": "7.4",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.ogrodnictwo",
+   "lemma": "ogrodnictwo",
+   "pos": "noun",
+   "translation": "садоводство",
+   "transparency": "partial",
+   "themeId": "7.4",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.powiesc",
+   "lemma": "powieść",
+   "pos": "noun",
+   "translation": "роман (книга)",
+   "transparency": "partial",
+   "themeId": "7.4",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.komedia",
+   "lemma": "komedia",
+   "pos": "noun",
+   "translation": "комедия",
+   "transparency": "transparent",
+   "themeId": "7.4",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.serial",
+   "lemma": "serial",
+   "pos": "noun",
+   "translation": "сериал",
+   "transparency": "transparent",
+   "themeId": "7.4",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.odcinek",
+   "lemma": "odcinek",
+   "pos": "noun",
+   "translation": "серия; отрезок",
+   "transparency": "partial",
+   "themeId": "7.4",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.scena",
+   "lemma": "scena",
+   "pos": "noun",
+   "translation": "сцена",
+   "transparency": "transparent",
+   "themeId": "7.4",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.widz",
+   "lemma": "widz",
+   "pos": "noun",
+   "translation": "зритель",
+   "transparency": "opaque",
+   "themeId": "7.4",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.publicznosc",
+   "lemma": "publiczność",
+   "pos": "noun",
+   "translation": "публика",
+   "transparency": "transparent",
+   "themeId": "7.4",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.gitara",
+   "lemma": "gitara",
+   "pos": "noun",
+   "translation": "гитара",
+   "transparency": "transparent",
+   "themeId": "7.4",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.chor",
+   "lemma": "chór",
+   "pos": "noun",
+   "translation": "хор",
+   "transparency": "transparent",
+   "themeId": "7.4",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.rysowac",
+   "lemma": "rysować",
+   "pos": "verb",
+   "translation": "рисовать",
+   "transparency": "transparent",
+   "themeId": "7.4",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.malowac",
+   "lemma": "malować",
+   "pos": "verb",
+   "translation": "рисовать красками",
+   "transparency": "partial",
+   "themeId": "7.4",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.szachy",
+   "lemma": "szachy",
+   "pos": "noun",
+   "translation": "шахматы",
+   "transparency": "transparent",
+   "themeId": "7.4",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.rozrywka",
+   "lemma": "rozrywka",
+   "pos": "noun",
+   "translation": "развлечение",
+   "transparency": "opaque",
+   "themeId": "7.4",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.festiwal",
+   "lemma": "festiwal",
+   "pos": "noun",
+   "translation": "фестиваль",
+   "transparency": "transparent",
+   "themeId": "7.4",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.lot",
+   "lemma": "lot",
+   "pos": "noun",
+   "translation": "рейс, полёт",
+   "transparency": "partial",
+   "themeId": "7.5",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.przesiadka",
+   "lemma": "przesiadka",
+   "pos": "noun",
+   "translation": "пересадка",
+   "transparency": "opaque",
+   "themeId": "7.5",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.odprawa",
+   "lemma": "odprawa",
+   "pos": "noun",
+   "translation": "регистрация на рейс",
+   "transparency": "opaque",
+   "themeId": "7.5",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.wiza",
+   "lemma": "wiza",
+   "pos": "noun",
+   "translation": "виза",
+   "transparency": "transparent",
+   "themeId": "7.5",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.pensjonat",
+   "lemma": "pensjonat",
+   "pos": "noun",
+   "translation": "пансионат",
+   "transparency": "transparent",
+   "themeId": "7.5",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.recepcja",
+   "lemma": "recepcja",
+   "pos": "noun",
+   "translation": "стойка регистрации",
+   "transparency": "partial",
+   "themeId": "7.5",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.doba",
+   "lemma": "doba",
+   "pos": "noun",
+   "translation": "сутки",
+   "transparency": "transparent",
+   "themeId": "7.5",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.pamiatka",
+   "lemma": "pamiątka",
+   "pos": "noun",
+   "translation": "сувенир",
+   "transparency": "partial",
+   "themeId": "7.5",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.zagranica",
+   "lemma": "zagranica",
+   "pos": "noun",
+   "translation": "заграница",
+   "transparency": "partial",
+   "themeId": "7.5",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.kraj",
+   "lemma": "kraj",
+   "pos": "noun",
+   "translation": "страна",
+   "transparency": "partial",
+   "themeId": "7.5",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.stolica",
+   "lemma": "stolica",
+   "pos": "noun",
+   "translation": "столица",
+   "transparency": "transparent",
+   "themeId": "7.5",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.taksowka",
+   "lemma": "taksówka",
+   "pos": "noun",
+   "translation": "такси",
+   "transparency": "transparent",
+   "themeId": "7.5",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.metro",
+   "lemma": "metro",
+   "pos": "noun",
+   "translation": "метро",
+   "transparency": "transparent",
+   "themeId": "7.5",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.tramwaj",
+   "lemma": "tramwaj",
+   "pos": "noun",
+   "translation": "трамвай",
+   "transparency": "transparent",
+   "themeId": "7.5",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.autostrada",
+   "lemma": "autostrada",
+   "pos": "noun",
+   "translation": "автомагистраль",
+   "transparency": "transparent",
+   "themeId": "7.5",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.prom",
+   "lemma": "prom",
+   "pos": "noun",
+   "translation": "паром",
+   "transparency": "partial",
+   "themeId": "7.5",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.wojna",
+   "lemma": "wojna",
+   "pos": "noun",
+   "translation": "война",
+   "transparency": "transparent",
+   "themeId": "7.6",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.bezpieczenstwo",
+   "lemma": "bezpieczeństwo",
+   "pos": "noun",
+   "translation": "безопасность",
+   "transparency": "opaque",
+   "themeId": "7.6",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.przestepstwo",
+   "lemma": "przestępstwo",
+   "pos": "noun",
+   "translation": "преступление",
+   "transparency": "partial",
+   "themeId": "7.6",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.kara",
+   "lemma": "kara",
+   "pos": "noun",
+   "translation": "наказание",
+   "transparency": "partial",
+   "themeId": "7.6",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.wiezienie",
+   "lemma": "więzienie",
+   "pos": "noun",
+   "translation": "тюрьма",
+   "transparency": "opaque",
+   "themeId": "7.6",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.budzet",
+   "lemma": "budżet",
+   "pos": "noun",
+   "translation": "бюджет",
+   "transparency": "transparent",
+   "themeId": "7.6",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.gospodarka",
+   "lemma": "gospodarka",
+   "pos": "noun",
+   "translation": "экономика, хозяйство",
+   "transparency": "opaque",
+   "themeId": "7.6",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.inflacja",
+   "lemma": "inflacja",
+   "pos": "noun",
+   "translation": "инфляция",
+   "transparency": "transparent",
+   "themeId": "7.6",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.demokracja",
+   "lemma": "demokracja",
+   "pos": "noun",
+   "translation": "демократия",
+   "transparency": "transparent",
+   "themeId": "7.6",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.partia",
+   "lemma": "partia",
+   "pos": "noun",
+   "translation": "партия",
+   "transparency": "transparent",
+   "themeId": "7.6",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.glosowac",
+   "lemma": "głosować",
+   "pos": "verb",
+   "translation": "голосовать",
+   "transparency": "transparent",
+   "themeId": "7.6",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.kandydat",
+   "lemma": "kandydat",
+   "pos": "noun",
+   "translation": "кандидат",
+   "transparency": "transparent",
+   "themeId": "7.6",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.protest",
+   "lemma": "protest",
+   "pos": "noun",
+   "translation": "протест",
+   "transparency": "transparent",
+   "themeId": "7.6",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.strajk",
+   "lemma": "strajk",
+   "pos": "noun",
+   "translation": "забастовка",
+   "transparency": "partial",
+   "themeId": "7.6",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.organizacja",
+   "lemma": "organizacja",
+   "pos": "noun",
+   "translation": "организация",
+   "transparency": "transparent",
+   "themeId": "7.6",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.wolontariat",
+   "lemma": "wolontariat",
+   "pos": "noun",
+   "translation": "волонтёрство",
+   "transparency": "partial",
+   "themeId": "7.6",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.mniejszosc",
+   "lemma": "mniejszość",
+   "pos": "noun",
+   "translation": "меньшинство",
+   "transparency": "opaque",
+   "themeId": "7.6",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.uchodzca",
+   "lemma": "uchodźca",
+   "pos": "noun",
+   "translation": "беженец",
+   "transparency": "opaque",
+   "themeId": "7.6",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.religia",
+   "lemma": "religia",
+   "pos": "noun",
+   "translation": "религия",
+   "transparency": "transparent",
+   "themeId": "7.6",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.tolerancja",
+   "lemma": "tolerancja",
+   "pos": "noun",
+   "translation": "терпимость",
+   "transparency": "transparent",
+   "themeId": "7.6",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.pogotowie",
+   "lemma": "pogotowie",
+   "pos": "noun",
+   "translation": "скорая помощь",
+   "transparency": "opaque",
+   "themeId": "7.7",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.karetka",
+   "lemma": "karetka",
+   "pos": "noun",
+   "translation": "машина скорой",
+   "transparency": "opaque",
+   "themeId": "7.7",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.objaw",
+   "lemma": "objaw",
+   "pos": "noun",
+   "translation": "симптом",
+   "transparency": "opaque",
+   "themeId": "7.7",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.cisnienie",
+   "lemma": "ciśnienie",
+   "pos": "noun",
+   "translation": "давление",
+   "transparency": "partial",
+   "themeId": "7.7",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.alergia",
+   "lemma": "alergia",
+   "pos": "noun",
+   "translation": "аллергия",
+   "transparency": "transparent",
+   "themeId": "7.7",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.zastrzyk",
+   "lemma": "zastrzyk",
+   "pos": "noun",
+   "translation": "укол",
+   "transparency": "opaque",
+   "themeId": "7.7",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.szczepienie",
+   "lemma": "szczepienie",
+   "pos": "noun",
+   "translation": "прививка",
+   "transparency": "opaque",
+   "themeId": "7.7",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.rana",
+   "lemma": "rana",
+   "pos": "noun",
+   "translation": "рана",
+   "transparency": "transparent",
+   "themeId": "7.7",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.zlamanie",
+   "lemma": "złamanie",
+   "pos": "noun",
+   "translation": "перелом",
+   "transparency": "opaque",
+   "themeId": "7.7",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.dieta",
+   "lemma": "dieta",
+   "pos": "noun",
+   "translation": "диета",
+   "transparency": "transparent",
+   "themeId": "7.7",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.sen",
+   "lemma": "sen",
+   "pos": "noun",
+   "translation": "сон",
+   "transparency": "transparent",
+   "themeId": "7.7",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.cwiczyc",
+   "lemma": "ćwiczyć",
+   "pos": "verb",
+   "translation": "тренироваться",
+   "transparency": "opaque",
+   "themeId": "7.7",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.oddychac",
+   "lemma": "oddychać",
+   "pos": "verb",
+   "translation": "дышать",
+   "transparency": "partial",
+   "themeId": "7.7",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.wyzdrowiec",
+   "lemma": "wyzdrowieć",
+   "pos": "verb",
+   "translation": "выздороветь",
+   "transparency": "partial",
+   "themeId": "7.7",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.przedszkole",
+   "lemma": "przedszkole",
+   "pos": "noun",
+   "translation": "детский сад",
+   "transparency": "opaque",
+   "themeId": "7.8",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.podstawowka",
+   "lemma": "podstawówka",
+   "pos": "noun",
+   "translation": "начальная школа",
+   "transparency": "opaque",
+   "themeId": "7.8",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.liceum",
+   "lemma": "liceum",
+   "pos": "noun",
+   "translation": "лицей",
+   "transparency": "transparent",
+   "themeId": "7.8",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.klasa",
+   "lemma": "klasa",
+   "pos": "noun",
+   "translation": "класс",
+   "transparency": "transparent",
+   "themeId": "7.8",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.dyrektor",
+   "lemma": "dyrektor",
+   "pos": "noun",
+   "translation": "директор",
+   "transparency": "transparent",
+   "themeId": "7.8",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.przerwa",
+   "lemma": "przerwa",
+   "pos": "noun",
+   "translation": "перемена, перерыв",
+   "transparency": "partial",
+   "themeId": "7.8",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.dzwonek",
+   "lemma": "dzwonek",
+   "pos": "noun",
+   "translation": "звонок",
+   "transparency": "partial",
+   "themeId": "7.8",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.tablica",
+   "lemma": "tablica",
+   "pos": "noun",
+   "translation": "доска",
+   "transparency": "partial",
+   "themeId": "7.8",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.dlugopis",
+   "lemma": "długopis",
+   "pos": "noun",
+   "translation": "ручка",
+   "transparency": "opaque",
+   "themeId": "7.8",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.olowek",
+   "lemma": "ołówek",
+   "pos": "noun",
+   "translation": "карандаш",
+   "transparency": "opaque",
+   "themeId": "7.8",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.plecak",
+   "lemma": "plecak",
+   "pos": "noun",
+   "translation": "рюкзак",
+   "transparency": "opaque",
+   "themeId": "7.8",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.matura",
+   "lemma": "matura",
+   "pos": "noun",
+   "translation": "выпускной экзамен",
+   "transparency": "opaque",
+   "themeId": "7.8",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.swiadectwo",
+   "lemma": "świadectwo",
+   "pos": "noun",
+   "translation": "аттестат",
+   "transparency": "partial",
+   "themeId": "7.8",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.semestr",
+   "lemma": "semestr",
+   "pos": "noun",
+   "translation": "семестр",
+   "transparency": "transparent",
+   "themeId": "7.8",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.praca-domowa",
+   "lemma": "praca domowa",
+   "pos": "noun",
+   "translation": "домашнее задание",
+   "transparency": "partial",
+   "themeId": "7.8",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.powtarzac",
+   "lemma": "powtarzać",
+   "pos": "verb",
+   "translation": "повторять",
+   "transparency": "transparent",
+   "themeId": "7.8",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.blad",
+   "lemma": "błąd",
+   "pos": "noun",
+   "translation": "ошибка",
+   "transparency": "opaque",
+   "themeId": "7.8",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.slownik",
+   "lemma": "słownik",
+   "pos": "noun",
+   "translation": "словарь",
+   "transparency": "transparent",
+   "themeId": "7.8",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.gramatyka",
+   "lemma": "gramatyka",
+   "pos": "noun",
+   "translation": "грамматика",
+   "transparency": "transparent",
+   "themeId": "7.8",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.zaliczyc",
+   "lemma": "zaliczyć",
+   "pos": "verb",
+   "translation": "сдать, зачесть",
+   "transparency": "opaque",
+   "themeId": "7.8",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.kariera",
+   "lemma": "kariera",
+   "pos": "noun",
+   "translation": "карьера",
+   "transparency": "transparent",
+   "themeId": "7.9",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.ogloszenie",
+   "lemma": "ogłoszenie",
+   "pos": "noun",
+   "translation": "объявление",
+   "transparency": "opaque",
+   "themeId": "7.9",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.rekrutacja",
+   "lemma": "rekrutacja",
+   "pos": "noun",
+   "translation": "набор, отбор",
+   "transparency": "transparent",
+   "themeId": "7.9",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.pracodawca",
+   "lemma": "pracodawca",
+   "pos": "noun",
+   "translation": "работодатель",
+   "transparency": "opaque",
+   "themeId": "7.9",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.zespol",
+   "lemma": "zespół",
+   "pos": "noun",
+   "translation": "команда, коллектив",
+   "transparency": "opaque",
+   "themeId": "7.9",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.zebranie",
+   "lemma": "zebranie",
+   "pos": "noun",
+   "translation": "собрание",
+   "transparency": "partial",
+   "themeId": "7.9",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.prezentacja",
+   "lemma": "prezentacja",
+   "pos": "noun",
+   "translation": "презентация",
+   "transparency": "transparent",
+   "themeId": "7.9",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.raport",
+   "lemma": "raport",
+   "pos": "noun",
+   "translation": "отчёт",
+   "transparency": "transparent",
+   "themeId": "7.9",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.delegacja",
+   "lemma": "delegacja",
+   "pos": "noun",
+   "translation": "командировка",
+   "transparency": "partial",
+   "themeId": "7.9",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.szkolenie",
+   "lemma": "szkolenie",
+   "pos": "noun",
+   "translation": "обучение, тренинг",
+   "transparency": "opaque",
+   "themeId": "7.9",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.odpowiedzialnosc",
+   "lemma": "odpowiedzialność",
+   "pos": "noun",
+   "translation": "ответственность",
+   "transparency": "opaque",
+   "themeId": "7.9",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.stres",
+   "lemma": "stres",
+   "pos": "noun",
+   "translation": "стресс",
+   "transparency": "transparent",
+   "themeId": "7.9",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.zarabiac",
+   "lemma": "zarabiać",
+   "pos": "verb",
+   "translation": "зарабатывать",
+   "transparency": "opaque",
+   "themeId": "7.9",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.zatrudnic",
+   "lemma": "zatrudnić",
+   "pos": "verb",
+   "translation": "нанять",
+   "transparency": "opaque",
+   "themeId": "7.9",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.podpisac",
+   "lemma": "podpisać",
+   "pos": "verb",
+   "translation": "подписать",
+   "transparency": "transparent",
+   "themeId": "7.9",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.ubezpieczenie",
+   "lemma": "ubezpieczenie",
+   "pos": "noun",
+   "translation": "страховка",
+   "transparency": "opaque",
+   "themeId": "7.9",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.premia",
+   "lemma": "premia",
+   "pos": "noun",
+   "translation": "премия",
+   "transparency": "transparent",
+   "themeId": "7.9",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.biurko",
+   "lemma": "biurko",
+   "pos": "noun",
+   "translation": "письменный стол",
+   "transparency": "opaque",
+   "themeId": "7.9",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.komputer",
+   "lemma": "komputer",
+   "pos": "noun",
+   "translation": "компьютер",
+   "transparency": "transparent",
+   "themeId": "7.9",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.spoznienie",
+   "lemma": "spóźnienie",
+   "pos": "noun",
+   "translation": "опоздание",
+   "transparency": "opaque",
+   "themeId": "7.9",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.centrum-handlowe",
+   "lemma": "centrum handlowe",
+   "pos": "noun",
+   "translation": "торговый центр",
+   "transparency": "partial",
+   "themeId": "7.10",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.supermarket",
+   "lemma": "supermarket",
+   "pos": "noun",
+   "translation": "супермаркет",
+   "transparency": "transparent",
+   "themeId": "7.10",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.piekarnia",
+   "lemma": "piekarnia",
+   "pos": "noun",
+   "translation": "булочная",
+   "transparency": "opaque",
+   "themeId": "7.10",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.kiosk",
+   "lemma": "kiosk",
+   "pos": "noun",
+   "translation": "киоск",
+   "transparency": "transparent",
+   "themeId": "7.10",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.targ",
+   "lemma": "targ",
+   "pos": "noun",
+   "translation": "рынок, базар",
+   "transparency": "partial",
+   "themeId": "7.10",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.przymierzalnia",
+   "lemma": "przymierzalnia",
+   "pos": "noun",
+   "translation": "примерочная",
+   "transparency": "opaque",
+   "themeId": "7.10",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.rozmiar",
+   "lemma": "rozmiar",
+   "pos": "noun",
+   "translation": "размер",
+   "transparency": "transparent",
+   "themeId": "7.10",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.kolor",
+   "lemma": "kolor",
+   "pos": "noun",
+   "translation": "цвет",
+   "transparency": "transparent",
+   "themeId": "7.10",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.wzor",
+   "lemma": "wzór",
+   "pos": "noun",
+   "translation": "узор; образец",
+   "transparency": "opaque",
+   "themeId": "7.10",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.bawelna",
+   "lemma": "bawełna",
+   "pos": "noun",
+   "translation": "хлопок",
+   "transparency": "opaque",
+   "themeId": "7.10",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.ubranie",
+   "lemma": "ubranie",
+   "pos": "noun",
+   "translation": "одежда",
+   "transparency": "opaque",
+   "themeId": "7.10",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.koszula",
+   "lemma": "koszula",
+   "pos": "noun",
+   "translation": "рубашка",
+   "transparency": "partial",
+   "themeId": "7.10",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.spodnie",
+   "lemma": "spodnie",
+   "pos": "noun",
+   "translation": "брюки",
+   "transparency": "opaque",
+   "themeId": "7.10",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.sukienka",
+   "lemma": "sukienka",
+   "pos": "noun",
+   "translation": "платье",
+   "transparency": "opaque",
+   "themeId": "7.10",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.buty",
+   "lemma": "buty",
+   "pos": "noun",
+   "translation": "обувь, ботинки",
+   "transparency": "opaque",
+   "themeId": "7.10",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.kurtka",
+   "lemma": "kurtka",
+   "pos": "noun",
+   "translation": "куртка",
+   "transparency": "transparent",
+   "themeId": "7.10",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.czapka",
+   "lemma": "czapka",
+   "pos": "noun",
+   "translation": "шапка",
+   "transparency": "transparent",
+   "themeId": "7.10",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.przecena",
+   "lemma": "przecena",
+   "pos": "noun",
+   "translation": "уценка",
+   "transparency": "opaque",
+   "themeId": "7.10",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.mechanik",
+   "lemma": "mechanik",
+   "pos": "noun",
+   "translation": "механик",
+   "transparency": "transparent",
+   "themeId": "7.12",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.hydraulik",
+   "lemma": "hydraulik",
+   "pos": "noun",
+   "translation": "сантехник",
+   "transparency": "opaque",
+   "themeId": "7.12",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.elektryk",
+   "lemma": "elektryk",
+   "pos": "noun",
+   "translation": "электрик",
+   "transparency": "transparent",
+   "themeId": "7.12",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.krawiec",
+   "lemma": "krawiec",
+   "pos": "noun",
+   "translation": "портной",
+   "transparency": "opaque",
+   "themeId": "7.12",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.sprzataczka",
+   "lemma": "sprzątaczka",
+   "pos": "noun",
+   "translation": "уборщица",
+   "transparency": "opaque",
+   "themeId": "7.12",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.opiekunka",
+   "lemma": "opiekunka",
+   "pos": "noun",
+   "translation": "няня, сиделка",
+   "transparency": "opaque",
+   "themeId": "7.12",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.abonament",
+   "lemma": "abonament",
+   "pos": "noun",
+   "translation": "абонемент",
+   "transparency": "transparent",
+   "themeId": "7.12",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.prad",
+   "lemma": "prąd",
+   "pos": "noun",
+   "translation": "электричество",
+   "transparency": "opaque",
+   "themeId": "7.12",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.awaria",
+   "lemma": "awaria",
+   "pos": "noun",
+   "translation": "авария, поломка",
+   "transparency": "partial",
+   "themeId": "7.12",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.zglosic",
+   "lemma": "zgłosić",
+   "pos": "verb",
+   "translation": "заявить, сообщить",
+   "transparency": "opaque",
+   "themeId": "7.12",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.karnawal",
+   "lemma": "karnawał",
+   "pos": "noun",
+   "translation": "карнавал",
+   "transparency": "transparent",
+   "themeId": "7.15",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.wszystkich-swietych",
+   "lemma": "Wszystkich Świętych",
+   "pos": "noun",
+   "translation": "День всех святых",
+   "transparency": "partial",
+   "themeId": "7.15",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.dzien-kobiet",
+   "lemma": "Dzień Kobiet",
+   "pos": "noun",
+   "translation": "Женский день",
+   "transparency": "partial",
+   "themeId": "7.15",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.oplatek",
+   "lemma": "opłatek",
+   "pos": "noun",
+   "translation": "рождественская облатка",
+   "transparency": "opaque",
+   "themeId": "7.15",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.pisanki",
+   "lemma": "pisanki",
+   "pos": "noun",
+   "translation": "расписные яйца",
+   "transparency": "partial",
+   "themeId": "7.15",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.tort",
+   "lemma": "tort",
+   "pos": "noun",
+   "translation": "торт",
+   "transparency": "transparent",
+   "themeId": "7.15",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.toast",
+   "lemma": "toast",
+   "pos": "noun",
+   "translation": "тост",
+   "transparency": "transparent",
+   "themeId": "7.15",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.zabawa",
+   "lemma": "zabawa",
+   "pos": "noun",
+   "translation": "гулянье, вечеринка",
+   "transparency": "partial",
+   "themeId": "7.15",
    "priority": "normal"
   }
  ]

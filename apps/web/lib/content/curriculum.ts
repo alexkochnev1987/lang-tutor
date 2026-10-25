@@ -9,6 +9,7 @@
  * на себя HTTP-кэш и service worker; дублировать их ещё одним хранилищем
  * незачем.
  */
+import { CLOSED_CLASS_PARADIGMS } from '@/lib/lang-pl/closed-class'
 import { loadState } from '@/lib/data/store'
 
 export const COURSE_ID = process.env.NEXT_PUBLIC_COURSE_ID ?? 'pl-b1-ru'
@@ -119,7 +120,12 @@ export type Paradigm = Record<string, string[]>
 
 export async function loadMorphology(): Promise<Record<string, Paradigm>> {
   const pack = await loadPack<{ paradigms: Record<string, Paradigm> }>('morphology.json')
-  return pack.paradigms
+  // Закрытые классы (местоимения, числительные, `być`) в дамп SGJP не
+  // попали. Ручные таблицы языкового пакета подмешиваются здесь — на
+  // границе загрузки контента, а не в движке: `packages/engine` про
+  // польский не знает (R8). Данные из дампа при совпадении леммы
+  // перекрывают ручные: SGJP точнее.
+  return { ...CLOSED_CLASS_PARADIGMS, ...pack.paradigms }
 }
 
 export async function loadGrammarRules(): Promise<Map<string, GrammarRule>> {

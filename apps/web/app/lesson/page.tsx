@@ -71,7 +71,12 @@ export default function LessonPage() {
         for (const ex of exercisesForWord(w, all)) built.push({ phase: 'exercise', ex })
       }
       // 3. грамматика дня — на уже введённой лексике
-      const known = newWords.length ? newWords : all.slice(0, 20)
+      // Грамматику отрабатываем прежде всего на словах дня, но пулом
+      // остаётся весь словарь: правило дня бывает про глагол или
+      // прилагательное, а слова дня — существительные. Срез из первых
+      // 20 лексем (все они существительные) оставлял такие дни вовсе
+      // без грамматики. exercisesForRule всё равно берёт не больше limit.
+      const known = [...newWords, ...all]
       for (const ruleId of d.grammarRuleIds) {
         for (const ex of exercisesForRule(ruleId, known, morph, 3)) {
           built.push({ phase: 'exercise', ex })

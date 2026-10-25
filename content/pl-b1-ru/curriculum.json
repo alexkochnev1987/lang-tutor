@@ -10,7 +10,7 @@
  "params": {
   "totalDays": 182,
   "daysPerWeek": 7,
-  "dailyBudgetSec": 900,
+  "dailyBudgetSec": 3000,
   "weekRhythm": [
    "new",
    "new",
@@ -162,7 +162,7 @@
    "checkpoint": 6,
    "final": 1
   },
-  "totalMinutes": 2730
+  "totalMinutes": 9100
  },
  "days": [
   {
@@ -189,10 +189,10 @@
     "review": 0,
     "newGrammar": 0,
     "practice": 0,
-    "exam": 840,
-    "analysis": 60
+    "exam": 2800,
+    "analysis": 200
    },
-   "totalSec": 900,
+   "totalSec": 3000,
    "expectedOutcome": "Определён входной трек: A0, A2 или B1−. Программа подстроена под результат.",
    "interferenceRisk": null,
    "lexemeIds": []
@@ -222,13 +222,13 @@
     "pl-b1.grammar.transform"
    ],
    "timeBudgetSec": {
-    "review": 180,
-    "newGrammar": 240,
-    "practice": 300,
-    "exam": 120,
-    "analysis": 60
+    "review": 600,
+    "newGrammar": 800,
+    "practice": 1000,
+    "exam": 400,
+    "analysis": 200
    },
-   "totalSec": 900,
+   "totalSec": 3000,
    "expectedOutcome": "Правило «Глагол «быть» в настоящем» введено и отработано на теме «Человек».",
    "interferenceRisk": 5,
    "lexemeIds": [
@@ -265,13 +265,13 @@
     "pl-b1.listening.media"
    ],
    "timeBudgetSec": {
-    "review": 180,
-    "newGrammar": 240,
-    "practice": 300,
-    "exam": 120,
-    "analysis": 60
+    "review": 600,
+    "newGrammar": 800,
+    "practice": 1000,
+    "exam": 400,
+    "analysis": 200
    },
-   "totalSec": 900,
+   "totalSec": 3000,
    "expectedOutcome": "Правило «III спряжение: -am, -asz» введено и отработано на теме «Человек».",
    "interferenceRisk": 2,
    "lexemeIds": [
@@ -311,13 +311,13 @@
     "pl-b1.writing.short-forms"
    ],
    "timeBudgetSec": {
-    "review": 180,
-    "newGrammar": 240,
-    "practice": 300,
-    "exam": 120,
-    "analysis": 60
+    "review": 600,
+    "newGrammar": 800,
+    "practice": 1000,
+    "exam": 400,
+    "analysis": 200
    },
-   "totalSec": 900,
+   "totalSec": 3000,
    "expectedOutcome": "Правило «Алфавит и орфография» введено и отработано на теме «Человек».",
    "interferenceRisk": 4,
    "lexemeIds": [
@@ -356,13 +356,13 @@
     "pl-b1.reading.global"
    ],
    "timeBudgetSec": {
-    "review": 180,
-    "newGrammar": 240,
-    "practice": 300,
-    "exam": 120,
-    "analysis": 60
+    "review": 600,
+    "newGrammar": 800,
+    "practice": 1000,
+    "exam": 400,
+    "analysis": 200
    },
-   "totalSec": 900,
+   "totalSec": 3000,
    "expectedOutcome": "Правило «Род существительного» введено и отработано на теме «Человек».",
    "interferenceRisk": 3,
    "lexemeIds": [
@@ -370,8 +370,8 @@
     "pl.smutny",
     "pl.mily",
     "pl.niesmialy",
-    "pl.i",
-    "pl.a"
+    "pl.czlowiek",
+    "pl.osoba"
    ]
   },
   {
@@ -400,19 +400,19 @@
     "pl-b1.speaking.photo"
    ],
    "timeBudgetSec": {
-    "review": 300,
+    "review": 1000,
     "newGrammar": 0,
-    "practice": 420,
-    "exam": 120,
-    "analysis": 60
+    "practice": 1400,
+    "exam": 400,
+    "analysis": 200
    },
-   "totalSec": 900,
+   "totalSec": 3000,
    "expectedOutcome": "Правила недели отработаны на новом материале, без ввода нового.",
    "interferenceRisk": null,
    "lexemeIds": [
-    "pl.ale",
-    "pl.oraz",
-    "pl.lub"
+    "pl.mezczyzna",
+    "pl.kobieta",
+    "pl.dziewczyna"
    ]
   },
   {
@@ -442,11 +442,11 @@
    "timeBudgetSec": {
     "review": 0,
     "newGrammar": 0,
-    "practice": 180,
-    "exam": 540,
-    "analysis": 180
+    "practice": 600,
+    "exam": 1800,
+    "analysis": 600
    },
-   "totalSec": 900,
+   "totalSec": 3000,
    "expectedOutcome": "Проверено усвоение правил и лексики недели. Ошибки поставлены в очередь на пересдачу.",
    "interferenceRisk": null,
    "lexemeIds": []
@@ -477,13 +477,13 @@
     "pl-b1.reading.signs"
    ],
    "timeBudgetSec": {
-    "review": 180,
-    "newGrammar": 240,
-    "practice": 300,
-    "exam": 120,
-    "analysis": 60
+    "review": 600,
+    "newGrammar": 800,
+    "practice": 1000,
+    "exam": 400,
+    "analysis": 200
    },
-   "totalSec": 900,
+   "totalSec": 3000,
    "expectedOutcome": "Правило «Одушевлённость существительных м. р.» введено и отработано на теме «Дом и жильё».",
    "interferenceRisk": 1,
    "lexemeIds": [
@@ -522,13 +522,13 @@
     "pl-b1.grammar.recognize"
    ],
    "timeBudgetSec": {
-    "review": 180,
-    "newGrammar": 240,
-    "practice": 300,
-    "exam": 120,
-    "analysis": 60
+    "review": 600,
+    "newGrammar": 800,
+    "practice": 1000,
+    "exam": 400,
+    "analysis": 200
    },
-   "totalSec": 900,
+   "totalSec": 3000,
    "expectedOutcome": "Правило «Ударение» введено и отработано на теме «Дом и жильё».",
    "interferenceRisk": 5,
    "lexemeIds": [
@@ -567,13 +567,13 @@
     "pl-b1.listening.dialogue"
    ],
    "timeBudgetSec": {
-    "review": 180,
-    "newGrammar": 240,
-    "practice": 300,
-    "exam": 120,
-    "analysis": 60
+    "review": 600,
+    "newGrammar": 800,
+    "practice": 1000,
+    "exam": 400,
+    "analysis": 200
    },
-   "totalSec": 900,
+   "totalSec": 3000,
    "expectedOutcome": "Правило «IV спряжение: -em, -esz» введено и отработано на теме «Дом и жильё».",
    "interferenceRisk": 2,
    "lexemeIds": [
@@ -582,7 +582,7 @@
     "pl.lozko",
     "pl.czynsz",
     "pl.oplata",
-    "pl.albo"
+    "pl.blok"
    ]
   },
   {
@@ -612,22 +612,22 @@
     "pl-b1.writing.opinion"
    ],
    "timeBudgetSec": {
-    "review": 180,
-    "newGrammar": 240,
-    "practice": 300,
-    "exam": 120,
-    "analysis": 60
+    "review": 600,
+    "newGrammar": 800,
+    "practice": 1000,
+    "exam": 400,
+    "analysis": 200
    },
-   "totalSec": 900,
+   "totalSec": 3000,
    "expectedOutcome": "Правило «Множественное число, именительный» введено и отработано на теме «Дом и жильё».",
    "interferenceRisk": 3,
    "lexemeIds": [
-    "pl.czy",
-    "pl.ze",
-    "pl.zeby",
-    "pl.poniewaz",
-    "pl.bo",
-    "pl.dlatego"
+    "pl.parter",
+    "pl.schody",
+    "pl.drzwi",
+    "pl.okno",
+    "pl.sciana",
+    "pl.podloga"
    ]
   },
   {
@@ -658,22 +658,22 @@
     "pl-b1.reading.signs"
    ],
    "timeBudgetSec": {
-    "review": 180,
-    "newGrammar": 240,
-    "practice": 300,
-    "exam": 120,
-    "analysis": 60
+    "review": 600,
+    "newGrammar": 800,
+    "practice": 1000,
+    "exam": 400,
+    "analysis": 200
    },
-   "totalSec": 900,
+   "totalSec": 3000,
    "expectedOutcome": "Правило «Именительный падеж» введено и отработано на теме «Дом и жильё».",
    "interferenceRisk": 1,
    "lexemeIds": [
-    "pl.kiedy",
-    "pl.gdy",
-    "pl.ktory",
-    "pl.jaki",
-    "pl.jesli",
-    "pl.jezeli"
+    "pl.sufit",
+    "pl.balkon",
+    "pl.lodowka",
+    "pl.pralka",
+    "pl.prysznic",
+    "pl.recznik"
    ]
   },
   {
@@ -703,19 +703,19 @@
     "pl-b1.speaking.monologue"
    ],
    "timeBudgetSec": {
-    "review": 300,
+    "review": 1000,
     "newGrammar": 0,
-    "practice": 420,
-    "exam": 120,
-    "analysis": 60
+    "practice": 1400,
+    "exam": 400,
+    "analysis": 200
    },
-   "totalSec": 900,
+   "totalSec": 3000,
    "expectedOutcome": "Правила недели отработаны на новом материале, без ввода нового.",
    "interferenceRisk": null,
    "lexemeIds": [
-    "pl.gdyby",
-    "pl.w",
-    "pl.na"
+    "pl.poduszka",
+    "pl.koc",
+    "pl.remont"
    ]
   },
   {
@@ -746,11 +746,11 @@
    "timeBudgetSec": {
     "review": 0,
     "newGrammar": 0,
-    "practice": 180,
-    "exam": 540,
-    "analysis": 180
+    "practice": 600,
+    "exam": 1800,
+    "analysis": 600
    },
-   "totalSec": 900,
+   "totalSec": 3000,
    "expectedOutcome": "Проверено усвоение правил и лексики недели. Ошибки поставлены в очередь на пересдачу.",
    "interferenceRisk": null,
    "lexemeIds": []
@@ -783,13 +783,13 @@
     "pl-b1.reading.argument"
    ],
    "timeBudgetSec": {
-    "review": 180,
-    "newGrammar": 240,
-    "practice": 300,
-    "exam": 120,
-    "analysis": 60
+    "review": 600,
+    "newGrammar": 800,
+    "practice": 1000,
+    "exam": 400,
+    "analysis": 200
    },
-   "totalSec": 900,
+   "totalSec": 3000,
    "expectedOutcome": "Правило «Творительный падеж» введено и отработано на теме «Повседневная жизнь».",
    "interferenceRisk": 2,
    "lexemeIds": [
@@ -829,13 +829,13 @@
     "pl-b1.grammar.produce"
    ],
    "timeBudgetSec": {
-    "review": 180,
-    "newGrammar": 240,
-    "practice": 300,
-    "exam": 120,
-    "analysis": 60
+    "review": 600,
+    "newGrammar": 800,
+    "practice": 1000,
+    "exam": 400,
+    "analysis": 200
    },
-   "totalSec": 900,
+   "totalSec": 3000,
    "expectedOutcome": "Правило «Указательные местоимения» введено и отработано на теме «Повседневная жизнь».",
    "interferenceRisk": 2,
    "lexemeIds": [
@@ -875,13 +875,13 @@
     "pl-b1.listening.detail"
    ],
    "timeBudgetSec": {
-    "review": 180,
-    "newGrammar": 240,
-    "practice": 300,
-    "exam": 120,
-    "analysis": 60
+    "review": 600,
+    "newGrammar": 800,
+    "practice": 1000,
+    "exam": 400,
+    "analysis": 200
    },
-   "totalSec": 900,
+   "totalSec": 3000,
    "expectedOutcome": "Правило «Творительный: глаголы и предлоги» введено и отработано на теме «Повседневная жизнь».",
    "interferenceRisk": 3,
    "lexemeIds": [
@@ -890,7 +890,7 @@
     "pl.wieczor",
     "pl.poludnie",
     "pl.klucz",
-    "pl.do"
+    "pl.dzien"
    ]
   },
   {
@@ -921,22 +921,22 @@
     "pl-b1.writing.narrative"
    ],
    "timeBudgetSec": {
-    "review": 180,
-    "newGrammar": 240,
-    "practice": 300,
-    "exam": 120,
-    "analysis": 60
+    "review": 600,
+    "newGrammar": 800,
+    "practice": 1000,
+    "exam": 400,
+    "analysis": 200
    },
-   "totalSec": 900,
+   "totalSec": 3000,
    "expectedOutcome": "Правило «Количественные 1–4» введено и отработано на теме «Повседневная жизнь».",
    "interferenceRisk": 3,
    "lexemeIds": [
-    "pl.z",
-    "pl.od",
-    "pl.bez",
-    "pl.dla",
-    "pl.obok",
-    "pl.przy"
+    "pl.noc",
+    "pl.wtorek",
+    "pl.czwartek",
+    "pl.weekend",
+    "pl.budzik",
+    "pl.spozniac-sie"
    ]
   },
   {
@@ -967,22 +967,22 @@
     "pl-b1.reading.argument"
    ],
    "timeBudgetSec": {
-    "review": 180,
-    "newGrammar": 240,
-    "practice": 300,
-    "exam": 120,
-    "analysis": 60
+    "review": 600,
+    "newGrammar": 800,
+    "practice": 1000,
+    "exam": 400,
+    "analysis": 200
    },
-   "totalSec": 900,
+   "totalSec": 3000,
    "expectedOutcome": "Правило «Порядковые числительные» введено и отработано на теме «Повседневная жизнь».",
    "interferenceRisk": 2,
    "lexemeIds": [
-    "pl.przed",
-    "pl.za",
-    "pl.pod",
-    "pl.nad",
-    "pl.miedzy",
-    "pl.przez"
+    "pl.zdazyc",
+    "pl.zalatwic",
+    "pl.codziennie",
+    "pl.zwykle",
+    "pl.rzadko",
+    "pl.chwila"
    ]
   },
   {
@@ -1012,19 +1012,19 @@
     "pl-b1.speaking.dialogue"
    ],
    "timeBudgetSec": {
-    "review": 300,
+    "review": 1000,
     "newGrammar": 0,
-    "practice": 420,
-    "exam": 120,
-    "analysis": 60
+    "practice": 1400,
+    "exam": 400,
+    "analysis": 200
    },
-   "totalSec": 900,
+   "totalSec": 3000,
    "expectedOutcome": "Правила недели отработаны на новом материале, без ввода нового.",
    "interferenceRisk": null,
    "lexemeIds": [
-    "pl.o",
-    "pl.po",
-    "pl.nikt"
+    "pl.termin",
+    "pl.spotkanie",
+    "pl.plan"
    ]
   },
   {
@@ -1055,11 +1055,11 @@
    "timeBudgetSec": {
     "review": 0,
     "newGrammar": 0,
-    "practice": 180,
-    "exam": 540,
-    "analysis": 180
+    "practice": 600,
+    "exam": 1800,
+    "analysis": 600
    },
-   "totalSec": 900,
+   "totalSec": 3000,
    "expectedOutcome": "Проверено усвоение правил и лексики недели. Ошибки поставлены в очередь на пересдачу.",
    "interferenceRisk": null,
    "lexemeIds": []
@@ -1092,13 +1092,13 @@
     "pl-b1.reading.selective"
    ],
    "timeBudgetSec": {
-    "review": 180,
-    "newGrammar": 240,
-    "practice": 300,
-    "exam": 120,
-    "analysis": 60
+    "review": 600,
+    "newGrammar": 800,
+    "practice": 1000,
+    "exam": 400,
+    "analysis": 200
    },
-   "totalSec": 900,
+   "totalSec": 3000,
    "expectedOutcome": "Правило «Вопросительные местоимения» введено и отработано на теме «Досуг».",
    "interferenceRisk": 3,
    "lexemeIds": [
@@ -1138,13 +1138,13 @@
     "pl-b1.grammar.transform"
    ],
    "timeBudgetSec": {
-    "review": 180,
-    "newGrammar": 240,
-    "practice": 300,
-    "exam": 120,
-    "analysis": 60
+    "review": 600,
+    "newGrammar": 800,
+    "practice": 1000,
+    "exam": 400,
+    "analysis": 200
    },
-   "totalSec": 900,
+   "totalSec": 3000,
    "expectedOutcome": "Правило «Вопросительные предложения» введено и отработано на теме «Досуг».",
    "interferenceRisk": 3,
    "lexemeIds": [
@@ -1153,7 +1153,7 @@
     "pl.plywac",
     "pl.biegac",
     "pl.taniec",
-    "pl.nic"
+    "pl.hobby"
    ]
   },
   {
@@ -1184,22 +1184,22 @@
     "pl-b1.listening.global"
    ],
    "timeBudgetSec": {
-    "review": 180,
-    "newGrammar": 240,
-    "practice": 300,
-    "exam": 120,
-    "analysis": 60
+    "review": 600,
+    "newGrammar": 800,
+    "practice": 1000,
+    "exam": 400,
+    "analysis": 200
    },
-   "totalSec": 900,
+   "totalSec": 3000,
    "expectedOutcome": "Правило «Сложносочинённые предложения» введено и отработано на теме «Досуг».",
    "interferenceRisk": 3,
    "lexemeIds": [
-    "pl.ktos",
-    "pl.cos",
-    "pl.bardzo",
-    "pl.zawsze",
-    "pl.nigdy",
-    "pl.czesto"
+    "pl.sport",
+    "pl.silownia",
+    "pl.rower",
+    "pl.narty",
+    "pl.basen",
+    "pl.teatr"
    ]
   },
   {
@@ -1230,22 +1230,22 @@
     "pl-b1.writing.descriptive"
    ],
    "timeBudgetSec": {
-    "review": 180,
-    "newGrammar": 240,
-    "practice": 300,
-    "exam": 120,
-    "analysis": 60
+    "review": 600,
+    "newGrammar": 800,
+    "practice": 1000,
+    "exam": 400,
+    "analysis": 200
    },
-   "totalSec": 900,
+   "totalSec": 3000,
    "expectedOutcome": "Правило «Притяжательные местоимения» введено и отработано на теме «Досуг».",
    "interferenceRisk": 2,
    "lexemeIds": [
-    "pl.czasem",
-    "pl.juz",
-    "pl.jeszcze",
-    "pl.tylko",
-    "pl.tez",
-    "pl.takze"
+    "pl.kino",
+    "pl.aktor",
+    "pl.przedstawienie",
+    "pl.gra",
+    "pl.grac",
+    "pl.spiewac"
    ]
   },
   {
@@ -1277,22 +1277,22 @@
     "pl-b1.reading.selective"
    ],
    "timeBudgetSec": {
-    "review": 180,
-    "newGrammar": 240,
-    "practice": 300,
-    "exam": 120,
-    "analysis": 60
+    "review": 600,
+    "newGrammar": 800,
+    "practice": 1000,
+    "exam": 400,
+    "analysis": 200
    },
-   "totalSec": 900,
+   "totalSec": 3000,
    "expectedOutcome": "Правило «Прошедшее время, ед. ч.» введено и отработано на теме «Досуг».",
    "interferenceRisk": 4,
    "lexemeIds": [
-    "pl.teraz",
-    "pl.potem",
-    "pl.wczoraj",
-    "pl.dzisiaj",
-    "pl.zaraz",
-    "pl.moze"
+    "pl.tanczyc",
+    "pl.spacer",
+    "pl.zbierac",
+    "pl.fotografia",
+    "pl.pilka-nozna",
+    "pl.mecz"
    ]
   },
   {
@@ -1322,19 +1322,19 @@
     "pl-b1.speaking.photo"
    ],
    "timeBudgetSec": {
-    "review": 300,
+    "review": 1000,
     "newGrammar": 0,
-    "practice": 420,
-    "exam": 120,
-    "analysis": 60
+    "practice": 1400,
+    "exam": 400,
+    "analysis": 200
    },
-   "totalSec": 900,
+   "totalSec": 3000,
    "expectedOutcome": "Правила недели отработаны на новом материале, без ввода нового.",
    "interferenceRisk": null,
    "lexemeIds": [
-    "pl.trzeba",
-    "pl.mozna",
-    "pl.wolno"
+    "pl.kibic",
+    "pl.druzyna",
+    "pl.trener"
    ]
   },
   {
@@ -1365,10 +1365,10 @@
     "review": 0,
     "newGrammar": 0,
     "practice": 0,
-    "exam": 840,
-    "analysis": 60
+    "exam": 2800,
+    "analysis": 200
    },
-   "totalSec": 900,
+   "totalSec": 3000,
    "expectedOutcome": "Обновлён прогноз по всем пяти модулям. Слабейший получает приоритет в следующем цикле.",
    "interferenceRisk": null,
    "lexemeIds": []
@@ -1401,13 +1401,13 @@
     "pl-b1.reading.global"
    ],
    "timeBudgetSec": {
-    "review": 240,
-    "newGrammar": 180,
-    "practice": 300,
-    "exam": 120,
-    "analysis": 60
+    "review": 800,
+    "newGrammar": 600,
+    "practice": 1000,
+    "exam": 400,
+    "analysis": 200
    },
-   "totalSec": 900,
+   "totalSec": 3000,
    "expectedOutcome": "Правило «Вид глагола — понятие» введено и отработано на теме «Путешествия».",
    "interferenceRisk": 1,
    "lexemeIds": [
@@ -1448,13 +1448,13 @@
     "pl-b1.grammar.recognize"
    ],
    "timeBudgetSec": {
-    "review": 240,
-    "newGrammar": 180,
-    "practice": 300,
-    "exam": 120,
-    "analysis": 60
+    "review": 800,
+    "newGrammar": 600,
+    "practice": 1000,
+    "exam": 400,
+    "analysis": 200
    },
-   "totalSec": 900,
+   "totalSec": 3000,
    "expectedOutcome": "Правило «Образование совершенного вида» введено и отработано на теме «Путешествия».",
    "interferenceRisk": 3,
    "lexemeIds": [
@@ -1464,7 +1464,7 @@
     "pl.wycieczka",
     "pl.nocleg",
     "pl.opoznienie",
-    "pl.robic"
+    "pl.podrozowac"
    ]
   },
   {
@@ -1494,23 +1494,23 @@
     "pl-b1.listening.media"
    ],
    "timeBudgetSec": {
-    "review": 240,
-    "newGrammar": 180,
-    "practice": 300,
-    "exam": 120,
-    "analysis": 60
+    "review": 800,
+    "newGrammar": 600,
+    "practice": 1000,
+    "exam": 400,
+    "analysis": 200
    },
-   "totalSec": 900,
+   "totalSec": 3000,
    "expectedOutcome": "Правило «Будущее простое» введено и отработано на теме «Путешествия».",
    "interferenceRisk": 1,
    "lexemeIds": [
-    "pl.mowic",
-    "pl.czytac",
-    "pl.pisac",
-    "pl.widziec",
-    "pl.slyszec",
-    "pl.sluchac",
-    "pl.szukac"
+    "pl.pasazer",
+    "pl.peron",
+    "pl.rozklad-jazdy",
+    "pl.kierowca",
+    "pl.benzyna",
+    "pl.droga",
+    "pl.mapa"
    ]
   },
   {
@@ -1541,23 +1541,23 @@
     "pl-b1.writing.short-forms"
    ],
    "timeBudgetSec": {
-    "review": 240,
-    "newGrammar": 180,
-    "practice": 300,
-    "exam": 120,
-    "analysis": 60
+    "review": 800,
+    "newGrammar": 600,
+    "practice": 1000,
+    "exam": 400,
+    "analysis": 200
    },
-   "totalSec": 900,
+   "totalSec": 3000,
    "expectedOutcome": "Правило «Употребление вида» введено и отработано на теме «Путешествия».",
    "interferenceRisk": 2,
    "lexemeIds": [
-    "pl.potrzebowac",
-    "pl.uzywac",
-    "pl.uczyc-sie",
-    "pl.bac-sie",
-    "pl.podobac-sie",
-    "pl.pomagac",
-    "pl.dziekowac"
+    "pl.hotel",
+    "pl.rezerwacja",
+    "pl.paszport",
+    "pl.granica",
+    "pl.zwiedzac",
+    "pl.przewodnik",
+    "pl.plaza"
    ]
   },
   {
@@ -1588,23 +1588,23 @@
     "pl-b1.reading.global"
    ],
    "timeBudgetSec": {
-    "review": 240,
-    "newGrammar": 180,
-    "practice": 300,
-    "exam": 120,
-    "analysis": 60
+    "review": 800,
+    "newGrammar": 600,
+    "practice": 1000,
+    "exam": 400,
+    "analysis": 200
    },
-   "totalSec": 900,
+   "totalSec": 3000,
    "expectedOutcome": "Правило «Будущее сложное» введено и отработано на теме «Путешествия».",
    "interferenceRisk": 4,
    "lexemeIds": [
-    "pl.przeszkadzac",
-    "pl.interesowac-sie",
-    "pl.zajmowac-sie",
-    "pl.czekac",
-    "pl.pytac",
-    "pl.prosic",
-    "pl.dzwonic"
+    "pl.wyjazd",
+    "pl.przyjazd",
+    "pl.lot",
+    "pl.przesiadka",
+    "pl.odprawa",
+    "pl.wiza",
+    "pl.pensjonat"
    ]
   },
   {
@@ -1634,20 +1634,20 @@
     "pl-b1.speaking.monologue"
    ],
    "timeBudgetSec": {
-    "review": 300,
+    "review": 1000,
     "newGrammar": 0,
-    "practice": 420,
-    "exam": 120,
-    "analysis": 60
+    "practice": 1400,
+    "exam": 400,
+    "analysis": 200
    },
-   "totalSec": 900,
+   "totalSec": 3000,
    "expectedOutcome": "Правила недели отработаны на новом материале, без ввода нового.",
    "interferenceRisk": null,
    "lexemeIds": [
-    "pl.isc",
-    "pl.jechac",
-    "pl.chodzic",
-    "pl.przychodzic"
+    "pl.recepcja",
+    "pl.doba",
+    "pl.pamiatka",
+    "pl.zagranica"
    ]
   },
   {
@@ -1678,11 +1678,11 @@
    "timeBudgetSec": {
     "review": 0,
     "newGrammar": 0,
-    "practice": 180,
-    "exam": 540,
-    "analysis": 180
+    "practice": 600,
+    "exam": 1800,
+    "analysis": 600
    },
-   "totalSec": 900,
+   "totalSec": 3000,
    "expectedOutcome": "Проверено усвоение правил и лексики недели. Ошибки поставлены в очередь на пересдачу.",
    "interferenceRisk": null,
    "lexemeIds": []
@@ -1715,13 +1715,13 @@
     "pl-b1.reading.signs"
    ],
    "timeBudgetSec": {
-    "review": 240,
-    "newGrammar": 180,
-    "practice": 300,
-    "exam": 120,
-    "analysis": 60
+    "review": 800,
+    "newGrammar": 600,
+    "practice": 1000,
+    "exam": 400,
+    "analysis": 200
    },
-   "totalSec": 900,
+   "totalSec": 3000,
    "expectedOutcome": "Правило «I спряжение: -ę, -esz» введено и отработано на теме «Общество».",
    "interferenceRisk": 3,
    "lexemeIds": [
@@ -1762,23 +1762,23 @@
     "pl-b1.grammar.produce"
    ],
    "timeBudgetSec": {
-    "review": 240,
-    "newGrammar": 180,
-    "practice": 300,
-    "exam": 120,
-    "analysis": 60
+    "review": 800,
+    "newGrammar": 600,
+    "practice": 1000,
+    "exam": 400,
+    "analysis": 200
    },
-   "totalSec": 900,
+   "totalSec": 3000,
    "expectedOutcome": "Правило «II спряжение: -ę, -isz/-ysz» введено и отработано на теме «Общество».",
    "interferenceRisk": 3,
    "lexemeIds": [
     "pl.policja",
     "pl.wybory",
     "pl.podatek",
-    "pl.wychodzic",
-    "pl.wracac",
-    "pl.kupowac",
-    "pl.sprzedawac"
+    "pl.rzad",
+    "pl.prezydent",
+    "pl.minister",
+    "pl.prawo"
    ]
   },
   {
@@ -1809,23 +1809,23 @@
     "pl-b1.listening.dialogue"
    ],
    "timeBudgetSec": {
-    "review": 240,
-    "newGrammar": 180,
-    "practice": 300,
-    "exam": 120,
-    "analysis": 60
+    "review": 800,
+    "newGrammar": 600,
+    "practice": 1000,
+    "exam": 400,
+    "analysis": 200
    },
-   "totalSec": 900,
+   "totalSec": 3000,
    "expectedOutcome": "Правило «Повелительное наклонение» введено и отработано на теме «Общество».",
    "interferenceRisk": 3,
    "lexemeIds": [
-    "pl.placic",
-    "pl.jesc",
-    "pl.pic",
-    "pl.gotowac",
-    "pl.spac",
-    "pl.wstawac",
-    "pl.pracowac"
+    "pl.ustawa",
+    "pl.sad",
+    "pl.obywatelstwo",
+    "pl.cudzoziemiec",
+    "pl.dowod-osobisty",
+    "pl.formularz",
+    "pl.wniosek"
    ]
   },
   {
@@ -1856,23 +1856,23 @@
     "pl-b1.writing.opinion"
    ],
    "timeBudgetSec": {
-    "review": 240,
-    "newGrammar": 180,
-    "practice": 300,
-    "exam": 120,
-    "analysis": 60
+    "review": 800,
+    "newGrammar": 600,
+    "practice": 1000,
+    "exam": 400,
+    "analysis": 200
    },
-   "totalSec": 900,
+   "totalSec": 3000,
    "expectedOutcome": "Правило «Повелительное через niech» введено и отработано на теме «Общество».",
    "interferenceRisk": 3,
    "lexemeIds": [
-    "pl.odpoczywac",
-    "pl.mieszkac",
-    "pl.wynajmowac",
-    "pl.zaczynac",
-    "pl.konczyc",
-    "pl.otwierac",
-    "pl.zamykac"
+    "pl.urzednik",
+    "pl.kolejka",
+    "pl.spoleczenstwo",
+    "pl.wojna",
+    "pl.bezpieczenstwo",
+    "pl.przestepstwo",
+    "pl.kara"
    ]
   },
   {
@@ -1904,23 +1904,23 @@
     "pl-b1.reading.signs"
    ],
    "timeBudgetSec": {
-    "review": 240,
-    "newGrammar": 180,
-    "practice": 300,
-    "exam": 120,
-    "analysis": 60
+    "review": 800,
+    "newGrammar": 600,
+    "practice": 1000,
+    "exam": 400,
+    "analysis": 200
    },
-   "totalSec": 900,
+   "totalSec": 3000,
    "expectedOutcome": "Правило «Возвратные глаголы и позиция się» введено и отработано на теме «Общество».",
    "interferenceRisk": 5,
    "lexemeIds": [
-    "pl.brac",
-    "pl.dawac",
-    "pl.wiedziec",
-    "pl.znac",
-    "pl.umiec",
-    "pl.moc",
-    "pl.chciec"
+    "pl.wiezienie",
+    "pl.budzet",
+    "pl.gospodarka",
+    "pl.inflacja",
+    "pl.demokracja",
+    "pl.partia",
+    "pl.glosowac"
    ]
   },
   {
@@ -1950,20 +1950,20 @@
     "pl-b1.speaking.dialogue"
    ],
    "timeBudgetSec": {
-    "review": 300,
+    "review": 1000,
     "newGrammar": 0,
-    "practice": 420,
-    "exam": 120,
-    "analysis": 60
+    "practice": 1400,
+    "exam": 400,
+    "analysis": 200
    },
-   "totalSec": 900,
+   "totalSec": 3000,
    "expectedOutcome": "Правила недели отработаны на новом материале, без ввода нового.",
    "interferenceRisk": null,
    "lexemeIds": [
-    "pl.musiec",
-    "pl.lubic",
-    "pl.kochac",
-    "pl.myslec"
+    "pl.kandydat",
+    "pl.protest",
+    "pl.strajk",
+    "pl.organizacja"
    ]
   },
   {
@@ -1994,11 +1994,11 @@
    "timeBudgetSec": {
     "review": 0,
     "newGrammar": 0,
-    "practice": 180,
-    "exam": 540,
-    "analysis": 180
+    "practice": 600,
+    "exam": 1800,
+    "analysis": 600
    },
-   "totalSec": 900,
+   "totalSec": 3000,
    "expectedOutcome": "Проверено усвоение правил и лексики недели. Ошибки поставлены в очередь на пересдачу.",
    "interferenceRisk": null,
    "lexemeIds": []
@@ -2031,13 +2031,13 @@
     "pl-b1.reading.argument"
    ],
    "timeBudgetSec": {
-    "review": 240,
-    "newGrammar": 180,
-    "practice": 300,
-    "exam": 120,
-    "analysis": 60
+    "review": 800,
+    "newGrammar": 600,
+    "practice": 1000,
+    "exam": 400,
+    "analysis": 200
    },
-   "totalSec": 900,
+   "totalSec": 3000,
    "expectedOutcome": "Правило «Нерегулярные глаголы» введено и отработано на теме «Здоровье».",
    "interferenceRisk": 3,
    "lexemeIds": [
@@ -2078,13 +2078,13 @@
     "pl-b1.grammar.transform"
    ],
    "timeBudgetSec": {
-    "review": 240,
-    "newGrammar": 180,
-    "practice": 300,
-    "exam": 120,
-    "analysis": 60
+    "review": 800,
+    "newGrammar": 600,
+    "practice": 1000,
+    "exam": 400,
+    "analysis": 200
    },
-   "totalSec": 900,
+   "totalSec": 3000,
    "expectedOutcome": "Правило «Нерегулярные глаголы» введено и отработано на теме «Здоровье».",
    "interferenceRisk": 3,
    "lexemeIds": [
@@ -2126,21 +2126,23 @@
     "pl-b1.listening.detail"
    ],
    "timeBudgetSec": {
-    "review": 240,
-    "newGrammar": 180,
-    "practice": 300,
-    "exam": 120,
-    "analysis": 60
+    "review": 800,
+    "newGrammar": 600,
+    "practice": 1000,
+    "exam": 400,
+    "analysis": 200
    },
-   "totalSec": 900,
+   "totalSec": 3000,
    "expectedOutcome": "Правило «Мужско-личный род» введено и отработано на теме «Здоровье».",
    "interferenceRisk": 5,
    "lexemeIds": [
-    "pl.rozumiec",
-    "pl.pamietac",
-    "pl.zapominac",
-    "pl.spotykac-sie",
-    "pl.rozmawiac"
+    "pl.choroba",
+    "pl.chory",
+    "pl.zdrowy",
+    "pl.kaszel",
+    "pl.katar",
+    "pl.grypa",
+    "pl.gardlo"
    ]
   },
   {
@@ -2172,16 +2174,24 @@
     "pl-b1.writing.narrative"
    ],
    "timeBudgetSec": {
-    "review": 240,
-    "newGrammar": 180,
-    "practice": 300,
-    "exam": 120,
-    "analysis": 60
+    "review": 800,
+    "newGrammar": 600,
+    "practice": 1000,
+    "exam": 400,
+    "analysis": 200
    },
-   "totalSec": 900,
+   "totalSec": 3000,
    "expectedOutcome": "Правило «Мужско-личный род» введено и отработано на теме «Здоровье».",
    "interferenceRisk": 5,
-   "lexemeIds": []
+   "lexemeIds": [
+    "pl.brzuch",
+    "pl.serce",
+    "pl.plecy",
+    "pl.zab",
+    "pl.dentysta",
+    "pl.pielegniarka",
+    "pl.badanie"
+   ]
   },
   {
    "day": 47,
@@ -2211,16 +2221,24 @@
     "pl-b1.reading.argument"
    ],
    "timeBudgetSec": {
-    "review": 240,
-    "newGrammar": 180,
-    "practice": 300,
-    "exam": 120,
-    "analysis": 60
+    "review": 800,
+    "newGrammar": 600,
+    "practice": 1000,
+    "exam": 400,
+    "analysis": 200
    },
-   "totalSec": 900,
+   "totalSec": 3000,
    "expectedOutcome": "Правило «Винительный падеж» введено и отработано на теме «Здоровье».",
    "interferenceRisk": 2,
-   "lexemeIds": []
+   "lexemeIds": [
+    "pl.tabletka",
+    "pl.leczyc",
+    "pl.bolec",
+    "pl.czuc-sie",
+    "pl.pogotowie",
+    "pl.karetka",
+    "pl.objaw"
+   ]
   },
   {
    "day": 48,
@@ -2249,16 +2267,21 @@
     "pl-b1.speaking.photo"
    ],
    "timeBudgetSec": {
-    "review": 300,
+    "review": 1000,
     "newGrammar": 0,
-    "practice": 420,
-    "exam": 120,
-    "analysis": 60
+    "practice": 1400,
+    "exam": 400,
+    "analysis": 200
    },
-   "totalSec": 900,
+   "totalSec": 3000,
    "expectedOutcome": "Правила недели отработаны на новом материале, без ввода нового.",
    "interferenceRisk": null,
-   "lexemeIds": []
+   "lexemeIds": [
+    "pl.cisnienie",
+    "pl.alergia",
+    "pl.zastrzyk",
+    "pl.szczepienie"
+   ]
   },
   {
    "day": 49,
@@ -2288,11 +2311,11 @@
    "timeBudgetSec": {
     "review": 0,
     "newGrammar": 0,
-    "practice": 180,
-    "exam": 540,
-    "analysis": 180
+    "practice": 600,
+    "exam": 1800,
+    "analysis": 600
    },
-   "totalSec": 900,
+   "totalSec": 3000,
    "expectedOutcome": "Проверено усвоение правил и лексики недели. Ошибки поставлены в очередь на пересдачу.",
    "interferenceRisk": null,
    "lexemeIds": []
@@ -2325,13 +2348,13 @@
     "pl-b1.reading.selective"
    ],
    "timeBudgetSec": {
-    "review": 240,
-    "newGrammar": 180,
-    "practice": 300,
-    "exam": 120,
-    "analysis": 60
+    "review": 800,
+    "newGrammar": 600,
+    "practice": 1000,
+    "exam": 400,
+    "analysis": 200
    },
-   "totalSec": 900,
+   "totalSec": 3000,
    "expectedOutcome": "Правило «Винительный с предлогами» введено и отработано на теме «Образование».",
    "interferenceRisk": 4,
    "lexemeIds": [
@@ -2372,19 +2395,23 @@
     "pl-b1.grammar.recognize"
    ],
    "timeBudgetSec": {
-    "review": 240,
-    "newGrammar": 180,
-    "practice": 300,
-    "exam": 120,
-    "analysis": 60
+    "review": 800,
+    "newGrammar": 600,
+    "practice": 1000,
+    "exam": 400,
+    "analysis": 200
    },
-   "totalSec": 900,
+   "totalSec": 3000,
    "expectedOutcome": "Правило «Родительный падеж — формы» введено и отработано на теме «Образование».",
    "interferenceRisk": 3,
    "lexemeIds": [
     "pl.zeszyt",
     "pl.uniwersytet",
-    "pl.studia"
+    "pl.studia",
+    "pl.wyklad",
+    "pl.zajecia",
+    "pl.cwiczenia",
+    "pl.wydzial"
    ]
   },
   {
@@ -2415,16 +2442,24 @@
     "pl-b1.listening.global"
    ],
    "timeBudgetSec": {
-    "review": 240,
-    "newGrammar": 180,
-    "practice": 300,
-    "exam": 120,
-    "analysis": 60
+    "review": 800,
+    "newGrammar": 600,
+    "practice": 1000,
+    "exam": 400,
+    "analysis": 200
    },
-   "totalSec": 900,
+   "totalSec": 3000,
    "expectedOutcome": "Правило «Родительный падеж — формы» введено и отработано на теме «Образование».",
    "interferenceRisk": 3,
-   "lexemeIds": []
+   "lexemeIds": [
+    "pl.student",
+    "pl.dyplom",
+    "pl.stypendium",
+    "pl.podrecznik",
+    "pl.notatka",
+    "pl.zadanie",
+    "pl.sprawdzian"
+   ]
   },
   {
    "day": 53,
@@ -2455,16 +2490,24 @@
     "pl-b1.writing.descriptive"
    ],
    "timeBudgetSec": {
-    "review": 240,
-    "newGrammar": 180,
-    "practice": 300,
-    "exam": 120,
-    "analysis": 60
+    "review": 800,
+    "newGrammar": 600,
+    "practice": 1000,
+    "exam": 400,
+    "analysis": 200
    },
-   "totalSec": 900,
+   "totalSec": 3000,
    "expectedOutcome": "Правило «Родительный при отрицании» введено и отработано на теме «Образование».",
    "interferenceRisk": 4,
-   "lexemeIds": []
+   "lexemeIds": [
+    "pl.nauka",
+    "pl.kurs",
+    "pl.wiedza",
+    "pl.umiejetnosc",
+    "pl.przedszkole",
+    "pl.podstawowka",
+    "pl.liceum"
+   ]
   },
   {
    "day": 54,
@@ -2494,16 +2537,24 @@
     "pl-b1.reading.selective"
    ],
    "timeBudgetSec": {
-    "review": 240,
-    "newGrammar": 180,
-    "practice": 300,
-    "exam": 120,
-    "analysis": 60
+    "review": 800,
+    "newGrammar": 600,
+    "practice": 1000,
+    "exam": 400,
+    "analysis": 200
    },
-   "totalSec": 900,
+   "totalSec": 3000,
    "expectedOutcome": "Правило «Родительный с предлогами» введено и отработано на теме «Образование».",
    "interferenceRisk": 4,
-   "lexemeIds": []
+   "lexemeIds": [
+    "pl.klasa",
+    "pl.dyrektor",
+    "pl.przerwa",
+    "pl.dzwonek",
+    "pl.tablica",
+    "pl.dlugopis",
+    "pl.olowek"
+   ]
   },
   {
    "day": 55,
@@ -2532,16 +2583,21 @@
     "pl-b1.speaking.monologue"
    ],
    "timeBudgetSec": {
-    "review": 300,
+    "review": 1000,
     "newGrammar": 0,
-    "practice": 420,
-    "exam": 120,
-    "analysis": 60
+    "practice": 1400,
+    "exam": 400,
+    "analysis": 200
    },
-   "totalSec": 900,
+   "totalSec": 3000,
    "expectedOutcome": "Правила недели отработаны на новом материале, без ввода нового.",
    "interferenceRisk": null,
-   "lexemeIds": []
+   "lexemeIds": [
+    "pl.plecak",
+    "pl.matura",
+    "pl.swiadectwo",
+    "pl.semestr"
+   ]
   },
   {
    "day": 56,
@@ -2571,10 +2627,10 @@
     "review": 0,
     "newGrammar": 0,
     "practice": 0,
-    "exam": 840,
-    "analysis": 60
+    "exam": 2800,
+    "analysis": 200
    },
-   "totalSec": 900,
+   "totalSec": 3000,
    "expectedOutcome": "Обновлён прогноз по всем пяти модулям. Слабейший получает приоритет в следующем цикле.",
    "interferenceRisk": null,
    "lexemeIds": []
@@ -2607,13 +2663,13 @@
     "pl-b1.reading.global"
    ],
    "timeBudgetSec": {
-    "review": 240,
-    "newGrammar": 180,
-    "practice": 300,
-    "exam": 120,
-    "analysis": 60
+    "review": 800,
+    "newGrammar": 600,
+    "practice": 1000,
+    "exam": 400,
+    "analysis": 200
    },
-   "totalSec": 900,
+   "totalSec": 3000,
    "expectedOutcome": "Правило «Неопределённые и отрицательные местоимения» введено и отработано на теме «Работа».",
    "interferenceRisk": 1,
    "lexemeIds": [
@@ -2654,20 +2710,23 @@
     "pl-b1.grammar.produce"
    ],
    "timeBudgetSec": {
-    "review": 240,
-    "newGrammar": 180,
-    "practice": 300,
-    "exam": 120,
-    "analysis": 60
+    "review": 800,
+    "newGrammar": 600,
+    "practice": 1000,
+    "exam": 400,
+    "analysis": 200
    },
-   "totalSec": 900,
+   "totalSec": 3000,
    "expectedOutcome": "Правило «Отрицательные предложения» введено и отработано на теме «Работа».",
    "interferenceRisk": 2,
    "lexemeIds": [
     "pl.urlop",
     "pl.zarobki",
     "pl.rozmowa-o-prace",
-    "pl.doswiadczenie"
+    "pl.doswiadczenie",
+    "pl.stanowisko",
+    "pl.etat",
+    "pl.nadgodziny"
    ]
   },
   {
@@ -2699,16 +2758,24 @@
     "pl-b1.listening.media"
    ],
    "timeBudgetSec": {
-    "review": 240,
-    "newGrammar": 180,
-    "practice": 300,
-    "exam": 120,
-    "analysis": 60
+    "review": 800,
+    "newGrammar": 600,
+    "practice": 1000,
+    "exam": 400,
+    "analysis": 200
    },
-   "totalSec": 900,
+   "totalSec": 3000,
    "expectedOutcome": "Правило «Глаголы с родительным» введено и отработано на теме «Работа».",
    "interferenceRisk": 5,
-   "lexemeIds": []
+   "lexemeIds": [
+    "pl.awans",
+    "pl.firma",
+    "pl.klient",
+    "pl.projekt",
+    "pl.zyciorys",
+    "pl.zatrudnienie",
+    "pl.bezrobocie"
+   ]
   },
   {
    "day": 60,
@@ -2739,16 +2806,24 @@
     "pl-b1.writing.short-forms"
    ],
    "timeBudgetSec": {
-    "review": 240,
-    "newGrammar": 180,
-    "practice": 300,
-    "exam": 120,
-    "analysis": 60
+    "review": 800,
+    "newGrammar": 600,
+    "practice": 1000,
+    "exam": 400,
+    "analysis": 200
    },
-   "totalSec": 900,
+   "totalSec": 3000,
    "expectedOutcome": "Правило «Глаголы с родительным» введено и отработано на теме «Работа».",
    "interferenceRisk": 5,
-   "lexemeIds": []
+   "lexemeIds": [
+    "pl.emerytura",
+    "pl.zwolnienie",
+    "pl.obowiazki",
+    "pl.wynagrodzenie",
+    "pl.kariera",
+    "pl.ogloszenie",
+    "pl.rekrutacja"
+   ]
   },
   {
    "day": 61,
@@ -2779,16 +2854,24 @@
     "pl-b1.reading.global"
    ],
    "timeBudgetSec": {
-    "review": 240,
-    "newGrammar": 180,
-    "practice": 300,
-    "exam": 120,
-    "analysis": 60
+    "review": 800,
+    "newGrammar": 600,
+    "practice": 1000,
+    "exam": 400,
+    "analysis": 200
    },
-   "totalSec": 900,
+   "totalSec": 3000,
    "expectedOutcome": "Правило «Склонение прилагательных» введено и отработано на теме «Работа».",
    "interferenceRisk": 3,
-   "lexemeIds": []
+   "lexemeIds": [
+    "pl.pracodawca",
+    "pl.zespol",
+    "pl.zebranie",
+    "pl.prezentacja",
+    "pl.raport",
+    "pl.delegacja",
+    "pl.szkolenie"
+   ]
   },
   {
    "day": 62,
@@ -2817,16 +2900,21 @@
     "pl-b1.speaking.dialogue"
    ],
    "timeBudgetSec": {
-    "review": 300,
+    "review": 1000,
     "newGrammar": 0,
-    "practice": 420,
-    "exam": 120,
-    "analysis": 60
+    "practice": 1400,
+    "exam": 400,
+    "analysis": 200
    },
-   "totalSec": 900,
+   "totalSec": 3000,
    "expectedOutcome": "Правила недели отработаны на новом материале, без ввода нового.",
    "interferenceRisk": null,
-   "lexemeIds": []
+   "lexemeIds": [
+    "pl.odpowiedzialnosc",
+    "pl.stres",
+    "pl.zarabiac",
+    "pl.zatrudnic"
+   ]
   },
   {
    "day": 63,
@@ -2856,11 +2944,11 @@
    "timeBudgetSec": {
     "review": 0,
     "newGrammar": 0,
-    "practice": 180,
-    "exam": 540,
-    "analysis": 180
+    "practice": 600,
+    "exam": 1800,
+    "analysis": 600
    },
-   "totalSec": 900,
+   "totalSec": 3000,
    "expectedOutcome": "Проверено усвоение правил и лексики недели. Ошибки поставлены в очередь на пересдачу.",
    "interferenceRisk": null,
    "lexemeIds": []
@@ -2894,13 +2982,13 @@
     "pl-b1.reading.signs"
    ],
    "timeBudgetSec": {
-    "review": 240,
-    "newGrammar": 180,
-    "practice": 300,
-    "exam": 120,
-    "analysis": 60
+    "review": 800,
+    "newGrammar": 600,
+    "practice": 1000,
+    "exam": 400,
+    "analysis": 200
    },
-   "totalSec": 900,
+   "totalSec": 3000,
    "expectedOutcome": "Правило «Склонение прилагательных» введено и отработано на теме «Покупки».",
    "interferenceRisk": 3,
    "lexemeIds": [
@@ -2942,13 +3030,13 @@
     "pl-b1.grammar.transform"
    ],
    "timeBudgetSec": {
-    "review": 240,
-    "newGrammar": 180,
-    "practice": 300,
-    "exam": 120,
-    "analysis": 60
+    "review": 800,
+    "newGrammar": 600,
+    "practice": 1000,
+    "exam": 400,
+    "analysis": 200
    },
-   "totalSec": 900,
+   "totalSec": 3000,
    "expectedOutcome": "Правило «Степени сравнения прилагательных» введено и отработано на теме «Покупки».",
    "interferenceRisk": 3,
    "lexemeIds": [
@@ -2956,7 +3044,9 @@
     "pl.tani",
     "pl.drogi",
     "pl.promocja",
-    "pl.kilogram"
+    "pl.kilogram",
+    "pl.sprzedawca",
+    "pl.klientka"
    ]
   },
   {
@@ -2988,16 +3078,24 @@
     "pl-b1.listening.dialogue"
    ],
    "timeBudgetSec": {
-    "review": 240,
-    "newGrammar": 180,
-    "practice": 300,
-    "exam": 120,
-    "analysis": 60
+    "review": 800,
+    "newGrammar": 600,
+    "practice": 1000,
+    "exam": 400,
+    "analysis": 200
    },
-   "totalSec": 900,
+   "totalSec": 3000,
    "expectedOutcome": "Правило «Степени сравнения прилагательных» введено и отработано на теме «Покупки».",
    "interferenceRisk": 3,
-   "lexemeIds": []
+   "lexemeIds": [
+    "pl.wozek",
+    "pl.polka",
+    "pl.torba",
+    "pl.opakowanie",
+    "pl.rabat",
+    "pl.wyprzedaz",
+    "pl.zwrot"
+   ]
   },
   {
    "day": 67,
@@ -3027,16 +3125,24 @@
     "pl-b1.writing.opinion"
    ],
    "timeBudgetSec": {
-    "review": 240,
-    "newGrammar": 180,
-    "practice": 300,
-    "exam": 120,
-    "analysis": 60
+    "review": 800,
+    "newGrammar": 600,
+    "practice": 1000,
+    "exam": 400,
+    "analysis": 200
    },
-   "totalSec": 900,
+   "totalSec": 3000,
    "expectedOutcome": "Правило «Наречия и их степени сравнения» введено и отработано на теме «Покупки».",
    "interferenceRisk": 3,
-   "lexemeIds": []
+   "lexemeIds": [
+    "pl.gwarancja",
+    "pl.gotowka",
+    "pl.reszta",
+    "pl.kosztowac",
+    "pl.wydawac",
+    "pl.centrum-handlowe",
+    "pl.supermarket"
+   ]
   },
   {
    "day": 68,
@@ -3067,16 +3173,24 @@
     "pl-b1.reading.signs"
    ],
    "timeBudgetSec": {
-    "review": 240,
-    "newGrammar": 180,
-    "practice": 300,
-    "exam": 120,
-    "analysis": 60
+    "review": 800,
+    "newGrammar": 600,
+    "practice": 1000,
+    "exam": 400,
+    "analysis": 200
    },
-   "totalSec": 900,
+   "totalSec": 3000,
    "expectedOutcome": "Правило «Дата и время» введено и отработано на теме «Покупки».",
    "interferenceRisk": 3,
-   "lexemeIds": []
+   "lexemeIds": [
+    "pl.piekarnia",
+    "pl.kiosk",
+    "pl.targ",
+    "pl.przymierzalnia",
+    "pl.rozmiar",
+    "pl.kolor",
+    "pl.wzor"
+   ]
   },
   {
    "day": 69,
@@ -3105,16 +3219,21 @@
     "pl-b1.speaking.photo"
    ],
    "timeBudgetSec": {
-    "review": 300,
+    "review": 1000,
     "newGrammar": 0,
-    "practice": 420,
-    "exam": 120,
-    "analysis": 60
+    "practice": 1400,
+    "exam": 400,
+    "analysis": 200
    },
-   "totalSec": 900,
+   "totalSec": 3000,
    "expectedOutcome": "Правила недели отработаны на новом материале, без ввода нового.",
    "interferenceRisk": null,
-   "lexemeIds": []
+   "lexemeIds": [
+    "pl.bawelna",
+    "pl.ubranie",
+    "pl.koszula",
+    "pl.spodnie"
+   ]
   },
   {
    "day": 70,
@@ -3144,11 +3263,11 @@
    "timeBudgetSec": {
     "review": 0,
     "newGrammar": 0,
-    "practice": 180,
-    "exam": 540,
-    "analysis": 180
+    "practice": 600,
+    "exam": 1800,
+    "analysis": 600
    },
-   "totalSec": 900,
+   "totalSec": 3000,
    "expectedOutcome": "Проверено усвоение правил и лексики недели. Ошибки поставлены в очередь на пересдачу.",
    "interferenceRisk": null,
    "lexemeIds": []
@@ -3182,13 +3301,13 @@
     "pl-b1.reading.argument"
    ],
    "timeBudgetSec": {
-    "review": 240,
-    "newGrammar": 180,
-    "practice": 300,
-    "exam": 120,
-    "analysis": 60
+    "review": 800,
+    "newGrammar": 600,
+    "practice": 1000,
+    "exam": 400,
+    "analysis": 200
    },
-   "totalSec": 900,
+   "totalSec": 3000,
    "expectedOutcome": "Правило «Дата и время» введено и отработано на теме «Еда и напитки».",
    "interferenceRisk": 3,
    "lexemeIds": [
@@ -3230,13 +3349,13 @@
     "pl-b1.grammar.recognize"
    ],
    "timeBudgetSec": {
-    "review": 240,
-    "newGrammar": 180,
-    "practice": 300,
-    "exam": 120,
-    "analysis": 60
+    "review": 800,
+    "newGrammar": 600,
+    "practice": 1000,
+    "exam": 400,
+    "analysis": 200
    },
-   "totalSec": 900,
+   "totalSec": 3000,
    "expectedOutcome": "Правило «Родительный множественного» введено и отработано на теме «Еда и напитки».",
    "interferenceRisk": 3,
    "lexemeIds": [
@@ -3278,19 +3397,23 @@
     "pl-b1.listening.detail"
    ],
    "timeBudgetSec": {
-    "review": 240,
-    "newGrammar": 180,
-    "practice": 300,
-    "exam": 120,
-    "analysis": 60
+    "review": 800,
+    "newGrammar": 600,
+    "practice": 1000,
+    "exam": 400,
+    "analysis": 200
    },
-   "totalSec": 900,
+   "totalSec": 3000,
    "expectedOutcome": "Правило «Родительный множественного» введено и отработано на теме «Еда и напитки».",
    "interferenceRisk": 3,
    "lexemeIds": [
     "pl.obiad",
     "pl.kolacja",
-    "pl.restauracja"
+    "pl.restauracja",
+    "pl.woda",
+    "pl.sok",
+    "pl.piwo",
+    "pl.wino"
    ]
   },
   {
@@ -3321,16 +3444,24 @@
     "pl-b1.writing.narrative"
    ],
    "timeBudgetSec": {
-    "review": 240,
-    "newGrammar": 180,
-    "practice": 300,
-    "exam": 120,
-    "analysis": 60
+    "review": 800,
+    "newGrammar": 600,
+    "practice": 1000,
+    "exam": 400,
+    "analysis": 200
    },
-   "totalSec": 900,
+   "totalSec": 3000,
    "expectedOutcome": "Правило «Количественные от 5» введено и отработано на теме «Еда и напитки».",
    "interferenceRisk": 2,
-   "lexemeIds": []
+   "lexemeIds": [
+    "pl.cukier",
+    "pl.sol",
+    "pl.maslo",
+    "pl.jajko",
+    "pl.ryba",
+    "pl.kurczak",
+    "pl.ziemniak"
+   ]
   },
   {
    "day": 75,
@@ -3360,16 +3491,24 @@
     "pl-b1.reading.argument"
    ],
    "timeBudgetSec": {
-    "review": 240,
-    "newGrammar": 180,
-    "practice": 300,
-    "exam": 120,
-    "analysis": 60
+    "review": 800,
+    "newGrammar": 600,
+    "practice": 1000,
+    "exam": 400,
+    "analysis": 200
    },
-   "totalSec": 900,
+   "totalSec": 3000,
    "expectedOutcome": "Правило «Количественные от 5» введено и отработано на теме «Еда и напитки».",
    "interferenceRisk": 2,
-   "lexemeIds": []
+   "lexemeIds": [
+    "pl.pomidor",
+    "pl.ogorek",
+    "pl.jablko",
+    "pl.ciasto",
+    "pl.lody",
+    "pl.smaczny",
+    "pl.slodki"
+   ]
   },
   {
    "day": 76,
@@ -3398,16 +3537,21 @@
     "pl-b1.speaking.monologue"
    ],
    "timeBudgetSec": {
-    "review": 300,
+    "review": 1000,
     "newGrammar": 0,
-    "practice": 420,
-    "exam": 120,
-    "analysis": 60
+    "practice": 1400,
+    "exam": 400,
+    "analysis": 200
    },
-   "totalSec": 900,
+   "totalSec": 3000,
    "expectedOutcome": "Правила недели отработаны на новом материале, без ввода нового.",
    "interferenceRisk": null,
-   "lexemeIds": []
+   "lexemeIds": [
+    "pl.slony",
+    "pl.kwasny",
+    "pl.i",
+    "pl.a"
+   ]
   },
   {
    "day": 77,
@@ -3437,11 +3581,11 @@
    "timeBudgetSec": {
     "review": 0,
     "newGrammar": 0,
-    "practice": 180,
-    "exam": 540,
-    "analysis": 180
+    "practice": 600,
+    "exam": 1800,
+    "analysis": 600
    },
-   "totalSec": 900,
+   "totalSec": 3000,
    "expectedOutcome": "Проверено усвоение правил и лексики недели. Ошибки поставлены в очередь на пересдачу.",
    "interferenceRisk": null,
    "lexemeIds": []
@@ -3474,13 +3618,13 @@
     "pl-b1.reading.selective"
    ],
    "timeBudgetSec": {
-    "review": 240,
-    "newGrammar": 180,
-    "practice": 300,
-    "exam": 120,
-    "analysis": 60
+    "review": 800,
+    "newGrammar": 600,
+    "practice": 1000,
+    "exam": 400,
+    "analysis": 200
    },
-   "totalSec": 900,
+   "totalSec": 3000,
    "expectedOutcome": "Правило «Родительный после количества» введено и отработано на теме «Услуги».",
    "interferenceRisk": 2,
    "lexemeIds": [
@@ -3521,18 +3665,23 @@
     "pl-b1.grammar.produce"
    ],
    "timeBudgetSec": {
-    "review": 240,
-    "newGrammar": 180,
-    "practice": 300,
-    "exam": 120,
-    "analysis": 60
+    "review": 800,
+    "newGrammar": 600,
+    "practice": 1000,
+    "exam": 400,
+    "analysis": 200
    },
-   "totalSec": 900,
+   "totalSec": 3000,
    "expectedOutcome": "Правило «Родительный после количества» введено и отработано на теме «Услуги».",
    "interferenceRisk": 2,
    "lexemeIds": [
     "pl.pralnia",
-    "pl.naprawa"
+    "pl.naprawa",
+    "pl.usluga",
+    "pl.kelner",
+    "pl.warsztat",
+    "pl.naprawic",
+    "pl.reklamacja"
    ]
   },
   {
@@ -3564,16 +3713,24 @@
     "pl-b1.listening.global"
    ],
    "timeBudgetSec": {
-    "review": 240,
-    "newGrammar": 180,
-    "practice": 300,
-    "exam": 120,
-    "analysis": 60
+    "review": 800,
+    "newGrammar": 600,
+    "practice": 1000,
+    "exam": 400,
+    "analysis": 200
    },
-   "totalSec": 900,
+   "totalSec": 3000,
    "expectedOutcome": "Правило «Предложный падеж» введено и отработано на теме «Услуги».",
    "interferenceRisk": 4,
-   "lexemeIds": []
+   "lexemeIds": [
+    "pl.dostawa",
+    "pl.kurier",
+    "pl.przesylka",
+    "pl.znaczek",
+    "pl.koperta",
+    "pl.kantor",
+    "pl.wymiana"
+   ]
   },
   {
    "day": 81,
@@ -3604,16 +3761,24 @@
     "pl-b1.writing.descriptive"
    ],
    "timeBudgetSec": {
-    "review": 240,
-    "newGrammar": 180,
-    "practice": 300,
-    "exam": 120,
-    "analysis": 60
+    "review": 800,
+    "newGrammar": 600,
+    "practice": 1000,
+    "exam": 400,
+    "analysis": 200
    },
-   "totalSec": 900,
+   "totalSec": 3000,
    "expectedOutcome": "Правило «Предложный падеж» введено и отработано на теме «Услуги».",
    "interferenceRisk": 4,
-   "lexemeIds": []
+   "lexemeIds": [
+    "pl.kredyt",
+    "pl.oszczednosci",
+    "pl.mechanik",
+    "pl.hydraulik",
+    "pl.elektryk",
+    "pl.krawiec",
+    "pl.sprzataczka"
+   ]
   },
   {
    "day": 82,
@@ -3643,16 +3808,24 @@
     "pl-b1.reading.selective"
    ],
    "timeBudgetSec": {
-    "review": 240,
-    "newGrammar": 180,
-    "practice": 300,
-    "exam": 120,
-    "analysis": 60
+    "review": 800,
+    "newGrammar": 600,
+    "practice": 1000,
+    "exam": 400,
+    "analysis": 200
    },
-   "totalSec": 900,
+   "totalSec": 3000,
    "expectedOutcome": "Правило «Предложный с предлогами» введено и отработано на теме «Услуги».",
    "interferenceRisk": 4,
-   "lexemeIds": []
+   "lexemeIds": [
+    "pl.opiekunka",
+    "pl.abonament",
+    "pl.prad",
+    "pl.awaria",
+    "pl.zglosic",
+    "pl.ale",
+    "pl.oraz"
+   ]
   },
   {
    "day": 83,
@@ -3681,16 +3854,21 @@
     "pl-b1.speaking.dialogue"
    ],
    "timeBudgetSec": {
-    "review": 300,
+    "review": 1000,
     "newGrammar": 0,
-    "practice": 420,
-    "exam": 120,
-    "analysis": 60
+    "practice": 1400,
+    "exam": 400,
+    "analysis": 200
    },
-   "totalSec": 900,
+   "totalSec": 3000,
    "expectedOutcome": "Правила недели отработаны на новом материале, без ввода нового.",
    "interferenceRisk": null,
-   "lexemeIds": []
+   "lexemeIds": [
+    "pl.lub",
+    "pl.albo",
+    "pl.czy",
+    "pl.ze"
+   ]
   },
   {
    "day": 84,
@@ -3720,10 +3898,10 @@
     "review": 0,
     "newGrammar": 0,
     "practice": 0,
-    "exam": 840,
-    "analysis": 60
+    "exam": 2800,
+    "analysis": 200
    },
-   "totalSec": 900,
+   "totalSec": 3000,
    "expectedOutcome": "Обновлён прогноз по всем пяти модулям. Слабейший получает приоритет в следующем цикле.",
    "interferenceRisk": null,
    "lexemeIds": []
@@ -3756,13 +3934,13 @@
     "pl-b1.reading.global"
    ],
    "timeBudgetSec": {
-    "review": 240,
-    "newGrammar": 120,
-    "practice": 240,
-    "exam": 240,
-    "analysis": 60
+    "review": 800,
+    "newGrammar": 400,
+    "practice": 800,
+    "exam": 800,
+    "analysis": 200
    },
-   "totalSec": 900,
+   "totalSec": 3000,
    "expectedOutcome": "Правило «Звательный падеж» введено и отработано на теме «Места».",
    "interferenceRisk": 5,
    "lexemeIds": [
@@ -3802,13 +3980,13 @@
     "pl-b1.grammar.transform"
    ],
    "timeBudgetSec": {
-    "review": 240,
-    "newGrammar": 120,
-    "practice": 240,
-    "exam": 240,
-    "analysis": 60
+    "review": 800,
+    "newGrammar": 400,
+    "practice": 800,
+    "exam": 800,
+    "analysis": 200
    },
-   "totalSec": 900,
+   "totalSec": 3000,
    "expectedOutcome": "Правило «Дательный падеж» введено и отработано на теме «Места».",
    "interferenceRisk": 3,
    "lexemeIds": [
@@ -3816,7 +3994,8 @@
     "pl.rynek",
     "pl.most",
     "pl.zabytek",
-    "pl.centrum"
+    "pl.centrum",
+    "pl.dzielnica"
    ]
   },
   {
@@ -3847,16 +4026,23 @@
     "pl-b1.listening.media"
    ],
    "timeBudgetSec": {
-    "review": 240,
-    "newGrammar": 120,
-    "practice": 240,
-    "exam": 240,
-    "analysis": 60
+    "review": 800,
+    "newGrammar": 400,
+    "practice": 800,
+    "exam": 800,
+    "analysis": 200
    },
-   "totalSec": 900,
+   "totalSec": 3000,
    "expectedOutcome": "Правило «Дательный падеж» введено и отработано на теме «Места».",
    "interferenceRisk": 3,
-   "lexemeIds": []
+   "lexemeIds": [
+    "pl.osiedle",
+    "pl.skrzyzowanie",
+    "pl.przystanek",
+    "pl.chodnik",
+    "pl.parking",
+    "pl.park"
+   ]
   },
   {
    "day": 88,
@@ -3886,16 +4072,23 @@
     "pl-b1.writing.short-forms"
    ],
    "timeBudgetSec": {
-    "review": 240,
-    "newGrammar": 120,
-    "practice": 240,
-    "exam": 240,
-    "analysis": 60
+    "review": 800,
+    "newGrammar": 400,
+    "practice": 800,
+    "exam": 800,
+    "analysis": 200
    },
-   "totalSec": 900,
+   "totalSec": 3000,
    "expectedOutcome": "Правило «Глаголы с дательным» введено и отработано на теме «Места».",
    "interferenceRisk": 2,
-   "lexemeIds": []
+   "lexemeIds": [
+    "pl.wies",
+    "pl.okolica",
+    "pl.kierunek",
+    "pl.prosto",
+    "pl.blisko",
+    "pl.daleko"
+   ]
   },
   {
    "day": 89,
@@ -3924,16 +4117,23 @@
     "pl-b1.reading.global"
    ],
    "timeBudgetSec": {
-    "review": 240,
-    "newGrammar": 120,
-    "practice": 240,
-    "exam": 240,
-    "analysis": 60
+    "review": 800,
+    "newGrammar": 400,
+    "practice": 800,
+    "exam": 800,
+    "analysis": 200
    },
-   "totalSec": 900,
+   "totalSec": 3000,
    "expectedOutcome": "Правило «Возвратное местоимение siebie» введено и отработано на теме «Места».",
    "interferenceRisk": 3,
-   "lexemeIds": []
+   "lexemeIds": [
+    "pl.naprzeciwko",
+    "pl.zeby",
+    "pl.poniewaz",
+    "pl.bo",
+    "pl.dlatego",
+    "pl.kiedy"
+   ]
   },
   {
    "day": 90,
@@ -3962,16 +4162,20 @@
     "pl-b1.speaking.photo"
    ],
    "timeBudgetSec": {
-    "review": 300,
+    "review": 1000,
     "newGrammar": 0,
-    "practice": 420,
-    "exam": 120,
-    "analysis": 60
+    "practice": 1400,
+    "exam": 400,
+    "analysis": 200
    },
-   "totalSec": 900,
+   "totalSec": 3000,
    "expectedOutcome": "Правила недели отработаны на новом материале, без ввода нового.",
    "interferenceRisk": null,
-   "lexemeIds": []
+   "lexemeIds": [
+    "pl.gdy",
+    "pl.ktory",
+    "pl.jaki"
+   ]
   },
   {
    "day": 91,
@@ -4001,11 +4205,11 @@
    "timeBudgetSec": {
     "review": 0,
     "newGrammar": 0,
-    "practice": 180,
-    "exam": 540,
-    "analysis": 180
+    "practice": 600,
+    "exam": 1800,
+    "analysis": 600
    },
-   "totalSec": 900,
+   "totalSec": 3000,
    "expectedOutcome": "Проверено усвоение правил и лексики недели. Ошибки поставлены в очередь на пересдачу.",
    "interferenceRisk": null,
    "lexemeIds": []
@@ -4039,13 +4243,13 @@
     "pl-b1.reading.signs"
    ],
    "timeBudgetSec": {
-    "review": 240,
-    "newGrammar": 120,
-    "practice": 240,
-    "exam": 240,
-    "analysis": 60
+    "review": 800,
+    "newGrammar": 400,
+    "practice": 800,
+    "exam": 800,
+    "analysis": 200
    },
-   "totalSec": 900,
+   "totalSec": 3000,
    "expectedOutcome": "Правило «Личные местоимения» введено и отработано на теме «Природа».",
    "interferenceRisk": 4,
    "lexemeIds": [
@@ -4086,13 +4290,13 @@
     "pl-b1.grammar.recognize"
    ],
    "timeBudgetSec": {
-    "review": 240,
-    "newGrammar": 120,
-    "practice": 240,
-    "exam": 240,
-    "analysis": 60
+    "review": 800,
+    "newGrammar": 400,
+    "practice": 800,
+    "exam": 800,
+    "analysis": 200
    },
-   "totalSec": 900,
+   "totalSec": 3000,
    "expectedOutcome": "Правило «Личные местоимения» введено и отработано на теме «Природа».",
    "interferenceRisk": 4,
    "lexemeIds": [
@@ -4133,17 +4337,22 @@
     "pl-b1.listening.dialogue"
    ],
    "timeBudgetSec": {
-    "review": 240,
-    "newGrammar": 120,
-    "practice": 240,
-    "exam": 240,
-    "analysis": 60
+    "review": 800,
+    "newGrammar": 400,
+    "practice": 800,
+    "exam": 800,
+    "analysis": 200
    },
-   "totalSec": 900,
+   "totalSec": 3000,
    "expectedOutcome": "Правило «Вежливые формы Pan/Pani/Państwo» введено и отработано на теме «Природа».",
    "interferenceRisk": 5,
    "lexemeIds": [
-    "pl.jesien"
+    "pl.jesien",
+    "pl.niebo",
+    "pl.chmura",
+    "pl.mroz",
+    "pl.upal",
+    "pl.temperatura"
    ]
   },
   {
@@ -4175,16 +4384,23 @@
     "pl-b1.writing.opinion"
    ],
    "timeBudgetSec": {
-    "review": 240,
-    "newGrammar": 120,
-    "practice": 240,
-    "exam": 240,
-    "analysis": 60
+    "review": 800,
+    "newGrammar": 400,
+    "practice": 800,
+    "exam": 800,
+    "analysis": 200
    },
-   "totalSec": 900,
+   "totalSec": 3000,
    "expectedOutcome": "Правило «Стили: формальный, неформальный, разговорный» введено и отработано на теме «Природа».",
    "interferenceRisk": 3,
-   "lexemeIds": []
+   "lexemeIds": [
+    "pl.burza",
+    "pl.mgla",
+    "pl.lisc",
+    "pl.kwiat",
+    "pl.trawa",
+    "pl.zwierze"
+   ]
   },
   {
    "day": 96,
@@ -4214,16 +4430,23 @@
     "pl-b1.reading.signs"
    ],
    "timeBudgetSec": {
-    "review": 240,
-    "newGrammar": 120,
-    "practice": 240,
-    "exam": 240,
-    "analysis": 60
+    "review": 800,
+    "newGrammar": 400,
+    "practice": 800,
+    "exam": 800,
+    "analysis": 200
    },
-   "totalSec": 900,
+   "totalSec": 3000,
    "expectedOutcome": "Правило «Стилистические средства» введено и отработано на теме «Природа».",
    "interferenceRisk": 1,
-   "lexemeIds": []
+   "lexemeIds": [
+    "pl.pies",
+    "pl.kot",
+    "pl.ptak",
+    "pl.jezioro",
+    "pl.lato",
+    "pl.zima"
+   ]
   },
   {
    "day": 97,
@@ -4252,16 +4475,20 @@
     "pl-b1.speaking.monologue"
    ],
    "timeBudgetSec": {
-    "review": 300,
+    "review": 1000,
     "newGrammar": 0,
-    "practice": 420,
-    "exam": 120,
-    "analysis": 60
+    "practice": 1400,
+    "exam": 400,
+    "analysis": 200
    },
-   "totalSec": 900,
+   "totalSec": 3000,
    "expectedOutcome": "Правила недели отработаны на новом материале, без ввода нового.",
    "interferenceRisk": null,
-   "lexemeIds": []
+   "lexemeIds": [
+    "pl.jesli",
+    "pl.jezeli",
+    "pl.gdyby"
+   ]
   },
   {
    "day": 98,
@@ -4291,11 +4518,11 @@
    "timeBudgetSec": {
     "review": 0,
     "newGrammar": 0,
-    "practice": 180,
-    "exam": 540,
-    "analysis": 180
+    "practice": 600,
+    "exam": 1800,
+    "analysis": 600
    },
-   "totalSec": 900,
+   "totalSec": 3000,
    "expectedOutcome": "Проверено усвоение правил и лексики недели. Ошибки поставлены в очередь на пересдачу.",
    "interferenceRisk": null,
    "lexemeIds": []
@@ -4329,13 +4556,13 @@
     "pl-b1.reading.argument"
    ],
    "timeBudgetSec": {
-    "review": 240,
-    "newGrammar": 120,
-    "practice": 240,
-    "exam": 240,
-    "analysis": 60
+    "review": 800,
+    "newGrammar": 400,
+    "practice": 800,
+    "exam": 800,
+    "analysis": 200
    },
-   "totalSec": 900,
+   "totalSec": 3000,
    "expectedOutcome": "Правило «Мужско-личные числительные» введено и отработано на теме «Традиции и праздники».",
    "interferenceRisk": 5,
    "lexemeIds": [
@@ -4376,19 +4603,22 @@
     "pl-b1.grammar.produce"
    ],
    "timeBudgetSec": {
-    "review": 240,
-    "newGrammar": 120,
-    "practice": 240,
-    "exam": 240,
-    "analysis": 60
+    "review": 800,
+    "newGrammar": 400,
+    "practice": 800,
+    "exam": 800,
+    "analysis": 200
    },
-   "totalSec": 900,
+   "totalSec": 3000,
    "expectedOutcome": "Правило «Мужско-личные числительные» введено и отработано на теме «Традиции и праздники».",
    "interferenceRisk": 5,
    "lexemeIds": [
     "pl.urodziny",
     "pl.slub",
-    "pl.zwyczaj"
+    "pl.zwyczaj",
+    "pl.tradycja",
+    "pl.sylwester",
+    "pl.nowy-rok"
    ]
   },
   {
@@ -4420,16 +4650,23 @@
     "pl-b1.listening.detail"
    ],
    "timeBudgetSec": {
-    "review": 240,
-    "newGrammar": 120,
-    "practice": 240,
-    "exam": 240,
-    "analysis": 60
+    "review": 800,
+    "newGrammar": 400,
+    "practice": 800,
+    "exam": 800,
+    "analysis": 200
    },
-   "totalSec": 900,
+   "totalSec": 3000,
    "expectedOutcome": "Правило «Управление глаголов» введено и отработано на теме «Традиции и праздники».",
    "interferenceRisk": 5,
-   "lexemeIds": []
+   "lexemeIds": [
+    "pl.choinka",
+    "pl.koleda",
+    "pl.imieniny",
+    "pl.rocznica",
+    "pl.gosc",
+    "pl.zaprosic"
+   ]
   },
   {
    "day": 102,
@@ -4460,16 +4697,23 @@
     "pl-b1.writing.narrative"
    ],
    "timeBudgetSec": {
-    "review": 240,
-    "newGrammar": 120,
-    "practice": 240,
-    "exam": 240,
-    "analysis": 60
+    "review": 800,
+    "newGrammar": 400,
+    "practice": 800,
+    "exam": 800,
+    "analysis": 200
    },
-   "totalSec": 900,
+   "totalSec": 3000,
    "expectedOutcome": "Правило «Управление глаголов» введено и отработано на теме «Традиции и праздники».",
    "interferenceRisk": 5,
-   "lexemeIds": []
+   "lexemeIds": [
+    "pl.zyczyc",
+    "pl.obchodzic",
+    "pl.przyjecie",
+    "pl.karnawal",
+    "pl.wszystkich-swietych",
+    "pl.dzien-kobiet"
+   ]
   },
   {
    "day": 103,
@@ -4500,16 +4744,23 @@
     "pl-b1.reading.argument"
    ],
    "timeBudgetSec": {
-    "review": 240,
-    "newGrammar": 120,
-    "practice": 240,
-    "exam": 240,
-    "analysis": 60
+    "review": 800,
+    "newGrammar": 400,
+    "practice": 800,
+    "exam": 800,
+    "analysis": 200
    },
-   "totalSec": 900,
+   "totalSec": 3000,
    "expectedOutcome": "Правило «Прошедшее время, мн. ч.» введено и отработано на теме «Традиции и праздники».",
    "interferenceRisk": 5,
-   "lexemeIds": []
+   "lexemeIds": [
+    "pl.oplatek",
+    "pl.pisanki",
+    "pl.tort",
+    "pl.toast",
+    "pl.zabawa",
+    "pl.w"
+   ]
   },
   {
    "day": 104,
@@ -4538,16 +4789,20 @@
     "pl-b1.speaking.dialogue"
    ],
    "timeBudgetSec": {
-    "review": 300,
+    "review": 1000,
     "newGrammar": 0,
-    "practice": 420,
-    "exam": 120,
-    "analysis": 60
+    "practice": 1400,
+    "exam": 400,
+    "analysis": 200
    },
-   "totalSec": 900,
+   "totalSec": 3000,
    "expectedOutcome": "Правила недели отработаны на новом материале, без ввода нового.",
    "interferenceRisk": null,
-   "lexemeIds": []
+   "lexemeIds": [
+    "pl.na",
+    "pl.do",
+    "pl.z"
+   ]
   },
   {
    "day": 105,
@@ -4577,11 +4832,11 @@
    "timeBudgetSec": {
     "review": 0,
     "newGrammar": 0,
-    "practice": 180,
-    "exam": 540,
-    "analysis": 180
+    "practice": 600,
+    "exam": 1800,
+    "analysis": 600
    },
-   "totalSec": 900,
+   "totalSec": 3000,
    "expectedOutcome": "Проверено усвоение правил и лексики недели. Ошибки поставлены в очередь на пересдачу.",
    "interferenceRisk": null,
    "lexemeIds": []
@@ -4615,13 +4870,13 @@
     "pl-b1.reading.selective"
    ],
    "timeBudgetSec": {
-    "review": 240,
-    "newGrammar": 120,
-    "practice": 240,
-    "exam": 240,
-    "analysis": 60
+    "review": 800,
+    "newGrammar": 400,
+    "practice": 800,
+    "exam": 800,
+    "analysis": 200
    },
-   "totalSec": 900,
+   "totalSec": 3000,
    "expectedOutcome": "Правило «Прошедшее время, мн. ч.» введено и отработано на теме «Общие темы».",
    "interferenceRisk": 5,
    "lexemeIds": [
@@ -4662,13 +4917,13 @@
     "pl-b1.grammar.transform"
    ],
    "timeBudgetSec": {
-    "review": 240,
-    "newGrammar": 120,
-    "practice": 240,
-    "exam": 240,
-    "analysis": 60
+    "review": 800,
+    "newGrammar": 400,
+    "practice": 800,
+    "exam": 800,
+    "analysis": 200
    },
-   "totalSec": 900,
+   "totalSec": 3000,
    "expectedOutcome": "Правило «Сослагательное наклонение» введено и отработано на теме «Общие темы».",
    "interferenceRisk": 5,
    "lexemeIds": [
@@ -4709,16 +4964,23 @@
     "pl-b1.listening.global"
    ],
    "timeBudgetSec": {
-    "review": 240,
-    "newGrammar": 120,
-    "practice": 240,
-    "exam": 240,
-    "analysis": 60
+    "review": 800,
+    "newGrammar": 400,
+    "practice": 800,
+    "exam": 800,
+    "analysis": 200
    },
-   "totalSec": 900,
+   "totalSec": 3000,
    "expectedOutcome": "Правило «Сослагательное наклонение» введено и отработано на теме «Общие темы».",
    "interferenceRisk": 5,
-   "lexemeIds": []
+   "lexemeIds": [
+    "pl.temat",
+    "pl.pytanie",
+    "pl.odpowiedz",
+    "pl.przyklad",
+    "pl.roznica",
+    "pl.znaczenie"
+   ]
   },
   {
    "day": 109,
@@ -4749,16 +5011,23 @@
     "pl-b1.writing.descriptive"
    ],
    "timeBudgetSec": {
-    "review": 240,
-    "newGrammar": 120,
-    "practice": 240,
-    "exam": 240,
-    "analysis": 60
+    "review": 800,
+    "newGrammar": 400,
+    "practice": 800,
+    "exam": 800,
+    "analysis": 200
    },
-   "totalSec": 900,
+   "totalSec": 3000,
    "expectedOutcome": "Правило «Придаточные с że и żeby» введено и отработано на теме «Общие темы».",
    "interferenceRisk": 4,
-   "lexemeIds": []
+   "lexemeIds": [
+    "pl.cel",
+    "pl.wynik",
+    "pl.skutek",
+    "pl.warunek",
+    "pl.uwaga",
+    "pl.opinia"
+   ]
   },
   {
    "day": 110,
@@ -4788,16 +5057,23 @@
     "pl-b1.reading.selective"
    ],
    "timeBudgetSec": {
-    "review": 240,
-    "newGrammar": 120,
-    "practice": 240,
-    "exam": 240,
-    "analysis": 60
+    "review": 800,
+    "newGrammar": 400,
+    "practice": 800,
+    "exam": 800,
+    "analysis": 200
    },
-   "totalSec": 900,
+   "totalSec": 3000,
    "expectedOutcome": "Правило «Придаточные причины и времени» введено и отработано на теме «Общие темы».",
    "interferenceRisk": 2,
-   "lexemeIds": []
+   "lexemeIds": [
+    "pl.prawda",
+    "pl.zgoda",
+    "pl.od",
+    "pl.bez",
+    "pl.dla",
+    "pl.obok"
+   ]
   },
   {
    "day": 111,
@@ -4826,16 +5102,20 @@
     "pl-b1.speaking.photo"
    ],
    "timeBudgetSec": {
-    "review": 300,
+    "review": 1000,
     "newGrammar": 0,
-    "practice": 420,
-    "exam": 120,
-    "analysis": 60
+    "practice": 1400,
+    "exam": 400,
+    "analysis": 200
    },
-   "totalSec": 900,
+   "totalSec": 3000,
    "expectedOutcome": "Правила недели отработаны на новом материале, без ввода нового.",
    "interferenceRisk": null,
-   "lexemeIds": []
+   "lexemeIds": [
+    "pl.przy",
+    "pl.przed",
+    "pl.za"
+   ]
   },
   {
    "day": 112,
@@ -4865,10 +5145,10 @@
     "review": 0,
     "newGrammar": 0,
     "practice": 0,
-    "exam": 840,
-    "analysis": 60
+    "exam": 2800,
+    "analysis": 200
    },
-   "totalSec": 900,
+   "totalSec": 3000,
    "expectedOutcome": "Обновлён прогноз по всем пяти модулям. Слабейший получает приоритет в следующем цикле.",
    "interferenceRisk": null,
    "lexemeIds": []
@@ -4902,16 +5182,23 @@
     "pl-b1.reading.global"
    ],
    "timeBudgetSec": {
-    "review": 240,
-    "newGrammar": 120,
-    "practice": 240,
-    "exam": 240,
-    "analysis": 60
+    "review": 800,
+    "newGrammar": 400,
+    "practice": 800,
+    "exam": 800,
+    "analysis": 200
    },
-   "totalSec": 900,
+   "totalSec": 3000,
    "expectedOutcome": "Правило «Условные предложения» введено и отработано на теме «Человек».",
    "interferenceRisk": 4,
-   "lexemeIds": []
+   "lexemeIds": [
+    "pl.chlopak",
+    "pl.mlody",
+    "pl.starszy",
+    "pl.charakter",
+    "pl.leniwy",
+    "pl.madry"
+   ]
   },
   {
    "day": 114,
@@ -4942,16 +5229,23 @@
     "pl-b1.grammar.recognize"
    ],
    "timeBudgetSec": {
-    "review": 240,
-    "newGrammar": 120,
-    "practice": 240,
-    "exam": 240,
-    "analysis": 60
+    "review": 800,
+    "newGrammar": 400,
+    "practice": 800,
+    "exam": 800,
+    "analysis": 200
    },
-   "totalSec": 900,
+   "totalSec": 3000,
    "expectedOutcome": "Правило «Условные предложения» введено и отработано на теме «Человек».",
    "interferenceRisk": 4,
-   "lexemeIds": []
+   "lexemeIds": [
+    "pl.odwazny",
+    "pl.spokojny",
+    "pl.wlosy",
+    "pl.twarz",
+    "pl.okulary",
+    "pl.sasiad"
+   ]
   },
   {
    "day": 115,
@@ -4981,16 +5275,23 @@
     "pl-b1.listening.media"
    ],
    "timeBudgetSec": {
-    "review": 240,
-    "newGrammar": 120,
-    "practice": 240,
-    "exam": 240,
-    "analysis": 60
+    "review": 800,
+    "newGrammar": 400,
+    "practice": 800,
+    "exam": 800,
+    "analysis": 200
    },
-   "totalSec": 900,
+   "totalSec": 3000,
    "expectedOutcome": "Правило «Конструкция im… tym…» введено и отработано на теме «Человек».",
    "interferenceRisk": 1,
-   "lexemeIds": []
+   "lexemeIds": [
+    "pl.babcia",
+    "pl.dziadek",
+    "pl.corka",
+    "pl.syn",
+    "pl.znajomy",
+    "pl.wnuk"
+   ]
   },
   {
    "day": 116,
@@ -5021,16 +5322,23 @@
     "pl-b1.writing.short-forms"
    ],
    "timeBudgetSec": {
-    "review": 240,
-    "newGrammar": 120,
-    "practice": 240,
-    "exam": 240,
-    "analysis": 60
+    "review": 800,
+    "newGrammar": 400,
+    "practice": 800,
+    "exam": 800,
+    "analysis": 200
    },
-   "totalSec": 900,
+   "totalSec": 3000,
    "expectedOutcome": "Правило «Относительные придаточные» введено и отработано на теме «Человек».",
    "interferenceRisk": 3,
-   "lexemeIds": []
+   "lexemeIds": [
+    "pl.wujek",
+    "pl.ciocia",
+    "pl.kuzyn",
+    "pl.malzenstwo",
+    "pl.rozwod",
+    "pl.przyjaciolka"
+   ]
   },
   {
    "day": 117,
@@ -5061,16 +5369,23 @@
     "pl-b1.reading.global"
    ],
    "timeBudgetSec": {
-    "review": 240,
-    "newGrammar": 120,
-    "practice": 240,
-    "exam": 240,
-    "analysis": 60
+    "review": 800,
+    "newGrammar": 400,
+    "practice": 800,
+    "exam": 800,
+    "analysis": 200
    },
-   "totalSec": 900,
+   "totalSec": 3000,
    "expectedOutcome": "Правило «Относительные придаточные» введено и отработано на теме «Человек».",
    "interferenceRisk": 3,
-   "lexemeIds": []
+   "lexemeIds": [
+    "pl.pracowity",
+    "pl.wzrost",
+    "pl.broda",
+    "pl.pod",
+    "pl.nad",
+    "pl.miedzy"
+   ]
   },
   {
    "day": 118,
@@ -5099,16 +5414,20 @@
     "pl-b1.speaking.monologue"
    ],
    "timeBudgetSec": {
-    "review": 300,
+    "review": 1000,
     "newGrammar": 0,
-    "practice": 420,
-    "exam": 120,
-    "analysis": 60
+    "practice": 1400,
+    "exam": 400,
+    "analysis": 200
    },
-   "totalSec": 900,
+   "totalSec": 3000,
    "expectedOutcome": "Правила недели отработаны на новом материале, без ввода нового.",
    "interferenceRisk": null,
-   "lexemeIds": []
+   "lexemeIds": [
+    "pl.przez",
+    "pl.o",
+    "pl.po"
+   ]
   },
   {
    "day": 119,
@@ -5138,11 +5457,11 @@
    "timeBudgetSec": {
     "review": 0,
     "newGrammar": 0,
-    "practice": 180,
-    "exam": 540,
-    "analysis": 180
+    "practice": 600,
+    "exam": 1800,
+    "analysis": 600
    },
-   "totalSec": 900,
+   "totalSec": 3000,
    "expectedOutcome": "Проверено усвоение правил и лексики недели. Ошибки поставлены в очередь на пересдачу.",
    "interferenceRisk": null,
    "lexemeIds": []
@@ -5175,16 +5494,23 @@
     "pl-b1.reading.signs"
    ],
    "timeBudgetSec": {
-    "review": 240,
-    "newGrammar": 120,
-    "practice": 240,
-    "exam": 240,
-    "analysis": 60
+    "review": 800,
+    "newGrammar": 400,
+    "practice": 800,
+    "exam": 800,
+    "analysis": 200
    },
-   "totalSec": 900,
+   "totalSec": 3000,
    "expectedOutcome": "Правило «Подвижные окончания» введено и отработано на теме «Дом и жильё».",
    "interferenceRisk": 3,
-   "lexemeIds": []
+   "lexemeIds": [
+    "pl.sprzatac",
+    "pl.porzadek",
+    "pl.adres",
+    "pl.piwnica",
+    "pl.strych",
+    "pl.garaz"
+   ]
   },
   {
    "day": 121,
@@ -5214,16 +5540,23 @@
     "pl-b1.grammar.produce"
    ],
    "timeBudgetSec": {
-    "review": 240,
-    "newGrammar": 120,
-    "practice": 240,
-    "exam": 240,
-    "analysis": 60
+    "review": 800,
+    "newGrammar": 400,
+    "practice": 800,
+    "exam": 800,
+    "analysis": 200
    },
-   "totalSec": 900,
+   "totalSec": 3000,
    "expectedOutcome": "Правило «Подвижные окончания» введено и отработано на теме «Дом и жильё».",
    "interferenceRisk": 3,
-   "lexemeIds": []
+   "lexemeIds": [
+    "pl.kaucja",
+    "pl.wlasciciel",
+    "pl.lokator",
+    "pl.przeprowadzka",
+    "pl.kanapa",
+    "pl.fotel"
+   ]
   },
   {
    "day": 122,
@@ -5253,16 +5586,23 @@
     "pl-b1.listening.dialogue"
    ],
    "timeBudgetSec": {
-    "review": 240,
-    "newGrammar": 120,
-    "practice": 240,
-    "exam": 240,
-    "analysis": 60
+    "review": 800,
+    "newGrammar": 400,
+    "practice": 800,
+    "exam": 800,
+    "analysis": 200
    },
-   "totalSec": 900,
+   "totalSec": 3000,
    "expectedOutcome": "Правило «Подвижные окончания» введено и отработано на теме «Дом и жильё».",
    "interferenceRisk": 3,
-   "lexemeIds": []
+   "lexemeIds": [
+    "pl.lampa",
+    "pl.zarowka",
+    "pl.kran",
+    "pl.piekarnik",
+    "pl.talerz",
+    "pl.kubek"
+   ]
   },
   {
    "day": 123,
@@ -5292,16 +5632,23 @@
     "pl-b1.writing.opinion"
    ],
    "timeBudgetSec": {
-    "review": 240,
-    "newGrammar": 120,
-    "practice": 240,
-    "exam": 240,
-    "analysis": 60
+    "review": 800,
+    "newGrammar": 400,
+    "practice": 800,
+    "exam": 800,
+    "analysis": 200
    },
-   "totalSec": 900,
+   "totalSec": 3000,
    "expectedOutcome": "Правило «Подвижные окончания» введено и отработано на теме «Дом и жильё».",
    "interferenceRisk": 3,
-   "lexemeIds": []
+   "lexemeIds": [
+    "pl.szklanka",
+    "pl.widelec",
+    "pl.lyzka",
+    "pl.naczynia",
+    "pl.nikt",
+    "pl.nic"
+   ]
   },
   {
    "day": 124,
@@ -5331,16 +5678,23 @@
     "pl-b1.reading.signs"
    ],
    "timeBudgetSec": {
-    "review": 240,
-    "newGrammar": 120,
-    "practice": 240,
-    "exam": 240,
-    "analysis": 60
+    "review": 800,
+    "newGrammar": 400,
+    "practice": 800,
+    "exam": 800,
+    "analysis": 200
    },
-   "totalSec": 900,
+   "totalSec": 3000,
    "expectedOutcome": "Правило «Подвижные окончания» введено и отработано на теме «Дом и жильё».",
    "interferenceRisk": 3,
-   "lexemeIds": []
+   "lexemeIds": [
+    "pl.ktos",
+    "pl.cos",
+    "pl.bardzo",
+    "pl.zawsze",
+    "pl.nigdy",
+    "pl.czesto"
+   ]
   },
   {
    "day": 125,
@@ -5369,16 +5723,20 @@
     "pl-b1.speaking.dialogue"
    ],
    "timeBudgetSec": {
-    "review": 300,
+    "review": 1000,
     "newGrammar": 0,
-    "practice": 420,
-    "exam": 120,
-    "analysis": 60
+    "practice": 1400,
+    "exam": 400,
+    "analysis": 200
    },
-   "totalSec": 900,
+   "totalSec": 3000,
    "expectedOutcome": "Правила недели отработаны на новом материале, без ввода нового.",
    "interferenceRisk": null,
-   "lexemeIds": []
+   "lexemeIds": [
+    "pl.czasem",
+    "pl.juz",
+    "pl.jeszcze"
+   ]
   },
   {
    "day": 126,
@@ -5408,11 +5766,11 @@
    "timeBudgetSec": {
     "review": 0,
     "newGrammar": 0,
-    "practice": 180,
-    "exam": 540,
-    "analysis": 180
+    "practice": 600,
+    "exam": 1800,
+    "analysis": 600
    },
-   "totalSec": 900,
+   "totalSec": 3000,
    "expectedOutcome": "Проверено усвоение правил и лексики недели. Ошибки поставлены в очередь на пересдачу.",
    "interferenceRisk": null,
    "lexemeIds": []
@@ -5445,16 +5803,23 @@
     "pl-b1.reading.argument"
    ],
    "timeBudgetSec": {
-    "review": 240,
-    "newGrammar": 120,
-    "practice": 240,
-    "exam": 240,
-    "analysis": 60
+    "review": 800,
+    "newGrammar": 400,
+    "practice": 800,
+    "exam": 800,
+    "analysis": 200
    },
-   "totalSec": 900,
+   "totalSec": 3000,
    "expectedOutcome": "Правило «Подвижные окончания» введено и отработано на теме «Повседневная жизнь».",
    "interferenceRisk": 3,
-   "lexemeIds": []
+   "lexemeIds": [
+    "pl.obowiazek",
+    "pl.styczen",
+    "pl.luty",
+    "pl.marzec",
+    "pl.kwiecien",
+    "pl.maj"
+   ]
   },
   {
    "day": 128,
@@ -5484,16 +5849,23 @@
     "pl-b1.grammar.transform"
    ],
    "timeBudgetSec": {
-    "review": 240,
-    "newGrammar": 120,
-    "practice": 240,
-    "exam": 240,
-    "analysis": 60
+    "review": 800,
+    "newGrammar": 400,
+    "practice": 800,
+    "exam": 800,
+    "analysis": 200
    },
-   "totalSec": 900,
+   "totalSec": 3000,
    "expectedOutcome": "Правило «Подвижные окончания» введено и отработано на теме «Повседневная жизнь».",
    "interferenceRisk": 3,
-   "lexemeIds": []
+   "lexemeIds": [
+    "pl.czerwiec",
+    "pl.lipiec",
+    "pl.sierpien",
+    "pl.wrzesien",
+    "pl.pazdziernik",
+    "pl.listopad"
+   ]
   },
   {
    "day": 129,
@@ -5523,16 +5895,23 @@
     "pl-b1.listening.detail"
    ],
    "timeBudgetSec": {
-    "review": 240,
-    "newGrammar": 120,
-    "practice": 240,
-    "exam": 240,
-    "analysis": 60
+    "review": 800,
+    "newGrammar": 400,
+    "practice": 800,
+    "exam": 800,
+    "analysis": 200
    },
-   "totalSec": 900,
+   "totalSec": 3000,
    "expectedOutcome": "Правило «Подвижные окончания» введено и отработано на теме «Повседневная жизнь».",
    "interferenceRisk": 3,
-   "lexemeIds": []
+   "lexemeIds": [
+    "pl.grudzien",
+    "pl.popoludnie",
+    "pl.polnoc",
+    "pl.kwadrans",
+    "pl.minuta",
+    "pl.zegarek"
+   ]
   },
   {
    "day": 130,
@@ -5562,16 +5941,23 @@
     "pl-b1.writing.narrative"
    ],
    "timeBudgetSec": {
-    "review": 240,
-    "newGrammar": 120,
-    "practice": 240,
-    "exam": 240,
-    "analysis": 60
+    "review": 800,
+    "newGrammar": 400,
+    "practice": 800,
+    "exam": 800,
+    "analysis": 200
    },
-   "totalSec": 900,
+   "totalSec": 3000,
    "expectedOutcome": "Правило «Подвижные окончания» введено и отработано на теме «Повседневная жизнь».",
    "interferenceRisk": 3,
-   "lexemeIds": []
+   "lexemeIds": [
+    "pl.kalendarz",
+    "pl.data",
+    "pl.myc-sie",
+    "pl.zmeczony",
+    "pl.smieci",
+    "pl.tylko"
+   ]
   },
   {
    "day": 131,
@@ -5601,16 +5987,23 @@
     "pl-b1.reading.argument"
    ],
    "timeBudgetSec": {
-    "review": 240,
-    "newGrammar": 120,
-    "practice": 240,
-    "exam": 240,
-    "analysis": 60
+    "review": 800,
+    "newGrammar": 400,
+    "practice": 800,
+    "exam": 800,
+    "analysis": 200
    },
-   "totalSec": 900,
+   "totalSec": 3000,
    "expectedOutcome": "Правило «Подвижные окончания» введено и отработано на теме «Повседневная жизнь».",
    "interferenceRisk": 3,
-   "lexemeIds": []
+   "lexemeIds": [
+    "pl.tez",
+    "pl.takze",
+    "pl.teraz",
+    "pl.potem",
+    "pl.wczoraj",
+    "pl.dzisiaj"
+   ]
   },
   {
    "day": 132,
@@ -5639,16 +6032,20 @@
     "pl-b1.speaking.photo"
    ],
    "timeBudgetSec": {
-    "review": 300,
+    "review": 1000,
     "newGrammar": 0,
-    "practice": 420,
-    "exam": 120,
-    "analysis": 60
+    "practice": 1400,
+    "exam": 400,
+    "analysis": 200
    },
-   "totalSec": 900,
+   "totalSec": 3000,
    "expectedOutcome": "Правила недели отработаны на новом материале, без ввода нового.",
    "interferenceRisk": null,
-   "lexemeIds": []
+   "lexemeIds": [
+    "pl.zaraz",
+    "pl.moze",
+    "pl.trzeba"
+   ]
   },
   {
    "day": 133,
@@ -5678,11 +6075,11 @@
    "timeBudgetSec": {
     "review": 0,
     "newGrammar": 0,
-    "practice": 180,
-    "exam": 540,
-    "analysis": 180
+    "practice": 600,
+    "exam": 1800,
+    "analysis": 600
    },
-   "totalSec": 900,
+   "totalSec": 3000,
    "expectedOutcome": "Проверено усвоение правил и лексики недели. Ошибки поставлены в очередь на пересдачу.",
    "interferenceRisk": null,
    "lexemeIds": []
@@ -5715,16 +6112,23 @@
     "pl-b1.reading.selective"
    ],
    "timeBudgetSec": {
-    "review": 240,
-    "newGrammar": 120,
-    "practice": 240,
-    "exam": 240,
-    "analysis": 60
+    "review": 800,
+    "newGrammar": 400,
+    "practice": 800,
+    "exam": 800,
+    "analysis": 200
    },
-   "totalSec": 900,
+   "totalSec": 3000,
    "expectedOutcome": "Правило «Подвижные окончания» введено и отработано на теме «Досуг».",
    "interferenceRisk": 3,
-   "lexemeIds": []
+   "lexemeIds": [
+    "pl.bieganie",
+    "pl.wedkarstwo",
+    "pl.ogrodnictwo",
+    "pl.powiesc",
+    "pl.komedia",
+    "pl.serial"
+   ]
   },
   {
    "day": 135,
@@ -5754,16 +6158,23 @@
     "pl-b1.grammar.recognize"
    ],
    "timeBudgetSec": {
-    "review": 240,
-    "newGrammar": 120,
-    "practice": 240,
-    "exam": 240,
-    "analysis": 60
+    "review": 800,
+    "newGrammar": 400,
+    "practice": 800,
+    "exam": 800,
+    "analysis": 200
    },
-   "totalSec": 900,
+   "totalSec": 3000,
    "expectedOutcome": "Правило «Подвижные окончания» введено и отработано на теме «Досуг».",
    "interferenceRisk": 3,
-   "lexemeIds": []
+   "lexemeIds": [
+    "pl.odcinek",
+    "pl.scena",
+    "pl.widz",
+    "pl.publicznosc",
+    "pl.gitara",
+    "pl.chor"
+   ]
   },
   {
    "day": 136,
@@ -5793,16 +6204,23 @@
     "pl-b1.listening.global"
    ],
    "timeBudgetSec": {
-    "review": 240,
-    "newGrammar": 120,
-    "practice": 240,
-    "exam": 240,
-    "analysis": 60
+    "review": 800,
+    "newGrammar": 400,
+    "practice": 800,
+    "exam": 800,
+    "analysis": 200
    },
-   "totalSec": 900,
+   "totalSec": 3000,
    "expectedOutcome": "Правило «Подвижные окончания» введено и отработано на теме «Досуг».",
    "interferenceRisk": 3,
-   "lexemeIds": []
+   "lexemeIds": [
+    "pl.rysowac",
+    "pl.malowac",
+    "pl.szachy",
+    "pl.rozrywka",
+    "pl.festiwal",
+    "pl.mozna"
+   ]
   },
   {
    "day": 137,
@@ -5832,16 +6250,23 @@
     "pl-b1.writing.descriptive"
    ],
    "timeBudgetSec": {
-    "review": 240,
-    "newGrammar": 120,
-    "practice": 240,
-    "exam": 240,
-    "analysis": 60
+    "review": 800,
+    "newGrammar": 400,
+    "practice": 800,
+    "exam": 800,
+    "analysis": 200
    },
-   "totalSec": 900,
+   "totalSec": 3000,
    "expectedOutcome": "Правило «Подвижные окончания» введено и отработано на теме «Досуг».",
    "interferenceRisk": 3,
-   "lexemeIds": []
+   "lexemeIds": [
+    "pl.wolno",
+    "pl.robic",
+    "pl.mowic",
+    "pl.czytac",
+    "pl.pisac",
+    "pl.widziec"
+   ]
   },
   {
    "day": 138,
@@ -5871,16 +6296,23 @@
     "pl-b1.reading.selective"
    ],
    "timeBudgetSec": {
-    "review": 240,
-    "newGrammar": 120,
-    "practice": 240,
-    "exam": 240,
-    "analysis": 60
+    "review": 800,
+    "newGrammar": 400,
+    "practice": 800,
+    "exam": 800,
+    "analysis": 200
    },
-   "totalSec": 900,
+   "totalSec": 3000,
    "expectedOutcome": "Правило «Подвижные окончания» введено и отработано на теме «Досуг».",
    "interferenceRisk": 3,
-   "lexemeIds": []
+   "lexemeIds": [
+    "pl.slyszec",
+    "pl.sluchac",
+    "pl.szukac",
+    "pl.potrzebowac",
+    "pl.uzywac",
+    "pl.uczyc-sie"
+   ]
   },
   {
    "day": 139,
@@ -5909,16 +6341,20 @@
     "pl-b1.speaking.monologue"
    ],
    "timeBudgetSec": {
-    "review": 300,
+    "review": 1000,
     "newGrammar": 0,
-    "practice": 420,
-    "exam": 120,
-    "analysis": 60
+    "practice": 1400,
+    "exam": 400,
+    "analysis": 200
    },
-   "totalSec": 900,
+   "totalSec": 3000,
    "expectedOutcome": "Правила недели отработаны на новом материале, без ввода нового.",
    "interferenceRisk": null,
-   "lexemeIds": []
+   "lexemeIds": [
+    "pl.bac-sie",
+    "pl.podobac-sie",
+    "pl.pomagac"
+   ]
   },
   {
    "day": 140,
@@ -5948,10 +6384,10 @@
     "review": 0,
     "newGrammar": 0,
     "practice": 0,
-    "exam": 840,
-    "analysis": 60
+    "exam": 2800,
+    "analysis": 200
    },
-   "totalSec": 900,
+   "totalSec": 3000,
    "expectedOutcome": "Обновлён прогноз по всем пяти модулям. Слабейший получает приоритет в следующем цикле.",
    "interferenceRisk": null,
    "lexemeIds": []
@@ -5982,16 +6418,20 @@
     "pl-b1.reading.global"
    ],
    "timeBudgetSec": {
-    "review": 240,
+    "review": 800,
     "newGrammar": 0,
-    "practice": 180,
-    "exam": 420,
-    "analysis": 60
+    "practice": 600,
+    "exam": 1400,
+    "analysis": 200
    },
-   "totalSec": 900,
+   "totalSec": 3000,
    "expectedOutcome": "Закрепление пройденного на новой лексике.",
    "interferenceRisk": null,
-   "lexemeIds": []
+   "lexemeIds": [
+    "pl.kraj",
+    "pl.stolica",
+    "pl.taksowka"
+   ]
   },
   {
    "day": 142,
@@ -6019,16 +6459,20 @@
     "pl-b1.grammar.produce"
    ],
    "timeBudgetSec": {
-    "review": 240,
+    "review": 800,
     "newGrammar": 0,
-    "practice": 180,
-    "exam": 420,
-    "analysis": 60
+    "practice": 600,
+    "exam": 1400,
+    "analysis": 200
    },
-   "totalSec": 900,
+   "totalSec": 3000,
    "expectedOutcome": "Закрепление пройденного на новой лексике.",
    "interferenceRisk": null,
-   "lexemeIds": []
+   "lexemeIds": [
+    "pl.metro",
+    "pl.tramwaj",
+    "pl.autostrada"
+   ]
   },
   {
    "day": 143,
@@ -6056,16 +6500,20 @@
     "pl-b1.listening.media"
    ],
    "timeBudgetSec": {
-    "review": 240,
+    "review": 800,
     "newGrammar": 0,
-    "practice": 180,
-    "exam": 420,
-    "analysis": 60
+    "practice": 600,
+    "exam": 1400,
+    "analysis": 200
    },
-   "totalSec": 900,
+   "totalSec": 3000,
    "expectedOutcome": "Закрепление пройденного на новой лексике.",
    "interferenceRisk": null,
-   "lexemeIds": []
+   "lexemeIds": [
+    "pl.prom",
+    "pl.dziekowac",
+    "pl.przeszkadzac"
+   ]
   },
   {
    "day": 144,
@@ -6093,16 +6541,20 @@
     "pl-b1.writing.short-forms"
    ],
    "timeBudgetSec": {
-    "review": 240,
+    "review": 800,
     "newGrammar": 0,
-    "practice": 180,
-    "exam": 420,
-    "analysis": 60
+    "practice": 600,
+    "exam": 1400,
+    "analysis": 200
    },
-   "totalSec": 900,
+   "totalSec": 3000,
    "expectedOutcome": "Закрепление пройденного на новой лексике.",
    "interferenceRisk": null,
-   "lexemeIds": []
+   "lexemeIds": [
+    "pl.interesowac-sie",
+    "pl.zajmowac-sie",
+    "pl.czekac"
+   ]
   },
   {
    "day": 145,
@@ -6130,16 +6582,20 @@
     "pl-b1.reading.global"
    ],
    "timeBudgetSec": {
-    "review": 240,
+    "review": 800,
     "newGrammar": 0,
-    "practice": 180,
-    "exam": 420,
-    "analysis": 60
+    "practice": 600,
+    "exam": 1400,
+    "analysis": 200
    },
-   "totalSec": 900,
+   "totalSec": 3000,
    "expectedOutcome": "Закрепление пройденного на новой лексике.",
    "interferenceRisk": null,
-   "lexemeIds": []
+   "lexemeIds": [
+    "pl.pytac",
+    "pl.prosic",
+    "pl.dzwonic"
+   ]
   },
   {
    "day": 146,
@@ -6168,16 +6624,19 @@
     "pl-b1.speaking.dialogue"
    ],
    "timeBudgetSec": {
-    "review": 300,
+    "review": 1000,
     "newGrammar": 0,
-    "practice": 420,
-    "exam": 120,
-    "analysis": 60
+    "practice": 1400,
+    "exam": 400,
+    "analysis": 200
    },
-   "totalSec": 900,
+   "totalSec": 3000,
    "expectedOutcome": "Правила недели отработаны на новом материале, без ввода нового.",
    "interferenceRisk": null,
-   "lexemeIds": []
+   "lexemeIds": [
+    "pl.isc",
+    "pl.jechac"
+   ]
   },
   {
    "day": 147,
@@ -6207,11 +6666,11 @@
    "timeBudgetSec": {
     "review": 0,
     "newGrammar": 0,
-    "practice": 180,
-    "exam": 540,
-    "analysis": 180
+    "practice": 600,
+    "exam": 1800,
+    "analysis": 600
    },
-   "totalSec": 900,
+   "totalSec": 3000,
    "expectedOutcome": "Проверено усвоение правил и лексики недели. Ошибки поставлены в очередь на пересдачу.",
    "interferenceRisk": null,
    "lexemeIds": []
@@ -6242,16 +6701,20 @@
     "pl-b1.reading.signs"
    ],
    "timeBudgetSec": {
-    "review": 240,
+    "review": 800,
     "newGrammar": 0,
-    "practice": 180,
-    "exam": 420,
-    "analysis": 60
+    "practice": 600,
+    "exam": 1400,
+    "analysis": 200
    },
-   "totalSec": 900,
+   "totalSec": 3000,
    "expectedOutcome": "Закрепление пройденного на новой лексике.",
    "interferenceRisk": null,
-   "lexemeIds": []
+   "lexemeIds": [
+    "pl.wolontariat",
+    "pl.mniejszosc",
+    "pl.uchodzca"
+   ]
   },
   {
    "day": 149,
@@ -6279,16 +6742,20 @@
     "pl-b1.grammar.transform"
    ],
    "timeBudgetSec": {
-    "review": 240,
+    "review": 800,
     "newGrammar": 0,
-    "practice": 180,
-    "exam": 420,
-    "analysis": 60
+    "practice": 600,
+    "exam": 1400,
+    "analysis": 200
    },
-   "totalSec": 900,
+   "totalSec": 3000,
    "expectedOutcome": "Закрепление пройденного на новой лексике.",
    "interferenceRisk": null,
-   "lexemeIds": []
+   "lexemeIds": [
+    "pl.religia",
+    "pl.tolerancja",
+    "pl.chodzic"
+   ]
   },
   {
    "day": 150,
@@ -6316,16 +6783,20 @@
     "pl-b1.listening.dialogue"
    ],
    "timeBudgetSec": {
-    "review": 240,
+    "review": 800,
     "newGrammar": 0,
-    "practice": 180,
-    "exam": 420,
-    "analysis": 60
+    "practice": 600,
+    "exam": 1400,
+    "analysis": 200
    },
-   "totalSec": 900,
+   "totalSec": 3000,
    "expectedOutcome": "Закрепление пройденного на новой лексике.",
    "interferenceRisk": null,
-   "lexemeIds": []
+   "lexemeIds": [
+    "pl.przychodzic",
+    "pl.wychodzic",
+    "pl.wracac"
+   ]
   },
   {
    "day": 151,
@@ -6353,16 +6824,20 @@
     "pl-b1.writing.opinion"
    ],
    "timeBudgetSec": {
-    "review": 240,
+    "review": 800,
     "newGrammar": 0,
-    "practice": 180,
-    "exam": 420,
-    "analysis": 60
+    "practice": 600,
+    "exam": 1400,
+    "analysis": 200
    },
-   "totalSec": 900,
+   "totalSec": 3000,
    "expectedOutcome": "Закрепление пройденного на новой лексике.",
    "interferenceRisk": null,
-   "lexemeIds": []
+   "lexemeIds": [
+    "pl.kupowac",
+    "pl.sprzedawac",
+    "pl.placic"
+   ]
   },
   {
    "day": 152,
@@ -6390,16 +6865,20 @@
     "pl-b1.reading.signs"
    ],
    "timeBudgetSec": {
-    "review": 240,
+    "review": 800,
     "newGrammar": 0,
-    "practice": 180,
-    "exam": 420,
-    "analysis": 60
+    "practice": 600,
+    "exam": 1400,
+    "analysis": 200
    },
-   "totalSec": 900,
+   "totalSec": 3000,
    "expectedOutcome": "Закрепление пройденного на новой лексике.",
    "interferenceRisk": null,
-   "lexemeIds": []
+   "lexemeIds": [
+    "pl.jesc",
+    "pl.pic",
+    "pl.gotowac"
+   ]
   },
   {
    "day": 153,
@@ -6428,16 +6907,19 @@
     "pl-b1.speaking.photo"
    ],
    "timeBudgetSec": {
-    "review": 300,
+    "review": 1000,
     "newGrammar": 0,
-    "practice": 420,
-    "exam": 120,
-    "analysis": 60
+    "practice": 1400,
+    "exam": 400,
+    "analysis": 200
    },
-   "totalSec": 900,
+   "totalSec": 3000,
    "expectedOutcome": "Правила недели отработаны на новом материале, без ввода нового.",
    "interferenceRisk": null,
-   "lexemeIds": []
+   "lexemeIds": [
+    "pl.spac",
+    "pl.wstawac"
+   ]
   },
   {
    "day": 154,
@@ -6467,11 +6949,11 @@
    "timeBudgetSec": {
     "review": 0,
     "newGrammar": 0,
-    "practice": 180,
-    "exam": 540,
-    "analysis": 180
+    "practice": 600,
+    "exam": 1800,
+    "analysis": 600
    },
-   "totalSec": 900,
+   "totalSec": 3000,
    "expectedOutcome": "Проверено усвоение правил и лексики недели. Ошибки поставлены в очередь на пересдачу.",
    "interferenceRisk": null,
    "lexemeIds": []
@@ -6502,16 +6984,20 @@
     "pl-b1.reading.argument"
    ],
    "timeBudgetSec": {
-    "review": 240,
+    "review": 800,
     "newGrammar": 0,
-    "practice": 180,
-    "exam": 420,
-    "analysis": 60
+    "practice": 600,
+    "exam": 1400,
+    "analysis": 200
    },
-   "totalSec": 900,
+   "totalSec": 3000,
    "expectedOutcome": "Закрепление пройденного на новой лексике.",
    "interferenceRisk": null,
-   "lexemeIds": []
+   "lexemeIds": [
+    "pl.rana",
+    "pl.zlamanie",
+    "pl.dieta"
+   ]
   },
   {
    "day": 156,
@@ -6539,16 +7025,20 @@
     "pl-b1.grammar.recognize"
    ],
    "timeBudgetSec": {
-    "review": 240,
+    "review": 800,
     "newGrammar": 0,
-    "practice": 180,
-    "exam": 420,
-    "analysis": 60
+    "practice": 600,
+    "exam": 1400,
+    "analysis": 200
    },
-   "totalSec": 900,
+   "totalSec": 3000,
    "expectedOutcome": "Закрепление пройденного на новой лексике.",
    "interferenceRisk": null,
-   "lexemeIds": []
+   "lexemeIds": [
+    "pl.sen",
+    "pl.cwiczyc",
+    "pl.oddychac"
+   ]
   },
   {
    "day": 157,
@@ -6576,16 +7066,20 @@
     "pl-b1.listening.detail"
    ],
    "timeBudgetSec": {
-    "review": 240,
+    "review": 800,
     "newGrammar": 0,
-    "practice": 180,
-    "exam": 420,
-    "analysis": 60
+    "practice": 600,
+    "exam": 1400,
+    "analysis": 200
    },
-   "totalSec": 900,
+   "totalSec": 3000,
    "expectedOutcome": "Закрепление пройденного на новой лексике.",
    "interferenceRisk": null,
-   "lexemeIds": []
+   "lexemeIds": [
+    "pl.wyzdrowiec",
+    "pl.pracowac",
+    "pl.odpoczywac"
+   ]
   },
   {
    "day": 158,
@@ -6613,16 +7107,20 @@
     "pl-b1.writing.narrative"
    ],
    "timeBudgetSec": {
-    "review": 240,
+    "review": 800,
     "newGrammar": 0,
-    "practice": 180,
-    "exam": 420,
-    "analysis": 60
+    "practice": 600,
+    "exam": 1400,
+    "analysis": 200
    },
-   "totalSec": 900,
+   "totalSec": 3000,
    "expectedOutcome": "Закрепление пройденного на новой лексике.",
    "interferenceRisk": null,
-   "lexemeIds": []
+   "lexemeIds": [
+    "pl.mieszkac",
+    "pl.wynajmowac",
+    "pl.zaczynac"
+   ]
   },
   {
    "day": 159,
@@ -6650,16 +7148,20 @@
     "pl-b1.reading.argument"
    ],
    "timeBudgetSec": {
-    "review": 240,
+    "review": 800,
     "newGrammar": 0,
-    "practice": 180,
-    "exam": 420,
-    "analysis": 60
+    "practice": 600,
+    "exam": 1400,
+    "analysis": 200
    },
-   "totalSec": 900,
+   "totalSec": 3000,
    "expectedOutcome": "Закрепление пройденного на новой лексике.",
    "interferenceRisk": null,
-   "lexemeIds": []
+   "lexemeIds": [
+    "pl.konczyc",
+    "pl.otwierac",
+    "pl.zamykac"
+   ]
   },
   {
    "day": 160,
@@ -6688,16 +7190,19 @@
     "pl-b1.speaking.monologue"
    ],
    "timeBudgetSec": {
-    "review": 300,
+    "review": 1000,
     "newGrammar": 0,
-    "practice": 420,
-    "exam": 120,
-    "analysis": 60
+    "practice": 1400,
+    "exam": 400,
+    "analysis": 200
    },
-   "totalSec": 900,
+   "totalSec": 3000,
    "expectedOutcome": "Правила недели отработаны на новом материале, без ввода нового.",
    "interferenceRisk": null,
-   "lexemeIds": []
+   "lexemeIds": [
+    "pl.brac",
+    "pl.dawac"
+   ]
   },
   {
    "day": 161,
@@ -6727,11 +7232,11 @@
    "timeBudgetSec": {
     "review": 0,
     "newGrammar": 0,
-    "practice": 180,
-    "exam": 540,
-    "analysis": 180
+    "practice": 600,
+    "exam": 1800,
+    "analysis": 600
    },
-   "totalSec": 900,
+   "totalSec": 3000,
    "expectedOutcome": "Проверено усвоение правил и лексики недели. Ошибки поставлены в очередь на пересдачу.",
    "interferenceRisk": null,
    "lexemeIds": []
@@ -6762,16 +7267,20 @@
     "pl-b1.reading.selective"
    ],
    "timeBudgetSec": {
-    "review": 240,
+    "review": 800,
     "newGrammar": 0,
-    "practice": 180,
-    "exam": 420,
-    "analysis": 60
+    "practice": 600,
+    "exam": 1400,
+    "analysis": 200
    },
-   "totalSec": 900,
+   "totalSec": 3000,
    "expectedOutcome": "Закрепление пройденного на новой лексике.",
    "interferenceRisk": null,
-   "lexemeIds": []
+   "lexemeIds": [
+    "pl.praca-domowa",
+    "pl.powtarzac",
+    "pl.blad"
+   ]
   },
   {
    "day": 163,
@@ -6799,16 +7308,20 @@
     "pl-b1.grammar.produce"
    ],
    "timeBudgetSec": {
-    "review": 240,
+    "review": 800,
     "newGrammar": 0,
-    "practice": 180,
-    "exam": 420,
-    "analysis": 60
+    "practice": 600,
+    "exam": 1400,
+    "analysis": 200
    },
-   "totalSec": 900,
+   "totalSec": 3000,
    "expectedOutcome": "Закрепление пройденного на новой лексике.",
    "interferenceRisk": null,
-   "lexemeIds": []
+   "lexemeIds": [
+    "pl.slownik",
+    "pl.gramatyka",
+    "pl.zaliczyc"
+   ]
   },
   {
    "day": 164,
@@ -6836,16 +7349,20 @@
     "pl-b1.listening.global"
    ],
    "timeBudgetSec": {
-    "review": 240,
+    "review": 800,
     "newGrammar": 0,
-    "practice": 180,
-    "exam": 420,
-    "analysis": 60
+    "practice": 600,
+    "exam": 1400,
+    "analysis": 200
    },
-   "totalSec": 900,
+   "totalSec": 3000,
    "expectedOutcome": "Закрепление пройденного на новой лексике.",
    "interferenceRisk": null,
-   "lexemeIds": []
+   "lexemeIds": [
+    "pl.wiedziec",
+    "pl.znac",
+    "pl.umiec"
+   ]
   },
   {
    "day": 165,
@@ -6873,16 +7390,20 @@
     "pl-b1.writing.descriptive"
    ],
    "timeBudgetSec": {
-    "review": 240,
+    "review": 800,
     "newGrammar": 0,
-    "practice": 180,
-    "exam": 420,
-    "analysis": 60
+    "practice": 600,
+    "exam": 1400,
+    "analysis": 200
    },
-   "totalSec": 900,
+   "totalSec": 3000,
    "expectedOutcome": "Закрепление пройденного на новой лексике.",
    "interferenceRisk": null,
-   "lexemeIds": []
+   "lexemeIds": [
+    "pl.moc",
+    "pl.chciec",
+    "pl.musiec"
+   ]
   },
   {
    "day": 166,
@@ -6910,16 +7431,20 @@
     "pl-b1.reading.selective"
    ],
    "timeBudgetSec": {
-    "review": 240,
+    "review": 800,
     "newGrammar": 0,
-    "practice": 180,
-    "exam": 420,
-    "analysis": 60
+    "practice": 600,
+    "exam": 1400,
+    "analysis": 200
    },
-   "totalSec": 900,
+   "totalSec": 3000,
    "expectedOutcome": "Закрепление пройденного на новой лексике.",
    "interferenceRisk": null,
-   "lexemeIds": []
+   "lexemeIds": [
+    "pl.lubic",
+    "pl.kochac",
+    "pl.myslec"
+   ]
   },
   {
    "day": 167,
@@ -6948,16 +7473,19 @@
     "pl-b1.speaking.dialogue"
    ],
    "timeBudgetSec": {
-    "review": 300,
+    "review": 1000,
     "newGrammar": 0,
-    "practice": 420,
-    "exam": 120,
-    "analysis": 60
+    "practice": 1400,
+    "exam": 400,
+    "analysis": 200
    },
-   "totalSec": 900,
+   "totalSec": 3000,
    "expectedOutcome": "Правила недели отработаны на новом материале, без ввода нового.",
    "interferenceRisk": null,
-   "lexemeIds": []
+   "lexemeIds": [
+    "pl.rozumiec",
+    "pl.pamietac"
+   ]
   },
   {
    "day": 168,
@@ -6987,10 +7515,10 @@
     "review": 0,
     "newGrammar": 0,
     "practice": 0,
-    "exam": 840,
-    "analysis": 60
+    "exam": 2800,
+    "analysis": 200
    },
-   "totalSec": 900,
+   "totalSec": 3000,
    "expectedOutcome": "Обновлён прогноз по всем пяти модулям. Слабейший получает приоритет в следующем цикле.",
    "interferenceRisk": null,
    "lexemeIds": []
@@ -7021,16 +7549,20 @@
     "pl-b1.reading.global"
    ],
    "timeBudgetSec": {
-    "review": 240,
+    "review": 800,
     "newGrammar": 0,
-    "practice": 180,
-    "exam": 420,
-    "analysis": 60
+    "practice": 600,
+    "exam": 1400,
+    "analysis": 200
    },
-   "totalSec": 900,
+   "totalSec": 3000,
    "expectedOutcome": "Закрепление пройденного на новой лексике.",
    "interferenceRisk": null,
-   "lexemeIds": []
+   "lexemeIds": [
+    "pl.podpisac",
+    "pl.ubezpieczenie",
+    "pl.premia"
+   ]
   },
   {
    "day": 170,
@@ -7058,16 +7590,20 @@
     "pl-b1.grammar.transform"
    ],
    "timeBudgetSec": {
-    "review": 240,
+    "review": 800,
     "newGrammar": 0,
-    "practice": 180,
-    "exam": 420,
-    "analysis": 60
+    "practice": 600,
+    "exam": 1400,
+    "analysis": 200
    },
-   "totalSec": 900,
+   "totalSec": 3000,
    "expectedOutcome": "Закрепление пройденного на новой лексике.",
    "interferenceRisk": null,
-   "lexemeIds": []
+   "lexemeIds": [
+    "pl.biurko",
+    "pl.komputer",
+    "pl.spoznienie"
+   ]
   },
   {
    "day": 171,
@@ -7095,16 +7631,20 @@
     "pl-b1.listening.media"
    ],
    "timeBudgetSec": {
-    "review": 240,
+    "review": 800,
     "newGrammar": 0,
-    "practice": 180,
-    "exam": 420,
-    "analysis": 60
+    "practice": 600,
+    "exam": 1400,
+    "analysis": 200
    },
-   "totalSec": 900,
+   "totalSec": 3000,
    "expectedOutcome": "Закрепление пройденного на новой лексике.",
    "interferenceRisk": null,
-   "lexemeIds": []
+   "lexemeIds": [
+    "pl.zapominac",
+    "pl.spotykac-sie",
+    "pl.rozmawiac"
+   ]
   },
   {
    "day": 172,
@@ -7132,13 +7672,13 @@
     "pl-b1.writing.short-forms"
    ],
    "timeBudgetSec": {
-    "review": 240,
+    "review": 800,
     "newGrammar": 0,
-    "practice": 180,
-    "exam": 420,
-    "analysis": 60
+    "practice": 600,
+    "exam": 1400,
+    "analysis": 200
    },
-   "totalSec": 900,
+   "totalSec": 3000,
    "expectedOutcome": "Закрепление пройденного на новой лексике.",
    "interferenceRisk": null,
    "lexemeIds": []
@@ -7169,13 +7709,13 @@
     "pl-b1.reading.global"
    ],
    "timeBudgetSec": {
-    "review": 240,
+    "review": 800,
     "newGrammar": 0,
-    "practice": 180,
-    "exam": 420,
-    "analysis": 60
+    "practice": 600,
+    "exam": 1400,
+    "analysis": 200
    },
-   "totalSec": 900,
+   "totalSec": 3000,
    "expectedOutcome": "Закрепление пройденного на новой лексике.",
    "interferenceRisk": null,
    "lexemeIds": []
@@ -7207,13 +7747,13 @@
     "pl-b1.speaking.photo"
    ],
    "timeBudgetSec": {
-    "review": 300,
+    "review": 1000,
     "newGrammar": 0,
-    "practice": 420,
-    "exam": 120,
-    "analysis": 60
+    "practice": 1400,
+    "exam": 400,
+    "analysis": 200
    },
-   "totalSec": 900,
+   "totalSec": 3000,
    "expectedOutcome": "Правила недели отработаны на новом материале, без ввода нового.",
    "interferenceRisk": null,
    "lexemeIds": []
@@ -7246,11 +7786,11 @@
    "timeBudgetSec": {
     "review": 0,
     "newGrammar": 0,
-    "practice": 180,
-    "exam": 540,
-    "analysis": 180
+    "practice": 600,
+    "exam": 1800,
+    "analysis": 600
    },
-   "totalSec": 900,
+   "totalSec": 3000,
    "expectedOutcome": "Проверено усвоение правил и лексики недели. Ошибки поставлены в очередь на пересдачу.",
    "interferenceRisk": null,
    "lexemeIds": []
@@ -7281,16 +7821,20 @@
     "pl-b1.reading.signs"
    ],
    "timeBudgetSec": {
-    "review": 240,
+    "review": 800,
     "newGrammar": 0,
-    "practice": 180,
-    "exam": 420,
-    "analysis": 60
+    "practice": 600,
+    "exam": 1400,
+    "analysis": 200
    },
-   "totalSec": 900,
+   "totalSec": 3000,
    "expectedOutcome": "Закрепление пройденного на новой лексике.",
    "interferenceRisk": null,
-   "lexemeIds": []
+   "lexemeIds": [
+    "pl.sukienka",
+    "pl.buty",
+    "pl.kurtka"
+   ]
   },
   {
    "day": 177,
@@ -7318,16 +7862,19 @@
     "pl-b1.grammar.recognize"
    ],
    "timeBudgetSec": {
-    "review": 240,
+    "review": 800,
     "newGrammar": 0,
-    "practice": 180,
-    "exam": 420,
-    "analysis": 60
+    "practice": 600,
+    "exam": 1400,
+    "analysis": 200
    },
-   "totalSec": 900,
+   "totalSec": 3000,
    "expectedOutcome": "Закрепление пройденного на новой лексике.",
    "interferenceRisk": null,
-   "lexemeIds": []
+   "lexemeIds": [
+    "pl.czapka",
+    "pl.przecena"
+   ]
   },
   {
    "day": 178,
@@ -7355,13 +7902,13 @@
     "pl-b1.listening.dialogue"
    ],
    "timeBudgetSec": {
-    "review": 240,
+    "review": 800,
     "newGrammar": 0,
-    "practice": 180,
-    "exam": 420,
-    "analysis": 60
+    "practice": 600,
+    "exam": 1400,
+    "analysis": 200
    },
-   "totalSec": 900,
+   "totalSec": 3000,
    "expectedOutcome": "Закрепление пройденного на новой лексике.",
    "interferenceRisk": null,
    "lexemeIds": []
@@ -7392,13 +7939,13 @@
     "pl-b1.writing.opinion"
    ],
    "timeBudgetSec": {
-    "review": 240,
+    "review": 800,
     "newGrammar": 0,
-    "practice": 180,
-    "exam": 420,
-    "analysis": 60
+    "practice": 600,
+    "exam": 1400,
+    "analysis": 200
    },
-   "totalSec": 900,
+   "totalSec": 3000,
    "expectedOutcome": "Закрепление пройденного на новой лексике.",
    "interferenceRisk": null,
    "lexemeIds": []
@@ -7429,13 +7976,13 @@
     "pl-b1.reading.signs"
    ],
    "timeBudgetSec": {
-    "review": 240,
+    "review": 800,
     "newGrammar": 0,
-    "practice": 180,
-    "exam": 420,
-    "analysis": 60
+    "practice": 600,
+    "exam": 1400,
+    "analysis": 200
    },
-   "totalSec": 900,
+   "totalSec": 3000,
    "expectedOutcome": "Закрепление пройденного на новой лексике.",
    "interferenceRisk": null,
    "lexemeIds": []
@@ -7467,13 +8014,13 @@
     "pl-b1.speaking.monologue"
    ],
    "timeBudgetSec": {
-    "review": 300,
+    "review": 1000,
     "newGrammar": 0,
-    "practice": 420,
-    "exam": 120,
-    "analysis": 60
+    "practice": 1400,
+    "exam": 400,
+    "analysis": 200
    },
-   "totalSec": 900,
+   "totalSec": 3000,
    "expectedOutcome": "Правила недели отработаны на новом материале, без ввода нового.",
    "interferenceRisk": null,
    "lexemeIds": []
@@ -7506,10 +8053,10 @@
     "review": 0,
     "newGrammar": 0,
     "practice": 0,
-    "exam": 780,
-    "analysis": 120
+    "exam": 2600,
+    "analysis": 400
    },
-   "totalSec": 900,
+   "totalSec": 3000,
    "expectedOutcome": "Вердикт по каждому из 5 модулей: готов / не готов. Критерий — ≥65% дважды подряд.",
    "interferenceRisk": null,
    "lexemeIds": []

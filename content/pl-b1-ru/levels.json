@@ -1,0 +1,70 @@
+{
+  "$schema": "./levels.schema.json",
+  "courseId": "pl-b1-ru",
+  "version": "2026-10-25",
+
+  "_meta": {
+    "purpose": "Сколько учебных часов нужно до уровня. На этих числах строится ответ на вопрос «сколько мне ещё осталось» — и проверка, что программа вообще способна довести до цели.",
+    "note": "Guided learning hours (GLH) — часы работы с преподавателем или по программе, без домашней работы сверх неё. Шкалы Oxford и Cambridge совпадают в пределах погрешности; берём их как ориентир, а не как закон."
+  },
+
+  "sources": [
+    {
+      "id": "cambridge-glh",
+      "title": "Cambridge English — Guided learning hours",
+      "url": "https://support.cambridgeenglish.org/hc/en-gb/articles/202838506-Guided-learning-hours",
+      "claim": "A2 — около 180-200 GLH накопительно, B1 — около 350-400 GLH накопительно"
+    },
+    {
+      "id": "languagecert-glh",
+      "title": "LANGUAGECERT — Guided learning hours",
+      "url": "https://www.languagecert.org/en/guided-learning-hours",
+      "claim": "Сопоставимая шкала: B1 достигается в районе 350-400 часов с нуля"
+    }
+  ],
+
+  "cefr": [
+    { "level": "A1", "cumulativeHours": [90, 100] },
+    { "level": "A2", "cumulativeHours": [180, 200] },
+    { "level": "B1", "cumulativeHours": [350, 400] },
+    { "level": "B2", "cumulativeHours": [500, 600] }
+  ],
+
+  "_tracksNote": "Сколько осталось до B1 с каждого входного трека: разница накопительных часов. Нижняя граница — оптимистичная оценка, верхняя — осторожная. Показывать пользователю нужно обе, иначе прогресс либо врёт, либо пугает.",
+
+  "tracks": [
+    {
+      "id": "a0",
+      "titleRu": "С нуля",
+      "startLevel": "none",
+      "hoursToTarget": [350, 400]
+    },
+    {
+      "id": "a2",
+      "titleRu": "Что-то понимаю",
+      "startLevel": "A2",
+      "hoursToTarget": [170, 200]
+    },
+    {
+      "id": "b1-minus",
+      "titleRu": "Понимаю, но путаюсь",
+      "startLevel": "A2+",
+      "hoursToTarget": [90, 120]
+    }
+  ],
+
+  "_discountNote": "Поправка на близость языков. Шкалы Cambridge и Oxford усреднены по всем парам языков. Для русскоязычного поляк — славянский язык с общей лексикой и падежной системой: часть часов из общей оценки уходит на то, что уже известно. Надёжной опубликованной цифры для пары ru→pl нет (RESEARCH.md §8), поэтому скидка задана явным коэффициентом, а не спрятана в часах: её видно и можно оспорить.",
+
+  "relatedLanguageDiscount": {
+    "factor": 0.7,
+    "appliesTo": ["listening", "reading", "grammar"],
+    "notAppliesTo": ["writing", "speaking"],
+    "reason": "Узнавание ускоряется родством языков, производство — почти нет: ложные друзья и чужая морфология мешают активному употреблению не меньше, чем при неродственном языке."
+  },
+
+  "target": {
+    "level": "B1",
+    "examId": "pl-b1-adults",
+    "passRule": { "kind": "per-module-floor", "thresholdPercent": 50 }
+  }
+}

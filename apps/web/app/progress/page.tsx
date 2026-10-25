@@ -10,6 +10,17 @@ import { loadProgress, type Progress, type RuleProgress } from '@/lib/engine/pro
 const THRESHOLD = 50
 const TARGET = 65
 
+/** Часы и минуты. Ниже часа показываем минуты: «0,3 ч» никому не говорит. */
+function dur(ms: number): string {
+  const min = Math.round(ms / 60_000)
+  if (min < 60) return `${min} мин`
+  const h = Math.floor(min / 60)
+  const m = min % 60
+  return m ? `${h} ч ${m} мин` : `${h} ч`
+}
+
+const hours = (h: number) => `${h < 10 ? h.toFixed(1).replace('.', ',') : Math.round(h)} ч`
+
 export default function ProgressPage() {
   const t = useTranslations()
   const [p, setP] = useState<Progress | null>(null)
@@ -35,6 +46,59 @@ export default function ProgressPage() {
           <Stat value={`${p.rules.introduced}/${p.rules.total}`} label="правил введено"
                 hint={`${p.rules.strong} освоено`} />
         </Row>
+      </Card>
+
+      <Card>
+        <Stack gap="md">
+          <Stack gap="none">
+            <h2 className="font-semibold">Сколько осталось до B1</h2>
+            <p className="text-xs text-muted">
+              Оценка вилкой, от оптимистичной до осторожной: точного числа
+              часов не обещает ни одна шкала. Основано на guided learning
+              hours Cambridge и LANGUAGECERT, с поправкой на родство языков.
+            </p>
+          </Stack>
+
+          <Stack gap="xs">
+            <Row justify="between">
+              <span className="text-sm">
+                Пройдено {hours(p.time.spentHours)} из{' '}
+                {hours(p.time.requiredHours[0])}–{hours(p.time.requiredHours[1])}
+              </span>
+              <span className="text-sm tabular-nums font-semibold">
+                {Math.round(p.time.percent * 100)}%
+              </span>
+            </Row>
+            <Meter value={p.time.percent * 100} tone="neutral" />
+          </Stack>
+
+          <Row gap="lg" wrap>
+            <Stat
+              value={`${hours(p.time.remainingHours[0])}–${hours(p.time.remainingHours[1])}`}
+              label="осталось учиться" />
+            <Stat
+              value={p.time.paceMinPerDay >= 1
+                ? dur(p.time.paceMinPerDay * 60_000)
+                : '—'}
+              label="темп в день"
+              hint="с начала курса, включая пропуски" />
+            <Stat
+              value={p.time.daysLeft ? `${p.time.daysLeft}` : '—'}
+              label="дней при этом темпе"
+              hint={p.time.daysLeft ? 'по осторожной оценке' : 'нужен хотя бы один день занятий'} />
+          </Row>
+
+          {p.time.paceMinPerDay > 0 && p.time.daysLeft !== null && p.time.daysLeft > p.totalDays && (
+            <p className="rounded-card bg-warn-bg p-3 text-xs text-warn-ink">
+              При нынешнем темпе до B1 выйдет {p.time.daysLeft} дней, а в
+              программе {p.totalDays}. Чтобы уложиться, заниматься нужно
+              примерно{' '}
+              {Math.ceil(p.time.remainingHours[1] * 60 / Math.max(1, p.totalDays - p.daysCompleted))}{' '}
+              минут в день. Это не ошибка расчёта — это честная арифметика:
+              уровень берётся часами, а не днями в календаре.
+            </p>
+          )}
+        </Stack>
       </Card>
 
       <Card>
@@ -75,6 +139,66 @@ export default function ProgressPage() {
           </p>
         </Stack>
       </Card>
+
+      <Card>
+        <Stack gap="md">
+          <Stack gap="none">
+            <h2 className="font-semibold">Что сделано</h2>
+            <p className="text-xs text-muted">
+              Освоенным считается слово, вышедшее из фазы заучивания:
+              интервал повторения перевалил за сутки и ответ был верным.
+              Правило освоено при устойчивости выше 85%.
+            </p>
+          </Stack>
+
+          <Row gap="lg" wrap>
+            <Stat value={dur(p.time.spentHours * 3_600_000)} label="всего за курс" />
+            <Stat value={p.daysCompleted} label="занятий пройдено" />
+            <Stat
+              value={p.accuracy.reviewed ? `${Math.round(p.accuracy.percent * 100)}%` : '—'}
+              label="верных ответов"
+              hint={p.accuracy.reviewed ? `${p.accuracy.correct} из ${p.accuracy.reviewed}` : 'ещё не было упражнений'} />
+            <Stat value={p.rules.weak} label="правил проседает"
+                  hint="устойчивость ниже 60%" />
+          </Row>
+        </Stack>
+      </Card>
+
+      {p.themes.some((x) => x.spentMs > 0) && (
+        <Card>
+          <Stack gap="md">
+            <Stack gap="none">
+              <h2 className="font-semibold">Время по темам</h2>
+              <p className="text-xs text-muted">
+                Считается по завершённым занятиям: тема дня берётся из
+                программы. Дни срезов и контрольных попадают в тему своей
+                недели.
+              </p>
+            </Stack>
+
+            <Stack gap="xs">
+              {p.themes.filter((x) => x.spentMs > 0).map((x) => (
+                <Stack key={x.themeId} gap="xs">
+                  <Row justify="between">
+                    <span className="text-sm">{x.themeRu}</span>
+                    <span className="text-sm tabular-nums text-muted">
+                      {dur(x.spentMs)} · {x.daysDone}/{x.daysTotal} дней
+                    </span>
+                  </Row>
+                  <Meter value={(x.daysDone / x.daysTotal) * 100} tone="neutral" />
+                </Stack>
+              ))}
+            </Stack>
+
+            {p.themes.some((x) => x.spentMs === 0) && (
+              <p className="text-xs text-muted">
+                Ещё не начаты:{' '}
+                {p.themes.filter((x) => x.spentMs === 0).map((x) => x.themeRu).join(', ')}
+              </p>
+            )}
+          </Stack>
+        </Card>
+      )}
 
       {p.weakRules.length > 0 && (
         <Card>

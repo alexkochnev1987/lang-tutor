@@ -17,6 +17,8 @@ import { FALSE_FRIENDS } from './data/vocab-false-friends.mjs'
 import { FUNCTION_WORDS } from './data/vocab-function.mjs'
 import { VERBS } from './data/vocab-verbs.mjs'
 import { THEMATIC } from './data/vocab-themes.mjs'
+import { THEMATIC_2 } from './data/vocab-themes-2.mjs'
+import { THEMATIC_3 } from './data/vocab-themes-3.mjs'
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..')
 const CONTENT = join(root, 'content/pl-b1-ru')
@@ -76,9 +78,15 @@ for (const [ndk, dk, ru, transparency, government] of VERBS) {
   })
 }
 
-for (const [themeId, list] of Object.entries(THEMATIC)) {
-  for (const [lemma, pos, ru, transparency] of list) {
-    add({ lemma, pos, translation: ru, transparency, themeId, priority: 'normal' })
+// Три захода по одним и тем же темам: первый дал 174 слова и покрыл
+// 58 дней из 155, второй и третий добирают остаток до потолка бюджета.
+// Источники раздельные, чтобы было видно, что когда добавлено;
+// `add` сам отбрасывает дубли.
+for (const source of [THEMATIC, THEMATIC_2, THEMATIC_3]) {
+  for (const [themeId, list] of Object.entries(source)) {
+    for (const [lemma, pos, ru, transparency] of list) {
+      add({ lemma, pos, translation: ru, transparency, themeId, priority: 'normal' })
+    }
   }
 }
 

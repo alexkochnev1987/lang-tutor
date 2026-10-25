@@ -10,6 +10,9 @@ apps/web/public/sw.js
 
 # строка подключения к проду и выгрузки из него: там персональные данные
 .env.prod
+# любые выгрузки переменных: .env.check, .env.vercel и прочие
+.env.*
+!.env.example
 dumps/
 *.tsbuildinfo
 .vercel

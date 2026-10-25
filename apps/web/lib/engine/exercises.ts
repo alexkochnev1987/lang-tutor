@@ -9,11 +9,15 @@ import {
   translateProduction, translateRecognition,
   type Exercise,
 } from '@polski/engine'
+import { closedClassWordsForRule } from '@/lib/lang-pl/closed-class'
 import { labelTag, RULE_TO_TAGS, resolveTag } from '@/lib/lang-pl/tags'
 import type { Lexeme, Paradigm } from '@/lib/content/curriculum'
 import type { StudyItemKind } from '@/lib/data/types'
 
 const hash = (s: string) => [...s].reduce((h, c) => (Math.imul(h, 31) + c.charCodeAt(0)) | 0, 7) >>> 0
+
+/** Что генератору нужно от слова: лемма для парадигмы и id для сида. */
+export type WordRef = Pick<Lexeme, 'id' | 'lemma'>
 
 export interface BuildInput {
   newWords: Lexeme[]
@@ -73,27 +77,44 @@ export function exerciseForReview(
 
 /** Грамматические упражнения по правилу — на лексике, которую уже знают. */
 export function exercisesForRule(
-  ruleId: string, words: Lexeme[], morphology: Record<string, Paradigm>, limit = 3,
+  ruleId: string,
+  words: readonly WordRef[],
+  morphology: Record<string, Paradigm>,
+  limit = 3,
 ): Exercise[] {
   const prefixes = RULE_TO_TAGS[ruleId]
   if (!prefixes?.length) return []
 
+  // Закрытый класс — это конкретные слова, а не лексика дня: правило
+  // «личные местоимения» про `ja` и `on`, и подставлять туда слова урока
+  // бессмысленно. Если список задан, он пул и заменяет.
+  const closed = closedClassWordsForRule(ruleId)
+  const pool: readonly WordRef[] = closed.length ? closed : words
+
   const out: Exercise[] = []
-  for (const w of words) {
-    if (out.length >= limit) break
-    const paradigm = morphology[w.lemma.replace(/\s+się$/, '')]
-    if (!paradigm) continue
-    for (const prefix of prefixes) {
-      const tag = resolveTag(paradigm, prefix)
-      if (!tag) continue
-      const seed = hash(w.id + tag)
-      // Закрытое и открытое чередуем: на экзамене есть оба типа.
-      // Генератор вернёт null, если целевая форма равна начальной —
-      // тогда пробуем следующий тег.
-      const ex = out.length % 2 === 0
-        ? chooseForm(w.lemma, paradigm, tag, labelTag, { seed }, [ruleId])
-        : inflect(w.lemma, paradigm, tag, labelTag, [ruleId])
-      if (ex) { out.push(ex); break }
+  const used = new Set<string>()
+
+  // Проходов несколько. Первый берёт по одному заданию со слова — в
+  // уроке лучше три разных слова, чем три формы одного. Следующие
+  // добирают другие формы тех же слов: закрытый класс бывает и из
+  // одной леммы (`siebie`, `być`), и одним заданием там не обойтись.
+  for (let pass = 0; pass < limit && out.length < limit; pass++) {
+    for (const w of pool) {
+      if (out.length >= limit) break
+      const paradigm = morphology[w.lemma.replace(/\s+się$/, '')]
+      if (!paradigm) continue
+      for (const prefix of prefixes) {
+        const tag = resolveTag(paradigm, prefix)
+        if (!tag || used.has(`${w.lemma}|${tag}`)) continue
+        const seed = hash(w.id + tag)
+        // Закрытое и открытое чередуем: на экзамене есть оба типа.
+        // Генератор вернёт null, если целевая форма равна начальной —
+        // тогда пробуем следующий тег.
+        const ex = out.length % 2 === 0
+          ? chooseForm(w.lemma, paradigm, tag, labelTag, { seed }, [ruleId])
+          : inflect(w.lemma, paradigm, tag, labelTag, [ruleId])
+        if (ex) { used.add(`${w.lemma}|${tag}`); out.push(ex); break }
+      }
     }
   }
   return out

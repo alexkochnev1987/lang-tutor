@@ -33,10 +33,44 @@ const comps = read('competencies.json')
  * Измерение на реальном ядре дало вместимость ~800 слов, а не 1092.
  * См. CURRICULUM.md §6.
  */
+/**
+ * СКОЛЬКО ВРЕМЕНИ В ДЕНЬ.
+ *
+ * Было 15 минут — и это не доводило до цели. Шкалы guided learning hours
+ * (Cambridge, LANGUAGECERT) дают до B1 с уровня A2 порядка 170-200 часов;
+ * с поправкой на родство русского и польского — 139-164 часа
+ * (`content/pl-b1-ru/levels.json`). 182 дня по 15 минут — это 45,5 часа,
+ * то есть примерно треть от нижней границы. Программа обещала уровень,
+ * которого не обеспечивала.
+ *
+ * 50 минут × 182 дня = 151,7 часа — попадает в вилку. Это и стоит
+ * по умолчанию.
+ *
+ * Значение переопределяется переменной окружения, потому что это
+ * решение пользователя, а не константа предметной области:
+ *
+ *   DAILY_BUDGET_SEC=1800 node scripts/build-curriculum.mjs   # 30 минут
+ *
+ * Фазовые бюджеты ниже заданы для 15 минут и масштабируются
+ * пропорционально: меняется объём, а не структура занятия.
+ */
+const DAILY_BUDGET_SEC = Number(process.env.DAILY_BUDGET_SEC ?? 3000)
+const BASE_BUDGET_SEC = 900
+const SCALE = DAILY_BUDGET_SEC / BASE_BUDGET_SEC
+
+/** Пропорционально растягивает бюджет дня, сохраняя сумму ровно равной дневной. */
+function scaleBudget(base) {
+  const out = {}
+  for (const [k, v] of Object.entries(base)) out[k] = Math.round(v * SCALE)
+  const diff = DAILY_BUDGET_SEC - Object.values(out).reduce((a, b) => a + b, 0)
+  if (diff !== 0) out.practice = Math.max(0, out.practice + diff)
+  return out
+}
+
 const PARAMS = {
   totalDays: 182,
   daysPerWeek: 7,
-  dailyBudgetSec: 900, // 15 минут
+  dailyBudgetSec: DAILY_BUDGET_SEC,
 
   /** Ритм недели: 5 дней нового, 1 закрепление, 1 недельный срез */
   weekRhythm: ['new', 'new', 'new', 'new', 'new', 'consolidation', 'weekly-check'],
@@ -241,6 +275,17 @@ for (let d = 1; d <= PARAMS.totalDays; d++) {
     exerciseKinds = rule ? rule.exerciseKinds.slice(0, 3) : ['gap-fill', 'translate-to-target']
     newWords = ph.newWordsPerDay
   }
+
+  // Бюджеты фаз описаны для 15-минутного дня — масштабируем под выбранный.
+  // Остаток от округления уходит в практику: это самый эластичный блок,
+  // ему всё равно, 300 секунд или 317.
+  budget = scaleBudget(budget)
+  // Слова НЕ масштабируются вместе со временем, хотя вместимость и
+  // выведена из секунд блока review. Ограничение здесь не время, а сам
+  // словарь: написано 784 слова, и просить по 20 в день — значит
+  // обещать то, чего в данных нет. Лишние минуты уходят в повторение,
+  // практику и экзаменационные задания, а им словарь не нужен: письмо,
+  // говорение и аудирование упираются не в число лемм.
 
   const sum = Object.values(budget).reduce((a, b) => a + b, 0)
 
