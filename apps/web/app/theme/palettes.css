@@ -1,0 +1,225 @@
+/* ===========================================================
+   ПАЛИТРЫ
+   -----------------------------------------------------------
+   Это единственный файл с «сырыми» цветами во всём приложении.
+   Одна палитра = один блок [data-palette="id"] с двумя наборами:
+     --l-*  значения для светлой темы
+     --d-*  значения для тёмной темы
+   Какой набор станет активным, решает tokens.css — здесь только
+   данные. Компоненты сюда не смотрят вообще.
+
+   ЧТОБЫ ДОБАВИТЬ ПАЛИТРУ:
+     1. скопировать любой блок ниже, поменять id и значения;
+     2. дописать её в PALETTES в ./index.ts (id, название, 3 цвета
+        для превью в переключателе);
+     3. всё — больше ничего менять не нужно.
+
+   КОНТРАКТ (23 токена, нужны оба набора — и --l-, и --d-):
+     primary       основной цвет действий (заливка кнопок)
+     primary-dark  он же в нажатом состоянии
+     on-primary    текст поверх primary
+     accent-ink    акцентный ТЕКСТ (транскрипция, активная вкладка) —
+                   отдельно от primary, чтобы читался на светлом
+     head          фон шапки
+     on-head       текст в шапке
+     bg            фон приложения
+     card          фон карточек, полей, нижней навигации
+     ink           основной текст
+     muted         второстепенный текст
+     line          границы и разделители
+     soft          нейтральная подложка (варианты ответа, буквы)
+     soft2         акцентная подложка (трек прогресса, бейдж «учу»)
+     bar-a, bar-b  градиент полосы прогресса
+     ok / ok-bg / ok-ink          «верно», статус «знаю»
+     danger / danger-bg / danger-ink   «неверно», ошибки
+     warn-bg / warn-ink           статус «новое»
+   =========================================================== */
+
+/* --- Графит и коралл — палитра по умолчанию --------------- */
+[data-palette="graphite"] {
+  --l-primary: #ff5a5f;      --d-primary: #ff6b70;
+  --l-primary-dark: #e8464b; --d-primary-dark: #f0565b;
+  --l-on-primary: #ffffff;   --d-on-primary: #24090a;
+  --l-accent-ink: #b3353a;   --d-accent-ink: #ff9b9f;
+  --l-head: #1d1d20;         --d-head: #111113;
+  --l-on-head: #fafaf9;      --d-on-head: #f4f4f5;
+  --l-bg: #fafaf9;           --d-bg: #0b0b0c;
+  --l-card: #ffffff;         --d-card: #161618;
+  --l-ink: #18181b;          --d-ink: #f0f0f2;
+  --l-muted: #71717a;        --d-muted: #8a8a93;
+  --l-line: #e4e4e7;         --d-line: #262628;
+  --l-soft: #f4f4f5;         --d-soft: #1b1b1e;
+  --l-soft2: #ffe5e6;        --d-soft2: #33191b;
+  --l-bar-a: #27272a;        --d-bar-a: #f4f4f5;
+  --l-bar-b: #ff5a5f;        --d-bar-b: #ff6b70;
+  --l-ok: #16a34a;           --d-ok: #4ade80;
+  --l-ok-bg: #dcf5e4;        --d-ok-bg: #132d1c;
+  --l-ok-ink: #15803d;       --d-ok-ink: #86efac;
+  --l-danger: #e11d48;       --d-danger: #fb7185;
+  --l-danger-bg: #ffe4e9;    --d-danger-bg: #351418;
+  --l-danger-ink: #be123c;   --d-danger-ink: #fda4af;
+  --l-warn-bg: #f4ebda;      --d-warn-bg: #2e2512;
+  --l-warn-ink: #854d0e;     --d-warn-ink: #fcd34d;
+}
+
+/* --- Индиго и мята ---------------------------------------- */
+[data-palette="indigo"] {
+  --l-primary: #4f46e5;      --d-primary: #7c74f2;
+  --l-primary-dark: #4338ca; --d-primary-dark: #6a61ee;
+  --l-on-primary: #ffffff;   --d-on-primary: #0b0a1e;
+  --l-accent-ink: #4338ca;   --d-accent-ink: #a9a3f8;
+  --l-head: #4f46e5;         --d-head: #15142a;
+  --l-on-head: #ffffff;      --d-on-head: #eae9fa;
+  --l-bg: #f6f7fb;           --d-bg: #0e0e16;
+  --l-card: #ffffff;         --d-card: #191922;
+  --l-ink: #15161d;          --d-ink: #ececf4;
+  --l-muted: #6b6b80;        --d-muted: #8c8ca4;
+  --l-line: #e6e6f0;         --d-line: #272733;
+  --l-soft: #f1f0fe;         --d-soft: #1c1b2e;
+  --l-soft2: #e2e0fb;        --d-soft2: #272441;
+  --l-bar-a: #4f46e5;        --d-bar-a: #7c74f2;
+  --l-bar-b: #10b981;        --d-bar-b: #34d399;
+  --l-ok: #10b981;           --d-ok: #34d399;
+  --l-ok-bg: #d6f7ea;        --d-ok-bg: #102e26;
+  --l-ok-ink: #047857;       --d-ok-ink: #6ee7c0;
+  --l-danger: #f43f5e;       --d-danger: #fb7185;
+  --l-danger-bg: #ffe4e9;    --d-danger-bg: #36151f;
+  --l-danger-ink: #be123c;   --d-danger-ink: #fda4af;
+  --l-warn-bg: #fef0c7;      --d-warn-bg: #33260c;
+  --l-warn-ink: #92400e;     --d-warn-ink: #fbbf24;
+}
+
+/* --- Тил и песок ------------------------------------------ */
+[data-palette="teal"] {
+  --l-primary: #0d9488;      --d-primary: #2dd4bf;
+  --l-primary-dark: #0f766e; --d-primary-dark: #14b8a6;
+  --l-on-primary: #ffffff;   --d-on-primary: #06211d;
+  --l-accent-ink: #0f766e;   --d-accent-ink: #5eead4;
+  --l-head: #0d9488;         --d-head: #13201e;
+  --l-on-head: #ffffff;      --d-on-head: #e6f5f2;
+  --l-bg: #fbf7f0;           --d-bg: #12100e;
+  --l-card: #ffffff;         --d-card: #1d1a17;
+  --l-ink: #1c1917;          --d-ink: #f2ede6;
+  --l-muted: #78716c;        --d-muted: #a39a8e;
+  --l-line: #ebe3d7;         --d-line: #2e2922;
+  --l-soft: #edfaf7;         --d-soft: #152320;
+  --l-soft2: #cff0ea;        --d-soft2: #1c332e;
+  --l-bar-a: #0d9488;        --d-bar-a: #2dd4bf;
+  --l-bar-b: #f97316;        --d-bar-b: #fb923c;
+  --l-ok: #0d9488;           --d-ok: #2dd4bf;
+  --l-ok-bg: #cff0ea;        --d-ok-bg: #10302b;
+  --l-ok-ink: #0f766e;       --d-ok-ink: #5eead4;
+  --l-danger: #dc2626;       --d-danger: #f87171;
+  --l-danger-bg: #fbe0dd;    --d-danger-bg: #361a17;
+  --l-danger-ink: #b91c1c;   --d-danger-ink: #fca5a5;
+  --l-warn-bg: #fbecc8;      --d-warn-bg: #352a10;
+  --l-warn-ink: #92400e;     --d-warn-ink: #facc15;
+}
+
+/* --- Ночной фиолет ---------------------------------------- */
+[data-palette="violet"] {
+  --l-primary: #7c3aed;      --d-primary: #8b5cf6;
+  --l-primary-dark: #6d28d9; --d-primary-dark: #7c3aed;
+  --l-on-primary: #ffffff;   --d-on-primary: #ffffff;
+  --l-accent-ink: #6d28d9;   --d-accent-ink: #b69cf8;
+  --l-head: #7c3aed;         --d-head: #15121f;
+  --l-on-head: #ffffff;      --d-on-head: #edeafb;
+  --l-bg: #f8f6ff;           --d-bg: #0b0b12;
+  --l-card: #ffffff;         --d-card: #1a1824;
+  --l-ink: #1a152b;          --d-ink: #eceaf4;
+  --l-muted: #6e6688;        --d-muted: #8e8aa6;
+  --l-line: #e9e4f7;         --d-line: #272338;
+  --l-soft: #f3effe;         --d-soft: #1e1a2e;
+  --l-soft2: #e6ddfc;        --d-soft2: #2b2442;
+  --l-bar-a: #7c3aed;        --d-bar-a: #8b5cf6;
+  --l-bar-b: #06b6d4;        --d-bar-b: #22d3ee;
+  --l-ok: #10b981;           --d-ok: #34d399;
+  --l-ok-bg: #d6f7ea;        --d-ok-bg: #102e26;
+  --l-ok-ink: #047857;       --d-ok-ink: #6ee7c0;
+  --l-danger: #e11d48;       --d-danger: #fb7185;
+  --l-danger-bg: #ffe4e9;    --d-danger-bg: #36151f;
+  --l-danger-ink: #be123c;   --d-danger-ink: #fda4af;
+  --l-warn-bg: #fbebc8;      --d-warn-bg: #33260c;
+  --l-warn-ink: #92400e;     --d-warn-ink: #fbbf24;
+}
+
+/* --- Синий и лайм ----------------------------------------- */
+[data-palette="blue"] {
+  --l-primary: #2563eb;      --d-primary: #3b82f6;
+  --l-primary-dark: #1d4ed8; --d-primary-dark: #2563eb;
+  --l-on-primary: #ffffff;   --d-on-primary: #06152e;
+  --l-accent-ink: #1d4ed8;   --d-accent-ink: #93b4fb;
+  --l-head: #1e3a8a;         --d-head: #0d1527;
+  --l-on-head: #ffffff;      --d-on-head: #e6edf9;
+  --l-bg: #f4f6fa;           --d-bg: #090d16;
+  --l-card: #ffffff;         --d-card: #141b29;
+  --l-ink: #111827;          --d-ink: #e8edf7;
+  --l-muted: #64748b;        --d-muted: #8395b0;
+  --l-line: #e2e8f0;         --d-line: #233048;
+  --l-soft: #eff4fe;         --d-soft: #111d33;
+  --l-soft2: #dce7fe;        --d-soft2: #17294a;
+  --l-bar-a: #2563eb;        --d-bar-a: #3b82f6;
+  --l-bar-b: #84cc16;        --d-bar-b: #a3e635;
+  --l-ok: #65a30d;           --d-ok: #a3e635;
+  --l-ok-bg: #e6f5cf;        --d-ok-bg: #1d2c0f;
+  --l-ok-ink: #4d7c0f;       --d-ok-ink: #bef264;
+  --l-danger: #e11d48;       --d-danger: #fb7185;
+  --l-danger-bg: #ffe4e9;    --d-danger-bg: #331620;
+  --l-danger-ink: #be123c;   --d-danger-ink: #fda4af;
+  --l-warn-bg: #fef0c7;      --d-warn-bg: #33280d;
+  --l-warn-ink: #92400e;     --d-warn-ink: #fbbf24;
+}
+
+/* --- Слива и персик --------------------------------------- */
+[data-palette="plum"] {
+  --l-primary: #6b2d5c;      --d-primary: #c77bae;
+  --l-primary-dark: #551f49; --d-primary-dark: #b264a0;
+  --l-on-primary: #ffffff;   --d-on-primary: #2a0f23;
+  --l-accent-ink: #6b2d5c;   --d-accent-ink: #e2a9d0;
+  --l-head: #6b2d5c;         --d-head: #1c101a;
+  --l-on-head: #fdf4f8;      --d-on-head: #f6e9f0;
+  --l-bg: #fdf6f3;           --d-bg: #140b12;
+  --l-card: #ffffff;         --d-card: #221621;
+  --l-ink: #241019;          --d-ink: #f6e9f0;
+  --l-muted: #8a6a77;        --d-muted: #a98a9c;
+  --l-line: #f1e1db;         --d-line: #342534;
+  --l-soft: #fbefec;         --d-soft: #1f141e;
+  --l-soft2: #f5ddd4;        --d-soft2: #2e1e2c;
+  --l-bar-a: #6b2d5c;        --d-bar-a: #c77bae;
+  --l-bar-b: #f6a07a;        --d-bar-b: #f6a07a;
+  --l-ok: #2e9e6b;           --d-ok: #5fbf93;
+  --l-ok-bg: #d8f2e4;        --d-ok-bg: #132c21;
+  --l-ok-ink: #1e7a50;       --d-ok-ink: #8fe0bb;
+  --l-danger: #d64550;       --d-danger: #f07a86;
+  --l-danger-bg: #fbe0e2;    --d-danger-bg: #351a1e;
+  --l-danger-ink: #a72a34;   --d-danger-ink: #f6a6ae;
+  --l-warn-bg: #faebcf;      --d-warn-bg: #33280f;
+  --l-warn-ink: #8a5a12;     --d-warn-ink: #e7b45f;
+}
+
+/* --- Зелёная (как было до редизайна) ---------------------- */
+[data-palette="leaf"] {
+  --l-primary: #16a34a;      --d-primary: #22c55e;
+  --l-primary-dark: #15803d; --d-primary-dark: #16a34a;
+  --l-on-primary: #ffffff;   --d-on-primary: #07210f;
+  --l-accent-ink: #15803d;   --d-accent-ink: #6ee7a8;
+  --l-head: #16a34a;         --d-head: #0f1a13;
+  --l-on-head: #ffffff;      --d-on-head: #e7f0e9;
+  --l-bg: #f7faf5;           --d-bg: #0d130f;
+  --l-card: #ffffff;         --d-card: #161f19;
+  --l-ink: #1f2937;          --d-ink: #e6ede8;
+  --l-muted: #6b7280;        --d-muted: #8b9a90;
+  --l-line: #e5e7eb;         --d-line: #243029;
+  --l-soft: #f0fdf4;         --d-soft: #13201a;
+  --l-soft2: #dcfce7;        --d-soft2: #1c2e23;
+  --l-bar-a: #22c55e;        --d-bar-a: #22c55e;
+  --l-bar-b: #16a34a;        --d-bar-b: #4ade80;
+  --l-ok: #16a34a;           --d-ok: #34d399;
+  --l-ok-bg: #dcfce7;        --d-ok-bg: #13301f;
+  --l-ok-ink: #166534;       --d-ok-ink: #6ee7a8;
+  --l-danger: #ef4444;       --d-danger: #f87171;
+  --l-danger-bg: #fee2e2;    --d-danger-bg: #3a1718;
+  --l-danger-ink: #b91c1c;   --d-danger-ink: #fca5a5;
+  --l-warn-bg: #fef3c7;      --d-warn-bg: #33240d;
+  --l-warn-ink: #92400e;     --d-warn-ink: #fbbf24;
+}

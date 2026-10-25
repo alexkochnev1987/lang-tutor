@@ -1,0 +1,3625 @@
+{
+ "$schema": "./vocabulary.schema.json",
+ "courseId": "pl-b1-ru",
+ "targetLanguageId": "pl",
+ "sourceLanguageId": "ru",
+ "version": "2026-10-25",
+ "generatedBy": "scripts/build-vocabulary.mjs",
+ "_meta": {
+  "warning": "ФАЙЛ СГЕНЕРИРОВАН из scripts/data/vocab-*.mjs. Правки — туда.",
+  "costModel": {
+   "intro": 20,
+   "recogSec": 6,
+   "prodSec": 13,
+   "reps": {
+    "transparent": 3,
+    "partial": 6,
+    "opaque": 8,
+    "false-friend": 10
+   }
+  }
+ },
+ "stats": {
+  "total": 327,
+  "byTransparency": {
+   "false-friend": 35,
+   "transparent": 146,
+   "partial": 71,
+   "opaque": 75
+  },
+  "byPriority": {
+   "critical": 35,
+   "high": 119,
+   "normal": 173
+  },
+  "totalCostSec": 30177,
+  "totalCostHours": 8.4,
+  "vocabBudgetSec": 56436,
+  "vocabBudgetHours": 15.7,
+  "capacityAtThisMix": 611,
+  "placedInDays": 327,
+  "slotsTotal": 804,
+  "slotsFilled": 327,
+  "daysWanting": 155,
+  "daysFilled": 58
+ },
+ "items": [
+  {
+   "id": "pl.sklep",
+   "lemma": "sklep",
+   "pos": "noun",
+   "translation": "магазин",
+   "transparency": "false-friend",
+   "themeId": "7.10",
+   "interference": {
+    "confusedWith": "склеп",
+    "actuallyIs": "grobowiec"
+   },
+   "priority": "critical"
+  },
+  {
+   "id": "pl.dywan",
+   "lemma": "dywan",
+   "pos": "noun",
+   "translation": "ковёр",
+   "transparency": "false-friend",
+   "themeId": "7.2",
+   "interference": {
+    "confusedWith": "диван",
+    "actuallyIs": "kanapa"
+   },
+   "priority": "critical"
+  },
+  {
+   "id": "pl.krzeslo",
+   "lemma": "krzesło",
+   "pos": "noun",
+   "translation": "стул",
+   "transparency": "false-friend",
+   "themeId": "7.2",
+   "interference": {
+    "confusedWith": "кресло",
+    "actuallyIs": "fotel"
+   },
+   "priority": "critical"
+  },
+  {
+   "id": "pl.lustro",
+   "lemma": "lustro",
+   "pos": "noun",
+   "translation": "зеркало",
+   "transparency": "false-friend",
+   "themeId": "7.2",
+   "interference": {
+    "confusedWith": "люстра",
+    "actuallyIs": "żyrandol"
+   },
+   "priority": "critical"
+  },
+  {
+   "id": "pl.uroda",
+   "lemma": "uroda",
+   "pos": "noun",
+   "translation": "красота",
+   "transparency": "false-friend",
+   "themeId": "7.1",
+   "interference": {
+    "confusedWith": "урод",
+    "actuallyIs": "brzydal"
+   },
+   "priority": "critical"
+  },
+  {
+   "id": "pl.rodzina",
+   "lemma": "rodzina",
+   "pos": "noun",
+   "translation": "семья",
+   "transparency": "false-friend",
+   "themeId": "7.1",
+   "interference": {
+    "confusedWith": "родина",
+    "actuallyIs": "ojczyzna"
+   },
+   "priority": "critical"
+  },
+  {
+   "id": "pl.czaszka",
+   "lemma": "czaszka",
+   "pos": "noun",
+   "translation": "череп",
+   "transparency": "false-friend",
+   "themeId": "7.7",
+   "interference": {
+    "confusedWith": "чашка",
+    "actuallyIs": "filiżanka"
+   },
+   "priority": "critical"
+  },
+  {
+   "id": "pl.owoce",
+   "lemma": "owoce",
+   "pos": "noun",
+   "translation": "фрукты",
+   "transparency": "false-friend",
+   "themeId": "7.11",
+   "interference": {
+    "confusedWith": "овощи",
+    "actuallyIs": "warzywa"
+   },
+   "priority": "critical"
+  },
+  {
+   "id": "pl.dynia",
+   "lemma": "dynia",
+   "pos": "noun",
+   "translation": "тыква",
+   "transparency": "false-friend",
+   "themeId": "7.11",
+   "interference": {
+    "confusedWith": "дыня",
+    "actuallyIs": "melon"
+   },
+   "priority": "critical"
+  },
+  {
+   "id": "pl.dworzec",
+   "lemma": "dworzec",
+   "pos": "noun",
+   "translation": "вокзал",
+   "transparency": "false-friend",
+   "themeId": "7.5",
+   "interference": {
+    "confusedWith": "дворец",
+    "actuallyIs": "pałac"
+   },
+   "priority": "critical"
+  },
+  {
+   "id": "pl.miasto",
+   "lemma": "miasto",
+   "pos": "noun",
+   "translation": "город",
+   "transparency": "false-friend",
+   "themeId": "7.13",
+   "interference": {
+    "confusedWith": "место",
+    "actuallyIs": "miejsce"
+   },
+   "priority": "critical"
+  },
+  {
+   "id": "pl.ogrod",
+   "lemma": "ogród",
+   "pos": "noun",
+   "translation": "сад",
+   "transparency": "false-friend",
+   "themeId": "7.14",
+   "interference": {
+    "confusedWith": "огород",
+    "actuallyIs": "ogród warzywny"
+   },
+   "priority": "critical"
+  },
+  {
+   "id": "pl.list",
+   "lemma": "list",
+   "pos": "noun",
+   "translation": "письмо",
+   "transparency": "false-friend",
+   "themeId": "7.12",
+   "interference": {
+    "confusedWith": "лист",
+    "actuallyIs": "liść"
+   },
+   "priority": "critical"
+  },
+  {
+   "id": "pl.zdanie",
+   "lemma": "zdanie",
+   "pos": "noun",
+   "translation": "предложение",
+   "transparency": "false-friend",
+   "themeId": "7.8",
+   "interference": {
+    "confusedWith": "здание",
+    "actuallyIs": "budynek"
+   },
+   "priority": "critical"
+  },
+  {
+   "id": "pl.pamietnik",
+   "lemma": "pamiętnik",
+   "pos": "noun",
+   "translation": "дневник",
+   "transparency": "false-friend",
+   "themeId": "7.13",
+   "interference": {
+    "confusedWith": "памятник",
+    "actuallyIs": "pomnik"
+   },
+   "priority": "critical"
+  },
+  {
+   "id": "pl.pensja",
+   "lemma": "pensja",
+   "pos": "noun",
+   "translation": "зарплата",
+   "transparency": "false-friend",
+   "themeId": "7.9",
+   "interference": {
+    "confusedWith": "пенсия",
+    "actuallyIs": "emerytura"
+   },
+   "priority": "critical"
+  },
+  {
+   "id": "pl.rzecz",
+   "lemma": "rzecz",
+   "pos": "noun",
+   "translation": "вещь",
+   "transparency": "false-friend",
+   "themeId": "7.3",
+   "interference": {
+    "confusedWith": "речь",
+    "actuallyIs": "mowa"
+   },
+   "priority": "critical"
+  },
+  {
+   "id": "pl.sprawa",
+   "lemma": "sprawa",
+   "pos": "noun",
+   "translation": "дело",
+   "transparency": "false-friend",
+   "themeId": "7.16",
+   "interference": {
+    "confusedWith": "справа",
+    "actuallyIs": "po prawej"
+   },
+   "priority": "critical"
+  },
+  {
+   "id": "pl.zakaz",
+   "lemma": "zakaz",
+   "pos": "noun",
+   "translation": "запрет",
+   "transparency": "false-friend",
+   "themeId": "7.6",
+   "interference": {
+    "confusedWith": "заказ",
+    "actuallyIs": "zamówienie"
+   },
+   "priority": "critical"
+  },
+  {
+   "id": "pl.puszka",
+   "lemma": "puszka",
+   "pos": "noun",
+   "translation": "банка",
+   "transparency": "false-friend",
+   "themeId": "7.10",
+   "interference": {
+    "confusedWith": "пушка",
+    "actuallyIs": "armata"
+   },
+   "priority": "critical"
+  },
+  {
+   "id": "pl.zegar",
+   "lemma": "zegar",
+   "pos": "noun",
+   "translation": "часы (прибор)",
+   "transparency": "false-friend",
+   "themeId": "7.3",
+   "interference": {
+    "confusedWith": "загар",
+    "actuallyIs": "opalenizna"
+   },
+   "priority": "critical"
+  },
+  {
+   "id": "pl.czas",
+   "lemma": "czas",
+   "pos": "noun",
+   "translation": "время",
+   "transparency": "false-friend",
+   "themeId": "7.3",
+   "interference": {
+    "confusedWith": "час",
+    "actuallyIs": "godzina"
+   },
+   "priority": "critical"
+  },
+  {
+   "id": "pl.godzina",
+   "lemma": "godzina",
+   "pos": "noun",
+   "translation": "час",
+   "transparency": "false-friend",
+   "themeId": "7.3",
+   "interference": {
+    "confusedWith": "година",
+    "actuallyIs": "—"
+   },
+   "priority": "critical"
+  },
+  {
+   "id": "pl.bielizna",
+   "lemma": "bielizna",
+   "pos": "noun",
+   "translation": "бельё",
+   "transparency": "false-friend",
+   "themeId": "7.1",
+   "interference": {
+    "confusedWith": "белизна",
+    "actuallyIs": "biel"
+   },
+   "priority": "critical"
+  },
+  {
+   "id": "pl.kawior",
+   "lemma": "kawior",
+   "pos": "noun",
+   "translation": "икра",
+   "transparency": "false-friend",
+   "themeId": "7.11",
+   "interference": {
+    "confusedWith": "ковёр",
+    "actuallyIs": "dywan"
+   },
+   "priority": "critical"
+  },
+  {
+   "id": "pl.zapomniec",
+   "lemma": "zapomnieć",
+   "pos": "verb",
+   "translation": "забыть",
+   "transparency": "false-friend",
+   "themeId": "7.3",
+   "interference": {
+    "confusedWith": "запомнить",
+    "actuallyIs": "zapamiętać"
+   },
+   "priority": "critical"
+  },
+  {
+   "id": "pl.pukac",
+   "lemma": "pukać",
+   "pos": "verb",
+   "translation": "стучать",
+   "transparency": "false-friend",
+   "themeId": "7.2",
+   "interference": {
+    "confusedWith": "пукать",
+    "actuallyIs": "—"
+   },
+   "priority": "critical"
+  },
+  {
+   "id": "pl.grzeczny",
+   "lemma": "grzeczny",
+   "pos": "adj",
+   "translation": "вежливый",
+   "transparency": "false-friend",
+   "themeId": "7.1",
+   "interference": {
+    "confusedWith": "грешный",
+    "actuallyIs": "grzeszny"
+   },
+   "priority": "critical"
+  },
+  {
+   "id": "pl.wygodny",
+   "lemma": "wygodny",
+   "pos": "adj",
+   "translation": "удобный",
+   "transparency": "false-friend",
+   "themeId": "7.2",
+   "interference": {
+    "confusedWith": "выгодный",
+    "actuallyIs": "korzystny"
+   },
+   "priority": "critical"
+  },
+  {
+   "id": "pl.nagly",
+   "lemma": "nagły",
+   "pos": "adj",
+   "translation": "внезапный",
+   "transparency": "false-friend",
+   "themeId": "7.7",
+   "interference": {
+    "confusedWith": "наглый",
+    "actuallyIs": "bezczelny"
+   },
+   "priority": "critical"
+  },
+  {
+   "id": "pl.rano",
+   "lemma": "rano",
+   "pos": "adv",
+   "translation": "утро, утром",
+   "transparency": "false-friend",
+   "themeId": "7.3",
+   "interference": {
+    "confusedWith": "рано",
+    "actuallyIs": "wcześnie"
+   },
+   "priority": "critical"
+  },
+  {
+   "id": "pl.jutro",
+   "lemma": "jutro",
+   "pos": "adv",
+   "translation": "завтра",
+   "transparency": "false-friend",
+   "themeId": "7.3",
+   "interference": {
+    "confusedWith": "утро",
+    "actuallyIs": "rano"
+   },
+   "priority": "critical"
+  },
+  {
+   "id": "pl.czerstwy",
+   "lemma": "czerstwy",
+   "pos": "adj",
+   "translation": "чёрствый",
+   "transparency": "false-friend",
+   "themeId": "7.11",
+   "interference": {
+    "confusedWith": "—",
+    "actuallyIs": "—"
+   },
+   "priority": "critical"
+  },
+  {
+   "id": "pl.zaklad",
+   "lemma": "zakład",
+   "pos": "noun",
+   "translation": "предприятие",
+   "transparency": "false-friend",
+   "themeId": "7.9",
+   "interference": {
+    "confusedWith": "заклад",
+    "actuallyIs": "zastaw"
+   },
+   "priority": "critical"
+  },
+  {
+   "id": "pl.lyzwy",
+   "lemma": "łyżwy",
+   "pos": "noun",
+   "translation": "коньки",
+   "transparency": "false-friend",
+   "themeId": "7.4",
+   "interference": {
+    "confusedWith": "лыжи",
+    "actuallyIs": "narty"
+   },
+   "priority": "critical"
+  },
+  {
+   "id": "pl.i",
+   "lemma": "i",
+   "pos": "conj",
+   "translation": "и",
+   "transparency": "transparent",
+   "themeId": null,
+   "grammarRuleIds": [],
+   "priority": "high"
+  },
+  {
+   "id": "pl.a",
+   "lemma": "a",
+   "pos": "conj",
+   "translation": "а, и",
+   "transparency": "partial",
+   "themeId": null,
+   "grammarRuleIds": [
+    "pl.gram.s-coordinate"
+   ],
+   "priority": "high"
+  },
+  {
+   "id": "pl.ale",
+   "lemma": "ale",
+   "pos": "conj",
+   "translation": "но",
+   "transparency": "opaque",
+   "themeId": null,
+   "grammarRuleIds": [
+    "pl.gram.s-coordinate"
+   ],
+   "priority": "high"
+  },
+  {
+   "id": "pl.oraz",
+   "lemma": "oraz",
+   "pos": "conj",
+   "translation": "а также",
+   "transparency": "opaque",
+   "themeId": null,
+   "grammarRuleIds": [
+    "pl.gram.s-coordinate"
+   ],
+   "priority": "high"
+  },
+  {
+   "id": "pl.lub",
+   "lemma": "lub",
+   "pos": "conj",
+   "translation": "или",
+   "transparency": "opaque",
+   "themeId": null,
+   "grammarRuleIds": [
+    "pl.gram.s-coordinate"
+   ],
+   "priority": "high"
+  },
+  {
+   "id": "pl.albo",
+   "lemma": "albo",
+   "pos": "conj",
+   "translation": "или (одно из двух)",
+   "transparency": "opaque",
+   "themeId": null,
+   "grammarRuleIds": [
+    "pl.gram.s-coordinate"
+   ],
+   "priority": "high"
+  },
+  {
+   "id": "pl.czy",
+   "lemma": "czy",
+   "pos": "part",
+   "translation": "ли; или",
+   "transparency": "opaque",
+   "themeId": null,
+   "grammarRuleIds": [
+    "pl.gram.s-questions"
+   ],
+   "priority": "high"
+  },
+  {
+   "id": "pl.ze",
+   "lemma": "że",
+   "pos": "conj",
+   "translation": "что",
+   "transparency": "opaque",
+   "themeId": null,
+   "grammarRuleIds": [
+    "pl.gram.s-subordinate-ze"
+   ],
+   "priority": "high"
+  },
+  {
+   "id": "pl.zeby",
+   "lemma": "żeby",
+   "pos": "conj",
+   "translation": "чтобы",
+   "transparency": "opaque",
+   "themeId": null,
+   "grammarRuleIds": [
+    "pl.gram.s-subordinate-ze"
+   ],
+   "priority": "high"
+  },
+  {
+   "id": "pl.poniewaz",
+   "lemma": "ponieważ",
+   "pos": "conj",
+   "translation": "потому что",
+   "transparency": "opaque",
+   "themeId": null,
+   "grammarRuleIds": [
+    "pl.gram.s-subordinate-cause-time"
+   ],
+   "priority": "high"
+  },
+  {
+   "id": "pl.bo",
+   "lemma": "bo",
+   "pos": "conj",
+   "translation": "потому что",
+   "transparency": "opaque",
+   "themeId": null,
+   "grammarRuleIds": [
+    "pl.gram.s-subordinate-cause-time"
+   ],
+   "priority": "high"
+  },
+  {
+   "id": "pl.dlatego",
+   "lemma": "dlatego",
+   "pos": "conj",
+   "translation": "поэтому",
+   "transparency": "opaque",
+   "themeId": null,
+   "grammarRuleIds": [
+    "pl.gram.s-coordinate"
+   ],
+   "priority": "high"
+  },
+  {
+   "id": "pl.kiedy",
+   "lemma": "kiedy",
+   "pos": "conj",
+   "translation": "когда",
+   "transparency": "opaque",
+   "themeId": null,
+   "grammarRuleIds": [
+    "pl.gram.s-subordinate-cause-time"
+   ],
+   "priority": "high"
+  },
+  {
+   "id": "pl.gdy",
+   "lemma": "gdy",
+   "pos": "conj",
+   "translation": "когда",
+   "transparency": "opaque",
+   "themeId": null,
+   "grammarRuleIds": [
+    "pl.gram.s-subordinate-cause-time"
+   ],
+   "priority": "high"
+  },
+  {
+   "id": "pl.ktory",
+   "lemma": "który",
+   "pos": "pron",
+   "translation": "который",
+   "transparency": "transparent",
+   "themeId": null,
+   "grammarRuleIds": [
+    "pl.gram.s-relative"
+   ],
+   "priority": "high"
+  },
+  {
+   "id": "pl.jaki",
+   "lemma": "jaki",
+   "pos": "pron",
+   "translation": "какой",
+   "transparency": "partial",
+   "themeId": null,
+   "grammarRuleIds": [
+    "pl.gram.p-interrogative"
+   ],
+   "priority": "high"
+  },
+  {
+   "id": "pl.jesli",
+   "lemma": "jeśli",
+   "pos": "conj",
+   "translation": "если",
+   "transparency": "opaque",
+   "themeId": null,
+   "grammarRuleIds": [
+    "pl.gram.s-conditional-clauses"
+   ],
+   "priority": "high"
+  },
+  {
+   "id": "pl.jezeli",
+   "lemma": "jeżeli",
+   "pos": "conj",
+   "translation": "если",
+   "transparency": "opaque",
+   "themeId": null,
+   "grammarRuleIds": [
+    "pl.gram.s-conditional-clauses"
+   ],
+   "priority": "high"
+  },
+  {
+   "id": "pl.gdyby",
+   "lemma": "gdyby",
+   "pos": "conj",
+   "translation": "если бы",
+   "transparency": "opaque",
+   "themeId": null,
+   "grammarRuleIds": [
+    "pl.gram.s-conditional-clauses"
+   ],
+   "priority": "high"
+  },
+  {
+   "id": "pl.w",
+   "lemma": "w",
+   "pos": "prep",
+   "translation": "в",
+   "transparency": "transparent",
+   "themeId": null,
+   "grammarRuleIds": [
+    "pl.gram.c-loc-prepositions"
+   ],
+   "priority": "high"
+  },
+  {
+   "id": "pl.na",
+   "lemma": "na",
+   "pos": "prep",
+   "translation": "на",
+   "transparency": "transparent",
+   "themeId": null,
+   "grammarRuleIds": [
+    "pl.gram.c-loc-prepositions"
+   ],
+   "priority": "high"
+  },
+  {
+   "id": "pl.do",
+   "lemma": "do",
+   "pos": "prep",
+   "translation": "в, до, к",
+   "transparency": "partial",
+   "themeId": null,
+   "grammarRuleIds": [
+    "pl.gram.c-gen-prepositions"
+   ],
+   "priority": "high"
+  },
+  {
+   "id": "pl.z",
+   "lemma": "z",
+   "pos": "prep",
+   "translation": "из; с",
+   "transparency": "partial",
+   "themeId": null,
+   "grammarRuleIds": [
+    "pl.gram.c-gen-prepositions"
+   ],
+   "priority": "high"
+  },
+  {
+   "id": "pl.od",
+   "lemma": "od",
+   "pos": "prep",
+   "translation": "от, с",
+   "transparency": "transparent",
+   "themeId": null,
+   "grammarRuleIds": [
+    "pl.gram.c-gen-prepositions"
+   ],
+   "priority": "high"
+  },
+  {
+   "id": "pl.bez",
+   "lemma": "bez",
+   "pos": "prep",
+   "translation": "без",
+   "transparency": "transparent",
+   "themeId": null,
+   "grammarRuleIds": [
+    "pl.gram.c-gen-prepositions"
+   ],
+   "priority": "high"
+  },
+  {
+   "id": "pl.dla",
+   "lemma": "dla",
+   "pos": "prep",
+   "translation": "для",
+   "transparency": "transparent",
+   "themeId": null,
+   "grammarRuleIds": [
+    "pl.gram.c-gen-prepositions"
+   ],
+   "priority": "high"
+  },
+  {
+   "id": "pl.obok",
+   "lemma": "obok",
+   "pos": "prep",
+   "translation": "рядом с",
+   "transparency": "opaque",
+   "themeId": null,
+   "grammarRuleIds": [
+    "pl.gram.c-gen-prepositions"
+   ],
+   "priority": "high"
+  },
+  {
+   "id": "pl.przy",
+   "lemma": "przy",
+   "pos": "prep",
+   "translation": "при, возле",
+   "transparency": "partial",
+   "themeId": null,
+   "grammarRuleIds": [
+    "pl.gram.c-loc-prepositions"
+   ],
+   "priority": "high"
+  },
+  {
+   "id": "pl.przed",
+   "lemma": "przed",
+   "pos": "prep",
+   "translation": "перед, до",
+   "transparency": "transparent",
+   "themeId": null,
+   "grammarRuleIds": [
+    "pl.gram.c-instr-verbs"
+   ],
+   "priority": "high"
+  },
+  {
+   "id": "pl.za",
+   "lemma": "za",
+   "pos": "prep",
+   "translation": "за",
+   "transparency": "transparent",
+   "themeId": null,
+   "grammarRuleIds": [
+    "pl.gram.c-instr-verbs"
+   ],
+   "priority": "high"
+  },
+  {
+   "id": "pl.pod",
+   "lemma": "pod",
+   "pos": "prep",
+   "translation": "под",
+   "transparency": "transparent",
+   "themeId": null,
+   "grammarRuleIds": [
+    "pl.gram.c-instr-verbs"
+   ],
+   "priority": "high"
+  },
+  {
+   "id": "pl.nad",
+   "lemma": "nad",
+   "pos": "prep",
+   "translation": "над",
+   "transparency": "transparent",
+   "themeId": null,
+   "grammarRuleIds": [
+    "pl.gram.c-instr-verbs"
+   ],
+   "priority": "high"
+  },
+  {
+   "id": "pl.miedzy",
+   "lemma": "między",
+   "pos": "prep",
+   "translation": "между",
+   "transparency": "partial",
+   "themeId": null,
+   "grammarRuleIds": [
+    "pl.gram.c-instr-verbs"
+   ],
+   "priority": "high"
+  },
+  {
+   "id": "pl.przez",
+   "lemma": "przez",
+   "pos": "prep",
+   "translation": "через; в течение",
+   "transparency": "partial",
+   "themeId": null,
+   "grammarRuleIds": [
+    "pl.gram.c-acc-prepositions"
+   ],
+   "priority": "high"
+  },
+  {
+   "id": "pl.o",
+   "lemma": "o",
+   "pos": "prep",
+   "translation": "о; на (время)",
+   "transparency": "partial",
+   "themeId": null,
+   "grammarRuleIds": [
+    "pl.gram.c-loc-prepositions"
+   ],
+   "priority": "high"
+  },
+  {
+   "id": "pl.po",
+   "lemma": "po",
+   "pos": "prep",
+   "translation": "после; по",
+   "transparency": "partial",
+   "themeId": null,
+   "grammarRuleIds": [
+    "pl.gram.c-loc-prepositions"
+   ],
+   "priority": "high"
+  },
+  {
+   "id": "pl.nikt",
+   "lemma": "nikt",
+   "pos": "pron",
+   "translation": "никто",
+   "transparency": "transparent",
+   "themeId": null,
+   "grammarRuleIds": [
+    "pl.gram.p-indefinite-negative"
+   ],
+   "priority": "high"
+  },
+  {
+   "id": "pl.nic",
+   "lemma": "nic",
+   "pos": "pron",
+   "translation": "ничто, ничего",
+   "transparency": "transparent",
+   "themeId": null,
+   "grammarRuleIds": [
+    "pl.gram.p-indefinite-negative"
+   ],
+   "priority": "high"
+  },
+  {
+   "id": "pl.ktos",
+   "lemma": "ktoś",
+   "pos": "pron",
+   "translation": "кто-то",
+   "transparency": "transparent",
+   "themeId": null,
+   "grammarRuleIds": [
+    "pl.gram.p-indefinite-negative"
+   ],
+   "priority": "high"
+  },
+  {
+   "id": "pl.cos",
+   "lemma": "coś",
+   "pos": "pron",
+   "translation": "что-то",
+   "transparency": "transparent",
+   "themeId": null,
+   "grammarRuleIds": [
+    "pl.gram.p-indefinite-negative"
+   ],
+   "priority": "high"
+  },
+  {
+   "id": "pl.bardzo",
+   "lemma": "bardzo",
+   "pos": "adv",
+   "translation": "очень",
+   "transparency": "opaque",
+   "themeId": null,
+   "grammarRuleIds": [],
+   "priority": "high"
+  },
+  {
+   "id": "pl.zawsze",
+   "lemma": "zawsze",
+   "pos": "adv",
+   "translation": "всегда",
+   "transparency": "opaque",
+   "themeId": null,
+   "grammarRuleIds": [],
+   "priority": "high"
+  },
+  {
+   "id": "pl.nigdy",
+   "lemma": "nigdy",
+   "pos": "adv",
+   "translation": "никогда",
+   "transparency": "partial",
+   "themeId": null,
+   "grammarRuleIds": [
+    "pl.gram.s-negation"
+   ],
+   "priority": "high"
+  },
+  {
+   "id": "pl.czesto",
+   "lemma": "często",
+   "pos": "adv",
+   "translation": "часто",
+   "transparency": "transparent",
+   "themeId": null,
+   "grammarRuleIds": [],
+   "priority": "high"
+  },
+  {
+   "id": "pl.czasem",
+   "lemma": "czasem",
+   "pos": "adv",
+   "translation": "иногда",
+   "transparency": "partial",
+   "themeId": null,
+   "grammarRuleIds": [],
+   "priority": "high"
+  },
+  {
+   "id": "pl.juz",
+   "lemma": "już",
+   "pos": "adv",
+   "translation": "уже",
+   "transparency": "transparent",
+   "themeId": null,
+   "grammarRuleIds": [],
+   "priority": "high"
+  },
+  {
+   "id": "pl.jeszcze",
+   "lemma": "jeszcze",
+   "pos": "adv",
+   "translation": "ещё",
+   "transparency": "transparent",
+   "themeId": null,
+   "grammarRuleIds": [],
+   "priority": "high"
+  },
+  {
+   "id": "pl.tylko",
+   "lemma": "tylko",
+   "pos": "adv",
+   "translation": "только",
+   "transparency": "transparent",
+   "themeId": null,
+   "grammarRuleIds": [],
+   "priority": "high"
+  },
+  {
+   "id": "pl.tez",
+   "lemma": "też",
+   "pos": "adv",
+   "translation": "тоже",
+   "transparency": "partial",
+   "themeId": null,
+   "grammarRuleIds": [],
+   "priority": "high"
+  },
+  {
+   "id": "pl.takze",
+   "lemma": "także",
+   "pos": "adv",
+   "translation": "также",
+   "transparency": "transparent",
+   "themeId": null,
+   "grammarRuleIds": [],
+   "priority": "high"
+  },
+  {
+   "id": "pl.teraz",
+   "lemma": "teraz",
+   "pos": "adv",
+   "translation": "сейчас",
+   "transparency": "opaque",
+   "themeId": null,
+   "grammarRuleIds": [],
+   "priority": "high"
+  },
+  {
+   "id": "pl.potem",
+   "lemma": "potem",
+   "pos": "adv",
+   "translation": "потом",
+   "transparency": "transparent",
+   "themeId": null,
+   "grammarRuleIds": [],
+   "priority": "high"
+  },
+  {
+   "id": "pl.wczoraj",
+   "lemma": "wczoraj",
+   "pos": "adv",
+   "translation": "вчера",
+   "transparency": "transparent",
+   "themeId": null,
+   "grammarRuleIds": [],
+   "priority": "high"
+  },
+  {
+   "id": "pl.dzisiaj",
+   "lemma": "dzisiaj",
+   "pos": "adv",
+   "translation": "сегодня",
+   "transparency": "partial",
+   "themeId": null,
+   "grammarRuleIds": [],
+   "priority": "high"
+  },
+  {
+   "id": "pl.zaraz",
+   "lemma": "zaraz",
+   "pos": "adv",
+   "translation": "сейчас, сразу",
+   "transparency": "partial",
+   "themeId": null,
+   "grammarRuleIds": [],
+   "priority": "high"
+  },
+  {
+   "id": "pl.moze",
+   "lemma": "może",
+   "pos": "adv",
+   "translation": "может быть",
+   "transparency": "partial",
+   "themeId": null,
+   "grammarRuleIds": [],
+   "priority": "high"
+  },
+  {
+   "id": "pl.trzeba",
+   "lemma": "trzeba",
+   "pos": "pred",
+   "translation": "нужно",
+   "transparency": "opaque",
+   "themeId": null,
+   "grammarRuleIds": [],
+   "priority": "high"
+  },
+  {
+   "id": "pl.mozna",
+   "lemma": "można",
+   "pos": "pred",
+   "translation": "можно",
+   "transparency": "transparent",
+   "themeId": null,
+   "grammarRuleIds": [],
+   "priority": "high"
+  },
+  {
+   "id": "pl.wolno",
+   "lemma": "wolno",
+   "pos": "pred",
+   "translation": "разрешено",
+   "transparency": "opaque",
+   "themeId": null,
+   "grammarRuleIds": [],
+   "priority": "high"
+  },
+  {
+   "id": "pl.robic",
+   "lemma": "robić",
+   "pos": "verb",
+   "translation": "делать",
+   "transparency": "opaque",
+   "themeId": null,
+   "aspectPair": {
+    "imperfective": "robić",
+    "perfective": "zrobić"
+   },
+   "government": "acc",
+   "grammarRuleIds": [],
+   "priority": "high"
+  },
+  {
+   "id": "pl.mowic",
+   "lemma": "mówić",
+   "pos": "verb",
+   "translation": "говорить, сказать",
+   "transparency": "partial",
+   "themeId": null,
+   "aspectPair": {
+    "imperfective": "mówić",
+    "perfective": "powiedzieć"
+   },
+   "government": "acc",
+   "grammarRuleIds": [],
+   "priority": "high"
+  },
+  {
+   "id": "pl.czytac",
+   "lemma": "czytać",
+   "pos": "verb",
+   "translation": "читать",
+   "transparency": "transparent",
+   "themeId": null,
+   "aspectPair": {
+    "imperfective": "czytać",
+    "perfective": "przeczytać"
+   },
+   "government": "acc",
+   "grammarRuleIds": [],
+   "priority": "high"
+  },
+  {
+   "id": "pl.pisac",
+   "lemma": "pisać",
+   "pos": "verb",
+   "translation": "писать",
+   "transparency": "transparent",
+   "themeId": null,
+   "aspectPair": {
+    "imperfective": "pisać",
+    "perfective": "napisać"
+   },
+   "government": "acc",
+   "grammarRuleIds": [],
+   "priority": "high"
+  },
+  {
+   "id": "pl.widziec",
+   "lemma": "widzieć",
+   "pos": "verb",
+   "translation": "видеть, увидеть",
+   "transparency": "partial",
+   "themeId": null,
+   "aspectPair": {
+    "imperfective": "widzieć",
+    "perfective": "zobaczyć"
+   },
+   "government": "acc",
+   "grammarRuleIds": [],
+   "priority": "high"
+  },
+  {
+   "id": "pl.slyszec",
+   "lemma": "słyszeć",
+   "pos": "verb",
+   "translation": "слышать",
+   "transparency": "transparent",
+   "themeId": null,
+   "aspectPair": {
+    "imperfective": "słyszeć",
+    "perfective": "usłyszeć"
+   },
+   "government": "acc",
+   "grammarRuleIds": [],
+   "priority": "high"
+  },
+  {
+   "id": "pl.sluchac",
+   "lemma": "słuchać",
+   "pos": "verb",
+   "translation": "слушать",
+   "transparency": "transparent",
+   "themeId": null,
+   "aspectPair": {
+    "imperfective": "słuchać",
+    "perfective": "posłuchać"
+   },
+   "government": "gen",
+   "grammarRuleIds": [
+    "pl.gram.v-government"
+   ],
+   "priority": "high"
+  },
+  {
+   "id": "pl.szukac",
+   "lemma": "szukać",
+   "pos": "verb",
+   "translation": "искать",
+   "transparency": "opaque",
+   "themeId": null,
+   "aspectPair": {
+    "imperfective": "szukać",
+    "perfective": "poszukać"
+   },
+   "government": "gen",
+   "grammarRuleIds": [
+    "pl.gram.v-government"
+   ],
+   "priority": "high"
+  },
+  {
+   "id": "pl.potrzebowac",
+   "lemma": "potrzebować",
+   "pos": "verb",
+   "translation": "нуждаться",
+   "transparency": "opaque",
+   "themeId": null,
+   "aspectPair": null,
+   "government": "gen",
+   "grammarRuleIds": [
+    "pl.gram.v-government"
+   ],
+   "priority": "high"
+  },
+  {
+   "id": "pl.uzywac",
+   "lemma": "używać",
+   "pos": "verb",
+   "translation": "использовать",
+   "transparency": "partial",
+   "themeId": null,
+   "aspectPair": {
+    "imperfective": "używać",
+    "perfective": "użyć"
+   },
+   "government": "gen",
+   "grammarRuleIds": [
+    "pl.gram.v-government"
+   ],
+   "priority": "high"
+  },
+  {
+   "id": "pl.uczyc-sie",
+   "lemma": "uczyć się",
+   "pos": "verb",
+   "translation": "учить, учиться",
+   "transparency": "transparent",
+   "themeId": null,
+   "aspectPair": {
+    "imperfective": "uczyć się",
+    "perfective": "nauczyć się"
+   },
+   "government": "gen",
+   "grammarRuleIds": [
+    "pl.gram.v-government"
+   ],
+   "priority": "high"
+  },
+  {
+   "id": "pl.bac-sie",
+   "lemma": "bać się",
+   "pos": "verb",
+   "translation": "бояться",
+   "transparency": "opaque",
+   "themeId": null,
+   "aspectPair": null,
+   "government": "gen",
+   "grammarRuleIds": [
+    "pl.gram.v-government"
+   ],
+   "priority": "high"
+  },
+  {
+   "id": "pl.podobac-sie",
+   "lemma": "podobać się",
+   "pos": "verb",
+   "translation": "нравиться",
+   "transparency": "opaque",
+   "themeId": null,
+   "aspectPair": {
+    "imperfective": "podobać się",
+    "perfective": "spodobać się"
+   },
+   "government": "dat",
+   "grammarRuleIds": [
+    "pl.gram.v-government"
+   ],
+   "priority": "high"
+  },
+  {
+   "id": "pl.pomagac",
+   "lemma": "pomagać",
+   "pos": "verb",
+   "translation": "помогать",
+   "transparency": "transparent",
+   "themeId": null,
+   "aspectPair": {
+    "imperfective": "pomagać",
+    "perfective": "pomóc"
+   },
+   "government": "dat",
+   "grammarRuleIds": [
+    "pl.gram.v-government"
+   ],
+   "priority": "high"
+  },
+  {
+   "id": "pl.dziekowac",
+   "lemma": "dziękować",
+   "pos": "verb",
+   "translation": "благодарить",
+   "transparency": "opaque",
+   "themeId": null,
+   "aspectPair": {
+    "imperfective": "dziękować",
+    "perfective": "podziękować"
+   },
+   "government": "dat",
+   "grammarRuleIds": [
+    "pl.gram.v-government"
+   ],
+   "priority": "high"
+  },
+  {
+   "id": "pl.przeszkadzac",
+   "lemma": "przeszkadzać",
+   "pos": "verb",
+   "translation": "мешать",
+   "transparency": "opaque",
+   "themeId": null,
+   "aspectPair": {
+    "imperfective": "przeszkadzać",
+    "perfective": "przeszkodzić"
+   },
+   "government": "dat",
+   "grammarRuleIds": [
+    "pl.gram.v-government"
+   ],
+   "priority": "high"
+  },
+  {
+   "id": "pl.interesowac-sie",
+   "lemma": "interesować się",
+   "pos": "verb",
+   "translation": "интересоваться",
+   "transparency": "transparent",
+   "themeId": null,
+   "aspectPair": null,
+   "government": "inst",
+   "grammarRuleIds": [
+    "pl.gram.v-government"
+   ],
+   "priority": "high"
+  },
+  {
+   "id": "pl.zajmowac-sie",
+   "lemma": "zajmować się",
+   "pos": "verb",
+   "translation": "заниматься",
+   "transparency": "partial",
+   "themeId": null,
+   "aspectPair": {
+    "imperfective": "zajmować się",
+    "perfective": "zająć się"
+   },
+   "government": "inst",
+   "grammarRuleIds": [
+    "pl.gram.v-government"
+   ],
+   "priority": "high"
+  },
+  {
+   "id": "pl.czekac",
+   "lemma": "czekać",
+   "pos": "verb",
+   "translation": "ждать",
+   "transparency": "opaque",
+   "themeId": null,
+   "aspectPair": {
+    "imperfective": "czekać",
+    "perfective": "poczekać"
+   },
+   "government": "na+acc",
+   "grammarRuleIds": [],
+   "priority": "high"
+  },
+  {
+   "id": "pl.pytac",
+   "lemma": "pytać",
+   "pos": "verb",
+   "translation": "спрашивать",
+   "transparency": "partial",
+   "themeId": null,
+   "aspectPair": {
+    "imperfective": "pytać",
+    "perfective": "zapytać"
+   },
+   "government": "o+acc",
+   "grammarRuleIds": [],
+   "priority": "high"
+  },
+  {
+   "id": "pl.prosic",
+   "lemma": "prosić",
+   "pos": "verb",
+   "translation": "просить",
+   "transparency": "transparent",
+   "themeId": null,
+   "aspectPair": {
+    "imperfective": "prosić",
+    "perfective": "poprosić"
+   },
+   "government": "o+acc",
+   "grammarRuleIds": [],
+   "priority": "high"
+  },
+  {
+   "id": "pl.dzwonic",
+   "lemma": "dzwonić",
+   "pos": "verb",
+   "translation": "звонить",
+   "transparency": "transparent",
+   "themeId": null,
+   "aspectPair": {
+    "imperfective": "dzwonić",
+    "perfective": "zadzwonić"
+   },
+   "government": "do+gen",
+   "grammarRuleIds": [
+    "pl.gram.v-government"
+   ],
+   "priority": "high"
+  },
+  {
+   "id": "pl.isc",
+   "lemma": "iść",
+   "pos": "verb",
+   "translation": "идти (пешком)",
+   "transparency": "transparent",
+   "themeId": null,
+   "aspectPair": {
+    "imperfective": "iść",
+    "perfective": "pójść"
+   },
+   "government": null,
+   "grammarRuleIds": [],
+   "priority": "high"
+  },
+  {
+   "id": "pl.jechac",
+   "lemma": "jechać",
+   "pos": "verb",
+   "translation": "ехать",
+   "transparency": "transparent",
+   "themeId": null,
+   "aspectPair": {
+    "imperfective": "jechać",
+    "perfective": "pojechać"
+   },
+   "government": null,
+   "grammarRuleIds": [],
+   "priority": "high"
+  },
+  {
+   "id": "pl.chodzic",
+   "lemma": "chodzić",
+   "pos": "verb",
+   "translation": "ходить",
+   "transparency": "transparent",
+   "themeId": null,
+   "aspectPair": null,
+   "government": null,
+   "grammarRuleIds": [],
+   "priority": "high"
+  },
+  {
+   "id": "pl.przychodzic",
+   "lemma": "przychodzić",
+   "pos": "verb",
+   "translation": "приходить",
+   "transparency": "transparent",
+   "themeId": null,
+   "aspectPair": {
+    "imperfective": "przychodzić",
+    "perfective": "przyjść"
+   },
+   "government": null,
+   "grammarRuleIds": [],
+   "priority": "high"
+  },
+  {
+   "id": "pl.wychodzic",
+   "lemma": "wychodzić",
+   "pos": "verb",
+   "translation": "выходить",
+   "transparency": "transparent",
+   "themeId": null,
+   "aspectPair": {
+    "imperfective": "wychodzić",
+    "perfective": "wyjść"
+   },
+   "government": null,
+   "grammarRuleIds": [],
+   "priority": "high"
+  },
+  {
+   "id": "pl.wracac",
+   "lemma": "wracać",
+   "pos": "verb",
+   "translation": "возвращаться",
+   "transparency": "partial",
+   "themeId": null,
+   "aspectPair": {
+    "imperfective": "wracać",
+    "perfective": "wrócić"
+   },
+   "government": null,
+   "grammarRuleIds": [],
+   "priority": "high"
+  },
+  {
+   "id": "pl.kupowac",
+   "lemma": "kupować",
+   "pos": "verb",
+   "translation": "покупать",
+   "transparency": "transparent",
+   "themeId": null,
+   "aspectPair": {
+    "imperfective": "kupować",
+    "perfective": "kupić"
+   },
+   "government": "acc",
+   "grammarRuleIds": [],
+   "priority": "high"
+  },
+  {
+   "id": "pl.sprzedawac",
+   "lemma": "sprzedawać",
+   "pos": "verb",
+   "translation": "продавать",
+   "transparency": "partial",
+   "themeId": null,
+   "aspectPair": {
+    "imperfective": "sprzedawać",
+    "perfective": "sprzedać"
+   },
+   "government": "acc",
+   "grammarRuleIds": [],
+   "priority": "high"
+  },
+  {
+   "id": "pl.placic",
+   "lemma": "płacić",
+   "pos": "verb",
+   "translation": "платить",
+   "transparency": "transparent",
+   "themeId": null,
+   "aspectPair": {
+    "imperfective": "płacić",
+    "perfective": "zapłacić"
+   },
+   "government": "za+acc",
+   "grammarRuleIds": [],
+   "priority": "high"
+  },
+  {
+   "id": "pl.jesc",
+   "lemma": "jeść",
+   "pos": "verb",
+   "translation": "есть",
+   "transparency": "transparent",
+   "themeId": null,
+   "aspectPair": {
+    "imperfective": "jeść",
+    "perfective": "zjeść"
+   },
+   "government": "acc",
+   "grammarRuleIds": [],
+   "priority": "high"
+  },
+  {
+   "id": "pl.pic",
+   "lemma": "pić",
+   "pos": "verb",
+   "translation": "пить",
+   "transparency": "transparent",
+   "themeId": null,
+   "aspectPair": {
+    "imperfective": "pić",
+    "perfective": "wypić"
+   },
+   "government": "acc",
+   "grammarRuleIds": [],
+   "priority": "high"
+  },
+  {
+   "id": "pl.gotowac",
+   "lemma": "gotować",
+   "pos": "verb",
+   "translation": "готовить",
+   "transparency": "transparent",
+   "themeId": null,
+   "aspectPair": {
+    "imperfective": "gotować",
+    "perfective": "ugotować"
+   },
+   "government": "acc",
+   "grammarRuleIds": [],
+   "priority": "high"
+  },
+  {
+   "id": "pl.spac",
+   "lemma": "spać",
+   "pos": "verb",
+   "translation": "спать",
+   "transparency": "transparent",
+   "themeId": null,
+   "aspectPair": null,
+   "government": null,
+   "grammarRuleIds": [],
+   "priority": "high"
+  },
+  {
+   "id": "pl.wstawac",
+   "lemma": "wstawać",
+   "pos": "verb",
+   "translation": "вставать",
+   "transparency": "transparent",
+   "themeId": null,
+   "aspectPair": {
+    "imperfective": "wstawać",
+    "perfective": "wstać"
+   },
+   "government": null,
+   "grammarRuleIds": [],
+   "priority": "high"
+  },
+  {
+   "id": "pl.pracowac",
+   "lemma": "pracować",
+   "pos": "verb",
+   "translation": "работать",
+   "transparency": "transparent",
+   "themeId": null,
+   "aspectPair": null,
+   "government": null,
+   "grammarRuleIds": [],
+   "priority": "high"
+  },
+  {
+   "id": "pl.odpoczywac",
+   "lemma": "odpoczywać",
+   "pos": "verb",
+   "translation": "отдыхать",
+   "transparency": "partial",
+   "themeId": null,
+   "aspectPair": {
+    "imperfective": "odpoczywać",
+    "perfective": "odpocząć"
+   },
+   "government": null,
+   "grammarRuleIds": [],
+   "priority": "high"
+  },
+  {
+   "id": "pl.mieszkac",
+   "lemma": "mieszkać",
+   "pos": "verb",
+   "translation": "жить, проживать",
+   "transparency": "opaque",
+   "themeId": null,
+   "aspectPair": null,
+   "government": "w+loc",
+   "grammarRuleIds": [],
+   "priority": "high"
+  },
+  {
+   "id": "pl.wynajmowac",
+   "lemma": "wynajmować",
+   "pos": "verb",
+   "translation": "снимать (жильё)",
+   "transparency": "opaque",
+   "themeId": null,
+   "aspectPair": {
+    "imperfective": "wynajmować",
+    "perfective": "wynająć"
+   },
+   "government": "acc",
+   "grammarRuleIds": [],
+   "priority": "high"
+  },
+  {
+   "id": "pl.zaczynac",
+   "lemma": "zaczynać",
+   "pos": "verb",
+   "translation": "начинать",
+   "transparency": "partial",
+   "themeId": null,
+   "aspectPair": {
+    "imperfective": "zaczynać",
+    "perfective": "zacząć"
+   },
+   "government": "acc",
+   "grammarRuleIds": [],
+   "priority": "high"
+  },
+  {
+   "id": "pl.konczyc",
+   "lemma": "kończyć",
+   "pos": "verb",
+   "translation": "заканчивать",
+   "transparency": "partial",
+   "themeId": null,
+   "aspectPair": {
+    "imperfective": "kończyć",
+    "perfective": "skończyć"
+   },
+   "government": "acc",
+   "grammarRuleIds": [],
+   "priority": "high"
+  },
+  {
+   "id": "pl.otwierac",
+   "lemma": "otwierać",
+   "pos": "verb",
+   "translation": "открывать",
+   "transparency": "partial",
+   "themeId": null,
+   "aspectPair": {
+    "imperfective": "otwierać",
+    "perfective": "otworzyć"
+   },
+   "government": "acc",
+   "grammarRuleIds": [],
+   "priority": "high"
+  },
+  {
+   "id": "pl.zamykac",
+   "lemma": "zamykać",
+   "pos": "verb",
+   "translation": "закрывать",
+   "transparency": "partial",
+   "themeId": null,
+   "aspectPair": {
+    "imperfective": "zamykać",
+    "perfective": "zamknąć"
+   },
+   "government": "acc",
+   "grammarRuleIds": [],
+   "priority": "high"
+  },
+  {
+   "id": "pl.brac",
+   "lemma": "brać",
+   "pos": "verb",
+   "translation": "брать, взять",
+   "transparency": "partial",
+   "themeId": null,
+   "aspectPair": {
+    "imperfective": "brać",
+    "perfective": "wziąć"
+   },
+   "government": "acc",
+   "grammarRuleIds": [],
+   "priority": "high"
+  },
+  {
+   "id": "pl.dawac",
+   "lemma": "dawać",
+   "pos": "verb",
+   "translation": "давать, дать",
+   "transparency": "transparent",
+   "themeId": null,
+   "aspectPair": {
+    "imperfective": "dawać",
+    "perfective": "dać"
+   },
+   "government": "dat+acc",
+   "grammarRuleIds": [
+    "pl.gram.v-government"
+   ],
+   "priority": "high"
+  },
+  {
+   "id": "pl.wiedziec",
+   "lemma": "wiedzieć",
+   "pos": "verb",
+   "translation": "знать (факт)",
+   "transparency": "partial",
+   "themeId": null,
+   "aspectPair": null,
+   "government": null,
+   "grammarRuleIds": [],
+   "priority": "high"
+  },
+  {
+   "id": "pl.znac",
+   "lemma": "znać",
+   "pos": "verb",
+   "translation": "знать (кого/что)",
+   "transparency": "transparent",
+   "themeId": null,
+   "aspectPair": null,
+   "government": "acc",
+   "grammarRuleIds": [],
+   "priority": "high"
+  },
+  {
+   "id": "pl.umiec",
+   "lemma": "umieć",
+   "pos": "verb",
+   "translation": "уметь",
+   "transparency": "transparent",
+   "themeId": null,
+   "aspectPair": null,
+   "government": null,
+   "grammarRuleIds": [],
+   "priority": "high"
+  },
+  {
+   "id": "pl.moc",
+   "lemma": "móc",
+   "pos": "verb",
+   "translation": "мочь",
+   "transparency": "transparent",
+   "themeId": null,
+   "aspectPair": null,
+   "government": null,
+   "grammarRuleIds": [],
+   "priority": "high"
+  },
+  {
+   "id": "pl.chciec",
+   "lemma": "chcieć",
+   "pos": "verb",
+   "translation": "хотеть",
+   "transparency": "transparent",
+   "themeId": null,
+   "aspectPair": null,
+   "government": "gen/acc",
+   "grammarRuleIds": [
+    "pl.gram.v-government"
+   ],
+   "priority": "high"
+  },
+  {
+   "id": "pl.musiec",
+   "lemma": "musieć",
+   "pos": "verb",
+   "translation": "быть должным",
+   "transparency": "opaque",
+   "themeId": null,
+   "aspectPair": null,
+   "government": null,
+   "grammarRuleIds": [],
+   "priority": "high"
+  },
+  {
+   "id": "pl.lubic",
+   "lemma": "lubić",
+   "pos": "verb",
+   "translation": "любить, нравиться",
+   "transparency": "opaque",
+   "themeId": null,
+   "aspectPair": {
+    "imperfective": "lubić",
+    "perfective": "polubić"
+   },
+   "government": "acc",
+   "grammarRuleIds": [],
+   "priority": "high"
+  },
+  {
+   "id": "pl.kochac",
+   "lemma": "kochać",
+   "pos": "verb",
+   "translation": "любить (сильно)",
+   "transparency": "opaque",
+   "themeId": null,
+   "aspectPair": {
+    "imperfective": "kochać",
+    "perfective": "pokochać"
+   },
+   "government": "acc",
+   "grammarRuleIds": [],
+   "priority": "high"
+  },
+  {
+   "id": "pl.myslec",
+   "lemma": "myśleć",
+   "pos": "verb",
+   "translation": "думать",
+   "transparency": "partial",
+   "themeId": null,
+   "aspectPair": {
+    "imperfective": "myśleć",
+    "perfective": "pomyśleć"
+   },
+   "government": "o+loc",
+   "grammarRuleIds": [],
+   "priority": "high"
+  },
+  {
+   "id": "pl.rozumiec",
+   "lemma": "rozumieć",
+   "pos": "verb",
+   "translation": "понимать",
+   "transparency": "opaque",
+   "themeId": null,
+   "aspectPair": {
+    "imperfective": "rozumieć",
+    "perfective": "zrozumieć"
+   },
+   "government": "acc",
+   "grammarRuleIds": [],
+   "priority": "high"
+  },
+  {
+   "id": "pl.pamietac",
+   "lemma": "pamiętać",
+   "pos": "verb",
+   "translation": "помнить, запомнить",
+   "transparency": "transparent",
+   "themeId": null,
+   "aspectPair": {
+    "imperfective": "pamiętać",
+    "perfective": "zapamiętać"
+   },
+   "government": "acc",
+   "grammarRuleIds": [],
+   "priority": "high"
+  },
+  {
+   "id": "pl.zapominac",
+   "lemma": "zapominać",
+   "pos": "verb",
+   "translation": "забывать",
+   "transparency": "partial",
+   "themeId": null,
+   "aspectPair": {
+    "imperfective": "zapominać",
+    "perfective": "zapomnieć"
+   },
+   "government": "o+loc",
+   "grammarRuleIds": [],
+   "priority": "high"
+  },
+  {
+   "id": "pl.spotykac-sie",
+   "lemma": "spotykać się",
+   "pos": "verb",
+   "translation": "встречаться",
+   "transparency": "partial",
+   "themeId": null,
+   "aspectPair": {
+    "imperfective": "spotykać się",
+    "perfective": "spotkać się"
+   },
+   "government": "z+inst",
+   "grammarRuleIds": [
+    "pl.gram.v-government"
+   ],
+   "priority": "high"
+  },
+  {
+   "id": "pl.rozmawiac",
+   "lemma": "rozmawiać",
+   "pos": "verb",
+   "translation": "разговаривать",
+   "transparency": "partial",
+   "themeId": null,
+   "aspectPair": {
+    "imperfective": "rozmawiać",
+    "perfective": "porozmawiać"
+   },
+   "government": "z+inst",
+   "grammarRuleIds": [
+    "pl.gram.v-government"
+   ],
+   "priority": "high"
+  },
+  {
+   "id": "pl.imie",
+   "lemma": "imię",
+   "pos": "noun",
+   "translation": "имя",
+   "transparency": "transparent",
+   "themeId": "7.1",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.nazwisko",
+   "lemma": "nazwisko",
+   "pos": "noun",
+   "translation": "фамилия",
+   "transparency": "opaque",
+   "themeId": "7.1",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.wiek",
+   "lemma": "wiek",
+   "pos": "noun",
+   "translation": "возраст",
+   "transparency": "partial",
+   "themeId": "7.1",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.zawod",
+   "lemma": "zawód",
+   "pos": "noun",
+   "translation": "профессия",
+   "transparency": "partial",
+   "themeId": "7.1",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.wyksztalcenie",
+   "lemma": "wykształcenie",
+   "pos": "noun",
+   "translation": "образование",
+   "transparency": "opaque",
+   "themeId": "7.1",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.maz",
+   "lemma": "mąż",
+   "pos": "noun",
+   "translation": "муж",
+   "transparency": "transparent",
+   "themeId": "7.1",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.zona",
+   "lemma": "żona",
+   "pos": "noun",
+   "translation": "жена",
+   "transparency": "transparent",
+   "themeId": "7.1",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.dziecko",
+   "lemma": "dziecko",
+   "pos": "noun",
+   "translation": "ребёнок",
+   "transparency": "partial",
+   "themeId": "7.1",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.rodzice",
+   "lemma": "rodzice",
+   "pos": "noun",
+   "translation": "родители",
+   "transparency": "transparent",
+   "themeId": "7.1",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.brat",
+   "lemma": "brat",
+   "pos": "noun",
+   "translation": "брат",
+   "transparency": "transparent",
+   "themeId": "7.1",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.siostra",
+   "lemma": "siostra",
+   "pos": "noun",
+   "translation": "сестра",
+   "transparency": "transparent",
+   "themeId": "7.1",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.wysoki",
+   "lemma": "wysoki",
+   "pos": "adj",
+   "translation": "высокий",
+   "transparency": "transparent",
+   "themeId": "7.1",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.niski",
+   "lemma": "niski",
+   "pos": "adj",
+   "translation": "низкий",
+   "transparency": "transparent",
+   "themeId": "7.1",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.szczuply",
+   "lemma": "szczupły",
+   "pos": "adj",
+   "translation": "худой",
+   "transparency": "opaque",
+   "themeId": "7.1",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.wesoly",
+   "lemma": "wesoły",
+   "pos": "adj",
+   "translation": "весёлый",
+   "transparency": "transparent",
+   "themeId": "7.1",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.smutny",
+   "lemma": "smutny",
+   "pos": "adj",
+   "translation": "грустный",
+   "transparency": "partial",
+   "themeId": "7.1",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.mily",
+   "lemma": "miły",
+   "pos": "adj",
+   "translation": "приятный, милый",
+   "transparency": "transparent",
+   "themeId": "7.1",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.niesmialy",
+   "lemma": "nieśmiały",
+   "pos": "adj",
+   "translation": "стеснительный",
+   "transparency": "opaque",
+   "themeId": "7.1",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.mieszkanie",
+   "lemma": "mieszkanie",
+   "pos": "noun",
+   "translation": "квартира",
+   "transparency": "partial",
+   "themeId": "7.2",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.dom",
+   "lemma": "dom",
+   "pos": "noun",
+   "translation": "дом",
+   "transparency": "transparent",
+   "themeId": "7.2",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.pokoj",
+   "lemma": "pokój",
+   "pos": "noun",
+   "translation": "комната; покой",
+   "transparency": "partial",
+   "themeId": "7.2",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.kuchnia",
+   "lemma": "kuchnia",
+   "pos": "noun",
+   "translation": "кухня",
+   "transparency": "transparent",
+   "themeId": "7.2",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.lazienka",
+   "lemma": "łazienka",
+   "pos": "noun",
+   "translation": "ванная",
+   "transparency": "opaque",
+   "themeId": "7.2",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.pietro",
+   "lemma": "piętro",
+   "pos": "noun",
+   "translation": "этаж",
+   "transparency": "opaque",
+   "themeId": "7.2",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.winda",
+   "lemma": "winda",
+   "pos": "noun",
+   "translation": "лифт",
+   "transparency": "opaque",
+   "themeId": "7.2",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.meble",
+   "lemma": "meble",
+   "pos": "noun",
+   "translation": "мебель",
+   "transparency": "transparent",
+   "themeId": "7.2",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.szafa",
+   "lemma": "szafa",
+   "pos": "noun",
+   "translation": "шкаф",
+   "transparency": "partial",
+   "themeId": "7.2",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.lozko",
+   "lemma": "łóżko",
+   "pos": "noun",
+   "translation": "кровать",
+   "transparency": "opaque",
+   "themeId": "7.2",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.czynsz",
+   "lemma": "czynsz",
+   "pos": "noun",
+   "translation": "квартплата",
+   "transparency": "opaque",
+   "themeId": "7.2",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.oplata",
+   "lemma": "opłata",
+   "pos": "noun",
+   "translation": "плата, сбор",
+   "transparency": "transparent",
+   "themeId": "7.2",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.tydzien",
+   "lemma": "tydzień",
+   "pos": "noun",
+   "translation": "неделя",
+   "transparency": "partial",
+   "themeId": "7.3",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.miesiac",
+   "lemma": "miesiąc",
+   "pos": "noun",
+   "translation": "месяц",
+   "transparency": "transparent",
+   "themeId": "7.3",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.poniedzialek",
+   "lemma": "poniedziałek",
+   "pos": "noun",
+   "translation": "понедельник",
+   "transparency": "transparent",
+   "themeId": "7.3",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.sroda",
+   "lemma": "środa",
+   "pos": "noun",
+   "translation": "среда",
+   "transparency": "transparent",
+   "themeId": "7.3",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.piatek",
+   "lemma": "piątek",
+   "pos": "noun",
+   "translation": "пятница",
+   "transparency": "transparent",
+   "themeId": "7.3",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.sobota",
+   "lemma": "sobota",
+   "pos": "noun",
+   "translation": "суббота",
+   "transparency": "transparent",
+   "themeId": "7.3",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.niedziela",
+   "lemma": "niedziela",
+   "pos": "noun",
+   "translation": "воскресенье",
+   "transparency": "opaque",
+   "themeId": "7.3",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.wieczor",
+   "lemma": "wieczór",
+   "pos": "noun",
+   "translation": "вечер",
+   "transparency": "transparent",
+   "themeId": "7.3",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.poludnie",
+   "lemma": "południe",
+   "pos": "noun",
+   "translation": "полдень; юг",
+   "transparency": "partial",
+   "themeId": "7.3",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.klucz",
+   "lemma": "klucz",
+   "pos": "noun",
+   "translation": "ключ",
+   "transparency": "transparent",
+   "themeId": "7.3",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.wolny-czas",
+   "lemma": "wolny czas",
+   "pos": "phrase",
+   "translation": "свободное время",
+   "transparency": "transparent",
+   "themeId": "7.4",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.film",
+   "lemma": "film",
+   "pos": "noun",
+   "translation": "фильм",
+   "transparency": "transparent",
+   "themeId": "7.4",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.ksiazka",
+   "lemma": "książka",
+   "pos": "noun",
+   "translation": "книга",
+   "transparency": "partial",
+   "themeId": "7.4",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.wystawa",
+   "lemma": "wystawa",
+   "pos": "noun",
+   "translation": "выставка",
+   "transparency": "transparent",
+   "themeId": "7.4",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.muzeum",
+   "lemma": "muzeum",
+   "pos": "noun",
+   "translation": "музей",
+   "transparency": "transparent",
+   "themeId": "7.4",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.koncert",
+   "lemma": "koncert",
+   "pos": "noun",
+   "translation": "концерт",
+   "transparency": "transparent",
+   "themeId": "7.4",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.zainteresowanie",
+   "lemma": "zainteresowanie",
+   "pos": "noun",
+   "translation": "увлечение",
+   "transparency": "partial",
+   "themeId": "7.4",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.plywac",
+   "lemma": "pływać",
+   "pos": "verb",
+   "translation": "плавать",
+   "transparency": "transparent",
+   "themeId": "7.4",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.biegac",
+   "lemma": "biegać",
+   "pos": "verb",
+   "translation": "бегать",
+   "transparency": "transparent",
+   "themeId": "7.4",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.taniec",
+   "lemma": "taniec",
+   "pos": "noun",
+   "translation": "танец",
+   "transparency": "transparent",
+   "themeId": "7.4",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.podroz",
+   "lemma": "podróż",
+   "pos": "noun",
+   "translation": "поездка",
+   "transparency": "partial",
+   "themeId": "7.5",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.pociag",
+   "lemma": "pociąg",
+   "pos": "noun",
+   "translation": "поезд",
+   "transparency": "opaque",
+   "themeId": "7.5",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.samolot",
+   "lemma": "samolot",
+   "pos": "noun",
+   "translation": "самолёт",
+   "transparency": "transparent",
+   "themeId": "7.5",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.samochod",
+   "lemma": "samochód",
+   "pos": "noun",
+   "translation": "автомобиль",
+   "transparency": "partial",
+   "themeId": "7.5",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.autobus",
+   "lemma": "autobus",
+   "pos": "noun",
+   "translation": "автобус",
+   "transparency": "transparent",
+   "themeId": "7.5",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.lotnisko",
+   "lemma": "lotnisko",
+   "pos": "noun",
+   "translation": "аэропорт",
+   "transparency": "opaque",
+   "themeId": "7.5",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.bilet",
+   "lemma": "bilet",
+   "pos": "noun",
+   "translation": "билет",
+   "transparency": "transparent",
+   "themeId": "7.5",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.bagaz",
+   "lemma": "bagaż",
+   "pos": "noun",
+   "translation": "багаж",
+   "transparency": "transparent",
+   "themeId": "7.5",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.walizka",
+   "lemma": "walizka",
+   "pos": "noun",
+   "translation": "чемодан",
+   "transparency": "opaque",
+   "themeId": "7.5",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.wycieczka",
+   "lemma": "wycieczka",
+   "pos": "noun",
+   "translation": "экскурсия",
+   "transparency": "opaque",
+   "themeId": "7.5",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.nocleg",
+   "lemma": "nocleg",
+   "pos": "noun",
+   "translation": "ночлег",
+   "transparency": "transparent",
+   "themeId": "7.5",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.opoznienie",
+   "lemma": "opóźnienie",
+   "pos": "noun",
+   "translation": "опоздание",
+   "transparency": "partial",
+   "themeId": "7.5",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.panstwo",
+   "lemma": "państwo",
+   "pos": "noun",
+   "translation": "государство",
+   "transparency": "partial",
+   "themeId": "7.6",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.obywatel",
+   "lemma": "obywatel",
+   "pos": "noun",
+   "translation": "гражданин",
+   "transparency": "opaque",
+   "themeId": "7.6",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.urzad",
+   "lemma": "urząd",
+   "pos": "noun",
+   "translation": "учреждение",
+   "transparency": "opaque",
+   "themeId": "7.6",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.podanie",
+   "lemma": "podanie",
+   "pos": "noun",
+   "translation": "заявление",
+   "transparency": "partial",
+   "themeId": "7.6",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.pozwolenie",
+   "lemma": "pozwolenie",
+   "pos": "noun",
+   "translation": "разрешение",
+   "transparency": "partial",
+   "themeId": "7.6",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.pobyt",
+   "lemma": "pobyt",
+   "pos": "noun",
+   "translation": "пребывание",
+   "transparency": "partial",
+   "themeId": "7.6",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.policja",
+   "lemma": "policja",
+   "pos": "noun",
+   "translation": "полиция",
+   "transparency": "transparent",
+   "themeId": "7.6",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.wybory",
+   "lemma": "wybory",
+   "pos": "noun",
+   "translation": "выборы",
+   "transparency": "transparent",
+   "themeId": "7.6",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.podatek",
+   "lemma": "podatek",
+   "pos": "noun",
+   "translation": "налог",
+   "transparency": "opaque",
+   "themeId": "7.6",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.zdrowie",
+   "lemma": "zdrowie",
+   "pos": "noun",
+   "translation": "здоровье",
+   "transparency": "transparent",
+   "themeId": "7.7",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.lekarz",
+   "lemma": "lekarz",
+   "pos": "noun",
+   "translation": "врач",
+   "transparency": "partial",
+   "themeId": "7.7",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.szpital",
+   "lemma": "szpital",
+   "pos": "noun",
+   "translation": "больница",
+   "transparency": "transparent",
+   "themeId": "7.7",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.apteka",
+   "lemma": "apteka",
+   "pos": "noun",
+   "translation": "аптека",
+   "transparency": "transparent",
+   "themeId": "7.7",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.lekarstwo",
+   "lemma": "lekarstwo",
+   "pos": "noun",
+   "translation": "лекарство",
+   "transparency": "transparent",
+   "themeId": "7.7",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.recepta",
+   "lemma": "recepta",
+   "pos": "noun",
+   "translation": "рецепт",
+   "transparency": "transparent",
+   "themeId": "7.7",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.bol",
+   "lemma": "ból",
+   "pos": "noun",
+   "translation": "боль",
+   "transparency": "transparent",
+   "themeId": "7.7",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.goraczka",
+   "lemma": "gorączka",
+   "pos": "noun",
+   "translation": "температура, жар",
+   "transparency": "opaque",
+   "themeId": "7.7",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.przeziebienie",
+   "lemma": "przeziębienie",
+   "pos": "noun",
+   "translation": "простуда",
+   "transparency": "opaque",
+   "themeId": "7.7",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.glowa",
+   "lemma": "głowa",
+   "pos": "noun",
+   "translation": "голова",
+   "transparency": "transparent",
+   "themeId": "7.7",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.reka",
+   "lemma": "ręka",
+   "pos": "noun",
+   "translation": "рука",
+   "transparency": "transparent",
+   "themeId": "7.7",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.noga",
+   "lemma": "noga",
+   "pos": "noun",
+   "translation": "нога",
+   "transparency": "transparent",
+   "themeId": "7.7",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.szkola",
+   "lemma": "szkoła",
+   "pos": "noun",
+   "translation": "школа",
+   "transparency": "transparent",
+   "themeId": "7.8",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.uczen",
+   "lemma": "uczeń",
+   "pos": "noun",
+   "translation": "ученик",
+   "transparency": "transparent",
+   "themeId": "7.8",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.nauczyciel",
+   "lemma": "nauczyciel",
+   "pos": "noun",
+   "translation": "учитель",
+   "transparency": "partial",
+   "themeId": "7.8",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.lekcja",
+   "lemma": "lekcja",
+   "pos": "noun",
+   "translation": "урок",
+   "transparency": "transparent",
+   "themeId": "7.8",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.egzamin",
+   "lemma": "egzamin",
+   "pos": "noun",
+   "translation": "экзамен",
+   "transparency": "transparent",
+   "themeId": "7.8",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.ocena",
+   "lemma": "ocena",
+   "pos": "noun",
+   "translation": "оценка",
+   "transparency": "transparent",
+   "themeId": "7.8",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.zeszyt",
+   "lemma": "zeszyt",
+   "pos": "noun",
+   "translation": "тетрадь",
+   "transparency": "opaque",
+   "themeId": "7.8",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.uniwersytet",
+   "lemma": "uniwersytet",
+   "pos": "noun",
+   "translation": "университет",
+   "transparency": "transparent",
+   "themeId": "7.8",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.studia",
+   "lemma": "studia",
+   "pos": "noun",
+   "translation": "учёба в вузе",
+   "transparency": "partial",
+   "themeId": "7.8",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.praca",
+   "lemma": "praca",
+   "pos": "noun",
+   "translation": "работа",
+   "transparency": "transparent",
+   "themeId": "7.9",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.pracownik",
+   "lemma": "pracownik",
+   "pos": "noun",
+   "translation": "работник",
+   "transparency": "transparent",
+   "themeId": "7.9",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.szef",
+   "lemma": "szef",
+   "pos": "noun",
+   "translation": "начальник",
+   "transparency": "transparent",
+   "themeId": "7.9",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.biuro",
+   "lemma": "biuro",
+   "pos": "noun",
+   "translation": "офис",
+   "transparency": "transparent",
+   "themeId": "7.9",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.umowa",
+   "lemma": "umowa",
+   "pos": "noun",
+   "translation": "договор",
+   "transparency": "opaque",
+   "themeId": "7.9",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.urlop",
+   "lemma": "urlop",
+   "pos": "noun",
+   "translation": "отпуск",
+   "transparency": "opaque",
+   "themeId": "7.9",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.zarobki",
+   "lemma": "zarobki",
+   "pos": "noun",
+   "translation": "заработок",
+   "transparency": "transparent",
+   "themeId": "7.9",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.rozmowa-o-prace",
+   "lemma": "rozmowa o pracę",
+   "pos": "phrase",
+   "translation": "собеседование",
+   "transparency": "opaque",
+   "themeId": "7.9",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.doswiadczenie",
+   "lemma": "doświadczenie",
+   "pos": "noun",
+   "translation": "опыт",
+   "transparency": "opaque",
+   "themeId": "7.9",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.zakupy",
+   "lemma": "zakupy",
+   "pos": "noun",
+   "translation": "покупки",
+   "transparency": "transparent",
+   "themeId": "7.10",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.cena",
+   "lemma": "cena",
+   "pos": "noun",
+   "translation": "цена",
+   "transparency": "transparent",
+   "themeId": "7.10",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.pieniadze",
+   "lemma": "pieniądze",
+   "pos": "noun",
+   "translation": "деньги",
+   "transparency": "opaque",
+   "themeId": "7.10",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.rachunek",
+   "lemma": "rachunek",
+   "pos": "noun",
+   "translation": "счёт",
+   "transparency": "partial",
+   "themeId": "7.10",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.paragon",
+   "lemma": "paragon",
+   "pos": "noun",
+   "translation": "чек",
+   "transparency": "opaque",
+   "themeId": "7.10",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.kasa",
+   "lemma": "kasa",
+   "pos": "noun",
+   "translation": "касса",
+   "transparency": "transparent",
+   "themeId": "7.10",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.tani",
+   "lemma": "tani",
+   "pos": "adj",
+   "translation": "дешёвый",
+   "transparency": "opaque",
+   "themeId": "7.10",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.drogi",
+   "lemma": "drogi",
+   "pos": "adj",
+   "translation": "дорогой",
+   "transparency": "transparent",
+   "themeId": "7.10",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.promocja",
+   "lemma": "promocja",
+   "pos": "noun",
+   "translation": "скидка, акция",
+   "transparency": "partial",
+   "themeId": "7.10",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.kilogram",
+   "lemma": "kilogram",
+   "pos": "noun",
+   "translation": "килограмм",
+   "transparency": "transparent",
+   "themeId": "7.10",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.jedzenie",
+   "lemma": "jedzenie",
+   "pos": "noun",
+   "translation": "еда",
+   "transparency": "partial",
+   "themeId": "7.11",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.chleb",
+   "lemma": "chleb",
+   "pos": "noun",
+   "translation": "хлеб",
+   "transparency": "transparent",
+   "themeId": "7.11",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.mieso",
+   "lemma": "mięso",
+   "pos": "noun",
+   "translation": "мясо",
+   "transparency": "transparent",
+   "themeId": "7.11",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.warzywa",
+   "lemma": "warzywa",
+   "pos": "noun",
+   "translation": "овощи",
+   "transparency": "opaque",
+   "themeId": "7.11",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.ser",
+   "lemma": "ser",
+   "pos": "noun",
+   "translation": "сыр",
+   "transparency": "transparent",
+   "themeId": "7.11",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.mleko",
+   "lemma": "mleko",
+   "pos": "noun",
+   "translation": "молоко",
+   "transparency": "transparent",
+   "themeId": "7.11",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.herbata",
+   "lemma": "herbata",
+   "pos": "noun",
+   "translation": "чай",
+   "transparency": "opaque",
+   "themeId": "7.11",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.kawa",
+   "lemma": "kawa",
+   "pos": "noun",
+   "translation": "кофе",
+   "transparency": "transparent",
+   "themeId": "7.11",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.zupa",
+   "lemma": "zupa",
+   "pos": "noun",
+   "translation": "суп",
+   "transparency": "transparent",
+   "themeId": "7.11",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.sniadanie",
+   "lemma": "śniadanie",
+   "pos": "noun",
+   "translation": "завтрак",
+   "transparency": "opaque",
+   "themeId": "7.11",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.obiad",
+   "lemma": "obiad",
+   "pos": "noun",
+   "translation": "обед",
+   "transparency": "transparent",
+   "themeId": "7.11",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.kolacja",
+   "lemma": "kolacja",
+   "pos": "noun",
+   "translation": "ужин",
+   "transparency": "opaque",
+   "themeId": "7.11",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.restauracja",
+   "lemma": "restauracja",
+   "pos": "noun",
+   "translation": "ресторан",
+   "transparency": "transparent",
+   "themeId": "7.11",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.poczta",
+   "lemma": "poczta",
+   "pos": "noun",
+   "translation": "почта",
+   "transparency": "transparent",
+   "themeId": "7.12",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.bank",
+   "lemma": "bank",
+   "pos": "noun",
+   "translation": "банк",
+   "transparency": "transparent",
+   "themeId": "7.12",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.konto",
+   "lemma": "konto",
+   "pos": "noun",
+   "translation": "счёт в банке",
+   "transparency": "partial",
+   "themeId": "7.12",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.przelew",
+   "lemma": "przelew",
+   "pos": "noun",
+   "translation": "перевод денег",
+   "transparency": "opaque",
+   "themeId": "7.12",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.biblioteka",
+   "lemma": "biblioteka",
+   "pos": "noun",
+   "translation": "библиотека",
+   "transparency": "transparent",
+   "themeId": "7.12",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.fryzjer",
+   "lemma": "fryzjer",
+   "pos": "noun",
+   "translation": "парикмахер",
+   "transparency": "opaque",
+   "themeId": "7.12",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.pralnia",
+   "lemma": "pralnia",
+   "pos": "noun",
+   "translation": "прачечная",
+   "transparency": "partial",
+   "themeId": "7.12",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.naprawa",
+   "lemma": "naprawa",
+   "pos": "noun",
+   "translation": "ремонт",
+   "transparency": "opaque",
+   "themeId": "7.12",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.miejsce",
+   "lemma": "miejsce",
+   "pos": "noun",
+   "translation": "место",
+   "transparency": "transparent",
+   "themeId": "7.13",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.ulica",
+   "lemma": "ulica",
+   "pos": "noun",
+   "translation": "улица",
+   "transparency": "transparent",
+   "themeId": "7.13",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.plac",
+   "lemma": "plac",
+   "pos": "noun",
+   "translation": "площадь",
+   "transparency": "partial",
+   "themeId": "7.13",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.kosciol",
+   "lemma": "kościół",
+   "pos": "noun",
+   "translation": "костёл, церковь",
+   "transparency": "partial",
+   "themeId": "7.13",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.zamek",
+   "lemma": "zamek",
+   "pos": "noun",
+   "translation": "замок",
+   "transparency": "transparent",
+   "themeId": "7.13",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.rynek",
+   "lemma": "rynek",
+   "pos": "noun",
+   "translation": "рынок; главная площадь",
+   "transparency": "partial",
+   "themeId": "7.13",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.most",
+   "lemma": "most",
+   "pos": "noun",
+   "translation": "мост",
+   "transparency": "transparent",
+   "themeId": "7.13",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.zabytek",
+   "lemma": "zabytek",
+   "pos": "noun",
+   "translation": "памятник старины",
+   "transparency": "opaque",
+   "themeId": "7.13",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.centrum",
+   "lemma": "centrum",
+   "pos": "noun",
+   "translation": "центр",
+   "transparency": "transparent",
+   "themeId": "7.13",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.pogoda",
+   "lemma": "pogoda",
+   "pos": "noun",
+   "translation": "погода",
+   "transparency": "transparent",
+   "themeId": "7.14",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.deszcz",
+   "lemma": "deszcz",
+   "pos": "noun",
+   "translation": "дождь",
+   "transparency": "partial",
+   "themeId": "7.14",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.snieg",
+   "lemma": "śnieg",
+   "pos": "noun",
+   "translation": "снег",
+   "transparency": "transparent",
+   "themeId": "7.14",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.slonce",
+   "lemma": "słońce",
+   "pos": "noun",
+   "translation": "солнце",
+   "transparency": "transparent",
+   "themeId": "7.14",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.wiatr",
+   "lemma": "wiatr",
+   "pos": "noun",
+   "translation": "ветер",
+   "transparency": "transparent",
+   "themeId": "7.14",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.las",
+   "lemma": "las",
+   "pos": "noun",
+   "translation": "лес",
+   "transparency": "transparent",
+   "themeId": "7.14",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.rzeka",
+   "lemma": "rzeka",
+   "pos": "noun",
+   "translation": "река",
+   "transparency": "transparent",
+   "themeId": "7.14",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.morze",
+   "lemma": "morze",
+   "pos": "noun",
+   "translation": "море",
+   "transparency": "transparent",
+   "themeId": "7.14",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.gora",
+   "lemma": "góra",
+   "pos": "noun",
+   "translation": "гора",
+   "transparency": "transparent",
+   "themeId": "7.14",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.drzewo",
+   "lemma": "drzewo",
+   "pos": "noun",
+   "translation": "дерево",
+   "transparency": "transparent",
+   "themeId": "7.14",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.wiosna",
+   "lemma": "wiosna",
+   "pos": "noun",
+   "translation": "весна",
+   "transparency": "transparent",
+   "themeId": "7.14",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.jesien",
+   "lemma": "jesień",
+   "pos": "noun",
+   "translation": "осень",
+   "transparency": "partial",
+   "themeId": "7.14",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.swieto",
+   "lemma": "święto",
+   "pos": "noun",
+   "translation": "праздник",
+   "transparency": "partial",
+   "themeId": "7.15",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.wielkanoc",
+   "lemma": "Wielkanoc",
+   "pos": "noun",
+   "translation": "Пасха",
+   "transparency": "opaque",
+   "themeId": "7.15",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.boze-narodzenie",
+   "lemma": "Boże Narodzenie",
+   "pos": "noun",
+   "translation": "Рождество",
+   "transparency": "opaque",
+   "themeId": "7.15",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.wigilia",
+   "lemma": "wigilia",
+   "pos": "noun",
+   "translation": "сочельник",
+   "transparency": "partial",
+   "themeId": "7.15",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.prezent",
+   "lemma": "prezent",
+   "pos": "noun",
+   "translation": "подарок",
+   "transparency": "partial",
+   "themeId": "7.15",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.zyczenia",
+   "lemma": "życzenia",
+   "pos": "noun",
+   "translation": "пожелания",
+   "transparency": "partial",
+   "themeId": "7.15",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.urodziny",
+   "lemma": "urodziny",
+   "pos": "noun",
+   "translation": "день рождения",
+   "transparency": "partial",
+   "themeId": "7.15",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.slub",
+   "lemma": "ślub",
+   "pos": "noun",
+   "translation": "свадьба",
+   "transparency": "opaque",
+   "themeId": "7.15",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.zwyczaj",
+   "lemma": "zwyczaj",
+   "pos": "noun",
+   "translation": "обычай",
+   "transparency": "transparent",
+   "themeId": "7.15",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.zycie",
+   "lemma": "życie",
+   "pos": "noun",
+   "translation": "жизнь",
+   "transparency": "transparent",
+   "themeId": "7.16",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.problem",
+   "lemma": "problem",
+   "pos": "noun",
+   "translation": "проблема",
+   "transparency": "transparent",
+   "themeId": "7.16",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.powod",
+   "lemma": "powód",
+   "pos": "noun",
+   "translation": "причина",
+   "transparency": "opaque",
+   "themeId": "7.16",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.wydarzenie",
+   "lemma": "wydarzenie",
+   "pos": "noun",
+   "translation": "событие",
+   "transparency": "opaque",
+   "themeId": "7.16",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.wiadomosc",
+   "lemma": "wiadomość",
+   "pos": "noun",
+   "translation": "новость, сообщение",
+   "transparency": "partial",
+   "themeId": "7.16",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.telewizja",
+   "lemma": "telewizja",
+   "pos": "noun",
+   "translation": "телевидение",
+   "transparency": "transparent",
+   "themeId": "7.16",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.gazeta",
+   "lemma": "gazeta",
+   "pos": "noun",
+   "translation": "газета",
+   "transparency": "transparent",
+   "themeId": "7.16",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.internet",
+   "lemma": "internet",
+   "pos": "noun",
+   "translation": "интернет",
+   "transparency": "transparent",
+   "themeId": "7.16",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.zmiana",
+   "lemma": "zmiana",
+   "pos": "noun",
+   "translation": "изменение",
+   "transparency": "partial",
+   "themeId": "7.16",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.mozliwosc",
+   "lemma": "możliwość",
+   "pos": "noun",
+   "translation": "возможность",
+   "transparency": "transparent",
+   "themeId": "7.16",
+   "priority": "normal"
+  },
+  {
+   "id": "pl.sposob",
+   "lemma": "sposób",
+   "pos": "noun",
+   "translation": "способ",
+   "transparency": "transparent",
+   "themeId": "7.16",
+   "priority": "normal"
+  }
+ ]
+}

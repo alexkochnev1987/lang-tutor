@@ -1,0 +1,89 @@
+/* ===========================================================
+   СЛОЙ ВЫБОРА
+   -----------------------------------------------------------
+   Превращает «сырые» --l-* / --d-* из palettes.css в активные
+   семантические токены, которыми пользуются компоненты.
+
+   Как это работает:
+     <html data-palette="graphite" data-mode="light">
+       data-palette  выбирает блок в palettes.css
+       data-mode     всегда уже разрешён в light | dark
+
+   «Системную» тему разрешает JS (theme.ts слушает matchMedia и
+   пишет итог в data-mode), поэтому тёмный набор описан здесь
+   ровно один раз, без дублей в @media. Приложение всё равно на
+   React — без JS оно не отрисуется, так что no-JS-ветка не нужна.
+
+   Добавляя токен, допиши его в ОБА блока ниже и в контракт
+   в palettes.css. Компоненты литеральных цветов не содержат.
+   =========================================================== */
+
+:root {
+  --primary: var(--l-primary);
+  --primary-dark: var(--l-primary-dark);
+  --on-primary: var(--l-on-primary);
+  --accent-ink: var(--l-accent-ink);
+  --head: var(--l-head);
+  --on-head: var(--l-on-head);
+  --bg: var(--l-bg);
+  --card: var(--l-card);
+  --ink: var(--l-ink);
+  --muted: var(--l-muted);
+  --line: var(--l-line);
+  --soft: var(--l-soft);
+  --soft2: var(--l-soft2);
+  --bar-a: var(--l-bar-a);
+  --bar-b: var(--l-bar-b);
+  --ok: var(--l-ok);
+  --ok-bg: var(--l-ok-bg);
+  --ok-ink: var(--l-ok-ink);
+  --danger: var(--l-danger);
+  --danger-bg: var(--l-danger-bg);
+  --danger-ink: var(--l-danger-ink);
+  --warn-bg: var(--l-warn-bg);
+  --warn-ink: var(--l-warn-ink);
+
+  /* зависит от темы, но не от палитры */
+  --overlay: rgba(24, 24, 27, 0.45);
+  --shadow: 0 1px 2px rgba(24, 24, 27, 0.05), 0 4px 16px rgba(24, 24, 27, 0.07);
+  --shadow-lg: 0 2px 6px rgba(24, 24, 27, 0.06), 0 12px 32px rgba(24, 24, 27, 0.12);
+  color-scheme: light;
+
+  /* производные — считаются из токенов, отдельно задавать не надо */
+  --on-head-soft: color-mix(in srgb, var(--on-head) 16%, transparent);
+  --on-head-soft-2: color-mix(in srgb, var(--on-head) 28%, transparent);
+
+  --radius: 18px;
+  --font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+:root[data-mode="dark"] {
+  --primary: var(--d-primary);
+  --primary-dark: var(--d-primary-dark);
+  --on-primary: var(--d-on-primary);
+  --accent-ink: var(--d-accent-ink);
+  --head: var(--d-head);
+  --on-head: var(--d-on-head);
+  --bg: var(--d-bg);
+  --card: var(--d-card);
+  --ink: var(--d-ink);
+  --muted: var(--d-muted);
+  --line: var(--d-line);
+  --soft: var(--d-soft);
+  --soft2: var(--d-soft2);
+  --bar-a: var(--d-bar-a);
+  --bar-b: var(--d-bar-b);
+  --ok: var(--d-ok);
+  --ok-bg: var(--d-ok-bg);
+  --ok-ink: var(--d-ok-ink);
+  --danger: var(--d-danger);
+  --danger-bg: var(--d-danger-bg);
+  --danger-ink: var(--d-danger-ink);
+  --warn-bg: var(--d-warn-bg);
+  --warn-ink: var(--d-warn-ink);
+
+  --overlay: rgba(0, 0, 0, 0.62);
+  --shadow: 0 1px 2px rgba(0, 0, 0, 0.5), 0 4px 16px rgba(0, 0, 0, 0.45);
+  --shadow-lg: 0 2px 6px rgba(0, 0, 0, 0.5), 0 12px 32px rgba(0, 0, 0, 0.6);
+  color-scheme: dark;
+}

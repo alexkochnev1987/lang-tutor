@@ -1,0 +1,38 @@
+import type { Metadata, Viewport } from 'next'
+import { IntlProvider } from './_providers/IntlProvider'
+import { ThemeInit } from './_providers/ThemeInit'
+import { ThemeScript } from './_providers/ThemeScript'
+import './globals.css'
+
+export const metadata: Metadata = {
+  title: 'Polski B1',
+  description: 'Подготовка к государственному экзамену по польскому языку B1',
+  manifest: '/manifest.webmanifest',
+  appleWebApp: { capable: true, statusBarStyle: 'default', title: 'Polski B1' },
+}
+
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  viewportFit: 'cover',
+  // UX_UI.md §1.5б: без этого виртуальная клавиатура накрывает поле ввода,
+  // а 100dvh продолжает считаться по полной высоте
+  interactiveWidget: 'resizes-content',
+  // Конкретное значение ставит lib/theme из активного токена --head:
+  // у каждой палитры своя шапка
+  themeColor: '#1d1d20',
+}
+
+export default function RootLayout({ children }: { children: React.ReactNode }) {
+  return (
+    <html lang="ru" suppressHydrationWarning>
+      <head>
+        <ThemeScript />
+      </head>
+      <body>
+        <ThemeInit />
+        <IntlProvider>{children}</IntlProvider>
+      </body>
+    </html>
+  )
+}

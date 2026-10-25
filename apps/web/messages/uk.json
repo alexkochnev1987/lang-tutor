@@ -1,0 +1,76 @@
+{
+  "app": {
+    "name": "Polski B1",
+    "tagline": "Підготовка до державного іспиту"
+  },
+  "nav": {
+    "today": "Сьогодні",
+    "plan": "Програма",
+    "dictionary": "Словник",
+    "progress": "Прогрес"
+  },
+  "today": {
+    "title": "Заняття на сьогодні",
+    "day": "День {day} з {total}",
+    "start": "Почати · {minutes} хв",
+    "done": "Готово на сьогодні",
+    "streak": "{count, plural, one {# день} few {# дні} other {# днів}} поспіль",
+    "wordsDue": "{count, plural, =0 {немає слів на повторення} one {# слово на повторення} few {# слова на повторення} other {# слів на повторення}}"
+  },
+  "lesson": {
+    "check": "Перевірити",
+    "next": "Далі",
+    "finish": "Завершити",
+    "progress": "{done} з {total}",
+    "correct": "Правильно",
+    "wrong": "Помилка",
+    "correctAnswerIs": "Правильно: {answer}",
+    "playAudio": "Вимовити"
+  },
+  "exam": {
+    "readiness": "Готовність до іспиту",
+    "modules": {
+      "listening": "Аудіювання",
+      "reading": "Читання",
+      "grammar": "Граматика",
+      "writing": "Письмо",
+      "speaking": "Говоріння"
+    },
+    "threshold": "Поріг — 50% у кожному модулі",
+    "weakest": "Найслабше: {module}"
+  },
+  "settings": {
+    "title": "Налаштування",
+    "uiLanguage": "Мова інтерфейсу",
+    "theme": "Тема",
+    "themeLight": "Світла",
+    "themeDark": "Темна",
+    "themeSystem": "Як у системі",
+    "voice": "Голос",
+    "rate": "Темп мовлення",
+    "dailyBudget": "Хвилин на день",
+    "appearance": "Оформлення",
+    "appearanceHint": "Оберіть тему та кольорову палітру",
+    "palette": "Палітра",
+    "done": "Готово"
+  },
+  "auth": {
+    "signIn": "Увійти",
+    "signOut": "Вийти",
+    "signedInAs": "Ви увійшли як {name}",
+    "localOnly": "Дані зберігаються лише на цьому пристрої. Вхід потрібен для майбутньої синхронізації.",
+    "unavailable": "Вхід через Google не налаштовано"
+  },
+  "errors": {
+    "noVoice": "На пристрої немає голосу для польської мови",
+    "noVoiceHint": "Налаштування → Доступність → Усний контент → Голоси → Польська",
+    "generic": "Щось пішло не так",
+    "retry": "Повторити"
+  },
+  "common": {
+    "cancel": "Скасувати",
+    "save": "Зберегти",
+    "close": "Закрити",
+    "loading": "Завантаження…"
+  }
+}

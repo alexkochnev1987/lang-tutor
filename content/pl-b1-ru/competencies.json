@@ -1,0 +1,219 @@
+{
+  "$schema": "./competencies.schema.json",
+  "certificationTargetId": "pl-state-b1-adults",
+  "version": "2026-10-24",
+
+  "_meta": {
+    "source": "Dz.U. 2018 poz. 1386, załącznik nr 1, część II, rozdz. E",
+    "secondarySource": "NAWA «Przetestuj swój polski!», UWr 2023 — типы заданий и практика",
+    "why": "Граф грамматики покрывает только модули grammar/writing/speaking. Аудирование и чтение — это НАВЫКИ, а не правила, и их нельзя вывести из списка грамматики. Компетенции — отдельная сущность, иначе два модуля из пяти останутся без плана.",
+    "idScheme": "pl-b1.<модуль>.<навык>"
+  },
+
+  "competencies": [
+    {
+      "id": "pl-b1.listening.global",
+      "moduleId": "listening",
+      "title": { "ru": "Глобальное понимание на слух", "pl": "Rozumienie globalne" },
+      "description": "Понять главную мысль и коммуникативное намерение звучащего текста в нормальном темпе, в хороших, но не идеальных акустических условиях.",
+      "taskTypes": ["multiple-choice", "true-false", "matching"],
+      "weight": 0.3,
+      "sourceRef": "1.1"
+    },
+    {
+      "id": "pl-b1.listening.detail",
+      "moduleId": "listening",
+      "title": { "ru": "Детальное понимание на слух", "pl": "Rozumienie szczegółowe" },
+      "description": "Найти конкретную информацию в высказывании с прозрачной структурой: время, цену, номер платформы, имя.",
+      "taskTypes": ["gap-fill-from-audio", "multiple-choice", "iconographic"],
+      "weight": 0.35,
+      "notes": "В заданиях с пропусками оценивается правильность НАПИСАНИЯ услышанного — связывает аудирование с орфографией.",
+      "sourceRef": "1.1 + NAWA, типы заданий"
+    },
+    {
+      "id": "pl-b1.listening.dialogue",
+      "moduleId": "listening",
+      "title": { "ru": "Диалог и полилог", "pl": "Dialog i polilog" },
+      "description": "Понимать короткие диалоги (в т. ч. телефонные) и фрагменты полилогов — простых обсуждений на общие темы.",
+      "taskTypes": ["matching", "multiple-choice"],
+      "weight": 0.2,
+      "sourceRef": "1.2 п. 2–3"
+    },
+    {
+      "id": "pl-b1.listening.media",
+      "moduleId": "listening",
+      "title": { "ru": "Фрагменты радио и ТВ", "pl": "Fragmenty programów radiowych i TV" },
+      "description": "Понимать короткие фрагменты радио- и телепрограмм, связанных с повседневной жизнью и интересами.",
+      "taskTypes": ["multiple-choice", "true-false"],
+      "weight": 0.15,
+      "risk": "high",
+      "notes": "Оригинальные неадаптированные записи. Синтезом речи не тренируется — требует внешнего материала. См. AUDIO_AND_PRONUNCIATION.md §5.",
+      "sourceRef": "1.2 п. 6"
+    },
+
+    {
+      "id": "pl-b1.reading.signs",
+      "moduleId": "reading",
+      "title": { "ru": "Вывески и объявления", "pl": "Napisy i ogłoszenia" },
+      "description": "Понимать отдельные надписи интенциональные (Palenie wzbronione) и тематические (Sklep czynny od 8 do 21).",
+      "taskTypes": ["matching", "multiple-choice"],
+      "weight": 0.15,
+      "sourceRef": "3.2 п. 1 + NAWA"
+    },
+    {
+      "id": "pl-b1.reading.global",
+      "moduleId": "reading",
+      "title": { "ru": "Глобальное понимание текста", "pl": "Rozumienie globalne" },
+      "description": "Понять главную мысль и намерение текста о повседневной или профессиональной жизни.",
+      "taskTypes": ["multiple-choice", "true-false", "gap-fill-sentences"],
+      "weight": 0.3,
+      "sourceRef": "3.1"
+    },
+    {
+      "id": "pl-b1.reading.selective",
+      "moduleId": "reading",
+      "title": { "ru": "Селективное и детальное чтение", "pl": "Rozumienie selektywne i szczegółowe" },
+      "description": "Найти конкретную информацию в расписании, меню, объявлении, формуляре, газетной заметке.",
+      "taskTypes": ["matching", "gap-fill-words", "true-false"],
+      "weight": 0.3,
+      "sourceRef": "3.1 + 3.2 п. 4"
+    },
+    {
+      "id": "pl-b1.reading.argument",
+      "moduleId": "reading",
+      "title": { "ru": "Аргументативный текст", "pl": "Tekst argumentacyjny" },
+      "description": "Распознать главное сообщение и аргументы прозрачно построенного аргументативного текста на знакомую тему.",
+      "taskTypes": ["multiple-choice", "gap-fill-sentences"],
+      "weight": 0.25,
+      "notes": "Единственная компетенция чтения, выходящая за рамки «найти факт». Вводить в фазе 3.",
+      "sourceRef": "3.1"
+    },
+
+    {
+      "id": "pl-b1.grammar.recognize",
+      "moduleId": "grammar",
+      "title": { "ru": "Узнавание правильной формы", "pl": "Rozpoznawanie poprawnych form" },
+      "description": "Выбрать грамматически правильную форму из предложенных. Закрытые задания экзамена.",
+      "taskTypes": ["closed-choice"],
+      "weight": 0.5,
+      "notes": "NAWA: за одни только закрытые задания можно взять 15–17,5 из 30 — формально порог. Но это хрупкая стратегия.",
+      "sourceRef": "2.1 + NAWA, типы заданий"
+    },
+    {
+      "id": "pl-b1.grammar.produce",
+      "moduleId": "grammar",
+      "title": { "ru": "Образование формы", "pl": "Tworzenie form gramatycznych" },
+      "description": "Самостоятельно образовать требуемую форму слова в контексте. Открытые задания.",
+      "taskTypes": ["open-form-production"],
+      "weight": 0.3,
+      "notes": "Оценивается строго: понятные, но грамматически неверные формы баллов не получают.",
+      "sourceRef": "2.1 + NAWA"
+    },
+    {
+      "id": "pl-b1.grammar.transform",
+      "moduleId": "grammar",
+      "title": { "ru": "Трансформация", "pl": "Transformacje" },
+      "description": "Перестроить предложение с сохранением смысла: утверждение → отрицание, ед. → мн. ч., наст. → прош.",
+      "taskTypes": ["open-transformation"],
+      "weight": 0.2,
+      "sourceRef": "NAWA, типы заданий"
+    },
+
+    {
+      "id": "pl-b1.writing.short-forms",
+      "moduleId": "writing",
+      "title": { "ru": "Короткие формы 20–40 слов", "pl": "Krótkie formy wypowiedzi" },
+      "description": "Пожелания, приветы, приглашение, объявление, SMS. Задание «a» в экзаменационном комплекте.",
+      "forms": ["życzenia", "pozdrowienia", "zaproszenie", "ogłoszenie", "sms"],
+      "weight": 0.3,
+      "notes": "Жёсткая структура: место и дата, обращение в звательном падеже, текст, подпись. Отсутствие элемента — потеря баллов за форму.",
+      "sourceRef": "4.2 + NAWA, примеры комплектов"
+    },
+    {
+      "id": "pl-b1.writing.descriptive",
+      "moduleId": "writing",
+      "title": { "ru": "Описание 160–180 слов", "pl": "Formy opisowe" },
+      "description": "Описание человека, предмета, места, ситуации; характеристика лица.",
+      "forms": ["opis osoby", "opis przedmiotu", "opis miejsca", "opis sytuacji", "charakterystyka osoby"],
+      "weight": 0.25,
+      "sourceRef": "4.2"
+    },
+    {
+      "id": "pl-b1.writing.narrative",
+      "moduleId": "writing",
+      "title": { "ru": "Повествование и отчёт", "pl": "Opowiadanie i sprawozdanie" },
+      "description": "Рассказ о событии в хронологическом порядке, отчёт о поездке или мероприятии.",
+      "forms": ["opowiadanie", "sprawozdanie", "list prywatny"],
+      "weight": 0.25,
+      "notes": "⚠️ sprawozdanie в тексте стандарта для B1 прямо не названо, но присутствует в примерах NAWA как реальная тема. Готовим по расширенному списку: риск недоподготовки опаснее лишней формы.",
+      "sourceRef": "NAWA, расширенный список форм"
+    },
+    {
+      "id": "pl-b1.writing.opinion",
+      "moduleId": "writing",
+      "title": { "ru": "Мнение и эссе", "pl": "Esej, recenzja" },
+      "description": "Высказать и обосновать точку зрения на заданную тему.",
+      "forms": ["esej", "recenzja", "wypracowanie"],
+      "weight": 0.2,
+      "notes": "Самая трудная форма. Пример из NAWA: «Co oznaczają określenia „prawdziwy mężczyzna\" i „stuprocentowa kobieta\"?»",
+      "sourceRef": "NAWA"
+    },
+    {
+      "id": "pl-b1.writing.orthography",
+      "moduleId": "writing",
+      "title": { "ru": "Орфография и пунктуация", "pl": "Ortografia i interpunkcja" },
+      "description": "Правильная запись польских букв, основы правописания прописных/строчных, основы пунктуации.",
+      "weight": 0.0,
+      "notes": "Весовой коэффициент 0: это не отдельное задание, а один из пяти критериев оценки каждой письменной работы. Отслеживается сквозной метрикой.",
+      "crossCutting": true,
+      "sourceRef": "4.1"
+    },
+
+    {
+      "id": "pl-b1.speaking.photo",
+      "moduleId": "speaking",
+      "title": { "ru": "Описание фотографии", "pl": "Opis fotografii" },
+      "description": "Описать людей, предметы, место и действия на фотографии, включая динамику: что было — есть — будет.",
+      "taskTypes": ["photo-description"],
+      "weight": 0.33,
+      "requiredVocabulary": ["внешность", "эмоции", "одежда", "расположение в пространстве", "цвета", "погода", "время суток"],
+      "usefulPhrases": ["Na pierwszym planie…", "W tle…", "Po lewej stronie…", "Wydaje mi się, że…"],
+      "sourceRef": "NAWA, Mówienie, zadanie A"
+    },
+    {
+      "id": "pl-b1.speaking.monologue",
+      "moduleId": "speaking",
+      "title": { "ru": "Монолог на тему", "pl": "Monolog" },
+      "description": "Связное высказывание о своих интересах, опыте, планах; пересказ книги или фильма с кратким комментарием; мнение с обоснованием.",
+      "taskTypes": ["monologue"],
+      "weight": 0.33,
+      "sourceRef": "5.2 п. 1 + NAWA, zadanie B"
+    },
+    {
+      "id": "pl-b1.speaking.dialogue",
+      "moduleId": "speaking",
+      "title": { "ru": "Коммуникативная ситуация", "pl": "Sytuacja komunikacyjna" },
+      "description": "Диалог с экзаменатором: разыграть бытовую ситуацию — просьба, предложение, жалоба, запись к врачу, телефонный разговор.",
+      "taskTypes": ["dialogue"],
+      "weight": 0.34,
+      "notes": "Экзаменатор обращается на Pan/Pani. Ошибка в вежливой форме читается как невежливость — см. правило pl.gram.p-formal-pan.",
+      "sourceRef": "5.2 п. 2 + NAWA, zadanie C"
+    },
+    {
+      "id": "pl-b1.speaking.pronunciation",
+      "moduleId": "speaking",
+      "title": { "ru": "Произношение и интонация", "pl": "Wymowa i intonacja" },
+      "description": "Ударение на предпоследнем слоге и его исключения; интонация вопроса, утверждения, приказа.",
+      "weight": 0.0,
+      "crossCutting": true,
+      "notes": "Один из пяти критериев оценки устной части, не отдельное задание. Стандарт допускает заметный родной акцент, если он не мешает пониманию — гнаться за фонетической точностью не нужно.",
+      "sourceRef": "5.1 + NAWA, Wymagania w zakresie wymowy"
+    }
+  ],
+
+  "crossModuleNotes": [
+    "Порог 50% считается по КАЖДОМУ модулю отдельно. Генератор урока обязан подтягивать слабейший модуль, а не наращивать средний балл.",
+    "Аудирование весит 40 баллов — больше любого другого модуля, и при этом хуже всех тренируется в 15-минутном формате. Это главный риск программы.",
+    "Компетенции с weight = 0 (орфография, произношение) — сквозные критерии оценки, а не отдельные задания. Они отслеживаются по ошибкам в работах других модулей."
+  ]
+}

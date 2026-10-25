@@ -1,0 +1,104 @@
+@import "tailwindcss";
+
+/* Сырые цвета палитр и слой выбора активных токенов.
+   Порядок важен: palettes → tokens → @theme. */
+@import "./theme/palettes.css";
+@import "./theme/tokens.css";
+
+/* Tailwind 4 по умолчанию не сканирует node_modules, а @polski/ui
+   симлинкнут именно туда. Без этой строки классы из пакета
+   не попадают в сборку и вёрстка разъезжается. */
+@source "../../../packages/ui/src";
+
+/* ──────────────────────────────────────────────────────────────
+   Мост в Tailwind.
+   `inline` принципиально: без него Tailwind подставит ВЫЧИСЛЕННОЕ
+   значение переменной на этапе сборки, и смена палитры в рантайме
+   перестанет работать. С `inline` в CSS попадает сама var().
+   ────────────────────────────────────────────────────────────── */
+@theme inline {
+  /* Брейкпоинты — четыре размера из UX_UI.md §1.2 */
+  --breakpoint-sm: 30rem;   /*  480px  крупный телефон         */
+  --breakpoint-md: 48rem;   /*  768px  планшет / телефон лёжа  */
+  --breakpoint-lg: 64rem;   /* 1024px  ноутбук                 */
+  --breakpoint-xl: 90rem;   /* 1440px  большой монитор         */
+
+  /* 23 семантических токена из контракта palettes.css.
+     Литеральных цветов в компонентах быть не должно — R6. */
+  --color-primary:      var(--primary);
+  --color-primary-dark: var(--primary-dark);
+  --color-on-primary:   var(--on-primary);
+  --color-accent-ink:   var(--accent-ink);
+  --color-head:         var(--head);
+  --color-on-head:      var(--on-head);
+  --color-bg:           var(--bg);
+  --color-card:         var(--card);
+  --color-ink:          var(--ink);
+  --color-muted:        var(--muted);
+  --color-line:         var(--line);
+  --color-soft:         var(--soft);
+  --color-soft2:        var(--soft2);
+  --color-bar-a:        var(--bar-a);
+  --color-bar-b:        var(--bar-b);
+  --color-ok:           var(--ok);
+  --color-ok-bg:        var(--ok-bg);
+  --color-ok-ink:       var(--ok-ink);
+  --color-danger:       var(--danger);
+  --color-danger-bg:    var(--danger-bg);
+  --color-danger-ink:   var(--danger-ink);
+  --color-warn-bg:      var(--warn-bg);
+  --color-warn-ink:     var(--warn-ink);
+  --color-overlay:      var(--overlay);
+
+  --radius-card: var(--radius);
+  --radius-pill: 999px;
+
+  --shadow-card: var(--shadow);
+  --shadow-modal: var(--shadow-lg);
+
+  --font-sans: var(--font);
+
+  /* Карточка упражнения не растягивается на широких экранах.
+     UX_UI.md §1.1 — лишнее место уходит в зону контекста. */
+  --container-exercise: 36rem;
+}
+
+/* ──────────────────────────────────────────────────────────────
+   База
+   ────────────────────────────────────────────────────────────── */
+html {
+  background: var(--bg);
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font);
+  /* UX_UI.md §1.5a: 100vh на мобильных врёт из-за адресной строки */
+  min-height: 100dvh;
+  overscroll-behavior-y: none;
+}
+
+/* UX_UI.md §1.6: < 16px заставляет iOS Safari зумить страницу
+   при фокусе в поле и обратно не возвращать */
+input, select, textarea {
+  font-size: max(1rem, 16px);
+}
+
+/* Телефон лёжа: ~400px высоты, с клавиатурой вдвое меньше */
+@media (max-height: 30rem) {
+  .u-hide-on-short { display: none; }
+}
+
+:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}

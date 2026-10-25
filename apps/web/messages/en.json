@@ -1,0 +1,76 @@
+{
+  "app": {
+    "name": "Polski B1",
+    "tagline": "Polish state certificate exam prep"
+  },
+  "nav": {
+    "today": "Today",
+    "plan": "Plan",
+    "dictionary": "Dictionary",
+    "progress": "Progress"
+  },
+  "today": {
+    "title": "Today's lesson",
+    "day": "Day {day} of {total}",
+    "start": "Start · {minutes} min",
+    "done": "Done for today",
+    "streak": "{count, plural, one {# day} other {# days}} in a row",
+    "wordsDue": "{count, plural, =0 {nothing to review} one {# word to review} other {# words to review}}"
+  },
+  "lesson": {
+    "check": "Check",
+    "next": "Next",
+    "finish": "Finish",
+    "progress": "{done} of {total}",
+    "correct": "Correct",
+    "wrong": "Wrong",
+    "correctAnswerIs": "Correct: {answer}",
+    "playAudio": "Pronounce"
+  },
+  "exam": {
+    "readiness": "Exam readiness",
+    "modules": {
+      "listening": "Listening",
+      "reading": "Reading",
+      "grammar": "Grammar",
+      "writing": "Writing",
+      "speaking": "Speaking"
+    },
+    "threshold": "You need 50% in every module",
+    "weakest": "Weakest: {module}"
+  },
+  "settings": {
+    "title": "Settings",
+    "uiLanguage": "Interface language",
+    "theme": "Theme",
+    "themeLight": "Light",
+    "themeDark": "Dark",
+    "themeSystem": "System",
+    "voice": "Voice",
+    "rate": "Speech rate",
+    "dailyBudget": "Minutes per day",
+    "appearance": "Appearance",
+    "appearanceHint": "Pick a theme and a colour palette",
+    "palette": "Palette",
+    "done": "Done"
+  },
+  "auth": {
+    "signIn": "Sign in",
+    "signOut": "Sign out",
+    "signedInAs": "Signed in as {name}",
+    "localOnly": "Data stays on this device. Sign-in is groundwork for future sync.",
+    "unavailable": "Google sign-in is not configured"
+  },
+  "errors": {
+    "noVoice": "No Polish voice installed on this device",
+    "noVoiceHint": "Settings → Accessibility → Spoken Content → Voices → Polish",
+    "generic": "Something went wrong",
+    "retry": "Retry"
+  },
+  "common": {
+    "cancel": "Cancel",
+    "save": "Save",
+    "close": "Close",
+    "loading": "Loading…"
+  }
+}

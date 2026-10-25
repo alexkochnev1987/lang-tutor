@@ -1,0 +1,7518 @@
+{
+ "$schema": "./curriculum.schema.json",
+ "courseId": "pl-b1-ru",
+ "certificationTargetId": "pl-state-b1-adults",
+ "version": "2026-10-25",
+ "generatedBy": "scripts/build-curriculum.mjs",
+ "_meta": {
+  "warning": "ФАЙЛ СГЕНЕРИРОВАН. Правки вносятся в build-curriculum.mjs или в grammar-rules.json, не сюда."
+ },
+ "params": {
+  "totalDays": 182,
+  "daysPerWeek": 7,
+  "dailyBudgetSec": 900,
+  "weekRhythm": [
+   "new",
+   "new",
+   "new",
+   "new",
+   "new",
+   "consolidation",
+   "weekly-check"
+  ],
+  "checkpointEvery": 28,
+  "phases": [
+   {
+    "id": 1,
+    "from": 1,
+    "to": 28,
+    "title": "Фундамент",
+    "goal": "Род, число, мужско-личность, базовые спряжения, первые падежи. Цель фазы — собрать простое предложение.",
+    "budget": {
+     "review": 180,
+     "newGrammar": 240,
+     "practice": 300,
+     "exam": 120,
+     "analysis": 60
+    },
+    "newWordsPerDay": 6
+   },
+   {
+    "id": 2,
+    "from": 29,
+    "to": 84,
+    "title": "Падежная система",
+    "goal": "Все семь падежей с существительным, прилагательным и местоимением. Времена и вид глагола.",
+    "budget": {
+     "review": 240,
+     "newGrammar": 180,
+     "practice": 300,
+     "exam": 120,
+     "analysis": 60
+    },
+    "newWordsPerDay": 7
+   },
+   {
+    "id": 3,
+    "from": 85,
+    "to": 140,
+    "title": "Синтаксис и формат экзамена",
+    "goal": "Сложные предложения, степени сравнения, числительные. Параллельно — все типы экзаменационных заданий.",
+    "budget": {
+     "review": 240,
+     "newGrammar": 120,
+     "practice": 240,
+     "exam": 240,
+     "analysis": 60
+    },
+    "newWordsPerDay": 6
+   },
+   {
+    "id": 4,
+    "from": 141,
+    "to": 182,
+    "title": "Экзаменационный тренинг",
+    "goal": "Новой грамматики нет. Пробные модули, разбор ошибок, письменные формы, устные сценарии.",
+    "budget": {
+     "review": 240,
+     "newGrammar": 0,
+     "practice": 180,
+     "exam": 420,
+     "analysis": 60
+    },
+    "newWordsPerDay": 3
+   }
+  ],
+  "themes": [
+   {
+    "id": "7.1",
+    "ru": "Человек"
+   },
+   {
+    "id": "7.2",
+    "ru": "Дом и жильё"
+   },
+   {
+    "id": "7.3",
+    "ru": "Повседневная жизнь"
+   },
+   {
+    "id": "7.4",
+    "ru": "Досуг"
+   },
+   {
+    "id": "7.5",
+    "ru": "Путешествия"
+   },
+   {
+    "id": "7.6",
+    "ru": "Общество"
+   },
+   {
+    "id": "7.7",
+    "ru": "Здоровье"
+   },
+   {
+    "id": "7.8",
+    "ru": "Образование"
+   },
+   {
+    "id": "7.9",
+    "ru": "Работа"
+   },
+   {
+    "id": "7.10",
+    "ru": "Покупки"
+   },
+   {
+    "id": "7.11",
+    "ru": "Еда и напитки"
+   },
+   {
+    "id": "7.12",
+    "ru": "Услуги"
+   },
+   {
+    "id": "7.13",
+    "ru": "Места"
+   },
+   {
+    "id": "7.14",
+    "ru": "Природа"
+   },
+   {
+    "id": "7.15",
+    "ru": "Традиции и праздники"
+   },
+   {
+    "id": "7.16",
+    "ru": "Общие темы"
+   }
+  ]
+ },
+ "stats": {
+  "totalDays": 182,
+  "rulesIntroduced": 66,
+  "totalNewWords": 804,
+  "byKind": {
+   "diagnostic": 1,
+   "new": 129,
+   "consolidation": 26,
+   "weekly-check": 19,
+   "checkpoint": 6,
+   "final": 1
+  },
+  "totalMinutes": 2730
+ },
+ "days": [
+  {
+   "day": 1,
+   "week": 1,
+   "phase": 1,
+   "phaseTitle": "Фундамент",
+   "kind": "diagnostic",
+   "topic": "Входная диагностика",
+   "themeId": "7.1",
+   "themeRu": "Человек",
+   "grammarRuleIds": [],
+   "isNewRule": false,
+   "reviewRuleIds": [],
+   "newWordCount": 0,
+   "exerciseKinds": [
+    "placement-test"
+   ],
+   "examFocus": "reading",
+   "competencyIds": [
+    "pl-b1.reading.global"
+   ],
+   "timeBudgetSec": {
+    "review": 0,
+    "newGrammar": 0,
+    "practice": 0,
+    "exam": 840,
+    "analysis": 60
+   },
+   "totalSec": 900,
+   "expectedOutcome": "Определён входной трек: A0, A2 или B1−. Программа подстроена под результат.",
+   "interferenceRisk": null,
+   "lexemeIds": []
+  },
+  {
+   "day": 2,
+   "week": 1,
+   "phase": 1,
+   "phaseTitle": "Фундамент",
+   "kind": "new",
+   "topic": "Глагол «быть» в настоящем",
+   "themeId": "7.1",
+   "themeRu": "Человек",
+   "grammarRuleIds": [
+    "pl.gram.v-byc"
+   ],
+   "isNewRule": true,
+   "reviewRuleIds": [],
+   "newWordCount": 6,
+   "exerciseKinds": [
+    "conjugate",
+    "gap-fill",
+    "translate-to-target"
+   ],
+   "examFocus": "grammar",
+   "competencyIds": [
+    "pl-b1.grammar.transform"
+   ],
+   "timeBudgetSec": {
+    "review": 180,
+    "newGrammar": 240,
+    "practice": 300,
+    "exam": 120,
+    "analysis": 60
+   },
+   "totalSec": 900,
+   "expectedOutcome": "Правило «Глагол «быть» в настоящем» введено и отработано на теме «Человек».",
+   "interferenceRisk": 5,
+   "lexemeIds": [
+    "pl.uroda",
+    "pl.rodzina",
+    "pl.bielizna",
+    "pl.grzeczny",
+    "pl.imie",
+    "pl.nazwisko"
+   ]
+  },
+  {
+   "day": 3,
+   "week": 1,
+   "phase": 1,
+   "phaseTitle": "Фундамент",
+   "kind": "new",
+   "topic": "III спряжение: -am, -asz",
+   "themeId": "7.1",
+   "themeRu": "Человек",
+   "grammarRuleIds": [
+    "pl.gram.v-present-3"
+   ],
+   "isNewRule": true,
+   "reviewRuleIds": [
+    "pl.gram.v-byc"
+   ],
+   "newWordCount": 6,
+   "exerciseKinds": [
+    "conjugate"
+   ],
+   "examFocus": "listening",
+   "competencyIds": [
+    "pl-b1.listening.media"
+   ],
+   "timeBudgetSec": {
+    "review": 180,
+    "newGrammar": 240,
+    "practice": 300,
+    "exam": 120,
+    "analysis": 60
+   },
+   "totalSec": 900,
+   "expectedOutcome": "Правило «III спряжение: -am, -asz» введено и отработано на теме «Человек».",
+   "interferenceRisk": 2,
+   "lexemeIds": [
+    "pl.wiek",
+    "pl.zawod",
+    "pl.wyksztalcenie",
+    "pl.maz",
+    "pl.zona",
+    "pl.dziecko"
+   ]
+  },
+  {
+   "day": 4,
+   "week": 1,
+   "phase": 1,
+   "phaseTitle": "Фундамент",
+   "kind": "new",
+   "topic": "Алфавит и орфография",
+   "themeId": "7.1",
+   "themeRu": "Человек",
+   "grammarRuleIds": [
+    "pl.gram.alphabet-orthography"
+   ],
+   "isNewRule": true,
+   "reviewRuleIds": [
+    "pl.gram.v-byc",
+    "pl.gram.v-present-3"
+   ],
+   "newWordCount": 6,
+   "exerciseKinds": [
+    "spelling",
+    "gap-fill",
+    "error-correction"
+   ],
+   "examFocus": "writing",
+   "competencyIds": [
+    "pl-b1.writing.short-forms"
+   ],
+   "timeBudgetSec": {
+    "review": 180,
+    "newGrammar": 240,
+    "practice": 300,
+    "exam": 120,
+    "analysis": 60
+   },
+   "totalSec": 900,
+   "expectedOutcome": "Правило «Алфавит и орфография» введено и отработано на теме «Человек».",
+   "interferenceRisk": 4,
+   "lexemeIds": [
+    "pl.rodzice",
+    "pl.brat",
+    "pl.siostra",
+    "pl.wysoki",
+    "pl.niski",
+    "pl.szczuply"
+   ]
+  },
+  {
+   "day": 5,
+   "week": 1,
+   "phase": 1,
+   "phaseTitle": "Фундамент",
+   "kind": "new",
+   "topic": "Род существительного",
+   "themeId": "7.1",
+   "themeRu": "Человек",
+   "grammarRuleIds": [
+    "pl.gram.gender"
+   ],
+   "isNewRule": true,
+   "reviewRuleIds": [
+    "pl.gram.v-present-3",
+    "pl.gram.alphabet-orthography"
+   ],
+   "newWordCount": 6,
+   "exerciseKinds": [
+    "classify",
+    "multiple-choice"
+   ],
+   "examFocus": "reading",
+   "competencyIds": [
+    "pl-b1.reading.global"
+   ],
+   "timeBudgetSec": {
+    "review": 180,
+    "newGrammar": 240,
+    "practice": 300,
+    "exam": 120,
+    "analysis": 60
+   },
+   "totalSec": 900,
+   "expectedOutcome": "Правило «Род существительного» введено и отработано на теме «Человек».",
+   "interferenceRisk": 3,
+   "lexemeIds": [
+    "pl.wesoly",
+    "pl.smutny",
+    "pl.mily",
+    "pl.niesmialy",
+    "pl.i",
+    "pl.a"
+   ]
+  },
+  {
+   "day": 6,
+   "week": 1,
+   "phase": 1,
+   "phaseTitle": "Фундамент",
+   "kind": "consolidation",
+   "topic": "Закрепление: Человек",
+   "themeId": "7.1",
+   "themeRu": "Человек",
+   "grammarRuleIds": [],
+   "isNewRule": false,
+   "reviewRuleIds": [
+    "pl.gram.v-present-3",
+    "pl.gram.alphabet-orthography"
+   ],
+   "newWordCount": 3,
+   "exerciseKinds": [
+    "drill",
+    "error-correction",
+    "translate-to-target"
+   ],
+   "examFocus": "speaking",
+   "competencyIds": [
+    "pl-b1.speaking.photo"
+   ],
+   "timeBudgetSec": {
+    "review": 300,
+    "newGrammar": 0,
+    "practice": 420,
+    "exam": 120,
+    "analysis": 60
+   },
+   "totalSec": 900,
+   "expectedOutcome": "Правила недели отработаны на новом материале, без ввода нового.",
+   "interferenceRisk": null,
+   "lexemeIds": [
+    "pl.ale",
+    "pl.oraz",
+    "pl.lub"
+   ]
+  },
+  {
+   "day": 7,
+   "week": 1,
+   "phase": 1,
+   "phaseTitle": "Фундамент",
+   "kind": "weekly-check",
+   "topic": "Недельный срез: Человек",
+   "themeId": "7.1",
+   "themeRu": "Человек",
+   "grammarRuleIds": [],
+   "isNewRule": false,
+   "reviewRuleIds": [
+    "pl.gram.v-present-3",
+    "pl.gram.alphabet-orthography"
+   ],
+   "newWordCount": 0,
+   "exerciseKinds": [
+    "mixed-review",
+    "exam-format"
+   ],
+   "examFocus": "listening",
+   "competencyIds": [
+    "pl-b1.listening.media"
+   ],
+   "timeBudgetSec": {
+    "review": 0,
+    "newGrammar": 0,
+    "practice": 180,
+    "exam": 540,
+    "analysis": 180
+   },
+   "totalSec": 900,
+   "expectedOutcome": "Проверено усвоение правил и лексики недели. Ошибки поставлены в очередь на пересдачу.",
+   "interferenceRisk": null,
+   "lexemeIds": []
+  },
+  {
+   "day": 8,
+   "week": 2,
+   "phase": 1,
+   "phaseTitle": "Фундамент",
+   "kind": "new",
+   "topic": "Одушевлённость существительных м. р.",
+   "themeId": "7.2",
+   "themeRu": "Дом и жильё",
+   "grammarRuleIds": [
+    "pl.gram.animacy"
+   ],
+   "isNewRule": true,
+   "reviewRuleIds": [
+    "pl.gram.alphabet-orthography",
+    "pl.gram.gender"
+   ],
+   "newWordCount": 6,
+   "exerciseKinds": [
+    "classify"
+   ],
+   "examFocus": "reading",
+   "competencyIds": [
+    "pl-b1.reading.signs"
+   ],
+   "timeBudgetSec": {
+    "review": 180,
+    "newGrammar": 240,
+    "practice": 300,
+    "exam": 120,
+    "analysis": 60
+   },
+   "totalSec": 900,
+   "expectedOutcome": "Правило «Одушевлённость существительных м. р.» введено и отработано на теме «Дом и жильё».",
+   "interferenceRisk": 1,
+   "lexemeIds": [
+    "pl.dywan",
+    "pl.krzeslo",
+    "pl.lustro",
+    "pl.pukac",
+    "pl.wygodny",
+    "pl.mieszkanie"
+   ]
+  },
+  {
+   "day": 9,
+   "week": 2,
+   "phase": 1,
+   "phaseTitle": "Фундамент",
+   "kind": "new",
+   "topic": "Ударение",
+   "themeId": "7.2",
+   "themeRu": "Дом и жильё",
+   "grammarRuleIds": [
+    "pl.gram.stress"
+   ],
+   "isNewRule": true,
+   "reviewRuleIds": [
+    "pl.gram.gender",
+    "pl.gram.animacy"
+   ],
+   "newWordCount": 6,
+   "exerciseKinds": [
+    "listen-and-mark-stress",
+    "minimal-pairs"
+   ],
+   "examFocus": "grammar",
+   "competencyIds": [
+    "pl-b1.grammar.recognize"
+   ],
+   "timeBudgetSec": {
+    "review": 180,
+    "newGrammar": 240,
+    "practice": 300,
+    "exam": 120,
+    "analysis": 60
+   },
+   "totalSec": 900,
+   "expectedOutcome": "Правило «Ударение» введено и отработано на теме «Дом и жильё».",
+   "interferenceRisk": 5,
+   "lexemeIds": [
+    "pl.dom",
+    "pl.pokoj",
+    "pl.kuchnia",
+    "pl.lazienka",
+    "pl.pietro",
+    "pl.winda"
+   ]
+  },
+  {
+   "day": 10,
+   "week": 2,
+   "phase": 1,
+   "phaseTitle": "Фундамент",
+   "kind": "new",
+   "topic": "IV спряжение: -em, -esz",
+   "themeId": "7.2",
+   "themeRu": "Дом и жильё",
+   "grammarRuleIds": [
+    "pl.gram.v-present-4"
+   ],
+   "isNewRule": true,
+   "reviewRuleIds": [
+    "pl.gram.animacy",
+    "pl.gram.stress"
+   ],
+   "newWordCount": 6,
+   "exerciseKinds": [
+    "conjugate",
+    "choose-correct-verb"
+   ],
+   "examFocus": "listening",
+   "competencyIds": [
+    "pl-b1.listening.dialogue"
+   ],
+   "timeBudgetSec": {
+    "review": 180,
+    "newGrammar": 240,
+    "practice": 300,
+    "exam": 120,
+    "analysis": 60
+   },
+   "totalSec": 900,
+   "expectedOutcome": "Правило «IV спряжение: -em, -esz» введено и отработано на теме «Дом и жильё».",
+   "interferenceRisk": 2,
+   "lexemeIds": [
+    "pl.meble",
+    "pl.szafa",
+    "pl.lozko",
+    "pl.czynsz",
+    "pl.oplata",
+    "pl.albo"
+   ]
+  },
+  {
+   "day": 11,
+   "week": 2,
+   "phase": 1,
+   "phaseTitle": "Фундамент",
+   "kind": "new",
+   "topic": "Множественное число, именительный",
+   "themeId": "7.2",
+   "themeRu": "Дом и жильё",
+   "grammarRuleIds": [
+    "pl.gram.number"
+   ],
+   "isNewRule": true,
+   "reviewRuleIds": [
+    "pl.gram.stress",
+    "pl.gram.v-present-4"
+   ],
+   "newWordCount": 6,
+   "exerciseKinds": [
+    "inflect",
+    "gap-fill"
+   ],
+   "examFocus": "writing",
+   "competencyIds": [
+    "pl-b1.writing.opinion"
+   ],
+   "timeBudgetSec": {
+    "review": 180,
+    "newGrammar": 240,
+    "practice": 300,
+    "exam": 120,
+    "analysis": 60
+   },
+   "totalSec": 900,
+   "expectedOutcome": "Правило «Множественное число, именительный» введено и отработано на теме «Дом и жильё».",
+   "interferenceRisk": 3,
+   "lexemeIds": [
+    "pl.czy",
+    "pl.ze",
+    "pl.zeby",
+    "pl.poniewaz",
+    "pl.bo",
+    "pl.dlatego"
+   ]
+  },
+  {
+   "day": 12,
+   "week": 2,
+   "phase": 1,
+   "phaseTitle": "Фундамент",
+   "kind": "new",
+   "topic": "Именительный падеж",
+   "themeId": "7.2",
+   "themeRu": "Дом и жильё",
+   "grammarRuleIds": [
+    "pl.gram.c-nom"
+   ],
+   "isNewRule": true,
+   "reviewRuleIds": [
+    "pl.gram.v-present-4",
+    "pl.gram.number",
+    "pl.gram.alphabet-orthography"
+   ],
+   "newWordCount": 6,
+   "exerciseKinds": [
+    "inflect",
+    "gap-fill"
+   ],
+   "examFocus": "reading",
+   "competencyIds": [
+    "pl-b1.reading.signs"
+   ],
+   "timeBudgetSec": {
+    "review": 180,
+    "newGrammar": 240,
+    "practice": 300,
+    "exam": 120,
+    "analysis": 60
+   },
+   "totalSec": 900,
+   "expectedOutcome": "Правило «Именительный падеж» введено и отработано на теме «Дом и жильё».",
+   "interferenceRisk": 1,
+   "lexemeIds": [
+    "pl.kiedy",
+    "pl.gdy",
+    "pl.ktory",
+    "pl.jaki",
+    "pl.jesli",
+    "pl.jezeli"
+   ]
+  },
+  {
+   "day": 13,
+   "week": 2,
+   "phase": 1,
+   "phaseTitle": "Фундамент",
+   "kind": "consolidation",
+   "topic": "Закрепление: Дом и жильё",
+   "themeId": "7.2",
+   "themeRu": "Дом и жильё",
+   "grammarRuleIds": [],
+   "isNewRule": false,
+   "reviewRuleIds": [
+    "pl.gram.v-present-4",
+    "pl.gram.number",
+    "pl.gram.gender"
+   ],
+   "newWordCount": 3,
+   "exerciseKinds": [
+    "drill",
+    "error-correction",
+    "translate-to-target"
+   ],
+   "examFocus": "speaking",
+   "competencyIds": [
+    "pl-b1.speaking.monologue"
+   ],
+   "timeBudgetSec": {
+    "review": 300,
+    "newGrammar": 0,
+    "practice": 420,
+    "exam": 120,
+    "analysis": 60
+   },
+   "totalSec": 900,
+   "expectedOutcome": "Правила недели отработаны на новом материале, без ввода нового.",
+   "interferenceRisk": null,
+   "lexemeIds": [
+    "pl.gdyby",
+    "pl.w",
+    "pl.na"
+   ]
+  },
+  {
+   "day": 14,
+   "week": 2,
+   "phase": 1,
+   "phaseTitle": "Фундамент",
+   "kind": "weekly-check",
+   "topic": "Недельный срез: Дом и жильё",
+   "themeId": "7.2",
+   "themeRu": "Дом и жильё",
+   "grammarRuleIds": [],
+   "isNewRule": false,
+   "reviewRuleIds": [
+    "pl.gram.v-present-4",
+    "pl.gram.number",
+    "pl.gram.animacy"
+   ],
+   "newWordCount": 0,
+   "exerciseKinds": [
+    "mixed-review",
+    "exam-format"
+   ],
+   "examFocus": "listening",
+   "competencyIds": [
+    "pl-b1.listening.dialogue"
+   ],
+   "timeBudgetSec": {
+    "review": 0,
+    "newGrammar": 0,
+    "practice": 180,
+    "exam": 540,
+    "analysis": 180
+   },
+   "totalSec": 900,
+   "expectedOutcome": "Проверено усвоение правил и лексики недели. Ошибки поставлены в очередь на пересдачу.",
+   "interferenceRisk": null,
+   "lexemeIds": []
+  },
+  {
+   "day": 15,
+   "week": 3,
+   "phase": 1,
+   "phaseTitle": "Фундамент",
+   "kind": "new",
+   "topic": "Творительный падеж",
+   "themeId": "7.3",
+   "themeRu": "Повседневная жизнь",
+   "grammarRuleIds": [
+    "pl.gram.c-instr"
+   ],
+   "isNewRule": true,
+   "reviewRuleIds": [
+    "pl.gram.number",
+    "pl.gram.c-nom",
+    "pl.gram.gender"
+   ],
+   "newWordCount": 6,
+   "exerciseKinds": [
+    "inflect",
+    "gap-fill"
+   ],
+   "examFocus": "reading",
+   "competencyIds": [
+    "pl-b1.reading.argument"
+   ],
+   "timeBudgetSec": {
+    "review": 180,
+    "newGrammar": 240,
+    "practice": 300,
+    "exam": 120,
+    "analysis": 60
+   },
+   "totalSec": 900,
+   "expectedOutcome": "Правило «Творительный падеж» введено и отработано на теме «Повседневная жизнь».",
+   "interferenceRisk": 2,
+   "lexemeIds": [
+    "pl.rzecz",
+    "pl.zegar",
+    "pl.czas",
+    "pl.godzina",
+    "pl.zapomniec",
+    "pl.rano"
+   ]
+  },
+  {
+   "day": 16,
+   "week": 3,
+   "phase": 1,
+   "phaseTitle": "Фундамент",
+   "kind": "new",
+   "topic": "Указательные местоимения",
+   "themeId": "7.3",
+   "themeRu": "Повседневная жизнь",
+   "grammarRuleIds": [
+    "pl.gram.p-demonstrative"
+   ],
+   "isNewRule": true,
+   "reviewRuleIds": [
+    "pl.gram.c-nom",
+    "pl.gram.c-instr",
+    "pl.gram.alphabet-orthography"
+   ],
+   "newWordCount": 6,
+   "exerciseKinds": [
+    "inflect",
+    "agreement"
+   ],
+   "examFocus": "grammar",
+   "competencyIds": [
+    "pl-b1.grammar.produce"
+   ],
+   "timeBudgetSec": {
+    "review": 180,
+    "newGrammar": 240,
+    "practice": 300,
+    "exam": 120,
+    "analysis": 60
+   },
+   "totalSec": 900,
+   "expectedOutcome": "Правило «Указательные местоимения» введено и отработано на теме «Повседневная жизнь».",
+   "interferenceRisk": 2,
+   "lexemeIds": [
+    "pl.jutro",
+    "pl.tydzien",
+    "pl.miesiac",
+    "pl.poniedzialek",
+    "pl.sroda",
+    "pl.piatek"
+   ]
+  },
+  {
+   "day": 17,
+   "week": 3,
+   "phase": 1,
+   "phaseTitle": "Фундамент",
+   "kind": "new",
+   "topic": "Творительный: глаголы и предлоги",
+   "themeId": "7.3",
+   "themeRu": "Повседневная жизнь",
+   "grammarRuleIds": [
+    "pl.gram.c-instr-verbs"
+   ],
+   "isNewRule": true,
+   "reviewRuleIds": [
+    "pl.gram.c-instr",
+    "pl.gram.p-demonstrative",
+    "pl.gram.v-present-3"
+   ],
+   "newWordCount": 6,
+   "exerciseKinds": [
+    "gap-fill",
+    "translate-to-target"
+   ],
+   "examFocus": "listening",
+   "competencyIds": [
+    "pl-b1.listening.detail"
+   ],
+   "timeBudgetSec": {
+    "review": 180,
+    "newGrammar": 240,
+    "practice": 300,
+    "exam": 120,
+    "analysis": 60
+   },
+   "totalSec": 900,
+   "expectedOutcome": "Правило «Творительный: глаголы и предлоги» введено и отработано на теме «Повседневная жизнь».",
+   "interferenceRisk": 3,
+   "lexemeIds": [
+    "pl.sobota",
+    "pl.niedziela",
+    "pl.wieczor",
+    "pl.poludnie",
+    "pl.klucz",
+    "pl.do"
+   ]
+  },
+  {
+   "day": 18,
+   "week": 3,
+   "phase": 1,
+   "phaseTitle": "Фундамент",
+   "kind": "new",
+   "topic": "Количественные 1–4",
+   "themeId": "7.3",
+   "themeRu": "Повседневная жизнь",
+   "grammarRuleIds": [
+    "pl.gram.n-cardinal-1-4"
+   ],
+   "isNewRule": true,
+   "reviewRuleIds": [
+    "pl.gram.p-demonstrative",
+    "pl.gram.c-instr-verbs",
+    "pl.gram.v-byc"
+   ],
+   "newWordCount": 6,
+   "exerciseKinds": [
+    "agreement",
+    "gap-fill"
+   ],
+   "examFocus": "writing",
+   "competencyIds": [
+    "pl-b1.writing.narrative"
+   ],
+   "timeBudgetSec": {
+    "review": 180,
+    "newGrammar": 240,
+    "practice": 300,
+    "exam": 120,
+    "analysis": 60
+   },
+   "totalSec": 900,
+   "expectedOutcome": "Правило «Количественные 1–4» введено и отработано на теме «Повседневная жизнь».",
+   "interferenceRisk": 3,
+   "lexemeIds": [
+    "pl.z",
+    "pl.od",
+    "pl.bez",
+    "pl.dla",
+    "pl.obok",
+    "pl.przy"
+   ]
+  },
+  {
+   "day": 19,
+   "week": 3,
+   "phase": 1,
+   "phaseTitle": "Фундамент",
+   "kind": "new",
+   "topic": "Порядковые числительные",
+   "themeId": "7.3",
+   "themeRu": "Повседневная жизнь",
+   "grammarRuleIds": [
+    "pl.gram.n-ordinal"
+   ],
+   "isNewRule": true,
+   "reviewRuleIds": [
+    "pl.gram.c-instr-verbs",
+    "pl.gram.n-cardinal-1-4",
+    "pl.gram.c-instr"
+   ],
+   "newWordCount": 6,
+   "exerciseKinds": [
+    "inflect",
+    "gap-fill"
+   ],
+   "examFocus": "reading",
+   "competencyIds": [
+    "pl-b1.reading.argument"
+   ],
+   "timeBudgetSec": {
+    "review": 180,
+    "newGrammar": 240,
+    "practice": 300,
+    "exam": 120,
+    "analysis": 60
+   },
+   "totalSec": 900,
+   "expectedOutcome": "Правило «Порядковые числительные» введено и отработано на теме «Повседневная жизнь».",
+   "interferenceRisk": 2,
+   "lexemeIds": [
+    "pl.przed",
+    "pl.za",
+    "pl.pod",
+    "pl.nad",
+    "pl.miedzy",
+    "pl.przez"
+   ]
+  },
+  {
+   "day": 20,
+   "week": 3,
+   "phase": 1,
+   "phaseTitle": "Фундамент",
+   "kind": "consolidation",
+   "topic": "Закрепление: Повседневная жизнь",
+   "themeId": "7.3",
+   "themeRu": "Повседневная жизнь",
+   "grammarRuleIds": [],
+   "isNewRule": false,
+   "reviewRuleIds": [
+    "pl.gram.c-instr-verbs",
+    "pl.gram.n-cardinal-1-4",
+    "pl.gram.v-byc"
+   ],
+   "newWordCount": 3,
+   "exerciseKinds": [
+    "drill",
+    "error-correction",
+    "translate-to-target"
+   ],
+   "examFocus": "speaking",
+   "competencyIds": [
+    "pl-b1.speaking.dialogue"
+   ],
+   "timeBudgetSec": {
+    "review": 300,
+    "newGrammar": 0,
+    "practice": 420,
+    "exam": 120,
+    "analysis": 60
+   },
+   "totalSec": 900,
+   "expectedOutcome": "Правила недели отработаны на новом материале, без ввода нового.",
+   "interferenceRisk": null,
+   "lexemeIds": [
+    "pl.o",
+    "pl.po",
+    "pl.nikt"
+   ]
+  },
+  {
+   "day": 21,
+   "week": 3,
+   "phase": 1,
+   "phaseTitle": "Фундамент",
+   "kind": "weekly-check",
+   "topic": "Недельный срез: Повседневная жизнь",
+   "themeId": "7.3",
+   "themeRu": "Повседневная жизнь",
+   "grammarRuleIds": [],
+   "isNewRule": false,
+   "reviewRuleIds": [
+    "pl.gram.c-instr-verbs",
+    "pl.gram.n-cardinal-1-4",
+    "pl.gram.v-present-3"
+   ],
+   "newWordCount": 0,
+   "exerciseKinds": [
+    "mixed-review",
+    "exam-format"
+   ],
+   "examFocus": "listening",
+   "competencyIds": [
+    "pl-b1.listening.detail"
+   ],
+   "timeBudgetSec": {
+    "review": 0,
+    "newGrammar": 0,
+    "practice": 180,
+    "exam": 540,
+    "analysis": 180
+   },
+   "totalSec": 900,
+   "expectedOutcome": "Проверено усвоение правил и лексики недели. Ошибки поставлены в очередь на пересдачу.",
+   "interferenceRisk": null,
+   "lexemeIds": []
+  },
+  {
+   "day": 22,
+   "week": 4,
+   "phase": 1,
+   "phaseTitle": "Фундамент",
+   "kind": "new",
+   "topic": "Вопросительные местоимения",
+   "themeId": "7.4",
+   "themeRu": "Досуг",
+   "grammarRuleIds": [
+    "pl.gram.p-interrogative"
+   ],
+   "isNewRule": true,
+   "reviewRuleIds": [
+    "pl.gram.n-cardinal-1-4",
+    "pl.gram.n-ordinal",
+    "pl.gram.v-byc"
+   ],
+   "newWordCount": 6,
+   "exerciseKinds": [
+    "gap-fill",
+    "build-question"
+   ],
+   "examFocus": "reading",
+   "competencyIds": [
+    "pl-b1.reading.selective"
+   ],
+   "timeBudgetSec": {
+    "review": 180,
+    "newGrammar": 240,
+    "practice": 300,
+    "exam": 120,
+    "analysis": 60
+   },
+   "totalSec": 900,
+   "expectedOutcome": "Правило «Вопросительные местоимения» введено и отработано на теме «Досуг».",
+   "interferenceRisk": 3,
+   "lexemeIds": [
+    "pl.lyzwy",
+    "pl.wolny-czas",
+    "pl.film",
+    "pl.ksiazka",
+    "pl.wystawa",
+    "pl.muzeum"
+   ]
+  },
+  {
+   "day": 23,
+   "week": 4,
+   "phase": 1,
+   "phaseTitle": "Фундамент",
+   "kind": "new",
+   "topic": "Вопросительные предложения",
+   "themeId": "7.4",
+   "themeRu": "Досуг",
+   "grammarRuleIds": [
+    "pl.gram.s-questions"
+   ],
+   "isNewRule": true,
+   "reviewRuleIds": [
+    "pl.gram.n-ordinal",
+    "pl.gram.p-interrogative",
+    "pl.gram.c-instr-verbs"
+   ],
+   "newWordCount": 6,
+   "exerciseKinds": [
+    "build-question",
+    "transform"
+   ],
+   "examFocus": "grammar",
+   "competencyIds": [
+    "pl-b1.grammar.transform"
+   ],
+   "timeBudgetSec": {
+    "review": 180,
+    "newGrammar": 240,
+    "practice": 300,
+    "exam": 120,
+    "analysis": 60
+   },
+   "totalSec": 900,
+   "expectedOutcome": "Правило «Вопросительные предложения» введено и отработано на теме «Досуг».",
+   "interferenceRisk": 3,
+   "lexemeIds": [
+    "pl.koncert",
+    "pl.zainteresowanie",
+    "pl.plywac",
+    "pl.biegac",
+    "pl.taniec",
+    "pl.nic"
+   ]
+  },
+  {
+   "day": 24,
+   "week": 4,
+   "phase": 1,
+   "phaseTitle": "Фундамент",
+   "kind": "new",
+   "topic": "Сложносочинённые предложения",
+   "themeId": "7.4",
+   "themeRu": "Досуг",
+   "grammarRuleIds": [
+    "pl.gram.s-coordinate"
+   ],
+   "isNewRule": true,
+   "reviewRuleIds": [
+    "pl.gram.p-interrogative",
+    "pl.gram.s-questions",
+    "pl.gram.c-instr-verbs"
+   ],
+   "newWordCount": 6,
+   "exerciseKinds": [
+    "gap-fill",
+    "combine-sentences"
+   ],
+   "examFocus": "listening",
+   "competencyIds": [
+    "pl-b1.listening.global"
+   ],
+   "timeBudgetSec": {
+    "review": 180,
+    "newGrammar": 240,
+    "practice": 300,
+    "exam": 120,
+    "analysis": 60
+   },
+   "totalSec": 900,
+   "expectedOutcome": "Правило «Сложносочинённые предложения» введено и отработано на теме «Досуг».",
+   "interferenceRisk": 3,
+   "lexemeIds": [
+    "pl.ktos",
+    "pl.cos",
+    "pl.bardzo",
+    "pl.zawsze",
+    "pl.nigdy",
+    "pl.czesto"
+   ]
+  },
+  {
+   "day": 25,
+   "week": 4,
+   "phase": 1,
+   "phaseTitle": "Фундамент",
+   "kind": "new",
+   "topic": "Притяжательные местоимения",
+   "themeId": "7.4",
+   "themeRu": "Досуг",
+   "grammarRuleIds": [
+    "pl.gram.p-possessive"
+   ],
+   "isNewRule": true,
+   "reviewRuleIds": [
+    "pl.gram.s-questions",
+    "pl.gram.s-coordinate",
+    "pl.gram.c-instr-verbs"
+   ],
+   "newWordCount": 6,
+   "exerciseKinds": [
+    "agreement",
+    "gap-fill"
+   ],
+   "examFocus": "writing",
+   "competencyIds": [
+    "pl-b1.writing.descriptive"
+   ],
+   "timeBudgetSec": {
+    "review": 180,
+    "newGrammar": 240,
+    "practice": 300,
+    "exam": 120,
+    "analysis": 60
+   },
+   "totalSec": 900,
+   "expectedOutcome": "Правило «Притяжательные местоимения» введено и отработано на теме «Досуг».",
+   "interferenceRisk": 2,
+   "lexemeIds": [
+    "pl.czasem",
+    "pl.juz",
+    "pl.jeszcze",
+    "pl.tylko",
+    "pl.tez",
+    "pl.takze"
+   ]
+  },
+  {
+   "day": 26,
+   "week": 4,
+   "phase": 1,
+   "phaseTitle": "Фундамент",
+   "kind": "new",
+   "topic": "Прошедшее время, ед. ч.",
+   "themeId": "7.4",
+   "themeRu": "Досуг",
+   "grammarRuleIds": [
+    "pl.gram.v-past-sg"
+   ],
+   "isNewRule": true,
+   "reviewRuleIds": [
+    "pl.gram.s-coordinate",
+    "pl.gram.p-possessive",
+    "pl.gram.c-instr-verbs"
+   ],
+   "newWordCount": 6,
+   "exerciseKinds": [
+    "conjugate",
+    "transform",
+    "gap-fill"
+   ],
+   "examFocus": "reading",
+   "competencyIds": [
+    "pl-b1.reading.selective"
+   ],
+   "timeBudgetSec": {
+    "review": 180,
+    "newGrammar": 240,
+    "practice": 300,
+    "exam": 120,
+    "analysis": 60
+   },
+   "totalSec": 900,
+   "expectedOutcome": "Правило «Прошедшее время, ед. ч.» введено и отработано на теме «Досуг».",
+   "interferenceRisk": 4,
+   "lexemeIds": [
+    "pl.teraz",
+    "pl.potem",
+    "pl.wczoraj",
+    "pl.dzisiaj",
+    "pl.zaraz",
+    "pl.moze"
+   ]
+  },
+  {
+   "day": 27,
+   "week": 4,
+   "phase": 1,
+   "phaseTitle": "Фундамент",
+   "kind": "consolidation",
+   "topic": "Закрепление: Досуг",
+   "themeId": "7.4",
+   "themeRu": "Досуг",
+   "grammarRuleIds": [],
+   "isNewRule": false,
+   "reviewRuleIds": [
+    "pl.gram.s-coordinate",
+    "pl.gram.p-possessive",
+    "pl.gram.n-cardinal-1-4"
+   ],
+   "newWordCount": 3,
+   "exerciseKinds": [
+    "drill",
+    "error-correction",
+    "translate-to-target"
+   ],
+   "examFocus": "speaking",
+   "competencyIds": [
+    "pl-b1.speaking.photo"
+   ],
+   "timeBudgetSec": {
+    "review": 300,
+    "newGrammar": 0,
+    "practice": 420,
+    "exam": 120,
+    "analysis": 60
+   },
+   "totalSec": 900,
+   "expectedOutcome": "Правила недели отработаны на новом материале, без ввода нового.",
+   "interferenceRisk": null,
+   "lexemeIds": [
+    "pl.trzeba",
+    "pl.mozna",
+    "pl.wolno"
+   ]
+  },
+  {
+   "day": 28,
+   "week": 4,
+   "phase": 1,
+   "phaseTitle": "Фундамент",
+   "kind": "checkpoint",
+   "topic": "Контрольный срез · неделя 4",
+   "themeId": "7.4",
+   "themeRu": "Досуг",
+   "grammarRuleIds": [],
+   "isNewRule": false,
+   "reviewRuleIds": [
+    "pl.gram.s-coordinate",
+    "pl.gram.p-possessive",
+    "pl.gram.n-ordinal"
+   ],
+   "newWordCount": 0,
+   "exerciseKinds": [
+    "mini-mock-all-modules"
+   ],
+   "examFocus": "listening",
+   "competencyIds": [
+    "pl-b1.listening.global"
+   ],
+   "timeBudgetSec": {
+    "review": 0,
+    "newGrammar": 0,
+    "practice": 0,
+    "exam": 840,
+    "analysis": 60
+   },
+   "totalSec": 900,
+   "expectedOutcome": "Обновлён прогноз по всем пяти модулям. Слабейший получает приоритет в следующем цикле.",
+   "interferenceRisk": null,
+   "lexemeIds": []
+  },
+  {
+   "day": 29,
+   "week": 5,
+   "phase": 2,
+   "phaseTitle": "Падежная система",
+   "kind": "new",
+   "topic": "Вид глагола — понятие",
+   "themeId": "7.5",
+   "themeRu": "Путешествия",
+   "grammarRuleIds": [
+    "pl.gram.v-aspect-concept"
+   ],
+   "isNewRule": true,
+   "reviewRuleIds": [
+    "pl.gram.p-possessive",
+    "pl.gram.v-past-sg",
+    "pl.gram.n-ordinal"
+   ],
+   "newWordCount": 7,
+   "exerciseKinds": [
+    "match-pairs",
+    "classify"
+   ],
+   "examFocus": "reading",
+   "competencyIds": [
+    "pl-b1.reading.global"
+   ],
+   "timeBudgetSec": {
+    "review": 240,
+    "newGrammar": 180,
+    "practice": 300,
+    "exam": 120,
+    "analysis": 60
+   },
+   "totalSec": 900,
+   "expectedOutcome": "Правило «Вид глагола — понятие» введено и отработано на теме «Путешествия».",
+   "interferenceRisk": 1,
+   "lexemeIds": [
+    "pl.dworzec",
+    "pl.podroz",
+    "pl.pociag",
+    "pl.samolot",
+    "pl.samochod",
+    "pl.autobus",
+    "pl.lotnisko"
+   ]
+  },
+  {
+   "day": 30,
+   "week": 5,
+   "phase": 2,
+   "phaseTitle": "Падежная система",
+   "kind": "new",
+   "topic": "Образование совершенного вида",
+   "themeId": "7.5",
+   "themeRu": "Путешествия",
+   "grammarRuleIds": [
+    "pl.gram.v-aspect-formation"
+   ],
+   "isNewRule": true,
+   "reviewRuleIds": [
+    "pl.gram.v-past-sg",
+    "pl.gram.v-aspect-concept",
+    "pl.gram.n-ordinal"
+   ],
+   "newWordCount": 7,
+   "exerciseKinds": [
+    "transform",
+    "match-pairs"
+   ],
+   "examFocus": "grammar",
+   "competencyIds": [
+    "pl-b1.grammar.recognize"
+   ],
+   "timeBudgetSec": {
+    "review": 240,
+    "newGrammar": 180,
+    "practice": 300,
+    "exam": 120,
+    "analysis": 60
+   },
+   "totalSec": 900,
+   "expectedOutcome": "Правило «Образование совершенного вида» введено и отработано на теме «Путешествия».",
+   "interferenceRisk": 3,
+   "lexemeIds": [
+    "pl.bilet",
+    "pl.bagaz",
+    "pl.walizka",
+    "pl.wycieczka",
+    "pl.nocleg",
+    "pl.opoznienie",
+    "pl.robic"
+   ]
+  },
+  {
+   "day": 31,
+   "week": 5,
+   "phase": 2,
+   "phaseTitle": "Падежная система",
+   "kind": "new",
+   "topic": "Будущее простое",
+   "themeId": "7.5",
+   "themeRu": "Путешествия",
+   "grammarRuleIds": [
+    "pl.gram.v-future-simple"
+   ],
+   "isNewRule": true,
+   "reviewRuleIds": [
+    "pl.gram.v-aspect-concept",
+    "pl.gram.v-aspect-formation",
+    "pl.gram.n-ordinal"
+   ],
+   "newWordCount": 7,
+   "exerciseKinds": [
+    "conjugate"
+   ],
+   "examFocus": "listening",
+   "competencyIds": [
+    "pl-b1.listening.media"
+   ],
+   "timeBudgetSec": {
+    "review": 240,
+    "newGrammar": 180,
+    "practice": 300,
+    "exam": 120,
+    "analysis": 60
+   },
+   "totalSec": 900,
+   "expectedOutcome": "Правило «Будущее простое» введено и отработано на теме «Путешествия».",
+   "interferenceRisk": 1,
+   "lexemeIds": [
+    "pl.mowic",
+    "pl.czytac",
+    "pl.pisac",
+    "pl.widziec",
+    "pl.slyszec",
+    "pl.sluchac",
+    "pl.szukac"
+   ]
+  },
+  {
+   "day": 32,
+   "week": 5,
+   "phase": 2,
+   "phaseTitle": "Падежная система",
+   "kind": "new",
+   "topic": "Употребление вида",
+   "themeId": "7.5",
+   "themeRu": "Путешествия",
+   "grammarRuleIds": [
+    "pl.gram.v-aspect-usage"
+   ],
+   "isNewRule": true,
+   "reviewRuleIds": [
+    "pl.gram.v-aspect-formation",
+    "pl.gram.v-future-simple",
+    "pl.gram.n-ordinal"
+   ],
+   "newWordCount": 7,
+   "exerciseKinds": [
+    "choose-correct-verb",
+    "gap-fill"
+   ],
+   "examFocus": "writing",
+   "competencyIds": [
+    "pl-b1.writing.short-forms"
+   ],
+   "timeBudgetSec": {
+    "review": 240,
+    "newGrammar": 180,
+    "practice": 300,
+    "exam": 120,
+    "analysis": 60
+   },
+   "totalSec": 900,
+   "expectedOutcome": "Правило «Употребление вида» введено и отработано на теме «Путешествия».",
+   "interferenceRisk": 2,
+   "lexemeIds": [
+    "pl.potrzebowac",
+    "pl.uzywac",
+    "pl.uczyc-sie",
+    "pl.bac-sie",
+    "pl.podobac-sie",
+    "pl.pomagac",
+    "pl.dziekowac"
+   ]
+  },
+  {
+   "day": 33,
+   "week": 5,
+   "phase": 2,
+   "phaseTitle": "Падежная система",
+   "kind": "new",
+   "topic": "Будущее сложное",
+   "themeId": "7.5",
+   "themeRu": "Путешествия",
+   "grammarRuleIds": [
+    "pl.gram.v-future-compound"
+   ],
+   "isNewRule": true,
+   "reviewRuleIds": [
+    "pl.gram.v-future-simple",
+    "pl.gram.v-aspect-usage",
+    "pl.gram.n-ordinal"
+   ],
+   "newWordCount": 7,
+   "exerciseKinds": [
+    "conjugate",
+    "transform"
+   ],
+   "examFocus": "reading",
+   "competencyIds": [
+    "pl-b1.reading.global"
+   ],
+   "timeBudgetSec": {
+    "review": 240,
+    "newGrammar": 180,
+    "practice": 300,
+    "exam": 120,
+    "analysis": 60
+   },
+   "totalSec": 900,
+   "expectedOutcome": "Правило «Будущее сложное» введено и отработано на теме «Путешествия».",
+   "interferenceRisk": 4,
+   "lexemeIds": [
+    "pl.przeszkadzac",
+    "pl.interesowac-sie",
+    "pl.zajmowac-sie",
+    "pl.czekac",
+    "pl.pytac",
+    "pl.prosic",
+    "pl.dzwonic"
+   ]
+  },
+  {
+   "day": 34,
+   "week": 5,
+   "phase": 2,
+   "phaseTitle": "Падежная система",
+   "kind": "consolidation",
+   "topic": "Закрепление: Путешествия",
+   "themeId": "7.5",
+   "themeRu": "Путешествия",
+   "grammarRuleIds": [],
+   "isNewRule": false,
+   "reviewRuleIds": [
+    "pl.gram.v-future-simple",
+    "pl.gram.v-aspect-usage",
+    "pl.gram.p-interrogative"
+   ],
+   "newWordCount": 4,
+   "exerciseKinds": [
+    "drill",
+    "error-correction",
+    "translate-to-target"
+   ],
+   "examFocus": "speaking",
+   "competencyIds": [
+    "pl-b1.speaking.monologue"
+   ],
+   "timeBudgetSec": {
+    "review": 300,
+    "newGrammar": 0,
+    "practice": 420,
+    "exam": 120,
+    "analysis": 60
+   },
+   "totalSec": 900,
+   "expectedOutcome": "Правила недели отработаны на новом материале, без ввода нового.",
+   "interferenceRisk": null,
+   "lexemeIds": [
+    "pl.isc",
+    "pl.jechac",
+    "pl.chodzic",
+    "pl.przychodzic"
+   ]
+  },
+  {
+   "day": 35,
+   "week": 5,
+   "phase": 2,
+   "phaseTitle": "Падежная система",
+   "kind": "weekly-check",
+   "topic": "Недельный срез: Путешествия",
+   "themeId": "7.5",
+   "themeRu": "Путешествия",
+   "grammarRuleIds": [],
+   "isNewRule": false,
+   "reviewRuleIds": [
+    "pl.gram.v-future-simple",
+    "pl.gram.v-aspect-usage",
+    "pl.gram.s-questions"
+   ],
+   "newWordCount": 0,
+   "exerciseKinds": [
+    "mixed-review",
+    "exam-format"
+   ],
+   "examFocus": "listening",
+   "competencyIds": [
+    "pl-b1.listening.media"
+   ],
+   "timeBudgetSec": {
+    "review": 0,
+    "newGrammar": 0,
+    "practice": 180,
+    "exam": 540,
+    "analysis": 180
+   },
+   "totalSec": 900,
+   "expectedOutcome": "Проверено усвоение правил и лексики недели. Ошибки поставлены в очередь на пересдачу.",
+   "interferenceRisk": null,
+   "lexemeIds": []
+  },
+  {
+   "day": 36,
+   "week": 6,
+   "phase": 2,
+   "phaseTitle": "Падежная система",
+   "kind": "new",
+   "topic": "I спряжение: -ę, -esz",
+   "themeId": "7.6",
+   "themeRu": "Общество",
+   "grammarRuleIds": [
+    "pl.gram.v-present-1"
+   ],
+   "isNewRule": true,
+   "reviewRuleIds": [
+    "pl.gram.v-aspect-usage",
+    "pl.gram.v-future-compound",
+    "pl.gram.s-questions"
+   ],
+   "newWordCount": 7,
+   "exerciseKinds": [
+    "conjugate",
+    "gap-fill"
+   ],
+   "examFocus": "reading",
+   "competencyIds": [
+    "pl-b1.reading.signs"
+   ],
+   "timeBudgetSec": {
+    "review": 240,
+    "newGrammar": 180,
+    "practice": 300,
+    "exam": 120,
+    "analysis": 60
+   },
+   "totalSec": 900,
+   "expectedOutcome": "Правило «I спряжение: -ę, -esz» введено и отработано на теме «Общество».",
+   "interferenceRisk": 3,
+   "lexemeIds": [
+    "pl.zakaz",
+    "pl.panstwo",
+    "pl.obywatel",
+    "pl.urzad",
+    "pl.podanie",
+    "pl.pozwolenie",
+    "pl.pobyt"
+   ]
+  },
+  {
+   "day": 37,
+   "week": 6,
+   "phase": 2,
+   "phaseTitle": "Падежная система",
+   "kind": "new",
+   "topic": "II спряжение: -ę, -isz/-ysz",
+   "themeId": "7.6",
+   "themeRu": "Общество",
+   "grammarRuleIds": [
+    "pl.gram.v-present-2"
+   ],
+   "isNewRule": true,
+   "reviewRuleIds": [
+    "pl.gram.v-future-compound",
+    "pl.gram.v-present-1",
+    "pl.gram.s-questions"
+   ],
+   "newWordCount": 7,
+   "exerciseKinds": [
+    "conjugate",
+    "gap-fill"
+   ],
+   "examFocus": "grammar",
+   "competencyIds": [
+    "pl-b1.grammar.produce"
+   ],
+   "timeBudgetSec": {
+    "review": 240,
+    "newGrammar": 180,
+    "practice": 300,
+    "exam": 120,
+    "analysis": 60
+   },
+   "totalSec": 900,
+   "expectedOutcome": "Правило «II спряжение: -ę, -isz/-ysz» введено и отработано на теме «Общество».",
+   "interferenceRisk": 3,
+   "lexemeIds": [
+    "pl.policja",
+    "pl.wybory",
+    "pl.podatek",
+    "pl.wychodzic",
+    "pl.wracac",
+    "pl.kupowac",
+    "pl.sprzedawac"
+   ]
+  },
+  {
+   "day": 38,
+   "week": 6,
+   "phase": 2,
+   "phaseTitle": "Падежная система",
+   "kind": "new",
+   "topic": "Повелительное наклонение",
+   "themeId": "7.6",
+   "themeRu": "Общество",
+   "grammarRuleIds": [
+    "pl.gram.v-imperative"
+   ],
+   "isNewRule": true,
+   "reviewRuleIds": [
+    "pl.gram.v-present-1",
+    "pl.gram.v-present-2",
+    "pl.gram.s-questions"
+   ],
+   "newWordCount": 7,
+   "exerciseKinds": [
+    "transform",
+    "conjugate"
+   ],
+   "examFocus": "listening",
+   "competencyIds": [
+    "pl-b1.listening.dialogue"
+   ],
+   "timeBudgetSec": {
+    "review": 240,
+    "newGrammar": 180,
+    "practice": 300,
+    "exam": 120,
+    "analysis": 60
+   },
+   "totalSec": 900,
+   "expectedOutcome": "Правило «Повелительное наклонение» введено и отработано на теме «Общество».",
+   "interferenceRisk": 3,
+   "lexemeIds": [
+    "pl.placic",
+    "pl.jesc",
+    "pl.pic",
+    "pl.gotowac",
+    "pl.spac",
+    "pl.wstawac",
+    "pl.pracowac"
+   ]
+  },
+  {
+   "day": 39,
+   "week": 6,
+   "phase": 2,
+   "phaseTitle": "Падежная система",
+   "kind": "new",
+   "topic": "Повелительное через niech",
+   "themeId": "7.6",
+   "themeRu": "Общество",
+   "grammarRuleIds": [
+    "pl.gram.v-imperative-niech"
+   ],
+   "isNewRule": true,
+   "reviewRuleIds": [
+    "pl.gram.v-present-2",
+    "pl.gram.v-imperative",
+    "pl.gram.s-questions"
+   ],
+   "newWordCount": 7,
+   "exerciseKinds": [
+    "transform",
+    "situational"
+   ],
+   "examFocus": "writing",
+   "competencyIds": [
+    "pl-b1.writing.opinion"
+   ],
+   "timeBudgetSec": {
+    "review": 240,
+    "newGrammar": 180,
+    "practice": 300,
+    "exam": 120,
+    "analysis": 60
+   },
+   "totalSec": 900,
+   "expectedOutcome": "Правило «Повелительное через niech» введено и отработано на теме «Общество».",
+   "interferenceRisk": 3,
+   "lexemeIds": [
+    "pl.odpoczywac",
+    "pl.mieszkac",
+    "pl.wynajmowac",
+    "pl.zaczynac",
+    "pl.konczyc",
+    "pl.otwierac",
+    "pl.zamykac"
+   ]
+  },
+  {
+   "day": 40,
+   "week": 6,
+   "phase": 2,
+   "phaseTitle": "Падежная система",
+   "kind": "new",
+   "topic": "Возвратные глаголы и позиция się",
+   "themeId": "7.6",
+   "themeRu": "Общество",
+   "grammarRuleIds": [
+    "pl.gram.v-reflexive"
+   ],
+   "isNewRule": true,
+   "reviewRuleIds": [
+    "pl.gram.v-imperative",
+    "pl.gram.v-imperative-niech",
+    "pl.gram.s-questions"
+   ],
+   "newWordCount": 7,
+   "exerciseKinds": [
+    "word-order",
+    "gap-fill",
+    "error-correction"
+   ],
+   "examFocus": "reading",
+   "competencyIds": [
+    "pl-b1.reading.signs"
+   ],
+   "timeBudgetSec": {
+    "review": 240,
+    "newGrammar": 180,
+    "practice": 300,
+    "exam": 120,
+    "analysis": 60
+   },
+   "totalSec": 900,
+   "expectedOutcome": "Правило «Возвратные глаголы и позиция się» введено и отработано на теме «Общество».",
+   "interferenceRisk": 5,
+   "lexemeIds": [
+    "pl.brac",
+    "pl.dawac",
+    "pl.wiedziec",
+    "pl.znac",
+    "pl.umiec",
+    "pl.moc",
+    "pl.chciec"
+   ]
+  },
+  {
+   "day": 41,
+   "week": 6,
+   "phase": 2,
+   "phaseTitle": "Падежная система",
+   "kind": "consolidation",
+   "topic": "Закрепление: Общество",
+   "themeId": "7.6",
+   "themeRu": "Общество",
+   "grammarRuleIds": [],
+   "isNewRule": false,
+   "reviewRuleIds": [
+    "pl.gram.v-imperative",
+    "pl.gram.v-imperative-niech",
+    "pl.gram.s-coordinate"
+   ],
+   "newWordCount": 4,
+   "exerciseKinds": [
+    "drill",
+    "error-correction",
+    "translate-to-target"
+   ],
+   "examFocus": "speaking",
+   "competencyIds": [
+    "pl-b1.speaking.dialogue"
+   ],
+   "timeBudgetSec": {
+    "review": 300,
+    "newGrammar": 0,
+    "practice": 420,
+    "exam": 120,
+    "analysis": 60
+   },
+   "totalSec": 900,
+   "expectedOutcome": "Правила недели отработаны на новом материале, без ввода нового.",
+   "interferenceRisk": null,
+   "lexemeIds": [
+    "pl.musiec",
+    "pl.lubic",
+    "pl.kochac",
+    "pl.myslec"
+   ]
+  },
+  {
+   "day": 42,
+   "week": 6,
+   "phase": 2,
+   "phaseTitle": "Падежная система",
+   "kind": "weekly-check",
+   "topic": "Недельный срез: Общество",
+   "themeId": "7.6",
+   "themeRu": "Общество",
+   "grammarRuleIds": [],
+   "isNewRule": false,
+   "reviewRuleIds": [
+    "pl.gram.v-imperative",
+    "pl.gram.v-imperative-niech",
+    "pl.gram.p-possessive"
+   ],
+   "newWordCount": 0,
+   "exerciseKinds": [
+    "mixed-review",
+    "exam-format"
+   ],
+   "examFocus": "listening",
+   "competencyIds": [
+    "pl-b1.listening.dialogue"
+   ],
+   "timeBudgetSec": {
+    "review": 0,
+    "newGrammar": 0,
+    "practice": 180,
+    "exam": 540,
+    "analysis": 180
+   },
+   "totalSec": 900,
+   "expectedOutcome": "Проверено усвоение правил и лексики недели. Ошибки поставлены в очередь на пересдачу.",
+   "interferenceRisk": null,
+   "lexemeIds": []
+  },
+  {
+   "day": 43,
+   "week": 7,
+   "phase": 2,
+   "phaseTitle": "Падежная система",
+   "kind": "new",
+   "topic": "Нерегулярные глаголы",
+   "themeId": "7.7",
+   "themeRu": "Здоровье",
+   "grammarRuleIds": [
+    "pl.gram.v-present-irregular"
+   ],
+   "isNewRule": true,
+   "reviewRuleIds": [
+    "pl.gram.v-imperative-niech",
+    "pl.gram.v-reflexive",
+    "pl.gram.p-possessive"
+   ],
+   "newWordCount": 7,
+   "exerciseKinds": [
+    "conjugate",
+    "choose-correct-verb"
+   ],
+   "examFocus": "reading",
+   "competencyIds": [
+    "pl-b1.reading.argument"
+   ],
+   "timeBudgetSec": {
+    "review": 240,
+    "newGrammar": 180,
+    "practice": 300,
+    "exam": 120,
+    "analysis": 60
+   },
+   "totalSec": 900,
+   "expectedOutcome": "Правило «Нерегулярные глаголы» введено и отработано на теме «Здоровье».",
+   "interferenceRisk": 3,
+   "lexemeIds": [
+    "pl.czaszka",
+    "pl.nagly",
+    "pl.zdrowie",
+    "pl.lekarz",
+    "pl.szpital",
+    "pl.apteka",
+    "pl.lekarstwo"
+   ]
+  },
+  {
+   "day": 44,
+   "week": 7,
+   "phase": 2,
+   "phaseTitle": "Падежная система",
+   "kind": "new",
+   "topic": "Нерегулярные глаголы",
+   "themeId": "7.7",
+   "themeRu": "Здоровье",
+   "grammarRuleIds": [
+    "pl.gram.v-present-irregular"
+   ],
+   "isNewRule": false,
+   "reviewRuleIds": [
+    "pl.gram.v-imperative-niech",
+    "pl.gram.v-reflexive",
+    "pl.gram.v-past-sg"
+   ],
+   "newWordCount": 7,
+   "exerciseKinds": [
+    "conjugate",
+    "choose-correct-verb"
+   ],
+   "examFocus": "grammar",
+   "competencyIds": [
+    "pl-b1.grammar.transform"
+   ],
+   "timeBudgetSec": {
+    "review": 240,
+    "newGrammar": 180,
+    "practice": 300,
+    "exam": 120,
+    "analysis": 60
+   },
+   "totalSec": 900,
+   "expectedOutcome": "Правило «Нерегулярные глаголы» введено и отработано на теме «Здоровье».",
+   "interferenceRisk": 3,
+   "lexemeIds": [
+    "pl.recepta",
+    "pl.bol",
+    "pl.goraczka",
+    "pl.przeziebienie",
+    "pl.glowa",
+    "pl.reka",
+    "pl.noga"
+   ]
+  },
+  {
+   "day": 45,
+   "week": 7,
+   "phase": 2,
+   "phaseTitle": "Падежная система",
+   "kind": "new",
+   "topic": "Мужско-личный род",
+   "themeId": "7.7",
+   "themeRu": "Здоровье",
+   "grammarRuleIds": [
+    "pl.gram.masc-personal"
+   ],
+   "isNewRule": true,
+   "reviewRuleIds": [
+    "pl.gram.v-reflexive",
+    "pl.gram.v-present-irregular",
+    "pl.gram.v-past-sg"
+   ],
+   "newWordCount": 7,
+   "exerciseKinds": [
+    "classify",
+    "inflect",
+    "error-correction"
+   ],
+   "examFocus": "listening",
+   "competencyIds": [
+    "pl-b1.listening.detail"
+   ],
+   "timeBudgetSec": {
+    "review": 240,
+    "newGrammar": 180,
+    "practice": 300,
+    "exam": 120,
+    "analysis": 60
+   },
+   "totalSec": 900,
+   "expectedOutcome": "Правило «Мужско-личный род» введено и отработано на теме «Здоровье».",
+   "interferenceRisk": 5,
+   "lexemeIds": [
+    "pl.rozumiec",
+    "pl.pamietac",
+    "pl.zapominac",
+    "pl.spotykac-sie",
+    "pl.rozmawiac"
+   ]
+  },
+  {
+   "day": 46,
+   "week": 7,
+   "phase": 2,
+   "phaseTitle": "Падежная система",
+   "kind": "new",
+   "topic": "Мужско-личный род",
+   "themeId": "7.7",
+   "themeRu": "Здоровье",
+   "grammarRuleIds": [
+    "pl.gram.masc-personal"
+   ],
+   "isNewRule": false,
+   "reviewRuleIds": [
+    "pl.gram.v-reflexive",
+    "pl.gram.v-present-irregular",
+    "pl.gram.v-aspect-concept"
+   ],
+   "newWordCount": 7,
+   "exerciseKinds": [
+    "classify",
+    "inflect",
+    "error-correction"
+   ],
+   "examFocus": "writing",
+   "competencyIds": [
+    "pl-b1.writing.narrative"
+   ],
+   "timeBudgetSec": {
+    "review": 240,
+    "newGrammar": 180,
+    "practice": 300,
+    "exam": 120,
+    "analysis": 60
+   },
+   "totalSec": 900,
+   "expectedOutcome": "Правило «Мужско-личный род» введено и отработано на теме «Здоровье».",
+   "interferenceRisk": 5,
+   "lexemeIds": []
+  },
+  {
+   "day": 47,
+   "week": 7,
+   "phase": 2,
+   "phaseTitle": "Падежная система",
+   "kind": "new",
+   "topic": "Винительный падеж",
+   "themeId": "7.7",
+   "themeRu": "Здоровье",
+   "grammarRuleIds": [
+    "pl.gram.c-acc"
+   ],
+   "isNewRule": true,
+   "reviewRuleIds": [
+    "pl.gram.v-present-irregular",
+    "pl.gram.masc-personal",
+    "pl.gram.v-aspect-concept"
+   ],
+   "newWordCount": 7,
+   "exerciseKinds": [
+    "inflect",
+    "gap-fill"
+   ],
+   "examFocus": "reading",
+   "competencyIds": [
+    "pl-b1.reading.argument"
+   ],
+   "timeBudgetSec": {
+    "review": 240,
+    "newGrammar": 180,
+    "practice": 300,
+    "exam": 120,
+    "analysis": 60
+   },
+   "totalSec": 900,
+   "expectedOutcome": "Правило «Винительный падеж» введено и отработано на теме «Здоровье».",
+   "interferenceRisk": 2,
+   "lexemeIds": []
+  },
+  {
+   "day": 48,
+   "week": 7,
+   "phase": 2,
+   "phaseTitle": "Падежная система",
+   "kind": "consolidation",
+   "topic": "Закрепление: Здоровье",
+   "themeId": "7.7",
+   "themeRu": "Здоровье",
+   "grammarRuleIds": [],
+   "isNewRule": false,
+   "reviewRuleIds": [
+    "pl.gram.v-present-irregular",
+    "pl.gram.masc-personal",
+    "pl.gram.v-aspect-formation"
+   ],
+   "newWordCount": 4,
+   "exerciseKinds": [
+    "drill",
+    "error-correction",
+    "translate-to-target"
+   ],
+   "examFocus": "speaking",
+   "competencyIds": [
+    "pl-b1.speaking.photo"
+   ],
+   "timeBudgetSec": {
+    "review": 300,
+    "newGrammar": 0,
+    "practice": 420,
+    "exam": 120,
+    "analysis": 60
+   },
+   "totalSec": 900,
+   "expectedOutcome": "Правила недели отработаны на новом материале, без ввода нового.",
+   "interferenceRisk": null,
+   "lexemeIds": []
+  },
+  {
+   "day": 49,
+   "week": 7,
+   "phase": 2,
+   "phaseTitle": "Падежная система",
+   "kind": "weekly-check",
+   "topic": "Недельный срез: Здоровье",
+   "themeId": "7.7",
+   "themeRu": "Здоровье",
+   "grammarRuleIds": [],
+   "isNewRule": false,
+   "reviewRuleIds": [
+    "pl.gram.v-present-irregular",
+    "pl.gram.masc-personal",
+    "pl.gram.v-future-simple"
+   ],
+   "newWordCount": 0,
+   "exerciseKinds": [
+    "mixed-review",
+    "exam-format"
+   ],
+   "examFocus": "listening",
+   "competencyIds": [
+    "pl-b1.listening.detail"
+   ],
+   "timeBudgetSec": {
+    "review": 0,
+    "newGrammar": 0,
+    "practice": 180,
+    "exam": 540,
+    "analysis": 180
+   },
+   "totalSec": 900,
+   "expectedOutcome": "Проверено усвоение правил и лексики недели. Ошибки поставлены в очередь на пересдачу.",
+   "interferenceRisk": null,
+   "lexemeIds": []
+  },
+  {
+   "day": 50,
+   "week": 8,
+   "phase": 2,
+   "phaseTitle": "Падежная система",
+   "kind": "new",
+   "topic": "Винительный с предлогами",
+   "themeId": "7.8",
+   "themeRu": "Образование",
+   "grammarRuleIds": [
+    "pl.gram.c-acc-prepositions"
+   ],
+   "isNewRule": true,
+   "reviewRuleIds": [
+    "pl.gram.masc-personal",
+    "pl.gram.c-acc",
+    "pl.gram.v-future-simple"
+   ],
+   "newWordCount": 7,
+   "exerciseKinds": [
+    "gap-fill",
+    "error-correction"
+   ],
+   "examFocus": "reading",
+   "competencyIds": [
+    "pl-b1.reading.selective"
+   ],
+   "timeBudgetSec": {
+    "review": 240,
+    "newGrammar": 180,
+    "practice": 300,
+    "exam": 120,
+    "analysis": 60
+   },
+   "totalSec": 900,
+   "expectedOutcome": "Правило «Винительный с предлогами» введено и отработано на теме «Образование».",
+   "interferenceRisk": 4,
+   "lexemeIds": [
+    "pl.zdanie",
+    "pl.szkola",
+    "pl.uczen",
+    "pl.nauczyciel",
+    "pl.lekcja",
+    "pl.egzamin",
+    "pl.ocena"
+   ]
+  },
+  {
+   "day": 51,
+   "week": 8,
+   "phase": 2,
+   "phaseTitle": "Падежная система",
+   "kind": "new",
+   "topic": "Родительный падеж — формы",
+   "themeId": "7.8",
+   "themeRu": "Образование",
+   "grammarRuleIds": [
+    "pl.gram.c-gen"
+   ],
+   "isNewRule": true,
+   "reviewRuleIds": [
+    "pl.gram.c-acc",
+    "pl.gram.c-acc-prepositions",
+    "pl.gram.v-future-simple"
+   ],
+   "newWordCount": 7,
+   "exerciseKinds": [
+    "inflect",
+    "gap-fill"
+   ],
+   "examFocus": "grammar",
+   "competencyIds": [
+    "pl-b1.grammar.recognize"
+   ],
+   "timeBudgetSec": {
+    "review": 240,
+    "newGrammar": 180,
+    "practice": 300,
+    "exam": 120,
+    "analysis": 60
+   },
+   "totalSec": 900,
+   "expectedOutcome": "Правило «Родительный падеж — формы» введено и отработано на теме «Образование».",
+   "interferenceRisk": 3,
+   "lexemeIds": [
+    "pl.zeszyt",
+    "pl.uniwersytet",
+    "pl.studia"
+   ]
+  },
+  {
+   "day": 52,
+   "week": 8,
+   "phase": 2,
+   "phaseTitle": "Падежная система",
+   "kind": "new",
+   "topic": "Родительный падеж — формы",
+   "themeId": "7.8",
+   "themeRu": "Образование",
+   "grammarRuleIds": [
+    "pl.gram.c-gen"
+   ],
+   "isNewRule": false,
+   "reviewRuleIds": [
+    "pl.gram.c-acc",
+    "pl.gram.c-acc-prepositions",
+    "pl.gram.v-aspect-usage"
+   ],
+   "newWordCount": 7,
+   "exerciseKinds": [
+    "inflect",
+    "gap-fill"
+   ],
+   "examFocus": "listening",
+   "competencyIds": [
+    "pl-b1.listening.global"
+   ],
+   "timeBudgetSec": {
+    "review": 240,
+    "newGrammar": 180,
+    "practice": 300,
+    "exam": 120,
+    "analysis": 60
+   },
+   "totalSec": 900,
+   "expectedOutcome": "Правило «Родительный падеж — формы» введено и отработано на теме «Образование».",
+   "interferenceRisk": 3,
+   "lexemeIds": []
+  },
+  {
+   "day": 53,
+   "week": 8,
+   "phase": 2,
+   "phaseTitle": "Падежная система",
+   "kind": "new",
+   "topic": "Родительный при отрицании",
+   "themeId": "7.8",
+   "themeRu": "Образование",
+   "grammarRuleIds": [
+    "pl.gram.c-gen-negation"
+   ],
+   "isNewRule": true,
+   "reviewRuleIds": [
+    "pl.gram.c-acc-prepositions",
+    "pl.gram.c-gen",
+    "pl.gram.v-aspect-usage"
+   ],
+   "newWordCount": 7,
+   "exerciseKinds": [
+    "transform",
+    "error-correction",
+    "gap-fill"
+   ],
+   "examFocus": "writing",
+   "competencyIds": [
+    "pl-b1.writing.descriptive"
+   ],
+   "timeBudgetSec": {
+    "review": 240,
+    "newGrammar": 180,
+    "practice": 300,
+    "exam": 120,
+    "analysis": 60
+   },
+   "totalSec": 900,
+   "expectedOutcome": "Правило «Родительный при отрицании» введено и отработано на теме «Образование».",
+   "interferenceRisk": 4,
+   "lexemeIds": []
+  },
+  {
+   "day": 54,
+   "week": 8,
+   "phase": 2,
+   "phaseTitle": "Падежная система",
+   "kind": "new",
+   "topic": "Родительный с предлогами",
+   "themeId": "7.8",
+   "themeRu": "Образование",
+   "grammarRuleIds": [
+    "pl.gram.c-gen-prepositions"
+   ],
+   "isNewRule": true,
+   "reviewRuleIds": [
+    "pl.gram.c-gen",
+    "pl.gram.c-gen-negation",
+    "pl.gram.v-aspect-usage"
+   ],
+   "newWordCount": 7,
+   "exerciseKinds": [
+    "gap-fill",
+    "error-correction"
+   ],
+   "examFocus": "reading",
+   "competencyIds": [
+    "pl-b1.reading.selective"
+   ],
+   "timeBudgetSec": {
+    "review": 240,
+    "newGrammar": 180,
+    "practice": 300,
+    "exam": 120,
+    "analysis": 60
+   },
+   "totalSec": 900,
+   "expectedOutcome": "Правило «Родительный с предлогами» введено и отработано на теме «Образование».",
+   "interferenceRisk": 4,
+   "lexemeIds": []
+  },
+  {
+   "day": 55,
+   "week": 8,
+   "phase": 2,
+   "phaseTitle": "Падежная система",
+   "kind": "consolidation",
+   "topic": "Закрепление: Образование",
+   "themeId": "7.8",
+   "themeRu": "Образование",
+   "grammarRuleIds": [],
+   "isNewRule": false,
+   "reviewRuleIds": [
+    "pl.gram.c-gen",
+    "pl.gram.c-gen-negation",
+    "pl.gram.v-future-compound"
+   ],
+   "newWordCount": 4,
+   "exerciseKinds": [
+    "drill",
+    "error-correction",
+    "translate-to-target"
+   ],
+   "examFocus": "speaking",
+   "competencyIds": [
+    "pl-b1.speaking.monologue"
+   ],
+   "timeBudgetSec": {
+    "review": 300,
+    "newGrammar": 0,
+    "practice": 420,
+    "exam": 120,
+    "analysis": 60
+   },
+   "totalSec": 900,
+   "expectedOutcome": "Правила недели отработаны на новом материале, без ввода нового.",
+   "interferenceRisk": null,
+   "lexemeIds": []
+  },
+  {
+   "day": 56,
+   "week": 8,
+   "phase": 2,
+   "phaseTitle": "Падежная система",
+   "kind": "checkpoint",
+   "topic": "Контрольный срез · неделя 8",
+   "themeId": "7.8",
+   "themeRu": "Образование",
+   "grammarRuleIds": [],
+   "isNewRule": false,
+   "reviewRuleIds": [
+    "pl.gram.c-gen",
+    "pl.gram.c-gen-negation",
+    "pl.gram.v-present-1"
+   ],
+   "newWordCount": 0,
+   "exerciseKinds": [
+    "mini-mock-all-modules"
+   ],
+   "examFocus": "listening",
+   "competencyIds": [
+    "pl-b1.listening.global"
+   ],
+   "timeBudgetSec": {
+    "review": 0,
+    "newGrammar": 0,
+    "practice": 0,
+    "exam": 840,
+    "analysis": 60
+   },
+   "totalSec": 900,
+   "expectedOutcome": "Обновлён прогноз по всем пяти модулям. Слабейший получает приоритет в следующем цикле.",
+   "interferenceRisk": null,
+   "lexemeIds": []
+  },
+  {
+   "day": 57,
+   "week": 9,
+   "phase": 2,
+   "phaseTitle": "Падежная система",
+   "kind": "new",
+   "topic": "Неопределённые и отрицательные местоимения",
+   "themeId": "7.9",
+   "themeRu": "Работа",
+   "grammarRuleIds": [
+    "pl.gram.p-indefinite-negative"
+   ],
+   "isNewRule": true,
+   "reviewRuleIds": [
+    "pl.gram.c-gen-negation",
+    "pl.gram.c-gen-prepositions",
+    "pl.gram.v-present-1"
+   ],
+   "newWordCount": 7,
+   "exerciseKinds": [
+    "gap-fill",
+    "transform"
+   ],
+   "examFocus": "reading",
+   "competencyIds": [
+    "pl-b1.reading.global"
+   ],
+   "timeBudgetSec": {
+    "review": 240,
+    "newGrammar": 180,
+    "practice": 300,
+    "exam": 120,
+    "analysis": 60
+   },
+   "totalSec": 900,
+   "expectedOutcome": "Правило «Неопределённые и отрицательные местоимения» введено и отработано на теме «Работа».",
+   "interferenceRisk": 1,
+   "lexemeIds": [
+    "pl.pensja",
+    "pl.zaklad",
+    "pl.praca",
+    "pl.pracownik",
+    "pl.szef",
+    "pl.biuro",
+    "pl.umowa"
+   ]
+  },
+  {
+   "day": 58,
+   "week": 9,
+   "phase": 2,
+   "phaseTitle": "Падежная система",
+   "kind": "new",
+   "topic": "Отрицательные предложения",
+   "themeId": "7.9",
+   "themeRu": "Работа",
+   "grammarRuleIds": [
+    "pl.gram.s-negation"
+   ],
+   "isNewRule": true,
+   "reviewRuleIds": [
+    "pl.gram.c-gen-prepositions",
+    "pl.gram.p-indefinite-negative",
+    "pl.gram.v-present-1"
+   ],
+   "newWordCount": 7,
+   "exerciseKinds": [
+    "transform",
+    "error-correction"
+   ],
+   "examFocus": "grammar",
+   "competencyIds": [
+    "pl-b1.grammar.produce"
+   ],
+   "timeBudgetSec": {
+    "review": 240,
+    "newGrammar": 180,
+    "practice": 300,
+    "exam": 120,
+    "analysis": 60
+   },
+   "totalSec": 900,
+   "expectedOutcome": "Правило «Отрицательные предложения» введено и отработано на теме «Работа».",
+   "interferenceRisk": 2,
+   "lexemeIds": [
+    "pl.urlop",
+    "pl.zarobki",
+    "pl.rozmowa-o-prace",
+    "pl.doswiadczenie"
+   ]
+  },
+  {
+   "day": 59,
+   "week": 9,
+   "phase": 2,
+   "phaseTitle": "Падежная система",
+   "kind": "new",
+   "topic": "Глаголы с родительным",
+   "themeId": "7.9",
+   "themeRu": "Работа",
+   "grammarRuleIds": [
+    "pl.gram.c-gen-verbs"
+   ],
+   "isNewRule": true,
+   "reviewRuleIds": [
+    "pl.gram.p-indefinite-negative",
+    "pl.gram.s-negation",
+    "pl.gram.v-present-1"
+   ],
+   "newWordCount": 7,
+   "exerciseKinds": [
+    "gap-fill",
+    "error-correction",
+    "translate-to-target"
+   ],
+   "examFocus": "listening",
+   "competencyIds": [
+    "pl-b1.listening.media"
+   ],
+   "timeBudgetSec": {
+    "review": 240,
+    "newGrammar": 180,
+    "practice": 300,
+    "exam": 120,
+    "analysis": 60
+   },
+   "totalSec": 900,
+   "expectedOutcome": "Правило «Глаголы с родительным» введено и отработано на теме «Работа».",
+   "interferenceRisk": 5,
+   "lexemeIds": []
+  },
+  {
+   "day": 60,
+   "week": 9,
+   "phase": 2,
+   "phaseTitle": "Падежная система",
+   "kind": "new",
+   "topic": "Глаголы с родительным",
+   "themeId": "7.9",
+   "themeRu": "Работа",
+   "grammarRuleIds": [
+    "pl.gram.c-gen-verbs"
+   ],
+   "isNewRule": false,
+   "reviewRuleIds": [
+    "pl.gram.p-indefinite-negative",
+    "pl.gram.s-negation",
+    "pl.gram.v-present-2"
+   ],
+   "newWordCount": 7,
+   "exerciseKinds": [
+    "gap-fill",
+    "error-correction",
+    "translate-to-target"
+   ],
+   "examFocus": "writing",
+   "competencyIds": [
+    "pl-b1.writing.short-forms"
+   ],
+   "timeBudgetSec": {
+    "review": 240,
+    "newGrammar": 180,
+    "practice": 300,
+    "exam": 120,
+    "analysis": 60
+   },
+   "totalSec": 900,
+   "expectedOutcome": "Правило «Глаголы с родительным» введено и отработано на теме «Работа».",
+   "interferenceRisk": 5,
+   "lexemeIds": []
+  },
+  {
+   "day": 61,
+   "week": 9,
+   "phase": 2,
+   "phaseTitle": "Падежная система",
+   "kind": "new",
+   "topic": "Склонение прилагательных",
+   "themeId": "7.9",
+   "themeRu": "Работа",
+   "grammarRuleIds": [
+    "pl.gram.k-adj-agreement"
+   ],
+   "isNewRule": true,
+   "reviewRuleIds": [
+    "pl.gram.s-negation",
+    "pl.gram.c-gen-verbs",
+    "pl.gram.v-present-2"
+   ],
+   "newWordCount": 7,
+   "exerciseKinds": [
+    "agreement",
+    "inflect",
+    "error-correction"
+   ],
+   "examFocus": "reading",
+   "competencyIds": [
+    "pl-b1.reading.global"
+   ],
+   "timeBudgetSec": {
+    "review": 240,
+    "newGrammar": 180,
+    "practice": 300,
+    "exam": 120,
+    "analysis": 60
+   },
+   "totalSec": 900,
+   "expectedOutcome": "Правило «Склонение прилагательных» введено и отработано на теме «Работа».",
+   "interferenceRisk": 3,
+   "lexemeIds": []
+  },
+  {
+   "day": 62,
+   "week": 9,
+   "phase": 2,
+   "phaseTitle": "Падежная система",
+   "kind": "consolidation",
+   "topic": "Закрепление: Работа",
+   "themeId": "7.9",
+   "themeRu": "Работа",
+   "grammarRuleIds": [],
+   "isNewRule": false,
+   "reviewRuleIds": [
+    "pl.gram.s-negation",
+    "pl.gram.c-gen-verbs",
+    "pl.gram.v-imperative"
+   ],
+   "newWordCount": 4,
+   "exerciseKinds": [
+    "drill",
+    "error-correction",
+    "translate-to-target"
+   ],
+   "examFocus": "speaking",
+   "competencyIds": [
+    "pl-b1.speaking.dialogue"
+   ],
+   "timeBudgetSec": {
+    "review": 300,
+    "newGrammar": 0,
+    "practice": 420,
+    "exam": 120,
+    "analysis": 60
+   },
+   "totalSec": 900,
+   "expectedOutcome": "Правила недели отработаны на новом материале, без ввода нового.",
+   "interferenceRisk": null,
+   "lexemeIds": []
+  },
+  {
+   "day": 63,
+   "week": 9,
+   "phase": 2,
+   "phaseTitle": "Падежная система",
+   "kind": "weekly-check",
+   "topic": "Недельный срез: Работа",
+   "themeId": "7.9",
+   "themeRu": "Работа",
+   "grammarRuleIds": [],
+   "isNewRule": false,
+   "reviewRuleIds": [
+    "pl.gram.s-negation",
+    "pl.gram.c-gen-verbs",
+    "pl.gram.v-imperative-niech"
+   ],
+   "newWordCount": 0,
+   "exerciseKinds": [
+    "mixed-review",
+    "exam-format"
+   ],
+   "examFocus": "listening",
+   "competencyIds": [
+    "pl-b1.listening.media"
+   ],
+   "timeBudgetSec": {
+    "review": 0,
+    "newGrammar": 0,
+    "practice": 180,
+    "exam": 540,
+    "analysis": 180
+   },
+   "totalSec": 900,
+   "expectedOutcome": "Проверено усвоение правил и лексики недели. Ошибки поставлены в очередь на пересдачу.",
+   "interferenceRisk": null,
+   "lexemeIds": []
+  },
+  {
+   "day": 64,
+   "week": 10,
+   "phase": 2,
+   "phaseTitle": "Падежная система",
+   "kind": "new",
+   "topic": "Склонение прилагательных",
+   "themeId": "7.10",
+   "themeRu": "Покупки",
+   "grammarRuleIds": [
+    "pl.gram.k-adj-agreement"
+   ],
+   "isNewRule": false,
+   "reviewRuleIds": [
+    "pl.gram.s-negation",
+    "pl.gram.c-gen-verbs",
+    "pl.gram.v-reflexive"
+   ],
+   "newWordCount": 7,
+   "exerciseKinds": [
+    "agreement",
+    "inflect",
+    "error-correction"
+   ],
+   "examFocus": "reading",
+   "competencyIds": [
+    "pl-b1.reading.signs"
+   ],
+   "timeBudgetSec": {
+    "review": 240,
+    "newGrammar": 180,
+    "practice": 300,
+    "exam": 120,
+    "analysis": 60
+   },
+   "totalSec": 900,
+   "expectedOutcome": "Правило «Склонение прилагательных» введено и отработано на теме «Покупки».",
+   "interferenceRisk": 3,
+   "lexemeIds": [
+    "pl.sklep",
+    "pl.puszka",
+    "pl.zakupy",
+    "pl.cena",
+    "pl.pieniadze",
+    "pl.rachunek",
+    "pl.paragon"
+   ]
+  },
+  {
+   "day": 65,
+   "week": 10,
+   "phase": 2,
+   "phaseTitle": "Падежная система",
+   "kind": "new",
+   "topic": "Степени сравнения прилагательных",
+   "themeId": "7.10",
+   "themeRu": "Покупки",
+   "grammarRuleIds": [
+    "pl.gram.k-comparative"
+   ],
+   "isNewRule": true,
+   "reviewRuleIds": [
+    "pl.gram.c-gen-verbs",
+    "pl.gram.k-adj-agreement",
+    "pl.gram.v-reflexive"
+   ],
+   "newWordCount": 7,
+   "exerciseKinds": [
+    "transform",
+    "gap-fill",
+    "error-correction"
+   ],
+   "examFocus": "grammar",
+   "competencyIds": [
+    "pl-b1.grammar.transform"
+   ],
+   "timeBudgetSec": {
+    "review": 240,
+    "newGrammar": 180,
+    "practice": 300,
+    "exam": 120,
+    "analysis": 60
+   },
+   "totalSec": 900,
+   "expectedOutcome": "Правило «Степени сравнения прилагательных» введено и отработано на теме «Покупки».",
+   "interferenceRisk": 3,
+   "lexemeIds": [
+    "pl.kasa",
+    "pl.tani",
+    "pl.drogi",
+    "pl.promocja",
+    "pl.kilogram"
+   ]
+  },
+  {
+   "day": 66,
+   "week": 10,
+   "phase": 2,
+   "phaseTitle": "Падежная система",
+   "kind": "new",
+   "topic": "Степени сравнения прилагательных",
+   "themeId": "7.10",
+   "themeRu": "Покупки",
+   "grammarRuleIds": [
+    "pl.gram.k-comparative"
+   ],
+   "isNewRule": false,
+   "reviewRuleIds": [
+    "pl.gram.c-gen-verbs",
+    "pl.gram.k-adj-agreement",
+    "pl.gram.v-present-irregular"
+   ],
+   "newWordCount": 7,
+   "exerciseKinds": [
+    "transform",
+    "gap-fill",
+    "error-correction"
+   ],
+   "examFocus": "listening",
+   "competencyIds": [
+    "pl-b1.listening.dialogue"
+   ],
+   "timeBudgetSec": {
+    "review": 240,
+    "newGrammar": 180,
+    "practice": 300,
+    "exam": 120,
+    "analysis": 60
+   },
+   "totalSec": 900,
+   "expectedOutcome": "Правило «Степени сравнения прилагательных» введено и отработано на теме «Покупки».",
+   "interferenceRisk": 3,
+   "lexemeIds": []
+  },
+  {
+   "day": 67,
+   "week": 10,
+   "phase": 2,
+   "phaseTitle": "Падежная система",
+   "kind": "new",
+   "topic": "Наречия и их степени сравнения",
+   "themeId": "7.10",
+   "themeRu": "Покупки",
+   "grammarRuleIds": [
+    "pl.gram.k-adverb"
+   ],
+   "isNewRule": true,
+   "reviewRuleIds": [
+    "pl.gram.k-adj-agreement",
+    "pl.gram.k-comparative",
+    "pl.gram.v-present-irregular"
+   ],
+   "newWordCount": 7,
+   "exerciseKinds": [
+    "transform",
+    "gap-fill"
+   ],
+   "examFocus": "writing",
+   "competencyIds": [
+    "pl-b1.writing.opinion"
+   ],
+   "timeBudgetSec": {
+    "review": 240,
+    "newGrammar": 180,
+    "practice": 300,
+    "exam": 120,
+    "analysis": 60
+   },
+   "totalSec": 900,
+   "expectedOutcome": "Правило «Наречия и их степени сравнения» введено и отработано на теме «Покупки».",
+   "interferenceRisk": 3,
+   "lexemeIds": []
+  },
+  {
+   "day": 68,
+   "week": 10,
+   "phase": 2,
+   "phaseTitle": "Падежная система",
+   "kind": "new",
+   "topic": "Дата и время",
+   "themeId": "7.10",
+   "themeRu": "Покупки",
+   "grammarRuleIds": [
+    "pl.gram.n-date-time"
+   ],
+   "isNewRule": true,
+   "reviewRuleIds": [
+    "pl.gram.k-comparative",
+    "pl.gram.k-adverb",
+    "pl.gram.v-present-irregular"
+   ],
+   "newWordCount": 7,
+   "exerciseKinds": [
+    "gap-fill",
+    "listen-and-write",
+    "situational"
+   ],
+   "examFocus": "reading",
+   "competencyIds": [
+    "pl-b1.reading.signs"
+   ],
+   "timeBudgetSec": {
+    "review": 240,
+    "newGrammar": 180,
+    "practice": 300,
+    "exam": 120,
+    "analysis": 60
+   },
+   "totalSec": 900,
+   "expectedOutcome": "Правило «Дата и время» введено и отработано на теме «Покупки».",
+   "interferenceRisk": 3,
+   "lexemeIds": []
+  },
+  {
+   "day": 69,
+   "week": 10,
+   "phase": 2,
+   "phaseTitle": "Падежная система",
+   "kind": "consolidation",
+   "topic": "Закрепление: Покупки",
+   "themeId": "7.10",
+   "themeRu": "Покупки",
+   "grammarRuleIds": [],
+   "isNewRule": false,
+   "reviewRuleIds": [
+    "pl.gram.k-comparative",
+    "pl.gram.k-adverb",
+    "pl.gram.masc-personal"
+   ],
+   "newWordCount": 4,
+   "exerciseKinds": [
+    "drill",
+    "error-correction",
+    "translate-to-target"
+   ],
+   "examFocus": "speaking",
+   "competencyIds": [
+    "pl-b1.speaking.photo"
+   ],
+   "timeBudgetSec": {
+    "review": 300,
+    "newGrammar": 0,
+    "practice": 420,
+    "exam": 120,
+    "analysis": 60
+   },
+   "totalSec": 900,
+   "expectedOutcome": "Правила недели отработаны на новом материале, без ввода нового.",
+   "interferenceRisk": null,
+   "lexemeIds": []
+  },
+  {
+   "day": 70,
+   "week": 10,
+   "phase": 2,
+   "phaseTitle": "Падежная система",
+   "kind": "weekly-check",
+   "topic": "Недельный срез: Покупки",
+   "themeId": "7.10",
+   "themeRu": "Покупки",
+   "grammarRuleIds": [],
+   "isNewRule": false,
+   "reviewRuleIds": [
+    "pl.gram.k-comparative",
+    "pl.gram.k-adverb",
+    "pl.gram.c-acc"
+   ],
+   "newWordCount": 0,
+   "exerciseKinds": [
+    "mixed-review",
+    "exam-format"
+   ],
+   "examFocus": "listening",
+   "competencyIds": [
+    "pl-b1.listening.dialogue"
+   ],
+   "timeBudgetSec": {
+    "review": 0,
+    "newGrammar": 0,
+    "practice": 180,
+    "exam": 540,
+    "analysis": 180
+   },
+   "totalSec": 900,
+   "expectedOutcome": "Проверено усвоение правил и лексики недели. Ошибки поставлены в очередь на пересдачу.",
+   "interferenceRisk": null,
+   "lexemeIds": []
+  },
+  {
+   "day": 71,
+   "week": 11,
+   "phase": 2,
+   "phaseTitle": "Падежная система",
+   "kind": "new",
+   "topic": "Дата и время",
+   "themeId": "7.11",
+   "themeRu": "Еда и напитки",
+   "grammarRuleIds": [
+    "pl.gram.n-date-time"
+   ],
+   "isNewRule": false,
+   "reviewRuleIds": [
+    "pl.gram.k-comparative",
+    "pl.gram.k-adverb",
+    "pl.gram.c-acc-prepositions"
+   ],
+   "newWordCount": 7,
+   "exerciseKinds": [
+    "gap-fill",
+    "listen-and-write",
+    "situational"
+   ],
+   "examFocus": "reading",
+   "competencyIds": [
+    "pl-b1.reading.argument"
+   ],
+   "timeBudgetSec": {
+    "review": 240,
+    "newGrammar": 180,
+    "practice": 300,
+    "exam": 120,
+    "analysis": 60
+   },
+   "totalSec": 900,
+   "expectedOutcome": "Правило «Дата и время» введено и отработано на теме «Еда и напитки».",
+   "interferenceRisk": 3,
+   "lexemeIds": [
+    "pl.owoce",
+    "pl.dynia",
+    "pl.kawior",
+    "pl.czerstwy",
+    "pl.jedzenie",
+    "pl.chleb",
+    "pl.mieso"
+   ]
+  },
+  {
+   "day": 72,
+   "week": 11,
+   "phase": 2,
+   "phaseTitle": "Падежная система",
+   "kind": "new",
+   "topic": "Родительный множественного",
+   "themeId": "7.11",
+   "themeRu": "Еда и напитки",
+   "grammarRuleIds": [
+    "pl.gram.c-gen-pl"
+   ],
+   "isNewRule": true,
+   "reviewRuleIds": [
+    "pl.gram.k-adverb",
+    "pl.gram.n-date-time",
+    "pl.gram.c-acc-prepositions"
+   ],
+   "newWordCount": 7,
+   "exerciseKinds": [
+    "inflect",
+    "gap-fill",
+    "error-correction"
+   ],
+   "examFocus": "grammar",
+   "competencyIds": [
+    "pl-b1.grammar.recognize"
+   ],
+   "timeBudgetSec": {
+    "review": 240,
+    "newGrammar": 180,
+    "practice": 300,
+    "exam": 120,
+    "analysis": 60
+   },
+   "totalSec": 900,
+   "expectedOutcome": "Правило «Родительный множественного» введено и отработано на теме «Еда и напитки».",
+   "interferenceRisk": 3,
+   "lexemeIds": [
+    "pl.warzywa",
+    "pl.ser",
+    "pl.mleko",
+    "pl.herbata",
+    "pl.kawa",
+    "pl.zupa",
+    "pl.sniadanie"
+   ]
+  },
+  {
+   "day": 73,
+   "week": 11,
+   "phase": 2,
+   "phaseTitle": "Падежная система",
+   "kind": "new",
+   "topic": "Родительный множественного",
+   "themeId": "7.11",
+   "themeRu": "Еда и напитки",
+   "grammarRuleIds": [
+    "pl.gram.c-gen-pl"
+   ],
+   "isNewRule": false,
+   "reviewRuleIds": [
+    "pl.gram.k-adverb",
+    "pl.gram.n-date-time",
+    "pl.gram.c-gen"
+   ],
+   "newWordCount": 7,
+   "exerciseKinds": [
+    "inflect",
+    "gap-fill",
+    "error-correction"
+   ],
+   "examFocus": "listening",
+   "competencyIds": [
+    "pl-b1.listening.detail"
+   ],
+   "timeBudgetSec": {
+    "review": 240,
+    "newGrammar": 180,
+    "practice": 300,
+    "exam": 120,
+    "analysis": 60
+   },
+   "totalSec": 900,
+   "expectedOutcome": "Правило «Родительный множественного» введено и отработано на теме «Еда и напитки».",
+   "interferenceRisk": 3,
+   "lexemeIds": [
+    "pl.obiad",
+    "pl.kolacja",
+    "pl.restauracja"
+   ]
+  },
+  {
+   "day": 74,
+   "week": 11,
+   "phase": 2,
+   "phaseTitle": "Падежная система",
+   "kind": "new",
+   "topic": "Количественные от 5",
+   "themeId": "7.11",
+   "themeRu": "Еда и напитки",
+   "grammarRuleIds": [
+    "pl.gram.n-cardinal-5plus"
+   ],
+   "isNewRule": true,
+   "reviewRuleIds": [
+    "pl.gram.n-date-time",
+    "pl.gram.c-gen-pl",
+    "pl.gram.c-gen"
+   ],
+   "newWordCount": 7,
+   "exerciseKinds": [
+    "gap-fill",
+    "agreement"
+   ],
+   "examFocus": "writing",
+   "competencyIds": [
+    "pl-b1.writing.narrative"
+   ],
+   "timeBudgetSec": {
+    "review": 240,
+    "newGrammar": 180,
+    "practice": 300,
+    "exam": 120,
+    "analysis": 60
+   },
+   "totalSec": 900,
+   "expectedOutcome": "Правило «Количественные от 5» введено и отработано на теме «Еда и напитки».",
+   "interferenceRisk": 2,
+   "lexemeIds": []
+  },
+  {
+   "day": 75,
+   "week": 11,
+   "phase": 2,
+   "phaseTitle": "Падежная система",
+   "kind": "new",
+   "topic": "Количественные от 5",
+   "themeId": "7.11",
+   "themeRu": "Еда и напитки",
+   "grammarRuleIds": [
+    "pl.gram.n-cardinal-5plus"
+   ],
+   "isNewRule": false,
+   "reviewRuleIds": [
+    "pl.gram.n-date-time",
+    "pl.gram.c-gen-pl",
+    "pl.gram.c-gen-negation"
+   ],
+   "newWordCount": 7,
+   "exerciseKinds": [
+    "gap-fill",
+    "agreement"
+   ],
+   "examFocus": "reading",
+   "competencyIds": [
+    "pl-b1.reading.argument"
+   ],
+   "timeBudgetSec": {
+    "review": 240,
+    "newGrammar": 180,
+    "practice": 300,
+    "exam": 120,
+    "analysis": 60
+   },
+   "totalSec": 900,
+   "expectedOutcome": "Правило «Количественные от 5» введено и отработано на теме «Еда и напитки».",
+   "interferenceRisk": 2,
+   "lexemeIds": []
+  },
+  {
+   "day": 76,
+   "week": 11,
+   "phase": 2,
+   "phaseTitle": "Падежная система",
+   "kind": "consolidation",
+   "topic": "Закрепление: Еда и напитки",
+   "themeId": "7.11",
+   "themeRu": "Еда и напитки",
+   "grammarRuleIds": [],
+   "isNewRule": false,
+   "reviewRuleIds": [
+    "pl.gram.n-date-time",
+    "pl.gram.c-gen-pl",
+    "pl.gram.c-gen-prepositions"
+   ],
+   "newWordCount": 4,
+   "exerciseKinds": [
+    "drill",
+    "error-correction",
+    "translate-to-target"
+   ],
+   "examFocus": "speaking",
+   "competencyIds": [
+    "pl-b1.speaking.monologue"
+   ],
+   "timeBudgetSec": {
+    "review": 300,
+    "newGrammar": 0,
+    "practice": 420,
+    "exam": 120,
+    "analysis": 60
+   },
+   "totalSec": 900,
+   "expectedOutcome": "Правила недели отработаны на новом материале, без ввода нового.",
+   "interferenceRisk": null,
+   "lexemeIds": []
+  },
+  {
+   "day": 77,
+   "week": 11,
+   "phase": 2,
+   "phaseTitle": "Падежная система",
+   "kind": "weekly-check",
+   "topic": "Недельный срез: Еда и напитки",
+   "themeId": "7.11",
+   "themeRu": "Еда и напитки",
+   "grammarRuleIds": [],
+   "isNewRule": false,
+   "reviewRuleIds": [
+    "pl.gram.n-date-time",
+    "pl.gram.c-gen-pl",
+    "pl.gram.p-indefinite-negative"
+   ],
+   "newWordCount": 0,
+   "exerciseKinds": [
+    "mixed-review",
+    "exam-format"
+   ],
+   "examFocus": "listening",
+   "competencyIds": [
+    "pl-b1.listening.detail"
+   ],
+   "timeBudgetSec": {
+    "review": 0,
+    "newGrammar": 0,
+    "practice": 180,
+    "exam": 540,
+    "analysis": 180
+   },
+   "totalSec": 900,
+   "expectedOutcome": "Проверено усвоение правил и лексики недели. Ошибки поставлены в очередь на пересдачу.",
+   "interferenceRisk": null,
+   "lexemeIds": []
+  },
+  {
+   "day": 78,
+   "week": 12,
+   "phase": 2,
+   "phaseTitle": "Падежная система",
+   "kind": "new",
+   "topic": "Родительный после количества",
+   "themeId": "7.12",
+   "themeRu": "Услуги",
+   "grammarRuleIds": [
+    "pl.gram.c-gen-quantity"
+   ],
+   "isNewRule": true,
+   "reviewRuleIds": [
+    "pl.gram.c-gen-pl",
+    "pl.gram.n-cardinal-5plus",
+    "pl.gram.p-indefinite-negative"
+   ],
+   "newWordCount": 7,
+   "exerciseKinds": [
+    "gap-fill",
+    "inflect"
+   ],
+   "examFocus": "reading",
+   "competencyIds": [
+    "pl-b1.reading.selective"
+   ],
+   "timeBudgetSec": {
+    "review": 240,
+    "newGrammar": 180,
+    "practice": 300,
+    "exam": 120,
+    "analysis": 60
+   },
+   "totalSec": 900,
+   "expectedOutcome": "Правило «Родительный после количества» введено и отработано на теме «Услуги».",
+   "interferenceRisk": 2,
+   "lexemeIds": [
+    "pl.list",
+    "pl.poczta",
+    "pl.bank",
+    "pl.konto",
+    "pl.przelew",
+    "pl.biblioteka",
+    "pl.fryzjer"
+   ]
+  },
+  {
+   "day": 79,
+   "week": 12,
+   "phase": 2,
+   "phaseTitle": "Падежная система",
+   "kind": "new",
+   "topic": "Родительный после количества",
+   "themeId": "7.12",
+   "themeRu": "Услуги",
+   "grammarRuleIds": [
+    "pl.gram.c-gen-quantity"
+   ],
+   "isNewRule": false,
+   "reviewRuleIds": [
+    "pl.gram.c-gen-pl",
+    "pl.gram.n-cardinal-5plus",
+    "pl.gram.s-negation"
+   ],
+   "newWordCount": 7,
+   "exerciseKinds": [
+    "gap-fill",
+    "inflect"
+   ],
+   "examFocus": "grammar",
+   "competencyIds": [
+    "pl-b1.grammar.produce"
+   ],
+   "timeBudgetSec": {
+    "review": 240,
+    "newGrammar": 180,
+    "practice": 300,
+    "exam": 120,
+    "analysis": 60
+   },
+   "totalSec": 900,
+   "expectedOutcome": "Правило «Родительный после количества» введено и отработано на теме «Услуги».",
+   "interferenceRisk": 2,
+   "lexemeIds": [
+    "pl.pralnia",
+    "pl.naprawa"
+   ]
+  },
+  {
+   "day": 80,
+   "week": 12,
+   "phase": 2,
+   "phaseTitle": "Падежная система",
+   "kind": "new",
+   "topic": "Предложный падеж",
+   "themeId": "7.12",
+   "themeRu": "Услуги",
+   "grammarRuleIds": [
+    "pl.gram.c-loc"
+   ],
+   "isNewRule": true,
+   "reviewRuleIds": [
+    "pl.gram.n-cardinal-5plus",
+    "pl.gram.c-gen-quantity",
+    "pl.gram.s-negation"
+   ],
+   "newWordCount": 7,
+   "exerciseKinds": [
+    "inflect",
+    "gap-fill",
+    "error-correction"
+   ],
+   "examFocus": "listening",
+   "competencyIds": [
+    "pl-b1.listening.global"
+   ],
+   "timeBudgetSec": {
+    "review": 240,
+    "newGrammar": 180,
+    "practice": 300,
+    "exam": 120,
+    "analysis": 60
+   },
+   "totalSec": 900,
+   "expectedOutcome": "Правило «Предложный падеж» введено и отработано на теме «Услуги».",
+   "interferenceRisk": 4,
+   "lexemeIds": []
+  },
+  {
+   "day": 81,
+   "week": 12,
+   "phase": 2,
+   "phaseTitle": "Падежная система",
+   "kind": "new",
+   "topic": "Предложный падеж",
+   "themeId": "7.12",
+   "themeRu": "Услуги",
+   "grammarRuleIds": [
+    "pl.gram.c-loc"
+   ],
+   "isNewRule": false,
+   "reviewRuleIds": [
+    "pl.gram.n-cardinal-5plus",
+    "pl.gram.c-gen-quantity",
+    "pl.gram.c-gen-verbs"
+   ],
+   "newWordCount": 7,
+   "exerciseKinds": [
+    "inflect",
+    "gap-fill",
+    "error-correction"
+   ],
+   "examFocus": "writing",
+   "competencyIds": [
+    "pl-b1.writing.descriptive"
+   ],
+   "timeBudgetSec": {
+    "review": 240,
+    "newGrammar": 180,
+    "practice": 300,
+    "exam": 120,
+    "analysis": 60
+   },
+   "totalSec": 900,
+   "expectedOutcome": "Правило «Предложный падеж» введено и отработано на теме «Услуги».",
+   "interferenceRisk": 4,
+   "lexemeIds": []
+  },
+  {
+   "day": 82,
+   "week": 12,
+   "phase": 2,
+   "phaseTitle": "Падежная система",
+   "kind": "new",
+   "topic": "Предложный с предлогами",
+   "themeId": "7.12",
+   "themeRu": "Услуги",
+   "grammarRuleIds": [
+    "pl.gram.c-loc-prepositions"
+   ],
+   "isNewRule": true,
+   "reviewRuleIds": [
+    "pl.gram.c-gen-quantity",
+    "pl.gram.c-loc",
+    "pl.gram.c-gen-verbs"
+   ],
+   "newWordCount": 7,
+   "exerciseKinds": [
+    "gap-fill",
+    "error-correction"
+   ],
+   "examFocus": "reading",
+   "competencyIds": [
+    "pl-b1.reading.selective"
+   ],
+   "timeBudgetSec": {
+    "review": 240,
+    "newGrammar": 180,
+    "practice": 300,
+    "exam": 120,
+    "analysis": 60
+   },
+   "totalSec": 900,
+   "expectedOutcome": "Правило «Предложный с предлогами» введено и отработано на теме «Услуги».",
+   "interferenceRisk": 4,
+   "lexemeIds": []
+  },
+  {
+   "day": 83,
+   "week": 12,
+   "phase": 2,
+   "phaseTitle": "Падежная система",
+   "kind": "consolidation",
+   "topic": "Закрепление: Услуги",
+   "themeId": "7.12",
+   "themeRu": "Услуги",
+   "grammarRuleIds": [],
+   "isNewRule": false,
+   "reviewRuleIds": [
+    "pl.gram.c-gen-quantity",
+    "pl.gram.c-loc",
+    "pl.gram.k-adj-agreement"
+   ],
+   "newWordCount": 4,
+   "exerciseKinds": [
+    "drill",
+    "error-correction",
+    "translate-to-target"
+   ],
+   "examFocus": "speaking",
+   "competencyIds": [
+    "pl-b1.speaking.dialogue"
+   ],
+   "timeBudgetSec": {
+    "review": 300,
+    "newGrammar": 0,
+    "practice": 420,
+    "exam": 120,
+    "analysis": 60
+   },
+   "totalSec": 900,
+   "expectedOutcome": "Правила недели отработаны на новом материале, без ввода нового.",
+   "interferenceRisk": null,
+   "lexemeIds": []
+  },
+  {
+   "day": 84,
+   "week": 12,
+   "phase": 2,
+   "phaseTitle": "Падежная система",
+   "kind": "checkpoint",
+   "topic": "Контрольный срез · неделя 12",
+   "themeId": "7.12",
+   "themeRu": "Услуги",
+   "grammarRuleIds": [],
+   "isNewRule": false,
+   "reviewRuleIds": [
+    "pl.gram.c-gen-quantity",
+    "pl.gram.c-loc",
+    "pl.gram.k-comparative"
+   ],
+   "newWordCount": 0,
+   "exerciseKinds": [
+    "mini-mock-all-modules"
+   ],
+   "examFocus": "listening",
+   "competencyIds": [
+    "pl-b1.listening.global"
+   ],
+   "timeBudgetSec": {
+    "review": 0,
+    "newGrammar": 0,
+    "practice": 0,
+    "exam": 840,
+    "analysis": 60
+   },
+   "totalSec": 900,
+   "expectedOutcome": "Обновлён прогноз по всем пяти модулям. Слабейший получает приоритет в следующем цикле.",
+   "interferenceRisk": null,
+   "lexemeIds": []
+  },
+  {
+   "day": 85,
+   "week": 13,
+   "phase": 3,
+   "phaseTitle": "Синтаксис и формат экзамена",
+   "kind": "new",
+   "topic": "Звательный падеж",
+   "themeId": "7.13",
+   "themeRu": "Места",
+   "grammarRuleIds": [
+    "pl.gram.c-voc"
+   ],
+   "isNewRule": true,
+   "reviewRuleIds": [
+    "pl.gram.c-loc",
+    "pl.gram.c-loc-prepositions",
+    "pl.gram.k-comparative"
+   ],
+   "newWordCount": 6,
+   "exerciseKinds": [
+    "inflect",
+    "situational"
+   ],
+   "examFocus": "reading",
+   "competencyIds": [
+    "pl-b1.reading.global"
+   ],
+   "timeBudgetSec": {
+    "review": 240,
+    "newGrammar": 120,
+    "practice": 240,
+    "exam": 240,
+    "analysis": 60
+   },
+   "totalSec": 900,
+   "expectedOutcome": "Правило «Звательный падеж» введено и отработано на теме «Места».",
+   "interferenceRisk": 5,
+   "lexemeIds": [
+    "pl.miasto",
+    "pl.pamietnik",
+    "pl.miejsce",
+    "pl.ulica",
+    "pl.plac",
+    "pl.kosciol"
+   ]
+  },
+  {
+   "day": 86,
+   "week": 13,
+   "phase": 3,
+   "phaseTitle": "Синтаксис и формат экзамена",
+   "kind": "new",
+   "topic": "Дательный падеж",
+   "themeId": "7.13",
+   "themeRu": "Места",
+   "grammarRuleIds": [
+    "pl.gram.c-dat"
+   ],
+   "isNewRule": true,
+   "reviewRuleIds": [
+    "pl.gram.c-loc-prepositions",
+    "pl.gram.c-voc",
+    "pl.gram.k-comparative"
+   ],
+   "newWordCount": 6,
+   "exerciseKinds": [
+    "inflect",
+    "gap-fill"
+   ],
+   "examFocus": "grammar",
+   "competencyIds": [
+    "pl-b1.grammar.transform"
+   ],
+   "timeBudgetSec": {
+    "review": 240,
+    "newGrammar": 120,
+    "practice": 240,
+    "exam": 240,
+    "analysis": 60
+   },
+   "totalSec": 900,
+   "expectedOutcome": "Правило «Дательный падеж» введено и отработано на теме «Места».",
+   "interferenceRisk": 3,
+   "lexemeIds": [
+    "pl.zamek",
+    "pl.rynek",
+    "pl.most",
+    "pl.zabytek",
+    "pl.centrum"
+   ]
+  },
+  {
+   "day": 87,
+   "week": 13,
+   "phase": 3,
+   "phaseTitle": "Синтаксис и формат экзамена",
+   "kind": "new",
+   "topic": "Дательный падеж",
+   "themeId": "7.13",
+   "themeRu": "Места",
+   "grammarRuleIds": [
+    "pl.gram.c-dat"
+   ],
+   "isNewRule": false,
+   "reviewRuleIds": [
+    "pl.gram.c-loc-prepositions",
+    "pl.gram.c-voc",
+    "pl.gram.k-adverb"
+   ],
+   "newWordCount": 6,
+   "exerciseKinds": [
+    "inflect",
+    "gap-fill"
+   ],
+   "examFocus": "listening",
+   "competencyIds": [
+    "pl-b1.listening.media"
+   ],
+   "timeBudgetSec": {
+    "review": 240,
+    "newGrammar": 120,
+    "practice": 240,
+    "exam": 240,
+    "analysis": 60
+   },
+   "totalSec": 900,
+   "expectedOutcome": "Правило «Дательный падеж» введено и отработано на теме «Места».",
+   "interferenceRisk": 3,
+   "lexemeIds": []
+  },
+  {
+   "day": 88,
+   "week": 13,
+   "phase": 3,
+   "phaseTitle": "Синтаксис и формат экзамена",
+   "kind": "new",
+   "topic": "Глаголы с дательным",
+   "themeId": "7.13",
+   "themeRu": "Места",
+   "grammarRuleIds": [
+    "pl.gram.c-dat-verbs"
+   ],
+   "isNewRule": true,
+   "reviewRuleIds": [
+    "pl.gram.c-voc",
+    "pl.gram.c-dat",
+    "pl.gram.k-adverb"
+   ],
+   "newWordCount": 6,
+   "exerciseKinds": [
+    "gap-fill",
+    "translate-to-target"
+   ],
+   "examFocus": "writing",
+   "competencyIds": [
+    "pl-b1.writing.short-forms"
+   ],
+   "timeBudgetSec": {
+    "review": 240,
+    "newGrammar": 120,
+    "practice": 240,
+    "exam": 240,
+    "analysis": 60
+   },
+   "totalSec": 900,
+   "expectedOutcome": "Правило «Глаголы с дательным» введено и отработано на теме «Места».",
+   "interferenceRisk": 2,
+   "lexemeIds": []
+  },
+  {
+   "day": 89,
+   "week": 13,
+   "phase": 3,
+   "phaseTitle": "Синтаксис и формат экзамена",
+   "kind": "new",
+   "topic": "Возвратное местоимение siebie",
+   "themeId": "7.13",
+   "themeRu": "Места",
+   "grammarRuleIds": [
+    "pl.gram.p-reflexive-siebie"
+   ],
+   "isNewRule": true,
+   "reviewRuleIds": [
+    "pl.gram.c-dat",
+    "pl.gram.c-dat-verbs",
+    "pl.gram.k-adverb"
+   ],
+   "newWordCount": 6,
+   "exerciseKinds": [
+    "gap-fill"
+   ],
+   "examFocus": "reading",
+   "competencyIds": [
+    "pl-b1.reading.global"
+   ],
+   "timeBudgetSec": {
+    "review": 240,
+    "newGrammar": 120,
+    "practice": 240,
+    "exam": 240,
+    "analysis": 60
+   },
+   "totalSec": 900,
+   "expectedOutcome": "Правило «Возвратное местоимение siebie» введено и отработано на теме «Места».",
+   "interferenceRisk": 3,
+   "lexemeIds": []
+  },
+  {
+   "day": 90,
+   "week": 13,
+   "phase": 3,
+   "phaseTitle": "Синтаксис и формат экзамена",
+   "kind": "consolidation",
+   "topic": "Закрепление: Места",
+   "themeId": "7.13",
+   "themeRu": "Места",
+   "grammarRuleIds": [],
+   "isNewRule": false,
+   "reviewRuleIds": [
+    "pl.gram.c-dat",
+    "pl.gram.c-dat-verbs",
+    "pl.gram.n-date-time"
+   ],
+   "newWordCount": 3,
+   "exerciseKinds": [
+    "drill",
+    "error-correction",
+    "translate-to-target"
+   ],
+   "examFocus": "speaking",
+   "competencyIds": [
+    "pl-b1.speaking.photo"
+   ],
+   "timeBudgetSec": {
+    "review": 300,
+    "newGrammar": 0,
+    "practice": 420,
+    "exam": 120,
+    "analysis": 60
+   },
+   "totalSec": 900,
+   "expectedOutcome": "Правила недели отработаны на новом материале, без ввода нового.",
+   "interferenceRisk": null,
+   "lexemeIds": []
+  },
+  {
+   "day": 91,
+   "week": 13,
+   "phase": 3,
+   "phaseTitle": "Синтаксис и формат экзамена",
+   "kind": "weekly-check",
+   "topic": "Недельный срез: Места",
+   "themeId": "7.13",
+   "themeRu": "Места",
+   "grammarRuleIds": [],
+   "isNewRule": false,
+   "reviewRuleIds": [
+    "pl.gram.c-dat",
+    "pl.gram.c-dat-verbs",
+    "pl.gram.c-gen-pl"
+   ],
+   "newWordCount": 0,
+   "exerciseKinds": [
+    "mixed-review",
+    "exam-format"
+   ],
+   "examFocus": "listening",
+   "competencyIds": [
+    "pl-b1.listening.media"
+   ],
+   "timeBudgetSec": {
+    "review": 0,
+    "newGrammar": 0,
+    "practice": 180,
+    "exam": 540,
+    "analysis": 180
+   },
+   "totalSec": 900,
+   "expectedOutcome": "Проверено усвоение правил и лексики недели. Ошибки поставлены в очередь на пересдачу.",
+   "interferenceRisk": null,
+   "lexemeIds": []
+  },
+  {
+   "day": 92,
+   "week": 14,
+   "phase": 3,
+   "phaseTitle": "Синтаксис и формат экзамена",
+   "kind": "new",
+   "topic": "Личные местоимения",
+   "themeId": "7.14",
+   "themeRu": "Природа",
+   "grammarRuleIds": [
+    "pl.gram.p-personal"
+   ],
+   "isNewRule": true,
+   "reviewRuleIds": [
+    "pl.gram.c-dat-verbs",
+    "pl.gram.p-reflexive-siebie",
+    "pl.gram.c-gen-pl"
+   ],
+   "newWordCount": 6,
+   "exerciseKinds": [
+    "gap-fill",
+    "word-order",
+    "error-correction"
+   ],
+   "examFocus": "reading",
+   "competencyIds": [
+    "pl-b1.reading.signs"
+   ],
+   "timeBudgetSec": {
+    "review": 240,
+    "newGrammar": 120,
+    "practice": 240,
+    "exam": 240,
+    "analysis": 60
+   },
+   "totalSec": 900,
+   "expectedOutcome": "Правило «Личные местоимения» введено и отработано на теме «Природа».",
+   "interferenceRisk": 4,
+   "lexemeIds": [
+    "pl.ogrod",
+    "pl.pogoda",
+    "pl.deszcz",
+    "pl.snieg",
+    "pl.slonce",
+    "pl.wiatr"
+   ]
+  },
+  {
+   "day": 93,
+   "week": 14,
+   "phase": 3,
+   "phaseTitle": "Синтаксис и формат экзамена",
+   "kind": "new",
+   "topic": "Личные местоимения",
+   "themeId": "7.14",
+   "themeRu": "Природа",
+   "grammarRuleIds": [
+    "pl.gram.p-personal"
+   ],
+   "isNewRule": false,
+   "reviewRuleIds": [
+    "pl.gram.c-dat-verbs",
+    "pl.gram.p-reflexive-siebie",
+    "pl.gram.n-cardinal-5plus"
+   ],
+   "newWordCount": 6,
+   "exerciseKinds": [
+    "gap-fill",
+    "word-order",
+    "error-correction"
+   ],
+   "examFocus": "grammar",
+   "competencyIds": [
+    "pl-b1.grammar.recognize"
+   ],
+   "timeBudgetSec": {
+    "review": 240,
+    "newGrammar": 120,
+    "practice": 240,
+    "exam": 240,
+    "analysis": 60
+   },
+   "totalSec": 900,
+   "expectedOutcome": "Правило «Личные местоимения» введено и отработано на теме «Природа».",
+   "interferenceRisk": 4,
+   "lexemeIds": [
+    "pl.las",
+    "pl.rzeka",
+    "pl.morze",
+    "pl.gora",
+    "pl.drzewo",
+    "pl.wiosna"
+   ]
+  },
+  {
+   "day": 94,
+   "week": 14,
+   "phase": 3,
+   "phaseTitle": "Синтаксис и формат экзамена",
+   "kind": "new",
+   "topic": "Вежливые формы Pan/Pani/Państwo",
+   "themeId": "7.14",
+   "themeRu": "Природа",
+   "grammarRuleIds": [
+    "pl.gram.p-formal-pan"
+   ],
+   "isNewRule": true,
+   "reviewRuleIds": [
+    "pl.gram.p-reflexive-siebie",
+    "pl.gram.p-personal",
+    "pl.gram.n-cardinal-5plus"
+   ],
+   "newWordCount": 6,
+   "exerciseKinds": [
+    "transform",
+    "situational",
+    "error-correction"
+   ],
+   "examFocus": "listening",
+   "competencyIds": [
+    "pl-b1.listening.dialogue"
+   ],
+   "timeBudgetSec": {
+    "review": 240,
+    "newGrammar": 120,
+    "practice": 240,
+    "exam": 240,
+    "analysis": 60
+   },
+   "totalSec": 900,
+   "expectedOutcome": "Правило «Вежливые формы Pan/Pani/Państwo» введено и отработано на теме «Природа».",
+   "interferenceRisk": 5,
+   "lexemeIds": [
+    "pl.jesien"
+   ]
+  },
+  {
+   "day": 95,
+   "week": 14,
+   "phase": 3,
+   "phaseTitle": "Синтаксис и формат экзамена",
+   "kind": "new",
+   "topic": "Стили: формальный, неформальный, разговорный",
+   "themeId": "7.14",
+   "themeRu": "Природа",
+   "grammarRuleIds": [
+    "pl.gram.t-registers"
+   ],
+   "isNewRule": true,
+   "reviewRuleIds": [
+    "pl.gram.p-personal",
+    "pl.gram.p-formal-pan",
+    "pl.gram.n-cardinal-5plus"
+   ],
+   "newWordCount": 6,
+   "exerciseKinds": [
+    "classify",
+    "transform",
+    "situational"
+   ],
+   "examFocus": "writing",
+   "competencyIds": [
+    "pl-b1.writing.opinion"
+   ],
+   "timeBudgetSec": {
+    "review": 240,
+    "newGrammar": 120,
+    "practice": 240,
+    "exam": 240,
+    "analysis": 60
+   },
+   "totalSec": 900,
+   "expectedOutcome": "Правило «Стили: формальный, неформальный, разговорный» введено и отработано на теме «Природа».",
+   "interferenceRisk": 3,
+   "lexemeIds": []
+  },
+  {
+   "day": 96,
+   "week": 14,
+   "phase": 3,
+   "phaseTitle": "Синтаксис и формат экзамена",
+   "kind": "new",
+   "topic": "Стилистические средства",
+   "themeId": "7.14",
+   "themeRu": "Природа",
+   "grammarRuleIds": [
+    "pl.gram.t-figures"
+   ],
+   "isNewRule": true,
+   "reviewRuleIds": [
+    "pl.gram.p-formal-pan",
+    "pl.gram.t-registers",
+    "pl.gram.n-cardinal-5plus"
+   ],
+   "newWordCount": 6,
+   "exerciseKinds": [
+    "match-pairs",
+    "gap-fill"
+   ],
+   "examFocus": "reading",
+   "competencyIds": [
+    "pl-b1.reading.signs"
+   ],
+   "timeBudgetSec": {
+    "review": 240,
+    "newGrammar": 120,
+    "practice": 240,
+    "exam": 240,
+    "analysis": 60
+   },
+   "totalSec": 900,
+   "expectedOutcome": "Правило «Стилистические средства» введено и отработано на теме «Природа».",
+   "interferenceRisk": 1,
+   "lexemeIds": []
+  },
+  {
+   "day": 97,
+   "week": 14,
+   "phase": 3,
+   "phaseTitle": "Синтаксис и формат экзамена",
+   "kind": "consolidation",
+   "topic": "Закрепление: Природа",
+   "themeId": "7.14",
+   "themeRu": "Природа",
+   "grammarRuleIds": [],
+   "isNewRule": false,
+   "reviewRuleIds": [
+    "pl.gram.p-formal-pan",
+    "pl.gram.t-registers",
+    "pl.gram.c-gen-quantity"
+   ],
+   "newWordCount": 3,
+   "exerciseKinds": [
+    "drill",
+    "error-correction",
+    "translate-to-target"
+   ],
+   "examFocus": "speaking",
+   "competencyIds": [
+    "pl-b1.speaking.monologue"
+   ],
+   "timeBudgetSec": {
+    "review": 300,
+    "newGrammar": 0,
+    "practice": 420,
+    "exam": 120,
+    "analysis": 60
+   },
+   "totalSec": 900,
+   "expectedOutcome": "Правила недели отработаны на новом материале, без ввода нового.",
+   "interferenceRisk": null,
+   "lexemeIds": []
+  },
+  {
+   "day": 98,
+   "week": 14,
+   "phase": 3,
+   "phaseTitle": "Синтаксис и формат экзамена",
+   "kind": "weekly-check",
+   "topic": "Недельный срез: Природа",
+   "themeId": "7.14",
+   "themeRu": "Природа",
+   "grammarRuleIds": [],
+   "isNewRule": false,
+   "reviewRuleIds": [
+    "pl.gram.p-formal-pan",
+    "pl.gram.t-registers",
+    "pl.gram.c-loc"
+   ],
+   "newWordCount": 0,
+   "exerciseKinds": [
+    "mixed-review",
+    "exam-format"
+   ],
+   "examFocus": "listening",
+   "competencyIds": [
+    "pl-b1.listening.dialogue"
+   ],
+   "timeBudgetSec": {
+    "review": 0,
+    "newGrammar": 0,
+    "practice": 180,
+    "exam": 540,
+    "analysis": 180
+   },
+   "totalSec": 900,
+   "expectedOutcome": "Проверено усвоение правил и лексики недели. Ошибки поставлены в очередь на пересдачу.",
+   "interferenceRisk": null,
+   "lexemeIds": []
+  },
+  {
+   "day": 99,
+   "week": 15,
+   "phase": 3,
+   "phaseTitle": "Синтаксис и формат экзамена",
+   "kind": "new",
+   "topic": "Мужско-личные числительные",
+   "themeId": "7.15",
+   "themeRu": "Традиции и праздники",
+   "grammarRuleIds": [
+    "pl.gram.n-masc-personal"
+   ],
+   "isNewRule": true,
+   "reviewRuleIds": [
+    "pl.gram.t-registers",
+    "pl.gram.t-figures",
+    "pl.gram.c-loc"
+   ],
+   "newWordCount": 6,
+   "exerciseKinds": [
+    "agreement",
+    "transform",
+    "error-correction"
+   ],
+   "examFocus": "reading",
+   "competencyIds": [
+    "pl-b1.reading.argument"
+   ],
+   "timeBudgetSec": {
+    "review": 240,
+    "newGrammar": 120,
+    "practice": 240,
+    "exam": 240,
+    "analysis": 60
+   },
+   "totalSec": 900,
+   "expectedOutcome": "Правило «Мужско-личные числительные» введено и отработано на теме «Традиции и праздники».",
+   "interferenceRisk": 5,
+   "lexemeIds": [
+    "pl.swieto",
+    "pl.wielkanoc",
+    "pl.boze-narodzenie",
+    "pl.wigilia",
+    "pl.prezent",
+    "pl.zyczenia"
+   ]
+  },
+  {
+   "day": 100,
+   "week": 15,
+   "phase": 3,
+   "phaseTitle": "Синтаксис и формат экзамена",
+   "kind": "new",
+   "topic": "Мужско-личные числительные",
+   "themeId": "7.15",
+   "themeRu": "Традиции и праздники",
+   "grammarRuleIds": [
+    "pl.gram.n-masc-personal"
+   ],
+   "isNewRule": false,
+   "reviewRuleIds": [
+    "pl.gram.t-registers",
+    "pl.gram.t-figures",
+    "pl.gram.c-loc-prepositions"
+   ],
+   "newWordCount": 6,
+   "exerciseKinds": [
+    "agreement",
+    "transform",
+    "error-correction"
+   ],
+   "examFocus": "grammar",
+   "competencyIds": [
+    "pl-b1.grammar.produce"
+   ],
+   "timeBudgetSec": {
+    "review": 240,
+    "newGrammar": 120,
+    "practice": 240,
+    "exam": 240,
+    "analysis": 60
+   },
+   "totalSec": 900,
+   "expectedOutcome": "Правило «Мужско-личные числительные» введено и отработано на теме «Традиции и праздники».",
+   "interferenceRisk": 5,
+   "lexemeIds": [
+    "pl.urodziny",
+    "pl.slub",
+    "pl.zwyczaj"
+   ]
+  },
+  {
+   "day": 101,
+   "week": 15,
+   "phase": 3,
+   "phaseTitle": "Синтаксис и формат экзамена",
+   "kind": "new",
+   "topic": "Управление глаголов",
+   "themeId": "7.15",
+   "themeRu": "Традиции и праздники",
+   "grammarRuleIds": [
+    "pl.gram.v-government"
+   ],
+   "isNewRule": true,
+   "reviewRuleIds": [
+    "pl.gram.t-figures",
+    "pl.gram.n-masc-personal",
+    "pl.gram.c-loc-prepositions"
+   ],
+   "newWordCount": 6,
+   "exerciseKinds": [
+    "gap-fill",
+    "error-correction",
+    "translate-to-target"
+   ],
+   "examFocus": "listening",
+   "competencyIds": [
+    "pl-b1.listening.detail"
+   ],
+   "timeBudgetSec": {
+    "review": 240,
+    "newGrammar": 120,
+    "practice": 240,
+    "exam": 240,
+    "analysis": 60
+   },
+   "totalSec": 900,
+   "expectedOutcome": "Правило «Управление глаголов» введено и отработано на теме «Традиции и праздники».",
+   "interferenceRisk": 5,
+   "lexemeIds": []
+  },
+  {
+   "day": 102,
+   "week": 15,
+   "phase": 3,
+   "phaseTitle": "Синтаксис и формат экзамена",
+   "kind": "new",
+   "topic": "Управление глаголов",
+   "themeId": "7.15",
+   "themeRu": "Традиции и праздники",
+   "grammarRuleIds": [
+    "pl.gram.v-government"
+   ],
+   "isNewRule": false,
+   "reviewRuleIds": [
+    "pl.gram.t-figures",
+    "pl.gram.n-masc-personal",
+    "pl.gram.c-voc"
+   ],
+   "newWordCount": 6,
+   "exerciseKinds": [
+    "gap-fill",
+    "error-correction",
+    "translate-to-target"
+   ],
+   "examFocus": "writing",
+   "competencyIds": [
+    "pl-b1.writing.narrative"
+   ],
+   "timeBudgetSec": {
+    "review": 240,
+    "newGrammar": 120,
+    "practice": 240,
+    "exam": 240,
+    "analysis": 60
+   },
+   "totalSec": 900,
+   "expectedOutcome": "Правило «Управление глаголов» введено и отработано на теме «Традиции и праздники».",
+   "interferenceRisk": 5,
+   "lexemeIds": []
+  },
+  {
+   "day": 103,
+   "week": 15,
+   "phase": 3,
+   "phaseTitle": "Синтаксис и формат экзамена",
+   "kind": "new",
+   "topic": "Прошедшее время, мн. ч.",
+   "themeId": "7.15",
+   "themeRu": "Традиции и праздники",
+   "grammarRuleIds": [
+    "pl.gram.v-past-pl"
+   ],
+   "isNewRule": true,
+   "reviewRuleIds": [
+    "pl.gram.n-masc-personal",
+    "pl.gram.v-government",
+    "pl.gram.c-voc"
+   ],
+   "newWordCount": 6,
+   "exerciseKinds": [
+    "conjugate",
+    "agreement",
+    "error-correction"
+   ],
+   "examFocus": "reading",
+   "competencyIds": [
+    "pl-b1.reading.argument"
+   ],
+   "timeBudgetSec": {
+    "review": 240,
+    "newGrammar": 120,
+    "practice": 240,
+    "exam": 240,
+    "analysis": 60
+   },
+   "totalSec": 900,
+   "expectedOutcome": "Правило «Прошедшее время, мн. ч.» введено и отработано на теме «Традиции и праздники».",
+   "interferenceRisk": 5,
+   "lexemeIds": []
+  },
+  {
+   "day": 104,
+   "week": 15,
+   "phase": 3,
+   "phaseTitle": "Синтаксис и формат экзамена",
+   "kind": "consolidation",
+   "topic": "Закрепление: Традиции и праздники",
+   "themeId": "7.15",
+   "themeRu": "Традиции и праздники",
+   "grammarRuleIds": [],
+   "isNewRule": false,
+   "reviewRuleIds": [
+    "pl.gram.n-masc-personal",
+    "pl.gram.v-government",
+    "pl.gram.c-dat"
+   ],
+   "newWordCount": 3,
+   "exerciseKinds": [
+    "drill",
+    "error-correction",
+    "translate-to-target"
+   ],
+   "examFocus": "speaking",
+   "competencyIds": [
+    "pl-b1.speaking.dialogue"
+   ],
+   "timeBudgetSec": {
+    "review": 300,
+    "newGrammar": 0,
+    "practice": 420,
+    "exam": 120,
+    "analysis": 60
+   },
+   "totalSec": 900,
+   "expectedOutcome": "Правила недели отработаны на новом материале, без ввода нового.",
+   "interferenceRisk": null,
+   "lexemeIds": []
+  },
+  {
+   "day": 105,
+   "week": 15,
+   "phase": 3,
+   "phaseTitle": "Синтаксис и формат экзамена",
+   "kind": "weekly-check",
+   "topic": "Недельный срез: Традиции и праздники",
+   "themeId": "7.15",
+   "themeRu": "Традиции и праздники",
+   "grammarRuleIds": [],
+   "isNewRule": false,
+   "reviewRuleIds": [
+    "pl.gram.n-masc-personal",
+    "pl.gram.v-government",
+    "pl.gram.c-dat-verbs"
+   ],
+   "newWordCount": 0,
+   "exerciseKinds": [
+    "mixed-review",
+    "exam-format"
+   ],
+   "examFocus": "listening",
+   "competencyIds": [
+    "pl-b1.listening.detail"
+   ],
+   "timeBudgetSec": {
+    "review": 0,
+    "newGrammar": 0,
+    "practice": 180,
+    "exam": 540,
+    "analysis": 180
+   },
+   "totalSec": 900,
+   "expectedOutcome": "Проверено усвоение правил и лексики недели. Ошибки поставлены в очередь на пересдачу.",
+   "interferenceRisk": null,
+   "lexemeIds": []
+  },
+  {
+   "day": 106,
+   "week": 16,
+   "phase": 3,
+   "phaseTitle": "Синтаксис и формат экзамена",
+   "kind": "new",
+   "topic": "Прошедшее время, мн. ч.",
+   "themeId": "7.16",
+   "themeRu": "Общие темы",
+   "grammarRuleIds": [
+    "pl.gram.v-past-pl"
+   ],
+   "isNewRule": false,
+   "reviewRuleIds": [
+    "pl.gram.n-masc-personal",
+    "pl.gram.v-government",
+    "pl.gram.p-reflexive-siebie"
+   ],
+   "newWordCount": 6,
+   "exerciseKinds": [
+    "conjugate",
+    "agreement",
+    "error-correction"
+   ],
+   "examFocus": "reading",
+   "competencyIds": [
+    "pl-b1.reading.selective"
+   ],
+   "timeBudgetSec": {
+    "review": 240,
+    "newGrammar": 120,
+    "practice": 240,
+    "exam": 240,
+    "analysis": 60
+   },
+   "totalSec": 900,
+   "expectedOutcome": "Правило «Прошедшее время, мн. ч.» введено и отработано на теме «Общие темы».",
+   "interferenceRisk": 5,
+   "lexemeIds": [
+    "pl.sprawa",
+    "pl.zycie",
+    "pl.problem",
+    "pl.powod",
+    "pl.wydarzenie",
+    "pl.wiadomosc"
+   ]
+  },
+  {
+   "day": 107,
+   "week": 16,
+   "phase": 3,
+   "phaseTitle": "Синтаксис и формат экзамена",
+   "kind": "new",
+   "topic": "Сослагательное наклонение",
+   "themeId": "7.16",
+   "themeRu": "Общие темы",
+   "grammarRuleIds": [
+    "pl.gram.v-conditional"
+   ],
+   "isNewRule": true,
+   "reviewRuleIds": [
+    "pl.gram.v-government",
+    "pl.gram.v-past-pl",
+    "pl.gram.p-reflexive-siebie"
+   ],
+   "newWordCount": 6,
+   "exerciseKinds": [
+    "conjugate",
+    "transform",
+    "error-correction"
+   ],
+   "examFocus": "grammar",
+   "competencyIds": [
+    "pl-b1.grammar.transform"
+   ],
+   "timeBudgetSec": {
+    "review": 240,
+    "newGrammar": 120,
+    "practice": 240,
+    "exam": 240,
+    "analysis": 60
+   },
+   "totalSec": 900,
+   "expectedOutcome": "Правило «Сослагательное наклонение» введено и отработано на теме «Общие темы».",
+   "interferenceRisk": 5,
+   "lexemeIds": [
+    "pl.telewizja",
+    "pl.gazeta",
+    "pl.internet",
+    "pl.zmiana",
+    "pl.mozliwosc",
+    "pl.sposob"
+   ]
+  },
+  {
+   "day": 108,
+   "week": 16,
+   "phase": 3,
+   "phaseTitle": "Синтаксис и формат экзамена",
+   "kind": "new",
+   "topic": "Сослагательное наклонение",
+   "themeId": "7.16",
+   "themeRu": "Общие темы",
+   "grammarRuleIds": [
+    "pl.gram.v-conditional"
+   ],
+   "isNewRule": false,
+   "reviewRuleIds": [
+    "pl.gram.v-government",
+    "pl.gram.v-past-pl",
+    "pl.gram.p-personal"
+   ],
+   "newWordCount": 6,
+   "exerciseKinds": [
+    "conjugate",
+    "transform",
+    "error-correction"
+   ],
+   "examFocus": "listening",
+   "competencyIds": [
+    "pl-b1.listening.global"
+   ],
+   "timeBudgetSec": {
+    "review": 240,
+    "newGrammar": 120,
+    "practice": 240,
+    "exam": 240,
+    "analysis": 60
+   },
+   "totalSec": 900,
+   "expectedOutcome": "Правило «Сослагательное наклонение» введено и отработано на теме «Общие темы».",
+   "interferenceRisk": 5,
+   "lexemeIds": []
+  },
+  {
+   "day": 109,
+   "week": 16,
+   "phase": 3,
+   "phaseTitle": "Синтаксис и формат экзамена",
+   "kind": "new",
+   "topic": "Придаточные с że и żeby",
+   "themeId": "7.16",
+   "themeRu": "Общие темы",
+   "grammarRuleIds": [
+    "pl.gram.s-subordinate-ze"
+   ],
+   "isNewRule": true,
+   "reviewRuleIds": [
+    "pl.gram.v-past-pl",
+    "pl.gram.v-conditional",
+    "pl.gram.p-personal"
+   ],
+   "newWordCount": 6,
+   "exerciseKinds": [
+    "combine-sentences",
+    "gap-fill",
+    "error-correction"
+   ],
+   "examFocus": "writing",
+   "competencyIds": [
+    "pl-b1.writing.descriptive"
+   ],
+   "timeBudgetSec": {
+    "review": 240,
+    "newGrammar": 120,
+    "practice": 240,
+    "exam": 240,
+    "analysis": 60
+   },
+   "totalSec": 900,
+   "expectedOutcome": "Правило «Придаточные с że и żeby» введено и отработано на теме «Общие темы».",
+   "interferenceRisk": 4,
+   "lexemeIds": []
+  },
+  {
+   "day": 110,
+   "week": 16,
+   "phase": 3,
+   "phaseTitle": "Синтаксис и формат экзамена",
+   "kind": "new",
+   "topic": "Придаточные причины и времени",
+   "themeId": "7.16",
+   "themeRu": "Общие темы",
+   "grammarRuleIds": [
+    "pl.gram.s-subordinate-cause-time"
+   ],
+   "isNewRule": true,
+   "reviewRuleIds": [
+    "pl.gram.v-conditional",
+    "pl.gram.s-subordinate-ze",
+    "pl.gram.p-personal"
+   ],
+   "newWordCount": 6,
+   "exerciseKinds": [
+    "combine-sentences",
+    "gap-fill"
+   ],
+   "examFocus": "reading",
+   "competencyIds": [
+    "pl-b1.reading.selective"
+   ],
+   "timeBudgetSec": {
+    "review": 240,
+    "newGrammar": 120,
+    "practice": 240,
+    "exam": 240,
+    "analysis": 60
+   },
+   "totalSec": 900,
+   "expectedOutcome": "Правило «Придаточные причины и времени» введено и отработано на теме «Общие темы».",
+   "interferenceRisk": 2,
+   "lexemeIds": []
+  },
+  {
+   "day": 111,
+   "week": 16,
+   "phase": 3,
+   "phaseTitle": "Синтаксис и формат экзамена",
+   "kind": "consolidation",
+   "topic": "Закрепление: Общие темы",
+   "themeId": "7.16",
+   "themeRu": "Общие темы",
+   "grammarRuleIds": [],
+   "isNewRule": false,
+   "reviewRuleIds": [
+    "pl.gram.v-conditional",
+    "pl.gram.s-subordinate-ze",
+    "pl.gram.p-formal-pan"
+   ],
+   "newWordCount": 3,
+   "exerciseKinds": [
+    "drill",
+    "error-correction",
+    "translate-to-target"
+   ],
+   "examFocus": "speaking",
+   "competencyIds": [
+    "pl-b1.speaking.photo"
+   ],
+   "timeBudgetSec": {
+    "review": 300,
+    "newGrammar": 0,
+    "practice": 420,
+    "exam": 120,
+    "analysis": 60
+   },
+   "totalSec": 900,
+   "expectedOutcome": "Правила недели отработаны на новом материале, без ввода нового.",
+   "interferenceRisk": null,
+   "lexemeIds": []
+  },
+  {
+   "day": 112,
+   "week": 16,
+   "phase": 3,
+   "phaseTitle": "Синтаксис и формат экзамена",
+   "kind": "checkpoint",
+   "topic": "Контрольный срез · неделя 16",
+   "themeId": "7.16",
+   "themeRu": "Общие темы",
+   "grammarRuleIds": [],
+   "isNewRule": false,
+   "reviewRuleIds": [
+    "pl.gram.v-conditional",
+    "pl.gram.s-subordinate-ze",
+    "pl.gram.t-registers"
+   ],
+   "newWordCount": 0,
+   "exerciseKinds": [
+    "mini-mock-all-modules"
+   ],
+   "examFocus": "listening",
+   "competencyIds": [
+    "pl-b1.listening.global"
+   ],
+   "timeBudgetSec": {
+    "review": 0,
+    "newGrammar": 0,
+    "practice": 0,
+    "exam": 840,
+    "analysis": 60
+   },
+   "totalSec": 900,
+   "expectedOutcome": "Обновлён прогноз по всем пяти модулям. Слабейший получает приоритет в следующем цикле.",
+   "interferenceRisk": null,
+   "lexemeIds": []
+  },
+  {
+   "day": 113,
+   "week": 17,
+   "phase": 3,
+   "phaseTitle": "Синтаксис и формат экзамена",
+   "kind": "new",
+   "topic": "Условные предложения",
+   "themeId": "7.1",
+   "themeRu": "Человек",
+   "grammarRuleIds": [
+    "pl.gram.s-conditional-clauses"
+   ],
+   "isNewRule": true,
+   "reviewRuleIds": [
+    "pl.gram.s-subordinate-ze",
+    "pl.gram.s-subordinate-cause-time",
+    "pl.gram.t-registers"
+   ],
+   "newWordCount": 6,
+   "exerciseKinds": [
+    "combine-sentences",
+    "transform",
+    "error-correction"
+   ],
+   "examFocus": "reading",
+   "competencyIds": [
+    "pl-b1.reading.global"
+   ],
+   "timeBudgetSec": {
+    "review": 240,
+    "newGrammar": 120,
+    "practice": 240,
+    "exam": 240,
+    "analysis": 60
+   },
+   "totalSec": 900,
+   "expectedOutcome": "Правило «Условные предложения» введено и отработано на теме «Человек».",
+   "interferenceRisk": 4,
+   "lexemeIds": []
+  },
+  {
+   "day": 114,
+   "week": 17,
+   "phase": 3,
+   "phaseTitle": "Синтаксис и формат экзамена",
+   "kind": "new",
+   "topic": "Условные предложения",
+   "themeId": "7.1",
+   "themeRu": "Человек",
+   "grammarRuleIds": [
+    "pl.gram.s-conditional-clauses"
+   ],
+   "isNewRule": false,
+   "reviewRuleIds": [
+    "pl.gram.s-subordinate-ze",
+    "pl.gram.s-subordinate-cause-time",
+    "pl.gram.t-figures"
+   ],
+   "newWordCount": 6,
+   "exerciseKinds": [
+    "combine-sentences",
+    "transform",
+    "error-correction"
+   ],
+   "examFocus": "grammar",
+   "competencyIds": [
+    "pl-b1.grammar.recognize"
+   ],
+   "timeBudgetSec": {
+    "review": 240,
+    "newGrammar": 120,
+    "practice": 240,
+    "exam": 240,
+    "analysis": 60
+   },
+   "totalSec": 900,
+   "expectedOutcome": "Правило «Условные предложения» введено и отработано на теме «Человек».",
+   "interferenceRisk": 4,
+   "lexemeIds": []
+  },
+  {
+   "day": 115,
+   "week": 17,
+   "phase": 3,
+   "phaseTitle": "Синтаксис и формат экзамена",
+   "kind": "new",
+   "topic": "Конструкция im… tym…",
+   "themeId": "7.1",
+   "themeRu": "Человек",
+   "grammarRuleIds": [
+    "pl.gram.s-correlative"
+   ],
+   "isNewRule": true,
+   "reviewRuleIds": [
+    "pl.gram.s-subordinate-cause-time",
+    "pl.gram.s-conditional-clauses",
+    "pl.gram.t-figures"
+   ],
+   "newWordCount": 6,
+   "exerciseKinds": [
+    "combine-sentences",
+    "translate-to-target"
+   ],
+   "examFocus": "listening",
+   "competencyIds": [
+    "pl-b1.listening.media"
+   ],
+   "timeBudgetSec": {
+    "review": 240,
+    "newGrammar": 120,
+    "practice": 240,
+    "exam": 240,
+    "analysis": 60
+   },
+   "totalSec": 900,
+   "expectedOutcome": "Правило «Конструкция im… tym…» введено и отработано на теме «Человек».",
+   "interferenceRisk": 1,
+   "lexemeIds": []
+  },
+  {
+   "day": 116,
+   "week": 17,
+   "phase": 3,
+   "phaseTitle": "Синтаксис и формат экзамена",
+   "kind": "new",
+   "topic": "Относительные придаточные",
+   "themeId": "7.1",
+   "themeRu": "Человек",
+   "grammarRuleIds": [
+    "pl.gram.s-relative"
+   ],
+   "isNewRule": true,
+   "reviewRuleIds": [
+    "pl.gram.s-conditional-clauses",
+    "pl.gram.s-correlative",
+    "pl.gram.t-figures"
+   ],
+   "newWordCount": 6,
+   "exerciseKinds": [
+    "combine-sentences",
+    "gap-fill",
+    "error-correction"
+   ],
+   "examFocus": "writing",
+   "competencyIds": [
+    "pl-b1.writing.short-forms"
+   ],
+   "timeBudgetSec": {
+    "review": 240,
+    "newGrammar": 120,
+    "practice": 240,
+    "exam": 240,
+    "analysis": 60
+   },
+   "totalSec": 900,
+   "expectedOutcome": "Правило «Относительные придаточные» введено и отработано на теме «Человек».",
+   "interferenceRisk": 3,
+   "lexemeIds": []
+  },
+  {
+   "day": 117,
+   "week": 17,
+   "phase": 3,
+   "phaseTitle": "Синтаксис и формат экзамена",
+   "kind": "new",
+   "topic": "Относительные придаточные",
+   "themeId": "7.1",
+   "themeRu": "Человек",
+   "grammarRuleIds": [
+    "pl.gram.s-relative"
+   ],
+   "isNewRule": false,
+   "reviewRuleIds": [
+    "pl.gram.s-conditional-clauses",
+    "pl.gram.s-correlative",
+    "pl.gram.n-masc-personal"
+   ],
+   "newWordCount": 6,
+   "exerciseKinds": [
+    "combine-sentences",
+    "gap-fill",
+    "error-correction"
+   ],
+   "examFocus": "reading",
+   "competencyIds": [
+    "pl-b1.reading.global"
+   ],
+   "timeBudgetSec": {
+    "review": 240,
+    "newGrammar": 120,
+    "practice": 240,
+    "exam": 240,
+    "analysis": 60
+   },
+   "totalSec": 900,
+   "expectedOutcome": "Правило «Относительные придаточные» введено и отработано на теме «Человек».",
+   "interferenceRisk": 3,
+   "lexemeIds": []
+  },
+  {
+   "day": 118,
+   "week": 17,
+   "phase": 3,
+   "phaseTitle": "Синтаксис и формат экзамена",
+   "kind": "consolidation",
+   "topic": "Закрепление: Человек",
+   "themeId": "7.1",
+   "themeRu": "Человек",
+   "grammarRuleIds": [],
+   "isNewRule": false,
+   "reviewRuleIds": [
+    "pl.gram.s-conditional-clauses",
+    "pl.gram.s-correlative",
+    "pl.gram.v-government"
+   ],
+   "newWordCount": 3,
+   "exerciseKinds": [
+    "drill",
+    "error-correction",
+    "translate-to-target"
+   ],
+   "examFocus": "speaking",
+   "competencyIds": [
+    "pl-b1.speaking.monologue"
+   ],
+   "timeBudgetSec": {
+    "review": 300,
+    "newGrammar": 0,
+    "practice": 420,
+    "exam": 120,
+    "analysis": 60
+   },
+   "totalSec": 900,
+   "expectedOutcome": "Правила недели отработаны на новом материале, без ввода нового.",
+   "interferenceRisk": null,
+   "lexemeIds": []
+  },
+  {
+   "day": 119,
+   "week": 17,
+   "phase": 3,
+   "phaseTitle": "Синтаксис и формат экзамена",
+   "kind": "weekly-check",
+   "topic": "Недельный срез: Человек",
+   "themeId": "7.1",
+   "themeRu": "Человек",
+   "grammarRuleIds": [],
+   "isNewRule": false,
+   "reviewRuleIds": [
+    "pl.gram.s-conditional-clauses",
+    "pl.gram.s-correlative",
+    "pl.gram.v-past-pl"
+   ],
+   "newWordCount": 0,
+   "exerciseKinds": [
+    "mixed-review",
+    "exam-format"
+   ],
+   "examFocus": "listening",
+   "competencyIds": [
+    "pl-b1.listening.media"
+   ],
+   "timeBudgetSec": {
+    "review": 0,
+    "newGrammar": 0,
+    "practice": 180,
+    "exam": 540,
+    "analysis": 180
+   },
+   "totalSec": 900,
+   "expectedOutcome": "Проверено усвоение правил и лексики недели. Ошибки поставлены в очередь на пересдачу.",
+   "interferenceRisk": null,
+   "lexemeIds": []
+  },
+  {
+   "day": 120,
+   "week": 18,
+   "phase": 3,
+   "phaseTitle": "Синтаксис и формат экзамена",
+   "kind": "new",
+   "topic": "Подвижные окончания",
+   "themeId": "7.2",
+   "themeRu": "Дом и жильё",
+   "grammarRuleIds": [
+    "pl.gram.v-movable-endings"
+   ],
+   "isNewRule": true,
+   "reviewRuleIds": [
+    "pl.gram.s-correlative",
+    "pl.gram.s-relative",
+    "pl.gram.v-past-pl"
+   ],
+   "newWordCount": 6,
+   "exerciseKinds": [
+    "recognize",
+    "transform"
+   ],
+   "examFocus": "reading",
+   "competencyIds": [
+    "pl-b1.reading.signs"
+   ],
+   "timeBudgetSec": {
+    "review": 240,
+    "newGrammar": 120,
+    "practice": 240,
+    "exam": 240,
+    "analysis": 60
+   },
+   "totalSec": 900,
+   "expectedOutcome": "Правило «Подвижные окончания» введено и отработано на теме «Дом и жильё».",
+   "interferenceRisk": 3,
+   "lexemeIds": []
+  },
+  {
+   "day": 121,
+   "week": 18,
+   "phase": 3,
+   "phaseTitle": "Синтаксис и формат экзамена",
+   "kind": "new",
+   "topic": "Подвижные окончания",
+   "themeId": "7.2",
+   "themeRu": "Дом и жильё",
+   "grammarRuleIds": [
+    "pl.gram.v-movable-endings"
+   ],
+   "isNewRule": false,
+   "reviewRuleIds": [
+    "pl.gram.s-correlative",
+    "pl.gram.s-relative",
+    "pl.gram.v-conditional"
+   ],
+   "newWordCount": 6,
+   "exerciseKinds": [
+    "recognize",
+    "transform"
+   ],
+   "examFocus": "grammar",
+   "competencyIds": [
+    "pl-b1.grammar.produce"
+   ],
+   "timeBudgetSec": {
+    "review": 240,
+    "newGrammar": 120,
+    "practice": 240,
+    "exam": 240,
+    "analysis": 60
+   },
+   "totalSec": 900,
+   "expectedOutcome": "Правило «Подвижные окончания» введено и отработано на теме «Дом и жильё».",
+   "interferenceRisk": 3,
+   "lexemeIds": []
+  },
+  {
+   "day": 122,
+   "week": 18,
+   "phase": 3,
+   "phaseTitle": "Синтаксис и формат экзамена",
+   "kind": "new",
+   "topic": "Подвижные окончания",
+   "themeId": "7.2",
+   "themeRu": "Дом и жильё",
+   "grammarRuleIds": [
+    "pl.gram.v-movable-endings"
+   ],
+   "isNewRule": false,
+   "reviewRuleIds": [
+    "pl.gram.s-correlative",
+    "pl.gram.s-relative",
+    "pl.gram.s-subordinate-ze"
+   ],
+   "newWordCount": 6,
+   "exerciseKinds": [
+    "recognize",
+    "transform"
+   ],
+   "examFocus": "listening",
+   "competencyIds": [
+    "pl-b1.listening.dialogue"
+   ],
+   "timeBudgetSec": {
+    "review": 240,
+    "newGrammar": 120,
+    "practice": 240,
+    "exam": 240,
+    "analysis": 60
+   },
+   "totalSec": 900,
+   "expectedOutcome": "Правило «Подвижные окончания» введено и отработано на теме «Дом и жильё».",
+   "interferenceRisk": 3,
+   "lexemeIds": []
+  },
+  {
+   "day": 123,
+   "week": 18,
+   "phase": 3,
+   "phaseTitle": "Синтаксис и формат экзамена",
+   "kind": "new",
+   "topic": "Подвижные окончания",
+   "themeId": "7.2",
+   "themeRu": "Дом и жильё",
+   "grammarRuleIds": [
+    "pl.gram.v-movable-endings"
+   ],
+   "isNewRule": false,
+   "reviewRuleIds": [
+    "pl.gram.s-correlative",
+    "pl.gram.s-relative",
+    "pl.gram.s-subordinate-cause-time"
+   ],
+   "newWordCount": 6,
+   "exerciseKinds": [
+    "recognize",
+    "transform"
+   ],
+   "examFocus": "writing",
+   "competencyIds": [
+    "pl-b1.writing.opinion"
+   ],
+   "timeBudgetSec": {
+    "review": 240,
+    "newGrammar": 120,
+    "practice": 240,
+    "exam": 240,
+    "analysis": 60
+   },
+   "totalSec": 900,
+   "expectedOutcome": "Правило «Подвижные окончания» введено и отработано на теме «Дом и жильё».",
+   "interferenceRisk": 3,
+   "lexemeIds": []
+  },
+  {
+   "day": 124,
+   "week": 18,
+   "phase": 3,
+   "phaseTitle": "Синтаксис и формат экзамена",
+   "kind": "new",
+   "topic": "Подвижные окончания",
+   "themeId": "7.2",
+   "themeRu": "Дом и жильё",
+   "grammarRuleIds": [
+    "pl.gram.v-movable-endings"
+   ],
+   "isNewRule": false,
+   "reviewRuleIds": [
+    "pl.gram.s-correlative",
+    "pl.gram.s-relative",
+    "pl.gram.v-byc"
+   ],
+   "newWordCount": 6,
+   "exerciseKinds": [
+    "recognize",
+    "transform"
+   ],
+   "examFocus": "reading",
+   "competencyIds": [
+    "pl-b1.reading.signs"
+   ],
+   "timeBudgetSec": {
+    "review": 240,
+    "newGrammar": 120,
+    "practice": 240,
+    "exam": 240,
+    "analysis": 60
+   },
+   "totalSec": 900,
+   "expectedOutcome": "Правило «Подвижные окончания» введено и отработано на теме «Дом и жильё».",
+   "interferenceRisk": 3,
+   "lexemeIds": []
+  },
+  {
+   "day": 125,
+   "week": 18,
+   "phase": 3,
+   "phaseTitle": "Синтаксис и формат экзамена",
+   "kind": "consolidation",
+   "topic": "Закрепление: Дом и жильё",
+   "themeId": "7.2",
+   "themeRu": "Дом и жильё",
+   "grammarRuleIds": [],
+   "isNewRule": false,
+   "reviewRuleIds": [
+    "pl.gram.s-correlative",
+    "pl.gram.s-relative",
+    "pl.gram.v-present-3"
+   ],
+   "newWordCount": 3,
+   "exerciseKinds": [
+    "drill",
+    "error-correction",
+    "translate-to-target"
+   ],
+   "examFocus": "speaking",
+   "competencyIds": [
+    "pl-b1.speaking.dialogue"
+   ],
+   "timeBudgetSec": {
+    "review": 300,
+    "newGrammar": 0,
+    "practice": 420,
+    "exam": 120,
+    "analysis": 60
+   },
+   "totalSec": 900,
+   "expectedOutcome": "Правила недели отработаны на новом материале, без ввода нового.",
+   "interferenceRisk": null,
+   "lexemeIds": []
+  },
+  {
+   "day": 126,
+   "week": 18,
+   "phase": 3,
+   "phaseTitle": "Синтаксис и формат экзамена",
+   "kind": "weekly-check",
+   "topic": "Недельный срез: Дом и жильё",
+   "themeId": "7.2",
+   "themeRu": "Дом и жильё",
+   "grammarRuleIds": [],
+   "isNewRule": false,
+   "reviewRuleIds": [
+    "pl.gram.s-correlative",
+    "pl.gram.s-relative",
+    "pl.gram.alphabet-orthography"
+   ],
+   "newWordCount": 0,
+   "exerciseKinds": [
+    "mixed-review",
+    "exam-format"
+   ],
+   "examFocus": "listening",
+   "competencyIds": [
+    "pl-b1.listening.dialogue"
+   ],
+   "timeBudgetSec": {
+    "review": 0,
+    "newGrammar": 0,
+    "practice": 180,
+    "exam": 540,
+    "analysis": 180
+   },
+   "totalSec": 900,
+   "expectedOutcome": "Проверено усвоение правил и лексики недели. Ошибки поставлены в очередь на пересдачу.",
+   "interferenceRisk": null,
+   "lexemeIds": []
+  },
+  {
+   "day": 127,
+   "week": 19,
+   "phase": 3,
+   "phaseTitle": "Синтаксис и формат экзамена",
+   "kind": "new",
+   "topic": "Подвижные окончания",
+   "themeId": "7.3",
+   "themeRu": "Повседневная жизнь",
+   "grammarRuleIds": [
+    "pl.gram.v-movable-endings"
+   ],
+   "isNewRule": false,
+   "reviewRuleIds": [
+    "pl.gram.s-correlative",
+    "pl.gram.s-relative",
+    "pl.gram.gender"
+   ],
+   "newWordCount": 6,
+   "exerciseKinds": [
+    "recognize",
+    "transform"
+   ],
+   "examFocus": "reading",
+   "competencyIds": [
+    "pl-b1.reading.argument"
+   ],
+   "timeBudgetSec": {
+    "review": 240,
+    "newGrammar": 120,
+    "practice": 240,
+    "exam": 240,
+    "analysis": 60
+   },
+   "totalSec": 900,
+   "expectedOutcome": "Правило «Подвижные окончания» введено и отработано на теме «Повседневная жизнь».",
+   "interferenceRisk": 3,
+   "lexemeIds": []
+  },
+  {
+   "day": 128,
+   "week": 19,
+   "phase": 3,
+   "phaseTitle": "Синтаксис и формат экзамена",
+   "kind": "new",
+   "topic": "Подвижные окончания",
+   "themeId": "7.3",
+   "themeRu": "Повседневная жизнь",
+   "grammarRuleIds": [
+    "pl.gram.v-movable-endings"
+   ],
+   "isNewRule": false,
+   "reviewRuleIds": [
+    "pl.gram.s-correlative",
+    "pl.gram.s-relative",
+    "pl.gram.animacy"
+   ],
+   "newWordCount": 6,
+   "exerciseKinds": [
+    "recognize",
+    "transform"
+   ],
+   "examFocus": "grammar",
+   "competencyIds": [
+    "pl-b1.grammar.transform"
+   ],
+   "timeBudgetSec": {
+    "review": 240,
+    "newGrammar": 120,
+    "practice": 240,
+    "exam": 240,
+    "analysis": 60
+   },
+   "totalSec": 900,
+   "expectedOutcome": "Правило «Подвижные окончания» введено и отработано на теме «Повседневная жизнь».",
+   "interferenceRisk": 3,
+   "lexemeIds": []
+  },
+  {
+   "day": 129,
+   "week": 19,
+   "phase": 3,
+   "phaseTitle": "Синтаксис и формат экзамена",
+   "kind": "new",
+   "topic": "Подвижные окончания",
+   "themeId": "7.3",
+   "themeRu": "Повседневная жизнь",
+   "grammarRuleIds": [
+    "pl.gram.v-movable-endings"
+   ],
+   "isNewRule": false,
+   "reviewRuleIds": [
+    "pl.gram.s-correlative",
+    "pl.gram.s-relative",
+    "pl.gram.stress"
+   ],
+   "newWordCount": 6,
+   "exerciseKinds": [
+    "recognize",
+    "transform"
+   ],
+   "examFocus": "listening",
+   "competencyIds": [
+    "pl-b1.listening.detail"
+   ],
+   "timeBudgetSec": {
+    "review": 240,
+    "newGrammar": 120,
+    "practice": 240,
+    "exam": 240,
+    "analysis": 60
+   },
+   "totalSec": 900,
+   "expectedOutcome": "Правило «Подвижные окончания» введено и отработано на теме «Повседневная жизнь».",
+   "interferenceRisk": 3,
+   "lexemeIds": []
+  },
+  {
+   "day": 130,
+   "week": 19,
+   "phase": 3,
+   "phaseTitle": "Синтаксис и формат экзамена",
+   "kind": "new",
+   "topic": "Подвижные окончания",
+   "themeId": "7.3",
+   "themeRu": "Повседневная жизнь",
+   "grammarRuleIds": [
+    "pl.gram.v-movable-endings"
+   ],
+   "isNewRule": false,
+   "reviewRuleIds": [
+    "pl.gram.s-correlative",
+    "pl.gram.s-relative",
+    "pl.gram.v-present-4"
+   ],
+   "newWordCount": 6,
+   "exerciseKinds": [
+    "recognize",
+    "transform"
+   ],
+   "examFocus": "writing",
+   "competencyIds": [
+    "pl-b1.writing.narrative"
+   ],
+   "timeBudgetSec": {
+    "review": 240,
+    "newGrammar": 120,
+    "practice": 240,
+    "exam": 240,
+    "analysis": 60
+   },
+   "totalSec": 900,
+   "expectedOutcome": "Правило «Подвижные окончания» введено и отработано на теме «Повседневная жизнь».",
+   "interferenceRisk": 3,
+   "lexemeIds": []
+  },
+  {
+   "day": 131,
+   "week": 19,
+   "phase": 3,
+   "phaseTitle": "Синтаксис и формат экзамена",
+   "kind": "new",
+   "topic": "Подвижные окончания",
+   "themeId": "7.3",
+   "themeRu": "Повседневная жизнь",
+   "grammarRuleIds": [
+    "pl.gram.v-movable-endings"
+   ],
+   "isNewRule": false,
+   "reviewRuleIds": [
+    "pl.gram.s-correlative",
+    "pl.gram.s-relative",
+    "pl.gram.number"
+   ],
+   "newWordCount": 6,
+   "exerciseKinds": [
+    "recognize",
+    "transform"
+   ],
+   "examFocus": "reading",
+   "competencyIds": [
+    "pl-b1.reading.argument"
+   ],
+   "timeBudgetSec": {
+    "review": 240,
+    "newGrammar": 120,
+    "practice": 240,
+    "exam": 240,
+    "analysis": 60
+   },
+   "totalSec": 900,
+   "expectedOutcome": "Правило «Подвижные окончания» введено и отработано на теме «Повседневная жизнь».",
+   "interferenceRisk": 3,
+   "lexemeIds": []
+  },
+  {
+   "day": 132,
+   "week": 19,
+   "phase": 3,
+   "phaseTitle": "Синтаксис и формат экзамена",
+   "kind": "consolidation",
+   "topic": "Закрепление: Повседневная жизнь",
+   "themeId": "7.3",
+   "themeRu": "Повседневная жизнь",
+   "grammarRuleIds": [],
+   "isNewRule": false,
+   "reviewRuleIds": [
+    "pl.gram.s-correlative",
+    "pl.gram.s-relative",
+    "pl.gram.c-nom"
+   ],
+   "newWordCount": 3,
+   "exerciseKinds": [
+    "drill",
+    "error-correction",
+    "translate-to-target"
+   ],
+   "examFocus": "speaking",
+   "competencyIds": [
+    "pl-b1.speaking.photo"
+   ],
+   "timeBudgetSec": {
+    "review": 300,
+    "newGrammar": 0,
+    "practice": 420,
+    "exam": 120,
+    "analysis": 60
+   },
+   "totalSec": 900,
+   "expectedOutcome": "Правила недели отработаны на новом материале, без ввода нового.",
+   "interferenceRisk": null,
+   "lexemeIds": []
+  },
+  {
+   "day": 133,
+   "week": 19,
+   "phase": 3,
+   "phaseTitle": "Синтаксис и формат экзамена",
+   "kind": "weekly-check",
+   "topic": "Недельный срез: Повседневная жизнь",
+   "themeId": "7.3",
+   "themeRu": "Повседневная жизнь",
+   "grammarRuleIds": [],
+   "isNewRule": false,
+   "reviewRuleIds": [
+    "pl.gram.s-correlative",
+    "pl.gram.s-relative",
+    "pl.gram.c-instr"
+   ],
+   "newWordCount": 0,
+   "exerciseKinds": [
+    "mixed-review",
+    "exam-format"
+   ],
+   "examFocus": "listening",
+   "competencyIds": [
+    "pl-b1.listening.detail"
+   ],
+   "timeBudgetSec": {
+    "review": 0,
+    "newGrammar": 0,
+    "practice": 180,
+    "exam": 540,
+    "analysis": 180
+   },
+   "totalSec": 900,
+   "expectedOutcome": "Проверено усвоение правил и лексики недели. Ошибки поставлены в очередь на пересдачу.",
+   "interferenceRisk": null,
+   "lexemeIds": []
+  },
+  {
+   "day": 134,
+   "week": 20,
+   "phase": 3,
+   "phaseTitle": "Синтаксис и формат экзамена",
+   "kind": "new",
+   "topic": "Подвижные окончания",
+   "themeId": "7.4",
+   "themeRu": "Досуг",
+   "grammarRuleIds": [
+    "pl.gram.v-movable-endings"
+   ],
+   "isNewRule": false,
+   "reviewRuleIds": [
+    "pl.gram.s-correlative",
+    "pl.gram.s-relative",
+    "pl.gram.p-demonstrative"
+   ],
+   "newWordCount": 6,
+   "exerciseKinds": [
+    "recognize",
+    "transform"
+   ],
+   "examFocus": "reading",
+   "competencyIds": [
+    "pl-b1.reading.selective"
+   ],
+   "timeBudgetSec": {
+    "review": 240,
+    "newGrammar": 120,
+    "practice": 240,
+    "exam": 240,
+    "analysis": 60
+   },
+   "totalSec": 900,
+   "expectedOutcome": "Правило «Подвижные окончания» введено и отработано на теме «Досуг».",
+   "interferenceRisk": 3,
+   "lexemeIds": []
+  },
+  {
+   "day": 135,
+   "week": 20,
+   "phase": 3,
+   "phaseTitle": "Синтаксис и формат экзамена",
+   "kind": "new",
+   "topic": "Подвижные окончания",
+   "themeId": "7.4",
+   "themeRu": "Досуг",
+   "grammarRuleIds": [
+    "pl.gram.v-movable-endings"
+   ],
+   "isNewRule": false,
+   "reviewRuleIds": [
+    "pl.gram.s-correlative",
+    "pl.gram.s-relative",
+    "pl.gram.c-instr-verbs"
+   ],
+   "newWordCount": 6,
+   "exerciseKinds": [
+    "recognize",
+    "transform"
+   ],
+   "examFocus": "grammar",
+   "competencyIds": [
+    "pl-b1.grammar.recognize"
+   ],
+   "timeBudgetSec": {
+    "review": 240,
+    "newGrammar": 120,
+    "practice": 240,
+    "exam": 240,
+    "analysis": 60
+   },
+   "totalSec": 900,
+   "expectedOutcome": "Правило «Подвижные окончания» введено и отработано на теме «Досуг».",
+   "interferenceRisk": 3,
+   "lexemeIds": []
+  },
+  {
+   "day": 136,
+   "week": 20,
+   "phase": 3,
+   "phaseTitle": "Синтаксис и формат экзамена",
+   "kind": "new",
+   "topic": "Подвижные окончания",
+   "themeId": "7.4",
+   "themeRu": "Досуг",
+   "grammarRuleIds": [
+    "pl.gram.v-movable-endings"
+   ],
+   "isNewRule": false,
+   "reviewRuleIds": [
+    "pl.gram.s-correlative",
+    "pl.gram.s-relative",
+    "pl.gram.n-cardinal-1-4"
+   ],
+   "newWordCount": 6,
+   "exerciseKinds": [
+    "recognize",
+    "transform"
+   ],
+   "examFocus": "listening",
+   "competencyIds": [
+    "pl-b1.listening.global"
+   ],
+   "timeBudgetSec": {
+    "review": 240,
+    "newGrammar": 120,
+    "practice": 240,
+    "exam": 240,
+    "analysis": 60
+   },
+   "totalSec": 900,
+   "expectedOutcome": "Правило «Подвижные окончания» введено и отработано на теме «Досуг».",
+   "interferenceRisk": 3,
+   "lexemeIds": []
+  },
+  {
+   "day": 137,
+   "week": 20,
+   "phase": 3,
+   "phaseTitle": "Синтаксис и формат экзамена",
+   "kind": "new",
+   "topic": "Подвижные окончания",
+   "themeId": "7.4",
+   "themeRu": "Досуг",
+   "grammarRuleIds": [
+    "pl.gram.v-movable-endings"
+   ],
+   "isNewRule": false,
+   "reviewRuleIds": [
+    "pl.gram.s-correlative",
+    "pl.gram.s-relative",
+    "pl.gram.n-ordinal"
+   ],
+   "newWordCount": 6,
+   "exerciseKinds": [
+    "recognize",
+    "transform"
+   ],
+   "examFocus": "writing",
+   "competencyIds": [
+    "pl-b1.writing.descriptive"
+   ],
+   "timeBudgetSec": {
+    "review": 240,
+    "newGrammar": 120,
+    "practice": 240,
+    "exam": 240,
+    "analysis": 60
+   },
+   "totalSec": 900,
+   "expectedOutcome": "Правило «Подвижные окончания» введено и отработано на теме «Досуг».",
+   "interferenceRisk": 3,
+   "lexemeIds": []
+  },
+  {
+   "day": 138,
+   "week": 20,
+   "phase": 3,
+   "phaseTitle": "Синтаксис и формат экзамена",
+   "kind": "new",
+   "topic": "Подвижные окончания",
+   "themeId": "7.4",
+   "themeRu": "Досуг",
+   "grammarRuleIds": [
+    "pl.gram.v-movable-endings"
+   ],
+   "isNewRule": false,
+   "reviewRuleIds": [
+    "pl.gram.s-correlative",
+    "pl.gram.s-relative",
+    "pl.gram.p-interrogative"
+   ],
+   "newWordCount": 6,
+   "exerciseKinds": [
+    "recognize",
+    "transform"
+   ],
+   "examFocus": "reading",
+   "competencyIds": [
+    "pl-b1.reading.selective"
+   ],
+   "timeBudgetSec": {
+    "review": 240,
+    "newGrammar": 120,
+    "practice": 240,
+    "exam": 240,
+    "analysis": 60
+   },
+   "totalSec": 900,
+   "expectedOutcome": "Правило «Подвижные окончания» введено и отработано на теме «Досуг».",
+   "interferenceRisk": 3,
+   "lexemeIds": []
+  },
+  {
+   "day": 139,
+   "week": 20,
+   "phase": 3,
+   "phaseTitle": "Синтаксис и формат экзамена",
+   "kind": "consolidation",
+   "topic": "Закрепление: Досуг",
+   "themeId": "7.4",
+   "themeRu": "Досуг",
+   "grammarRuleIds": [],
+   "isNewRule": false,
+   "reviewRuleIds": [
+    "pl.gram.s-correlative",
+    "pl.gram.s-relative",
+    "pl.gram.s-questions"
+   ],
+   "newWordCount": 3,
+   "exerciseKinds": [
+    "drill",
+    "error-correction",
+    "translate-to-target"
+   ],
+   "examFocus": "speaking",
+   "competencyIds": [
+    "pl-b1.speaking.monologue"
+   ],
+   "timeBudgetSec": {
+    "review": 300,
+    "newGrammar": 0,
+    "practice": 420,
+    "exam": 120,
+    "analysis": 60
+   },
+   "totalSec": 900,
+   "expectedOutcome": "Правила недели отработаны на новом материале, без ввода нового.",
+   "interferenceRisk": null,
+   "lexemeIds": []
+  },
+  {
+   "day": 140,
+   "week": 20,
+   "phase": 3,
+   "phaseTitle": "Синтаксис и формат экзамена",
+   "kind": "checkpoint",
+   "topic": "Контрольный срез · неделя 20",
+   "themeId": "7.4",
+   "themeRu": "Досуг",
+   "grammarRuleIds": [],
+   "isNewRule": false,
+   "reviewRuleIds": [
+    "pl.gram.s-correlative",
+    "pl.gram.s-relative",
+    "pl.gram.s-coordinate"
+   ],
+   "newWordCount": 0,
+   "exerciseKinds": [
+    "mini-mock-all-modules"
+   ],
+   "examFocus": "listening",
+   "competencyIds": [
+    "pl-b1.listening.global"
+   ],
+   "timeBudgetSec": {
+    "review": 0,
+    "newGrammar": 0,
+    "practice": 0,
+    "exam": 840,
+    "analysis": 60
+   },
+   "totalSec": 900,
+   "expectedOutcome": "Обновлён прогноз по всем пяти модулям. Слабейший получает приоритет в следующем цикле.",
+   "interferenceRisk": null,
+   "lexemeIds": []
+  },
+  {
+   "day": 141,
+   "week": 21,
+   "phase": 4,
+   "phaseTitle": "Экзаменационный тренинг",
+   "kind": "new",
+   "topic": "Практика: Путешествия",
+   "themeId": "7.5",
+   "themeRu": "Путешествия",
+   "grammarRuleIds": [],
+   "isNewRule": false,
+   "reviewRuleIds": [
+    "pl.gram.s-correlative",
+    "pl.gram.s-relative",
+    "pl.gram.p-possessive"
+   ],
+   "newWordCount": 3,
+   "exerciseKinds": [
+    "gap-fill",
+    "translate-to-target"
+   ],
+   "examFocus": "reading",
+   "competencyIds": [
+    "pl-b1.reading.global"
+   ],
+   "timeBudgetSec": {
+    "review": 240,
+    "newGrammar": 0,
+    "practice": 180,
+    "exam": 420,
+    "analysis": 60
+   },
+   "totalSec": 900,
+   "expectedOutcome": "Закрепление пройденного на новой лексике.",
+   "interferenceRisk": null,
+   "lexemeIds": []
+  },
+  {
+   "day": 142,
+   "week": 21,
+   "phase": 4,
+   "phaseTitle": "Экзаменационный тренинг",
+   "kind": "new",
+   "topic": "Практика: Путешествия",
+   "themeId": "7.5",
+   "themeRu": "Путешествия",
+   "grammarRuleIds": [],
+   "isNewRule": false,
+   "reviewRuleIds": [
+    "pl.gram.s-correlative",
+    "pl.gram.s-relative",
+    "pl.gram.v-past-sg"
+   ],
+   "newWordCount": 3,
+   "exerciseKinds": [
+    "gap-fill",
+    "translate-to-target"
+   ],
+   "examFocus": "grammar",
+   "competencyIds": [
+    "pl-b1.grammar.produce"
+   ],
+   "timeBudgetSec": {
+    "review": 240,
+    "newGrammar": 0,
+    "practice": 180,
+    "exam": 420,
+    "analysis": 60
+   },
+   "totalSec": 900,
+   "expectedOutcome": "Закрепление пройденного на новой лексике.",
+   "interferenceRisk": null,
+   "lexemeIds": []
+  },
+  {
+   "day": 143,
+   "week": 21,
+   "phase": 4,
+   "phaseTitle": "Экзаменационный тренинг",
+   "kind": "new",
+   "topic": "Практика: Путешествия",
+   "themeId": "7.5",
+   "themeRu": "Путешествия",
+   "grammarRuleIds": [],
+   "isNewRule": false,
+   "reviewRuleIds": [
+    "pl.gram.s-correlative",
+    "pl.gram.s-relative",
+    "pl.gram.v-aspect-concept"
+   ],
+   "newWordCount": 3,
+   "exerciseKinds": [
+    "gap-fill",
+    "translate-to-target"
+   ],
+   "examFocus": "listening",
+   "competencyIds": [
+    "pl-b1.listening.media"
+   ],
+   "timeBudgetSec": {
+    "review": 240,
+    "newGrammar": 0,
+    "practice": 180,
+    "exam": 420,
+    "analysis": 60
+   },
+   "totalSec": 900,
+   "expectedOutcome": "Закрепление пройденного на новой лексике.",
+   "interferenceRisk": null,
+   "lexemeIds": []
+  },
+  {
+   "day": 144,
+   "week": 21,
+   "phase": 4,
+   "phaseTitle": "Экзаменационный тренинг",
+   "kind": "new",
+   "topic": "Практика: Путешествия",
+   "themeId": "7.5",
+   "themeRu": "Путешествия",
+   "grammarRuleIds": [],
+   "isNewRule": false,
+   "reviewRuleIds": [
+    "pl.gram.s-correlative",
+    "pl.gram.s-relative",
+    "pl.gram.v-aspect-formation"
+   ],
+   "newWordCount": 3,
+   "exerciseKinds": [
+    "gap-fill",
+    "translate-to-target"
+   ],
+   "examFocus": "writing",
+   "competencyIds": [
+    "pl-b1.writing.short-forms"
+   ],
+   "timeBudgetSec": {
+    "review": 240,
+    "newGrammar": 0,
+    "practice": 180,
+    "exam": 420,
+    "analysis": 60
+   },
+   "totalSec": 900,
+   "expectedOutcome": "Закрепление пройденного на новой лексике.",
+   "interferenceRisk": null,
+   "lexemeIds": []
+  },
+  {
+   "day": 145,
+   "week": 21,
+   "phase": 4,
+   "phaseTitle": "Экзаменационный тренинг",
+   "kind": "new",
+   "topic": "Практика: Путешествия",
+   "themeId": "7.5",
+   "themeRu": "Путешествия",
+   "grammarRuleIds": [],
+   "isNewRule": false,
+   "reviewRuleIds": [
+    "pl.gram.s-correlative",
+    "pl.gram.s-relative",
+    "pl.gram.v-future-simple"
+   ],
+   "newWordCount": 3,
+   "exerciseKinds": [
+    "gap-fill",
+    "translate-to-target"
+   ],
+   "examFocus": "reading",
+   "competencyIds": [
+    "pl-b1.reading.global"
+   ],
+   "timeBudgetSec": {
+    "review": 240,
+    "newGrammar": 0,
+    "practice": 180,
+    "exam": 420,
+    "analysis": 60
+   },
+   "totalSec": 900,
+   "expectedOutcome": "Закрепление пройденного на новой лексике.",
+   "interferenceRisk": null,
+   "lexemeIds": []
+  },
+  {
+   "day": 146,
+   "week": 21,
+   "phase": 4,
+   "phaseTitle": "Экзаменационный тренинг",
+   "kind": "consolidation",
+   "topic": "Закрепление: Путешествия",
+   "themeId": "7.5",
+   "themeRu": "Путешествия",
+   "grammarRuleIds": [],
+   "isNewRule": false,
+   "reviewRuleIds": [
+    "pl.gram.s-correlative",
+    "pl.gram.s-relative",
+    "pl.gram.v-aspect-usage"
+   ],
+   "newWordCount": 2,
+   "exerciseKinds": [
+    "drill",
+    "error-correction",
+    "translate-to-target"
+   ],
+   "examFocus": "speaking",
+   "competencyIds": [
+    "pl-b1.speaking.dialogue"
+   ],
+   "timeBudgetSec": {
+    "review": 300,
+    "newGrammar": 0,
+    "practice": 420,
+    "exam": 120,
+    "analysis": 60
+   },
+   "totalSec": 900,
+   "expectedOutcome": "Правила недели отработаны на новом материале, без ввода нового.",
+   "interferenceRisk": null,
+   "lexemeIds": []
+  },
+  {
+   "day": 147,
+   "week": 21,
+   "phase": 4,
+   "phaseTitle": "Экзаменационный тренинг",
+   "kind": "weekly-check",
+   "topic": "Недельный срез: Путешествия",
+   "themeId": "7.5",
+   "themeRu": "Путешествия",
+   "grammarRuleIds": [],
+   "isNewRule": false,
+   "reviewRuleIds": [
+    "pl.gram.s-correlative",
+    "pl.gram.s-relative",
+    "pl.gram.v-future-compound"
+   ],
+   "newWordCount": 0,
+   "exerciseKinds": [
+    "mixed-review",
+    "exam-format"
+   ],
+   "examFocus": "listening",
+   "competencyIds": [
+    "pl-b1.listening.media"
+   ],
+   "timeBudgetSec": {
+    "review": 0,
+    "newGrammar": 0,
+    "practice": 180,
+    "exam": 540,
+    "analysis": 180
+   },
+   "totalSec": 900,
+   "expectedOutcome": "Проверено усвоение правил и лексики недели. Ошибки поставлены в очередь на пересдачу.",
+   "interferenceRisk": null,
+   "lexemeIds": []
+  },
+  {
+   "day": 148,
+   "week": 22,
+   "phase": 4,
+   "phaseTitle": "Экзаменационный тренинг",
+   "kind": "new",
+   "topic": "Практика: Общество",
+   "themeId": "7.6",
+   "themeRu": "Общество",
+   "grammarRuleIds": [],
+   "isNewRule": false,
+   "reviewRuleIds": [
+    "pl.gram.s-correlative",
+    "pl.gram.s-relative",
+    "pl.gram.v-present-1"
+   ],
+   "newWordCount": 3,
+   "exerciseKinds": [
+    "gap-fill",
+    "translate-to-target"
+   ],
+   "examFocus": "reading",
+   "competencyIds": [
+    "pl-b1.reading.signs"
+   ],
+   "timeBudgetSec": {
+    "review": 240,
+    "newGrammar": 0,
+    "practice": 180,
+    "exam": 420,
+    "analysis": 60
+   },
+   "totalSec": 900,
+   "expectedOutcome": "Закрепление пройденного на новой лексике.",
+   "interferenceRisk": null,
+   "lexemeIds": []
+  },
+  {
+   "day": 149,
+   "week": 22,
+   "phase": 4,
+   "phaseTitle": "Экзаменационный тренинг",
+   "kind": "new",
+   "topic": "Практика: Общество",
+   "themeId": "7.6",
+   "themeRu": "Общество",
+   "grammarRuleIds": [],
+   "isNewRule": false,
+   "reviewRuleIds": [
+    "pl.gram.s-correlative",
+    "pl.gram.s-relative",
+    "pl.gram.v-present-2"
+   ],
+   "newWordCount": 3,
+   "exerciseKinds": [
+    "gap-fill",
+    "translate-to-target"
+   ],
+   "examFocus": "grammar",
+   "competencyIds": [
+    "pl-b1.grammar.transform"
+   ],
+   "timeBudgetSec": {
+    "review": 240,
+    "newGrammar": 0,
+    "practice": 180,
+    "exam": 420,
+    "analysis": 60
+   },
+   "totalSec": 900,
+   "expectedOutcome": "Закрепление пройденного на новой лексике.",
+   "interferenceRisk": null,
+   "lexemeIds": []
+  },
+  {
+   "day": 150,
+   "week": 22,
+   "phase": 4,
+   "phaseTitle": "Экзаменационный тренинг",
+   "kind": "new",
+   "topic": "Практика: Общество",
+   "themeId": "7.6",
+   "themeRu": "Общество",
+   "grammarRuleIds": [],
+   "isNewRule": false,
+   "reviewRuleIds": [
+    "pl.gram.s-correlative",
+    "pl.gram.s-relative",
+    "pl.gram.v-imperative"
+   ],
+   "newWordCount": 3,
+   "exerciseKinds": [
+    "gap-fill",
+    "translate-to-target"
+   ],
+   "examFocus": "listening",
+   "competencyIds": [
+    "pl-b1.listening.dialogue"
+   ],
+   "timeBudgetSec": {
+    "review": 240,
+    "newGrammar": 0,
+    "practice": 180,
+    "exam": 420,
+    "analysis": 60
+   },
+   "totalSec": 900,
+   "expectedOutcome": "Закрепление пройденного на новой лексике.",
+   "interferenceRisk": null,
+   "lexemeIds": []
+  },
+  {
+   "day": 151,
+   "week": 22,
+   "phase": 4,
+   "phaseTitle": "Экзаменационный тренинг",
+   "kind": "new",
+   "topic": "Практика: Общество",
+   "themeId": "7.6",
+   "themeRu": "Общество",
+   "grammarRuleIds": [],
+   "isNewRule": false,
+   "reviewRuleIds": [
+    "pl.gram.s-correlative",
+    "pl.gram.s-relative",
+    "pl.gram.v-imperative-niech"
+   ],
+   "newWordCount": 3,
+   "exerciseKinds": [
+    "gap-fill",
+    "translate-to-target"
+   ],
+   "examFocus": "writing",
+   "competencyIds": [
+    "pl-b1.writing.opinion"
+   ],
+   "timeBudgetSec": {
+    "review": 240,
+    "newGrammar": 0,
+    "practice": 180,
+    "exam": 420,
+    "analysis": 60
+   },
+   "totalSec": 900,
+   "expectedOutcome": "Закрепление пройденного на новой лексике.",
+   "interferenceRisk": null,
+   "lexemeIds": []
+  },
+  {
+   "day": 152,
+   "week": 22,
+   "phase": 4,
+   "phaseTitle": "Экзаменационный тренинг",
+   "kind": "new",
+   "topic": "Практика: Общество",
+   "themeId": "7.6",
+   "themeRu": "Общество",
+   "grammarRuleIds": [],
+   "isNewRule": false,
+   "reviewRuleIds": [
+    "pl.gram.s-correlative",
+    "pl.gram.s-relative",
+    "pl.gram.v-reflexive"
+   ],
+   "newWordCount": 3,
+   "exerciseKinds": [
+    "gap-fill",
+    "translate-to-target"
+   ],
+   "examFocus": "reading",
+   "competencyIds": [
+    "pl-b1.reading.signs"
+   ],
+   "timeBudgetSec": {
+    "review": 240,
+    "newGrammar": 0,
+    "practice": 180,
+    "exam": 420,
+    "analysis": 60
+   },
+   "totalSec": 900,
+   "expectedOutcome": "Закрепление пройденного на новой лексике.",
+   "interferenceRisk": null,
+   "lexemeIds": []
+  },
+  {
+   "day": 153,
+   "week": 22,
+   "phase": 4,
+   "phaseTitle": "Экзаменационный тренинг",
+   "kind": "consolidation",
+   "topic": "Закрепление: Общество",
+   "themeId": "7.6",
+   "themeRu": "Общество",
+   "grammarRuleIds": [],
+   "isNewRule": false,
+   "reviewRuleIds": [
+    "pl.gram.s-correlative",
+    "pl.gram.s-relative",
+    "pl.gram.v-present-irregular"
+   ],
+   "newWordCount": 2,
+   "exerciseKinds": [
+    "drill",
+    "error-correction",
+    "translate-to-target"
+   ],
+   "examFocus": "speaking",
+   "competencyIds": [
+    "pl-b1.speaking.photo"
+   ],
+   "timeBudgetSec": {
+    "review": 300,
+    "newGrammar": 0,
+    "practice": 420,
+    "exam": 120,
+    "analysis": 60
+   },
+   "totalSec": 900,
+   "expectedOutcome": "Правила недели отработаны на новом материале, без ввода нового.",
+   "interferenceRisk": null,
+   "lexemeIds": []
+  },
+  {
+   "day": 154,
+   "week": 22,
+   "phase": 4,
+   "phaseTitle": "Экзаменационный тренинг",
+   "kind": "weekly-check",
+   "topic": "Недельный срез: Общество",
+   "themeId": "7.6",
+   "themeRu": "Общество",
+   "grammarRuleIds": [],
+   "isNewRule": false,
+   "reviewRuleIds": [
+    "pl.gram.s-correlative",
+    "pl.gram.s-relative",
+    "pl.gram.masc-personal"
+   ],
+   "newWordCount": 0,
+   "exerciseKinds": [
+    "mixed-review",
+    "exam-format"
+   ],
+   "examFocus": "listening",
+   "competencyIds": [
+    "pl-b1.listening.dialogue"
+   ],
+   "timeBudgetSec": {
+    "review": 0,
+    "newGrammar": 0,
+    "practice": 180,
+    "exam": 540,
+    "analysis": 180
+   },
+   "totalSec": 900,
+   "expectedOutcome": "Проверено усвоение правил и лексики недели. Ошибки поставлены в очередь на пересдачу.",
+   "interferenceRisk": null,
+   "lexemeIds": []
+  },
+  {
+   "day": 155,
+   "week": 23,
+   "phase": 4,
+   "phaseTitle": "Экзаменационный тренинг",
+   "kind": "new",
+   "topic": "Практика: Здоровье",
+   "themeId": "7.7",
+   "themeRu": "Здоровье",
+   "grammarRuleIds": [],
+   "isNewRule": false,
+   "reviewRuleIds": [
+    "pl.gram.s-correlative",
+    "pl.gram.s-relative",
+    "pl.gram.c-acc"
+   ],
+   "newWordCount": 3,
+   "exerciseKinds": [
+    "gap-fill",
+    "translate-to-target"
+   ],
+   "examFocus": "reading",
+   "competencyIds": [
+    "pl-b1.reading.argument"
+   ],
+   "timeBudgetSec": {
+    "review": 240,
+    "newGrammar": 0,
+    "practice": 180,
+    "exam": 420,
+    "analysis": 60
+   },
+   "totalSec": 900,
+   "expectedOutcome": "Закрепление пройденного на новой лексике.",
+   "interferenceRisk": null,
+   "lexemeIds": []
+  },
+  {
+   "day": 156,
+   "week": 23,
+   "phase": 4,
+   "phaseTitle": "Экзаменационный тренинг",
+   "kind": "new",
+   "topic": "Практика: Здоровье",
+   "themeId": "7.7",
+   "themeRu": "Здоровье",
+   "grammarRuleIds": [],
+   "isNewRule": false,
+   "reviewRuleIds": [
+    "pl.gram.s-correlative",
+    "pl.gram.s-relative",
+    "pl.gram.c-acc-prepositions"
+   ],
+   "newWordCount": 3,
+   "exerciseKinds": [
+    "gap-fill",
+    "translate-to-target"
+   ],
+   "examFocus": "grammar",
+   "competencyIds": [
+    "pl-b1.grammar.recognize"
+   ],
+   "timeBudgetSec": {
+    "review": 240,
+    "newGrammar": 0,
+    "practice": 180,
+    "exam": 420,
+    "analysis": 60
+   },
+   "totalSec": 900,
+   "expectedOutcome": "Закрепление пройденного на новой лексике.",
+   "interferenceRisk": null,
+   "lexemeIds": []
+  },
+  {
+   "day": 157,
+   "week": 23,
+   "phase": 4,
+   "phaseTitle": "Экзаменационный тренинг",
+   "kind": "new",
+   "topic": "Практика: Здоровье",
+   "themeId": "7.7",
+   "themeRu": "Здоровье",
+   "grammarRuleIds": [],
+   "isNewRule": false,
+   "reviewRuleIds": [
+    "pl.gram.s-correlative",
+    "pl.gram.s-relative",
+    "pl.gram.c-gen"
+   ],
+   "newWordCount": 3,
+   "exerciseKinds": [
+    "gap-fill",
+    "translate-to-target"
+   ],
+   "examFocus": "listening",
+   "competencyIds": [
+    "pl-b1.listening.detail"
+   ],
+   "timeBudgetSec": {
+    "review": 240,
+    "newGrammar": 0,
+    "practice": 180,
+    "exam": 420,
+    "analysis": 60
+   },
+   "totalSec": 900,
+   "expectedOutcome": "Закрепление пройденного на новой лексике.",
+   "interferenceRisk": null,
+   "lexemeIds": []
+  },
+  {
+   "day": 158,
+   "week": 23,
+   "phase": 4,
+   "phaseTitle": "Экзаменационный тренинг",
+   "kind": "new",
+   "topic": "Практика: Здоровье",
+   "themeId": "7.7",
+   "themeRu": "Здоровье",
+   "grammarRuleIds": [],
+   "isNewRule": false,
+   "reviewRuleIds": [
+    "pl.gram.s-correlative",
+    "pl.gram.s-relative",
+    "pl.gram.c-gen-negation"
+   ],
+   "newWordCount": 3,
+   "exerciseKinds": [
+    "gap-fill",
+    "translate-to-target"
+   ],
+   "examFocus": "writing",
+   "competencyIds": [
+    "pl-b1.writing.narrative"
+   ],
+   "timeBudgetSec": {
+    "review": 240,
+    "newGrammar": 0,
+    "practice": 180,
+    "exam": 420,
+    "analysis": 60
+   },
+   "totalSec": 900,
+   "expectedOutcome": "Закрепление пройденного на новой лексике.",
+   "interferenceRisk": null,
+   "lexemeIds": []
+  },
+  {
+   "day": 159,
+   "week": 23,
+   "phase": 4,
+   "phaseTitle": "Экзаменационный тренинг",
+   "kind": "new",
+   "topic": "Практика: Здоровье",
+   "themeId": "7.7",
+   "themeRu": "Здоровье",
+   "grammarRuleIds": [],
+   "isNewRule": false,
+   "reviewRuleIds": [
+    "pl.gram.s-correlative",
+    "pl.gram.s-relative",
+    "pl.gram.c-gen-prepositions"
+   ],
+   "newWordCount": 3,
+   "exerciseKinds": [
+    "gap-fill",
+    "translate-to-target"
+   ],
+   "examFocus": "reading",
+   "competencyIds": [
+    "pl-b1.reading.argument"
+   ],
+   "timeBudgetSec": {
+    "review": 240,
+    "newGrammar": 0,
+    "practice": 180,
+    "exam": 420,
+    "analysis": 60
+   },
+   "totalSec": 900,
+   "expectedOutcome": "Закрепление пройденного на новой лексике.",
+   "interferenceRisk": null,
+   "lexemeIds": []
+  },
+  {
+   "day": 160,
+   "week": 23,
+   "phase": 4,
+   "phaseTitle": "Экзаменационный тренинг",
+   "kind": "consolidation",
+   "topic": "Закрепление: Здоровье",
+   "themeId": "7.7",
+   "themeRu": "Здоровье",
+   "grammarRuleIds": [],
+   "isNewRule": false,
+   "reviewRuleIds": [
+    "pl.gram.s-correlative",
+    "pl.gram.s-relative",
+    "pl.gram.p-indefinite-negative"
+   ],
+   "newWordCount": 2,
+   "exerciseKinds": [
+    "drill",
+    "error-correction",
+    "translate-to-target"
+   ],
+   "examFocus": "speaking",
+   "competencyIds": [
+    "pl-b1.speaking.monologue"
+   ],
+   "timeBudgetSec": {
+    "review": 300,
+    "newGrammar": 0,
+    "practice": 420,
+    "exam": 120,
+    "analysis": 60
+   },
+   "totalSec": 900,
+   "expectedOutcome": "Правила недели отработаны на новом материале, без ввода нового.",
+   "interferenceRisk": null,
+   "lexemeIds": []
+  },
+  {
+   "day": 161,
+   "week": 23,
+   "phase": 4,
+   "phaseTitle": "Экзаменационный тренинг",
+   "kind": "weekly-check",
+   "topic": "Недельный срез: Здоровье",
+   "themeId": "7.7",
+   "themeRu": "Здоровье",
+   "grammarRuleIds": [],
+   "isNewRule": false,
+   "reviewRuleIds": [
+    "pl.gram.s-correlative",
+    "pl.gram.s-relative",
+    "pl.gram.s-negation"
+   ],
+   "newWordCount": 0,
+   "exerciseKinds": [
+    "mixed-review",
+    "exam-format"
+   ],
+   "examFocus": "listening",
+   "competencyIds": [
+    "pl-b1.listening.detail"
+   ],
+   "timeBudgetSec": {
+    "review": 0,
+    "newGrammar": 0,
+    "practice": 180,
+    "exam": 540,
+    "analysis": 180
+   },
+   "totalSec": 900,
+   "expectedOutcome": "Проверено усвоение правил и лексики недели. Ошибки поставлены в очередь на пересдачу.",
+   "interferenceRisk": null,
+   "lexemeIds": []
+  },
+  {
+   "day": 162,
+   "week": 24,
+   "phase": 4,
+   "phaseTitle": "Экзаменационный тренинг",
+   "kind": "new",
+   "topic": "Практика: Образование",
+   "themeId": "7.8",
+   "themeRu": "Образование",
+   "grammarRuleIds": [],
+   "isNewRule": false,
+   "reviewRuleIds": [
+    "pl.gram.s-correlative",
+    "pl.gram.s-relative",
+    "pl.gram.c-gen-verbs"
+   ],
+   "newWordCount": 3,
+   "exerciseKinds": [
+    "gap-fill",
+    "translate-to-target"
+   ],
+   "examFocus": "reading",
+   "competencyIds": [
+    "pl-b1.reading.selective"
+   ],
+   "timeBudgetSec": {
+    "review": 240,
+    "newGrammar": 0,
+    "practice": 180,
+    "exam": 420,
+    "analysis": 60
+   },
+   "totalSec": 900,
+   "expectedOutcome": "Закрепление пройденного на новой лексике.",
+   "interferenceRisk": null,
+   "lexemeIds": []
+  },
+  {
+   "day": 163,
+   "week": 24,
+   "phase": 4,
+   "phaseTitle": "Экзаменационный тренинг",
+   "kind": "new",
+   "topic": "Практика: Образование",
+   "themeId": "7.8",
+   "themeRu": "Образование",
+   "grammarRuleIds": [],
+   "isNewRule": false,
+   "reviewRuleIds": [
+    "pl.gram.s-correlative",
+    "pl.gram.s-relative",
+    "pl.gram.k-adj-agreement"
+   ],
+   "newWordCount": 3,
+   "exerciseKinds": [
+    "gap-fill",
+    "translate-to-target"
+   ],
+   "examFocus": "grammar",
+   "competencyIds": [
+    "pl-b1.grammar.produce"
+   ],
+   "timeBudgetSec": {
+    "review": 240,
+    "newGrammar": 0,
+    "practice": 180,
+    "exam": 420,
+    "analysis": 60
+   },
+   "totalSec": 900,
+   "expectedOutcome": "Закрепление пройденного на новой лексике.",
+   "interferenceRisk": null,
+   "lexemeIds": []
+  },
+  {
+   "day": 164,
+   "week": 24,
+   "phase": 4,
+   "phaseTitle": "Экзаменационный тренинг",
+   "kind": "new",
+   "topic": "Практика: Образование",
+   "themeId": "7.8",
+   "themeRu": "Образование",
+   "grammarRuleIds": [],
+   "isNewRule": false,
+   "reviewRuleIds": [
+    "pl.gram.s-correlative",
+    "pl.gram.s-relative",
+    "pl.gram.k-comparative"
+   ],
+   "newWordCount": 3,
+   "exerciseKinds": [
+    "gap-fill",
+    "translate-to-target"
+   ],
+   "examFocus": "listening",
+   "competencyIds": [
+    "pl-b1.listening.global"
+   ],
+   "timeBudgetSec": {
+    "review": 240,
+    "newGrammar": 0,
+    "practice": 180,
+    "exam": 420,
+    "analysis": 60
+   },
+   "totalSec": 900,
+   "expectedOutcome": "Закрепление пройденного на новой лексике.",
+   "interferenceRisk": null,
+   "lexemeIds": []
+  },
+  {
+   "day": 165,
+   "week": 24,
+   "phase": 4,
+   "phaseTitle": "Экзаменационный тренинг",
+   "kind": "new",
+   "topic": "Практика: Образование",
+   "themeId": "7.8",
+   "themeRu": "Образование",
+   "grammarRuleIds": [],
+   "isNewRule": false,
+   "reviewRuleIds": [
+    "pl.gram.s-correlative",
+    "pl.gram.s-relative",
+    "pl.gram.k-adverb"
+   ],
+   "newWordCount": 3,
+   "exerciseKinds": [
+    "gap-fill",
+    "translate-to-target"
+   ],
+   "examFocus": "writing",
+   "competencyIds": [
+    "pl-b1.writing.descriptive"
+   ],
+   "timeBudgetSec": {
+    "review": 240,
+    "newGrammar": 0,
+    "practice": 180,
+    "exam": 420,
+    "analysis": 60
+   },
+   "totalSec": 900,
+   "expectedOutcome": "Закрепление пройденного на новой лексике.",
+   "interferenceRisk": null,
+   "lexemeIds": []
+  },
+  {
+   "day": 166,
+   "week": 24,
+   "phase": 4,
+   "phaseTitle": "Экзаменационный тренинг",
+   "kind": "new",
+   "topic": "Практика: Образование",
+   "themeId": "7.8",
+   "themeRu": "Образование",
+   "grammarRuleIds": [],
+   "isNewRule": false,
+   "reviewRuleIds": [
+    "pl.gram.s-correlative",
+    "pl.gram.s-relative",
+    "pl.gram.n-date-time"
+   ],
+   "newWordCount": 3,
+   "exerciseKinds": [
+    "gap-fill",
+    "translate-to-target"
+   ],
+   "examFocus": "reading",
+   "competencyIds": [
+    "pl-b1.reading.selective"
+   ],
+   "timeBudgetSec": {
+    "review": 240,
+    "newGrammar": 0,
+    "practice": 180,
+    "exam": 420,
+    "analysis": 60
+   },
+   "totalSec": 900,
+   "expectedOutcome": "Закрепление пройденного на новой лексике.",
+   "interferenceRisk": null,
+   "lexemeIds": []
+  },
+  {
+   "day": 167,
+   "week": 24,
+   "phase": 4,
+   "phaseTitle": "Экзаменационный тренинг",
+   "kind": "consolidation",
+   "topic": "Закрепление: Образование",
+   "themeId": "7.8",
+   "themeRu": "Образование",
+   "grammarRuleIds": [],
+   "isNewRule": false,
+   "reviewRuleIds": [
+    "pl.gram.s-correlative",
+    "pl.gram.s-relative",
+    "pl.gram.c-gen-pl"
+   ],
+   "newWordCount": 2,
+   "exerciseKinds": [
+    "drill",
+    "error-correction",
+    "translate-to-target"
+   ],
+   "examFocus": "speaking",
+   "competencyIds": [
+    "pl-b1.speaking.dialogue"
+   ],
+   "timeBudgetSec": {
+    "review": 300,
+    "newGrammar": 0,
+    "practice": 420,
+    "exam": 120,
+    "analysis": 60
+   },
+   "totalSec": 900,
+   "expectedOutcome": "Правила недели отработаны на новом материале, без ввода нового.",
+   "interferenceRisk": null,
+   "lexemeIds": []
+  },
+  {
+   "day": 168,
+   "week": 24,
+   "phase": 4,
+   "phaseTitle": "Экзаменационный тренинг",
+   "kind": "checkpoint",
+   "topic": "Контрольный срез · неделя 24",
+   "themeId": "7.8",
+   "themeRu": "Образование",
+   "grammarRuleIds": [],
+   "isNewRule": false,
+   "reviewRuleIds": [
+    "pl.gram.s-correlative",
+    "pl.gram.s-relative",
+    "pl.gram.n-cardinal-5plus"
+   ],
+   "newWordCount": 0,
+   "exerciseKinds": [
+    "mini-mock-all-modules"
+   ],
+   "examFocus": "listening",
+   "competencyIds": [
+    "pl-b1.listening.global"
+   ],
+   "timeBudgetSec": {
+    "review": 0,
+    "newGrammar": 0,
+    "practice": 0,
+    "exam": 840,
+    "analysis": 60
+   },
+   "totalSec": 900,
+   "expectedOutcome": "Обновлён прогноз по всем пяти модулям. Слабейший получает приоритет в следующем цикле.",
+   "interferenceRisk": null,
+   "lexemeIds": []
+  },
+  {
+   "day": 169,
+   "week": 25,
+   "phase": 4,
+   "phaseTitle": "Экзаменационный тренинг",
+   "kind": "new",
+   "topic": "Практика: Работа",
+   "themeId": "7.9",
+   "themeRu": "Работа",
+   "grammarRuleIds": [],
+   "isNewRule": false,
+   "reviewRuleIds": [
+    "pl.gram.s-correlative",
+    "pl.gram.s-relative",
+    "pl.gram.c-gen-quantity"
+   ],
+   "newWordCount": 3,
+   "exerciseKinds": [
+    "gap-fill",
+    "translate-to-target"
+   ],
+   "examFocus": "reading",
+   "competencyIds": [
+    "pl-b1.reading.global"
+   ],
+   "timeBudgetSec": {
+    "review": 240,
+    "newGrammar": 0,
+    "practice": 180,
+    "exam": 420,
+    "analysis": 60
+   },
+   "totalSec": 900,
+   "expectedOutcome": "Закрепление пройденного на новой лексике.",
+   "interferenceRisk": null,
+   "lexemeIds": []
+  },
+  {
+   "day": 170,
+   "week": 25,
+   "phase": 4,
+   "phaseTitle": "Экзаменационный тренинг",
+   "kind": "new",
+   "topic": "Практика: Работа",
+   "themeId": "7.9",
+   "themeRu": "Работа",
+   "grammarRuleIds": [],
+   "isNewRule": false,
+   "reviewRuleIds": [
+    "pl.gram.s-correlative",
+    "pl.gram.s-relative",
+    "pl.gram.c-loc"
+   ],
+   "newWordCount": 3,
+   "exerciseKinds": [
+    "gap-fill",
+    "translate-to-target"
+   ],
+   "examFocus": "grammar",
+   "competencyIds": [
+    "pl-b1.grammar.transform"
+   ],
+   "timeBudgetSec": {
+    "review": 240,
+    "newGrammar": 0,
+    "practice": 180,
+    "exam": 420,
+    "analysis": 60
+   },
+   "totalSec": 900,
+   "expectedOutcome": "Закрепление пройденного на новой лексике.",
+   "interferenceRisk": null,
+   "lexemeIds": []
+  },
+  {
+   "day": 171,
+   "week": 25,
+   "phase": 4,
+   "phaseTitle": "Экзаменационный тренинг",
+   "kind": "new",
+   "topic": "Практика: Работа",
+   "themeId": "7.9",
+   "themeRu": "Работа",
+   "grammarRuleIds": [],
+   "isNewRule": false,
+   "reviewRuleIds": [
+    "pl.gram.s-correlative",
+    "pl.gram.s-relative",
+    "pl.gram.c-loc-prepositions"
+   ],
+   "newWordCount": 3,
+   "exerciseKinds": [
+    "gap-fill",
+    "translate-to-target"
+   ],
+   "examFocus": "listening",
+   "competencyIds": [
+    "pl-b1.listening.media"
+   ],
+   "timeBudgetSec": {
+    "review": 240,
+    "newGrammar": 0,
+    "practice": 180,
+    "exam": 420,
+    "analysis": 60
+   },
+   "totalSec": 900,
+   "expectedOutcome": "Закрепление пройденного на новой лексике.",
+   "interferenceRisk": null,
+   "lexemeIds": []
+  },
+  {
+   "day": 172,
+   "week": 25,
+   "phase": 4,
+   "phaseTitle": "Экзаменационный тренинг",
+   "kind": "new",
+   "topic": "Практика: Работа",
+   "themeId": "7.9",
+   "themeRu": "Работа",
+   "grammarRuleIds": [],
+   "isNewRule": false,
+   "reviewRuleIds": [
+    "pl.gram.s-correlative",
+    "pl.gram.s-relative",
+    "pl.gram.c-voc"
+   ],
+   "newWordCount": 3,
+   "exerciseKinds": [
+    "gap-fill",
+    "translate-to-target"
+   ],
+   "examFocus": "writing",
+   "competencyIds": [
+    "pl-b1.writing.short-forms"
+   ],
+   "timeBudgetSec": {
+    "review": 240,
+    "newGrammar": 0,
+    "practice": 180,
+    "exam": 420,
+    "analysis": 60
+   },
+   "totalSec": 900,
+   "expectedOutcome": "Закрепление пройденного на новой лексике.",
+   "interferenceRisk": null,
+   "lexemeIds": []
+  },
+  {
+   "day": 173,
+   "week": 25,
+   "phase": 4,
+   "phaseTitle": "Экзаменационный тренинг",
+   "kind": "new",
+   "topic": "Практика: Работа",
+   "themeId": "7.9",
+   "themeRu": "Работа",
+   "grammarRuleIds": [],
+   "isNewRule": false,
+   "reviewRuleIds": [
+    "pl.gram.s-correlative",
+    "pl.gram.s-relative",
+    "pl.gram.c-dat"
+   ],
+   "newWordCount": 3,
+   "exerciseKinds": [
+    "gap-fill",
+    "translate-to-target"
+   ],
+   "examFocus": "reading",
+   "competencyIds": [
+    "pl-b1.reading.global"
+   ],
+   "timeBudgetSec": {
+    "review": 240,
+    "newGrammar": 0,
+    "practice": 180,
+    "exam": 420,
+    "analysis": 60
+   },
+   "totalSec": 900,
+   "expectedOutcome": "Закрепление пройденного на новой лексике.",
+   "interferenceRisk": null,
+   "lexemeIds": []
+  },
+  {
+   "day": 174,
+   "week": 25,
+   "phase": 4,
+   "phaseTitle": "Экзаменационный тренинг",
+   "kind": "consolidation",
+   "topic": "Закрепление: Работа",
+   "themeId": "7.9",
+   "themeRu": "Работа",
+   "grammarRuleIds": [],
+   "isNewRule": false,
+   "reviewRuleIds": [
+    "pl.gram.s-correlative",
+    "pl.gram.s-relative",
+    "pl.gram.c-dat-verbs"
+   ],
+   "newWordCount": 2,
+   "exerciseKinds": [
+    "drill",
+    "error-correction",
+    "translate-to-target"
+   ],
+   "examFocus": "speaking",
+   "competencyIds": [
+    "pl-b1.speaking.photo"
+   ],
+   "timeBudgetSec": {
+    "review": 300,
+    "newGrammar": 0,
+    "practice": 420,
+    "exam": 120,
+    "analysis": 60
+   },
+   "totalSec": 900,
+   "expectedOutcome": "Правила недели отработаны на новом материале, без ввода нового.",
+   "interferenceRisk": null,
+   "lexemeIds": []
+  },
+  {
+   "day": 175,
+   "week": 25,
+   "phase": 4,
+   "phaseTitle": "Экзаменационный тренинг",
+   "kind": "weekly-check",
+   "topic": "Недельный срез: Работа",
+   "themeId": "7.9",
+   "themeRu": "Работа",
+   "grammarRuleIds": [],
+   "isNewRule": false,
+   "reviewRuleIds": [
+    "pl.gram.s-correlative",
+    "pl.gram.s-relative",
+    "pl.gram.p-reflexive-siebie"
+   ],
+   "newWordCount": 0,
+   "exerciseKinds": [
+    "mixed-review",
+    "exam-format"
+   ],
+   "examFocus": "listening",
+   "competencyIds": [
+    "pl-b1.listening.media"
+   ],
+   "timeBudgetSec": {
+    "review": 0,
+    "newGrammar": 0,
+    "practice": 180,
+    "exam": 540,
+    "analysis": 180
+   },
+   "totalSec": 900,
+   "expectedOutcome": "Проверено усвоение правил и лексики недели. Ошибки поставлены в очередь на пересдачу.",
+   "interferenceRisk": null,
+   "lexemeIds": []
+  },
+  {
+   "day": 176,
+   "week": 26,
+   "phase": 4,
+   "phaseTitle": "Экзаменационный тренинг",
+   "kind": "new",
+   "topic": "Практика: Покупки",
+   "themeId": "7.10",
+   "themeRu": "Покупки",
+   "grammarRuleIds": [],
+   "isNewRule": false,
+   "reviewRuleIds": [
+    "pl.gram.s-correlative",
+    "pl.gram.s-relative",
+    "pl.gram.p-personal"
+   ],
+   "newWordCount": 3,
+   "exerciseKinds": [
+    "gap-fill",
+    "translate-to-target"
+   ],
+   "examFocus": "reading",
+   "competencyIds": [
+    "pl-b1.reading.signs"
+   ],
+   "timeBudgetSec": {
+    "review": 240,
+    "newGrammar": 0,
+    "practice": 180,
+    "exam": 420,
+    "analysis": 60
+   },
+   "totalSec": 900,
+   "expectedOutcome": "Закрепление пройденного на новой лексике.",
+   "interferenceRisk": null,
+   "lexemeIds": []
+  },
+  {
+   "day": 177,
+   "week": 26,
+   "phase": 4,
+   "phaseTitle": "Экзаменационный тренинг",
+   "kind": "new",
+   "topic": "Практика: Покупки",
+   "themeId": "7.10",
+   "themeRu": "Покупки",
+   "grammarRuleIds": [],
+   "isNewRule": false,
+   "reviewRuleIds": [
+    "pl.gram.s-correlative",
+    "pl.gram.s-relative",
+    "pl.gram.p-formal-pan"
+   ],
+   "newWordCount": 3,
+   "exerciseKinds": [
+    "gap-fill",
+    "translate-to-target"
+   ],
+   "examFocus": "grammar",
+   "competencyIds": [
+    "pl-b1.grammar.recognize"
+   ],
+   "timeBudgetSec": {
+    "review": 240,
+    "newGrammar": 0,
+    "practice": 180,
+    "exam": 420,
+    "analysis": 60
+   },
+   "totalSec": 900,
+   "expectedOutcome": "Закрепление пройденного на новой лексике.",
+   "interferenceRisk": null,
+   "lexemeIds": []
+  },
+  {
+   "day": 178,
+   "week": 26,
+   "phase": 4,
+   "phaseTitle": "Экзаменационный тренинг",
+   "kind": "new",
+   "topic": "Практика: Покупки",
+   "themeId": "7.10",
+   "themeRu": "Покупки",
+   "grammarRuleIds": [],
+   "isNewRule": false,
+   "reviewRuleIds": [
+    "pl.gram.s-correlative",
+    "pl.gram.s-relative",
+    "pl.gram.t-registers"
+   ],
+   "newWordCount": 3,
+   "exerciseKinds": [
+    "gap-fill",
+    "translate-to-target"
+   ],
+   "examFocus": "listening",
+   "competencyIds": [
+    "pl-b1.listening.dialogue"
+   ],
+   "timeBudgetSec": {
+    "review": 240,
+    "newGrammar": 0,
+    "practice": 180,
+    "exam": 420,
+    "analysis": 60
+   },
+   "totalSec": 900,
+   "expectedOutcome": "Закрепление пройденного на новой лексике.",
+   "interferenceRisk": null,
+   "lexemeIds": []
+  },
+  {
+   "day": 179,
+   "week": 26,
+   "phase": 4,
+   "phaseTitle": "Экзаменационный тренинг",
+   "kind": "new",
+   "topic": "Практика: Покупки",
+   "themeId": "7.10",
+   "themeRu": "Покупки",
+   "grammarRuleIds": [],
+   "isNewRule": false,
+   "reviewRuleIds": [
+    "pl.gram.s-correlative",
+    "pl.gram.s-relative",
+    "pl.gram.t-figures"
+   ],
+   "newWordCount": 3,
+   "exerciseKinds": [
+    "gap-fill",
+    "translate-to-target"
+   ],
+   "examFocus": "writing",
+   "competencyIds": [
+    "pl-b1.writing.opinion"
+   ],
+   "timeBudgetSec": {
+    "review": 240,
+    "newGrammar": 0,
+    "practice": 180,
+    "exam": 420,
+    "analysis": 60
+   },
+   "totalSec": 900,
+   "expectedOutcome": "Закрепление пройденного на новой лексике.",
+   "interferenceRisk": null,
+   "lexemeIds": []
+  },
+  {
+   "day": 180,
+   "week": 26,
+   "phase": 4,
+   "phaseTitle": "Экзаменационный тренинг",
+   "kind": "new",
+   "topic": "Практика: Покупки",
+   "themeId": "7.10",
+   "themeRu": "Покупки",
+   "grammarRuleIds": [],
+   "isNewRule": false,
+   "reviewRuleIds": [
+    "pl.gram.s-correlative",
+    "pl.gram.s-relative",
+    "pl.gram.n-masc-personal"
+   ],
+   "newWordCount": 3,
+   "exerciseKinds": [
+    "gap-fill",
+    "translate-to-target"
+   ],
+   "examFocus": "reading",
+   "competencyIds": [
+    "pl-b1.reading.signs"
+   ],
+   "timeBudgetSec": {
+    "review": 240,
+    "newGrammar": 0,
+    "practice": 180,
+    "exam": 420,
+    "analysis": 60
+   },
+   "totalSec": 900,
+   "expectedOutcome": "Закрепление пройденного на новой лексике.",
+   "interferenceRisk": null,
+   "lexemeIds": []
+  },
+  {
+   "day": 181,
+   "week": 26,
+   "phase": 4,
+   "phaseTitle": "Экзаменационный тренинг",
+   "kind": "consolidation",
+   "topic": "Закрепление: Покупки",
+   "themeId": "7.10",
+   "themeRu": "Покупки",
+   "grammarRuleIds": [],
+   "isNewRule": false,
+   "reviewRuleIds": [
+    "pl.gram.s-correlative",
+    "pl.gram.s-relative",
+    "pl.gram.v-government"
+   ],
+   "newWordCount": 2,
+   "exerciseKinds": [
+    "drill",
+    "error-correction",
+    "translate-to-target"
+   ],
+   "examFocus": "speaking",
+   "competencyIds": [
+    "pl-b1.speaking.monologue"
+   ],
+   "timeBudgetSec": {
+    "review": 300,
+    "newGrammar": 0,
+    "practice": 420,
+    "exam": 120,
+    "analysis": 60
+   },
+   "totalSec": 900,
+   "expectedOutcome": "Правила недели отработаны на новом материале, без ввода нового.",
+   "interferenceRisk": null,
+   "lexemeIds": []
+  },
+  {
+   "day": 182,
+   "week": 26,
+   "phase": 4,
+   "phaseTitle": "Экзаменационный тренинг",
+   "kind": "final",
+   "topic": "Итоговая оценка готовности",
+   "themeId": "7.10",
+   "themeRu": "Покупки",
+   "grammarRuleIds": [],
+   "isNewRule": false,
+   "reviewRuleIds": [
+    "pl.gram.s-correlative",
+    "pl.gram.s-relative",
+    "pl.gram.v-past-pl"
+   ],
+   "newWordCount": 0,
+   "exerciseKinds": [
+    "full-mock"
+   ],
+   "examFocus": "listening",
+   "competencyIds": [
+    "pl-b1.listening.dialogue"
+   ],
+   "timeBudgetSec": {
+    "review": 0,
+    "newGrammar": 0,
+    "practice": 0,
+    "exam": 780,
+    "analysis": 120
+   },
+   "totalSec": 900,
+   "expectedOutcome": "Вердикт по каждому из 5 модулей: готов / не готов. Критерий — ≥65% дважды подряд.",
+   "interferenceRisk": null,
+   "lexemeIds": []
+  }
+ ]
+}

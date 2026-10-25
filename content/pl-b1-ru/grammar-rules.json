@@ -1,0 +1,1360 @@
+{
+  "$schema": "./grammar-rules.schema.json",
+  "languageId": "pl",
+  "sourceLanguageId": "ru",
+  "certificationTargetId": "pl-state-b1-adults",
+  "version": "2026-10-24",
+
+  "_meta": {
+    "source": "Dz.U. 2018 poz. 1386, załącznik nr 1, część II, rozdz. E, p. 2.2 «Lista zagadnień gramatycznych»",
+    "sourceUrl": "https://isap.sejm.gov.pl/isap.nsf/download.xsp/WDU20180001386/O/D20181386.pdf",
+    "decomposition": "Официальный перечень сгруппирован по частям речи. Для обучения он перестроен по падежам: падеж вводится сразу для существительного, прилагательного и местоимения, иначе из него нельзя построить предложение. Глагольная линия идёт параллельно и почти независимо.",
+    "fields": {
+      "prerequisites": "Правила, без которых это не объяснить. Граф ДОЛЖЕН быть ацикличен — проверяется валидатором.",
+      "difficulty": "1..5 — объективная сложность темы",
+      "interferenceRu": "1..5 — риск переноса из русского. 5 = русский активно мешает. Это то, подо что генерируются точечные дриллы",
+      "morfeusz": "теги SGJP для автогенерации упражнений на формы",
+      "examModules": "модули экзамена, на которые правило влияет напрямую"
+    }
+  },
+
+  "categories": {
+    "foundations": "Основы: род, число, одушевлённость, орфография",
+    "verbs": "Спряжение, время, вид, наклонение",
+    "cases": "Падежи: формы и функции",
+    "pronouns": "Местоимения",
+    "numerals": "Числительные",
+    "comparison": "Степени сравнения",
+    "syntax": "Синтаксис предложения",
+    "style": "Стилистика и регистр"
+  },
+
+  "rules": [
+    {
+      "id": "pl.gram.alphabet-orthography",
+      "category": "foundations",
+      "title": { "pl": "Alfabet i ortografia", "ru": "Алфавит и орфография" },
+      "summary": "Польский алфавит, диакритика, орфографические пары ż/rz, u/ó, h/ch, ch/cz.",
+      "prerequisites": [],
+      "difficulty": 2,
+      "interferenceRu": 4,
+      "examples": [
+        { "pl": "żona, rzeka — звучат одинаково, пишутся по-разному", "ru": "жена, река" },
+        { "pl": "może (может) ≠ morze (море)", "ru": "омофоны с разным написанием" }
+      ],
+      "pitfallsForRu": [
+        "Кириллическая привычка: нет ощущения, где ż, а где rz — а на письме это оценивается",
+        "ó читается как u, но пишется там, где в русском о: ból ← боль, mój ← мой. Это рабочее правило",
+        "Пропуск диакритики = другое слово: laska (палка) ≠ łaska (милость)"
+      ],
+      "examModules": ["writing", "listening"],
+      "exerciseKinds": ["spelling", "gap-fill", "error-correction"],
+      "sourceRef": "4.1 (ortografia i interpunkcja)"
+    },
+    {
+      "id": "pl.gram.stress",
+      "category": "foundations",
+      "title": { "pl": "Akcent wyrazowy", "ru": "Ударение" },
+      "summary": "Ударение на предпоследнем слоге. Исключения: заимствования на -yka, формы прошедшего мн. ч., сослагательное, часть числительных.",
+      "prerequisites": ["pl.gram.alphabet-orthography"],
+      "difficulty": 2,
+      "interferenceRu": 5,
+      "examples": [
+        { "pl": "mieszKAnie, staCJA, koLEga", "ru": "регулярное — предпоследний слог" },
+        { "pl": "mateMAtyka, uniwerSYtet, poSZLIśmy, CZTErysta", "ru": "исключения" }
+      ],
+      "pitfallsForRu": [
+        "В русском ударение свободное — автоматически переносится на польские слова и всегда мимо",
+        "Эти же слова TTS произносит неверно, см. AUDIO_AND_PRONUNCIATION.md §3ter"
+      ],
+      "examModules": ["speaking", "listening"],
+      "exerciseKinds": ["listen-and-mark-stress", "minimal-pairs"],
+      "sourceRef": "NAWA, Mówienie — Wymagania w zakresie wymowy"
+    },
+    {
+      "id": "pl.gram.gender",
+      "category": "foundations",
+      "title": { "pl": "Rodzaj rzeczownika", "ru": "Род существительного" },
+      "summary": "Три рода в ед. ч., определяются по окончанию начальной формы.",
+      "prerequisites": ["pl.gram.alphabet-orthography"],
+      "difficulty": 1,
+      "interferenceRu": 3,
+      "examples": [
+        { "pl": "stół, pies, dzień — męski", "ru": "м. р. на согласный" },
+        { "pl": "kierowca, poeta, gitarzysta — męski na -a", "ru": "м. р. на -a (как в русском «папа»)" },
+        { "pl": "sala, ulica / miłość, twarz — żeński", "ru": "ж. р. на -a и на согласный" },
+        { "pl": "ciasto, morze, liceum, imię — nijaki", "ru": "ср. р. на -o, -e, -um, -ę" }
+      ],
+      "pitfallsForRu": [
+        "Род часто НЕ совпадает с русским: pies — м.р. (собака ж.р.), krzesło — ср.р. (стул м.р.)",
+        "Существительные на -um (liceum, muzeum) — средний род и в ед. ч. НЕ склоняются"
+      ],
+      "morfeusz": { "pos": "subst", "extract": "gender" },
+      "examModules": ["grammar", "writing", "speaking"],
+      "exerciseKinds": ["classify", "multiple-choice"],
+      "sourceRef": "2.2.1 1) a)"
+    },
+    {
+      "id": "pl.gram.number",
+      "category": "foundations",
+      "title": { "pl": "Liczba mnoga — mianownik", "ru": "Множественное число, именительный" },
+      "summary": "Образование мн. ч. в им. п., чередования согласных.",
+      "prerequisites": ["pl.gram.gender"],
+      "difficulty": 3,
+      "interferenceRu": 3,
+      "examples": [
+        { "pl": "stół → stoły, kot → koty", "ru": "неодушевл. м. р." },
+        { "pl": "ulica → ulice, kobieta → kobiety", "ru": "ж. р." },
+        { "pl": "miasto → miasta, morze → morza", "ru": "ср. р." }
+      ],
+      "pitfallsForRu": [
+        "Чередования: ręka → ręce, oko → oczy, ucho → uszy, dziecko → dzieci — неочевидны"
+      ],
+      "morfeusz": { "pos": "subst", "tags": "pl:nom" },
+      "examModules": ["grammar"],
+      "exerciseKinds": ["inflect", "gap-fill"],
+      "sourceRef": "2.2.1 1) a)"
+    },
+    {
+      "id": "pl.gram.animacy",
+      "category": "foundations",
+      "title": { "pl": "Żywotność rzeczowników męskich", "ru": "Одушевлённость существительных м. р." },
+      "summary": "Деление м. р. на живые и неживые — определяет винительный падеж ед. ч.",
+      "prerequisites": ["pl.gram.gender"],
+      "difficulty": 2,
+      "interferenceRu": 1,
+      "examples": [
+        { "pl": "student, pies — żywotne → biernik = dopełniacz", "ru": "widzę studenta, psa" },
+        { "pl": "stół, zeszyt — nieżywotne → biernik = mianownik", "ru": "widzę stół, zeszyt" }
+      ],
+      "pitfallsForRu": [
+        "Механика та же, что в русском — это одна из немногих тем, где русский помогает полностью"
+      ],
+      "examModules": ["grammar"],
+      "exerciseKinds": ["classify"],
+      "sourceRef": "2.2.1 1) a) tiret 5"
+    },
+    {
+      "id": "pl.gram.masc-personal",
+      "category": "foundations",
+      "title": { "pl": "Rodzaj męskoosobowy", "ru": "Мужско-личный род" },
+      "summary": "Ключевое для польского деление мн. ч. на мужско-личный и немужско-личный. Влияет на существительные, прилагательные, глаголы прошедшего времени и числительные.",
+      "prerequisites": ["pl.gram.number", "pl.gram.animacy"],
+      "difficulty": 5,
+      "interferenceRu": 5,
+      "examples": [
+        { "pl": "panowie, studenci (męskoosobowe)", "ru": "группа, где есть хоть один мужчина" },
+        { "pl": "stoły, studentki (niemęskoosobowe)", "ru": "всё остальное" },
+        { "pl": "czterech panów / czterej studenci ≠ cztery stoły / cztery studentki", "ru": "числительные тоже" },
+        { "pl": "studenci byli ≠ studentki były", "ru": "и глагол в прошедшем" }
+      ],
+      "pitfallsForRu": [
+        "В русском такой категории НЕТ вообще. Это самая чужая тема курса",
+        "Пронизывает всё: согласование прилагательных, прошедшее время, числительные",
+        "Чередования при образовании: student → studenci, Polak → Polacy, brat → bracia"
+      ],
+      "morfeusz": { "pos": "subst", "tags": "pl:nom:m1" },
+      "examModules": ["grammar", "writing", "speaking"],
+      "exerciseKinds": ["classify", "inflect", "error-correction", "agreement"],
+      "sourceRef": "2.2.1 1) a) tiret 6",
+      "teachingNote": "Вводить рано и возвращаться постоянно. Одного блока недостаточно."
+    },
+
+    {
+      "id": "pl.gram.v-byc",
+      "category": "verbs",
+      "title": { "pl": "Czasownik «być»", "ru": "Глагол «быть» в настоящем" },
+      "summary": "jestem, jesteś, jest, jesteśmy, jesteście, są. В польском связка обязательна.",
+      "prerequisites": [],
+      "difficulty": 1,
+      "interferenceRu": 5,
+      "examples": [
+        { "pl": "Jestem studentem.", "ru": "Я студент. — связка ОБЯЗАТЕЛЬНА" },
+        { "pl": "Czy jesteś Polakiem?", "ru": "Ты поляк?" }
+      ],
+      "pitfallsForRu": [
+        "В русском «я студент» без связки. По-польски «Ja student» — грубая ошибка",
+        "После być — творительный падеж, не именительный: jestem studentEM"
+      ],
+      "examModules": ["grammar", "writing", "speaking"],
+      "exerciseKinds": ["conjugate", "gap-fill", "translate-to-target"],
+      "sourceRef": "2.2.1 2) a)"
+    },
+    {
+      "id": "pl.gram.v-present-1",
+      "category": "verbs",
+      "title": { "pl": "Koniugacja I: -ę, -esz", "ru": "I спряжение: -ę, -esz" },
+      "summary": "Первая группа: iść, pisać, pracować, móc.",
+      "prerequisites": ["pl.gram.v-byc"],
+      "difficulty": 3,
+      "interferenceRu": 3,
+      "examples": [
+        { "pl": "idę, idziesz, idzie, idziemy, idziecie, idą", "ru": "iść" },
+        { "pl": "piszę, piszesz, pisze…", "ru": "pisać — чередование s→sz" }
+      ],
+      "pitfallsForRu": [
+        "Чередования в основе: pisać → piszę, jechać → jadę"
+      ],
+      "morfeusz": { "pos": "fin", "tags": "sg:pri:imperf" },
+      "examModules": ["grammar", "writing", "speaking"],
+      "exerciseKinds": ["conjugate", "gap-fill"],
+      "sourceRef": "2.2.1 2) a)"
+    },
+    {
+      "id": "pl.gram.v-present-2",
+      "category": "verbs",
+      "title": { "pl": "Koniugacja II: -ę, -isz/-ysz", "ru": "II спряжение: -ę, -isz/-ysz" },
+      "summary": "mówić, robić, lubić, uczyć się.",
+      "prerequisites": ["pl.gram.v-present-1"],
+      "difficulty": 3,
+      "interferenceRu": 3,
+      "examples": [
+        { "pl": "mówię, mówisz, mówi, mówimy, mówicie, mówią", "ru": "mówić" },
+        { "pl": "robię, robisz, robi…", "ru": "robić" }
+      ],
+      "pitfallsForRu": [],
+      "morfeusz": { "pos": "fin" },
+      "examModules": ["grammar"],
+      "exerciseKinds": ["conjugate", "gap-fill"],
+      "sourceRef": "2.2.1 2) a)"
+    },
+    {
+      "id": "pl.gram.v-present-3",
+      "category": "verbs",
+      "title": { "pl": "Koniugacja III: -am, -asz", "ru": "III спряжение: -am, -asz" },
+      "summary": "mieć, czytać, mieszkać, znać, czekać. Самая регулярная группа.",
+      "prerequisites": ["pl.gram.v-byc"],
+      "difficulty": 1,
+      "interferenceRu": 2,
+      "examples": [
+        { "pl": "czytam, czytasz, czyta, czytamy, czytacie, czytają", "ru": "czytać" },
+        { "pl": "mam, masz, ma, mamy, macie, mają", "ru": "mieć — нерегулярный в этой группе" }
+      ],
+      "pitfallsForRu": [],
+      "morfeusz": { "pos": "fin" },
+      "examModules": ["grammar"],
+      "exerciseKinds": ["conjugate"],
+      "sourceRef": "2.2.1 2) a)",
+      "teachingNote": "Вводить первой: самая простая, даёт быстрый результат."
+    },
+    {
+      "id": "pl.gram.v-present-4",
+      "category": "verbs",
+      "title": { "pl": "Koniugacja IV: -em, -esz", "ru": "IV спряжение: -em, -esz" },
+      "summary": "jeść, wiedzieć, rozumieć, umieć. Малая, но частотная группа.",
+      "prerequisites": ["pl.gram.v-present-3"],
+      "difficulty": 2,
+      "interferenceRu": 2,
+      "examples": [
+        { "pl": "jem, jesz, je, jemy, jecie, jedzą", "ru": "jeść" },
+        { "pl": "rozumiem, rozumiesz, rozumie…", "ru": "rozumieć" }
+      ],
+      "pitfallsForRu": [
+        "wiedzieć (знать факт) ≠ znać (знать кого-то/что-то) — в русском один глагол"
+      ],
+      "examModules": ["grammar"],
+      "exerciseKinds": ["conjugate", "choose-correct-verb"],
+      "sourceRef": "2.2.1 2) a)"
+    },
+    {
+      "id": "pl.gram.v-present-irregular",
+      "category": "verbs",
+      "title": { "pl": "Czasowniki nieregularne", "ru": "Нерегулярные глаголы" },
+      "summary": "iść, jechać, chcieć, móc, wziąć — частотные и непредсказуемые.",
+      "prerequisites": ["pl.gram.v-present-1", "pl.gram.v-present-2"],
+      "difficulty": 4,
+      "interferenceRu": 3,
+      "examples": [
+        { "pl": "iść: idę, idziesz / jechać: jadę, jedziesz", "ru": "идти пешком / ехать" },
+        { "pl": "móc: mogę, możesz, może, mogą", "ru": "мочь" }
+      ],
+      "pitfallsForRu": [
+        "iść vs jechać: в русском «я иду в школу» можно и про транспорт, в польском нет"
+      ],
+      "examModules": ["grammar", "speaking"],
+      "exerciseKinds": ["conjugate", "choose-correct-verb"],
+      "sourceRef": "2.2.1 2) a)"
+    },
+    {
+      "id": "pl.gram.v-reflexive",
+      "category": "verbs",
+      "title": { "pl": "Czasowniki zwrotne i miejsce «się»", "ru": "Возвратные глаголы и позиция się" },
+      "summary": "się — отдельное слово со свободной, но не произвольной позицией.",
+      "prerequisites": ["pl.gram.v-present-2"],
+      "difficulty": 3,
+      "interferenceRu": 5,
+      "examples": [
+        { "pl": "Uczę się polskiego.", "ru": "Я учу польский" },
+        { "pl": "Jak się nazywasz? / Nazywam się Anna.", "ru": "позиция się меняется" }
+      ],
+      "pitfallsForRu": [
+        "В русском -ся приклеено к глаголу. В польском się — отдельное слово и двигается",
+        "się не ставится в начало предложения и обычно не в самый конец",
+        "Набор возвратных глаголов не совпадает: uczyć się (учить), bać się (бояться), но «начинаться» = zaczynać się ✓"
+      ],
+      "examModules": ["grammar", "writing", "speaking"],
+      "exerciseKinds": ["word-order", "gap-fill", "error-correction"],
+      "sourceRef": "2.2.1 1) c) — zaimek zwrotny"
+    },
+    {
+      "id": "pl.gram.v-past-sg",
+      "category": "verbs",
+      "title": { "pl": "Czas przeszły — liczba pojedyncza", "ru": "Прошедшее время, ед. ч." },
+      "summary": "Основа + родовое окончание + личное окончание: -łem/-łam, -łeś/-łaś, -ł/-ła/-ło.",
+      "prerequisites": ["pl.gram.v-present-3", "pl.gram.gender"],
+      "difficulty": 3,
+      "interferenceRu": 4,
+      "examples": [
+        { "pl": "czytałem / czytałam", "ru": "я читал / я читала" },
+        { "pl": "czytałeś / czytałaś", "ru": "ты читал / ты читала" }
+      ],
+      "pitfallsForRu": [
+        "В русском прошедшее не имеет личных окончаний: «я читал» = «ты читал». В польском РАЗНЫЕ формы",
+        "Из-за окончаний местоимение обычно опускается: не «ja czytałem», а просто «czytałem»"
+      ],
+      "morfeusz": { "pos": "praet" },
+      "examModules": ["grammar", "writing", "speaking"],
+      "exerciseKinds": ["conjugate", "transform", "gap-fill"],
+      "sourceRef": "2.2.1 2) a)"
+    },
+    {
+      "id": "pl.gram.v-past-pl",
+      "category": "verbs",
+      "title": { "pl": "Czas przeszły — liczba mnoga", "ru": "Прошедшее время, мн. ч." },
+      "summary": "Зависит от мужско-личности: -liśmy / -łyśmy.",
+      "prerequisites": ["pl.gram.v-past-sg", "pl.gram.masc-personal"],
+      "difficulty": 5,
+      "interferenceRu": 5,
+      "examples": [
+        { "pl": "czytaliśmy (męskoosobowe) / czytałyśmy", "ru": "мы читали — две разные формы" },
+        { "pl": "Studenci poszli. / Studentki poszły.", "ru": "та же пара" }
+      ],
+      "pitfallsForRu": [
+        "В русском «мы читали» — одна форма на всех. Здесь выбор зависит от состава группы",
+        "Ударение сдвигается: poSZLIśmy, а не poszliŚMY"
+      ],
+      "morfeusz": { "pos": "praet", "tags": "pl" },
+      "examModules": ["grammar", "writing", "speaking"],
+      "exerciseKinds": ["conjugate", "agreement", "error-correction"],
+      "sourceRef": "2.2.1 2) a)"
+    },
+    {
+      "id": "pl.gram.v-movable-endings",
+      "category": "verbs",
+      "title": { "pl": "Ruchome końcówki", "ru": "Подвижные окончания" },
+      "summary": "Окончания -em, -eś, -śmy, -ście могут отрываться от глагола.",
+      "prerequisites": ["pl.gram.v-past-pl"],
+      "difficulty": 4,
+      "interferenceRu": 3,
+      "examples": [
+        { "pl": "Gdzie byłeś? = Gdzieś był?", "ru": "обе формы верны" },
+        { "pl": "Już to zrobiliśmy. = Jużeśmy to zrobili.", "ru": "вторая разговорная" }
+      ],
+      "pitfallsForRu": [
+        "Явление опознаётся при чтении и аудировании; активно производить не обязательно"
+      ],
+      "examModules": ["reading", "listening"],
+      "exerciseKinds": ["recognize", "transform"],
+      "sourceRef": "2.2.1 2) a)",
+      "teachingNote": "Пассивное узнавание достаточно. Не тратить время на активную продукцию."
+    },
+    {
+      "id": "pl.gram.v-aspect-concept",
+      "category": "verbs",
+      "title": { "pl": "Aspekt — pojęcie", "ru": "Вид глагола — понятие" },
+      "summary": "Совершенный и несовершенный вид, видовые пары.",
+      "prerequisites": ["pl.gram.v-past-sg"],
+      "difficulty": 2,
+      "interferenceRu": 1,
+      "examples": [
+        { "pl": "czytać (ndk) / przeczytać (dk)", "ru": "читать / прочитать" },
+        { "pl": "pisać / napisać, kupować / kupić", "ru": "видовые пары" }
+      ],
+      "pitfallsForRu": [
+        "Категория та же, что в русском — понятие объяснять не нужно, это большая экономия времени",
+        "Но КОНКРЕТНЫЕ пары часто не совпадают: brać/wziąć, widzieć/zobaczyć"
+      ],
+      "examModules": ["grammar"],
+      "exerciseKinds": ["match-pairs", "classify"],
+      "sourceRef": "2.2.1 2) b)",
+      "teachingNote": "Для русскоязычного это лёгкая тема — в отличие от англоязычного. Учить парами как лексику, а не как правило."
+    },
+    {
+      "id": "pl.gram.v-aspect-formation",
+      "category": "verbs",
+      "title": { "pl": "Tworzenie form dokonanych", "ru": "Образование совершенного вида" },
+      "summary": "Приставки, суффиксы, супплетивные пары.",
+      "prerequisites": ["pl.gram.v-aspect-concept"],
+      "difficulty": 3,
+      "interferenceRu": 3,
+      "examples": [
+        { "pl": "robić → zrobić, pisać → napisać", "ru": "приставка" },
+        { "pl": "kupować → kupić", "ru": "суффикс" },
+        { "pl": "brać → wziąć", "ru": "супплетив" }
+      ],
+      "pitfallsForRu": [
+        "Приставка часто ДРУГАЯ, чем в русском: zrobić (не «сделать»→*sdelać), napisać ✓ совпало"
+      ],
+      "morfeusz": { "pos": "inf", "extract": "aspect" },
+      "examModules": ["grammar"],
+      "exerciseKinds": ["transform", "match-pairs"],
+      "sourceRef": "2.2.1 2) b)"
+    },
+    {
+      "id": "pl.gram.v-aspect-usage",
+      "category": "verbs",
+      "title": { "pl": "Użycie aspektu", "ru": "Употребление вида" },
+      "summary": "Выбор вида по контексту: результат, повторяемость, процесс.",
+      "prerequisites": ["pl.gram.v-aspect-formation"],
+      "difficulty": 3,
+      "interferenceRu": 2,
+      "examples": [
+        { "pl": "Wczoraj czytałem książkę. / Wczoraj przeczytałem książkę.", "ru": "процесс / результат" }
+      ],
+      "pitfallsForRu": [
+        "Логика совпадает с русской на 90%. Проверять надо остальные 10%"
+      ],
+      "examModules": ["grammar", "writing"],
+      "exerciseKinds": ["choose-correct-verb", "gap-fill"],
+      "sourceRef": "2.2.1 2) b)"
+    },
+    {
+      "id": "pl.gram.v-future-compound",
+      "category": "verbs",
+      "title": { "pl": "Czas przyszły złożony", "ru": "Будущее сложное" },
+      "summary": "będę + инфинитив ИЛИ будę + форма на -ł (родовая).",
+      "prerequisites": ["pl.gram.v-aspect-concept", "pl.gram.v-past-sg"],
+      "difficulty": 3,
+      "interferenceRu": 4,
+      "examples": [
+        { "pl": "Będę czytać. = Będę czytał/czytała.", "ru": "обе формы верны, вторая частотнее" },
+        { "pl": "Będziemy spacerować. / Będziecie chciały.", "ru": "мн. ч." }
+      ],
+      "pitfallsForRu": [
+        "Родовая форма (będę czytała) в русском отсутствует — это чисто польская конструкция",
+        "Только от НЕсовершенного вида"
+      ],
+      "examModules": ["grammar", "writing"],
+      "exerciseKinds": ["conjugate", "transform"],
+      "sourceRef": "2.2.1 2) a)"
+    },
+    {
+      "id": "pl.gram.v-future-simple",
+      "category": "verbs",
+      "title": { "pl": "Czas przyszły prosty", "ru": "Будущее простое" },
+      "summary": "Форма настоящего времени от глагола совершенного вида.",
+      "prerequisites": ["pl.gram.v-aspect-formation"],
+      "difficulty": 2,
+      "interferenceRu": 1,
+      "examples": [
+        { "pl": "pójdę, kupię, napiszę", "ru": "пойду, куплю, напишу" }
+      ],
+      "pitfallsForRu": [
+        "Механика идентична русской"
+      ],
+      "examModules": ["grammar"],
+      "exerciseKinds": ["conjugate"],
+      "sourceRef": "2.2.1 2) a)"
+    },
+    {
+      "id": "pl.gram.v-imperative",
+      "category": "verbs",
+      "title": { "pl": "Tryb rozkazujący", "ru": "Повелительное наклонение" },
+      "summary": "Формы 2 л. ед./мн. и 1 л. мн.",
+      "prerequisites": ["pl.gram.v-present-2"],
+      "difficulty": 3,
+      "interferenceRu": 3,
+      "examples": [
+        { "pl": "przeczytaj, bierzcie, napiszmy, uczcie się", "ru": "прочитай, берите, напишем, учитесь" }
+      ],
+      "pitfallsForRu": [],
+      "morfeusz": { "pos": "impt" },
+      "examModules": ["grammar", "speaking"],
+      "exerciseKinds": ["transform", "conjugate"],
+      "sourceRef": "2.2.1 2) a)"
+    },
+    {
+      "id": "pl.gram.v-imperative-niech",
+      "category": "verbs",
+      "title": { "pl": "Niech + 3. osoba", "ru": "Повелительное через niech" },
+      "summary": "Niech для 3 л. и для вежливой формы с Pan/Pani.",
+      "prerequisites": ["pl.gram.v-imperative"],
+      "difficulty": 2,
+      "interferenceRu": 3,
+      "examples": [
+        { "pl": "Niech słuchają. / Niech oni kupią chleb.", "ru": "пусть слушают" },
+        { "pl": "Niech Pan usiądzie.", "ru": "вежливая форма — садитесь, пожалуйста" }
+      ],
+      "pitfallsForRu": [
+        "Вежливое обращение строится через niech + 3 л., а не через 2 л. мн. ч. как в русском «садитесь»"
+      ],
+      "examModules": ["speaking", "writing"],
+      "exerciseKinds": ["transform", "situational"],
+      "sourceRef": "2.2.1 2) a)"
+    },
+    {
+      "id": "pl.gram.v-conditional",
+      "category": "verbs",
+      "title": { "pl": "Tryb przypuszczający", "ru": "Сослагательное наклонение" },
+      "summary": "Форма на -ł + by + личное окончание. by пишется слитно с глаголом.",
+      "prerequisites": ["pl.gram.v-past-pl"],
+      "difficulty": 4,
+      "interferenceRu": 5,
+      "examples": [
+        { "pl": "przeczytałbyś, napisalibyście", "ru": "ты бы прочитал, вы бы написали" },
+        { "pl": "Chciałbym kupić bilet.", "ru": "Я бы хотел купить билет — базовая вежливая формула" }
+      ],
+      "pitfallsForRu": [
+        "В русском «бы» — отдельное свободное слово. В польском by СЛИТНО и несёт личное окончание",
+        "Ударение: zroBIlibyśmy — на третьем от конца слоге"
+      ],
+      "morfeusz": { "pos": "cond" },
+      "examModules": ["grammar", "writing", "speaking"],
+      "exerciseKinds": ["conjugate", "transform", "error-correction"],
+      "sourceRef": "2.2.1 2) a)"
+    },
+    {
+      "id": "pl.gram.v-government",
+      "category": "verbs",
+      "title": { "pl": "Rekcja czasowników", "ru": "Управление глаголов" },
+      "summary": "Какого падежа требует конкретный глагол. NAWA отмечает тему как одну из самых трудных на экзамене.",
+      "prerequisites": ["pl.gram.c-gen-verbs", "pl.gram.c-dat-verbs", "pl.gram.c-instr-verbs"],
+      "difficulty": 5,
+      "interferenceRu": 5,
+      "examples": [
+        { "pl": "szukać + dopełniacz: Szukam pracy.", "ru": "искать + вин. в русском → род. в польском" },
+        { "pl": "potrzebować + dopełniacz: Potrzebuję nowych butów.", "ru": "нуждаться" },
+        { "pl": "pytać o + biernik: Pyta o cenę.", "ru": "спрашивать о + предл. в русском" },
+        { "pl": "czekać na + biernik: Czekam na autobus.", "ru": "ждать + род./вин. в русском" }
+      ],
+      "pitfallsForRu": [
+        "ГЛАВНЫЙ источник ошибок для русскоязычных: конструкция узнаваема, падеж другой",
+        "Учить только списком, как лексику. Правила тут нет"
+      ],
+      "examModules": ["grammar", "writing", "speaking"],
+      "exerciseKinds": ["gap-fill", "error-correction", "translate-to-target"],
+      "sourceRef": "NAWA, Poprawność gramatyczna — Wskazówki",
+      "teachingNote": "Самая доходная тема для русскоязычного: много баллов за точечные дриллы."
+    },
+
+    {
+      "id": "pl.gram.c-nom",
+      "category": "cases",
+      "title": { "pl": "Mianownik", "ru": "Именительный падеж" },
+      "summary": "Подлежащее и именная часть сказуемого.",
+      "prerequisites": ["pl.gram.gender", "pl.gram.number"],
+      "difficulty": 1,
+      "interferenceRu": 1,
+      "examples": [
+        { "pl": "Poeci dyskutują o poezji.", "ru": "подлежащее" },
+        { "pl": "Ci pracowici studenci to Niemcy.", "ru": "сказуемое с «to»" }
+      ],
+      "pitfallsForRu": [
+        "Конструкция «X to Y» (вместо «X jest Y») требует ИМЕНИТЕЛЬНОГО: Warszawa to stolica"
+      ],
+      "morfeusz": { "tags": "nom" },
+      "examModules": ["grammar"],
+      "exerciseKinds": ["inflect", "gap-fill"],
+      "sourceRef": "2.2.3 1) a)"
+    },
+    {
+      "id": "pl.gram.c-instr",
+      "category": "cases",
+      "title": { "pl": "Narzędnik", "ru": "Творительный падеж" },
+      "summary": "Формы творительного для существительных, прилагательных, местоимений.",
+      "prerequisites": ["pl.gram.c-nom", "pl.gram.v-byc"],
+      "difficulty": 2,
+      "interferenceRu": 2,
+      "examples": [
+        { "pl": "studentem, studentką, dzieckiem / studentami", "ru": "ед. -em/-ą, мн. -ami" },
+        { "pl": "Piotr jest przystojnym mężczyzną.", "ru": "именная часть сказуемого" }
+      ],
+      "pitfallsForRu": [
+        "Окончание мн. ч. -ami почти всегда (в русском -ами/-ями) — лёгкая тема"
+      ],
+      "morfeusz": { "tags": "inst" },
+      "examModules": ["grammar", "speaking"],
+      "exerciseKinds": ["inflect", "gap-fill"],
+      "sourceRef": "2.2.3 1) e)",
+      "teachingNote": "Вводить рано: без него нельзя сказать «jestem …»."
+    },
+    {
+      "id": "pl.gram.c-instr-verbs",
+      "category": "cases",
+      "title": { "pl": "Narzędnik z czasownikami i przyimkami", "ru": "Творительный: глаголы и предлоги" },
+      "summary": "być, zostać, zajmować się, kierować; предлоги z, nad, pod, przed, za, między.",
+      "prerequisites": ["pl.gram.c-instr"],
+      "difficulty": 3,
+      "interferenceRu": 3,
+      "examples": [
+        { "pl": "Zajmowała się dziećmi.", "ru": "заниматься + тв." },
+        { "pl": "Sklep jest za rogiem. / Przyjdziemy między siódmą a ósmą.", "ru": "предлоги" },
+        { "pl": "kawa z mlekiem", "ru": "определение существительного" }
+      ],
+      "pitfallsForRu": [],
+      "examModules": ["grammar", "writing"],
+      "exerciseKinds": ["gap-fill", "translate-to-target"],
+      "sourceRef": "2.2.3 1) e)"
+    },
+    {
+      "id": "pl.gram.c-acc",
+      "category": "cases",
+      "title": { "pl": "Biernik", "ru": "Винительный падеж" },
+      "summary": "Формы винительного. Зависит от одушевлённости в ед. ч. и мужско-личности во мн. ч.",
+      "prerequisites": ["pl.gram.c-nom", "pl.gram.animacy", "pl.gram.masc-personal"],
+      "difficulty": 3,
+      "interferenceRu": 2,
+      "examples": [
+        { "pl": "Widzę stół. / Widzę studenta.", "ru": "неживое = им., живое = род." },
+        { "pl": "Widzę studentów. / Widzę stoły.", "ru": "мн. ч.: муж.-личн. = род." }
+      ],
+      "pitfallsForRu": [
+        "Механика как в русском, но мужско-личность во мн. ч. — чужая"
+      ],
+      "morfeusz": { "tags": "acc" },
+      "examModules": ["grammar"],
+      "exerciseKinds": ["inflect", "gap-fill"],
+      "sourceRef": "2.2.3 1) d)"
+    },
+    {
+      "id": "pl.gram.c-acc-prepositions",
+      "category": "cases",
+      "title": { "pl": "Biernik z przyimkami", "ru": "Винительный с предлогами" },
+      "summary": "na, w, przez, o, po, za — направление, цель, время.",
+      "prerequisites": ["pl.gram.c-acc"],
+      "difficulty": 3,
+      "interferenceRu": 4,
+      "examples": [
+        { "pl": "Zapraszam was na kolację.", "ru": "приглашаю на ужин" },
+        { "pl": "Czekam na autobus.", "ru": "жду автобус — в русском без предлога!" },
+        { "pl": "Ewa była w Brazylii tydzień.", "ru": "длительность без предлога" }
+      ],
+      "pitfallsForRu": [
+        "«Идти в магазин» = iść DO sklepu (род.), а не *w sklep",
+        "na / do — главная пара ошибок: na pocztę, ale do sklepu"
+      ],
+      "examModules": ["grammar", "writing", "speaking"],
+      "exerciseKinds": ["gap-fill", "error-correction"],
+      "sourceRef": "2.2.3 1) d)"
+    },
+    {
+      "id": "pl.gram.c-gen",
+      "category": "cases",
+      "title": { "pl": "Dopełniacz — formy", "ru": "Родительный падеж — формы" },
+      "summary": "Самый употребительный косвенный падеж. Окончания ед. ч. -a/-u (м.р.) непредсказуемы.",
+      "prerequisites": ["pl.gram.c-acc"],
+      "difficulty": 4,
+      "interferenceRu": 3,
+      "examples": [
+        { "pl": "stół → stołu, pies → psa, dom → domu", "ru": "-a или -u, надо запоминать" },
+        { "pl": "kobieta → kobiety, miłość → miłości", "ru": "ж. р." }
+      ],
+      "pitfallsForRu": [
+        "Выбор -a/-u у м. р. правилом не описывается — только частотностью и запоминанием"
+      ],
+      "morfeusz": { "tags": "gen:sg" },
+      "examModules": ["grammar"],
+      "exerciseKinds": ["inflect", "gap-fill"],
+      "sourceRef": "2.2.3 1) b)"
+    },
+    {
+      "id": "pl.gram.c-gen-pl",
+      "category": "cases",
+      "title": { "pl": "Dopełniacz liczby mnogiej", "ru": "Родительный множественного" },
+      "summary": "Нулевое окончание, -ów, -i/-y. Самая трудная форма польского словоизменения.",
+      "prerequisites": ["pl.gram.c-gen"],
+      "difficulty": 5,
+      "interferenceRu": 3,
+      "examples": [
+        { "pl": "studentów, kobiet, miast, ulic, nocy", "ru": "четыре разных окончания" }
+      ],
+      "pitfallsForRu": [
+        "Беглые гласные: okno → okien, matka → matek",
+        "Требуется после числительных от 5 — то есть встречается постоянно"
+      ],
+      "morfeusz": { "tags": "gen:pl" },
+      "examModules": ["grammar", "writing"],
+      "exerciseKinds": ["inflect", "gap-fill", "error-correction"],
+      "sourceRef": "2.2.3 1) b)"
+    },
+    {
+      "id": "pl.gram.c-gen-negation",
+      "category": "cases",
+      "title": { "pl": "Dopełniacz w zdaniach zaprzeczonych", "ru": "Родительный при отрицании" },
+      "summary": "Прямое дополнение при отрицании переходит из винительного в родительный. Правило без исключений.",
+      "prerequisites": ["pl.gram.c-gen", "pl.gram.c-acc"],
+      "difficulty": 3,
+      "interferenceRu": 4,
+      "examples": [
+        { "pl": "Mam czas. → Nie mam czasu.", "ru": "вин. → род." },
+        { "pl": "Studentki nie przeczytały tych artykułów.", "ru": "обязательно" },
+        { "pl": "Studentów nie było na spotkaniu.", "ru": "и подлежащее при nie ma / nie było" }
+      ],
+      "pitfallsForRu": [
+        "В русском это факультативно («не вижу книгу» и «не вижу книги» оба верны). В польском — ОБЯЗАТЕЛЬНО",
+        "Частая и дорогая ошибка на экзамене"
+      ],
+      "examModules": ["grammar", "writing", "speaking"],
+      "exerciseKinds": ["transform", "error-correction", "gap-fill"],
+      "sourceRef": "2.2.3 1) b)",
+      "teachingNote": "Высокий приоритет: правило простое, ошибка частая, проверяется прямо."
+    },
+    {
+      "id": "pl.gram.c-gen-quantity",
+      "category": "cases",
+      "title": { "pl": "Dopełniacz po liczebnikach i miarach", "ru": "Родительный после количества" },
+      "summary": "После 5+, после dużo/mało/kilka, после мер.",
+      "prerequisites": ["pl.gram.c-gen-pl", "pl.gram.n-cardinal-5plus"],
+      "difficulty": 4,
+      "interferenceRu": 2,
+      "examples": [
+        { "pl": "pięć książek, dużo ludzi, kilogram cukru", "ru": "как в русском" },
+        { "pl": "Janek wypił filiżankę kawy.", "ru": "мера" }
+      ],
+      "pitfallsForRu": [
+        "Логика совпадает с русской, формы — нет"
+      ],
+      "examModules": ["grammar"],
+      "exerciseKinds": ["gap-fill", "inflect"],
+      "sourceRef": "2.2.3 1) b)"
+    },
+    {
+      "id": "pl.gram.c-gen-prepositions",
+      "category": "cases",
+      "title": { "pl": "Dopełniacz z przyimkami", "ru": "Родительный с предлогами" },
+      "summary": "do, od, z, bez, dla, obok, koło, według, oprócz.",
+      "prerequisites": ["pl.gram.c-gen"],
+      "difficulty": 3,
+      "interferenceRu": 4,
+      "examples": [
+        { "pl": "Wracają z Krakowa do Warszawy.", "ru": "из… в…" },
+        { "pl": "Apteka jest obok szpitala. / Jestem bez pracy.", "ru": "рядом с / без" },
+        { "pl": "Zrobił to dla kariery.", "ru": "ради" }
+      ],
+      "pitfallsForRu": [
+        "do + род. там, где в русском «в» + вин.: idę do sklepu = иду в магазин",
+        "z имеет два значения: «из» (+род.) и «с» (+тв.) — различаются только падежом"
+      ],
+      "examModules": ["grammar", "writing", "speaking"],
+      "exerciseKinds": ["gap-fill", "error-correction"],
+      "sourceRef": "2.2.3 1) b)"
+    },
+    {
+      "id": "pl.gram.c-gen-verbs",
+      "category": "cases",
+      "title": { "pl": "Czasowniki z dopełniaczem", "ru": "Глаголы с родительным" },
+      "summary": "szukać, potrzebować, słuchać, używać, uczyć się, bać się.",
+      "prerequisites": ["pl.gram.c-gen"],
+      "difficulty": 4,
+      "interferenceRu": 5,
+      "examples": [
+        { "pl": "Szukam większego mieszkania.", "ru": "искать квартиру (вин. в русском)" },
+        { "pl": "Słucham muzyki.", "ru": "слушать музыку (вин. в русском)" },
+        { "pl": "Uczę się polskiego.", "ru": "учить польский (вин. в русском)" }
+      ],
+      "pitfallsForRu": [
+        "Это чистая интерференция: в русском те же глаголы требуют винительного",
+        "Закрытый список — учить как лексику"
+      ],
+      "examModules": ["grammar", "writing", "speaking"],
+      "exerciseKinds": ["gap-fill", "error-correction", "translate-to-target"],
+      "sourceRef": "2.2.3 1) b)",
+      "teachingNote": "Один из самых доходных дриллов для русскоязычного."
+    },
+    {
+      "id": "pl.gram.c-loc",
+      "category": "cases",
+      "title": { "pl": "Miejscownik", "ru": "Предложный падеж" },
+      "summary": "Всегда только с предлогом. Богатые чередования в основе.",
+      "prerequisites": ["pl.gram.c-gen"],
+      "difficulty": 5,
+      "interferenceRu": 4,
+      "examples": [
+        { "pl": "Warszawa → w Warszawie, stół → na stole", "ru": "чередование" },
+        { "pl": "miasto → w mieście, Kraków → w Krakowie", "ru": "t→ci, k→ki" },
+        { "pl": "ręka → w ręce, noga → na nodze", "ru": "трудные" }
+      ],
+      "pitfallsForRu": [
+        "Чередования согласных значительно богаче русских: t→ć, d→dź, s→ś, z→ź, r→rz, ł→l, k→c, g→dz",
+        "Без предлога не употребляется — в отличие от русского «предложного» в названии"
+      ],
+      "morfeusz": { "tags": "loc" },
+      "examModules": ["grammar", "writing"],
+      "exerciseKinds": ["inflect", "gap-fill", "error-correction"],
+      "sourceRef": "2.2.3 1) f)"
+    },
+    {
+      "id": "pl.gram.c-loc-prepositions",
+      "category": "cases",
+      "title": { "pl": "Miejscownik z przyimkami", "ru": "Предложный с предлогами" },
+      "summary": "w, na, o, po, przy.",
+      "prerequisites": ["pl.gram.c-loc"],
+      "difficulty": 3,
+      "interferenceRu": 4,
+      "examples": [
+        { "pl": "Mieszka w Warszawie przy ulicy Pięknej na pierwszym piętrze.", "ru": "три предлога подряд" },
+        { "pl": "Rozmawiali o tym wykładzie. / Spacerują po lesie.", "ru": "о / по" }
+      ],
+      "pitfallsForRu": [
+        "w vs na: na uniwersytecie, na poczcie, ale w szkole, w banku — список, не правило"
+      ],
+      "examModules": ["grammar", "writing", "speaking"],
+      "exerciseKinds": ["gap-fill", "error-correction"],
+      "sourceRef": "2.2.3 1) f)"
+    },
+    {
+      "id": "pl.gram.c-dat",
+      "category": "cases",
+      "title": { "pl": "Celownik", "ru": "Дательный падеж" },
+      "summary": "Самый редкий падеж. Формы ед. -owi/-u (м.р.), -(i)e (ж.р.).",
+      "prerequisites": ["pl.gram.c-loc"],
+      "difficulty": 4,
+      "interferenceRu": 3,
+      "examples": [
+        { "pl": "student → studentowi, kobieta → kobiecie", "ru": "основные окончания" },
+        { "pl": "Dał matce kwiaty.", "ru": "дал матери цветы" }
+      ],
+      "pitfallsForRu": [
+        "-owi у мужского рода не имеет аналога в русском (-у)"
+      ],
+      "morfeusz": { "tags": "dat" },
+      "examModules": ["grammar"],
+      "exerciseKinds": ["inflect", "gap-fill"],
+      "sourceRef": "2.2.3 1) c)"
+    },
+    {
+      "id": "pl.gram.c-dat-verbs",
+      "category": "cases",
+      "title": { "pl": "Czasowniki z celownikiem", "ru": "Глаголы с дательным" },
+      "summary": "podobać się, pomagać, dziękować, przeszkadzać, wydawać się.",
+      "prerequisites": ["pl.gram.c-dat"],
+      "difficulty": 3,
+      "interferenceRu": 2,
+      "examples": [
+        { "pl": "Ten film podobał mi się bardzo.", "ru": "мне понравился" },
+        { "pl": "Dziękuję Pani za pomoc.", "ru": "благодарю Вас" }
+      ],
+      "pitfallsForRu": [
+        "podobać się — конструкция как «нравиться», совпадает с русской"
+      ],
+      "examModules": ["grammar", "speaking"],
+      "exerciseKinds": ["gap-fill", "translate-to-target"],
+      "sourceRef": "2.2.3 1) c)"
+    },
+    {
+      "id": "pl.gram.c-voc",
+      "category": "cases",
+      "title": { "pl": "Wołacz", "ru": "Звательный падеж" },
+      "summary": "Обращение. В русском отсутствует как грамматическая форма.",
+      "prerequisites": ["pl.gram.c-loc"],
+      "difficulty": 3,
+      "interferenceRu": 5,
+      "examples": [
+        { "pl": "Kochana Mamo! Pozdrawiam Cię z Poznania.", "ru": "в письме" },
+        { "pl": "Szanowni Państwo!", "ru": "формальное обращение" },
+        { "pl": "Olu! Aniu! Panie Profesorze!", "ru": "имена и титулы" }
+      ],
+      "pitfallsForRu": [
+        "В русском звательного нет — нужно строить осознанно",
+        "ОБЯЗАТЕЛЕН в письменной форме «list prywatny» на экзамене. Отсутствие = потеря баллов за форму"
+      ],
+      "morfeusz": { "tags": "voc" },
+      "examModules": ["writing", "speaking"],
+      "exerciseKinds": ["inflect", "situational"],
+      "sourceRef": "2.2.3 1) g)",
+      "teachingNote": "Прямо влияет на модуль «Pisanie»: во всех письмах нужно обращение."
+    },
+
+    {
+      "id": "pl.gram.p-personal",
+      "category": "pronouns",
+      "title": { "pl": "Zaimki osobowe", "ru": "Личные местоимения" },
+      "summary": "ja, ty, on, ona, ono + падежные формы, включая краткие (клитики).",
+      "prerequisites": ["pl.gram.c-acc", "pl.gram.c-dat"],
+      "difficulty": 4,
+      "interferenceRu": 4,
+      "examples": [
+        { "pl": "mnie / mi, jego / go, jemu / mu", "ru": "полная и краткая формы" },
+        { "pl": "Daj mi to. / Mnie to daj.", "ru": "краткая нейтральна, полная под ударением" }
+      ],
+      "pitfallsForRu": [
+        "Пара полная/краткая в русском отсутствует. Краткая не ставится в начало предложения",
+        "После предлога — только полная форма: dla mnie, не *dla mi"
+      ],
+      "examModules": ["grammar", "writing", "speaking"],
+      "exerciseKinds": ["gap-fill", "word-order", "error-correction"],
+      "sourceRef": "2.2.1 1) c)"
+    },
+    {
+      "id": "pl.gram.p-formal-pan",
+      "category": "pronouns",
+      "title": { "pl": "Formy grzecznościowe Pan / Pani / Państwo", "ru": "Вежливые формы Pan/Pani/Państwo" },
+      "summary": "Вежливое обращение через 3 лицо, а не через «вы».",
+      "prerequisites": ["pl.gram.p-personal", "pl.gram.v-present-3"],
+      "difficulty": 3,
+      "interferenceRu": 5,
+      "examples": [
+        { "pl": "Czy Pan mówi po polsku?", "ru": "Вы говорите по-польски? — глагол в 3 л. ед." },
+        { "pl": "Co Państwo robią?", "ru": "обращение к группе — 3 л. мн." }
+      ],
+      "pitfallsForRu": [
+        "КРИТИЧНО. В русском вежливость = «вы» + 2 л. мн. В польском — Pan/Pani + 3 л. ед.",
+        "«Czy wy mówicie» к незнакомому — грубо",
+        "Влияет на устную часть экзамена напрямую: экзаменатор обращается на Pan/Pani"
+      ],
+      "examModules": ["speaking", "writing"],
+      "exerciseKinds": ["transform", "situational", "error-correction"],
+      "sourceRef": "Katalog A 6.1 1) — konwencje grzecznościowe",
+      "teachingNote": "Вводить очень рано. Ошибка здесь читается как невежливость, а не как грамматическая погрешность."
+    },
+    {
+      "id": "pl.gram.p-demonstrative",
+      "category": "pronouns",
+      "title": { "pl": "Zaimki wskazujące", "ru": "Указательные местоимения" },
+      "summary": "ten, ta, to + склонение; конструкция «X to Y».",
+      "prerequisites": ["pl.gram.c-nom", "pl.gram.gender"],
+      "difficulty": 2,
+      "interferenceRu": 2,
+      "examples": [
+        { "pl": "ten stół, ta książka, to okno", "ru": "этот, эта, это" },
+        { "pl": "Warszawa to stolica Polski.", "ru": "to как связка" }
+      ],
+      "pitfallsForRu": [],
+      "examModules": ["grammar"],
+      "exerciseKinds": ["inflect", "agreement"],
+      "sourceRef": "2.2.1 1) c)"
+    },
+    {
+      "id": "pl.gram.p-possessive",
+      "category": "pronouns",
+      "title": { "pl": "Zaimki dzierżawcze", "ru": "Притяжательные местоимения" },
+      "summary": "mój, twój, nasz, wasz, swój + согласование.",
+      "prerequisites": ["pl.gram.p-demonstrative"],
+      "difficulty": 3,
+      "interferenceRu": 2,
+      "examples": [
+        { "pl": "mój dom, moja książka, moje okno", "ru": "согласование по роду" },
+        { "pl": "Zabrał swoją torbę.", "ru": "swój — как русское «свой»" }
+      ],
+      "pitfallsForRu": [
+        "swój работает так же, как русское «свой» — редкий случай полного совпадения",
+        "jego / jej / ich НЕ склоняются"
+      ],
+      "examModules": ["grammar", "writing"],
+      "exerciseKinds": ["agreement", "gap-fill"],
+      "sourceRef": "2.2.1 1) c)"
+    },
+    {
+      "id": "pl.gram.p-interrogative",
+      "category": "pronouns",
+      "title": { "pl": "Zaimki pytające", "ru": "Вопросительные местоимения" },
+      "summary": "kto, co, jaki, który, czyj, ile + их склонение.",
+      "prerequisites": ["pl.gram.p-demonstrative"],
+      "difficulty": 3,
+      "interferenceRu": 3,
+      "examples": [
+        { "pl": "O czym lubisz rozmawiać?", "ru": "о чём" },
+        { "pl": "Jakiej zupy nie lubisz?", "ru": "какой суп — род. при отрицании" },
+        { "pl": "jaki (какой по качеству) ≠ który (который из нескольких)", "ru": "различие" }
+      ],
+      "pitfallsForRu": [
+        "jaki / który — в русском оба «какой/который», граница проходит иначе"
+      ],
+      "examModules": ["grammar", "speaking"],
+      "exerciseKinds": ["gap-fill", "build-question"],
+      "sourceRef": "2.2.1 1) c)"
+    },
+    {
+      "id": "pl.gram.p-indefinite-negative",
+      "category": "pronouns",
+      "title": { "pl": "Zaimki nieokreślone i przeczące", "ru": "Неопределённые и отрицательные местоимения" },
+      "summary": "ktoś, coś / nikt, nic + обязательное двойное отрицание.",
+      "prerequisites": ["pl.gram.p-interrogative", "pl.gram.c-gen-negation"],
+      "difficulty": 3,
+      "interferenceRu": 1,
+      "examples": [
+        { "pl": "Nikt nie przyszedł.", "ru": "никто не пришёл — двойное отрицание как в русском" },
+        { "pl": "Niczym się nie interesujesz.", "ru": "ничем не интересуешься" }
+      ],
+      "pitfallsForRu": [
+        "Двойное отрицание совпадает с русским полностью — лёгкая тема"
+      ],
+      "examModules": ["grammar"],
+      "exerciseKinds": ["gap-fill", "transform"],
+      "sourceRef": "2.2.1 1) c)"
+    },
+    {
+      "id": "pl.gram.p-reflexive-siebie",
+      "category": "pronouns",
+      "title": { "pl": "Zaimek zwrotny «siebie»", "ru": "Возвратное местоимение siebie" },
+      "summary": "siebie / sobie / sobą и его отличие от się.",
+      "prerequisites": ["pl.gram.v-reflexive", "pl.gram.c-dat"],
+      "difficulty": 3,
+      "interferenceRu": 3,
+      "examples": [
+        { "pl": "Kupiłem sobie książkę.", "ru": "купил себе" },
+        { "pl": "Patrzy na siebie w lustrze.", "ru": "смотрит на себя" }
+      ],
+      "pitfallsForRu": [],
+      "examModules": ["grammar"],
+      "exerciseKinds": ["gap-fill"],
+      "sourceRef": "2.2.1 1) c)"
+    },
+
+    {
+      "id": "pl.gram.n-cardinal-1-4",
+      "category": "numerals",
+      "title": { "pl": "Liczebniki główne 1–4", "ru": "Количественные 1–4" },
+      "summary": "jeden/jedna/jedno, dwa/dwie, trzy, cztery + согласование с существительным.",
+      "prerequisites": ["pl.gram.c-nom", "pl.gram.number"],
+      "difficulty": 3,
+      "interferenceRu": 3,
+      "examples": [
+        { "pl": "jeden stół, jedna książka, jedno okno", "ru": "согласование по роду" },
+        { "pl": "dwa stoły, dwie książki", "ru": "dwa/dwie различаются по роду" }
+      ],
+      "pitfallsForRu": [
+        "dwie только для женского рода. В русском «две» тоже — совпадает",
+        "После 2–4 существительное в им. п. мн. ч. (как в русском род. ед. — НЕ совпадает!)"
+      ],
+      "examModules": ["grammar", "speaking"],
+      "exerciseKinds": ["agreement", "gap-fill"],
+      "sourceRef": "2.2.1 1) d)"
+    },
+    {
+      "id": "pl.gram.n-cardinal-5plus",
+      "category": "numerals",
+      "title": { "pl": "Liczebniki główne od 5", "ru": "Количественные от 5" },
+      "summary": "pięć и выше + родительный мн. ч. + глагол в 3 л. ед. ср. р.",
+      "prerequisites": ["pl.gram.n-cardinal-1-4", "pl.gram.c-gen-pl"],
+      "difficulty": 4,
+      "interferenceRu": 2,
+      "examples": [
+        { "pl": "pięć książek, dziesięć stołów", "ru": "+ родительный мн." },
+        { "pl": "Pięć osób przyszło.", "ru": "глагол в ср. р. ед. ч." }
+      ],
+      "pitfallsForRu": [
+        "Родительный после 5+ совпадает с русским; согласование глагола в ср. р. — тоже"
+      ],
+      "examModules": ["grammar"],
+      "exerciseKinds": ["gap-fill", "agreement"],
+      "sourceRef": "2.2.1 1) d)"
+    },
+    {
+      "id": "pl.gram.n-masc-personal",
+      "category": "numerals",
+      "title": { "pl": "Liczebniki męskoosobowe", "ru": "Мужско-личные числительные" },
+      "summary": "dwaj/dwóch, trzej/trzech, czterej/czterech, pięciu — особые формы для групп с мужчинами.",
+      "prerequisites": ["pl.gram.n-cardinal-5plus", "pl.gram.masc-personal"],
+      "difficulty": 5,
+      "interferenceRu": 5,
+      "examples": [
+        { "pl": "czterej studenci ≠ cztery studentki", "ru": "прямо из официального перечня" },
+        { "pl": "czterech panów = czterej panowie", "ru": "две равноправные конструкции" },
+        { "pl": "pięciu studentów przyszło", "ru": "форма на -u + род. + глагол ед. ч." }
+      ],
+      "pitfallsForRu": [
+        "В русском аналога нет совсем",
+        "Две параллельные конструкции (czterej studenci / czterech studentów) с разным согласованием глагола"
+      ],
+      "examModules": ["grammar", "writing"],
+      "exerciseKinds": ["agreement", "transform", "error-correction"],
+      "sourceRef": "2.2.1 1) d) — прямо процитировано в стандарте"
+    },
+    {
+      "id": "pl.gram.n-ordinal",
+      "category": "numerals",
+      "title": { "pl": "Liczebniki porządkowe", "ru": "Порядковые числительные" },
+      "summary": "pierwszy, drugi… dwunasty, dwudziesty, pięćdziesiąty. Склоняются как прилагательные.",
+      "prerequisites": ["pl.gram.n-cardinal-1-4"],
+      "difficulty": 3,
+      "interferenceRu": 2,
+      "examples": [
+        { "pl": "na pierwszym piętrze", "ru": "на первом этаже" },
+        { "pl": "dwudziesty, pięćdziesiąty", "ru": "из официального перечня" }
+      ],
+      "pitfallsForRu": [],
+      "examModules": ["grammar", "speaking"],
+      "exerciseKinds": ["inflect", "gap-fill"],
+      "sourceRef": "2.2.1 1) d)"
+    },
+    {
+      "id": "pl.gram.n-date-time",
+      "category": "numerals",
+      "title": { "pl": "Data i godzina", "ru": "Дата и время" },
+      "summary": "Даты через порядковые в родительном, часы через порядковые.",
+      "prerequisites": ["pl.gram.n-ordinal", "pl.gram.c-gen"],
+      "difficulty": 4,
+      "interferenceRu": 3,
+      "examples": [
+        { "pl": "trzeciego maja, dwudziestego pierwszego lipca", "ru": "дата — род. падеж" },
+        { "pl": "o której godzinie? — o ósmej trzydzieści", "ru": "время" },
+        { "pl": "Przyjdziemy między siódmą a ósmą.", "ru": "интервал" }
+      ],
+      "pitfallsForRu": [
+        "Механика как в русском, но формы порядковых надо знать твёрдо",
+        "Важно для модуля аудирования: расписания, объявления"
+      ],
+      "examModules": ["grammar", "listening", "speaking"],
+      "exerciseKinds": ["gap-fill", "listen-and-write", "situational"],
+      "sourceRef": "2.2.1 1) d) + Katalog B 7.3"
+    },
+
+    {
+      "id": "pl.gram.k-adj-agreement",
+      "category": "comparison",
+      "title": { "pl": "Odmiana przymiotnika", "ru": "Склонение прилагательных" },
+      "summary": "Согласование с существительным в роде, числе, падеже; мужско-личные формы мн. ч.",
+      "prerequisites": ["pl.gram.c-nom", "pl.gram.masc-personal"],
+      "difficulty": 4,
+      "interferenceRu": 3,
+      "examples": [
+        { "pl": "chory, chora, chore / polski, lekki, długi", "ru": "на -y и на -i" },
+        { "pl": "dobrzy studenci ≠ dobre studentki", "ru": "мужско-личная форма мн. ч." },
+        { "pl": "Kowalski, Kowalska, Słowacki", "ru": "фамилии склоняются как прилагательные" }
+      ],
+      "pitfallsForRu": [
+        "Мужско-личная форма мн. ч. (dobrzy, mili, wysocy) с чередованием — чужая категория",
+        "Польские фамилии на -ski склоняются; русскоязычные часто не склоняют"
+      ],
+      "morfeusz": { "pos": "adj" },
+      "examModules": ["grammar", "writing"],
+      "exerciseKinds": ["agreement", "inflect", "error-correction"],
+      "sourceRef": "2.2.1 1) b)"
+    },
+    {
+      "id": "pl.gram.k-comparative",
+      "category": "comparison",
+      "title": { "pl": "Stopniowanie przymiotników", "ru": "Степени сравнения прилагательных" },
+      "summary": "Простая (-szy/-ejszy), супплетивная, описательная (bardziej).",
+      "prerequisites": ["pl.gram.k-adj-agreement"],
+      "difficulty": 4,
+      "interferenceRu": 3,
+      "examples": [
+        { "pl": "pilny → pilniejszy, długi → dłuższy", "ru": "регулярная" },
+        { "pl": "duży → większy, dobry → lepszy, zły → gorszy", "ru": "супплетивная" },
+        { "pl": "chory → bardziej chory", "ru": "описательная" },
+        { "pl": "najdłuższy, najlepszy", "ru": "превосходная через naj-" }
+      ],
+      "pitfallsForRu": [
+        "NAWA отмечает степени сравнения как одну из трудных тем экзамена",
+        "Чередования: długi → dłuższy, wysoki → wyższy, niski → niższy"
+      ],
+      "morfeusz": { "pos": "adj", "tags": "com|sup" },
+      "examModules": ["grammar", "writing", "speaking"],
+      "exerciseKinds": ["transform", "gap-fill", "error-correction"],
+      "sourceRef": "2.2.2 1)"
+    },
+    {
+      "id": "pl.gram.k-adverb",
+      "category": "comparison",
+      "title": { "pl": "Przysłówki i ich stopniowanie", "ru": "Наречия и их степени сравнения" },
+      "summary": "Образование от прилагательных и степени сравнения.",
+      "prerequisites": ["pl.gram.k-comparative"],
+      "difficulty": 3,
+      "interferenceRu": 3,
+      "examples": [
+        { "pl": "szybko → szybciej, dobrze → lepiej", "ru": "регулярная и супплетивная" },
+        { "pl": "źle → gorzej, dużo → więcej", "ru": "супплетивные из перечня" },
+        { "pl": "bardziej gorąco", "ru": "описательная" }
+      ],
+      "pitfallsForRu": [],
+      "morfeusz": { "pos": "adv" },
+      "examModules": ["grammar", "writing"],
+      "exerciseKinds": ["transform", "gap-fill"],
+      "sourceRef": "2.2.2 2)"
+    },
+
+    {
+      "id": "pl.gram.s-questions",
+      "category": "syntax",
+      "title": { "pl": "Zdania pytające", "ru": "Вопросительные предложения" },
+      "summary": "Общие вопросы с czy, специальные с вопросительным словом.",
+      "prerequisites": ["pl.gram.p-interrogative"],
+      "difficulty": 2,
+      "interferenceRu": 3,
+      "examples": [
+        { "pl": "Czy moi sąsiedzi chodzą do teatru?", "ru": "общий вопрос" },
+        { "pl": "Jak często moi sąsiedzi chodzą do teatru?", "ru": "специальный" }
+      ],
+      "pitfallsForRu": [
+        "czy обязательно в письменной речи; в устной может опускаться с вопросительной интонацией",
+        "В русском аналога czy нет — вопрос строится только интонацией"
+      ],
+      "examModules": ["grammar", "speaking", "writing"],
+      "exerciseKinds": ["build-question", "transform"],
+      "sourceRef": "2.2.3 2) b)"
+    },
+    {
+      "id": "pl.gram.s-negation",
+      "category": "syntax",
+      "title": { "pl": "Zdania zaprzeczone", "ru": "Отрицательные предложения" },
+      "summary": "nie + глагол, двойное отрицание, влияние на падеж дополнения.",
+      "prerequisites": ["pl.gram.c-gen-negation", "pl.gram.p-indefinite-negative"],
+      "difficulty": 3,
+      "interferenceRu": 2,
+      "examples": [
+        { "pl": "Nie lubię zupy pomidorowej.", "ru": "+ родительный" },
+        { "pl": "Nigdy nie byłem w Polsce.", "ru": "двойное отрицание" }
+      ],
+      "pitfallsForRu": [],
+      "examModules": ["grammar"],
+      "exerciseKinds": ["transform", "error-correction"],
+      "sourceRef": "2.2.3 2) c)"
+    },
+    {
+      "id": "pl.gram.s-coordinate",
+      "category": "syntax",
+      "title": { "pl": "Zdania współrzędnie złożone", "ru": "Сложносочинённые предложения" },
+      "summary": "Союзы oraz, a także, lub, albo, czy, dlatego, ale.",
+      "prerequisites": ["pl.gram.s-questions"],
+      "difficulty": 2,
+      "interferenceRu": 3,
+      "examples": [
+        { "pl": "Lubię kawę, ale nie lubię herbaty.", "ru": "но" },
+        { "pl": "Kawa lub herbata? / Kawa czy herbata?", "ru": "lub — любой, czy — выбор одного" }
+      ],
+      "pitfallsForRu": [
+        "a в польском чаще «и/а», чем противительное — не калькировать с русского",
+        "lub / albo / czy различаются оттенком"
+      ],
+      "examModules": ["grammar", "writing"],
+      "exerciseKinds": ["gap-fill", "combine-sentences"],
+      "sourceRef": "2.2.3 3) a)"
+    },
+    {
+      "id": "pl.gram.s-subordinate-ze",
+      "category": "syntax",
+      "title": { "pl": "Zdania z «że» i «żeby»", "ru": "Придаточные с że и żeby" },
+      "summary": "że — изъяснительное, żeby — цель и желание.",
+      "prerequisites": ["pl.gram.s-coordinate", "pl.gram.v-conditional"],
+      "difficulty": 3,
+      "interferenceRu": 4,
+      "examples": [
+        { "pl": "Myślę, że to dobry pomysł.", "ru": "думаю, что" },
+        { "pl": "Chcę, żebyś przyszedł.", "ru": "хочу, чтобы ты пришёл" }
+      ],
+      "pitfallsForRu": [
+        "żeby несёт личные окончания: żebym, żebyś, żeby, żebyśmy — в русском «чтобы» неизменяемо",
+        "Запятая перед że ОБЯЗАТЕЛЬНА — оценивается в письменной части"
+      ],
+      "examModules": ["grammar", "writing"],
+      "exerciseKinds": ["combine-sentences", "gap-fill", "error-correction"],
+      "sourceRef": "2.2.3 3) b)"
+    },
+    {
+      "id": "pl.gram.s-subordinate-cause-time",
+      "category": "syntax",
+      "title": { "pl": "Zdania przyczyny i czasu", "ru": "Придаточные причины и времени" },
+      "summary": "ponieważ, bo, dlatego że / kiedy, gdy.",
+      "prerequisites": ["pl.gram.s-subordinate-ze"],
+      "difficulty": 2,
+      "interferenceRu": 2,
+      "examples": [
+        { "pl": "Nie przyszedłem, ponieważ byłem chory.", "ru": "причина" },
+        { "pl": "Kiedy wrócisz, zadzwoń.", "ru": "время" }
+      ],
+      "pitfallsForRu": [
+        "bo не ставится в начало предложения, ponieważ — можно"
+      ],
+      "examModules": ["grammar", "writing"],
+      "exerciseKinds": ["combine-sentences", "gap-fill"],
+      "sourceRef": "2.2.3 3) b)"
+    },
+    {
+      "id": "pl.gram.s-relative",
+      "category": "syntax",
+      "title": { "pl": "Zdania względne: który, jaki", "ru": "Относительные придаточные" },
+      "summary": "który склоняется по роду, числу и падежу внутри придаточного.",
+      "prerequisites": ["pl.gram.p-interrogative", "pl.gram.s-subordinate-ze"],
+      "difficulty": 4,
+      "interferenceRu": 3,
+      "examples": [
+        { "pl": "Książka, którą czytam, jest ciekawa.", "ru": "którą — вин. ж. р." },
+        { "pl": "Człowiek, o którym mówiłem…", "ru": "предл. падеж после предлога" }
+      ],
+      "pitfallsForRu": [
+        "Падеж który определяется ролью внутри придаточного, не главного — как в русском, но ошибок много"
+      ],
+      "examModules": ["grammar", "writing", "reading"],
+      "exerciseKinds": ["combine-sentences", "gap-fill", "error-correction"],
+      "sourceRef": "2.2.3 3) b)"
+    },
+    {
+      "id": "pl.gram.s-conditional-clauses",
+      "category": "syntax",
+      "title": { "pl": "Zdania warunkowe", "ru": "Условные предложения" },
+      "summary": "jeśli/jeżeli… to… (реальное), gdyby… to… (нереальное).",
+      "prerequisites": ["pl.gram.v-conditional", "pl.gram.s-subordinate-cause-time"],
+      "difficulty": 4,
+      "interferenceRu": 4,
+      "examples": [
+        { "pl": "Jeśli będzie ładna pogoda, pójdziemy na spacer.", "ru": "реальное условие" },
+        { "pl": "Gdybym miał czas, przyszedłbym.", "ru": "нереальное — by в ОБЕИХ частях" }
+      ],
+      "pitfallsForRu": [
+        "В нереальном условии форма с by нужна в обеих частях: Gdybym miał… przyszedłbym",
+        "gdyby тоже несёт личные окончания: gdybym, gdybyś"
+      ],
+      "examModules": ["grammar", "writing", "speaking"],
+      "exerciseKinds": ["combine-sentences", "transform", "error-correction"],
+      "sourceRef": "2.2.3 3) b)"
+    },
+    {
+      "id": "pl.gram.s-correlative",
+      "category": "syntax",
+      "title": { "pl": "Konstrukcja «im… tym…»", "ru": "Конструкция im… tym…" },
+      "summary": "Сопоставление двух возрастающих величин.",
+      "prerequisites": ["pl.gram.k-comparative", "pl.gram.s-conditional-clauses"],
+      "difficulty": 3,
+      "interferenceRu": 1,
+      "examples": [
+        { "pl": "Im więcej czytasz, tym lepiej mówisz.", "ru": "чем больше… тем лучше" }
+      ],
+      "pitfallsForRu": [
+        "Полностью совпадает с русским «чем… тем…»"
+      ],
+      "examModules": ["grammar", "writing"],
+      "exerciseKinds": ["combine-sentences", "translate-to-target"],
+      "sourceRef": "2.2.3 3) b)"
+    },
+
+    {
+      "id": "pl.gram.t-registers",
+      "category": "style",
+      "title": { "pl": "Styl formalny, nieformalny, potoczny", "ru": "Стили: формальный, неформальный, разговорный" },
+      "summary": "Различение трёх регистров и выбор уместного.",
+      "prerequisites": ["pl.gram.p-formal-pan", "pl.gram.c-voc"],
+      "difficulty": 3,
+      "interferenceRu": 3,
+      "examples": [
+        { "pl": "Szanowny Panie Dyrektorze / Cześć, Olu!", "ru": "формальное и неформальное обращение" },
+        { "pl": "Uprzejmie proszę o… / Chciałbym poprosić o…", "ru": "разные регистры просьбы" }
+      ],
+      "pitfallsForRu": [
+        "На экзамене в «Pisanie» прямо оценивается критерий «styl». Смешение регистров — потеря баллов"
+      ],
+      "examModules": ["writing", "speaking"],
+      "exerciseKinds": ["classify", "transform", "situational"],
+      "sourceRef": "2.2.4 1)"
+    },
+    {
+      "id": "pl.gram.t-figures",
+      "category": "style",
+      "title": { "pl": "Środki stylistyczne", "ru": "Стилистические средства" },
+      "summary": "Эллипсис, синонимы, антонимы, эпитеты, сравнения.",
+      "prerequisites": ["pl.gram.t-registers"],
+      "difficulty": 2,
+      "interferenceRu": 1,
+      "examples": [
+        { "pl": "Jak miło! (эллипсис)", "ru": "как мило" },
+        { "pl": "biały jak śnieg, zimny jak lód", "ru": "сравнения" },
+        { "pl": "miły – sympatyczny / dobry – zły", "ru": "синонимы и антонимы" }
+      ],
+      "pitfallsForRu": [],
+      "examModules": ["writing", "speaking", "reading"],
+      "exerciseKinds": ["match-pairs", "gap-fill"],
+      "sourceRef": "2.2.4 2)"
+    }
+  ]
+}

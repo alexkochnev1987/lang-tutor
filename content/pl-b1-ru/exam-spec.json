@@ -1,0 +1,246 @@
+{
+  "$schema": "./exam-spec.schema.json",
+  "id": "pl-state-cert-b1-adults",
+  "version": "2026-10-24",
+  "name": {
+    "pl": "Egzamin certyfikatowy z języka polskiego jako obcego, poziom B1, grupa dostosowana do potrzeb osób dorosłych",
+    "ru": "Государственный сертификационный экзамен по польскому языку как иностранному, уровень B1, группа для взрослых"
+  },
+  "level": "B1",
+  "cefrLabel": "poziom progowy",
+  "alteLabel": "Threshold User",
+  "audience": "adults",
+
+  "legalBasis": {
+    "act": "Rozporządzenie Ministra Nauki i Szkolnictwa Wyższego z dnia 26 lutego 2016 r. w sprawie egzaminów z języka polskiego jako obcego",
+    "originalPublication": "Dz.U. 2016 poz. 405",
+    "consolidatedText": "Dz.U. 2018 poz. 1386",
+    "standardsAnnex": "załącznik nr 1, część II, rozdział E",
+    "url": "https://isap.sejm.gov.pl/isap.nsf/download.xsp/WDU20180001386/O/D20181386.pdf",
+    "verifiedOn": "2026-10-24"
+  },
+
+  "legallyFixed": {
+    "comment": "Эти значения закреплены нормативным актом и не меняются от сессии к сессии.",
+    "writtenPartMaxMinutes": {
+      "value": 190,
+      "source": "§14 ust. 1 pkt 1 lit. c"
+    },
+    "oralPartMaxMinutes": {
+      "value": 15,
+      "source": "§17 ust. 2 pkt 1 lit. b"
+    },
+    "minBreakBetweenModulesMinutes": {
+      "value": 10,
+      "source": "§16 ust. 1 pkt 3"
+    },
+    "passRule": {
+      "type": "per-module-floor",
+      "thresholdPercent": 50,
+      "appliesTo": "every written module AND the oral part",
+      "source": "§23 ust. 1 pkt 1 lit. b",
+      "note": "КРИТИЧНО: провал одного модуля = провал экзамена. Целевая функция подготовки — максимизировать МИНИМАЛЬНЫЙ модуль, а не средний балл."
+    },
+    "oralPartTiming": {
+      "heldAfterWritten": true,
+      "sameOrNextDay": true,
+      "candidateDrawsOneTaskSet": true,
+      "source": "§17 ust. 1, ust. 4"
+    }
+  },
+
+  "sessionConfigurable": {
+    "comment": "§14 ust. 2: время на конкретный модуль Комиссия определяет на экзаменационном листе. Баллы также задаются на листе сессии. Значения ниже — фактическая раскладка по пособию NAWA «Przetestuj swój polski!» (UWr, 2023). НЕ ХАРДКОДИТЬ в коде — читать отсюда.",
+    "source": "https://nawa.gov.pl/images/Promocja-JP/PJP-2022/Przetestuj-swoj-polski.pdf",
+    "confidence": "source-not-law"
+  },
+
+  "modules": [
+    {
+      "id": "listening",
+      "order": 1,
+      "part": "written",
+      "name": {
+        "pl": "Rozumienie ze słuchu",
+        "ru": "Аудирование"
+      },
+      "durationMinutes": 30,
+      "maxPoints": 40,
+      "passPoints": 20,
+      "typicalTaskCount": 5,
+      "taskTypes": [
+        "multiple-choice",
+        "gap-fill-from-audio",
+        "true-false",
+        "matching",
+        "iconographic"
+      ],
+      "notes": [
+        "Самый дорогой модуль по баллам — 40 из ~170 письменных.",
+        "Записи воспроизводятся дважды.",
+        "Стандарт требует оригинальных, неадаптированных записей в нормальном темпе.",
+        "В заданиях с пропусками оценивается правильность написания.",
+        "ГЛАВНЫЙ РИСК ПРОГРАММЫ: не тренируется текстовыми упражнениями, не помещается в 15 мин/день."
+      ]
+    },
+    {
+      "id": "reading",
+      "order": 2,
+      "part": "written",
+      "name": {
+        "pl": "Rozumienie tekstów pisanych",
+        "ru": "Чтение"
+      },
+      "durationMinutes": 40,
+      "maxPoints": 30,
+      "passPoints": 15,
+      "typicalTaskCount": 4,
+      "taskTypes": [
+        "multiple-choice",
+        "matching",
+        "gap-fill-words",
+        "gap-fill-sentences",
+        "true-false"
+      ],
+      "notes": [
+        "Задания можно выполнять в любом порядке.",
+        "Проверяются глобальное, селективное и детальное понимание."
+      ]
+    },
+    {
+      "id": "grammar",
+      "order": 3,
+      "part": "written",
+      "name": {
+        "pl": "Poprawność gramatyczna",
+        "ru": "Грамматическая правильность"
+      },
+      "durationMinutes": null,
+      "maxPoints": 30,
+      "passPoints": 15,
+      "typicalTaskCount": 8,
+      "taskTypes": [
+        "closed-choice",
+        "open-form-production",
+        "open-transformation"
+      ],
+      "taskMix": {
+        "closed": "4-5",
+        "open": "3-4"
+      },
+      "notes": [
+        "За одни только закрытые задания можно получить 15–17,5 из 30 — формально порог. Но это хрупкая стратегия.",
+        "Открытые задания оцениваются строго: понятные, но грамматически неверные формы баллов не получают.",
+        "Каждое задание проверяет отдельную грамматическую тему.",
+        "NAWA отмечает как трудные: rekcja czasowników, нетипичное словоизменение, степени сравнения."
+      ]
+    },
+    {
+      "id": "writing",
+      "order": 4,
+      "part": "written",
+      "name": {
+        "pl": "Pisanie",
+        "ru": "Письмо"
+      },
+      "durationMinutes": null,
+      "maxPoints": 30,
+      "passPoints": 15,
+      "structure": {
+        "setsOffered": 3,
+        "setsToChoose": 1,
+        "tasksPerSet": 2,
+        "taskA": { "type": "short-form", "words": [20, 40] },
+        "taskB": { "type": "long-form", "words": [160, 180] }
+      },
+      "assessmentCriteria": [
+        "wykonanie zadania (treść, długość, forma, kompozycja)",
+        "poprawność gramatyczna",
+        "słownictwo",
+        "styl",
+        "ortografia i interpunkcja"
+      ],
+      "notes": [
+        "Оценивается только чистовик, черновик не проверяется.",
+        "Нужно выполнить ОБА задания из одного комплекта."
+      ]
+    },
+    {
+      "id": "speaking",
+      "order": 5,
+      "part": "oral",
+      "name": {
+        "pl": "Mówienie",
+        "ru": "Говорение"
+      },
+      "durationMinutes": 15,
+      "maxPoints": null,
+      "passPercent": 50,
+      "preparationMinutes": 5,
+      "warmupMinutes": 1,
+      "warmupGraded": false,
+      "tasks": [
+        {
+          "id": "photo-description",
+          "order": 1,
+          "minutes": 5,
+          "name": { "pl": "Opis fotografii", "ru": "Описание фотографии" },
+          "requires": [
+            "описание людей: внешность, выражение лица, эмоции, возможные отношения, вероятная профессия",
+            "описание места и ситуации: взаимное расположение (na pierwszym/drugim planie), цвета, пейзаж или помещение, погода, время года и суток",
+            "описание действий",
+            "динамика: co było – jest – będzie"
+          ]
+        },
+        {
+          "id": "monologue",
+          "order": 2,
+          "minutes": 5,
+          "name": { "pl": "Monolog", "ru": "Монолог на заданную тему" }
+        },
+        {
+          "id": "communicative-situation",
+          "order": 3,
+          "minutes": 5,
+          "name": { "pl": "Sytuacja komunikacyjna", "ru": "Диалог с экзаменатором" }
+        }
+      ],
+      "assessmentCriteria": [
+        "sprawność komunikacyjna",
+        "wykonanie zadania",
+        "poprawność gramatyczna",
+        "słownictwo",
+        "wymowa i intonacja"
+      ],
+      "commissionSize": 3,
+      "notes": [
+        "Один экзаменатор ведёт диалог, двое независимо оценивают.",
+        "Влияние родного акцента допустимо, если не мешает пониманию."
+      ]
+    }
+  ],
+
+  "totals": {
+    "writtenMaxPoints": 130,
+    "writtenMaxPointsNote": "40 + 30 + 30 + 30. Проверять по листу конкретной сессии — баллы конфигурируемы.",
+    "modulesToPass": 5,
+    "allMustPass": true
+  },
+
+  "fees": {
+    "currency": "EUR",
+    "examB1Adults": 150,
+    "certificateIssuance": 20,
+    "source": "NAWA «Przetestuj swój polski!», 2023",
+    "confidence": "source-not-law",
+    "note": "Проверять актуальность на certyfikatpolski.pl перед показом пользователю."
+  },
+
+  "readinessCriteria": {
+    "comment": "Собственный критерий готовности приложения. Запас над официальным порогом намеренный: реальный экзамен тяжелее тренировки.",
+    "targetPercentPerModule": 65,
+    "officialThresholdPercent": 50,
+    "requiredConsecutiveMockExams": 2,
+    "rule": "Готов, если в 2 подряд пробных экзаменах каждый из 5 модулей ≥65%."
+  }
+}

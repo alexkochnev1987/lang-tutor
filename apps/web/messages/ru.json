@@ -1,0 +1,76 @@
+{
+  "app": {
+    "name": "Polski B1",
+    "tagline": "Подготовка к государственному экзамену"
+  },
+  "nav": {
+    "today": "Сегодня",
+    "plan": "Программа",
+    "dictionary": "Словарь",
+    "progress": "Прогресс"
+  },
+  "today": {
+    "title": "Занятие на сегодня",
+    "day": "День {day} из {total}",
+    "start": "Начать · {minutes} мин",
+    "done": "Готово на сегодня",
+    "streak": "{count, plural, one {# день} few {# дня} other {# дней}} подряд",
+    "wordsDue": "{count, plural, =0 {нет слов к повторению} one {# слово к повторению} few {# слова к повторению} other {# слов к повторению}}"
+  },
+  "lesson": {
+    "check": "Проверить",
+    "next": "Дальше",
+    "finish": "Завершить",
+    "progress": "{done} из {total}",
+    "correct": "Верно",
+    "wrong": "Ошибка",
+    "correctAnswerIs": "Правильно: {answer}",
+    "playAudio": "Произнести"
+  },
+  "exam": {
+    "readiness": "Готовность к экзамену",
+    "modules": {
+      "listening": "Аудирование",
+      "reading": "Чтение",
+      "grammar": "Грамматика",
+      "writing": "Письмо",
+      "speaking": "Говорение"
+    },
+    "threshold": "Порог — 50% в каждом модуле",
+    "weakest": "Слабее всего: {module}"
+  },
+  "settings": {
+    "title": "Настройки",
+    "uiLanguage": "Язык интерфейса",
+    "theme": "Тема",
+    "themeLight": "Светлая",
+    "themeDark": "Тёмная",
+    "themeSystem": "Как в системе",
+    "voice": "Голос",
+    "rate": "Темп речи",
+    "dailyBudget": "Минут в день",
+    "appearance": "Оформление",
+    "appearanceHint": "Выберите тему и цветовую палитру",
+    "palette": "Палитра",
+    "done": "Готово"
+  },
+  "auth": {
+    "signIn": "Войти",
+    "signOut": "Выйти",
+    "signedInAs": "Вы вошли как {name}",
+    "localOnly": "Данные хранятся только на этом устройстве. Вход нужен для будущей синхронизации.",
+    "unavailable": "Вход через Google не настроен"
+  },
+  "errors": {
+    "noVoice": "На устройстве нет голоса для польского языка",
+    "noVoiceHint": "Настройки → Универсальный доступ → Устный контент → Голоса → Польский",
+    "generic": "Что-то пошло не так",
+    "retry": "Повторить"
+  },
+  "common": {
+    "cancel": "Отмена",
+    "save": "Сохранить",
+    "close": "Закрыть",
+    "loading": "Загрузка…"
+  }
+}

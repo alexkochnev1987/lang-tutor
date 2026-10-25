@@ -1,0 +1,351 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TTS-проверка · польский</title>
+<style>
+  :root {
+    --bg: #f7faf8; --card: #fff; --fg: #10231a; --muted: #5b7267;
+    --line: #dde8e2; --accent: #1f9d55; --accent-fg: #fff;
+    --ok: #1f9d55; --bad: #c0392b; --warn: #b26a00;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0e1613; --card: #15201b; --fg: #e8f0ec; --muted: #94a9a0;
+      --line: #263530; --accent: #35c477; --accent-fg: #06130c;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; padding: 24px 16px 64px;
+    font: 15px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background: var(--bg); color: var(--fg);
+  }
+  .wrap { max-width: 760px; margin: 0 auto; }
+  h1 { font-size: 22px; margin: 0 0 4px; }
+  h2 { font-size: 15px; margin: 28px 0 10px; color: var(--muted);
+       text-transform: uppercase; letter-spacing: .06em; font-weight: 600; }
+  .sub { color: var(--muted); margin: 0 0 20px; }
+  .card { background: var(--card); border: 1px solid var(--line);
+          border-radius: 12px; padding: 14px 16px; margin-bottom: 12px; }
+  label { display: block; font-size: 13px; color: var(--muted); margin-bottom: 6px; }
+  select, input[type=text] {
+    width: 100%; padding: 9px 11px; border-radius: 8px;
+    border: 1px solid var(--line); background: var(--bg); color: var(--fg);
+    font: inherit;
+  }
+  .row { display: flex; gap: 12px; align-items: flex-end; flex-wrap: wrap; }
+  .row > * { flex: 1 1 200px; }
+  button {
+    font: inherit; cursor: pointer; border-radius: 8px;
+    border: 1px solid var(--line); background: var(--card); color: var(--fg);
+    padding: 9px 14px;
+  }
+  button:hover { border-color: var(--accent); }
+  button.primary { background: var(--accent); color: var(--accent-fg); border-color: var(--accent); }
+  .speak { display: inline-flex; align-items: center; gap: 8px; }
+  .item {
+    display: flex; align-items: center; gap: 10px;
+    padding: 9px 0; border-bottom: 1px solid var(--line);
+  }
+  .item:last-child { border-bottom: 0; }
+  .item .word { flex: 1; font-size: 16px; }
+  .item .hint { color: var(--muted); font-size: 13px; }
+  .mark { border: 1px solid var(--line); background: transparent;
+          width: 34px; padding: 6px 0; text-align: center; }
+  .mark.on-ok  { border-color: var(--ok);  color: var(--ok); }
+  .mark.on-bad { border-color: var(--bad); color: var(--bad); }
+  #log { font: 12px/1.6 ui-monospace, SFMono-Regular, Menlo, monospace;
+         white-space: pre-wrap; max-height: 220px; overflow: auto;
+         color: var(--muted); }
+  .pill { display: inline-block; padding: 2px 8px; border-radius: 999px;
+          font-size: 12px; border: 1px solid var(--line); color: var(--muted); }
+  .pill.ok  { color: var(--ok);  border-color: var(--ok); }
+  .pill.bad { color: var(--bad); border-color: var(--bad); }
+  .pill.warn{ color: var(--warn);border-color: var(--warn); }
+  table { width: 100%; border-collapse: collapse; font-size: 14px; }
+  td, th { text-align: left; padding: 6px 8px 6px 0; border-bottom: 1px solid var(--line); }
+  th { color: var(--muted); font-weight: 600; font-size: 12px;
+       text-transform: uppercase; letter-spacing: .05em; }
+  .controls { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 10px; }
+  input[type=range] { width: 100%; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <h1>TTS-проверка · польский</h1>
+  <p class="sub">Нажмите любую кнопку <b>🔊</b>. Всё работает на синтезе вашего устройства, ничего не загружается.</p>
+
+  <div class="card">
+    <div class="row">
+      <div style="flex:3 1 320px">
+        <label>Голос <span id="voiceCount" class="pill">…</span></label>
+        <select id="voice"></select>
+      </div>
+      <div style="flex:1 1 140px">
+        <label>Темп · <span id="rateVal">0.95</span></label>
+        <input type="range" id="rate" min="0.4" max="1.3" step="0.05" value="0.95">
+      </div>
+    </div>
+    <div class="controls">
+      <button class="primary" id="hello">🔊 Проверить звук</button>
+      <button id="stop">⏹ Стоп</button>
+      <button id="unstick">🔧 Расклинить очередь</button>
+      <button id="showAll">Показать все голоса</button>
+    </div>
+    <div style="margin-top:10px"><span id="status" class="pill">готово</span></div>
+  </div>
+
+  <h2>Своя строка</h2>
+  <div class="card">
+    <div class="row">
+      <input type="text" id="custom" value="Dzień dobry, chciałbym kupić bilet do Krakowa." style="flex:4 1 300px">
+      <button class="primary" id="saycustom" style="flex:0 0 auto">🔊 Сказать</button>
+    </div>
+  </div>
+
+  <h2>Ударение — где синтез обычно врёт</h2>
+  <div class="card">
+    <p class="sub" style="margin:0 0 10px">
+      В польском ударение на <b>предпоследнем</b> слоге. Ниже — исключения.
+      Слушайте и отмечайте: <b>✓</b> если ударение верное, <b>✗</b> если нет.
+      Отмеченные <b>✗</b> нужно будет озвучивать записью носителя, а не синтезом.
+    </p>
+    <div id="stress"></div>
+    <div class="controls">
+      <button id="copyBad">Скопировать список ошибок</button>
+      <span id="badCount" class="pill">—</span>
+    </div>
+  </div>
+
+  <h2>Числа и сокращения</h2>
+  <div class="card">
+    <p class="sub" style="margin:0 0 10px">
+      Проверяем, нужно ли поле <code>speakAs</code> в данных. Слева — как лежит
+      в тексте, справа — как должно звучать.
+    </p>
+    <table id="norm"></table>
+  </div>
+
+  <h2>Журнал событий</h2>
+  <div class="card"><div id="log">—</div></div>
+
+</div>
+
+<script>
+const STRESS = [
+  ['uniwersytet',  'ожидается: uniwerSYtet'],
+  ['matematyka',   'ожидается: mateMAtyka'],
+  ['fizyka',       'ожидается: FIzyka'],
+  ['gramatyka',    'ожидается: graMAtyka'],
+  ['muzyka',       'ожидается: MUzyka'],
+  ['poszliśmy',    'ожидается: poSZLIśmy'],
+  ['byliśmy',      'ожидается: BYliśmy'],
+  ['zrobiliście',  'ожидается: zroBIliście'],
+  ['zrobilibyśmy', 'ожидается: zroBIlibyśmy'],
+  ['czterysta',    'ожидается: CZTErysta'],
+  ['siedemset',    'ожидается: SIEdemset'],
+  ['dziewięćset',  'ожидается: DZIEwięćset'],
+  ['prezydent',    'ожидается: prezyDENT — регулярное, контроль'],
+  ['mieszkanie',   'регулярное, контрольное слово'],
+];
+
+const NORM = [
+  ['Bilet kosztuje 15 zł.',        'Bilet kosztuje piętnaście złotych.'],
+  ['np. w sklepie',                'na przykład w sklepie'],
+  ['ul. Piękna 12',                'ulica Piękna dwanaście'],
+  ['Spotkanie o godz. 8:30.',      'Spotkanie o godzinie ósmej trzydzieści.'],
+  ['Święto 3 Maja',                'Święto trzeciego maja'],
+  ['itd.',                         'i tak dalej'],
+];
+
+const $ = (s) => document.querySelector(s);
+const logEl = $('#log');
+let lines = [];
+function log(msg, kind) {
+  const t = new Date().toLocaleTimeString('ru-RU', { hour12: false });
+  lines.unshift(`${t}  ${msg}`);
+  lines = lines.slice(0, 60);
+  logEl.textContent = lines.join('\n');
+  if (kind) setStatus(msg, kind);
+}
+function setStatus(text, kind) {
+  const el = $('#status');
+  el.textContent = text;
+  el.className = 'pill' + (kind ? ' ' + kind : '');
+}
+
+// ── Голоса ────────────────────────────────────────────────────────────
+let allVoices = [];
+let showingAll = false;
+
+function loadVoices() {
+  return new Promise((resolve) => {
+    const got = speechSynthesis.getVoices();
+    if (got.length) return resolve(got);
+    speechSynthesis.addEventListener('voiceschanged',
+      () => resolve(speechSynthesis.getVoices()), { once: true });
+    setTimeout(() => resolve(speechSynthesis.getVoices()), 1500);
+  });
+}
+
+function isPolish(v) {
+  return v.lang.replace('_', '-').toLowerCase().startsWith('pl');
+}
+
+function renderVoices() {
+  const sel = $('#voice');
+  const list = showingAll ? allVoices : allVoices.filter(isPolish);
+  sel.innerHTML = '';
+  if (!list.length) {
+    sel.innerHTML = '<option value="">— польских голосов не найдено —</option>';
+    $('#voiceCount').textContent = 'польских: 0';
+    $('#voiceCount').className = 'pill bad';
+    log('Польского голоса в системе НЕТ. macOS: Настройки → Универсальный доступ → Устный контент → Голоса → Польский', 'bad');
+    return;
+  }
+  list.forEach((v, i) => {
+    const o = document.createElement('option');
+    o.value = allVoices.indexOf(v);
+    o.textContent = `${v.name} · ${v.lang}${v.localService ? ' · офлайн' : ' · сетевой'}`;
+    sel.appendChild(o);
+  });
+  const plCount = allVoices.filter(isPolish).length;
+  $('#voiceCount').textContent = `польских: ${plCount} из ${allVoices.length}`;
+  $('#voiceCount').className = 'pill ok';
+}
+
+function currentVoice() {
+  const idx = $('#voice').value;
+  return idx === '' ? null : allVoices[Number(idx)];
+}
+
+// ── Произнесение ──────────────────────────────────────────────────────
+let watchdog = null;
+
+function say(text) {
+  const voice = currentVoice();
+  if (!voice) { log('Голос не выбран', 'bad'); return; }
+
+  speechSynthesis.cancel();
+  clearTimeout(watchdog);
+
+  // небольшая пауза после cancel() — иначе Chrome иногда роняет 'canceled'
+  setTimeout(() => {
+    const u = new SpeechSynthesisUtterance(text);
+    u.voice = voice;
+    u.lang  = voice.lang;
+    u.rate  = Number($('#rate').value);
+
+    const t0 = performance.now();
+    u.onstart = () => log(`▶ start · "${text.slice(0, 40)}"`, 'ok');
+    u.onend   = () => { clearTimeout(watchdog);
+                        log(`■ end · ${Math.round(performance.now() - t0)} мс`); };
+    u.onerror = (e) => { clearTimeout(watchdog);
+                         log(`✗ error: ${e.error}`, 'bad'); };
+
+    speechSynthesis.speak(u);
+    log(`→ speak(${voice.name}, rate=${u.rate}) "${text.slice(0, 40)}"`);
+
+    // Chrome умеет подвесить очередь: speaking=true и ни одного события
+    watchdog = setTimeout(() => {
+      if (speechSynthesis.speaking) {
+        log('⚠ очередь подвисла: speaking=true, событий нет. Жмите «Расклинить».', 'warn');
+      }
+    }, 6000);
+  }, 120);
+}
+
+// ── Списки ────────────────────────────────────────────────────────────
+function renderStress() {
+  const box = $('#stress');
+  STRESS.forEach(([word, hint]) => {
+    const row = document.createElement('div');
+    row.className = 'item';
+    row.innerHTML = `
+      <button class="speak" data-say="${word}">🔊</button>
+      <span class="word">${word}</span>
+      <span class="hint">${hint}</span>
+      <button class="mark" data-mark="ok"  data-word="${word}">✓</button>
+      <button class="mark" data-mark="bad" data-word="${word}">✗</button>`;
+    box.appendChild(row);
+  });
+}
+
+function renderNorm() {
+  const t = $('#norm');
+  t.innerHTML = '<tr><th>как в тексте</th><th>как должно звучать</th></tr>';
+  NORM.forEach(([raw, spoken]) => {
+    const tr = document.createElement('tr');
+    tr.innerHTML = `
+      <td><button class="speak" data-say="${raw}">🔊</button> <code>${raw}</code></td>
+      <td><button class="speak" data-say="${spoken}">🔊</button> ${spoken}</td>`;
+    t.appendChild(tr);
+  });
+}
+
+const marks = {};
+function updateBadCount() {
+  const bad = Object.entries(marks).filter(([, v]) => v === 'bad').map(([k]) => k);
+  const el = $('#badCount');
+  el.textContent = bad.length ? `ошибок: ${bad.length}` : '—';
+  el.className = 'pill' + (bad.length ? ' bad' : '');
+  return bad;
+}
+
+// ── События ───────────────────────────────────────────────────────────
+document.addEventListener('click', (e) => {
+  const sayBtn = e.target.closest('[data-say]');
+  if (sayBtn) { say(sayBtn.dataset.say); return; }
+
+  const mark = e.target.closest('[data-mark]');
+  if (mark) {
+    const { word, mark: kind } = mark.dataset;
+    marks[word] = marks[word] === kind ? null : kind;
+    mark.parentElement.querySelectorAll('.mark').forEach((b) => {
+      b.className = 'mark' + (marks[word] === b.dataset.mark ? ' on-' + b.dataset.mark : '');
+    });
+    updateBadCount();
+  }
+});
+
+$('#rate').addEventListener('input', (e) => { $('#rateVal').textContent = e.target.value; });
+$('#hello').addEventListener('click', () => say('Dzień dobry! To jest test polskiej wymowy.'));
+$('#saycustom').addEventListener('click', () => say($('#custom').value));
+$('#custom').addEventListener('keydown', (e) => { if (e.key === 'Enter') say(e.target.value); });
+$('#stop').addEventListener('click', () => { speechSynthesis.cancel(); clearTimeout(watchdog); log('⏹ cancel()'); });
+$('#unstick').addEventListener('click', () => {
+  speechSynthesis.cancel();
+  speechSynthesis.resume();
+  clearTimeout(watchdog);
+  setTimeout(() => log(`🔧 после расклинивания: speaking=${speechSynthesis.speaking}, pending=${speechSynthesis.pending}`,
+                       speechSynthesis.speaking ? 'bad' : 'ok'), 300);
+});
+$('#showAll').addEventListener('click', (e) => {
+  showingAll = !showingAll;
+  e.target.textContent = showingAll ? 'Только польские' : 'Показать все голоса';
+  renderVoices();
+});
+$('#copyBad').addEventListener('click', () => {
+  const bad = updateBadCount();
+  const text = bad.length
+    ? bad.join('\n')
+    : 'Ошибок не отмечено — синтез справляется со всеми исключениями.';
+  navigator.clipboard.writeText(text).then(
+    () => log(`📋 скопировано: ${bad.length} шт.`, 'ok'),
+    () => log('не удалось скопировать', 'bad'));
+});
+
+// ── Старт ─────────────────────────────────────────────────────────────
+(async () => {
+  renderStress();
+  renderNorm();
+  allVoices = await loadVoices();
+  renderVoices();
+  log(`Загружено голосов: ${allVoices.length}. Нажмите «Проверить звук».`);
+})();
+</script>
+</body>
+</html>
