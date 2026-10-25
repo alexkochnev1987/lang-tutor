@@ -10,17 +10,17 @@
 
 /** Падеж в предложном падеже: «поставьте в родительном падеже». */
 const CASE_LOC: Record<string, string> = {
-  nom: 'именительном', gen: 'родительном', dat: 'дательном',
-  acc: 'винительном', inst: 'творительном', loc: 'предложном', voc: 'звательном',
+  nom: 'mianowniku', gen: 'dopełniaczu', dat: 'celowniku',
+  acc: 'bierniku', inst: 'narzędniku', loc: 'miejscowniku', voc: 'wołaczu',
 }
 
 /** Тот же падеж в именительном: «родительный падеж». */
 const CASE_NOM: Record<string, string> = {
-  nom: 'именительный', gen: 'родительный', dat: 'дательный',
-  acc: 'винительный', inst: 'творительный', loc: 'предложный', voc: 'звательный',
+  nom: 'mianownik', gen: 'dopełniacz', dat: 'celownik',
+  acc: 'biernik', inst: 'narzędnik', loc: 'miejscownik', voc: 'wołacz',
 }
 
-const PERSONS: Record<string, string> = { pri: '1 лицо', sec: '2 лицо', ter: '3 лицо' }
+const PERSONS: Record<string, string> = { pri: '1. osoba', sec: '2. osoba', ter: '3. osoba' }
 
 /**
  * Род и подрод в теге SGJP. Пустая строка — форма одинакова для всех
@@ -31,21 +31,21 @@ const PERSONS: Record<string, string> = { pri: '1 лицо', sec: '2 лицо', 
  * может выбрать верный вариант не угадывая.
  */
 const GENDERS: Record<string, string> = {
-  'm1': 'мужско-личный род',
-  'm1.m2': 'м. р., одушевлённое',
-  'm1.m2.m3': 'м. р.',
-  'm1.m2.m3.n': 'м./ср. р.',
+  'm1': 'rodzaj męskoosobowy',
+  'm1.m2': 'rodzaj męski, żywotny',
+  'm1.m2.m3': 'rodzaj męski',
+  'm1.m2.m3.n': 'rodzaj męski lub nijaki',
   'm1.m2.m3.f.n': '',
-  'm2.m3': 'м. р., неличное',
-  'm2.m3.f.n': 'немужско-личный род',
-  'm2.m3.n': 'м. р. неличное и ср. р.',
-  'm3': 'м. р., неодушевлённое',
-  'f': 'ж. р.',
-  'n': 'ср. р.',
+  'm2.m3': 'rodzaj męski, nieosobowy',
+  'm2.m3.f.n': 'rodzaj niemęskoosobowy',
+  'm2.m3.n': 'rodzaj męski nieosobowy lub nijaki',
+  'm3': 'rodzaj męski, nieżywotny',
+  'f': 'rodzaj żeński',
+  'n': 'rodzaj nijaki',
 }
 
 const DEGREES: Record<string, string> = {
-  com: 'Сравнительная степень', sup: 'Превосходная степень',
+  com: 'stopień wyższy', sup: 'stopień najwyższy',
 }
 
 /** Сегмент тега, состоящий только из родовых кодов: `f`, `m1.m2.m3`, … */
@@ -71,16 +71,16 @@ export function labelTag(tag: string): string {
 
   // ── Существительные и отглагольные существительные ──────────────────
   if (pos === 'subst' || pos === 'ger') {
-    if (!c) return 'Поставьте в нужную форму'
-    return `Поставьте в ${CASE_LOC[c]} падеже, ${num}`
+    if (!c) return 'Odmień przez przypadki'
+    return `Użyj ${CASE_LOC[c]}, ${num}`
   }
 
   // ── Прилагательные и местоимённые прилагательные (ten, mój, który) ──
   if (pos === 'adj') {
     const degree = p.find((x) => x in DEGREES)
-    if (!c) return degree ? `${DEGREES[degree]} — образуйте форму` : 'Поставьте в нужную форму'
-    if (degree) return `${DEGREES[degree]}: ${join(`${CASE_NOM[c]} падеж`, gender, num)}`
-    return `Поставьте в ${CASE_LOC[c]} падеже: ${join(gender, num)}`
+    if (!c) return degree ? `${DEGREES[degree]} — utwórz formę` : 'Utwórz odpowiednią formę'
+    if (degree) return `${DEGREES[degree]}: ${join(`${CASE_NOM[c]}`, gender, num)}`
+    return `Użyj ${CASE_LOC[c]}: ${join(gender, num)}`
   }
 
   // ── Личные формы глагола ────────────────────────────────────────────
@@ -88,28 +88,28 @@ export function labelTag(tag: string): string {
     // Личная форма глагола СОВЕРШЕННОГО вида — это простое будущее,
     // а не настоящее. Назвать её настоящим временем значит учить
     // неверному: `napiszę` — «напишу», не «пишу».
-    const tense = p.includes('perf') ? 'Простое будущее время' : 'Настоящее время'
+    const tense = p.includes('perf') ? 'Czas przyszły prosty' : 'Czas teraźniejszy'
     return `${tense}: ${join(PERSONS[person ?? 'ter'], num)}`
   }
 
   if (pos === 'praet') {
     // Лицо обязательно: без него `czytał`, `czytałem` и `czytałeś`
     // описываются одной и той же подписью.
-    return `Прошедшее время: ${join(PERSONS[person ?? 'ter'], gender, num)}`
+    return `Czas przeszły: ${join(PERSONS[person ?? 'ter'], gender, num)}`
   }
 
   if (pos === 'impt') {
     const who = plural ? (person === 'pri' ? 'my' : 'wy') : 'ty'
-    return `Повелительное наклонение: ${who}`
+    return `Tryb rozkazujący: ${who}`
   }
 
   // Личные формы будущего времени есть только у `być`; SGJP зовёт их
   // `bedzie`, потому что остальные глаголы несовершенного вида образуют
   // будущее описательно.
-  if (pos === 'bedzie') return `Будущее время: ${join(PERSONS[person ?? 'ter'], num)}`
+  if (pos === 'bedzie') return `Czas przyszły: ${join(PERSONS[person ?? 'ter'], num)}`
 
-  if (pos === 'inf') return 'Неопределённая форма'
-  if (pos === 'pcon') return 'Деепричастие одновременного действия'
+  if (pos === 'inf') return 'Bezokolicznik'
+  if (pos === 'pcon') return 'Imiesłów przysłówkowy współczesny'
 
   // ── Закрытые классы: ручные таблицы из closed-class.ts ──────────────
   if (pos === 'ppron12' || pos === 'ppron3') {
@@ -120,26 +120,26 @@ export function labelTag(tag: string): string {
     // jego → do niego: после предлога у местоимений 3 лица другая основа
     const prep = p.includes('praep') ? 'после предлога'
       : p.includes('npraep') ? 'без предлога' : undefined
-    if (!c) return 'Личное местоимение — образуйте форму'
-    return `Личное местоимение: ${join(`${CASE_NOM[c]} падеж`, gender, num, clitic, prep)}`
+    if (!c) return 'Zaimek osobowy — utwórz formę'
+    return `Zaimek osobowy: ${join(CASE_NOM[c], gender, num, clitic, prep)}`
   }
 
   if (pos === 'siebie') {
-    if (!c) return 'Возвратное местоимение — образуйте форму'
+    if (!c) return 'Zaimek zwrotny — utwórz formę'
     const clitic = p.includes('nakc') ? 'краткая форма' : undefined
-    return `Возвратное местоимение: ${join(`${CASE_NOM[c]} падеж`, clitic)}`
+    return `Zaimek zwrotny: ${join(CASE_NOM[c], clitic)}`
   }
 
   if (pos === 'num') {
     // congr — согласуемая форма (dwa stoły), rec — требующая родительного
     // падежа (dwóch studentów). Разница и есть предмет правила.
-    const kind = p.includes('rec') ? 'форма, требующая родительного падежа'
-      : p.includes('congr') ? 'форма, согласуемая с существительным' : undefined
-    if (!c) return 'Числительное — образуйте форму'
-    return `Числительное: ${join(`${CASE_NOM[c]} падеж`, gender, kind)}`
+    const kind = p.includes('rec') ? 'wymagający dopełniacza'
+      : p.includes('congr') ? 'uzgadniany z rzeczownikiem' : undefined
+    if (!c) return 'Liczebnik — utwórz formę'
+    return `Liczebnik: ${join(CASE_NOM[c], gender, kind)}`
   }
 
-  return 'Поставьте в нужную форму'
+  return 'Utwórz odpowiednią formę'
 }
 
 /**

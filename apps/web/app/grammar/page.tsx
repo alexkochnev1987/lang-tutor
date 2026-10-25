@@ -9,11 +9,12 @@ import {
   type Stage, type Step,
 } from '@/lib/engine/plan'
 import { recordRuleAttempt } from '@/lib/engine/session'
-import { saveLessonSession } from '@/lib/data/store'
-import { ExerciseView } from '@/app/_components/ExerciseView'
+import { saveExerciseResult, saveLessonSession } from '@/lib/data/store'
+import { GrammarExerciseBatch } from '@/app/_components/ExerciseView'
 import { RuleSheet } from '@/app/_components/RuleSheet'
 import { RuleView } from '@/app/_components/RuleView'
 import { Nav } from '@/app/_components/Nav'
+import { ThemePicker } from '@/app/_components/ThemePicker'
 
 type GrammarView = 'rule' | 'drill' | 'result'
 
@@ -23,7 +24,6 @@ export default function GrammarPage() {
   const [dayNumber, setDayNumber] = useState(1)
   const [loaded, setLoaded] = useState(false)
   const [view, setView] = useState<GrammarView>('rule')
-  const [i, setI] = useState(0)
   const [canAdvance, setCanAdvance] = useState(false)
   const [stats, setStats] = useState({ correct: 0, total: 0 })
   const startedAt = useRef(Date.now())
@@ -40,18 +40,29 @@ export default function GrammarPage() {
 
   useEffect(() => { load() }, [load])
 
-  const step = drills[i]
+  const step = drills[0]
 
   function switchKind() {
-    const mode = otherDrillMode(step)
+    const mode = otherDrillMode(drills[0])
     if (!mode) return
-    // disliking the kind, not the sentence — so the rest of the task switches too
-    setDrills((prev) => prev.map((s, idx) => (idx < i ? s : withDrillMode(s, mode))))
+    // Переключаем тип сразу у всех предложений блока.
+    setDrills((prev) => prev.map((s) => withDrillMode(s, mode)))
   }
 
-  async function onAnswered(ex: Exercise, r: CheckResult) {
-    setCanAdvance(true)
+  async function onAnswered(
+    ex: Exercise, r: CheckResult, complete = true, attempts = 1, answer = '',
+  ) {
+    if (complete) setCanAdvance(true)
     setStats((s) => ({ correct: s.correct + (r.correct ? 1 : 0), total: s.total + 1 }))
+    await saveExerciseResult({
+      dayNumber,
+      exerciseId: ex.id,
+      attempts,
+      correct: r.correct,
+      answer,
+      expected: r.expected,
+      errorKind: r.errorKind ?? null,
+    })
     for (const ruleId of ex.grammarRuleIds) {
       await recordRuleAttempt(ruleId, r.correct, ex.difficulty)
     }
@@ -59,7 +70,6 @@ export default function GrammarPage() {
 
   async function next() {
     setCanAdvance(false)
-    if (i + 1 < drills.length) { setI(i + 1); return }
     await saveLessonSession({
       id: crypto.randomUUID(),
       dayNumber,
@@ -75,7 +85,6 @@ export default function GrammarPage() {
   }
 
   function restart() {
-    setI(0)
     setStats({ correct: 0, total: 0 })
     setCanAdvance(false)
     startedAt.current = Date.now()
@@ -83,7 +92,7 @@ export default function GrammarPage() {
     load()
   }
 
-  if (!loaded) return <Shell><Card><p className="text-sm text-muted">Загрузка…</p></Card></Shell>
+  if (!loaded) return <Shell><Card><p className="text-sm text-muted">Ładowanie…</p></Card></Shell>
 
   if (!stage) {
     return (
@@ -92,11 +101,11 @@ export default function GrammarPage() {
           <Stack gap="md" align="center">
             <span className="text-4xl" aria-hidden>📘</span>
             <p className="text-center text-sm text-muted">
-              На сегодня грамматики в программе нет. Правила вернутся в
-              следующий день с новой темой.
+              Dziś nie ma gramatyki w programie. Reguły wrócą w kolejnym dniu
+              z nowym tematem.
             </p>
             <Link href="/" className="w-full">
-              <Button full>На главный</Button>
+              <Button variant="outline" full>Strona główna</Button>
             </Link>
           </Stack>
         </Card>
@@ -111,11 +120,11 @@ export default function GrammarPage() {
         <Card>
           <Stack gap="md" align="center">
             <span className="text-4xl" aria-hidden>{pct >= 70 ? '✓' : '↻'}</span>
-            <h2 className="text-xl font-semibold">Тренировка закончена</h2>
-            <p className="text-sm text-muted">Верно {stats.correct} из {stats.total} · {pct}%</p>
-            <Button size="lg" full onClick={restart}>Ещё раз</Button>
+            <h2 className="text-xl font-semibold">Trening zakończony</h2>
+            <p className="text-sm text-muted">Poprawne odpowiedzi: {stats.correct} z {stats.total} · {pct}%</p>
+            <Button size="lg" full onClick={restart}>Jeszcze raz</Button>
             <Link href="/" className="w-full">
-              <Button variant="ghost" full>На главный</Button>
+              <Button variant="outline" full>Strona główna</Button>
             </Link>
           </Stack>
         </Card>
@@ -131,15 +140,15 @@ export default function GrammarPage() {
             {stage.rule
               ? <RuleView rule={stage.rule} />
               : <p className="text-sm text-muted">
-                  Сегодня отрабатываются правила, которые проседают по статистике.
+                  Dziś ćwiczymy reguły, które wypadają najsłabiej w statystykach.
                 </p>}
             {stage.missingContent && (
               <p className="rounded-card bg-warn-bg px-3 py-2 text-sm text-warn-ink">
-                Заданий нет: {stage.missingContent}
+                Brak zadań: {stage.missingContent}
               </p>
             )}
             <Button size="lg" full disabled={!drills.length} onClick={() => setView('drill')}>
-              {drills.length ? `К заданиям · ${drills.length}` : 'Заданий нет'}
+              {drills.length ? `Do zadań · ${drills.length}` : 'Brak zadań'}
             </Button>
           </Stack>
         </Card>
@@ -155,34 +164,32 @@ export default function GrammarPage() {
           onClick={() => setView('rule')}
           className="text-sm text-muted hover:text-ink"
         >
-          ← К правилу
+          ← Do reguły
         </button>
-        <span className="text-sm tabular-nums text-muted">{i + 1} / {drills.length}</span>
+        <span className="text-sm tabular-nums text-muted">{drills.length} zdań</span>
       </Row>
 
       {step?.kind === 'exercise' && (
         <Stack gap="md">
-          <ExerciseView
-            key={`${i}-${step.ex.id}`}
-            exercise={step.ex}
-            onAnswered={(r) => void onAnswered(step.ex, r)}
+          <GrammarExerciseBatch
+            key={drills.map((s) => s.kind === 'exercise' ? s.ex.id : s.kind).join('|')}
+            exercises={drills.flatMap((s) => s.kind === 'exercise' ? [s.ex] : [])}
+            dayNumber={dayNumber}
+            onAnswered={(ex, r, _ms, attempts, answer) => void onAnswered(ex, r, false, attempts, answer)}
+            onComplete={() => setCanAdvance(true)}
           />
           <Row gap="sm" justify="center">
             {step.rule && <RuleSheet rule={step.rule} />}
             {!canAdvance && hasAltMode(step) && (
-              <button
-                type="button"
-                onClick={switchKind}
-                className="inline-flex min-h-10 items-center gap-1.5 rounded-card bg-soft px-3 text-sm text-muted hover:bg-soft2 hover:text-ink"
-              >
+              <Button variant="outline" size="sm" onClick={switchKind}>
                 <span aria-hidden>🎲</span>
-                Другой вид задания
-              </button>
+                Inny typ zadania
+              </Button>
             )}
           </Row>
           {canAdvance && (
             <Button size="lg" full onClick={() => void next()}>
-              {i + 1 < drills.length ? 'Дальше' : 'Завершить'}
+              Zakończ
             </Button>
           )}
         </Stack>
@@ -195,7 +202,10 @@ function Shell({ children }: { children: React.ReactNode }) {
   return (
     <Screen>
       <header className="mx-auto w-full max-w-2xl px-4 py-3">
-        <h1 className="text-lg font-semibold">Грамматика</h1>
+        <Row justify="between">
+          <h1 className="text-lg font-semibold">Gramatyka</h1>
+          <ThemePicker />
+        </Row>
       </header>
       <main className="mx-auto w-full max-w-2xl flex-1 px-4 pb-4">
         <Stack gap="md">{children}</Stack>

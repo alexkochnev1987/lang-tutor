@@ -1,7 +1,7 @@
-import { hashString, type CheckResult, type Exercise } from '@polski/engine'
+import { hashString, type Exercise } from '@polski/engine'
 import {
   currentDayNumber, loadCurriculum, loadGrammarRules, loadGrammarSentences,
-  loadMorphology, loadVocabulary,
+  loadMorphology, loadReadingTexts, loadVocabulary,
   type CurriculumDay, type Lexeme, type Paradigm, type SentencePack,
 } from '@/lib/content/curriculum'
 import {
@@ -11,21 +11,19 @@ import {
 import { knownLexemeIds, loadState } from '@/lib/data/store'
 import {
   exerciseForReview, exercisesForRule, exercisesForWord,
-  sentenceDrillsForRule, sentenceWriteDrills, type SentenceMode,
+  exercisesForReading, sentenceDrillsForRule, sentenceWriteDrills, type SentenceMode,
 } from './exercises'
 import { buildTodayLesson } from './session'
 
 export type { SentenceMode } from './exercises'
 
-export type StageId = 'words' | 'grammar' | 'exam' | 'analysis'
+export type StageId = 'words' | 'grammar' | 'exam'
 
 export const STAGE_TITLE: Record<StageId, string> = {
   words: 'Слова',
   grammar: 'Грамматика',
   exam: 'Экзаменационное задание',
-  analysis: 'Разбор ошибок',
 }
-
 export type Step =
   | { kind: 'word-intro'; word: Lexeme }
   | { kind: 'rule-intro'; rule: LocalizedRule }
@@ -44,7 +42,6 @@ export interface Stage {
   rule: LocalizedRule | null
   missingContent: string | null
 }
-
 export interface TodayPlan {
   day: CurriculumDay
   dayNumber: number
@@ -57,16 +54,11 @@ export interface TodayPlan {
   deferredCount: number
 }
 
-export interface Mistake {
-  ex: Exercise
-  result: CheckResult
-  rule: LocalizedRule | null
-}
-
 const WORD_INTRO_SEC = 20
 const RULE_INTRO_SEC = 60
-const DRILLS_PER_RULE = 3
+const DRILLS_PER_RULE = 10
 const SENTENCES_PER_TASK = 10
+const MIN_GRAMMAR_EXERCISES = 10
 const WRITE_TASKS_PER_RULE = 2
 const EXAM_TASK_COUNT = 4
 const EXAM_TASKS_PER_RULE = 2
@@ -82,10 +74,10 @@ const MODULE_NAME: Record<string, string> = {
 }
 
 const MISSING_CONTENT_FOR_MODULE: Record<string, string> = {
-  listening: 'нужны аудиофайлы — синтезом речи модуль не заменяется (решение D13)',
-  reading: 'нужны тексты для чтения, в языковом пакете их пока нет',
-  writing: 'нужны темы письменных работ и критерии проверки',
-  speaking: 'нужны карточки устной части и запись ответа',
+  listening: 'potrzebne są nagrania audio — synteza mowy nie zastępuje tego modułu (decyzja D13)',
+  reading: 'potrzebne są teksty do czytania, których jeszcze nie ma w pakiecie językowym',
+  writing: 'potrzebne są tematy prac pisemnych i kryteria oceny',
+  speaking: 'potrzebne są karty części ustnej i nagranie odpowiedzi',
 }
 
 const stepSec = (step: Step): number =>
@@ -99,9 +91,9 @@ const exerciseIdsOf = (steps: Step[]): Set<string> =>
   new Set(steps.flatMap((s) => (s.kind === 'exercise' ? [s.ex.id] : [])))
 
 export async function buildTodayPlan(): Promise<TodayPlan> {
-  const [curriculum, vocabulary, morphology, rules, sentences] = await Promise.all([
+  const [curriculum, vocabulary, morphology, rules, sentences, readingTexts] = await Promise.all([
     loadCurriculum(), loadVocabulary(), loadMorphology(), loadGrammarRules(),
-    loadGrammarSentences(),
+    loadGrammarSentences(), loadReadingTexts(),
   ])
   const state = await loadState()
   const dayNumber = await currentDayNumber(curriculum.stats.totalDays)
@@ -135,7 +127,9 @@ export async function buildTodayPlan(): Promise<TodayPlan> {
     ruleIds, [...newWords, ...practisedPool], morphology, sentences, localized,
     dayNumber, curriculum.stats.totalDays)
 
-  const examSteps = MODULES_WITH_GENERATOR.has(day.examFocus)
+  const examSteps = day.examFocus === 'reading'
+    ? buildReadingSteps(readingTexts, day.day, exerciseIdsOf(drillSteps))
+    : MODULES_WITH_GENERATOR.has(day.examFocus)
     ? buildExamSteps(
         [...new Set([...state.mastery.map((m) => m.grammarRuleId), ...ruleIds])],
         practisedPool, morphology, localized, exerciseIdsOf(drillSteps))
@@ -165,7 +159,7 @@ export async function buildTodayPlan(): Promise<TodayPlan> {
       rule: dayRule,
       missingContent: drillSteps.length
         ? null
-        : 'для правила дня не нашлось форм в словаре',
+        : 'nie znaleziono form dla reguły dnia w słowniku',
     })
   }
 
@@ -176,12 +170,6 @@ export async function buildTodayPlan(): Promise<TodayPlan> {
       estimatedSec: sumSec(examSteps),
       rule: null,
       missingContent: examSteps.length ? null : missingExamContent(day.examFocus),
-    })
-  }
-
-  if (day.timeBudgetSec.analysis > 0) {
-    stages.push({
-      id: 'analysis', steps: [], estimatedSec: 0, rule: null, missingContent: null,
     })
   }
 
@@ -200,11 +188,25 @@ export async function buildTodayPlan(): Promise<TodayPlan> {
 
 function missingExamContent(moduleId: string): string {
   if (MODULES_WITH_GENERATOR.has(moduleId)) {
-    return 'не нашлось форм для задания — введённого словаря пока не хватает'
+    return 'nie znaleziono form do zadania — słownik jest jeszcze zbyt mały'
   }
   const name = MODULE_NAME[moduleId] ?? moduleId
   const blocker = MISSING_CONTENT_FOR_MODULE[moduleId] ?? 'нужен контент'
   return `модуль «${name}»: ${blocker}`
+}
+
+function buildReadingSteps(
+  texts: import('@/lib/content/curriculum').ReadingText[],
+  dayNumber: number,
+  alreadyDrilled: Set<string>,
+): Step[] {
+  if (!texts.length) return []
+  const text = texts[(dayNumber - 1) % texts.length]!
+  const used = new Set(alreadyDrilled)
+  return exercisesForReading(text, dayNumber)
+    .filter((ex) => !used.has(ex.id))
+    .slice(0, EXAM_TASK_COUNT)
+    .map((ex): Step => ({ kind: 'exercise', ex, review: false, rule: null }))
 }
 
 function buildReviewSteps(
@@ -227,7 +229,6 @@ function buildReviewSteps(
   }
   return steps
 }
-
 function buildDrillSteps(
   ruleIds: string[],
   words: Lexeme[],
@@ -267,6 +268,29 @@ function buildDrillSteps(
       if (used.has(ex.id)) continue
       used.add(ex.id)
       steps.push({ kind: 'exercise', ex, review: false, rule })
+    }
+  }
+
+  // Один грамматический блок не должен заканчиваться после одного
+  // предложения: добираем до минимальных десяти предложений из языкового
+  // пакета, даже если основной режим не смог собрать все варианты выбора.
+  const sentenceSteps = () => steps.filter(
+    (step) => step.kind === 'exercise' &&
+      (step.ex.kind === 'sentence-choice' || step.ex.kind === 'sentence-typed'))
+  const usedSentenceIds = new Set(
+    sentenceSteps().map((step) => step.kind === 'exercise'
+      ? step.ex.id.replace(/\.(choice|typed)$/, '') : ''))
+  for (const ruleId of ruleIds) {
+    if (sentenceSteps().length >= MIN_GRAMMAR_EXERCISES) break
+    const rule = localized(ruleId)
+    const fallback = sentenceDrillsForRule(
+      ruleId, sentences, morphology, 'typed', dayNumber, SENTENCES_PER_TASK)
+    for (const d of fallback) {
+      const sentenceId = d.ex.id.replace(/\.(choice|typed)$/, '')
+      if (usedSentenceIds.has(sentenceId)) continue
+      usedSentenceIds.add(sentenceId)
+      steps.push({ kind: 'exercise', ex: d.variants.typed ?? d.ex, review: false, rule })
+      if (sentenceSteps().length >= MIN_GRAMMAR_EXERCISES) break
     }
   }
   return steps
@@ -316,9 +340,4 @@ function buildExamSteps(
     }
   }
   return steps
-}
-
-export function buildAnalysisSteps(mistakes: Mistake[]): Step[] {
-  return mistakes.map((m): Step => (
-    { kind: 'exercise', ex: m.ex, review: true, rule: m.rule }))
 }

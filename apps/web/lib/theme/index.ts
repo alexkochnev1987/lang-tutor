@@ -43,7 +43,9 @@ export const DEFAULT_PALETTE: PaletteId = 'graphite'
 export const DEFAULT_MODE: ModePref = 'system'
 
 /** Те же ключи читает блокирующий скрипт в <head>. */
-export const STORAGE = { palette: 'polski.palette', mode: 'polski.mode' } as const
+export const STORAGE = {
+  palette: 'polski.palette', mode: 'polski.mode',
+} as const
 
 const MODES: ModePref[] = ['light', 'dark', 'system']
 

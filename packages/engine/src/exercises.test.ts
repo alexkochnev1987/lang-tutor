@@ -105,6 +105,7 @@ describe('грамматические упражнения из парадиг�
     const ex = chooseForm('ręka', REKA, 'subst:pl:gen:f', label, CTX)!
     expect(ex.instruction).toContain('родительный')
     expect(ex.instruction).toContain('мн. ч.')
+    expect(ex.baseForm).toBe('ręka')
   })
 
   it('открытое задание принимает оба варианта формы', () => {
@@ -123,6 +124,7 @@ describe('грамматические упражнения из парадиг�
   it('пропуск в предложении', () => {
     const ex = gapFill('Mam dwie ___.', 'ręka', REKA, 'subst:pl:nom:f', label, CTX)!
     expect(ex.prompt).toContain('␣␣␣')
+    expect(ex.baseForm).toBe('ręka')
     expect(ex.answer).toBe('ręce')
   })
 
@@ -175,6 +177,7 @@ describe('задания по предложениям', () => {
   const gap = {
     id: 'pl.gram.c-gen.1',
     sentence: 'Nie mam ___ na kawę.',
+    baseForm: 'czas',
     answers: ['czasu'],
     distractors: ['czas', 'czasie', 'czasem'],
     translation: 'У меня нет времени на кофе.',
@@ -185,6 +188,7 @@ describe('задания по предложениям', () => {
     expect(ex.options).toHaveLength(4)
     expect(ex.options).toContain('czasu')
     expect(ex.prompt).not.toContain('___')
+    expect(ex.baseForm).toBe('czas')
     expect(ex.attemptsAllowed).toBe(SENTENCE_ATTEMPTS)
     expect(ex.grammarRuleIds).toEqual(['pl.gram.c-gen'])
   })
@@ -201,7 +205,8 @@ describe('задания по предложениям', () => {
   })
 
   it('ввод: принимает все варианты ответа', () => {
-    const ex = sentenceTyped({ ...gap, answers: ['rękami', 'rękoma'] })!
+    const ex = sentenceTyped({ ...gap, baseForm: 'ręka', answers: ['rękami', 'rękoma'] })!
+    expect(ex.baseForm).toBe('ręka')
     expect(check(ex, 'rękoma').correct).toBe(true)
     expect(check(ex, 'rękami').correct).toBe(true)
   })

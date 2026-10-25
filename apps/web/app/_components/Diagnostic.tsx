@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 import { Button, Card, OptionRow, Stack } from '@polski/ui'
-import { saveLessonSession, startCourse } from '@/lib/data/store'
+import { startCourse } from '@/lib/data/store'
 
 type Track = 'a0' | 'a2' | 'b1-minus'
 
@@ -26,8 +26,9 @@ const TRACKS: { id: Track; title: string; desc: string }[] = [
  * этого на B1 не хватит (RESEARCH.md §8), и программа должна знать,
  * откуда стартует человек.
  */
-export function Diagnostic({ day, onDone }: { day: number; onDone: () => void }) {
+export function Diagnostic({ onDone }: { onDone: () => void }) {
   const [picked, setPicked] = useState<Track | null>(null)
+  const [completedTrack, setCompletedTrack] = useState<Track | null>(null)
   const [saving, setSaving] = useState(false)
   const [error, setError] = useState<string | null>(null)
 
@@ -36,18 +37,44 @@ export function Diagnostic({ day, onDone }: { day: number; onDone: () => void })
     setSaving(true)
     try {
       await startCourse(picked)
-      await saveLessonSession({
-        id: crypto.randomUUID(),
-        dayNumber: day, kind: 'day', startedAt: new Date(), completedAt: new Date(),
-        plannedBudgetMs: 900_000, actualMs: 0, itemsReviewed: 0, itemsCorrect: 0,
-      })
-      onDone()
+      setCompletedTrack(picked)
+      setSaving(false)
     } catch (e) {
       // Кнопка обязана разблокироваться: иначе экран навсегда
       // застревает на «Сохраняю…», как это уже было.
       setSaving(false)
       setError(e instanceof Error ? e.message : 'save_failed')
     }
+  }
+
+  if (completedTrack) {
+    const track = TRACKS.find((item) => item.id === completedTrack)!
+    return (
+      <Card>
+        <Stack gap="lg" align="center">
+          <span className="text-4xl" aria-hidden>✓</span>
+          <Stack gap="xs" align="center">
+            <h1 className="text-xl font-semibold">Диагностика завершена</h1>
+            <p className="text-center text-sm text-muted">
+              Ваш стартовый трек: <strong className="text-ink">{track.title}</strong>
+            </p>
+            <p className="text-center text-xs text-muted">{track.desc}</p>
+          </Stack>
+          <p className="w-full rounded-card bg-ok-bg px-3 py-2 text-center text-sm text-ok-ink">
+            ✓ Прогресс сохранён
+          </p>
+          <Button size="lg" full onClick={onDone}>Начать обучение</Button>
+          <Button variant="outline" full onClick={() => {
+            setCompletedTrack(null)
+            setPicked(null)
+            setError(null)
+            setSaving(false)
+          }}>
+            Пройти диагностику заново
+          </Button>
+        </Stack>
+      </Card>
+    )
   }
 
   return (
@@ -73,7 +100,7 @@ export function Diagnostic({ day, onDone }: { day: number; onDone: () => void })
         </Stack>
 
         <Button size="lg" full disabled={!picked || saving} onClick={save}>
-          {saving ? 'Сохраняю…' : 'Начать программу'}
+          {saving ? 'Сохраняю…' : 'Сохранить и продолжить'}
         </Button>
 
         {error && (

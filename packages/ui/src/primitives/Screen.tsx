@@ -8,10 +8,16 @@ import { cn } from '../cn'
 export function Screen({ className, children }: { className?: string; children: React.ReactNode }) {
   return (
     <div
-      className={cn('flex min-h-dvh flex-col bg-bg text-ink', className)}
+      className={cn(
+        'flex h-dvh min-h-0 flex-col overflow-hidden bg-bg text-ink',
+        '[&>header]:shrink-0 [&>main]:min-h-0 [&>main]:overflow-y-auto [&>main]:overscroll-contain [&>footer]:shrink-0',
+        className,
+      )}
       style={{
         paddingTop: 'max(0.5rem, env(safe-area-inset-top))',
-        paddingBottom: 'max(0.5rem, env(safe-area-inset-bottom))',
+        // Нижняя навигация сама учитывает safe-area, чтобы не создавать
+        // двойной отступ и оставаться у физического края экрана.
+        paddingBottom: '0px',
         paddingLeft: 'env(safe-area-inset-left)',
         paddingRight: 'env(safe-area-inset-right)',
       }}

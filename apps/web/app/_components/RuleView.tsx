@@ -14,7 +14,7 @@ export function RuleView({ rule, compact }: { rule: LocalizedRule; compact?: boo
           <strong className="text-lg">{rule.titlePl}</strong>
           {rule.interferenceRu >= 4 && (
             <span className="shrink-0 rounded-pill bg-warn-bg px-2 py-0.5 text-xs text-warn-ink">
-              русский мешает
+              rosyjski przeszkadza
             </span>
           )}
         </Row>
@@ -29,7 +29,7 @@ export function RuleView({ rule, compact }: { rule: LocalizedRule; compact?: boo
             onClick={() => setTranslated((v) => !v)}
             className="self-start text-xs text-muted underline underline-offset-2 hover:text-ink"
           >
-            {translated ? 'Скрыть перевод' : 'Перевести'}
+            {translated ? 'Ukryj tłumaczenie' : 'Pokaż tłumaczenie'}
           </button>
           {translated && <p className="text-sm text-muted">{rule.summary}</p>}
         </Stack>
@@ -39,13 +39,13 @@ export function RuleView({ rule, compact }: { rule: LocalizedRule; compact?: boo
 
       {rule.showsOriginalInstead && (
         <p className="rounded-card bg-soft px-3 py-2 text-xs text-muted">
-          Перевода этого правила пока нет — показан русский оригинал.
+          Brak tłumaczenia tej reguły — pokazano rosyjski oryginał.
         </p>
       )}
 
       {rule.examples.length > 0 && (
         <Stack gap="xs">
-          <span className="text-xs tracking-wide text-muted uppercase">Примеры</span>
+          <span className="text-xs tracking-wide text-muted uppercase">Przykłady</span>
           {rule.examples.map((e) => (
             <Row key={e.pl} gap="sm" justify="between">
               <Stack gap="none">
@@ -60,9 +60,9 @@ export function RuleView({ rule, compact }: { rule: LocalizedRule; compact?: boo
 
       {!compact && rule.pitfalls.length > 0 && (
         <Stack gap="xs">
-          <span className="text-xs tracking-wide text-muted uppercase">Где ошибаются</span>
+          <span className="text-xs tracking-wide text-muted uppercase">Typowe błędy</span>
           {rule.pitfalls.map((p) => (
-            <p key={p} className="rounded-card bg-danger-bg px-3 py-2 text-sm text-danger-ink">
+            <p key={p} className="rounded-card bg-warn-bg px-3 py-2 text-sm text-warn-ink">
               {p}
             </p>
           ))}

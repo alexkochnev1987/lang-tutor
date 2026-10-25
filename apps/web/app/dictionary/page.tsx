@@ -3,6 +3,7 @@
 import { useEffect, useMemo, useState } from 'react'
 import { Button, Card, Row, Screen, Segmented, Stack } from '@polski/ui'
 import { Nav } from '@/app/_components/Nav'
+import { ThemePicker } from '@/app/_components/ThemePicker'
 import { WordRow } from '@/app/_components/WordRow'
 import { loadVocabulary, type Lexeme } from '@/lib/content/curriculum'
 import { useAppState } from '@/lib/data/store'
@@ -54,6 +55,13 @@ export default function DictionaryPage() {
     })
   }, [words, query, filter, knownIds, startedIds])
 
+  const personalVisible = useMemo(() => {
+    const q = query.trim().toLowerCase()
+    return (state?.personalDict ?? []).filter((word) => (
+      !q || word.lemma.toLowerCase().includes(q) || word.translation.toLowerCase().includes(q)
+    ))
+  }, [state?.personalDict, query])
+
   useEffect(() => { setLimit(PAGE_SIZE) }, [filter, query])
 
   return (
@@ -62,9 +70,12 @@ export default function DictionaryPage() {
         <Stack gap="sm">
           <Row justify="between">
             <h1 className="text-lg font-semibold">Словарь</h1>
-            <span className="text-sm tabular-nums text-muted">
-              {knownIds.size} знаю · {words?.length ?? 0} всего
-            </span>
+            <Row gap="sm">
+              <span className="text-sm tabular-nums text-muted">
+                {knownIds.size} знаю · {words?.length ?? 0} всего
+              </span>
+              <ThemePicker />
+            </Row>
           </Row>
           <input
             value={query}
@@ -91,6 +102,25 @@ export default function DictionaryPage() {
             </p>
           </Card>
 
+          {personalVisible.length > 0 && (
+            <Card>
+              <Stack gap="sm">
+                <Row justify="between">
+                  <h2 className="text-base font-semibold">Мой словарь</h2>
+                  <span className="text-sm tabular-nums text-muted">{personalVisible.length}</span>
+                </Row>
+                <div>
+                  {personalVisible.map((word) => (
+                    <div key={word.id} className="border-b border-line py-2 last:border-0">
+                      <div className="text-base font-medium" lang="pl">{word.lemma}</div>
+                      <div className="text-sm text-muted">{word.translation}</div>
+                    </div>
+                  ))}
+                </div>
+              </Stack>
+            </Card>
+          )}
+
           {!words && <Card><p className="text-sm text-muted">Загрузка…</p></Card>}
 
           {words && visible.length === 0 && (
@@ -106,7 +136,7 @@ export default function DictionaryPage() {
           )}
 
           {visible.length > limit && (
-            <Button variant="ghost" full onClick={() => setLimit(limit + PAGE_SIZE)}>
+            <Button variant="outline" full onClick={() => setLimit(limit + PAGE_SIZE)}>
               Показать ещё · осталось {visible.length - limit}
             </Button>
           )}

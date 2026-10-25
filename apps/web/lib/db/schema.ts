@@ -104,6 +104,24 @@ export const ruleMastery = pgTable('rule_mastery', {
   updatedAt: timestamp('updated_at', { withTimezone: true }).notNull().defaultNow(),
 }, (t) => [primaryKey({ columns: [t.userId, t.grammarRuleId] })])
 
+/** Завершённые попытки конкретных упражнений, чтобы прогресс переживал reload. */
+export const exerciseResults = pgTable('exercise_results', {
+  userId: text('user_id').notNull().references(() => users.id, { onDelete: 'cascade' }),
+  courseId: text('course_id').notNull(),
+  dayNumber: integer('day_number').notNull(),
+  exerciseId: text('exercise_id').notNull(),
+  attempts: integer('attempts').notNull(),
+  correct: integer('correct').notNull(),
+  answer: text('answer').notNull(),
+  expected: text('expected').notNull(),
+  errorKind: text('error_kind'),
+  completedAt: timestamp('completed_at', { withTimezone: true }).notNull().defaultNow(),
+  updatedAt: timestamp('updated_at', { withTimezone: true }).notNull().defaultNow(),
+}, (t) => [
+  primaryKey({ columns: [t.userId, t.courseId, t.dayNumber, t.exerciseId] }),
+  index('exercise_results_user_day_idx').on(t.userId, t.courseId, t.dayNumber),
+])
+
 export const lexemeStatus = pgTable('lexeme_status', {
   userId: text('user_id').notNull().references(() => users.id, { onDelete: 'cascade' }),
   courseId: text('course_id').notNull(),

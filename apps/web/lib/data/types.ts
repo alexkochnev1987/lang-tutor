@@ -38,6 +38,18 @@ export interface RuleMasteryRow {
   introducedOnDay: number | null
 }
 
+export interface ExerciseResultRow {
+  courseId: string
+  dayNumber: number
+  exerciseId: string
+  attempts: number
+  correct: boolean
+  answer: string
+  expected: string
+  errorKind: 'wrong-form' | 'diacritic' | 'typo' | 'wrong-word' | null
+  completedAt: Date
+}
+
 export interface ModuleReadinessRow {
   courseId: string
   moduleId: ModuleId
@@ -120,6 +132,7 @@ export interface AppState {
   course: UserCourseRow | null
   studyItems: StudyItemRow[]
   mastery: RuleMasteryRow[]
+  exerciseResults: ExerciseResultRow[]
   readiness: ModuleReadinessRow[]
   sessions: LessonSessionRow[]
   personalDict: PersonalWordRow[]

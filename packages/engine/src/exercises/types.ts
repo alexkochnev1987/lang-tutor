@@ -17,6 +17,7 @@ export type ExerciseKind =
   | 'sentence-choice'         // предложение с пропуском: выбор из 4 вариантов
   | 'sentence-typed'          // предложение с пропуском: слово вписывается
   | 'sentence-write'          // написать предложение целиком (ответ на вопрос)
+  | 'reading-choice'          // текст для чтения с вопросом и вариантами ответа
 
 export type AnswerMode = 'choice' | 'typed' | 'assemble'
 
@@ -39,6 +40,10 @@ export interface ExerciseBase {
 export interface ChoiceExercise extends ExerciseBase {
   mode: 'choice'
   prompt: string
+  /** Базовая форма слова, если ответ образуется прямо в строке. */
+  baseForm?: string
+  /** Отдельный текст для comprehension-задания: вопрос меняется, текст остаётся. */
+  readingText?: string
   /** Подсказка над заданием: «Выберите перевод», «Родительный падеж мн. ч.» */
   instruction: string
   options: string[]
@@ -50,6 +55,8 @@ export interface ChoiceExercise extends ExerciseBase {
 export interface TypedExercise extends ExerciseBase {
   mode: 'typed'
   prompt: string
+  /** Базовая форма слова, если ответ образуется прямо в строке. */
+  baseForm?: string
   instruction: string
   /** Принимаемые ответы — вариантов может быть несколько (rękami / rękoma) */
   accepted: string[]

@@ -58,7 +58,7 @@ export function translateRecognition(
     grammarRuleIds: [],
     moduleId: 'reading',
     estimatedSec: 8,
-    instruction: 'Выберите перевод',
+    instruction: 'Wybierz tłumaczenie',
     prompt: word.lemma,
     options: shuffle([word.translation, ...distractors], ctx.seed + 1),
     answer: word.translation,
@@ -78,7 +78,7 @@ export function translateProduction(
     grammarRuleIds: [],
     moduleId: 'writing',
     estimatedSec: 12,
-    instruction: 'Как это по-польски?',
+    instruction: 'Jak to powiedzieć po polsku?',
     prompt: word.translation,
     options: shuffle([word.lemma, ...distractors], ctx.seed + 1),
     answer: word.lemma,
@@ -99,7 +99,7 @@ export function spelling(word: LexemeLike, ctx: ExerciseContext): AssembleExerci
     grammarRuleIds: ['pl.gram.alphabet-orthography'],
     moduleId: 'writing',
     estimatedSec: 20,
-    instruction: 'Соберите слово по буквам',
+    instruction: 'Ułóż słowo z liter',
     prompt: word.translation,
     letters: shuffle([...word.lemma.replace(/\s/g, '')], ctx.seed),
     answer: word.lemma.replace(/\s/g, ''),
@@ -127,11 +127,11 @@ export function falseFriendContrast(
     grammarRuleIds: [],
     moduleId: 'reading',
     estimatedSec: 12,
-    instruction: 'Осторожно: ложный друг',
+    instruction: 'Uwaga: fałszywy przyjaciel',
     prompt: word.lemma,
     options,
     answer: word.translation,
-    explanation: `«${confusedWith}» по-польски — ${actuallyIs}`,
+    explanation: `„${confusedWith}” po polsku to „${actuallyIs}”.`,
   }
 }
 
@@ -172,6 +172,7 @@ export function chooseForm(
     moduleId: 'grammar',
     estimatedSec: 15,
     instruction: label(targetTag),
+    baseForm: lemma,
     prompt: lemma,
     options: shuffle([answer, ...distractors], ctx.seed + 1),
     answer,
@@ -199,6 +200,7 @@ export function inflect(
     moduleId: 'grammar',
     estimatedSec: 25,
     instruction: label(targetTag),
+    baseForm: lemma,
     prompt: lemma,
     accepted: [...accepted],
   }
@@ -224,7 +226,8 @@ export function gapFill(
     grammarRuleIds: ruleIds,
     moduleId: 'grammar',
     estimatedSec: 18,
-    instruction: `Вставьте нужную форму слова «${blankFor}»`,
+    instruction: `Wstaw odpowiednią formę słowa „${blankFor}”`,
+    baseForm: blankFor,
     prompt: sentence.replace('___', '␣␣␣'),
     options: shuffle([answer, ...shuffle(others, ctx.seed).slice(0, 3)], ctx.seed + 1),
     answer,
@@ -244,6 +247,8 @@ export interface SentenceGapLike {
   id: string
   /** Contains exactly one `___` gap */
   sentence: string
+  /** Лемма пропущенного слова — показывается рядом с inline-полем. */
+  baseForm?: string
   answers: string[]
   /** Hand-vetted to be ungrammatical in this context — a random paradigm
    *  form can't guarantee that: it sometimes fits the sentence too. */
@@ -275,7 +280,8 @@ export function sentenceChoice(
     moduleId: 'grammar',
     estimatedSec: 15,
     attemptsAllowed: SENTENCE_ATTEMPTS,
-    instruction: 'Выберите слово в пропуск',
+    instruction: 'Wybierz słowo do luki',
+    baseForm: item.baseForm,
     prompt: item.sentence.replace('___', GAP_MARK),
     options: shuffle([answer, ...distractors], ctx.seed + 1),
     answer,
@@ -296,7 +302,8 @@ export function sentenceTyped(
     moduleId: 'grammar',
     estimatedSec: 20,
     attemptsAllowed: SENTENCE_ATTEMPTS,
-    instruction: 'Впишите слово в пропуск',
+    instruction: 'Wpisz słowo w lukę',
+    baseForm: item.baseForm,
     prompt: item.sentence.replace('___', GAP_MARK),
     accepted: [...item.answers],
     explanation: item.translation,
@@ -324,10 +331,47 @@ export function sentenceWrite(
     moduleId: 'grammar',
     estimatedSec: 40,
     attemptsAllowed: SENTENCE_ATTEMPTS,
-    instruction: item.instruction ?? 'Напишите ответ целым предложением',
+    instruction: item.instruction ?? 'Napisz odpowiedź pełnym zdaniem',
     prompt: item.question,
     accepted: [...item.answers],
     explanation: item.translation,
+  }
+}
+
+// ─────────────────────────────────────────────────────────────────────
+// Reading: pre-authored Polish text with a comprehension question
+// ─────────────────────────────────────────────────────────────────────
+
+export interface ReadingChoiceLike {
+  id: string
+  text: string
+  question: string
+  options: string[]
+  answer: string
+  explanation?: string
+  difficulty?: number
+}
+
+export function readingChoice(
+  item: ReadingChoiceLike, ctx: ExerciseContext,
+): ChoiceExercise | null {
+  if (!item.text || !item.question || item.options.length < 2) return null
+  if (!item.options.includes(item.answer)) return null
+  const options = shuffle(item.options, ctx.seed)
+  return {
+    id: `ex.reading.${item.id}`,
+    kind: 'reading-choice',
+    mode: 'choice',
+    difficulty: item.difficulty ?? 3,
+    grammarRuleIds: [],
+    moduleId: 'reading',
+    estimatedSec: 35,
+    instruction: 'Przeczytaj tekst i wybierz poprawną odpowiedź',
+    prompt: item.question,
+    readingText: item.text,
+    options,
+    answer: item.answer,
+    explanation: item.explanation,
   }
 }
 

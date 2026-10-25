@@ -16,7 +16,7 @@
 import { useSyncExternalStore } from 'react'
 import {
   DEFAULT_SETTINGS,
-  type AppState, type LessonSessionRow, type LexemeStatusRow,
+  type AppState, type ExerciseResultRow, type LessonSessionRow, type LexemeStatusRow, type PersonalWordRow,
   type RuleMasteryRow, type Settings, type StudyItemRow,
 } from './types'
 
@@ -49,6 +49,11 @@ function parse(raw: Record<string, unknown>): AppState {
     })),
     mastery: (r.mastery ?? []).map((m) => ({
       ...m, lastPracticedAt: maybeDate(m.lastPracticedAt),
+    })),
+    exerciseResults: (r.exerciseResults ?? []).map((result) => ({
+      ...result,
+      correct: Boolean(result.correct),
+      completedAt: date(result.completedAt),
     })),
     readiness: (r.readiness ?? []).map((m) => ({
       ...m, lastMockAt: maybeDate(m.lastMockAt),
@@ -213,6 +218,62 @@ export async function setLexemeKnown(lexemeId: string, known: boolean): Promise<
   } catch (e) {
     console.error('[lexeme]', e)
     void refresh()
+  }
+}
+
+export async function savePersonalWord(input: Omit<PersonalWordRow, 'id' | 'createdAt'>): Promise<boolean> {
+  const row: PersonalWordRow = {
+    ...input,
+    id: crypto.randomUUID(),
+    createdAt: new Date(),
+  }
+  patch((s) => ({
+    ...s,
+    personalDict: [
+      row,
+      ...s.personalDict.filter((word) => word.lemma.toLocaleLowerCase() !== row.lemma.toLocaleLowerCase()),
+    ],
+  }))
+  try {
+    await request('/api/personal-dict/', {
+      method: 'POST',
+      body: JSON.stringify(row),
+    })
+    return true
+  } catch (e) {
+    console.error('[personal-dict]', e)
+    void refresh()
+    return false
+  }
+}
+
+const COURSE_ID = process.env.NEXT_PUBLIC_COURSE_ID ?? 'pl-b1-ru'
+
+export async function saveExerciseResult(input: Omit<ExerciseResultRow, 'courseId' | 'completedAt'>): Promise<boolean> {
+  const row: ExerciseResultRow = {
+    ...input,
+    courseId: COURSE_ID,
+    completedAt: new Date(),
+  }
+  patch((s) => ({
+    ...s,
+    exerciseResults: [
+      ...s.exerciseResults.filter((result) => (
+        result.dayNumber !== row.dayNumber || result.exerciseId !== row.exerciseId
+      )),
+      row,
+    ],
+  }))
+  try {
+    await request('/api/exercise-result/', {
+      method: 'POST',
+      body: JSON.stringify(row),
+    })
+    return true
+  } catch (e) {
+    console.error('[exercise-result]', e)
+    void refresh()
+    return false
   }
 }
 

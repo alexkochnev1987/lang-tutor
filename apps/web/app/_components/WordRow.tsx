@@ -9,7 +9,7 @@ const BADGE: Record<Lexeme['transparency'], { text: string; cls: string } | null
   transparent: null,
   partial: null,
   opaque: null,
-  'false-friend': { text: 'ложный друг', cls: 'bg-danger-bg text-danger-ink' },
+  'false-friend': { text: 'fałszywy przyjaciel', cls: 'bg-warn-bg text-warn-ink' },
 }
 
 export function WordRow({ word }: { word: Lexeme }) {
@@ -26,7 +26,7 @@ export function WordRow({ word }: { word: Lexeme }) {
           <button
             type="button"
             onClick={() => pronounce(word.lemma)}
-            aria-label={`Произнести ${word.lemma}`}
+            aria-label={`Wymów ${word.lemma}`}
             className="flex size-9 shrink-0 items-center justify-center rounded-pill bg-soft text-base hover:bg-soft2"
           >
             {message ? '🔇' : '🔊'}
@@ -44,54 +44,70 @@ export function WordRow({ word }: { word: Lexeme }) {
               {badge.text}
             </span>
           )}
-          <KnownToggle lexemeId={word.id} />
+          <KnownToggle lexemeId={word.id} polishLabels />
         </Row>
       </Row>
 
       {!known && word.interference && (
         <p className="mt-1 ml-12 text-xs text-muted">
-          не «{word.interference.confusedWith}» — это{' '}
-          <span className="text-accent-ink">{word.interference.actuallyIs}</span>
+          nie „{word.interference.confusedWith}” — po polsku to{' '}
+          <span className="text-warn-ink">{word.interference.actuallyIs}</span>
         </p>
       )}
       {!known && word.aspectPair?.perfective && (
         <p className="mt-1 ml-12 text-xs text-muted">
-          сов. вид: <span className="text-accent-ink">{word.aspectPair.perfective}</span>
+          aspekt dokonany: <span className="text-accent-ink">{word.aspectPair.perfective}</span>
         </p>
       )}
       {!known && word.government && (
-        <p className="mt-1 ml-12 text-xs text-muted">управление: {word.government}</p>
+        <p className="mt-1 ml-12 text-xs text-muted">rekcja: {word.government}</p>
       )}
       {message && <p role="status" className="mt-1 ml-12 text-xs text-danger">{message}</p>}
     </div>
   )
 }
 
-export function KnownToggle({ lexemeId, onMarked }: {
+export function KnownToggle({ lexemeId, onMarked, polishLabels = false }: {
   lexemeId: string
   onMarked?: (known: boolean) => void
+  polishLabels?: boolean
 }) {
   const state = useAppState()
   const known = state?.lexemeStatus.some(
     (l) => l.lexemeId === lexemeId && l.status === 'known') ?? false
 
   return (
-    <button
-      type="button"
-      aria-pressed={known}
-      onClick={() => {
-        void setLexemeKnown(lexemeId, !known)
-        onMarked?.(!known)
-      }}
-      title={known ? 'Вернуть в практику' : 'Больше не показывать в практике'}
-      className={`flex min-h-9 shrink-0 items-center gap-1 rounded-pill px-2.5 text-xs font-medium ${
-        known
-          ? 'bg-ok-bg text-ok-ink hover:bg-soft2'
-          : 'bg-soft text-muted hover:bg-soft2 hover:text-ink'
-      }`}
-    >
-      <span aria-hidden>{known ? '✓' : '○'}</span>
-      {known ? 'знаю' : 'учу'}
-    </button>
+    <Row gap="xs">
+      {!known && (
+        <span
+          role="status"
+          className="shrink-0 text-xs text-muted"
+          title={polishLabels ? 'Słowo jest w trakcie nauki' : 'Слово изучается'}
+        >
+          ○ {polishLabels ? 'uczę się' : 'учу'}
+        </span>
+      )}
+      <button
+        type="button"
+        aria-pressed={known}
+        onClick={() => {
+          void setLexemeKnown(lexemeId, !known)
+          onMarked?.(!known)
+        }}
+        title={polishLabels
+          ? known ? 'Przywróć do ćwiczeń' : 'Oznacz słowo jako znane'
+          : known ? 'Вернуть в практику' : 'Отметить слово как выученное'}
+        className={`flex min-h-9 shrink-0 items-center gap-1 rounded-pill px-2.5 text-xs font-medium ${
+          known
+            ? 'bg-ok-bg text-ok-ink hover:bg-soft2'
+            : 'border border-primary bg-transparent text-primary hover:bg-soft'
+        }`}
+      >
+        <span aria-hidden>{known ? '✓' : '→'}</span>
+        {polishLabels
+          ? known ? 'znam' : 'Znam'
+          : known ? 'знаю' : 'Знаю'}
+      </button>
+    </Row>
   )
 }

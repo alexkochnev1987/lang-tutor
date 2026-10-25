@@ -7,9 +7,9 @@ import type { LocalizedRule } from '@/lib/content/rules'
 export function RuleSheet({ rule }: { rule: LocalizedRule }) {
   return (
     <Dialog.Root>
-      <Dialog.Trigger className="inline-flex min-h-10 items-center gap-1.5 rounded-card bg-soft px-3 text-sm text-muted hover:bg-soft2 hover:text-ink">
+      <Dialog.Trigger className="inline-flex min-h-10 items-center gap-1.5 rounded-card border border-primary bg-transparent px-3 text-sm text-primary hover:bg-soft">
         <span aria-hidden>📘</span>
-        Правило
+        Reguła
       </Dialog.Trigger>
       <Dialog.Portal>
         <Dialog.Overlay className="fixed inset-0 z-30 bg-black/40" />
@@ -19,8 +19,8 @@ export function RuleSheet({ rule }: { rule: LocalizedRule }) {
         >
           <Dialog.Title className="sr-only">{rule.titlePl}</Dialog.Title>
           <RuleView rule={rule} />
-          <Dialog.Close className="mt-4 min-h-12 w-full rounded-card bg-soft text-sm font-medium text-ink hover:bg-soft2">
-            Закрыть
+          <Dialog.Close className="mt-4 min-h-12 w-full rounded-card border border-primary bg-transparent text-sm font-medium text-primary hover:bg-soft">
+            Zamknij
           </Dialog.Close>
         </Dialog.Content>
       </Dialog.Portal>

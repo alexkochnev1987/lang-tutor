@@ -1,0 +1,263 @@
+{
+  "version": "1",
+  "texts": [
+    {
+      "id": "pl-b1.reading.biblioteka",
+      "title": "Biblioteka po sąsiedzku",
+      "text": "W małym mieście otwarto nową bibliotekę. Nie jest to tylko miejsce, w którym można wypożyczyć książkę. W soboty mieszkańcy spotykają się tam na warsztatach, a dzieci mogą odrabiać lekcje przy dużym stole. Bibliotekarka zauważyła, że dzięki tym spotkaniom sąsiedzi zaczęli lepiej się poznawać.",
+      "questions": [
+        {
+          "id": "main-idea",
+          "question": "Jaki jest główny temat tekstu?",
+          "options": [
+            "Nowa biblioteka stała się miejscem spotkań mieszkańców.",
+            "Mieszkańcy przestali czytać książki.",
+            "Dzieci nie mogą odrabiać lekcji w domu.",
+            "Bibliotekarka organizuje wyłącznie spotkania dla dorosłych."
+          ],
+          "answer": "Nowa biblioteka stała się miejscem spotkań mieszkańców.",
+          "explanation": "Biblioteka służy nie tylko do wypożyczania książek, ale także do wspólnych aktywności."
+        },
+        {
+          "id": "saturday",
+          "question": "Co dzieje się w bibliotece w soboty?",
+          "options": [
+            "Odbywają się warsztaty.",
+            "Biblioteka jest zamknięta.",
+            "Dzieci grają w piłkę.",
+            "Mieszkańcy sprzedają książki."
+          ],
+          "answer": "Odbywają się warsztaty.",
+          "explanation": "Tekst mówi, że w soboty mieszkańcy spotykają się na warsztatach."
+        },
+        {
+          "id": "effect",
+          "question": "Jaki skutek miały spotkania w bibliotece?",
+          "options": [
+            "Sąsiedzi zaczęli lepiej się poznawać.",
+            "Biblioteka musiała się przeprowadzić.",
+            "Dzieci przestały chodzić do szkoły.",
+            "Warsztaty zostały odwołane."
+          ],
+          "answer": "Sąsiedzi zaczęli lepiej się poznawać.",
+          "explanation": "Bibliotekarka zauważyła, że wspólne spotkania zbliżyły mieszkańców."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.rower",
+      "title": "Rowerem do pracy",
+      "text": "Marek przez wiele lat jeździł do pracy samochodem. Kiedy jego firma przeniosła biuro bliżej centrum, postanowił spróbować jazdy na rowerze. Początkowo obawiał się deszczu i dużego ruchu, ale po kilku tygodniach zauważył, że podróż zajmuje mu mniej czasu. Teraz do samochodu wsiada tylko wtedy, gdy musi przewieźć coś ciężkiego.",
+      "questions": [
+        {
+          "id": "change",
+          "question": "Dlaczego Marek zaczął jeździć do pracy rowerem?",
+          "options": [
+            "Jego biuro znalazło się bliżej centrum.",
+            "Samochód został skradziony.",
+            "Firma kupiła mu nowy rower.",
+            "Nie lubił już swojej pracy."
+          ],
+          "answer": "Jego biuro znalazło się bliżej centrum.",
+          "explanation": "Przeprowadzka biura sprawiła, że jazda rowerem stała się dla Marka możliwa."
+        },
+        {
+          "id": "time",
+          "question": "Co Marek zauważył po kilku tygodniach?",
+          "options": [
+            "Podróż rowerem zajmuje mniej czasu.",
+            "Rower jest droższy od samochodu.",
+            "W pracy nie ma już miejsca na rower.",
+            "Deszcz pada codziennie."
+          ],
+          "answer": "Podróż rowerem zajmuje mniej czasu.",
+          "explanation": "Marek odkrył, że rowerem dociera do pracy szybciej."
+        },
+        {
+          "id": "exception",
+          "question": "Kiedy Marek nadal korzysta z samochodu?",
+          "options": [
+            "Gdy musi przewieźć coś ciężkiego.",
+            "Gdy jedzie do centrum.",
+            "Gdy ma wolny dzień.",
+            "Gdy spotyka się z kolegami."
+          ],
+          "answer": "Gdy musi przewieźć coś ciężkiego.",
+          "explanation": "Samochód jest mu potrzebny przede wszystkim do transportu ciężkich rzeczy."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.plastik",
+      "title": "Mniej plastiku w domu",
+      "text": "Kasia postanowiła ograniczyć ilość plastiku w swoim domu. Najpierw zaczęła robić zakupy z materiałową torbą. Później kupiła butelkę wielokrotnego użytku i pojemniki na żywność. Nie udało jej się całkowicie zrezygnować z plastiku, ale po miesiącu zauważyła, że wyrzuca znacznie mniej śmieci.",
+      "questions": [
+        {
+          "id": "first-step",
+          "question": "Co Kasia zrobiła najpierw?",
+          "options": [
+            "Zaczęła robić zakupy z materiałową torbą.",
+            "Wyrzuciła wszystkie pojemniki.",
+            "Kupiła plastikową butelkę.",
+            "Przestała gotować w domu."
+          ],
+          "answer": "Zaczęła robić zakupy z materiałową torbą.",
+          "explanation": "Materiałowa torba była pierwszą zmianą wprowadzoną przez Kasię."
+        },
+        {
+          "id": "result",
+          "question": "Jaki był rezultat po miesiącu?",
+          "options": [
+            "Kasia wyrzucała znacznie mniej śmieci.",
+            "Kasia całkowicie zrezygnowała z zakupów.",
+            "W domu pojawiło się więcej plastiku.",
+            "Kasia przestała używać pojemników."
+          ],
+          "answer": "Kasia wyrzucała znacznie mniej śmieci.",
+          "explanation": "Ograniczenie jednorazowych produktów zmniejszyło ilość wyrzucanych odpadów."
+        },
+        {
+          "id": "conclusion",
+          "question": "Co można wywnioskować z tekstu?",
+          "options": [
+            "Małe zmiany mogą ograniczyć ilość odpadów.",
+            "W domu nie da się używać żadnych opakowań.",
+            "Kasia kupuje wyłącznie produkty plastikowe.",
+            "Butelki wielokrotnego użytku są jednorazowe."
+          ],
+          "answer": "Małe zmiany mogą ograniczyć ilość odpadów.",
+          "explanation": "Kasia nie wyeliminowała plastiku całkowicie, ale proste działania dały widoczny efekt."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.targ",
+      "title": "Sobotni targ",
+      "text": "W każdą sobotę na rynku odbywa się targ. Rolnicy z okolicznych wsi przywożą warzywa, sery i świeży chleb. Klienci cenią to miejsce, ponieważ mogą porozmawiać ze sprzedawcami i dowiedzieć się, skąd pochodzą produkty. Targ zaczyna się wcześnie rano, ale największy ruch jest około południa.",
+      "questions": [
+        {
+          "id": "products",
+          "question": "Co rolnicy przywożą na targ?",
+          "options": [
+            "Warzywa, sery i świeży chleb.",
+            "Używane książki i meble.",
+            "Bilety na koncerty.",
+            "Tylko owoce egzotyczne."
+          ],
+          "answer": "Warzywa, sery i świeży chleb.",
+          "explanation": "Tekst wymienia te trzy grupy produktów."
+        },
+        {
+          "id": "reason",
+          "question": "Dlaczego klienci cenią targ?",
+          "options": [
+            "Mogą porozmawiać ze sprzedawcami o pochodzeniu produktów.",
+            "Wszystkie produkty są tam darmowe.",
+            "Targ jest otwarty przez całą noc.",
+            "Można tam kupić samochód."
+          ],
+          "answer": "Mogą porozmawiać ze sprzedawcami o pochodzeniu produktów.",
+          "explanation": "Dla klientów ważny jest bezpośredni kontakt i wiedza o pochodzeniu żywności."
+        },
+        {
+          "id": "busy-time",
+          "question": "Kiedy na targu jest największy ruch?",
+          "options": [
+            "Około południa.",
+            "Późnym wieczorem.",
+            "W nocy.",
+            "Tylko w piątek."
+          ],
+          "answer": "Około południa.",
+          "explanation": "Targ zaczyna się rano, ale najwięcej osób przychodzi około południa."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.fotografia",
+      "title": "Kurs fotografii",
+      "text": "Ania zapisała się na wieczorny kurs fotografii, chociaż wcześniej robiła zdjęcia tylko telefonem. Na pierwszych zajęciach nauczyła się, jak ustawiać ostrość i korzystać ze światła. Najbardziej spodobały jej się ćwiczenia na ulicy, ponieważ mogła obserwować ludzi i budynki z innej perspektywy. Po zakończeniu kursu planuje przygotować małą wystawę dla rodziny.",
+      "questions": [
+        {
+          "id": "before",
+          "question": "Czym Ania robiła zdjęcia przed kursem?",
+          "options": [
+            "Telefonem.",
+            "Profesjonalnym aparatem studyjnym.",
+            "Kamerą filmową.",
+            "Sprzętem pożyczonym od nauczyciela."
+          ],
+          "answer": "Telefonem.",
+          "explanation": "Przed kursem Ania robiła zdjęcia tylko telefonem."
+        },
+        {
+          "id": "favourite",
+          "question": "Które ćwiczenia spodobały się Ani najbardziej?",
+          "options": [
+            "Ćwiczenia na ulicy.",
+            "Ćwiczenia z samym nauczycielem.",
+            "Ćwiczenia w ciemnym studiu.",
+            "Ćwiczenia bez aparatu."
+          ],
+          "answer": "Ćwiczenia na ulicy.",
+          "explanation": "Ania lubiła obserwować ludzi i budynki podczas pracy na ulicy."
+        },
+        {
+          "id": "plan",
+          "question": "Co Ania planuje po zakończeniu kursu?",
+          "options": [
+            "Przygotować małą wystawę dla rodziny.",
+            "Otworzyć szkołę fotografii.",
+            "Sprzedać swój telefon.",
+            "Zrezygnować ze zdjęć."
+          ],
+          "answer": "Przygotować małą wystawę dla rodziny.",
+          "explanation": "Ania chce pokazać rodzinie zdjęcia wykonane podczas kursu."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.praca-zdalna",
+      "title": "Dzień pracy zdalnej",
+      "text": "Tomasz pracuje zdalnie trzy dni w tygodniu. Rano przygotowuje listę najważniejszych zadań, a telefon odkłada do innego pokoju. Dzięki temu łatwiej mu się skupić. W południe wychodzi na krótki spacer, ponieważ po kilku godzinach przed komputerem potrzebuje ruchu. Po pracy zamyka komputer i nie sprawdza już służbowej poczty.",
+      "questions": [
+        {
+          "id": "focus",
+          "question": "Co pomaga Tomaszowi się skupić?",
+          "options": [
+            "Odkłada telefon do innego pokoju.",
+            "Pracuje bez żadnego planu.",
+            "Sprawdza pocztę przez cały dzień.",
+            "Włącza telewizor podczas pracy."
+          ],
+          "answer": "Odkłada telefon do innego pokoju.",
+          "explanation": "Tomasz ogranicza rozpraszacze, odkładając telefon poza miejsce pracy."
+        },
+        {
+          "id": "walk",
+          "question": "Dlaczego Tomasz wychodzi w południe na spacer?",
+          "options": [
+            "Potrzebuje ruchu po kilku godzinach przed komputerem.",
+            "Chce kupić nowy telefon.",
+            "Musi spotkać się z szefem.",
+            "Nie ma dostępu do internetu."
+          ],
+          "answer": "Potrzebuje ruchu po kilku godzinach przed komputerem.",
+          "explanation": "Spacer jest dla Tomasza przerwą od siedzenia i pracy przed ekranem."
+        },
+        {
+          "id": "after-work",
+          "question": "Co Tomasz robi po pracy?",
+          "options": [
+            "Zamyka komputer i nie sprawdza służbowej poczty.",
+            "Pracuje do późnej nocy.",
+            "Wysyła listę zadań kolegom.",
+            "Ogląda służbową pocztę podczas spaceru."
+          ],
+          "answer": "Zamyka komputer i nie sprawdza służbowej poczty.",
+          "explanation": "Tomasz wyraźnie oddziela czas pracy od czasu prywatnego."
+        }
+      ]
+    }
+  ]
+}

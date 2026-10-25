@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react'
 import { useTranslations } from 'next-intl'
 import { Card, Meter, Row, Screen, Stack, Stat } from '@polski/ui'
 import { Nav } from '@/app/_components/Nav'
+import { ThemePicker } from '@/app/_components/ThemePicker'
 import { loadProgress, type Progress, type RuleProgress } from '@/lib/engine/progress'
 
 /** Официальный порог и наша цель с запасом — exam-spec.json / SPACED_REPETITION.md §6 */
@@ -255,7 +256,10 @@ function Shell({ children }: { children: React.ReactNode }) {
   return (
     <Screen>
       <header className="mx-auto w-full max-w-2xl px-4 py-3">
-        <h1 className="text-lg font-semibold">{t('progress')}</h1>
+        <Row justify="between">
+          <h1 className="text-lg font-semibold">{t('progress')}</h1>
+          <ThemePicker />
+        </Row>
       </header>
       <main className="mx-auto w-full max-w-2xl flex-1 px-4">
         <Stack gap="lg">{children}</Stack>

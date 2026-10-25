@@ -96,6 +96,13 @@ input, select, textarea {
   outline-offset: 2px;
 }
 
+/* Inline grammar fields already have their own rounded status container.
+   Do not draw the global rectangular keyboard-focus outline inside it. */
+.inline-form-control:focus-visible {
+  outline: none;
+  outline-offset: 0;
+}
+
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
     animation-duration: 0.01ms !important;

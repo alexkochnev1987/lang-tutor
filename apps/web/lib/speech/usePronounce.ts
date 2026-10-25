@@ -6,10 +6,10 @@ import { primeVoices, speak, type SpeakOutcome, type SpeakProblem } from './tts'
 export type SpeakIssue = Exclude<SpeakOutcome, 'ok'> | SpeakProblem
 
 const MESSAGE: Record<SpeakIssue, string> = {
-  unsupported: 'браузер не умеет произносить слова',
-  'no-voice': 'нет польского голоса — добавьте его в настройках системы',
-  stalled: 'браузер не произнёс слово — перезапустите браузер',
-  failed: 'не удалось произнести',
+  unsupported: 'Przeglądarka nie obsługuje odczytywania słów',
+  'no-voice': 'Brak polskiego głosu — dodaj go w ustawieniach systemu',
+  stalled: 'Przeglądarka nie odczytała słowa — uruchom ją ponownie',
+  failed: 'Nie udało się odczytać słowa',
 }
 
 export function usePronounce(lang = 'pl-PL') {

@@ -1,21 +1,22 @@
 'use client'
 
-import { useEffect, useMemo, useRef, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import Link from 'next/link'
 import { Button, Card, Row, Screen, Stack } from '@polski/ui'
 import type { CheckResult, Exercise } from '@polski/engine'
 import {
-  buildAnalysisSteps, buildTodayPlan, hasAltMode, otherDrillMode, STAGE_TITLE, withDrillMode,
-  type Mistake, type Stage, type StageId, type Step, type TodayPlan,
+  buildTodayPlan, hasAltMode, otherDrillMode, withDrillMode,
+  type Stage, type StageId, type Step, type TodayPlan,
 } from '@/lib/engine/plan'
 import { ensureLexemeCards, recordAnswer, recordRuleAttempt, Rating } from '@/lib/engine/session'
-import { saveLessonSession } from '@/lib/data/store'
-import { ExerciseView, SpeakIcon } from '@/app/_components/ExerciseView'
+import { saveExerciseResult, saveLessonSession } from '@/lib/data/store'
+import { ExerciseView, GrammarExerciseBatch, SpeakIcon } from '@/app/_components/ExerciseView'
 import { RuleSheet } from '@/app/_components/RuleSheet'
 import { RuleView } from '@/app/_components/RuleView'
 import { Diagnostic } from '@/app/_components/Diagnostic'
 import { EmptyDay } from '@/app/_components/EmptyDay'
 import { KnownToggle } from '@/app/_components/WordRow'
+import { ThemePicker } from '@/app/_components/ThemePicker'
 import type { Lexeme } from '@/lib/content/curriculum'
 
 type Slot =
@@ -23,10 +24,15 @@ type Slot =
   | { kind: 'step'; stage: Stage; step: Step }
 
 const STAGE_LEAD: Record<StageId, string> = {
-  words: 'Повторяем и вводим слова. Грамматика будет отдельным блоком.',
-  grammar: 'Сначала правило, потом задания на него. Правило доступно по кнопке.',
-  exam: 'Задание в формате экзамена: правила вперемешку, как на настоящем листе.',
-  analysis: 'Возвращаемся к тому, где ошиблись.',
+  words: 'Powtarzamy i poznajemy słowa. Gramatyka będzie osobnym blokiem.',
+  grammar: 'Najpierw reguła, potem ćwiczenia. Regułę otworzysz przyciskiem.',
+  exam: 'Zadanie w formacie egzaminacyjnym: reguły są wymieszane jak na prawdziwym arkuszu.',
+}
+
+const STAGE_TITLE_PL: Record<StageId, string> = {
+  words: 'Słowa',
+  grammar: 'Gramatyka',
+  exam: 'Zadanie egzaminacyjne',
 }
 
 function toSlots(stages: Stage[]): Slot[] {
@@ -45,9 +51,8 @@ export default function LessonPage() {
   const [i, setI] = useState(0)
   const [canAdvance, setCanAdvance] = useState(false)
   const [stats, setStats] = useState({ correct: 0, total: 0 })
-  const [phase, setPhase] = useState<'main' | 'analysis' | 'done'>('main')
+  const [phase, setPhase] = useState<'main' | 'done'>('main')
   const [special, setSpecial] = useState<'diagnostic' | 'empty' | null>(null)
-  const mistakes = useRef<Mistake[]>([])
   const startedAt = useRef(Date.now())
 
   useEffect(() => {
@@ -55,29 +60,46 @@ export default function LessonPage() {
     buildTodayPlan().then((p) => {
       if (!alive) return
       setPlan(p)
-      const main = toSlots(p.stages.filter((s) => s.id !== 'analysis'))
-      setSlots(main)
-      if (!main.length) setSpecial(p.day.kind === 'diagnostic' ? 'diagnostic' : 'empty')
+      const main = toSlots(p.stages)
+      if (p.day.kind === 'diagnostic') {
+        setSlots([])
+        setSpecial('diagnostic')
+      } else {
+        setSlots(main)
+        setSpecial(main.length ? null : 'empty')
+      }
     })
     return () => { alive = false }
   }, [])
-
-  const analysisStage = useMemo(
-    () => plan?.stages.find((s) => s.id === 'analysis') ?? null, [plan])
 
   const slot = slots[i]
   const stageSlots = slot
     ? slots.filter((s) => s.kind === 'step' && s.stage.id === slot.stage.id)
     : []
   const indexInStage = slot ? stageSlots.indexOf(slot) + 1 : 0
+  const grammarExerciseSlots = slots.filter((s) => (
+    s.kind === 'step' && s.stage.id === 'grammar' && s.step.kind === 'exercise'
+  ))
+  const grammarExerciseIndex = slot?.kind === 'step' && slot.stage.id === 'grammar' && slot.step.kind === 'exercise'
+    ? grammarExerciseSlots.indexOf(slot) + 1
+    : 0
 
-  async function onAnswered(step: Step, ex: Exercise, r: CheckResult, ms: number) {
-    setCanAdvance(true)
+  async function onAnswered(
+    ex: Exercise, r: CheckResult, ms: number, complete = true, attempts = 1, answer = '',
+  ) {
+    if (complete) setCanAdvance(true)
     setStats((s) => ({ correct: s.correct + (r.correct ? 1 : 0), total: s.total + 1 }))
 
-    if (!r.correct && phase === 'main') {
-      const rule = step.kind === 'exercise' ? step.rule : null
-      mistakes.current = [...mistakes.current, { ex, result: r, rule }]
+    if (ex.kind === 'sentence-choice' || ex.kind === 'sentence-typed') {
+      await saveExerciseResult({
+        dayNumber: plan?.dayNumber ?? 1,
+        exerciseId: ex.id,
+        attempts,
+        correct: r.correct,
+        answer,
+        expected: r.expected,
+        errorKind: r.errorKind ?? null,
+      })
     }
 
     if (ex.lexemeId) {
@@ -109,16 +131,47 @@ export default function LessonPage() {
 
   function next() {
     setCanAdvance(false)
-    if (i + 1 < slots.length) { setI(i + 1); return }
-    if (phase === 'main' && analysisStage && mistakes.current.length) {
-      const steps = buildAnalysisSteps(mistakes.current)
-      const stage: Stage = { ...analysisStage, steps }
-      setPhase('analysis')
-      setSlots(toSlots([stage]))
-      setI(0)
+    if (slot?.kind === 'step' && slot.stage.id === 'grammar' && slot.step.kind === 'exercise') {
+      const lastGrammarIndex = slots.reduce((last, current, index) => (
+        current.kind === 'step' && current.stage.id === 'grammar' && current.step.kind === 'exercise'
+          ? index
+          : last
+      ), -1)
+      if (lastGrammarIndex + 1 < slots.length) {
+        setI(lastGrammarIndex + 1)
+      } else {
+        void finish()
+      }
       return
     }
+    if (i + 1 < slots.length) { setI(i + 1); return }
     void finish()
+  }
+
+  async function afterDiagnostic() {
+    if (plan) {
+      await saveLessonSession({
+        id: crypto.randomUUID(),
+        dayNumber: plan.dayNumber,
+        kind: 'day',
+        startedAt: new Date(startedAt.current),
+        completedAt: new Date(),
+        plannedBudgetMs: plan.estimatedSec * 1000,
+        actualMs: Date.now() - startedAt.current,
+        itemsReviewed: 0,
+        itemsCorrect: 0,
+      })
+    }
+    const nextPlan = await buildTodayPlan()
+    const nextSlots = toSlots(nextPlan.stages)
+    setPlan(nextPlan)
+    setSlots(nextSlots)
+    setI(0)
+    setCanAdvance(false)
+    setStats({ correct: 0, total: 0 })
+    setSpecial(nextSlots.length ? null : 'empty')
+    setPhase('main')
+    startedAt.current = Date.now()
   }
 
   async function finish() {
@@ -160,7 +213,7 @@ export default function LessonPage() {
                 <p key={n} className="text-center text-xs text-warn-ink">{n}</p>
               ))}
               <Link href="/" className="w-full">
-                <Button size="lg" full>На главный</Button>
+                <Button variant="outline" size="lg" full>На главный</Button>
               </Link>
             </Stack>
           </Card>
@@ -173,7 +226,7 @@ export default function LessonPage() {
     return (
       <Screen>
         <Centered>
-          <Diagnostic day={plan.dayNumber} onDone={() => setPhase('done')} />
+          <Diagnostic onDone={() => void afterDiagnostic()} />
         </Centered>
       </Screen>
     )
@@ -190,15 +243,18 @@ export default function LessonPage() {
     <Screen>
       <header className="mx-auto w-full max-w-2xl px-4 py-3">
         <Row justify="between">
-          <Link href="/" className="text-sm text-muted hover:text-ink">← Выйти</Link>
-          {slot && (
-            <span className="text-sm text-muted">
-              {STAGE_TITLE[slot.stage.id]}
-              {slot.kind === 'step' && (
-                <span className="tabular-nums"> · {indexInStage} / {stageSlots.length}</span>
-              )}
-            </span>
-          )}
+          <Link href="/" className="text-sm text-muted hover:text-ink">← Wyjdź</Link>
+          <Row gap="sm">
+            {slot && (
+              <span className="text-sm text-muted">
+                {STAGE_TITLE_PL[slot.stage.id]}
+                {slot.kind === 'step' && (
+                  <span className="tabular-nums"> · {indexInStage} / {stageSlots.length}</span>
+                )}
+              </span>
+            )}
+            <ThemePicker />
+          </Row>
         </Row>
         <div className="mt-2 h-1 overflow-hidden rounded-pill bg-soft">
           <div
@@ -225,7 +281,7 @@ export default function LessonPage() {
           <Card>
             <Stack gap="lg">
               <RuleView rule={slot.step.rule} />
-              <Button size="lg" full onClick={next}>К заданиям</Button>
+              <Button size="lg" full onClick={next}>Do zadań</Button>
             </Stack>
           </Card>
         )}
@@ -234,33 +290,52 @@ export default function LessonPage() {
           <Stack gap="md">
             {slot.step.review && (
               <p className="text-center text-xs tracking-wide text-muted uppercase">
-                {phase === 'analysis' ? 'Работа над ошибкой' : 'Повторение'}
+                Powtórka
               </p>
             )}
-            <ExerciseView
-              key={`${i}-${slot.step.ex.id}`}
-              exercise={slot.step.ex}
-              onAnswered={(r, ms) => {
-                const step = slot.step
-                if (step.kind === 'exercise') void onAnswered(step, step.ex, r, ms)
-              }}
-            />
+            {grammarExerciseIndex === 1 ? (
+              <GrammarExerciseBatch
+                key={grammarExerciseSlots.map((s) => (
+                  s.kind === 'step' && s.step.kind === 'exercise' ? s.step.ex.id : s.kind
+                )).join('|')}
+                exercises={grammarExerciseSlots.flatMap((s) => (
+                  s.kind === 'step' && s.step.kind === 'exercise' ? [s.step.ex] : []
+                ))}
+                dayNumber={plan.dayNumber}
+                onAnswered={(ex, r, ms, attempts, answer) => void onAnswered(ex, r, ms, false, attempts, answer)}
+                onComplete={() => setCanAdvance(true)}
+              />
+            ) : readingTextOf(slot.step.ex) ? (
+              <ReadingExerciseBlock
+                text={readingTextOf(slot.step.ex)!}
+                exercise={slot.step.ex}
+                onAnswered={(r, ms) => {
+                  const step = slot.step
+                  if (step.kind === 'exercise') void onAnswered(step.ex, r, ms)
+                }}
+              />
+            ) : (
+              <ExerciseView
+                key={`${i}-${slot.step.ex.id}`}
+                exercise={slot.step.ex}
+                onAnswered={(r, ms) => {
+                  const step = slot.step
+                  if (step.kind === 'exercise') void onAnswered(step.ex, r, ms)
+                }}
+              />
+            )}
             <Row gap="sm" justify="center">
               {slot.step.rule && <RuleSheet rule={slot.step.rule} />}
               {!canAdvance && hasAltMode(slot.step) && (
-                <button
-                  type="button"
-                  onClick={switchKind}
-                  className="inline-flex min-h-10 items-center gap-1.5 rounded-card bg-soft px-3 text-sm text-muted hover:bg-soft2 hover:text-ink"
-                >
+                <Button variant="outline" size="sm" onClick={switchKind}>
                   <span aria-hidden>🎲</span>
-                  Другой вид задания
-                </button>
+                  Inny typ zadania
+                </Button>
               )}
             </Row>
             {canAdvance && (
-              <Button size="lg" full onClick={next}>
-                {i + 1 < slots.length ? 'Дальше' : 'Завершить'}
+              <Button variant="outline" size="lg" full onClick={next}>
+                {i + 1 < slots.length ? 'Dalej' : 'Zakończ'}
               </Button>
             )}
           </Stack>
@@ -275,21 +350,21 @@ function StageStart({ stage, onNext }: { stage: Stage; onNext: () => void }) {
   return (
     <Card>
       <Stack gap="md" align="center">
-        <span className="text-xs tracking-wide text-muted uppercase">Блок занятия</span>
-        <h1 className="text-xl font-semibold">{STAGE_TITLE[stage.id]}</h1>
+        <span className="text-xs tracking-wide text-muted uppercase">Blok lekcji</span>
+        <h1 className="text-xl font-semibold">{STAGE_TITLE_PL[stage.id]}</h1>
         <p className="text-center text-sm text-muted">{STAGE_LEAD[stage.id]}</p>
         {exercises > 0 && (
           <p className="text-sm tabular-nums text-muted">
-            {exercises} заданий · {Math.max(1, Math.round(stage.estimatedSec / 60))} мин
+            {exercises} zadań · {Math.max(1, Math.round(stage.estimatedSec / 60))} min
           </p>
         )}
         {stage.missingContent && (
           <p className="rounded-card bg-warn-bg px-3 py-2 text-center text-sm text-warn-ink">
-            Блок пока не собирается: {stage.missingContent}
+            Blok nie jest jeszcze gotowy: {stage.missingContent}
           </p>
         )}
-        <Button size="lg" full onClick={onNext}>
-          {stage.steps.length ? 'Начать блок' : 'Пропустить'}
+        <Button variant="outline" size="lg" full onClick={onNext}>
+            {stage.steps.length ? 'Rozpocznij blok' : 'Pomiń'}
         </Button>
       </Stack>
     </Card>
@@ -304,31 +379,63 @@ function WordIntro({ word, onNext, onMarkedKnown }: {
   return (
     <Card>
       <Stack gap="lg" align="center">
-        <span className="text-xs tracking-wide text-muted uppercase">Новое слово</span>
+        <span className="text-xs tracking-wide text-muted uppercase">Nowe słowo</span>
         <div className="text-center text-3xl font-semibold">{word.lemma}</div>
         <SpeakIcon text={word.lemma} />
         <div className="text-center text-lg">{word.translation}</div>
 
         {word.interference && (
-          <p className="rounded-card bg-danger-bg px-3 py-2 text-center text-sm text-danger-ink">
-            Не «{word.interference.confusedWith}»!<br />
-            «{word.interference.confusedWith}» — это <strong>{word.interference.actuallyIs}</strong>
+          <p className="rounded-card bg-warn-bg px-3 py-2 text-center text-sm text-warn-ink">
+            Nie „{word.interference.confusedWith}”!<br />
+            „{word.interference.confusedWith}” po polsku to <strong>{word.interference.actuallyIs}</strong>.
           </p>
         )}
         {word.aspectPair?.perfective && (
           <p className="text-sm text-muted">
-            сов. вид: <span className="text-accent-ink">{word.aspectPair.perfective}</span>
+            aspekt dokonany: <span className="text-accent-ink">{word.aspectPair.perfective}</span>
           </p>
         )}
         {word.government && (
-          <p className="text-sm text-muted">управление: {word.government}</p>
+          <p className="text-sm text-muted">rekcja: {word.government}</p>
         )}
 
         <Row gap="sm" justify="center">
-          <KnownToggle lexemeId={word.id} onMarked={(known) => known && onMarkedKnown()} />
+          <KnownToggle lexemeId={word.id} polishLabels onMarked={(known) => known && onMarkedKnown()} />
         </Row>
 
-        <Button size="lg" full onClick={onNext}>Запомнил</Button>
+        <Button variant="outline" size="lg" full onClick={onNext}>Zapamiętałem</Button>
+      </Stack>
+    </Card>
+  )
+}
+
+function readingTextOf(exercise: Exercise): string | null {
+  return exercise.mode === 'choice' && exercise.kind === 'reading-choice'
+    ? exercise.readingText ?? null
+    : null
+}
+
+function ReadingExerciseBlock({
+  text, exercise, onAnswered,
+}: {
+  text: string
+  exercise: Exercise
+  onAnswered: (r: CheckResult, ms: number) => void
+}) {
+  return (
+    <Card>
+      <Stack gap="lg">
+        <section className="w-full rounded-card bg-soft2 p-4" lang="pl">
+          <p className="mb-2 text-xs tracking-wide text-muted uppercase">Tekst</p>
+          <p className="whitespace-pre-wrap text-left text-base leading-7">{text}</p>
+        </section>
+        <ExerciseView
+          key={exercise.id}
+          exercise={exercise}
+          bare
+          showReadingText={false}
+          onAnswered={onAnswered}
+        />
       </Stack>
     </Card>
   )

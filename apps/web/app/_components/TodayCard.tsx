@@ -25,7 +25,6 @@ function stageSummary(stage: Stage, plan: TodayPlan): string {
     if (plan.newWords.length) parts.push(`${plan.newWords.length} новых`)
     return parts.join(' · ') || 'нет заданий'
   }
-  if (stage.id === 'analysis') return 'по ошибкам занятия'
   if (!exercises) return 'нет заданий'
   return `${exercises} заданий`
 }
@@ -101,9 +100,7 @@ export function TodayCard() {
 
           <Link href="/lesson" className="w-full">
             <Button size="lg" full>
-              {day.kind === 'diagnostic'
-                ? 'Пройти диагностику'
-                : t('today.start', { minutes })}
+              {t('today.start', { minutes })}
             </Button>
           </Link>
 

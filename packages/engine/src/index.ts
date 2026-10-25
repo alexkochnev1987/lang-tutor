@@ -15,11 +15,12 @@ export type { Activity, ActivityKind, DayPlan, Lesson, LessonInput } from './les
 export * from './exercises/types'
 export {
   check, chooseForm, falseFriendContrast, gapFill, hashString, inflect,
-  rng, sentenceChoice, sentenceTyped, sentenceWrite, SENTENCE_ATTEMPTS,
+  readingChoice, rng, sentenceChoice, sentenceTyped, sentenceWrite, SENTENCE_ATTEMPTS,
   shuffle, spelling, translateProduction, translateRecognition,
 } from './exercises/generate'
 export type {
   CheckResult, LexemeLike, SentenceGapLike, SentenceResponseLike, TagLabeller,
+  ReadingChoiceLike,
 } from './exercises/generate'
 export { estimateModuleReadiness } from './readiness/estimate'
 export type { EstimateInput } from './readiness/estimate'

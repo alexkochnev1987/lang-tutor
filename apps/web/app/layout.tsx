@@ -3,6 +3,7 @@ import { IntlProvider } from './_providers/IntlProvider'
 import { ServiceWorker } from './_providers/ServiceWorker'
 import { ThemeInit } from './_providers/ThemeInit'
 import { ThemeScript } from './_providers/ThemeScript'
+import { SelectionDictionary } from './_components/SelectionDictionary'
 import './globals.css'
 
 export const metadata: Metadata = {
@@ -42,7 +43,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body>
         <ThemeInit />
         <ServiceWorker />
-        <IntlProvider>{children}</IntlProvider>
+        <IntlProvider>
+          <SelectionDictionary />
+          {children}
+        </IntlProvider>
       </body>
     </html>
   )

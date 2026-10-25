@@ -13,7 +13,7 @@
   "today": {
     "title": "Занятие на сегодня",
     "day": "День {day} из {total}",
-    "start": "Начать · {minutes} мин",
+    "start": "Начать обучение · {minutes} мин",
     "done": "Готово на сегодня",
     "streak": "{count, plural, one {# день} few {# дня} other {# дней}} подряд",
     "wordsDue": "{count, plural, =0 {нет слов к повторению} one {# слово к повторению} few {# слова к повторению} other {# слов к повторению}}"

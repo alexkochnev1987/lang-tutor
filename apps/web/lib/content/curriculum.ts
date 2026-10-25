@@ -169,6 +169,31 @@ export async function loadGrammarSentences(): Promise<SentencePack> {
   }
 }
 
+export interface ReadingQuestion {
+  id: string
+  question: string
+  options: string[]
+  answer: string
+  explanation?: string
+  difficulty?: number
+}
+
+export interface ReadingText {
+  id: string
+  title: string
+  text: string
+  questions: ReadingQuestion[]
+}
+
+export async function loadReadingTexts(): Promise<ReadingText[]> {
+  try {
+    const pack = await loadPack<{ texts: ReadingText[] }>('reading.json')
+    return pack.texts ?? []
+  } catch {
+    return []
+  }
+}
+
 /**
  * Какой сегодня учебный день.
  * Считается от даты старта курса, а не от календаря: пропущенные дни не

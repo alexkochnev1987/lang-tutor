@@ -13,7 +13,7 @@
   "today": {
     "title": "Today's lesson",
     "day": "Day {day} of {total}",
-    "start": "Start · {minutes} min",
+    "start": "Start learning · {minutes} min",
     "done": "Done for today",
     "streak": "{count, plural, one {# day} other {# days}} in a row",
     "wordsDue": "{count, plural, =0 {nothing to review} one {# word to review} other {# words to review}}"

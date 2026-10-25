@@ -15,8 +15,8 @@ const button = tv({
   ],
   variants: {
     variant: {
-      primary: 'bg-primary text-on-primary hover:opacity-90',
-      outline: 'border border-line bg-card text-ink hover:bg-soft',
+      primary: 'border border-primary bg-transparent text-primary hover:bg-soft',
+      outline: 'border border-primary bg-transparent text-primary hover:bg-soft',
       ghost:   'bg-transparent text-ink hover:bg-soft',
       danger:  'bg-danger text-on-primary hover:opacity-90',
     },

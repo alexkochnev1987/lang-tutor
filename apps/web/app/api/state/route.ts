@@ -9,7 +9,7 @@ import { and, eq, isNull } from 'drizzle-orm'
 import { pg } from '@/lib/db/pg'
 import {
   lessonSessions, lexemeStatus, moduleReadiness, personalDict,
-  ruleMastery, studyItems, userCourses, users,
+  exerciseResults, ruleMastery, studyItems, userCourses, users,
 } from '@/lib/db/schema'
 import { withUser } from '@/lib/api/handler'
 
@@ -21,7 +21,7 @@ const COURSE_ID = process.env.NEXT_PUBLIC_COURSE_ID ?? 'pl-b1-ru'
 export const GET = withUser(async ({ userId }) => {
   const [user] = await pg.select().from(users).where(eq(users.id, userId)).limit(1)
 
-  const [course, items, mastery, readiness, sessions, dict, statuses] = await Promise.all([
+  const [course, items, mastery, readiness, sessions, dict, statuses, results] = await Promise.all([
     pg.select().from(userCourses)
       .where(and(eq(userCourses.userId, userId), eq(userCourses.courseId, COURSE_ID))).limit(1),
     pg.select().from(studyItems)
@@ -35,6 +35,8 @@ export const GET = withUser(async ({ userId }) => {
       .where(and(eq(personalDict.userId, userId), isNull(personalDict.deletedAt))),
     pg.select().from(lexemeStatus)
       .where(and(eq(lexemeStatus.userId, userId), eq(lexemeStatus.courseId, COURSE_ID))),
+    pg.select().from(exerciseResults)
+      .where(and(eq(exerciseResults.userId, userId), eq(exerciseResults.courseId, COURSE_ID))),
   ])
 
   return {
@@ -49,6 +51,7 @@ export const GET = withUser(async ({ userId }) => {
     course: course[0] ?? null,
     studyItems: items,
     mastery,
+    exerciseResults: results,
     readiness,
     sessions,
     personalDict: dict,

@@ -21,7 +21,7 @@ export function Nav() {
 
   return (
     <nav
-      className="sticky bottom-0 z-20 border-t border-line bg-card lg:static lg:border-0 lg:bg-transparent"
+      className="z-20 shrink-0 border-t border-line bg-card lg:static lg:border-0 lg:bg-transparent"
       style={{ paddingBottom: 'max(0px, env(safe-area-inset-bottom))' }}
     >
       <div className="mx-auto flex w-full max-w-2xl">

@@ -6,12 +6,12 @@
  */
 import {
   chooseForm, falseFriendContrast, inflect, sentenceChoice, sentenceTyped,
-  sentenceWrite, shuffle, spelling, translateProduction, translateRecognition,
+  readingChoice, sentenceWrite, shuffle, spelling, translateProduction, translateRecognition,
   type Exercise, type SentenceGapLike,
 } from '@polski/engine'
 import { closedClassWordsForRule } from '@/lib/lang-pl/closed-class'
 import { labelTag, RULE_TO_TAGS, resolveTag } from '@/lib/lang-pl/tags'
-import type { Lexeme, Paradigm, SentencePack } from '@/lib/content/curriculum'
+import type { Lexeme, Paradigm, ReadingText, SentencePack } from '@/lib/content/curriculum'
 import type { StudyItemKind } from '@/lib/data/types'
 
 const hash = (s: string) => [...s].reduce((h, c) => (Math.imul(h, 31) + c.charCodeAt(0)) | 0, 7) >>> 0
@@ -144,9 +144,9 @@ export function sentenceDrillsForRule(
     const item: SentenceGapLike = {
       id: `${ruleId}.${idx}`,
       sentence: g.pl,
+      baseForm: g.lemma,
       answers: g.answers,
       distractors: g.distractors,
-      translation: g.ru,
     }
     const paradigm = g.lemma ? morphology[g.lemma] : undefined
     const forms = paradigm ? [...new Set(Object.values(paradigm).flat())] : []
@@ -173,10 +173,26 @@ export function sentenceWriteDrills(
       id: `${ruleId}.${idx}`,
       question: r.question,
       answers: r.answers,
-      instruction: r.hint,
-      translation: r.ru,
+      // Подсказки в текущем пакете написаны на русском; в упражнении
+      // интерфейс и инструкция должны оставаться на польском.
+      instruction: 'Napisz odpowiedź pełnym zdaniem',
     }, [ruleId])
     if (ex) out.push(ex)
   }
   return out
+}
+
+export function exercisesForReading(text: ReadingText, dayNumber: number): Exercise[] {
+  return text.questions.flatMap((question) => {
+    const exercise = readingChoice({
+      id: `${text.id}.${question.id}`,
+      text: `${text.title}\n\n${text.text}`,
+      question: question.question,
+      options: question.options,
+      answer: question.answer,
+      explanation: question.explanation,
+      difficulty: question.difficulty,
+    }, { seed: hash(`${text.id}.${question.id}.${dayNumber}`) })
+    return exercise ? [exercise] : []
+  })
 }
