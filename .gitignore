@@ -7,6 +7,10 @@ out/
 .DS_Store
 apps/web/public/content/
 apps/web/public/sw.js
+
+# строка подключения к проду и выгрузки из него: там персональные данные
+.env.prod
+dumps/
 *.tsbuildinfo
 .vercel
 .env.development.local

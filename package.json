@@ -16,6 +16,9 @@
     "db:generate": "pnpm --filter @polski/web exec drizzle-kit generate",
     "db:migrate": "pnpm --filter @polski/web exec drizzle-kit migrate",
     "db:studio": "pnpm --filter @polski/web exec drizzle-kit studio",
+    "db:dump": "node scripts/db-prod.mjs dump",
+    "db:restore": "node scripts/db-prod.mjs restore",
+    "db:migrate:prod": "node scripts/db-prod.mjs migrate",
     "validate": "node scripts/validate-grammar.mjs && node scripts/build-curriculum.mjs && node scripts/build-vocabulary.mjs"
   },
   "devDependencies": {
