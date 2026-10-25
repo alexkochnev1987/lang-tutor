@@ -5,13 +5,13 @@
  * соединяются: план дня, словарь, морфология и польский плагин.
  */
 import {
-  chooseForm, falseFriendContrast, inflect, spelling,
-  translateProduction, translateRecognition,
-  type Exercise,
+  chooseForm, falseFriendContrast, inflect, sentenceChoice, sentenceTyped,
+  sentenceWrite, shuffle, spelling, translateProduction, translateRecognition,
+  type Exercise, type SentenceGapLike,
 } from '@polski/engine'
 import { closedClassWordsForRule } from '@/lib/lang-pl/closed-class'
 import { labelTag, RULE_TO_TAGS, resolveTag } from '@/lib/lang-pl/tags'
-import type { Lexeme, Paradigm } from '@/lib/content/curriculum'
+import type { Lexeme, Paradigm, SentencePack } from '@/lib/content/curriculum'
 import type { StudyItemKind } from '@/lib/data/types'
 
 const hash = (s: string) => [...s].reduce((h, c) => (Math.imul(h, 31) + c.charCodeAt(0)) | 0, 7) >>> 0
@@ -116,6 +116,67 @@ export function exercisesForRule(
         if (ex) { used.add(`${w.lemma}|${tag}`); out.push(ex); break }
       }
     }
+  }
+  return out
+}
+
+export type SentenceMode = 'choice' | 'typed'
+
+export interface SentenceDrill {
+  ex: Exercise
+  variants: Partial<Record<SentenceMode, Exercise>>
+}
+
+export function sentenceDrillsForRule(
+  ruleId: string,
+  sentences: SentencePack,
+  morphology: Record<string, Paradigm>,
+  mode: SentenceMode,
+  salt: number,
+  limit: number,
+): SentenceDrill[] {
+  const gaps = sentences[ruleId]?.gaps ?? []
+  if (!gaps.length) return []
+  const order = shuffle(gaps.map((_, i) => i), hash(ruleId) + salt).slice(0, limit)
+  const out: SentenceDrill[] = []
+  for (const idx of order) {
+    const g = gaps[idx]!
+    const item: SentenceGapLike = {
+      id: `${ruleId}.${idx}`,
+      sentence: g.pl,
+      answers: g.answers,
+      distractors: g.distractors,
+      translation: g.ru,
+    }
+    const paradigm = g.lemma ? morphology[g.lemma] : undefined
+    const forms = paradigm ? [...new Set(Object.values(paradigm).flat())] : []
+    const variants: Partial<Record<SentenceMode, Exercise>> = {}
+    const choice = sentenceChoice(item, forms, { seed: hash(item.id) + salt }, [ruleId])
+    const typed = sentenceTyped(item, [ruleId])
+    if (choice) variants.choice = choice
+    if (typed) variants.typed = typed
+    const ex = variants[mode] ?? choice ?? typed
+    if (ex) out.push({ ex, variants })
+  }
+  return out
+}
+
+export function sentenceWriteDrills(
+  ruleId: string, sentences: SentencePack, salt: number, limit: number,
+): Exercise[] {
+  const responses = sentences[ruleId]?.responses ?? []
+  const order = shuffle(responses.map((_, i) => i), hash(`${ruleId}.w`) + salt).slice(0, limit)
+  const out: Exercise[] = []
+  for (const idx of order) {
+    const r = responses[idx]!
+    const ex = sentenceWrite({
+      id: `${ruleId}.${idx}`,
+      question: r.question,
+      answers: r.answers,
+      instruction: r.hint,
+      translation: r.ru,
+    }, [ruleId])
+    if (ex) out.push(ex)
   }
   return out
 }

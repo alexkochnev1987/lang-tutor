@@ -136,6 +136,39 @@ export async function loadGrammarRules(): Promise<Map<string, GrammarRule>> {
   return new Map(pack.rules.map((r) => [r.id, r]))
 }
 
+export interface SentenceGapItem {
+  /** Contains exactly one `___` gap */
+  pl: string
+  lemma?: string
+  answers: string[]
+  distractors?: string[]
+  ru?: string
+}
+
+export interface SentenceResponseItem {
+  question: string
+  answers: string[]
+  hint?: string
+  ru?: string
+}
+
+export interface RuleSentences {
+  gaps: SentenceGapItem[]
+  responses?: SentenceResponseItem[]
+}
+
+export type SentencePack = Record<string, RuleSentences>
+
+export async function loadGrammarSentences(): Promise<SentencePack> {
+  // Optional pack: without it grammar falls back to paradigm form drills.
+  try {
+    const pack = await loadPack<{ rules: SentencePack }>('grammar-sentences.json')
+    return pack.rules ?? {}
+  } catch {
+    return {}
+  }
+}
+
 /**
  * Какой сегодня учебный день.
  * Считается от даты старта курса, а не от календаря: пропущенные дни не

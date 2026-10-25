@@ -1,10 +1,12 @@
 'use client'
 
+import { useState } from 'react'
 import { Row, Stack } from '@polski/ui'
 import { SpeakIcon } from './ExerciseView'
 import type { LocalizedRule } from '@/lib/content/rules'
 
 export function RuleView({ rule, compact }: { rule: LocalizedRule; compact?: boolean }) {
+  const [translated, setTranslated] = useState(false)
   return (
     <Stack gap="md">
       <Stack gap="none">
@@ -19,7 +21,21 @@ export function RuleView({ rule, compact }: { rule: LocalizedRule; compact?: boo
         <span className="text-sm text-muted">{rule.title}</span>
       </Stack>
 
-      <p className="text-sm">{rule.summary}</p>
+      {rule.summaryPl ? (
+        <Stack gap="xs">
+          <p className="text-sm" lang="pl">{rule.summaryPl}</p>
+          <button
+            type="button"
+            onClick={() => setTranslated((v) => !v)}
+            className="self-start text-xs text-muted underline underline-offset-2 hover:text-ink"
+          >
+            {translated ? 'Скрыть перевод' : 'Перевести'}
+          </button>
+          {translated && <p className="text-sm text-muted">{rule.summary}</p>}
+        </Stack>
+      ) : (
+        <p className="text-sm">{rule.summary}</p>
+      )}
 
       {rule.showsOriginalInstead && (
         <p className="rounded-card bg-soft px-3 py-2 text-xs text-muted">

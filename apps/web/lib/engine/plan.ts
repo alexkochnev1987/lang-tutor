@@ -1,15 +1,21 @@
-import type { CheckResult, Exercise } from '@polski/engine'
+import { hashString, type CheckResult, type Exercise } from '@polski/engine'
 import {
-  currentDayNumber, loadCurriculum, loadGrammarRules, loadMorphology, loadVocabulary,
-  type CurriculumDay, type Lexeme, type Paradigm,
+  currentDayNumber, loadCurriculum, loadGrammarRules, loadGrammarSentences,
+  loadMorphology, loadVocabulary,
+  type CurriculumDay, type Lexeme, type Paradigm, type SentencePack,
 } from '@/lib/content/curriculum'
 import {
   localizeRule, PACK_ORIGINAL_LANGUAGE, isRuleLanguage,
   type LocalizedRule, type RuleLanguage,
 } from '@/lib/content/rules'
 import { knownLexemeIds, loadState } from '@/lib/data/store'
-import { exerciseForReview, exercisesForRule, exercisesForWord } from './exercises'
+import {
+  exerciseForReview, exercisesForRule, exercisesForWord,
+  sentenceDrillsForRule, sentenceWriteDrills, type SentenceMode,
+} from './exercises'
 import { buildTodayLesson } from './session'
+
+export type { SentenceMode } from './exercises'
 
 export type StageId = 'words' | 'grammar' | 'exam' | 'analysis'
 
@@ -23,7 +29,13 @@ export const STAGE_TITLE: Record<StageId, string> = {
 export type Step =
   | { kind: 'word-intro'; word: Lexeme }
   | { kind: 'rule-intro'; rule: LocalizedRule }
-  | { kind: 'exercise'; ex: Exercise; review: boolean; rule: LocalizedRule | null }
+  | {
+      kind: 'exercise'
+      ex: Exercise
+      review: boolean
+      rule: LocalizedRule | null
+      variants?: Partial<Record<SentenceMode, Exercise>>
+    }
 
 export interface Stage {
   id: StageId
@@ -54,6 +66,8 @@ export interface Mistake {
 const WORD_INTRO_SEC = 20
 const RULE_INTRO_SEC = 60
 const DRILLS_PER_RULE = 3
+const SENTENCES_PER_TASK = 10
+const WRITE_TASKS_PER_RULE = 2
 const EXAM_TASK_COUNT = 4
 const EXAM_TASKS_PER_RULE = 2
 
@@ -85,8 +99,9 @@ const exerciseIdsOf = (steps: Step[]): Set<string> =>
   new Set(steps.flatMap((s) => (s.kind === 'exercise' ? [s.ex.id] : [])))
 
 export async function buildTodayPlan(): Promise<TodayPlan> {
-  const [curriculum, vocabulary, morphology, rules] = await Promise.all([
+  const [curriculum, vocabulary, morphology, rules, sentences] = await Promise.all([
     loadCurriculum(), loadVocabulary(), loadMorphology(), loadGrammarRules(),
+    loadGrammarSentences(),
   ])
   const state = await loadState()
   const dayNumber = await currentDayNumber(curriculum.stats.totalDays)
@@ -117,7 +132,8 @@ export async function buildTodayPlan(): Promise<TodayPlan> {
   const ruleIds = [...new Set([...day.grammarRuleIds, ...drillRuleIds])]
   const dayRule = day.grammarRuleIds[0] ? localized(day.grammarRuleIds[0]) : null
   const drillSteps = buildDrillSteps(
-    ruleIds, [...newWords, ...practisedPool], morphology, localized)
+    ruleIds, [...newWords, ...practisedPool], morphology, sentences, localized,
+    dayNumber, curriculum.stats.totalDays)
 
   const examSteps = MODULES_WITH_GENERATOR.has(day.examFocus)
     ? buildExamSteps(
@@ -216,12 +232,37 @@ function buildDrillSteps(
   ruleIds: string[],
   words: Lexeme[],
   morphology: Record<string, Paradigm>,
+  sentences: SentencePack,
   localized: (id: string) => LocalizedRule | null,
+  dayNumber: number,
+  totalDays: number,
 ): Step[] {
   const steps: Step[] = []
   const used = new Set<string>()
+  const writeUnlocked = dayNumber * 3 >= totalDays * 2
   for (const ruleId of ruleIds) {
     const rule = localized(ruleId)
+
+    const mode: SentenceMode =
+      (hashString(ruleId) + dayNumber) % 2 === 0 ? 'choice' : 'typed'
+    const drills = sentenceDrillsForRule(
+      ruleId, sentences, morphology, mode, dayNumber, SENTENCES_PER_TASK)
+    if (drills.length) {
+      for (const d of drills) {
+        if (used.has(d.ex.id)) continue
+        used.add(d.ex.id)
+        steps.push({ kind: 'exercise', ex: d.ex, review: false, rule, variants: d.variants })
+      }
+      if (writeUnlocked) {
+        for (const ex of sentenceWriteDrills(ruleId, sentences, dayNumber, WRITE_TASKS_PER_RULE)) {
+          if (used.has(ex.id)) continue
+          used.add(ex.id)
+          steps.push({ kind: 'exercise', ex, review: false, rule })
+        }
+      }
+      continue
+    }
+
     for (const ex of exercisesForRule(ruleId, words, morphology, DRILLS_PER_RULE)) {
       if (used.has(ex.id)) continue
       used.add(ex.id)
@@ -229,6 +270,26 @@ function buildDrillSteps(
     }
   }
   return steps
+}
+
+export function hasAltMode(step: Step | undefined): boolean {
+  if (step?.kind !== 'exercise' || !step.variants) return false
+  const cur: SentenceMode = step.ex.kind === 'sentence-choice' ? 'choice' : 'typed'
+  return (Object.keys(step.variants) as SentenceMode[]).some((m) => m !== cur)
+}
+
+export function otherDrillMode(step: Step | undefined): SentenceMode | null {
+  if (step?.kind !== 'exercise' || !step.variants) return null
+  const cur: SentenceMode = step.ex.kind === 'sentence-choice' ? 'choice' : 'typed'
+  const alts = (Object.keys(step.variants) as SentenceMode[]).filter((m) => m !== cur)
+  if (!alts.length) return null
+  return alts[Math.floor(Math.random() * alts.length)]!
+}
+
+export function withDrillMode(step: Step, mode: SentenceMode): Step {
+  if (step.kind !== 'exercise' || !step.variants) return step
+  const ex = step.variants[mode]
+  return ex ? { ...step, ex } : step
 }
 
 function buildExamSteps(

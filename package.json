@@ -19,7 +19,7 @@
     "db:dump": "node scripts/db-prod.mjs dump",
     "db:restore": "node scripts/db-prod.mjs restore",
     "db:migrate:prod": "node scripts/db-prod.mjs migrate",
-    "validate": "node scripts/validate-grammar.mjs && node scripts/build-curriculum.mjs && node scripts/build-vocabulary.mjs"
+    "validate": "node scripts/validate-grammar.mjs && node scripts/validate-sentences.mjs && node scripts/build-curriculum.mjs && node scripts/build-vocabulary.mjs"
   },
   "devDependencies": {
     "typescript": "^5.9.0"

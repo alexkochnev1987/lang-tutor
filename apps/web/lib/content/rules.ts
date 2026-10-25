@@ -26,6 +26,8 @@ export interface LocalizedRule {
   category: string
   titlePl: string
   title: string
+  /** Shown first; `summary` then acts as its on-demand translation. */
+  summaryPl: string | null
   summary: string
   examples: LocalizedExample[]
   pitfalls: string[]
@@ -35,8 +37,10 @@ export interface LocalizedRule {
   showsOriginalInstead: boolean
 }
 
-export function localizeRule(rule: GrammarRule, lang: RuleLanguage): LocalizedRule {
+export function localizeRule(rule: GrammarRule, requested: RuleLanguage): LocalizedRule {
   const original = PACK_ORIGINAL_LANGUAGE
+  // Polish is the rule's own language, not a translation target.
+  const lang = requested === 'pl' ? original : requested
   const isOriginal = lang === original
 
   const translatedSummary = rule.summaryI18n?.[lang] ?? (isOriginal ? rule.summary : null)
@@ -50,6 +54,7 @@ export function localizeRule(rule: GrammarRule, lang: RuleLanguage): LocalizedRu
     category: rule.category,
     titlePl: rule.title.pl ?? rule.id,
     title: rule.title[lang] ?? rule.title[original] ?? rule.id,
+    summaryPl: rule.summaryI18n?.pl ?? null,
     summary: translatedSummary ?? rule.summary,
     examples: rule.examples.map((e) => ({
       pl: e.pl ?? '',

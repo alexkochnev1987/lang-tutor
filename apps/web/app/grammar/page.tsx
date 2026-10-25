@@ -4,7 +4,10 @@ import { useCallback, useEffect, useRef, useState } from 'react'
 import Link from 'next/link'
 import { Button, Card, Row, Screen, Stack } from '@polski/ui'
 import type { CheckResult, Exercise } from '@polski/engine'
-import { buildTodayPlan, type Stage, type Step } from '@/lib/engine/plan'
+import {
+  buildTodayPlan, hasAltMode, otherDrillMode, withDrillMode,
+  type Stage, type Step,
+} from '@/lib/engine/plan'
 import { recordRuleAttempt } from '@/lib/engine/session'
 import { saveLessonSession } from '@/lib/data/store'
 import { ExerciseView } from '@/app/_components/ExerciseView'
@@ -16,6 +19,7 @@ type GrammarView = 'rule' | 'drill' | 'result'
 
 export default function GrammarPage() {
   const [stage, setStage] = useState<Stage | null>(null)
+  const [drills, setDrills] = useState<Step[]>([])
   const [dayNumber, setDayNumber] = useState(1)
   const [loaded, setLoaded] = useState(false)
   const [view, setView] = useState<GrammarView>('rule')
@@ -26,7 +30,9 @@ export default function GrammarPage() {
 
   const load = useCallback(() => {
     buildTodayPlan().then((p) => {
-      setStage(p.stages.find((s) => s.id === 'grammar') ?? null)
+      const grammar = p.stages.find((s) => s.id === 'grammar') ?? null
+      setStage(grammar)
+      setDrills((grammar?.steps ?? []).filter((s) => s.kind === 'exercise'))
       setDayNumber(p.dayNumber)
       setLoaded(true)
     })
@@ -34,8 +40,14 @@ export default function GrammarPage() {
 
   useEffect(() => { load() }, [load])
 
-  const drills: Step[] = (stage?.steps ?? []).filter((s) => s.kind === 'exercise')
   const step = drills[i]
+
+  function switchKind() {
+    const mode = otherDrillMode(step)
+    if (!mode) return
+    // disliking the kind, not the sentence — so the rest of the task switches too
+    setDrills((prev) => prev.map((s, idx) => (idx < i ? s : withDrillMode(s, mode))))
+  }
 
   async function onAnswered(ex: Exercise, r: CheckResult) {
     setCanAdvance(true)
@@ -157,6 +169,16 @@ export default function GrammarPage() {
           />
           <Row gap="sm" justify="center">
             {step.rule && <RuleSheet rule={step.rule} />}
+            {!canAdvance && hasAltMode(step) && (
+              <button
+                type="button"
+                onClick={switchKind}
+                className="inline-flex min-h-10 items-center gap-1.5 rounded-card bg-soft px-3 text-sm text-muted hover:bg-soft2 hover:text-ink"
+              >
+                <span aria-hidden>🎲</span>
+                Другой вид задания
+              </button>
+            )}
           </Row>
           {canAdvance && (
             <Button size="lg" full onClick={() => void next()}>

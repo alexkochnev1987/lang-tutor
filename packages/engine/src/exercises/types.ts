@@ -14,6 +14,9 @@ export type ExerciseKind =
   | 'choose-form'             // выбрать верную форму — закрытое задание
   | 'gap-fill'                // вставить слово в предложение
   | 'false-friend-contrast'   // контраст с русским ложным другом
+  | 'sentence-choice'         // предложение с пропуском: выбор из 4 вариантов
+  | 'sentence-typed'          // предложение с пропуском: слово вписывается
+  | 'sentence-write'          // написать предложение целиком (ответ на вопрос)
 
 export type AnswerMode = 'choice' | 'typed' | 'assemble'
 
@@ -29,6 +32,8 @@ export interface ExerciseBase {
   moduleId: string
   /** Сколько секунд закладываем */
   estimatedSec: number
+  /** Tries before the correct answer is revealed; absent means one. */
+  attemptsAllowed?: number
 }
 
 export interface ChoiceExercise extends ExerciseBase {

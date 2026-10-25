@@ -42,14 +42,28 @@ export function ExerciseView({
   const [result, setResult] = useState<CheckResult | null>(null)
   const [typed, setTyped] = useState('')
   const [built, setBuilt] = useState<string[]>([])
+  const [wrongTries, setWrongTries] = useState<string[]>([])
+  const [lastTry, setLastTry] = useState<CheckResult | null>(null)
   const started = useRef(Date.now())
 
-  const isPolishPrompt =
-    exercise.kind !== 'translate-production' && exercise.kind !== 'spelling'
+  const attemptsAllowed = exercise.attemptsAllowed ?? 1
+  const attemptsLeft = attemptsAllowed - wrongTries.length
+
+  const isGapSentence =
+    exercise.kind === 'sentence-choice' || exercise.kind === 'sentence-typed'
+  const isSentence = isGapSentence || exercise.kind === 'sentence-write'
+  const isPolishPrompt = !isGapSentence
+    && exercise.kind !== 'translate-production' && exercise.kind !== 'spelling'
 
   function submit(answer: string) {
     if (result) return
     const r = check(exercise, answer)
+    if (!r.correct && wrongTries.length + 1 < attemptsAllowed) {
+      setWrongTries((w) => [...w, answer])
+      setLastTry(r)
+      return
+    }
+    if (!r.correct) setWrongTries((w) => [...w, answer])
     setResult(r)
     onAnswered(r, Date.now() - started.current)
   }
@@ -70,7 +84,7 @@ export function ExerciseView({
           </span>
           <Row gap="sm" justify="center">
             {/* ≥24px: иначе не различить диакритику, UX_UI.md §1.6 */}
-            <span className="text-center text-2xl font-semibold sm:text-3xl">
+            <span className={`text-center font-semibold ${isSentence ? 'text-2xl' : 'text-2xl sm:text-3xl'}`}>
               {exercise.prompt}
             </span>
             {isPolishPrompt && <SpeakIcon text={exercise.prompt} />}
@@ -83,12 +97,12 @@ export function ExerciseView({
               <OptionRow
                 key={o}
                 outcome={
-                  !result ? 'none'
-                    : o === exercise.answer ? 'correct'
+                  result && o === exercise.answer ? 'correct'
+                    : wrongTries.includes(o) ? 'wrong'
                     : 'none'
                 }
                 selected={false}
-                disabled={Boolean(result)}
+                disabled={Boolean(result) || wrongTries.includes(o)}
                 onClick={() => submit(o)}
               >
                 {o}
@@ -105,7 +119,11 @@ export function ExerciseView({
               disabled={Boolean(result)}
               onChange={(e) => setTyped(e.target.value)}
               onKeyDown={(e) => { if (e.key === 'Enter') submit(typed) }}
-              placeholder="Введите форму"
+              placeholder={
+                exercise.kind === 'sentence-write' ? 'Напишите предложение'
+                  : exercise.kind === 'sentence-typed' ? 'Впишите слово'
+                  : 'Введите форму'
+              }
               className="min-h-12 w-full rounded-card border border-line bg-card px-3 text-center text-xl text-ink"
               lang="pl"
               autoCapitalize="off"
@@ -146,6 +164,13 @@ export function ExerciseView({
           </Stack>
         )}
 
+        {!result && lastTry && (
+          <p className="text-center text-xs text-warn-ink">
+            {lastTry.errorKind ? ERROR_HINT[lastTry.errorKind] : 'Неверно'}
+            {' · '}осталось попыток: {attemptsLeft}
+          </p>
+        )}
+
         {result && (
           <Stack gap="sm">
             {!result.correct && (
@@ -157,6 +182,14 @@ export function ExerciseView({
                   <p className="text-xs text-muted">{ERROR_HINT[result.errorKind]}</p>
                 )}
               </Stack>
+            )}
+            {isGapSentence && (
+              <Row gap="sm" justify="between">
+                <span className="text-sm text-accent-ink" lang="pl">
+                  {exercise.prompt.replace('␣␣␣', result.expected)}
+                </span>
+                <SpeakIcon text={exercise.prompt.replace('␣␣␣', result.expected)} size="sm" />
+              </Row>
             )}
             {'explanation' in exercise && exercise.explanation && (
               <p className="text-sm text-accent-ink">{exercise.explanation}</p>

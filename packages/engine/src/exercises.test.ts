@@ -1,6 +1,7 @@
 import { describe, expect, it } from 'vitest'
 import {
-  check, chooseForm, falseFriendContrast, gapFill, inflect, shuffle,
+  check, chooseForm, falseFriendContrast, gapFill, inflect,
+  SENTENCE_ATTEMPTS, sentenceChoice, sentenceTyped, sentenceWrite, shuffle,
   spelling, translateProduction, translateRecognition,
   type LexemeLike, type Paradigm,
 } from './index'
@@ -167,5 +168,59 @@ describe('проверка ответа', () => {
     const ch = chooseForm('ręka', REKA, 'subst:pl:gen:f', label, CTX)!
     expect(check(ch, 'rąk').correct).toBe(true)
     expect(check(ch, 'ręce').correct).toBe(false)
+  })
+})
+
+describe('задания по предложениям', () => {
+  const gap = {
+    id: 'pl.gram.c-gen.1',
+    sentence: 'Nie mam ___ na kawę.',
+    answers: ['czasu'],
+    distractors: ['czas', 'czasie', 'czasem'],
+    translation: 'У меня нет времени на кофе.',
+  }
+
+  it('выбор: 4 варианта, дистракторы из контента, три попытки', () => {
+    const ex = sentenceChoice(gap, [], CTX, ['pl.gram.c-gen'])!
+    expect(ex.options).toHaveLength(4)
+    expect(ex.options).toContain('czasu')
+    expect(ex.prompt).not.toContain('___')
+    expect(ex.attemptsAllowed).toBe(SENTENCE_ATTEMPTS)
+    expect(ex.grammarRuleIds).toEqual(['pl.gram.c-gen'])
+  })
+
+  it('выбор: парадигма добирает недостающие дистракторы', () => {
+    const scant = { ...gap, distractors: ['czas'] }
+    const ex = sentenceChoice(scant, ['czasie', 'czasem', 'czasu', 'czasy'], CTX)!
+    expect(ex.options).toHaveLength(4)
+    expect(new Set(ex.options).size).toBe(4)
+  })
+
+  it('выбор: меньше трёх дистракторов — задания нет', () => {
+    expect(sentenceChoice({ ...gap, distractors: ['czas'] }, [], CTX)).toBeNull()
+  })
+
+  it('ввод: принимает все варианты ответа', () => {
+    const ex = sentenceTyped({ ...gap, answers: ['rękami', 'rękoma'] })!
+    expect(check(ex, 'rękoma').correct).toBe(true)
+    expect(check(ex, 'rękami').correct).toBe(true)
+  })
+
+  it('целое предложение: пунктуация и регистр не важны, формы — важны', () => {
+    const ex = sentenceWrite({
+      id: 'pl.gram.c-gen.r1',
+      question: 'Czy masz czas? (odpowiedz: nie)',
+      answers: ['Nie, nie mam czasu.'],
+    })!
+    expect(check(ex, 'nie nie mam czasu').correct).toBe(true)
+    expect(check(ex, 'Nie, nie mam czas.').correct).toBe(false)
+    expect(check(ex, 'Nie, nie mam czasu!').correct).toBe(true)
+  })
+
+  it('целое предложение: потеря диакритики распознаётся', () => {
+    const ex = sentenceWrite({
+      id: 'x', question: 'q', answers: ['Idę do sklepu.'],
+    })!
+    expect(check(ex, 'Ide do sklepu').errorKind).toBe('diacritic')
   })
 })
