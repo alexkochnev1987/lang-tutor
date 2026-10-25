@@ -78,9 +78,10 @@ export default function LessonPage() {
     : []
   const indexInStage = slot ? stageSlots.indexOf(slot) + 1 : 0
   const grammarExerciseSlots = slots.filter((s) => (
-    s.kind === 'step' && s.stage.id === 'grammar' && s.step.kind === 'exercise'
+    s.kind === 'step' && s.step.kind === 'exercise' && s.step.ex.moduleId === 'grammar'
   ))
-  const grammarExerciseIndex = slot?.kind === 'step' && slot.stage.id === 'grammar' && slot.step.kind === 'exercise'
+  const grammarExerciseIndex = slot?.kind === 'step'
+    && slot.step.kind === 'exercise' && slot.step.ex.moduleId === 'grammar'
     ? grammarExerciseSlots.indexOf(slot) + 1
     : 0
 
@@ -131,9 +132,9 @@ export default function LessonPage() {
 
   function next() {
     setCanAdvance(false)
-    if (slot?.kind === 'step' && slot.stage.id === 'grammar' && slot.step.kind === 'exercise') {
+    if (slot?.kind === 'step' && slot.step.kind === 'exercise' && slot.step.ex.moduleId === 'grammar') {
       const lastGrammarIndex = slots.reduce((last, current, index) => (
-        current.kind === 'step' && current.stage.id === 'grammar' && current.step.kind === 'exercise'
+        current.kind === 'step' && current.step.kind === 'exercise' && current.step.ex.moduleId === 'grammar'
           ? index
           : last
       ), -1)
@@ -247,9 +248,11 @@ export default function LessonPage() {
           <Row gap="sm">
             {slot && (
               <span className="text-sm text-muted">
-                {STAGE_TITLE_PL[slot.stage.id]}
+                {grammarExerciseIndex ? 'Gramatyka' : STAGE_TITLE_PL[slot.stage.id]}
                 {slot.kind === 'step' && (
-                  <span className="tabular-nums"> · {indexInStage} / {stageSlots.length}</span>
+                  <span className="tabular-nums"> · {
+                    grammarExerciseIndex || indexInStage
+                  } / {grammarExerciseIndex ? grammarExerciseSlots.length : stageSlots.length}</span>
                 )}
               </span>
             )}

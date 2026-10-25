@@ -89,12 +89,8 @@ function InlineFormControl({
       ? 'border-danger bg-danger-bg'
       : 'border-line bg-soft'
   const [focused, setFocused] = useState(false)
-  const focusClass = status === 'empty' ? 'focus-within:border-primary focus-within:bg-card' : ''
-  const textClass = status === 'correct'
-    ? 'text-ok-ink placeholder:text-ok-ink'
-    : status === 'wrong'
-      ? 'text-danger-ink placeholder:text-danger-ink'
-      : 'text-ink placeholder:text-muted'
+  const focusClass = status === 'empty' ? 'focus-within:border-muted focus-within:bg-card' : ''
+  const textClass = 'text-ink placeholder:text-muted selection:bg-line selection:text-ink'
   const stateLabel = status === 'correct'
     ? ', odpowiedź poprawna'
     : status === 'wrong'
@@ -170,7 +166,7 @@ function AttemptDots({
   const remaining = Math.max(0, attemptsAllowed - wrongCount)
   return (
     <span
-      className="flex shrink-0 flex-col items-center gap-1 pl-1"
+      className="flex shrink-0 flex-col-reverse items-center gap-1 pl-1"
       aria-label={`Pozostało prób: ${remaining}`}
       title={`Pozostało prób: ${remaining}`}
     >
@@ -180,7 +176,7 @@ function AttemptDots({
           : result && index === wrongCount
             ? result.correct ? 'bg-ok' : 'bg-danger'
             : focused && !result && index === wrongCount
-              ? 'bg-primary ring-2 ring-primary/30'
+              ? 'bg-muted ring-2 ring-muted/30'
             : 'bg-line'
         return <span key={index} className={`size-1.5 rounded-full ${className}`} />
       })}
@@ -530,6 +526,12 @@ export function GrammarExerciseBatch({
       .filter((result) => result.dayNumber === dayNumber)
       .map((result) => [result.exerciseId, result]),
   )
+  const groups = (['choice', 'typed'] as const)
+    .map((mode) => ({
+      mode,
+      exercises: exercises.filter((exercise) => exercise.mode === mode),
+    }))
+    .filter((group) => group.exercises.length > 0)
 
   useEffect(() => {
     setCompletedIds(new Set(
@@ -548,32 +550,41 @@ export function GrammarExerciseBatch({
 
   return (
     <Stack gap="lg" className="mx-auto w-full max-w-(--container-exercise)">
-      {exercises[0] && (
-        <p className="text-left text-sm tracking-wide text-muted uppercase">
-          {exercises[0].instruction}
-        </p>
-      )}
-      {exercises.map((exercise, index) => (
-        <div key={exercise.id} className="w-full">
-          <ExerciseView
-            exercise={exercise}
-            bare
-            autoFocus={index === 0}
-            showInstruction={false}
-            leadingNumber={index + 1}
-            restoredResult={restored.get(exercise.id) ? {
-              result: {
-                correct: restored.get(exercise.id)!.correct,
-                expected: restored.get(exercise.id)!.expected,
-                errorKind: restored.get(exercise.id)!.errorKind ?? undefined,
-              },
-              answer: restored.get(exercise.id)!.answer,
-              attempts: restored.get(exercise.id)!.attempts,
-            } : null}
-            onAnswered={(result, ms, attempts, answer) => handleAnswered(exercise, result, ms, attempts, answer)}
-          />
-        </div>
-      ))}
+      {groups.map((group, groupIndex) => {
+        const offset = groups
+          .slice(0, groupIndex)
+          .reduce((count, previous) => count + previous.exercises.length, 0)
+        return (
+          <Stack key={group.mode} gap="md">
+            <p className="text-left text-sm tracking-wide text-muted uppercase">
+              {group.exercises[0]!.instruction}
+            </p>
+            {group.exercises.map((exercise, index) => (
+              <div key={exercise.id} className="w-full">
+                <ExerciseView
+                  exercise={exercise}
+                  bare
+                  autoFocus={groupIndex === 0 && index === 0}
+                  showInstruction={false}
+                  leadingNumber={offset + index + 1}
+                  restoredResult={restored.get(exercise.id) ? {
+                    result: {
+                      correct: restored.get(exercise.id)!.correct,
+                      expected: restored.get(exercise.id)!.expected,
+                      errorKind: restored.get(exercise.id)!.errorKind ?? undefined,
+                    },
+                    answer: restored.get(exercise.id)!.answer,
+                    attempts: restored.get(exercise.id)!.attempts,
+                  } : null}
+                  onAnswered={(result, ms, attempts, answer) => (
+                    handleAnswered(exercise, result, ms, attempts, answer)
+                  )}
+                />
+              </div>
+            ))}
+          </Stack>
+        )
+      })}
     </Stack>
   )
 }
