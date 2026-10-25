@@ -86,12 +86,13 @@ NEXT_PUBLIC_COURSE_ID=pl-b1-ru
 | Команда | Что делает |
 |---|---|
 | `pnpm dev` | дев-сервер с hot reload |
-| `pnpm build` | продакшен-сборка → `apps/web/out/` |
+| `pnpm build` | продакшен-сборка → `apps/web/out/`, затем штамповка версии в `sw.js` |
 | `pnpm start` | локальный просмотр собранной статики |
 | `pnpm typecheck` | проверка типов во всех пакетах |
 | `pnpm validate` | валидатор графа грамматики и программы |
 | `pnpm content` | пересобрать программу и словарь |
-| `pnpm --filter @polski/engine test` | 22 теста движка: FSRS, mastery, готовность |
+| `pnpm --filter @polski/engine test` | 42 теста движка: FSRS, mastery, готовность, упражнения |
+| `node scripts/build-morphology.mjs <sgjp.tab.gz>` | пересобрать парадигмы из словаря SGJP |
 
 ---
 
@@ -211,6 +212,7 @@ rsync -av apps/web/out/ user@server:/var/www/polski-b1/
 ☐ pnpm typecheck проходит
 ☐ проверено на ширине 320px (iPhone SE) — нижняя граница вёрстки
 ☐ проверено, что тема не моргает при загрузке
+☐ офлайн: выключить сеть и открыть /progress/ — должно работать
 ```
 
 ---
@@ -225,4 +227,7 @@ rsync -av apps/web/out/ user@server:/var/www/polski-b1/
 | **Кнопки Google нет** | `NEXT_PUBLIC_GOOGLE_CLIENT_ID` пуст или проект не пересобран после его добавления |
 | **`origin_mismatch` от Google** | Домен не добавлен в Authorized JavaScript origins. Порт тоже имеет значение: `localhost:3000` ≠ `localhost:3100` |
 | **Тема моргает светлой при загрузке** | Не отработал блокирующий скрипт в `<head>` — он читает тему из `localStorage` синхронно, потому что IndexedDB до первого кадра не успевает |
+| **`pnpm test` зелёный, а `pnpm typecheck` красный** | Vitest не типизирует код, он только исполняет. Строгие ошибки (`noUncheckedIndexedAccess`) ловит только `tsc`. Гонять оба |
+| **Офлайн не работает** | Проверить `apps/web/out/sw.js`: в нём должна стоять версия, а не `__BUILD_ID__`. Штамповку делает `scripts/stamp-sw.mjs` последним шагом `pnpm build` |
+| **После деплоя у пользователей старый кэш** | Не сменилась версия SW. На Vercel её даёт `VERCEL_GIT_COMMIT_SHA`; локально — timestamp |
 | **Сборка падает на типах** | `pnpm typecheck` покажет подробности. Next правит `tsconfig.json` при первой сборке — это нормально |

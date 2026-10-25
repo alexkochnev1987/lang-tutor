@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from 'next'
 import { IntlProvider } from './_providers/IntlProvider'
+import { ServiceWorker } from './_providers/ServiceWorker'
 import { ThemeInit } from './_providers/ThemeInit'
 import { ThemeScript } from './_providers/ThemeScript'
 import './globals.css'
@@ -40,6 +41,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       </head>
       <body>
         <ThemeInit />
+        <ServiceWorker />
         <IntlProvider>{children}</IntlProvider>
       </body>
     </html>

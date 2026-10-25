@@ -5,8 +5,5 @@ out/
 .env.local
 *.log
 .DS_Store
-public/sw.js
-public/sw.js.map
-public/workbox-*.js
 apps/web/public/content/
 *.tsbuildinfo

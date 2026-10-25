@@ -11,6 +11,8 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@polski/engine": "workspace:*",
+    "@polski/ui": "workspace:*",
     "dexie": "^4.4.7",
     "dexie-react-hooks": "^4.4.0",
     "next": "^16.4.3",
@@ -21,8 +23,7 @@
     "tailwind-merge": "^3.7.0",
     "tailwind-variants": "^3.3.1",
     "ts-fsrs": "5.4.2",
-    "zustand": "^5.0.16",
-    "@polski/ui": "workspace:*"
+    "zustand": "^5.0.16"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4.3.3",

@@ -39,8 +39,10 @@ pnpm install && pnpm dev
 | — | Скелет приложения: Next 16, i18n, тема, TTS, вход Google | ✅ готово |
 | 3 | Карта компетенций и программа на 182 дня | ✅ готово |
 | 4 | Словарь: ядро 327 единиц, модель стоимости, раскладка по дням | ✅ готово |
-| 5 | FSRS, mastery-модель, движок упражнений | ⏳ следующий |
-| 6 | Экраны, Chrome-расширение | — |
+| 5 | FSRS, mastery-модель, генератор занятия — **22 теста** | ✅ готово |
+| 6 | Движок упражнений: 7 типов, морфология SGJP — **42 теста** | ✅ готово |
+| 7 | Экран прогресса, навигация, оценка готовности — **47 тестов** | ✅ готово |
+| 8 | Календарь, личный словарь, Chrome-расширение | ⏳ следующий |
 
 ---
 
@@ -56,6 +58,8 @@ pnpm install && pnpm dev
 | [docs/ARCHITECTURE.md](./docs/ARCHITECTURE.md) | Многоязычная модель данных, слои, `LanguagePlugin`, стек, i18n |
 | [docs/CURRICULUM.md](./docs/CURRICULUM.md) | Программа на 182 дня: фазы, ритм, бюджеты и честный расчёт, сколько слов помещается |
 | [docs/VOCABULARY.md](./docs/VOCABULARY.md) | Словарь: разметка прозрачности, модель стоимости слова, измеренная вместимость |
+| [docs/SPACED_REPETITION.md](./docs/SPACED_REPETITION.md) | Две модели памяти, очередь с потолком, пропущенные дни, готовность к экзамену |
+| [docs/EXERCISE_ENGINE.md](./docs/EXERCISE_ENGINE.md) | 7 типов упражнений, дистракторы из парадигм SGJP, разбор ошибок |
 | [docs/UX_UI.md](./docs/UX_UI.md) | Адаптивность на четырёх размерах экрана, темы, PWA |
 | [docs/AUDIO_AND_PRONUNCIATION.md](./docs/AUDIO_AND_PRONUNCIATION.md) | Озвучка, аудирование, оценка произношения |
 | [GETTING_STARTED.md](./GETTING_STARTED.md) | Запуск, переменные окружения, деплой |
@@ -66,6 +70,7 @@ pnpm install && pnpm dev
 
 ```
 apps/web/            Next 16, App Router, output: 'export'
+packages/engine/     FSRS + mastery + генератор занятия. Без единого 'pl'
 packages/ui/         дизайн-система. ТОЛЬКО здесь живут Tailwind-классы
 content/pl-b1-ru/    учебный контент — данные, не код
 scripts/             валидаторы контента
@@ -103,6 +108,6 @@ docs/                документация
 | Ресурс | Лицензия | Как используется |
 |---|---|---|
 | Текст rozporządzenia (перечни требований) | нормативный акт | основа учебной программы |
-| [Morfeusz 2 + SGJP](https://morfeusz.sgjp.pl/) | 2-clause BSD | генерация упражнений на формы |
+| [SGJP / Morfeusz 2](https://morfeusz.sgjp.pl/) | 2-clause BSD | 8316 форм для упражнений. Копирайт обязан быть в «О приложении» |
 | [Leipzig Corpora](https://wortschatz.uni-leipzig.de/) | CC BY 4.0 | частотное ранжирование лексики |
 | [Wikimedia Commons](https://commons.wikimedia.org/) | CC BY-SA 4.0 | записи произношения (опционально, v2) |

@@ -109,6 +109,13 @@ export async function loadVocabulary(): Promise<Map<string, Lexeme>> {
   return new Map(pack.items.map((v) => [v.id, v]))
 }
 
+export type Paradigm = Record<string, string[]>
+
+export async function loadMorphology(): Promise<Record<string, Paradigm>> {
+  const pack = await loadPack<{ paradigms: Record<string, Paradigm> }>('morphology.json')
+  return pack.paradigms
+}
+
 export async function loadGrammarRules(): Promise<Map<string, GrammarRule>> {
   const pack = await loadPack<{ rules: GrammarRule[] }>('grammar-rules.json')
   return new Map(pack.rules.map((r) => [r.id, r]))

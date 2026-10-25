@@ -1,0 +1,304 @@
+/**
+ * Генераторы упражнений.
+ *
+ * Принцип, ради которого всё это: **дистракторы берутся из настоящей
+ * парадигмы того же слова.** Случайные варианты учат узнавать мусор;
+ * реальные формы заставляют различать `ręce` / `ręką` / `rąk` — ровно то,
+ * что проверяет открытая часть модуля «Poprawność gramatyczna».
+ */
+import type {
+  AssembleExercise, ChoiceExercise, Exercise, ExerciseContext, Paradigm, TypedExercise,
+} from './types'
+
+/** Детерминированный ГПСЧ: одинаковый вход — одинаковое упражнение. */
+export function rng(seed: number) {
+  let s = seed >>> 0 || 1
+  return () => {
+    s = (s * 1664525 + 1013904223) >>> 0
+    return s / 0x100000000
+  }
+}
+
+export function shuffle<T>(arr: readonly T[], seed: number): T[] {
+  const a = [...arr]
+  const r = rng(seed)
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(r() * (i + 1))
+    ;[a[i], a[j]] = [a[j]!, a[i]!]
+  }
+  return a
+}
+
+export const hashString = (s: string): number =>
+  [...s].reduce((h, c) => (Math.imul(h, 31) + c.charCodeAt(0)) | 0, 7) >>> 0
+
+// ─────────────────────────────────────────────────────────────────────
+// Лексика
+// ─────────────────────────────────────────────────────────────────────
+
+export interface LexemeLike {
+  id: string
+  lemma: string
+  translation: string
+  transparency: string
+  interference?: { confusedWith: string; actuallyIs: string }
+  grammarRuleIds?: string[]
+}
+
+export function translateRecognition(
+  word: LexemeLike, pool: readonly string[], ctx: ExerciseContext,
+): ChoiceExercise {
+  const distractors = shuffle(pool.filter((t) => t !== word.translation), ctx.seed).slice(0, 3)
+  return {
+    id: `ex.rec.${word.id}`,
+    kind: 'translate-recognition',
+    mode: 'choice',
+    difficulty: 1,
+    lexemeId: word.id,
+    grammarRuleIds: [],
+    moduleId: 'reading',
+    estimatedSec: 8,
+    instruction: 'Выберите перевод',
+    prompt: word.lemma,
+    options: shuffle([word.translation, ...distractors], ctx.seed + 1),
+    answer: word.translation,
+  }
+}
+
+export function translateProduction(
+  word: LexemeLike, pool: readonly string[], ctx: ExerciseContext,
+): ChoiceExercise {
+  const distractors = shuffle(pool.filter((l) => l !== word.lemma), ctx.seed).slice(0, 3)
+  return {
+    id: `ex.prod.${word.id}`,
+    kind: 'translate-production',
+    mode: 'choice',
+    difficulty: 2,
+    lexemeId: word.id,
+    grammarRuleIds: [],
+    moduleId: 'writing',
+    estimatedSec: 12,
+    instruction: 'Как это по-польски?',
+    prompt: word.translation,
+    options: shuffle([word.lemma, ...distractors], ctx.seed + 1),
+    answer: word.lemma,
+  }
+}
+
+/**
+ * Сборка слова из букв. Главная цель — диакритика: разница между
+ * `może` и `morze`, `laska` и `łaska` проходит именно по этим знакам.
+ */
+export function spelling(word: LexemeLike, ctx: ExerciseContext): AssembleExercise {
+  return {
+    id: `ex.spell.${word.id}`,
+    kind: 'spelling',
+    mode: 'assemble',
+    difficulty: 3,
+    lexemeId: word.id,
+    grammarRuleIds: ['pl.gram.alphabet-orthography'],
+    moduleId: 'writing',
+    estimatedSec: 20,
+    instruction: 'Соберите слово по буквам',
+    prompt: word.translation,
+    letters: shuffle([...word.lemma.replace(/\s/g, '')], ctx.seed),
+    answer: word.lemma.replace(/\s/g, ''),
+  }
+}
+
+/**
+ * Контраст с ложным другом. Обычная карточка тут не работает: ошибка не
+ * в незнании, а в ложном знании, которое надо активно перебить.
+ */
+export function falseFriendContrast(
+  word: LexemeLike, ctx: ExerciseContext,
+): ChoiceExercise | null {
+  if (!word.interference) return null
+  const { confusedWith, actuallyIs } = word.interference
+  const options = shuffle(
+    [word.translation, confusedWith, actuallyIs, '—'].filter((x) => x !== '—'),
+    ctx.seed)
+  return {
+    id: `ex.ff.${word.id}`,
+    kind: 'false-friend-contrast',
+    mode: 'choice',
+    difficulty: 4,
+    lexemeId: word.id,
+    grammarRuleIds: [],
+    moduleId: 'reading',
+    estimatedSec: 12,
+    instruction: 'Осторожно: ложный друг',
+    prompt: word.lemma,
+    options,
+    answer: word.translation,
+    explanation: `«${confusedWith}» по-польски — ${actuallyIs}`,
+  }
+}
+
+// ─────────────────────────────────────────────────────────────────────
+// Грамматика: дистракторы из настоящей парадигмы
+// ─────────────────────────────────────────────────────────────────────
+
+/** Человекочитаемая подпись тега. Приходит из языкового пакета. */
+export type TagLabeller = (tag: string) => string
+
+export function chooseForm(
+  lemma: string, paradigm: Paradigm, targetTag: string,
+  label: TagLabeller, ctx: ExerciseContext, ruleIds: string[] = [],
+): ChoiceExercise | null {
+  const answers = paradigm[targetTag]
+  if (!answers?.length) return null
+  const answer = answers[0]!
+  // Если целевая форма совпадает с начальной, упражнения нет: ответ
+  // написан в самом задании. Пропускаем — пусть вызывающий возьмёт
+  // другой тег.
+  if (answer === lemma) return null
+
+  // дистракторы — ДРУГИЕ реальные формы того же слова
+  const others = Object.entries(paradigm)
+    .filter(([tag]) => tag !== targetTag)
+    .flatMap(([, forms]) => forms)
+    .filter((f) => f !== answer)
+  const unique = [...new Set(others)]
+  if (unique.length < 2) return null
+
+  const distractors = shuffle(unique, ctx.seed).slice(0, 3)
+  return {
+    id: `ex.form.${lemma}.${targetTag}`,
+    kind: 'choose-form',
+    mode: 'choice',
+    difficulty: 3,
+    grammarRuleIds: ruleIds,
+    moduleId: 'grammar',
+    estimatedSec: 15,
+    instruction: label(targetTag),
+    prompt: lemma,
+    options: shuffle([answer, ...distractors], ctx.seed + 1),
+    answer,
+  }
+}
+
+/**
+ * Открытое задание: образовать форму самостоятельно.
+ * Именно такие задания на экзамене имеют большую различительную силу —
+ * понятные, но неверные формы баллов не получают.
+ */
+export function inflect(
+  lemma: string, paradigm: Paradigm, targetTag: string,
+  label: TagLabeller, ruleIds: string[] = [],
+): TypedExercise | null {
+  const accepted = paradigm[targetTag]
+  if (!accepted?.length) return null
+  if (accepted.length === 1 && accepted[0] === lemma) return null
+  return {
+    id: `ex.infl.${lemma}.${targetTag}`,
+    kind: 'inflect',
+    mode: 'typed',
+    difficulty: 5,
+    grammarRuleIds: ruleIds,
+    moduleId: 'grammar',
+    estimatedSec: 25,
+    instruction: label(targetTag),
+    prompt: lemma,
+    accepted: [...accepted],
+  }
+}
+
+export function gapFill(
+  sentence: string, blankFor: string, paradigm: Paradigm, targetTag: string,
+  label: TagLabeller, ctx: ExerciseContext, ruleIds: string[] = [],
+): ChoiceExercise | null {
+  const answers = paradigm[targetTag]
+  if (!answers?.length) return null
+  const answer = answers[0]!
+  const others = [...new Set(Object.entries(paradigm)
+    .filter(([t]) => t !== targetTag).flatMap(([, f]) => f))]
+    .filter((f) => f !== answer)
+  if (others.length < 2) return null
+
+  return {
+    id: `ex.gap.${blankFor}.${targetTag}`,
+    kind: 'gap-fill',
+    mode: 'choice',
+    difficulty: 4,
+    grammarRuleIds: ruleIds,
+    moduleId: 'grammar',
+    estimatedSec: 18,
+    instruction: `Вставьте нужную форму слова «${blankFor}»`,
+    prompt: sentence.replace('___', '␣␣␣'),
+    options: shuffle([answer, ...shuffle(others, ctx.seed).slice(0, 3)], ctx.seed + 1),
+    answer,
+    explanation: label(targetTag),
+  }
+}
+
+// ─────────────────────────────────────────────────────────────────────
+// Проверка ответа
+// ─────────────────────────────────────────────────────────────────────
+
+export interface CheckResult {
+  correct: boolean
+  /** Что именно не так — нужно для разбора и для статистики ошибок */
+  errorKind?: 'wrong-form' | 'diacritic' | 'typo' | 'wrong-word'
+  expected: string
+}
+
+/** Нормализация для сравнения: регистр и лишние пробелы. Диакритика — НЕТ. */
+const norm = (s: string) => s.trim().toLowerCase().replace(/\s+/g, ' ')
+
+/** Снятие диакритики — только чтобы отличить её потерю от другой ошибки. */
+const DIACRITIC_MAP: Record<string, string> = {
+  ą: 'a', ć: 'c', ę: 'e', ł: 'l', ń: 'n', ó: 'o', ś: 's', ź: 'z', ż: 'z',
+}
+const stripDiacritics = (s: string) =>
+  s.replace(/[ąćęłńóśźż]/g, (c) => DIACRITIC_MAP[c] ?? c)
+
+export function check(ex: Exercise, answer: string): CheckResult {
+  if (ex.mode === 'choice') {
+    return { correct: norm(answer) === norm(ex.answer), expected: ex.answer }
+  }
+  if (ex.mode === 'assemble') {
+    return {
+      correct: norm(answer) === norm(ex.answer),
+      expected: ex.answer,
+      errorKind: norm(answer) === norm(ex.answer) ? undefined
+        : stripDiacritics(norm(answer)) === stripDiacritics(norm(ex.answer))
+          ? 'diacritic' : 'typo',
+    }
+  }
+  // typed
+  const a = norm(answer)
+  if (ex.accepted.some((x) => norm(x) === a)) {
+    return { correct: true, expected: ex.accepted[0]! }
+  }
+  // диакритика потеряна — отдельная ошибка: на экзамене её засчитывают как ошибку,
+  // но учащемуся полезно знать, что форму он выбрал верно
+  if (ex.accepted.some((x) => stripDiacritics(norm(x)) === stripDiacritics(a))) {
+    return { correct: false, errorKind: 'diacritic', expected: ex.accepted[0]! }
+  }
+  const close = ex.accepted.some((x) => levenshtein(norm(x), a) <= 1)
+  return {
+    correct: false,
+    errorKind: close ? 'typo' : 'wrong-form',
+    expected: ex.accepted[0]!,
+  }
+}
+
+function levenshtein(a: string, b: string): number {
+  if (a === b) return 0
+  const prev = Array.from({ length: b.length + 1 }, (_, i) => i)
+  for (let i = 1; i <= a.length; i++) {
+    let last = prev[0]!
+    prev[0] = i
+    for (let j = 1; j <= b.length; j++) {
+      const tmp = prev[j]!
+      prev[j] = Math.min(
+        prev[j]! + 1, prev[j - 1]! + 1,
+        last + (a[i - 1] === b[j - 1] ? 0 : 1))
+      last = tmp
+    }
+  }
+  return prev[b.length]!
+}
+
+export const _internal = { levenshtein, stripDiacritics }

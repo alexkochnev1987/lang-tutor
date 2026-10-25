@@ -6,7 +6,7 @@
   "packageManager": "pnpm@9.15.0",
   "scripts": {
     "dev": "node scripts/sync-content.mjs && pnpm --filter @polski/web dev",
-    "build": "node scripts/sync-content.mjs && pnpm --filter @polski/web build",
+    "build": "node scripts/sync-content.mjs && pnpm --filter @polski/web build && node scripts/stamp-sw.mjs",
     "start": "pnpm --filter @polski/web start",
     "lint": "pnpm -r lint",
     "typecheck": "pnpm -r typecheck",

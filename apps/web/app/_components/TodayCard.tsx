@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect, useState } from 'react'
+import Link from 'next/link'
 import { useTranslations } from 'next-intl'
 import { Button, Card, Row, Stack } from '@polski/ui'
 import {
@@ -128,9 +129,16 @@ export function TodayCard() {
           </Stack>
         )}
 
-        <Button size="lg" full disabled>
-          {t('today.start', { minutes: Math.round(day.totalSec / 60) })}
-        </Button>
+        {/* Кнопка ведёт в занятие ВСЕГДА. Дни без слов и правил —
+            диагностика, срезы, контрольные — обрабатываются там
+            отдельными экранами, а не выключенной кнопкой. */}
+        <Link href="/lesson" className="w-full">
+          <Button size="lg" full>
+            {day.kind === 'diagnostic'
+              ? 'Пройти диагностику'
+              : t('today.start', { minutes: Math.round(day.totalSec / 60) })}
+          </Button>
+        </Link>
 
         <p className="text-xs text-muted">{day.expectedOutcome}</p>
       </Stack>

@@ -14,17 +14,33 @@ const row = tv({
       true:  'border-primary bg-soft2 text-ink',
       false: 'border-line bg-card text-ink hover:bg-soft',
     },
+    /** Подсветка после ответа: верный вариант всегда видно, даже если
+     *  выбран другой — иначе разбор ошибки не работает. */
+    outcome: {
+      none:    '',
+      correct: 'border-ok bg-ok-bg text-ok-ink',
+      wrong:   'border-danger bg-danger-bg text-danger-ink',
+    },
   },
-  defaultVariants: { selected: false },
+  defaultVariants: { selected: false, outcome: 'none' },
 })
 
-export function OptionRow({
-  selected, children, ...rest
-}: React.ComponentProps<'button'> & { selected?: boolean }) {
+type OptionRowProps = React.ComponentProps<'button'> & {
+  selected?: boolean
+  outcome?: 'none' | 'correct' | 'wrong'
+}
+
+export function OptionRow({ selected, outcome, children, ...rest }: OptionRowProps) {
+  const mark = outcome === 'correct' ? '✓' : outcome === 'wrong' ? '✗' : selected ? '✓' : null
   return (
-    <button type="button" className={row({ selected })} aria-pressed={selected} {...rest}>
+    <button
+      type="button"
+      className={row({ selected: outcome && outcome !== 'none' ? false : selected, outcome })}
+      aria-pressed={selected}
+      {...rest}
+    >
       {children}
-      {selected && <span className="ml-auto text-primary" aria-hidden>✓</span>}
+      {mark && <span className="ml-auto" aria-hidden>{mark}</span>}
     </button>
   )
 }

@@ -3,7 +3,7 @@ import { State } from 'ts-fsrs'
 import {
   applyAttempt, buildQueue, createScheduler, decayed, emptyMastery,
   evaluate, generateLesson, newItem, newItemAllowance, rate, weakestRules,
-  allocateExamTime, Rating,
+  allocateExamTime, estimateModuleReadiness, Rating,
   type DayPlan, type ModuleScore, type PassRule, type StudyItem,
 } from './index'
 
@@ -236,5 +236,66 @@ describe('генератор занятия', () => {
     })
     const drill = lesson.activities.find((a) => a.kind === 'grammar-drill')
     expect(drill?.refIds).toContain('pl.gram.v-government')
+  })
+})
+
+describe('оценка готовности из практики', () => {
+  const MODULES = ['listening', 'reading', 'grammar', 'writing', 'speaking']
+  const ruleModules = {
+    r1: ['grammar', 'writing'],
+    r2: ['grammar', 'speaking'],
+    r3: ['reading'],
+  }
+  const mastery = (v: number) =>
+    Object.keys(ruleModules).map((id) => ({
+      ...emptyMastery(id), mastery: v, attempts: 20, correct: 18,
+      lastPracticedAt: NOW.getTime(),
+    }))
+
+  const base = {
+    ruleModules, lexemesKnown: 100, lexemesTotal: 200,
+    modules: MODULES, now: NOW.getTime(),
+  }
+
+  it('без практики всё около нуля', () => {
+    const s = estimateModuleReadiness({ ...base, mastery: [], lexemesKnown: 0 })
+    expect(s.every((m) => m.estimatedPercent === 0)).toBe(true)
+  })
+
+  it('рост освоения поднимает оценку', () => {
+    const low = estimateModuleReadiness({ ...base, mastery: mastery(0.2) })
+    const high = estimateModuleReadiness({ ...base, mastery: mastery(0.9) })
+    const g = (xs: typeof low, id: string) =>
+      xs.find((m) => m.moduleId === id)!.estimatedPercent
+    expect(g(high, 'grammar')).toBeGreaterThan(g(low, 'grammar'))
+  })
+
+  it('у аудирования потолок ниже: текстом его не натренировать', () => {
+    const s = estimateModuleReadiness({
+      ...base, mastery: mastery(1), lexemesKnown: 200,
+    })
+    const listening = s.find((m) => m.moduleId === 'listening')!
+    const grammar = s.find((m) => m.moduleId === 'grammar')!
+    expect(listening.estimatedPercent).toBeLessThan(grammar.estimatedPercent)
+    expect(listening.estimatedPercent).toBeLessThanOrEqual(60)
+  })
+
+  it('реальный пробник перебивает оценку', () => {
+    const s = estimateModuleReadiness({
+      ...base, mastery: mastery(0.1), mockScores: { listening: 72 },
+    })
+    const l = s.find((m) => m.moduleId === 'listening')!
+    expect(l.estimatedPercent).toBe(72)
+    expect(l.confidence).toBeGreaterThan(0.8)
+  })
+
+  it('уверенность растёт с объёмом практики', () => {
+    const few = estimateModuleReadiness({
+      ...base,
+      mastery: [{ ...emptyMastery('r1'), mastery: 0.8, attempts: 2, lastPracticedAt: NOW.getTime() }],
+    })
+    const many = estimateModuleReadiness({ ...base, mastery: mastery(0.8) })
+    const c = (xs: typeof few) => xs.find((m) => m.moduleId === 'grammar')!.confidence
+    expect(c(many)).toBeGreaterThan(c(few))
   })
 })

@@ -12,8 +12,8 @@ const config: NextConfig = {
   // работает на хостингах без rewrite-правил.
   trailingSlash: true,
 
-  // UI-пакет поставляется исходниками — Next его транспилирует сам
-  transpilePackages: ['@polski/ui'],
+  // UI и движок поставляются исходниками — Next транспилирует их сам
+  transpilePackages: ['@polski/ui', '@polski/engine'],
 }
 
 export default config

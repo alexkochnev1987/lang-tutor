@@ -5,6 +5,7 @@ import { Row, Screen, Stack } from '@polski/ui'
 import { SettingsRow } from './_components/SettingsRow'
 import { SignInButton } from './_components/SignInButton'
 import { ThemePicker } from './_components/ThemePicker'
+import { Nav } from './_components/Nav'
 import { TodayCard } from './_components/TodayCard'
 
 /**
@@ -43,6 +44,8 @@ export default function TodayPage() {
           Данные хранятся только в этом браузере. Бэкенда нет.
         </p>
       </footer>
+
+      <Nav />
     </Screen>
   )
 }
