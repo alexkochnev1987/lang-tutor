@@ -22,7 +22,7 @@ export const dynamic = 'force-dynamic'
 
 const JWKS = createRemoteJWKSet(new URL('https://www.googleapis.com/oauth2/v3/certs'))
 
-export const POST = withUser(async ({ userId, req }) => {
+export const POST = withUser(async ({ userId, req, setSession }) => {
   const clientId = process.env.NEXT_PUBLIC_GOOGLE_CLIENT_ID
   if (!clientId) throw new Error('google_auth_not_configured')
 
@@ -66,7 +66,12 @@ export const POST = withUser(async ({ userId, req }) => {
   // Прогресс аккаунта — главнее: переключаем сессию на него, гостевые
   // строки не трогаем и не удаляем. Сливать два набора карточек FSRS
   // автоматически нельзя: это испортило бы расписание повторений.
+  //
+  // Переключение — это именно новая cookie. Без неё вход выглядел бы
+  // сделанным, но следующий же запрос шёл бы от гостя: человек видел бы
+  // пустой курс, а занятия продолжали бы писаться мимо аккаунта.
   await pg.update(users).set({ ...profile, lastSeenAt: sql`now()` })
     .where(eq(users.id, existing.id))
+  setSession(existing.id)
   return { userId: existing.id, linked: false, switched: true, switchTo: existing.id }
 })

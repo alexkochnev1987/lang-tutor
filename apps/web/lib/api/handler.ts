@@ -9,7 +9,21 @@
 import { NextResponse } from 'next/server'
 import { cookieOptions, resolveUser, SESSION_COOKIE, signSession } from '@/lib/auth/session'
 
-export type Handler<T> = (ctx: { userId: string; req: Request }) => Promise<T>
+export interface Ctx {
+  userId: string
+  req: Request
+  /**
+   * Перевыпустить сессию на другого пользователя.
+   *
+   * Нужно ровно одному роуту — входу через Google, когда аккаунт уже
+   * существует, а запрос пришёл из-под чужой гостевой строки. Ставить
+   * cookie сам роут не может: она попадает в ответ, а ответ собирается
+   * здесь.
+   */
+  setSession: (userId: string) => void
+}
+
+export type Handler<T> = (ctx: Ctx) => Promise<T>
 
 export function withUser<T>(handler: Handler<T>) {
   return async (req: Request): Promise<NextResponse> => {
@@ -24,13 +38,17 @@ export function withUser<T>(handler: Handler<T>) {
       return NextResponse.json({ error: 'database_unavailable', message }, { status: 503 })
     }
 
+    // Кого положить в cookie: нового гостя, либо того, на кого роут
+    // переключил сессию. null — cookie уже стоит и верна, не трогаем.
+    const session: { id: string | null } = { id: setCookie ? userId : null }
+
     try {
-      const body = await handler({ userId, req })
+      const body = await handler({ userId, req, setSession: (id) => { session.id = id } })
       const res = NextResponse.json(body ?? { ok: true })
       // Ответ персональный. Next по умолчанию ставит `public, max-age=0,
       // must-revalidate` — разделяемому кэшу такое хранить нечего.
       res.headers.set('cache-control', 'no-store, private')
-      if (setCookie) res.cookies.set(SESSION_COOKIE, await signSession(userId), cookieOptions)
+      if (session.id) res.cookies.set(SESSION_COOKIE, await signSession(session.id), cookieOptions)
       return res
     } catch (e) {
       const message = e instanceof Error ? e.message : 'internal_error'
