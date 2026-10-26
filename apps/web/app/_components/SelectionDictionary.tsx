@@ -3,9 +3,10 @@
 import { useEffect, useMemo, useState } from 'react'
 import { loadMorphology, loadVocabulary, type Lexeme } from '@/lib/content/curriculum'
 import { savePersonalWord, useAppState } from '@/lib/data/store'
+import { usePronounce } from '@/lib/speech/usePronounce'
 
 interface SelectedWord {
-  word: Lexeme
+  matches: Array<{ text: string; word: Lexeme }>
   selectedText: string
   left: number
   top: number
@@ -13,13 +14,19 @@ interface SelectedWord {
 
 const normalizeWord = (value: string): string => value.normalize('NFC').toLocaleLowerCase('pl-PL')
 
-function selectedWord(value: string): string | null {
-  const word = value.trim().replace(/^[^\p{L}]+|[^\p{L}]+$/gu, '')
-  return /^[\p{L}]+(?:[-'][\p{L}]+)*$/u.test(word) ? word : null
+function selectedPhrase(value: string): string | null {
+  const phrase = value.trim()
+    .replace(/^[^\p{L}]+/u, '')
+    .replace(/[^\p{L}]+$/u, '')
+    .replace(/\s+/g, ' ')
+  return /^[\p{L}]+(?:[-'’][\p{L}]+)*(?:\s+[\p{L}]+(?:[-'’][\p{L}]+)*)*$/u.test(phrase)
+    ? phrase
+    : null
 }
 
 export function SelectionDictionary() {
   const state = useAppState()
+  const { pronounce, message } = usePronounce()
   const [vocabulary, setVocabulary] = useState<Map<string, Lexeme> | null>(null)
   const [morphology, setMorphology] = useState<Record<string, Record<string, string[]>> | null>(null)
   const [selection, setSelection] = useState<SelectedWord | null>(null)
@@ -54,7 +61,7 @@ export function SelectionDictionary() {
     function updateSelection() {
       const nativeSelection = window.getSelection()
       const raw = nativeSelection?.toString() ?? ''
-      const normalized = selectedWord(raw)
+      const normalized = selectedPhrase(raw)
       const range = nativeSelection && nativeSelection.rangeCount > 0
         ? nativeSelection.getRangeAt(0)
         : null
@@ -64,8 +71,11 @@ export function SelectionDictionary() {
         return
       }
 
-      const word = byForm?.get(normalizeWord(normalized))
-      if (!word || !range) {
+      const matches = normalized.split(' ').map((text) => ({
+        text,
+        word: byForm?.get(normalizeWord(text)),
+      })).filter((match): match is { text: string; word: Lexeme } => Boolean(match.word))
+      if (!matches.length || !range) {
         setSelection(null)
         return
       }
@@ -73,10 +83,10 @@ export function SelectionDictionary() {
       const rect = range.getBoundingClientRect()
       const width = 280
       setSelection({
-        word,
+        matches,
         selectedText: raw.trim(),
         left: Math.min(Math.max(8, rect.left), Math.max(8, window.innerWidth - width - 8)),
-        top: Math.min(rect.bottom + 8, window.innerHeight - 150),
+        top: Math.min(rect.bottom + 8, Math.max(8, window.innerHeight - 280)),
       })
     }
 
@@ -89,8 +99,9 @@ export function SelectionDictionary() {
   }, [byForm])
 
   useEffect(() => {
-    setSaved(Boolean(selection && state?.personalDict.some(
-      (word) => normalizeWord(word.lemma) === normalizeWord(selection.selectedText),
+    const match = selection?.matches.length === 1 ? selection.matches[0] : null
+    setSaved(Boolean(match && state?.personalDict.some(
+      (word) => normalizeWord(word.lemma) === normalizeWord(match.text),
     )))
   }, [selection, state?.personalDict])
 
@@ -98,14 +109,15 @@ export function SelectionDictionary() {
   const currentSelection = selection
 
   async function save() {
-    if (saved || saving) return
+    const match = currentSelection.matches.length === 1 ? currentSelection.matches[0] : null
+    if (!match || saved || saving) return
     setSaving(true)
     const ok = await savePersonalWord({
       lemma: currentSelection.selectedText,
-      translation: currentSelection.word.translation,
+      translation: match.word.translation,
       sourceUrl: window.location.pathname,
       context: currentSelection.selectedText,
-      linkedLexemeId: currentSelection.word.id,
+      linkedLexemeId: match.word.id,
     })
     setSaving(false)
     if (ok) setSaved(true)
@@ -119,17 +131,44 @@ export function SelectionDictionary() {
       onPointerDown={(event) => event.stopPropagation()}
       aria-label="Tłumaczenie zaznaczonego słowa"
     >
-      <div className="text-sm text-muted">Tłumaczenie</div>
-      <div className="mt-1 text-base font-semibold text-ink" lang="pl">{currentSelection.selectedText}</div>
-      <div className="text-sm text-muted">{currentSelection.word.translation}</div>
-      <button
-        type="button"
-        disabled={saved || saving}
-        onClick={() => void save()}
-        className="mt-3 min-h-9 w-full rounded-card border border-primary bg-transparent px-3 text-sm font-medium text-primary hover:bg-soft disabled:opacity-60"
-      >
-        {saved ? 'Już w słowniku' : saving ? 'Zapisywanie…' : 'Zapisz do słownika'}
-      </button>
+      <div className="text-sm text-muted">
+        {currentSelection.matches.length > 1 ? 'Tłumaczenie słów' : 'Tłumaczenie'}
+      </div>
+      <div className="mt-1 flex items-center gap-2">
+        <div className="min-w-0 flex-1 text-base font-semibold text-ink" lang="pl">
+          {currentSelection.selectedText}
+        </div>
+        <button
+          type="button"
+          aria-label={`Wymów ${currentSelection.selectedText}`}
+          title={message ?? `Wymów ${currentSelection.selectedText}`}
+          onClick={() => pronounce(currentSelection.selectedText)}
+          className="flex size-8 shrink-0 items-center justify-center rounded-pill bg-soft text-base text-ink hover:bg-soft2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+        >
+          {message ? '🔇' : '🔊'}
+        </button>
+      </div>
+      <div className="mt-2 space-y-1 text-sm text-muted">
+        {currentSelection.matches.map((match) => (
+          <div key={`${match.text}-${match.word.id}`} className="flex items-baseline justify-between gap-3">
+            <span lang="pl">{match.text}</span>
+            <span className="text-right text-ink">{match.word.translation}</span>
+          </div>
+        ))}
+      </div>
+      {message && <div className="mt-1 text-xs text-danger-ink" role="status">{message}</div>}
+      {currentSelection.matches.length === 1 ? (
+        <button
+          type="button"
+          disabled={saved || saving}
+          onClick={() => void save()}
+          className="mt-3 min-h-9 w-full rounded-card border border-line bg-transparent px-3 text-sm font-medium text-ink hover:bg-soft disabled:opacity-60"
+        >
+          {saved ? 'Już w słowniku' : saving ? 'Zapisywanie…' : 'Zapisz do słownika'}
+        </button>
+      ) : (
+        <div className="mt-3 text-xs text-muted">Aby zapisać słowo, zaznacz je osobno.</div>
+      )}
     </aside>
   )
 }

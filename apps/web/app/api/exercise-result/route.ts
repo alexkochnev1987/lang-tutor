@@ -1,4 +1,4 @@
-import { sql } from 'drizzle-orm'
+import { and, inArray, sql, eq } from 'drizzle-orm'
 import { pg } from '@/lib/db/pg'
 import { exerciseResults } from '@/lib/db/schema'
 import { withUser } from '@/lib/api/handler'
@@ -49,6 +49,30 @@ export const POST = withUser(async ({ userId, req }) => {
       updatedAt: sql`now()`,
     },
   })
+
+  return { ok: true }
+})
+
+interface ResetBody {
+  dayNumber: number
+  exerciseIds: string[]
+}
+
+export const DELETE = withUser(async ({ userId, req }) => {
+  const body = await req.json() as ResetBody
+  const exerciseIds = Array.isArray(body.exerciseIds)
+    ? body.exerciseIds.filter((id): id is string => typeof id === 'string' && Boolean(id.trim()))
+    : []
+  if (!Number.isInteger(body.dayNumber) || body.dayNumber < 1 || !exerciseIds.length) {
+    throw new Error('bad_exercise_reset')
+  }
+
+  await pg.delete(exerciseResults).where(and(
+    eq(exerciseResults.userId, userId),
+    eq(exerciseResults.courseId, COURSE_ID),
+    eq(exerciseResults.dayNumber, body.dayNumber),
+    inArray(exerciseResults.exerciseId, exerciseIds),
+  ))
 
   return { ok: true }
 })

@@ -1,4 +1,4 @@
-import { hashString, type Exercise } from '@polski/engine'
+import type { Exercise } from '@polski/engine'
 import {
   currentDayNumber, loadCurriculum, loadGrammarRules, loadGrammarSentences,
   loadMorphology, loadReadingTexts, loadVocabulary,
@@ -57,11 +57,9 @@ export interface TodayPlan {
 const WORD_INTRO_SEC = 20
 const RULE_INTRO_SEC = 60
 const DRILLS_PER_RULE = 10
-const SENTENCES_PER_TASK = 10
-const MIN_GRAMMAR_EXERCISES = 10
+const MIN_GRAMMAR_EXAMPLES_PER_TYPE = 10
 const WRITE_TASKS_PER_RULE = 2
-const EXAM_TASK_COUNT = 4
-const EXAM_TASKS_PER_RULE = 2
+const EXAM_TASK_COUNT = 10
 
 const MODULES_WITH_GENERATOR = new Set(['grammar'])
 
@@ -125,13 +123,13 @@ export async function buildTodayPlan(): Promise<TodayPlan> {
   const dayRule = day.grammarRuleIds[0] ? localized(day.grammarRuleIds[0]) : null
   const drillSteps = buildDrillSteps(
     ruleIds, [...newWords, ...practisedPool], morphology, sentences, localized,
-    dayNumber, curriculum.stats.totalDays)
+    dayNumber)
 
   const examSteps = day.examFocus === 'reading'
     ? buildReadingSteps(readingTexts, day.day, exerciseIdsOf(drillSteps))
     : MODULES_WITH_GENERATOR.has(day.examFocus)
     ? buildExamSteps(
-        [...new Set([...state.mastery.map((m) => m.grammarRuleId), ...ruleIds])],
+        [...new Set([...ruleIds, ...state.mastery.map((m) => m.grammarRuleId)])],
         practisedPool, morphology, localized, exerciseIdsOf(drillSteps))
     : []
 
@@ -236,84 +234,51 @@ function buildDrillSteps(
   sentences: SentencePack,
   localized: (id: string) => LocalizedRule | null,
   dayNumber: number,
-  totalDays: number,
 ): Step[] {
-  const steps: Step[] = []
-  const used = new Set<string>()
-  const writeUnlocked = dayNumber * 3 >= totalDays * 2
-  for (const ruleId of ruleIds) {
-    const rule = localized(ruleId)
+  // Each answer mode gets its own quota. We deliberately build both pools
+  // from the same sentence pack instead of choosing one mode per rule: one
+  // rule must never produce ten typed items and only two choice items.
+  function buildModeSteps(mode: SentenceMode): Step[] {
+    const candidates: Step[] = []
+    const used = new Set<string>()
 
-    const mode: SentenceMode =
-      (hashString(ruleId) + dayNumber) % 2 === 0 ? 'choice' : 'typed'
-    const drills = sentenceDrillsForRule(
-      ruleId, sentences, morphology, mode, dayNumber, SENTENCES_PER_TASK)
-    if (drills.length) {
+    for (const ruleId of ruleIds) {
+      if (candidates.length >= MIN_GRAMMAR_EXAMPLES_PER_TYPE) break
+      const rule = localized(ruleId)
+      const drills = sentenceDrillsForRule(
+        ruleId,
+        sentences,
+        morphology,
+        mode,
+        dayNumber,
+        MIN_GRAMMAR_EXAMPLES_PER_TYPE - candidates.length,
+      )
       for (const d of drills) {
         if (used.has(d.ex.id)) continue
         used.add(d.ex.id)
-        steps.push({ kind: 'exercise', ex: d.ex, review: false, rule, variants: d.variants })
+        candidates.push({ kind: 'exercise', ex: d.ex, review: false, rule, variants: d.variants })
+        if (candidates.length >= MIN_GRAMMAR_EXAMPLES_PER_TYPE) break
       }
-      if (writeUnlocked) {
-        for (const ex of sentenceWriteDrills(ruleId, sentences, dayNumber, WRITE_TASKS_PER_RULE)) {
-          if (used.has(ex.id)) continue
-          used.add(ex.id)
-          steps.push({ kind: 'exercise', ex, review: false, rule })
-        }
-      }
-      continue
     }
 
-    for (const ex of exercisesForRule(ruleId, words, morphology, DRILLS_PER_RULE)) {
-      if (used.has(ex.id)) continue
-      used.add(ex.id)
-      steps.push({ kind: 'exercise', ex, review: false, rule })
-    }
+    // An incomplete block is worse than no block: the content pack must be
+    // extended instead of silently replacing sentence exercises with a
+    // one-word paradigm drill.
+    return candidates.length >= MIN_GRAMMAR_EXAMPLES_PER_TYPE ? candidates : []
   }
 
-  // Один грамматический блок не должен заканчиваться после одного
-  // предложения: добираем до минимальных десяти предложений из языкового
-  // пакета, даже если основной режим не смог собрать все варианты выбора.
-  const sentenceSteps = () => steps.filter(
-    (step) => step.kind === 'exercise' &&
-      (step.ex.kind === 'sentence-choice' || step.ex.kind === 'sentence-typed'))
-  const usedSentenceIds = new Set(
-    sentenceSteps().map((step) => step.kind === 'exercise'
-      ? step.ex.id.replace(/\.(choice|typed)$/, '') : ''))
+  const choiceSteps = buildModeSteps('choice')
+  const typedSteps = buildModeSteps('typed')
+  const steps = [...choiceSteps, ...typedSteps]
+
   for (const ruleId of ruleIds) {
-    if (sentenceSteps().length >= MIN_GRAMMAR_EXERCISES) break
     const rule = localized(ruleId)
-    const fallback = sentenceDrillsForRule(
-      ruleId, sentences, morphology, 'typed', dayNumber, SENTENCES_PER_TASK)
-    for (const d of fallback) {
-      const sentenceId = d.ex.id.replace(/\.(choice|typed)$/, '')
-      if (usedSentenceIds.has(sentenceId)) continue
-      usedSentenceIds.add(sentenceId)
-      steps.push({ kind: 'exercise', ex: d.variants.typed ?? d.ex, review: false, rule })
-      if (sentenceSteps().length >= MIN_GRAMMAR_EXERCISES) break
-    }
+    steps.push(...sentenceWriteDrills(
+      ruleId, sentences, dayNumber, WRITE_TASKS_PER_RULE,
+    ).map((ex): Step => ({ kind: 'exercise', ex, review: false, rule })))
   }
+
   return steps
-}
-
-export function hasAltMode(step: Step | undefined): boolean {
-  if (step?.kind !== 'exercise' || !step.variants) return false
-  const cur: SentenceMode = step.ex.kind === 'sentence-choice' ? 'choice' : 'typed'
-  return (Object.keys(step.variants) as SentenceMode[]).some((m) => m !== cur)
-}
-
-export function otherDrillMode(step: Step | undefined): SentenceMode | null {
-  if (step?.kind !== 'exercise' || !step.variants) return null
-  const cur: SentenceMode = step.ex.kind === 'sentence-choice' ? 'choice' : 'typed'
-  const alts = (Object.keys(step.variants) as SentenceMode[]).filter((m) => m !== cur)
-  if (!alts.length) return null
-  return alts[Math.floor(Math.random() * alts.length)]!
-}
-
-export function withDrillMode(step: Step, mode: SentenceMode): Step {
-  if (step.kind !== 'exercise' || !step.variants) return step
-  const ex = step.variants[mode]
-  return ex ? { ...step, ex } : step
 }
 
 function buildExamSteps(
@@ -325,19 +290,31 @@ function buildExamSteps(
 ): Step[] {
   const steps: Step[] = []
   const used = new Set(alreadyDrilled)
-  for (const ruleId of ruleIds) {
-    if (steps.length >= EXAM_TASK_COUNT) break
-    const rule = localized(ruleId)
-    const generated = exercisesForRule(
-      ruleId, words, morphology, DRILLS_PER_RULE + EXAM_TASKS_PER_RULE)
-    let takenForRule = 0
-    for (const ex of generated) {
-      if (used.has(ex.id)) continue
-      if (takenForRule >= EXAM_TASKS_PER_RULE || steps.length >= EXAM_TASK_COUNT) break
+  const pools = ruleIds.map((ruleId) => ({
+    rule: localized(ruleId),
+    exercises: exercisesForRule(ruleId, words, morphology, EXAM_TASK_COUNT),
+    cursor: 0,
+  }))
+
+  // Round-robin keeps the current rule and older mastered rules in the same
+  // exam block instead of exhausting one rule before repeating another.
+  let progressed = true
+  while (steps.length < EXAM_TASK_COUNT && progressed) {
+    progressed = false
+    for (const pool of pools) {
+      while (pool.cursor < pool.exercises.length && used.has(pool.exercises[pool.cursor]!.id)) {
+        pool.cursor++
+      }
+      const ex = pool.exercises[pool.cursor++]
+      if (!ex) continue
       used.add(ex.id)
-      takenForRule++
-      steps.push({ kind: 'exercise', ex, review: false, rule })
+      steps.push({ kind: 'exercise', ex, review: false, rule: pool.rule })
+      progressed = true
+      if (steps.length >= EXAM_TASK_COUNT) break
     }
   }
-  return steps
+
+  // Do not render a misleading one-item exam block: it must be a real
+  // practice set with at least the required ten examples.
+  return steps.length >= EXAM_TASK_COUNT ? steps : []
 }

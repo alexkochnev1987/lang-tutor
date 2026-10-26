@@ -277,6 +277,27 @@ export async function saveExerciseResult(input: Omit<ExerciseResultRow, 'courseI
   }
 }
 
+export async function resetExerciseResults(dayNumber: number, exerciseIds: string[]): Promise<boolean> {
+  const ids = new Set(exerciseIds)
+  patch((s) => ({
+    ...s,
+    exerciseResults: s.exerciseResults.filter((result) => (
+      result.dayNumber !== dayNumber || !ids.has(result.exerciseId)
+    )),
+  }))
+  try {
+    await request('/api/exercise-result/', {
+      method: 'DELETE',
+      body: JSON.stringify({ dayNumber, exerciseIds }),
+    })
+    return true
+  } catch (e) {
+    console.error('[exercise-result-reset]', e)
+    void refresh()
+    return false
+  }
+}
+
 export function knownLexemeIds(state: AppState | null): ReadonlySet<string> {
   return new Set(
     (state?.lexemeStatus ?? []).filter((l) => l.status === 'known').map((l) => l.lexemeId))

@@ -5,7 +5,7 @@ import Link from 'next/link'
 import { Button, Card, Row, Screen, Stack } from '@polski/ui'
 import type { CheckResult, Exercise } from '@polski/engine'
 import {
-  buildTodayPlan, hasAltMode, otherDrillMode, withDrillMode,
+  buildTodayPlan,
   type Stage, type Step,
 } from '@/lib/engine/plan'
 import { recordRuleAttempt } from '@/lib/engine/session'
@@ -41,13 +41,6 @@ export default function GrammarPage() {
   useEffect(() => { load() }, [load])
 
   const step = drills[0]
-
-  function switchKind() {
-    const mode = otherDrillMode(drills[0])
-    if (!mode) return
-    // Переключаем тип сразу у всех предложений блока.
-    setDrills((prev) => prev.map((s) => withDrillMode(s, mode)))
-  }
 
   async function onAnswered(
     ex: Exercise, r: CheckResult, complete = true, attempts = 1, answer = '',
@@ -177,15 +170,10 @@ export default function GrammarPage() {
             dayNumber={dayNumber}
             onAnswered={(ex, r, _ms, attempts, answer) => void onAnswered(ex, r, false, attempts, answer)}
             onComplete={() => setCanAdvance(true)}
+            onReset={() => setCanAdvance(false)}
           />
           <Row gap="sm" justify="center">
             {step.rule && <RuleSheet rule={step.rule} />}
-            {!canAdvance && hasAltMode(step) && (
-              <Button variant="outline" size="sm" onClick={switchKind}>
-                <span aria-hidden>🎲</span>
-                Inny typ zadania
-              </Button>
-            )}
           </Row>
           {canAdvance && (
             <Button size="lg" full onClick={() => void next()}>

@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from 'react'
 import { Button, Card, OptionRow, Row, Stack } from '@polski/ui'
 import { check, type CheckResult, type Exercise } from '@polski/engine'
 import { usePronounce } from '@/lib/speech/usePronounce'
-import { useAppState } from '@/lib/data/store'
+import { resetExerciseResults, useAppState } from '@/lib/data/store'
 
 export function SpeakIcon({ text, size = 'md' }: { text: string; size?: 'sm' | 'md' }) {
   const { pronounce, message } = usePronounce()
@@ -499,19 +499,21 @@ export function ExerciseView({
 }
 
 /**
- * Пакет грамматических предложений: все строки остаются на одной странице,
- * а завершить блок можно только после проверки каждой строки.
+ * Пошаговый пакет грамматических заданий. Внутри одного типа все примеры
+ * остаются на одной странице, а следующий тип открывается автоматически.
  */
 export function GrammarExerciseBatch({
-  exercises, onAnswered, onComplete, dayNumber,
+  exercises, onAnswered, onComplete, onReset, dayNumber,
 }: {
   exercises: Exercise[]
   onAnswered: (exercise: Exercise, result: CheckResult, ms: number, attempts: number, answer: string) => void
   onComplete: () => void
+  onReset?: () => void
   dayNumber: number
 }) {
   const state = useAppState()
   const [completedIds, setCompletedIds] = useState<Set<string>>(() => new Set())
+  const [resetting, setResetting] = useState(false)
   const completionNotified = useRef(false)
 
   useEffect(() => {
@@ -526,12 +528,35 @@ export function GrammarExerciseBatch({
       .filter((result) => result.dayNumber === dayNumber)
       .map((result) => [result.exerciseId, result]),
   )
-  const groups = (['choice', 'typed'] as const)
-    .map((mode) => ({
-      mode,
-      exercises: exercises.filter((exercise) => exercise.mode === mode),
+  const groups = (['choice', 'typed', 'write'] as const)
+    .map((type) => ({
+      type,
+      exercises: exercises.filter((exercise) => (
+        type === 'choice'
+          ? exercise.mode === 'choice'
+          : type === 'write'
+            ? exercise.kind === 'sentence-write'
+            : exercise.mode === 'typed' && exercise.kind !== 'sentence-write'
+      )),
     }))
     .filter((group) => group.exercises.length > 0)
+
+  const activeGroupIndex = groups.findIndex((group) => (
+    group.exercises.some((exercise) => !completedIds.has(exercise.id))
+  ))
+  const activeGroup = activeGroupIndex >= 0 ? groups[activeGroupIndex] : null
+
+  async function resetBlock() {
+    if (resetting) return
+    setResetting(true)
+    const ok = await resetExerciseResults(dayNumber, exercises.map((exercise) => exercise.id))
+    if (ok) {
+      completionNotified.current = false
+      setCompletedIds(new Set())
+      onReset?.()
+    }
+    setResetting(false)
+  }
 
   useEffect(() => {
     setCompletedIds(new Set(
@@ -548,43 +573,53 @@ export function GrammarExerciseBatch({
     })
   }
 
+  if (!activeGroup) {
+    return (
+      <Stack gap="md" className="mx-auto w-full max-w-(--container-exercise)" align="center">
+        <div className="w-full rounded-card border border-ok bg-ok-bg px-4 py-4 text-center">
+          <p className="font-semibold text-ok-ink">Blok gramatyki ukończony</p>
+          <p className="mt-1 text-sm text-muted">Wynik zapisany. Możesz przejść dalej albo powtórzyć blok.</p>
+        </div>
+        <Button variant="outline" size="sm" disabled={resetting} onClick={() => void resetBlock()}>
+          {resetting ? 'Przygotowuję…' : 'Powtórz blok'}
+        </Button>
+      </Stack>
+    )
+  }
+
   return (
     <Stack gap="lg" className="mx-auto w-full max-w-(--container-exercise)">
-      {groups.map((group, groupIndex) => {
-        const offset = groups
-          .slice(0, groupIndex)
-          .reduce((count, previous) => count + previous.exercises.length, 0)
-        return (
-          <Stack key={group.mode} gap="md">
-            <p className="text-left text-sm tracking-wide text-muted uppercase">
-              {group.exercises[0]!.instruction}
-            </p>
-            {group.exercises.map((exercise, index) => (
-              <div key={exercise.id} className="w-full">
-                <ExerciseView
-                  exercise={exercise}
-                  bare
-                  autoFocus={groupIndex === 0 && index === 0}
-                  showInstruction={false}
-                  leadingNumber={offset + index + 1}
-                  restoredResult={restored.get(exercise.id) ? {
-                    result: {
-                      correct: restored.get(exercise.id)!.correct,
-                      expected: restored.get(exercise.id)!.expected,
-                      errorKind: restored.get(exercise.id)!.errorKind ?? undefined,
-                    },
-                    answer: restored.get(exercise.id)!.answer,
-                    attempts: restored.get(exercise.id)!.attempts,
-                  } : null}
-                  onAnswered={(result, ms, attempts, answer) => (
-                    handleAnswered(exercise, result, ms, attempts, answer)
-                  )}
-                />
-              </div>
-            ))}
-          </Stack>
-        )
-      })}
+      <Stack gap="sm">
+        <p className="text-left text-sm tracking-wide text-muted uppercase">
+          {activeGroup.exercises[0]!.instruction}
+        </p>
+        <p className="text-left text-xs text-muted">
+          Blok {activeGroupIndex + 1} z {groups.length}
+        </p>
+      </Stack>
+      {activeGroup.exercises.map((exercise, index) => (
+        <div key={exercise.id} className="w-full">
+          <ExerciseView
+            exercise={exercise}
+            bare
+            autoFocus={index === 0}
+            showInstruction={false}
+            leadingNumber={index + 1}
+            restoredResult={restored.get(exercise.id) ? {
+              result: {
+                correct: restored.get(exercise.id)!.correct,
+                expected: restored.get(exercise.id)!.expected,
+                errorKind: restored.get(exercise.id)!.errorKind ?? undefined,
+              },
+              answer: restored.get(exercise.id)!.answer,
+              attempts: restored.get(exercise.id)!.attempts,
+            } : null}
+            onAnswered={(result, ms, attempts, answer) => (
+              handleAnswered(exercise, result, ms, attempts, answer)
+            )}
+          />
+        </div>
+      ))}
     </Stack>
   )
 }

@@ -5,7 +5,7 @@ import Link from 'next/link'
 import { Button, Card, Row, Screen, Stack } from '@polski/ui'
 import type { CheckResult, Exercise } from '@polski/engine'
 import {
-  buildTodayPlan, hasAltMode, otherDrillMode, withDrillMode,
+  buildTodayPlan,
   type Stage, type StageId, type Step, type TodayPlan,
 } from '@/lib/engine/plan'
 import { ensureLexemeCards, recordAnswer, recordRuleAttempt, Rating } from '@/lib/engine/session'
@@ -78,10 +78,10 @@ export default function LessonPage() {
     : []
   const indexInStage = slot ? stageSlots.indexOf(slot) + 1 : 0
   const grammarExerciseSlots = slots.filter((s) => (
-    s.kind === 'step' && s.step.kind === 'exercise' && s.step.ex.moduleId === 'grammar'
+    s.kind === 'step' && s.stage.id === 'grammar' && s.step.kind === 'exercise'
   ))
   const grammarExerciseIndex = slot?.kind === 'step'
-    && slot.step.kind === 'exercise' && slot.step.ex.moduleId === 'grammar'
+    && slot.stage.id === 'grammar' && slot.step.kind === 'exercise'
     ? grammarExerciseSlots.indexOf(slot) + 1
     : 0
 
@@ -91,7 +91,7 @@ export default function LessonPage() {
     if (complete) setCanAdvance(true)
     setStats((s) => ({ correct: s.correct + (r.correct ? 1 : 0), total: s.total + 1 }))
 
-    if (ex.kind === 'sentence-choice' || ex.kind === 'sentence-typed') {
+    if (ex.moduleId === 'grammar') {
       await saveExerciseResult({
         dayNumber: plan?.dayNumber ?? 1,
         exerciseId: ex.id,
@@ -114,16 +114,6 @@ export default function LessonPage() {
     }
   }
 
-  function switchKind() {
-    const cur = slots[i]
-    if (cur?.kind !== 'step') return
-    const mode = otherDrillMode(cur.step)
-    if (!mode) return
-    // disliking the kind, not the sentence — so the rest of the task switches too
-    setSlots((prev) => prev.map((s, idx) => (
-      idx < i || s.kind !== 'step' ? s : { ...s, step: withDrillMode(s.step, mode) })))
-  }
-
   function skipWord(lexemeId: string) {
     setSlots((prev) => prev.filter((s, idx) => idx <= i
       || !(s.kind === 'step' && s.step.kind === 'exercise' && s.step.ex.lexemeId === lexemeId)))
@@ -132,9 +122,9 @@ export default function LessonPage() {
 
   function next() {
     setCanAdvance(false)
-    if (slot?.kind === 'step' && slot.step.kind === 'exercise' && slot.step.ex.moduleId === 'grammar') {
+    if (slot?.kind === 'step' && slot.stage.id === 'grammar' && slot.step.kind === 'exercise') {
       const lastGrammarIndex = slots.reduce((last, current, index) => (
-        current.kind === 'step' && current.step.kind === 'exercise' && current.step.ex.moduleId === 'grammar'
+        current.kind === 'step' && current.stage.id === 'grammar' && current.step.kind === 'exercise'
           ? index
           : last
       ), -1)
@@ -267,7 +257,7 @@ export default function LessonPage() {
         </div>
       </header>
 
-      <main className="mx-auto flex w-full max-w-2xl flex-1 flex-col justify-center px-4 pb-4">
+      <main className="mx-auto flex min-h-0 w-full max-w-2xl flex-1 flex-col justify-start overflow-y-auto overscroll-contain px-4 pb-4">
         {slot?.kind === 'stage-start' && (
           <StageStart stage={slot.stage} onNext={next} />
         )}
@@ -306,7 +296,8 @@ export default function LessonPage() {
                 ))}
                 dayNumber={plan.dayNumber}
                 onAnswered={(ex, r, ms, attempts, answer) => void onAnswered(ex, r, ms, false, attempts, answer)}
-                onComplete={() => setCanAdvance(true)}
+                onComplete={() => void next()}
+                onReset={() => setCanAdvance(false)}
               />
             ) : readingTextOf(slot.step.ex) ? (
               <ReadingExerciseBlock
@@ -329,12 +320,6 @@ export default function LessonPage() {
             )}
             <Row gap="sm" justify="center">
               {slot.step.rule && <RuleSheet rule={slot.step.rule} />}
-              {!canAdvance && hasAltMode(slot.step) && (
-                <Button variant="outline" size="sm" onClick={switchKind}>
-                  <span aria-hidden>🎲</span>
-                  Inny typ zadania
-                </Button>
-              )}
             </Row>
             {canAdvance && (
               <Button variant="outline" size="lg" full onClick={next}>
