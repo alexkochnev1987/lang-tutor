@@ -10,6 +10,7 @@ export type ExerciseKind =
   | 'translate-recognition'   // pl → ru, выбор из вариантов
   | 'translate-production'    // ru → pl, выбор или ввод
   | 'spelling'                // собрать слово из букв — тренирует диакритику
+  | 'listen-write'            // услышать польское слово и вписать его
   | 'inflect'                 // образовать форму: открытое задание экзамена
   | 'choose-form'             // выбрать верную форму — закрытое задание
   | 'gap-fill'                // вставить слово в предложение
@@ -60,6 +61,8 @@ export interface TypedExercise extends ExerciseBase {
   instruction: string
   /** Принимаемые ответы — вариантов может быть несколько (rękami / rękoma) */
   accepted: string[]
+  /** Текст, который приложение произносит в аудио-задании. */
+  speakText?: string
   explanation?: string
 }
 

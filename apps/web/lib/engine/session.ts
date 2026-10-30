@@ -120,6 +120,19 @@ export async function recordAnswer(
 }
 
 /**
+ * Завершение полного цикла нового слова. Один вызов рейтинга на каждую
+ * сторону карточки, а не отдельный рейтинг после каждого упражнения.
+ */
+export async function completeLexemeLearning(
+  lexemeId: string, allCorrect: boolean, responseMs = 0,
+): Promise<void> {
+  const rating = allCorrect ? Rating.Good : Rating.Again
+  await ensureLexemeCards(lexemeId)
+  await recordAnswer(`lexeme-recognition:${lexemeId}`, rating, responseMs)
+  await recordAnswer(`lexeme-production:${lexemeId}`, rating, responseMs)
+}
+
+/**
  * Ответ на упражнение по правилу.
  *
  * Грамматика идёт в mastery-модель, а не в FSRS: правило — это навык на

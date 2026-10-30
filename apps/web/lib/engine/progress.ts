@@ -38,6 +38,7 @@ export interface Accuracy {
 export interface Progress {
   day: number
   totalDays: number
+  completedDays: number[]
   daysCompleted: number
   streak: number
   scores: ModuleScore[]
@@ -159,6 +160,7 @@ export async function loadProgress(): Promise<Progress> {
   return {
     day: Math.min(curriculum.stats.totalDays, daysCompleted + 1),
     totalDays: curriculum.stats.totalDays,
+    completedDays: [...programDays].sort((a, b) => a - b),
     daysCompleted,
     streak: computeStreak(sessions.map((s) => s.completedAt!).sort((a, b) => +b - +a)),
     scores,

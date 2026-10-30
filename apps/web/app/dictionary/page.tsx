@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect, useMemo, useState } from 'react'
+import Link from 'next/link'
 import { Button, Card, Row, Screen, Segmented, Stack } from '@polski/ui'
 import { Nav } from '@/app/_components/Nav'
 import { ThemePicker } from '@/app/_components/ThemePicker'
@@ -18,6 +19,12 @@ const FILTERS = [
 ] as const
 
 const PAGE_SIZE = 40
+
+function completedWordId(sessionId: string): string | null {
+  const marker = ':word:'
+  const markerIndex = sessionId.lastIndexOf(marker)
+  return markerIndex >= 0 ? sessionId.slice(markerIndex + marker.length) : null
+}
 
 export default function DictionaryPage() {
   const state = useAppState()
@@ -40,6 +47,14 @@ export default function DictionaryPage() {
   const startedIds = useMemo(
     () => new Set((state?.studyItems ?? []).map((i) => i.refId)),
     [state?.studyItems])
+
+  const completedIds = useMemo(
+    () => new Set((state?.sessions ?? [])
+      .filter((session) => session.kind === 'words' && session.completedAt)
+      .map((session) => completedWordId(session.id))
+      .filter((id): id is string => Boolean(id))),
+    [state?.sessions],
+  )
 
   const visible = useMemo(() => {
     if (!words) return []
@@ -68,12 +83,18 @@ export default function DictionaryPage() {
     <Screen>
       <header className="mx-auto w-full max-w-2xl px-4 py-3">
         <Stack gap="sm">
-          <Row justify="between">
+          <Row justify="between" gap="sm">
             <h1 className="text-lg font-semibold">Словарь</h1>
             <Row gap="sm">
               <span className="text-sm tabular-nums text-muted">
-                {knownIds.size} знаю · {words?.length ?? 0} всего
+                {knownIds.size} знаю · {completedIds.size} пройдено · {words?.length ?? 0} всего
               </span>
+              <Link
+                href="/words"
+                className="rounded-pill border border-primary px-2.5 py-1 text-xs font-medium text-primary hover:bg-soft"
+              >
+                Учить 5
+              </Link>
               <ThemePicker />
             </Row>
           </Row>
@@ -130,7 +151,9 @@ export default function DictionaryPage() {
           {visible.length > 0 && (
             <Card>
               <div className="-my-2">
-                {visible.slice(0, limit).map((w) => <WordRow key={w.id} word={w} />)}
+                {visible.slice(0, limit).map((w) => (
+                  <WordRow key={w.id} word={w} completed={completedIds.has(w.id)} />
+                ))}
               </div>
             </Card>
           )}

@@ -10,9 +10,10 @@ import {
 } from '@/lib/content/rules'
 import { knownLexemeIds, loadState } from '@/lib/data/store'
 import {
-  exerciseForReview, exercisesForRule, exercisesForWord,
+  exerciseForReview, exercisesForRule,
   exercisesForReading, sentenceDrillsForRule, sentenceWriteDrills, type SentenceMode,
 } from './exercises'
+import { buildWordStudySteps } from './word-study'
 import { buildTodayLesson } from './session'
 
 export type { SentenceMode } from './exercises'
@@ -60,6 +61,7 @@ const DRILLS_PER_RULE = 10
 const MIN_GRAMMAR_EXAMPLES_PER_TYPE = 10
 const WRITE_TASKS_PER_RULE = 2
 const EXAM_TASK_COUNT = 10
+const NEW_WORD_BATCH_SIZE = 5
 
 const MODULES_WITH_GENERATOR = new Set(['grammar'])
 
@@ -112,11 +114,12 @@ export async function buildTodayPlan(): Promise<TodayPlan> {
   const reviewSteps = buildReviewSteps(lesson.activities, state.studyItems, vocabulary, practisedPool)
   const newWords = (lesson.activities.find((a) => a.kind === 'new-words')?.refIds ?? [])
     .map((id) => vocabulary.get(id)).filter(Boolean) as Lexeme[]
-  const newWordSteps = newWords.flatMap((word): Step[] => [
-    { kind: 'word-intro', word },
-    ...exercisesForWord(word, practisedPool).map((ex): Step => (
-      { kind: 'exercise', ex, review: false, rule: null })),
-  ])
+  const newWordSteps = [] as Step[]
+  for (let start = 0; start < newWords.length; start += NEW_WORD_BATCH_SIZE) {
+    newWordSteps.push(...buildNewWordSteps(
+      newWords.slice(start, start + NEW_WORD_BATCH_SIZE), practisedPool,
+    ))
+  }
 
   const drillRuleIds = lesson.activities.find((a) => a.kind === 'grammar-drill')?.refIds ?? []
   const ruleIds = [...new Set([...day.grammarRuleIds, ...drillRuleIds])]
@@ -182,6 +185,19 @@ export async function buildTodayPlan(): Promise<TodayPlan> {
     reviewCount: reviewSteps.length,
     deferredCount: lesson.queue.deferred,
   }
+}
+
+/**
+ * Вводим слова небольшими пачками и чередуем их упражнения:
+ * карточка A → перевод A → карточка B → перевод B → следующее задание A.
+ * Так человек не получает подряд четыре разных проверки одного слова.
+ */
+function buildNewWordSteps(words: Lexeme[], pool: Lexeme[]): Step[] {
+  return buildWordStudySteps(words, pool).map((step): Step => (
+    step.kind === 'word-intro'
+      ? step
+      : { kind: 'exercise', ex: step.ex, review: false, rule: null }
+  ))
 }
 
 function missingExamContent(moduleId: string): string {

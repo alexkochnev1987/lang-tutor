@@ -51,6 +51,15 @@ export interface CurriculumDay {
 export interface Curriculum {
   courseId: string
   version: string
+  params?: {
+    phases?: Array<{
+      id: number
+      from: number
+      to: number
+      title: string
+      goal: string
+    }>
+  }
   stats: {
     totalDays: number
     rulesIntroduced: number

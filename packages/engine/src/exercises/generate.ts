@@ -107,6 +107,28 @@ export function spelling(word: LexemeLike, ctx: ExerciseContext): AssembleExerci
 }
 
 /**
+ * Одно аудио-задание: приложение произносит польское слово, а учащийся
+ * записывает услышанное. Отдельный этап «произнести слово» не создаём —
+ * произношение является частью этого задания.
+ */
+export function listenWrite(word: LexemeLike): TypedExercise {
+  return {
+    id: `ex.listen-write.${word.id}`,
+    kind: 'listen-write',
+    mode: 'typed',
+    difficulty: 4,
+    lexemeId: word.id,
+    grammarRuleIds: [],
+    moduleId: 'listening',
+    estimatedSec: 20,
+    instruction: 'Posłuchaj i wpisz słowo',
+    prompt: word.translation,
+    accepted: [word.lemma],
+    speakText: word.lemma,
+  }
+}
+
+/**
  * Контраст с ложным другом. Обычная карточка тут не работает: ошибка не
  * в незнании, а в ложном знании, которое надо активно перебить.
  */

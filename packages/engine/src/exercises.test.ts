@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest'
 import {
   check, chooseForm, falseFriendContrast, gapFill, inflect,
-  SENTENCE_ATTEMPTS, sentenceChoice, sentenceTyped, sentenceWrite, shuffle,
+  listenWrite, SENTENCE_ATTEMPTS, sentenceChoice, sentenceTyped, sentenceWrite, shuffle,
   spelling, translateProduction, translateRecognition,
   type LexemeLike, type Paradigm,
 } from './index'
@@ -73,6 +73,14 @@ describe('лексические упражнения', () => {
     const ex = spelling(reka, CTX)
     expect(ex.letters.sort()).toEqual([...'ręka'].sort())
     expect(ex.answer).toBe('ręka')
+  })
+
+  it('аудио-задание произносит слово и принимает его ввод', () => {
+    const ex = listenWrite(reka)
+    expect(ex.kind).toBe('listen-write')
+    expect(ex.speakText).toBe('ręka')
+    expect(ex.prompt).toBe('рука')
+    expect(check(ex, 'ręka').correct).toBe(true)
   })
 
   it('ложный друг противопоставляется тому, чем кажется', () => {

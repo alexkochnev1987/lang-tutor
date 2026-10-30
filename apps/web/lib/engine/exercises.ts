@@ -6,7 +6,7 @@
  */
 import {
   chooseForm, falseFriendContrast, inflect, sentenceChoice, sentenceTyped,
-  readingChoice, sentenceWrite, shuffle, spelling, translateProduction, translateRecognition,
+  listenWrite, readingChoice, sentenceWrite, shuffle, spelling, translateProduction, translateRecognition,
   type Exercise, type SentenceGapLike,
 } from '@polski/engine'
 import { closedClassWordsForRule } from '@/lib/lang-pl/closed-class'
@@ -36,14 +36,11 @@ export function exercisesForWord(word: Lexeme, pool: Lexeme[]): Exercise[] {
   const ff = falseFriendContrast(word, { seed })
   out.push(ff ?? translateRecognition(word, pool.map((p) => p.translation), { seed }))
 
-  // продукция — только для ядра; тематику держим на узнавании (VOCABULARY.md §2)
-  if (word.priority !== 'normal') {
-    out.push(translateProduction(word, pool.map((p) => p.lemma), { seed: seed + 7 }))
-  }
-  // диакритика: если в слове есть особые знаки, стоит собрать по буквам
-  if (/[ąćęłńóśźż]/.test(word.lemma) && word.lemma.length <= 12) {
-    out.push(spelling(word, { seed: seed + 13 }))
-  }
+  // Каждое новое слово проходит одинаковую последовательность: узнать,
+  // воспроизвести, собрать из букв и записать после прослушивания.
+  out.push(translateProduction(word, pool.map((p) => p.lemma), { seed: seed + 7 }))
+  out.push(spelling(word, { seed: seed + 13 }))
+  out.push(listenWrite(word))
   return out
 }
 

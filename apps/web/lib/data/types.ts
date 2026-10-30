@@ -59,7 +59,7 @@ export interface ModuleReadinessRow {
   lastMockAt: Date | null
 }
 
-export type SessionKind = 'day' | 'grammar' | 'words'
+export type SessionKind = 'day' | 'grammar' | 'words' | 'words-failed'
 
 export interface LessonSessionRow {
   id: string

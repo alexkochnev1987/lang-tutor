@@ -6,13 +6,15 @@ import { check, type CheckResult, type Exercise } from '@polski/engine'
 import { usePronounce } from '@/lib/speech/usePronounce'
 import { resetExerciseResults, useAppState } from '@/lib/data/store'
 
-export function SpeakIcon({ text, size = 'md' }: { text: string; size?: 'sm' | 'md' }) {
+export function SpeakIcon({
+  text, size = 'md', ariaLabel,
+}: { text: string; size?: 'sm' | 'md'; ariaLabel?: string }) {
   const { pronounce, message } = usePronounce()
   const cls = size === 'sm' ? 'size-9 text-base' : 'size-12 text-xl'
   return (
     <button
       type="button"
-      aria-label={`Wymów ${text}`}
+      aria-label={ariaLabel ?? `Wymów ${text}`}
       title={message ?? undefined}
       onClick={() => pronounce(text)}
       className={`flex shrink-0 items-center justify-center rounded-pill bg-soft hover:bg-soft2 ${cls}`}
@@ -36,6 +38,18 @@ function hintForExercise(exercise: InlineExercise): string | undefined {
   const answer = 'answer' in exercise ? exercise.answer : exercise.accepted[0]
   const firstLetter = answer?.trim().slice(0, 1)
   return firstLetter ? `Pierwsza litera odpowiedzi: ${firstLetter}` : undefined
+}
+
+function letterIndexesForAnswer(letters: string[], answer: string): number[] {
+  const used = new Set<number>()
+  return [...answer].flatMap((letter) => {
+    const index = letters.findIndex((candidate, candidateIndex) => (
+      candidate === letter && !used.has(candidateIndex)
+    ))
+    if (index < 0) return []
+    used.add(index)
+    return [index]
+  })
 }
 
 function HintButton({ hint }: { hint: string }) {
@@ -286,16 +300,22 @@ export function ExerciseView({
   restoredResult?: { result: CheckResult; answer: string; attempts: number } | null
 }) {
   const [result, setResult] = useState<CheckResult | null>(null)
+  const [feedback, setFeedback] = useState<CheckResult | null>(null)
   const [typed, setTyped] = useState('')
-  const [built, setBuilt] = useState<string[]>([])
+  const [builtIndexes, setBuiltIndexes] = useState<number[]>([])
   const [wrongTries, setWrongTries] = useState<string[]>([])
+  const [lastSubmittedAnswer, setLastSubmittedAnswer] = useState('')
   const started = useRef(Date.now())
   const lastCheckedValue = useRef<string | null>(null)
 
   useEffect(() => {
     if (!restoredResult) return
     setResult(restoredResult.result)
+    setFeedback(restoredResult.result)
     setTyped(restoredResult.answer)
+    if (exercise.mode === 'assemble') {
+      setBuiltIndexes(letterIndexesForAnswer(exercise.letters, restoredResult.answer))
+    }
     setWrongTries(Array.from({
       length: Math.max(0, restoredResult.attempts - (restoredResult.result.correct ? 1 : 0)),
     }, () => ''))
@@ -306,15 +326,19 @@ export function ExerciseView({
   const isGapSentence =
     exercise.kind === 'sentence-choice' || exercise.kind === 'sentence-typed'
   const isReading = exercise.kind === 'reading-choice'
+  const isListenWrite = exercise.kind === 'listen-write'
   const isSentence = isGapSentence || exercise.kind === 'sentence-write'
   const baseForm = exercise.mode === 'assemble' ? undefined : baseFormOf(exercise)
   const isInlineForm = Boolean(baseForm) && exercise.kind !== 'sentence-write'
   const inlineStatus: ControlStatus = result
     ? result.correct ? 'correct' : 'wrong'
+    : feedback && !feedback.correct && !typed ? 'wrong'
     : wrongTries.includes(typed) && typed ? 'wrong' : 'empty'
   const isPolishPrompt = !isGapSentence
     && !isReading
-    && exercise.kind !== 'translate-production' && exercise.kind !== 'spelling'
+    && exercise.kind !== 'translate-production'
+    && exercise.kind !== 'spelling'
+    && !isListenWrite
 
   function updateTyped(value: string) {
     lastCheckedValue.current = null
@@ -327,10 +351,12 @@ export function ExerciseView({
     if (!normalized || lastCheckedValue.current === normalized) return
     lastCheckedValue.current = normalized
     const r = check(exercise, answer)
+    setFeedback(r)
+    setLastSubmittedAnswer(answer)
     if (!r.correct && wrongTries.length + 1 < attemptsAllowed) {
       setWrongTries((w) => [...w, answer])
       if (exercise.mode === 'typed' && !isInlineForm) setTyped('')
-      if (exercise.mode === 'assemble') setBuilt([])
+      if (exercise.mode === 'assemble') setBuiltIndexes([])
       return
     }
     const nextWrongTries = r.correct ? wrongTries : [...wrongTries, answer]
@@ -347,9 +373,18 @@ export function ExerciseView({
   // сборка по буквам: как только набрана нужная длина — проверяем
   useEffect(() => {
     if (exercise.mode !== 'assemble' || result) return
-    if (built.join('').length === exercise.answer.length) submit(built.join(''))
+    const answer = builtIndexes.map((index) => exercise.letters[index]).join('')
+    if (answer.length === exercise.answer.length) submit(answer)
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [built])
+  }, [builtIndexes])
+
+  function selectAssembledLetter(index: number) {
+    if (feedback && !feedback.correct && !result) {
+      setFeedback(null)
+      setLastSubmittedAnswer('')
+    }
+    setBuiltIndexes((current) => [...current, index])
+  }
 
   const content = (
     <Stack gap="lg" className="w-full">
@@ -379,38 +414,46 @@ export function ExerciseView({
               </span>
             )}
             {/* ≥24px: иначе не различить диакритику, UX_UI.md §1.6 */}
-            <span className={isReading
-              ? 'whitespace-pre-wrap text-left text-base leading-7'
-              : `${leadingNumber !== undefined ? 'text-left' : 'text-center'} font-semibold ${isSentence ? 'text-base sm:text-lg' : 'text-lg sm:text-xl'}`}>
-              {isInlineForm && exercise.mode !== 'assemble'
-                ? isGapSentence
-                  ? <InlineSentencePrompt
-                      exercise={exercise}
-                      value={typed}
-                      disabled={Boolean(result)}
-                      status={inlineStatus}
-                      attemptsAllowed={attemptsAllowed}
-                      wrongCount={wrongTries.length}
-                      result={result}
-                      autoFocus={autoFocus && exercise.mode === 'typed'}
-                      onChange={updateTyped}
-                      onSubmit={submit}
-                    />
-                  : <InlineWordPrompt
-                      exercise={exercise}
-                      value={typed}
-                      disabled={Boolean(result)}
-                      status={inlineStatus}
-                      attemptsAllowed={attemptsAllowed}
-                      wrongCount={wrongTries.length}
-                      result={result}
-                      autoFocus={autoFocus && exercise.mode === 'typed'}
-                      onChange={updateTyped}
-                      onSubmit={submit}
-                    />
-                : exercise.prompt}
-            </span>
+            {!isListenWrite && (
+              <span className={isReading
+                ? 'whitespace-pre-wrap text-left text-base leading-7'
+                : `${leadingNumber !== undefined ? 'text-left' : 'text-center'} font-semibold ${isSentence ? 'text-base sm:text-lg' : 'text-lg sm:text-xl'}`}>
+                {isInlineForm && exercise.mode !== 'assemble'
+                  ? isGapSentence
+                    ? <InlineSentencePrompt
+                        exercise={exercise}
+                        value={typed}
+                        disabled={Boolean(result)}
+                        status={inlineStatus}
+                        attemptsAllowed={attemptsAllowed}
+                        wrongCount={wrongTries.length}
+                        result={result}
+                        autoFocus={autoFocus && exercise.mode === 'typed'}
+                        onChange={updateTyped}
+                        onSubmit={submit}
+                      />
+                    : <InlineWordPrompt
+                        exercise={exercise}
+                        value={typed}
+                        disabled={Boolean(result)}
+                        status={inlineStatus}
+                        attemptsAllowed={attemptsAllowed}
+                        wrongCount={wrongTries.length}
+                        result={result}
+                        autoFocus={autoFocus && exercise.mode === 'typed'}
+                        onChange={updateTyped}
+                        onSubmit={submit}
+                      />
+                  : exercise.prompt}
+              </span>
+            )}
             {isPolishPrompt && <SpeakIcon text={exercise.prompt} />}
+            {isListenWrite && exercise.mode === 'typed' && (
+              <SpeakIcon
+                text={exercise.speakText ?? exercise.accepted[0] ?? ''}
+                ariaLabel="Odtwórz wymowę"
+              />
+            )}
           </Row>
         </Stack>
 
@@ -420,7 +463,8 @@ export function ExerciseView({
               <OptionRow
                 key={o}
                 outcome={
-                  result && o === exercise.answer ? 'correct'
+                  feedback && !feedback.correct && o === feedback.expected ? 'correct'
+                    : result && o === exercise.answer ? 'correct'
                     : wrongTries.includes(o) ? 'wrong'
                     : 'none'
                 }
@@ -447,6 +491,7 @@ export function ExerciseView({
                 placeholder={
                   exercise.kind === 'sentence-write' ? 'Napisz zdanie'
                     : exercise.kind === 'sentence-typed' ? 'Wpisz słowo'
+                    : exercise.kind === 'listen-write' ? 'Wpisz usłyszane słowo'
                     : 'Wpisz formę'
                 }
                 className="min-h-12 w-full rounded-card border border-line bg-card px-3 text-center text-xl text-ink"
@@ -461,34 +506,69 @@ export function ExerciseView({
 
         {exercise.mode === 'assemble' && (
           <Stack gap="md">
-            <div className="min-h-12 rounded-card border border-dashed border-line px-3 py-2 text-center text-2xl tracking-widest">
-              {built.join('') || ' '}
+            <div className="flex items-center gap-2">
+              <div className={`min-h-12 flex-1 rounded-card border px-3 py-2 text-center text-2xl tracking-widest ${
+                result
+                  ? result.correct ? 'border-ok bg-ok-bg text-ok-ink' : 'border-danger bg-danger-bg text-danger-ink'
+                  : feedback && !feedback.correct ? 'border-danger bg-danger-bg text-danger-ink' : 'border-dashed border-line'
+              }`}>
+                {feedback && !feedback.correct && !result
+                  ? lastSubmittedAnswer
+                  : builtIndexes.length
+                    ? builtIndexes.map((index, position) => (
+                        <button
+                          key={`${index}-${position}`}
+                          type="button"
+                          aria-label={`Usuń literę ${exercise.letters[index]}`}
+                          onClick={() => setBuiltIndexes((current) => current.filter((_, i) => i !== position))}
+                          className="rounded px-0.5 hover:bg-soft2"
+                        >
+                          {exercise.letters[index]}
+                        </button>
+                      ))
+                    : ' '}
+              </div>
+              <AttemptDots
+                attemptsAllowed={attemptsAllowed}
+                wrongCount={wrongTries.length}
+                result={result}
+                focused={false}
+              />
             </div>
             <Row gap="xs" wrap justify="center">
               {exercise.letters.map((l, idx) => (
-                <button
-                  key={`${l}-${idx}`}
-                  type="button"
-                  disabled={Boolean(result) || built.length > idx && false}
-                  onClick={() => setBuilt((b) => [...b, l])}
-                  className="size-12 rounded-card bg-soft text-xl font-medium hover:bg-soft2 disabled:opacity-40"
-                >
-                  {l}
-                </button>
+                builtIndexes.includes(idx) ? null : (
+                  <button
+                    key={`${l}-${idx}`}
+                    type="button"
+                    disabled={Boolean(result)}
+                    onClick={() => selectAssembledLetter(idx)}
+                    className="size-12 rounded-card bg-soft text-xl font-medium hover:bg-soft2 disabled:opacity-40"
+                  >
+                    {l}
+                  </button>
+                )
               ))}
             </Row>
-            {built.length > 0 && !result && (
-              <Button variant="ghost" size="sm" onClick={() => setBuilt([])}>
+            {builtIndexes.length > 0 && !result && (
+              <Button variant="ghost" size="sm" onClick={() => setBuiltIndexes([])}>
                 Wyczyść
               </Button>
             )}
           </Stack>
         )}
 
-        {result && !result.correct && (
-          <p className="text-sm text-ok-ink">
-            Poprawna odpowiedź: <strong>{result.expected}</strong>
-          </p>
+        {feedback?.correct && (
+          <p className="text-sm font-medium text-ok-ink">Poprawnie</p>
+        )}
+        {feedback && !feedback.correct && (
+          <Stack gap="xs" className="text-sm">
+            {exercise.mode !== 'choice' && result && (
+              <p className="text-ok-ink">
+                Poprawna odpowiedź: <strong>{feedback.expected}</strong>
+              </p>
+            )}
+          </Stack>
         )}
 
     </Stack>

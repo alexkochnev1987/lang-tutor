@@ -12,7 +12,7 @@ const BADGE: Record<Lexeme['transparency'], { text: string; cls: string } | null
   'false-friend': { text: 'fałszywy przyjaciel', cls: 'bg-warn-bg text-warn-ink' },
 }
 
-export function WordRow({ word }: { word: Lexeme }) {
+export function WordRow({ word, completed = false }: { word: Lexeme; completed?: boolean }) {
   const { pronounce, message } = usePronounce()
   const state = useAppState()
   const badge = BADGE[word.transparency]
@@ -47,6 +47,10 @@ export function WordRow({ word }: { word: Lexeme }) {
           <KnownToggle lexemeId={word.id} polishLabels />
         </Row>
       </Row>
+
+      {completed && !known && (
+        <p className="mt-1 ml-12 text-xs text-ok-ink">✓ слово пройдено и добавлено в повторение</p>
+      )}
 
       {!known && word.interference && (
         <p className="mt-1 ml-12 text-xs text-muted">

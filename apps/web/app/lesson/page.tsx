@@ -8,8 +8,8 @@ import {
   buildTodayPlan,
   type Stage, type StageId, type Step, type TodayPlan,
 } from '@/lib/engine/plan'
-import { ensureLexemeCards, recordAnswer, recordRuleAttempt, Rating } from '@/lib/engine/session'
-import { saveExerciseResult, saveLessonSession } from '@/lib/data/store'
+import { completeLexemeLearning, recordAnswer, recordRuleAttempt, Rating } from '@/lib/engine/session'
+import { saveExerciseResult, saveLessonSession, useAppState } from '@/lib/data/store'
 import { ExerciseView, GrammarExerciseBatch, SpeakIcon } from '@/app/_components/ExerciseView'
 import { RuleSheet } from '@/app/_components/RuleSheet'
 import { RuleView } from '@/app/_components/RuleView'
@@ -46,6 +46,7 @@ function toSlots(stages: Stage[]): Slot[] {
 }
 
 export default function LessonPage() {
+  const appState = useAppState()
   const [plan, setPlan] = useState<TodayPlan | null>(null)
   const [slots, setSlots] = useState<Slot[]>([])
   const [i, setI] = useState(0)
@@ -54,6 +55,7 @@ export default function LessonPage() {
   const [phase, setPhase] = useState<'main' | 'done'>('main')
   const [special, setSpecial] = useState<'diagnostic' | 'empty' | null>(null)
   const startedAt = useRef(Date.now())
+  const finalizedWords = useRef(new Set<string>())
 
   useEffect(() => {
     let alive = true
@@ -84,6 +86,61 @@ export default function LessonPage() {
     && slot.stage.id === 'grammar' && slot.step.kind === 'exercise'
     ? grammarExerciseSlots.indexOf(slot) + 1
     : 0
+  const currentExerciseId = slot?.kind === 'step' && slot.step.kind === 'exercise'
+    ? slot.step.ex.id
+    : undefined
+  const restoredRow = currentExerciseId
+    ? appState?.exerciseResults.find((row) => (
+        row.dayNumber === plan?.dayNumber && row.exerciseId === currentExerciseId
+      ))
+    : undefined
+  const restoredResult = restoredRow ? {
+    result: {
+      correct: restoredRow.correct,
+      expected: restoredRow.expected,
+      errorKind: restoredRow.errorKind ?? undefined,
+    },
+    answer: restoredRow.answer,
+    attempts: restoredRow.attempts,
+  } : null
+
+  useEffect(() => {
+    if (!plan || !appState || !slots.length) return
+    const idsByWord = new Map<string, string[]>()
+    for (const currentSlot of slots) {
+      if (currentSlot.kind !== 'step' || currentSlot.step.kind !== 'exercise') continue
+      if (currentSlot.step.review || !currentSlot.step.ex.lexemeId) continue
+      const ids = idsByWord.get(currentSlot.step.ex.lexemeId) ?? []
+      ids.push(currentSlot.step.ex.id)
+      idsByWord.set(currentSlot.step.ex.lexemeId, ids)
+    }
+
+    for (const [lexemeId, exerciseIds] of idsByWord) {
+      const markerId = `day:${plan.dayNumber}:word:${lexemeId}`
+      if (finalizedWords.current.has(lexemeId) || appState.sessions.some((s) => s.id === markerId)) {
+        continue
+      }
+      const rows = exerciseIds.map((exerciseId) => appState.exerciseResults.find((row) => (
+        row.dayNumber === plan.dayNumber && row.exerciseId === exerciseId
+      )))
+      if (rows.some((row) => !row)) continue
+
+      const completed = rows.filter(Boolean) as NonNullable<typeof rows[number]>[]
+      const allCorrect = completed.every((row) => row.correct && row.attempts === 1)
+      finalizedWords.current.add(lexemeId)
+      void completeLexemeLearning(lexemeId, allCorrect).then(() => saveLessonSession({
+        id: markerId,
+        dayNumber: plan.dayNumber,
+        kind: 'words',
+        startedAt: new Date(startedAt.current),
+        completedAt: new Date(),
+        plannedBudgetMs: completed.length * 20_000,
+        actualMs: Date.now() - startedAt.current,
+        itemsReviewed: completed.length,
+        itemsCorrect: completed.filter((row) => row.correct).length,
+      }))
+    }
+  }, [appState, plan, slots])
 
   async function onAnswered(
     ex: Exercise, r: CheckResult, ms: number, complete = true, attempts = 1, answer = '',
@@ -91,21 +148,25 @@ export default function LessonPage() {
     if (complete) setCanAdvance(true)
     setStats((s) => ({ correct: s.correct + (r.correct ? 1 : 0), total: s.total + 1 }))
 
-    if (ex.moduleId === 'grammar') {
-      await saveExerciseResult({
-        dayNumber: plan?.dayNumber ?? 1,
-        exerciseId: ex.id,
-        attempts,
-        correct: r.correct,
-        answer,
-        expected: r.expected,
-        errorKind: r.errorKind ?? null,
-      })
-    }
+    // Результат каждого задания сохраняется на сервере: после reload должны
+    // восстанавливаться и упражнения на слова, а не только грамматика.
+    await saveExerciseResult({
+      dayNumber: plan?.dayNumber ?? 1,
+      exerciseId: ex.id,
+      attempts,
+      correct: r.correct,
+      answer,
+      expected: r.expected,
+      errorKind: r.errorKind ?? null,
+    })
 
-    if (ex.lexemeId) {
-      await ensureLexemeCards(ex.lexemeId)
-      const kind = ex.kind === 'translate-production' || ex.kind === 'spelling'
+    const isNewWordExercise = Boolean(
+      ex.lexemeId && plan?.newWords.some((word) => word.id === ex.lexemeId),
+    )
+    if (ex.lexemeId && !isNewWordExercise) {
+      const kind = ex.kind === 'translate-production'
+        || ex.kind === 'spelling'
+        || ex.kind === 'listen-write'
         ? 'lexeme-production' : 'lexeme-recognition'
       await recordAnswer(`${kind}:${ex.lexemeId}`, r.correct ? Rating.Good : Rating.Again, ms)
     }
@@ -162,6 +223,7 @@ export default function LessonPage() {
     setStats({ correct: 0, total: 0 })
     setSpecial(nextSlots.length ? null : 'empty')
     setPhase('main')
+    finalizedWords.current.clear()
     startedAt.current = Date.now()
   }
 
@@ -312,6 +374,7 @@ export default function LessonPage() {
               <ExerciseView
                 key={`${i}-${slot.step.ex.id}`}
                 exercise={slot.step.ex}
+                restoredResult={restoredResult}
                 onAnswered={(r, ms) => {
                   const step = slot.step
                   if (step.kind === 'exercise') void onAnswered(step.ex, r, ms)
@@ -321,7 +384,7 @@ export default function LessonPage() {
             <Row gap="sm" justify="center">
               {slot.step.rule && <RuleSheet rule={slot.step.rule} />}
             </Row>
-            {canAdvance && (
+            {(canAdvance || Boolean(restoredResult)) && (
               <Button variant="outline" size="lg" full onClick={next}>
                 {i + 1 < slots.length ? 'Dalej' : 'Zakończ'}
               </Button>

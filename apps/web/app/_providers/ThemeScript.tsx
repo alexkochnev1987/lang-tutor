@@ -1,3 +1,5 @@
+import Script from 'next/script'
+
 /**
  * Ставит data-palette и data-mode до первой отрисовки.
  *
@@ -27,5 +29,9 @@ const SCRIPT = `
 `
 
 export function ThemeScript() {
-  return <script dangerouslySetInnerHTML={{ __html: SCRIPT }} />
+  return (
+    <Script id="theme-script" strategy="beforeInteractive">
+      {SCRIPT}
+    </Script>
+  )
 }

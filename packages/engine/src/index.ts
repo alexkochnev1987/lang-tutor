@@ -15,7 +15,7 @@ export type { Activity, ActivityKind, DayPlan, Lesson, LessonInput } from './les
 export * from './exercises/types'
 export {
   check, chooseForm, falseFriendContrast, gapFill, hashString, inflect,
-  readingChoice, rng, sentenceChoice, sentenceTyped, sentenceWrite, SENTENCE_ATTEMPTS,
+  listenWrite, readingChoice, rng, sentenceChoice, sentenceTyped, sentenceWrite, SENTENCE_ATTEMPTS,
   shuffle, spelling, translateProduction, translateRecognition,
 } from './exercises/generate'
 export type {
