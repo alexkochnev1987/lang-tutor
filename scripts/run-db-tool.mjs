@@ -29,9 +29,12 @@ function readEnv(path) {
   return values
 }
 
-const env = readEnv(envPath)
+// Локально берём значения из apps/web/.env.local, а на Vercel — из
+// process.env. Переменные окружения процесса имеют приоритет: Vercel не
+// создаёт .env.local во время сборки, но передаёт DATABASE_URL напрямую.
+const env = { ...readEnv(envPath), ...process.env }
 if (!env.DATABASE_URL && !env.DATABASE_URL_UNPOOLED) {
-  console.error('✖ В apps/web/.env.local нет DATABASE_URL. Выполните pnpm db:use:local или pnpm db:use:prod.')
+  console.error('✖ Не найдена DATABASE_URL или DATABASE_URL_UNPOOLED в окружении или apps/web/.env.local.')
   process.exit(1)
 }
 
