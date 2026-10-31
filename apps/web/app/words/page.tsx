@@ -5,7 +5,9 @@ import Link from 'next/link'
 import { Button, Card, Row, Screen, Stack } from '@polski/ui'
 import type { CheckResult, Exercise } from '@polski/engine'
 import { Nav } from '@/app/_components/Nav'
-import { ExerciseView, SpeakIcon } from '@/app/_components/ExerciseView'
+import {
+  ExerciseView, StudyActionBar, speakableTextOf,
+} from '@/app/_components/ExerciseView'
 import { ThemePicker } from '@/app/_components/ThemePicker'
 import {
   currentDayNumber, loadCurriculum, loadVocabulary, type Lexeme,
@@ -15,11 +17,13 @@ import {
 } from '@/lib/data/store'
 import { completeLexemeLearning } from '@/lib/engine/session'
 import {
-  buildWordStudySteps, type WordStudyStep,
+  buildWordStageRetryStep, oneAttemptWordSteps, wordExerciseSteps,
+  WORD_STAGE_RETRY_LIMIT, buildWordStudySteps, type WordStudyStep,
 } from '@/lib/engine/word-study'
+import { getLexemeStudyStatus } from '@/lib/engine/word-status'
+import { StudyStatusBadge } from '@/app/_components/WordRow'
 
 const WORDS_PER_SESSION = 5
-const MAX_WORD_RETRIES = 2
 
 type Phase = 'select' | 'study' | 'done'
 
@@ -30,20 +34,6 @@ function initialUrlState(): { sessionId: string | null; wordIds: string[] } {
     sessionId: params.get('session'),
     wordIds: (params.get('ids') ?? '').split(',').filter(Boolean).slice(0, WORDS_PER_SESSION),
   }
-}
-
-function oneAttemptWordSteps(steps: WordStudyStep[]): WordStudyStep[] {
-  return steps.map((step) => step.kind === 'exercise'
-    ? { ...step, ex: { ...step.ex, attemptsAllowed: 1 } }
-    : step)
-}
-
-function wordCyclePrefix(sessionId: string, wordId: string, round: number): string {
-  return round === 0 ? `${sessionId}:` : `${sessionId}:retry:${round}:${wordId}:`
-}
-
-function buildWordCycle(word: Lexeme, pool: Lexeme[], prefix: string): WordStudyStep[] {
-  return oneAttemptWordSteps(buildWordStudySteps([word], pool, prefix))
 }
 
 export default function WordsPage() {
@@ -100,31 +90,25 @@ export default function WordsPage() {
       .map((result) => [result.exerciseId, result]),
   ), [dayNumber, state?.exerciseResults])
 
-  // После полного прохода ошибившееся слово возвращается в конец пакета.
-  // Две дополнительные попытки — последняя ошибка окончательно снимает
-  // слово с изучения и не создаёт ему карточки FSRS.
+  // После полного прохода в очередь возвращается только ошибочный этап.
+  // Остальные этапы слова повторно не создаются.
   const retryStudySteps = useMemo(() => {
     if (!sessionId || !words || selectedWords.length !== WORDS_PER_SESSION) return []
     const retries: WordStudyStep[] = []
-    for (let round = 1; round <= MAX_WORD_RETRIES; round += 1) {
-      for (const word of selectedWords) {
-        const previous = buildWordCycle(
-          word,
-          words,
-          wordCyclePrefix(sessionId, word.id, round - 1),
-        )
-        const previousIds = previous
-          .filter((step): step is Extract<WordStudyStep, { kind: 'exercise' }> => step.kind === 'exercise')
-          .map((step) => step.ex.id)
-        const previousResults = previousIds.map((id) => resultByExercise.get(id))
-        if (previousResults.some((result) => !result) || previousResults.every((result) => result?.correct)) {
-          continue
+    for (const word of selectedWords) {
+      const baseExercises = wordExerciseSteps(word, words, `${sessionId}:`)
+      for (let stageIndex = 0; stageIndex < baseExercises.length; stageIndex += 1) {
+        let previousId = baseExercises[stageIndex]!.ex.id
+        for (let round = 1; round <= WORD_STAGE_RETRY_LIMIT; round += 1) {
+          const previous = resultByExercise.get(previousId)
+          if (!previous || previous.correct) break
+          const retry = buildWordStageRetryStep(
+            word, words, `${sessionId}:`, stageIndex, round,
+          )
+          if (!retry) break
+          retries.push(retry)
+          previousId = retry.ex.id
         }
-        retries.push(...buildWordCycle(
-          word,
-          words,
-          wordCyclePrefix(sessionId, word.id, round),
-        ))
       }
     }
     return retries.flat()
@@ -207,27 +191,35 @@ export default function WordsPage() {
       if (finalizedWordIds.has(word.id) || finalizing.current.has(word.id)) continue
 
       const completed: NonNullable<ReturnType<typeof resultByExercise.get>>[] = []
-      let learned = false
-      let finished = false
-      for (let round = 0; round <= MAX_WORD_RETRIES; round += 1) {
-        const cycle = buildWordCycle(
-          word,
-          words ?? [],
-          wordCyclePrefix(sessionId, word.id, round),
-        )
-        const ids = cycle
-          .filter((step): step is Extract<WordStudyStep, { kind: 'exercise' }> => step.kind === 'exercise')
-          .map((step) => step.ex.id)
-        const rows = ids.map((id) => resultByExercise.get(id))
-        if (rows.some((row) => !row)) break
-        const cycleResults = rows.filter(Boolean) as NonNullable<typeof rows[number]>[]
-        completed.push(...cycleResults)
-        if (cycleResults.every((row) => row.correct)) {
-          learned = true
-          finished = true
-          break
+      let learned = true
+      let finished = true
+      const baseExercises = wordExerciseSteps(word, words ?? [], `${sessionId}:`)
+      for (let stageIndex = 0; stageIndex < baseExercises.length; stageIndex += 1) {
+        let current = baseExercises[stageIndex]!
+        let stageLearned = false
+        for (let round = 0; round <= WORD_STAGE_RETRY_LIMIT; round += 1) {
+          const row = resultByExercise.get(current.ex.id)
+          if (!row) {
+            finished = false
+            break
+          }
+          completed.push(row)
+          if (row.correct) {
+            stageLearned = true
+            break
+          }
+          if (round === WORD_STAGE_RETRY_LIMIT) break
+          const retry = buildWordStageRetryStep(
+            word, words ?? [], `${sessionId}:`, stageIndex, round + 1,
+          )
+          if (!retry) {
+            finished = false
+            break
+          }
+          current = retry
         }
-        if (round === MAX_WORD_RETRIES) finished = true
+        if (!stageLearned) learned = false
+        if (!finished) break
       }
       if (!finished || !completed.length) continue
 
@@ -257,6 +249,14 @@ export default function WordsPage() {
   const step = studySteps[current]
   const restoredRow = step?.kind === 'exercise' ? resultByExercise.get(step.ex.id) : undefined
   const selectedSet = useMemo(() => new Set(selectedIds), [selectedIds])
+  const statusByWord = useMemo(() => new Map(
+    (words ?? []).map((word) => [word.id, getLexemeStudyStatus(state, word.id)] as const),
+  ), [state, words])
+  const stageTitle = step?.kind === 'word-intro'
+    ? 'Карточка слова'
+    : step?.kind === 'exercise'
+      ? exerciseStageTitle(step.ex)
+      : ''
 
   function toggleWord(id: string) {
     setSelectedIds((currentIds) => {
@@ -320,42 +320,46 @@ export default function WordsPage() {
   }
 
   if (phase === 'study' && step) {
+    const stepCanAdvance = step.kind === 'word-intro' || canAdvance
+    const nextLabel = step.kind === 'word-intro'
+      ? 'Запомнил'
+      : current + 1 < studySteps.length ? 'Далее' : 'Завершить'
     return (
       <Screen>
         <header className="mx-auto w-full max-w-2xl px-4 py-3">
           <Row justify="between">
-            <button type="button" onClick={chooseAnotherSet} className="text-sm text-muted hover:text-ink">
+            <button type="button" onClick={chooseAnotherSet} className="inline-flex min-h-10 items-center text-sm text-muted hover:text-ink">
               ← Выбор слов
             </button>
             <Row gap="sm">
-              <span className="text-sm text-muted tabular-nums">{current + 1} / {studySteps.length}</span>
+              <span className="text-right text-xs text-muted tabular-nums sm:text-sm">
+                {stageTitle} · {current + 1} / {studySteps.length}
+              </span>
               <ThemePicker />
             </Row>
           </Row>
-          <div className="mt-2 h-1 overflow-hidden rounded-pill bg-soft">
+          <div className="u-hide-on-short mt-2 h-1 overflow-hidden rounded-pill bg-soft">
             <div className="h-full bg-primary" style={{ width: `${((current + 1) / studySteps.length) * 100}%` }} />
           </div>
         </header>
         <main
           ref={studyMainRef}
           tabIndex={-1}
-          className="mx-auto flex min-h-0 w-full max-w-2xl flex-1 cursor-pointer flex-col overflow-y-auto px-4 pb-4"
-          onClick={() => {
-            if (canAdvance) nextStep()
-          }}
+          className="mx-auto flex min-h-0 w-full max-w-2xl flex-1 flex-col overflow-y-auto px-4 pb-2"
           onKeyDown={(event) => {
-            if (!canAdvance || event.repeat || (event.key !== 'Enter' && event.code !== 'Space')) return
+            if (!stepCanAdvance || event.repeat || (event.key !== 'Enter' && event.code !== 'Space')) return
             event.preventDefault()
             nextStep()
           }}
         >
           <Stack gap="md">
             {step.kind === 'word-intro' ? (
-              <WordStudyCard word={step.word} onNext={nextStep} />
+              <WordStudyCard word={step.word} />
             ) : (
               <ExerciseView
                 key={step.ex.id}
                 exercise={step.ex}
+                showSpeakButton={false}
                 restoredResult={restoredRow ? {
                   result: {
                     correct: restoredRow.correct,
@@ -371,6 +375,12 @@ export default function WordsPage() {
               />
             )}
           </Stack>
+          <StudyActionBar
+            speakText={step.kind === 'word-intro' ? step.word.lemma : speakableTextOf(step.ex)}
+            canAdvance={stepCanAdvance}
+            onNext={nextStep}
+            nextLabel={nextLabel}
+          />
         </main>
       </Screen>
     )
@@ -442,7 +452,7 @@ export default function WordsPage() {
                       key={word.id}
                       type="button"
                       onClick={() => toggleWord(word.id)}
-                      className="rounded-pill bg-soft px-2.5 py-1 text-sm text-ink hover:bg-soft2"
+                      className="inline-flex min-h-10 items-center rounded-pill bg-soft px-2.5 py-1 text-sm text-ink hover:bg-soft2"
                     >
                       {word.lemma} ×
                     </button>
@@ -476,9 +486,10 @@ export default function WordsPage() {
                           : 'border-line bg-card hover:bg-soft disabled:opacity-45'
                       }`}
                     >
-                      <span>
+                      <span className="min-w-0">
                         <span className="block font-medium" lang="pl">{word.lemma}</span>
                         <span className="block text-sm text-muted">{word.translation}</span>
+                        <StudyStatusBadge status={statusByWord.get(word.id) ?? 'untouched'} />
                       </span>
                       <span className="text-lg text-muted" aria-hidden>{selected ? '✓' : '+'}</span>
                     </button>
@@ -494,18 +505,32 @@ export default function WordsPage() {
   )
 }
 
-function WordStudyCard({ word, onNext }: { word: Lexeme; onNext: () => void }) {
+function WordStudyCard({ word }: { word: Lexeme }) {
   return (
     <Card>
       <Stack gap="lg" align="center">
         <span className="text-xs tracking-wide text-muted uppercase">Karta słowa</span>
         <div className="text-center text-3xl font-semibold" lang="pl">{word.lemma}</div>
-        <SpeakIcon text={word.lemma} />
         <div className="text-center text-lg">{word.translation}</div>
-        <Button size="lg" full onClick={onNext}>Znam słowo</Button>
       </Stack>
     </Card>
   )
+}
+
+function exerciseStageTitle(exercise: Exercise): string {
+  switch (exercise.kind) {
+    case 'translate-recognition':
+    case 'false-friend-contrast':
+      return 'Перевод'
+    case 'translate-production':
+      return 'Слово по переводу'
+    case 'spelling':
+      return 'Сборка по буквам'
+    case 'listen-write':
+      return 'Запись на слух'
+    default:
+      return 'Упражнение'
+  }
 }
 
 async function finalizeWord({

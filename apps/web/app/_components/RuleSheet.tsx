@@ -7,7 +7,7 @@ import type { LocalizedRule } from '@/lib/content/rules'
 export function RuleSheet({ rule }: { rule: LocalizedRule }) {
   return (
     <Dialog.Root>
-      <Dialog.Trigger className="inline-flex min-h-10 items-center gap-1.5 rounded-card border border-primary bg-transparent px-3 text-sm text-primary hover:bg-soft">
+      <Dialog.Trigger className="inline-flex min-h-12 items-center gap-1.5 rounded-card border border-primary bg-transparent px-3 text-sm text-primary hover:bg-soft">
         <span aria-hidden>📘</span>
         Reguła
       </Dialog.Trigger>

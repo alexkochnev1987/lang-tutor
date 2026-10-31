@@ -6,6 +6,46 @@ export type WordStudyStep =
   | { kind: 'word-intro'; word: Lexeme }
   | { kind: 'exercise'; word: Lexeme; ex: Exercise }
 
+export type WordExerciseStep = Extract<WordStudyStep, { kind: 'exercise' }>
+
+/** Максимум дополнительных показов одного ошибочного этапа. */
+export const WORD_STAGE_RETRY_LIMIT = 2
+
+export function oneAttemptWordSteps(steps: WordStudyStep[]): WordStudyStep[] {
+  return steps.map((step) => step.kind === 'exercise'
+    ? { ...step, ex: { ...step.ex, attemptsAllowed: 1 } }
+    : step)
+}
+
+export function wordExerciseSteps(
+  word: Lexeme, pool: readonly Lexeme[], prefix = '',
+): WordExerciseStep[] {
+  return oneAttemptWordSteps(buildWordStudySteps([word], pool, prefix))
+    .filter((step): step is WordExerciseStep => step.kind === 'exercise')
+}
+
+export function wordStageRetryPrefix(
+  basePrefix: string, wordId: string, stageIndex: number, round: number,
+): string {
+  return `${basePrefix}retry:${round}:${wordId}:${stageIndex}:`
+}
+
+/** Создаёт только один повторный этап, не весь цикл слова. */
+export function buildWordStageRetryStep(
+  word: Lexeme,
+  pool: readonly Lexeme[],
+  basePrefix: string,
+  stageIndex: number,
+  round: number,
+): WordExerciseStep | null {
+  const step = wordExerciseSteps(
+    word,
+    pool,
+    wordStageRetryPrefix(basePrefix, word.id, stageIndex, round),
+  )[stageIndex]
+  return step ?? null
+}
+
 /**
  * Строит один последовательный набор слов.
  *

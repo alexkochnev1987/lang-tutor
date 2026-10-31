@@ -8,9 +8,14 @@ import {
   buildTodayPlan,
   type Stage, type StageId, type Step, type TodayPlan,
 } from '@/lib/engine/plan'
-import { completeLexemeLearning, recordAnswer, recordRuleAttempt, Rating } from '@/lib/engine/session'
+import {
+  completeLexemeLearning, ensureLexemeCards, recordAnswer, recordRuleAttempt, Rating,
+} from '@/lib/engine/session'
 import { saveExerciseResult, saveLessonSession, useAppState } from '@/lib/data/store'
-import { ExerciseView, GrammarExerciseBatch, SpeakIcon } from '@/app/_components/ExerciseView'
+import {
+  ExerciseView, GrammarExerciseBatch, StudyActionBar, VocabularyExerciseBatch,
+  speakableTextOf,
+} from '@/app/_components/ExerciseView'
 import { RuleSheet } from '@/app/_components/RuleSheet'
 import { RuleView } from '@/app/_components/RuleView'
 import { Diagnostic } from '@/app/_components/Diagnostic'
@@ -18,6 +23,7 @@ import { EmptyDay } from '@/app/_components/EmptyDay'
 import { KnownToggle } from '@/app/_components/WordRow'
 import { ThemePicker } from '@/app/_components/ThemePicker'
 import type { Lexeme } from '@/lib/content/curriculum'
+import { WORD_STAGE_RETRY_LIMIT } from '@/lib/engine/word-study'
 
 type Slot =
   | { kind: 'stage-start'; stage: Stage }
@@ -75,6 +81,9 @@ export default function LessonPage() {
   }, [])
 
   const slot = slots[i]
+  const wordStudyExercise = slot?.kind === 'step'
+    && slot.step.kind === 'exercise'
+    && slot.step.wordStage !== undefined
   const stageSlots = slot
     ? slots.filter((s) => s.kind === 'step' && s.stage.id === slot.stage.id)
     : []
@@ -123,6 +132,31 @@ export default function LessonPage() {
       const rows = exerciseIds.map((exerciseId) => appState.exerciseResults.find((row) => (
         row.dayNumber === plan.dayNumber && row.exerciseId === exerciseId
       )))
+      const pendingRetry = slots.some((currentSlot) => {
+        if (
+          currentSlot.kind !== 'step'
+          || currentSlot.step.kind !== 'exercise'
+          || currentSlot.step.ex.lexemeId !== lexemeId
+          || currentSlot.step.wordStage === undefined
+          || (currentSlot.step.wordRetryRound ?? 0) >= WORD_STAGE_RETRY_LIMIT
+        ) return false
+        const exerciseId = currentSlot.step.ex.id
+        const wordStage = currentSlot.step.wordStage
+        const retryRound = currentSlot.step.wordRetryRound ?? 0
+        const hasNextRetry = slots.some((nextSlot) => (
+          nextSlot.kind === 'step'
+          && nextSlot.step.kind === 'exercise'
+          && nextSlot.step.ex.lexemeId === lexemeId
+          && nextSlot.step.wordStage === wordStage
+          && (nextSlot.step.wordRetryRound ?? 0) === retryRound + 1
+        ))
+        return !hasNextRetry && appState.exerciseResults.some((row) => (
+          row.dayNumber === plan.dayNumber
+          && row.exerciseId === exerciseId
+          && !row.correct
+        ))
+      })
+      if (pendingRetry) continue
       if (rows.some((row) => !row)) continue
 
       const completed = rows.filter(Boolean) as NonNullable<typeof rows[number]>[]
@@ -143,9 +177,14 @@ export default function LessonPage() {
   }, [appState, plan, slots])
 
   async function onAnswered(
-    ex: Exercise, r: CheckResult, ms: number, complete = true, attempts = 1, answer = '',
+    ex: Exercise,
+    r: CheckResult,
+    ms: number,
+    complete = true,
+    attempts = 1,
+    answer = '',
+    wordStep?: Extract<Step, { kind: 'exercise' }>,
   ) {
-    if (complete) setCanAdvance(true)
     setStats((s) => ({ correct: s.correct + (r.correct ? 1 : 0), total: s.total + 1 }))
 
     // Результат каждого задания сохраняется на сервере: после reload должны
@@ -160,10 +199,41 @@ export default function LessonPage() {
       errorKind: r.errorKind ?? null,
     })
 
+    // Для новых слов возвращаем в очередь только ошибочный этап. Остальные
+    // этапы слова не повторяются, а retry получает отдельный ID для reload.
+    if (
+      !r.correct
+      && wordStep?.wordStage !== undefined
+      && ex.lexemeId
+      && plan?.newWords.some((word) => word.id === ex.lexemeId)
+      && (wordStep.wordRetryRound ?? 0) < WORD_STAGE_RETRY_LIMIT
+      && slot?.kind === 'step'
+    ) {
+      const retryRound = (wordStep.wordRetryRound ?? 0) + 1
+      const retryId = `day:${plan.dayNumber}:word-retry:${ex.lexemeId}:${wordStep.wordStage}:${retryRound}:${ex.id}`
+      const retryStep: Step = {
+        ...wordStep,
+        wordRetryRound: retryRound,
+        ex: { ...ex, id: retryId, attemptsAllowed: 1 },
+      }
+      setSlots((currentSlots) => currentSlots.some((currentSlot) => (
+        currentSlot.kind === 'step'
+        && currentSlot.step.kind === 'exercise'
+        && currentSlot.step.ex.id === retryId
+      )) ? currentSlots : [
+        ...currentSlots,
+        { kind: 'step', stage: slot.stage, step: retryStep },
+      ])
+    }
+
     const isNewWordExercise = Boolean(
       ex.lexemeId && plan?.newWords.some((word) => word.id === ex.lexemeId),
     )
     if (ex.lexemeId && !isNewWordExercise) {
+      // Обязательный лексический минимум может добрать резервное слово,
+      // которого ещё нет в FSRS. Создаём обе стороны карточки перед записью
+      // ответа, иначе такое упражнение не влияло бы на дальнейшие повторы.
+      await ensureLexemeCards(ex.lexemeId)
       const kind = ex.kind === 'translate-production'
         || ex.kind === 'spelling'
         || ex.kind === 'listen-write'
@@ -173,6 +243,7 @@ export default function LessonPage() {
     for (const ruleId of ex.grammarRuleIds) {
       await recordRuleAttempt(ruleId, r.correct, ex.difficulty)
     }
+    if (complete) setCanAdvance(true)
   }
 
   function skipWord(lexemeId: string) {
@@ -296,7 +367,7 @@ export default function LessonPage() {
     <Screen>
       <header className="mx-auto w-full max-w-2xl px-4 py-3">
         <Row justify="between">
-          <Link href="/" className="text-sm text-muted hover:text-ink">← Wyjdź</Link>
+          <Link href="/" className="inline-flex min-h-10 items-center text-sm text-muted hover:text-ink">← Wyjdź</Link>
           <Row gap="sm">
             {slot && (
               <span className="text-sm text-muted">
@@ -311,7 +382,7 @@ export default function LessonPage() {
             <ThemePicker />
           </Row>
         </Row>
-        <div className="mt-2 h-1 overflow-hidden rounded-pill bg-soft">
+        <div className="u-hide-on-short mt-2 h-1 overflow-hidden rounded-pill bg-soft">
           <div
             className="h-full bg-primary transition-all"
             style={{ width: `${((i + 1) / Math.max(1, slots.length)) * 100}%` }}
@@ -327,8 +398,16 @@ export default function LessonPage() {
         {slot?.kind === 'step' && slot.step.kind === 'word-intro' && (
           <WordIntro
             word={slot.step.word}
-            onNext={next}
             onMarkedKnown={() => skipWord((slot.step as { word: Lexeme }).word.id)}
+          />
+        )}
+
+        {slot?.kind === 'step' && slot.step.kind === 'word-intro' && (
+          <StudyActionBar
+            speakText={slot.step.word.lemma}
+            canAdvance
+            onNext={next}
+            nextLabel="Запомнил"
           />
         )}
 
@@ -339,6 +418,23 @@ export default function LessonPage() {
               <Button size="lg" full onClick={next}>Do zadań</Button>
             </Stack>
           </Card>
+        )}
+
+        {slot?.kind === 'step' && slot.step.kind === 'exercise-batch' && (
+          <Stack gap="md">
+            <VocabularyExerciseBatch
+              key={slot.step.exercises.map((exercise) => exercise.id).join('|')}
+              exercises={slot.step.exercises}
+              blockTitle={slot.step.title}
+              blockDescription={slot.step.description}
+              dayNumber={plan.dayNumber}
+              onAnswered={(ex, r, ms, attempts, answer) => (
+                void onAnswered(ex, r, ms, false, attempts, answer)
+              )}
+              onComplete={() => void next()}
+              onReset={() => setCanAdvance(false)}
+            />
+          </Stack>
         )}
 
         {slot?.kind === 'step' && slot.step.kind === 'exercise' && (
@@ -374,17 +470,27 @@ export default function LessonPage() {
               <ExerciseView
                 key={`${i}-${slot.step.ex.id}`}
                 exercise={slot.step.ex}
+                showSpeakButton={!wordStudyExercise}
                 restoredResult={restoredResult}
-                onAnswered={(r, ms) => {
+                onAnswered={(r, ms, attempts, answer) => {
                   const step = slot.step
-                  if (step.kind === 'exercise') void onAnswered(step.ex, r, ms)
+                  if (step.kind === 'exercise') {
+                    void onAnswered(step.ex, r, ms, true, attempts, answer, step)
+                  }
                 }}
               />
             )}
             <Row gap="sm" justify="center">
               {slot.step.rule && <RuleSheet rule={slot.step.rule} />}
             </Row>
-            {(canAdvance || Boolean(restoredResult)) && (
+            {wordStudyExercise ? (
+              <StudyActionBar
+                speakText={speakableTextOf(slot.step.ex)}
+                canAdvance={canAdvance || Boolean(restoredResult)}
+                onNext={next}
+                nextLabel={i + 1 < slots.length ? 'Далее' : 'Завершить'}
+              />
+            ) : (canAdvance || Boolean(restoredResult)) && (
               <Button variant="outline" size="lg" full onClick={next}>
                 {i + 1 < slots.length ? 'Dalej' : 'Zakończ'}
               </Button>
@@ -397,7 +503,11 @@ export default function LessonPage() {
 }
 
 function StageStart({ stage, onNext }: { stage: Stage; onNext: () => void }) {
-  const exercises = stage.steps.filter((s) => s.kind === 'exercise').length
+  const exercises = stage.steps.reduce((count, step) => count + (
+    step.kind === 'exercise' ? 1
+      : step.kind === 'exercise-batch' ? step.exercises.length
+        : 0
+  ), 0)
   return (
     <Card>
       <Stack gap="md" align="center">
@@ -422,9 +532,8 @@ function StageStart({ stage, onNext }: { stage: Stage; onNext: () => void }) {
   )
 }
 
-function WordIntro({ word, onNext, onMarkedKnown }: {
+function WordIntro({ word, onMarkedKnown }: {
   word: Lexeme
-  onNext: () => void
   onMarkedKnown: () => void
 }) {
   return (
@@ -432,7 +541,6 @@ function WordIntro({ word, onNext, onMarkedKnown }: {
       <Stack gap="lg" align="center">
         <span className="text-xs tracking-wide text-muted uppercase">Nowe słowo</span>
         <div className="text-center text-3xl font-semibold">{word.lemma}</div>
-        <SpeakIcon text={word.lemma} />
         <div className="text-center text-lg">{word.translation}</div>
 
         {word.interference && (
@@ -454,7 +562,6 @@ function WordIntro({ word, onNext, onMarkedKnown }: {
           <KnownToggle lexemeId={word.id} polishLabels onMarked={(known) => known && onMarkedKnown()} />
         </Row>
 
-        <Button variant="outline" size="lg" full onClick={onNext}>Zapamiętałem</Button>
       </Stack>
     </Card>
   )

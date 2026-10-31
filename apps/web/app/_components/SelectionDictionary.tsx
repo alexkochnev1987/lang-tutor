@@ -126,7 +126,7 @@ export function SelectionDictionary() {
   return (
     <aside
       data-selection-ignore
-      className="fixed z-50 w-70 rounded-card border border-line bg-card p-3 shadow-modal"
+      className="fixed z-50 w-70 max-w-[calc(100vw-1rem)] rounded-card border border-line bg-card p-3 shadow-modal"
       style={{ left: currentSelection.left, top: currentSelection.top }}
       onPointerDown={(event) => event.stopPropagation()}
       aria-label="Tłumaczenie zaznaczonego słowa"
@@ -143,7 +143,7 @@ export function SelectionDictionary() {
           aria-label={`Wymów ${currentSelection.selectedText}`}
           title={message ?? `Wymów ${currentSelection.selectedText}`}
           onClick={() => pronounce(currentSelection.selectedText)}
-          className="flex size-8 shrink-0 items-center justify-center rounded-pill bg-soft text-base text-ink hover:bg-soft2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+          className="flex size-12 shrink-0 items-center justify-center rounded-pill bg-soft text-base text-ink hover:bg-soft2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
         >
           {message ? '🔇' : '🔊'}
         </button>
@@ -162,7 +162,7 @@ export function SelectionDictionary() {
           type="button"
           disabled={saved || saving}
           onClick={() => void save()}
-          className="mt-3 min-h-9 w-full rounded-card border border-line bg-transparent px-3 text-sm font-medium text-ink hover:bg-soft disabled:opacity-60"
+          className="mt-3 min-h-12 w-full rounded-card border border-line bg-transparent px-3 text-sm font-medium text-ink hover:bg-soft disabled:opacity-60"
         >
           {saved ? 'Już w słowniku' : saving ? 'Zapisywanie…' : 'Zapisz do słownika'}
         </button>

@@ -89,6 +89,10 @@ input, select, textarea {
 /* Телефон лёжа: ~400px высоты, с клавиатурой вдвое меньше */
 @media (max-height: 30rem) {
   .u-hide-on-short { display: none; }
+  .study-action-bar {
+    margin-top: 0.5rem;
+    padding-top: 0.5rem;
+  }
 }
 
 :focus-visible {

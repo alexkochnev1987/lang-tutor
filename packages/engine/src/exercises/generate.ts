@@ -32,6 +32,16 @@ export function shuffle<T>(arr: readonly T[], seed: number): T[] {
 export const hashString = (s: string): number =>
   [...s].reduce((h, c) => (Math.imul(h, 31) + c.charCodeAt(0)) | 0, 7) >>> 0
 
+function uniqueText(values: readonly string[]): string[] {
+  const seen = new Set<string>()
+  return values.filter((value) => {
+    const key = value.trim().toLocaleLowerCase()
+    if (!key || seen.has(key)) return false
+    seen.add(key)
+    return true
+  })
+}
+
 // ─────────────────────────────────────────────────────────────────────
 // Лексика
 // ─────────────────────────────────────────────────────────────────────
@@ -48,7 +58,11 @@ export interface LexemeLike {
 export function translateRecognition(
   word: LexemeLike, pool: readonly string[], ctx: ExerciseContext,
 ): ChoiceExercise {
-  const distractors = shuffle(pool.filter((t) => t !== word.translation), ctx.seed).slice(0, 3)
+  const answerKey = word.translation.trim().toLocaleLowerCase()
+  const distractors = shuffle(
+    uniqueText(pool).filter((t) => t.trim().toLocaleLowerCase() !== answerKey),
+    ctx.seed,
+  ).slice(0, 3)
   return {
     id: `ex.rec.${word.id}`,
     kind: 'translate-recognition',
@@ -68,7 +82,11 @@ export function translateRecognition(
 export function translateProduction(
   word: LexemeLike, pool: readonly string[], ctx: ExerciseContext,
 ): ChoiceExercise {
-  const distractors = shuffle(pool.filter((l) => l !== word.lemma), ctx.seed).slice(0, 3)
+  const answerKey = word.lemma.trim().toLocaleLowerCase()
+  const distractors = shuffle(
+    uniqueText(pool).filter((l) => l.trim().toLocaleLowerCase() !== answerKey),
+    ctx.seed,
+  ).slice(0, 3)
   return {
     id: `ex.prod.${word.id}`,
     kind: 'translate-production',

@@ -4,6 +4,7 @@ import { Row } from '@polski/ui'
 import { usePronounce } from '@/lib/speech/usePronounce'
 import { setLexemeKnown, useAppState } from '@/lib/data/store'
 import type { Lexeme } from '@/lib/content/curriculum'
+import { getLexemeStudyStatus, type LexemeStudyStatus } from '@/lib/engine/word-status'
 
 const BADGE: Record<Lexeme['transparency'], { text: string; cls: string } | null> = {
   transparent: null,
@@ -18,6 +19,7 @@ export function WordRow({ word, completed = false }: { word: Lexeme; completed?:
   const badge = BADGE[word.transparency]
   const known = state?.lexemeStatus.some(
     (l) => l.lexemeId === word.id && l.status === 'known') ?? false
+  const studyStatus = getLexemeStudyStatus(state, word.id)
 
   return (
     <div className="border-b border-line py-2 last:border-0">
@@ -27,7 +29,7 @@ export function WordRow({ word, completed = false }: { word: Lexeme; completed?:
             type="button"
             onClick={() => pronounce(word.lemma)}
             aria-label={`Wymów ${word.lemma}`}
-            className="flex size-9 shrink-0 items-center justify-center rounded-pill bg-soft text-base hover:bg-soft2"
+            className="flex size-12 shrink-0 items-center justify-center rounded-pill bg-soft text-base hover:bg-soft2"
           >
             {message ? '🔇' : '🔊'}
           </button>
@@ -36,6 +38,7 @@ export function WordRow({ word, completed = false }: { word: Lexeme; completed?:
               {word.lemma}
             </div>
             <div className="text-sm text-muted">{word.translation}</div>
+            <StudyStatusBadge status={studyStatus} />
           </div>
         </Row>
         <Row gap="xs">
@@ -101,7 +104,7 @@ export function KnownToggle({ lexemeId, onMarked, polishLabels = false }: {
         title={polishLabels
           ? known ? 'Przywróć do ćwiczeń' : 'Oznacz słowo jako znane'
           : known ? 'Вернуть в практику' : 'Отметить слово как выученное'}
-        className={`flex min-h-9 shrink-0 items-center gap-1 rounded-pill px-2.5 text-xs font-medium ${
+        className={`flex min-h-12 shrink-0 items-center gap-1 rounded-pill px-2.5 text-xs font-medium ${
           known
             ? 'bg-ok-bg text-ok-ink hover:bg-soft2'
             : 'border border-primary bg-transparent text-primary hover:bg-soft'
@@ -113,5 +116,22 @@ export function KnownToggle({ lexemeId, onMarked, polishLabels = false }: {
           : known ? 'знаю' : 'Знаю'}
       </button>
     </Row>
+  )
+}
+
+const STUDY_STATUS: Record<LexemeStudyStatus, { label: string; className: string }> = {
+  known: { label: '✓ знаю', className: 'bg-ok-bg text-ok-ink' },
+  learning: { label: '↻ в повторении', className: 'bg-soft2 text-accent-ink' },
+  completed: { label: '✓ изучено', className: 'bg-ok-bg text-ok-ink' },
+  failed: { label: '↻ нужно повторить', className: 'bg-warn-bg text-warn-ink' },
+  untouched: { label: '○ не начато', className: 'bg-soft text-muted' },
+}
+
+export function StudyStatusBadge({ status }: { status: LexemeStudyStatus }) {
+  const view = STUDY_STATUS[status]
+  return (
+    <span className={`mt-1 inline-flex min-h-6 items-center rounded-pill px-2 py-0.5 text-xs ${view.className}`}>
+      {view.label}
+    </span>
   )
 }

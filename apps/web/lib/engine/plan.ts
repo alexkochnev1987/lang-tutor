@@ -1,4 +1,7 @@
-import type { Exercise } from '@polski/engine'
+import {
+  hashString, listenWrite, translateRecognition,
+  type Exercise,
+} from '@polski/engine'
 import {
   currentDayNumber, loadCurriculum, loadGrammarRules, loadGrammarSentences,
   loadMorphology, loadReadingTexts, loadVocabulary,
@@ -29,11 +32,20 @@ export type Step =
   | { kind: 'word-intro'; word: Lexeme }
   | { kind: 'rule-intro'; rule: LocalizedRule }
   | {
+      kind: 'exercise-batch'
+      exercises: Exercise[]
+      title: string
+      description: string
+    }
+  | {
       kind: 'exercise'
       ex: Exercise
       review: boolean
       rule: LocalizedRule | null
       variants?: Partial<Record<SentenceMode, Exercise>>
+      /** Этап нового слова: нужен для точечного повтора после ошибки. */
+      wordStage?: number
+      wordRetryRound?: number
     }
 
 export interface Stage {
@@ -62,6 +74,8 @@ const MIN_GRAMMAR_EXAMPLES_PER_TYPE = 10
 const WRITE_TASKS_PER_RULE = 2
 const EXAM_TASK_COUNT = 10
 const NEW_WORD_BATCH_SIZE = 5
+const MINIMUM_WORDS_PER_MODE = 10
+const MINIMUM_WORD_BATCH_SIZE = MINIMUM_WORDS_PER_MODE * 2
 
 const MODULES_WITH_GENERATOR = new Set(['grammar'])
 
@@ -82,6 +96,8 @@ const MISSING_CONTENT_FOR_MODULE: Record<string, string> = {
 
 const stepSec = (step: Step): number =>
   step.kind === 'exercise' ? step.ex.estimatedSec
+  : step.kind === 'exercise-batch'
+    ? step.exercises.reduce((sec, exercise) => sec + exercise.estimatedSec, 0)
   : step.kind === 'rule-intro' ? RULE_INTRO_SEC
   : WORD_INTRO_SEC
 
@@ -120,6 +136,14 @@ export async function buildTodayPlan(): Promise<TodayPlan> {
       newWords.slice(start, start + NEW_WORD_BATCH_SIZE), practisedPool,
     ))
   }
+  const minimumWordBatch = buildMinimumWordBatch(
+    curriculum.days,
+    dayNumber,
+    day,
+    newWords,
+    state.studyItems,
+    vocabulary,
+  )
 
   const drillRuleIds = lesson.activities.find((a) => a.kind === 'grammar-drill')?.refIds ?? []
   const ruleIds = [...new Set([...day.grammarRuleIds, ...drillRuleIds])]
@@ -139,6 +163,7 @@ export async function buildTodayPlan(): Promise<TodayPlan> {
   const stages: Stage[] = []
 
   const wordSteps = [...reviewSteps, ...newWordSteps]
+  if (minimumWordBatch) wordSteps.push(minimumWordBatch)
   if (wordSteps.length) {
     stages.push({
       id: 'words',
@@ -188,15 +213,103 @@ export async function buildTodayPlan(): Promise<TodayPlan> {
 }
 
 /**
+ * Обязательный лексический минимум каждого обычного урока:
+ * 10 уникальных слов нужно вписать и ещё 10 уникальных слов выбрать.
+ *
+ * Это отдельный блок практики, а не замена текущему знакомству со словами.
+ * Сначала берём слова, которые уже есть в текущей очереди/дне, затем слова
+ * из пройденной части курса. Если это первый день или состояние пустое,
+ * детерминированно добираем из словаря, чтобы контроль не зависел от того,
+ * сколько слов было запланировано именно на этот день.
+ */
+function buildMinimumWordBatch(
+  curriculumDays: CurriculumDay[],
+  dayNumber: number,
+  day: CurriculumDay,
+  newWords: Lexeme[],
+  studyItems: { refId: string }[],
+  vocabulary: Map<string, Lexeme>,
+): Extract<Step, { kind: 'exercise-batch' }> | null {
+  const allWords = [...vocabulary.values()]
+  const byId = (ids: readonly string[]) => ids
+    .map((id) => vocabulary.get(id))
+    .filter((word): word is Lexeme => Boolean(word))
+
+  const offset = allWords.length
+    ? ((dayNumber - 1) * MINIMUM_WORD_BATCH_SIZE) % allWords.length
+    : 0
+  const rotatedWords = allWords.length
+    ? [...allWords.slice(offset), ...allWords.slice(0, offset)]
+    : []
+  const previousCourseWords = curriculumDays
+    .slice(0, dayNumber)
+    .flatMap((courseDay) => courseDay.lexemeIds ?? [])
+
+  const candidates = [
+    ...newWords,
+    ...byId(studyItems.map((item) => item.refId)),
+    ...byId(day.lexemeIds ?? []),
+    ...byId(previousCourseWords),
+    ...rotatedWords,
+  ]
+
+  // A repeated translation is also unhelpful in a 10-word minimum block:
+  // the learner should see ten different prompts, not ten copies of one
+  // Russian equivalent.
+  const usedLemmas = new Set<string>()
+  const usedTranslations = new Set<string>()
+  const words: Lexeme[] = []
+  for (const word of candidates) {
+    const lemma = word.lemma.trim().toLocaleLowerCase()
+    const translation = word.translation.trim().toLocaleLowerCase()
+    if (!lemma || !translation || usedLemmas.has(lemma) || usedTranslations.has(translation)) continue
+    usedLemmas.add(lemma)
+    usedTranslations.add(translation)
+    words.push(word)
+    if (words.length >= MINIMUM_WORD_BATCH_SIZE) break
+  }
+  if (words.length < MINIMUM_WORD_BATCH_SIZE) return null
+
+  const choicePool = allWords
+    .map((word) => word.translation)
+    .filter(Boolean)
+  const typed = words.slice(0, MINIMUM_WORDS_PER_MODE).map((word) => ({
+    ...listenWrite(word),
+    id: `ex.minimum-words.${day.day}.typed.${word.id}`,
+  }))
+  const choice = words.slice(MINIMUM_WORDS_PER_MODE).map((word) => ({
+    ...translateRecognition(word, choicePool, {
+      seed: hashString(`minimum-words:${day.day}:${word.id}`),
+    }),
+    id: `ex.minimum-words.${day.day}.choice.${word.id}`,
+  }))
+
+  return {
+    kind: 'exercise-batch',
+    exercises: [...typed, ...choice],
+    title: 'Minimum leksykalne',
+    description: '10 słów wpisz i 10 innych słów wybierz — bez powtórzeń.',
+  }
+}
+
+/**
  * Вводим слова небольшими пачками и чередуем их упражнения:
  * карточка A → перевод A → карточка B → перевод B → следующее задание A.
  * Так человек не получает подряд четыре разных проверки одного слова.
  */
 function buildNewWordSteps(words: Lexeme[], pool: Lexeme[]): Step[] {
+  const stageByWord = new Map<string, number>()
   return buildWordStudySteps(words, pool).map((step): Step => (
     step.kind === 'word-intro'
       ? step
-      : { kind: 'exercise', ex: step.ex, review: false, rule: null }
+      : (() => {
+          const wordStage = stageByWord.get(step.word.id) ?? 0
+          stageByWord.set(step.word.id, wordStage + 1)
+          return {
+            kind: 'exercise', ex: { ...step.ex, attemptsAllowed: 1 },
+            review: false, rule: null, wordStage,
+          }
+        })()
   ))
 }
 

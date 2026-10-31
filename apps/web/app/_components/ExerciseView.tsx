@@ -10,7 +10,7 @@ export function SpeakIcon({
   text, size = 'md', ariaLabel,
 }: { text: string; size?: 'sm' | 'md'; ariaLabel?: string }) {
   const { pronounce, message } = usePronounce()
-  const cls = size === 'sm' ? 'size-9 text-base' : 'size-12 text-xl'
+  const cls = size === 'sm' ? 'size-12 text-base' : 'size-12 text-xl'
   return (
     <button
       type="button"
@@ -21,6 +21,48 @@ export function SpeakIcon({
     >
       {message ? '🔇' : '🔊'}
     </button>
+  )
+}
+
+/** Польский текст для кнопки повторного прослушивания в нижней панели. */
+export function speakableTextOf(exercise: Exercise): string | undefined {
+  if (exercise.kind === 'listen-write' && exercise.mode === 'typed') {
+    return exercise.speakText ?? exercise.accepted[0]
+  }
+  if (exercise.kind === 'translate-production' && exercise.mode === 'choice') {
+    return exercise.answer
+  }
+  if (exercise.kind === 'spelling' && exercise.mode === 'assemble') {
+    return exercise.answer
+  }
+  if (exercise.mode === 'choice' && exercise.kind === 'reading-choice') return undefined
+  if (exercise.kind === 'sentence-write') return undefined
+  return exercise.prompt
+}
+
+export function StudyActionBar({
+  speakText, canAdvance, onNext, nextLabel,
+}: {
+  speakText?: string
+  canAdvance: boolean
+  onNext: () => void
+  nextLabel: string
+}) {
+  return (
+    <div className="study-action-bar sticky bottom-0 z-10 -mx-4 mt-3 border-t border-line bg-bg/95 px-4 pt-3 backdrop-blur-sm">
+      <div className="mx-auto flex w-full max-w-(--container-exercise) items-center gap-2 pb-[max(0.75rem,env(safe-area-inset-bottom))]">
+        {speakText && <SpeakIcon text={speakText} ariaLabel="Прослушать слово" />}
+        {canAdvance && (
+          <Button
+            size="lg"
+            className={speakText ? 'min-w-0 flex-1' : 'w-full'}
+            onClick={onNext}
+          >
+            {nextLabel}
+          </Button>
+        )}
+      </div>
+    </div>
   )
 }
 
@@ -38,6 +80,13 @@ function hintForExercise(exercise: InlineExercise): string | undefined {
   const answer = 'answer' in exercise ? exercise.answer : exercise.accepted[0]
   const firstLetter = answer?.trim().slice(0, 1)
   return firstLetter ? `Pierwsza litera odpowiedzi: ${firstLetter}` : undefined
+}
+
+function keepInputVisible(element: HTMLElement): void {
+  if (typeof window === 'undefined') return
+  window.requestAnimationFrame(() => {
+    element.scrollIntoView({ block: 'center', behavior: 'smooth' })
+  })
 }
 
 function letterIndexesForAnswer(letters: string[], answer: string): number[] {
@@ -63,7 +112,7 @@ function HintButton({ hint }: { hint: string }) {
         title="Pokaż podpowiedź"
         onPointerDown={(event) => event.preventDefault()}
         onClick={() => setVisible((current) => !current)}
-        className="flex size-6 items-center justify-center rounded-pill bg-soft2 text-xs font-semibold text-muted hover:text-ink focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+        className="flex size-12 items-center justify-center rounded-pill bg-soft2 text-xs font-semibold text-muted hover:text-ink focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
       >
         ?
       </button>
@@ -115,7 +164,7 @@ function InlineFormControl({
     'aria-label': `Forma słowa ${baseForm}${stateLabel}`,
     'aria-invalid': status === 'wrong' ? true : undefined,
     disabled,
-    className: `inline-form-control min-h-9 min-w-24 border-0 bg-transparent px-1 text-left text-lg font-semibold shadow-none outline-none ring-0 focus:border-0 focus:shadow-none focus:outline-none focus:ring-0 focus-visible:border-0 focus-visible:shadow-none focus-visible:outline-none focus-visible:ring-0 disabled:opacity-100 ${textClass}`,
+    className: `inline-form-control min-h-12 min-w-24 border-0 bg-transparent px-1 text-left text-lg font-semibold shadow-none outline-none ring-0 focus:border-0 focus:shadow-none focus:outline-none focus:ring-0 focus-visible:border-0 focus-visible:shadow-none focus-visible:outline-none focus-visible:ring-0 disabled:opacity-100 ${textClass}`,
     lang: 'pl',
   } as const
 
@@ -127,7 +176,10 @@ function InlineFormControl({
         <select
           {...common}
           value={value}
-          onFocus={() => setFocused(true)}
+          onFocus={(event) => {
+            setFocused(true)
+            keepInputVisible(event.currentTarget)
+          }}
           onBlur={() => setFocused(false)}
           onChange={(e) => {
             const next = e.target.value
@@ -147,7 +199,10 @@ function InlineFormControl({
           autoCapitalize="off"
           autoCorrect="off"
           spellCheck={false}
-          onFocus={() => setFocused(true)}
+          onFocus={(event) => {
+            setFocused(true)
+            keepInputVisible(event.currentTarget)
+          }}
           onChange={(e) => onChange(e.target.value)}
           onBlur={() => {
             setFocused(false)
@@ -282,7 +337,7 @@ function InlineWordPrompt({
  */
 export function ExerciseView({
   exercise, onAnswered, bare = false, showReadingText = true, autoFocus = true,
-  showInstruction = true, leadingNumber, restoredResult,
+  showInstruction = true, leadingNumber, restoredResult, showSpeakButton = true,
 }: {
   exercise: Exercise
   onAnswered: (r: CheckResult, ms: number, attempts: number, answer: string) => void
@@ -298,6 +353,8 @@ export function ExerciseView({
   leadingNumber?: number
   /** Результат упражнения, восстановленный из серверной истории. */
   restoredResult?: { result: CheckResult; answer: string; attempts: number } | null
+  /** Переносит озвучку в нижнюю панель мобильного сценария. */
+  showSpeakButton?: boolean
 }) {
   const [result, setResult] = useState<CheckResult | null>(null)
   const [feedback, setFeedback] = useState<CheckResult | null>(null)
@@ -362,6 +419,9 @@ export function ExerciseView({
     const nextWrongTries = r.correct ? wrongTries : [...wrongTries, answer]
     if (!r.correct) setWrongTries(nextWrongTries)
     setResult(r)
+    if (typeof navigator !== 'undefined' && 'vibrate' in navigator) {
+      navigator.vibrate(r.correct ? 12 : [18, 35, 18])
+    }
     onAnswered(
       r,
       Date.now() - started.current,
@@ -447,8 +507,8 @@ export function ExerciseView({
                   : exercise.prompt}
               </span>
             )}
-            {isPolishPrompt && <SpeakIcon text={exercise.prompt} />}
-            {isListenWrite && exercise.mode === 'typed' && (
+            {showSpeakButton && isPolishPrompt && <SpeakIcon text={exercise.prompt} />}
+            {showSpeakButton && isListenWrite && exercise.mode === 'typed' && (
               <SpeakIcon
                 text={exercise.speakText ?? exercise.accepted[0] ?? ''}
                 ariaLabel="Odtwórz wymowę"
@@ -485,6 +545,7 @@ export function ExerciseView({
                 autoFocus={autoFocus}
                 value={typed}
                 disabled={Boolean(result)}
+                onFocus={(event) => keepInputVisible(event.currentTarget)}
                 onChange={(e) => updateTyped(e.target.value)}
                 onBlur={() => submit(typed)}
                 onKeyDown={(e) => { if (e.key === 'Enter') submit(typed) }}
@@ -558,18 +619,20 @@ export function ExerciseView({
           </Stack>
         )}
 
-        {feedback?.correct && (
-          <p className="text-sm font-medium text-ok-ink">Poprawnie</p>
-        )}
-        {feedback && !feedback.correct && (
-          <Stack gap="xs" className="text-sm">
-            {exercise.mode !== 'choice' && result && (
-              <p className="text-ok-ink">
-                Poprawna odpowiedź: <strong>{feedback.expected}</strong>
-              </p>
-            )}
-          </Stack>
-        )}
+        <div className="min-h-6 text-sm">
+          {feedback?.correct && (
+            <p className="font-medium text-ok-ink">Poprawnie</p>
+          )}
+          {feedback && !feedback.correct && (
+            <Stack gap="xs">
+              {exercise.mode !== 'choice' && result && (
+                <p className="text-ok-ink">
+                  Poprawna odpowiedź: <strong>{feedback.expected}</strong>
+                </p>
+              )}
+            </Stack>
+          )}
+        </div>
 
     </Stack>
   )
@@ -579,17 +642,22 @@ export function ExerciseView({
 }
 
 /**
- * Пошаговый пакет грамматических заданий. Внутри одного типа все примеры
- * остаются на одной странице, а следующий тип открывается автоматически.
+ * Пошаговый пакет однотипных заданий. Все ответы сохраняются поштучно, но
+ * пользователю блок показывается как одно задание с нумерованными строками.
  */
-export function GrammarExerciseBatch({
+export function ExerciseBatch({
   exercises, onAnswered, onComplete, onReset, dayNumber,
+  completedTitle, completedDescription, blockTitle, blockDescription,
 }: {
   exercises: Exercise[]
   onAnswered: (exercise: Exercise, result: CheckResult, ms: number, attempts: number, answer: string) => void
   onComplete: () => void
   onReset?: () => void
   dayNumber: number
+  completedTitle: string
+  completedDescription: string
+  blockTitle?: string
+  blockDescription?: string
 }) {
   const state = useAppState()
   const [completedIds, setCompletedIds] = useState<Set<string>>(() => new Set())
@@ -657,8 +725,8 @@ export function GrammarExerciseBatch({
     return (
       <Stack gap="md" className="mx-auto w-full max-w-(--container-exercise)" align="center">
         <div className="w-full rounded-card border border-ok bg-ok-bg px-4 py-4 text-center">
-          <p className="font-semibold text-ok-ink">Blok gramatyki ukończony</p>
-          <p className="mt-1 text-sm text-muted">Wynik zapisany. Możesz przejść dalej albo powtórzyć blok.</p>
+          <p className="font-semibold text-ok-ink">{completedTitle}</p>
+          <p className="mt-1 text-sm text-muted">{completedDescription}</p>
         </div>
         <Button variant="outline" size="sm" disabled={resetting} onClick={() => void resetBlock()}>
           {resetting ? 'Przygotowuję…' : 'Powtórz blok'}
@@ -669,6 +737,14 @@ export function GrammarExerciseBatch({
 
   return (
     <Stack gap="lg" className="mx-auto w-full max-w-(--container-exercise)">
+      {blockTitle && (
+        <Stack gap="xs">
+          <p className="text-left text-sm font-semibold tracking-wide text-muted uppercase">
+            {blockTitle}
+          </p>
+          {blockDescription && <p className="text-left text-sm text-muted">{blockDescription}</p>}
+        </Stack>
+      )}
       <Stack gap="sm">
         <p className="text-left text-sm tracking-wide text-muted uppercase">
           {activeGroup.exercises[0]!.instruction}
@@ -701,5 +777,27 @@ export function GrammarExerciseBatch({
         </div>
       ))}
     </Stack>
+  )
+}
+
+/** Пакет грамматических заданий с прежним текстом интерфейса. */
+export function GrammarExerciseBatch(props: Omit<Parameters<typeof ExerciseBatch>[0], 'completedTitle' | 'completedDescription'>) {
+  return (
+    <ExerciseBatch
+      {...props}
+      completedTitle="Blok gramatyki ukończony"
+      completedDescription="Wynik zapisany. Możesz przejść dalej albo powtórzyć blok."
+    />
+  )
+}
+
+/** Обязательный пакет слов: 10 вводов и 10 выборов. */
+export function VocabularyExerciseBatch(props: Omit<Parameters<typeof ExerciseBatch>[0], 'completedTitle' | 'completedDescription'>) {
+  return (
+    <ExerciseBatch
+      {...props}
+      completedTitle="Minimum leksykalne ukończone"
+      completedDescription="10 słów wpisanych i 10 słów wybranych. Możesz przejść dalej."
+    />
   )
 }

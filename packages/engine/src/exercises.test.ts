@@ -58,8 +58,14 @@ describe('лексические упражнения', () => {
   it('узнавание: 4 варианта, верный среди них', () => {
     const ex = translateRecognition(reka, ['нога', 'голова', 'глаз', 'ухо'], CTX)
     expect(ex.options).toHaveLength(4)
+    expect(new Set(ex.options).size).toBe(4)
     expect(ex.options).toContain('рука')
     expect(ex.answer).toBe('рука')
+  })
+
+  it('узнавание не повторяет варианты даже при дублях в пуле', () => {
+    const ex = translateRecognition(reka, ['рука', 'нога', 'нога', 'ГОЛОВА', 'голова', 'ухо'], CTX)
+    expect(new Set(ex.options.map((option) => option.toLocaleLowerCase())).size).toBe(ex.options.length)
   })
 
   it('воспроизведение дороже узнавания по времени и сложности', () => {
