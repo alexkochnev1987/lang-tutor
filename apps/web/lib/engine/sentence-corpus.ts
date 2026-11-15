@@ -1,4 +1,4 @@
-import { shuffle, type Exercise } from '@polski/engine'
+import { hashString, shuffle, type Exercise } from '@polski/engine'
 import { sentenceDrillVariants } from './exercises'
 import type { Paradigm, SentenceGapItem, SentencePack } from '../content/curriculum'
 
@@ -55,6 +55,7 @@ export interface LinkedGap {
   ruleId: string
   lemma: string
   accepted: string[]
+  distractors?: string[]
   hint: string
 }
 
@@ -77,7 +78,7 @@ const CASES: Record<string, string> = {
   inst: 'творительный', loc: 'местный',
 }
 const PERSONS: Record<string, string> = { pri: '1-е', sec: '2-е', ter: '3-е' }
-const normalize = (text: string) => text.normalize('NFC').toLocaleLowerCase('pl')
+export const normalizeLinkedAnswer = (text: string) => text.trim().normalize('NFC').toLocaleLowerCase('pl')
 
 function indexFiniteForms(morphology: Record<string, Paradigm>) {
   const forms = new Map<string, TokenForm[]>()
@@ -85,7 +86,7 @@ function indexFiniteForms(morphology: Record<string, Paradigm>) {
     for (const [tag, variants] of Object.entries(paradigm)) {
       if (!tag.startsWith('fin:')) continue
       for (const variant of variants) {
-        const key = normalize(variant)
+        const key = normalizeLinkedAnswer(variant)
         const analyses = forms.get(key) ?? []
         analyses.push({ lemma, tag })
         forms.set(key, analyses)
@@ -123,7 +124,7 @@ export function buildLinkedSentences(
       // The source rule already identifies the gap as governed by a verb.
       // Resolve its head only when the clause has one unambiguous finite verb.
       const verbs = tokens.flatMap((token, index) => {
-        const forms = finiteForms.get(normalize(token.text))
+        const forms = finiteForms.get(normalizeLinkedAnswer(token.text))
         return forms ? [{ token, index, forms }] : []
       })
       const verb = verbs[0]
@@ -136,14 +137,14 @@ export function buildLinkedSentences(
       const verbRule = conjugation(morphology[form.lemma])
       if (aspect !== 'imperf' || !verbRule || !PERSONS[person]) continue
       const nounCases = new Set(Object.entries(morphology[entry.lemma] ?? {}).flatMap(([tag, variants]) =>
-        tag.startsWith('subst:') && variants.some((variant) => normalize(variant) === normalize(noun.text))
+        tag.startsWith('subst:') && variants.some((variant) => normalizeLinkedAnswer(variant) === normalizeLinkedAnswer(noun.text))
           ? [tag.split(':')[2]] : [],
       ))
       const nounCase = ruleId === 'pl.gram.c-gen-verbs' && nounCases.has('gen')
         ? 'gen' : nounCases.size === 1 ? [...nounCases][0] : ''
       if (!CASES[nounCase]) continue
 
-      const key = [ruleId, verbRule, normalize(entry.text)].join('|')
+      const key = [ruleId, verbRule, normalizeLinkedAnswer(entry.text)].join('|')
       if (seen.has(key)) continue
       seen.add(key)
       const governor = form.lemma + (/^\s+się(?:\s|$)/u.test(between) ? ' się' : '')
@@ -165,6 +166,7 @@ export function buildLinkedSentences(
             ruleId,
             lemma: entry.lemma,
             accepted: entry.answers,
+            distractors: entry.distractors,
             hint: `В этом сочетании глагол ${governor} требует ${CASES[nounCase]} падеж.`,
           },
         ],
@@ -179,4 +181,28 @@ export function matchesRulePair(card: LinkedSentence, firstRuleId: string, secon
   return (first.head === second.token || second.head === first.token) &&
     ((first.ruleId === firstRuleId && second.ruleId === secondRuleId) ||
       (first.ruleId === secondRuleId && second.ruleId === firstRuleId))
+}
+
+
+export function linkedGapOptions(
+  card: LinkedSentence,
+  position: number,
+  morphology: Record<string, Paradigm>,
+  seed: number,
+) {
+  const gap = card.gaps[position]
+  const answer = gap.accepted[0]
+  const paradigm = morphology[gap.lemma.replace(/\s+się$/, '')]
+  const used = new Set(gap.accepted.map(normalizeLinkedAnswer))
+  const variants = shuffle(Object.values(paradigm ?? {}).flat(), seed)
+  const other = card.gaps[1 - position]
+  const distractors: string[] = []
+  for (const text of [...(gap.distractors ?? []), ...variants, ...other.accepted, gap.lemma]) {
+    const key = normalizeLinkedAnswer(text)
+    if (!key || used.has(key)) continue
+    used.add(key)
+    distractors.push(text)
+    if (distractors.length === 3) break
+  }
+  return shuffle([answer, ...distractors], seed + hashString(`${card.id}.${position}`))
 }

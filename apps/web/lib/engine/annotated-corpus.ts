@@ -13,7 +13,45 @@ const wordSpans = (sentence: AnnotatedSentence) => [...sentence.pl.matchAll(/\p{
 
 export const pairKey = (first: string, second: string) => [first, second].sort().join('|')
 
-export async function sampleAnnotated(index: CorpusIndex, candidates: number[], limit: number, seed: number) {
+export function diverseSentences(
+  sentences: AnnotatedSentence[],
+  ruleIds: readonly string[],
+  limit: number,
+) {
+  const seen = new Map<string, number>()
+  const candidates = sentences.map((sentence) => ({
+    sentence,
+    lemmas: new Set(ruleIds.flatMap((rule) => {
+      const node = sentence.nodes[sentence.hits[rule]]
+      return node ? [node[0]] : []
+    })),
+  }))
+  const result: AnnotatedSentence[] = []
+  while (candidates.length && result.length < limit) {
+    let best = 0
+    let bestScore = Infinity
+    for (const [index, { lemmas }] of candidates.entries()) {
+      const score = [...lemmas].reduce((sum, lemma) => sum + (seen.get(lemma) ?? 0), 0)
+      if (score < bestScore) {
+        best = index
+        bestScore = score
+      }
+      if (score === 0) break
+    }
+    const [candidate] = candidates.splice(best, 1)
+    result.push(candidate.sentence)
+    for (const lemma of candidate.lemmas) seen.set(lemma, (seen.get(lemma) ?? 0) + 1)
+  }
+  return result
+}
+
+export async function sampleAnnotated(
+  index: CorpusIndex,
+  candidates: number[],
+  limit: number,
+  seed: number,
+  ruleIds: readonly string[],
+) {
   const chunkOf = (id: number) => Math.floor(id / index.chunkSize)
   const byChunk = new Map<number, number[]>()
   for (const id of shuffle(candidates, seed)) {
@@ -35,17 +73,18 @@ export async function sampleAnnotated(index: CorpusIndex, candidates: number[], 
   const chunks = new Map(await Promise.all([...new Set(selected.map(chunkOf))].map(async (chunk) =>
     [chunk, await loadCorpusChunk(index.version, chunk).catch(() => null)] as const,
   )))
-  const samples = selected.flatMap((id) => {
+  const samples = shuffle(candidates, seed).flatMap((id) => {
     const sentence = chunks.get(chunkOf(id))?.[id % index.chunkSize]
     return sentence ? [sentence] : []
   })
-  if (samples.length || !candidates.length) return samples
+  if (samples.length || !candidates.length) return diverseSentences(samples, ruleIds, limit)
 
   // The first chunk can be installed with the PWA. Use its matching examples
   // when the randomly selected chunks are unavailable offline.
   const starter = await loadCorpusChunk(index.version, 0)
-  return shuffle(candidates.filter((id) => id < index.chunkSize), seed)
-    .slice(0, limit).flatMap((id) => starter[id] ? [starter[id]] : [])
+  const offline = shuffle(candidates.filter((id) => id < index.chunkSize), seed)
+    .flatMap((id) => starter[id] ? [starter[id]] : [])
+  return diverseSentences(offline, ruleIds, limit)
 }
 
 export function annotatedLinkedSentence(sentence: AnnotatedSentence, first: string, second: string): LinkedSentence {

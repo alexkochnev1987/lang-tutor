@@ -4,23 +4,27 @@ import { useMemo, useState } from 'react'
 import { shuffle } from '@polski/engine'
 import { Button, Card, Row, Stack } from '@polski/ui'
 import { annotatedLinkedSentence, pairKey, sampleAnnotated } from '@/lib/engine/annotated-corpus'
-import type { CorpusIndex } from '@/lib/content/curriculum'
-import { matchesRulePair, type LinkedSentence } from '@/lib/engine/sentence-corpus'
+import type { CorpusIndex, Paradigm } from '@/lib/content/curriculum'
+import { linkedGapOptions, matchesRulePair, normalizeLinkedAnswer, type LinkedSentence } from '@/lib/engine/sentence-corpus'
 
 interface Props {
   cards: LinkedSentence[]
   corpus: CorpusIndex | null
+  morphology?: Record<string, Paradigm>
   titles: ReadonlyMap<string, string>
   limit: number
   onChangeFormat: () => void
 }
 
-export function LinkedSentencePractice({ cards, corpus, titles, limit, onChangeFormat }: Props) {
+type Difficulty = 'easy' | 'hard'
+
+export function LinkedSentencePractice({ cards, corpus, morphology, titles, limit, onChangeFormat }: Props) {
+  const [difficulty, setDifficulty] = useState<Difficulty>('easy')
   const [firstRule, setFirstRule] = useState('')
   const [secondRule, setSecondRule] = useState('')
   const [loading, setLoading] = useState(false)
   const [unavailable, setUnavailable] = useState(false)
-  const [session, setSession] = useState<{ cards: LinkedSentence[]; index: number; correct: number } | null>(null)
+  const [session, setSession] = useState<{ cards: LinkedSentence[]; index: number; correct: number; difficulty: Difficulty; seed: number } | null>(null)
   const byRule = useMemo(() => {
     const index = new Map<string, LinkedSentence[]>()
     for (const card of cards) {
@@ -56,11 +60,11 @@ export function LinkedSentencePractice({ cards, corpus, titles, limit, onChangeF
     setLoading(true)
     try {
       const annotated = corpus && candidates.length
-        ? await sampleAnnotated(corpus, candidates, limit, seed).catch(() => [])
+        ? await sampleAnnotated(corpus, candidates, limit, seed, [firstRule, secondRule]).catch(() => [])
         : []
       const generated = annotated.map((sentence) => annotatedLinkedSentence(sentence, firstRule, secondRule))
       const selected = shuffle([...legacy, ...generated], seed).slice(0, limit)
-      if (selected.length) setSession({ cards: selected, index: 0, correct: 0 })
+      if (selected.length) setSession({ cards: selected, index: 0, correct: 0, difficulty, seed })
       else setUnavailable(true)
     } finally {
       setLoading(false)
@@ -76,7 +80,12 @@ export function LinkedSentencePractice({ cards, corpus, titles, limit, onChangeF
           {card && <span className="text-sm text-muted">{session.index + 1} / {session.cards.length}</span>}
         </Row>
         {card ? (
-          <LinkedSentenceCard key={card.id} card={card} last={session.index + 1 === session.cards.length}
+          <LinkedSentenceCard
+            key={card.id}
+            card={card}
+            options={session.difficulty === 'easy' ? card.gaps.map((_, index) =>
+              linkedGapOptions(card, index, morphology ?? {}, session.seed)) : null}
+            last={session.index + 1 === session.cards.length}
             onNext={(correct) => setSession({
               ...session, index: session.index + 1, correct: session.correct + Number(correct),
             })}
@@ -111,6 +120,17 @@ export function LinkedSentencePractice({ cards, corpus, titles, limit, onChangeF
                 </select>
               </>
             )}
+            <fieldset disabled={loading} className="grid gap-2 sm:grid-cols-2">
+              <legend className="mb-2 text-sm font-medium">Сложность</legend>
+              <label className="flex cursor-pointer items-center gap-2 rounded-card border border-line px-3 py-2">
+                <input type="radio" name="linked-difficulty" checked={difficulty === 'easy'} onChange={() => setDifficulty('easy')} />
+                <span className="text-sm">Лёгкая · выбрать из вариантов</span>
+              </label>
+              <label className="flex cursor-pointer items-center gap-2 rounded-card border border-line px-3 py-2">
+                <input type="radio" name="linked-difficulty" checked={difficulty === 'hard'} onChange={() => setDifficulty('hard')} />
+                <span className="text-sm">Сложная · вписать</span>
+              </label>
+            </fieldset>
             <Button disabled={!secondRule || loading} onClick={() => void start()}>
               {loading ? 'Загружаем примеры…' : 'Начать тренировку'}
             </Button>
@@ -122,16 +142,18 @@ export function LinkedSentencePractice({ cards, corpus, titles, limit, onChangeF
   )
 }
 
-function LinkedSentenceCard({ card, last, onNext }: {
+function LinkedSentenceCard({ card, options, last, onNext }: {
   card: LinkedSentence
+  options: string[][] | null
   last: boolean
   onNext: (correct: boolean) => void
 }) {
   const [answers, setAnswers] = useState(['', ''])
   const [checked, setChecked] = useState(false)
-  const normalizeAnswer = (answer: string) => answer.trim().normalize('NFC').toLocaleLowerCase('pl')
+  const updateAnswer = (index: number, value: string) =>
+    setAnswers((current) => current.map((answer, i) => i === index ? value : answer))
   const results = card.gaps.map((gap, index) =>
-    gap.accepted.some((answer) => normalizeAnswer(answer) === normalizeAnswer(answers[index])))
+    gap.accepted.some((answer) => normalizeLinkedAnswer(answer) === normalizeLinkedAnswer(answers[index])))
 
   return (
     <Card>
@@ -146,17 +168,31 @@ function LinkedSentenceCard({ card, last, onNext }: {
             {card.parts[0]}
             {card.gaps.map((gap, index) => (
               <span key={gap.token}>
-                <input
-                  className="inline-block h-9 w-[min(8rem,38vw)] rounded-card border border-line bg-soft px-2"
-                  aria-label={`Пропуск ${index + 1}: ${gap.lemma}`}
-                  autoCapitalize="none"
-                  autoComplete="off"
-                  spellCheck={false}
-                  readOnly={checked}
-                  aria-invalid={checked && !results[index]}
-                  value={answers[index]}
-                  onChange={(event) => setAnswers(answers.map((answer, i) => i === index ? event.target.value : answer))}
-                />
+                {options ? (
+                  <select
+                    className="inline-block h-9 max-w-[48vw] rounded-card border border-line bg-soft px-2 text-sm"
+                    aria-label={`Пропуск ${index + 1}: ${gap.lemma}`}
+                    aria-invalid={checked && !results[index]}
+                    disabled={checked}
+                    value={answers[index]}
+                    onChange={(event) => updateAnswer(index, event.target.value)}
+                  >
+                    <option value="" disabled>…</option>
+                    {options[index].map((option) => <option key={option} value={option}>{option}</option>)}
+                  </select>
+                ) : (
+                  <input
+                    className="inline-block h-9 w-[min(8rem,38vw)] rounded-card border border-line bg-soft px-2"
+                    aria-label={`Пропуск ${index + 1}: ${gap.lemma}`}
+                    autoCapitalize="none"
+                    autoComplete="off"
+                    spellCheck={false}
+                    readOnly={checked}
+                    aria-invalid={checked && !results[index]}
+                    value={answers[index]}
+                    onChange={(event) => updateAnswer(index, event.target.value)}
+                  />
+                )}
                 {card.parts[index + 1]}
               </span>
             ))}

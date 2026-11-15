@@ -108,7 +108,7 @@ export function GrammarPractice() {
       const legacy = data ? practiceExercises(data, ruleId, mode, seed) : []
       const fromCorpus = mode === 'typed' || (mode === 'choice' && supportsAnnotatedChoice(ruleId))
       const examples = fromCorpus && corpusIndex
-        ? await sampleAnnotated(corpusIndex, corpusIndex.rules[ruleId] ?? [], MAX_EXERCISES, seed).catch(() => [])
+        ? await sampleAnnotated(corpusIndex, corpusIndex.rules[ruleId] ?? [], MAX_EXERCISES, seed, [ruleId]).catch(() => [])
         : []
       const generated = mode !== 'write' ? examples.flatMap((example) => {
         const exercise = annotatedGapExercise(example, ruleId, mode, seed)
@@ -124,7 +124,7 @@ export function GrammarPractice() {
 
   if (format === 'collocation') {
     const titles = new Map([...rules.values()].map((entry) => [entry.id, entry.title[language] ?? entry.title.pl ?? entry.id]))
-    return <LinkedSentencePractice cards={linkedSentences} corpus={corpusIndex} titles={titles} limit={MAX_EXERCISES} onChangeFormat={() => setFormat(null)} />
+    return <LinkedSentencePractice cards={linkedSentences} corpus={corpusIndex} morphology={data?.morphology} titles={titles} limit={MAX_EXERCISES} onChangeFormat={() => setFormat(null)} />
   }
 
   if (session && rule) {

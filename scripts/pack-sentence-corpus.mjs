@@ -3,12 +3,17 @@ import { mkdirSync, readFileSync, writeFileSync } from 'node:fs'
 import { join } from 'node:path'
 
 const CHUNK_SIZE = 20
+const textKey = (text) => text.normalize('NFC').toLocaleLowerCase('pl').replace(/[^\p{L}\p{N}]+/gu, ' ').trim()
 
 export function packSentenceCorpus(source, destination) {
   const input = readFileSync(join(source, 'sentence-corpus.json'))
   const { sentences } = JSON.parse(input)
   const { rules } = JSON.parse(readFileSync(join(source, 'grammar-rules.json'), 'utf8'))
   const ruleIds = new Set(rules.map(({ id }) => id))
+  const legacy = JSON.parse(readFileSync(join(source, 'grammar-sentences.json'), 'utf8')).rules
+  const legacyTexts = new Set(Object.values(legacy).flatMap(({ gaps }) =>
+    gaps.flatMap(({ pl, answers }) => answers.map((answer) => textKey(pl.replace('___', answer)))),
+  ))
   const texts = new Set()
   const ids = new Set()
   const indexedRules = {}
@@ -20,8 +25,8 @@ export function packSentenceCorpus(source, destination) {
   for (const [i, item] of sentences.entries()) {
     const { id, pl, ru, nodes, hits } = item
     const words = [...pl.matchAll(/\p{L}+/gu)]
-    const uniqueText = pl.toLocaleLowerCase('pl').normalize('NFC').replace(/[^\p{L}\p{N}]+/gu, ' ').trim()
-    if (!ru.trim() || !uniqueText || texts.has(uniqueText) || ids.has(id) || nodes.length !== words.length ||
+    const uniqueText = textKey(pl)
+    if (!ru.trim() || !uniqueText || legacyTexts.has(uniqueText) || texts.has(uniqueText) || ids.has(id) || nodes.length !== words.length ||
         nodes.filter(([, head]) => head === null).length !== 1) {
       throw new Error(`Invalid or duplicate corpus sentence: ${id}`)
     }
