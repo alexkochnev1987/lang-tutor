@@ -1,0 +1,46 @@
+{
+  "$schema": "./collocations.schema.json",
+  "languageId": "pl",
+  "sourceLanguageId": "ru",
+  "version": "2026-11-15",
+  "_meta": {
+    "purpose": "Пошаговая сборка сочетаний из 2–3 слов: каждый слот связан со своим правилом.",
+    "authoring": "В каждом слоте должен быть правильный токен и минимум три вручную проверенных дистрактора."
+  },
+  "items": [
+    {
+      "id": "pl.collocation.szukac-mieszkanie",
+      "templateId": "pl.template.verb-government",
+      "translation": "Я ищу квартиру",
+      "difficulty": 3,
+      "slots": [
+        {
+          "id": "verb",
+          "token": "szukam",
+          "lexemeId": "pl.szukac",
+          "ruleIds": ["pl.gram.v-present-1"],
+          "distractors": [
+            { "text": "szukasz", "errorTags": ["wrong-person"] },
+            { "text": "szukałem", "errorTags": ["wrong-tense"] },
+            { "text": "szuka", "errorTags": ["wrong-person"] },
+            { "text": "szukać", "errorTags": ["infinitive"] },
+            { "text": "znajdę", "errorTags": ["wrong-verb"] }
+          ]
+        },
+        {
+          "id": "noun",
+          "token": "mieszkania",
+          "lexemeId": "pl.mieszkanie",
+          "ruleIds": ["pl.gram.v-government"],
+          "distractors": [
+            { "text": "mieszkanie", "errorTags": ["wrong-case"] },
+            { "text": "mieszkaniu", "errorTags": ["wrong-case"] },
+            { "text": "mieszkaniem", "errorTags": ["wrong-case"] },
+            { "text": "mieszkań", "errorTags": ["wrong-number"] },
+            { "text": "mieszkaniami", "errorTags": ["wrong-number", "wrong-case"] }
+          ]
+        }
+      ]
+    }
+  ]
+}

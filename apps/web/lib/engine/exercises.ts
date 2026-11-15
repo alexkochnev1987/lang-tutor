@@ -6,6 +6,7 @@
  */
 import {
   chooseForm,
+  collocationGuided,
   falseFriendContrast,
   inflect,
   sentenceChoice,
@@ -23,6 +24,7 @@ import {
 import { closedClassWordsForRule } from "@/lib/lang-pl/closed-class";
 import { labelTag, RULE_TO_TAGS, resolveTag } from "@/lib/lang-pl/tags";
 import type {
+  CollocationItem,
   Lexeme,
   Paradigm,
   ReadingText,
@@ -249,6 +251,20 @@ export function sentenceWriteDrills(
     if (ex) out.push(ex);
   }
   return out;
+}
+
+/** Генератор сочетаний подключается к языковому пакету, но остаётся
+ * языконезависимым внутри packages/engine. */
+export function collocationDrills(
+  item: CollocationItem,
+  salt: number,
+  optionCount = 6,
+): Exercise[] {
+  return collocationGuided(
+    item,
+    { seed: hash(`${item.id}.${salt}`) },
+    optionCount,
+  ) ?? []
 }
 
 export function exercisesForReading(

@@ -2,6 +2,7 @@ import { describe, expect, it } from "vitest";
 import {
   check,
   chooseForm,
+  collocationGuided,
   falseFriendContrast,
   gapFill,
   inflect,
@@ -300,5 +301,110 @@ describe("задания по предложениям", () => {
       answers: ["Idę do sklepu."],
     })!;
     expect(check(ex, "Ide do sklepu").errorKind).toBe("diacritic");
+  });
+});
+
+describe("пошаговая сборка сочетания", () => {
+  const collocation = {
+    id: "pl.collocation.szukac-mieszkanie",
+    templateId: "pl.template.verb-government",
+    translation: "Я ищу квартиру",
+    difficulty: 3,
+    slots: [
+      {
+        id: "verb",
+        token: "szukam",
+        lexemeId: "pl.szukac",
+        ruleIds: ["pl.gram.v-present-1"],
+        distractors: [
+          { text: "szukasz", errorTags: ["wrong-person"] },
+          { text: "szukałem", errorTags: ["wrong-tense"] },
+          { text: "szuka", errorTags: ["wrong-person"] },
+          { text: "szukać", errorTags: ["infinitive"] },
+          { text: "znajdę", errorTags: ["wrong-verb"] },
+        ],
+      },
+      {
+        id: "noun",
+        token: "mieszkania",
+        lexemeId: "pl.mieszkanie",
+        ruleIds: ["pl.gram.v-government"],
+        distractors: [
+          { text: "mieszkanie", errorTags: ["wrong-case"] },
+          { text: "mieszkaniu", errorTags: ["wrong-case"] },
+          { text: "mieszkaniem", errorTags: ["wrong-case"] },
+          { text: "mieszkań", errorTags: ["wrong-number"] },
+          { text: "mieszkaniami", errorTags: ["wrong-number", "wrong-case"] },
+        ],
+      },
+    ],
+  } as const;
+
+  it("создаёт отдельное задание для каждого слова и правила", () => {
+    const exercises = collocationGuided(collocation, CTX)!;
+
+    expect(exercises).toHaveLength(2);
+    expect(exercises[0]).toMatchObject({
+      kind: "collocation-guided",
+      sentenceId: collocation.id,
+      templateId: collocation.templateId,
+      slotIndex: 0,
+      tokenId: "verb",
+      answer: "szukam",
+      grammarRuleIds: ["pl.gram.v-present-1"],
+    });
+    expect(exercises[1]).toMatchObject({
+      slotIndex: 1,
+      tokenId: "noun",
+      answer: "mieszkania",
+      grammarRuleIds: ["pl.gram.v-government"],
+    });
+  });
+
+  it("предпочитает шесть близких вариантов", () => {
+    const exercises = collocationGuided(collocation, CTX)!;
+
+    for (const exercise of exercises) {
+      expect(exercise.options).toHaveLength(6);
+      expect(new Set(exercise.options.map((option) => option.toLowerCase())).size)
+        .toBe(6);
+      expect(exercise.options).toContain(exercise.answer);
+      expect(exercise.optionErrorTags?.[exercise.answer]).toEqual([]);
+    }
+  });
+
+  it("делает fallback на четыре варианта, если качественных вариантов только четыре", () => {
+    const reduced = {
+      ...collocation,
+      slots: collocation.slots.map((slot) => ({
+        ...slot,
+        distractors: slot.distractors.slice(0, 3),
+      })),
+    };
+    const exercises = collocationGuided(reduced, CTX)!;
+
+    expect(exercises).toHaveLength(2);
+    expect(exercises.every((exercise) => exercise.options)).toBe(true);
+    expect(exercises.map((exercise) => exercise.options.length)).toEqual([4, 4]);
+  });
+
+  it("не создаёт упражнение, если нет минимума из четырёх вариантов", () => {
+    const invalid = {
+      ...collocation,
+      slots: collocation.slots.map((slot) => ({
+        ...slot,
+        distractors: slot.distractors.slice(0, 2),
+      })),
+    };
+
+    expect(collocationGuided(invalid, CTX)).toBeNull();
+  });
+
+  it("помечает весь текст сочетания для последующего произношения", () => {
+    const exercises = collocationGuided(collocation, CTX)!;
+
+    expect(exercises[0]?.speakText).toBe("szukam mieszkania");
+    expect(exercises[1]?.contextBefore).toBe("szukam");
+    expect(exercises[1]?.contextAfter).toBe("");
   });
 });

@@ -18,6 +18,7 @@ export type ExerciseKind =
   | 'sentence-choice'         // предложение с пропуском: выбор из 4 вариантов
   | 'sentence-typed'          // предложение с пропуском: слово вписывается
   | 'sentence-write'          // написать предложение целиком (ответ на вопрос)
+  | 'collocation-guided'      // пошагово собрать сочетание: один слот за раз
   | 'reading-choice'          // текст для чтения с вопросом и вариантами ответа
 
 export type AnswerMode = 'choice' | 'typed' | 'assemble'
@@ -36,6 +37,13 @@ export interface ExerciseBase {
   estimatedSec: number
   /** Tries before the correct answer is revealed; absent means one. */
   attemptsAllowed?: number
+  /** Метаданные для адаптивных сочетаний и предложений. */
+  sentenceId?: string
+  templateId?: string
+  slotIndex?: number
+  tokenId?: string
+  /** Ключ — вариант ответа, значение — типичные ошибки этого варианта. */
+  optionErrorTags?: Record<string, string[]>
 }
 
 export interface ChoiceExercise extends ExerciseBase {
@@ -51,6 +59,13 @@ export interface ChoiceExercise extends ExerciseBase {
   answer: string
   /** Что сказать после неверного ответа */
   explanation?: string
+  /** Перевод/смысл, который можно показать отдельно от польского контекста. */
+  translation?: string
+  /** Текст до и после текущего слота в пошаговой сборке. */
+  contextBefore?: string
+  contextAfter?: string
+  /** Полный текст для озвучивания после ответа. */
+  speakText?: string
 }
 
 export interface TypedExercise extends ExerciseBase {

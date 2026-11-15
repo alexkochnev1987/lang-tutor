@@ -406,6 +406,131 @@ export interface SentenceResponseLike {
   translation?: string;
 }
 
+// ─────────────────────────────────────────────────────────────────────
+// Сочетания: каждый слот проверяет своё правило
+// ─────────────────────────────────────────────────────────────────────
+
+export interface CollocationDistractorLike {
+  text: string
+  /** Например: wrong-case, wrong-tense, wrong-preposition, wrong-agreement. */
+  errorTags?: readonly string[]
+}
+
+export interface CollocationSlotLike {
+  id: string
+  token: string
+  lexemeId?: string
+  /** Правила именно этого слова/слота, а не всей фразы. */
+  ruleIds: readonly string[]
+  /** Вручную проверенные близкие варианты для этого контекста. */
+  distractors: readonly CollocationDistractorLike[]
+}
+
+export interface CollocationLike {
+  id: string
+  templateId?: string
+  translation: string
+  slots: readonly CollocationSlotLike[]
+  difficulty?: number
+  instruction?: string
+}
+
+/**
+ * Создаёт последовательность заданий для сочетания из 2–3 слов.
+ *
+ * Для каждого слота создаётся отдельный выбор: правильное слово плюс
+ * ближайшие формы с типичными ошибками. Поэтому одна фраза может тренировать
+ * несколько независимых правил, но ошибка сохраняется на уровне конкретного
+ * слота. Запрошенные 6 вариантов — предпочтительный размер; если в контенте
+ * есть только 4 качественных варианта, возвращаются 4, а не случайный мусор.
+ */
+export function collocationGuided(
+  item: CollocationLike,
+  ctx: ExerciseContext,
+  requestedOptionCount = 6,
+): ChoiceExercise[] | null {
+  if (
+    !Number.isInteger(requestedOptionCount) ||
+    requestedOptionCount < 4 ||
+    requestedOptionCount > 6 ||
+    item.slots.length < 2 ||
+    item.slots.length > 3 ||
+    !item.translation.trim()
+  ) {
+    return null
+  }
+
+  const fullText = item.slots.map((slot) => slot.token).join(" ")
+  const exercises: ChoiceExercise[] = []
+  const prefix: string[] = []
+
+  for (const [slotIndex, slot] of item.slots.entries()) {
+    if (!slot.token.trim() || slot.ruleIds.length === 0) return null
+    const candidates = uniqueText([
+      slot.token,
+      ...slot.distractors.map((distractor) => distractor.text),
+    ])
+    const optionCount = Math.min(requestedOptionCount, candidates.length)
+    if (optionCount < 4) return null
+
+    // Правильный токен ставится первым до перемешивания, поэтому он всегда
+    // попадает в пул даже при fallback с 6 на 4 варианта.
+    const options = shuffle(
+      candidates.slice(0, optionCount),
+      ctx.seed + slotIndex * 101,
+    )
+    const tagsByText = new Map(
+      slot.distractors.map((distractor) => [
+        distractor.text.toLocaleLowerCase(),
+        distractor.errorTags ?? [],
+      ]),
+    )
+    const optionErrorTags = Object.fromEntries(
+      options.map((option) => [
+        option,
+        [...(tagsByText.get(option.toLocaleLowerCase()) ?? [])],
+      ]),
+    )
+    const contextBefore = prefix.join(" ")
+    const contextAfter = item.slots
+      .slice(slotIndex + 1)
+      .map((next) => next.token)
+      .join(" ")
+    const prompt = [contextBefore, "___", contextAfter]
+      .filter(Boolean)
+      .join(" ")
+
+    exercises.push({
+      id: `ex.collocation.${item.id}.${slot.id}`,
+      kind: "collocation-guided",
+      mode: "choice",
+      difficulty: item.difficulty ?? 3,
+      lexemeId: slot.lexemeId,
+      grammarRuleIds: [...slot.ruleIds],
+      moduleId: "grammar",
+      estimatedSec: 10,
+      attemptsAllowed: 1,
+      sentenceId: item.id,
+      templateId: item.templateId ?? item.id,
+      slotIndex,
+      tokenId: slot.id,
+      optionErrorTags,
+      instruction: item.instruction ?? "Wybierz następne słowo",
+      prompt,
+      translation: item.translation,
+      contextBefore,
+      contextAfter,
+      options,
+      answer: slot.token,
+      explanation: item.translation,
+      speakText: fullText,
+    })
+    prefix.push(slot.token)
+  }
+
+  return exercises
+}
+
 export function sentenceWrite(
   item: SentenceResponseLike,
   ruleIds: string[] = [],

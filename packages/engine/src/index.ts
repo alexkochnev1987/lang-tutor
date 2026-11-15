@@ -14,12 +14,13 @@ export { generateLesson } from './lesson/generator'
 export type { Activity, ActivityKind, DayPlan, Lesson, LessonInput } from './lesson/generator'
 export * from './exercises/types'
 export {
-  check, chooseForm, falseFriendContrast, gapFill, hashString, inflect,
+  check, chooseForm, collocationGuided, falseFriendContrast, gapFill, hashString, inflect,
   listenWrite, readingChoice, rng, sentenceChoice, sentenceTyped, sentenceWrite, SENTENCE_ATTEMPTS,
   shuffle, spelling, translateProduction, translateRecognition,
 } from './exercises/generate'
 export type {
-  CheckResult, LexemeLike, SentenceGapLike, SentenceResponseLike, TagLabeller,
+  CheckResult, CollocationDistractorLike, CollocationLike, CollocationSlotLike,
+  LexemeLike, SentenceGapLike, SentenceResponseLike, TagLabeller,
   ReadingChoiceLike,
 } from './exercises/generate'
 export { estimateModuleReadiness } from './readiness/estimate'

@@ -67,12 +67,14 @@ type Slot =
 const STAGE_LEAD: Record<StageId, string> = {
   words: "Powtarzamy i poznajemy słowa. Gramatyka będzie osobnym blokiem.",
   grammar: "Najpierw reguła, potem ćwiczenia. Regułę otworzysz przyciskiem.",
+  collocations: "Łączymy znane słowa. Każde słowo ćwiczy własną regułę.",
   exam: "Zadanie w formacie egzaminacyjnym: reguły są wymieszane jak na prawdziwym arkuszu.",
 };
 
 const STAGE_TITLE_PL: Record<StageId, string> = {
   words: "Słowa",
   grammar: "Gramatyka",
+  collocations: "Połączenia słów",
   exam: "Zadanie egzaminacyjne",
 };
 
@@ -793,9 +795,20 @@ export default function LessonPage() {
               <ReadingExerciseBlock
                 text={readingTextOf(slot.step.ex)!}
                 exercise={slot.step.ex}
-                onAnswered={(r, ms) => {
+                restoredResult={restoredResult}
+                onAnswered={(r, ms, attempts, answer) => {
                   const step = slot.step;
-                  if (step.kind === "exercise") void onAnswered(step.ex, r, ms);
+                  if (step.kind === "exercise") {
+                    void onAnswered(
+                      step.ex,
+                      r,
+                      ms,
+                      true,
+                      attempts,
+                      answer,
+                      step,
+                    );
+                  }
                 }}
               />
             ) : (
@@ -1147,11 +1160,18 @@ function readingTextOf(exercise: Exercise): string | null {
 function ReadingExerciseBlock({
   text,
   exercise,
+  restoredResult,
   onAnswered,
 }: {
   text: string;
   exercise: Exercise;
-  onAnswered: (r: CheckResult, ms: number) => void;
+  restoredResult?: React.ComponentProps<typeof ExerciseView>["restoredResult"];
+  onAnswered: (
+    r: CheckResult,
+    ms: number,
+    attempts: number,
+    answer: string,
+  ) => void;
 }) {
   return (
     <Card>
@@ -1169,6 +1189,7 @@ function ReadingExerciseBlock({
           exercise={exercise}
           bare
           showReadingText={false}
+          restoredResult={restoredResult}
           onAnswered={onAnswered}
         />
       </Stack>

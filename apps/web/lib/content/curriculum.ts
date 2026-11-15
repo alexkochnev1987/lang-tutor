@@ -168,6 +168,29 @@ export interface RuleSentences {
 
 export type SentencePack = Record<string, RuleSentences>
 
+export interface CollocationDistractor {
+  text: string
+  errorTags?: string[]
+}
+
+export interface CollocationSlot {
+  id: string
+  token: string
+  lexemeId?: string
+  ruleIds: string[]
+  distractors: CollocationDistractor[]
+}
+
+/** Сочетание из 2–3 слов: каждый слот тренирует своё правило. */
+export interface CollocationItem {
+  id: string
+  templateId?: string
+  translation: string
+  slots: CollocationSlot[]
+  difficulty?: number
+  instruction?: string
+}
+
 export async function loadGrammarSentences(): Promise<SentencePack> {
   // Optional pack: without it grammar falls back to paradigm form drills.
   try {
@@ -175,6 +198,15 @@ export async function loadGrammarSentences(): Promise<SentencePack> {
     return pack.rules ?? {}
   } catch {
     return {}
+  }
+}
+
+export async function loadCollocations(): Promise<CollocationItem[]> {
+  try {
+    const pack = await loadPack<{ items: CollocationItem[] }>('collocations.json')
+    return pack.items ?? []
+  } catch {
+    return []
   }
 }
 

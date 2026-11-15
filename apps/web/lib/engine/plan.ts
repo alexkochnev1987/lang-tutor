@@ -7,6 +7,7 @@ import {
 } from "@polski/engine";
 import {
   currentDayNumber,
+  loadCollocations,
   loadCurriculum,
   loadGrammarRules,
   loadGrammarSentences,
@@ -14,6 +15,7 @@ import {
   loadReadingTexts,
   loadVocabulary,
   type CurriculumDay,
+  type CollocationItem,
   type Lexeme,
   type Paradigm,
   type SentencePack,
@@ -28,6 +30,7 @@ import {
 import { knownLexemeIds, loadState } from "@/lib/data/store";
 import type { StudyItemRow } from "@/lib/data/types";
 import {
+  collocationDrills,
   exerciseForReview,
   exercisesForRule,
   exercisesForReading,
@@ -40,11 +43,12 @@ import { buildTodayLesson } from "./session";
 
 export type { SentenceMode } from "./exercises";
 
-export type StageId = "words" | "grammar" | "exam";
+export type StageId = "words" | "grammar" | "collocations" | "exam";
 
 export const STAGE_TITLE: Record<StageId, string> = {
   words: "Слова",
   grammar: "Грамматика",
+  collocations: "Сочетания",
   exam: "Экзаменационное задание",
 };
 export type Step =
@@ -95,6 +99,9 @@ const EXAM_TASK_COUNT = 10;
 const NEW_WORD_BATCH_SIZE = 5;
 const MINIMUM_WORDS_PER_MODE = 10;
 const MINIMUM_WORD_BATCH_SIZE = MINIMUM_WORDS_PER_MODE * 2;
+const COLLOCATION_LIMIT = 3;
+const STRONG_RULE_THRESHOLD = 0.85;
+const MINIMUM_RULE_ATTEMPTS = 3;
 
 const MODULES_WITH_GENERATOR = new Set(["grammar"]);
 
@@ -131,13 +138,14 @@ const exerciseIdsOf = (steps: Step[]): Set<string> =>
   new Set(steps.flatMap((s) => (s.kind === "exercise" ? [s.ex.id] : [])));
 
 export async function buildTodayPlan(): Promise<TodayPlan> {
-  const [curriculum, vocabulary, morphology, rules, sentences, readingTexts] =
+  const [curriculum, vocabulary, morphology, rules, sentences, collocations, readingTexts] =
     await Promise.all([
       loadCurriculum(),
       loadVocabulary(),
       loadMorphology(),
       loadGrammarRules(),
       loadGrammarSentences(),
+      loadCollocations(),
       loadReadingTexts(),
     ]);
   const state = await loadState();
@@ -208,6 +216,7 @@ export async function buildTodayPlan(): Promise<TodayPlan> {
     localized,
     dayNumber,
   );
+  const collocationSteps = buildCollocationSteps(collocations, state, localized, dayNumber);
 
   const examSteps =
     day.examFocus === "reading"
@@ -253,6 +262,16 @@ export async function buildTodayPlan(): Promise<TodayPlan> {
       missingContent: drillSteps.length
         ? null
         : "nie znaleziono form dla reguły dnia w słowniku",
+    });
+  }
+
+  if (collocationSteps.length) {
+    stages.push({
+      id: "collocations",
+      steps: collocationSteps,
+      estimatedSec: sumSec(collocationSteps),
+      rule: null,
+      missingContent: null,
     });
   }
 
@@ -415,6 +434,64 @@ function buildReadingSteps(
     .filter((ex) => !used.has(ex.id))
     .slice(0, EXAM_TASK_COUNT)
     .map((ex): Step => ({ kind: "exercise", ex, review: false, rule: null }));
+}
+
+/**
+ * Сочетания — первый адаптивный блок. Он появляется только после того,
+ * как все слова и правила конкретного сочетания достаточно освоены.
+ */
+function buildCollocationSteps(
+  items: CollocationItem[],
+  state: Awaited<ReturnType<typeof loadState>>,
+  localized: (id: string) => LocalizedRule | null,
+  dayNumber: number,
+): Step[] {
+  const known = knownLexemeIds(state);
+  const readyWords = new Set<string>(known);
+  const cardKinds = ["lexeme-recognition", "lexeme-production"];
+
+  for (const item of state.studyItems) {
+    if (!cardKinds.includes(item.kind) || item.reps < 2) continue;
+    const pair = state.studyItems.filter(
+      (candidate) =>
+        candidate.refId === item.refId && cardKinds.includes(candidate.kind),
+    );
+    if (pair.length === 2 && pair.every((card) => card.reps >= 2)) {
+      readyWords.add(item.refId);
+    }
+  }
+
+  const strongRules = new Set(
+    state.mastery
+      .filter(
+        (rule) =>
+          rule.attempts >= MINIMUM_RULE_ATTEMPTS &&
+          rule.mastery >= STRONG_RULE_THRESHOLD,
+      )
+      .map((rule) => rule.grammarRuleId),
+  );
+
+  return items
+    .filter((item) =>
+      item.slots.every(
+        (slot) =>
+          Boolean(slot.lexemeId) &&
+          readyWords.has(slot.lexemeId!) &&
+          slot.ruleIds.every((ruleId) => strongRules.has(ruleId)),
+      ),
+    )
+    .slice(0, COLLOCATION_LIMIT)
+    .flatMap((item) => {
+      const rule = item.slots[0]?.ruleIds[0]
+        ? localized(item.slots[0].ruleIds[0])
+        : null;
+      return collocationDrills(item, dayNumber, 6).map((ex): Step => ({
+        kind: "exercise",
+        ex,
+        review: false,
+        rule,
+      }));
+    });
 }
 
 function buildReviewSteps(

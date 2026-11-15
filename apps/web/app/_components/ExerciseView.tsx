@@ -17,7 +17,7 @@ export function SpeakIcon({
   ariaLabel?: string;
 }) {
   const { pronounce, message } = usePronounce();
-  const cls = size === "sm" ? "size-12 text-base" : "size-12 text-xl";
+  const cls = size === "sm" ? "size-10 text-sm" : "size-12 text-xl";
   return (
     <button
       type="button"
@@ -33,6 +33,9 @@ export function SpeakIcon({
 
 /** Польский текст для кнопки повторного прослушивания задания. */
 export function speakableTextOf(exercise: Exercise): string | undefined {
+  if (exercise.kind === "collocation-guided" && exercise.mode === "choice") {
+    return exercise.speakText ?? exercise.prompt;
+  }
   if (exercise.kind === "listen-write" && exercise.mode === "typed") {
     return exercise.speakText ?? exercise.accepted[0];
   }
@@ -50,6 +53,9 @@ export function speakableTextOf(exercise: Exercise): string | undefined {
 
 /** Польское слово для озвучивания после завершения ответа. */
 function answerSpeakableText(exercise: Exercise): string | undefined {
+  if (exercise.kind === "collocation-guided" && exercise.mode === "choice") {
+    return exercise.speakText ?? exercise.answer;
+  }
   if (!exercise.lexemeId) return undefined;
   if (
     exercise.kind === "translate-recognition" ||
@@ -140,7 +146,7 @@ function letterIndexesForAnswer(letters: string[], answer: string): number[] {
   });
 }
 
-function HintButton({ hint }: { hint: string }) {
+function HintButton({ hint, compact }: { hint: string; compact: boolean }) {
   const [visible, setVisible] = useState(false);
   return (
     <span className="relative shrink-0">
@@ -151,7 +157,7 @@ function HintButton({ hint }: { hint: string }) {
         title="Pokaż podpowiedź"
         onPointerDown={(event) => event.preventDefault()}
         onClick={() => setVisible((current) => !current)}
-        className="flex size-12 items-center justify-center rounded-pill bg-soft2 text-xs font-semibold text-muted hover:text-ink focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+        className={`flex items-center justify-center rounded-pill bg-soft2 text-xs font-semibold text-muted hover:text-ink focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary ${compact ? "size-9" : "size-12"}`}
       >
         ?
       </button>
@@ -176,6 +182,7 @@ function InlineFormControl({
   autoFocus,
   status,
   hint,
+  compact = false,
   attemptsAllowed,
   wrongCount,
   result,
@@ -190,6 +197,7 @@ function InlineFormControl({
   autoFocus?: boolean;
   status: ControlStatus;
   hint?: string;
+  compact?: boolean;
   attemptsAllowed: number;
   wrongCount: number;
   result: CheckResult | null;
@@ -218,13 +226,13 @@ function InlineFormControl({
     "aria-label": `Forma słowa ${baseForm}${stateLabel}`,
     "aria-invalid": status === "wrong" ? true : undefined,
     disabled,
-    className: `inline-form-control min-h-12 min-w-24 border-0 bg-transparent px-1 text-left text-lg font-semibold shadow-none outline-none ring-0 focus:border-0 focus:shadow-none focus:outline-none focus:ring-0 focus-visible:border-0 focus-visible:shadow-none focus-visible:outline-none focus-visible:ring-0 disabled:opacity-100 ${textClass}`,
+    className: `inline-form-control border-0 bg-transparent px-1 text-left font-semibold shadow-none outline-none ring-0 focus:border-0 focus:shadow-none focus:outline-none focus:ring-0 focus-visible:border-0 focus-visible:shadow-none focus-visible:outline-none focus-visible:ring-0 disabled:opacity-100 ${compact ? `min-h-9 min-w-0 text-base ${mode === "typed" ? "w-28" : ""}` : "min-h-12 min-w-24 text-lg"} ${textClass}`,
     lang: "pl",
   } as const;
 
   return (
     <span
-      className={`mx-1 inline-flex max-w-full items-center gap-1 overflow-visible rounded-card border-2 px-2 py-1 align-baseline ${statusClass} ${focusClass}`}
+      className={`mx-1 inline-flex max-w-full items-center gap-1 overflow-visible rounded-card border-2 px-2 align-baseline ${compact ? "py-0" : "py-1"} ${statusClass} ${focusClass}`}
     >
       <span className="shrink-0 text-sm font-medium text-muted" lang="pl">
         {baseForm}
@@ -247,7 +255,7 @@ function InlineFormControl({
             if (next) onSubmit(next);
           }}
         >
-          <option value="">Wybierz…</option>
+          {compact ? <option value="" disabled hidden /> : <option value="">Wybierz…</option>}
           {options?.map((option) => (
             <option key={option} value={option}>
               {option}
@@ -283,7 +291,7 @@ function InlineFormControl({
         result={result}
         focused={focused}
       />
-      {hint && !result && <HintButton hint={hint} />}
+      {hint && !result && <HintButton hint={hint} compact={compact} />}
     </span>
   );
 }
@@ -334,6 +342,7 @@ function InlineSentencePrompt({
   wrongCount,
   result,
   autoFocus,
+  compact,
   onChange,
   onSubmit,
 }: {
@@ -345,6 +354,7 @@ function InlineSentencePrompt({
   wrongCount: number;
   result: CheckResult | null;
   autoFocus?: boolean;
+  compact: boolean;
   onChange: (value: string) => void;
   onSubmit: (value: string) => void;
 }) {
@@ -357,6 +367,7 @@ function InlineSentencePrompt({
       {before}
       <InlineFormControl
         baseForm={baseForm}
+        compact={compact}
         mode={exercise.mode}
         options={exercise.mode === "choice" ? exercise.options : undefined}
         value={value}
@@ -518,6 +529,7 @@ export function ExerciseView({
 
   const isGapSentence =
     exercise.kind === "sentence-choice" || exercise.kind === "sentence-typed";
+  const compactSentence = isGapSentence && leadingNumber !== undefined;
   const isReading = exercise.kind === "reading-choice";
   const isListenWrite = exercise.kind === "listen-write";
   const isSentence = isGapSentence || exercise.kind === "sentence-write";
@@ -533,7 +545,12 @@ export function ExerciseView({
       : wrongTries.includes(typed) && typed
         ? "wrong"
         : "empty";
-  const speakText = speakableTextOf(exercise);
+  const speakText = compactSentence
+    ? exercise.prompt.replace(
+        GAP_MARK,
+        () => result ? (result.correct ? typed.trim() : result.expected) : "…",
+      )
+    : speakableTextOf(exercise);
 
   function updateTyped(value: string) {
     lastCheckedValue.current = null;
@@ -560,7 +577,9 @@ export function ExerciseView({
     if (typeof navigator !== "undefined" && "vibrate" in navigator) {
       navigator.vibrate(r.correct ? 12 : [18, 35, 18]);
     }
-    const spokenAnswer = answerSpeakableText(exercise);
+    const spokenAnswer = compactSentence
+      ? exercise.prompt.replace(GAP_MARK, () => r.correct ? normalized : r.expected)
+      : answerSpeakableText(exercise);
     if (spokenAnswer) pronounce(spokenAnswer);
     onAnswered(
       r,
@@ -589,13 +608,20 @@ export function ExerciseView({
   }
 
   const content = (
-    <Stack gap="lg" className="w-full">
+    <Stack gap={compactSentence ? "xs" : "lg"} className="w-full">
       <Stack gap="sm" align="center">
         {showInstruction && (
           <span className="text-center text-xs tracking-wide text-muted uppercase">
             {exercise.instruction}
           </span>
         )}
+        {exercise.kind === "collocation-guided" &&
+          exercise.mode === "choice" &&
+          exercise.translation && (
+            <span className="text-center text-sm text-muted" lang="ru">
+              {exercise.translation}
+            </span>
+          )}
         {showReadingText &&
           exercise.mode === "choice" &&
           isReading &&
@@ -616,23 +642,25 @@ export function ExerciseView({
           className={leadingNumber !== undefined ? "w-full" : undefined}
         >
           {leadingNumber !== undefined && (
-            <span className="shrink-0 text-base font-semibold text-muted sm:text-lg">
+            <span className={`shrink-0 font-semibold text-muted ${compactSentence ? "text-sm" : "text-base sm:text-lg"}`}>
               {leadingNumber}.
             </span>
           )}
-          {/* ≥24px: иначе не различить диакритику, UX_UI.md §1.6 */}
           {!isListenWrite && (
             <span
               className={
                 isReading
                   ? "whitespace-pre-wrap text-left text-base leading-7"
-                  : `${leadingNumber !== undefined ? "text-left" : "text-center"} font-semibold ${isSentence ? "text-base sm:text-lg" : "text-lg sm:text-xl"}`
+                  : compactSentence
+                    ? "min-w-0 flex-1 break-words text-left text-base leading-snug"
+                    : `${leadingNumber !== undefined ? "text-left" : "text-center"} font-semibold ${isSentence ? "text-base sm:text-lg" : "text-lg sm:text-xl"}`
               }
             >
               {isInlineForm && exercise.mode !== "assemble" ? (
                 isGapSentence ? (
                   <InlineSentencePrompt
                     exercise={exercise}
+                    compact={compactSentence}
                     value={typed}
                     disabled={Boolean(result)}
                     status={inlineStatus}
@@ -662,10 +690,19 @@ export function ExerciseView({
               )}
             </span>
           )}
+          {compactSentence && showSpeakButton && speakText && (
+            <div className="shrink-0 self-start">
+              <SpeakIcon
+                text={speakText}
+                size="sm"
+                ariaLabel={`Odtwórz zdanie: ${speakText}`}
+              />
+            </div>
+          )}
         </Row>
       </Stack>
 
-      {showSpeakButton && speakText && (
+      {!compactSentence && showSpeakButton && speakText && (
         <div className="flex justify-center">
           <SpeakIcon
             text={speakText}
@@ -798,7 +835,7 @@ export function ExerciseView({
         </Stack>
       )}
 
-      <div className="min-h-6 text-sm">
+      <div className={compactSentence ? "empty:hidden text-sm" : "min-h-6 text-sm"}>
         {feedback?.correct && (
           <p className="font-medium text-ok-ink">Poprawnie</p>
         )}
