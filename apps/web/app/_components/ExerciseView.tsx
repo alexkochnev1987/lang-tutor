@@ -1,16 +1,22 @@
-'use client'
+"use client";
 
-import { useEffect, useRef, useState } from 'react'
-import { Button, Card, OptionRow, Row, Stack } from '@polski/ui'
-import { check, type CheckResult, type Exercise } from '@polski/engine'
-import { usePronounce } from '@/lib/speech/usePronounce'
-import { resetExerciseResults, useAppState } from '@/lib/data/store'
+import { useEffect, useRef, useState } from "react";
+import { Button, Card, OptionRow, Row, Stack } from "@polski/ui";
+import { check, type CheckResult, type Exercise } from "@polski/engine";
+import { usePronounce } from "@/lib/speech/usePronounce";
+import { resetExerciseResults, useAppState } from "@/lib/data/store";
 
 export function SpeakIcon({
-  text, size = 'md', ariaLabel,
-}: { text: string; size?: 'sm' | 'md'; ariaLabel?: string }) {
-  const { pronounce, message } = usePronounce()
-  const cls = size === 'sm' ? 'size-12 text-base' : 'size-12 text-xl'
+  text,
+  size = "md",
+  ariaLabel,
+}: {
+  text: string;
+  size?: "sm" | "md";
+  ariaLabel?: string;
+}) {
+  const { pronounce, message } = usePronounce();
+  const cls = size === "sm" ? "size-12 text-base" : "size-12 text-xl";
   return (
     <button
       type="button"
@@ -19,43 +25,74 @@ export function SpeakIcon({
       onClick={() => pronounce(text)}
       className={`flex shrink-0 items-center justify-center rounded-pill bg-soft hover:bg-soft2 ${cls}`}
     >
-      {message ? '🔇' : '🔊'}
+      {message ? "🔇" : "🔊"}
     </button>
-  )
+  );
 }
 
-/** Польский текст для кнопки повторного прослушивания в нижней панели. */
+/** Польский текст для кнопки повторного прослушивания задания. */
 export function speakableTextOf(exercise: Exercise): string | undefined {
-  if (exercise.kind === 'listen-write' && exercise.mode === 'typed') {
-    return exercise.speakText ?? exercise.accepted[0]
+  if (exercise.kind === "listen-write" && exercise.mode === "typed") {
+    return exercise.speakText ?? exercise.accepted[0];
   }
-  if (exercise.kind === 'translate-production' && exercise.mode === 'choice') {
-    return exercise.answer
+  if (exercise.kind === "translate-production" && exercise.mode === "choice") {
+    return exercise.answer;
   }
-  if (exercise.kind === 'spelling' && exercise.mode === 'assemble') {
-    return exercise.answer
+  if (exercise.kind === "spelling" && exercise.mode === "assemble") {
+    return exercise.answer;
   }
-  if (exercise.mode === 'choice' && exercise.kind === 'reading-choice') return undefined
-  if (exercise.kind === 'sentence-write') return undefined
-  return exercise.prompt
+  if (exercise.mode === "choice" && exercise.kind === "reading-choice")
+    return undefined;
+  if (exercise.kind === "sentence-write") return undefined;
+  return exercise.prompt;
+}
+
+/** Польское слово для озвучивания после завершения ответа. */
+function answerSpeakableText(exercise: Exercise): string | undefined {
+  if (!exercise.lexemeId) return undefined;
+  if (
+    exercise.kind === "translate-recognition" ||
+    exercise.kind === "false-friend-contrast"
+  ) {
+    return exercise.prompt;
+  }
+  if (exercise.mode === "typed")
+    return exercise.speakText ?? exercise.accepted[0];
+  return exercise.answer;
 }
 
 export function StudyActionBar({
-  speakText, canAdvance, onNext, nextLabel,
+  speakText,
+  canAdvance,
+  onNext,
+  nextLabel,
+  autoFocusOnAdvance = false,
 }: {
-  speakText?: string
-  canAdvance: boolean
-  onNext: () => void
-  nextLabel: string
+  speakText?: string;
+  canAdvance: boolean;
+  onNext: () => void;
+  nextLabel: string;
+  autoFocusOnAdvance?: boolean;
 }) {
+  const nextButtonRef = useRef<HTMLButtonElement>(null);
+
+  useEffect(() => {
+    if (autoFocusOnAdvance && canAdvance) {
+      nextButtonRef.current?.focus({ preventScroll: true });
+    }
+  }, [autoFocusOnAdvance, canAdvance]);
+
   return (
     <div className="study-action-bar sticky bottom-0 z-10 -mx-4 mt-3 border-t border-line bg-bg/95 px-4 pt-3 backdrop-blur-sm">
       <div className="mx-auto flex w-full max-w-(--container-exercise) items-center gap-2 pb-[max(0.75rem,env(safe-area-inset-bottom))]">
-        {speakText && <SpeakIcon text={speakText} ariaLabel="Прослушать слово" />}
+        {speakText && (
+          <SpeakIcon text={speakText} ariaLabel="Прослушать слово" />
+        )}
         {canAdvance && (
           <Button
+            ref={nextButtonRef}
             size="lg"
-            className={speakText ? 'min-w-0 flex-1' : 'w-full'}
+            className={speakText ? "min-w-0 flex-1" : "w-full"}
             onClick={onNext}
           >
             {nextLabel}
@@ -63,46 +100,47 @@ export function StudyActionBar({
         )}
       </div>
     </div>
-  )
+  );
 }
 
-const GAP_MARK = '␣␣␣'
-const DEFAULT_ATTEMPTS = 3
+const GAP_MARK = "␣␣␣";
+const DEFAULT_ATTEMPTS = 3;
 
-type InlineExercise = Extract<Exercise, { mode: 'choice' | 'typed' }>
-type ControlStatus = 'empty' | 'correct' | 'wrong'
+type InlineExercise = Extract<Exercise, { mode: "choice" | "typed" }>;
+type ControlStatus = "empty" | "correct" | "wrong";
 
 function baseFormOf(exercise: InlineExercise): string | undefined {
-  return 'baseForm' in exercise ? exercise.baseForm : undefined
+  return "baseForm" in exercise ? exercise.baseForm : undefined;
 }
 
 function hintForExercise(exercise: InlineExercise): string | undefined {
-  const answer = 'answer' in exercise ? exercise.answer : exercise.accepted[0]
-  const firstLetter = answer?.trim().slice(0, 1)
-  return firstLetter ? `Pierwsza litera odpowiedzi: ${firstLetter}` : undefined
+  const answer = "answer" in exercise ? exercise.answer : exercise.accepted[0];
+  const firstLetter = answer?.trim().slice(0, 1);
+  return firstLetter ? `Pierwsza litera odpowiedzi: ${firstLetter}` : undefined;
 }
 
 function keepInputVisible(element: HTMLElement): void {
-  if (typeof window === 'undefined') return
+  if (typeof window === "undefined") return;
   window.requestAnimationFrame(() => {
-    element.scrollIntoView({ block: 'center', behavior: 'smooth' })
-  })
+    element.scrollIntoView({ block: "center", behavior: "smooth" });
+  });
 }
 
 function letterIndexesForAnswer(letters: string[], answer: string): number[] {
-  const used = new Set<number>()
+  const used = new Set<number>();
   return [...answer].flatMap((letter) => {
-    const index = letters.findIndex((candidate, candidateIndex) => (
-      candidate === letter && !used.has(candidateIndex)
-    ))
-    if (index < 0) return []
-    used.add(index)
-    return [index]
-  })
+    const index = letters.findIndex(
+      (candidate, candidateIndex) =>
+        candidate === letter && !used.has(candidateIndex),
+    );
+    if (index < 0) return [];
+    used.add(index);
+    return [index];
+  });
 }
 
 function HintButton({ hint }: { hint: string }) {
-  const [visible, setVisible] = useState(false)
+  const [visible, setVisible] = useState(false);
   return (
     <span className="relative shrink-0">
       <button
@@ -125,70 +163,95 @@ function HintButton({ hint }: { hint: string }) {
         </span>
       )}
     </span>
-  )
+  );
 }
 
 function InlineFormControl({
-  baseForm, mode, options, value, disabled, autoFocus, status, hint,
-  attemptsAllowed, wrongCount, result, onChange, onSubmit,
+  baseForm,
+  mode,
+  options,
+  value,
+  disabled,
+  autoFocus,
+  status,
+  hint,
+  attemptsAllowed,
+  wrongCount,
+  result,
+  onChange,
+  onSubmit,
 }: {
-  baseForm: string
-  mode: 'choice' | 'typed'
-  options?: string[]
-  value: string
-  disabled: boolean
-  autoFocus?: boolean
-  status: ControlStatus
-  hint?: string
-  attemptsAllowed: number
-  wrongCount: number
-  result: CheckResult | null
-  onChange: (value: string) => void
-  onSubmit: (value: string) => void
+  baseForm: string;
+  mode: "choice" | "typed";
+  options?: string[];
+  value: string;
+  disabled: boolean;
+  autoFocus?: boolean;
+  status: ControlStatus;
+  hint?: string;
+  attemptsAllowed: number;
+  wrongCount: number;
+  result: CheckResult | null;
+  onChange: (value: string) => void;
+  onSubmit: (value: string) => void;
 }) {
-  const statusClass = status === 'correct'
-    ? 'border-ok bg-ok-bg'
-    : status === 'wrong'
-      ? 'border-danger bg-danger-bg'
-      : 'border-line bg-soft'
-  const [focused, setFocused] = useState(false)
-  const focusClass = status === 'empty' ? 'focus-within:border-muted focus-within:bg-card' : ''
-  const textClass = 'text-ink placeholder:text-muted selection:bg-line selection:text-ink'
-  const stateLabel = status === 'correct'
-    ? ', odpowiedź poprawna'
-    : status === 'wrong'
-      ? ', odpowiedź niepoprawna'
-      : ''
+  const statusClass =
+    status === "correct"
+      ? "border-ok bg-ok-bg"
+      : status === "wrong"
+        ? "border-danger bg-danger-bg"
+        : "border-line bg-soft";
+  const [focused, setFocused] = useState(false);
+  const focusClass =
+    status === "empty" ? "focus-within:border-muted focus-within:bg-card" : "";
+  const textClass =
+    "text-ink placeholder:text-muted selection:bg-line selection:text-ink";
+  const stateLabel =
+    status === "correct"
+      ? ", odpowiedź poprawna"
+      : status === "wrong"
+        ? ", odpowiedź niepoprawna"
+        : "";
 
   const common = {
-    'aria-label': `Forma słowa ${baseForm}${stateLabel}`,
-    'aria-invalid': status === 'wrong' ? true : undefined,
+    "aria-label": `Forma słowa ${baseForm}${stateLabel}`,
+    "aria-invalid": status === "wrong" ? true : undefined,
     disabled,
     className: `inline-form-control min-h-12 min-w-24 border-0 bg-transparent px-1 text-left text-lg font-semibold shadow-none outline-none ring-0 focus:border-0 focus:shadow-none focus:outline-none focus:ring-0 focus-visible:border-0 focus-visible:shadow-none focus-visible:outline-none focus-visible:ring-0 disabled:opacity-100 ${textClass}`,
-    lang: 'pl',
-  } as const
+    lang: "pl",
+  } as const;
 
   return (
-    <span className={`mx-1 inline-flex max-w-full items-center gap-1 overflow-visible rounded-card border-2 px-2 py-1 align-baseline ${statusClass} ${focusClass}`}>
-      <span className="shrink-0 text-sm font-medium text-muted" lang="pl">{baseForm}</span>
-      <span className="text-muted" aria-hidden>→</span>
-      {mode === 'choice' ? (
+    <span
+      className={`mx-1 inline-flex max-w-full items-center gap-1 overflow-visible rounded-card border-2 px-2 py-1 align-baseline ${statusClass} ${focusClass}`}
+    >
+      <span className="shrink-0 text-sm font-medium text-muted" lang="pl">
+        {baseForm}
+      </span>
+      <span className="text-muted" aria-hidden>
+        →
+      </span>
+      {mode === "choice" ? (
         <select
           {...common}
           value={value}
           onFocus={(event) => {
-            setFocused(true)
-            keepInputVisible(event.currentTarget)
+            setFocused(true);
+            keepInputVisible(event.currentTarget);
           }}
           onBlur={() => setFocused(false)}
           onChange={(e) => {
-            const next = e.target.value
-            onChange(next)
-            if (next) onSubmit(next)
+            const next = e.target.value;
+            onChange(next);
+            if (next) onSubmit(next);
           }}
         >
           <option value="">Wybierz…</option>
-          {options?.map((option) => <option key={option} value={option}>{option}</option>)}
+          {options?.map((option) => (
+            <option key={option} value={option}>
+              {option}
+            </option>
+          ))}
         </select>
       ) : (
         <input
@@ -200,15 +263,17 @@ function InlineFormControl({
           autoCorrect="off"
           spellCheck={false}
           onFocus={(event) => {
-            setFocused(true)
-            keepInputVisible(event.currentTarget)
+            setFocused(true);
+            keepInputVisible(event.currentTarget);
           }}
           onChange={(e) => onChange(e.target.value)}
           onBlur={() => {
-            setFocused(false)
-            if (value.trim()) onSubmit(value)
+            setFocused(false);
+            if (value.trim()) onSubmit(value);
           }}
-          onKeyDown={(e) => { if (e.key === 'Enter') onSubmit(value) }}
+          onKeyDown={(e) => {
+            if (e.key === "Enter") onSubmit(value);
+          }}
         />
       )}
       <AttemptDots
@@ -217,22 +282,23 @@ function InlineFormControl({
         result={result}
         focused={focused}
       />
-      {hint && !result && (
-        <HintButton hint={hint} />
-      )}
+      {hint && !result && <HintButton hint={hint} />}
     </span>
-  )
+  );
 }
 
 function AttemptDots({
-  attemptsAllowed, wrongCount, result, focused,
+  attemptsAllowed,
+  wrongCount,
+  result,
+  focused,
 }: {
-  attemptsAllowed: number
-  wrongCount: number
-  result: CheckResult | null
-  focused: boolean
+  attemptsAllowed: number;
+  wrongCount: number;
+  result: CheckResult | null;
+  focused: boolean;
 }) {
-  const remaining = Math.max(0, attemptsAllowed - wrongCount)
+  const remaining = Math.max(0, attemptsAllowed - wrongCount);
   return (
     <span
       className="flex shrink-0 flex-col-reverse items-center gap-1 pl-1"
@@ -240,44 +306,58 @@ function AttemptDots({
       title={`Pozostało prób: ${remaining}`}
     >
       {Array.from({ length: attemptsAllowed }, (_, index) => {
-        const className = index < wrongCount
-          ? 'bg-danger'
-          : result && index === wrongCount
-            ? result.correct ? 'bg-ok' : 'bg-danger'
-            : focused && !result && index === wrongCount
-              ? 'bg-muted ring-2 ring-muted/30'
-            : 'bg-line'
-        return <span key={index} className={`size-1.5 rounded-full ${className}`} />
+        const className =
+          index < wrongCount
+            ? "bg-danger"
+            : result && index === wrongCount
+              ? result.correct
+                ? "bg-ok"
+                : "bg-danger"
+              : focused && !result && index === wrongCount
+                ? "bg-muted ring-2 ring-muted/30"
+                : "bg-line";
+        return (
+          <span key={index} className={`size-1.5 rounded-full ${className}`} />
+        );
       })}
     </span>
-  )
+  );
 }
 
 function InlineSentencePrompt({
-  exercise, value, disabled, status, attemptsAllowed, wrongCount, result, autoFocus, onChange, onSubmit,
+  exercise,
+  value,
+  disabled,
+  status,
+  attemptsAllowed,
+  wrongCount,
+  result,
+  autoFocus,
+  onChange,
+  onSubmit,
 }: {
-  exercise: InlineExercise
-  value: string
-  disabled: boolean
-  status: ControlStatus
-  attemptsAllowed: number
-  wrongCount: number
-  result: CheckResult | null
-  autoFocus?: boolean
-  onChange: (value: string) => void
-  onSubmit: (value: string) => void
+  exercise: InlineExercise;
+  value: string;
+  disabled: boolean;
+  status: ControlStatus;
+  attemptsAllowed: number;
+  wrongCount: number;
+  result: CheckResult | null;
+  autoFocus?: boolean;
+  onChange: (value: string) => void;
+  onSubmit: (value: string) => void;
 }) {
-  const baseForm = baseFormOf(exercise)
-  if (!baseForm) return <>{exercise.prompt}</>
+  const baseForm = baseFormOf(exercise);
+  if (!baseForm) return <>{exercise.prompt}</>;
 
-  const [before, after = ''] = exercise.prompt.split(GAP_MARK)
+  const [before, after = ""] = exercise.prompt.split(GAP_MARK);
   return (
     <>
       {before}
       <InlineFormControl
         baseForm={baseForm}
         mode={exercise.mode}
-        options={exercise.mode === 'choice' ? exercise.options : undefined}
+        options={exercise.mode === "choice" ? exercise.options : undefined}
         value={value}
         disabled={disabled}
         status={status}
@@ -291,31 +371,40 @@ function InlineSentencePrompt({
       />
       {after}
     </>
-  )
+  );
 }
 
 function InlineWordPrompt({
-  exercise, value, disabled, status, attemptsAllowed, wrongCount, result, autoFocus, onChange, onSubmit,
+  exercise,
+  value,
+  disabled,
+  status,
+  attemptsAllowed,
+  wrongCount,
+  result,
+  autoFocus,
+  onChange,
+  onSubmit,
 }: {
-  exercise: InlineExercise
-  value: string
-  disabled: boolean
-  status: ControlStatus
-  attemptsAllowed: number
-  wrongCount: number
-  result: CheckResult | null
-  autoFocus?: boolean
-  onChange: (value: string) => void
-  onSubmit: (value: string) => void
+  exercise: InlineExercise;
+  value: string;
+  disabled: boolean;
+  status: ControlStatus;
+  attemptsAllowed: number;
+  wrongCount: number;
+  result: CheckResult | null;
+  autoFocus?: boolean;
+  onChange: (value: string) => void;
+  onSubmit: (value: string) => void;
 }) {
-  const baseForm = baseFormOf(exercise)
-  if (!baseForm) return <>{exercise.prompt}</>
+  const baseForm = baseFormOf(exercise);
+  if (!baseForm) return <>{exercise.prompt}</>;
 
   return (
     <InlineFormControl
       baseForm={baseForm}
       mode={exercise.mode}
-      options={exercise.mode === 'choice' ? exercise.options : undefined}
+      options={exercise.mode === "choice" ? exercise.options : undefined}
       value={value}
       disabled={disabled}
       status={status}
@@ -327,7 +416,7 @@ function InlineWordPrompt({
       onChange={onChange}
       onSubmit={onSubmit}
     />
-  )
+  );
 }
 
 /**
@@ -336,309 +425,397 @@ function InlineWordPrompt({
  * предыдущего упражнения переживёт смену задания.
  */
 export function ExerciseView({
-  exercise, onAnswered, bare = false, showReadingText = true, autoFocus = true,
-  showInstruction = true, leadingNumber, restoredResult, showSpeakButton = true,
+  exercise,
+  onAnswered,
+  bare = false,
+  showReadingText = true,
+  autoFocus = true,
+  showInstruction = true,
+  leadingNumber,
+  restoredResult,
+  showSpeakButton = true,
 }: {
-  exercise: Exercise
-  onAnswered: (r: CheckResult, ms: number, attempts: number, answer: string) => void
+  exercise: Exercise;
+  onAnswered: (
+    r: CheckResult,
+    ms: number,
+    attempts: number,
+    answer: string,
+  ) => void;
   /** Рендерит содержимое без собственной карточки — для составных блоков. */
-  bare?: boolean
+  bare?: boolean;
   /** Текст чтения можно вынести во внешний стабильный контейнер. */
-  showReadingText?: boolean
+  showReadingText?: boolean;
   /** Автофокус только для первого поля в пакетном задании. */
-  autoFocus?: boolean
+  autoFocus?: boolean;
   /** Показывать инструкцию над конкретным упражнением. */
-  showInstruction?: boolean
+  showInstruction?: boolean;
   /** Номер строки, который отображается перед предложением. */
-  leadingNumber?: number
+  leadingNumber?: number;
   /** Результат упражнения, восстановленный из серверной истории. */
-  restoredResult?: { result: CheckResult; answer: string; attempts: number } | null
+  restoredResult?: {
+    result: CheckResult;
+    answer: string;
+    attempts: number;
+  } | null;
   /** Переносит озвучку в нижнюю панель мобильного сценария. */
-  showSpeakButton?: boolean
+  showSpeakButton?: boolean;
 }) {
-  const [result, setResult] = useState<CheckResult | null>(null)
-  const [feedback, setFeedback] = useState<CheckResult | null>(null)
-  const [typed, setTyped] = useState('')
-  const [builtIndexes, setBuiltIndexes] = useState<number[]>([])
-  const [wrongTries, setWrongTries] = useState<string[]>([])
-  const [lastSubmittedAnswer, setLastSubmittedAnswer] = useState('')
-  const started = useRef(Date.now())
-  const lastCheckedValue = useRef<string | null>(null)
+  const [result, setResult] = useState<CheckResult | null>(null);
+  const [feedback, setFeedback] = useState<CheckResult | null>(null);
+  const [typed, setTyped] = useState("");
+  const [builtIndexes, setBuiltIndexes] = useState<number[]>([]);
+  const [wrongTries, setWrongTries] = useState<string[]>([]);
+  const [lastSubmittedAnswer, setLastSubmittedAnswer] = useState("");
+  const started = useRef(Date.now());
+  const lastCheckedValue = useRef<string | null>(null);
+  const autoPronouncedExercise = useRef<string | null>(null);
+  const { pronounce } = usePronounce();
 
   useEffect(() => {
-    if (!restoredResult) return
-    setResult(restoredResult.result)
-    setFeedback(restoredResult.result)
-    setTyped(restoredResult.answer)
-    if (exercise.mode === 'assemble') {
-      setBuiltIndexes(letterIndexesForAnswer(exercise.letters, restoredResult.answer))
+    if (!restoredResult) return;
+    setResult(restoredResult.result);
+    setFeedback(restoredResult.result);
+    setTyped(restoredResult.answer);
+    if (exercise.mode === "assemble") {
+      setBuiltIndexes(
+        letterIndexesForAnswer(exercise.letters, restoredResult.answer),
+      );
     }
-    setWrongTries(Array.from({
-      length: Math.max(0, restoredResult.attempts - (restoredResult.result.correct ? 1 : 0)),
-    }, () => ''))
-  }, [exercise.id, restoredResult])
+    setWrongTries(
+      Array.from(
+        {
+          length: Math.max(
+            0,
+            restoredResult.attempts - (restoredResult.result.correct ? 1 : 0),
+          ),
+        },
+        () => "",
+      ),
+    );
+  }, [exercise.id, restoredResult]);
 
-  const attemptsAllowed = exercise.attemptsAllowed ?? DEFAULT_ATTEMPTS
+  useEffect(() => {
+    if (
+      restoredResult ||
+      exercise.kind !== "listen-write" ||
+      exercise.mode !== "typed"
+    )
+      return;
+    if (autoPronouncedExercise.current === exercise.id) return;
+    const text = exercise.speakText ?? exercise.accepted[0];
+    if (!text) return;
+    autoPronouncedExercise.current = exercise.id;
+    pronounce(text);
+  }, [exercise, exercise.id, pronounce, restoredResult]);
+
+  const attemptsAllowed = exercise.attemptsAllowed ?? DEFAULT_ATTEMPTS;
 
   const isGapSentence =
-    exercise.kind === 'sentence-choice' || exercise.kind === 'sentence-typed'
-  const isReading = exercise.kind === 'reading-choice'
-  const isListenWrite = exercise.kind === 'listen-write'
-  const isSentence = isGapSentence || exercise.kind === 'sentence-write'
-  const baseForm = exercise.mode === 'assemble' ? undefined : baseFormOf(exercise)
-  const isInlineForm = Boolean(baseForm) && exercise.kind !== 'sentence-write'
+    exercise.kind === "sentence-choice" || exercise.kind === "sentence-typed";
+  const isReading = exercise.kind === "reading-choice";
+  const isListenWrite = exercise.kind === "listen-write";
+  const isSentence = isGapSentence || exercise.kind === "sentence-write";
+  const baseForm =
+    exercise.mode === "assemble" ? undefined : baseFormOf(exercise);
+  const isInlineForm = Boolean(baseForm) && exercise.kind !== "sentence-write";
   const inlineStatus: ControlStatus = result
-    ? result.correct ? 'correct' : 'wrong'
-    : feedback && !feedback.correct && !typed ? 'wrong'
-    : wrongTries.includes(typed) && typed ? 'wrong' : 'empty'
-  const isPolishPrompt = !isGapSentence
-    && !isReading
-    && exercise.kind !== 'translate-production'
-    && exercise.kind !== 'spelling'
-    && !isListenWrite
+    ? result.correct
+      ? "correct"
+      : "wrong"
+    : feedback && !feedback.correct && !typed
+      ? "wrong"
+      : wrongTries.includes(typed) && typed
+        ? "wrong"
+        : "empty";
+  const speakText = speakableTextOf(exercise);
 
   function updateTyped(value: string) {
-    lastCheckedValue.current = null
-    setTyped(value)
+    lastCheckedValue.current = null;
+    setTyped(value);
   }
 
   function submit(answer: string) {
-    if (result) return
-    const normalized = answer.trim()
-    if (!normalized || lastCheckedValue.current === normalized) return
-    lastCheckedValue.current = normalized
-    const r = check(exercise, answer)
-    setFeedback(r)
-    setLastSubmittedAnswer(answer)
+    if (result) return;
+    const normalized = answer.trim();
+    if (!normalized || lastCheckedValue.current === normalized) return;
+    lastCheckedValue.current = normalized;
+    const r = check(exercise, answer);
+    setFeedback(r);
+    setLastSubmittedAnswer(answer);
     if (!r.correct && wrongTries.length + 1 < attemptsAllowed) {
-      setWrongTries((w) => [...w, answer])
-      if (exercise.mode === 'typed' && !isInlineForm) setTyped('')
-      if (exercise.mode === 'assemble') setBuiltIndexes([])
-      return
+      setWrongTries((w) => [...w, answer]);
+      if (exercise.mode === "typed" && !isInlineForm) setTyped("");
+      if (exercise.mode === "assemble") setBuiltIndexes([]);
+      return;
     }
-    const nextWrongTries = r.correct ? wrongTries : [...wrongTries, answer]
-    if (!r.correct) setWrongTries(nextWrongTries)
-    setResult(r)
-    if (typeof navigator !== 'undefined' && 'vibrate' in navigator) {
-      navigator.vibrate(r.correct ? 12 : [18, 35, 18])
+    const nextWrongTries = r.correct ? wrongTries : [...wrongTries, answer];
+    if (!r.correct) setWrongTries(nextWrongTries);
+    setResult(r);
+    if (typeof navigator !== "undefined" && "vibrate" in navigator) {
+      navigator.vibrate(r.correct ? 12 : [18, 35, 18]);
     }
+    const spokenAnswer = answerSpeakableText(exercise);
+    if (spokenAnswer) pronounce(spokenAnswer);
     onAnswered(
       r,
       Date.now() - started.current,
       nextWrongTries.length + (r.correct ? 1 : 0),
       answer,
-    )
+    );
   }
 
   // сборка по буквам: как только набрана нужная длина — проверяем
   useEffect(() => {
-    if (exercise.mode !== 'assemble' || result) return
-    const answer = builtIndexes.map((index) => exercise.letters[index]).join('')
-    if (answer.length === exercise.answer.length) submit(answer)
+    if (exercise.mode !== "assemble" || result) return;
+    const answer = builtIndexes
+      .map((index) => exercise.letters[index])
+      .join("");
+    if (answer.length === exercise.answer.length) submit(answer);
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [builtIndexes])
+  }, [builtIndexes]);
 
   function selectAssembledLetter(index: number) {
     if (feedback && !feedback.correct && !result) {
-      setFeedback(null)
-      setLastSubmittedAnswer('')
+      setFeedback(null);
+      setLastSubmittedAnswer("");
     }
-    setBuiltIndexes((current) => [...current, index])
+    setBuiltIndexes((current) => [...current, index]);
   }
 
   const content = (
     <Stack gap="lg" className="w-full">
-        <Stack gap="sm" align="center">
-          {showInstruction && (
-            <span className="text-center text-xs tracking-wide text-muted uppercase">
-              {exercise.instruction}
-            </span>
-          )}
-          {showReadingText && exercise.mode === 'choice' && isReading && exercise.readingText && (
+      <Stack gap="sm" align="center">
+        {showInstruction && (
+          <span className="text-center text-xs tracking-wide text-muted uppercase">
+            {exercise.instruction}
+          </span>
+        )}
+        {showReadingText &&
+          exercise.mode === "choice" &&
+          isReading &&
+          exercise.readingText && (
             <div className="w-full rounded-card bg-soft2 p-4" lang="pl">
-              <p className="mb-2 text-xs tracking-wide text-muted uppercase">Tekst</p>
+              <p className="mb-2 text-xs tracking-wide text-muted uppercase">
+                Tekst
+              </p>
               <p className="whitespace-pre-wrap text-left text-base leading-7">
                 {exercise.readingText}
               </p>
             </div>
           )}
-          <Row
-            gap="sm"
-            justify={leadingNumber !== undefined ? 'start' : 'center'}
-            align="baseline"
-            className={leadingNumber !== undefined ? 'w-full' : undefined}
-          >
-            {leadingNumber !== undefined && (
-              <span className="shrink-0 text-base font-semibold text-muted sm:text-lg">
-                {leadingNumber}.
-              </span>
-            )}
-            {/* ≥24px: иначе не различить диакритику, UX_UI.md §1.6 */}
-            {!isListenWrite && (
-              <span className={isReading
-                ? 'whitespace-pre-wrap text-left text-base leading-7'
-                : `${leadingNumber !== undefined ? 'text-left' : 'text-center'} font-semibold ${isSentence ? 'text-base sm:text-lg' : 'text-lg sm:text-xl'}`}>
-                {isInlineForm && exercise.mode !== 'assemble'
-                  ? isGapSentence
-                    ? <InlineSentencePrompt
-                        exercise={exercise}
-                        value={typed}
-                        disabled={Boolean(result)}
-                        status={inlineStatus}
-                        attemptsAllowed={attemptsAllowed}
-                        wrongCount={wrongTries.length}
-                        result={result}
-                        autoFocus={autoFocus && exercise.mode === 'typed'}
-                        onChange={updateTyped}
-                        onSubmit={submit}
-                      />
-                    : <InlineWordPrompt
-                        exercise={exercise}
-                        value={typed}
-                        disabled={Boolean(result)}
-                        status={inlineStatus}
-                        attemptsAllowed={attemptsAllowed}
-                        wrongCount={wrongTries.length}
-                        result={result}
-                        autoFocus={autoFocus && exercise.mode === 'typed'}
-                        onChange={updateTyped}
-                        onSubmit={submit}
-                      />
-                  : exercise.prompt}
-              </span>
-            )}
-            {showSpeakButton && isPolishPrompt && <SpeakIcon text={exercise.prompt} />}
-            {showSpeakButton && isListenWrite && exercise.mode === 'typed' && (
-              <SpeakIcon
-                text={exercise.speakText ?? exercise.accepted[0] ?? ''}
-                ariaLabel="Odtwórz wymowę"
-              />
+        <Row
+          gap="sm"
+          justify={leadingNumber !== undefined ? "start" : "center"}
+          align="baseline"
+          className={leadingNumber !== undefined ? "w-full" : undefined}
+        >
+          {leadingNumber !== undefined && (
+            <span className="shrink-0 text-base font-semibold text-muted sm:text-lg">
+              {leadingNumber}.
+            </span>
+          )}
+          {/* ≥24px: иначе не различить диакритику, UX_UI.md §1.6 */}
+          {!isListenWrite && (
+            <span
+              className={
+                isReading
+                  ? "whitespace-pre-wrap text-left text-base leading-7"
+                  : `${leadingNumber !== undefined ? "text-left" : "text-center"} font-semibold ${isSentence ? "text-base sm:text-lg" : "text-lg sm:text-xl"}`
+              }
+            >
+              {isInlineForm && exercise.mode !== "assemble" ? (
+                isGapSentence ? (
+                  <InlineSentencePrompt
+                    exercise={exercise}
+                    value={typed}
+                    disabled={Boolean(result)}
+                    status={inlineStatus}
+                    attemptsAllowed={attemptsAllowed}
+                    wrongCount={wrongTries.length}
+                    result={result}
+                    autoFocus={autoFocus && exercise.mode === "typed"}
+                    onChange={updateTyped}
+                    onSubmit={submit}
+                  />
+                ) : (
+                  <InlineWordPrompt
+                    exercise={exercise}
+                    value={typed}
+                    disabled={Boolean(result)}
+                    status={inlineStatus}
+                    attemptsAllowed={attemptsAllowed}
+                    wrongCount={wrongTries.length}
+                    result={result}
+                    autoFocus={autoFocus && exercise.mode === "typed"}
+                    onChange={updateTyped}
+                    onSubmit={submit}
+                  />
+                )
+              ) : (
+                exercise.prompt
+              )}
+            </span>
+          )}
+        </Row>
+      </Stack>
+
+      {showSpeakButton && speakText && (
+        <div className="flex justify-center">
+          <SpeakIcon
+            text={speakText}
+            ariaLabel={isListenWrite ? "Odtwórz wymowę" : undefined}
+          />
+        </div>
+      )}
+
+      {exercise.mode === "choice" && !isInlineForm && (
+        <Stack gap="xs">
+          {exercise.options.map((o) => (
+            <OptionRow
+              key={o}
+              outcome={
+                feedback && !feedback.correct && o === feedback.expected
+                  ? "correct"
+                  : result && o === exercise.answer
+                    ? "correct"
+                    : wrongTries.includes(o)
+                      ? "wrong"
+                      : "none"
+              }
+              selected={false}
+              disabled={Boolean(result) || wrongTries.includes(o)}
+              onClick={() => submit(o)}
+            >
+              {o}
+            </OptionRow>
+          ))}
+        </Stack>
+      )}
+
+      {exercise.mode === "typed" && (
+        <Stack gap="sm">
+          {!isInlineForm && (
+            <input
+              autoFocus={autoFocus}
+              value={typed}
+              disabled={Boolean(result)}
+              onFocus={(event) => keepInputVisible(event.currentTarget)}
+              onChange={(e) => updateTyped(e.target.value)}
+              onBlur={() => submit(typed)}
+              onKeyDown={(e) => {
+                if (e.key === "Enter") submit(typed);
+              }}
+              placeholder={
+                exercise.kind === "sentence-write"
+                  ? "Napisz zdanie"
+                  : exercise.kind === "sentence-typed"
+                    ? "Wpisz słowo"
+                    : exercise.kind === "listen-write"
+                      ? "Wpisz usłyszane słowo"
+                      : "Wpisz formę"
+              }
+              className="min-h-12 w-full rounded-card border border-line bg-card px-3 text-center text-xl text-ink"
+              lang="pl"
+              autoCapitalize="off"
+              autoCorrect="off"
+              spellCheck={false}
+            />
+          )}
+        </Stack>
+      )}
+
+      {exercise.mode === "assemble" && (
+        <Stack gap="md">
+          <div className="flex items-center gap-2">
+            <div
+              className={`min-h-12 flex-1 rounded-card border px-3 py-2 text-center text-2xl tracking-widest ${
+                result
+                  ? result.correct
+                    ? "border-ok bg-ok-bg text-ok-ink"
+                    : "border-danger bg-danger-bg text-danger-ink"
+                  : feedback && !feedback.correct
+                    ? "border-danger bg-danger-bg text-danger-ink"
+                    : "border-dashed border-line"
+              }`}
+            >
+              {feedback && !feedback.correct && !result
+                ? lastSubmittedAnswer
+                : builtIndexes.length
+                  ? builtIndexes.map((index, position) => (
+                      <button
+                        key={`${index}-${position}`}
+                        type="button"
+                        aria-label={`Usuń literę ${exercise.letters[index]}`}
+                        onClick={() =>
+                          setBuiltIndexes((current) =>
+                            current.filter((_, i) => i !== position),
+                          )
+                        }
+                        className="rounded px-0.5 hover:bg-soft2"
+                      >
+                        {exercise.letters[index]}
+                      </button>
+                    ))
+                  : " "}
+            </div>
+            <AttemptDots
+              attemptsAllowed={attemptsAllowed}
+              wrongCount={wrongTries.length}
+              result={result}
+              focused={false}
+            />
+          </div>
+          <Row gap="xs" wrap justify="center">
+            {exercise.letters.map((l, idx) =>
+              builtIndexes.includes(idx) ? null : (
+                <button
+                  key={`${l}-${idx}`}
+                  type="button"
+                  disabled={Boolean(result)}
+                  onClick={() => selectAssembledLetter(idx)}
+                  className="size-12 rounded-card bg-soft text-xl font-medium hover:bg-soft2 disabled:opacity-40"
+                >
+                  {l}
+                </button>
+              ),
             )}
           </Row>
+          {builtIndexes.length > 0 && !result && (
+            <Button
+              variant="ghost"
+              size="sm"
+              onClick={() => setBuiltIndexes([])}
+            >
+              Wyczyść
+            </Button>
+          )}
         </Stack>
+      )}
 
-        {exercise.mode === 'choice' && !isInlineForm && (
+      <div className="min-h-6 text-sm">
+        {feedback?.correct && (
+          <p className="font-medium text-ok-ink">Poprawnie</p>
+        )}
+        {feedback && !feedback.correct && (
           <Stack gap="xs">
-            {exercise.options.map((o) => (
-              <OptionRow
-                key={o}
-                outcome={
-                  feedback && !feedback.correct && o === feedback.expected ? 'correct'
-                    : result && o === exercise.answer ? 'correct'
-                    : wrongTries.includes(o) ? 'wrong'
-                    : 'none'
-                }
-                selected={false}
-                disabled={Boolean(result) || wrongTries.includes(o)}
-                onClick={() => submit(o)}
-              >
-                {o}
-              </OptionRow>
-            ))}
-          </Stack>
-        )}
-
-        {exercise.mode === 'typed' && (
-          <Stack gap="sm">
-            {!isInlineForm && (
-              <input
-                autoFocus={autoFocus}
-                value={typed}
-                disabled={Boolean(result)}
-                onFocus={(event) => keepInputVisible(event.currentTarget)}
-                onChange={(e) => updateTyped(e.target.value)}
-                onBlur={() => submit(typed)}
-                onKeyDown={(e) => { if (e.key === 'Enter') submit(typed) }}
-                placeholder={
-                  exercise.kind === 'sentence-write' ? 'Napisz zdanie'
-                    : exercise.kind === 'sentence-typed' ? 'Wpisz słowo'
-                    : exercise.kind === 'listen-write' ? 'Wpisz usłyszane słowo'
-                    : 'Wpisz formę'
-                }
-                className="min-h-12 w-full rounded-card border border-line bg-card px-3 text-center text-xl text-ink"
-                lang="pl"
-                autoCapitalize="off"
-                autoCorrect="off"
-                spellCheck={false}
-              />
+            {exercise.mode !== "choice" && result && (
+              <p className="text-ok-ink">
+                Poprawna odpowiedź: <strong>{feedback.expected}</strong>
+              </p>
             )}
           </Stack>
         )}
-
-        {exercise.mode === 'assemble' && (
-          <Stack gap="md">
-            <div className="flex items-center gap-2">
-              <div className={`min-h-12 flex-1 rounded-card border px-3 py-2 text-center text-2xl tracking-widest ${
-                result
-                  ? result.correct ? 'border-ok bg-ok-bg text-ok-ink' : 'border-danger bg-danger-bg text-danger-ink'
-                  : feedback && !feedback.correct ? 'border-danger bg-danger-bg text-danger-ink' : 'border-dashed border-line'
-              }`}>
-                {feedback && !feedback.correct && !result
-                  ? lastSubmittedAnswer
-                  : builtIndexes.length
-                    ? builtIndexes.map((index, position) => (
-                        <button
-                          key={`${index}-${position}`}
-                          type="button"
-                          aria-label={`Usuń literę ${exercise.letters[index]}`}
-                          onClick={() => setBuiltIndexes((current) => current.filter((_, i) => i !== position))}
-                          className="rounded px-0.5 hover:bg-soft2"
-                        >
-                          {exercise.letters[index]}
-                        </button>
-                      ))
-                    : ' '}
-              </div>
-              <AttemptDots
-                attemptsAllowed={attemptsAllowed}
-                wrongCount={wrongTries.length}
-                result={result}
-                focused={false}
-              />
-            </div>
-            <Row gap="xs" wrap justify="center">
-              {exercise.letters.map((l, idx) => (
-                builtIndexes.includes(idx) ? null : (
-                  <button
-                    key={`${l}-${idx}`}
-                    type="button"
-                    disabled={Boolean(result)}
-                    onClick={() => selectAssembledLetter(idx)}
-                    className="size-12 rounded-card bg-soft text-xl font-medium hover:bg-soft2 disabled:opacity-40"
-                  >
-                    {l}
-                  </button>
-                )
-              ))}
-            </Row>
-            {builtIndexes.length > 0 && !result && (
-              <Button variant="ghost" size="sm" onClick={() => setBuiltIndexes([])}>
-                Wyczyść
-              </Button>
-            )}
-          </Stack>
-        )}
-
-        <div className="min-h-6 text-sm">
-          {feedback?.correct && (
-            <p className="font-medium text-ok-ink">Poprawnie</p>
-          )}
-          {feedback && !feedback.correct && (
-            <Stack gap="xs">
-              {exercise.mode !== 'choice' && result && (
-                <p className="text-ok-ink">
-                  Poprawna odpowiedź: <strong>{feedback.expected}</strong>
-                </p>
-              )}
-            </Stack>
-          )}
-        </div>
-
+      </div>
     </Stack>
-  )
+  );
 
-  if (bare) return content
-  return <Card tone={result ? (result.correct ? 'correct' : 'wrong') : 'neutral'}>{content}</Card>
+  if (bare) return content;
+  return (
+    <Card tone={result ? (result.correct ? "correct" : "wrong") : "neutral"}>
+      {content}
+    </Card>
+  );
 }
 
 /**
@@ -646,93 +823,145 @@ export function ExerciseView({
  * пользователю блок показывается как одно задание с нумерованными строками.
  */
 export function ExerciseBatch({
-  exercises, onAnswered, onComplete, onReset, dayNumber,
-  completedTitle, completedDescription, blockTitle, blockDescription,
+  exercises,
+  onAnswered,
+  onComplete,
+  onReset,
+  dayNumber,
+  completedTitle,
+  completedDescription,
+  blockTitle,
+  blockDescription,
+  showWrongFrame = false,
 }: {
-  exercises: Exercise[]
-  onAnswered: (exercise: Exercise, result: CheckResult, ms: number, attempts: number, answer: string) => void
-  onComplete: () => void
-  onReset?: () => void
-  dayNumber: number
-  completedTitle: string
-  completedDescription: string
-  blockTitle?: string
-  blockDescription?: string
+  exercises: Exercise[];
+  onAnswered: (
+    exercise: Exercise,
+    result: CheckResult,
+    ms: number,
+    attempts: number,
+    answer: string,
+  ) => void;
+  onComplete: () => void;
+  onReset?: () => void;
+  dayNumber: number;
+  completedTitle: string;
+  completedDescription: string;
+  blockTitle?: string;
+  blockDescription?: string;
+  /** В лексическом блоке ошибка должна оставаться видимой после ответа. */
+  showWrongFrame?: boolean;
 }) {
-  const state = useAppState()
-  const [completedIds, setCompletedIds] = useState<Set<string>>(() => new Set())
-  const [resetting, setResetting] = useState(false)
-  const completionNotified = useRef(false)
+  const state = useAppState();
+  const [completedIds, setCompletedIds] = useState<Set<string>>(
+    () => new Set(),
+  );
+  const [answeredCorrectness, setAnsweredCorrectness] = useState<
+    Record<string, boolean>
+  >({});
+  const [resetting, setResetting] = useState(false);
+  const completionNotified = useRef(false);
 
   useEffect(() => {
-    if (exercises.length > 0 && completedIds.size === exercises.length && !completionNotified.current) {
-      completionNotified.current = true
-      onComplete()
+    if (
+      exercises.length > 0 &&
+      completedIds.size === exercises.length &&
+      !completionNotified.current
+    ) {
+      completionNotified.current = true;
+      onComplete();
     }
-  }, [completedIds, exercises.length, onComplete])
+  }, [completedIds, exercises.length, onComplete]);
 
   const restored = new Map(
     (state?.exerciseResults ?? [])
       .filter((result) => result.dayNumber === dayNumber)
       .map((result) => [result.exerciseId, result]),
-  )
-  const groups = (['choice', 'typed', 'write'] as const)
+  );
+  const groups = (["choice", "typed", "write"] as const)
     .map((type) => ({
       type,
-      exercises: exercises.filter((exercise) => (
-        type === 'choice'
-          ? exercise.mode === 'choice'
-          : type === 'write'
-            ? exercise.kind === 'sentence-write'
-            : exercise.mode === 'typed' && exercise.kind !== 'sentence-write'
-      )),
+      exercises: exercises.filter((exercise) =>
+        type === "choice"
+          ? exercise.mode === "choice"
+          : type === "write"
+            ? exercise.kind === "sentence-write"
+            : exercise.mode === "typed" && exercise.kind !== "sentence-write",
+      ),
     }))
-    .filter((group) => group.exercises.length > 0)
+    .filter((group) => group.exercises.length > 0);
 
-  const activeGroupIndex = groups.findIndex((group) => (
-    group.exercises.some((exercise) => !completedIds.has(exercise.id))
-  ))
-  const activeGroup = activeGroupIndex >= 0 ? groups[activeGroupIndex] : null
+  const activeGroupIndex = groups.findIndex((group) =>
+    group.exercises.some((exercise) => !completedIds.has(exercise.id)),
+  );
+  const activeGroup = activeGroupIndex >= 0 ? groups[activeGroupIndex] : null;
 
   async function resetBlock() {
-    if (resetting) return
-    setResetting(true)
-    const ok = await resetExerciseResults(dayNumber, exercises.map((exercise) => exercise.id))
+    if (resetting) return;
+    setResetting(true);
+    const ok = await resetExerciseResults(
+      dayNumber,
+      exercises.map((exercise) => exercise.id),
+    );
     if (ok) {
-      completionNotified.current = false
-      setCompletedIds(new Set())
-      onReset?.()
+      completionNotified.current = false;
+      setCompletedIds(new Set());
+      setAnsweredCorrectness({});
+      onReset?.();
     }
-    setResetting(false)
+    setResetting(false);
   }
 
   useEffect(() => {
-    setCompletedIds(new Set(
-      exercises.filter((exercise) => restored.has(exercise.id)).map((exercise) => exercise.id),
-    ))
-  }, [dayNumber, exercises, state?.exerciseResults])
+    setCompletedIds(
+      new Set(
+        exercises
+          .filter((exercise) => restored.has(exercise.id))
+          .map((exercise) => exercise.id),
+      ),
+    );
+  }, [dayNumber, exercises, state?.exerciseResults]);
 
-  function handleAnswered(exercise: Exercise, result: CheckResult, ms: number, attempts: number, answer: string) {
-    onAnswered(exercise, result, ms, attempts, answer)
+  function handleAnswered(
+    exercise: Exercise,
+    result: CheckResult,
+    ms: number,
+    attempts: number,
+    answer: string,
+  ) {
+    setAnsweredCorrectness((current) => ({
+      ...current,
+      [exercise.id]: result.correct,
+    }));
+    onAnswered(exercise, result, ms, attempts, answer);
     setCompletedIds((current) => {
-      const next = new Set(current)
-      next.add(exercise.id)
-      return next
-    })
+      const next = new Set(current);
+      next.add(exercise.id);
+      return next;
+    });
   }
 
   if (!activeGroup) {
     return (
-      <Stack gap="md" className="mx-auto w-full max-w-(--container-exercise)" align="center">
+      <Stack
+        gap="md"
+        className="mx-auto w-full max-w-(--container-exercise)"
+        align="center"
+      >
         <div className="w-full rounded-card border border-ok bg-ok-bg px-4 py-4 text-center">
           <p className="font-semibold text-ok-ink">{completedTitle}</p>
           <p className="mt-1 text-sm text-muted">{completedDescription}</p>
         </div>
-        <Button variant="outline" size="sm" disabled={resetting} onClick={() => void resetBlock()}>
-          {resetting ? 'Przygotowuję…' : 'Powtórz blok'}
+        <Button
+          variant="outline"
+          size="sm"
+          disabled={resetting}
+          onClick={() => void resetBlock()}
+        >
+          {resetting ? "Przygotowuję…" : "Powtórz blok"}
         </Button>
       </Stack>
-    )
+    );
   }
 
   return (
@@ -742,7 +971,9 @@ export function ExerciseBatch({
           <p className="text-left text-sm font-semibold tracking-wide text-muted uppercase">
             {blockTitle}
           </p>
-          {blockDescription && <p className="text-left text-sm text-muted">{blockDescription}</p>}
+          {blockDescription && (
+            <p className="text-left text-sm text-muted">{blockDescription}</p>
+          )}
         </Stack>
       )}
       <Stack gap="sm">
@@ -754,50 +985,75 @@ export function ExerciseBatch({
         </p>
       </Stack>
       {activeGroup.exercises.map((exercise, index) => (
-        <div key={exercise.id} className="w-full">
+        <div
+          key={exercise.id}
+          className={
+            showWrongFrame &&
+            (answeredCorrectness[exercise.id] ??
+              restored.get(exercise.id)?.correct) === false
+              ? "w-full rounded-card border-2 border-danger bg-danger-bg px-2 py-1"
+              : "w-full"
+          }
+        >
           <ExerciseView
             exercise={exercise}
             bare
             autoFocus={index === 0}
             showInstruction={false}
             leadingNumber={index + 1}
-            restoredResult={restored.get(exercise.id) ? {
-              result: {
-                correct: restored.get(exercise.id)!.correct,
-                expected: restored.get(exercise.id)!.expected,
-                errorKind: restored.get(exercise.id)!.errorKind ?? undefined,
-              },
-              answer: restored.get(exercise.id)!.answer,
-              attempts: restored.get(exercise.id)!.attempts,
-            } : null}
-            onAnswered={(result, ms, attempts, answer) => (
+            restoredResult={
+              restored.get(exercise.id)
+                ? {
+                    result: {
+                      correct: restored.get(exercise.id)!.correct,
+                      expected: restored.get(exercise.id)!.expected,
+                      errorKind:
+                        restored.get(exercise.id)!.errorKind ?? undefined,
+                    },
+                    answer: restored.get(exercise.id)!.answer,
+                    attempts: restored.get(exercise.id)!.attempts,
+                  }
+                : null
+            }
+            onAnswered={(result, ms, attempts, answer) =>
               handleAnswered(exercise, result, ms, attempts, answer)
-            )}
+            }
           />
         </div>
       ))}
     </Stack>
-  )
+  );
 }
 
 /** Пакет грамматических заданий с прежним текстом интерфейса. */
-export function GrammarExerciseBatch(props: Omit<Parameters<typeof ExerciseBatch>[0], 'completedTitle' | 'completedDescription'>) {
+export function GrammarExerciseBatch(
+  props: Omit<
+    Parameters<typeof ExerciseBatch>[0],
+    "completedTitle" | "completedDescription"
+  >,
+) {
   return (
     <ExerciseBatch
       {...props}
       completedTitle="Blok gramatyki ukończony"
       completedDescription="Wynik zapisany. Możesz przejść dalej albo powtórzyć blok."
     />
-  )
+  );
 }
 
 /** Обязательный пакет слов: 10 вводов и 10 выборов. */
-export function VocabularyExerciseBatch(props: Omit<Parameters<typeof ExerciseBatch>[0], 'completedTitle' | 'completedDescription'>) {
+export function VocabularyExerciseBatch(
+  props: Omit<
+    Parameters<typeof ExerciseBatch>[0],
+    "completedTitle" | "completedDescription"
+  >,
+) {
   return (
     <ExerciseBatch
       {...props}
+      showWrongFrame
       completedTitle="Minimum leksykalne ukończone"
       completedDescription="10 słów wpisanych i 10 słów wybranych. Możesz przejść dalej."
     />
-  )
+  );
 }

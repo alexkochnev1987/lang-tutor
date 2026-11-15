@@ -1,230 +1,300 @@
-'use client'
+"use client";
 
-import { useEffect, useMemo, useRef, useState } from 'react'
-import Link from 'next/link'
-import { Button, Card, Row, Screen, Stack } from '@polski/ui'
-import type { CheckResult, Exercise } from '@polski/engine'
-import { Nav } from '@/app/_components/Nav'
+import { useEffect, useMemo, useRef, useState } from "react";
+import Link from "next/link";
+import { Button, Card, Row, Screen, Stack } from "@polski/ui";
+import type { CheckResult, Exercise } from "@polski/engine";
+import { Nav } from "@/app/_components/Nav";
 import {
-  ExerciseView, StudyActionBar, speakableTextOf,
-} from '@/app/_components/ExerciseView'
-import { ThemePicker } from '@/app/_components/ThemePicker'
+  ExerciseView,
+  SpeakIcon,
+  StudyActionBar,
+} from "@/app/_components/ExerciseView";
+import { ThemePicker } from "@/app/_components/ThemePicker";
 import {
-  currentDayNumber, loadCurriculum, loadVocabulary, type Lexeme,
-} from '@/lib/content/curriculum'
+  currentDayNumber,
+  loadCurriculum,
+  loadVocabulary,
+  type Lexeme,
+} from "@/lib/content/curriculum";
 import {
-  useAppState, saveExerciseResult, saveLessonSession, setLexemeKnown,
-} from '@/lib/data/store'
-import { completeLexemeLearning } from '@/lib/engine/session'
+  useAppState,
+  saveExerciseResult,
+  saveLessonSession,
+  setLexemeKnown,
+} from "@/lib/data/store";
+import { completeLexemeLearning } from "@/lib/engine/session";
 import {
-  buildWordStageRetryStep, oneAttemptWordSteps, wordExerciseSteps,
-  WORD_STAGE_RETRY_LIMIT, buildWordStudySteps, type WordStudyStep,
-} from '@/lib/engine/word-study'
-import { getLexemeStudyStatus } from '@/lib/engine/word-status'
-import { StudyStatusBadge } from '@/app/_components/WordRow'
+  buildWordStageRetryStep,
+  oneAttemptWordSteps,
+  wordExerciseSteps,
+  WORD_STAGE_RETRY_LIMIT,
+  buildWordStudySteps,
+  type WordStudyStep,
+} from "@/lib/engine/word-study";
+import { getLexemeStudyStatus } from "@/lib/engine/word-status";
+import { StudyStatusBadge } from "@/app/_components/WordRow";
+import { usePronounce } from "@/lib/speech/usePronounce";
 
-const WORDS_PER_SESSION = 5
+const WORDS_PER_SESSION = 5;
 
-type Phase = 'select' | 'study' | 'done'
+type Phase = "select" | "study" | "done";
 
 function initialUrlState(): { sessionId: string | null; wordIds: string[] } {
-  if (typeof window === 'undefined') return { sessionId: null, wordIds: [] }
-  const params = new URLSearchParams(window.location.search)
+  if (typeof window === "undefined") return { sessionId: null, wordIds: [] };
+  const params = new URLSearchParams(window.location.search);
   return {
-    sessionId: params.get('session'),
-    wordIds: (params.get('ids') ?? '').split(',').filter(Boolean).slice(0, WORDS_PER_SESSION),
-  }
+    sessionId: params.get("session"),
+    wordIds: (params.get("ids") ?? "")
+      .split(",")
+      .filter(Boolean)
+      .slice(0, WORDS_PER_SESSION),
+  };
 }
 
 export default function WordsPage() {
-  const state = useAppState()
-  const [words, setWords] = useState<Lexeme[] | null>(null)
+  const state = useAppState();
+  const { pronounce } = usePronounce();
+  const [words, setWords] = useState<Lexeme[] | null>(null);
   // URL is read after hydration. Reading window during the first render made
   // the server render 0/5 while the client immediately rendered 5/5.
-  const [selectedIds, setSelectedIds] = useState<string[]>([])
-  const [sessionId, setSessionId] = useState<string | null>(null)
-  const [phase, setPhase] = useState<Phase>('select')
-  const [query, setQuery] = useState('')
-  const [current, setCurrent] = useState(0)
-  const [canAdvance, setCanAdvance] = useState(false)
-  const [dayNumber, setDayNumber] = useState(1)
-  const startedAt = useRef(Date.now())
-  const finalizing = useRef(new Set<string>())
-  const restorePositionInitialized = useRef(false)
-  const studyMainRef = useRef<HTMLElement>(null)
+  const [selectedIds, setSelectedIds] = useState<string[]>([]);
+  const [sessionId, setSessionId] = useState<string | null>(null);
+  const [phase, setPhase] = useState<Phase>("select");
+  const [query, setQuery] = useState("");
+  const [current, setCurrent] = useState(0);
+  const [canAdvance, setCanAdvance] = useState(false);
+  const [dayNumber, setDayNumber] = useState(1);
+  const startedAt = useRef(Date.now());
+  const finalizing = useRef(new Set<string>());
+  const autoPronouncedWordIntro = useRef<string | null>(null);
+  const restorePositionInitialized = useRef(false);
 
   useEffect(() => {
-    const initial = initialUrlState()
-    setSelectedIds(initial.wordIds)
-    setSessionId(initial.sessionId)
-    setPhase(initial.sessionId ? 'study' : 'select')
-  }, [])
+    const initial = initialUrlState();
+    setSelectedIds(initial.wordIds);
+    setSessionId(initial.sessionId);
+    setPhase(initial.sessionId ? "study" : "select");
+  }, []);
 
   useEffect(() => {
-    let alive = true
-    Promise.all([loadVocabulary(), loadCurriculum()]).then(([vocabulary, curriculum]) => {
-      if (!alive) return
-      setWords([...vocabulary.values()])
-      void currentDayNumber(curriculum.stats.totalDays).then((day) => {
-        if (alive) setDayNumber(day)
-      })
-    })
-    return () => { alive = false }
-  }, [])
+    let alive = true;
+    Promise.all([loadVocabulary(), loadCurriculum()]).then(
+      ([vocabulary, curriculum]) => {
+        if (!alive) return;
+        setWords([...vocabulary.values()]);
+        void currentDayNumber(curriculum.stats.totalDays).then((day) => {
+          if (alive) setDayNumber(day);
+        });
+      },
+    );
+    return () => {
+      alive = false;
+    };
+  }, []);
 
   const selectedWords = useMemo(() => {
-    if (!words) return []
-    const byId = new Map(words.map((word) => [word.id, word]))
-    return selectedIds.map((id) => byId.get(id)).filter(Boolean) as Lexeme[]
-  }, [selectedIds, words])
+    if (!words) return [];
+    const byId = new Map(words.map((word) => [word.id, word]));
+    return selectedIds.map((id) => byId.get(id)).filter(Boolean) as Lexeme[];
+  }, [selectedIds, words]);
 
-  const baseStudySteps = useMemo(() => (
-    sessionId && selectedWords.length === WORDS_PER_SESSION && words
-      ? oneAttemptWordSteps(buildWordStudySteps(selectedWords, words, `${sessionId}:`))
-      : []
-  ), [selectedWords, sessionId, words])
+  const baseStudySteps = useMemo(
+    () =>
+      sessionId && selectedWords.length === WORDS_PER_SESSION && words
+        ? oneAttemptWordSteps(
+            buildWordStudySteps(selectedWords, words, `${sessionId}:`),
+          )
+        : [],
+    [selectedWords, sessionId, words],
+  );
 
-  const resultByExercise = useMemo(() => new Map(
-    (state?.exerciseResults ?? [])
-      .filter((result) => result.dayNumber === dayNumber)
-      .map((result) => [result.exerciseId, result]),
-  ), [dayNumber, state?.exerciseResults])
+  const resultByExercise = useMemo(
+    () =>
+      new Map(
+        (state?.exerciseResults ?? [])
+          .filter((result) => result.dayNumber === dayNumber)
+          .map((result) => [result.exerciseId, result]),
+      ),
+    [dayNumber, state?.exerciseResults],
+  );
 
   // После полного прохода в очередь возвращается только ошибочный этап.
   // Остальные этапы слова повторно не создаются.
   const retryStudySteps = useMemo(() => {
-    if (!sessionId || !words || selectedWords.length !== WORDS_PER_SESSION) return []
-    const retries: WordStudyStep[] = []
+    if (!sessionId || !words || selectedWords.length !== WORDS_PER_SESSION)
+      return [];
+    const retries: WordStudyStep[] = [];
     for (const word of selectedWords) {
-      const baseExercises = wordExerciseSteps(word, words, `${sessionId}:`)
-      for (let stageIndex = 0; stageIndex < baseExercises.length; stageIndex += 1) {
-        let previousId = baseExercises[stageIndex]!.ex.id
+      const baseExercises = wordExerciseSteps(word, words, `${sessionId}:`);
+      for (
+        let stageIndex = 0;
+        stageIndex < baseExercises.length;
+        stageIndex += 1
+      ) {
+        let previousId = baseExercises[stageIndex]!.ex.id;
         for (let round = 1; round <= WORD_STAGE_RETRY_LIMIT; round += 1) {
-          const previous = resultByExercise.get(previousId)
-          if (!previous || previous.correct) break
+          const previous = resultByExercise.get(previousId);
+          if (!previous || previous.correct) break;
           const retry = buildWordStageRetryStep(
-            word, words, `${sessionId}:`, stageIndex, round,
-          )
-          if (!retry) break
-          retries.push(retry)
-          previousId = retry.ex.id
+            word,
+            words,
+            `${sessionId}:`,
+            stageIndex,
+            round,
+          );
+          if (!retry) break;
+          retries.push(retry);
+          previousId = retry.ex.id;
         }
       }
     }
-    return retries.flat()
-  }, [resultByExercise, selectedWords, sessionId, words])
+    return retries.flat();
+  }, [resultByExercise, selectedWords, sessionId, words]);
 
   const studySteps = useMemo(
     () => [...baseStudySteps, ...retryStudySteps],
     [baseStudySteps, retryStudySteps],
-  )
+  );
 
-  const finalizedWordIds = useMemo(() => new Set(
-    (state?.sessions ?? [])
-      .filter((session) => (
-        (session.kind === 'words' || session.kind === 'words-failed')
-        && session.id.startsWith(`${sessionId}:word:`)
-      ))
-      .map((session) => session.id.slice(`${sessionId}:word:`.length)),
-  ), [sessionId, state?.sessions])
+  const finalizedWordIds = useMemo(
+    () =>
+      new Set(
+        (state?.sessions ?? [])
+          .filter(
+            (session) =>
+              (session.kind === "words" || session.kind === "words-failed") &&
+              session.id.startsWith(`${sessionId}:word:`),
+          )
+          .map((session) => session.id.slice(`${sessionId}:word:`.length)),
+      ),
+    [sessionId, state?.sessions],
+  );
 
-  const failedWordIds = useMemo(() => new Set(
-    (state?.sessions ?? [])
-      .filter((session) => (
-        session.kind === 'words-failed' && session.id.startsWith(`${sessionId}:word:`)
-      ))
-      .map((session) => session.id.slice(`${sessionId}:word:`.length)),
-  ), [sessionId, state?.sessions])
+  const failedWordIds = useMemo(
+    () =>
+      new Set(
+        (state?.sessions ?? [])
+          .filter(
+            (session) =>
+              session.kind === "words-failed" &&
+              session.id.startsWith(`${sessionId}:word:`),
+          )
+          .map((session) => session.id.slice(`${sessionId}:word:`.length)),
+      ),
+    [sessionId, state?.sessions],
+  );
 
   // После reload автоматически пропускаем уже сохранённые этапы.
   useEffect(() => {
-    if (phase !== 'study' || !state || !studySteps.length || restorePositionInitialized.current) return
-    restorePositionInitialized.current = true
-    let next = 0
+    if (
+      phase !== "study" ||
+      !state ||
+      !studySteps.length ||
+      restorePositionInitialized.current
+    )
+      return;
+    restorePositionInitialized.current = true;
+    let next = 0;
     while (next < studySteps.length) {
-      const step = studySteps[next]!
-      if (step.kind === 'word-intro') {
-        const firstExercise = studySteps[next + 1]
-        if (firstExercise?.kind === 'exercise' && resultByExercise.has(firstExercise.ex.id)) {
-          next += 2
-          continue
+      const step = studySteps[next]!;
+      if (step.kind === "word-intro") {
+        const firstExercise = studySteps[next + 1];
+        if (
+          firstExercise?.kind === "exercise" &&
+          resultByExercise.has(firstExercise.ex.id)
+        ) {
+          next += 2;
+          continue;
         }
-        break
+        break;
       }
-      if (!resultByExercise.has(step.ex.id)) break
-      next += 1
+      if (!resultByExercise.has(step.ex.id)) break;
+      next += 1;
     }
     if (next >= studySteps.length) {
-      setPhase('done')
-      return
+      setPhase("done");
+      return;
     }
-    const nextStep = studySteps[next]
-    setCurrent(next)
-    setCanAdvance(Boolean(
-      nextStep?.kind === 'exercise'
-      && resultByExercise.has(nextStep.ex.id),
-    ))
-  }, [phase, resultByExercise, state, studySteps])
+    const nextStep = studySteps[next];
+    setCurrent(next);
+    setCanAdvance(
+      Boolean(
+        nextStep?.kind === "exercise" && resultByExercise.has(nextStep.ex.id),
+      ),
+    );
+  }, [phase, resultByExercise, state, studySteps]);
 
   // Состояние может прийти после первого прохода эффекта восстановления.
   // Если текущий ответ уже есть на сервере, результат нельзя оставлять
   // без перехода: пользователь должен продолжить одним кликом.
   useEffect(() => {
-    if (phase !== 'study') return
-    const currentStep = studySteps[current]
-    if (!currentStep) return
-    if (currentStep.kind === 'word-intro') {
-      setCanAdvance(false)
+    if (phase !== "study") return;
+    const currentStep = studySteps[current];
+    if (!currentStep) return;
+    if (currentStep.kind === "word-intro") {
+      setCanAdvance(false);
     } else if (resultByExercise.has(currentStep.ex.id)) {
-      setCanAdvance(true)
+      setCanAdvance(true);
     }
-  }, [current, phase, resultByExercise, studySteps])
-
-  useEffect(() => {
-    if (phase === 'study' && canAdvance) studyMainRef.current?.focus()
-  }, [canAdvance, phase])
+  }, [current, phase, resultByExercise, studySteps]);
 
   // Завершение слова — единственная точка, где оно попадает в FSRS.
   useEffect(() => {
-    if (!sessionId || !studySteps.length) return
+    if (!sessionId || !studySteps.length) return;
     for (const word of selectedWords) {
-      if (finalizedWordIds.has(word.id) || finalizing.current.has(word.id)) continue
+      if (finalizedWordIds.has(word.id) || finalizing.current.has(word.id))
+        continue;
 
-      const completed: NonNullable<ReturnType<typeof resultByExercise.get>>[] = []
-      let learned = true
-      let finished = true
-      const baseExercises = wordExerciseSteps(word, words ?? [], `${sessionId}:`)
-      for (let stageIndex = 0; stageIndex < baseExercises.length; stageIndex += 1) {
-        let current = baseExercises[stageIndex]!
-        let stageLearned = false
+      const completed: NonNullable<ReturnType<typeof resultByExercise.get>>[] =
+        [];
+      let learned = true;
+      let finished = true;
+      const baseExercises = wordExerciseSteps(
+        word,
+        words ?? [],
+        `${sessionId}:`,
+      );
+      for (
+        let stageIndex = 0;
+        stageIndex < baseExercises.length;
+        stageIndex += 1
+      ) {
+        let current = baseExercises[stageIndex]!;
+        let stageLearned = false;
         for (let round = 0; round <= WORD_STAGE_RETRY_LIMIT; round += 1) {
-          const row = resultByExercise.get(current.ex.id)
+          const row = resultByExercise.get(current.ex.id);
           if (!row) {
-            finished = false
-            break
+            finished = false;
+            break;
           }
-          completed.push(row)
+          completed.push(row);
           if (row.correct) {
-            stageLearned = true
-            break
+            stageLearned = true;
+            break;
           }
-          if (round === WORD_STAGE_RETRY_LIMIT) break
+          if (round === WORD_STAGE_RETRY_LIMIT) break;
           const retry = buildWordStageRetryStep(
-            word, words ?? [], `${sessionId}:`, stageIndex, round + 1,
-          )
+            word,
+            words ?? [],
+            `${sessionId}:`,
+            stageIndex,
+            round + 1,
+          );
           if (!retry) {
-            finished = false
-            break
+            finished = false;
+            break;
           }
-          current = retry
+          current = retry;
         }
-        if (!stageLearned) learned = false
-        if (!finished) break
+        if (!stageLearned) learned = false;
+        if (!finished) break;
       }
-      if (!finished || !completed.length) continue
+      if (!finished || !completed.length) continue;
 
-      const allCorrect = learned && completed.every((row) => row.correct && row.attempts === 1)
-      finalizing.current.add(word.id)
+      const allCorrect =
+        learned && completed.every((row) => row.correct && row.attempts === 1);
+      finalizing.current.add(word.id);
       void finalizeWord({
         word,
         learned,
@@ -234,68 +304,104 @@ export default function WordsPage() {
         sessionId,
         dayNumber,
         startedAt: startedAt.current,
-      })
+      });
     }
-  }, [dayNumber, finalizedWordIds, resultByExercise, selectedWords, sessionId, studySteps, words])
+  }, [
+    dayNumber,
+    finalizedWordIds,
+    resultByExercise,
+    selectedWords,
+    sessionId,
+    studySteps,
+    words,
+  ]);
 
   const filteredWords = useMemo(() => {
-    if (!words) return []
-    const q = query.trim().toLowerCase()
-    return words.filter((word) => (
-      !q || word.lemma.toLowerCase().includes(q) || word.translation.toLowerCase().includes(q)
-    )).slice(0, 80)
-  }, [query, words])
+    if (!words) return [];
+    const q = query.trim().toLowerCase();
+    return words
+      .filter(
+        (word) =>
+          !q ||
+          word.lemma.toLowerCase().includes(q) ||
+          word.translation.toLowerCase().includes(q),
+      )
+      .slice(0, 80);
+  }, [query, words]);
 
-  const step = studySteps[current]
-  const restoredRow = step?.kind === 'exercise' ? resultByExercise.get(step.ex.id) : undefined
-  const selectedSet = useMemo(() => new Set(selectedIds), [selectedIds])
-  const statusByWord = useMemo(() => new Map(
-    (words ?? []).map((word) => [word.id, getLexemeStudyStatus(state, word.id)] as const),
-  ), [state, words])
-  const stageTitle = step?.kind === 'word-intro'
-    ? 'Карточка слова'
-    : step?.kind === 'exercise'
-      ? exerciseStageTitle(step.ex)
-      : ''
+  const step = studySteps[current];
+  useEffect(() => {
+    if (phase !== "study" || step?.kind !== "word-intro" || !sessionId) return;
+    const stageId = `${sessionId}:${step.word.id}`;
+    if (autoPronouncedWordIntro.current === stageId) return;
+    autoPronouncedWordIntro.current = stageId;
+    pronounce(step.word.lemma);
+  }, [phase, pronounce, sessionId, step]);
+
+  const restoredRow =
+    step?.kind === "exercise" ? resultByExercise.get(step.ex.id) : undefined;
+  const selectedSet = useMemo(() => new Set(selectedIds), [selectedIds]);
+  const statusByWord = useMemo(
+    () =>
+      new Map(
+        (words ?? []).map(
+          (word) => [word.id, getLexemeStudyStatus(state, word.id)] as const,
+        ),
+      ),
+    [state, words],
+  );
+  const stageTitle =
+    step?.kind === "word-intro"
+      ? "Карточка слова"
+      : step?.kind === "exercise"
+        ? exerciseStageTitle(step.ex)
+        : "";
 
   function toggleWord(id: string) {
     setSelectedIds((currentIds) => {
-      if (currentIds.includes(id)) return currentIds.filter((currentId) => currentId !== id)
-      if (currentIds.length >= WORDS_PER_SESSION) return currentIds
-      return [...currentIds, id]
-    })
+      if (currentIds.includes(id))
+        return currentIds.filter((currentId) => currentId !== id);
+      if (currentIds.length >= WORDS_PER_SESSION) return currentIds;
+      return [...currentIds, id];
+    });
   }
 
   function startSession() {
-    if (selectedIds.length !== WORDS_PER_SESSION) return
-    const nextSessionId = crypto.randomUUID()
+    if (selectedIds.length !== WORDS_PER_SESSION) return;
+    const nextSessionId = crypto.randomUUID();
     const params = new URLSearchParams({
       session: nextSessionId,
-      ids: selectedIds.join(','),
-    })
-    window.history.replaceState(null, '', `/words?${params.toString()}`)
-    setSessionId(nextSessionId)
-    setCurrent(0)
-    setCanAdvance(false)
-    restorePositionInitialized.current = true
-    startedAt.current = Date.now()
-    setPhase('study')
+      ids: selectedIds.join(","),
+    });
+    window.history.replaceState(null, "", `/words?${params.toString()}`);
+    setSessionId(nextSessionId);
+    setCurrent(0);
+    setCanAdvance(false);
+    restorePositionInitialized.current = true;
+    startedAt.current = Date.now();
+    setPhase("study");
   }
 
   function nextStep() {
-    setCanAdvance(false)
+    setCanAdvance(false);
     if (current + 1 < studySteps.length) {
-      setCurrent((value) => value + 1)
+      setCurrent((value) => value + 1);
     } else {
-      setPhase('done')
+      setPhase("done");
     }
   }
 
-  function onAnswered(ex: Exercise, result: CheckResult, ms: number, attempts: number, answer: string) {
+  function onAnswered(
+    ex: Exercise,
+    result: CheckResult,
+    ms: number,
+    attempts: number,
+    answer: string,
+  ) {
     // Результат уже показан на экране: следующий клик нельзя блокировать
     // ожиданием сети или БД. Сохранение оптимистично обновляет снапшот и
     // выполняется в фоне, чтобы пользователь не попадал в «лимб».
-    setCanAdvance(true)
+    setCanAdvance(true);
     void saveExerciseResult({
       dayNumber,
       exerciseId: ex.id,
@@ -304,31 +410,38 @@ export default function WordsPage() {
       answer,
       expected: result.expected,
       errorKind: result.errorKind ?? null,
-    })
-    void ms
+    });
+    void ms;
   }
 
   function chooseAnotherSet() {
-    window.history.replaceState(null, '', '/words')
-    setSessionId(null)
-    setSelectedIds([])
-    setCurrent(0)
-    setCanAdvance(false)
-    restorePositionInitialized.current = false
-    setPhase('select')
-    finalizing.current.clear()
+    window.history.replaceState(null, "", "/words");
+    setSessionId(null);
+    setSelectedIds([]);
+    setCurrent(0);
+    setCanAdvance(false);
+    restorePositionInitialized.current = false;
+    setPhase("select");
+    finalizing.current.clear();
   }
 
-  if (phase === 'study' && step) {
-    const stepCanAdvance = step.kind === 'word-intro' || canAdvance
-    const nextLabel = step.kind === 'word-intro'
-      ? 'Запомнил'
-      : current + 1 < studySteps.length ? 'Далее' : 'Завершить'
+  if (phase === "study" && step) {
+    const stepCanAdvance = step.kind === "word-intro" || canAdvance;
+    const nextLabel =
+      step.kind === "word-intro"
+        ? "Запомнил"
+        : current + 1 < studySteps.length
+          ? "Далее"
+          : "Завершить";
     return (
       <Screen>
         <header className="mx-auto w-full max-w-2xl px-4 py-3">
           <Row justify="between">
-            <button type="button" onClick={chooseAnotherSet} className="inline-flex min-h-10 items-center text-sm text-muted hover:text-ink">
+            <button
+              type="button"
+              onClick={chooseAnotherSet}
+              className="inline-flex min-h-10 items-center text-sm text-muted hover:text-ink"
+            >
               ← Выбор слов
             </button>
             <Row gap="sm">
@@ -339,84 +452,108 @@ export default function WordsPage() {
             </Row>
           </Row>
           <div className="u-hide-on-short mt-2 h-1 overflow-hidden rounded-pill bg-soft">
-            <div className="h-full bg-primary" style={{ width: `${((current + 1) / studySteps.length) * 100}%` }} />
+            <div
+              className="h-full bg-primary"
+              style={{ width: `${((current + 1) / studySteps.length) * 100}%` }}
+            />
           </div>
         </header>
         <main
-          ref={studyMainRef}
           tabIndex={-1}
           className="mx-auto flex min-h-0 w-full max-w-2xl flex-1 flex-col overflow-y-auto px-4 pb-2"
           onKeyDown={(event) => {
-            if (!stepCanAdvance || event.repeat || (event.key !== 'Enter' && event.code !== 'Space')) return
-            event.preventDefault()
-            nextStep()
+            if (
+              !stepCanAdvance ||
+              event.repeat ||
+              (event.key !== "Enter" && event.code !== "Space")
+            )
+              return;
+            event.preventDefault();
+            nextStep();
           }}
         >
           <Stack gap="md">
-            {step.kind === 'word-intro' ? (
+            {step.kind === "word-intro" ? (
               <WordStudyCard word={step.word} />
             ) : (
               <ExerciseView
                 key={step.ex.id}
                 exercise={step.ex}
-                showSpeakButton={false}
-                restoredResult={restoredRow ? {
-                  result: {
-                    correct: restoredRow.correct,
-                    expected: restoredRow.expected,
-                    errorKind: restoredRow.errorKind ?? undefined,
-                  },
-                  answer: restoredRow.answer,
-                  attempts: restoredRow.attempts,
-                } : null}
-                onAnswered={(result, ms, attempts, answer) => (
+                restoredResult={
+                  restoredRow
+                    ? {
+                        result: {
+                          correct: restoredRow.correct,
+                          expected: restoredRow.expected,
+                          errorKind: restoredRow.errorKind ?? undefined,
+                        },
+                        answer: restoredRow.answer,
+                        attempts: restoredRow.attempts,
+                      }
+                    : null
+                }
+                onAnswered={(result, ms, attempts, answer) =>
                   void onAnswered(step.ex, result, ms, attempts, answer)
-                )}
+                }
               />
             )}
           </Stack>
           <StudyActionBar
-            speakText={step.kind === 'word-intro' ? step.word.lemma : speakableTextOf(step.ex)}
             canAdvance={stepCanAdvance}
             onNext={nextStep}
             nextLabel={nextLabel}
+            autoFocusOnAdvance
           />
         </main>
       </Screen>
-    )
+    );
   }
 
-  if (phase === 'done') {
+  if (phase === "done") {
     return (
       <Screen>
         <header className="mx-auto w-full max-w-2xl px-4 py-3">
           <Row justify="between">
-            <Link href="/dictionary" className="text-sm text-muted hover:text-ink">← Словарь</Link>
+            <Link
+              href="/dictionary"
+              className="text-sm text-muted hover:text-ink"
+            >
+              ← Словарь
+            </Link>
             <ThemePicker />
           </Row>
         </header>
         <main className="mx-auto flex w-full max-w-2xl flex-1 items-center px-4 pb-4">
           <Card className="w-full">
             <Stack gap="md" align="center">
-              <span className="text-4xl text-ok-ink" aria-hidden>✓</span>
+              <span className="text-4xl text-ok-ink" aria-hidden>
+                ✓
+              </span>
               <h1 className="text-xl font-semibold">
                 {failedWordIds.size
-                  ? `${failedWordIds.size} ${failedWordIds.size === 1 ? 'слово' : 'слова'} не выучено`
-                  : 'Слова добавлены в повторение'}
+                  ? `${failedWordIds.size} ${failedWordIds.size === 1 ? "слово" : "слова"} не выучено`
+                  : "Слова добавлены в повторение"}
               </h1>
               <p className="text-center text-sm text-muted">
                 {failedWordIds.size
-                  ? 'Эти слова не добавлены в повторение. Их можно выбрать снова позже.'
-                  : 'Каждое слово прошло пять этапов. Следующее повторение рассчитано по FSRS.'}
+                  ? "Эти слова не добавлены в повторение. Их можно выбрать снова позже."
+                  : "Каждое слово прошло пять этапов. Следующее повторение рассчитано по FSRS."}
               </p>
-              <Button size="lg" full onClick={chooseAnotherSet}>Выбрать ещё 5 слов</Button>
-              <Link href="/dictionary" className="text-sm text-muted hover:text-ink">Открыть словарь</Link>
+              <Button size="lg" full onClick={chooseAnotherSet}>
+                Выбрать ещё 5 слов
+              </Button>
+              <Link
+                href="/dictionary"
+                className="text-sm text-muted hover:text-ink"
+              >
+                Открыть словарь
+              </Link>
             </Stack>
           </Card>
         </main>
         <Nav />
       </Screen>
-    )
+    );
   }
 
   return (
@@ -425,7 +562,9 @@ export default function WordsPage() {
         <Row justify="between">
           <div>
             <h1 className="text-lg font-semibold">Учить слова</h1>
-            <p className="text-sm text-muted">Выберите ровно 5 слов из словаря</p>
+            <p className="text-sm text-muted">
+              Выберите ровно 5 слов из словаря
+            </p>
           </div>
           <ThemePicker />
         </Row>
@@ -443,7 +582,9 @@ export default function WordsPage() {
             <Stack gap="sm">
               <Row justify="between">
                 <span className="text-sm font-medium">Выбрано</span>
-                <span className="text-sm tabular-nums text-muted">{selectedIds.length} / {WORDS_PER_SESSION}</span>
+                <span className="text-sm tabular-nums text-muted">
+                  {selectedIds.length} / {WORDS_PER_SESSION}
+                </span>
               </Row>
               {selectedWords.length > 0 && (
                 <Row gap="xs" wrap>
@@ -459,20 +600,34 @@ export default function WordsPage() {
                   ))}
                 </Row>
               )}
-              <Button size="lg" full disabled={selectedIds.length !== WORDS_PER_SESSION} onClick={startSession}>
+              <Button
+                size="lg"
+                full
+                disabled={selectedIds.length !== WORDS_PER_SESSION}
+                onClick={startSession}
+              >
                 Начать изучение
               </Button>
             </Stack>
           </Card>
 
-          {!words && <Card><p className="text-sm text-muted">Загрузка словаря…</p></Card>}
-          {words && filteredWords.length === 0 && <Card><p className="text-sm text-muted">Ничего не найдено</p></Card>}
+          {!words && (
+            <Card>
+              <p className="text-sm text-muted">Загрузка словаря…</p>
+            </Card>
+          )}
+          {words && filteredWords.length === 0 && (
+            <Card>
+              <p className="text-sm text-muted">Ничего не найдено</p>
+            </Card>
+          )}
           {filteredWords.length > 0 && (
             <Card>
               <Stack gap="xs">
                 {filteredWords.map((word) => {
-                  const selected = selectedSet.has(word.id)
-                  const disabled = !selected && selectedIds.length >= WORDS_PER_SESSION
+                  const selected = selectedSet.has(word.id);
+                  const disabled =
+                    !selected && selectedIds.length >= WORDS_PER_SESSION;
                   return (
                     <button
                       key={word.id}
@@ -482,18 +637,26 @@ export default function WordsPage() {
                       onClick={() => toggleWord(word.id)}
                       className={`flex min-h-14 w-full items-center justify-between rounded-card border px-3 py-2 text-left transition-colors ${
                         selected
-                          ? 'border-primary bg-soft'
-                          : 'border-line bg-card hover:bg-soft disabled:opacity-45'
+                          ? "border-primary bg-soft"
+                          : "border-line bg-card hover:bg-soft disabled:opacity-45"
                       }`}
                     >
                       <span className="min-w-0">
-                        <span className="block font-medium" lang="pl">{word.lemma}</span>
-                        <span className="block text-sm text-muted">{word.translation}</span>
-                        <StudyStatusBadge status={statusByWord.get(word.id) ?? 'untouched'} />
+                        <span className="block font-medium" lang="pl">
+                          {word.lemma}
+                        </span>
+                        <span className="block text-sm text-muted">
+                          {word.translation}
+                        </span>
+                        <StudyStatusBadge
+                          status={statusByWord.get(word.id) ?? "untouched"}
+                        />
                       </span>
-                      <span className="text-lg text-muted" aria-hidden>{selected ? '✓' : '+'}</span>
+                      <span className="text-lg text-muted" aria-hidden>
+                        {selected ? "✓" : "+"}
+                      </span>
                     </button>
-                  )
+                  );
                 })}
               </Stack>
             </Card>
@@ -502,63 +665,79 @@ export default function WordsPage() {
       </main>
       <Nav />
     </Screen>
-  )
+  );
 }
 
 function WordStudyCard({ word }: { word: Lexeme }) {
   return (
-    <Card>
-      <Stack gap="lg" align="center">
-        <span className="text-xs tracking-wide text-muted uppercase">Karta słowa</span>
-        <div className="text-center text-3xl font-semibold" lang="pl">{word.lemma}</div>
-        <div className="text-center text-lg">{word.translation}</div>
-      </Stack>
-    </Card>
-  )
+    <>
+      <Card>
+        <Stack gap="lg" align="center">
+          <span className="text-xs tracking-wide text-muted uppercase">
+            Karta słowa
+          </span>
+          <div className="text-center text-3xl font-semibold" lang="pl">
+            {word.lemma}
+          </div>
+          <div className="text-center text-lg">{word.translation}</div>
+        </Stack>
+      </Card>
+      <div className="flex justify-center">
+        <SpeakIcon text={word.lemma} ariaLabel="Прослушать слово" />
+      </div>
+    </>
+  );
 }
 
 function exerciseStageTitle(exercise: Exercise): string {
   switch (exercise.kind) {
-    case 'translate-recognition':
-    case 'false-friend-contrast':
-      return 'Перевод'
-    case 'translate-production':
-      return 'Слово по переводу'
-    case 'spelling':
-      return 'Сборка по буквам'
-    case 'listen-write':
-      return 'Запись на слух'
+    case "translate-recognition":
+    case "false-friend-contrast":
+      return "Перевод";
+    case "translate-production":
+      return "Слово по переводу";
+    case "spelling":
+      return "Сборка по буквам";
+    case "listen-write":
+      return "Запись на слух";
     default:
-      return 'Упражнение'
+      return "Упражнение";
   }
 }
 
 async function finalizeWord({
-  word, learned, allCorrect, correctCount, itemsReviewed, sessionId, dayNumber, startedAt,
+  word,
+  learned,
+  allCorrect,
+  correctCount,
+  itemsReviewed,
+  sessionId,
+  dayNumber,
+  startedAt,
 }: {
-  word: Lexeme
-  learned: boolean
-  allCorrect: boolean
-  correctCount: number
-  itemsReviewed: number
-  sessionId: string
-  dayNumber: number
-  startedAt: number
+  word: Lexeme;
+  learned: boolean;
+  allCorrect: boolean;
+  correctCount: number;
+  itemsReviewed: number;
+  sessionId: string;
+  dayNumber: number;
+  startedAt: number;
 }) {
   if (learned) {
-    await completeLexemeLearning(word.id, allCorrect)
+    await completeLexemeLearning(word.id, allCorrect);
   } else {
-    await setLexemeKnown(word.id, false)
+    await setLexemeKnown(word.id, false);
   }
   await saveLessonSession({
     id: `${sessionId}:word:${word.id}`,
     dayNumber,
-    kind: learned ? 'words' : 'words-failed',
+    kind: learned ? "words" : "words-failed",
     startedAt: new Date(startedAt),
     completedAt: new Date(),
     plannedBudgetMs: itemsReviewed * 20_000,
     actualMs: Date.now() - startedAt,
     itemsReviewed,
     itemsCorrect: correctCount,
-  })
+  });
 }

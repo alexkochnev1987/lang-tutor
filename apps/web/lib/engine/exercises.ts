@@ -5,43 +5,77 @@
  * соединяются: план дня, словарь, морфология и польский плагин.
  */
 import {
-  chooseForm, falseFriendContrast, inflect, sentenceChoice, sentenceTyped,
-  listenWrite, readingChoice, sentenceWrite, shuffle, spelling, translateProduction, translateRecognition,
-  type Exercise, type SentenceGapLike,
-} from '@polski/engine'
-import { closedClassWordsForRule } from '@/lib/lang-pl/closed-class'
-import { labelTag, RULE_TO_TAGS, resolveTag } from '@/lib/lang-pl/tags'
-import type { Lexeme, Paradigm, ReadingText, SentencePack } from '@/lib/content/curriculum'
-import type { StudyItemKind } from '@/lib/data/types'
+  chooseForm,
+  falseFriendContrast,
+  inflect,
+  sentenceChoice,
+  sentenceTyped,
+  listenWrite,
+  readingChoice,
+  sentenceWrite,
+  shuffle,
+  spelling,
+  translateProduction,
+  translateRecognition,
+  type Exercise,
+  type SentenceGapLike,
+} from "@polski/engine";
+import { closedClassWordsForRule } from "@/lib/lang-pl/closed-class";
+import { labelTag, RULE_TO_TAGS, resolveTag } from "@/lib/lang-pl/tags";
+import type {
+  Lexeme,
+  Paradigm,
+  ReadingText,
+  SentencePack,
+} from "@/lib/content/curriculum";
+import type { StudyItemKind } from "@/lib/data/types";
 
-const hash = (s: string) => [...s].reduce((h, c) => (Math.imul(h, 31) + c.charCodeAt(0)) | 0, 7) >>> 0
+const hash = (s: string) =>
+  [...s].reduce((h, c) => (Math.imul(h, 31) + c.charCodeAt(0)) | 0, 7) >>> 0;
 
 /** Что генератору нужно от слова: лемма для парадигмы и id для сида. */
-export type WordRef = Pick<Lexeme, 'id' | 'lemma'>
+export type WordRef = Pick<Lexeme, "id" | "lemma">;
 
 export interface BuildInput {
-  newWords: Lexeme[]
-  reviewWords: Lexeme[]
-  grammarRuleIds: string[]
-  vocabulary: Map<string, Lexeme>
-  morphology: Record<string, Paradigm>
+  newWords: Lexeme[];
+  reviewWords: Lexeme[];
+  grammarRuleIds: string[];
+  vocabulary: Map<string, Lexeme>;
+  morphology: Record<string, Paradigm>;
 }
 
 /** Упражнения на новое слово: от узнавания к продукции. */
 export function exercisesForWord(word: Lexeme, pool: Lexeme[]): Exercise[] {
-  const seed = hash(word.id)
-  const out: Exercise[] = []
+  const seed = hash(word.id);
+  const out: Exercise[] = [];
 
   // ложный друг идёт контрастом вместо обычного узнавания
-  const ff = falseFriendContrast(word, { seed })
-  out.push(ff ?? translateRecognition(word, pool.map((p) => p.translation), { seed }))
+  const ff = falseFriendContrast(
+    word,
+    pool.map((p) => p.translation),
+    { seed },
+  );
+  out.push(
+    ff ??
+      translateRecognition(
+        word,
+        pool.map((p) => p.translation),
+        { seed },
+      ),
+  );
 
   // Каждое новое слово проходит одинаковую последовательность: узнать,
   // воспроизвести, собрать из букв и записать после прослушивания.
-  out.push(translateProduction(word, pool.map((p) => p.lemma), { seed: seed + 7 }))
-  out.push(spelling(word, { seed: seed + 13 }))
-  out.push(listenWrite(word))
-  return out
+  out.push(
+    translateProduction(
+      word,
+      pool.map((p) => p.lemma),
+      { seed: seed + 7 },
+    ),
+  );
+  out.push(spelling(word, { seed: seed + 13 }));
+  out.push(listenWrite(word));
+  return out;
 }
 
 /**
@@ -58,18 +92,35 @@ export function exercisesForWord(word: Lexeme, pool: Lexeme[]): Exercise[] {
  *    варианта в списке.
  */
 export function exerciseForReview(
-  word: Lexeme, kind: StudyItemKind, reps: number, pool: Lexeme[],
+  word: Lexeme,
+  kind: StudyItemKind,
+  reps: number,
+  pool: Lexeme[],
 ): Exercise | null {
   // 101 — просто нечётный множитель: даёт заметно разные сиды на
   // соседних повторениях, а не сдвиг на единицу
-  const seed = hash(word.id) + reps * 101
+  const seed = hash(word.id) + reps * 101;
 
-  if (kind === 'lexeme-production') {
-    return translateProduction(word, pool.map((p) => p.lemma), { seed })
+  if (kind === "lexeme-production") {
+    return translateProduction(
+      word,
+      pool.map((p) => p.lemma),
+      { seed },
+    );
   }
   // ложный друг и на повторении идёт контрастом: это самая дорогая ошибка
-  return falseFriendContrast(word, { seed })
-    ?? translateRecognition(word, pool.map((p) => p.translation), { seed })
+  return (
+    falseFriendContrast(
+      word,
+      pool.map((p) => p.translation),
+      { seed },
+    ) ??
+    translateRecognition(
+      word,
+      pool.map((p) => p.translation),
+      { seed },
+    )
+  );
 }
 
 /** Грамматические упражнения по правилу — на лексике, которую уже знают. */
@@ -79,17 +130,17 @@ export function exercisesForRule(
   morphology: Record<string, Paradigm>,
   limit = 3,
 ): Exercise[] {
-  const prefixes = RULE_TO_TAGS[ruleId]
-  if (!prefixes?.length) return []
+  const prefixes = RULE_TO_TAGS[ruleId];
+  if (!prefixes?.length) return [];
 
   // Закрытый класс — это конкретные слова, а не лексика дня: правило
   // «личные местоимения» про `ja` и `on`, и подставлять туда слова урока
   // бессмысленно. Если список задан, он пул и заменяет.
-  const closed = closedClassWordsForRule(ruleId)
-  const pool: readonly WordRef[] = closed.length ? closed : words
+  const closed = closedClassWordsForRule(ruleId);
+  const pool: readonly WordRef[] = closed.length ? closed : words;
 
-  const out: Exercise[] = []
-  const used = new Set<string>()
+  const out: Exercise[] = [];
+  const used = new Set<string>();
 
   // Проходов несколько. Первый берёт по одному заданию со слова — в
   // уроке лучше три разных слова, чем три формы одного. Следующие
@@ -97,31 +148,36 @@ export function exercisesForRule(
   // одной леммы (`siebie`, `być`), и одним заданием там не обойтись.
   for (let pass = 0; pass < limit && out.length < limit; pass++) {
     for (const w of pool) {
-      if (out.length >= limit) break
-      const paradigm = morphology[w.lemma.replace(/\s+się$/, '')]
-      if (!paradigm) continue
+      if (out.length >= limit) break;
+      const paradigm = morphology[w.lemma.replace(/\s+się$/, "")];
+      if (!paradigm) continue;
       for (const prefix of prefixes) {
-        const tag = resolveTag(paradigm, prefix)
-        if (!tag || used.has(`${w.lemma}|${tag}`)) continue
-        const seed = hash(w.id + tag)
+        const tag = resolveTag(paradigm, prefix);
+        if (!tag || used.has(`${w.lemma}|${tag}`)) continue;
+        const seed = hash(w.id + tag);
         // Закрытое и открытое чередуем: на экзамене есть оба типа.
         // Генератор вернёт null, если целевая форма равна начальной —
         // тогда пробуем следующий тег.
-        const ex = out.length % 2 === 0
-          ? chooseForm(w.lemma, paradigm, tag, labelTag, { seed }, [ruleId])
-          : inflect(w.lemma, paradigm, tag, labelTag, [ruleId])
-        if (ex) { used.add(`${w.lemma}|${tag}`); out.push(ex); break }
+        const ex =
+          out.length % 2 === 0
+            ? chooseForm(w.lemma, paradigm, tag, labelTag, { seed }, [ruleId])
+            : inflect(w.lemma, paradigm, tag, labelTag, [ruleId]);
+        if (ex) {
+          used.add(`${w.lemma}|${tag}`);
+          out.push(ex);
+          break;
+        }
       }
     }
   }
-  return out
+  return out;
 }
 
-export type SentenceMode = 'choice' | 'typed'
+export type SentenceMode = "choice" | "typed";
 
 export interface SentenceDrill {
-  ex: Exercise
-  variants: Partial<Record<SentenceMode, Exercise>>
+  ex: Exercise;
+  variants: Partial<Record<SentenceMode, Exercise>>;
 }
 
 export function sentenceDrillsForRule(
@@ -132,64 +188,84 @@ export function sentenceDrillsForRule(
   salt: number,
   limit: number,
 ): SentenceDrill[] {
-  const gaps = sentences[ruleId]?.gaps ?? []
-  if (!gaps.length) return []
-  const order = shuffle(gaps.map((_, i) => i), hash(ruleId) + salt).slice(0, limit)
-  const out: SentenceDrill[] = []
+  const gaps = sentences[ruleId]?.gaps ?? [];
+  if (!gaps.length) return [];
+  const order = shuffle(
+    gaps.map((_, i) => i),
+    hash(ruleId) + salt,
+  ).slice(0, limit);
+  const out: SentenceDrill[] = [];
   for (const idx of order) {
-    const g = gaps[idx]!
+    const g = gaps[idx]!;
     const item: SentenceGapLike = {
       id: `${ruleId}.${idx}`,
       sentence: g.pl,
       baseForm: g.lemma,
       answers: g.answers,
       distractors: g.distractors,
-    }
-    const paradigm = g.lemma ? morphology[g.lemma] : undefined
-    const forms = paradigm ? [...new Set(Object.values(paradigm).flat())] : []
-    const variants: Partial<Record<SentenceMode, Exercise>> = {}
-    const choice = sentenceChoice(item, forms, { seed: hash(item.id) + salt }, [ruleId])
-    const typed = sentenceTyped(item, [ruleId])
-    if (choice) variants.choice = choice
-    if (typed) variants.typed = typed
-    const ex = variants[mode] ?? choice ?? typed
-    if (ex) out.push({ ex, variants })
+    };
+    const paradigm = g.lemma ? morphology[g.lemma] : undefined;
+    const forms = paradigm ? [...new Set(Object.values(paradigm).flat())] : [];
+    const variants: Partial<Record<SentenceMode, Exercise>> = {};
+    const choice = sentenceChoice(item, forms, { seed: hash(item.id) + salt }, [
+      ruleId,
+    ]);
+    const typed = sentenceTyped(item, [ruleId]);
+    if (choice) variants.choice = choice;
+    if (typed) variants.typed = typed;
+    const ex = variants[mode] ?? choice ?? typed;
+    if (ex) out.push({ ex, variants });
   }
-  return out
+  return out;
 }
 
 export function sentenceWriteDrills(
-  ruleId: string, sentences: SentencePack, salt: number, limit: number,
+  ruleId: string,
+  sentences: SentencePack,
+  salt: number,
+  limit: number,
 ): Exercise[] {
-  const responses = sentences[ruleId]?.responses ?? []
-  const order = shuffle(responses.map((_, i) => i), hash(`${ruleId}.w`) + salt).slice(0, limit)
-  const out: Exercise[] = []
+  const responses = sentences[ruleId]?.responses ?? [];
+  const order = shuffle(
+    responses.map((_, i) => i),
+    hash(`${ruleId}.w`) + salt,
+  ).slice(0, limit);
+  const out: Exercise[] = [];
   for (const idx of order) {
-    const r = responses[idx]!
-    const ex = sentenceWrite({
-      id: `${ruleId}.${idx}`,
-      question: r.question,
-      answers: r.answers,
-      // Подсказки в текущем пакете написаны на русском; в упражнении
-      // интерфейс и инструкция должны оставаться на польском.
-      instruction: 'Napisz odpowiedź pełnym zdaniem',
-    }, [ruleId])
-    if (ex) out.push(ex)
+    const r = responses[idx]!;
+    const ex = sentenceWrite(
+      {
+        id: `${ruleId}.${idx}`,
+        question: r.question,
+        answers: r.answers,
+        // Подсказки в текущем пакете написаны на русском; в упражнении
+        // интерфейс и инструкция должны оставаться на польском.
+        instruction: "Napisz odpowiedź pełnym zdaniem",
+      },
+      [ruleId],
+    );
+    if (ex) out.push(ex);
   }
-  return out
+  return out;
 }
 
-export function exercisesForReading(text: ReadingText, dayNumber: number): Exercise[] {
+export function exercisesForReading(
+  text: ReadingText,
+  dayNumber: number,
+): Exercise[] {
   return text.questions.flatMap((question) => {
-    const exercise = readingChoice({
-      id: `${text.id}.${question.id}`,
-      text: `${text.title}\n\n${text.text}`,
-      question: question.question,
-      options: question.options,
-      answer: question.answer,
-      explanation: question.explanation,
-      difficulty: question.difficulty,
-    }, { seed: hash(`${text.id}.${question.id}.${dayNumber}`) })
-    return exercise ? [exercise] : []
-  })
+    const exercise = readingChoice(
+      {
+        id: `${text.id}.${question.id}`,
+        text: `${text.title}\n\n${text.text}`,
+        question: question.question,
+        options: question.options,
+        answer: question.answer,
+        explanation: question.explanation,
+        difficulty: question.difficulty,
+      },
+      { seed: hash(`${text.id}.${question.id}.${dayNumber}`) },
+    );
+    return exercise ? [exercise] : [];
+  });
 }

@@ -275,12 +275,14 @@ function buildMinimumWordBatch(
     .filter(Boolean)
   const typed = words.slice(0, MINIMUM_WORDS_PER_MODE).map((word) => ({
     ...listenWrite(word),
+    attemptsAllowed: 1,
     id: `ex.minimum-words.${day.day}.typed.${word.id}`,
   }))
   const choice = words.slice(MINIMUM_WORDS_PER_MODE).map((word) => ({
     ...translateRecognition(word, choicePool, {
       seed: hashString(`minimum-words:${day.day}:${word.id}`),
     }),
+    attemptsAllowed: 1,
     id: `ex.minimum-words.${day.day}.choice.${word.id}`,
   }))
 
@@ -350,9 +352,16 @@ function buildReviewSteps(
     if (!item || item.kind === 'rule-card') continue
     const word = vocabulary.get(item.refId)
     if (!word) continue
-    const ex = exerciseForReview(
+    const generated = exerciseForReview(
       word, item.kind as 'lexeme-recognition' | 'lexeme-production', item.reps, pool)
-    if (ex) steps.push({ kind: 'exercise', ex, review: true, rule: null })
+    if (generated) {
+      steps.push({
+        kind: 'exercise',
+        ex: { ...generated, attemptsAllowed: 1 },
+        review: true,
+        rule: null,
+      })
+    }
   }
   return steps
 }
