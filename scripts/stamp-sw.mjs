@@ -15,7 +15,7 @@
  *
  * Без смены VERSION браузер не переустановит worker и не обновит кэш.
  */
-import { readFileSync, writeFileSync } from 'node:fs'
+import { existsSync, readFileSync, writeFileSync } from 'node:fs'
 import { fileURLToPath } from 'node:url'
 import { dirname, join } from 'node:path'
 
@@ -27,11 +27,22 @@ const dst = join(root, 'apps/web/public/sw.js')
 const buildId = process.env.VERCEL_GIT_COMMIT_SHA?.slice(0, 12) ?? String(Date.now())
 const courseId = process.env.NEXT_PUBLIC_COURSE_ID ?? 'pl-b1-ru'
 
+const corpusIndex = join(root, 'apps/web/public/content', courseId, 'sentence-corpus/index.json')
+let corpusStarter = []
+if (existsSync(corpusIndex)) {
+  const { version, rules } = JSON.parse(readFileSync(corpusIndex, 'utf8'))
+  if (Object.keys(rules).length) {
+    const base = `/content/${courseId}/sentence-corpus`
+    corpusStarter = [`${base}/index.json`, `${base}/${version}-0.json`]
+  }
+}
+
 const stamped = readFileSync(src, 'utf8')
   .replace(/__BUILD_ID__/g, buildId)
   .replace(/__COURSE_ID__/g, courseId)
+  .replace('__CORPUS_STARTER__', JSON.stringify(corpusStarter))
 
-if (stamped.includes('__BUILD_ID__') || stamped.includes('__COURSE_ID__')) {
+if (stamped.includes('__BUILD_ID__') || stamped.includes('__COURSE_ID__') || stamped.includes('__CORPUS_STARTER__')) {
   console.error('sw: плейсхолдеры остались незаполненными')
   process.exit(1)
 }

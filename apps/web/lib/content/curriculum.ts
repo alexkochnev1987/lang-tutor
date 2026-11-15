@@ -248,3 +248,23 @@ export async function currentDayNumber(totalDays: number): Promise<number> {
     sessions.filter((s) => s.completedAt && s.kind === 'day').map((s) => s.dayNumber))
   return Math.min(totalDays, done.size + 1)
 }
+
+export interface AnnotatedSentence {
+  id: string
+  pl: string
+  ru: string
+  nodes: [lemma: string, head: number | null, relation: string, morphology?: string][]
+  hits: Record<string, number>
+}
+
+export interface CorpusIndex {
+  version: string
+  chunkSize: number
+  rules: Record<string, number[]>
+  pairs: Record<string, number[]>
+}
+
+export const loadCorpusIndex = () => loadPack<CorpusIndex>('sentence-corpus/index.json')
+
+export const loadCorpusChunk = (version: string, chunk: number) =>
+  loadPack<AnnotatedSentence[]>(`sentence-corpus/${version}-${chunk}.json`)

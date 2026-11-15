@@ -208,19 +208,27 @@ export function sentenceDrillsForRule(
       answers: g.answers,
       distractors: g.distractors,
     };
-    const paradigm = g.lemma ? morphology[g.lemma] : undefined;
-    const forms = paradigm ? [...new Set(Object.values(paradigm).flat())] : [];
-    const variants: Partial<Record<SentenceMode, Exercise>> = {};
-    const choice = sentenceChoice(item, forms, { seed: hash(item.id) + salt }, [
-      ruleId,
-    ]);
-    const typed = sentenceTyped(item, [ruleId]);
-    if (choice) variants.choice = choice;
-    if (typed) variants.typed = typed;
-    const ex = variants[mode] ?? choice ?? typed;
+    const variants = sentenceDrillVariants(item, ruleId, morphology, salt);
+    const ex = variants[mode] ?? variants.choice ?? variants.typed;
     if (ex) out.push({ ex, variants });
   }
   return out;
+}
+
+export function sentenceDrillVariants(
+  item: SentenceGapLike,
+  ruleId: string,
+  morphology: Record<string, Paradigm>,
+  seed: number,
+): Partial<Record<SentenceMode, Exercise>> {
+  const paradigm = item.baseForm ? morphology[item.baseForm] : undefined;
+  const forms = paradigm ? [...new Set(Object.values(paradigm).flat())] : [];
+  const variants: Partial<Record<SentenceMode, Exercise>> = {};
+  const choice = sentenceChoice(item, forms, { seed: hash(item.id) + seed }, [ruleId]);
+  const typed = sentenceTyped(item, [ruleId]);
+  if (choice) variants.choice = choice;
+  if (typed) variants.typed = typed;
+  return variants;
 }
 
 export function sentenceWriteDrills(

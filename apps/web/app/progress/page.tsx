@@ -2,9 +2,8 @@
 
 import { useEffect, useState } from 'react'
 import { useTranslations } from 'next-intl'
-import { Card, Meter, Row, Screen, Stack, Stat } from '@polski/ui'
-import { Nav } from '@/app/_components/Nav'
-import { ThemePicker } from '@/app/_components/ThemePicker'
+import { Card, Meter, Row, Stack, Stat } from '@polski/ui'
+import { CourseShell } from '@/app/_components/CourseShell'
 import { loadProgress, type Progress, type RuleProgress } from '@/lib/engine/progress'
 
 /** Официальный порог и наша цель с запасом — exam-spec.json / SPACED_REPETITION.md §6 */
@@ -33,11 +32,11 @@ export default function ProgressPage() {
     return () => { alive = false }
   }, [])
 
-  if (error) return <Shell><Card><p className="text-sm text-danger">{t('errors.generic')}</p></Card></Shell>
-  if (!p) return <Shell><Card><p className="text-sm text-muted">{t('common.loading')}</p></Card></Shell>
+  if (error) return <CourseShell current="/progress"><Card><p className="text-sm text-danger">{t('errors.generic')}</p></Card></CourseShell>
+  if (!p) return <CourseShell current="/progress"><Card><p className="text-sm text-muted">{t('common.loading')}</p></Card></CourseShell>
 
   return (
-    <Shell>
+    <CourseShell current="/progress">
       <Card>
         <Row gap="lg" wrap>
           <Stat value={`${p.day}/${p.totalDays}`} label="день программы" />
@@ -226,7 +225,7 @@ export default function ProgressPage() {
           </Stack>
         </Card>
       )}
-    </Shell>
+    </CourseShell>
   )
 }
 
@@ -248,23 +247,5 @@ function RuleRow({ rule, showRisk }: { rule: RuleProgress; showRisk?: boolean })
       </Row>
       <Meter value={rule.mastery * 100} target={85} threshold={60} />
     </Stack>
-  )
-}
-
-function Shell({ children }: { children: React.ReactNode }) {
-  const t = useTranslations('nav')
-  return (
-    <Screen>
-      <header className="mx-auto w-full max-w-2xl px-4 py-3">
-        <Row justify="between">
-          <h1 className="text-lg font-semibold">{t('progress')}</h1>
-          <ThemePicker />
-        </Row>
-      </header>
-      <main className="mx-auto w-full max-w-2xl flex-1 px-4">
-        <Stack gap="lg">{children}</Stack>
-      </main>
-      <Nav />
-    </Screen>
   )
 }

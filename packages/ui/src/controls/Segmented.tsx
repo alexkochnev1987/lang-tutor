@@ -16,6 +16,7 @@ export interface SegmentedOption<T extends string> {
   value: T
   label: string
   icon?: string
+  count?: number
 }
 
 export function Segmented<T extends string>({
@@ -33,12 +34,13 @@ export function Segmented<T extends string>({
         <button
           key={o.value}
           type="button"
-          className={item()}
+          className={item({ className: o.count !== undefined ? 'flex-col gap-0 px-2 sm:flex-row sm:gap-1.5 sm:px-3' : undefined })}
           aria-pressed={value === o.value}
           onClick={() => onChange(o.value)}
         >
           {o.icon && <span aria-hidden>{o.icon}</span>}
           {o.label}
+          {o.count !== undefined && <span className="text-xs tabular-nums">{o.count}</span>}
         </button>
       ))}
     </div>

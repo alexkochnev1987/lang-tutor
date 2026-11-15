@@ -79,7 +79,6 @@ export function SignInButton() {
               </p>
             )}
           </div>
-          <p className="max-w-xs text-xs text-muted">{t('localOnly')}</p>
           {error && <p className="text-xs text-bad">{t('unavailable')}</p>}
         </Stack>
       )}

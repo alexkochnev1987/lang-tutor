@@ -5,8 +5,11 @@
   },
   "nav": {
     "today": "Today",
+    "course": "Course",
+    "profile": "Profile",
     "plan": "Plan",
     "words": "Words",
+    "studyWords": "Study",
     "dictionary": "Dictionary",
     "progress": "Progress",
     "grammar": "Grammar"
@@ -56,6 +59,19 @@
     "palette": "Palette",
     "done": "Done",
     "ruleLanguage": "Rule language"
+  },
+  "profile": {
+    "account": "Account",
+    "guest": "Guest mode",
+    "languageAndAppearance": "Language and appearance",
+    "study": "Study preferences",
+    "budgetHint": "This changes the number of reviews. Required exercises may take longer.",
+    "defaultVoice": "Automatic",
+    "unavailableVoice": "Saved voice is unavailable",
+    "previewVoice": "Play sample",
+    "saving": "Saving…",
+    "saved": "Settings saved",
+    "saveError": "Could not save settings. Try again."
   },
   "auth": {
     "signIn": "Sign in",

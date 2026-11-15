@@ -32,6 +32,7 @@ import {
   type AnswerPayload,
 } from "@/lib/data/store";
 import type { AppState, RuleMasteryRow, StudyItemRow } from "@/lib/data/types";
+import { DEFAULT_SETTINGS } from "@/lib/data/types";
 import { type CurriculumDay } from "@/lib/content/curriculum";
 
 export const scheduler = createScheduler();
@@ -127,7 +128,12 @@ export async function buildTodayLesson(day: CurriculumDay): Promise<Lesson> {
     lexemeIds: day.lexemeIds ?? [],
     newWordCount: day.newWordCount,
     examFocus: day.examFocus,
-    timeBudgetSec: day.timeBudgetSec,
+    timeBudgetSec: {
+      ...day.timeBudgetSec,
+      review: Math.round(
+        day.timeBudgetSec.review * state.settings.dailyBudgetMinutes / DEFAULT_SETTINGS.dailyBudgetMinutes,
+      ),
+    },
   };
   return generateLesson({
     scheduler,

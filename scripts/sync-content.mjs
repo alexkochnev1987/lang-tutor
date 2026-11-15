@@ -7,9 +7,10 @@
  * Источник истины — content/. В public/ лежит копия, она в .gitignore.
  * Запускается автоматически перед dev и build.
  */
-import { cpSync, mkdirSync, readdirSync, statSync } from 'node:fs'
+import { cpSync, existsSync, mkdirSync, readdirSync, rmSync, statSync } from 'node:fs'
 import { fileURLToPath } from 'node:url'
-import { dirname, join } from 'node:path'
+import { basename, dirname, join } from 'node:path'
+import { packSentenceCorpus } from './pack-sentence-corpus.mjs'
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..')
 const src = join(root, 'content')
@@ -20,7 +21,11 @@ let files = 0, bytes = 0
 for (const course of readdirSync(src)) {
   const from = join(src, course)
   if (!statSync(from).isDirectory()) continue
-  cpSync(from, join(dst, course), { recursive: true })
+  const target = join(dst, course)
+  const corpus = join(from, 'sentence-corpus.json')
+  cpSync(from, target, { recursive: true, filter: (source) => basename(source) !== 'sentence-corpus.json' })
+  rmSync(join(target, 'sentence-corpus.json'), { force: true })
+  if (existsSync(corpus)) packSentenceCorpus(from, target)
   for (const f of readdirSync(from)) {
     files++
     bytes += statSync(join(from, f)).size

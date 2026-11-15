@@ -1,6 +1,8 @@
 'use client'
 
 import { useCallback, useEffect, useState } from 'react'
+import { getSettings } from '@/lib/data/store'
+import type { Settings } from '@/lib/data/types'
 import { primeVoices, speak, type SpeakOutcome, type SpeakProblem } from './tts'
 
 export type SpeakIssue = Exclude<SpeakOutcome, 'ok'> | SpeakProblem
@@ -17,9 +19,10 @@ export function usePronounce(lang = 'pl-PL') {
 
   useEffect(primeVoices, [])
 
-  const pronounce = useCallback((text: string) => {
+  const pronounce = useCallback((text: string, preview?: Pick<Settings, 'ttsRate' | 'ttsVoiceURI'>) => {
     setIssue(null)
-    const outcome = speak(text, { lang, onProblem: setIssue })
+    const { ttsRate, ttsVoiceURI } = preview ?? getSettings()
+    const outcome = speak(text, { lang, rate: ttsRate, voiceURI: ttsVoiceURI, onProblem: setIssue })
     if (outcome !== 'ok') setIssue(outcome)
   }, [lang])
 

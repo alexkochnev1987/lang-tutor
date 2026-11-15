@@ -2,7 +2,7 @@
 
 import { useCallback, useEffect, useRef, useState } from 'react'
 import Link from 'next/link'
-import { Button, Card, Row, Screen, Stack } from '@polski/ui'
+import { Button, Card, Row, Screen, Segmented, Stack } from '@polski/ui'
 import type { CheckResult, Exercise } from '@polski/engine'
 import {
   buildTodayPlan,
@@ -15,11 +15,38 @@ import { GrammarExerciseBatch } from '@/app/_components/ExerciseView'
 import { RuleSheet } from '@/app/_components/RuleSheet'
 import { RuleView } from '@/app/_components/RuleView'
 import { Nav } from '@/app/_components/Nav'
-import { ThemePicker } from '@/app/_components/ThemePicker'
+import { SectionHeading } from '@/app/_components/SectionHeading'
+import { GrammarPractice } from '@/app/_components/GrammarPractice'
 
 type GrammarView = 'rule' | 'drill' | 'result'
 
+const MODES = [
+  { value: 'today', label: 'Сегодня' },
+  { value: 'practice', label: 'Тренировка' },
+] as const
+
 export default function GrammarPage() {
+  const [mode, setMode] = useState<(typeof MODES)[number]['value']>('today')
+  const [openedPractice, setOpenedPractice] = useState(false)
+
+  return (
+    <Shell mode={mode} onModeChange={(nextMode) => {
+      setMode(nextMode)
+      if (nextMode === 'practice') setOpenedPractice(true)
+    }}>
+      <div hidden={mode !== 'today'}>
+        <Stack gap="md"><TodayGrammar /></Stack>
+      </div>
+      {openedPractice && (
+        <div hidden={mode !== 'practice'}>
+          <GrammarPractice />
+        </div>
+      )}
+    </Shell>
+  )
+}
+
+function TodayGrammar() {
   const [stage, setStage] = useState<Stage | null>(null)
   const [drills, setDrills] = useState<Step[]>([])
   const [dayNumber, setDayNumber] = useState(1)
@@ -85,72 +112,66 @@ export default function GrammarPage() {
     load()
   }
 
-  if (!loaded) return <Shell><Card><p className="text-sm text-muted">Ładowanie…</p></Card></Shell>
+  if (!loaded) return <Card><p className="text-sm text-muted">Ładowanie…</p></Card>
 
   if (!stage) {
     return (
-      <Shell>
-        <Card>
-          <Stack gap="md" align="center">
-            <span className="text-4xl" aria-hidden>📘</span>
-            <p className="text-center text-sm text-muted">
-              Dziś nie ma gramatyki w programie. Reguły wrócą w kolejnym dniu
-              z nowym tematem.
-            </p>
-            <Link href="/" className="w-full">
-              <Button variant="outline" full>Strona główna</Button>
-            </Link>
-          </Stack>
-        </Card>
-      </Shell>
+      <Card>
+        <Stack gap="md" align="center">
+          <span className="text-4xl" aria-hidden>📘</span>
+          <p className="text-center text-sm text-muted">
+            Dziś nie ma gramatyki w programie. Reguły wrócą w kolejnym dniu
+            z nowym tematem.
+          </p>
+          <Link href="/" className="w-full">
+            <Button variant="outline" full>Strona główna</Button>
+          </Link>
+        </Stack>
+      </Card>
     )
   }
 
   if (view === 'result') {
     const pct = stats.total ? Math.round((stats.correct / stats.total) * 100) : 0
     return (
-      <Shell>
-        <Card>
-          <Stack gap="md" align="center">
-            <span className="text-4xl" aria-hidden>{pct >= 70 ? '✓' : '↻'}</span>
-            <h2 className="text-xl font-semibold">Trening zakończony</h2>
-            <p className="text-sm text-muted">Poprawne odpowiedzi: {stats.correct} z {stats.total} · {pct}%</p>
-            <Button size="lg" full onClick={restart}>Jeszcze raz</Button>
-            <Link href="/" className="w-full">
-              <Button variant="outline" full>Strona główna</Button>
-            </Link>
-          </Stack>
-        </Card>
-      </Shell>
+      <Card>
+        <Stack gap="md" align="center">
+          <span className="text-4xl" aria-hidden>{pct >= 70 ? '✓' : '↻'}</span>
+          <h2 className="text-xl font-semibold">Trening zakończony</h2>
+          <p className="text-sm text-muted">Poprawne odpowiedzi: {stats.correct} z {stats.total} · {pct}%</p>
+          <Button size="lg" full onClick={restart}>Jeszcze raz</Button>
+          <Link href="/" className="w-full">
+            <Button variant="outline" full>Strona główna</Button>
+          </Link>
+        </Stack>
+      </Card>
     )
   }
 
   if (view === 'rule') {
     return (
-      <Shell>
-        <Card>
-          <Stack gap="lg">
-            {stage.rule
-              ? <RuleView rule={stage.rule} />
-              : <p className="text-sm text-muted">
-                  Dziś ćwiczymy reguły, które wypadają najsłabiej w statystykach.
-                </p>}
-            {stage.missingContent && (
-              <p className="rounded-card bg-warn-bg px-3 py-2 text-sm text-warn-ink">
-                Brak zadań: {stage.missingContent}
-              </p>
-            )}
-            <Button size="lg" full disabled={!drills.length} onClick={() => setView('drill')}>
-              {drills.length ? `Do zadań · ${drills.length}` : 'Brak zadań'}
-            </Button>
-          </Stack>
-        </Card>
-      </Shell>
+      <Card>
+        <Stack gap="lg">
+          {stage.rule
+            ? <RuleView rule={stage.rule} />
+            : <p className="text-sm text-muted">
+                Dziś ćwiczymy reguły, które wypadają najsłabiej w statystykach.
+              </p>}
+          {stage.missingContent && (
+            <p className="rounded-card bg-warn-bg px-3 py-2 text-sm text-warn-ink">
+              Brak zadań: {stage.missingContent}
+            </p>
+          )}
+          <Button size="lg" full disabled={!drills.length} onClick={() => setView('drill')}>
+            {drills.length ? `Do zadań · ${drills.length}` : 'Brak zadań'}
+          </Button>
+        </Stack>
+      </Card>
     )
   }
 
   return (
-    <Shell>
+    <>
       <Row justify="between">
         <button
           type="button"
@@ -185,18 +206,22 @@ export default function GrammarPage() {
           )}
         </Stack>
       )}
-    </Shell>
+    </>
   )
 }
 
-function Shell({ children }: { children: React.ReactNode }) {
+function Shell({ children, mode, onModeChange }: {
+  children: React.ReactNode
+  mode: (typeof MODES)[number]['value']
+  onModeChange: (mode: (typeof MODES)[number]['value']) => void
+}) {
   return (
     <Screen>
       <header className="mx-auto w-full max-w-2xl px-4 py-3">
-        <Row justify="between">
-          <h1 className="text-lg font-semibold">Gramatyka</h1>
-          <ThemePicker />
-        </Row>
+        <SectionHeading section="grammar" />
+        <div className="mt-2">
+          <Segmented options={MODES} value={mode} onChange={onModeChange} ariaLabel="Режим грамматики" />
+        </div>
       </header>
       <main className="mx-auto w-full max-w-2xl flex-1 px-4 pb-4">
         <Stack gap="md">{children}</Stack>

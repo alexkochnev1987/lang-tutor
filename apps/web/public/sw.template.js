@@ -23,7 +23,9 @@ const CONTENT_CACHE = `content-${VERSION}`
 const PRECACHE = [
   '/',
   '/lesson/',
+  '/program/',
   '/progress/',
+  '/profile/',
   '/offline/',
   '/manifest.webmanifest',
   '/icon.svg',
@@ -33,6 +35,7 @@ const PRECACHE = [
   '/content/__COURSE_ID__/morphology.json',
   '/content/__COURSE_ID__/competencies.json',
   '/content/__COURSE_ID__/exam-spec.json',
+  ...__CORPUS_STARTER__,
 ]
 
 self.addEventListener('install', (event) => {
@@ -84,6 +87,11 @@ self.addEventListener('fetch', (event) => {
     return
   }
 
+  if (/\/sentence-corpus\/(?:index|[a-f0-9]{12}-\d+)\.json$/.test(url.pathname)) {
+    event.respondWith(cacheFirst(request, CONTENT_CACHE, event))
+    return
+  }
+
   // 3. Языковой пакет — отдаём из кэша сразу, обновляем фоном.
   if (url.pathname.startsWith('/content/')) {
     event.respondWith(staleWhileRevalidate(request, CONTENT_CACHE))
@@ -91,11 +99,12 @@ self.addEventListener('fetch', (event) => {
   }
 })
 
-function cacheFirst(request, cacheName) {
+function cacheFirst(request, cacheName, event) {
   return caches.match(request).then((hit) => hit ?? fetch(request).then((res) => {
     if (res.ok) {
       const copy = res.clone()
-      caches.open(cacheName).then((c) => c.put(request, copy))
+      const write = caches.open(cacheName).then((c) => c.put(request, copy)).catch(() => {})
+      event?.waitUntil(write)
     }
     return res
   }))

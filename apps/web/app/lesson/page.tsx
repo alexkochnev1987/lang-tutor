@@ -40,7 +40,6 @@ import { EmptyDay } from "@/app/_components/EmptyDay";
 import { KnownToggle } from "@/app/_components/WordRow";
 import { StudyTooltip } from "@/app/_components/StudyTooltip";
 import { useSaveLessonResult } from "@/app/_components/useSaveLessonResult";
-import { ThemePicker } from "@/app/_components/ThemePicker";
 import type { Lexeme } from "@/lib/content/curriculum";
 import { WORD_STAGE_RETRY_LIMIT } from "@/lib/engine/word-study";
 
@@ -658,7 +657,6 @@ export default function LessonPage() {
                 )}
               </span>
             )}
-            <ThemePicker />
           </Row>
         </Row>
         <div className="u-hide-on-short mt-2 h-1 overflow-hidden rounded-pill bg-soft">

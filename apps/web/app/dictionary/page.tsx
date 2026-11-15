@@ -1,10 +1,10 @@
 'use client'
 
 import { useEffect, useMemo, useState } from 'react'
-import Link from 'next/link'
 import { Button, Card, Row, Screen, Segmented, Stack } from '@polski/ui'
 import { Nav } from '@/app/_components/Nav'
-import { ThemePicker } from '@/app/_components/ThemePicker'
+import { SectionHeading } from '@/app/_components/SectionHeading'
+import { SectionNav } from '@/app/_components/SectionNav'
 import { WordRow } from '@/app/_components/WordRow'
 import { loadVocabulary, type Lexeme } from '@/lib/content/curriculum'
 import { useAppState } from '@/lib/data/store'
@@ -59,19 +59,25 @@ export default function DictionaryPage() {
     [state?.sessions],
   )
 
-  const visible = useMemo(() => {
-    if (!words) return []
+  const filteredWords = useMemo(() => {
+    const groups: Record<Filter, Lexeme[]> = { all: [], learning: [], known: [], untouched: [] }
     const q = query.trim().toLowerCase()
-    return words.filter((w) => {
+    for (const w of words ?? []) {
       if (q && !w.lemma.toLowerCase().includes(q) && !w.translation.toLowerCase().includes(q)) {
-        return false
+        continue
       }
-      if (filter === 'known') return knownIds.has(w.id)
-      if (filter === 'learning') return !knownIds.has(w.id) && startedIds.has(w.id)
-      if (filter === 'untouched') return !knownIds.has(w.id) && !startedIds.has(w.id)
-      return true
-    })
-  }, [words, query, filter, knownIds, startedIds])
+      groups.all.push(w)
+      if (knownIds.has(w.id)) groups.known.push(w)
+      else if (startedIds.has(w.id)) groups.learning.push(w)
+      else groups.untouched.push(w)
+    }
+    return groups
+  }, [words, query, knownIds, startedIds])
+  const visible = filteredWords[filter]
+  const filterOptions = FILTERS.map((option) => ({
+    ...option,
+    count: words && (state || option.value === 'all') ? filteredWords[option.value].length : undefined,
+  }))
 
   const loadingFilter = !state && filter !== 'all'
 
@@ -88,25 +94,15 @@ export default function DictionaryPage() {
     <Screen>
       <header className="mx-auto w-full max-w-2xl px-4 py-3">
         <Stack gap="sm">
-          <Row justify="between" gap="sm">
-            <h1 className="text-lg font-semibold">Словарь</h1>
-            <Row gap="sm">
-              {state && words ? (
-                <span className="text-sm tabular-nums text-muted">
-                  {knownIds.size} знаю · {completedIds.size} пройдено · {words.length} всего
-                </span>
-              ) : (
-                <span className="text-xs text-muted" role="status">{vocabularyError ? 'Статистика недоступна' : 'Загрузка статистики…'}</span>
-              )}
-              <Link
-                href="/words"
-                className="rounded-pill border border-primary px-2.5 py-1 text-xs font-medium text-primary hover:bg-soft"
-              >
-                Учить 5
-              </Link>
-              <ThemePicker />
-            </Row>
-          </Row>
+          <SectionHeading section="words" />
+          <SectionNav section="words" current="/dictionary" />
+          {state && words ? (
+            <p className="text-sm tabular-nums text-muted">
+              {knownIds.size} знаю · {completedIds.size} пройдено · {words.length} всего
+            </p>
+          ) : (
+            <p className="text-xs text-muted" role="status">{vocabularyError ? 'Статистика недоступна' : 'Загрузка статистики…'}</p>
+          )}
           <input
             value={query}
             onChange={(e) => setQuery(e.target.value)}
@@ -114,7 +110,7 @@ export default function DictionaryPage() {
             className="min-h-12 w-full rounded-card border border-line bg-card px-3 text-base text-ink"
           />
           <Segmented
-            options={FILTERS}
+            options={filterOptions}
             value={filter}
             onChange={setFilter}
             ariaLabel="Фильтр словаря"

@@ -22,6 +22,17 @@ export const PATCH = withUser(async ({ userId, req }) => {
   const clean = Object.fromEntries(
     Object.entries(patch).filter(([k]) => ALLOWED.has(k)),
   )
+  const { dailyBudgetMinutes, ttsRate, ttsVoiceURI } = clean
+  if (dailyBudgetMinutes !== undefined && (
+    typeof dailyBudgetMinutes !== 'number' || !Number.isInteger(dailyBudgetMinutes) ||
+    dailyBudgetMinutes < 5 || dailyBudgetMinutes > 90
+  )) throw new Error('bad_daily_budget')
+  if (ttsRate !== undefined && (
+    typeof ttsRate !== 'number' || !Number.isFinite(ttsRate) || ttsRate < 0.5 || ttsRate > 1.5
+  )) throw new Error('bad_speech_rate')
+  if (ttsVoiceURI != null && (typeof ttsVoiceURI !== 'string' || ttsVoiceURI.length > 500)) {
+    throw new Error('bad_speech_voice')
+  }
   if (!Object.keys(clean).length) return { ok: true }
 
   // слияние на стороне Postgres: клиент присылает только изменённые ключи

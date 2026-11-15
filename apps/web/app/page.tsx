@@ -1,11 +1,8 @@
 'use client'
 
-import { useTranslations } from 'next-intl'
-import { Row, Screen, Stack } from '@polski/ui'
-import { SettingsRow } from './_components/SettingsRow'
-import { SignInButton } from './_components/SignInButton'
-import { ThemePicker } from './_components/ThemePicker'
+import { Screen, Stack } from '@polski/ui'
 import { Nav } from './_components/Nav'
+import { SectionHeading } from './_components/SectionHeading'
 import { TodayCard } from './_components/TodayCard'
 
 /**
@@ -15,36 +12,17 @@ import { TodayCard } from './_components/TodayCard'
  * семантические компоненты и позиционирование.
  */
 export default function TodayPage() {
-  const t = useTranslations()
-
   return (
     <Screen>
       <header className="mx-auto w-full max-w-2xl px-4 py-3">
-        <Row justify="between">
-          <Stack gap="none">
-            <strong className="text-lg">{t('app.name')}</strong>
-            <span className="text-xs text-muted">{t('app.tagline')}</span>
-          </Stack>
-          <Row gap="xs">
-            <ThemePicker />
-            <SignInButton />
-          </Row>
-        </Row>
+        <SectionHeading section="today" />
       </header>
 
       <main className="mx-auto w-full max-w-2xl flex-1 px-4">
         <Stack gap="lg">
           <TodayCard />
-          <SettingsRow />
         </Stack>
       </main>
-
-      <footer className="mx-auto w-full max-w-2xl px-4 py-6">
-        <p className="text-xs text-muted">
-          Прогресс сохраняется на сервере. Войдите через Google, чтобы он
-          нашёлся на другом устройстве.
-        </p>
-      </footer>
 
       <Nav />
     </Screen>

@@ -34,9 +34,17 @@ const maybeDate = (v: unknown): Date | null => (v ? new Date(v as string) : null
 /** Разбор ISO-строк в Date. Один раз на границе сети — дальше только Date. */
 function parse(raw: Record<string, unknown>): AppState {
   const r = raw as never as AppState & Record<string, never>
+  const settings = { ...DEFAULT_SETTINGS, ...(r.settings ?? {}) }
+  const budget = r.settings?.dailyBudgetMinutes ?? r.course?.dailyBudgetMinutes
+  settings.dailyBudgetMinutes = typeof budget === 'number' && Number.isInteger(budget) && budget >= 5 && budget <= 90
+    ? budget
+    : DEFAULT_SETTINGS.dailyBudgetMinutes
+  if (!Number.isFinite(settings.ttsRate) || settings.ttsRate < 0.5 || settings.ttsRate > 1.5) {
+    settings.ttsRate = DEFAULT_SETTINGS.ttsRate
+  }
   return {
     user: r.user,
-    settings: { ...DEFAULT_SETTINGS, ...(r.settings ?? {}) },
+    settings,
     course: r.course
       ? {
           ...r.course,
@@ -108,7 +116,7 @@ function patch(fn: (s: AppState) => AppState): void {
 
 function subscribe(cb: () => void): () => void {
   listeners.add(cb)
-  if (!snapshot && !inflight) void loadState()
+  if (!snapshot && !inflight) void loadState().catch((error) => console.error('[state]', error))
   return () => { listeners.delete(cb) }
 }
 
@@ -125,9 +133,14 @@ export function useSettings(): Settings {
   return useAppState()?.settings ?? DEFAULT_SETTINGS
 }
 
+export function getSettings(): Settings {
+  return snapshot?.settings ?? DEFAULT_SETTINGS
+}
+
 // ── запись ───────────────────────────────────────────────────────────
 
 export async function saveSettings(p: Partial<Settings>): Promise<void> {
+  await request('/api/settings/', { method: 'PATCH', body: JSON.stringify(p) })
   patch((s) => ({ ...s, settings: { ...s.settings, ...p } }))
   // Зеркало в localStorage: тема и язык нужны СИНХРОННО до первой
   // отрисовки, иначе экран моргнёт (UX_UI.md §1.8). Сеть этого не успеет.
@@ -135,7 +148,6 @@ export async function saveSettings(p: Partial<Settings>): Promise<void> {
     if (p.theme) localStorage.setItem('theme', p.theme)
     if (p.uiLanguage) localStorage.setItem('uiLanguage', p.uiLanguage)
   } catch { /* приватный режим */ }
-  await request('/api/settings/', { method: 'PATCH', body: JSON.stringify(p) })
 }
 
 export async function startCourse(

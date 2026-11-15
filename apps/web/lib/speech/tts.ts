@@ -30,11 +30,8 @@ export function findVoice(
   lang: string,
   preferredURI?: string | null,
 ): SpeechSynthesisVoice | null {
-  if (!speechAvailable()) return null
-
   const languageTag = (v: SpeechSynthesisVoice) => v.lang.replace('_', '-')
-  const sameLanguage = refreshKnownVoices().filter((v) =>
-    languageTag(v).toLowerCase().startsWith(lang.split('-')[0].toLowerCase()))
+  const sameLanguage = voicesForLanguage(lang)
   if (!sameLanguage.length) return null
 
   const preferred = preferredURI && sameLanguage.find((v) => v.voiceURI === preferredURI)
@@ -43,6 +40,12 @@ export function findVoice(
       || sameLanguage.find((v) => v.localService)
       || sameLanguage.find((v) => languageTag(v) === lang)
       || sameLanguage[0]
+}
+
+export function voicesForLanguage(lang: string): SpeechSynthesisVoice[] {
+  if (!speechAvailable()) return []
+  const code = lang.toLowerCase().split('-')[0]
+  return refreshKnownVoices().filter((voice) => voice.lang.toLowerCase().split(/[-_]/)[0] === code)
 }
 
 function cancelOnlyIfBusy(): void {

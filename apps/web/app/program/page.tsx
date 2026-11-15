@@ -2,11 +2,10 @@
 
 import { useEffect, useState } from 'react'
 import Link from 'next/link'
-import { Button, Card, Meter, Row, Screen, Stack } from '@polski/ui'
+import { Button, Card, Meter, Row, Stack } from '@polski/ui'
 import { loadCurriculum, type Curriculum, type CurriculumDay } from '@/lib/content/curriculum'
 import { loadProgress, type Progress } from '@/lib/engine/progress'
-import { Nav } from '@/app/_components/Nav'
-import { ThemePicker } from '@/app/_components/ThemePicker'
+import { CourseShell } from '@/app/_components/CourseShell'
 
 interface WeekRoadmap {
   week: number
@@ -164,8 +163,8 @@ export default function ProgramPage() {
     return () => { alive = false }
   }, [])
 
-  if (error) return <Shell><Card><p className="text-sm text-danger">Что-то пошло не так</p></Card></Shell>
-  if (!data) return <Shell><Card><p className="text-sm text-muted">Загрузка…</p></Card></Shell>
+  if (error) return <CourseShell current="/program"><Card><p className="text-sm text-danger">Что-то пошло не так</p></Card></CourseShell>
+  if (!data) return <CourseShell current="/program"><Card><p className="text-sm text-muted">Загрузка…</p></Card></CourseShell>
 
   const { curriculum, progress } = data
   const completedDays = new Set(progress.completedDays)
@@ -175,7 +174,7 @@ export default function ProgramPage() {
   const finished = progress.daysCompleted >= progress.totalDays
 
   return (
-    <Shell>
+    <CourseShell current="/program">
       <Card>
         <Stack gap="md">
           <Row justify="between" gap="md" align="start">
@@ -274,23 +273,6 @@ export default function ProgramPage() {
           </Link>
         </Stack>
       </Card>
-    </Shell>
-  )
-}
-
-function Shell({ children }: { children: React.ReactNode }) {
-  return (
-    <Screen>
-      <header className="mx-auto w-full max-w-2xl px-4 py-3">
-        <Row justify="between">
-          <h1 className="text-lg font-semibold">Программа</h1>
-          <ThemePicker />
-        </Row>
-      </header>
-      <main className="mx-auto w-full max-w-2xl flex-1 px-4 pb-4">
-        <Stack gap="lg">{children}</Stack>
-      </main>
-      <Nav />
-    </Screen>
+    </CourseShell>
   )
 }

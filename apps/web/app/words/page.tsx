@@ -5,12 +5,13 @@ import Link from "next/link";
 import { Button, Card, Row, Screen, Stack } from "@polski/ui";
 import type { CheckResult, Exercise } from "@polski/engine";
 import { Nav } from "@/app/_components/Nav";
+import { SectionHeading } from "@/app/_components/SectionHeading";
+import { SectionNav } from "@/app/_components/SectionNav";
 import {
   ExerciseView,
   SpeakIcon,
   StudyActionBar,
 } from "@/app/_components/ExerciseView";
-import { ThemePicker } from "@/app/_components/ThemePicker";
 import {
   currentDayNumber,
   loadCurriculum,
@@ -450,12 +451,9 @@ export default function WordsPage() {
             >
               ← Выбор слов
             </button>
-            <Row gap="sm">
-              <span className="text-right text-xs text-muted tabular-nums sm:text-sm">
-                {stageTitle} · {current + 1} / {studySteps.length}
-              </span>
-              <ThemePicker />
-            </Row>
+            <span className="text-right text-xs text-muted tabular-nums sm:text-sm">
+              {stageTitle} · {current + 1} / {studySteps.length}
+            </span>
           </Row>
           <div className="u-hide-on-short mt-2 h-1 overflow-hidden rounded-pill bg-soft">
             <div
@@ -519,15 +517,7 @@ export default function WordsPage() {
     return (
       <Screen>
         <header className="mx-auto w-full max-w-2xl px-4 py-3">
-          <Row justify="between">
-            <Link
-              href="/dictionary"
-              className="text-sm text-muted hover:text-ink"
-            >
-              ← Словарь
-            </Link>
-            <ThemePicker />
-          </Row>
+          <SectionHeading section="words" />
         </header>
         <main className="mx-auto flex w-full max-w-2xl flex-1 items-center px-4 pb-4">
           <Card className="w-full">
@@ -535,11 +525,11 @@ export default function WordsPage() {
               <span className="text-4xl text-ok-ink" aria-hidden>
                 ✓
               </span>
-              <h1 className="text-xl font-semibold">
+              <h2 className="text-xl font-semibold">
                 {failedWordIds.size
                   ? `${failedWordIds.size} ${failedWordIds.size === 1 ? "слово" : "слова"} не выучено`
                   : "Слова добавлены в повторение"}
-              </h1>
+              </h2>
               <p className="text-center text-sm text-muted">
                 {failedWordIds.size
                   ? "Эти слова не добавлены в повторение. Их можно выбрать снова позже."
@@ -565,15 +555,11 @@ export default function WordsPage() {
   return (
     <Screen>
       <header className="mx-auto w-full max-w-2xl px-4 py-3">
-        <Row justify="between">
-          <div>
-            <h1 className="text-lg font-semibold">Учить слова</h1>
-            <p className="text-sm text-muted">
-              Выберите ровно 5 слов из словаря
-            </p>
-          </div>
-          <ThemePicker />
-        </Row>
+        <SectionHeading section="words" />
+        <div className="mt-2">
+          <SectionNav section="words" current="/words" />
+        </div>
+        <p className="mt-2 text-sm text-muted">Выберите ровно 5 слов из словаря</p>
         <input
           value={query}
           onChange={(event) => setQuery(event.target.value)}
