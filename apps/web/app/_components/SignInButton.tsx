@@ -22,8 +22,10 @@ import { signInWithGoogle, signOut, useAppState } from '@/lib/data/store'
  */
 export function SignInButton() {
   const t = useTranslations('auth')
+  const common = useTranslations('common')
   const [open, setOpen] = useState(false)
   const [error, setError] = useState<string | null>(null)
+  const [ready, setReady] = useState(false)
   const slot = useRef<HTMLDivElement>(null)
   const user = useAppState()?.user
 
@@ -36,7 +38,9 @@ export function SignInButton() {
       signInWithGoogle(idToken)
         .then(() => setOpen(false))
         .catch(() => setError('unavailable'))
-    }).catch(() => { if (!cancelled) setError('unavailable') })
+    })
+      .then(() => { if (!cancelled) setReady(true) })
+      .catch(() => { if (!cancelled) setError('unavailable') })
     return () => { cancelled = true }
   }, [open])
 
@@ -67,7 +71,14 @@ export function SignInButton() {
       )}
       {open && (
         <Stack gap="sm">
-          <div ref={slot} />
+          <div className="relative min-h-10 w-70 max-w-full" aria-busy={!ready && !error}>
+            <div ref={slot} />
+            {!ready && !error && (
+              <p role="status" className="absolute inset-0 flex items-center text-sm text-muted">
+                Google · {common('loading')}
+              </p>
+            )}
+          </div>
           <p className="max-w-xs text-xs text-muted">{t('localOnly')}</p>
           {error && <p className="text-xs text-bad">{t('unavailable')}</p>}
         </Stack>

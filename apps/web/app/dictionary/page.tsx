@@ -29,13 +29,16 @@ function completedWordId(sessionId: string): string | null {
 export default function DictionaryPage() {
   const state = useAppState()
   const [words, setWords] = useState<Lexeme[] | null>(null)
+  const [vocabularyError, setVocabularyError] = useState(false)
   const [filter, setFilter] = useState<Filter>('all')
   const [query, setQuery] = useState('')
   const [limit, setLimit] = useState(PAGE_SIZE)
 
   useEffect(() => {
     let alive = true
-    loadVocabulary().then((v) => alive && setWords([...v.values()]))
+    loadVocabulary()
+      .then((v) => { if (alive) setWords([...v.values()]) })
+      .catch(() => { if (alive) setVocabularyError(true) })
     return () => { alive = false }
   }, [])
 
@@ -70,6 +73,8 @@ export default function DictionaryPage() {
     })
   }, [words, query, filter, knownIds, startedIds])
 
+  const loadingFilter = !state && filter !== 'all'
+
   const personalVisible = useMemo(() => {
     const q = query.trim().toLowerCase()
     return (state?.personalDict ?? []).filter((word) => (
@@ -86,9 +91,13 @@ export default function DictionaryPage() {
           <Row justify="between" gap="sm">
             <h1 className="text-lg font-semibold">Словарь</h1>
             <Row gap="sm">
-              <span className="text-sm tabular-nums text-muted">
-                {knownIds.size} знаю · {completedIds.size} пройдено · {words?.length ?? 0} всего
-              </span>
+              {state && words ? (
+                <span className="text-sm tabular-nums text-muted">
+                  {knownIds.size} знаю · {completedIds.size} пройдено · {words.length} всего
+                </span>
+              ) : (
+                <span className="text-xs text-muted" role="status">{vocabularyError ? 'Статистика недоступна' : 'Загрузка статистики…'}</span>
+              )}
               <Link
                 href="/words"
                 className="rounded-pill border border-primary px-2.5 py-1 text-xs font-medium text-primary hover:bg-soft"
@@ -123,6 +132,12 @@ export default function DictionaryPage() {
             </p>
           </Card>
 
+          {!state && (
+            <Card>
+              <h2 className="text-base font-semibold">Мой словарь</h2>
+              <p className="mt-1 text-sm text-muted" role="status">Загружаем сохранённые слова…</p>
+            </Card>
+          )}
           {personalVisible.length > 0 && (
             <Card>
               <Stack gap="sm">
@@ -142,13 +157,16 @@ export default function DictionaryPage() {
             </Card>
           )}
 
-          {!words && <Card><p className="text-sm text-muted">Загрузка…</p></Card>}
+          {vocabularyError && <Card><p className="text-sm text-danger-ink" role="alert">Не удалось загрузить словарь.</p></Card>}
+          {(!words || loadingFilter) && !vocabularyError && (
+            <Card><p role="status" className="text-sm text-muted">Загрузка…</p></Card>
+          )}
 
-          {words && visible.length === 0 && (
+          {words && !loadingFilter && visible.length === 0 && (
             <Card><p className="text-sm text-muted">Ничего не нашлось</p></Card>
           )}
 
-          {visible.length > 0 && (
+          {!loadingFilter && visible.length > 0 && (
             <Card>
               <div className="-my-2">
                 {visible.slice(0, limit).map((w) => (
@@ -158,7 +176,7 @@ export default function DictionaryPage() {
             </Card>
           )}
 
-          {visible.length > limit && (
+          {!loadingFilter && visible.length > limit && (
             <Button variant="outline" full onClick={() => setLimit(limit + PAGE_SIZE)}>
               Показать ещё · осталось {visible.length - limit}
             </Button>

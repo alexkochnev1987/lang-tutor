@@ -30,6 +30,7 @@ export function SelectionDictionary() {
   const [vocabulary, setVocabulary] = useState<Map<string, Lexeme> | null>(null)
   const [morphology, setMorphology] = useState<Record<string, Record<string, string[]>> | null>(null)
   const [selection, setSelection] = useState<SelectedWord | null>(null)
+  const [dictionaryError, setDictionaryError] = useState(false)
   const [saved, setSaved] = useState(false)
   const [saving, setSaving] = useState(false)
 
@@ -41,7 +42,7 @@ export function SelectionDictionary() {
         setVocabulary(words)
         setMorphology(forms)
       })
-      .catch(() => {})
+      .catch(() => { if (alive) setDictionaryError(true) })
     return () => { alive = false }
   }, [])
 
@@ -75,7 +76,7 @@ export function SelectionDictionary() {
         text,
         word: byForm?.get(normalizeWord(text)),
       })).filter((match): match is { text: string; word: Lexeme } => Boolean(match.word))
-      if (!matches.length || !range) {
+      if (!range || (byForm && !matches.length)) {
         setSelection(null)
         return
       }
@@ -90,9 +91,11 @@ export function SelectionDictionary() {
       })
     }
 
+    const frame = requestAnimationFrame(updateSelection)
     document.addEventListener('mouseup', updateSelection)
     document.addEventListener('keyup', updateSelection)
     return () => {
+      cancelAnimationFrame(frame)
       document.removeEventListener('mouseup', updateSelection)
       document.removeEventListener('keyup', updateSelection)
     }
@@ -130,6 +133,7 @@ export function SelectionDictionary() {
       style={{ left: currentSelection.left, top: currentSelection.top }}
       onPointerDown={(event) => event.stopPropagation()}
       aria-label="Tłumaczenie zaznaczonego słowa"
+      aria-busy={!byForm && !dictionaryError}
     >
       <div className="text-sm text-muted">
         {currentSelection.matches.length > 1 ? 'Tłumaczenie słów' : 'Tłumaczenie'}
@@ -149,6 +153,11 @@ export function SelectionDictionary() {
         </button>
       </div>
       <div className="mt-2 space-y-1 text-sm text-muted">
+        {!byForm && (
+          <p role={dictionaryError ? 'alert' : 'status'}>
+            {dictionaryError ? 'Nie udało się załadować słownika.' : 'Ładowanie słownika…'}
+          </p>
+        )}
         {currentSelection.matches.map((match) => (
           <div key={`${match.text}-${match.word.id}`} className="flex items-baseline justify-between gap-3">
             <span lang="pl">{match.text}</span>
@@ -157,7 +166,7 @@ export function SelectionDictionary() {
         ))}
       </div>
       {message && <div className="mt-1 text-xs text-danger-ink" role="status">{message}</div>}
-      {currentSelection.matches.length === 1 ? (
+      {byForm && (currentSelection.matches.length === 1 ? (
         <button
           type="button"
           disabled={saved || saving}
@@ -168,7 +177,7 @@ export function SelectionDictionary() {
         </button>
       ) : (
         <div className="mt-3 text-xs text-muted">Aby zapisać słowo, zaznacz je osobno.</div>
-      )}
+      ))}
     </aside>
   )
 }

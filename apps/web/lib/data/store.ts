@@ -181,6 +181,24 @@ export async function saveAnswer(p: AnswerPayload): Promise<void> {
   }
 }
 
+/** Confirms the date before replacing the previously saved schedule in the UI. */
+export async function saveScheduledReview(payload: AnswerPayload): Promise<boolean> {
+  try {
+    await request('/api/answer/', { method: 'POST', body: JSON.stringify(payload) })
+  } catch (error) {
+    console.error('[answer]', error)
+    return false
+  }
+
+  const item = payload.item
+  patch((state) => {
+    const previous = state.studyItems.find((row) => row.id === item.id)
+    if (previous?.lastReview && (!item.lastReview || previous.lastReview > item.lastReview)) return state
+    return { ...state, studyItems: [...state.studyItems.filter((row) => row.id !== item.id), item] }
+  })
+  return true
+}
+
 /** Попытка по грамматическому правилу: карточка FSRS тут ни при чём. */
 export async function saveMastery(m: RuleMasteryRow): Promise<void> {
   patch((s) => ({
@@ -195,13 +213,15 @@ export async function saveMastery(m: RuleMasteryRow): Promise<void> {
   }
 }
 
-export async function saveLessonSession(s: LessonSessionRow): Promise<void> {
-  patch((prev) => ({ ...prev, sessions: [...prev.sessions, s] }))
+export async function saveLessonSession(s: LessonSessionRow): Promise<boolean> {
+  patch((prev) => ({ ...prev, sessions: [...prev.sessions.filter((session) => session.id !== s.id), s] }))
   try {
     await request('/api/lesson/', { method: 'POST', body: JSON.stringify(s) })
+    return true
   } catch (e) {
     console.error('[lesson]', e)
-    void refresh()
+    void refresh().catch((error) => console.error('[state]', error))
+    return false
   }
 }
 

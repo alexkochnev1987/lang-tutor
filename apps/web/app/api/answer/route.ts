@@ -88,6 +88,8 @@ export const POST = withUser(async ({ userId, req }) => {
       lastReview,
       updatedAt: sql`now()`,
     },
+    // An older retry or an unreviewed seed must not overwrite a newer schedule.
+    setWhere: sql`${studyItems.lastReview} IS NULL OR ${studyItems.lastReview} <= ${lastReview?.toISOString() ?? null}::timestamptz`,
     })
   }
 

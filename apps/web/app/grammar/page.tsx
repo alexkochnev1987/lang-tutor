@@ -9,7 +9,8 @@ import {
   type Stage, type Step,
 } from '@/lib/engine/plan'
 import { recordRuleAttempt } from '@/lib/engine/session'
-import { saveExerciseResult, saveLessonSession } from '@/lib/data/store'
+import { saveExerciseResult } from '@/lib/data/store'
+import { useSaveLessonResult } from '@/app/_components/useSaveLessonResult'
 import { GrammarExerciseBatch } from '@/app/_components/ExerciseView'
 import { RuleSheet } from '@/app/_components/RuleSheet'
 import { RuleView } from '@/app/_components/RuleView'
@@ -27,6 +28,7 @@ export default function GrammarPage() {
   const [canAdvance, setCanAdvance] = useState(false)
   const [stats, setStats] = useState({ correct: 0, total: 0 })
   const startedAt = useRef(Date.now())
+  const lessonSave = useSaveLessonResult()
 
   const load = useCallback(() => {
     buildTodayPlan().then((p) => {
@@ -62,9 +64,7 @@ export default function GrammarPage() {
   }
 
   async function next() {
-    setCanAdvance(false)
-    await saveLessonSession({
-      id: crypto.randomUUID(),
+    const saved = await lessonSave.save({
       dayNumber,
       kind: 'grammar',
       startedAt: new Date(startedAt.current),
@@ -74,7 +74,7 @@ export default function GrammarPage() {
       itemsReviewed: stats.total,
       itemsCorrect: stats.correct,
     })
-    setView('result')
+    if (saved) setView('result')
   }
 
   function restart() {
@@ -175,9 +175,12 @@ export default function GrammarPage() {
           <Row gap="sm" justify="center">
             {step.rule && <RuleSheet rule={step.rule} />}
           </Row>
+          {lessonSave.status === 'error' && (
+            <p role="alert" className="text-sm text-danger-ink">Nie udało się zapisać wyniku.</p>
+          )}
           {canAdvance && (
-            <Button size="lg" full onClick={() => void next()}>
-              Zakończ
+            <Button size="lg" full disabled={lessonSave.status === 'saving'} onClick={() => void next()}>
+              {lessonSave.status === 'saving' ? 'Zapisywanie wyniku…' : lessonSave.status === 'error' ? 'Spróbuj ponownie' : 'Zakończ'}
             </Button>
           )}
         </Stack>

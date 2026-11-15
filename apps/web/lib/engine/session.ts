@@ -28,6 +28,7 @@ import {
   loadState,
   saveAnswer,
   saveMastery,
+  type AnswerPayload,
 } from "@/lib/data/store";
 import type { AppState, RuleMasteryRow, StudyItemRow } from "@/lib/data/types";
 import { type CurriculumDay } from "@/lib/content/curriculum";
@@ -161,23 +162,21 @@ export async function ensureLexemeCards(
   }
 }
 
-/** Ответ на упражнение по слову: пересчёт FSRS и запись в лог. */
-export async function recordAnswer(
-  itemId: string,
+export function prepareLexemeReview(
+  studyItems: readonly StudyItemRow[],
+  lexemeId: string,
+  kind: LexemeSkillKind,
   grade: Grade,
   responseMs: number,
   now = new Date(),
-): Promise<void> {
-  const { studyItems } = await loadState();
-  const row = studyItems.find((i) => i.id === itemId);
-  if (!row) return;
-
-  const { item, log } = rate(scheduler, toEngine(row), grade, now);
-  await saveAnswer({
+): AnswerPayload {
+  const itemId = `${kind}:${lexemeId}`;
+  const row = studyItems.find((item) => item.id === itemId);
+  const previous = row ? toEngine(row) : newItem(itemId, kind, lexemeId, now);
+  const { item, log } = rate(scheduler, previous, grade, now);
+  return {
     item: toRow(item),
     log: {
-      // uuid от клиента: повторная отправка после обрыва сети не
-      // задвоит историю — на сервере ON CONFLICT DO NOTHING
       id: crypto.randomUUID(),
       studyItemId: itemId,
       rating: log.rating,
@@ -189,7 +188,7 @@ export async function recordAnswer(
       reviewedAt: now,
       responseMs,
     },
-  });
+  };
 }
 
 /**
@@ -201,14 +200,16 @@ export async function completeLexemeLearning(
   results: Record<LexemeSkillKind, boolean>,
   responseMs = 0,
 ): Promise<void> {
-  await ensureLexemeCards(lexemeId);
+  const { studyItems } = await loadState();
   await Promise.all(
     LEXEME_SKILL_KINDS.map((kind) =>
-      recordAnswer(
-        `${kind}:${lexemeId}`,
+      saveAnswer(prepareLexemeReview(
+        studyItems,
+        lexemeId,
+        kind,
         results[kind] ? Rating.Good : Rating.Again,
         responseMs,
-      ),
+      )),
     ),
   );
 }

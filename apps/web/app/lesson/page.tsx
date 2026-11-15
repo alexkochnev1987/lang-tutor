@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { Button, Card, Row, Screen, Stack } from "@polski/ui";
 import type { CheckResult, Exercise } from "@polski/engine";
@@ -12,18 +12,18 @@ import {
   type TodayPlan,
 } from "@/lib/engine/plan";
 import {
-  completeLexemeLearning,
   ensureLexemeCards,
   LEXEME_SKILL_KINDS,
   lexemeSkillProgress,
   nextLexemeReview,
-  recordAnswer,
+  prepareLexemeReview,
   recordRuleAttempt,
   Rating,
 } from "@/lib/engine/session";
 import {
   saveExerciseResult,
   saveLessonSession,
+  saveScheduledReview,
   useAppState,
 } from "@/lib/data/store";
 import {
@@ -39,9 +39,16 @@ import { Diagnostic } from "@/app/_components/Diagnostic";
 import { EmptyDay } from "@/app/_components/EmptyDay";
 import { KnownToggle } from "@/app/_components/WordRow";
 import { StudyTooltip } from "@/app/_components/StudyTooltip";
+import { useSaveLessonResult } from "@/app/_components/useSaveLessonResult";
 import { ThemePicker } from "@/app/_components/ThemePicker";
 import type { Lexeme } from "@/lib/content/curriculum";
 import { WORD_STAGE_RETRY_LIMIT } from "@/lib/engine/word-study";
+
+type ReviewWrite = {
+  lexemeId: string;
+  status: "pending" | "error";
+  retry: () => void;
+};
 
 type Slot =
   | { kind: "stage-start"; stage: Stage }
@@ -104,6 +111,8 @@ export default function LessonPage() {
   const [phase, setPhase] = useState<"main" | "done">("main");
   const [special, setSpecial] = useState<"diagnostic" | "empty" | null>(null);
   const startedAt = useRef(Date.now());
+  const [reviewWrites, setReviewWrites] = useState<Record<string, ReviewWrite>>({});
+  const lessonSave = useSaveLessonResult();
   const finalizedWords = useRef(new Set<string>());
   const batchResumeInitialized = useRef(false);
 
@@ -166,6 +175,10 @@ export default function LessonPage() {
           row.exerciseId === currentExerciseId,
       )
     : undefined;
+  const reviewPending = Object.values(reviewWrites).some(
+    (write) => write.lexemeId === exerciseLexemeId && write.status === "pending",
+  );
+  const failedReview = Object.values(reviewWrites).find((write) => write.status === "error");
   const restoredResult = restoredRow
     ? {
         result: {
@@ -177,6 +190,36 @@ export default function LessonPage() {
         attempts: restoredRow.attempts,
       }
     : null;
+
+  const trackReviewWrite = useCallback((key: string, lexemeId: string, save: () => Promise<boolean>) => {
+    let writing = false;
+
+    async function persist() {
+      if (writing) return;
+      writing = true;
+      const retry = () => void persist();
+      setReviewWrites((writes) => ({
+        ...writes,
+        [key]: { lexemeId, status: "pending", retry },
+      }));
+      try {
+        const saved = await save();
+        setReviewWrites((writes) => {
+          if (!saved) return { ...writes, [key]: { lexemeId, status: "error", retry } };
+          const remaining = { ...writes };
+          delete remaining[key];
+          return remaining;
+        });
+      } catch (error) {
+        console.error("[review]", error);
+        setReviewWrites((writes) => ({ ...writes, [key]: { lexemeId, status: "error", retry } }));
+      } finally {
+        writing = false;
+      }
+    }
+
+    return persist();
+  }, []);
 
   useEffect(() => {
     if (!plan || !appState || !slots.length) return;
@@ -270,8 +313,13 @@ export default function LessonPage() {
         }),
       ) as Record<(typeof LEXEME_SKILL_KINDS)[number], boolean>;
       finalizedWords.current.add(lexemeId);
-      void completeLexemeLearning(lexemeId, skillResults).then(() =>
-        saveLessonSession({
+      const payloads = LEXEME_SKILL_KINDS.map((kind) =>
+        prepareLexemeReview(appState.studyItems, lexemeId, kind, skillResults[kind] ? Rating.Good : Rating.Again, 0),
+      );
+      void trackReviewWrite(markerId, lexemeId, async () => {
+        const saved = await Promise.all(payloads.map(saveScheduledReview));
+        if (!saved.every(Boolean)) return false;
+        return saveLessonSession({
           id: markerId,
           dayNumber: plan.dayNumber,
           kind: "words",
@@ -281,10 +329,10 @@ export default function LessonPage() {
           actualMs: Date.now() - startedAt.current,
           itemsReviewed: completed.length,
           itemsCorrect: completed.filter((row) => row.correct).length,
-        }),
-      );
+        });
+      });
     }
-  }, [appState, plan, slots]);
+  }, [appState, plan, slots, trackReviewWrite]);
 
   async function onAnswered(
     ex: Exercise,
@@ -302,7 +350,7 @@ export default function LessonPage() {
 
     // Результат каждого задания сохраняется на сервере: после reload должны
     // восстанавливаться и упражнения на слова, а не только грамматика.
-    await saveExerciseResult({
+    const exerciseResult = {
       dayNumber: plan?.dayNumber ?? 1,
       exerciseId: ex.id,
       attempts,
@@ -310,7 +358,31 @@ export default function LessonPage() {
       answer,
       expected: r.expected,
       errorKind: r.errorKind ?? null,
-    });
+    };
+    const lexemeId = ex.lexemeId;
+    if (lexemeId && !plan?.newWords.some((word) => word.id === lexemeId)) {
+      const kind =
+        ex.kind === "translate-production"
+          ? "lexeme-production"
+          : ex.kind === "spelling"
+            ? "lexeme-spelling"
+            : ex.kind === "listen-write"
+              ? "lexeme-listen-write"
+              : "lexeme-recognition";
+      const payload = prepareLexemeReview(
+        appState?.studyItems ?? [], lexemeId, kind, r.correct ? Rating.Good : Rating.Again, ms,
+      );
+
+      let answerSaved = false;
+      await trackReviewWrite(ex.id, lexemeId, async () => {
+        if (!answerSaved) answerSaved = await saveExerciseResult(exerciseResult);
+        if (!answerSaved || !(await saveScheduledReview(payload))) return false;
+        void ensureLexemeCards(lexemeId);
+        return true;
+      });
+    } else {
+      await saveExerciseResult(exerciseResult);
+    }
 
     // Для новых слов возвращаем в очередь только ошибочный этап. Остальные
     // этапы слова не повторяются, а retry получает отдельный ID для reload.
@@ -344,32 +416,10 @@ export default function LessonPage() {
       );
     }
 
-    const isNewWordExercise = Boolean(
-      ex.lexemeId && plan?.newWords.some((word) => word.id === ex.lexemeId),
-    );
-    if (ex.lexemeId && !isNewWordExercise) {
-      // Обязательный лексический минимум может добрать резервное слово,
-      // которого ещё нет в FSRS. Создаём обе стороны карточки перед записью
-      // ответа, иначе такое упражнение не влияло бы на дальнейшие повторы.
-      await ensureLexemeCards(ex.lexemeId);
-      const kind =
-        ex.kind === "translate-production"
-          ? "lexeme-production"
-          : ex.kind === "spelling"
-            ? "lexeme-spelling"
-            : ex.kind === "listen-write"
-              ? "lexeme-listen-write"
-              : "lexeme-recognition";
-      await recordAnswer(
-        `${kind}:${ex.lexemeId}`,
-        r.correct ? Rating.Good : Rating.Again,
-        ms,
-      );
-    }
     for (const ruleId of ex.grammarRuleIds) {
       await recordRuleAttempt(ruleId, r.correct, ex.difficulty);
     }
-    if (complete) setCanAdvance(true);
+    if (complete && (!lexemeId || wordStep?.wordStage !== undefined)) setCanAdvance(true);
   }
 
   function skipWord(lexemeId: string) {
@@ -388,6 +438,7 @@ export default function LessonPage() {
   }
 
   function next() {
+    if (lessonSave.status === "saving") return;
     setCanAdvance(false);
     if (
       slot?.kind === "step" &&
@@ -446,8 +497,7 @@ export default function LessonPage() {
 
   async function finish() {
     if (plan) {
-      await saveLessonSession({
-        id: crypto.randomUUID(),
+      const saved = await lessonSave.save({
         dayNumber: plan.dayNumber,
         kind: "day",
         startedAt: new Date(startedAt.current),
@@ -457,6 +507,7 @@ export default function LessonPage() {
         itemsReviewed: stats.total,
         itemsCorrect: stats.correct,
       });
+      if (!saved) return;
     }
     setPhase("done");
   }
@@ -511,6 +562,13 @@ export default function LessonPage() {
     );
   }
 
+  const reviewFeedback = failedReview ? (
+    <div role="alert" className="my-2 flex flex-wrap items-center justify-between gap-2 text-sm text-danger-ink">
+      <span>Не удалось сохранить срок повторения.</span>
+      <Button variant="outline" size="sm" onClick={failedReview.retry}>Повторить</Button>
+    </div>
+  ) : null;
+
   if (phase === "done") {
     const pct = stats.total
       ? Math.round((stats.correct / stats.total) * 100)
@@ -536,6 +594,10 @@ export default function LessonPage() {
                   {n}
                 </p>
               ))}
+              {reviewFeedback}
+              {Object.values(reviewWrites).some((write) => write.status === "pending") && (
+                <p role="status" className="text-sm text-muted">Сохраняем сроки повторения…</p>
+              )}
               <Link href="/" className="w-full">
                 <Button variant="outline" size="lg" full>
                   На главный
@@ -606,6 +668,16 @@ export default function LessonPage() {
       </header>
 
       <main className="mx-auto flex min-h-0 w-full max-w-2xl flex-1 flex-col justify-start overflow-y-auto overscroll-contain px-4 pb-4">
+        {reviewFeedback}
+        {lessonSave.status === "saving" && !restoredResult && !wordStudyExercise && (
+          <p role="status" className="my-2 text-sm text-muted">Сохраняем итог…</p>
+        )}
+        {lessonSave.status === "error" && (
+          <div role="alert" className="my-2 flex flex-wrap items-center justify-between gap-2 text-sm text-danger-ink">
+            <span>Не удалось сохранить итог.</span>
+            <Button variant="outline" size="sm" onClick={() => void finish()}>Повторить</Button>
+          </div>
+        )}
         {slot?.kind === "stage-start" && (
           <StageStart stage={slot.stage} onNext={next} />
         )}
@@ -736,6 +808,7 @@ export default function LessonPage() {
                     <LexemeSkillLevel
                       progress={lexemeSkillProgress(appState, exerciseLexemeId)}
                       nextReview={nextLexemeReview(appState, exerciseLexemeId)}
+                      reviewPending={reviewPending}
                     />
                   ) : undefined
                 }
@@ -771,14 +844,14 @@ export default function LessonPage() {
             {wordStudyExercise ? (
               <StudyActionBar
                 speakText={speakableTextOf(slot.step.ex)}
-                canAdvance={canAdvance || Boolean(restoredResult)}
+                canAdvance={lessonSave.status !== "saving" && (canAdvance || Boolean(restoredResult))}
                 onNext={next}
-                nextLabel={i + 1 < slots.length ? "Далее" : "Завершить"}
+                nextLabel={lessonSave.status === "saving" ? "Сохраняем итог…" : i + 1 < slots.length ? "Далее" : "Завершить"}
               />
             ) : (
-              (canAdvance || Boolean(restoredResult)) && (
-                <Button variant="outline" size="lg" full onClick={next}>
-                  {i + 1 < slots.length ? "Dalej" : "Zakończ"}
+              (canAdvance || Boolean(restoredResult) || lessonSave.status === "saving") && (
+                <Button variant="outline" size="lg" full disabled={lessonSave.status === "saving"} onClick={next}>
+                  {lessonSave.status === "saving" ? "Сохраняем итог…" : i + 1 < slots.length ? "Dalej" : "Zakończ"}
                 </Button>
               )
             )}
@@ -960,9 +1033,11 @@ function IndicatorArc({ value }: { value: number }) {
 function LexemeSkillLevel({
   progress,
   nextReview,
+  reviewPending = false,
 }: {
   progress: ReturnType<typeof lexemeSkillProgress>;
   nextReview: ReturnType<typeof nextLexemeReview>;
+  reviewPending?: boolean;
 }) {
   const daysUntilReview = nextReview
     ? (nextReview.due.getTime() - Date.now()) / MILLISECONDS_PER_DAY
@@ -1027,14 +1102,23 @@ function LexemeSkillLevel({
             </StudyTooltip>
           );
         })}
-        <StudyTooltip description={reviewDescription} openOnActivation>
+        <StudyTooltip description={reviewPending ? "Назначаем повторение…" : reviewDescription} openOnActivation>
           <button
             type="button"
-            aria-label={nextReview ? `Следующее повторение — ${reviewBadgeText}` : reviewDescription}
+            aria-label={reviewPending ? "Назначаем повторение…" : nextReview ? `Следующее повторение — ${reviewBadgeText}` : reviewDescription}
+            aria-busy={reviewPending}
             className={`grid size-11 place-items-center rounded-pill hover:bg-soft ${reviewColor(daysUntilReview)}`}
           >
             <svg aria-hidden="true" className="size-10" viewBox="0 0 40 40" fill="none">
-              <IndicatorArc value={reviewFill} />
+              <IndicatorArc value={reviewPending ? 0 : reviewFill} />
+              {reviewPending && (
+                <circle
+                  cx="20" cy="20" r="17" pathLength="100"
+                  stroke="currentColor" strokeWidth="2" strokeLinecap="round"
+                  strokeDasharray="25 100"
+                  className="origin-center text-primary motion-safe:animate-spin"
+                />
+              )}
               <text
                 x="20"
                 y="20"
@@ -1044,7 +1128,7 @@ function LexemeSkillLevel({
                 fontSize="11"
                 className="font-semibold tabular-nums"
               >
-                {reviewBadgeText}
+                {(!reviewPending || nextReview) && reviewBadgeText}
               </text>
             </svg>
           </button>
