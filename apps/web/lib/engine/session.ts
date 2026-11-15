@@ -28,6 +28,7 @@ import {
   loadState,
   saveAnswer,
   saveMastery,
+  saveScheduledReview,
   type AnswerPayload,
 } from "@/lib/data/store";
 import type { AppState, RuleMasteryRow, StudyItemRow } from "@/lib/data/types";
@@ -158,7 +159,7 @@ export async function ensureLexemeCards(
   for (const kind of LEXEME_SKILL_KINDS) {
     const id = `${kind}:${lexemeId}`;
     if (studyItems.some((i) => i.id === id)) continue;
-    await saveAnswer({ item: toRow(newItem(id, kind, lexemeId, now)) });
+    await saveScheduledReview({ item: toRow(newItem(id, kind, lexemeId, now)) });
   }
 }
 
