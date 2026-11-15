@@ -6,12 +6,19 @@ const HINTS: Record<string, string> = {
   'pl.gram.v-present-3': 'Выбери личную форму глагола в настоящем времени по переводу.',
   'pl.gram.v-government': 'Определи, какого падежа требует управляющий глагол.',
   'pl.gram.c-gen-verbs': 'После этого глагола употребляется родительный падеж.',
+  'pl.gram.c-acc': 'Выбери форму винительного падежа. В этой фразе слово отвечает на вопрос кого? или что?',
   'pl.gram.k-adj-agreement': 'Согласуй прилагательное с существительным в роде, числе и падеже.',
 }
 
-const wordSpans = (sentence: AnnotatedSentence) => [...sentence.pl.matchAll(/\p{L}+/gu)]
+const GOVERNED_CASES: Record<string, string> = {
+  gen: 'родительный',
+  dat: 'дательный',
+  acc: 'винительный',
+  inst: 'творительный',
+  loc: 'предложный',
+}
 
-export const pairKey = (first: string, second: string) => [first, second].sort().join('|')
+const wordSpans = (sentence: AnnotatedSentence) => [...sentence.pl.matchAll(/\p{L}+/gu)]
 
 export function diverseSentences(
   sentences: AnnotatedSentence[],
@@ -53,27 +60,28 @@ export async function sampleAnnotated(
   ruleIds: readonly string[],
 ) {
   const chunkOf = (id: number) => Math.floor(id / index.chunkSize)
-  const byChunk = new Map<number, number[]>()
-  for (const id of shuffle(candidates, seed)) {
+  const shuffled = shuffle(candidates, seed)
+  const byChunk = new Map<number, number>()
+  for (const id of shuffled) {
     const chunk = chunkOf(id)
-    const group = byChunk.get(chunk) ?? []
-    group.push(id)
-    byChunk.set(chunk, group)
+    byChunk.set(chunk, (byChunk.get(chunk) ?? 0) + 1)
   }
-  const selected: number[] = []
-  const perChunk = Math.ceil(limit / 2)
-  for (const group of byChunk.values()) {
-    selected.push(...group.slice(0, Math.min(perChunk, limit - selected.length)))
-    if (selected.length === limit) break
+
+  const preferredPerChunk = Math.ceil(limit / 2)
+  const rankedChunks = [...byChunk].sort(([, left], [, right]) =>
+    Math.min(preferredPerChunk, right) - Math.min(preferredPerChunk, left),
+  )
+  const selectedChunks: number[] = []
+  let available = 0
+  for (const [chunk, count] of rankedChunks) {
+    selectedChunks.push(chunk)
+    available += count
+    if (available >= limit && (selectedChunks.length >= 2 || rankedChunks.length === 1)) break
   }
-  if (selected.length < limit) {
-    const used = new Set(selected)
-    selected.push(...[...byChunk.values()].flat().filter((id) => !used.has(id)).slice(0, limit - selected.length))
-  }
-  const chunks = new Map(await Promise.all([...new Set(selected.map(chunkOf))].map(async (chunk) =>
+  const chunks = new Map(await Promise.all(selectedChunks.map(async (chunk) =>
     [chunk, await loadCorpusChunk(index.version, chunk).catch(() => null)] as const,
   )))
-  const samples = shuffle(candidates, seed).flatMap((id) => {
+  const samples = shuffled.flatMap((id) => {
     const sentence = chunks.get(chunkOf(id))?.[id % index.chunkSize]
     return sentence ? [sentence] : []
   })
@@ -94,15 +102,22 @@ export function annotatedLinkedSentence(sentence: AnnotatedSentence, first: stri
     const token = sentence.hits[ruleId]
     const [lemma, head, , morphology] = sentence.nodes[token]
     const governor = head === null ? undefined : sentence.nodes[head][0]
+    const grammaticalCase = GOVERNED_CASES[morphology?.split(':')[2] ?? '']
+    const reflexive = sentence.nodes.some(([text, parent]) => text === 'się' && parent === head)
+    const verb = reflexive ? `${governor} się` : governor
+    const fallbackHint = HINTS[ruleId] ?? 'Определи нужную форму по контексту предложения.'
+    const hint = ruleId === 'pl.gram.k-adverb' && morphology === 'adv:com'
+      ? 'Поставь наречие в сравнительную степень: оно отвечает на вопрос «как?».'
+      : fallbackHint
     return {
       token,
       head: head ?? undefined,
       ruleId,
       lemma,
       accepted: [words[token][0]],
-      hint: ruleId === 'pl.gram.v-government' && governor && morphology?.split(':')[2] === 'gen'
-        ? `В этом предложении после ${governor} употребляется родительный падеж.`
-        : HINTS[ruleId] ?? 'Определи нужную форму по контексту предложения.',
+      hint: ruleId === 'pl.gram.v-government' && governor && grammaticalCase
+        ? `В этом предложении после ${verb} употребляется ${grammaticalCase} падеж.`
+        : hint,
     }
   }) as [LinkedGap, LinkedGap]
   const [left, right] = gaps.map(({ token }) => words[token])

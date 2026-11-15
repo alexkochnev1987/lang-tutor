@@ -1,9 +1,10 @@
 'use client'
 
-import { useMemo, useState } from 'react'
-import { shuffle } from '@polski/engine'
-import { Button, Card, Row, Stack } from '@polski/ui'
-import { annotatedLinkedSentence, pairKey, sampleAnnotated } from '@/lib/engine/annotated-corpus'
+import { useEffect, useMemo, useRef, useState } from 'react'
+import { SENTENCE_ATTEMPTS, shuffle } from '@polski/engine'
+import { Button, Card, OptionRow, Row, Stack } from '@polski/ui'
+import { usePronounce } from '@/lib/speech/usePronounce'
+import { annotatedLinkedSentence, sampleAnnotated } from '@/lib/engine/annotated-corpus'
 import type { CorpusIndex, Paradigm } from '@/lib/content/curriculum'
 import { linkedGapOptions, matchesRulePair, normalizeLinkedAnswer, type LinkedSentence } from '@/lib/engine/sentence-corpus'
 
@@ -17,6 +18,34 @@ interface Props {
 }
 
 type Difficulty = 'easy' | 'hard'
+type PairExamples = { legacy: LinkedSentence[]; annotated: number[] }
+
+function buildPracticePairs(cards: LinkedSentence[], corpus: CorpusIndex | null) {
+  const pairs = new Map<string, Map<string, PairExamples>>()
+
+  function connect(first: string, second: string) {
+    const forward = pairs.get(first) ?? new Map<string, PairExamples>()
+    const backward = pairs.get(second) ?? new Map<string, PairExamples>()
+    const examples = forward.get(second) ?? { legacy: [], annotated: [] }
+    forward.set(second, examples)
+    backward.set(first, examples)
+    pairs.set(first, forward)
+    pairs.set(second, backward)
+    return examples
+  }
+
+  for (const card of cards) {
+    const [left, right] = card.gaps
+    if (left.ruleId !== right.ruleId && matchesRulePair(card, left.ruleId, right.ruleId)) {
+      connect(left.ruleId, right.ruleId).legacy.push(card)
+    }
+  }
+  for (const [key, ids] of Object.entries(corpus?.pairs ?? {})) {
+    const [left, right] = key.split('|')
+    connect(left, right).annotated = ids
+  }
+  return pairs
+}
 
 export function LinkedSentencePractice({ cards, corpus, morphology, titles, limit, onChangeFormat }: Props) {
   const [difficulty, setDifficulty] = useState<Difficulty>('easy')
@@ -25,45 +54,21 @@ export function LinkedSentencePractice({ cards, corpus, morphology, titles, limi
   const [loading, setLoading] = useState(false)
   const [unavailable, setUnavailable] = useState(false)
   const [session, setSession] = useState<{ cards: LinkedSentence[]; index: number; correct: number; difficulty: Difficulty; seed: number } | null>(null)
-  const byRule = useMemo(() => {
-    const index = new Map<string, LinkedSentence[]>()
-    for (const card of cards) {
-      for (const { ruleId } of card.gaps) {
-        const examples = index.get(ruleId) ?? []
-        examples.push(card)
-        index.set(ruleId, examples)
-      }
-    }
-    return index
-  }, [cards])
-  const partners = new Map<string, number>()
-  const examples = byRule.get(firstRule) ?? []
-  for (const card of examples) {
-    const partner = card.gaps.find(({ ruleId }) => ruleId !== firstRule)?.ruleId
-    if (partner) partners.set(partner, (partners.get(partner) ?? 0) + 1)
-  }
-
-  const firstRules = new Set(byRule.keys())
-  for (const [key, ids] of Object.entries(corpus?.pairs ?? {})) {
-    const [left, right] = key.split('|')
-    firstRules.add(left)
-    firstRules.add(right)
-    const partner = firstRule === left ? right : firstRule === right ? left : null
-    if (partner) partners.set(partner, (partners.get(partner) ?? 0) + ids.length)
-  }
+  const pairs = useMemo(() => buildPracticePairs(cards, corpus), [cards, corpus])
+  const partners = pairs.get(firstRule)
 
   async function start() {
+    const examples = partners?.get(secondRule)
+    if (!examples) return
     const seed = Date.now()
-    const legacy = examples.filter((card) => matchesRulePair(card, firstRule, secondRule))
-    const candidates = corpus?.pairs[pairKey(firstRule, secondRule)] ?? []
     setUnavailable(false)
     setLoading(true)
     try {
-      const annotated = corpus && candidates.length
-        ? await sampleAnnotated(corpus, candidates, limit, seed, [firstRule, secondRule]).catch(() => [])
+      const annotated = corpus && examples.annotated.length
+        ? await sampleAnnotated(corpus, examples.annotated, limit, seed, [firstRule, secondRule]).catch(() => [])
         : []
       const generated = annotated.map((sentence) => annotatedLinkedSentence(sentence, firstRule, secondRule))
-      const selected = shuffle([...legacy, ...generated], seed).slice(0, limit)
+      const selected = shuffle([...examples.legacy, ...generated], seed).slice(0, limit)
       if (selected.length) setSession({ cards: selected, index: 0, correct: 0, difficulty, seed })
       else setUnavailable(true)
     } finally {
@@ -102,13 +107,13 @@ export function LinkedSentencePractice({ cards, corpus, morphology, titles, limi
       <Stack gap="sm">
         <Button variant="ghost" onClick={onChangeFormat}>К выбору формата</Button>
         <h2 className="font-semibold">Собрать словосочетание</h2>
-        {firstRules.size === 0 ? <p role="status">Для этого формата пока нет заданий.</p> : (
+        {pairs.size === 0 ? <p role="status">Для этого формата пока нет заданий.</p> : (
           <>
             <label className="text-sm font-medium" htmlFor="linked-first-rule">Первое правило</label>
             <select id="linked-first-rule" className="min-h-11 w-full rounded-card border border-line bg-card px-3"
               disabled={loading} value={firstRule} onChange={(event) => { setFirstRule(event.target.value); setSecondRule('') }}>
               <option value="" disabled>Выберите правило</option>
-              {[...firstRules].map((id) => <option key={id} value={id}>{titles.get(id) ?? id}</option>)}
+              {[...pairs.keys()].map((id) => <option key={id} value={id}>{titles.get(id) ?? id}</option>)}
             </select>
             {firstRule && (
               <>
@@ -116,7 +121,9 @@ export function LinkedSentencePractice({ cards, corpus, morphology, titles, limi
                 <select id="linked-second-rule" className="min-h-11 w-full rounded-card border border-line bg-card px-3"
                   disabled={loading} value={secondRule} onChange={(event) => setSecondRule(event.target.value)}>
                   <option value="" disabled>Выберите совместимое правило</option>
-                  {[...partners].map(([id, count]) => <option key={id} value={id}>{titles.get(id) ?? id} ({count})</option>)}
+                  {[...(partners ?? [])].map(([id, { legacy, annotated }]) => (
+                    <option key={id} value={id}>{titles.get(id) ?? id} ({legacy.length + annotated.length})</option>
+                  ))}
                 </select>
               </>
             )}
@@ -148,70 +155,156 @@ function LinkedSentenceCard({ card, options, last, onNext }: {
   last: boolean
   onNext: (correct: boolean) => void
 }) {
-  const [answers, setAnswers] = useState(['', ''])
-  const [checked, setChecked] = useState(false)
-  const updateAnswer = (index: number, value: string) =>
-    setAnswers((current) => current.map((answer, i) => i === index ? value : answer))
-  const results = card.gaps.map((gap, index) =>
-    gap.accepted.some((answer) => normalizeLinkedAnswer(answer) === normalizeLinkedAnswer(answers[index])))
+  const [resolved, setResolved] = useState<{ word: string; revealed: boolean; missed?: string }[]>([])
+  const [wrong, setWrong] = useState<string[]>([])
+  const [typed, setTyped] = useState('')
+  const stepTitle = useRef<HTMLHeadingElement>(null)
+  const input = useRef<HTMLInputElement>(null)
+  const { pronounce, message } = usePronounce()
+  const index = resolved.length
+  const gap = card.gaps[index]
+  const needsReveal = wrong.length === SENTENCE_ATTEMPTS
+  const remaining = SENTENCE_ATTEMPTS - wrong.length
+
+  const isChoice = options !== null
+  const hadError = resolved.some(({ missed }) => missed !== undefined)
+  const fullSentence = card.parts[0] + card.gaps.map((slot, position) =>
+    slot.accepted[0] + card.parts[position + 1],
+  ).join('')
+
+  useEffect(() => {
+    if (needsReveal || isChoice || index >= card.gaps.length) stepTitle.current?.focus()
+    else input.current?.focus()
+  }, [card.gaps.length, index, isChoice, needsReveal])
+
+  function finishWord(revealed: boolean) {
+    if (!gap) return
+    setResolved([...resolved, { word: gap.accepted[0], revealed, missed: wrong.at(-1) }])
+    if (index + 1 === card.gaps.length) pronounce(fullSentence)
+    setWrong([])
+    setTyped('')
+  }
+
+  function checkWord(answer: string) {
+    if (!gap || needsReveal || !answer.trim()) return
+    const normalized = normalizeLinkedAnswer(answer)
+    if (gap.accepted.some((accepted) => normalizeLinkedAnswer(accepted) === normalized)) {
+      finishWord(false)
+    } else {
+      setWrong((current) => [...current, answer.trim()])
+      setTyped('')
+      input.current?.focus()
+    }
+  }
 
   return (
-    <Card>
+    <Card tone={gap ? 'neutral' : hadError ? 'wrong' : 'correct'}>
       <form onSubmit={(event) => {
         event.preventDefault()
-        if (checked) onNext(results.every(Boolean))
-        else if (answers.every((answer) => answer.trim())) setChecked(true)
+        if (!options) checkWord(typed)
       }}>
         <Stack gap="md">
           <p>{card.translation}</p>
-          <p lang="pl" className="leading-10">
+          <p lang="pl" className="leading-8">
             {card.parts[0]}
-            {card.gaps.map((gap, index) => (
-              <span key={gap.token}>
-                {options ? (
-                  <select
-                    className="inline-block h-9 max-w-[48vw] rounded-card border border-line bg-soft px-2 text-sm"
-                    aria-label={`Пропуск ${index + 1}: ${gap.lemma}`}
-                    aria-invalid={checked && !results[index]}
-                    disabled={checked}
-                    value={answers[index]}
-                    onChange={(event) => updateAnswer(index, event.target.value)}
-                  >
-                    <option value="" disabled>…</option>
-                    {options[index].map((option) => <option key={option} value={option}>{option}</option>)}
-                  </select>
+            {card.gaps.map(({ token }, position) => {
+              const result = resolved[position]
+              const revealedWord = index === position && needsReveal ? gap.accepted[0] : null
+              const word = result?.word ?? revealedWord
+              const wrongWord = gap ? (revealedWord ? wrong.at(-1) : undefined) : result?.missed
+              const correct = result && result.missed === undefined
+              return (
+                <span key={token}>
+                  {word ? (
+                    <span className={`inline-flex flex-wrap items-baseline gap-x-1.5 rounded-card border px-2 ${correct ? 'border-ok bg-ok-bg text-ok-ink' : 'border-danger bg-danger-bg'}`}>
+                      {wrongWord && <del className="text-danger-ink">{wrongWord}</del>}
+                      <strong className="text-ok-ink">{word}</strong>
+                    </span>
+                  ) : (
+                    <span
+                      className={`inline-block min-w-12 rounded-card border px-2 text-center ${position === index ? 'border-primary text-primary' : 'border-line text-muted'}`}
+                      aria-label={`Пропуск ${position + 1}`}
+                    >…</span>
+                  )}
+                  {card.parts[position + 1]}
+                </span>
+              )
+            })}
+          </p>
+          {gap ? (
+            <Stack gap="sm" key={index}>
+              <h3 ref={stepTitle} tabIndex={-1} className="text-sm font-medium">
+                Слово {index + 1} из {card.gaps.length}
+              </h3>
+              <p role="status" className={wrong.length ? 'text-sm text-danger-ink' : 'text-sm text-muted'}>
+                {needsReveal ? (
+                  <>Правильный ответ — <strong lang="pl">{gap.accepted[0]}</strong>.</>
+                ) : wrong.length ? (
+                  <>Неверно. Осталось попыток: {remaining}.</>
                 ) : (
+                  <>Попыток: {remaining}.</>
+                )}
+              </p>
+              {needsReveal ? (
+                <Button type="button" onClick={() => finishWord(true)}>
+                  {index + 1 === card.gaps.length ? 'К результату' : 'Следующее слово'}
+                </Button>
+              ) : options ? (
+                <Stack gap="xs">
+                  {options[index].map((option) => {
+                    const tried = wrong.some((answer) => normalizeLinkedAnswer(answer) === normalizeLinkedAnswer(option))
+                    return (
+                      <OptionRow
+                        key={option}
+                        type="button"
+                        outcome={tried ? 'wrong' : 'none'}
+                        selected={false}
+                        disabled={tried}
+                        onClick={() => checkWord(option)}
+                      >
+                        <span lang="pl">{option}</span>
+                      </OptionRow>
+                    )
+                  })}
+                </Stack>
+              ) : (
+                <Row gap="sm" wrap>
                   <input
-                    className="inline-block h-9 w-[min(8rem,38vw)] rounded-card border border-line bg-soft px-2"
+                    ref={input}
                     aria-label={`Пропуск ${index + 1}: ${gap.lemma}`}
+                    aria-invalid={wrong.length > 0}
+                    lang="pl"
+                    className="min-h-12 min-w-0 flex-1 rounded-card border border-line bg-soft px-3"
                     autoCapitalize="none"
                     autoComplete="off"
                     spellCheck={false}
-                    readOnly={checked}
-                    aria-invalid={checked && !results[index]}
-                    value={answers[index]}
-                    onChange={(event) => updateAnswer(index, event.target.value)}
+                    value={typed}
+                    onChange={(event) => setTyped(event.target.value)}
                   />
-                )}
-                {card.parts[index + 1]}
-              </span>
-            ))}
-          </p>
-          {card.gaps.map((gap, index) => (
-            <details key={gap.token} className="text-sm">
-              <summary className="cursor-pointer font-medium">Подсказка {index + 1} · <span lang="pl">{gap.lemma}</span></summary>
-              <p className="mt-1 text-muted">{gap.hint}</p>
-            </details>
-          ))}
-          {checked && (
-            <div role="status" className="text-sm">
-              {results.every(Boolean) ? 'Оба слова верны.' : card.gaps.map((gap, index) =>
-                !results[index] && <p key={gap.token}>Пропуск {index + 1} — <strong lang="pl">{gap.accepted[0]}</strong></p>)}
-            </div>
+                  <Button type="submit" disabled={!typed.trim()}>Проверить слово</Button>
+                </Row>
+              )}
+              <details className="text-sm">
+                <summary className="cursor-pointer font-medium">Подсказка</summary>
+                <p className="mt-1 text-muted"><strong lang="pl">{gap.lemma}</strong> · {gap.hint}</p>
+              </details>
+            </Stack>
+          ) : (
+            <Stack gap="sm">
+              <h3 ref={stepTitle} tabIndex={-1} className="sr-only" role="status">
+                {hadError ? 'В ответах были ошибки.' : 'Оба слова верны.'}
+              </h3>
+              <Row gap="sm" wrap>
+                <Button type="button" variant="outline" onClick={() => pronounce(fullSentence)}>
+                  <span aria-hidden>🔊</span> Прослушать
+                </Button>
+                <Button type="button" className="flex-1" onClick={() => onNext(resolved.every(({ revealed }) => !revealed))}>
+                  {last ? 'Завершить' : 'Далее'}
+                </Button>
+              </Row>
+              {message && <p className="text-sm text-muted" lang="pl" role="status">{message}</p>}
+            </Stack>
           )}
-          <Button type="submit" disabled={!answers.every((answer) => answer.trim())}>
-            {checked ? (last ? 'Завершить' : 'Далее') : 'Проверить'}
-          </Button>
         </Stack>
       </form>
     </Card>

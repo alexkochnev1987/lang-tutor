@@ -196,8 +196,9 @@ export function linkedGapOptions(
   const used = new Set(gap.accepted.map(normalizeLinkedAnswer))
   const variants = shuffle(Object.values(paradigm ?? {}).flat(), seed)
   const other = card.gaps[1 - position]
+  const contextWords = card.parts.flatMap((part) => part.match(/\p{L}+/gu) ?? [])
   const distractors: string[] = []
-  for (const text of [...(gap.distractors ?? []), ...variants, ...other.accepted, gap.lemma]) {
+  for (const text of [...(gap.distractors ?? []), ...variants, ...other.accepted, gap.lemma, ...contextWords, 'ten', 'nie', 'jest', 'już']) {
     const key = normalizeLinkedAnswer(text)
     if (!key || used.has(key)) continue
     used.add(key)
