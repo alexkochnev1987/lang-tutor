@@ -7,7 +7,12 @@
  * расчётах расписания.
  */
 
-export type StudyItemKind = 'lexeme-recognition' | 'lexeme-production' | 'rule-card'
+export type StudyItemKind =
+  | 'lexeme-recognition'
+  | 'lexeme-production'
+  | 'lexeme-spelling'
+  | 'lexeme-listen-write'
+  | 'rule-card'
 export type ModuleId = 'listening' | 'reading' | 'grammar' | 'writing' | 'speaking'
 export type EntryTrack = 'a0' | 'a2' | 'b1-minus'
 

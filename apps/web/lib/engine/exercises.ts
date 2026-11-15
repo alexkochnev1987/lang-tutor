@@ -108,6 +108,8 @@ export function exerciseForReview(
       { seed },
     );
   }
+  if (kind === "lexeme-spelling") return spelling(word, { seed });
+  if (kind === "lexeme-listen-write") return listenWrite(word);
   // ложный друг и на повторении идёт контрастом: это самая дорогая ошибка
   return (
     falseFriendContrast(

@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import type { ReactNode } from "react";
 import { Button, Card, OptionRow, Row, Stack } from "@polski/ui";
 import { check, type CheckResult, type Exercise } from "@polski/engine";
 import { usePronounce } from "@/lib/speech/usePronounce";
@@ -434,6 +435,8 @@ export function ExerciseView({
   leadingNumber,
   restoredResult,
   showSpeakButton = true,
+  topLeftStatus,
+  topRightAction,
 }: {
   exercise: Exercise;
   onAnswered: (
@@ -460,6 +463,8 @@ export function ExerciseView({
   } | null;
   /** Переносит озвучку в нижнюю панель мобильного сценария. */
   showSpeakButton?: boolean;
+  topLeftStatus?: ReactNode;
+  topRightAction?: ReactNode;
 }) {
   const [result, setResult] = useState<CheckResult | null>(null);
   const [feedback, setFeedback] = useState<CheckResult | null>(null);
@@ -813,6 +818,12 @@ export function ExerciseView({
   if (bare) return content;
   return (
     <Card tone={result ? (result.correct ? "correct" : "wrong") : "neutral"}>
+      {(topLeftStatus || topRightAction) && (
+        <div className="mb-2 flex flex-wrap items-center justify-between gap-3">
+          <div>{topLeftStatus}</div>
+          {topRightAction}
+        </div>
+      )}
       {content}
     </Card>
   );

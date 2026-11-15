@@ -49,6 +49,11 @@
   --color-warn-bg:      var(--warn-bg);
   --color-warn-ink:     var(--warn-ink);
   --color-overlay:      var(--overlay);
+  --color-skill-start:  #f97316;
+  --color-skill-familiar: #3b82f6;
+  --color-skill-near:   #d946ef;
+  --color-skill-strong: #10b981;
+  --color-review-far:   #0d9488;
 
   --radius-card: var(--radius);
   --radius-pill: 999px;

@@ -23,7 +23,11 @@ import {
   saveLessonSession,
   setLexemeKnown,
 } from "@/lib/data/store";
-import { completeLexemeLearning } from "@/lib/engine/session";
+import {
+  completeLexemeLearning,
+  LEXEME_SKILL_KINDS,
+  type LexemeSkillKind,
+} from "@/lib/engine/session";
 import {
   buildWordStageRetryStep,
   oneAttemptWordSteps,
@@ -248,6 +252,9 @@ export default function WordsPage() {
 
       const completed: NonNullable<ReturnType<typeof resultByExercise.get>>[] =
         [];
+      const skillResults = Object.fromEntries(
+        LEXEME_SKILL_KINDS.map((kind) => [kind, false]),
+      ) as Record<LexemeSkillKind, boolean>;
       let learned = true;
       let finished = true;
       const baseExercises = wordExerciseSteps(
@@ -287,18 +294,17 @@ export default function WordsPage() {
           }
           current = retry;
         }
+        skillResults[LEXEME_SKILL_KINDS[stageIndex]!] = stageLearned;
         if (!stageLearned) learned = false;
         if (!finished) break;
       }
       if (!finished || !completed.length) continue;
 
-      const allCorrect =
-        learned && completed.every((row) => row.correct && row.attempts === 1);
       finalizing.current.add(word.id);
       void finalizeWord({
         word,
         learned,
-        allCorrect,
+        skillResults,
         correctCount: completed.filter((row) => row.correct).length,
         itemsReviewed: completed.length,
         sessionId,
@@ -708,7 +714,7 @@ function exerciseStageTitle(exercise: Exercise): string {
 async function finalizeWord({
   word,
   learned,
-  allCorrect,
+  skillResults,
   correctCount,
   itemsReviewed,
   sessionId,
@@ -717,18 +723,15 @@ async function finalizeWord({
 }: {
   word: Lexeme;
   learned: boolean;
-  allCorrect: boolean;
+  skillResults: Record<LexemeSkillKind, boolean>;
   correctCount: number;
   itemsReviewed: number;
   sessionId: string;
   dayNumber: number;
   startedAt: number;
 }) {
-  if (learned) {
-    await completeLexemeLearning(word.id, allCorrect);
-  } else {
-    await setLexemeKnown(word.id, false);
-  }
+  await completeLexemeLearning(word.id, skillResults);
+  if (!learned) await setLexemeKnown(word.id, false);
   await saveLessonSession({
     id: `${sessionId}:word:${word.id}`,
     dayNumber,

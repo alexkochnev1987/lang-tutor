@@ -8,7 +8,12 @@
 import type { Card, Grade } from 'ts-fsrs'
 
 export type ModuleId = string
-export type StudyItemKind = 'lexeme-recognition' | 'lexeme-production' | 'rule-card'
+export type StudyItemKind =
+  | 'lexeme-recognition'
+  | 'lexeme-production'
+  | 'lexeme-spelling'
+  | 'lexeme-listen-write'
+  | 'rule-card'
 
 export interface StudyItem {
   id: string
@@ -21,6 +26,8 @@ export interface StudyItem {
 export const REVIEW_COST_SEC: Record<StudyItemKind, number> = {
   'lexeme-recognition': 6,
   'lexeme-production': 13,
+  'lexeme-spelling': 12,
+  'lexeme-listen-write': 20,
   'rule-card': 10,
 }
 

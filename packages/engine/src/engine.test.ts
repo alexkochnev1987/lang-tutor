@@ -16,11 +16,16 @@ function makeItems(n: number, kind: StudyItem['kind'] = 'lexeme-recognition') {
 }
 
 /** Прогоняет карточку через несколько ответов, чтобы она стала просроченной. */
-function maturedAndDue(s: ReturnType<typeof createScheduler>, id: string, daysAgo: number) {
-  let item = newItem(id, 'lexeme-recognition', id, new Date(NOW.getTime() - daysAgo * DAY))
-  const r = rate(s, item, Rating.Good, new Date(NOW.getTime() - daysAgo * DAY))
-  item = r.item
-  return item
+function maturedAndDue(
+  s: ReturnType<typeof createScheduler>,
+  id: string,
+  daysAgo: number,
+  kind: StudyItem['kind'] = 'lexeme-recognition',
+  refId = id,
+) {
+  const reviewedAt = new Date(NOW.getTime() - daysAgo * DAY)
+  const item = newItem(id, kind, refId, reviewedAt)
+  return rate(s, item, Rating.Good, reviewedAt).item
 }
 
 describe('FSRS-обёртка', () => {
@@ -100,6 +105,27 @@ describe('очередь повторений', () => {
     expect(before.card.due.getTime()).toBe(
       restored.due.find((i) => i.refId === 'i1')!.card.due.getTime())
   })
+
+  it("планирует четыре независимых навыка одного слова", () => {
+    const s = createScheduler();
+    const kinds: StudyItem["kind"][] = [
+      "lexeme-recognition",
+      "lexeme-production",
+      "lexeme-spelling",
+      "lexeme-listen-write",
+    ];
+    const items = kinds.map((kind, index) =>
+      maturedAndDue(s, `skill-${index}`, 30, kind, "pl.sklep"),
+    );
+
+    const q = buildQueue({ scheduler: s, items, now: NOW, budgetSec: 600 });
+
+    expect(q.due).toHaveLength(4);
+    expect(new Set(q.due.map((item) => item.kind))).toEqual(new Set(kinds));
+    expect(new Set(q.due.map((item) => item.refId))).toEqual(
+      new Set(["pl.sklep"]),
+    );
+  });
 })
 
 describe('модель освоения грамматики', () => {
