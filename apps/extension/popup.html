@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Мой словарь</title>
+    <link rel="stylesheet" href="popup.css">
+  </head>
+  <body>
+    <main class="app">
+      <header class="header">
+        <div>
+          <p class="eyebrow">Polski B1</p>
+          <h1>Мой словарь</h1>
+        </div>
+        <span id="count" class="count">0</span>
+      </header>
+
+      <section class="notice" aria-live="polite">
+        <span id="auth-message">Войди через основной профиль, чтобы синхронизировать слова.</span>
+      </section>
+
+      <section id="account" class="account">
+        <button id="login" class="primary" type="button">Войти через Google</button>
+        <div id="signed-in" hidden>
+          <div id="user-name" class="user-name"></div>
+          <button id="logout" class="text-button" type="button">Выйти</button>
+        </div>
+      </section>
+
+      <form id="word-form" class="form">
+        <label>
+          Слово
+          <input id="word" name="word" maxlength="120" required autocomplete="off" placeholder="например, zwyczaj">
+        </label>
+        <label>
+          Перевод
+          <input id="translation" name="translation" maxlength="240" required autocomplete="off" placeholder="обычай">
+        </label>
+        <label>
+          Пример <span class="optional">необязательно</span>
+          <textarea id="example" name="example" maxlength="500" rows="2" placeholder="Podoba mi się ten zwyczaj."></textarea>
+        </label>
+        <button type="submit" class="primary">Добавить слово</button>
+        <p id="status" class="status" role="status"></p>
+      </form>
+
+      <section class="list-section">
+        <div class="list-heading">
+          <h2>Сохранённые слова</h2>
+          <button id="clear" class="text-button" type="button" hidden>Очистить</button>
+        </div>
+        <p id="empty" class="empty">Выделите слово на странице или добавьте его выше.</p>
+        <ul id="words" class="words"></ul>
+      </section>
+
+      <button id="open-app" class="secondary" type="button">Открыть Polski B1</button>
+    </main>
+    <script src="popup.js"></script>
+  </body>
+</html>

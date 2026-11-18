@@ -300,3 +300,21 @@ export const dailyWordReviews = pgTable("daily_word_reviews", {
   format: text("format").notNull(),
   answeredAt: timestamp("answered_at", { withTimezone: true }).notNull().defaultNow(),
 }, (t) => [primaryKey({ columns: [t.userId, t.courseId, t.day, t.lexemeId] })]);
+
+/** Одноразовые коды, которыми сайт передаёт вход Chrome-расширению. */
+export const extensionAuthCodes = pgTable(
+  "extension_auth_codes",
+  {
+    codeHash: text("code_hash").primaryKey(),
+    userId: text("user_id")
+      .notNull()
+      .references(() => users.id, { onDelete: "cascade" }),
+    redirectUri: text("redirect_uri").notNull(),
+    expiresAt: timestamp("expires_at", { withTimezone: true }).notNull(),
+    usedAt: timestamp("used_at", { withTimezone: true }),
+    createdAt: timestamp("created_at", { withTimezone: true })
+      .notNull()
+      .defaultNow(),
+  },
+  (t) => [index("extension_auth_codes_expiry_idx").on(t.expiresAt)],
+);

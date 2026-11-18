@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "Polski B1 — Мой словарь",
+  "version": "0.1.0",
+  "description": "Сохраняйте польские слова во время чтения и повторяйте их позже.",
+  "permissions": [
+    "storage",
+    "contextMenus",
+    "identity"
+  ],
+  "host_permissions": [
+    "https://web-ecru-ten-90.vercel.app/*"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Мой словарь"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "icons": {
+    "16": "icons/icon-16.png",
+    "48": "icons/icon-48.png",
+    "128": "icons/icon-128.png"
+  }
+}

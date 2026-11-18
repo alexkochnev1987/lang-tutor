@@ -49,3 +49,12 @@ export const POST = withUser(async ({ userId, req }) => {
 
   return { ok: true, id, alreadySaved: false }
 })
+
+export const DELETE = withUser(async ({ userId, req }) => {
+  const body = await req.json() as { id?: string }
+  const id = body.id?.trim()
+  if (!id) throw new Error('bad_personal_word_id')
+  await pg.update(personalDict).set({ deletedAt: new Date(), updatedAt: new Date() })
+    .where(and(eq(personalDict.userId, userId), eq(personalDict.id, id)))
+  return { ok: true }
+})

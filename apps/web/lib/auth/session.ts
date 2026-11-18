@@ -44,6 +44,26 @@ export async function signSession(userId: string): Promise<string> {
     .sign(secret())
 }
 
+const EXTENSION_AUDIENCE = 'polski-b1-extension'
+
+export async function signExtensionToken(userId: string): Promise<string> {
+  return new SignJWT({ sub: userId, typ: 'extension' })
+    .setProtectedHeader({ alg: 'HS256' })
+    .setIssuedAt()
+    .setAudience(EXTENSION_AUDIENCE)
+    .setExpirationTime('30d')
+    .sign(secret())
+}
+
+export async function readExtensionToken(req: Request): Promise<string | null> {
+  const header = req.headers.get('authorization')
+  if (!header?.startsWith('Bearer ')) return null
+  const token = header.slice('Bearer '.length).trim()
+  if (!token) throw new Error('invalid_extension_token')
+  const { payload } = await jwtVerify(token, secret(), { audience: EXTENSION_AUDIENCE })
+  return typeof payload.sub === 'string' ? payload.sub : null
+}
+
 /** userId из cookie или null. Испорченная подпись — это просто «не вошёл». */
 export async function readSession(): Promise<string | null> {
   const token = (await cookies()).get(SESSION_COOKIE)?.value

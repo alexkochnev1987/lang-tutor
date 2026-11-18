@@ -7,7 +7,7 @@
  * cookie, а если её нет, заводится гость и cookie ставится тут же.
  */
 import { NextResponse } from 'next/server'
-import { cookieOptions, resolveUser, SESSION_COOKIE, signSession } from '@/lib/auth/session'
+import { cookieOptions, readExtensionToken, resolveUser, SESSION_COOKIE, signSession } from '@/lib/auth/session'
 
 export interface Ctx {
   userId: string
@@ -30,12 +30,19 @@ export function withUser<T>(handler: Handler<T>) {
     let userId: string
     let setCookie: boolean
     try {
-      ({ userId, setCookie } = await resolveUser())
+      const hasBearer = req.headers.get('authorization')?.startsWith('Bearer ') ?? false
+      if (hasBearer) {
+        const extensionUserId = await readExtensionToken(req)
+        if (!extensionUserId) throw new Error('invalid_extension_token')
+        userId = extensionUserId
+        setCookie = false
+      } else {
+        ({ userId, setCookie } = await resolveUser())
+      }
     } catch (e) {
-      // Чаще всего это незаданный DATABASE_URL или недоступная база.
-      // Отдаём 503 с внятным текстом, а не падаем в generic 500.
       const message = e instanceof Error ? e.message : 'database_unavailable'
-      return NextResponse.json({ error: 'database_unavailable', message }, { status: 503 })
+      const status = message === 'invalid_extension_token' ? 401 : 503
+      return NextResponse.json({ error: status === 401 ? 'unauthorized' : 'database_unavailable', message }, { status })
     }
 
     // Кого положить в cookie: нового гостя, либо того, на кого роут
