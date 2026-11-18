@@ -10,6 +10,10 @@ const config: NextConfig = {
 
   // UI и движок поставляются исходниками — Next транспилирует их сам
   transpilePackages: ['@polski/ui', '@polski/engine'],
+
+  experimental: {
+    agentUpgrade: 'security',
+  },
 }
 
 export default config
