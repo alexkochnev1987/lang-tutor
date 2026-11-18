@@ -290,7 +290,7 @@ export const lessonSessions = pgTable(
   ],
 );
 
-/** One graded vocabulary exercise per lexeme and calendar day. */
+/** One completed vocabulary practice per lexeme and calendar day. */
 export const dailyWordReviews = pgTable("daily_word_reviews", {
   userId: text("user_id").notNull().references(() => users.id, { onDelete: "cascade" }),
   courseId: text("course_id").notNull(),

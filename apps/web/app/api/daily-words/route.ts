@@ -2,7 +2,7 @@ import { sql } from 'drizzle-orm'
 import { withUser } from '@/lib/api/handler'
 import { pg } from '@/lib/db/pg'
 import vocabulary from '../../../../../content/pl-b1-ru/vocabulary.json'
-import { WORD_FORMATS, wordSkill, type DailyWordAnswer } from '@/lib/engine/daily-words'
+import { brainstormWordSession, WORD_FORMATS, wordSkill, type DailyWordAnswer, type DailyWordSubmission } from '@/lib/engine/daily-words'
 
 export const runtime = 'nodejs'
 export const dynamic = 'force-dynamic'
@@ -50,24 +50,66 @@ export const GET = withUser(async ({ userId }) => {
   }
 })
 
-export const POST = withUser(async ({ userId, req }) => {
-  const { format, item, log, result } = await req.json() as DailyWordAnswer
-  if (!item || !log || !result || !WORD_FORMATS.includes(format) || !lexemes.has(item.refId)
-    || item.kind !== wordSkill(format) || item.id !== `${item.kind}:${item.refId}`
-    || !/^[0-9a-f-]{36}$/i.test(log.id) || log.studyItemId !== item.id
-    || !Number.isInteger(result.dayNumber) || result.dayNumber < 1
-    || !result.exerciseId?.trim() || !result.answer?.trim() || !result.expected?.trim()
-    || !Number.isFinite(Date.parse(String(item.due))) || !Number.isFinite(Date.parse(String(log.reviewedAt)))) throw new Error('bad_daily_word_answer')
+function validAnswer(answer: DailyWordAnswer, lexemeId: string) {
+  const { format, item, log, result } = answer ?? {}
+  return item && log && result && WORD_FORMATS.includes(format) && item.refId === lexemeId
+    && item.kind === wordSkill(format) && item.id === `${item.kind}:${lexemeId}`
+    && /^[0-9a-f-]{36}$/i.test(log.id) && log.studyItemId === item.id
+    && Number.isInteger(result.dayNumber) && result.dayNumber >= 1
+    && [result.exerciseId, result.answer, result.expected].every((value) => typeof value === 'string' && value.trim())
+    && Number.isFinite(Date.parse(String(item.due))) && Number.isFinite(Date.parse(String(log.reviewedAt)))
+}
 
+export const POST = withUser(async ({ userId, req }) => {
+  const submission = await req.json() as DailyWordSubmission
+  const isBrainstorm = submission?.format === 'brainstorm'
+  const answers = isBrainstorm ? submission.answers : [submission]
+  const first = Array.isArray(answers) ? answers[0] : undefined
+  const lexemeId = first?.item?.refId
+  if (!first || !lexemeId || !lexemes.has(lexemeId)
+    || answers.length !== (isBrainstorm ? WORD_FORMATS.length : 1)
+    || !answers.every((answer) => validAnswer(answer, lexemeId))
+    || new Set(answers.map(({ format }) => format)).size !== answers.length
+    || new Set(answers.map(({ log }) => log.id)).size !== answers.length
+    || new Set(answers.map(({ result }) => result.exerciseId)).size !== answers.length
+    || (isBrainstorm && (!/^[0-9a-f-]{36}$/i.test(submission.sessionId)
+      || !Number.isFinite(Date.parse(submission.startedAt))
+      || !answers.every(({ result }) => result.exerciseId.startsWith(`${submission.sessionId}:`)
+        && result.dayNumber === first.result.dayNumber && Number.isInteger(result.attempts)
+        && result.attempts >= 1 && result.attempts <= 3)))) {
+    throw new Error('bad_daily_word_answer')
+  }
+
+  const { item, log } = first
+  const session = isBrainstorm ? brainstormWordSession(submission) : null
+  const data = answers.map(({ item, log, result }) => ({
+    item_id: item.id, kind: item.kind, due: item.due, reviewed_at: log.reviewedAt,
+    stability: item.stability, difficulty: item.difficulty, elapsed_days: item.elapsedDays,
+    scheduled_days: item.scheduledDays, learning_steps: item.learningSteps, reps: item.reps,
+    lapses: item.lapses, state: item.state, log_id: log.id, rating: log.rating,
+    log_state: log.state, log_stability: log.stability, log_difficulty: log.difficulty,
+    log_elapsed_days: log.elapsedDays, log_scheduled_days: log.scheduledDays,
+    response_ms: log.responseMs ?? null, day_number: result.dayNumber, exercise_id: result.exerciseId,
+    attempts: result.attempts, correct: Number(result.correct), answer: result.answer.slice(0, 1000),
+    expected: result.expected.slice(0, 1000), error_kind: result.errorKind,
+  }))
   // A single statement is atomic with either Postgres driver. Losing the
   // unique-key race writes neither a schedule nor an exercise result.
   const { rows } = await pg.execute<{ answered_at: string | Date | null }>(sql`
-    WITH calendar AS (${calendar(userId)}),
-    claimed AS (
+    WITH calendar AS (${calendar(userId)}), input AS (
+      SELECT * FROM jsonb_to_recordset(${JSON.stringify(data)}::jsonb) AS a(
+        item_id text, kind text, due timestamptz, reviewed_at timestamptz, stability real,
+        difficulty real, elapsed_days integer, scheduled_days integer, learning_steps integer,
+        reps integer, lapses integer, state integer, log_id text, rating integer, log_state integer,
+        log_stability real, log_difficulty real, log_elapsed_days integer, log_scheduled_days integer,
+        response_ms integer, day_number integer, exercise_id text, attempts integer, correct integer,
+        answer text, expected text, error_kind text
+      )
+    ), claimed AS (
       INSERT INTO daily_word_reviews (user_id, course_id, day, lexeme_id, answer_id, format)
-      SELECT ${userId}, ${courseId}, day::text, ${item.refId}, ${log.id}, ${format}
+      SELECT ${userId}, ${courseId}, day::text, ${item.refId}, ${log.id}, ${submission.format}
       FROM calendar
-      WHERE NOT EXISTS (SELECT 1 FROM review_logs WHERE id = ${log.id})
+      WHERE NOT EXISTS (SELECT 1 FROM review_logs JOIN input ON review_logs.id = input.log_id)
         AND NOT EXISTS (
           SELECT 1 FROM lexeme_status WHERE user_id = ${userId} AND course_id = ${courseId}
             AND lexeme_id = ${item.refId} AND status = 'known'
@@ -83,10 +125,10 @@ export const POST = withUser(async ({ userId, req }) => {
         id, user_id, course_id, kind, ref_id, due, stability, difficulty, elapsed_days,
         scheduled_days, learning_steps, reps, lapses, state, last_review
       )
-      SELECT ${item.id}, ${userId}, ${courseId}, ${item.kind}, ${item.refId},
-        answered_at + greatest(interval '0 seconds', ${String(item.due)}::timestamptz - ${String(log.reviewedAt)}::timestamptz), ${item.stability}, ${item.difficulty},
-        ${item.elapsedDays}, ${item.scheduledDays}, ${item.learningSteps}, ${item.reps}, ${item.lapses},
-        ${item.state}, answered_at FROM claimed
+      SELECT item_id, ${userId}, ${courseId}, kind, ${lexemeId},
+        answered_at + greatest(interval '0 seconds', due - reviewed_at),
+        stability, difficulty, elapsed_days, scheduled_days, learning_steps, reps, lapses,
+        state, answered_at FROM claimed CROSS JOIN input
       ON CONFLICT (user_id, id) DO UPDATE SET due = excluded.due, stability = excluded.stability,
         difficulty = excluded.difficulty, elapsed_days = excluded.elapsed_days, scheduled_days = excluded.scheduled_days,
         learning_steps = excluded.learning_steps, reps = excluded.reps, lapses = excluded.lapses,
@@ -94,18 +136,25 @@ export const POST = withUser(async ({ userId, req }) => {
     ), logged AS (
       INSERT INTO review_logs (id, user_id, study_item_id, rating, state, stability, difficulty,
         elapsed_days, scheduled_days, reviewed_at, exercise_id, response_ms)
-      SELECT ${log.id}, ${userId}, ${item.id}, ${log.rating}, ${log.state}, ${log.stability},
-        ${log.difficulty}, ${log.elapsedDays}, ${log.scheduledDays}, answered_at,
-        ${result.exerciseId}, ${log.responseMs ?? null} FROM claimed
+      SELECT log_id, ${userId}, item_id, rating, log_state, log_stability, log_difficulty,
+        log_elapsed_days, log_scheduled_days, answered_at, exercise_id, response_ms
+      FROM claimed CROSS JOIN input
     ), recorded AS (
       INSERT INTO exercise_results (user_id, course_id, day_number, exercise_id, attempts, correct, answer, expected, error_kind, completed_at)
-      SELECT ${userId}, ${courseId}, ${result.dayNumber}, ${result.exerciseId},
-        ${result.attempts}, ${Number(result.correct)}, ${result.answer.slice(0, 1000)},
-        ${result.expected.slice(0, 1000)}, ${result.errorKind}, answered_at FROM claimed
+      SELECT ${userId}, ${courseId}, day_number, exercise_id, attempts, correct,
+        answer, expected, error_kind, answered_at FROM claimed CROSS JOIN input
       ON CONFLICT (user_id, course_id, day_number, exercise_id) DO UPDATE SET attempts = excluded.attempts,
         correct = excluded.correct, answer = excluded.answer, expected = excluded.expected,
         error_kind = excluded.error_kind, completed_at = excluded.completed_at, updated_at = now()
-    )
+    )${session ? sql`, completed_word AS (
+      INSERT INTO lesson_sessions (id, user_id, course_id, day_number, kind, started_at,
+        completed_at, planned_budget_ms, actual_ms, items_reviewed, items_correct)
+      SELECT ${session.id}, ${userId}, ${courseId}, ${session.dayNumber}, ${session.kind},
+        least(${session.startedAt.toISOString()}::timestamptz, answered_at), answered_at, ${session.plannedBudgetMs},
+        least(2147483647, greatest(0, extract(epoch FROM answered_at - ${session.startedAt.toISOString()}::timestamptz) * 1000))::integer,
+        ${session.itemsReviewed}, ${session.itemsCorrect} FROM claimed
+      ON CONFLICT (user_id, id) DO NOTHING
+    )` : sql.empty()}
     SELECT COALESCE((SELECT answered_at FROM claimed), (
       SELECT reviewed_at FROM review_logs WHERE id = ${log.id} AND user_id = ${userId} AND study_item_id = ${item.id}
     )) AS answered_at

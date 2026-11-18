@@ -14,6 +14,7 @@
  * того, чего в базе нет.
  */
 import { useSyncExternalStore } from 'react'
+import { brainstormWordSession, type DailyWordSubmission } from '@/lib/engine/daily-words'
 import {
   DEFAULT_SETTINGS,
   type AppState, type ExerciseResultRow, type LessonSessionRow, type LexemeStatusRow, type PersonalWordRow,
@@ -247,6 +248,7 @@ export async function setLexemeKnown(lexemeId: string, known: boolean): Promise<
   }))
   try {
     await request('/api/lexeme/', { method: 'POST', body: JSON.stringify(row) })
+    publishDailyWordsChange(crypto.randomUUID())
   } catch (e) {
     console.error('[lexeme]', e)
     void refresh()
@@ -348,6 +350,12 @@ export async function signOut(): Promise<void> {
 const DAILY_WORD_EVENT = 'daily-words-changed'
 const DAILY_WORD_REVISION = 'daily-words-revision'
 
+function publishDailyWordsChange(revision: string) {
+  dailyQueueRequest = null
+  window.dispatchEvent(new Event(DAILY_WORD_EVENT))
+  try { localStorage.setItem(DAILY_WORD_REVISION, revision) } catch { /* Storage may be disabled. */ }
+}
+
 export function subscribeDailyWords(listener: () => void) {
   function syncTabs(event: StorageEvent) {
     if (event.key === DAILY_WORD_REVISION) {
@@ -376,33 +384,43 @@ export function loadDailyWords() {
   return pending
 }
 
-export async function saveDailyWordAnswer(payload: import('@/lib/engine/daily-words').DailyWordAnswer) {
+export async function saveDailyWordAnswer(payload: DailyWordSubmission) {
   const { answeredAt } = await request<{ answeredAt: string | null }>('/api/daily-words/', {
     method: 'POST',
     body: JSON.stringify(payload),
   })
   if (!answeredAt) return false
 
-  const { result, item, log } = payload
+  const answers = payload.format === 'brainstorm' ? payload.answers : [payload]
   const completedAt = new Date(answeredAt)
-  const currentItem = {
+  const currentItems = new Map(answers.map(({ item, log }) => [item.id, {
     ...item,
     due: new Date(completedAt.getTime() + Math.max(0, item.due.getTime() - log.reviewedAt.getTime())),
     lastReview: completedAt,
-  }
+  }]))
+  const results = answers.map(({ result }) => ({ ...result, courseId: COURSE_ID, completedAt }))
+  const wordSession = payload.format === 'brainstorm' ? brainstormWordSession(payload) : null
   patch((state) => {
-    const previous = state.studyItems.find((row) => row.id === item.id)
+    const studyItems = state.studyItems.filter((row) => {
+      if (!currentItems.has(row.id)) return true
+      if (row.lastReview && row.lastReview > completedAt) {
+        currentItems.delete(row.id)
+        return true
+      }
+      return false
+    })
     return {
       ...state,
-      studyItems: previous?.lastReview && previous.lastReview > completedAt
-        ? state.studyItems : [...state.studyItems.filter((row) => row.id !== item.id), currentItem],
+      studyItems: [...studyItems, ...currentItems.values()],
+      sessions: wordSession ? [
+        ...state.sessions.filter(({ id }) => id !== wordSession.id),
+        { ...wordSession, completedAt, actualMs: Math.max(0, completedAt.getTime() - wordSession.startedAt.getTime()) },
+      ] : state.sessions,
       exerciseResults: [...state.exerciseResults.filter((row) =>
-        row.dayNumber !== result.dayNumber || row.exerciseId !== result.exerciseId),
-      { ...result, courseId: COURSE_ID, completedAt }],
+        !results.some((result) => row.dayNumber === result.dayNumber && row.exerciseId === result.exerciseId)),
+      ...results],
     }
   })
-  dailyQueueRequest = null
-  window.dispatchEvent(new Event(DAILY_WORD_EVENT))
-  try { localStorage.setItem(DAILY_WORD_REVISION, log.id) } catch { /* Storage may be disabled. */ }
+  publishDailyWordsChange(answers[0]!.log.id)
   return true
 }

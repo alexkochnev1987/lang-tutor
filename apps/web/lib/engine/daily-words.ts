@@ -1,7 +1,7 @@
 import { translateProduction, translateRecognition, type Exercise } from '@polski/engine'
 import type { Lexeme } from '@/lib/content/curriculum'
 import type { AnswerPayload } from '@/lib/data/store'
-import type { ExerciseResultRow } from '@/lib/data/types'
+import type { ExerciseResultRow, LessonSessionRow } from '@/lib/data/types'
 
 const skills = {
   translation: 'lexeme-recognition',
@@ -12,14 +12,40 @@ const skills = {
 
 export type WordFormat = keyof typeof skills
 export const WORD_FORMATS = ['translation', 'reverse', 'writing', 'listening'] as const
+export const WORD_PRACTICE_FORMATS = ['brainstorm', ...WORD_FORMATS] as const
+export type WordPracticeFormat = (typeof WORD_PRACTICE_FORMATS)[number]
 
 export const wordSkill = (format: WordFormat) => skills[format]
 
 export type DailyWordQueue = { day: string; learn: string[]; review: string[] }
+export type DailyWordList = 'learn' | 'review'
 export type DailyWordAnswer = AnswerPayload & {
   log: NonNullable<AnswerPayload['log']>
   format: WordFormat
   result: Omit<ExerciseResultRow, 'courseId' | 'completedAt'>
+}
+export type DailyWordSubmission = DailyWordAnswer | {
+  format: 'brainstorm'
+  answers: DailyWordAnswer[]
+  sessionId: string
+  startedAt: string
+}
+
+export function brainstormWordSession(
+  submission: Extract<DailyWordSubmission, { format: 'brainstorm' }>,
+): Omit<LessonSessionRow, 'completedAt' | 'actualMs'> {
+  const first = submission.answers[0]!
+  const itemsReviewed = submission.answers.reduce((total, { result }) => total + result.attempts, 0)
+  const itemsCorrect = submission.answers.filter(({ result }) => result.correct).length
+  return {
+    id: `${submission.sessionId}:word:${first.item.refId}`,
+    dayNumber: first.result.dayNumber,
+    kind: itemsCorrect === WORD_FORMATS.length ? 'words' : 'words-failed',
+    startedAt: new Date(submission.startedAt),
+    plannedBudgetMs: itemsReviewed * 20_000,
+    itemsReviewed,
+    itemsCorrect,
+  }
 }
 
 export function dailyWordExercise(word: Lexeme, pool: readonly Lexeme[], format: WordFormat, seed: number): Exercise {

@@ -93,6 +93,20 @@
     "loading": "Loading…"
   },
   "dailyWords": {
+    "brainstorm": "Brainstorm",
+    "batchWords": "{count, plural, one {# word} other {# words}}",
+    "pronounceWord": "Listen to the word",
+    "formatHint": {
+      "brainstorm": "4 exercises per word",
+      "translation": "Choose the translation of a Polish word",
+      "reverse": "Choose the Polish word",
+      "writing": "Build the word from letters",
+      "listening": "Listen and choose the translation"
+    },
+    "continue": "Continue",
+    "noMatches": "No matching words",
+    "selectWord": "Select “{word}”",
+    "showMore": "Show more · {count} remaining",
     "learn": "Learn",
     "review": "Review today",
     "translation": "Translate",

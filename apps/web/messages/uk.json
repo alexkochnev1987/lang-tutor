@@ -93,6 +93,20 @@
     "loading": "Завантаження…"
   },
   "dailyWords": {
+    "brainstorm": "Брейншторм",
+    "batchWords": "{count, plural, one {# слово} few {# слова} many {# слів} other {# слова}}",
+    "pronounceWord": "Прослухати слово",
+    "formatHint": {
+      "brainstorm": "4 завдання на кожне слово",
+      "translation": "Вибери переклад польського слова",
+      "reverse": "Вибери слово польською",
+      "writing": "Склади слово з літер",
+      "listening": "Послухай слово й вибери переклад"
+    },
+    "continue": "Продовжити",
+    "noMatches": "Нічого не знайдено",
+    "selectWord": "Вибрати слово «{word}»",
+    "showMore": "Показати ще · залишилося {count}",
     "learn": "Вчити",
     "review": "Повторювати сьогодні",
     "translation": "Прямий переклад",

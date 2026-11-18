@@ -93,6 +93,20 @@
     "loading": "Загрузка…"
   },
   "dailyWords": {
+    "brainstorm": "Брейншторм",
+    "batchWords": "{count, plural, one {# слово} few {# слова} many {# слов} other {# слова}}",
+    "pronounceWord": "Прослушать слово",
+    "formatHint": {
+      "brainstorm": "4 задания на каждое",
+      "translation": "Выбери перевод польского слова",
+      "reverse": "Выбери слово на польском",
+      "writing": "Собери слово из букв",
+      "listening": "Послушай слово и выбери перевод"
+    },
+    "continue": "Продолжить",
+    "noMatches": "Ничего не нашлось",
+    "selectWord": "Выбрать слово «{word}»",
+    "showMore": "Показать ещё · осталось {count}",
     "learn": "Учить",
     "review": "Повторять сегодня",
     "translation": "Прямой перевод",

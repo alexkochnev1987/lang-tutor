@@ -1,5 +1,6 @@
 "use client";
 
+import type { ReactNode } from "react";
 import { Row } from "@polski/ui";
 import { StudyTooltip } from "./StudyTooltip";
 import { usePronounce } from "@/lib/speech/usePronounce";
@@ -26,9 +27,11 @@ const BADGE: Record<
 export function WordRow({
   word,
   completed = false,
+  selectionControl,
 }: {
   word: Lexeme;
   completed?: boolean;
+  selectionControl?: ReactNode;
 }) {
   const { pronounce, message } = usePronounce();
   const state = useAppState();
@@ -41,8 +44,8 @@ export function WordRow({
 
   return (
     <div className="border-b border-line py-2 last:border-0">
-      <Row gap="sm" justify="between">
-        <Row gap="sm">
+      <Row gap="sm" justify="between" wrap>
+        <Row gap="sm" className="min-w-0 flex-1 basis-36">
           <button
             type="button"
             onClick={() => pronounce(word.lemma)}
@@ -51,8 +54,9 @@ export function WordRow({
           >
             {message ? "🔇" : "🔊"}
           </button>
-          <div>
+          <div className="min-w-0 break-words">
             <div
+              lang="pl"
               className={`text-base font-medium ${known ? "text-muted" : ""}`}
             >
               {word.lemma}
@@ -61,7 +65,7 @@ export function WordRow({
             <StudyStatusBadge status={studyStatus} />
           </div>
         </Row>
-        <Row gap="xs">
+        <Row gap="xs" wrap justify="end" className="ml-auto">
           {badge && !known && (
             <span
               className={`shrink-0 rounded-pill px-2 py-0.5 text-xs ${badge.cls}`}
@@ -70,6 +74,7 @@ export function WordRow({
             </span>
           )}
           <KnownToggle lexemeId={word.id} polishLabels />
+          {selectionControl}
         </Row>
       </Row>
 
