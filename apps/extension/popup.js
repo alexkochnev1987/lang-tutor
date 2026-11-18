@@ -1,11 +1,9 @@
 const STORAGE_KEY = 'personalWords';
-const APP_URL = 'https://web-ecru-ten-90.vercel.app/';
 const API_URL = 'https://web-ecru-ten-90.vercel.app';
 
 const form = document.querySelector('#word-form');
 const wordInput = document.querySelector('#word');
 const translationInput = document.querySelector('#translation');
-const exampleInput = document.querySelector('#example');
 const wordsList = document.querySelector('#words');
 const empty = document.querySelector('#empty');
 const count = document.querySelector('#count');
@@ -100,7 +98,6 @@ form.addEventListener('submit', async (event) => {
   event.preventDefault();
   const word = wordInput.value.trim();
   const translation = translationInput.value.trim();
-  const example = exampleInput.value.trim();
   if (!word || !translation) return;
 
   const words = await getWords();
@@ -109,7 +106,7 @@ form.addEventListener('submit', async (event) => {
     id: crypto.randomUUID(),
     word,
     translation,
-    example,
+    example: '',
     createdAt: new Date().toISOString(),
   });
   await setWords(withoutDuplicate);
@@ -167,9 +164,5 @@ async function renderAccount() {
   userName.textContent = user ? (user.name || user.email || 'Вы вошли') : '';
   if (!user && lastAuthError) showStatus(`Ошибка входа: ${lastAuthError}`, true);
 }
-
-document.querySelector('#open-app').addEventListener('click', () => {
-  chrome.tabs.create({ url: APP_URL });
-});
 
 void Promise.all([render(), renderAccount(), syncRemoteWords().catch(() => undefined)]);

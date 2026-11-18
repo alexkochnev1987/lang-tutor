@@ -16,10 +16,6 @@
         <span id="count" class="count">0</span>
       </header>
 
-      <section class="notice" aria-live="polite">
-        <span id="auth-message">Войди через основной профиль, чтобы синхронизировать слова.</span>
-      </section>
-
       <section id="account" class="account">
         <button id="login" class="primary" type="button">Войти через Google</button>
         <div id="signed-in" hidden>
@@ -37,10 +33,6 @@
           Перевод
           <input id="translation" name="translation" maxlength="240" required autocomplete="off" placeholder="обычай">
         </label>
-        <label>
-          Пример <span class="optional">необязательно</span>
-          <textarea id="example" name="example" maxlength="500" rows="2" placeholder="Podoba mi się ten zwyczaj."></textarea>
-        </label>
         <button type="submit" class="primary">Добавить слово</button>
         <p id="status" class="status" role="status"></p>
       </form>
@@ -54,7 +46,6 @@
         <ul id="words" class="words"></ul>
       </section>
 
-      <button id="open-app" class="secondary" type="button">Открыть Polski B1</button>
     </main>
     <script src="popup.js"></script>
   </body>

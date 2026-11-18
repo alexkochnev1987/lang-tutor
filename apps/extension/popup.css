@@ -6,7 +6,7 @@
 }
 
 * { box-sizing: border-box; }
-body { width: 380px; min-height: 520px; margin: 0; background: #faf8f5; }
+body { width: 380px; min-height: 390px; margin: 0; background: #faf8f5; }
 .app { padding: 18px; }
 .header, .list-heading { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
 .eyebrow { margin: 0 0 3px; color: #8f5e38; font-size: 11px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; }
@@ -14,20 +14,17 @@ h1, h2, p { margin-top: 0; }
 h1 { margin-bottom: 0; font-size: 23px; letter-spacing: -.03em; }
 h2 { margin-bottom: 0; font-size: 15px; }
 .count { display: grid; width: 30px; height: 30px; place-items: center; border-radius: 999px; background: #ead9c8; color: #704422; font-size: 13px; font-weight: 700; }
-.notice { margin: 16px 0; padding: 10px 12px; border: 1px solid #ead9c8; border-radius: 12px; background: #fffaf4; color: #765b43; font-size: 12px; line-height: 1.4; }
 .account { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
 .account .primary { flex: 1; }
 .user-name { min-width: 0; color: #615a54; font-size: 12px; font-weight: 700; overflow-wrap: anywhere; }
 .form { display: grid; gap: 10px; }
 label { display: grid; gap: 5px; color: #615a54; font-size: 12px; font-weight: 650; }
-.optional { color: #9b938b; font-weight: 400; }
-input, textarea { width: 100%; border: 1px solid #d9d1ca; border-radius: 9px; padding: 10px 11px; outline: none; background: #fff; color: #211f1d; font: inherit; font-size: 13px; resize: vertical; }
-input:focus, textarea:focus { border-color: #ae7145; box-shadow: 0 0 0 3px #f0dfd0; }
+input { width: 100%; border: 1px solid #d9d1ca; border-radius: 9px; padding: 10px 11px; outline: none; background: #fff; color: #211f1d; font: inherit; font-size: 13px; }
+input:focus { border-color: #ae7145; box-shadow: 0 0 0 3px #f0dfd0; }
 button { cursor: pointer; font: inherit; }
 .primary, .secondary { min-height: 38px; border: 0; border-radius: 10px; font-size: 13px; font-weight: 700; }
 .primary { background: #9a6037; color: white; }
 .primary:hover { background: #7f4d2d; }
-.secondary { width: 100%; margin-top: 16px; border: 1px solid #d9d1ca; background: transparent; color: #704422; }
 .text-button { border: 0; background: transparent; color: #9a6037; font-size: 12px; }
 .status { min-height: 16px; margin: 0; color: #6c5c4f; font-size: 12px; }
 .status.error { color: #a64235; }
