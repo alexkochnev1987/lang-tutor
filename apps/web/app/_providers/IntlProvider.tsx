@@ -16,7 +16,7 @@ export function IntlProvider({ children }: { children: ReactNode }) {
     <NextIntlClientProvider
       locale={locale}
       messages={MESSAGES[locale]}
-      timeZone="Europe/Warsaw"
+      timeZone={settings.timeZone}
       now={undefined}
     >
       {children}

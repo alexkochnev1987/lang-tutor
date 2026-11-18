@@ -11,14 +11,14 @@ export function RuleView({ rule, compact }: { rule: LocalizedRule; compact?: boo
     <Stack gap="md">
       <Stack gap="none">
         <Row gap="sm" justify="between">
-          <strong className="text-lg">{rule.titlePl}</strong>
+          <strong className="text-lg" lang="pl">{rule.titlePl}</strong>
           {rule.interferenceRu >= 4 && (
             <span className="shrink-0 rounded-pill bg-warn-bg px-2 py-0.5 text-xs text-warn-ink">
               rosyjski przeszkadza
             </span>
           )}
         </Row>
-        <span className="text-sm text-muted">{rule.title}</span>
+        {rule.title !== rule.titlePl && <span className="text-sm text-muted">{rule.title}</span>}
       </Stack>
 
       {rule.summaryPl ? (
@@ -49,7 +49,7 @@ export function RuleView({ rule, compact }: { rule: LocalizedRule; compact?: boo
           {rule.examples.map((e) => (
             <Row key={e.pl} gap="sm" justify="between">
               <Stack gap="none">
-                <span className="text-sm text-accent-ink">{e.pl}</span>
+                <span className="text-sm text-accent-ink" lang="pl">{e.pl}</span>
                 {e.gloss && <span className="text-xs text-muted">{e.gloss}</span>}
               </Stack>
               <SpeakIcon text={e.pl} size="sm" />
@@ -69,9 +69,6 @@ export function RuleView({ rule, compact }: { rule: LocalizedRule; compact?: boo
         </Stack>
       )}
 
-      {!compact && rule.teachingNote && (
-        <p className="rounded-card bg-soft px-3 py-2 text-sm text-muted">{rule.teachingNote}</p>
-      )}
     </Stack>
   )
 }

@@ -66,13 +66,15 @@ export function SelectionDictionary() {
       const range = nativeSelection && nativeSelection.rangeCount > 0
         ? nativeSelection.getRangeAt(0)
         : null
-      const source = range?.commonAncestorContainer.parentElement
+      const container = range?.commonAncestorContainer
+      const source = container instanceof Element ? container : container?.parentElement
       if (!normalized || nativeSelection?.isCollapsed || source?.closest('input, textarea, select, button, [data-selection-ignore]')) {
         setSelection(null)
         return
       }
 
-      const matches = normalized.split(' ').map((text) => ({
+      const phrase = byForm?.get(normalizeWord(normalized))
+      const matches = phrase ? [{ text: normalized, word: phrase }] : normalized.split(' ').map((text) => ({
         text,
         word: byForm?.get(normalizeWord(text)),
       })).filter((match): match is { text: string; word: Lexeme } => Boolean(match.word))
@@ -87,15 +89,17 @@ export function SelectionDictionary() {
         matches,
         selectedText: raw.trim(),
         left: Math.min(Math.max(8, rect.left), Math.max(8, window.innerWidth - width - 8)),
-        top: Math.min(rect.bottom + 8, Math.max(8, window.innerHeight - 280)),
+        top: Math.min(rect.bottom + 8, Math.max(8, (window.visualViewport?.height ?? window.innerHeight) - 280)),
       })
     }
 
     const frame = requestAnimationFrame(updateSelection)
+    document.addEventListener('selectionchange', updateSelection)
     document.addEventListener('mouseup', updateSelection)
     document.addEventListener('keyup', updateSelection)
     return () => {
       cancelAnimationFrame(frame)
+      document.removeEventListener('selectionchange', updateSelection)
       document.removeEventListener('mouseup', updateSelection)
       document.removeEventListener('keyup', updateSelection)
     }

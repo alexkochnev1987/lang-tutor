@@ -176,7 +176,7 @@ export function prepareLexemeReview(
   grade: Grade,
   responseMs: number,
   now = new Date(),
-): AnswerPayload {
+): AnswerPayload & { log: NonNullable<AnswerPayload["log"]> } {
   const itemId = `${kind}:${lexemeId}`;
   const row = studyItems.find((item) => item.id === itemId);
   const previous = row ? toEngine(row) : newItem(itemId, kind, lexemeId, now);
@@ -227,12 +227,16 @@ const EXERCISE_SKILL = {
   choice: "lexeme-recognition",
   prod: "lexeme-production",
   spell: "lexeme-spelling",
+  "write-word": "lexeme-spelling",
+  "listen-choice": "lexeme-listen-write",
   "listen-write": "lexeme-listen-write",
   typed: "lexeme-listen-write",
+  writing: "lexeme-spelling",
+  translation: "lexeme-recognition",
 } as const satisfies Record<string, LexemeSkillKind>;
 
 // Exercise results persist the generated ID, including optional session and retry prefixes.
-const WORD_EXERCISE_ID = /(?:^|:)ex\.(?:(rec|ff|prod|spell|listen-write)|minimum-words\.\d+\.(choice|typed))\.(.+)$/;
+const WORD_EXERCISE_ID = /(?:^|:)ex\.(?:(rec|ff|prod|spell|listen-write|listen-choice|write-word)|minimum-words\.\d+\.(choice|typed|writing|translation))\.(.+)$/;
 
 type LexemeSkillProgress = { value: number; correct: number; attempts: number };
 

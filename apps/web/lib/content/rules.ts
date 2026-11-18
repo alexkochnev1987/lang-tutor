@@ -2,6 +2,7 @@ import type { GrammarRule } from './curriculum'
 
 export const RULE_LANGUAGES = ['ru', 'uk', 'en', 'pl'] as const
 export type RuleLanguage = (typeof RULE_LANGUAGES)[number]
+export const AVAILABLE_RULE_LANGUAGES = ['ru', 'pl'] as const
 
 export const RULE_LANGUAGE_NAMES: Record<RuleLanguage, string> = {
   ru: 'Русский',
@@ -31,7 +32,6 @@ export interface LocalizedRule {
   summary: string
   examples: LocalizedExample[]
   pitfalls: string[]
-  teachingNote: string | null
   difficulty: number
   interferenceRu: number
   showsOriginalInstead: boolean
@@ -39,15 +39,12 @@ export interface LocalizedRule {
 
 export function localizeRule(rule: GrammarRule, requested: RuleLanguage): LocalizedRule {
   const original = PACK_ORIGINAL_LANGUAGE
-  // Polish is the rule's own language, not a translation target.
-  const lang = requested === 'pl' ? original : requested
+  const lang = requested
   const isOriginal = lang === original
 
   const translatedSummary = rule.summaryI18n?.[lang] ?? (isOriginal ? rule.summary : null)
   const translatedPitfalls = rule.pitfallsI18n?.[lang]
     ?? (isOriginal ? rule.pitfallsForRu : null)
-  const translatedNote = rule.teachingNoteI18n?.[lang]
-    ?? (isOriginal ? rule.teachingNote ?? null : null)
 
   return {
     id: rule.id,
@@ -58,10 +55,9 @@ export function localizeRule(rule: GrammarRule, requested: RuleLanguage): Locali
     summary: translatedSummary ?? rule.summary,
     examples: rule.examples.map((e) => ({
       pl: e.pl ?? '',
-      gloss: e[lang] ?? e[original] ?? '',
+      gloss: lang === 'pl' ? '' : e[lang] ?? e[original] ?? '',
     })),
-    pitfalls: translatedPitfalls ?? rule.pitfallsForRu ?? [],
-    teachingNote: translatedNote ?? rule.teachingNote ?? null,
+    pitfalls: translatedPitfalls ?? (lang === 'pl' ? [] : rule.pitfallsForRu ?? []),
     difficulty: rule.difficulty,
     interferenceRu: rule.interferenceRu,
     showsOriginalInstead: !isOriginal && translatedSummary === null,

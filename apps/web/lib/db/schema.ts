@@ -289,3 +289,14 @@ export const lessonSessions = pgTable(
     index("lesson_sessions_day_idx").on(t.userId, t.courseId, t.dayNumber),
   ],
 );
+
+/** One graded vocabulary exercise per lexeme and calendar day. */
+export const dailyWordReviews = pgTable("daily_word_reviews", {
+  userId: text("user_id").notNull().references(() => users.id, { onDelete: "cascade" }),
+  courseId: text("course_id").notNull(),
+  day: text("day").notNull(),
+  lexemeId: text("lexeme_id").notNull(),
+  answerId: text("answer_id").notNull(),
+  format: text("format").notNull(),
+  answeredAt: timestamp("answered_at", { withTimezone: true }).notNull().defaultNow(),
+}, (t) => [primaryKey({ columns: [t.userId, t.courseId, t.day, t.lexemeId] })]);

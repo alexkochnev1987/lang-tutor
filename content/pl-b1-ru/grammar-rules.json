@@ -34,18 +34,18 @@
         "pl": "Alfabet i ortografia",
         "ru": "Алфавит и орфография"
       },
-      "summary": "Польский алфавит, диакритика, орфографические пары ż/rz, u/ó, h/ch, ch/cz.",
+      "summary": "Один звук иногда можно записать двумя способами: ż/rz, u/ó, h/ch. Написание нужно запоминать вместе со значением: może («может») и morze («море») звучат одинаково. Буквы с диакритикой тоже важны: ł и l обозначают разные звуки.",
       "prerequisites": [],
       "difficulty": 2,
       "interferenceRu": 4,
       "examples": [
         {
-          "pl": "żona, rzeka — звучат одинаково, пишутся по-разному",
-          "ru": "жена, река"
+          "pl": "żona, rzeka",
+          "ru": "Жена, река. Совпадает только начальный звук."
         },
         {
-          "pl": "może (может) ≠ morze (море)",
-          "ru": "омофоны с разным написанием"
+          "pl": "może, morze",
+          "ru": "Может, море. Слова звучат одинаково."
         }
       ],
       "pitfallsForRu": [
@@ -64,7 +64,7 @@
       ],
       "sourceRef": "4.1 (ortografia i interpunkcja)",
       "summaryI18n": {
-        "pl": "W polskim niektóre głoski piszemy na dwa sposoby: ż lub rz, u lub ó, h lub ch. Wymowa jest taka sama, ale pisownia zmienia znaczenie: może – morze. Pamiętaj o znakach ą, ę, ł, ś, ć, ż — bez nich słowo znaczy co innego."
+        "pl": "Głoski mogą mieć różną pisownię: ż i rz, u i ó, h i ch. Może i morze brzmią tak samo, ale znaczą co innego. W słowach żona i rzeka tak samo wymawiamy tylko pierwszą głoskę. Znaki takie jak ą, ę i ł są częścią pisowni."
       }
     },
     {
@@ -114,7 +114,7 @@
         "pl": "Rodzaj rzeczownika",
         "ru": "Род существительного"
       },
-      "summary": "Три рода в ед. ч., определяются по окончанию начальной формы.",
+      "summary": "Род существительного обычно виден по его начальной форме: stół — мужской, książka — женский, okno — средний. Есть исключения: mężczyzna — мужского рода, хотя оканчивается на -a. Род определяет форму прилагательного и глагола в прошедшем времени.",
       "prerequisites": [
         "pl.gram.alphabet-orthography"
       ],
@@ -167,7 +167,7 @@
         "pl": "Liczba mnoga — mianownik",
         "ru": "Множественное число, именительный"
       },
-      "summary": "Образование мн. ч. в им. п., чередования согласных.",
+      "summary": "Во множественном числе меняется окончание, а иногда и основа: książka → książki, stół → stoły. У названий мужчин встречается чередование согласных: student → studenci. Запоминай форму множественного числа вместе со словом.",
       "prerequisites": [
         "pl.gram.gender"
       ],
@@ -213,7 +213,7 @@
         "pl": "Żywotność rzeczowników męskich",
         "ru": "Одушевлённость существительных м. р."
       },
-      "summary": "Деление м. р. на живые и неживые — определяет винительный падеж ед. ч.",
+      "summary": "У существительных мужского рода в единственном числе винительный часто совпадает с родительным для одушевлённых (widzę psa) и с именительным для неодушевлённых (widzę stół). Некоторые неодушевлённые слова тоже принимают форму на -a.",
       "prerequisites": [
         "pl.gram.gender"
       ],
@@ -250,7 +250,7 @@
         "pl": "Rodzaj męskoosobowy",
         "ru": "Мужско-личный род"
       },
-      "summary": "Ключевое для польского деление мн. ч. на мужско-личный и немужско-личный. Влияет на существительные, прилагательные, глаголы прошедшего времени и числительные.",
+      "summary": "Во множественном числе для мужчин и смешанных групп людей используется мужско-личная форма: młodzi studenci przyszli. Для группы женщин, животных и предметов используются другие формы: młode studentki przyszły.",
       "prerequisites": [
         "pl.gram.number",
         "pl.gram.animacy"
@@ -296,7 +296,6 @@
         "agreement"
       ],
       "sourceRef": "2.2.1 1) a) tiret 6",
-      "teachingNote": "Вводить рано и возвращаться постоянно. Одного блока недостаточно.",
       "summaryI18n": {
         "pl": "W liczbie mnogiej są dwa rodzaje: męskoosobowy i niemęskoosobowy. Kiedy w grupie jest przynajmniej jeden mężczyzna, używamy form męskoosobowych: ci studenci byli, dwaj panowie czekali. Inne grupy mają formy niemęskoosobowe: te studentki były, dwa stoły."
       }
@@ -308,18 +307,22 @@
         "pl": "Czasownik «być»",
         "ru": "Глагол «быть» в настоящем"
       },
-      "summary": "jestem, jesteś, jest, jesteśmy, jesteście, są. В польском связка обязательна.",
+      "summary": "В настоящем времени być принимает формы jestem, jesteś, jest, jesteśmy, jesteście, są. В конструкции с być существительное, называющее профессию или роль, ставится в творительном: Jestem studentem. В конструкции X to Y используется именительный: Warszawa to stolica Polski.",
       "prerequisites": [],
       "difficulty": 1,
       "interferenceRu": 5,
       "examples": [
         {
           "pl": "Jestem studentem.",
-          "ru": "Я студент. — связка ОБЯЗАТЕЛЬНА"
+          "ru": "Я студент. Studentem — творительный."
         },
         {
           "pl": "Czy jesteś Polakiem?",
           "ru": "Ты поляк?"
+        },
+        {
+          "pl": "Warszawa to stolica Polski.",
+          "ru": "Варшава — столица Польши. Stolica — именительный."
         }
       ],
       "pitfallsForRu": [
@@ -338,7 +341,7 @@
       ],
       "sourceRef": "2.2.1 2) a)",
       "summaryI18n": {
-        "pl": "Czasownik «być»: jestem, jesteś, jest, jesteśmy, jesteście, są. W polskim zdaniu nie można go opuścić: mówimy «Jestem studentem», nie «Ja student». Po «być» rzeczownik stoi w narzędniku."
+        "pl": "Czasownik „być”: jestem, jesteś, jest, jesteśmy, jesteście, są. Gdy mówisz o zawodzie lub roli, użyj narzędnika: Jestem studentem. W konstrukcji „X to Y” użyj mianownika: Warszawa to stolica Polski."
       }
     },
     {
@@ -348,7 +351,7 @@
         "pl": "Koniugacja I: -ę, -esz",
         "ru": "I спряжение: -ę, -esz"
       },
-      "summary": "Первая группа: iść, pisać, pracować, móc.",
+      "summary": "В этой группе формы для ja и ty оканчиваются на -ę и -esz: piszę, piszesz. Проверяй основу по обеим формам: у nieść, например, niosę и niesiesz.",
       "prerequisites": [
         "pl.gram.v-byc"
       ],
@@ -392,7 +395,7 @@
         "pl": "Koniugacja II: -ę, -isz/-ysz",
         "ru": "II спряжение: -ę, -isz/-ysz"
       },
-      "summary": "mówić, robić, lubić, uczyć się.",
+      "summary": "В этой группе ja имеет окончание -ę, а ty — -isz или -ysz: mówię → mówisz, słyszę → słyszysz. У формы для on, ona, ono — -i или -y: mówi, słyszy.",
       "prerequisites": [
         "pl.gram.v-present-1"
       ],
@@ -431,7 +434,7 @@
         "pl": "Koniugacja III: -am, -asz",
         "ru": "III спряжение: -am, -asz"
       },
-      "summary": "mieć, czytać, mieszkać, znać, czekać. Самая регулярная группа.",
+      "summary": "В этой группе ja имеет окончание -am, а ty — -asz: czytam, czytasz. Форма для они (oni/one) оканчивается на -ają: czytają. У частотного mieć запомни формы mam, masz, mają.",
       "prerequisites": [
         "pl.gram.v-byc"
       ],
@@ -458,7 +461,6 @@
         "conjugate"
       ],
       "sourceRef": "2.2.1 2) a)",
-      "teachingNote": "Вводить первой: самая простая, даёт быстрый результат.",
       "summaryI18n": {
         "pl": "Czasowniki takie jak czytać, mieszkać, znać, czekać mają końcówki: -am, -asz, -a, -amy, -acie, -ają. To bardzo regularna grupa. Czasownik mieć odmienia się tak samo: mam, masz, ma, mamy, macie, mają."
       }
@@ -470,7 +472,7 @@
         "pl": "Koniugacja IV: -em, -esz",
         "ru": "IV спряжение: -em, -esz"
       },
-      "summary": "jeść, wiedzieć, rozumieć, umieć. Малая, но частотная группа.",
+      "summary": "Глаголы этой группы имеют формы для ja на -em, для ty на -esz: jem, jesz; rozumiem, rozumiesz. Формы они запоминай отдельно: jedzą, wiedzą, но rozumieją, umieją.",
       "prerequisites": [
         "pl.gram.v-present-3"
       ],
@@ -508,7 +510,7 @@
         "pl": "Czasowniki nieregularne",
         "ru": "Нерегулярные глаголы"
       },
-      "summary": "iść, jechać, chcieć, móc, wziąć — частотные и непредсказуемые.",
+      "summary": "У частотных неправильных глаголов запоминай формы вместе с инфинитивом: iść → idę, jechać → jadę, chcieć → chcę, móc → mogę. У совершенного wziąć форма wezmę обозначает будущее.",
       "prerequisites": [
         "pl.gram.v-present-1",
         "pl.gram.v-present-2"
@@ -538,7 +540,7 @@
       ],
       "sourceRef": "2.2.1 2) a)",
       "summaryI18n": {
-        "pl": "Czasowniki iść, jechać, chcieć, móc i wziąć są nieregularne: idę, jadę, chcę, mogę, wezmę. Trzeba je znać na pamięć. Pamiętaj: iść — pieszo, jechać — autem lub pociągiem."
+        "pl": "Czasowniki iść, jechać, chcieć i móc mają nieregularne formy czasu teraźniejszego: idę, jadę, chcę, mogę. Wziąć jest czasownikiem dokonanym: forma wezmę oznacza przyszłość."
       }
     },
     {
@@ -548,7 +550,7 @@
         "pl": "Czasowniki zwrotne i miejsce «się»",
         "ru": "Возвратные глаголы и позиция się"
       },
-      "summary": "się — отдельное слово со свободной, но не произвольной позицией.",
+      "summary": "Się пишется отдельно. Оно часто стоит перед глаголом (Często się uczę) или после него (Uczę się polskiego). Его обычно не ставят первым в предложении.",
       "prerequisites": [
         "pl.gram.v-present-2"
       ],
@@ -637,7 +639,7 @@
         "pl": "Czas przeszły — liczba mnoga",
         "ru": "Прошедшее время, мн. ч."
       },
-      "summary": "Зависит от мужско-личности: -liśmy / -łyśmy.",
+      "summary": "Для группы мужчин или смешанной группы используются формы на -li: przyszli, przyszliśmy. Для группы женщин, животных или предметов — на -ły: przyszły, przyszłyśmy.",
       "prerequisites": [
         "pl.gram.v-past-sg",
         "pl.gram.masc-personal"
@@ -684,7 +686,7 @@
         "pl": "Ruchome końcówki",
         "ru": "Подвижные окончания"
       },
-      "summary": "Окончания -em, -eś, -śmy, -ście могут отрываться от глагола.",
+      "summary": "Показатель лица прошедшего времени иногда присоединяется к другому слову: Gdzie byłeś? → Gdzieś był? Лицо и время от этого не меняются. В нейтральной речи проще употребить Gdzie byłeś?",
       "prerequisites": [
         "pl.gram.v-past-pl"
       ],
@@ -712,7 +714,6 @@
         "transform"
       ],
       "sourceRef": "2.2.1 2) a)",
-      "teachingNote": "Пассивное узнавание достаточно. Не тратить время на активную продукцию.",
       "summaryI18n": {
         "pl": "Końcówki -em, -eś, -śmy, -ście mogą odłączyć się od czasownika i stanąć przy innym słowie: Gdzie byłeś? = Gdzieś był? Obie wersje znaczą to samo, druga jest typowa dla języka mówionego."
       }
@@ -724,7 +725,7 @@
         "pl": "Aspekt — pojęcie",
         "ru": "Вид глагола — понятие"
       },
-      "summary": "Совершенный и несовершенный вид, видовые пары.",
+      "summary": "Несовершенный вид описывает процесс или повторение: czytać («читать»). Совершенный показывает действие как целое или его результат: przeczytać («прочитать»). Многие глаголы удобно запоминать парами.",
       "prerequisites": [
         "pl.gram.v-past-sg"
       ],
@@ -752,7 +753,6 @@
         "classify"
       ],
       "sourceRef": "2.2.1 2) b)",
-      "teachingNote": "Для русскоязычного это лёгкая тема — в отличие от англоязычного. Учить парами как лексику, а не как правило.",
       "summaryI18n": {
         "pl": "Polskie czasowniki mają dwa aspekty: niedokonany (czytać) i dokonany (przeczytać). Aspekt niedokonany opisuje proces albo powtarzanie, dokonany — rezultat. Pary trzeba znać: pisać/napisać, kupować/kupić, brać/wziąć."
       }
@@ -764,7 +764,7 @@
         "pl": "Tworzenie form dokonanych",
         "ru": "Образование совершенного вида"
       },
-      "summary": "Приставки, суффиксы, супплетивные пары.",
+      "summary": "Видовые пары образуются приставками (pisać → napisać), суффиксами (podpisywać → podpisać) или от разных основ (brać → wziąć). Приставка может изменить и само значение, поэтому сверяй пару по словарю.",
       "prerequisites": [
         "pl.gram.v-aspect-concept"
       ],
@@ -810,7 +810,7 @@
         "pl": "Użycie aspektu",
         "ru": "Употребление вида"
       },
-      "summary": "Выбор вида по контексту: результат, повторяемость, процесс.",
+      "summary": "Выбирай несовершенный вид, если важны процесс, длительность или привычка. Выбирай совершенный, если важен результат: Czytałem książkę — я читал книгу, Przeczytałem książkę — я её прочитал.",
       "prerequisites": [
         "pl.gram.v-aspect-formation"
       ],
@@ -820,6 +820,10 @@
         {
           "pl": "Wczoraj czytałem książkę. / Wczoraj przeczytałem książkę.",
           "ru": "процесс / результат"
+        },
+        {
+          "pl": "Codziennie gotuję obiad. Dziś ugotuję zupę.",
+          "ru": "Каждый день я готовлю обед. Сегодня я приготовлю суп. Привычка и разовый результат."
         }
       ],
       "pitfallsForRu": [
@@ -845,7 +849,7 @@
         "pl": "Czas przyszły złożony",
         "ru": "Будущее сложное"
       },
-      "summary": "będę + инфинитив ИЛИ будę + форма на -ł (родовая).",
+      "summary": "С глаголом несовершенного вида употребляй будущую форму być и один из двух вариантов: инфинитив (będę czytać) или форму на -ł/-ła (będę czytał / czytała). Во втором варианте учитывай род и число.",
       "prerequisites": [
         "pl.gram.v-aspect-concept",
         "pl.gram.v-past-sg"
@@ -886,7 +890,7 @@
         "pl": "Czas przyszły prosty",
         "ru": "Будущее простое"
       },
-      "summary": "Форма настоящего времени от глагола совершенного вида.",
+      "summary": "У глагола совершенного вида одна форма выражает будущее без będę: kupię, napiszę, pójdę. Выбирай окончание по лицу и числу: jutro kupię bilet, jutro kupimy bilety.",
       "prerequisites": [
         "pl.gram.v-aspect-formation"
       ],
@@ -896,6 +900,10 @@
         {
           "pl": "pójdę, kupię, napiszę",
           "ru": "пойду, куплю, напишу"
+        },
+        {
+          "pl": "Jutro odbiorę paczkę.",
+          "ru": "Завтра я заберу посылку."
         }
       ],
       "pitfallsForRu": [
@@ -919,7 +927,7 @@
         "pl": "Tryb rozkazujący",
         "ru": "Повелительное наклонение"
       },
-      "summary": "Формы 2 л. ед./мн. и 1 л. мн.",
+      "summary": "Выбирай форму по тому, к кому обращаешься: czytaj! — к одному человеку, czytajcie! — к нескольким, czytajmy! — предложение сделать это вместе. У некоторых глаголов основа меняется: wziąć → weź!",
       "prerequisites": [
         "pl.gram.v-present-2"
       ],
@@ -929,6 +937,10 @@
         {
           "pl": "przeczytaj, bierzcie, napiszmy, uczcie się",
           "ru": "прочитай, берите, напишем, учитесь"
+        },
+        {
+          "pl": "Otwórz okno! Usiądźcie tutaj!",
+          "ru": "Открой окно! Садитесь здесь!"
         }
       ],
       "pitfallsForRu": [],
@@ -955,7 +967,7 @@
         "pl": "Niech + 3. osoba",
         "ru": "Повелительное через niech"
       },
-      "summary": "Niech для 3 л. и для вежливой формы с Pan/Pani.",
+      "summary": "После niech ставь личную форму третьего лица: Niech on poczeka. С Pan/Pani так можно передать распоряжение: Niech pani zaczeka. Для мягкой просьбы подходит Proszę chwilę zaczekać.",
       "prerequisites": [
         "pl.gram.v-imperative"
       ],
@@ -994,7 +1006,7 @@
         "pl": "Tryb przypuszczający",
         "ru": "Сослагательное наклонение"
       },
-      "summary": "Форма на -ł + by + личное окончание. by пишется слитно с глаголом.",
+      "summary": "В форме типа zrobiłbym часть -by и показатель лица присоединяются к глаголу: zrobiłbym, zrobiłabyś. Их можно встретить и после другого слова: Czy mógłbyś pomóc? / Czy byś mógł pomóc?",
       "prerequisites": [
         "pl.gram.v-past-pl"
       ],
@@ -1039,7 +1051,7 @@
         "pl": "Rekcja czasowników",
         "ru": "Управление глаголов"
       },
-      "summary": "Какого падежа требует конкретный глагол. NAWA отмечает тему как одну из самых трудных на экзамене.",
+      "summary": "Падеж зависит от конкретного глагола: szukać pracy (родительный), pomagać koledze (дательный), kierować zespołem (творительный). Запоминай глагол вместе с вопросом и примером.",
       "prerequisites": [
         "pl.gram.c-gen-verbs",
         "pl.gram.c-dat-verbs",
@@ -1080,7 +1092,6 @@
         "translate-to-target"
       ],
       "sourceRef": "NAWA, Poprawność gramatyczna — Wskazówki",
-      "teachingNote": "Самая доходная тема для русскоязычного: много баллов за точечные дриллы.",
       "summaryI18n": {
         "pl": "Każdy czasownik łączy się ze swoim przypadkiem: szukać, potrzebować, słuchać + dopełniacz; pomagać, dziękować + celownik; czekać na, pytać o + biernik. Trzeba uczyć się czasownika razem z przypadkiem, jak nowego słowa."
       }
@@ -1092,7 +1103,7 @@
         "pl": "Mianownik",
         "ru": "Именительный падеж"
       },
-      "summary": "Подлежащее и именная часть сказуемого.",
+      "summary": "Именительный отвечает на «кто? что?» и обычно обозначает подлежащее: Siostra czeka. Он также используется в конструкции X to Y: Warszawa to stolica Polski.",
       "prerequisites": [
         "pl.gram.gender",
         "pl.gram.number"
@@ -1134,7 +1145,7 @@
         "pl": "Narzędnik",
         "ru": "Творительный падеж"
       },
-      "summary": "Формы творительного для существительных, прилагательных, местоимений.",
+      "summary": "Творительный употребляется, например, после być с названием профессии, после z в значении «с кем» и для средства передвижения: jestem lekarzem, z koleżanką, jadę autobusem. Согласуй связанные с существительным слова с его формой.",
       "prerequisites": [
         "pl.gram.c-nom",
         "pl.gram.v-byc"
@@ -1166,7 +1177,6 @@
         "gap-fill"
       ],
       "sourceRef": "2.2.3 1) e)",
-      "teachingNote": "Вводить рано: без него нельзя сказать «jestem …».",
       "summaryI18n": {
         "pl": "Narzędnik odpowiada na pytania: kim? czym? Końcówki: -em (lekarzem), -ą (siostrą), w liczbie mnogiej -ami (studentami). Używamy go po «jest» (Mój brat jest lekarzem), po «z» (kawa z mlekiem) i przy transporcie (jadę autobusem)."
       }
@@ -1178,7 +1188,7 @@
         "pl": "Narzędnik z czasownikami i przyimkami",
         "ru": "Творительный: глаголы и предлоги"
       },
-      "summary": "być, zostać, zajmować się, kierować; предлоги z, nad, pod, przed, za, między.",
+      "summary": "Творительного требуют kierować, zajmować się и некоторые другие глаголы. Он употребляется после z в значении «вместе с» и после nad, pod, przed, za, między при указании места: pod mostem.",
       "prerequisites": [
         "pl.gram.c-instr"
       ],
@@ -1262,7 +1272,7 @@
         "pl": "Biernik z przyimkami",
         "ru": "Винительный с предлогами"
       },
-      "summary": "na, w, przez, o, po, za — направление, цель, время.",
+      "summary": "Падеж после предлога зависит от значения. Сравни: Jadę na pocztę — направление, Jestem na poczcie — место. В значении длительности употребляется винительный после przez: przez godzinę.",
       "prerequisites": [
         "pl.gram.c-acc"
       ],
@@ -1358,6 +1368,10 @@
         {
           "pl": "studentów, kobiet, miast, ulic, nocy",
           "ru": "четыре разных окончания"
+        },
+        {
+          "pl": "Na półce nie ma zeszytów. W koszyku jest pięć jabłek.",
+          "ru": "На полке нет тетрадей. В корзине пять яблок."
         }
       ],
       "pitfallsForRu": [
@@ -1388,7 +1402,7 @@
         "pl": "Dopełniacz w zdaniach zaprzeczonych",
         "ru": "Родительный при отрицании"
       },
-      "summary": "Прямое дополнение при отрицании переходит из винительного в родительный. Правило без исключений.",
+      "summary": "Если прямое дополнение при глаголе стоит в винительном, при отрицании того же глагола оно обычно переходит в родительный: Mam czas → Nie mam czasu. При nie ma тоже нужен родительный: Nie ma mleka.",
       "prerequisites": [
         "pl.gram.c-gen",
         "pl.gram.c-acc"
@@ -1424,9 +1438,8 @@
         "gap-fill"
       ],
       "sourceRef": "2.2.3 1) b)",
-      "teachingNote": "Высокий приоритет: правило простое, ошибка частая, проверяется прямо.",
       "summaryI18n": {
-        "pl": "Po przeczeniu biernik zmienia się na dopełniacz: Mam czas → Nie mam czasu. Ta reguła nie ma wyjątków. Po „nie ma” i „nie było” też używamy dopełniacza: Nie ma mleka."
+        "pl": "Gdy zaprzeczasz czasownikowi, dopełnienie bliższe w bierniku zwykle przechodzi w dopełniacz: Mam czas → Nie mam czasu. Po „nie ma” i „nie było” też używamy dopełniacza: Nie ma mleka."
       }
     },
     {
@@ -1436,7 +1449,7 @@
         "pl": "Dopełniacz po liczebnikach i miarach",
         "ru": "Родительный после количества"
       },
-      "summary": "После 5+, после dużo/mało/kilka, после мер.",
+      "summary": "После слов количества dużo, mało, kilka и числительных от пяти в именительном или винительном обычно нужен родительный: dużo wody, kilka minut, pięć książek. С мерой так же: litr mleka.",
       "prerequisites": [
         "pl.gram.c-gen-pl",
         "pl.gram.n-cardinal-5plus"
@@ -1475,7 +1488,7 @@
         "pl": "Dopełniacz z przyimkami",
         "ru": "Родительный с предлогами"
       },
-      "summary": "do, od, z, bez, dla, obok, koło, według, oprócz.",
+      "summary": "После do, od, bez, dla, obok, według и oprócz нужен родительный: bez cukru, dla przyjaciela. С z проверь значение: z pracy («с работы») требует родительного, z kolegą («с коллегой») — творительного.",
       "prerequisites": [
         "pl.gram.c-gen"
       ],
@@ -1520,7 +1533,7 @@
         "pl": "Czasowniki z dopełniaczem",
         "ru": "Глаголы с родительным"
       },
-      "summary": "szukać, potrzebować, słuchać, używać, uczyć się, bać się.",
+      "summary": "Глаголы szukać, potrzebować, słuchać, używać, uczyć się и bać się требуют родительного: szukam nowej pracy, słucham muzyki. Поставь в этот падеж и существительное, и его определение.",
       "prerequisites": [
         "pl.gram.c-gen"
       ],
@@ -1555,7 +1568,6 @@
         "translate-to-target"
       ],
       "sourceRef": "2.2.3 1) b)",
-      "teachingNote": "Один из самых доходных дриллов для русскоязычного.",
       "summaryI18n": {
         "pl": "Niektóre czasowniki łączą się z dopełniaczem, nie z biernikiem: szukać, potrzebować, słuchać, używać, uczyć się, bać się. Mówimy: szukam pracy, słucham muzyki, boję się egzaminu. Zapamiętaj tę listę!"
       }
@@ -1567,7 +1579,7 @@
         "pl": "Miejscownik",
         "ru": "Предложный падеж"
       },
-      "summary": "Всегда только с предлогом. Богатые чередования в основе.",
+      "summary": "Предложный падеж употребляется только после предлогов. Вопросы «где?» и «о ком/о чём?» часто ведут к этой форме: w mieście, o szkole. Вместе с окончанием иногда меняется основа: las → w lesie.",
       "prerequisites": [
         "pl.gram.c-gen"
       ],
@@ -1615,7 +1627,7 @@
         "pl": "Miejscownik z przyimkami",
         "ru": "Предложный с предлогами"
       },
-      "summary": "w, na, o, po, przy.",
+      "summary": "Для места часто используются w, na, przy с предложным: w domu, na poczcie, przy oknie. Для темы разговора — o: o filmie. Различай место (na poczcie) и направление (na pocztę).",
       "prerequisites": [
         "pl.gram.c-loc"
       ],
@@ -1655,7 +1667,7 @@
         "pl": "Celownik",
         "ru": "Дательный падеж"
       },
-      "summary": "Самый редкий падеж. Формы ед. -owi/-u (м.р.), -(i)e (ж.р.).",
+      "summary": "Дательный часто обозначает того, кому адресовано действие: Daję książkę koleżance. Сравни формы: sąsiad → sąsiadowi, brat → bratu, siostra → siostrze, babcia → babci.",
       "prerequisites": [
         "pl.gram.c-loc"
       ],
@@ -1696,7 +1708,7 @@
         "pl": "Czasowniki z celownikiem",
         "ru": "Глаголы с дательным"
       },
-      "summary": "podobać się, pomagać, dziękować, przeszkadzać, wydawać się.",
+      "summary": "Глаголы pomagać, dziękować, przeszkadzać и podobać się требуют дательного для обозначения человека: pomagam sąsiadowi, dziękuję nauczycielce, podobają mi się te buty.",
       "prerequisites": [
         "pl.gram.c-dat"
       ],
@@ -1735,7 +1747,7 @@
         "pl": "Wołacz",
         "ru": "Звательный падеж"
       },
-      "summary": "Обращение. В русском отсутствует как грамматическая форма.",
+      "summary": "Звательный используется при обращении: Anno!, Panie Marku!, Szanowna Pani! Форма может отличаться от именительного, поэтому имя собеседника в письме или обращении иногда нужно изменить.",
       "prerequisites": [
         "pl.gram.c-loc"
       ],
@@ -1771,7 +1783,6 @@
         "situational"
       ],
       "sourceRef": "2.2.3 1) g)",
-      "teachingNote": "Прямо влияет на модуль «Pisanie»: во всех письмах нужно обращение.",
       "summaryI18n": {
         "pl": "Wołacz to forma, której używamy, kiedy mówimy do kogoś: Mamo! Aniu! Panie Doktorze! Wołacz jest obowiązkowy na początku listu: Kochana Mamo! Szanowni Państwo!"
       }
@@ -1783,7 +1794,7 @@
         "pl": "Zaimki osobowe",
         "ru": "Личные местоимения"
       },
-      "summary": "ja, ty, on, ona, ono + падежные формы, включая краткие (клитики).",
+      "summary": "Личные местоимения меняются по падежам: ja → mnie/mi, on → jego/go. В обычном безударном положении часто нужна краткая форма (Daj mi), после предлога — полная (dla mnie, dla niego).",
       "prerequisites": [
         "pl.gram.c-acc",
         "pl.gram.c-dat"
@@ -1826,7 +1837,7 @@
         "pl": "Formy grzecznościowe Pan / Pani / Państwo",
         "ru": "Вежливые формы Pan/Pani/Państwo"
       },
-      "summary": "Вежливое обращение через 3 лицо, а не через «вы».",
+      "summary": "Вежливое обращение к одному человеку строится с Pan или Pani и глаголом в третьем лице: Czy pani mówi po polsku? Для группы: Czy państwo mówią po polsku?",
       "prerequisites": [
         "pl.gram.p-personal",
         "pl.gram.v-present-3"
@@ -1858,7 +1869,6 @@
         "error-correction"
       ],
       "sourceRef": "Katalog A 6.1 1) — konwencje grzecznościowe",
-      "teachingNote": "Вводить очень рано. Ошибка здесь читается как невежливость, а не как грамматическая погрешность.",
       "summaryI18n": {
         "pl": "Do osoby, której dobrze nie znamy, mówimy Pan lub Pani + czasownik w 3. osobie liczby pojedynczej: Czy Pan mówi po polsku? Do grupy — Państwo + 3. osoba liczby mnogiej: Co Państwo robią? Forma «wy» jest tylko dla przyjaciół i rodziny."
       }
@@ -1870,7 +1880,7 @@
         "pl": "Zaimki wskazujące",
         "ru": "Указательные местоимения"
       },
-      "summary": "ten, ta, to + склонение; конструкция «X to Y».",
+      "summary": "Ten, ta, to согласуются с существительным: ten film, ta książka, to okno. При смене падежа меняется и местоимение: ten film → o tym filmie. В конструкции X to Y слово to связывает две части.",
       "prerequisites": [
         "pl.gram.c-nom",
         "pl.gram.gender"
@@ -1907,7 +1917,7 @@
         "pl": "Zaimki dzierżawcze",
         "ru": "Притяжательные местоимения"
       },
-      "summary": "mój, twój, nasz, wasz, swój + согласование.",
+      "summary": "Mój, twój, nasz и подобные слова согласуются с тем, чем владеют: mój telefon, moja książka, moje okno. Swój указывает на принадлежность подлежащему: Anna czyta swoją książkę.",
       "prerequisites": [
         "pl.gram.p-demonstrative"
       ],
@@ -1947,7 +1957,7 @@
         "pl": "Zaimki pytające",
         "ru": "Вопросительные местоимения"
       },
-      "summary": "kto, co, jaki, który, czyj, ile + их склонение.",
+      "summary": "Kto спрашивает о человеке, co — о предмете, czyj — о владельце. Jaki спрашивает о качестве или типе, który — о выборе из известных вариантов. Форму определяет падеж: Kto przyszedł? O kim mówisz?",
       "prerequisites": [
         "pl.gram.p-demonstrative"
       ],
@@ -1963,8 +1973,8 @@
           "ru": "какой суп — род. при отрицании"
         },
         {
-          "pl": "jaki (какой по качеству) ≠ który (который из нескольких)",
-          "ru": "различие"
+          "pl": "Jaki film lubisz? Który film wybierasz?",
+          "ru": "Какое кино тебе нравится? Какой из фильмов выбираешь?"
         }
       ],
       "pitfallsForRu": [
@@ -1990,7 +2000,7 @@
         "pl": "Zaimki nieokreślone i przeczące",
         "ru": "Неопределённые и отрицательные местоимения"
       },
-      "summary": "ktoś, coś / nikt, nic + обязательное двойное отрицание.",
+      "summary": "Ktoś и coś означают «кто-то» и «что-то». С отрицательными nikt и nic глагол тоже получает nie: Nikt nie przyszedł. Nic nie widzę.",
       "prerequisites": [
         "pl.gram.p-interrogative",
         "pl.gram.c-gen-negation"
@@ -2029,7 +2039,7 @@
         "pl": "Zaimek zwrotny «siebie»",
         "ru": "Возвратное местоимение siebie"
       },
-      "summary": "siebie / sobie / sobą и его отличие от się.",
+      "summary": "Siebie, sobie, sobą относятся к подлежащему: Myślę o sobie. Форму выбирай по падежу. Się — отдельная краткая частица, которая входит и в состав глаголов: bać się.",
       "prerequisites": [
         "pl.gram.v-reflexive",
         "pl.gram.c-dat"
@@ -2065,7 +2075,7 @@
         "pl": "Liczebniki główne 1–4",
         "ru": "Количественные 1–4"
       },
-      "summary": "jeden/jedna/jedno, dwa/dwie, trzy, cztery + согласование с существительным.",
+      "summary": "Jeden, jedna, jedno согласуются в роде. Сравни dwa okna и dwie książki. В обычных конструкциях с 2–4 существительное стоит во множественном числе: trzy stoły, cztery książki. Для групп мужчин есть особые формы.",
       "prerequisites": [
         "pl.gram.c-nom",
         "pl.gram.number"
@@ -2106,7 +2116,7 @@
         "pl": "Liczebniki główne od 5",
         "ru": "Количественные от 5"
       },
-      "summary": "pięć и выше + родительный мн. ч. + глагол в 3 л. ед. ср. р.",
+      "summary": "С числительными от пяти в именительном или винительном существительное обычно стоит в родительном множественного: pięć książek. Если такое сочетание — подлежащее, глагол обычно в единственном: Pięć osób przyszło.",
       "prerequisites": [
         "pl.gram.n-cardinal-1-4",
         "pl.gram.c-gen-pl"
@@ -2228,7 +2238,7 @@
         "pl": "Data i godzina",
         "ru": "Дата и время"
       },
-      "summary": "Даты через порядковые в родительном, часы через порядковые.",
+      "summary": "В дате день часто выражается порядковым в родительном: Spotkamy się piątego maja. Для времени события используется o с предложным: Spotkamy się o piątej.",
       "prerequisites": [
         "pl.gram.n-ordinal",
         "pl.gram.c-gen"
@@ -2324,7 +2334,7 @@
         "pl": "Stopniowanie przymiotników",
         "ru": "Степени сравнения прилагательных"
       },
-      "summary": "Простая (-szy/-ejszy), супплетивная, описательная (bardziej).",
+      "summary": "Сравнительная степень может иметь окончание -szy/-ejszy (starszy, ładniejszy), отдельную основу (dobry → lepszy) или конструкцию с bardziej. Для сравнения употребляй niż или od с родительным.",
       "prerequisites": [
         "pl.gram.k-adj-agreement"
       ],
@@ -2378,7 +2388,7 @@
         "pl": "Przysłówki i ich stopniowanie",
         "ru": "Наречия и их степени сравнения"
       },
-      "summary": "Образование от прилагательных и степени сравнения.",
+      "summary": "Наречие описывает, как происходит действие: mówi cicho. Оно не согласуется с существительным. Для сравнения употребляй формы вроде ciszej и szybciej, а с некоторыми наречиями — конструкцию с bardziej.",
       "prerequisites": [
         "pl.gram.k-comparative"
       ],
@@ -2422,7 +2432,7 @@
         "pl": "Zdania pytające",
         "ru": "Вопросительные предложения"
       },
-      "summary": "Общие вопросы с czy, специальные с вопросительным словом.",
+      "summary": "Вопрос с ответом «да/нет» можно начать с czy: Czy masz czas? Для вопроса о конкретной детали используй нужное слово: Gdzie mieszkasz? Kiedy wracasz?",
       "prerequisites": [
         "pl.gram.p-interrogative"
       ],
@@ -2463,7 +2473,7 @@
         "pl": "Zdania zaprzeczone",
         "ru": "Отрицательные предложения"
       },
-      "summary": "nie + глагол, двойное отрицание, влияние на падеж дополнения.",
+      "summary": "Перед личной формой глагола ставь nie: Nie pracuję. Отрицательные местоимения его не заменяют: Nikt nie pracuje. Прямое дополнение часто меняется с винительного на родительный.",
       "prerequisites": [
         "pl.gram.c-gen-negation",
         "pl.gram.p-indefinite-negative"
@@ -2500,7 +2510,7 @@
         "pl": "Zdania współrzędnie złożone",
         "ru": "Сложносочинённые предложения"
       },
-      "summary": "Союзы oraz, a także, lub, albo, czy, dlatego, ale.",
+      "summary": "Выбирай союз по связи между частями: i/oraz — добавление, albo/lub — выбор, ale — противопоставление, dlatego — следствие. Например: Pada, dlatego zostaję w domu.",
       "prerequisites": [
         "pl.gram.s-questions"
       ],
@@ -2540,7 +2550,7 @@
         "pl": "Zdania z «że» i «żeby»",
         "ru": "Придаточные с że и żeby"
       },
-      "summary": "że — изъяснительное, żeby — цель и желание.",
+      "summary": "Że вводит содержание сообщения или мысли: Wiem, że masz czas. Żeby выражает цель или желаемое действие: Proszę, żebyś przyszedł.",
       "prerequisites": [
         "pl.gram.s-coordinate",
         "pl.gram.v-conditional"
@@ -2582,7 +2592,7 @@
         "pl": "Zdania przyczyny i czasu",
         "ru": "Придаточные причины и времени"
       },
-      "summary": "ponieważ, bo, dlatego że / kiedy, gdy.",
+      "summary": "Для причины выбирай bo, ponieważ или dlatego że: Zostałem w domu, bo padało. Для времени — kiedy или gdy: Kiedy przestało padać, wyszedłem.",
       "prerequisites": [
         "pl.gram.s-subordinate-ze"
       ],
@@ -2621,7 +2631,7 @@
         "pl": "Zdania względne: który, jaki",
         "ru": "Относительные придаточные"
       },
-      "summary": "który склоняется по роду, числу и падежу внутри придаточного.",
+      "summary": "Род и число который (który) берёт от существительного, а падеж — от своей роли в придаточном. В Książka, którą czytam форма którą стоит в винительном, потому что читать можно «что?».",
       "prerequisites": [
         "pl.gram.p-interrogative",
         "pl.gram.s-subordinate-ze"
@@ -2663,7 +2673,7 @@
         "pl": "Zdania warunkowe",
         "ru": "Условные предложения"
       },
-      "summary": "jeśli/jeżeli… to… (реальное), gdyby… to… (нереальное).",
+      "summary": "Если условие возможно, используй jeśli / jeżeli: Jeśli będę miał czas, przyjdę. Для воображаемого условия используй gdyby и форму с by в результате: Gdybym miał czas, przyszedłbym.",
       "prerequisites": [
         "pl.gram.v-conditional",
         "pl.gram.s-subordinate-cause-time"
@@ -2706,7 +2716,7 @@
         "pl": "Konstrukcja «im… tym…»",
         "ru": "Конструкция im… tym…"
       },
-      "summary": "Сопоставление двух возрастающих величин.",
+      "summary": "Конструкция im… tym… означает «чем…, тем…»: изменение одного признака связано с изменением другого. После обеих частей используй сравнительную степень: Im wolniej oddycham, tym spokojniej zasypiam.",
       "prerequisites": [
         "pl.gram.k-comparative",
         "pl.gram.s-conditional-clauses"
@@ -2716,7 +2726,11 @@
       "examples": [
         {
           "pl": "Im więcej czytasz, tym lepiej mówisz.",
-          "ru": "чем больше… тем лучше"
+          "ru": "Чем больше читаешь, тем лучше говоришь."
+        },
+        {
+          "pl": "Im wolniej oddycham, tym spokojniej zasypiam.",
+          "ru": "Чем медленнее я дышу, тем спокойнее засыпаю."
         }
       ],
       "pitfallsForRu": [
@@ -2732,7 +2746,7 @@
       ],
       "sourceRef": "2.2.3 3) b)",
       "summaryI18n": {
-        "pl": "Konstrukcja im… tym… porównuje dwie rzeczy, które rosną razem. Po im i po tym stoi stopień wyższy: Im więcej czytasz, tym lepiej mówisz."
+        "pl": "Konstrukcja im… tym… pokazuje związek między dwiema zmianami. Po im i po tym używamy stopnia wyższego: Im wolniej oddycham, tym spokojniej zasypiam."
       }
     },
     {
@@ -2742,7 +2756,7 @@
         "pl": "Styl formalny, nieformalny, potoczny",
         "ru": "Стили: формальный, неформальный, разговорный"
       },
-      "summary": "Различение трёх регистров и выбор уместного.",
+      "summary": "Выбирай стиль по ситуации и адресату. В официальном письме уместно Szanowna Pani, при нейтральном знакомстве Dzień dobry, а с друзьями Cześć.",
       "prerequisites": [
         "pl.gram.p-formal-pan",
         "pl.gram.c-voc"
@@ -2783,7 +2797,7 @@
         "pl": "Środki stylistyczne",
         "ru": "Стилистические средства"
       },
-      "summary": "Эллипсис, синонимы, антонимы, эпитеты, сравнения.",
+      "summary": "Синонимы помогают избежать повторов, антонимы показывают противопоставление, сравнение часто вводится через jak, а эллипсис позволяет опустить понятное из контекста слово: Jak miło!",
       "prerequisites": [
         "pl.gram.t-registers"
       ],
@@ -2791,8 +2805,8 @@
       "interferenceRu": 1,
       "examples": [
         {
-          "pl": "Jak miło! (эллипсис)",
-          "ru": "как мило"
+          "pl": "Jak miło!",
+          "ru": "Как мило! Пример эллипсиса."
         },
         {
           "pl": "biały jak śnieg, zimny jak lód",

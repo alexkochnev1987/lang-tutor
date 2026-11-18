@@ -6,7 +6,7 @@ import { Row } from '@polski/ui'
 import { saveSettings, useSettings } from '@/lib/data/store'
 import type { Settings } from '@/lib/data/types'
 import { LOCALES, LOCALE_NAMES, isLocale } from '@/lib/i18n/messages'
-import { RULE_LANGUAGES, RULE_LANGUAGE_NAMES, isRuleLanguage } from '@/lib/content/rules'
+import { AVAILABLE_RULE_LANGUAGES, RULE_LANGUAGE_NAMES, PACK_ORIGINAL_LANGUAGE } from '@/lib/content/rules'
 import { ThemePicker } from './ThemePicker'
 
 export function SettingsRow() {
@@ -14,7 +14,7 @@ export function SettingsRow() {
   const s = useSettings()
   const [status, setStatus] = useState<'idle' | 'saving' | 'error'>('idle')
 
-  async function update(settings: Partial<Pick<Settings, 'uiLanguage' | 'ruleLanguage'>>) {
+  async function update(settings: Partial<Pick<Settings, 'uiLanguage' | 'ruleLanguage' | 'timeZone'>>) {
     setStatus('saving')
     try {
       await saveSettings(settings)
@@ -45,18 +45,25 @@ export function SettingsRow() {
           {t('settings.ruleLanguage')}
           <select
             className="min-h-10 rounded-card border border-line bg-card px-2 text-ink"
-            value={s.ruleLanguage}
+            value={s.ruleLanguage === 'pl' ? 'pl' : PACK_ORIGINAL_LANGUAGE}
             onChange={(e) => {
               const v = e.target.value
-              if (isRuleLanguage(v)) void update({ ruleLanguage: v })
+              if (v === 'ru' || v === 'pl') void update({ ruleLanguage: v })
             }}
           >
-            {RULE_LANGUAGES.map((l) => (
+            {AVAILABLE_RULE_LANGUAGES.map((l) => (
               <option key={l} value={l}>{RULE_LANGUAGE_NAMES[l]}</option>
             ))}
           </select>
         </label>
 
+        <Row gap="sm" wrap>
+          <span className="text-sm text-muted">{t('dailyWords.timeZone', { zone: s.timeZone })}</span>
+          <button type="button" className="min-h-12 rounded-card border border-line px-3 text-sm"
+            onClick={() => void update({ timeZone: Intl.DateTimeFormat().resolvedOptions().timeZone })}>
+            {t('dailyWords.useTimeZone')}
+          </button>
+        </Row>
         <Row gap="sm">
           <span className="text-sm text-muted">{t('settings.appearance')}</span>
           <ThemePicker />

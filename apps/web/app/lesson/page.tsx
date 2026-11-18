@@ -12,7 +12,6 @@ import {
   type TodayPlan,
 } from "@/lib/engine/plan";
 import {
-  ensureLexemeCards,
   LEXEME_SKILL_KINDS,
   lexemeSkillProgress,
   nextLexemeReview,
@@ -21,17 +20,16 @@ import {
   Rating,
 } from "@/lib/engine/session";
 import {
+  loadDailyWords,
+  saveDailyWordAnswer,
   saveExerciseResult,
   saveLessonSession,
-  saveScheduledReview,
   useAppState,
 } from "@/lib/data/store";
 import {
   ExerciseView,
   GrammarExerciseBatch,
-  StudyActionBar,
   VocabularyExerciseBatch,
-  speakableTextOf,
 } from "@/app/_components/ExerciseView";
 import { RuleSheet } from "@/app/_components/RuleSheet";
 import { RuleView } from "@/app/_components/RuleView";
@@ -41,7 +39,11 @@ import { KnownToggle } from "@/app/_components/WordRow";
 import { StudyTooltip } from "@/app/_components/StudyTooltip";
 import { useSaveLessonResult } from "@/app/_components/useSaveLessonResult";
 import type { Lexeme } from "@/lib/content/curriculum";
-import { WORD_STAGE_RETRY_LIMIT } from "@/lib/engine/word-study";
+import { formatOfWordExercise, wordSkill } from "@/lib/engine/daily-words";
+import { WordPracticeFooter } from "@/app/_components/WordPracticeFooter";
+import { useTranslations } from "next-intl";
+
+const WORD_FORM_ID = "lesson-word-response";
 
 type ReviewWrite = {
   lexemeId: string;
@@ -104,6 +106,9 @@ function toSlots(stages: Stage[]): Slot[] {
 
 export default function LessonPage() {
   const appState = useAppState();
+  const t = useTranslations("dailyWords");
+  const [planError, setPlanError] = useState(false);
+  const [planAttempt, setPlanAttempt] = useState(0);
   const [plan, setPlan] = useState<TodayPlan | null>(null);
   const [slots, setSlots] = useState<Slot[]>([]);
   const [i, setI] = useState(0);
@@ -112,13 +117,15 @@ export default function LessonPage() {
   const [phase, setPhase] = useState<"main" | "done">("main");
   const [special, setSpecial] = useState<"diagnostic" | "empty" | null>(null);
   const startedAt = useRef(Date.now());
+  const wordMain = useRef<HTMLElement>(null);
   const [reviewWrites, setReviewWrites] = useState<Record<string, ReviewWrite>>({});
   const lessonSave = useSaveLessonResult();
-  const finalizedWords = useRef(new Set<string>());
-  const batchResumeInitialized = useRef(false);
+  const [queueStatus, setQueueStatus] = useState<"ready" | "checking" | "error">("ready");
+  const [unavailableWord, setUnavailableWord] = useState(false);
 
   useEffect(() => {
     let alive = true;
+    setPlanError(false);
     buildTodayPlan().then((p) => {
       if (!alive) return;
       setPlan(p);
@@ -130,17 +137,18 @@ export default function LessonPage() {
         setSlots(main);
         setSpecial(main.length ? null : "empty");
       }
-    });
+    }).catch(() => { if (alive) setPlanError(true); });
     return () => {
       alive = false;
     };
-  }, []);
+  }, [planAttempt]);
 
   const slot = slots[i];
+  const wordScreen = slot?.stage.id === "words";
   const wordStudyExercise =
     slot?.kind === "step" &&
     slot.step.kind === "exercise" &&
-    slot.step.wordStage !== undefined;
+    slot.stage.id === "words" && Boolean(slot.step.ex.lexemeId);
   const reviewLexemeId =
     slot?.kind === "step" && slot.step.kind === "exercise" && slot.step.review
       ? slot.step.ex.lexemeId
@@ -222,119 +230,6 @@ export default function LessonPage() {
     return persist();
   }, []);
 
-  useEffect(() => {
-    if (!plan || !appState || !slots.length) return;
-    const idsByWord = new Map<string, string[]>();
-    for (const currentSlot of slots) {
-      if (currentSlot.kind !== "step" || currentSlot.step.kind !== "exercise")
-        continue;
-      if (currentSlot.step.review || !currentSlot.step.ex.lexemeId) continue;
-      const ids = idsByWord.get(currentSlot.step.ex.lexemeId) ?? [];
-      ids.push(currentSlot.step.ex.id);
-      idsByWord.set(currentSlot.step.ex.lexemeId, ids);
-    }
-
-    for (const [lexemeId, exerciseIds] of idsByWord) {
-      const markerId = `day:${plan.dayNumber}:word:${lexemeId}`;
-      if (
-        finalizedWords.current.has(lexemeId) ||
-        appState.sessions.some((s) => s.id === markerId)
-      ) {
-        continue;
-      }
-      const rows = exerciseIds.map((exerciseId) =>
-        appState.exerciseResults.find(
-          (row) =>
-            row.dayNumber === plan.dayNumber && row.exerciseId === exerciseId,
-        ),
-      );
-      const pendingRetry = slots.some((currentSlot) => {
-        if (
-          currentSlot.kind !== "step" ||
-          currentSlot.step.kind !== "exercise" ||
-          currentSlot.step.ex.lexemeId !== lexemeId ||
-          currentSlot.step.wordStage === undefined ||
-          (currentSlot.step.wordRetryRound ?? 0) >= WORD_STAGE_RETRY_LIMIT
-        )
-          return false;
-        const exerciseId = currentSlot.step.ex.id;
-        const wordStage = currentSlot.step.wordStage;
-        const retryRound = currentSlot.step.wordRetryRound ?? 0;
-        const hasNextRetry = slots.some(
-          (nextSlot) =>
-            nextSlot.kind === "step" &&
-            nextSlot.step.kind === "exercise" &&
-            nextSlot.step.ex.lexemeId === lexemeId &&
-            nextSlot.step.wordStage === wordStage &&
-            (nextSlot.step.wordRetryRound ?? 0) === retryRound + 1,
-        );
-        return (
-          !hasNextRetry &&
-          appState.exerciseResults.some(
-            (row) =>
-              row.dayNumber === plan.dayNumber &&
-              row.exerciseId === exerciseId &&
-              !row.correct,
-          )
-        );
-      });
-      if (pendingRetry) continue;
-      if (rows.some((row) => !row)) continue;
-
-      const completed = rows.filter(Boolean) as NonNullable<
-        (typeof rows)[number]
-      >[];
-      const skillResults = Object.fromEntries(
-        LEXEME_SKILL_KINDS.map((kind, stageIndex) => {
-          const stageSlots = slots.filter(
-            (currentSlot) =>
-              currentSlot.kind === "step" &&
-              currentSlot.step.kind === "exercise" &&
-              currentSlot.step.ex.lexemeId === lexemeId &&
-              currentSlot.step.wordStage === stageIndex,
-          );
-          return [
-            kind,
-            stageSlots.some((stageSlot) => {
-              if (
-                stageSlot.kind !== "step" ||
-                stageSlot.step.kind !== "exercise"
-              ) {
-                return false;
-              }
-              const stageExerciseId = stageSlot.step.ex.id;
-              return appState.exerciseResults.some(
-                (row) =>
-                  row.dayNumber === plan.dayNumber &&
-                  row.exerciseId === stageExerciseId &&
-                  row.correct,
-              );
-            }),
-          ];
-        }),
-      ) as Record<(typeof LEXEME_SKILL_KINDS)[number], boolean>;
-      finalizedWords.current.add(lexemeId);
-      const payloads = LEXEME_SKILL_KINDS.map((kind) =>
-        prepareLexemeReview(appState.studyItems, lexemeId, kind, skillResults[kind] ? Rating.Good : Rating.Again, 0),
-      );
-      void trackReviewWrite(markerId, lexemeId, async () => {
-        const saved = await Promise.all(payloads.map(saveScheduledReview));
-        if (!saved.every(Boolean)) return false;
-        return saveLessonSession({
-          id: markerId,
-          dayNumber: plan.dayNumber,
-          kind: "words",
-          startedAt: new Date(startedAt.current),
-          completedAt: new Date(),
-          plannedBudgetMs: completed.length * 20_000,
-          actualMs: Date.now() - startedAt.current,
-          itemsReviewed: completed.length,
-          itemsCorrect: completed.filter((row) => row.correct).length,
-        });
-      });
-    }
-  }, [appState, plan, slots, trackReviewWrite]);
-
   async function onAnswered(
     ex: Exercise,
     r: CheckResult,
@@ -342,15 +237,7 @@ export default function LessonPage() {
     complete = true,
     attempts = 1,
     answer = "",
-    wordStep?: Extract<Step, { kind: "exercise" }>,
   ) {
-    setStats((s) => ({
-      correct: s.correct + (r.correct ? 1 : 0),
-      total: s.total + 1,
-    }));
-
-    // Результат каждого задания сохраняется на сервере: после reload должны
-    // восстанавливаться и упражнения на слова, а не только грамматика.
     const exerciseResult = {
       dayNumber: plan?.dayNumber ?? 1,
       exerciseId: ex.id,
@@ -360,86 +247,44 @@ export default function LessonPage() {
       expected: r.expected,
       errorKind: r.errorKind ?? null,
     };
-    const lexemeId = ex.lexemeId;
-    if (lexemeId && !plan?.newWords.some((word) => word.id === lexemeId)) {
-      const kind =
-        ex.kind === "translate-production"
-          ? "lexeme-production"
-          : ex.kind === "spelling"
-            ? "lexeme-spelling"
-            : ex.kind === "listen-write"
-              ? "lexeme-listen-write"
-              : "lexeme-recognition";
-      const payload = prepareLexemeReview(
-        appState?.studyItems ?? [], lexemeId, kind, r.correct ? Rating.Good : Rating.Again, ms,
-      );
-
-      let answerSaved = false;
+    if (slot?.stage.id === "words" && ex.lexemeId) {
+      const lexemeId = ex.lexemeId;
+      const format = formatOfWordExercise(ex);
+      const payload = {
+        ...prepareLexemeReview(appState?.studyItems ?? [], lexemeId, wordSkill(format), r.correct ? Rating.Good : Rating.Again, ms),
+        format,
+        result: exerciseResult,
+      };
       await trackReviewWrite(ex.id, lexemeId, async () => {
-        if (!answerSaved) answerSaved = await saveExerciseResult(exerciseResult);
-        if (!answerSaved || !(await saveScheduledReview(payload))) return false;
-        void ensureLexemeCards(lexemeId);
+        const accepted = await saveDailyWordAnswer(payload);
+        setUnavailableWord(!accepted);
+        if (accepted) setStats((previous) => ({
+          correct: previous.correct + Number(r.correct), total: previous.total + 1,
+        }));
+        if (complete) setCanAdvance(true);
         return true;
       });
-    } else {
-      await saveExerciseResult(exerciseResult);
+      return;
     }
-
-    // Для новых слов возвращаем в очередь только ошибочный этап. Остальные
-    // этапы слова не повторяются, а retry получает отдельный ID для reload.
-    if (
-      !r.correct &&
-      wordStep?.wordStage !== undefined &&
-      ex.lexemeId &&
-      plan?.newWords.some((word) => word.id === ex.lexemeId) &&
-      (wordStep.wordRetryRound ?? 0) < WORD_STAGE_RETRY_LIMIT &&
-      slot?.kind === "step"
-    ) {
-      const retryRound = (wordStep.wordRetryRound ?? 0) + 1;
-      const retryId = `day:${plan.dayNumber}:word-retry:${ex.lexemeId}:${wordStep.wordStage}:${retryRound}:${ex.id}`;
-      const retryStep: Step = {
-        ...wordStep,
-        wordRetryRound: retryRound,
-        ex: { ...ex, id: retryId, attemptsAllowed: 1 },
-      };
-      setSlots((currentSlots) =>
-        currentSlots.some(
-          (currentSlot) =>
-            currentSlot.kind === "step" &&
-            currentSlot.step.kind === "exercise" &&
-            currentSlot.step.ex.id === retryId,
-        )
-          ? currentSlots
-          : [
-              ...currentSlots,
-              { kind: "step", stage: slot.stage, step: retryStep },
-            ],
-      );
-    }
-
+    setStats((previous) => ({ correct: previous.correct + Number(r.correct), total: previous.total + 1 }));
+    await saveExerciseResult(exerciseResult);
     for (const ruleId of ex.grammarRuleIds) {
       await recordRuleAttempt(ruleId, r.correct, ex.difficulty);
     }
-    if (complete && (!lexemeId || wordStep?.wordStage !== undefined)) setCanAdvance(true);
+    if (complete) setCanAdvance(true);
   }
 
-  function skipWord(lexemeId: string) {
-    setSlots((prev) =>
-      prev.filter(
-        (s, idx) =>
-          idx <= i ||
-          !(
-            s.kind === "step" &&
-            s.step.kind === "exercise" &&
-            s.step.ex.lexemeId === lexemeId
-          ),
-      ),
-    );
-    next();
+  function skipWord() {
+    // The known-word toggle updates the UI before its API request finishes.
+    void advanceWordBlock(exerciseLexemeId);
   }
 
   function next() {
-    if (lessonSave.status === "saving") return;
+    if (lessonSave.status === "saving" || queueStatus === "checking") return;
+    if (slot?.stage.id === "words") {
+      void advanceWordBlock();
+      return;
+    }
     setCanAdvance(false);
     if (
       slot?.kind === "step" &&
@@ -469,6 +314,32 @@ export default function LessonPage() {
     void finish();
   }
 
+  async function advanceWordBlock(skippedId?: string) {
+    setQueueStatus("checking");
+    try {
+      const queue = await loadDailyWords();
+      const available = new Set([...queue.learn, ...queue.review]);
+      const upcoming = slots.slice(i + 1).filter((candidate) => {
+        if (candidate.kind !== "step" || candidate.stage.id !== "words") return true;
+        const step = candidate.step;
+        const id = step.kind === "exercise" ? step.ex.lexemeId : undefined;
+        return !id || (id !== skippedId && available.has(id));
+      });
+      setQueueStatus("ready");
+      setCanAdvance(false);
+      setUnavailableWord(false);
+      if (!upcoming.length) {
+        await finish();
+        return;
+      }
+      setSlots([...slots.slice(0, i + 1), ...upcoming]);
+      setI(i + 1);
+      wordMain.current?.scrollTo({ top: 0 });
+    } catch {
+      setQueueStatus("error");
+    }
+  }
+
   async function afterDiagnostic() {
     if (plan) {
       await saveLessonSession({
@@ -492,7 +363,6 @@ export default function LessonPage() {
     setStats({ correct: 0, total: 0 });
     setSpecial(nextSlots.length ? null : "empty");
     setPhase("main");
-    finalizedWords.current.clear();
     startedAt.current = Date.now();
   }
 
@@ -513,51 +383,13 @@ export default function LessonPage() {
     setPhase("done");
   }
 
-  useEffect(() => {
-    if (!plan || !appState || !slots.length || batchResumeInitialized.current)
-      return;
-    const batchSlots = slots.filter(
-      (currentSlot) =>
-        currentSlot.kind === "step" && Boolean(currentSlot.batchProgress),
-    );
-    if (!batchSlots.length) return;
-    batchResumeInitialized.current = true;
-
-    const completedIds = new Set(
-      appState.exerciseResults
-        .filter((row) => row.dayNumber === plan.dayNumber)
-        .map((row) => row.exerciseId),
-    );
-    const completedCount = batchSlots.filter(
-      (batchSlot) =>
-        batchSlot.kind === "step" &&
-        batchSlot.step.kind === "exercise" &&
-        completedIds.has(batchSlot.step.ex.id),
-    ).length;
-    if (!completedCount) return;
-
-    const firstPending = batchSlots.find(
-      (batchSlot) =>
-        batchSlot.kind === "step" &&
-        batchSlot.step.kind === "exercise" &&
-        !completedIds.has(batchSlot.step.ex.id),
-    );
-    if (firstPending) {
-      setI(slots.indexOf(firstPending));
-      return;
-    }
-
-    const lastBatchSlot = batchSlots[batchSlots.length - 1]!;
-    const nextIndex = slots.indexOf(lastBatchSlot) + 1;
-    if (nextIndex < slots.length) setI(nextIndex);
-    else void finish();
-  }, [appState, finish, plan, slots]);
 
   if (!plan) {
     return (
       <Screen>
         <Centered>
-          <p className="text-muted">Загрузка…</p>
+          {planError ? <Button onClick={() => setPlanAttempt((attempt) => attempt + 1)}>{t("reload")}</Button>
+            : <p className="text-muted">Загрузка…</p>}
         </Centered>
       </Screen>
     );
@@ -631,7 +463,7 @@ export default function LessonPage() {
   }
 
   return (
-    <Screen>
+    <Screen className={wordScreen ? "word-practice-screen" : undefined}>
       <header className="mx-auto w-full max-w-2xl px-4 py-3">
         <Row justify="between">
           <Link
@@ -667,8 +499,10 @@ export default function LessonPage() {
         </div>
       </header>
 
-      <main className="mx-auto flex min-h-0 w-full max-w-2xl flex-1 flex-col justify-start overflow-y-auto overscroll-contain px-4 pb-4">
+      <main ref={wordMain} className="mx-auto flex min-h-0 w-full max-w-2xl flex-1 flex-col justify-start overflow-y-auto overscroll-contain px-4 pb-4">
         {reviewFeedback}
+        {unavailableWord && <p role="status" className="text-sm text-muted">{t("unavailable")}</p>}
+        {queueStatus === "error" && <p role="alert" className="text-sm text-danger-ink">{t("error")}</p>}
         {lessonSave.status === "saving" && !restoredResult && !wordStudyExercise && (
           <p role="status" className="my-2 text-sm text-muted">Сохраняем итог…</p>
         )}
@@ -680,26 +514,6 @@ export default function LessonPage() {
         )}
         {slot?.kind === "stage-start" && (
           <StageStart stage={slot.stage} onNext={next} />
-        )}
-
-        {slot?.kind === "step" && slot.step.kind === "word-intro" && (
-          <WordIntro
-            word={slot.step.word}
-            skillProgress={lexemeSkillProgress(appState, slot.step.word.id)}
-            nextReview={nextLexemeReview(appState, slot.step.word.id)}
-            onMarkedKnown={() =>
-              skipWord((slot.step as { word: Lexeme }).word.id)
-            }
-          />
-        )}
-
-        {slot?.kind === "step" && slot.step.kind === "word-intro" && (
-          <StudyActionBar
-            speakText={slot.step.word.lemma}
-            canAdvance
-            onNext={next}
-            nextLabel="Запомнил"
-          />
         )}
 
         {slot?.kind === "step" && slot.step.kind === "rule-intro" && (
@@ -768,6 +582,15 @@ export default function LessonPage() {
                 Powtórka
               </p>
             ) : null}
+            {slot.step.newWord && (
+              <details key={slot.step.newWord.id} className="text-sm">
+                <summary className="cursor-pointer">Nowe słowo</summary>
+                <WordIntro word={slot.step.newWord}
+                  skillProgress={lexemeSkillProgress(appState, slot.step.newWord.id)}
+                  nextReview={nextLexemeReview(appState, slot.step.newWord.id)}
+                  onMarkedKnown={skipWord} />
+              </details>
+            )}
             {grammarExerciseIndex === 1 ? (
               <GrammarExerciseBatch
                 key={grammarExerciseSlots
@@ -804,7 +627,6 @@ export default function LessonPage() {
                       true,
                       attempts,
                       answer,
-                      step,
                     );
                   }
                 }}
@@ -813,7 +635,9 @@ export default function LessonPage() {
               <ExerciseView
                 key={`${i}-${slot.step.ex.id}`}
                 exercise={slot.step.ex}
-                showSpeakButton={!wordStudyExercise}
+                autoFocus={!wordStudyExercise}
+                showSpeakButton={!wordStudyExercise || formatOfWordExercise(slot.step.ex) === "translation" || Boolean(restoredResult)}
+                submitFormId={wordStudyExercise && slot.step.ex.mode === "typed" ? WORD_FORM_ID : undefined}
                 topLeftStatus={
                   exerciseLexemeId ? (
                     <LexemeSkillLevel
@@ -828,7 +652,7 @@ export default function LessonPage() {
                     <KnownToggle
                       lexemeId={reviewLexemeId}
                       removeFromStudy
-                      onMarked={(known) => known && skipWord(reviewLexemeId)}
+                      onMarked={(known) => known && skipWord()}
                     />
                   ) : undefined
                 }
@@ -843,7 +667,6 @@ export default function LessonPage() {
                       true,
                       attempts,
                       answer,
-                      step,
                     );
                   }
                 }}
@@ -852,23 +675,27 @@ export default function LessonPage() {
             <Row gap="sm" justify="center">
               {slot.step.rule && <RuleSheet rule={slot.step.rule} />}
             </Row>
-            {wordStudyExercise ? (
-              <StudyActionBar
-                speakText={speakableTextOf(slot.step.ex)}
-                canAdvance={lessonSave.status !== "saving" && (canAdvance || Boolean(restoredResult))}
-                onNext={next}
-                nextLabel={lessonSave.status === "saving" ? "Сохраняем итог…" : i + 1 < slots.length ? "Далее" : "Завершить"}
-              />
-            ) : (
-              (canAdvance || Boolean(restoredResult) || lessonSave.status === "saving") && (
-                <Button variant="outline" size="lg" full disabled={lessonSave.status === "saving"} onClick={next}>
-                  {lessonSave.status === "saving" ? "Сохраняем итог…" : i + 1 < slots.length ? "Dalej" : "Zakończ"}
-                </Button>
-              )
+            {!wordStudyExercise && (canAdvance || Boolean(restoredResult) || lessonSave.status === "saving") && (
+              <Button variant="outline" size="lg" full disabled={lessonSave.status === "saving"} onClick={next}>
+                {lessonSave.status === "saving" ? "Сохраняем итог…" : i + 1 < slots.length ? "Dalej" : "Zakończ"}
+              </Button>
             )}
           </Stack>
         )}
       </main>
+      {wordScreen && slot?.kind === "step" && (
+        <WordPracticeFooter
+          label={queueStatus === "checking" ? t("loading") : reviewPending ? t("saving")
+            : failedReview ? t("retry") : wordStudyExercise && slot.step.kind === "exercise"
+              && slot.step.ex.mode === "typed" && !canAdvance && !restoredResult ? t("check") : t("next")}
+          formId={wordStudyExercise && slot.step.kind === "exercise" && slot.step.ex.mode === "typed"
+            && !canAdvance && !restoredResult && !reviewPending && !failedReview ? WORD_FORM_ID : undefined}
+          disabled={queueStatus === "checking" || reviewPending || lessonSave.status === "saving"
+            || (wordStudyExercise && slot.step.kind === "exercise" && slot.step.ex.mode !== "typed"
+              && !canAdvance && !restoredResult && !failedReview)}
+          onNext={failedReview ? failedReview.retry : next}
+        />
+      )}
     </Screen>
   );
 }

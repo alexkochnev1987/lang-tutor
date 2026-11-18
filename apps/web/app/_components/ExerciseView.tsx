@@ -36,6 +36,8 @@ export function speakableTextOf(exercise: Exercise): string | undefined {
   if (exercise.kind === "collocation-guided" && exercise.mode === "choice") {
     return exercise.speakText ?? exercise.prompt;
   }
+  if (exercise.kind === "listen-choice" && exercise.mode === "choice") return exercise.speakText;
+  if (exercise.kind === "translate-production" && exercise.mode === "typed") return exercise.speakText;
   if (exercise.kind === "listen-write" && exercise.mode === "typed") {
     return exercise.speakText ?? exercise.accepted[0];
   }
@@ -57,6 +59,7 @@ function answerSpeakableText(exercise: Exercise): string | undefined {
     return exercise.speakText ?? exercise.answer;
   }
   if (!exercise.lexemeId) return undefined;
+  if (exercise.kind === "listen-choice" && exercise.mode === "choice") return exercise.speakText;
   if (
     exercise.kind === "translate-recognition" ||
     exercise.kind === "false-friend-contrast"
@@ -448,6 +451,7 @@ export function ExerciseView({
   showSpeakButton = true,
   topLeftStatus,
   topRightAction,
+  submitFormId,
 }: {
   exercise: Exercise;
   onAnswered: (
@@ -476,6 +480,7 @@ export function ExerciseView({
   showSpeakButton?: boolean;
   topLeftStatus?: ReactNode;
   topRightAction?: ReactNode;
+  submitFormId?: string;
 }) {
   const [result, setResult] = useState<CheckResult | null>(null);
   const [feedback, setFeedback] = useState<CheckResult | null>(null);
@@ -514,12 +519,12 @@ export function ExerciseView({
   useEffect(() => {
     if (
       restoredResult ||
-      exercise.kind !== "listen-write" ||
-      exercise.mode !== "typed"
+      (exercise.kind !== "listen-write" && exercise.kind !== "listen-choice") ||
+      exercise.mode === "assemble"
     )
       return;
     if (autoPronouncedExercise.current === exercise.id) return;
-    const text = exercise.speakText ?? exercise.accepted[0];
+    const text = exercise.speakText ?? (exercise.mode === "typed" ? exercise.accepted[0] : undefined);
     if (!text) return;
     autoPronouncedExercise.current = exercise.id;
     pronounce(text);
@@ -532,6 +537,7 @@ export function ExerciseView({
   const compactSentence = isGapSentence && leadingNumber !== undefined;
   const isReading = exercise.kind === "reading-choice";
   const isListenWrite = exercise.kind === "listen-write";
+  const isListenChoice = exercise.kind === "listen-choice";
   const isSentence = isGapSentence || exercise.kind === "sentence-write";
   const baseForm =
     exercise.mode === "assemble" ? undefined : baseFormOf(exercise);
@@ -646,7 +652,7 @@ export function ExerciseView({
               {leadingNumber}.
             </span>
           )}
-          {!isListenWrite && (
+          {!isListenWrite && !isListenChoice && (
             <span
               className={
                 isReading
@@ -702,11 +708,11 @@ export function ExerciseView({
         </Row>
       </Stack>
 
-      {!compactSentence && showSpeakButton && speakText && (
+      {!compactSentence && (showSpeakButton || isListenChoice) && speakText && (
         <div className="flex justify-center">
           <SpeakIcon
             text={speakText}
-            ariaLabel={isListenWrite ? "Odtwórz wymowę" : undefined}
+            ariaLabel={isListenWrite || isListenChoice ? "Odtwórz wymowę" : undefined}
           />
         </div>
       )}
@@ -735,17 +741,25 @@ export function ExerciseView({
         </Stack>
       )}
 
+      {isListenChoice && result && speakText && <p lang="pl" className="text-center font-medium">{speakText}</p>}
+
       {exercise.mode === "typed" && (
         <Stack gap="sm">
+          {submitFormId && <form id={submitFormId} onSubmit={(event) => {
+            event.preventDefault();
+            submit(typed);
+          }} />}
           {!isInlineForm && (
             <input
               autoFocus={autoFocus}
               value={typed}
               disabled={Boolean(result)}
-              onFocus={(event) => keepInputVisible(event.currentTarget)}
+              form={submitFormId}
+              required={Boolean(submitFormId)}
+              onFocus={submitFormId ? undefined : (event) => keepInputVisible(event.currentTarget)}
               onChange={(e) => updateTyped(e.target.value)}
-              onBlur={() => submit(typed)}
-              onKeyDown={(e) => {
+              onBlur={submitFormId ? undefined : () => submit(typed)}
+              onKeyDown={submitFormId ? undefined : (e) => {
                 if (e.key === "Enter") submit(typed);
               }}
               placeholder={

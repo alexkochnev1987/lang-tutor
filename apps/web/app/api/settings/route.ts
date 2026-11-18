@@ -14,7 +14,7 @@ export const dynamic = 'force-dynamic'
 
 const ALLOWED = new Set([
   'uiLanguage', 'sourceLanguage', 'ruleLanguage',
-  'theme', 'dailyBudgetMinutes', 'ttsVoiceURI', 'ttsRate',
+  'theme', 'dailyBudgetMinutes', 'ttsVoiceURI', 'ttsRate', 'timeZone',
 ])
 
 export const PATCH = withUser(async ({ userId, req }) => {
@@ -22,7 +22,14 @@ export const PATCH = withUser(async ({ userId, req }) => {
   const clean = Object.fromEntries(
     Object.entries(patch).filter(([k]) => ALLOWED.has(k)),
   )
-  const { dailyBudgetMinutes, ttsRate, ttsVoiceURI } = clean
+  const { dailyBudgetMinutes, ttsRate, ttsVoiceURI, timeZone } = clean
+  if (timeZone !== undefined) {
+    if (typeof timeZone !== 'string' || !timeZone || timeZone.startsWith('+') || timeZone.startsWith('-')) {
+      throw new Error('bad_time_zone')
+    }
+    const { rows } = await pg.execute(sql`SELECT name FROM pg_timezone_names WHERE name = ${timeZone}`)
+    if (!rows.length) throw new Error('bad_time_zone')
+  }
   if (dailyBudgetMinutes !== undefined && (
     typeof dailyBudgetMinutes !== 'number' || !Number.isInteger(dailyBudgetMinutes) ||
     dailyBudgetMinutes < 5 || dailyBudgetMinutes > 90

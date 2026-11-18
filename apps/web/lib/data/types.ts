@@ -117,6 +117,7 @@ export interface Settings {
   theme: 'light' | 'dark' | 'system'
   dailyBudgetMinutes: number
   ttsVoiceURI: string | null
+  timeZone: string
   ttsRate: number
 }
 
@@ -127,6 +128,7 @@ export const DEFAULT_SETTINGS: Settings = {
   theme: 'system',
   dailyBudgetMinutes: 15,
   ttsVoiceURI: null,
+  timeZone: 'Europe/Warsaw',
   ttsRate: 0.95,
 }
 

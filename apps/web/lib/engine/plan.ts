@@ -1,8 +1,5 @@
 import {
   hashString,
-  listenWrite,
-  State,
-  translateRecognition,
   type Exercise,
 } from "@polski/engine";
 import {
@@ -27,18 +24,17 @@ import {
   type LocalizedRule,
   type RuleLanguage,
 } from "@/lib/content/rules";
-import { knownLexemeIds, loadState } from "@/lib/data/store";
+import { knownLexemeIds, loadDailyWords, loadState } from "@/lib/data/store";
 import type { StudyItemRow } from "@/lib/data/types";
 import {
   collocationDrills,
-  exerciseForReview,
   exercisesForRule,
   exercisesForReading,
   sentenceDrillsForRule,
   sentenceWriteDrills,
   type SentenceMode,
 } from "./exercises";
-import { buildWordStudySteps } from "./word-study";
+import { dailyWordExercise, WORD_FORMATS, wordSkill } from "./daily-words";
 import { buildTodayLesson } from "./session";
 
 export type { SentenceMode } from "./exercises";
@@ -52,7 +48,6 @@ export const STAGE_TITLE: Record<StageId, string> = {
   exam: "Экзаменационное задание",
 };
 export type Step =
-  | { kind: "word-intro"; word: Lexeme }
   | { kind: "rule-intro"; rule: LocalizedRule }
   | {
       kind: "exercise-batch";
@@ -66,9 +61,7 @@ export type Step =
       review: boolean;
       rule: LocalizedRule | null;
       variants?: Partial<Record<SentenceMode, Exercise>>;
-      /** Этап нового слова: нужен для точечного повтора после ошибки. */
-      wordStage?: number;
-      wordRetryRound?: number;
+      newWord?: Lexeme;
     };
 
 export interface Stage {
@@ -90,13 +83,11 @@ export interface TodayPlan {
   deferredCount: number;
 }
 
-const WORD_INTRO_SEC = 20;
 const RULE_INTRO_SEC = 60;
 const DRILLS_PER_RULE = 10;
 const MIN_GRAMMAR_EXAMPLES_PER_TYPE = 10;
 const WRITE_TASKS_PER_RULE = 2;
 const EXAM_TASK_COUNT = 10;
-const NEW_WORD_BATCH_SIZE = 5;
 const MINIMUM_WORDS_PER_MODE = 10;
 const MINIMUM_WORD_BATCH_SIZE = MINIMUM_WORDS_PER_MODE * 2;
 const COLLOCATION_LIMIT = 3;
@@ -127,9 +118,7 @@ const stepSec = (step: Step): number =>
     ? step.ex.estimatedSec
     : step.kind === "exercise-batch"
       ? step.exercises.reduce((sec, exercise) => sec + exercise.estimatedSec, 0)
-      : step.kind === "rule-intro"
-        ? RULE_INTRO_SEC
-        : WORD_INTRO_SEC;
+      : RULE_INTRO_SEC;
 
 const sumSec = (steps: Step[]): number =>
   steps.reduce((sec, s) => sec + stepSec(s), 0);
@@ -160,46 +149,36 @@ export async function buildTodayPlan(): Promise<TodayPlan> {
     return rule ? localizeRule(rule, language) : null;
   };
 
-  const lesson = await buildTodayLesson(day);
+  const [lesson, dailyQueue] = await Promise.all([buildTodayLesson(day), loadDailyWords()]);
   const known = knownLexemeIds(state);
   const practisedPool = [...vocabulary.values()].filter(
     (w) => !known.has(w.id),
   );
 
+  const reviewIds = new Set(dailyQueue.review);
+  const learnIds = new Set(dailyQueue.learn);
   const reviewSteps = buildReviewSteps(
-    lesson.activities,
-    state.studyItems,
-    vocabulary,
-    practisedPool,
+    lesson.activities, state.studyItems, vocabulary, practisedPool, reviewIds,
   );
-  const freshSkillSteps = buildFreshSkillSteps(
-    state.studyItems,
-    vocabulary,
-    practisedPool,
-    known,
-  );
-  const newWords = (
-    lesson.activities.find((a) => a.kind === "new-words")?.refIds ?? []
-  )
-    .map((id) => vocabulary.get(id))
-    .filter(Boolean) as Lexeme[];
-  const newWordSteps = [] as Step[];
-  for (let start = 0; start < newWords.length; start += NEW_WORD_BATCH_SIZE) {
-    newWordSteps.push(
-      ...buildNewWordSteps(
-        newWords.slice(start, start + NEW_WORD_BATCH_SIZE),
-        practisedPool,
-      ),
-    );
-  }
+  const newWords = [...new Set(
+    lesson.activities.find((activity) => activity.kind === "new-words")?.refIds ?? [],
+  )].flatMap((id) => {
+    const word = vocabulary.get(id);
+    return word && learnIds.has(id) ? [word] : [];
+  });
+  const newWordSteps = newWords.map((word): Step => ({
+    kind: "exercise", ex: dailyWordExercise(word, practisedPool, "translation", hashString(word.id)),
+    review: false, rule: null, newWord: word,
+  }));
+  const usedWordIds = new Set([
+    ...newWords.map(({ id }) => id),
+    ...reviewSteps.flatMap((step) => step.kind === "exercise" && step.ex.lexemeId ? [step.ex.lexemeId] : []),
+  ]);
+  const courseWords = curriculum.days.slice(0, dayNumber).reverse().flatMap(({ lexemeIds }) => lexemeIds ?? []);
+  const minimumWordCandidates = [...new Set([...reviewIds, ...courseWords, ...learnIds])]
+    .filter((id) => (reviewIds.has(id) || learnIds.has(id)) && !usedWordIds.has(id));
   const minimumWordBatch = buildMinimumWordBatch(
-    curriculum.days,
-    dayNumber,
-    day,
-    newWords,
-    state.studyItems,
-    vocabulary,
-    known,
+    dayNumber, practisedPool, minimumWordCandidates, vocabulary,
   );
 
   const drillRuleIds =
@@ -238,8 +217,12 @@ export async function buildTodayPlan(): Promise<TodayPlan> {
 
   const stages: Stage[] = [];
 
-  const wordSteps = [...reviewSteps, ...freshSkillSteps, ...newWordSteps];
-  if (minimumWordBatch) wordSteps.push(minimumWordBatch);
+  const wordSteps = [...reviewSteps, ...newWordSteps].map((step) => step.kind === "exercise"
+    ? { ...step, ex: { ...step.ex, id: `${dailyQueue.day}:${step.ex.id}` } } : step);
+  if (minimumWordBatch) wordSteps.push({
+    ...minimumWordBatch,
+    exercises: minimumWordBatch.exercises.map((exercise) => ({ ...exercise, id: `${dailyQueue.day}:${exercise.id}` })),
+  });
   if (wordSteps.length) {
     stages.push({
       id: "words",
@@ -300,117 +283,37 @@ export async function buildTodayPlan(): Promise<TodayPlan> {
   };
 }
 
-/**
- * Обязательный лексический минимум каждого обычного урока:
- * 10 уникальных слов нужно вписать и ещё 10 уникальных слов выбрать.
- *
- * Это отдельный блок практики, а не замена текущему знакомству со словами.
- * Сначала берём слова, которые уже есть в текущей очереди/дне, затем слова
- * из пройденной части курса. Если это первый день или состояние пустое,
- * детерминированно добираем из словаря, чтобы контроль не зависел от того,
- * сколько слов было запланировано именно на этот день.
- */
 function buildMinimumWordBatch(
-  curriculumDays: CurriculumDay[],
   dayNumber: number,
-  day: CurriculumDay,
-  newWords: Lexeme[],
-  studyItems: { refId: string }[],
+  pool: Lexeme[],
+  available: string[],
   vocabulary: Map<string, Lexeme>,
-  known: ReadonlySet<string>,
 ): Extract<Step, { kind: "exercise-batch" }> | null {
-  const allWords = [...vocabulary.values()];
-  const byId = (ids: readonly string[]) =>
-    ids
-      .map((id) => vocabulary.get(id))
-      .filter((word): word is Lexeme => Boolean(word));
-
-  const offset = allWords.length
-    ? ((dayNumber - 1) * MINIMUM_WORD_BATCH_SIZE) % allWords.length
-    : 0;
-  const rotatedWords = allWords.length
-    ? [...allWords.slice(offset), ...allWords.slice(0, offset)]
-    : [];
-  const previousCourseWords = curriculumDays
-    .slice(0, dayNumber)
-    .flatMap((courseDay) => courseDay.lexemeIds ?? []);
-
-  const candidates = [
-    ...newWords,
-    ...byId(studyItems.map((item) => item.refId)),
-    ...byId(day.lexemeIds ?? []),
-    ...byId(previousCourseWords),
-    ...rotatedWords,
-  ].filter((word) => !known.has(word.id));
-
-  // A repeated translation is also unhelpful in a 10-word minimum block:
-  // the learner should see ten different prompts, not ten copies of one
-  // Russian equivalent.
-  const usedLemmas = new Set<string>();
   const usedTranslations = new Set<string>();
   const words: Lexeme[] = [];
-  for (const word of candidates) {
-    const lemma = word.lemma.trim().toLocaleLowerCase();
+  for (const id of available) {
+    const word = vocabulary.get(id);
+    if (!word) continue;
     const translation = word.translation.trim().toLocaleLowerCase();
-    if (
-      !lemma ||
-      !translation ||
-      usedLemmas.has(lemma) ||
-      usedTranslations.has(translation)
-    )
-      continue;
-    usedLemmas.add(lemma);
+    if (!translation || usedTranslations.has(translation)) continue;
     usedTranslations.add(translation);
     words.push(word);
     if (words.length >= MINIMUM_WORD_BATCH_SIZE) break;
   }
-  if (words.length < MINIMUM_WORD_BATCH_SIZE) return null;
-
-  const choicePool = allWords.map((word) => word.translation).filter(Boolean);
-  const typed = words.slice(0, MINIMUM_WORDS_PER_MODE).map((word) => ({
-    ...listenWrite(word),
-    attemptsAllowed: 1,
-    id: `ex.minimum-words.${day.day}.typed.${word.id}`,
-  }));
-  const choice = words.slice(MINIMUM_WORDS_PER_MODE).map((word) => ({
-    ...translateRecognition(word, choicePool, {
-      seed: hashString(`minimum-words:${day.day}:${word.id}`),
-    }),
-    attemptsAllowed: 1,
-    id: `ex.minimum-words.${day.day}.choice.${word.id}`,
-  }));
-
+  if (!words.length) return null;
+  const writingCount = Math.min(MINIMUM_WORDS_PER_MODE, Math.ceil(words.length / 2));
   return {
     kind: "exercise-batch",
-    exercises: [...typed, ...choice],
+    exercises: words.map((word, index) => {
+      const format = index < writingCount ? "writing" : "translation";
+      return {
+        ...dailyWordExercise(word, pool, format, hashString(`minimum-words:${dayNumber}:${word.id}`)),
+        id: `ex.minimum-words.${dayNumber}.${format}.${word.id}`,
+      };
+    }),
     title: "Minimum leksykalne",
-    description: "10 słów wpisz i 10 innych słów wybierz — bez powtórzeń.",
+    description: `Wpisz ${writingCount}, wybierz ${words.length - writingCount}.`,
   };
-}
-
-/**
- * Вводим слова небольшими пачками и чередуем их упражнения:
- * карточка A → перевод A → карточка B → перевод B → следующее задание A.
- * Так человек не получает подряд четыре разных проверки одного слова.
- */
-function buildNewWordSteps(words: Lexeme[], pool: Lexeme[]): Step[] {
-  const stageByWord = new Map<string, number>();
-  return buildWordStudySteps(words, pool).map(
-    (step): Step =>
-      step.kind === "word-intro"
-        ? step
-        : (() => {
-            const wordStage = stageByWord.get(step.word.id) ?? 0;
-            stageByWord.set(step.word.id, wordStage + 1);
-            return {
-              kind: "exercise",
-              ex: { ...step.ex, attemptsAllowed: 1 },
-              review: false,
-              rule: null,
-              wordStage,
-            };
-          })(),
-  );
 }
 
 function missingExamContent(moduleId: string): string {
@@ -499,59 +402,30 @@ function buildReviewSteps(
   studyItems: StudyItemRow[],
   vocabulary: Map<string, Lexeme>,
   pool: Lexeme[],
+  available: Set<string>,
 ): Step[] {
-  const dueIds = activities.find((a) => a.kind === "review")?.refIds ?? [];
-  const byId = new Map(studyItems.map((i) => [i.id, i]));
+  const dueIds = activities.find((activity) => activity.kind === "review")?.refIds ?? [];
+  const byId = new Map(studyItems.map((item) => [item.id, item]));
+  const seen = new Set<string>();
   const steps: Step[] = [];
   for (const id of dueIds) {
     const item = byId.get(id);
-    if (!item || item.kind === "rule-card") continue;
+    if (!item || seen.has(item.refId) || !available.has(item.refId)) continue;
     const word = vocabulary.get(item.refId);
-    if (!word) continue;
-    const generated = exerciseForReview(word, item.kind, item.reps, pool);
-    if (generated) {
-      steps.push({
-        kind: "exercise",
-        ex: { ...generated, attemptsAllowed: 1 },
-        review: true,
-        rule: null,
-      });
-    }
+    const format = WORD_FORMATS.find((candidate) => wordSkill(candidate) === item.kind);
+    if (!word || !format) continue;
+    seen.add(word.id);
+    steps.push({
+      kind: "exercise",
+      ex: dailyWordExercise(word, pool, format, hashString(word.id) + item.reps),
+      review: true,
+      rule: null,
+    });
   }
   return steps;
 }
 
-function buildFreshSkillSteps(
-  studyItems: StudyItemRow[],
-  vocabulary: Map<string, Lexeme>,
-  pool: Lexeme[],
-  known: ReadonlySet<string>,
-): Step[] {
-  return studyItems.flatMap((item): Step[] => {
-    if (
-      item.state !== State.New ||
-      (item.kind !== "lexeme-spelling" &&
-        item.kind !== "lexeme-listen-write") ||
-      known.has(item.refId)
-    ) {
-      return [];
-    }
 
-    const word = vocabulary.get(item.refId);
-    if (!word) return [];
-    const exercise = exerciseForReview(word, item.kind, item.reps, pool);
-    return exercise
-      ? [
-          {
-            kind: "exercise",
-            ex: { ...exercise, attemptsAllowed: 1 },
-            review: true,
-            rule: null,
-          },
-        ]
-      : [];
-  });
-}
 
 function buildDrillSteps(
   ruleIds: string[],

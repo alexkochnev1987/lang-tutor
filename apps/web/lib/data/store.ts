@@ -344,3 +344,65 @@ export async function signOut(): Promise<void> {
   await request('/api/auth/signout/', { method: 'POST' })
   await refresh()
 }
+
+const DAILY_WORD_EVENT = 'daily-words-changed'
+const DAILY_WORD_REVISION = 'daily-words-revision'
+
+export function subscribeDailyWords(listener: () => void) {
+  function syncTabs(event: StorageEvent) {
+    if (event.key === DAILY_WORD_REVISION) {
+      dailyQueueRequest = null
+      listener()
+    }
+  }
+  window.addEventListener(DAILY_WORD_EVENT, listener)
+  window.addEventListener('storage', syncTabs)
+  window.addEventListener('focus', listener)
+  return () => {
+    window.removeEventListener(DAILY_WORD_EVENT, listener)
+    window.removeEventListener('storage', syncTabs)
+    window.removeEventListener('focus', listener)
+  }
+}
+
+let dailyQueueRequest: Promise<import('@/lib/engine/daily-words').DailyWordQueue> | null = null
+
+export function loadDailyWords() {
+  if (dailyQueueRequest) return dailyQueueRequest
+  const pending = loadState()
+    .then(() => request<import('@/lib/engine/daily-words').DailyWordQueue>('/api/daily-words/', { cache: 'no-store' }))
+    .finally(() => { if (dailyQueueRequest === pending) dailyQueueRequest = null })
+  dailyQueueRequest = pending
+  return pending
+}
+
+export async function saveDailyWordAnswer(payload: import('@/lib/engine/daily-words').DailyWordAnswer) {
+  const { answeredAt } = await request<{ answeredAt: string | null }>('/api/daily-words/', {
+    method: 'POST',
+    body: JSON.stringify(payload),
+  })
+  if (!answeredAt) return false
+
+  const { result, item, log } = payload
+  const completedAt = new Date(answeredAt)
+  const currentItem = {
+    ...item,
+    due: new Date(completedAt.getTime() + Math.max(0, item.due.getTime() - log.reviewedAt.getTime())),
+    lastReview: completedAt,
+  }
+  patch((state) => {
+    const previous = state.studyItems.find((row) => row.id === item.id)
+    return {
+      ...state,
+      studyItems: previous?.lastReview && previous.lastReview > completedAt
+        ? state.studyItems : [...state.studyItems.filter((row) => row.id !== item.id), currentItem],
+      exerciseResults: [...state.exerciseResults.filter((row) =>
+        row.dayNumber !== result.dayNumber || row.exerciseId !== result.exerciseId),
+      { ...result, courseId: COURSE_ID, completedAt }],
+    }
+  })
+  dailyQueueRequest = null
+  window.dispatchEvent(new Event(DAILY_WORD_EVENT))
+  try { localStorage.setItem(DAILY_WORD_REVISION, log.id) } catch { /* Storage may be disabled. */ }
+  return true
+}

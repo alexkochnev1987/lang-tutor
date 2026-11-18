@@ -118,3 +118,7 @@ input, select, textarea {
     transition-duration: 0.01ms !important;
   }
 }
+
+.word-practice-screen {
+  height: var(--study-viewport-height, 100dvh);
+}

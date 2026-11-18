@@ -91,5 +91,30 @@
     "save": "Save",
     "close": "Close",
     "loading": "Loading…"
+  },
+  "dailyWords": {
+    "learn": "Learn",
+    "review": "Review today",
+    "translation": "Translate",
+    "reverse": "Reverse translation",
+    "writing": "Write",
+    "listening": "Listen",
+    "choose": "Choose a format",
+    "start": "Start",
+    "next": "Next",
+    "check": "Check",
+    "loading": "Checking the queue…",
+    "saving": "Saving your answer…",
+    "retry": "Retry saving",
+    "unavailable": "This word is no longer available for review today.",
+    "done": "Practice complete",
+    "score": "{correct} of {total} correct",
+    "empty": "No words are available today.",
+    "error": "Could not load the queue.",
+    "selected": "{selected} of {limit} selected",
+    "search": "Search by word or translation",
+    "reload": "Retry loading",
+    "useTimeZone": "Use the device time zone",
+    "timeZone": "Time zone: {zone}"
   }
 }
