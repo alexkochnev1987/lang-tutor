@@ -60,8 +60,12 @@ export async function readExtensionToken(req: Request): Promise<string | null> {
   if (!header?.startsWith('Bearer ')) return null
   const token = header.slice('Bearer '.length).trim()
   if (!token) throw new Error('invalid_extension_token')
-  const { payload } = await jwtVerify(token, secret(), { audience: EXTENSION_AUDIENCE })
-  return typeof payload.sub === 'string' ? payload.sub : null
+  try {
+    const { payload } = await jwtVerify(token, secret(), { audience: EXTENSION_AUDIENCE })
+    return typeof payload.sub === 'string' ? payload.sub : null
+  } catch {
+    throw new Error('invalid_extension_token')
+  }
 }
 
 /** userId из cookie или null. Испорченная подпись — это просто «не вошёл». */
