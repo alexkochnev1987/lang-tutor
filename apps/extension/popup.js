@@ -35,30 +35,7 @@ async function setWords(words) {
 }
 
 async function getAuth() {
-  return chrome.storage.local.get({ appToken: '', user: null });
-}
-
-async function login() {
-  const state = crypto.randomUUID();
-  const redirectUri = chrome.identity.getRedirectURL('extension-auth');
-  const url = new URL(`${APP_URL}extension-auth/`);
-  url.searchParams.set('redirect_uri', redirectUri);
-  url.searchParams.set('state', state);
-  const responseUrl = await chrome.identity.launchWebAuthFlow({ url: url.toString(), interactive: true });
-  if (!responseUrl) throw new Error('auth_cancelled');
-  const callback = new URL(responseUrl);
-  if (callback.searchParams.get('state') !== state) throw new Error('invalid_auth_state');
-  const code = callback.searchParams.get('code');
-  if (!code) throw new Error('missing_auth_code');
-  const response = await fetch(`${API_URL}/api/auth/extension/exchange/`, {
-    method: 'POST',
-    headers: { 'content-type': 'application/json' },
-    body: JSON.stringify({ code }),
-  });
-  if (!response.ok) throw new Error('auth_exchange_failed');
-  const data = await response.json();
-  await chrome.storage.local.set({ appToken: data.token, user: data.user });
-  return data.user;
+  return chrome.storage.local.get({ appToken: '', user: null, lastAuthError: '' });
 }
 
 async function syncRemoteWords() {
@@ -164,7 +141,8 @@ loginButton.addEventListener('click', async () => {
   loginButton.disabled = true;
   showStatus('Открываем вход…');
   try {
-    await login();
+    const result = await chrome.runtime.sendMessage({ type: 'login' });
+    if (!result?.ok) throw new Error(result?.error || 'auth_failed');
     await syncRemoteWords();
     await render();
     await renderAccount();
@@ -183,10 +161,11 @@ logoutButton.addEventListener('click', async () => {
 });
 
 async function renderAccount() {
-  const { user } = await getAuth();
+  const { user, lastAuthError } = await getAuth();
   loginButton.hidden = Boolean(user);
   signedIn.hidden = !user;
   userName.textContent = user ? (user.name || user.email || 'Вы вошли') : '';
+  if (!user && lastAuthError) showStatus(`Ошибка входа: ${lastAuthError}`, true);
 }
 
 document.querySelector('#open-app').addEventListener('click', () => {
