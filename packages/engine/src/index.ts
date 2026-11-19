@@ -25,3 +25,10 @@ export type {
 } from './exercises/generate'
 export { estimateModuleReadiness } from './readiness/estimate'
 export type { EstimateInput } from './readiness/estimate'
+export { filterSessions, validateSessionForm } from './sessions'
+export type {
+  SessionFilter,
+  SessionFormValues,
+  SessionStatus,
+  TrainingSession,
+} from './sessions'
