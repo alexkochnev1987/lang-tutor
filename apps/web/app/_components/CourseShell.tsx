@@ -7,7 +7,7 @@ import { SectionNav } from './SectionNav'
 
 export function CourseShell({ children, current }: {
   children: React.ReactNode
-  current: '/program' | '/progress'
+  current: '/program' | '/progress' | '/calendar'
 }) {
   return (
     <Screen>

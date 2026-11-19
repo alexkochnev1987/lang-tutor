@@ -1,16 +1,15 @@
 PASS
 
-Review surface: TASK-001 onboarding implementation in `apps/web` and `packages/engine`, excluding the pre-existing `polski-b1-extension-0.1.2.zip`, `store-assets/`, and accelerator installation payload.
+Review surface: the Program Calendar feature in `apps/web` and `packages/engine`, compared with the current branch base. The previous artificial sessions feature was removed from the final diff.
 
 No blocking or should-fix findings.
 
 Strengths:
 
-- The `/sessions` flow uses a replaceable HTTP boundary and keeps mock data out of the client component.
-- Loading, retryable request failure, empty filtered state, field-level validation, duplicate-submit prevention, and successful insertion are all represented in the UI.
-- The focused behavior tests cover status filtering and invalid create input; the production build and typecheck also pass.
+- The feature closes an explicit product gap from `docs/PLAN.md` and reuses existing curriculum/progress boundaries instead of adding a parallel API or persistence model.
+- Completed, current, and upcoming statuses are calculated in pure tested code and exposed through accessible labels, `aria-current`, and `aria-pressed`.
+- Loading/retry, selected-day details, current-lesson action, mobile seven-column layout, and existing Course navigation are all covered.
 
-Residual verification gap:
+Residual note:
 
-- The existing `@polski/web` lint script is `next lint`, which Next 16 no longer supports in this form, and no ESLint binary/config is present. This is a repository-level tooling gap, not a blocker found in the TASK-001 implementation.
-- The default Turbopack production build is blocked in this host by an `Operation not permitted` internal process error; the equivalent Webpack production build passes.
+- The repository's existing `@polski/web` lint script uses obsolete `next lint` behavior in Next 16 and has no ESLint binary/config. This is pre-existing project tooling, not a defect introduced by the calendar.

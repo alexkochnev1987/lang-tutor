@@ -1,40 +1,37 @@
-# TASK-001: Training Sessions Workspace
+# TASK-001: Program Calendar
 
 ## Goal
 
-Add a small training-sessions workspace to the existing Next.js application. A trainer must be able to load sessions from a replaceable mock HTTP boundary, filter by one status, and create a future-dated session that immediately appears in the list.
+Add a useful learner-facing calendar for the existing 182-day Polish B1 program. A learner must be able to see overall completion, distinguish completed/current/upcoming days, inspect a selected day, and start today's lesson from the calendar.
 
 ## Acceptance criteria
 
-1. The workspace route renders a sessions list loaded through an HTTP client boundary.
-2. Each session shows title, status, and localized start date/time.
-3. The list provides `All` and one status filter; selecting a status only shows matching sessions.
-4. A loading state is visible while the list request is pending.
-5. A recoverable request-error state explains the problem and offers retry.
-6. The create form requires a trimmed title from 3 through 80 characters.
-7. The create form requires a date/time later than the current time.
-8. The submit control prevents duplicate submissions while the request is pending.
-9. Validation errors are understandable and tied to the relevant controls.
-10. A successful creation adds the returned session to the visible list.
-11. Mock data remains behind a replaceable request boundary; no backend service is added.
-12. At least one behavior-level automated test covers filtering or successful creation.
-13. The main list, filter, and create flow is manually exercised in a browser and recorded honestly.
+1. The Course section exposes a Calendar route without removing the existing Program or Progress routes.
+2. The calendar loads the existing curriculum and progress sources; it does not invent a second persistence or API boundary.
+3. It shows all curriculum days with stable program-day numbers.
+4. Completed, current, and upcoming days are visually and semantically distinguishable.
+5. A learner can select any day and see its topic, week, phase, theme, expected outcome, and status.
+6. The current day offers a link to start `/lesson/`; future and completed days do not pretend to be actionable current work.
+7. The calendar shows completion percentage and completed-day count.
+8. Loading and recoverable error states are visible, with a retry action for load failure.
+9. The compact grid remains usable on mobile and uses accessible labels/pressed/current state.
+10. At least one behavior-level automated test covers calendar status or completion calculation.
+11. The calendar is manually checked in a browser, including selecting a day and starting the current lesson link.
 
 ## Scope and constraints
 
-- Use the existing Next.js, React, TypeScript, pnpm, Tailwind, and `@polski/ui` stack.
-- Keep the feature inside `apps/web` and do not rewrite unrelated learning screens.
-- Use a route-local mock API implementation rather than a database or backend service.
-- Preserve the existing navigation and theme conventions; add only the smallest useful entry point.
-- No details page, search, pagination, authentication, deployment, or advanced responsive matrix is required.
+- Use the existing Next.js, React, TypeScript, pnpm, Tailwind, `@polski/ui`, curriculum loader, and progress loader.
+- Keep the feature inside `apps/web` and `packages/engine`; do not rewrite unrelated learning screens.
+- Do not add a database table, API route, external dependency, or date-based scheduling model.
+- Preserve the existing Program and Progress screens and the existing bottom navigation.
+- No editing completed history, drag-and-drop planning, reminders, search, or deployment is required.
 
-## Assumptions and decisions
+## Decisions
 
-- The selected Application Root is `apps/web` inside the repository root.
-- The new route is `/sessions` so the current `/` learning flow remains unchanged.
-- The initial list contains deterministic in-memory mock sessions and the create endpoint returns the created record.
-- The required single status filter is `planned`.
+- The route is `/calendar`, linked as a third tab inside the existing Course section.
+- Program-day numbering is the stable identity; calendar dates are deliberately not invented.
+- The current day is the only day with a start-lesson action.
 
 ## Readiness
 
-The task is implementation-ready. No unresolved UI, architecture, API, or dependency decision blocks the bounded flow.
+The task is implementation-ready. Existing `loadCurriculum()` and `loadProgress()` resolve the required data contract.

@@ -1,39 +1,31 @@
-# Verification: TASK-001
+# Verification: TASK-001 Program Calendar
 
 ## Project-check verdict
 
-`PASS` for the applicable implementation checks below, with the existing lint-script/tooling gap recorded separately.
+`PASS` for applicable implementation checks, with the existing lint-script/tooling gap recorded separately.
 
 | Command | Result |
 | --- | --- |
-| `node ./toolchain/bin/doctor.mjs --json` | `DEGRADED`; browser and docs capabilities pass, hooks are `PENDING_ACTIVATION`, lint capability is detected. |
 | `pnpm --filter @polski/engine test` | PASS — 3 files, 67 tests passed. |
 | `pnpm --filter @polski/web exec tsc --noEmit --incremental false` | PASS. |
-| `pnpm --filter @polski/web exec next build --webpack` | PASS — routes include `/sessions` and `/api/sessions`. |
-| `pnpm --filter @polski/web lint` | FAIL — existing script invokes removed/unsupported `next lint` behavior in Next 16 (`Invalid project directory .../apps/web/lint`). No ESLint binary/config is present. |
+| `pnpm --filter @polski/web exec next build --webpack` | PASS — `/calendar` is included and deleted `/sessions` is absent. |
 | `git diff --check` | PASS. |
-
-The default `pnpm --filter @polski/web build` path was also attempted. Turbopack failed in this host with an internal `Operation not permitted` error while creating a process for CSS; this is why the Webpack build was run as a diagnostic fallback. Dev mode ran with Turbopack successfully.
+| `pnpm --filter @polski/web lint` | Not a valid passing check in the current repo — existing `next lint` is incompatible with Next 16 and no ESLint binary/config is present. |
 
 ## Browser observation
 
 - Command: `pnpm --filter @polski/web dev`
-- URL: `http://localhost:3000/sessions/`
-- Adapter: project-owned `node ./toolchain/bin/agent-browser.mjs`, session `onboarding-task-002`.
-- Observed: initial list displayed 3 sessions; selecting `Запланированные` reduced the list to 2; entering `Новая разговорная практика` and `2026-12-20T14:00` created the session and displayed it at the top with `Запланировано`.
-- Network: GET `/api/sessions` returned `200`; POST `/api/sessions/` returned `201`.
-- Console/page errors: no application errors; only the standard React DevTools informational message and HMR log.
+- URL: `http://localhost:3000/calendar/`
+- Adapter: project-owned `node ./toolchain/bin/agent-browser.mjs`, session `calendar-feature`.
+- Desktop: Course navigation showed `Календарь`; all 182 program days rendered, day 1 was current, completion was `0%`, and `Начать занятие` was exposed.
+- Interaction: selecting day 2 changed details to `Глагол «быть» в настоящем` with `Впереди`; selecting day 1 restored current-day details and lesson action.
+- Mobile: viewport `390×844` rendered the same grid and current-day action without a page error.
+- Network: `/api/state/` and curriculum, grammar, levels, vocabulary, and morphology JSON requests returned `200`.
+- Console/page errors: no application errors; only standard React DevTools/HMR informational logs.
 - The owned browser session and dev server were closed after the check.
-
-## Unverified items
-
-- No separate visual screenshot matrix was required by Basic Onboarding.
-- The lint script remains unverified as a passing check until the project adopts an explicit ESLint setup compatible with Next 16.
 
 ## Onboarding result
 
-`Passed` — the required role sequence, artifacts, working list/filter/create flow, behavior tests, review, verification, and real browser observation are present. The remaining lint-script and default-Turbopack host issues are documented improvements rather than hidden claims.
+`Passed` — role sequence, product requirements, architecture, implementation, tests, review, verification, and browser observation are recorded.
 
-Strengths: bounded scope; honest evidence; existing UI and mock-boundary conventions preserved.
-
-Prioritized improvement: replace the obsolete `next lint` script with an explicit ESLint setup compatible with Next 16.
+Known limitation: lint tooling needs a separate Next 16 ESLint migration and is not silently claimed as passing.

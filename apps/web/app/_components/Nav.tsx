@@ -6,7 +6,6 @@ import { useTranslations } from 'next-intl'
 
 const TABS = [
   { href: '/',           key: 'today',      icon: '📅' },
-  { href: '/sessions',   key: 'sessions',   icon: '🗓️' },
   { href: '/program',    key: 'course',     icon: '🧭', alternate: '/progress' },
   { href: '/words',      key: 'words',      icon: '🧠', alternate: '/dictionary' },
   { href: '/grammar',    key: 'grammar',    icon: '📘' },
