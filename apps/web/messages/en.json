@@ -93,10 +93,31 @@
     "loading": "Loading…"
   },
   "dailyWords": {
+    "pronunciation": "Pronunciation",
+    "speech": {
+      "instruction": "Say the translation in Polish",
+      "start": "Turn on microphone",
+      "retry": "Try again",
+      "listening": "Listening…",
+      "recognized": "Recognized:",
+      "correct": "Correct",
+      "incorrect": "The word did not match",
+      "remaining": "Attempts remaining: {count}",
+      "answer": "Correct answer:",
+      "playAnswer": "Listen to the correct answer",
+      "skip": "Skip word",
+      "unsupported": "Polish speech recognition is unavailable in this browser.",
+      "permission": "Allow microphone access and try again.",
+      "microphone": "Could not start the microphone.",
+      "network": "The speech recognition service is unavailable. Check your connection and try again.",
+      "noSpeech": "No word was recognized. Try again.",
+      "recognitionError": "Could not start recognition. Try again."
+    },
     "brainstorm": "Brainstorm",
     "batchWords": "{count, plural, one {# word} other {# words}}",
     "pronounceWord": "Listen to the word",
     "formatHint": {
+      "pronunciation": "Say the word in Polish",
       "brainstorm": "4 exercises per word",
       "translation": "Choose the translation of a Polish word",
       "reverse": "Choose the Polish word",

@@ -7,6 +7,7 @@
  */
 
 export type ExerciseKind =
+  | 'pronunciation'            // произнести слово на изучаемом языке
   | 'translate-recognition'   // pl → ru, выбор из вариантов
   | 'translate-production'    // ru → pl, выбор или ввод
   | 'spelling'                // собрать слово из букв — тренирует диакритику

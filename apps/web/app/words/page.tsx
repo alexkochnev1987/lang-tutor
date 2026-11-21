@@ -6,6 +6,7 @@ import { useTranslations } from 'next-intl'
 import { Button, Card, Row, Screen, Stack } from '@polski/ui'
 import { hashString, spelling, type CheckResult } from '@polski/engine'
 import { BrainstormPractice } from '@/app/_components/BrainstormPractice'
+import { PronunciationExercise } from '@/app/_components/PronunciationExercise'
 import { ExerciseView } from '@/app/_components/ExerciseView'
 import { Nav } from '@/app/_components/Nav'
 import { SectionHeading } from '@/app/_components/SectionHeading'
@@ -17,7 +18,7 @@ import { loadDailyWords, loadState, saveDailyWordAnswer, subscribeDailyWords } f
 import { dailyWordExercise, WORD_PRACTICE_FORMATS, wordSkill, type DailyWordAnswer, type DailyWordList, type DailyWordQueue, type WordPracticeFormat } from '@/lib/engine/daily-words'
 import { prepareLexemeReview, Rating } from '@/lib/engine/session'
 
-const SESSION_SIZE: Record<WordPracticeFormat, number> = { brainstorm: 5, translation: 10, reverse: 10, writing: 5, listening: 5 }
+const SESSION_SIZE: Record<WordPracticeFormat, number> = { brainstorm: 5, translation: 10, reverse: 10, writing: 5, listening: 5, pronunciation: 5 }
 const PAGE_SIZE = 40
 const SESSION_KEY = 'daily-word-practice'
 type Session = {
@@ -54,7 +55,7 @@ function WordPractice({ initialList }: { initialList?: DailyWordList }) {
   const [selected, setSelected] = useState<string[]>([])
   const [session, setSession] = useState<Session | null>(null)
   const [status, setStatus] = useState<'ready' | 'checking' | 'saving' | 'saved' | 'failed' | 'unavailable'>('ready')
-  const pending = useRef<DailyWordAnswer | null>(null)
+  const pending = useRef<(() => Promise<DailyWordAnswer>) | null>(null)
   const answering = useRef(false)
   const main = useRef<HTMLElement>(null)
   const initialized = useRef(false)
@@ -175,10 +176,11 @@ function WordPractice({ initialList }: { initialList?: DailyWordList }) {
   }
 
   async function persist() {
-    const payload = pending.current
-    if (!payload) return
+    const prepareAnswer = pending.current
+    if (!prepareAnswer) return
     setStatus('saving')
     try {
+      const payload = await prepareAnswer()
       const accepted = await saveDailyWordAnswer(payload)
       pending.current = null
       setStatus(accepted ? 'saved' : 'unavailable')
@@ -194,13 +196,18 @@ function WordPractice({ initialList }: { initialList?: DailyWordList }) {
   async function answer(result: CheckResult, ms: number, attempts: number, response: string) {
     if (!session || session.format === 'brainstorm' || !word || !exercise || answering.current) return
     answering.current = true
-    setStatus('saving')
-    const state = await loadState()
-    pending.current = {
-      ...prepareLexemeReview(state.studyItems, word.id, wordSkill(session.format), result.correct ? Rating.Good : Rating.Again, ms),
-      format: session.format,
-      result: { dayNumber, exerciseId: exercise.id, attempts, correct: result.correct,
-        answer: response, expected: result.expected, errorKind: result.errorKind ?? null },
+    const { format } = session
+    let payload: DailyWordAnswer | undefined
+    pending.current = async () => {
+      if (payload) return payload
+      const state = await loadState()
+      payload = {
+        ...prepareLexemeReview(state.studyItems, word.id, wordSkill(format), result.correct ? Rating.Good : Rating.Again, ms),
+        format,
+        result: { dayNumber, exerciseId: exercise.id, attempts, correct: result.correct,
+          answer: response, expected: result.expected, errorKind: result.errorKind ?? null },
+      }
+      return payload
     }
     await persist()
     answering.current = false
@@ -208,6 +215,7 @@ function WordPractice({ initialList }: { initialList?: DailyWordList }) {
 
   function exit() {
     try { sessionStorage.removeItem(SESSION_KEY) } catch { /* Session storage may be unavailable. */ }
+    pending.current = null
     setSession(null)
     setSelected([])
     setStatus('ready')
@@ -236,8 +244,13 @@ function WordPractice({ initialList }: { initialList?: DailyWordList }) {
         <main ref={main} className="mx-auto w-full max-w-2xl flex-1 px-4 pb-2">
           {exercise ? (
             <Stack gap="xs">
-              <ExerciseView key={exercise.id} exercise={exercise} onAnswered={(...args) => void answer(...args)}
-                autoFocus={false} showSpeakButton={session.format === 'translation' || status === 'saved'} />
+              {exercise.kind === 'pronunciation' && exercise.mode === 'typed' ? (
+                <PronunciationExercise key={exercise.id} prompt={exercise.prompt} expected={exercise.accepted[0]!}
+                  onAnswered={(...args) => void answer(...args)} onSkip={status === 'ready' ? advance : undefined} />
+              ) : (
+                <ExerciseView key={exercise.id} exercise={exercise} onAnswered={(...args) => void answer(...args)}
+                  autoFocus={false} showSpeakButton={session.format === 'translation' || status === 'saved'} />
+              )}
               {status === 'unavailable' && <p role="status" className="text-sm text-muted">{t('unavailable')}</p>}
             </Stack>
           ) : (
