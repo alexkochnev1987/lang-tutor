@@ -25,3 +25,5 @@ export type {
 } from './exercises/generate'
 export { estimateModuleReadiness } from './readiness/estimate'
 export type { EstimateInput } from './readiness/estimate'
+export { completionPercent, courseDayStatus } from './course-calendar'
+export type { CourseDayStatus } from './course-calendar'
