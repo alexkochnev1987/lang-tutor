@@ -13,7 +13,7 @@ export const runtime = 'nodejs'
 export const dynamic = 'force-dynamic'
 
 const ALLOWED = new Set([
-  'uiLanguage', 'sourceLanguage', 'ruleLanguage',
+  'uiLanguage', 'sourceLanguage', 'targetLanguage', 'ruleLanguage',
   'theme', 'dailyBudgetMinutes', 'ttsVoiceURI', 'ttsRate', 'timeZone',
 ])
 
@@ -22,6 +22,9 @@ export const PATCH = withUser(async ({ userId, req }) => {
   const clean = Object.fromEntries(
     Object.entries(patch).filter(([k]) => ALLOWED.has(k)),
   )
+  if (clean.targetLanguage !== undefined && clean.targetLanguage !== 'pl') {
+    throw new Error('unsupported_target_language')
+  }
   const { dailyBudgetMinutes, ttsRate, ttsVoiceURI, timeZone } = clean
   if (timeZone !== undefined) {
     if (typeof timeZone !== 'string' || !timeZone || timeZone.startsWith('+') || timeZone.startsWith('-')) {

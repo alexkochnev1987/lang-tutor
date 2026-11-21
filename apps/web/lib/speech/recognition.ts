@@ -9,10 +9,21 @@ export interface BrowserRecognition {
   onerror: ((event: { error: string }) => void) | null
   onend: (() => void) | null
   start(): void
+  stop(): void
   abort(): void
 }
 
-export function createBrowserRecognition(): BrowserRecognition | null {
+export type SpeechLanguage = 'pl'
+
+const SPEECH_TAGS: Record<SpeechLanguage, string> = {
+  pl: 'pl-PL',
+}
+
+export function speechTagForLanguage(language: string): string | null {
+  return SPEECH_TAGS[language as SpeechLanguage] ?? null
+}
+
+export function createBrowserRecognition(language = 'pl'): BrowserRecognition | null {
   const browser = window as Window & {
     SpeechRecognition?: new () => BrowserRecognition
     webkitSpeechRecognition?: new () => BrowserRecognition
@@ -20,10 +31,12 @@ export function createBrowserRecognition(): BrowserRecognition | null {
   const Recognition = browser.SpeechRecognition ?? browser.webkitSpeechRecognition
   if (!Recognition) return null
 
+  const speechTag = speechTagForLanguage(language)
+  if (!speechTag) return null
   const recognition = new Recognition()
-  recognition.lang = 'pl-PL'
-  recognition.continuous = false
-  recognition.interimResults = false
+  recognition.lang = speechTag
+  recognition.continuous = true
+  recognition.interimResults = true
   recognition.maxAlternatives = 1
   return recognition
 }

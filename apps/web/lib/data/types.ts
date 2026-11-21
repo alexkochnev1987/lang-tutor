@@ -114,6 +114,7 @@ export interface SessionUser {
 export interface Settings {
   uiLanguage: string      // язык интерфейса
   sourceLanguage: string  // язык переводов слов — может отличаться от UI
+  targetLanguage: string  // изучаемый язык; также язык TTS/распознавания
   ruleLanguage: string
   theme: 'light' | 'dark' | 'system'
   dailyBudgetMinutes: number
@@ -125,6 +126,7 @@ export interface Settings {
 export const DEFAULT_SETTINGS: Settings = {
   uiLanguage: 'ru',
   sourceLanguage: 'ru',
+  targetLanguage: 'pl',
   ruleLanguage: 'ru',
   theme: 'system',
   dailyBudgetMinutes: 15,

@@ -58,7 +58,8 @@
     "appearanceHint": "Pick a theme and a colour palette",
     "palette": "Palette",
     "done": "Done",
-    "ruleLanguage": "Rule language"
+    "ruleLanguage": "Rule language",
+    "targetLanguage": "Language you are learning"
   },
   "profile": {
     "account": "Account",
@@ -73,6 +74,7 @@
     "saved": "Settings saved",
     "saveError": "Could not save settings. Try again."
   },
+  "languages": { "pl": "Polish" },
   "auth": {
     "signIn": "Sign in",
     "signOut": "Sign out",
@@ -96,7 +98,10 @@
     "pronunciation": "Pronunciation",
     "speech": {
       "instruction": "Say the translation in Polish",
+      "showHint": "Show Polish word",
+      "hideHint": "Hide Polish word",
       "start": "Turn on microphone",
+      "stop": "Stop microphone",
       "retry": "Try again",
       "listening": "Listening…",
       "recognized": "Recognized:",

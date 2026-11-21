@@ -11,8 +11,9 @@ import { loadState, saveSettings, useAppState } from '@/lib/data/store'
 import type { Settings } from '@/lib/data/types'
 import { usePronounce } from '@/lib/speech/usePronounce'
 import { voicesForLanguage } from '@/lib/speech/tts'
+import { speechTagForLanguage } from '@/lib/speech/recognition'
 
-type StudySettings = Pick<Settings, 'dailyBudgetMinutes' | 'ttsVoiceURI' | 'ttsRate'>
+type StudySettings = Pick<Settings, 'targetLanguage' | 'dailyBudgetMinutes' | 'ttsVoiceURI' | 'ttsRate'>
 
 export default function ProfilePage() {
   const t = useTranslations()
@@ -83,15 +84,15 @@ function StudyPreferences({ settings }: { settings: StudySettings }) {
 
   useEffect(() => {
     if (!('speechSynthesis' in window)) return
-    const updateVoices = () => setVoices(voicesForLanguage('pl-PL'))
+    const updateVoices = () => setVoices(voicesForLanguage(speechTagForLanguage(values.targetLanguage) ?? 'pl-PL'))
     updateVoices()
     window.speechSynthesis.addEventListener('voiceschanged', updateVoices)
     return () => window.speechSynthesis.removeEventListener('voiceschanged', updateVoices)
-  }, [])
+  }, [values.targetLanguage])
 
   function change(changes: Partial<StudySettings>) {
-    const { dailyBudgetMinutes, ttsVoiceURI, ttsRate } = values
-    setDraft({ dailyBudgetMinutes, ttsVoiceURI, ttsRate, ...changes })
+    const { targetLanguage, dailyBudgetMinutes, ttsVoiceURI, ttsRate } = values
+    setDraft({ targetLanguage, dailyBudgetMinutes, ttsVoiceURI, ttsRate, ...changes })
     setStatus('idle')
   }
 
@@ -113,6 +114,16 @@ function StudyPreferences({ settings }: { settings: StudySettings }) {
         <fieldset disabled={status === 'saving'}>
           <legend className="mb-2 font-semibold">{t('profile.study')}</legend>
           <Stack gap="md">
+            <label className="flex flex-col gap-1 text-sm font-medium">
+              {t('settings.targetLanguage')}
+              <select
+                value={values.targetLanguage}
+                onChange={(event) => change({ targetLanguage: event.target.value })}
+                className="min-h-11 w-full rounded-card border border-line bg-card px-2"
+              >
+                <option value="pl">{t('languages.pl')}</option>
+              </select>
+            </label>
             <label className="flex flex-col gap-1 text-sm font-medium">
               {t('settings.dailyBudget')}
               <input
