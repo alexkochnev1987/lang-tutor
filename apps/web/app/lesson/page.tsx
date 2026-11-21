@@ -812,6 +812,11 @@ const SKILL_INDICATORS = {
     description: "Прослушать слово и написать его",
     icon: "M3 14v-3a9 9 0 0 1 18 0v3M3 13h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2Zm18 0h-3a2 2 0 0 0-2 2v3a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2Z",
   },
+  "lexeme-pronunciation": {
+    label: "Произнести слово",
+    description: "Произнести польский перевод и проверить распознанное слово",
+    icon: "M9 5a3 3 0 0 1 6 0v6a3 3 0 0 1-6 0V5Zm-3 6a6 6 0 0 0 12 0m-6 6v4m-3 0h6",
+  },
 } satisfies Record<(typeof LEXEME_SKILL_KINDS)[number], {
   label: string;
   description: string;

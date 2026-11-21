@@ -8,11 +8,12 @@ const skills = {
   reverse: 'lexeme-production',
   writing: 'lexeme-spelling',
   listening: 'lexeme-listen-write',
+  pronunciation: 'lexeme-pronunciation',
 } as const
 
 export type WordFormat = keyof typeof skills
 export const WORD_FORMATS = ['translation', 'reverse', 'writing', 'listening'] as const
-export const WORD_PRACTICE_FORMATS = ['brainstorm', ...WORD_FORMATS] as const
+export const WORD_PRACTICE_FORMATS = ['brainstorm', ...WORD_FORMATS, 'pronunciation'] as const
 export type WordPracticeFormat = (typeof WORD_PRACTICE_FORMATS)[number]
 
 export const wordSkill = (format: WordFormat) => skills[format]
@@ -50,6 +51,20 @@ export function brainstormWordSession(
 
 export function dailyWordExercise(word: Lexeme, pool: readonly Lexeme[], format: WordFormat, seed: number): Exercise {
   switch (format) {
+    case 'pronunciation':
+      return {
+        id: `ex.pronunciation.${word.id}`,
+        kind: 'pronunciation',
+        mode: 'typed',
+        lexemeId: word.id,
+        grammarRuleIds: [],
+        prompt: word.translation,
+        instruction: 'Powiedz słowo po polsku',
+        accepted: [word.lemma],
+        moduleId: 'speaking',
+        difficulty: 3,
+        estimatedSec: 20,
+      }
     case 'reverse':
       return { ...translateProduction(word, pool.map(({ lemma }) => lemma), { seed }), attemptsAllowed: 1 }
     case 'writing':
@@ -80,6 +95,8 @@ export function dailyWordExercise(word: Lexeme, pool: readonly Lexeme[], format:
 
 export function formatOfWordExercise(exercise: Exercise): WordFormat {
   switch (exercise.kind) {
+    case 'pronunciation':
+      return 'pronunciation'
     case 'listen-choice':
     case 'listen-write':
       return 'listening'

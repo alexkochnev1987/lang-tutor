@@ -13,6 +13,7 @@ export type StudyItemKind =
   | 'lexeme-production'
   | 'lexeme-spelling'
   | 'lexeme-listen-write'
+  | 'lexeme-pronunciation'
   | 'rule-card'
 
 export interface StudyItem {
@@ -28,6 +29,7 @@ export const REVIEW_COST_SEC: Record<StudyItemKind, number> = {
   'lexeme-production': 13,
   'lexeme-spelling': 12,
   'lexeme-listen-write': 20,
+  'lexeme-pronunciation': 20,
   'rule-card': 10,
 }
 

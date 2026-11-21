@@ -138,7 +138,7 @@ export async function buildTodayLesson(day: CurriculumDay): Promise<Lesson> {
   return generateLesson({
     scheduler,
     plan,
-    items,
+    items: items.filter(({ kind }) => kind !== "lexeme-pronunciation"),
     mastery,
     moduleScores,
     passRule: PASS_RULE,
@@ -152,6 +152,7 @@ export const LEXEME_SKILL_KINDS = [
   "lexeme-production",
   "lexeme-spelling",
   "lexeme-listen-write",
+  "lexeme-pronunciation",
 ] as const;
 
 export type LexemeSkillKind = (typeof LEXEME_SKILL_KINDS)[number];
@@ -230,13 +231,14 @@ const EXERCISE_SKILL = {
   "write-word": "lexeme-spelling",
   "listen-choice": "lexeme-listen-write",
   "listen-write": "lexeme-listen-write",
+  pronunciation: "lexeme-pronunciation",
   typed: "lexeme-listen-write",
   writing: "lexeme-spelling",
   translation: "lexeme-recognition",
 } as const satisfies Record<string, LexemeSkillKind>;
 
 // Exercise results persist the generated ID, including optional session and retry prefixes.
-const WORD_EXERCISE_ID = /(?:^|:)ex\.(?:(rec|ff|prod|spell|listen-write|listen-choice|write-word)|minimum-words\.\d+\.(choice|typed|writing|translation))\.(.+)$/;
+const WORD_EXERCISE_ID = /(?:^|:)ex\.(?:(rec|ff|prod|spell|listen-write|listen-choice|write-word|pronunciation)|minimum-words\.\d+\.(choice|typed|writing|translation))\.(.+)$/;
 
 type LexemeSkillProgress = { value: number; correct: number; attempts: number };
 

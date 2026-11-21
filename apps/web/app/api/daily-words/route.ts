@@ -50,9 +50,11 @@ export const GET = withUser(async ({ userId }) => {
   }
 })
 
-function validAnswer(answer: DailyWordAnswer, lexemeId: string) {
+function validAnswer(answer: DailyWordAnswer, lexemeId: string, isBrainstorm: boolean) {
   const { format, item, log, result } = answer ?? {}
-  return item && log && result && WORD_FORMATS.includes(format) && item.refId === lexemeId
+  const supportedFormat = format === 'pronunciation' ? !isBrainstorm : WORD_FORMATS.includes(format)
+  return item && log && result && supportedFormat && item.refId === lexemeId
+    && (format !== 'pronunciation' || (Number.isInteger(result.attempts) && result.attempts >= 1 && result.attempts <= 3))
     && item.kind === wordSkill(format) && item.id === `${item.kind}:${lexemeId}`
     && /^[0-9a-f-]{36}$/i.test(log.id) && log.studyItemId === item.id
     && Number.isInteger(result.dayNumber) && result.dayNumber >= 1
@@ -68,7 +70,7 @@ export const POST = withUser(async ({ userId, req }) => {
   const lexemeId = first?.item?.refId
   if (!first || !lexemeId || !lexemes.has(lexemeId)
     || answers.length !== (isBrainstorm ? WORD_FORMATS.length : 1)
-    || !answers.every((answer) => validAnswer(answer, lexemeId))
+    || !answers.every((answer) => validAnswer(answer, lexemeId, isBrainstorm))
     || new Set(answers.map(({ format }) => format)).size !== answers.length
     || new Set(answers.map(({ log }) => log.id)).size !== answers.length
     || new Set(answers.map(({ result }) => result.exerciseId)).size !== answers.length
