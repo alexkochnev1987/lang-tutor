@@ -33,9 +33,48 @@
           Перевод
           <input id="translation" name="translation" maxlength="240" required autocomplete="off" placeholder="обычай">
         </label>
+        <label>
+          Пример или ассоциация <span class="optional">необязательно</span>
+          <textarea id="example" name="example" maxlength="500" rows="2" placeholder="Например: Mam zwyczaj czytać wieczorem."></textarea>
+        </label>
         <button type="submit" class="primary">Добавить слово</button>
         <p id="status" class="status" role="status"></p>
       </form>
+
+      <section class="practice-card" aria-labelledby="practice-title">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Practice</p>
+            <h2 id="practice-title">Тренировка</h2>
+          </div>
+          <span id="practice-progress" class="progress">5 слов</span>
+        </div>
+        <div class="settings-grid">
+          <label class="switch-row">
+            <span>Напоминать каждые 30 минут</span>
+            <input id="reminders" type="checkbox">
+          </label>
+          <label>
+            Режим
+            <select id="practice-mode">
+              <option value="word-to-translation">Слово → перевод</option>
+              <option value="translation-to-word">Перевод → слово</option>
+              <option value="brainstorm">Brainstorm: пример или ассоциация</option>
+            </select>
+          </label>
+        </div>
+        <button id="start-practice" class="secondary" type="button">Начать тренировку</button>
+        <div id="practice" class="practice" hidden>
+          <div class="practice-meta"><span id="practice-index">1 / 5</span><span id="practice-score">0 правильно</span></div>
+          <p id="practice-prompt" class="practice-prompt"></p>
+          <input id="practice-answer" autocomplete="off" placeholder="Введите ответ">
+          <div class="practice-actions">
+            <button id="check-answer" class="primary" type="button">Проверить</button>
+            <button id="next-word" class="text-button" type="button" hidden>Следующее</button>
+          </div>
+          <p id="practice-feedback" class="feedback" role="status"></p>
+        </div>
+      </section>
 
       <section class="list-section">
         <div class="list-heading">

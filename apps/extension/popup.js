@@ -13,6 +13,26 @@ const loginButton = document.querySelector('#login');
 const signedIn = document.querySelector('#signed-in');
 const userName = document.querySelector('#user-name');
 const logoutButton = document.querySelector('#logout');
+const exampleInput = document.querySelector('#example');
+const remindersInput = document.querySelector('#reminders');
+const practiceMode = document.querySelector('#practice-mode');
+const startPracticeButton = document.querySelector('#start-practice');
+const practicePanel = document.querySelector('#practice');
+const practiceIndex = document.querySelector('#practice-index');
+const practiceScore = document.querySelector('#practice-score');
+const practicePrompt = document.querySelector('#practice-prompt');
+const practiceAnswer = document.querySelector('#practice-answer');
+const checkAnswerButton = document.querySelector('#check-answer');
+const nextWordButton = document.querySelector('#next-word');
+const practiceFeedback = document.querySelector('#practice-feedback');
+const practiceProgress = document.querySelector('#practice-progress');
+
+const SETTINGS_KEY = 'practiceSettings';
+const SESSION_SIZE = 5;
+let practiceSession = [];
+let practicePosition = 0;
+let practiceCorrect = 0;
+let answerChecked = false;
 
 function escapeHtml(value) {
   return String(value)
@@ -34,6 +54,21 @@ async function setWords(words) {
 
 async function getAuth() {
   return chrome.storage.local.get({ appToken: '', user: null, lastAuthError: '' });
+}
+
+async function getPracticeSettings() {
+  const result = await chrome.storage.local.get({ [SETTINGS_KEY]: { remindersEnabled: false, mode: 'word-to-translation' } });
+  return {
+    remindersEnabled: Boolean(result[SETTINGS_KEY]?.remindersEnabled),
+    mode: result[SETTINGS_KEY]?.mode || 'word-to-translation',
+  };
+}
+
+async function savePracticeSettings() {
+  const settings = { remindersEnabled: remindersInput.checked, mode: practiceMode.value };
+  await chrome.storage.local.set({ [SETTINGS_KEY]: settings });
+  await chrome.runtime.sendMessage({ type: 'update-reminder', enabled: settings.remindersEnabled });
+  showStatus(settings.remindersEnabled ? 'Напоминания включены' : 'Напоминания выключены');
 }
 
 async function syncRemoteWords() {
@@ -106,7 +141,7 @@ form.addEventListener('submit', async (event) => {
     id: crypto.randomUUID(),
     word,
     translation,
-    example: '',
+    example: exampleInput.value.trim(),
     createdAt: new Date().toISOString(),
   });
   await setWords(withoutDuplicate);
@@ -115,6 +150,95 @@ form.addEventListener('submit', async (event) => {
   showStatus('Слово добавлено');
   await render();
   wordInput.focus();
+});
+
+function normalizeAnswer(value) {
+  return value.trim().toLocaleLowerCase().replace(/[.!?,;:]+$/g, '');
+}
+
+function shuffle(items) {
+  return [...items].sort(() => Math.random() - 0.5);
+}
+
+function updatePracticeProgress() {
+  practiceProgress.textContent = `${practiceSession.length || SESSION_SIZE} слов`;
+  practiceIndex.textContent = `${Math.min(practicePosition + 1, practiceSession.length)} / ${practiceSession.length}`;
+  practiceScore.textContent = `${practiceCorrect} правильно`;
+}
+
+function renderPracticeCard() {
+  const item = practiceSession[practicePosition];
+  if (!item) {
+    practicePrompt.textContent = 'Тренировка завершена';
+    practiceAnswer.hidden = true;
+    checkAnswerButton.hidden = true;
+    nextWordButton.hidden = true;
+    practiceFeedback.textContent = `Результат: ${practiceCorrect} из ${practiceSession.length}.`;
+    return;
+  }
+
+  const mode = practiceMode.value;
+  practicePrompt.textContent = mode === 'translation-to-word' ? item.translation : item.word;
+  practiceAnswer.hidden = false;
+  checkAnswerButton.hidden = false;
+  nextWordButton.hidden = true;
+  practiceAnswer.value = '';
+  practiceAnswer.placeholder = mode === 'brainstorm' ? 'Напишите пример или ассоциацию' : 'Введите ответ';
+  practiceFeedback.textContent = '';
+  practiceFeedback.classList.remove('success');
+  answerChecked = false;
+  updatePracticeProgress();
+  practiceAnswer.focus();
+}
+
+async function startPractice() {
+  const words = (await getWords()).filter((item) => item.word && item.translation);
+  if (!words.length) {
+    showStatus('Добавьте минимум одно слово с переводом', true);
+    return;
+  }
+  practiceSession = shuffle(words).slice(0, SESSION_SIZE);
+  practicePosition = 0;
+  practiceCorrect = 0;
+  practicePanel.hidden = false;
+  renderPracticeCard();
+}
+
+function checkAnswer() {
+  if (answerChecked) return;
+  const item = practiceSession[practicePosition];
+  const answer = practiceAnswer.value.trim();
+  if (!item || !answer) return;
+  const mode = practiceMode.value;
+  const expected = mode === 'translation-to-word' ? item.word : item.translation;
+  const isBrainstorm = mode === 'brainstorm';
+  const correct = isBrainstorm || normalizeAnswer(answer) === normalizeAnswer(expected);
+  if (correct) practiceCorrect += 1;
+  answerChecked = true;
+  practiceFeedback.textContent = isBrainstorm
+    ? `Хорошо! Перевод: ${item.translation}`
+    : (correct ? 'Правильно!' : `Правильный ответ: ${expected}`);
+  practiceFeedback.classList.toggle('success', correct);
+  checkAnswerButton.hidden = true;
+  nextWordButton.hidden = false;
+  updatePracticeProgress();
+}
+
+function nextPracticeWord() {
+  practicePosition += 1;
+  renderPracticeCard();
+}
+
+remindersInput.addEventListener('change', savePracticeSettings);
+practiceMode.addEventListener('change', async () => {
+  await savePracticeSettings();
+  if (!practicePanel.hidden) renderPracticeCard();
+});
+startPracticeButton.addEventListener('click', startPractice);
+checkAnswerButton.addEventListener('click', checkAnswer);
+nextWordButton.addEventListener('click', nextPracticeWord);
+practiceAnswer.addEventListener('keydown', (event) => {
+  if (event.key === 'Enter') checkAnswer();
 });
 
 wordsList.addEventListener('click', async (event) => {
@@ -165,4 +289,14 @@ async function renderAccount() {
   if (!user && lastAuthError) showStatus(`Ошибка входа: ${lastAuthError}`, true);
 }
 
-void Promise.all([render(), renderAccount(), syncRemoteWords().catch(() => undefined)]);
+async function renderPracticeSettings() {
+  const settings = await getPracticeSettings();
+  remindersInput.checked = settings.remindersEnabled;
+  practiceMode.value = settings.mode;
+}
+
+void Promise.all([render(), renderAccount(), renderPracticeSettings(), syncRemoteWords().catch(() => undefined)]);
+
+if (new URLSearchParams(location.search).get('practice') === '1') {
+  void startPractice();
+}

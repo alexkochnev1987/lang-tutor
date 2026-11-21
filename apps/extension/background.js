@@ -1,6 +1,7 @@
 const STORAGE_KEY = 'personalWords';
 const APP_URL = 'https://web-ecru-ten-90.vercel.app/';
 const API_URL = 'https://web-ecru-ten-90.vercel.app';
+const REMINDER_ALARM = 'polski-b1-review-reminder';
 
 chrome.runtime.onInstalled.addListener(() => {
   chrome.contextMenus.create({
@@ -8,6 +9,37 @@ chrome.runtime.onInstalled.addListener(() => {
     title: 'Сохранить в Polski B1: %s',
     contexts: ['selection'],
   });
+});
+
+async function setReminderAlarm(enabled) {
+  await chrome.alarms.clear(REMINDER_ALARM);
+  if (enabled) {
+    await chrome.alarms.create(REMINDER_ALARM, { delayInMinutes: 30, periodInMinutes: 30 });
+  }
+}
+
+chrome.alarms.onAlarm.addListener(async (alarm) => {
+  if (alarm.name !== REMINDER_ALARM) return;
+  const result = await chrome.storage.local.get({ [STORAGE_KEY]: [] });
+  const words = (Array.isArray(result[STORAGE_KEY]) ? result[STORAGE_KEY] : []).filter((item) => item.word && item.translation);
+  if (!words.length) return;
+  const item = words[Math.floor(Math.random() * words.length)];
+  await chrome.notifications.create(`review-${Date.now()}`, {
+    type: 'basic',
+    iconUrl: 'icons/icon-128.png',
+    title: 'Polski B1 — время повторить',
+    message: `Слово: ${item.word}\nВспомните перевод и откройте тренировку.`,
+    buttons: [{ title: 'Начать тренировку' }],
+    priority: 1,
+  });
+});
+
+chrome.notifications.onClicked.addListener(() => {
+  chrome.tabs.create({ url: `${chrome.runtime.getURL('popup.html')}?practice=1` });
+});
+
+chrome.notifications.onButtonClicked.addListener((_notificationId, buttonIndex) => {
+  if (buttonIndex === 0) chrome.tabs.create({ url: `${chrome.runtime.getURL('popup.html')}?practice=1` });
 });
 
 chrome.contextMenus.onClicked.addListener(async (info) => {
@@ -64,6 +96,10 @@ async function loginWithGoogle() {
 }
 
 chrome.runtime.onMessage.addListener((message, _sender, sendResponse) => {
+  if (message?.type === 'update-reminder') {
+    setReminderAlarm(Boolean(message.enabled)).then(() => sendResponse({ ok: true }));
+    return true;
+  }
   if (message?.type !== 'login') return undefined;
 
   loginWithGoogle()
