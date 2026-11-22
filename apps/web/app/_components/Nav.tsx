@@ -2,7 +2,6 @@
 
 import { useEffect, useState } from 'react'
 import Link, { useLinkStatus } from 'next/link'
-import { BusyIndicator } from '@polski/ui'
 import { usePathname } from 'next/navigation'
 import { useTranslations } from 'next-intl'
 import { AppIcon } from './AppIcon'
@@ -29,18 +28,16 @@ function LinkTabContent(props: TabContentProps) {
 }
 
 function TabContent({ tab, label, active, pending }: TabContentProps & { pending: boolean }) {
-  const loading = useTranslations('common')
-  const navigating = pending && !active
+  const selected = active || pending
 
   return (
     <>
       <span className={`flex h-7 w-11 items-center justify-center rounded-pill group-active:bg-soft2 group-active:text-accent-ink ${
-        navigating || active ? 'bg-soft2 text-accent-ink' : 'group-hover:bg-soft'
+        selected ? 'bg-soft2 text-accent-ink' : 'group-hover:bg-soft'
       }`}>
-        {navigating ? <BusyIndicator className="size-5" /> : <AppIcon name={tab} className="size-5" />}
+        <AppIcon name={tab} className="size-5" />
       </span>
-      <span className={navigating ? 'text-accent-ink' : undefined}>{label}</span>
-      <span role="status" className="sr-only">{navigating ? loading('loading') : ''}</span>
+      <span className={selected ? 'text-accent-ink' : undefined}>{label}</span>
     </>
   )
 }
