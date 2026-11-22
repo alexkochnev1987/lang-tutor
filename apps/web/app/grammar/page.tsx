@@ -2,6 +2,7 @@
 
 import { useCallback, useEffect, useRef, useState } from 'react'
 import Link from 'next/link'
+import { useTranslations } from 'next-intl'
 import { Button, Card, Row, Screen, Segmented, Stack } from '@polski/ui'
 import type { CheckResult, Exercise } from '@polski/engine'
 import {
@@ -30,13 +31,15 @@ export default function GrammarPage() {
   const [mode, setMode] = useState<(typeof MODES)[number]['value']>('today')
   const [openedPractice, setOpenedPractice] = useState(false)
 
+  function changeMode(nextMode: typeof mode) {
+    setMode(nextMode)
+    if (nextMode === 'practice') setOpenedPractice(true)
+  }
+
   return (
-    <Shell mode={mode} onModeChange={(nextMode) => {
-      setMode(nextMode)
-      if (nextMode === 'practice') setOpenedPractice(true)
-    }}>
+    <Shell mode={mode} onModeChange={changeMode}>
       <div hidden={mode !== 'today'}>
-        <Stack gap="md"><TodayGrammar /></Stack>
+        <Stack gap="md"><TodayGrammar onPractice={() => changeMode('practice')} /></Stack>
       </div>
       {openedPractice && (
         <div hidden={mode !== 'practice'}>
@@ -47,11 +50,12 @@ export default function GrammarPage() {
   )
 }
 
-function TodayGrammar() {
+function TodayGrammar({ onPractice }: { onPractice: () => void }) {
+  const t = useTranslations()
   const [stage, setStage] = useState<Stage | null>(null)
   const [drills, setDrills] = useState<Step[]>([])
   const [dayNumber, setDayNumber] = useState(1)
-  const [loaded, setLoaded] = useState(false)
+  const [loadStatus, setLoadStatus] = useState<'loading' | 'ready' | 'error'>('loading')
   const [view, setView] = useState<GrammarView>('rule')
   const [canAdvance, setCanAdvance] = useState(false)
   const [stats, setStats] = useState({ correct: 0, total: 0 })
@@ -59,13 +63,14 @@ function TodayGrammar() {
   const lessonSave = useSaveLessonResult()
 
   const load = useCallback(() => {
-    buildTodayPlan().then((p) => {
+    setLoadStatus('loading')
+    void buildTodayPlan().then((p) => {
       const grammar = p.stages.find((s) => s.id === 'grammar') ?? null
       setStage(grammar)
       setDrills((grammar?.steps ?? []).filter((s) => s.kind === 'exercise'))
       setDayNumber(p.dayNumber)
-      setLoaded(true)
-    })
+      setLoadStatus('ready')
+    }).catch(() => setLoadStatus('error'))
   }, [])
 
   useEffect(() => { load() }, [load])
@@ -113,7 +118,21 @@ function TodayGrammar() {
     load()
   }
 
-  if (!loaded) return <Card><p className="text-sm text-muted">Ładowanie…</p></Card>
+  if (loadStatus === 'loading') {
+    return <Card><p role="status" className="text-sm text-muted">{t('common.loading')}</p></Card>
+  }
+
+  if (loadStatus === 'error') {
+    return (
+      <Card>
+        <Stack gap="sm">
+          <p role="alert" className="text-sm text-danger-ink">{t('errors.generic')}</p>
+          <Button variant="outline" full onClick={load}>{t('errors.retry')}</Button>
+          <Button variant="ghost" full onClick={onPractice}>{MODES[1].label}</Button>
+        </Stack>
+      </Card>
+    )
+  }
 
   if (!stage) {
     return (
@@ -124,9 +143,7 @@ function TodayGrammar() {
             Dziś nie ma gramatyki w programie. Reguły wrócą w kolejnym dniu
             z nowym tematem.
           </p>
-          <Link href="/" className="w-full">
-            <Button variant="outline" full>Strona główna</Button>
-          </Link>
+          <Button full onClick={onPractice}>{MODES[1].label}</Button>
         </Stack>
       </Card>
     )

@@ -9,7 +9,7 @@ const TABS = [
   { href: '/', key: 'today' },
   { href: '/program', key: 'course', alternate: '/progress' },
   { href: '/words', key: 'words', alternate: '/dictionary' },
-  { href: '/grammar', key: 'grammar' },
+  { href: '/grammar/', key: 'grammar' },
   { href: '/profile', key: 'profile' },
 ] as const
 
@@ -29,9 +29,12 @@ export function Nav() {
       <div className="mx-auto grid w-full max-w-2xl grid-cols-5 px-1 py-1">
         {TABS.map((tab) => {
           const alternate = 'alternate' in tab && (path === tab.alternate || path.startsWith(`${tab.alternate}/`))
-          const active = alternate || path === tab.href || path.startsWith(`${tab.href}/`)
+          const route = tab.href === '/' ? tab.href : tab.href.replace(/\/$/, '')
+          const active = alternate || path === route || path.startsWith(`${route}/`)
+          // Let the PWA service worker handle this document navigation directly.
+          const TabLink = tab.key === 'grammar' && !active ? 'a' : Link
           return (
-            <Link
+            <TabLink
               key={tab.href}
               href={tab.href}
               aria-current={alternate ? 'location' : active ? 'page' : undefined}
@@ -43,7 +46,7 @@ export function Nav() {
                 <AppIcon name={tab.key} className="size-5" />
               </span>
               {t(tab.key)}
-            </Link>
+            </TabLink>
           )
         })}
       </div>

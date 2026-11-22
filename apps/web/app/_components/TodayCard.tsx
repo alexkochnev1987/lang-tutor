@@ -128,9 +128,9 @@ export function TodayCard() {
               <span className="text-sm text-muted">{grammar.rule.title}</span>
             </Stack>
             <p className="text-sm text-muted">{grammar.rule.summary}</p>
-            <Link href="/grammar" className={buttonStyles({ variant: 'outline', full: true })}>
+            <a href="/grammar/" className={buttonStyles({ variant: 'outline', full: true })}>
               Тренажёр грамматики
-            </Link>
+            </a>
           </Stack>
         </Card>
       )}

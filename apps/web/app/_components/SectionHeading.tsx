@@ -19,9 +19,9 @@ export function SectionHeading({ section }: {
         </h1>
         {section === 'today' && <p className="mt-0.5 text-sm text-muted">{t('app.tagline')}</p>}
       </Stack>
-      {user && (
+      {user && section !== 'profile' && (
         <Link
-          href={user.signedIn && section !== 'profile' ? '/profile/' : '/profile/#profile-account'}
+          href={user.signedIn ? '/profile/' : '/profile/#profile-account'}
           className="flex min-h-11 min-w-0 max-w-[42%] shrink-0 items-center rounded-control px-3 text-sm font-medium text-accent-ink hover:bg-soft active:bg-soft2"
         >
           <span className="truncate">
