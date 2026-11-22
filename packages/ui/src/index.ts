@@ -1,5 +1,5 @@
 export { cn } from './cn'
-export { Button } from './controls/Button'
+export { Button, buttonStyles } from './controls/Button'
 export { Screen } from './primitives/Screen'
 export { Stack } from './primitives/Stack'
 export { Row } from './primitives/Row'

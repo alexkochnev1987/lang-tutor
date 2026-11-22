@@ -16,6 +16,7 @@ import { RuleSheet } from '@/app/_components/RuleSheet'
 import { RuleView } from '@/app/_components/RuleView'
 import { Nav } from '@/app/_components/Nav'
 import { SectionHeading } from '@/app/_components/SectionHeading'
+import { WeeklyGoalCredit } from '@/app/_components/WeeklyGoal'
 import { GrammarPractice } from '@/app/_components/GrammarPractice'
 
 type GrammarView = 'rule' | 'drill' | 'result'
@@ -139,6 +140,7 @@ function TodayGrammar() {
           <span className="text-4xl" aria-hidden>{pct >= 70 ? '✓' : '↻'}</span>
           <h2 className="text-xl font-semibold">Trening zakończony</h2>
           <p className="text-sm text-muted">Poprawne odpowiedzi: {stats.correct} z {stats.total} · {pct}%</p>
+          <WeeklyGoalCredit />
           <Button size="lg" full onClick={restart}>Jeszcze raz</Button>
           <Link href="/" className="w-full">
             <Button variant="outline" full>Strona główna</Button>

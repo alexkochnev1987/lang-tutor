@@ -92,7 +92,7 @@ function MapIsland({
         aria-hidden
         className={`absolute top-10 hidden h-1 w-10 bg-primary/35 sm:block ${connectorSide}`}
       />
-      <div className={`relative rounded-[2rem] border-2 px-4 py-4 ${phaseClass}`}>
+      <div className={`relative rounded-feature border px-4 py-4 ${phaseClass}`}>
         <Stack gap="md">
           <Row justify="between" gap="sm" align="start">
             <Stack gap="xs">
@@ -175,12 +175,12 @@ export default function ProgramPage() {
 
   return (
     <CourseShell current="/program">
-      <Card>
+      <Card tone="featured">
         <Stack gap="md">
           <Row justify="between" gap="md" align="start">
             <Stack gap="xs">
               <span className="text-xs uppercase tracking-wide text-muted">Визуализация курса</span>
-              <h1 className="text-xl font-semibold">Дорожка до B1</h1>
+              <h1 className="text-2xl font-semibold tracking-tight">Дорожка до B1</h1>
               <p className="text-sm text-muted">
                 День {currentDay} из {progress.totalDays} · пройдено {percent}%
               </p>

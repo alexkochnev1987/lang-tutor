@@ -1,9 +1,8 @@
 'use client'
 
-import { Screen, Stack } from '@polski/ui'
+import { Screen } from '@polski/ui'
 import { Nav } from './_components/Nav'
 import { SectionHeading } from './_components/SectionHeading'
-import { DailyWordCounts } from './_components/DailyWordCounts'
 import { TodayCard } from './_components/TodayCard'
 
 /**
@@ -19,11 +18,8 @@ export default function TodayPage() {
         <SectionHeading section="today" />
       </header>
 
-      <main className="mx-auto w-full max-w-2xl flex-1 px-4">
-        <Stack gap="lg">
-          <DailyWordCounts />
-          <TodayCard />
-        </Stack>
+      <main className="mx-auto w-full max-w-2xl flex-1 px-4 pb-4">
+        <TodayCard />
       </main>
 
       <Nav />

@@ -2,6 +2,7 @@
 
 import type { ReactNode } from "react";
 import { Row } from "@polski/ui";
+import { AppIcon } from "./AppIcon";
 import { StudyTooltip } from "./StudyTooltip";
 import { usePronounce } from "@/lib/speech/usePronounce";
 import { setLexemeKnown, useAppState } from "@/lib/data/store";
@@ -50,9 +51,9 @@ export function WordRow({
             type="button"
             onClick={() => pronounce(word.lemma)}
             aria-label={`Wymów ${word.lemma}`}
-            className="flex size-12 shrink-0 items-center justify-center rounded-pill bg-soft text-base hover:bg-soft2"
+            className="flex size-12 shrink-0 items-center justify-center rounded-control bg-soft2 text-accent-ink transition-colors hover:brightness-95 active:brightness-90"
           >
-            {message ? "🔇" : "🔊"}
+            <AppIcon name={message ? "muted" : "speaker"} className="size-5" />
           </button>
           <div className="min-w-0 break-words">
             <div
@@ -199,7 +200,7 @@ export function KnownToggle({
         className={`flex min-h-12 shrink-0 items-center gap-1 rounded-pill px-2.5 text-xs font-medium ${
           known
             ? "bg-ok-bg text-ok-ink hover:bg-soft2"
-            : "border border-primary bg-transparent text-primary hover:bg-soft"
+            : "bg-soft2 text-accent-ink hover:brightness-95 active:brightness-90"
         }`}
       >
         <span aria-hidden>{known ? "✓" : "→"}</span>

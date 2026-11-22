@@ -13,7 +13,7 @@ import Script from 'next/script'
 const SCRIPT = `
 (function () {
   try {
-    var p = localStorage.getItem('polski.palette') || 'graphite';
+    var p = localStorage.getItem('polski.palette') || 'ink';
     var m = localStorage.getItem('polski.mode') || 'system';
     if (m === 'system') {
       m = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
@@ -22,7 +22,7 @@ const SCRIPT = `
     r.dataset.palette = p;
     r.dataset.mode = m;
   } catch (e) {
-    document.documentElement.dataset.palette = 'graphite';
+    document.documentElement.dataset.palette = 'ink';
     document.documentElement.dataset.mode = 'light';
   }
 })();

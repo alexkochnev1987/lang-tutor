@@ -30,8 +30,8 @@ export function SectionNav({ section, current }: SectionNavProps) {
             key={href}
             href={href}
             aria-current={active ? 'page' : undefined}
-            className={`flex min-h-10 items-center justify-center rounded-card px-2 text-center text-sm font-medium ${
-              active ? 'bg-card text-primary shadow-sm' : 'text-muted hover:bg-soft2 hover:text-ink'
+            className={`flex min-h-11 items-center justify-center rounded-control px-2 text-center text-sm font-medium ${
+              active ? 'bg-card text-accent-ink shadow-card' : 'text-muted hover:bg-soft2 hover:text-ink'
             }`}
           >
             {t(label)}

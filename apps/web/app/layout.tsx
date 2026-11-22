@@ -31,7 +31,7 @@ export const viewport: Viewport = {
   interactiveWidget: 'resizes-content',
   // Конкретное значение ставит lib/theme из активного токена --head:
   // у каждой палитры своя шапка
-  themeColor: '#1d1d20',
+  themeColor: '#f6f5f2',
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
