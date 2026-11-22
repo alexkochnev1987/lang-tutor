@@ -2,8 +2,9 @@
 
 import { useEffect, useState } from 'react'
 import { useLocale, useTranslations } from 'next-intl'
-import { Card, Row, Stack } from '@polski/ui'
-import { useAppState } from '@/lib/data/store'
+import { Button, Card, Row, Stack } from '@polski/ui'
+import { loadState, useAppState } from '@/lib/data/store'
+import { SkeletonBlock } from './LoadingSkeleton'
 import { WEEKLY_GOAL, weeklyProgress } from '@/lib/engine/weekly-goal'
 
 type IconName = 'calendar' | 'complete' | 'today' | 'missed' | 'upcoming'
@@ -57,7 +58,47 @@ export function WeeklyGoal() {
   const locale = useLocale()
   const week = useWeeklyProgress()
 
-  if (!week) return null
+  const loading = useTranslations('loadingSections')
+  const errors = useTranslations('errors')
+  const [failed, setFailed] = useState(false)
+  const [attempt, setAttempt] = useState(0)
+
+  useEffect(() => {
+    let active = true
+    void loadState().catch(() => { if (active) setFailed(true) })
+    return () => { active = false }
+  }, [attempt])
+
+  if (!week) {
+    return (
+      <Card constrained={false}>
+        <Stack gap="sm">
+          <Row gap="sm">
+            <GoalIcon name="calendar" className="size-5 shrink-0 text-accent-ink" />
+            <h2 className="text-sm font-semibold">{t('title')}</h2>
+          </Row>
+          {failed ? (
+            <>
+              <p role="alert" className="text-xs text-danger-ink">{loading('unavailable')}</p>
+              <Button size="sm" variant="outline" onClick={() => {
+                setFailed(false)
+                setAttempt((current) => current + 1)
+              }}>{errors('retry')}</Button>
+            </>
+          ) : (
+            <>
+              <div className="grid grid-cols-7 justify-items-center gap-1">
+                {Array.from({ length: 7 }, (_, index) => (
+                  <SkeletonBlock key={index} className="size-7 rounded-full" />
+                ))}
+              </div>
+              <p role="status" className="text-xs text-muted">{loading('weeklyGoal')}</p>
+            </>
+          )}
+        </Stack>
+      </Card>
+    )
+  }
 
   const shortDay = new Intl.DateTimeFormat(locale, { weekday: 'short', timeZone: 'UTC' })
   const longDay = new Intl.DateTimeFormat(locale, { weekday: 'long', timeZone: 'UTC' })

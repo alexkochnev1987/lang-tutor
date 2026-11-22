@@ -189,5 +189,20 @@
     "write": "Write a sentence",
     "count": "{count, plural, one {# exercise} other {# exercises}}",
     "backTopics": "Back to topics"
+  },
+  "loadingSections": {
+    "lessonPlan": "Building your lesson plan…",
+    "wordCounts": "Checking available words…",
+    "weeklyGoal": "Loading your weekly goal…",
+    "unavailable": "Data unavailable",
+    "savedWords": "Loading saved words…",
+    "wordStatuses": "Loading word statuses…",
+    "vocabulary": "Loading vocabulary…",
+    "practice": "Preparing practice…",
+    "account": "Loading your account…",
+    "preferences": "Loading language settings…",
+    "roadmap": "Loading the course map…",
+    "courseProgress": "Loading course progress…",
+    "grammar": "Preparing today’s grammar exercises…"
   }
 }

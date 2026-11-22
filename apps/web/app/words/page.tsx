@@ -9,7 +9,7 @@ import { hashString, spelling, type CheckResult } from '@polski/engine'
 import { BrainstormPractice } from '@/app/_components/BrainstormPractice'
 import { PronunciationExercise } from '@/app/_components/PronunciationExercise'
 import { ExerciseView } from '@/app/_components/ExerciseView'
-import { LoadingSkeleton } from '@/app/_components/LoadingSkeleton'
+import { LoadingSkeleton, SkeletonBlock } from '@/app/_components/LoadingSkeleton'
 import { Nav } from '@/app/_components/Nav'
 import { SectionHeading } from '@/app/_components/SectionHeading'
 import { SectionNav } from '@/app/_components/SectionNav'
@@ -46,6 +46,8 @@ function WordsWithList() {
 
 function WordPractice({ initialList }: { initialList?: DailyWordList }) {
   const t = useTranslations('dailyWords')
+  const loading = useTranslations('loadingSections')
+  const [initializing, setInitializing] = useState(true)
   const [vocabulary, setVocabulary] = useState<Map<string, Lexeme> | null>(null)
   const [queue, setQueue] = useState<DailyWordQueue | null>(null)
   const [dayNumber, setDayNumber] = useState(1)
@@ -61,14 +63,26 @@ function WordPractice({ initialList }: { initialList?: DailyWordList }) {
   const answering = useRef(false)
   const main = useRef<HTMLElement>(null)
   const initialized = useRef(false)
+  const loadVersion = useRef(0)
 
   function load() {
+    const version = ++loadVersion.current
+    const active = () => version === loadVersion.current
     setLoadError(false)
-    void Promise.all([loadVocabulary(), loadDailyWords(), loadCurriculum()])
-      .then(async ([words, nextQueue, curriculum]) => {
-        setDayNumber(await currentDayNumber(curriculum.stats.totalDays))
-        setVocabulary(words)
-        setQueue(nextQueue)
+    setInitializing(true)
+    const wordsRequest = loadVocabulary().then((words) => {
+      if (active()) setVocabulary(words)
+      return words
+    })
+    const queueRequest = loadDailyWords().then((nextQueue) => {
+      if (active()) setQueue(nextQueue)
+      return nextQueue
+    })
+    const dayRequest = loadCurriculum().then((curriculum) => currentDayNumber(curriculum.stats.totalDays))
+    void Promise.all([wordsRequest, queueRequest, dayRequest])
+      .then(([words, nextQueue, day]) => {
+        if (!active()) return
+        setDayNumber(day)
         if (initialized.current) return
         initialized.current = true
         try {
@@ -86,10 +100,15 @@ function WordPractice({ initialList }: { initialList?: DailyWordList }) {
             setSession({ ...saved, list: restoredList, words: remaining, index: 0 })
           }
         } catch { /* Session storage may be unavailable. */ }
-      }).catch(() => setLoadError(true))
+      })
+      .catch(() => { if (active()) setLoadError(true) })
+      .finally(() => { if (active()) setInitializing(false) })
   }
 
-  useEffect(load, [])
+  useEffect(() => {
+    load()
+    return () => { loadVersion.current += 1 }
+  }, [])
   useEffect(() => {
     if (status !== 'ready') return
     let active = true
@@ -142,7 +161,7 @@ function WordPractice({ initialList }: { initialList?: DailyWordList }) {
   }, [pool, session, word])
 
   async function startBatch(batchList: DailyWordList, batchFormat: WordPracticeFormat, picked: string[] = []) {
-    if (!vocabulary) return
+    if (!vocabulary || initializing) return
     setLoadError(false)
     setStatus('checking')
     try {
@@ -281,7 +300,9 @@ function WordPractice({ initialList }: { initialList?: DailyWordList }) {
             {(['learn', 'review'] as const).map((kind) => (
               <Button key={kind} variant={list === kind ? 'primary' : 'outline'} aria-pressed={list === kind}
                 onClick={() => { setList(kind); setSelected([]); setLimit(PAGE_SIZE) }}>
-                {t(kind)} {queue ? queue[kind].length : '…'}
+                {t(kind)} {queue ? queue[kind].length : loadError ? '—' : (
+                  <SkeletonBlock className="h-4 w-6 bg-current/15" />
+                )}
               </Button>
             ))}
           </Row>
@@ -301,11 +322,13 @@ function WordPractice({ initialList }: { initialList?: DailyWordList }) {
               </label>
             ))}
           </fieldset>
-          {loadError ? <Button variant="outline" onClick={load}>{t('reload')}</Button> : !queue ? (
-            <LoadingSkeleton variant="list" />
+          {loadError && <Button variant="outline" onClick={load}>{t('reload')}</Button>}
+          {!queue || (queue[list].length > 0 && !vocabulary) ? (
+            !loadError && <LoadingSkeleton variant="list" visible label={loading(queue ? 'vocabulary' : 'wordCounts')} />
           ) : !queue[list].length ? <p role="status">{t('empty')}</p> : (
             <>
-              <Button full busy={status === 'checking'} busyLabel={t('loading')} onClick={() => void startBatch(list, format, selectedIds)}>
+              <Button full disabled={loadError} busy={initializing || status === 'checking'}
+                busyLabel={initializing ? loading('practice') : t('loading')} onClick={() => void startBatch(list, format, selectedIds)}>
                 {t('start')}
               </Button>
               <input value={query} onChange={(event) => { setQuery(event.target.value); setLimit(PAGE_SIZE) }} placeholder={t('search')} aria-label={t('search')}

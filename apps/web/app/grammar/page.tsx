@@ -141,7 +141,7 @@ function TodayGrammar({ onPractice }: { onPractice: () => void }) {
   }
 
   if (loadStatus === 'loading') {
-    return <LoadingSkeleton />
+    return <LoadingSkeleton variant="list" visible label={t('loadingSections.grammar')} />
   }
 
   if (loadStatus === 'error') {

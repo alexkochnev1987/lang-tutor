@@ -5,10 +5,12 @@ import Link from 'next/link'
 import { useTranslations } from 'next-intl'
 import { loadDailyWords, subscribeDailyWords } from '@/lib/data/store'
 import { AppIcon } from './AppIcon'
+import { SkeletonBlock } from './LoadingSkeleton'
 import type { DailyWordQueue } from '@/lib/engine/daily-words'
 
 export function DailyWordCounts() {
   const t = useTranslations('dailyWords')
+  const loading = useTranslations('loadingSections')
   const [queue, setQueue] = useState<DailyWordQueue | null>(null)
   const [failed, setFailed] = useState(false)
 
@@ -36,9 +38,16 @@ export function DailyWordCounts() {
             <AppIcon name={kind === 'learn' ? 'words' : 'review'} className="size-4" />
           </span>
           <span className="min-w-0 flex-1 basis-16 leading-tight">{t(kind)}</span>
-          <strong className="ml-auto text-base tabular-nums">{failed ? '—' : queue?.[kind].length ?? '…'}</strong>
+          {queue ? (
+            <strong className="ml-auto text-base tabular-nums">{queue[kind].length}</strong>
+          ) : failed ? (
+            <span className="ml-auto text-sm text-muted" aria-label={loading('unavailable')}>—</span>
+          ) : (
+            <SkeletonBlock className="ml-auto h-4 w-7 bg-soft2" />
+          )}
         </Link>
       ))}
+      {!queue && !failed && <p role="status" className="col-span-2 text-xs text-muted">{loading('wordCounts')}</p>}
     </div>
   )
 }
