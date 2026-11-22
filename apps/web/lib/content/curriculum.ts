@@ -121,11 +121,21 @@ function loadPack<T>(file: string): Promise<T> {
   return hit as Promise<T>
 }
 
-export const loadCurriculum = () => loadPack<Curriculum>('curriculum.json')
+let curriculum: Curriculum | null = null
+let vocabulary: Map<string, Lexeme> | null = null
+export const getCachedCurriculum = () => curriculum
+export const getCachedVocabulary = () => vocabulary
+
+export async function loadCurriculum(): Promise<Curriculum> {
+  curriculum ??= await loadPack<Curriculum>('curriculum.json')
+  return curriculum
+}
 
 export async function loadVocabulary(): Promise<Map<string, Lexeme>> {
+  if (vocabulary) return vocabulary
   const pack = await loadPack<{ items: Lexeme[] }>('vocabulary.json')
-  return new Map(pack.items.map((v) => [v.id, v]))
+  vocabulary ??= new Map(pack.items.map((word) => [word.id, word]))
+  return vocabulary
 }
 
 export type Paradigm = Record<string, string[]>

@@ -1,14 +1,13 @@
 'use client'
 
+import { TabBody } from '@/app/_components/TabBody'
 import { useEffect, useMemo, useState } from 'react'
 import { useTranslations } from 'next-intl'
-import { Button, Card, Row, Screen, Segmented, Stack } from '@polski/ui'
+import { Button, Card, Row, Segmented, Stack } from '@polski/ui'
 import { LoadingSkeleton, SkeletonBlock } from '@/app/_components/LoadingSkeleton'
-import { Nav } from '@/app/_components/Nav'
-import { SectionHeading } from '@/app/_components/SectionHeading'
 import { SectionNav } from '@/app/_components/SectionNav'
 import { WordRow } from '@/app/_components/WordRow'
-import { loadVocabulary, type Lexeme } from '@/lib/content/curriculum'
+import { getCachedVocabulary, loadVocabulary, type Lexeme } from '@/lib/content/curriculum'
 import { loadState, useAppState } from '@/lib/data/store'
 
 type Filter = 'all' | 'learning' | 'known' | 'untouched'
@@ -31,7 +30,10 @@ function completedWordId(sessionId: string): string | null {
 export default function DictionaryPage() {
   const loading = useTranslations('loadingSections')
   const state = useAppState()
-  const [words, setWords] = useState<Lexeme[] | null>(null)
+  const [words, setWords] = useState<Lexeme[] | null>(() => {
+    const cached = getCachedVocabulary()
+    return cached ? [...cached.values()] : null
+  })
   const [vocabularyError, setVocabularyError] = useState(false)
   const [stateError, setStateError] = useState(false)
   const [vocabularyAttempt, setVocabularyAttempt] = useState(0)
@@ -103,115 +105,108 @@ export default function DictionaryPage() {
   useEffect(() => { setLimit(PAGE_SIZE) }, [filter, query])
 
   return (
-    <Screen>
-      <header className="mx-auto w-full max-w-2xl px-4 py-3">
-        <Stack gap="sm">
-          <SectionHeading section="words" />
-          <SectionNav section="words" current="/dictionary" />
-          <div className="flex min-h-5 flex-wrap items-center gap-x-2 text-xs tabular-nums text-muted">
-            {words ? <span>{words.length} всего</span> : !vocabularyError && <SkeletonBlock className="h-3 w-14" />}
-            {state ? <span>{knownIds.size} знаю · {completedIds.size} пройдено</span> : !stateError && <SkeletonBlock className="h-3 w-24" />}
-          </div>
-          <input
-            value={query}
-            onChange={(e) => setQuery(e.target.value)}
-            placeholder="Поиск по слову или переводу"
-            className="min-h-12 w-full rounded-control border border-line bg-card px-3.5 text-base text-ink placeholder:text-muted"
-          />
-          <Segmented
-            options={filterOptions}
-            value={filter}
-            onChange={setFilter}
-            ariaLabel="Фильтр словаря"
-          />
-        </Stack>
-      </header>
+    <TabBody controls={
+      <Stack gap="sm">
+        <SectionNav section="words" current="/dictionary" />
+        <div className="flex min-h-5 flex-wrap items-center gap-x-2 text-xs tabular-nums text-muted">
+          {words ? <span>{words.length} всего</span> : !vocabularyError && <SkeletonBlock className="h-3 w-14" />}
+          {state ? <span>{knownIds.size} знаю · {completedIds.size} пройдено</span> : !stateError && <SkeletonBlock className="h-3 w-24" />}
+        </div>
+        <input
+          value={query}
+          onChange={(e) => setQuery(e.target.value)}
+          placeholder="Поиск по слову или переводу"
+          className="min-h-12 w-full rounded-control border border-line bg-card px-3.5 text-base text-ink placeholder:text-muted"
+        />
+        <Segmented
+          options={filterOptions}
+          value={filter}
+          onChange={setFilter}
+          ariaLabel="Фильтр словаря"
+        />
+      </Stack>
+    }>
+      <Stack gap="md">
+        <Card>
+          <p className="text-xs text-muted">
+            «Знаю» убирает слово из практики, но его статистика повторений
+            сохраняется. Вернёте «учу» — слово придёт на повторение по
+            своему прежнему сроку, а не начнётся заново.
+          </p>
+        </Card>
 
-      <main className="mx-auto w-full max-w-2xl flex-1 px-4 pb-4">
-        <Stack gap="md">
+        {!state && (
           <Card>
-            <p className="text-xs text-muted">
-              «Знаю» убирает слово из практики, но его статистика повторений
-              сохраняется. Вернёте «учу» — слово придёт на повторение по
-              своему прежнему сроку, а не начнётся заново.
-            </p>
-          </Card>
-
-          {!state && (
-            <Card>
-              <h2 className="text-base font-semibold">Мой словарь</h2>
-              {stateError ? (
-                <Stack gap="sm" className="mt-2">
-                  <p role="alert" className="text-sm text-danger-ink">Не удалось загрузить сохранённые слова и статусы.</p>
-                  <Button variant="outline" onClick={() => {
-                    setStateError(false)
-                    setStateAttempt((current) => current + 1)
-                  }}>Повторить</Button>
-                </Stack>
-              ) : (
-                <div className="mt-3 grid gap-2">
-                  <p role="status" className="text-xs text-muted">{loading('savedWords')}</p>
-                  <SkeletonBlock className="h-4 w-1/2" />
-                  <SkeletonBlock className="h-3 w-2/3" />
-                </div>
-              )}
-            </Card>
-          )}
-          {personalVisible.length > 0 && (
-            <Card>
-              <Stack gap="sm">
-                <Row justify="between">
-                  <h2 className="text-base font-semibold">Мой словарь</h2>
-                  <span className="text-sm tabular-nums text-muted">{personalVisible.length}</span>
-                </Row>
-                <div>
-                  {personalVisible.map((word) => (
-                    <div key={word.id} className="border-b border-line py-2 last:border-0">
-                      <div className="text-base font-medium" lang="pl">{word.lemma}</div>
-                      <div className="text-sm text-muted">{word.translation}</div>
-                    </div>
-                  ))}
-                </div>
+            <h2 className="text-base font-semibold">Мой словарь</h2>
+            {stateError ? (
+              <Stack gap="sm" className="mt-2">
+                <p role="alert" className="text-sm text-danger-ink">Не удалось загрузить сохранённые слова и статусы.</p>
+                <Button variant="outline" onClick={() => {
+                  setStateError(false)
+                  setStateAttempt((current) => current + 1)
+                }}>Повторить</Button>
               </Stack>
-            </Card>
-          )}
-
-          {vocabularyError && (
-            <Card><Stack gap="sm">
-              <p className="text-sm text-danger-ink" role="alert">Не удалось загрузить словарь.</p>
-              <Button variant="outline" onClick={() => {
-                setVocabularyError(false)
-                setVocabularyAttempt((current) => current + 1)
-              }}>Повторить</Button>
-            </Stack></Card>
-          )}
-          {((!words && !vocabularyError) || (words && loadingFilter && !stateError)) && (
-            <LoadingSkeleton variant="list" visible label={loading(loadingFilter && words ? 'wordStatuses' : 'vocabulary')} />
-          )}
-
-          {words && !loadingFilter && visible.length === 0 && (
-            <Card><p className="text-sm text-muted">Ничего не нашлось</p></Card>
-          )}
-
-          {!loadingFilter && visible.length > 0 && (
-            <Card>
-              <div className="-my-2">
-                {visible.slice(0, limit).map((w) => (
-                  <WordRow key={w.id} word={w} completed={completedIds.has(w.id)} />
+            ) : (
+              <div className="mt-3 grid gap-2">
+                <p role="status" className="text-xs text-muted">{loading('savedWords')}</p>
+                <SkeletonBlock className="h-4 w-1/2" />
+                <SkeletonBlock className="h-3 w-2/3" />
+              </div>
+            )}
+          </Card>
+        )}
+        {personalVisible.length > 0 && (
+          <Card>
+            <Stack gap="sm">
+              <Row justify="between">
+                <h2 className="text-base font-semibold">Мой словарь</h2>
+                <span className="text-sm tabular-nums text-muted">{personalVisible.length}</span>
+              </Row>
+              <div>
+                {personalVisible.map((word) => (
+                  <div key={word.id} className="border-b border-line py-2 last:border-0">
+                    <div className="text-base font-medium" lang="pl">{word.lemma}</div>
+                    <div className="text-sm text-muted">{word.translation}</div>
+                  </div>
                 ))}
               </div>
-            </Card>
-          )}
+            </Stack>
+          </Card>
+        )}
 
-          {!loadingFilter && visible.length > limit && (
-            <Button variant="outline" full onClick={() => setLimit(limit + PAGE_SIZE)}>
-              Показать ещё · осталось {visible.length - limit}
-            </Button>
-          )}
-        </Stack>
-      </main>
+        {vocabularyError && (
+          <Card><Stack gap="sm">
+            <p className="text-sm text-danger-ink" role="alert">Не удалось загрузить словарь.</p>
+            <Button variant="outline" onClick={() => {
+              setVocabularyError(false)
+              setVocabularyAttempt((current) => current + 1)
+            }}>Повторить</Button>
+          </Stack></Card>
+        )}
+        {((!words && !vocabularyError) || (words && loadingFilter && !stateError)) && (
+          <LoadingSkeleton variant="list" visible label={loading(loadingFilter && words ? 'wordStatuses' : 'vocabulary')} />
+        )}
 
-      <Nav />
-    </Screen>
+        {words && !loadingFilter && visible.length === 0 && (
+          <Card><p className="text-sm text-muted">Ничего не нашлось</p></Card>
+        )}
+
+        {!loadingFilter && visible.length > 0 && (
+          <Card>
+            <div className="-my-2">
+              {visible.slice(0, limit).map((w) => (
+                <WordRow key={w.id} word={w} completed={completedIds.has(w.id)} />
+              ))}
+            </div>
+          </Card>
+        )}
+
+        {!loadingFilter && visible.length > limit && (
+          <Button variant="outline" full onClick={() => setLimit(limit + PAGE_SIZE)}>
+            Показать ещё · осталось {visible.length - limit}
+          </Button>
+        )}
+      </Stack>
+    </TabBody>
   )
 }

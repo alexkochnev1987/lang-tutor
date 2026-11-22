@@ -124,3 +124,12 @@ input, select, textarea {
 .word-practice-screen {
   height: var(--study-viewport-height, 100dvh);
 }
+
+/* Both word practice formats own their full-screen layout and safe areas. */
+.app-tab-frame:has(.app-tab-content > .word-practice-screen) {
+  padding: 0 !important;
+}
+
+.app-tab-frame:has(.app-tab-content > .word-practice-screen) > :is(.app-tab-heading, nav) {
+  display: none;
+}
