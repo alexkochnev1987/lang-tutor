@@ -10,6 +10,7 @@ import { formatOfWordExercise, wordSkill, type DailyWordAnswer, type DailyWordSu
 import { prepareLexemeReview, Rating } from '@/lib/engine/session'
 import { buildWordStageRetryStep, buildWordStudySteps, oneAttemptWordSteps, WORD_STAGE_RETRY_LIMIT, type WordExerciseStep } from '@/lib/engine/word-study'
 import { ExerciseView, SpeakIcon } from './ExerciseView'
+import { WeeklyGoalCredit } from './WeeklyGoal'
 import { WordPracticeFooter } from './WordPracticeFooter'
 
 const FORM_ID = 'brainstorm-response'
@@ -189,6 +190,7 @@ export function BrainstormPractice({ id, words, pool, dayNumber, canContinue, ch
           <Card><Stack gap="sm">
             <strong>{t('done')}</strong>
             <p>{t('score', { correct: done.filter(({ result }) => result.correct).length, total: done.length })}</p>
+            <WeeklyGoalCredit />
           </Stack></Card>
         )}
         {unavailable && <p role="status" className="mt-2 text-sm text-muted">{t('unavailable')}</p>}

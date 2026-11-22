@@ -40,6 +40,7 @@ import { StudyTooltip } from "@/app/_components/StudyTooltip";
 import { useSaveLessonResult } from "@/app/_components/useSaveLessonResult";
 import type { Lexeme } from "@/lib/content/curriculum";
 import { formatOfWordExercise, wordSkill } from "@/lib/engine/daily-words";
+import { WeeklyGoalCredit } from "@/app/_components/WeeklyGoal";
 import { WordPracticeFooter } from "@/app/_components/WordPracticeFooter";
 import { useTranslations } from "next-intl";
 
@@ -427,6 +428,7 @@ export default function LessonPage() {
                   {n}
                 </p>
               ))}
+              <WeeklyGoalCredit />
               {reviewFeedback}
               {Object.values(reviewWrites).some((write) => write.status === "pending") && (
                 <p role="status" className="text-sm text-muted">Сохраняем сроки повторения…</p>

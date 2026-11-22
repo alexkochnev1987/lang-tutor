@@ -156,5 +156,17 @@
     "reload": "Retry loading",
     "useTimeZone": "Use the device time zone",
     "timeZone": "Time zone: {zone}"
+  },
+  "weeklyGoal": {
+    "title": "Weekly goal",
+    "count": "{count} of {goal} days",
+    "instruction": "Finish a practice session to count today.",
+    "credited": "Today counted",
+    "achieved": "Weekly goal reached",
+    "credit": "Today counted · {count} of {goal} days",
+    "complete": "Practice counted",
+    "today": "Today",
+    "missed": "No practice",
+    "upcoming": "Upcoming day"
   }
 }

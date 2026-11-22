@@ -7,6 +7,7 @@ import { Button, Card, Row, Stack } from '@polski/ui'
 import { STAGE_TITLE, buildTodayPlan, type Stage, type TodayPlan } from '@/lib/engine/plan'
 import type { CurriculumDay } from '@/lib/content/curriculum'
 import { WordRow } from './WordRow'
+import { WeeklyGoal } from './WeeklyGoal'
 
 const KIND_LABEL: Record<CurriculumDay['kind'], string> = {
   diagnostic: 'Диагностика',
@@ -107,6 +108,8 @@ export function TodayCard() {
           <p className="text-xs text-muted">{day.expectedOutcome}</p>
         </Stack>
       </Card>
+
+      <WeeklyGoal />
 
       {grammar?.rule && (
         <Card>
