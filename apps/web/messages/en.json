@@ -22,6 +22,26 @@
     "streak": "{count, plural, one {# day} other {# days}} in a row",
     "wordsDue": "{count, plural, =0 {nothing to review} one {# word to review} other {# words to review}}"
   },
+  "lessonPhrase": {
+    "title": "Real-life phrase",
+    "start": "Try it",
+    "close": "Close",
+    "assemble": "Build the phrase",
+    "selected": "Assembled phrase",
+    "write": "Write the phrase from memory",
+    "say": "Say the phrase in Polish",
+    "check": "Check",
+    "back": "Back",
+    "tryOrder": "Try a different word order.",
+    "tryWriting": "Check the words and Polish letters.",
+    "showHint": "Show the phrase",
+    "hideHint": "Hide the phrase",
+    "notRecognized": "No phrase was recognized. Try again.",
+    "notMatched": "The recognized phrase did not match.",
+    "showDialogue": "Show dialogue",
+    "skipMic": "Continue without a microphone",
+    "listen": "Listen to the phrase"
+  },
   "lesson": {
     "check": "Check",
     "next": "Next",

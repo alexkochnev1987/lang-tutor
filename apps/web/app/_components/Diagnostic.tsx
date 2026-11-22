@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, type ReactNode } from 'react'
 import { Button, Card, OptionRow, Stack } from '@polski/ui'
 import { startCourse } from '@/lib/data/store'
 
@@ -26,7 +26,7 @@ const TRACKS: { id: Track; title: string; desc: string }[] = [
  * этого на B1 не хватит (RESEARCH.md §8), и программа должна знать,
  * откуда стартует человек.
  */
-export function Diagnostic({ onDone }: { onDone: () => void }) {
+export function Diagnostic({ onDone, phrasePractice }: { onDone: () => void; phrasePractice?: ReactNode }) {
   const [picked, setPicked] = useState<Track | null>(null)
   const [completedTrack, setCompletedTrack] = useState<Track | null>(null)
   const [saving, setSaving] = useState(false)
@@ -63,6 +63,7 @@ export function Diagnostic({ onDone }: { onDone: () => void }) {
           <p className="w-full rounded-card bg-ok-bg px-3 py-2 text-center text-sm text-ok-ink">
             ✓ Прогресс сохранён
           </p>
+          {phrasePractice}
           <Button size="lg" full onClick={onDone}>Начать обучение</Button>
           <Button variant="outline" full onClick={() => {
             setCompletedTrack(null)
