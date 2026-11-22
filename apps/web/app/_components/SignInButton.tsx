@@ -51,8 +51,8 @@ export function SignInButton() {
 
   if (user?.signedIn) {
     return (
-      <Row gap="sm">
-        <span className="text-sm text-muted">{user.name ?? user.email}</span>
+      <Row gap="sm" justify="between" wrap>
+        <span className="min-w-0 flex-1 basis-40 text-sm text-muted [overflow-wrap:anywhere]">{user.name ?? user.email}</span>
         <Button variant="ghost" size="sm" onClick={handleSignOut}>{t('signOut')}</Button>
       </Row>
     )
@@ -79,7 +79,7 @@ export function SignInButton() {
               </p>
             )}
           </div>
-          {error && <p className="text-xs text-bad">{t('unavailable')}</p>}
+          {error && <p className="text-xs text-danger-ink">{t('unavailable')}</p>}
         </Stack>
       )}
     </Stack>

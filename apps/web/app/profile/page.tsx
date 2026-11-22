@@ -49,7 +49,7 @@ export default function ProfilePage() {
           <Stack gap="md">
             <Card>
               <Stack gap="sm">
-                <h2 id="profile-account" className="font-semibold">{t('profile.account')}</h2>
+                <h2 id="profile-account" className="scroll-mt-4 text-lg font-semibold tracking-tight">{t('profile.account')}</h2>
                 {!state.user.signedIn && (
                   <div className="text-sm text-muted">
                     <p className="font-medium text-ink">{t('profile.guest')}</p>
@@ -61,7 +61,7 @@ export default function ProfilePage() {
             </Card>
             <Card>
               <Stack gap="sm">
-                <h2 className="font-semibold">{t('profile.languageAndAppearance')}</h2>
+                <h2 className="text-lg font-semibold tracking-tight">{t('profile.languageAndAppearance')}</h2>
                 <SettingsRow />
               </Stack>
             </Card>
@@ -111,8 +111,8 @@ function StudyPreferences({ settings }: { settings: StudySettings }) {
   return (
     <Card>
       <form onSubmit={(event) => { event.preventDefault(); void save() }}>
-        <fieldset disabled={status === 'saving'}>
-          <legend className="mb-2 font-semibold">{t('profile.study')}</legend>
+        <fieldset disabled={status === 'saving'} className="min-w-0">
+          <legend className="mb-3 text-lg font-semibold tracking-tight">{t('profile.study')}</legend>
           <Stack gap="md">
             <label className="flex flex-col gap-1 text-sm font-medium">
               {t('settings.targetLanguage')}

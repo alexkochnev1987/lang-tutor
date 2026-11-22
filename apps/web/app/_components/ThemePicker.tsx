@@ -20,15 +20,19 @@ export function ThemePicker() {
   return (
     <Dialog.Root open={open} onOpenChange={setOpen}>
       <Dialog.Trigger asChild>
-        <Button variant="ghost" size="sm" aria-label={t('appearance')}>
-          <span aria-hidden>🎨</span>
+        <Button variant="outline" full className="justify-between">
+          {t('appearance')}
+          <svg aria-hidden="true" className="size-5 shrink-0" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round">
+            <path d="m9 6 6 6-6 6" />
+          </svg>
         </Button>
       </Dialog.Trigger>
 
       <Dialog.Portal>
         <Dialog.Overlay className="fixed inset-0 z-40 bg-overlay" />
         <Dialog.Content
-          className="fixed inset-x-0 bottom-0 z-50 max-h-[85dvh] overflow-y-auto rounded-t-card border border-line bg-card p-4 shadow-modal sm:inset-x-auto sm:top-1/2 sm:left-1/2 sm:bottom-auto sm:w-[26rem] sm:-translate-x-1/2 sm:-translate-y-1/2 sm:rounded-card"
+          className="fixed inset-x-0 bottom-0 z-50 max-h-[85dvh] overflow-y-auto overscroll-contain rounded-t-card border border-line bg-card p-4 shadow-modal sm:inset-x-auto sm:top-1/2 sm:left-1/2 sm:bottom-auto sm:w-[26rem] sm:-translate-x-1/2 sm:-translate-y-1/2 sm:rounded-card"
           style={{ paddingBottom: 'max(1rem, env(safe-area-inset-bottom))' }}
         >
           <Stack gap="lg">

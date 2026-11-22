@@ -25,6 +25,7 @@ const PRECACHE = [
   '/lesson/',
   '/program/',
   '/progress/',
+  '/grammar/',
   '/profile/',
   '/offline/',
   '/manifest.webmanifest',
@@ -32,6 +33,7 @@ const PRECACHE = [
   '/content/__COURSE_ID__/curriculum.json',
   '/content/__COURSE_ID__/vocabulary.json',
   '/content/__COURSE_ID__/grammar-rules.json',
+  '/content/__COURSE_ID__/grammar-sentences.json',
   '/content/__COURSE_ID__/morphology.json',
   '/content/__COURSE_ID__/competencies.json',
   '/content/__COURSE_ID__/exam-spec.json',
@@ -67,14 +69,15 @@ self.addEventListener('fetch', (event) => {
   //    офлайн отдаём из кэша, в крайнем случае /offline/.
   if (request.mode === 'navigate') {
     event.respondWith(
-      fetch(request)
-        .then((res) => {
-          const copy = res.clone()
-          caches.open(SHELL_CACHE).then((c) => c.put(request, copy))
+      fetch(request, { cache: 'no-cache' })
+        .then(async (res) => {
+          if (res.ok && !res.redirected && res.headers.get('content-type')?.includes('text/html')) {
+            await caches.open(SHELL_CACHE).then((cache) => cache.put(request, res.clone())).catch(() => {})
+          }
           return res
         })
-        .catch(() => caches.match(request)
-          .then((hit) => hit ?? caches.match('/offline/'))
+        .catch(() => caches.open(SHELL_CACHE)
+          .then(async (cache) => (await cache.match(request)) ?? cache.match('/offline/'))
           .then((hit) => hit ?? Response.error())),
     )
     return
