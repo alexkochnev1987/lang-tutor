@@ -3,8 +3,9 @@
 import { useEffect } from 'react'
 import { Button } from '@polski/ui'
 
-export function WordPracticeFooter({ label, onNext, formId, disabled }: {
+export function WordPracticeFooter({ label, busyLabel, onNext, formId, disabled }: {
   label: string
+  busyLabel?: string
   onNext?: () => void
   formId?: string
   disabled?: boolean
@@ -28,7 +29,7 @@ export function WordPracticeFooter({ label, onNext, formId, disabled }: {
   return (
     <footer className="border-t border-line bg-bg px-4 pt-2 pb-[max(0.5rem,env(safe-area-inset-bottom))]">
       <div className="mx-auto w-full max-w-(--container-exercise)">
-        <Button size="lg" full form={formId} type={formId ? 'submit' : 'button'} onClick={formId ? undefined : onNext} disabled={disabled}>
+        <Button size="lg" full form={formId} type={formId ? 'submit' : 'button'} onClick={formId ? undefined : onNext} disabled={disabled} busy={Boolean(busyLabel)} busyLabel={busyLabel}>
           {label}
         </Button>
       </div>

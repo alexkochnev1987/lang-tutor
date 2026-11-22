@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from 'react'
 import { useTranslations } from 'next-intl'
-import { Button, Row, Stack } from '@polski/ui'
+import { BusyIndicator, Button, Row, Stack } from '@polski/ui'
 import {
   disableGoogleAutoSelect,
   googleAuthEnabled,
@@ -74,7 +74,8 @@ export function SignInButton({ showName = true }: { showName?: boolean }) {
           <div className="relative min-h-10 w-70 max-w-full" aria-busy={!ready && !error}>
             <div ref={slot} />
             {!ready && !error && (
-              <p role="status" className="absolute inset-0 flex items-center text-sm text-muted">
+              <p role="status" className="absolute inset-0 flex items-center gap-2 text-sm text-muted">
+                <BusyIndicator className="text-accent-ink" />
                 Google · {common('loading')}
               </p>
             )}

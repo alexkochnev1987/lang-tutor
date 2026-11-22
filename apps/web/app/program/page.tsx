@@ -5,6 +5,7 @@ import Link from 'next/link'
 import { Button, Card, Meter, Row, Stack } from '@polski/ui'
 import { loadCurriculum, type Curriculum, type CurriculumDay } from '@/lib/content/curriculum'
 import { loadProgress, type Progress } from '@/lib/engine/progress'
+import { LoadingSkeleton } from '@/app/_components/LoadingSkeleton'
 import { CourseShell } from '@/app/_components/CourseShell'
 
 interface WeekRoadmap {
@@ -164,7 +165,7 @@ export default function ProgramPage() {
   }, [])
 
   if (error) return <CourseShell current="/program"><Card><p className="text-sm text-danger">Что-то пошло не так</p></Card></CourseShell>
-  if (!data) return <CourseShell current="/program"><Card><p className="text-sm text-muted">Загрузка…</p></Card></CourseShell>
+  if (!data) return <CourseShell current="/program"><LoadingSkeleton /></CourseShell>
 
   const { curriculum, progress } = data
   const completedDays = new Set(progress.completedDays)

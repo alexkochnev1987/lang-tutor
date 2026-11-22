@@ -2,6 +2,7 @@
 
 import { useCallback, useEffect, useRef, useState } from "react";
 import Link from "next/link";
+import { LoadingSkeleton, SkeletonBlock } from "@/app/_components/LoadingSkeleton";
 import { Button, Card, Row, Screen, Stack } from "@polski/ui";
 import type { CheckResult, Exercise } from "@polski/engine";
 import {
@@ -107,6 +108,7 @@ function toSlots(stages: Stage[]): Slot[] {
 
 export default function LessonPage() {
   const appState = useAppState();
+  const common = useTranslations("common");
   const t = useTranslations("dailyWords");
   const [planError, setPlanError] = useState(false);
   const [planAttempt, setPlanAttempt] = useState(0);
@@ -390,8 +392,13 @@ export default function LessonPage() {
       <Screen>
         <Centered>
           {planError ? <Button onClick={() => setPlanAttempt((attempt) => attempt + 1)}>{t("reload")}</Button>
-            : <p className="text-muted">Загрузка…</p>}
+            : <LoadingSkeleton variant="lesson" label={common("loadingLesson")} />}
         </Centered>
+        {!planError && (
+          <footer aria-hidden="true" className="border-t border-line px-4 pt-2 pb-[max(0.5rem,env(safe-area-inset-bottom))]">
+            <SkeletonBlock className="mx-auto h-14 w-full max-w-(--container-exercise)" />
+          </footer>
+        )}
       </Screen>
     );
   }
@@ -678,8 +685,8 @@ export default function LessonPage() {
               {slot.step.rule && <RuleSheet rule={slot.step.rule} />}
             </Row>
             {!wordStudyExercise && (canAdvance || Boolean(restoredResult) || lessonSave.status === "saving") && (
-              <Button size="lg" full disabled={lessonSave.status === "saving"} onClick={next}>
-                {lessonSave.status === "saving" ? "Сохраняем итог…" : i + 1 < slots.length ? "Dalej" : "Zakończ"}
+              <Button size="lg" full busy={lessonSave.status === "saving"} busyLabel="Сохраняем итог…" onClick={next}>
+                {i + 1 < slots.length ? "Dalej" : "Zakończ"}
               </Button>
             )}
           </Stack>
@@ -687,8 +694,9 @@ export default function LessonPage() {
       </main>
       {wordScreen && slot?.kind === "step" && (
         <WordPracticeFooter
-          label={queueStatus === "checking" ? t("loading") : reviewPending ? t("saving")
-            : failedReview ? t("retry") : wordStudyExercise && slot.step.kind === "exercise"
+          busyLabel={queueStatus === "checking" ? t("loading")
+            : reviewPending || lessonSave.status === "saving" ? t("saving") : undefined}
+          label={failedReview ? t("retry") : wordStudyExercise && slot.step.kind === "exercise"
               && slot.step.ex.mode === "typed" && !canAdvance && !restoredResult ? t("check") : t("next")}
           formId={wordStudyExercise && slot.step.kind === "exercise" && slot.step.ex.mode === "typed"
             && !canAdvance && !restoredResult && !reviewPending && !failedReview ? WORD_FORM_ID : undefined}

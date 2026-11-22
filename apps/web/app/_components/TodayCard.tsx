@@ -3,9 +3,10 @@
 import { useEffect, useState } from 'react'
 import Link from 'next/link'
 import { useTranslations } from 'next-intl'
-import { buttonStyles, Card, Row, Stack } from '@polski/ui'
+import { Button, buttonStyles, Card, Row, Stack } from '@polski/ui'
 import { STAGE_TITLE, buildTodayPlan, type Stage, type TodayPlan } from '@/lib/engine/plan'
 import type { CurriculumDay } from '@/lib/content/curriculum'
+import { LoadingSkeleton } from './LoadingSkeleton'
 import { WordRow } from './WordRow'
 import { AppIcon } from './AppIcon'
 import { DailyWordCounts } from './DailyWordCounts'
@@ -36,6 +37,7 @@ export function TodayCard() {
   const t = useTranslations()
   const [plan, setPlan] = useState<TodayPlan | null>(null)
   const [error, setError] = useState(false)
+  const [attempt, setAttempt] = useState(0)
 
   useEffect(() => {
     let alive = true
@@ -43,19 +45,24 @@ export function TodayCard() {
       .then((p) => { if (alive) setPlan(p) })
       .catch(() => { if (alive) setError(true) })
     return () => { alive = false }
-  }, [])
+  }, [attempt])
 
   if (error) {
     return (
       <Stack gap="lg">
-        <Card><p role="alert" className="text-sm text-danger-ink">{t('errors.generic')}</p></Card>
+        <Card><Stack gap="sm">
+          <p role="alert" className="text-sm text-danger-ink">{t('errors.generic')}</p>
+          <Button variant="outline" onClick={() => { setError(false); setAttempt((current) => current + 1) }}>
+            {t('errors.retry')}
+          </Button>
+        </Stack></Card>
         <DailyWordCounts />
         <WeeklyGoal />
       </Stack>
     )
   }
   if (!plan) {
-    return <Card><p className="text-sm text-muted">{t('common.loading')}</p></Card>
+    return <LoadingSkeleton variant="today" />
   }
 
   const { day } = plan

@@ -3,6 +3,7 @@
 import { useEffect, useState } from 'react'
 import { useTranslations } from 'next-intl'
 import { Button, Card, Screen, Stack } from '@polski/ui'
+import { LoadingSkeleton } from '@/app/_components/LoadingSkeleton'
 import { Nav } from '@/app/_components/Nav'
 import { ProfileIdentity } from '@/app/_components/ProfileIdentity'
 import { SectionHeading } from '@/app/_components/SectionHeading'
@@ -45,7 +46,7 @@ export default function ProfilePage() {
             </Stack>
           </Card>
         )}
-        {!state && !loadFailed && <p role="status" className="text-sm text-muted">{t('common.loading')}</p>}
+        {!state && !loadFailed && <LoadingSkeleton variant="profile" />}
         {state && (
           <Stack gap="md">
             <Card>
@@ -164,8 +165,8 @@ function StudyPreferences({ settings }: { settings: StudySettings }) {
               {t('profile.previewVoice')}
             </Button>
             {message && <p role="status" className="text-sm text-muted">{message}</p>}
-            <Button type="submit" disabled={!draft}>
-              {status === 'saving' ? t('profile.saving') : t('common.save')}
+            <Button type="submit" disabled={!draft} busy={status === 'saving'} busyLabel={t('profile.saving')}>
+              {t('common.save')}
             </Button>
             {status === 'saved' && <p role="status" className="text-sm text-ok-ink">{t('profile.saved')}</p>}
             {status === 'error' && <p role="alert" className="text-sm text-danger-ink">{t('profile.saveError')}</p>}

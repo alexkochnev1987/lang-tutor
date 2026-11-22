@@ -2,12 +2,13 @@
 
 import { useEffect, useMemo, useState } from 'react'
 import { Button, Card, Row, Screen, Segmented, Stack } from '@polski/ui'
+import { LoadingSkeleton, SkeletonBlock } from '@/app/_components/LoadingSkeleton'
 import { Nav } from '@/app/_components/Nav'
 import { SectionHeading } from '@/app/_components/SectionHeading'
 import { SectionNav } from '@/app/_components/SectionNav'
 import { WordRow } from '@/app/_components/WordRow'
 import { loadVocabulary, type Lexeme } from '@/lib/content/curriculum'
-import { useAppState } from '@/lib/data/store'
+import { loadState, useAppState } from '@/lib/data/store'
 
 type Filter = 'all' | 'learning' | 'known' | 'untouched'
 
@@ -30,6 +31,9 @@ export default function DictionaryPage() {
   const state = useAppState()
   const [words, setWords] = useState<Lexeme[] | null>(null)
   const [vocabularyError, setVocabularyError] = useState(false)
+  const [stateError, setStateError] = useState(false)
+  const [vocabularyAttempt, setVocabularyAttempt] = useState(0)
+  const [stateAttempt, setStateAttempt] = useState(0)
   const [filter, setFilter] = useState<Filter>('all')
   const [query, setQuery] = useState('')
   const [limit, setLimit] = useState(PAGE_SIZE)
@@ -40,7 +44,13 @@ export default function DictionaryPage() {
       .then((v) => { if (alive) setWords([...v.values()]) })
       .catch(() => { if (alive) setVocabularyError(true) })
     return () => { alive = false }
-  }, [])
+  }, [vocabularyAttempt])
+
+  useEffect(() => {
+    let alive = true
+    void loadState().catch(() => { if (alive) setStateError(true) })
+    return () => { alive = false }
+  }, [stateAttempt])
 
   const knownIds = useMemo(
     () => new Set((state?.lexemeStatus ?? [])
@@ -101,7 +111,7 @@ export default function DictionaryPage() {
               {knownIds.size} знаю · {completedIds.size} пройдено · {words.length} всего
             </p>
           ) : (
-            <p className="text-xs text-muted" role="status">{vocabularyError ? 'Статистика недоступна' : 'Загрузка статистики…'}</p>
+            <p className="text-xs text-muted" role="status">{vocabularyError || (!state && stateError) ? 'Статистика недоступна' : 'Загрузка статистики…'}</p>
           )}
           <input
             value={query}
@@ -131,7 +141,21 @@ export default function DictionaryPage() {
           {!state && (
             <Card>
               <h2 className="text-base font-semibold">Мой словарь</h2>
-              <p className="mt-1 text-sm text-muted" role="status">Загружаем сохранённые слова…</p>
+              {stateError ? (
+                <Stack gap="sm" className="mt-2">
+                  <p role="alert" className="text-sm text-danger-ink">Не удалось загрузить сохранённые слова и статусы.</p>
+                  <Button variant="outline" onClick={() => {
+                    setStateError(false)
+                    setStateAttempt((current) => current + 1)
+                  }}>Повторить</Button>
+                </Stack>
+              ) : (
+                <div className="mt-3 grid gap-2">
+                  <p role="status" className="sr-only">Загружаем сохранённые слова…</p>
+                  <SkeletonBlock className="h-4 w-1/2" />
+                  <SkeletonBlock className="h-3 w-2/3" />
+                </div>
+              )}
             </Card>
           )}
           {personalVisible.length > 0 && (
@@ -153,9 +177,17 @@ export default function DictionaryPage() {
             </Card>
           )}
 
-          {vocabularyError && <Card><p className="text-sm text-danger-ink" role="alert">Не удалось загрузить словарь.</p></Card>}
-          {(!words || loadingFilter) && !vocabularyError && (
-            <Card><p role="status" className="text-sm text-muted">Загрузка…</p></Card>
+          {vocabularyError && (
+            <Card><Stack gap="sm">
+              <p className="text-sm text-danger-ink" role="alert">Не удалось загрузить словарь.</p>
+              <Button variant="outline" onClick={() => {
+                setVocabularyError(false)
+                setVocabularyAttempt((current) => current + 1)
+              }}>Повторить</Button>
+            </Stack></Card>
+          )}
+          {((!words && !vocabularyError) || (words && loadingFilter && !stateError)) && (
+            <LoadingSkeleton variant="list" />
           )}
 
           {words && !loadingFilter && visible.length === 0 && (
