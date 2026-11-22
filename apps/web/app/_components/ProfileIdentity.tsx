@@ -60,7 +60,7 @@ export function ProfileIdentity({ user }: { user: SessionUser }) {
               </label>
             </div>
             <Row gap="sm" wrap>
-              <Button type="submit">{saving ? t('saving') : common('save')}</Button>
+              <Button type="submit" busy={saving} busyLabel={t('saving')}>{common('save')}</Button>
               <Button type="button" variant="ghost" onClick={() => { setDraft(null); setStatus('idle') }}>
                 {t('cancelEdit')}
               </Button>

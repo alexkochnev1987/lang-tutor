@@ -3,6 +3,7 @@
 import { useEffect, useState } from 'react'
 import { useTranslations } from 'next-intl'
 import { Card, Meter, Row, Stack, Stat } from '@polski/ui'
+import { LoadingSkeleton } from '@/app/_components/LoadingSkeleton'
 import { CourseShell } from '@/app/_components/CourseShell'
 import { loadProgress, type Progress, type RuleProgress } from '@/lib/engine/progress'
 
@@ -33,7 +34,7 @@ export default function ProgressPage() {
   }, [])
 
   if (error) return <CourseShell current="/progress"><Card><p className="text-sm text-danger">{t('errors.generic')}</p></Card></CourseShell>
-  if (!p) return <CourseShell current="/progress"><Card><p className="text-sm text-muted">{t('common.loading')}</p></Card></CourseShell>
+  if (!p) return <CourseShell current="/progress"><LoadingSkeleton /></CourseShell>
 
   return (
     <CourseShell current="/progress">

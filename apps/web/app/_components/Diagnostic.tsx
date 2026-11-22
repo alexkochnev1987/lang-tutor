@@ -99,8 +99,8 @@ export function Diagnostic({ onDone }: { onDone: () => void }) {
           ))}
         </Stack>
 
-        <Button size="lg" full disabled={!picked || saving} onClick={save}>
-          {saving ? 'Сохраняю…' : 'Сохранить и продолжить'}
+        <Button size="lg" full disabled={!picked} busy={saving} busyLabel="Сохраняю…" onClick={save}>
+          Сохранить и продолжить
         </Button>
 
         {error && (

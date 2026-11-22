@@ -15,6 +15,7 @@ import { useSaveLessonResult } from '@/app/_components/useSaveLessonResult'
 import { GrammarExerciseBatch } from '@/app/_components/ExerciseView'
 import { RuleSheet } from '@/app/_components/RuleSheet'
 import { RuleView } from '@/app/_components/RuleView'
+import { LoadingSkeleton } from '@/app/_components/LoadingSkeleton'
 import { Nav } from '@/app/_components/Nav'
 import { SectionHeading } from '@/app/_components/SectionHeading'
 import { WeeklyGoalCredit } from '@/app/_components/WeeklyGoal'
@@ -140,7 +141,7 @@ function TodayGrammar({ onPractice }: { onPractice: () => void }) {
   }
 
   if (loadStatus === 'loading') {
-    return <Card><p role="status" className="text-sm text-muted">{t('common.loading')}</p></Card>
+    return <LoadingSkeleton />
   }
 
   if (loadStatus === 'error') {
@@ -236,8 +237,8 @@ function TodayGrammar({ onPractice }: { onPractice: () => void }) {
           <p role="alert" className="text-sm text-danger-ink">Nie udało się zapisać wyniku.</p>
         )}
         {canAdvance && answers.length === selectedIds.size && (
-          <Button size="lg" full disabled={lessonSave.status === 'saving' || pendingAnswers > 0} onClick={() => void next()}>
-            {lessonSave.status === 'saving' ? 'Zapisywanie wyniku…' : lessonSave.status === 'error' ? 'Spróbuj ponownie' : 'Zakończ'}
+          <Button size="lg" full disabled={pendingAnswers > 0} busy={lessonSave.status === 'saving'} busyLabel="Zapisywanie wyniku…" onClick={() => void next()}>
+            {lessonSave.status === 'error' ? 'Spróbuj ponownie' : 'Zakończ'}
           </Button>
         )}
       </Stack>

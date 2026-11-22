@@ -201,7 +201,8 @@ export function BrainstormPractice({ id, words, pool, dayNumber, canContinue, ch
         {loadError && <p role="alert" className="mt-2 text-sm text-danger-ink">{t('error')}</p>}
       </main>
       <WordPracticeFooter
-        label={checking ? t('loading') : saving ? t('saving') : failed ? t('retry')
+        busyLabel={checking ? t('loading') : saving ? t('saving') : undefined}
+        label={failed ? t('retry')
           : formId && !response ? t('check') : step ? t('next') : canContinue ? t('continue') : t('backToFormats')}
         formId={response ? undefined : formId}
         disabled={saving || checking || Boolean(exercise && !formId && !response)}

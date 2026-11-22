@@ -95,6 +95,7 @@
     "retry": "Retry"
   },
   "common": {
+    "loadingLesson": "Preparing exercises…",
     "cancel": "Cancel",
     "save": "Save",
     "close": "Close",

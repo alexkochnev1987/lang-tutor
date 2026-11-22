@@ -9,6 +9,7 @@ import { hashString, spelling, type CheckResult } from '@polski/engine'
 import { BrainstormPractice } from '@/app/_components/BrainstormPractice'
 import { PronunciationExercise } from '@/app/_components/PronunciationExercise'
 import { ExerciseView } from '@/app/_components/ExerciseView'
+import { LoadingSkeleton } from '@/app/_components/LoadingSkeleton'
 import { Nav } from '@/app/_components/Nav'
 import { SectionHeading } from '@/app/_components/SectionHeading'
 import { SectionNav } from '@/app/_components/SectionNav'
@@ -34,7 +35,7 @@ type Session = {
 }
 
 export default function WordsPage() {
-  return <Suspense><WordsWithList /></Suspense>
+  return <Suspense fallback={<WordsShell><LoadingSkeleton variant="list" /></WordsShell>}><WordsWithList /></Suspense>
 }
 
 function WordsWithList() {
@@ -263,8 +264,8 @@ function WordPractice({ initialList }: { initialList?: DailyWordList }) {
           {loadError && <p role="alert" className="mt-2 text-sm text-danger-ink">{t('error')}</p>}
         </main>
         <WordPracticeFooter
-          label={status === 'saving' ? t('saving') : status === 'failed' ? t('retry') : status === 'checking' ? t('loading')
-            : exercise ? t('next') : canContinue ? t('continue') : t('backToFormats')}
+          busyLabel={status === 'saving' ? t('saving') : status === 'checking' ? t('loading') : undefined}
+          label={status === 'failed' ? t('retry') : exercise ? t('next') : canContinue ? t('continue') : t('backToFormats')}
           disabled={!(canAdvance || status === 'failed' || !exercise) || status === 'checking'}
           onNext={status === 'failed' ? () => void persist()
             : exercise ? advance : canContinue ? () => void startBatch(session.list, session.format) : exit}
@@ -274,12 +275,7 @@ function WordPractice({ initialList }: { initialList?: DailyWordList }) {
   }
 
   return (
-    <Screen>
-      <header className="mx-auto w-full max-w-2xl px-4 py-3">
-        <SectionHeading section="words" />
-        <div className="mt-2"><SectionNav section="words" current="/words" /></div>
-      </header>
-      <main className="mx-auto w-full max-w-2xl flex-1 px-4 pb-4">
+    <WordsShell>
         <Stack gap="sm">
           <Row wrap gap="xs">
             {(['learn', 'review'] as const).map((kind) => (
@@ -306,10 +302,12 @@ function WordPractice({ initialList }: { initialList?: DailyWordList }) {
             ))}
           </fieldset>
           {loadError ? <Button variant="outline" onClick={load}>{t('reload')}</Button> : !queue ? (
-            <p role="status">{t('loading')}</p>
+            <LoadingSkeleton variant="list" />
           ) : !queue[list].length ? <p role="status">{t('empty')}</p> : (
             <>
-              <Button full onClick={() => void startBatch(list, format, selectedIds)} disabled={status === 'checking'}>{status === 'checking' ? t('loading') : t('start')}</Button>
+              <Button full busy={status === 'checking'} busyLabel={t('loading')} onClick={() => void startBatch(list, format, selectedIds)}>
+                {t('start')}
+              </Button>
               <input value={query} onChange={(event) => { setQuery(event.target.value); setLimit(PAGE_SIZE) }} placeholder={t('search')} aria-label={t('search')}
                 className="min-h-12 rounded-card border border-line bg-card px-3" />
               <p className="text-sm text-muted">{t('selected', { selected: selectedIds.length, limit: sessionSize })}</p>
@@ -337,6 +335,19 @@ function WordPractice({ initialList }: { initialList?: DailyWordList }) {
             </>
           )}
         </Stack>
+    </WordsShell>
+  )
+}
+
+function WordsShell({ children }: { children: React.ReactNode }) {
+  return (
+    <Screen>
+      <header className="mx-auto w-full max-w-2xl px-4 py-3">
+        <SectionHeading section="words" />
+        <div className="mt-2"><SectionNav section="words" current="/words" /></div>
+      </header>
+      <main className="mx-auto w-full max-w-2xl flex-1 px-4 pb-4">
+        {children}
       </main>
       <Nav />
     </Screen>

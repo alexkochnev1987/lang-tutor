@@ -3,6 +3,7 @@
 import { useEffect, useMemo, useState } from 'react'
 import { Button, Card, Row, Stack } from '@polski/ui'
 import { shuffle, type Exercise } from '@polski/engine'
+import { LoadingSkeleton } from './LoadingSkeleton'
 import { ExerciseView } from './ExerciseView'
 import { RuleSheet } from './RuleSheet'
 import { RuleView } from './RuleView'
@@ -94,7 +95,7 @@ export function GrammarPractice() {
   )
 
   if (error) return <Card><p role="alert">Не удалось загрузить правила.</p></Card>
-  if (!rules) return <Card><p role="status">Загружаем правила…</p></Card>
+  if (!rules) return <LoadingSkeleton label="Загружаем правила…" />
   const selectedRule = rules.get(ruleId)
   const language = isRuleLanguage(ruleLanguage) ? ruleLanguage : PACK_ORIGINAL_LANGUAGE
   const rule = selectedRule ? localizeRule(selectedRule, language) : null
@@ -196,7 +197,7 @@ export function GrammarPractice() {
             ))}
           </div>
           {format && !data && !legacyUnavailable && availableRules.length === 0 && (
-            <p role="status" className="text-sm text-muted">Загружаем примеры…</p>
+            <LoadingSkeleton variant="list" label="Загружаем примеры…" />
           )}
           {format && (data || legacyUnavailable) && availableRules.length === 0 && (
             <p role="status" className="text-sm text-muted">
@@ -222,8 +223,8 @@ export function GrammarPractice() {
               </select>
               {unavailable && <p role="alert" className="text-sm">Примеры недоступны. Проверьте соединение и попробуйте снова.</p>}
               {rule && (
-                <Button disabled={starting} onClick={() => void start(ruleId, format)}>
-                  {starting ? 'Загружаем примеры…' : 'Начать тренировку'}
+                <Button busy={starting} busyLabel="Загружаем примеры…" onClick={() => void start(ruleId, format)}>
+                  Начать тренировку
                 </Button>
               )}
             </>
