@@ -25,5 +25,11 @@ export function useSaveLessonResult() {
     }
   }
 
-  return { status, save };
+  function reset() {
+    if (pending.current) return;
+    payload.current = null;
+    setStatus("idle");
+  }
+
+  return { status, save, reset };
 }

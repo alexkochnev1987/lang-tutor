@@ -139,6 +139,8 @@
     "reverse": "Reverse translation",
     "writing": "Write",
     "listening": "Listen",
+    "back": "Back",
+    "backToFormats": "Back to formats",
     "choose": "Choose a format",
     "start": "Start",
     "next": "Next",
@@ -168,5 +170,17 @@
     "today": "Today",
     "missed": "No practice",
     "upcoming": "Upcoming day"
+  },
+  "grammarToday": {
+    "quick": "Quick practice",
+    "topics": "Topics for today",
+    "other": "Other exercises",
+    "all": "Full plan",
+    "allTopic": "All exercises for this topic",
+    "choice": "Choose the form",
+    "typed": "Type the form",
+    "write": "Write a sentence",
+    "count": "{count, plural, one {# exercise} other {# exercises}}",
+    "backTopics": "Back to topics"
   }
 }

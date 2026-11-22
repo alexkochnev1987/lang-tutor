@@ -3,6 +3,7 @@
 import { Suspense, useEffect, useMemo, useRef, useState } from 'react'
 import { useSearchParams } from 'next/navigation'
 import { useTranslations } from 'next-intl'
+import { AppIcon } from '@/app/_components/AppIcon'
 import { Button, Card, Row, Screen, Stack } from '@polski/ui'
 import { hashString, spelling, type CheckResult } from '@polski/engine'
 import { BrainstormPractice } from '@/app/_components/BrainstormPractice'
@@ -237,7 +238,10 @@ function WordPractice({ initialList }: { initialList?: DailyWordList }) {
       <Screen className="word-practice-screen">
         <header className="mx-auto w-full max-w-2xl px-4 py-2">
           <Row justify="between" wrap>
-            <Button variant="ghost" size="sm" onClick={exit} disabled={status === 'saving' || status === 'checking'}>{t('choose')}</Button>
+            <Button variant="outline" size="sm" onClick={exit} disabled={status === 'saving' || status === 'checking'}>
+              <AppIcon name="back" className="size-4 shrink-0" />
+              {t('back')}
+            </Button>
             <span className="text-sm text-muted">{t(session.format)} {word && `· ${session.index + 1} / ${session.words.length}`}</span>
           </Row>
         </header>
@@ -260,7 +264,7 @@ function WordPractice({ initialList }: { initialList?: DailyWordList }) {
         </main>
         <WordPracticeFooter
           label={status === 'saving' ? t('saving') : status === 'failed' ? t('retry') : status === 'checking' ? t('loading')
-            : exercise ? t('next') : canContinue ? t('continue') : t('choose')}
+            : exercise ? t('next') : canContinue ? t('continue') : t('backToFormats')}
           disabled={!(canAdvance || status === 'failed' || !exercise) || status === 'checking'}
           onNext={status === 'failed' ? () => void persist()
             : exercise ? advance : canContinue ? () => void startBatch(session.list, session.format) : exit}

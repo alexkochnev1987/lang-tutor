@@ -2,6 +2,7 @@
 
 import { useMemo, useRef, useState } from 'react'
 import { useTranslations } from 'next-intl'
+import { AppIcon } from './AppIcon'
 import { Button, Card, Row, Screen, Stack } from '@polski/ui'
 import type { CheckResult } from '@polski/engine'
 import type { Lexeme } from '@/lib/content/curriculum'
@@ -167,7 +168,10 @@ export function BrainstormPractice({ id, words, pool, dayNumber, canContinue, ch
     <Screen className="word-practice-screen">
       <header className="mx-auto w-full max-w-2xl px-4 py-2">
         <Row justify="between" wrap>
-          <Button variant="ghost" size="sm" disabled={saving || checking} onClick={() => leave(onExit)}>{t('choose')}</Button>
+          <Button variant="outline" size="sm" disabled={saving || checking} onClick={() => leave(onExit)}>
+            <AppIcon name="back" className="size-4 shrink-0" />
+            {t('back')}
+          </Button>
           <span className="text-sm text-muted">{t('brainstorm')} · {t('batchWords', { count: words.length })}</span>
         </Row>
       </header>
@@ -198,7 +202,7 @@ export function BrainstormPractice({ id, words, pool, dayNumber, canContinue, ch
       </main>
       <WordPracticeFooter
         label={checking ? t('loading') : saving ? t('saving') : failed ? t('retry')
-          : formId && !response ? t('check') : step ? t('next') : canContinue ? t('continue') : t('choose')}
+          : formId && !response ? t('check') : step ? t('next') : canContinue ? t('continue') : t('backToFormats')}
         formId={response ? undefined : formId}
         disabled={saving || checking || Boolean(exercise && !formId && !response)}
         onNext={step ? () => void advance() : canContinue ? onContinue : () => leave(onExit)}

@@ -7,10 +7,10 @@ import { Button, Card, Row, Screen, Segmented, Stack } from '@polski/ui'
 import type { CheckResult, Exercise } from '@polski/engine'
 import {
   buildTodayPlan,
-  type Stage, type Step,
+  type Stage,
 } from '@/lib/engine/plan'
 import { recordRuleAttempt } from '@/lib/engine/session'
-import { saveExerciseResult } from '@/lib/data/store'
+import { saveExerciseResult, useAppState } from '@/lib/data/store'
 import { useSaveLessonResult } from '@/app/_components/useSaveLessonResult'
 import { GrammarExerciseBatch } from '@/app/_components/ExerciseView'
 import { RuleSheet } from '@/app/_components/RuleSheet'
@@ -18,6 +18,10 @@ import { RuleView } from '@/app/_components/RuleView'
 import { Nav } from '@/app/_components/Nav'
 import { SectionHeading } from '@/app/_components/SectionHeading'
 import { WeeklyGoalCredit } from '@/app/_components/WeeklyGoal'
+import { AppIcon } from '@/app/_components/AppIcon'
+import { TodayGrammarOptions } from '@/app/_components/TodayGrammarOptions'
+import { grammarPracticePlan } from '@/lib/engine/grammar-practice-plan'
+import type { LocalizedRule } from '@/lib/content/rules'
 import { GrammarPractice } from '@/app/_components/GrammarPractice'
 
 type GrammarView = 'rule' | 'drill' | 'result'
@@ -53,12 +57,14 @@ export default function GrammarPage() {
 function TodayGrammar({ onPractice }: { onPractice: () => void }) {
   const t = useTranslations()
   const [stage, setStage] = useState<Stage | null>(null)
-  const [drills, setDrills] = useState<Step[]>([])
+  const state = useAppState()
+  const [selection, setSelection] = useState<{ exercises: Exercise[]; rule?: LocalizedRule | null } | null>(null)
   const [dayNumber, setDayNumber] = useState(1)
   const [loadStatus, setLoadStatus] = useState<'loading' | 'ready' | 'error'>('loading')
   const [view, setView] = useState<GrammarView>('rule')
   const [canAdvance, setCanAdvance] = useState(false)
-  const [stats, setStats] = useState({ correct: 0, total: 0 })
+  const [pendingAnswers, setPendingAnswers] = useState(0)
+  const [result, setResult] = useState({ correct: 0, total: 0 })
   const startedAt = useRef(Date.now())
   const lessonSave = useSaveLessonResult()
 
@@ -67,7 +73,6 @@ function TodayGrammar({ onPractice }: { onPractice: () => void }) {
     void buildTodayPlan().then((p) => {
       const grammar = p.stages.find((s) => s.id === 'grammar') ?? null
       setStage(grammar)
-      setDrills((grammar?.steps ?? []).filter((s) => s.kind === 'exercise'))
       setDayNumber(p.dayNumber)
       setLoadStatus('ready')
     }).catch(() => setLoadStatus('error'))
@@ -75,45 +80,61 @@ function TodayGrammar({ onPractice }: { onPractice: () => void }) {
 
   useEffect(() => { load() }, [load])
 
-  const step = drills[0]
+  function start(exercises: Exercise[], rule?: LocalizedRule | null) {
+    lessonSave.reset()
+    setSelection({ exercises, rule })
+    setCanAdvance(false)
+    startedAt.current = Date.now()
+    setView('drill')
+  }
 
-  async function onAnswered(
-    ex: Exercise, r: CheckResult, complete = true, attempts = 1, answer = '',
-  ) {
-    if (complete) setCanAdvance(true)
-    setStats((s) => ({ correct: s.correct + (r.correct ? 1 : 0), total: s.total + 1 }))
-    await saveExerciseResult({
-      dayNumber,
-      exerciseId: ex.id,
-      attempts,
-      correct: r.correct,
-      answer,
-      expected: r.expected,
-      errorKind: r.errorKind ?? null,
-    })
-    for (const ruleId of ex.grammarRuleIds) {
-      await recordRuleAttempt(ruleId, r.correct, ex.difficulty)
+  async function onAnswered(ex: Exercise, r: CheckResult, attempts: number, answer: string) {
+    setPendingAnswers((count) => count + 1)
+    try {
+      const saved = await saveExerciseResult({
+        dayNumber,
+        exerciseId: ex.id,
+        attempts,
+        correct: r.correct,
+        answer,
+        expected: r.expected,
+        errorKind: r.errorKind ?? null,
+      })
+      if (saved) {
+        for (const ruleId of ex.grammarRuleIds) {
+          await recordRuleAttempt(ruleId, r.correct, ex.difficulty)
+        }
+      }
+    } finally {
+      setPendingAnswers((count) => count - 1)
     }
   }
 
+  const selectedIds = new Set(selection?.exercises.map(({ id }) => id))
+  const answers = (state?.exerciseResults ?? []).filter((answer) =>
+    answer.dayNumber === dayNumber && selectedIds.has(answer.exerciseId))
+
   async function next() {
+    if (!selection || pendingAnswers || answers.length !== selectedIds.size) return
+    const stats = { total: answers.length, correct: answers.filter(({ correct }) => correct).length }
     const saved = await lessonSave.save({
       dayNumber,
       kind: 'grammar',
       startedAt: new Date(startedAt.current),
       completedAt: new Date(),
-      plannedBudgetMs: (stage?.estimatedSec ?? 0) * 1000,
+      plannedBudgetMs: selection.exercises.reduce((sum, exercise) => sum + exercise.estimatedSec, 0) * 1000,
       actualMs: Date.now() - startedAt.current,
       itemsReviewed: stats.total,
       itemsCorrect: stats.correct,
     })
-    if (saved) setView('result')
+    if (saved) {
+      setResult(stats)
+      setView('result')
+    }
   }
 
   function restart() {
-    setStats({ correct: 0, total: 0 })
-    setCanAdvance(false)
-    startedAt.current = Date.now()
+    setSelection(null)
     setView('rule')
     load()
   }
@@ -150,13 +171,13 @@ function TodayGrammar({ onPractice }: { onPractice: () => void }) {
   }
 
   if (view === 'result') {
-    const pct = stats.total ? Math.round((stats.correct / stats.total) * 100) : 0
+    const pct = result.total ? Math.round((result.correct / result.total) * 100) : 0
     return (
       <Card>
         <Stack gap="md" align="center">
           <span className="text-4xl" aria-hidden>{pct >= 70 ? '✓' : '↻'}</span>
           <h2 className="text-xl font-semibold">Trening zakończony</h2>
-          <p className="text-sm text-muted">Poprawne odpowiedzi: {stats.correct} z {stats.total} · {pct}%</p>
+          <p className="text-sm text-muted">Poprawne odpowiedzi: {result.correct} z {result.total} · {pct}%</p>
           <WeeklyGoalCredit />
           <Button size="lg" full onClick={restart}>Jeszcze raz</Button>
           <Link href="/" className="w-full">
@@ -167,7 +188,10 @@ function TodayGrammar({ onPractice }: { onPractice: () => void }) {
     )
   }
 
-  if (view === 'rule') {
+  if (view === 'rule' || !selection) {
+    const plan = grammarPracticePlan(stage.steps)
+    if (plan.exercises.length > 0) return <TodayGrammarOptions plan={plan} onStart={start} />
+
     return (
       <Card>
         <Stack gap="lg">
@@ -181,9 +205,7 @@ function TodayGrammar({ onPractice }: { onPractice: () => void }) {
               Brak zadań: {stage.missingContent}
             </p>
           )}
-          <Button size="lg" full disabled={!drills.length} onClick={() => setView('drill')}>
-            {drills.length ? `Do zadań · ${drills.length}` : 'Brak zadań'}
-          </Button>
+          <Button full onClick={onPractice}>{MODES[1].label}</Button>
         </Stack>
       </Card>
     )
@@ -192,39 +214,33 @@ function TodayGrammar({ onPractice }: { onPractice: () => void }) {
   return (
     <>
       <Row justify="between">
-        <button
-          type="button"
-          onClick={() => setView('rule')}
-          className="text-sm text-muted hover:text-ink"
-        >
-          ← Do reguły
-        </button>
-        <span className="text-sm tabular-nums text-muted">{drills.length} zdań</span>
+        <Button size="sm" variant="outline" disabled={lessonSave.status === 'saving' || pendingAnswers > 0}
+          onClick={() => { setSelection(null); setView('rule') }}>
+          <AppIcon name="back" className="size-4 shrink-0" />
+          {t('grammarToday.backTopics')}
+        </Button>
+        <span className="text-sm tabular-nums text-muted">{t('grammarToday.count', { count: selection.exercises.length })}</span>
       </Row>
 
-      {step?.kind === 'exercise' && (
-        <Stack gap="md">
-          <GrammarExerciseBatch
-            key={drills.map((s) => s.kind === 'exercise' ? s.ex.id : s.kind).join('|')}
-            exercises={drills.flatMap((s) => s.kind === 'exercise' ? [s.ex] : [])}
-            dayNumber={dayNumber}
-            onAnswered={(ex, r, _ms, attempts, answer) => void onAnswered(ex, r, false, attempts, answer)}
-            onComplete={() => setCanAdvance(true)}
-            onReset={() => setCanAdvance(false)}
-          />
-          <Row gap="sm" justify="center">
-            {step.rule && <RuleSheet rule={step.rule} />}
-          </Row>
-          {lessonSave.status === 'error' && (
-            <p role="alert" className="text-sm text-danger-ink">Nie udało się zapisać wyniku.</p>
-          )}
-          {canAdvance && (
-            <Button size="lg" full disabled={lessonSave.status === 'saving'} onClick={() => void next()}>
-              {lessonSave.status === 'saving' ? 'Zapisywanie wyniku…' : lessonSave.status === 'error' ? 'Spróbuj ponownie' : 'Zakończ'}
-            </Button>
-          )}
-        </Stack>
-      )}
+      <Stack gap="md">
+        <GrammarExerciseBatch
+          exercises={selection.exercises}
+          dayNumber={dayNumber}
+          onAnswered={(ex, r, _ms, attempts, answer) => void onAnswered(ex, r, attempts, answer)}
+          onComplete={() => setCanAdvance(true)}
+          canReset={pendingAnswers === 0 && lessonSave.status !== 'saving'}
+          onReset={() => { lessonSave.reset(); setCanAdvance(false) }}
+        />
+        {selection.rule && <Row gap="sm" justify="center"><RuleSheet rule={selection.rule} /></Row>}
+        {lessonSave.status === 'error' && (
+          <p role="alert" className="text-sm text-danger-ink">Nie udało się zapisać wyniku.</p>
+        )}
+        {canAdvance && answers.length === selectedIds.size && (
+          <Button size="lg" full disabled={lessonSave.status === 'saving' || pendingAnswers > 0} onClick={() => void next()}>
+            {lessonSave.status === 'saving' ? 'Zapisywanie wyniku…' : lessonSave.status === 'error' ? 'Spróbuj ponownie' : 'Zakończ'}
+          </Button>
+        )}
+      </Stack>
     </>
   )
 }
