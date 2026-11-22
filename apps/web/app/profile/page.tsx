@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react'
 import { useTranslations } from 'next-intl'
 import { Button, Card, Screen, Stack } from '@polski/ui'
 import { Nav } from '@/app/_components/Nav'
+import { ProfileIdentity } from '@/app/_components/ProfileIdentity'
 import { SectionHeading } from '@/app/_components/SectionHeading'
 import { SettingsRow } from '@/app/_components/SettingsRow'
 import { SignInButton } from '@/app/_components/SignInButton'
@@ -50,13 +51,13 @@ export default function ProfilePage() {
             <Card>
               <Stack gap="sm">
                 <h2 id="profile-account" className="scroll-mt-4 text-lg font-semibold tracking-tight">{t('profile.account')}</h2>
-                {!state.user.signedIn && (
+                {state.user.signedIn ? <ProfileIdentity key={state.user.id} user={state.user} /> : (
                   <div className="text-sm text-muted">
                     <p className="font-medium text-ink">{t('profile.guest')}</p>
                     <p>{t('auth.localOnly')}</p>
                   </div>
                 )}
-                <SignInButton />
+                <SignInButton showName={false} />
               </Stack>
             </Card>
             <Card>

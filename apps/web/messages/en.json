@@ -62,6 +62,12 @@
     "targetLanguage": "Language you are learning"
   },
   "profile": {
+    "editProfile": "Edit profile",
+    "firstName": "First name",
+    "lastName": "Last name",
+    "nameMissing": "No name set",
+    "cancelEdit": "Cancel",
+    "invalidName": "Enter a first name. Each field can contain up to 80 characters.",
     "account": "Account",
     "guest": "Guest mode",
     "languageAndAppearance": "Language and appearance",
