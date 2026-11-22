@@ -27,6 +27,7 @@ export interface Palette {
 }
 
 export const PALETTES = [
+  { id: 'ink', name: 'Чернила и индиго', dots: ['#20232d', '#453bb5', '#f6f5f2'] },
   { id: 'graphite', name: 'Графит и коралл', dots: ['#1d1d20', '#ff5a5f', '#fafaf9'] },
   { id: 'indigo',   name: 'Индиго и мята',   dots: ['#4f46e5', '#10b981', '#f6f7fb'] },
   { id: 'teal',     name: 'Тил и песок',     dots: ['#0d9488', '#f97316', '#fbf7f0'] },
@@ -39,7 +40,7 @@ export const PALETTES = [
 export type PaletteId = (typeof PALETTES)[number]['id']
 export type ModePref = 'light' | 'dark' | 'system'
 
-export const DEFAULT_PALETTE: PaletteId = 'graphite'
+export const DEFAULT_PALETTE: PaletteId = 'ink'
 export const DEFAULT_MODE: ModePref = 'system'
 
 /** Те же ключи читает блокирующий скрипт в <head>. */

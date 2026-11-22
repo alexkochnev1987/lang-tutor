@@ -35,7 +35,35 @@
      warn-bg / warn-ink           статус «новое»
    =========================================================== */
 
-/* --- Графит и коралл — палитра по умолчанию --------------- */
+/* --- Чернила и индиго — палитра по умолчанию -------------- */
+:root:not([data-palette]),
+[data-palette="ink"] {
+  --l-primary: #453bb5;      --d-primary: #b9b1ff;
+  --l-primary-dark: #342a92; --d-primary-dark: #a398f3;
+  --l-on-primary: #ffffff;   --d-on-primary: #201841;
+  --l-accent-ink: #453bb5;   --d-accent-ink: #c8c1ff;
+  --l-head: #f6f5f2;         --d-head: #15141d;
+  --l-on-head: #20232d;      --d-on-head: #f3f0fa;
+  --l-bg: #f6f5f2;           --d-bg: #15141d;
+  --l-card: #ffffff;         --d-card: #201e2b;
+  --l-ink: #20232d;          --d-ink: #f3f0fa;
+  --l-muted: #626576;        --d-muted: #b6b2c6;
+  --l-line: #dfdce5;         --d-line: #3e394e;
+  --l-soft: #efedf1;         --d-soft: #292635;
+  --l-soft2: #eeecff;        --d-soft2: #342e53;
+  --l-bar-a: #453bb5;        --d-bar-a: #b9b1ff;
+  --l-bar-b: #766be0;        --d-bar-b: #9688ed;
+  --l-ok: #217348;           --d-ok: #74d2a0;
+  --l-ok-bg: #e8f5ed;        --d-ok-bg: #19372a;
+  --l-ok-ink: #17603c;       --d-ok-ink: #9ce0bc;
+  --l-danger: #9f292f;       --d-danger: #ff9da3;
+  --l-danger-bg: #fceceb;    --d-danger-bg: #44272e;
+  --l-danger-ink: #9f292f;   --d-danger-ink: #ffb2b7;
+  --l-warn-bg: #fbf0d9;      --d-warn-bg: #40321e;
+  --l-warn-ink: #784918;     --d-warn-ink: #f4d18f;
+}
+
+/* --- Графит и коралл ------------------------------------- */
 [data-palette="graphite"] {
   --l-primary: #ff5a5f;      --d-primary: #ff6b70;
   --l-primary-dark: #e8464b; --d-primary-dark: #f0565b;
