@@ -40,6 +40,8 @@ import { KnownToggle } from "@/app/_components/WordRow";
 import { StudyTooltip } from "@/app/_components/StudyTooltip";
 import { useSaveLessonResult } from "@/app/_components/useSaveLessonResult";
 import type { Lexeme } from "@/lib/content/curriculum";
+import { lessonPhraseFor } from "@/lib/content/lesson-phrases";
+import { LessonPhrasePractice } from "@/app/_components/LessonPhrasePractice";
 import { formatOfWordExercise, wordSkill } from "@/lib/engine/daily-words";
 import { WeeklyGoalCredit } from "@/app/_components/WeeklyGoal";
 import { WordPracticeFooter } from "@/app/_components/WordPracticeFooter";
@@ -403,6 +405,11 @@ export default function LessonPage() {
     );
   }
 
+  const phrase = lessonPhraseFor(plan.dayNumber, appState?.settings.targetLanguage ?? "pl");
+  const phrasePractice = phrase
+    ? <LessonPhrasePractice key={plan.dayNumber} day={plan.dayNumber} phrase={phrase} />
+    : undefined;
+
   const reviewFeedback = failedReview ? (
     <div role="alert" className="my-2 flex flex-wrap items-center justify-between gap-2 text-sm text-danger-ink">
       <span>Не удалось сохранить срок повторения.</span>
@@ -440,6 +447,7 @@ export default function LessonPage() {
               {Object.values(reviewWrites).some((write) => write.status === "pending") && (
                 <p role="status" className="text-sm text-muted">Сохраняем сроки повторения…</p>
               )}
+              {phrasePractice}
               <Link href="/" className="w-full">
                 <Button variant="outline" size="lg" full>
                   На главный
@@ -456,7 +464,7 @@ export default function LessonPage() {
     return (
       <Screen>
         <Centered>
-          <Diagnostic onDone={() => void afterDiagnostic()} />
+          <Diagnostic onDone={() => void afterDiagnostic()} phrasePractice={phrasePractice} />
         </Centered>
       </Screen>
     );
@@ -1039,7 +1047,7 @@ function ReadingExerciseBlock({
 
 function Centered({ children }: { children: React.ReactNode }) {
   return (
-    <div className="mx-auto flex w-full max-w-2xl flex-1 items-center justify-center px-4">
+    <div className="mx-auto flex w-full max-w-2xl flex-1 items-center justify-center px-4 py-4">
       {children}
     </div>
   );

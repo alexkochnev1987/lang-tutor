@@ -7,6 +7,7 @@ import type { CheckResult } from '@polski/engine'
 import { useSettings } from '@/lib/data/store'
 import { createBrowserRecognition, pronunciationMatches, speechTagForLanguage, type BrowserRecognition } from '@/lib/speech/recognition'
 import { SpeakIcon } from './ExerciseView'
+import { stop } from '@/lib/speech/tts'
 
 const MAX_ATTEMPTS = 3
 const SILENCE_TIMEOUT_MS = 900
@@ -26,13 +27,17 @@ function speechIssue(error: string): SpeechIssue {
   }
 }
 
-export function PronunciationExercise({ prompt, expected, onAnswered, onSkip }: {
-  prompt: string
+export function PronunciationExercise({ mode = 'word', prompt, expected, matchesAnswer, onAnswered, onSkip }: {
+  mode?: 'word' | 'phrase'
+  prompt?: string
   expected: string
+  matchesAnswer?: (transcript: string) => boolean
   onAnswered: (result: CheckResult, ms: number, attempts: number, answer: string) => void
   onSkip?: () => void
 }) {
   const t = useTranslations('dailyWords.speech')
+  const phrase = useTranslations('lessonPhrase')
+  const isPhrase = mode === 'phrase'
   const settings = useSettings()
   const active = useRef<{ recognition: BrowserRecognition; timer: number; silenceTimer: number | null } | null>(null)
   const started = useRef(Date.now())
@@ -67,7 +72,7 @@ export function PronunciationExercise({ prompt, expected, onAnswered, onSkip }: 
   function submitTranscript(transcript: string): void {
     if (!transcript || !finish()) return
     const attempts = (feedback?.attempts ?? 0) + 1
-    const correct = pronunciationMatches(expected, transcript)
+    const correct = matchesAnswer ? matchesAnswer(transcript) : pronunciationMatches(expected, transcript)
     setFeedback({ transcript, correct, attempts })
     if (correct || attempts === MAX_ATTEMPTS) {
       onAnswered({ correct, expected, errorKind: correct ? undefined : 'wrong-word' },
@@ -82,6 +87,7 @@ export function PronunciationExercise({ prompt, expected, onAnswered, onSkip }: 
     let recognition: BrowserRecognition | null
     try { recognition = createBrowserRecognition(settings.targetLanguage) } catch { setIssue('recognitionError'); return }
     if (!recognition) { setIssue('unsupported'); return }
+    if (isPhrase) stop()
 
     const current = { recognition, timer: 0, silenceTimer: null as number | null }
     const armSilenceTimer = () => {
@@ -89,11 +95,13 @@ export function PronunciationExercise({ prompt, expected, onAnswered, onSkip }: 
       current.silenceTimer = window.setTimeout(() => recognition?.stop(), SILENCE_TIMEOUT_MS)
     }
     recognition.onresult = ({ results }) => {
+      if (active.current !== current) return
       latestTranscript.current = Array.from(results).map((result) => result[0].transcript).join(' ').trim()
       if (latestTranscript.current) armSilenceTimer()
     }
     recognition.onerror = ({ error }) => { if (active.current === current && finish()) setIssue(speechIssue(error)) }
     recognition.onend = () => {
+      if (active.current !== current) return
       if (latestTranscript.current) submitTranscript(latestTranscript.current)
       else if (active.current === current && finish()) setIssue('noSpeech')
     }
@@ -117,7 +125,7 @@ export function PronunciationExercise({ prompt, expected, onAnswered, onSkip }: 
   }
 
   useEffect(() => {
-    if (!finished && !feedback) listen()
+    if (!isPhrase && !finished && !feedback) listen()
     // The pronunciation card starts listening as soon as it is shown.
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
@@ -125,33 +133,41 @@ export function PronunciationExercise({ prompt, expected, onAnswered, onSkip }: 
   return (
     <Card tone={finished ? (feedback?.correct ? 'correct' : 'wrong') : 'neutral'}>
       <Stack gap="sm">
-        <p className="text-sm text-muted">{t('instruction')}</p>
-        <p className="text-xl font-semibold" lang="ru">{prompt}</p>
+        <p className="text-sm text-muted">{isPhrase ? phrase('say') : t('instruction')}</p>
+        {prompt && <p className="text-xl font-semibold" lang="ru">{prompt}</p>}
         <div>
           <Button variant="ghost" size="sm" onClick={() => setHintVisible((visible) => !visible)}>
-            {t(hintVisible ? 'hideHint' : 'showHint')}
+            {isPhrase ? phrase(hintVisible ? 'hideHint' : 'showHint') : t(hintVisible ? 'hideHint' : 'showHint')}
           </Button>
-          {hintVisible && <p className="mt-1 text-lg font-semibold" lang="pl">{expected}</p>}
+          {hintVisible && (
+            <Row gap="sm">
+              <p className="mt-1 text-lg font-semibold" lang="pl">{expected}</p>
+              {isPhrase && !listening && <SpeakIcon text={expected} ariaLabel={phrase('listen')} />}
+            </Row>
+          )}
         </div>
         <div role="status">
           {listening && <p>{t('listening')}</p>}
-          {issue && <p className="text-danger-ink">{t(issue)}</p>}
+          {issue && <p className="text-danger-ink">{isPhrase && issue === 'noSpeech' ? phrase('notRecognized') : t(issue)}</p>}
           {!languageTag && <p className="text-danger-ink">{t('unsupported')}</p>}
           {feedback && (
             <>
               <p>{t('recognized')} <strong lang="pl">{feedback.transcript}</strong></p>
-              <p className={feedback.correct ? 'text-ok-ink' : 'text-danger-ink'}>{t(feedback.correct ? 'correct' : 'incorrect')}</p>
+              <p className={feedback.correct ? 'text-ok-ink' : 'text-danger-ink'}>{isPhrase && !feedback.correct ? phrase('notMatched') : t(feedback.correct ? 'correct' : 'incorrect')}</p>
               {!finished && <p>{t('remaining', { count: MAX_ATTEMPTS - feedback.attempts })}</p>}
             </>
           )}
         </div>
         {finished ? (
-          <Row gap="sm"><p>{t('answer')} <strong lang="pl">{expected}</strong></p><SpeakIcon text={expected} ariaLabel={t('playAnswer')} /></Row>
+          <Stack gap="sm">
+            <Row gap="sm"><p>{t('answer')} <strong lang="pl">{expected}</strong></p><SpeakIcon text={expected} ariaLabel={t('playAnswer')} /></Row>
+            {isPhrase && onSkip && <Button type="button" onClick={onSkip}>{phrase('showDialogue')}</Button>}
+          </Stack>
         ) : (
           <Row wrap gap="sm">
             {listening && <Button variant="ghost" onClick={stopListening}>{t('stop')}</Button>}
-            {!listening && <Button onClick={listen} disabled={!languageTag}>{t('retry')}</Button>}
-            {onSkip && <Button variant="ghost" onClick={onSkip} disabled={listening}>{t('skip')}</Button>}
+            {!listening && <Button onClick={listen} disabled={!languageTag}>{t(isPhrase && !issue && !feedback ? 'start' : 'retry')}</Button>}
+            {onSkip && <Button variant="ghost" onClick={onSkip} disabled={listening}>{isPhrase ? phrase('skipMic') : t('skip')}</Button>}
           </Row>
         )}
       </Stack>
