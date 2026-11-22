@@ -6,37 +6,32 @@ export function SkeletonBlock({ className }: { className: string }) {
     className={cn('rounded-control bg-soft motion-safe:animate-pulse [animation-delay:180ms]', className)} />
 }
 
-export function LoadingSkeleton({ variant = 'card', label }: {
+export function LoadingSkeleton({ variant = 'card', label, visible }: {
   variant?: 'card' | 'today' | 'list' | 'lesson' | 'profile'
   label?: string
+  visible?: boolean
 }) {
   const t = useTranslations('common')
   const title = label ?? t('loading')
 
   return (
     <div className="w-full">
-      <p role="status" className={variant === 'lesson' ? 'mb-3 text-center text-sm text-muted' : 'sr-only'}>{title}</p>
-      <div aria-hidden="true" className="grid gap-3">
+      {variant !== 'today' && <p role="status" className={variant === 'lesson' ? 'mb-3 text-center text-sm text-muted' : visible ? 'mb-2 text-sm text-muted' : 'sr-only'}>{title}</p>}
+      <div className="grid gap-3">
         {variant === 'today' && (
-          <>
-            <Card tone="featured" constrained={false}>
-              <div className="grid gap-3">
-                <SkeletonBlock className="h-3 w-24" />
-                <SkeletonBlock className="h-8 w-2/3" />
-                <SkeletonBlock className="h-4 w-1/2" />
-                <div className="my-1 grid gap-2">
-                  <SkeletonBlock className="h-4 w-full" />
-                  <SkeletonBlock className="h-4 w-3/4" />
-                </div>
-                <SkeletonBlock className="h-14 w-full bg-soft2" />
-                <SkeletonBlock className="h-3 w-4/5" />
+          <Card tone="featured" constrained={false}>
+            <div className="grid gap-3">
+              <SkeletonBlock className="h-3 w-24" />
+              <SkeletonBlock className="h-8 w-2/3" />
+              <SkeletonBlock className="h-4 w-1/2" />
+              <div className="my-1 grid gap-2">
+                <SkeletonBlock className="h-4 w-full" />
+                <SkeletonBlock className="h-4 w-3/4" />
               </div>
-            </Card>
-            <div className="grid grid-cols-2 gap-2">
-              <SkeletonBlock className="h-18 rounded-card" />
-              <SkeletonBlock className="h-18 rounded-card" />
+              <SkeletonBlock className="h-14 w-full bg-soft2" />
+              <p role="status" className="text-xs text-muted">{title}</p>
             </div>
-          </>
+          </Card>
         )}
         {variant === 'list' && (
           <Card>
@@ -76,7 +71,6 @@ export function LoadingSkeleton({ variant = 'card', label }: {
                 <SkeletonBlock className="h-12" />
               </div>
             </Card>
-            <Card><SkeletonBlock className="h-6 w-44 max-w-full" /></Card>
           </>
         )}
         {variant === 'card' && (

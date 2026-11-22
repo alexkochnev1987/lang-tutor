@@ -3,10 +3,11 @@
 import { useEffect, useState } from 'react'
 import { useTranslations } from 'next-intl'
 import { Button, Card, Screen, Stack } from '@polski/ui'
-import { LoadingSkeleton } from '@/app/_components/LoadingSkeleton'
+import { LoadingSkeleton, SkeletonBlock } from '@/app/_components/LoadingSkeleton'
 import { Nav } from '@/app/_components/Nav'
 import { ProfileIdentity } from '@/app/_components/ProfileIdentity'
 import { SectionHeading } from '@/app/_components/SectionHeading'
+import { ThemePicker } from '@/app/_components/ThemePicker'
 import { SettingsRow } from '@/app/_components/SettingsRow'
 import { SignInButton } from '@/app/_components/SignInButton'
 import { loadState, saveSettings, useAppState } from '@/lib/data/store'
@@ -35,20 +36,20 @@ export default function ProfilePage() {
         <SectionHeading section="profile" />
       </header>
       <main className="mx-auto w-full max-w-2xl flex-1 px-4 pb-4">
-        {!state && loadFailed && (
-          <Card>
-            <Stack gap="sm">
-              <p role="alert" className="text-sm text-danger-ink">{t('errors.generic')}</p>
-              <Button variant="outline" onClick={() => {
-                setLoadFailed(false)
-                setLoadAttempt((attempt) => attempt + 1)
-              }}>{t('errors.retry')}</Button>
-            </Stack>
-          </Card>
-        )}
-        {!state && !loadFailed && <LoadingSkeleton variant="profile" />}
-        {state && (
-          <Stack gap="md">
+        <Stack gap="md">
+          {!state && loadFailed && (
+            <Card>
+              <Stack gap="sm">
+                <p role="alert" className="text-sm text-danger-ink">{t('errors.generic')}</p>
+                <Button variant="outline" onClick={() => {
+                  setLoadFailed(false)
+                  setLoadAttempt((attempt) => attempt + 1)
+                }}>{t('errors.retry')}</Button>
+              </Stack>
+            </Card>
+          )}
+          {!state && !loadFailed && <LoadingSkeleton variant="profile" visible label={t('loadingSections.account')} />}
+          {state && (
             <Card>
               <Stack gap="sm">
                 <h2 id="profile-account" className="scroll-mt-4 text-lg font-semibold tracking-tight">{t('profile.account')}</h2>
@@ -61,15 +62,29 @@ export default function ProfilePage() {
                 <SignInButton showName={false} />
               </Stack>
             </Card>
+          )}
+          <Card>
+            <Stack gap="sm">
+              <h2 className="text-lg font-semibold tracking-tight">{t('profile.languageAndAppearance')}</h2>
+              {state ? <SettingsRow /> : !loadFailed && (
+                <Stack gap="sm">
+                  <p role="status" className="text-xs text-muted">{t('loadingSections.preferences')}</p>
+                  <SkeletonBlock className="h-12 w-full" />
+                </Stack>
+              )}
+              <ThemePicker />
+            </Stack>
+          </Card>
+          {state ? <StudyPreferences key={state.user.id} settings={state.settings} /> : !loadFailed && (
             <Card>
               <Stack gap="sm">
-                <h2 className="text-lg font-semibold tracking-tight">{t('profile.languageAndAppearance')}</h2>
-                <SettingsRow />
+                <h2 className="text-lg font-semibold tracking-tight">{t('profile.study')}</h2>
+                <SkeletonBlock className="h-12 w-full" />
+                <SkeletonBlock className="h-12 w-24" />
               </Stack>
             </Card>
-            <StudyPreferences key={state.user.id} settings={state.settings} />
-          </Stack>
-        )}
+          )}
+        </Stack>
       </main>
       <Nav />
     </Screen>

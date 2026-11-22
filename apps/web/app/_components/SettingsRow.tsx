@@ -7,7 +7,6 @@ import { saveSettings, useSettings } from '@/lib/data/store'
 import type { Settings } from '@/lib/data/types'
 import { LOCALES, LOCALE_NAMES, isLocale } from '@/lib/i18n/messages'
 import { AVAILABLE_RULE_LANGUAGES, RULE_LANGUAGE_NAMES, PACK_ORIGINAL_LANGUAGE } from '@/lib/content/rules'
-import { ThemePicker } from './ThemePicker'
 
 export function SettingsRow() {
   const t = useTranslations()
@@ -67,7 +66,6 @@ export function SettingsRow() {
             {t('dailyWords.useTimeZone')}
           </Button>
         </div>
-        <ThemePicker />
       </Stack>
       {status === 'saving' && <p role="status" className="text-sm text-muted">{t('profile.saving')}</p>}
       {status === 'error' && <p role="alert" className="text-sm text-danger-ink">{t('profile.saveError')}</p>}

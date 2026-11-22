@@ -127,7 +127,7 @@ const exerciseIdsOf = (steps: Step[]): Set<string> =>
   new Set(steps.flatMap((s) => (s.kind === "exercise" ? [s.ex.id] : [])));
 
 export async function buildTodayPlan(): Promise<TodayPlan> {
-  const [curriculum, vocabulary, morphology, rules, sentences, collocations, readingTexts] =
+  const [curriculum, vocabulary, morphology, rules, sentences, collocations, readingTexts, state, dailyQueue] =
     await Promise.all([
       loadCurriculum(),
       loadVocabulary(),
@@ -136,8 +136,9 @@ export async function buildTodayPlan(): Promise<TodayPlan> {
       loadGrammarSentences(),
       loadCollocations(),
       loadReadingTexts(),
+      loadState(),
+      loadDailyWords(),
     ]);
-  const state = await loadState();
   const dayNumber = await currentDayNumber(curriculum.stats.totalDays);
   const day = curriculum.days[dayNumber - 1]!;
 
@@ -149,7 +150,7 @@ export async function buildTodayPlan(): Promise<TodayPlan> {
     return rule ? localizeRule(rule, language) : null;
   };
 
-  const [lesson, dailyQueue] = await Promise.all([buildTodayLesson(day), loadDailyWords()]);
+  const lesson = await buildTodayLesson(day);
   const known = knownLexemeIds(state);
   const practisedPool = [...vocabulary.values()].filter(
     (w) => !known.has(w.id),

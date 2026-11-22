@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect, useMemo, useState } from 'react'
+import { useTranslations } from 'next-intl'
 import { Button, Card, Row, Screen, Segmented, Stack } from '@polski/ui'
 import { LoadingSkeleton, SkeletonBlock } from '@/app/_components/LoadingSkeleton'
 import { Nav } from '@/app/_components/Nav'
@@ -28,6 +29,7 @@ function completedWordId(sessionId: string): string | null {
 }
 
 export default function DictionaryPage() {
+  const loading = useTranslations('loadingSections')
   const state = useAppState()
   const [words, setWords] = useState<Lexeme[] | null>(null)
   const [vocabularyError, setVocabularyError] = useState(false)
@@ -106,13 +108,10 @@ export default function DictionaryPage() {
         <Stack gap="sm">
           <SectionHeading section="words" />
           <SectionNav section="words" current="/dictionary" />
-          {state && words ? (
-            <p className="text-sm tabular-nums text-muted">
-              {knownIds.size} знаю · {completedIds.size} пройдено · {words.length} всего
-            </p>
-          ) : (
-            <p className="text-xs text-muted" role="status">{vocabularyError || (!state && stateError) ? 'Статистика недоступна' : 'Загрузка статистики…'}</p>
-          )}
+          <div className="flex min-h-5 flex-wrap items-center gap-x-2 text-xs tabular-nums text-muted">
+            {words ? <span>{words.length} всего</span> : !vocabularyError && <SkeletonBlock className="h-3 w-14" />}
+            {state ? <span>{knownIds.size} знаю · {completedIds.size} пройдено</span> : !stateError && <SkeletonBlock className="h-3 w-24" />}
+          </div>
           <input
             value={query}
             onChange={(e) => setQuery(e.target.value)}
@@ -151,7 +150,7 @@ export default function DictionaryPage() {
                 </Stack>
               ) : (
                 <div className="mt-3 grid gap-2">
-                  <p role="status" className="sr-only">Загружаем сохранённые слова…</p>
+                  <p role="status" className="text-xs text-muted">{loading('savedWords')}</p>
                   <SkeletonBlock className="h-4 w-1/2" />
                   <SkeletonBlock className="h-3 w-2/3" />
                 </div>
@@ -187,7 +186,7 @@ export default function DictionaryPage() {
             </Stack></Card>
           )}
           {((!words && !vocabularyError) || (words && loadingFilter && !stateError)) && (
-            <LoadingSkeleton variant="list" />
+            <LoadingSkeleton variant="list" visible label={loading(loadingFilter && words ? 'wordStatuses' : 'vocabulary')} />
           )}
 
           {words && !loadingFilter && visible.length === 0 && (

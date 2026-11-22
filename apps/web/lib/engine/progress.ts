@@ -56,10 +56,9 @@ export interface Progress {
 
 export async function loadProgress(): Promise<Progress> {
   const now = Date.now()
-  const [curriculum, vocab, grammar, levels] = await Promise.all([
-    loadCurriculum(), loadVocabulary(), loadGrammarRules(), loadLevels(),
+  const [curriculum, vocab, grammar, levels, state] = await Promise.all([
+    loadCurriculum(), loadVocabulary(), loadGrammarRules(), loadLevels(), loadState(),
   ])
-  const state = await loadState()
   const items = state.studyItems
   const masteryRows = state.mastery
   const sessions = state.sessions.filter((s) => s.completedAt)
