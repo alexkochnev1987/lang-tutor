@@ -14,8 +14,9 @@
  * того, чего в базе нет.
  */
 import { useSyncExternalStore } from 'react'
+import { studyDayKey } from './study-day'
 import type { ProfileName } from './profile-name'
-import { brainstormWordSession, type DailyWordSubmission } from '@/lib/engine/daily-words'
+import { brainstormWordSession, type DailyWordQueue, type DailyWordSubmission } from '@/lib/engine/daily-words'
 import {
   DEFAULT_SETTINGS,
   type AppState, type ExerciseResultRow, type LessonSessionRow, type LexemeStatusRow, type PersonalWordRow,
@@ -99,10 +100,21 @@ async function request<T>(url: string, init?: RequestInit): Promise<T> {
 export function loadState(force = false): Promise<AppState> {
   if (!force && snapshot) return Promise.resolve(snapshot)
   if (!force && inflight) return inflight
-  inflight = request<Record<string, unknown>>('/api/state/')
-    .then((raw) => { snapshot = parse(raw); emit(); return snapshot })
-    .finally(() => { inflight = null })
-  return inflight
+  const pending: Promise<AppState> = request<Record<string, unknown>>('/api/state/')
+    .then((raw) => {
+      // A refresh after an account change supersedes older requests.
+      if (inflight !== pending) {
+        if (inflight) return inflight
+        if (snapshot) return snapshot
+        throw new Error('state_request_superseded')
+      }
+      snapshot = parse(raw)
+      emit()
+      return snapshot
+    })
+    .finally(() => { if (inflight === pending) inflight = null })
+  inflight = pending
+  return pending
 }
 
 export const refresh = (): Promise<AppState> => loadState(true)
@@ -143,6 +155,7 @@ export function getSettings(): Settings {
 
 export async function saveSettings(p: Partial<Settings>): Promise<void> {
   await request('/api/settings/', { method: 'PATCH', body: JSON.stringify(p) })
+  if (p.timeZone && p.timeZone !== snapshot?.settings.timeZone) invalidateDailyWords()
   patch((s) => ({ ...s, settings: { ...s.settings, ...p } }))
   // Зеркало в localStorage: тема и язык нужны СИНХРОННО до первой
   // отрисовки, иначе экран моргнёт (UX_UI.md §1.8). Сеть этого не успеет.
@@ -349,12 +362,22 @@ export async function saveProfileName(name: ProfileName): Promise<void> {
 }
 
 export async function signInWithGoogle(idToken: string): Promise<void> {
-  await request('/api/auth/google/', { method: 'POST', body: JSON.stringify({ idToken }) })
+  const { userId } = await request<{ userId: string }>('/api/auth/google/', {
+    method: 'POST', body: JSON.stringify({ idToken }),
+  })
+  invalidateDailyWords()
+  if (snapshot && snapshot.user.id !== userId) {
+    snapshot = null
+    emit()
+  }
   await refresh()
 }
 
 export async function signOut(): Promise<void> {
   await request('/api/auth/signout/', { method: 'POST' })
+  invalidateDailyWords()
+  snapshot = null
+  emit()
   await refresh()
 }
 
@@ -362,7 +385,7 @@ const DAILY_WORD_EVENT = 'daily-words-changed'
 const DAILY_WORD_REVISION = 'daily-words-revision'
 
 function publishDailyWordsChange(revision: string) {
-  dailyQueueRequest = null
+  invalidateDailyWords()
   window.dispatchEvent(new Event(DAILY_WORD_EVENT))
   try { localStorage.setItem(DAILY_WORD_REVISION, revision) } catch { /* Storage may be disabled. */ }
 }
@@ -370,7 +393,7 @@ function publishDailyWordsChange(revision: string) {
 export function subscribeDailyWords(listener: () => void) {
   function syncTabs(event: StorageEvent) {
     if (event.key === DAILY_WORD_REVISION) {
-      dailyQueueRequest = null
+      invalidateDailyWords()
       listener()
     }
   }
@@ -384,13 +407,33 @@ export function subscribeDailyWords(listener: () => void) {
   }
 }
 
-let dailyQueueRequest: Promise<import('@/lib/engine/daily-words').DailyWordQueue> | null = null
+let dailyQueueRequest: Promise<DailyWordQueue> | null = null
+let dailyQueueSnapshot: { userId: string; timeZone: string; queue: DailyWordQueue } | null = null
+
+function invalidateDailyWords() {
+  dailyQueueRequest = null
+  dailyQueueSnapshot = null
+}
+
+export function getCachedDailyWords(): DailyWordQueue | null {
+  if (!snapshot || !dailyQueueSnapshot) return null
+  const { userId, timeZone, queue } = dailyQueueSnapshot
+  return snapshot.user.id === userId
+    && snapshot.settings.timeZone === timeZone
+    && queue.day === studyDayKey(timeZone)
+    ? queue : null
+}
 
 export function loadDailyWords() {
   if (dailyQueueRequest) return dailyQueueRequest
-  const pending = loadState()
-    .then(() => request<import('@/lib/engine/daily-words').DailyWordQueue>('/api/daily-words/', { cache: 'no-store' }))
-    .finally(() => { if (dailyQueueRequest === pending) dailyQueueRequest = null })
+  const pending = loadState().then(async ({ user, settings }) => {
+    const queue = await request<DailyWordQueue>('/api/daily-words/', { cache: 'no-store' })
+    if (dailyQueueRequest === pending && snapshot?.user.id === user.id &&
+      snapshot.settings.timeZone === settings.timeZone) {
+      dailyQueueSnapshot = { userId: user.id, timeZone: settings.timeZone, queue }
+    }
+    return queue
+  }).finally(() => { if (dailyQueueRequest === pending) dailyQueueRequest = null })
   dailyQueueRequest = pending
   return pending
 }

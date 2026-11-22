@@ -3,7 +3,7 @@
 import { useEffect, useState } from 'react'
 import Link from 'next/link'
 import { useTranslations } from 'next-intl'
-import { loadDailyWords, subscribeDailyWords } from '@/lib/data/store'
+import { getCachedDailyWords, loadDailyWords, subscribeDailyWords } from '@/lib/data/store'
 import { AppIcon } from './AppIcon'
 import { SkeletonBlock } from './LoadingSkeleton'
 import type { DailyWordQueue } from '@/lib/engine/daily-words'
@@ -11,7 +11,7 @@ import type { DailyWordQueue } from '@/lib/engine/daily-words'
 export function DailyWordCounts() {
   const t = useTranslations('dailyWords')
   const loading = useTranslations('loadingSections')
-  const [queue, setQueue] = useState<DailyWordQueue | null>(null)
+  const [queue, setQueue] = useState<DailyWordQueue | null>(getCachedDailyWords)
   const [failed, setFailed] = useState(false)
 
   useEffect(() => {

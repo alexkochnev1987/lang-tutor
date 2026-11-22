@@ -1,14 +1,11 @@
 'use client'
 
-import { useCallback, useEffect, useRef, useState } from 'react'
+import { TabBody } from '@/app/_components/TabBody'
+import { useRef, useState } from 'react'
 import Link from 'next/link'
 import { useTranslations } from 'next-intl'
-import { Button, Card, Row, Screen, Segmented, Stack } from '@polski/ui'
+import { Button, Card, Row, Segmented, Stack } from '@polski/ui'
 import type { CheckResult, Exercise } from '@polski/engine'
-import {
-  buildTodayPlan,
-  type Stage,
-} from '@/lib/engine/plan'
 import { recordRuleAttempt } from '@/lib/engine/session'
 import { saveExerciseResult, useAppState } from '@/lib/data/store'
 import { useSaveLessonResult } from '@/app/_components/useSaveLessonResult'
@@ -16,13 +13,12 @@ import { GrammarExerciseBatch } from '@/app/_components/ExerciseView'
 import { RuleSheet } from '@/app/_components/RuleSheet'
 import { RuleView } from '@/app/_components/RuleView'
 import { LoadingSkeleton } from '@/app/_components/LoadingSkeleton'
-import { Nav } from '@/app/_components/Nav'
-import { SectionHeading } from '@/app/_components/SectionHeading'
 import { WeeklyGoalCredit } from '@/app/_components/WeeklyGoal'
 import { AppIcon } from '@/app/_components/AppIcon'
 import { TodayGrammarOptions } from '@/app/_components/TodayGrammarOptions'
 import { grammarPracticePlan } from '@/lib/engine/grammar-practice-plan'
 import type { LocalizedRule } from '@/lib/content/rules'
+import { useTodayPlan } from '@/app/_components/useTodayPlan'
 import { GrammarPractice } from '@/app/_components/GrammarPractice'
 
 type GrammarView = 'rule' | 'drill' | 'result'
@@ -57,11 +53,11 @@ export default function GrammarPage() {
 
 function TodayGrammar({ onPractice }: { onPractice: () => void }) {
   const t = useTranslations()
-  const [stage, setStage] = useState<Stage | null>(null)
+  const { plan, error, reload } = useTodayPlan()
+  const stage = plan?.stages.find((entry) => entry.id === 'grammar')
   const state = useAppState()
-  const [selection, setSelection] = useState<{ exercises: Exercise[]; rule?: LocalizedRule | null } | null>(null)
-  const [dayNumber, setDayNumber] = useState(1)
-  const [loadStatus, setLoadStatus] = useState<'loading' | 'ready' | 'error'>('loading')
+  const [selection, setSelection] = useState<{ exercises: Exercise[]; rule?: LocalizedRule | null; dayNumber: number } | null>(null)
+  const dayNumber = selection?.dayNumber ?? plan?.dayNumber ?? 1
   const [view, setView] = useState<GrammarView>('rule')
   const [canAdvance, setCanAdvance] = useState(false)
   const [pendingAnswers, setPendingAnswers] = useState(0)
@@ -69,21 +65,9 @@ function TodayGrammar({ onPractice }: { onPractice: () => void }) {
   const startedAt = useRef(Date.now())
   const lessonSave = useSaveLessonResult()
 
-  const load = useCallback(() => {
-    setLoadStatus('loading')
-    void buildTodayPlan().then((p) => {
-      const grammar = p.stages.find((s) => s.id === 'grammar') ?? null
-      setStage(grammar)
-      setDayNumber(p.dayNumber)
-      setLoadStatus('ready')
-    }).catch(() => setLoadStatus('error'))
-  }, [])
-
-  useEffect(() => { load() }, [load])
-
   function start(exercises: Exercise[], rule?: LocalizedRule | null) {
     lessonSave.reset()
-    setSelection({ exercises, rule })
+    setSelection({ exercises, rule, dayNumber })
     setCanAdvance(false)
     startedAt.current = Date.now()
     setView('drill')
@@ -137,26 +121,26 @@ function TodayGrammar({ onPractice }: { onPractice: () => void }) {
   function restart() {
     setSelection(null)
     setView('rule')
-    load()
+    reload()
   }
 
-  if (loadStatus === 'loading') {
+  if (!plan && !error && !selection) {
     return <LoadingSkeleton variant="list" visible label={t('loadingSections.grammar')} />
   }
 
-  if (loadStatus === 'error') {
+  if (error && !selection) {
     return (
       <Card>
         <Stack gap="sm">
           <p role="alert" className="text-sm text-danger-ink">{t('errors.generic')}</p>
-          <Button variant="outline" full onClick={load}>{t('errors.retry')}</Button>
+          <Button variant="outline" full onClick={reload}>{t('errors.retry')}</Button>
           <Button variant="ghost" full onClick={onPractice}>{MODES[1].label}</Button>
         </Stack>
       </Card>
     )
   }
 
-  if (!stage) {
+  if (!stage && !selection) {
     return (
       <Card>
         <Stack gap="md" align="center">
@@ -190,18 +174,18 @@ function TodayGrammar({ onPractice }: { onPractice: () => void }) {
   }
 
   if (view === 'rule' || !selection) {
-    const plan = grammarPracticePlan(stage.steps)
-    if (plan.exercises.length > 0) return <TodayGrammarOptions plan={plan} onStart={start} />
+    const options = grammarPracticePlan(stage?.steps ?? [])
+    if (options.exercises.length > 0) return <TodayGrammarOptions plan={options} onStart={start} />
 
     return (
       <Card>
         <Stack gap="lg">
-          {stage.rule
+          {stage?.rule
             ? <RuleView rule={stage.rule} />
             : <p className="text-sm text-muted">
                 Dziś ćwiczymy reguły, które wypadają najsłabiej w statystykach.
               </p>}
-          {stage.missingContent && (
+          {stage?.missingContent && (
             <p className="rounded-card bg-warn-bg px-3 py-2 text-sm text-warn-ink">
               Brak zadań: {stage.missingContent}
             </p>
@@ -252,17 +236,10 @@ function Shell({ children, mode, onModeChange }: {
   onModeChange: (mode: (typeof MODES)[number]['value']) => void
 }) {
   return (
-    <Screen>
-      <header className="mx-auto w-full max-w-2xl px-4 py-3">
-        <SectionHeading section="grammar" />
-        <div className="mt-2">
-          <Segmented options={MODES} value={mode} onChange={onModeChange} ariaLabel="Режим грамматики" />
-        </div>
-      </header>
-      <main className="mx-auto w-full max-w-2xl flex-1 px-4 pb-4">
-        <Stack gap="md">{children}</Stack>
-      </main>
-      <Nav />
-    </Screen>
+    <TabBody controls={
+      <Segmented options={MODES} value={mode} onChange={onModeChange} ariaLabel="Режим грамматики" />
+    }>
+    <Stack gap="md">{children}</Stack>
+    </TabBody>
   )
 }

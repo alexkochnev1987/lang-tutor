@@ -4,9 +4,10 @@ import { useEffect, useMemo, useState } from 'react'
 import { useTranslations } from 'next-intl'
 import Link from 'next/link'
 import { Button, Card, Meter, Row, Stack } from '@polski/ui'
-import { loadCurriculum, type Curriculum, type CurriculumDay } from '@/lib/content/curriculum'
+import { getCachedCurriculum, loadCurriculum, type Curriculum, type CurriculumDay } from '@/lib/content/curriculum'
 import { loadState, useAppState } from '@/lib/data/store'
 import { SkeletonBlock } from '@/app/_components/LoadingSkeleton'
+import { GrammarLink } from '@/app/_components/GrammarLink'
 import { CourseShell } from '@/app/_components/CourseShell'
 
 interface WeekRoadmap {
@@ -156,7 +157,7 @@ function MapIsland({
 export default function ProgramPage() {
   const t = useTranslations()
   const state = useAppState()
-  const [curriculum, setCurriculum] = useState<Curriculum | null>(null)
+  const [curriculum, setCurriculum] = useState<Curriculum | null>(getCachedCurriculum)
   const [mapError, setMapError] = useState(false)
   const [progressError, setProgressError] = useState(false)
   const [mapAttempt, setMapAttempt] = useState(0)
@@ -316,9 +317,9 @@ export default function ProgramPage() {
               ? 'Программа завершена. Можно повторять темы и готовиться к экзамену.'
               : 'Каждая точка — один учебный день. После завершения дня она становится зелёной.'}
           </p>
-          <Link href="/grammar" className="text-sm text-muted hover:text-ink">
+          <GrammarLink className="text-sm text-muted hover:text-ink">
             Открыть ресурс Gramatyka →
-          </Link>
+          </GrammarLink>
         </Stack>
       </Card>
     </CourseShell>

@@ -1,16 +1,17 @@
 'use client'
 
-import { useEffect, useState } from 'react'
 import Link from 'next/link'
 import { useTranslations } from 'next-intl'
 import { Button, buttonStyles, Card, Row, Stack } from '@polski/ui'
-import { STAGE_TITLE, buildTodayPlan, type Stage, type TodayPlan } from '@/lib/engine/plan'
+import { STAGE_TITLE, type Stage, type TodayPlan } from '@/lib/engine/plan'
 import type { CurriculumDay } from '@/lib/content/curriculum'
 import { LoadingSkeleton } from './LoadingSkeleton'
 import { WordRow } from './WordRow'
 import { AppIcon } from './AppIcon'
+import { GrammarLink } from './GrammarLink'
 import { DailyWordCounts } from './DailyWordCounts'
 import { WeeklyGoal } from './WeeklyGoal'
+import { useTodayPlan } from './useTodayPlan'
 
 const KIND_LABEL: Record<CurriculumDay['kind'], string> = {
   diagnostic: 'Диагностика',
@@ -35,17 +36,7 @@ function stageSummary(stage: Stage, plan: TodayPlan): string {
 
 export function TodayCard() {
   const t = useTranslations()
-  const [plan, setPlan] = useState<TodayPlan | null>(null)
-  const [error, setError] = useState(false)
-  const [attempt, setAttempt] = useState(0)
-
-  useEffect(() => {
-    let alive = true
-    buildTodayPlan()
-      .then((p) => { if (alive) setPlan(p) })
-      .catch(() => { if (alive) setError(true) })
-    return () => { alive = false }
-  }, [attempt])
+  const { plan, error, reload } = useTodayPlan()
 
   const grammar = plan?.stages.find((stage) => stage.id === 'grammar')
 
@@ -55,7 +46,7 @@ export function TodayCard() {
         <Card tone="featured" constrained={false}>
           <Stack gap="sm">
             <p role="alert" className="text-sm text-danger-ink">{t('errors.generic')}</p>
-            <Button variant="outline" onClick={() => { setError(false); setAttempt((current) => current + 1) }}>
+            <Button variant="outline" onClick={reload}>
               {t('errors.retry')}
             </Button>
           </Stack>
@@ -75,9 +66,9 @@ export function TodayCard() {
               <span className="text-sm text-muted">{grammar.rule.title}</span>
             </Stack>
             <p className="text-sm text-muted">{grammar.rule.summary}</p>
-            <a href="/grammar/" className={buttonStyles({ variant: 'outline', full: true })}>
+            <GrammarLink className={buttonStyles({ variant: 'outline', full: true })}>
               Тренажёр грамматики
-            </a>
+            </GrammarLink>
           </Stack>
         </Card>
       )}

@@ -1,5 +1,6 @@
 'use client'
 
+import { TabBody } from '@/app/_components/TabBody'
 import { Suspense, useEffect, useMemo, useRef, useState } from 'react'
 import { useSearchParams } from 'next/navigation'
 import { useTranslations } from 'next-intl'
@@ -10,13 +11,11 @@ import { BrainstormPractice } from '@/app/_components/BrainstormPractice'
 import { PronunciationExercise } from '@/app/_components/PronunciationExercise'
 import { ExerciseView } from '@/app/_components/ExerciseView'
 import { LoadingSkeleton, SkeletonBlock } from '@/app/_components/LoadingSkeleton'
-import { Nav } from '@/app/_components/Nav'
-import { SectionHeading } from '@/app/_components/SectionHeading'
 import { SectionNav } from '@/app/_components/SectionNav'
 import { WordPracticeFooter } from '@/app/_components/WordPracticeFooter'
 import { WordRow } from '@/app/_components/WordRow'
-import { currentDayNumber, loadCurriculum, loadVocabulary, type Lexeme } from '@/lib/content/curriculum'
-import { loadDailyWords, loadState, saveDailyWordAnswer, subscribeDailyWords } from '@/lib/data/store'
+import { currentDayNumber, getCachedVocabulary, loadCurriculum, loadVocabulary, type Lexeme } from '@/lib/content/curriculum'
+import { getCachedDailyWords, loadDailyWords, loadState, saveDailyWordAnswer, subscribeDailyWords } from '@/lib/data/store'
 import { dailyWordExercise, WORD_PRACTICE_FORMATS, wordSkill, type DailyWordAnswer, type DailyWordList, type DailyWordQueue, type WordPracticeFormat } from '@/lib/engine/daily-words'
 import { prepareLexemeReview, Rating } from '@/lib/engine/session'
 
@@ -48,8 +47,8 @@ function WordPractice({ initialList }: { initialList?: DailyWordList }) {
   const t = useTranslations('dailyWords')
   const loading = useTranslations('loadingSections')
   const [initializing, setInitializing] = useState(true)
-  const [vocabulary, setVocabulary] = useState<Map<string, Lexeme> | null>(null)
-  const [queue, setQueue] = useState<DailyWordQueue | null>(null)
+  const [vocabulary, setVocabulary] = useState<Map<string, Lexeme> | null>(getCachedVocabulary)
+  const [queue, setQueue] = useState<DailyWordQueue | null>(getCachedDailyWords)
   const [dayNumber, setDayNumber] = useState(1)
   const [loadError, setLoadError] = useState(false)
   const [format, setFormat] = useState<WordPracticeFormat>('brainstorm')
@@ -295,84 +294,77 @@ function WordPractice({ initialList }: { initialList?: DailyWordList }) {
 
   return (
     <WordsShell>
-        <Stack gap="sm">
-          <Row wrap gap="xs">
-            {(['learn', 'review'] as const).map((kind) => (
-              <Button key={kind} variant={list === kind ? 'primary' : 'outline'} aria-pressed={list === kind}
-                onClick={() => { setList(kind); setSelected([]); setLimit(PAGE_SIZE) }}>
-                {t(kind)} {queue ? queue[kind].length : loadError ? '—' : (
-                  <SkeletonBlock className="h-4 w-6 bg-current/15" />
-                )}
-              </Button>
-            ))}
-          </Row>
-          <fieldset className="grid grid-cols-2 gap-2">
-            <legend className="mb-2 text-sm font-medium">{t('choose')}</legend>
-            {WORD_PRACTICE_FORMATS.map((mode) => (
-              <label key={mode} className={`flex min-h-12 cursor-pointer items-start gap-2 rounded-card border px-3 py-2 focus-within:ring-2 focus-within:ring-primary ${mode === 'brainstorm' ? 'col-span-2' : ''} ${format === mode ? 'border-primary bg-primary/5' : 'border-line bg-card hover:bg-soft'}`}>
-                <input type="radio" name="word-format" className="mt-1 shrink-0 accent-primary" checked={format === mode}
-                  aria-label={t(mode)} aria-describedby={`word-format-${mode}`}
-                  onChange={() => { setFormat(mode); setSelected(selectedIds.slice(0, SESSION_SIZE[mode])) }} />
-                <span className="min-w-0 flex-1">
-                  <span className="block text-sm font-medium">{t(mode)}</span>
-                  <span id={`word-format-${mode}`} className="block text-xs text-muted">
-                    {t('batchWords', { count: SESSION_SIZE[mode] })} · {t(`formatHint.${mode}`)}
-                  </span>
-                </span>
-              </label>
-            ))}
-          </fieldset>
-          {loadError && <Button variant="outline" onClick={load}>{t('reload')}</Button>}
-          {!queue || (queue[list].length > 0 && !vocabulary) ? (
-            !loadError && <LoadingSkeleton variant="list" visible label={loading(queue ? 'vocabulary' : 'wordCounts')} />
-          ) : !queue[list].length ? <p role="status">{t('empty')}</p> : (
-            <>
-              <Button full disabled={loadError} busy={initializing || status === 'checking'}
-                busyLabel={initializing ? loading('practice') : t('loading')} onClick={() => void startBatch(list, format, selectedIds)}>
-                {t('start')}
-              </Button>
-              <input value={query} onChange={(event) => { setQuery(event.target.value); setLimit(PAGE_SIZE) }} placeholder={t('search')} aria-label={t('search')}
-                className="min-h-12 rounded-card border border-line bg-card px-3" />
-              <p className="text-sm text-muted">{t('selected', { selected: selectedIds.length, limit: sessionSize })}</p>
-              <Card>
-                {visibleIds.length === 0 && <p className="text-sm text-muted">{t('noMatches')}</p>}
-                <div className="-my-2">
-                  {visibleIds.slice(0, limit).map((id) => {
-                    const candidate = vocabulary?.get(id)
-                    if (!candidate) return null
-                    const picked = selectedIds.includes(id)
-                    return <WordRow key={id} word={candidate} selectionControl={
-                      <label className="flex min-h-12 min-w-12 cursor-pointer items-center justify-center">
-                        <input type="checkbox" className="size-5 accent-primary" checked={picked}
-                          aria-label={t('selectWord', { word: candidate.lemma })}
-                          disabled={!picked && selectedIds.length >= sessionSize}
-                          onChange={() => setSelected(picked ? selectedIds.filter((entry) => entry !== id) : [...selectedIds, id])} />
-                      </label>
-                    } />
-                  })}
-                </div>
-              </Card>
-              {visibleIds.length > limit && (
-                <Button variant="outline" full onClick={() => setLimit(limit + PAGE_SIZE)}>{t('showMore', { count: visibleIds.length - limit })}</Button>
+      <Stack gap="sm">
+        <Row wrap gap="xs">
+          {(['learn', 'review'] as const).map((kind) => (
+            <Button key={kind} variant={list === kind ? 'primary' : 'outline'} aria-pressed={list === kind}
+              onClick={() => { setList(kind); setSelected([]); setLimit(PAGE_SIZE) }}>
+              {t(kind)} {queue ? queue[kind].length : loadError ? '—' : (
+                <SkeletonBlock className="h-4 w-6 bg-current/15" />
               )}
-            </>
-          )}
-        </Stack>
+            </Button>
+          ))}
+        </Row>
+        <fieldset className="grid grid-cols-2 gap-2">
+          <legend className="mb-2 text-sm font-medium">{t('choose')}</legend>
+          {WORD_PRACTICE_FORMATS.map((mode) => (
+            <label key={mode} className={`flex min-h-12 cursor-pointer items-start gap-2 rounded-card border px-3 py-2 focus-within:ring-2 focus-within:ring-primary ${mode === 'brainstorm' ? 'col-span-2' : ''} ${format === mode ? 'border-primary bg-primary/5' : 'border-line bg-card hover:bg-soft'}`}>
+              <input type="radio" name="word-format" className="mt-1 shrink-0 accent-primary" checked={format === mode}
+                aria-label={t(mode)} aria-describedby={`word-format-${mode}`}
+                onChange={() => { setFormat(mode); setSelected(selectedIds.slice(0, SESSION_SIZE[mode])) }} />
+              <span className="min-w-0 flex-1">
+                <span className="block text-sm font-medium">{t(mode)}</span>
+                <span id={`word-format-${mode}`} className="block text-xs text-muted">
+                  {t('batchWords', { count: SESSION_SIZE[mode] })} · {t(`formatHint.${mode}`)}
+                </span>
+              </span>
+            </label>
+          ))}
+        </fieldset>
+        {loadError && <Button variant="outline" onClick={load}>{t('reload')}</Button>}
+        {!queue || (queue[list].length > 0 && !vocabulary) ? (
+          !loadError && <LoadingSkeleton variant="list" visible label={loading(queue ? 'vocabulary' : 'wordCounts')} />
+        ) : !queue[list].length ? <p role="status">{t('empty')}</p> : (
+          <>
+            <Button full disabled={loadError} busy={initializing || status === 'checking'}
+              busyLabel={initializing ? loading('practice') : t('loading')} onClick={() => void startBatch(list, format, selectedIds)}>
+              {t('start')}
+            </Button>
+            <input value={query} onChange={(event) => { setQuery(event.target.value); setLimit(PAGE_SIZE) }} placeholder={t('search')} aria-label={t('search')}
+              className="min-h-12 rounded-card border border-line bg-card px-3" />
+            <p className="text-sm text-muted">{t('selected', { selected: selectedIds.length, limit: sessionSize })}</p>
+            <Card>
+              {visibleIds.length === 0 && <p className="text-sm text-muted">{t('noMatches')}</p>}
+              <div className="-my-2">
+                {visibleIds.slice(0, limit).map((id) => {
+                  const candidate = vocabulary?.get(id)
+                  if (!candidate) return null
+                  const picked = selectedIds.includes(id)
+                  return <WordRow key={id} word={candidate} selectionControl={
+                    <label className="flex min-h-12 min-w-12 cursor-pointer items-center justify-center">
+                      <input type="checkbox" className="size-5 accent-primary" checked={picked}
+                        aria-label={t('selectWord', { word: candidate.lemma })}
+                        disabled={!picked && selectedIds.length >= sessionSize}
+                        onChange={() => setSelected(picked ? selectedIds.filter((entry) => entry !== id) : [...selectedIds, id])} />
+                    </label>
+                  } />
+                })}
+              </div>
+            </Card>
+            {visibleIds.length > limit && (
+              <Button variant="outline" full onClick={() => setLimit(limit + PAGE_SIZE)}>{t('showMore', { count: visibleIds.length - limit })}</Button>
+            )}
+          </>
+        )}
+      </Stack>
     </WordsShell>
   )
 }
 
 function WordsShell({ children }: { children: React.ReactNode }) {
   return (
-    <Screen>
-      <header className="mx-auto w-full max-w-2xl px-4 py-3">
-        <SectionHeading section="words" />
-        <div className="mt-2"><SectionNav section="words" current="/words" /></div>
-      </header>
-      <main className="mx-auto w-full max-w-2xl flex-1 px-4 pb-4">
-        {children}
-      </main>
-      <Nav />
-    </Screen>
+    <TabBody controls={<SectionNav section="words" current="/words" />}>
+    {children}
+    </TabBody>
   )
 }

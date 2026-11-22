@@ -3,6 +3,7 @@ import { IntlProvider } from './_providers/IntlProvider'
 import { ServiceWorker } from './_providers/ServiceWorker'
 import { ThemeInit } from './_providers/ThemeInit'
 import { ThemeScript } from './_providers/ThemeScript'
+import { AppFrame } from './_components/AppFrame'
 import { SelectionDictionary } from './_components/SelectionDictionary'
 import './globals.css'
 
@@ -45,7 +46,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <ServiceWorker />
         <IntlProvider>
           <SelectionDictionary />
-          {children}
+          <AppFrame>{children}</AppFrame>
         </IntlProvider>
       </body>
     </html>

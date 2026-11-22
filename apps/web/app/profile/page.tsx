@@ -1,12 +1,11 @@
 'use client'
 
+import { TabBody } from '@/app/_components/TabBody'
 import { useEffect, useState } from 'react'
 import { useTranslations } from 'next-intl'
-import { Button, Card, Screen, Stack } from '@polski/ui'
+import { Button, Card, Stack } from '@polski/ui'
 import { LoadingSkeleton, SkeletonBlock } from '@/app/_components/LoadingSkeleton'
-import { Nav } from '@/app/_components/Nav'
 import { ProfileIdentity } from '@/app/_components/ProfileIdentity'
-import { SectionHeading } from '@/app/_components/SectionHeading'
 import { ThemePicker } from '@/app/_components/ThemePicker'
 import { SettingsRow } from '@/app/_components/SettingsRow'
 import { SignInButton } from '@/app/_components/SignInButton'
@@ -31,63 +30,57 @@ export default function ProfilePage() {
   }, [loadAttempt])
 
   return (
-    <Screen>
-      <header className="mx-auto w-full max-w-2xl px-4 py-3">
-        <SectionHeading section="profile" />
-      </header>
-      <main className="mx-auto w-full max-w-2xl flex-1 px-4 pb-4">
-        <Stack gap="md">
-          {!state && loadFailed && (
-            <Card>
-              <Stack gap="sm">
-                <p role="alert" className="text-sm text-danger-ink">{t('errors.generic')}</p>
-                <Button variant="outline" onClick={() => {
-                  setLoadFailed(false)
-                  setLoadAttempt((attempt) => attempt + 1)
-                }}>{t('errors.retry')}</Button>
-              </Stack>
-            </Card>
-          )}
-          {!state && !loadFailed && <LoadingSkeleton variant="profile" visible label={t('loadingSections.account')} />}
-          {state && (
-            <Card>
-              <Stack gap="sm">
-                <h2 id="profile-account" className="scroll-mt-4 text-lg font-semibold tracking-tight">{t('profile.account')}</h2>
-                {state.user.signedIn ? <ProfileIdentity key={state.user.id} user={state.user} /> : (
-                  <div className="text-sm text-muted">
-                    <p className="font-medium text-ink">{t('profile.guest')}</p>
-                    <p>{t('auth.localOnly')}</p>
-                  </div>
-                )}
-                <SignInButton showName={false} />
-              </Stack>
-            </Card>
-          )}
+    <TabBody>
+      <Stack gap="md">
+        {!state && loadFailed && (
           <Card>
             <Stack gap="sm">
-              <h2 className="text-lg font-semibold tracking-tight">{t('profile.languageAndAppearance')}</h2>
-              {state ? <SettingsRow /> : !loadFailed && (
-                <Stack gap="sm">
-                  <p role="status" className="text-xs text-muted">{t('loadingSections.preferences')}</p>
-                  <SkeletonBlock className="h-12 w-full" />
-                </Stack>
-              )}
-              <ThemePicker />
+              <p role="alert" className="text-sm text-danger-ink">{t('errors.generic')}</p>
+              <Button variant="outline" onClick={() => {
+                setLoadFailed(false)
+                setLoadAttempt((attempt) => attempt + 1)
+              }}>{t('errors.retry')}</Button>
             </Stack>
           </Card>
-          {state ? <StudyPreferences key={state.user.id} settings={state.settings} /> : !loadFailed && (
-            <Card>
+        )}
+        {!state && !loadFailed && <LoadingSkeleton variant="profile" visible label={t('loadingSections.account')} />}
+        {state && (
+          <Card>
+            <Stack gap="sm">
+              <h2 id="profile-account" className="scroll-mt-4 text-lg font-semibold tracking-tight">{t('profile.account')}</h2>
+              {state.user.signedIn ? <ProfileIdentity key={state.user.id} user={state.user} /> : (
+                <div className="text-sm text-muted">
+                  <p className="font-medium text-ink">{t('profile.guest')}</p>
+                  <p>{t('auth.localOnly')}</p>
+                </div>
+              )}
+              <SignInButton showName={false} />
+            </Stack>
+          </Card>
+        )}
+        <Card>
+          <Stack gap="sm">
+            <h2 className="text-lg font-semibold tracking-tight">{t('profile.languageAndAppearance')}</h2>
+            {state ? <SettingsRow /> : !loadFailed && (
               <Stack gap="sm">
-                <h2 className="text-lg font-semibold tracking-tight">{t('profile.study')}</h2>
+                <p role="status" className="text-xs text-muted">{t('loadingSections.preferences')}</p>
                 <SkeletonBlock className="h-12 w-full" />
-                <SkeletonBlock className="h-12 w-24" />
               </Stack>
-            </Card>
-          )}
-        </Stack>
-      </main>
-      <Nav />
-    </Screen>
+            )}
+            <ThemePicker />
+          </Stack>
+        </Card>
+        {state ? <StudyPreferences key={state.user.id} settings={state.settings} /> : !loadFailed && (
+          <Card>
+            <Stack gap="sm">
+              <h2 className="text-lg font-semibold tracking-tight">{t('profile.study')}</h2>
+              <SkeletonBlock className="h-12 w-full" />
+              <SkeletonBlock className="h-12 w-24" />
+            </Stack>
+          </Card>
+        )}
+      </Stack>
+    </TabBody>
   )
 }
 
