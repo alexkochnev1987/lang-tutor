@@ -889,6 +889,7 @@ export function ExerciseBatch({
   onAnswered,
   onComplete,
   onReset,
+  canReset = true,
   dayNumber,
   completedTitle,
   completedDescription,
@@ -906,6 +907,7 @@ export function ExerciseBatch({
   ) => void;
   onComplete: () => void;
   onReset?: () => void;
+  canReset?: boolean;
   dayNumber: number;
   completedTitle: string;
   completedDescription: string;
@@ -959,7 +961,7 @@ export function ExerciseBatch({
   const activeGroup = activeGroupIndex >= 0 ? groups[activeGroupIndex] : null;
 
   async function resetBlock() {
-    if (resetting) return;
+    if (resetting || !canReset) return;
     setResetting(true);
     const ok = await resetExerciseResults(
       dayNumber,
@@ -1017,7 +1019,7 @@ export function ExerciseBatch({
         <Button
           variant="outline"
           size="sm"
-          disabled={resetting}
+          disabled={resetting || !canReset}
           onClick={() => void resetBlock()}
         >
           {resetting ? "Przygotowuję…" : "Powtórz blok"}

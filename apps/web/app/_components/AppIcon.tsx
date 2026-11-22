@@ -8,6 +8,7 @@ const paths = {
   speaker: 'M4 9h4l4-4v14l-4-4H4Zm11 0a4 4 0 0 1 0 6m2-9a8 8 0 0 1 0 12',
   muted: 'M4 9h4l4-4v14l-4-4H4Zm11 1 5 5m0-5-5 5',
   arrow: 'M5 12h14m-5-5 5 5-5 5',
+  back: 'M19 12H5m7-7-7 7 7 7',
 } as const
 
 export function AppIcon({ name, className }: { name: keyof typeof paths; className?: string }) {
