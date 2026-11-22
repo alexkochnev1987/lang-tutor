@@ -107,7 +107,7 @@ export default function DictionaryPage() {
             value={query}
             onChange={(e) => setQuery(e.target.value)}
             placeholder="Поиск по слову или переводу"
-            className="min-h-12 w-full rounded-card border border-line bg-card px-3 text-base text-ink"
+            className="min-h-12 w-full rounded-control border border-line bg-card px-3.5 text-base text-ink placeholder:text-muted"
           />
           <Segmented
             options={filterOptions}

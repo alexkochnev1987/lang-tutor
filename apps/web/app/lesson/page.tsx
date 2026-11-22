@@ -678,7 +678,7 @@ export default function LessonPage() {
               {slot.step.rule && <RuleSheet rule={slot.step.rule} />}
             </Row>
             {!wordStudyExercise && (canAdvance || Boolean(restoredResult) || lessonSave.status === "saving") && (
-              <Button variant="outline" size="lg" full disabled={lessonSave.status === "saving"} onClick={next}>
+              <Button size="lg" full disabled={lessonSave.status === "saving"} onClick={next}>
                 {lessonSave.status === "saving" ? "Сохраняем итог…" : i + 1 < slots.length ? "Dalej" : "Zakończ"}
               </Button>
             )}
@@ -719,7 +719,7 @@ function StageStart({ stage, onNext }: { stage: Stage; onNext: () => void }) {
         <span className="text-xs tracking-wide text-muted uppercase">
           Blok lekcji
         </span>
-        <h1 className="text-xl font-semibold">{STAGE_TITLE_PL[stage.id]}</h1>
+        <h1 className="text-2xl font-semibold tracking-tight">{STAGE_TITLE_PL[stage.id]}</h1>
         <p className="text-center text-sm text-muted">{STAGE_LEAD[stage.id]}</p>
         {exercises > 0 && (
           <p className="text-sm tabular-nums text-muted">

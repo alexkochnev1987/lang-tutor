@@ -63,7 +63,7 @@ export function WeeklyGoal() {
   const longDay = new Intl.DateTimeFormat(locale, { weekday: 'long', timeZone: 'UTC' })
 
   return (
-    <Card>
+    <Card constrained={false}>
       <section aria-labelledby="weekly-goal-title">
         <Stack gap="sm">
           <Row gap="sm" justify="between">

@@ -2,12 +2,12 @@ import { tv } from 'tailwind-variants'
 
 const seg = tv({
   slots: {
-    root: 'inline-flex rounded-card border border-line bg-soft p-0.5',
+    root: 'inline-flex rounded-card bg-soft p-1',
     item: [
-      'inline-flex h-10 min-w-10 items-center justify-center gap-1.5 px-3',
-      'rounded-card text-sm font-medium text-muted transition-colors',
-      'hover:text-ink',
-      'aria-pressed:bg-card aria-pressed:text-ink aria-pressed:shadow-card',
+      'inline-flex min-h-11 min-w-0 items-center justify-center gap-1.5 px-3',
+      'rounded-control text-sm font-medium text-muted transition-colors',
+      'hover:text-ink active:bg-soft2',
+      'aria-pressed:bg-card aria-pressed:text-accent-ink aria-pressed:shadow-card',
     ],
   },
 })

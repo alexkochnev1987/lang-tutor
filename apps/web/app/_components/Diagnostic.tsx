@@ -81,7 +81,7 @@ export function Diagnostic({ onDone }: { onDone: () => void }) {
     <Card>
       <Stack gap="lg">
         <Stack gap="xs">
-          <h1 className="text-xl font-semibold">С чего начинаем</h1>
+          <h1 className="text-2xl font-semibold tracking-tight">С чего начинаем</h1>
           <p className="text-sm text-muted">
             От ответа зависит темп программы. Ошибиться не страшно —
             сложность подстроится по вашим результатам.
@@ -92,8 +92,8 @@ export function Diagnostic({ onDone }: { onDone: () => void }) {
           {TRACKS.map((t) => (
             <OptionRow key={t.id} selected={picked === t.id} onClick={() => setPicked(t.id)}>
               <span className="flex flex-col items-start gap-0.5 py-1">
-                <span className="font-medium">{t.title}</span>
-                <span className="text-xs text-muted">{t.desc}</span>
+                <span className="font-semibold">{t.title}</span>
+                <span className="text-sm text-muted">{t.desc}</span>
               </span>
             </OptionRow>
           ))}
@@ -104,7 +104,7 @@ export function Diagnostic({ onDone }: { onDone: () => void }) {
         </Button>
 
         {error && (
-          <p className="text-xs text-bad">Не удалось сохранить: {error}</p>
+          <p className="text-xs text-danger-ink">Не удалось сохранить: {error}</p>
         )}
 
         <p className="text-xs text-muted">

@@ -7,11 +7,15 @@ import { tv, type VariantProps } from 'tailwind-variants'
 const card = tv({
   slots: {
     root: 'w-full rounded-card border border-line bg-card shadow-card',
-    body: 'p-4',
+    body: 'p-4 sm:p-5',
   },
   variants: {
     tone: {
       neutral: {},
+      featured: {
+        root: 'rounded-feature bg-linear-to-br from-soft2/65 via-card to-card',
+        body: 'p-5 sm:p-6',
+      },
       correct: { root: 'border-ok/50 bg-ok-bg' },
       wrong:   { root: 'border-danger/50 bg-danger-bg' },
     },

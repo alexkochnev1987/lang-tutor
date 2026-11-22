@@ -3,10 +3,12 @@
 import { useEffect, useState } from 'react'
 import Link from 'next/link'
 import { useTranslations } from 'next-intl'
-import { Button, Card, Row, Stack } from '@polski/ui'
+import { buttonStyles, Card, Row, Stack } from '@polski/ui'
 import { STAGE_TITLE, buildTodayPlan, type Stage, type TodayPlan } from '@/lib/engine/plan'
 import type { CurriculumDay } from '@/lib/content/curriculum'
 import { WordRow } from './WordRow'
+import { AppIcon } from './AppIcon'
+import { DailyWordCounts } from './DailyWordCounts'
 import { WeeklyGoal } from './WeeklyGoal'
 
 const KIND_LABEL: Record<CurriculumDay['kind'], string> = {
@@ -44,7 +46,13 @@ export function TodayCard() {
   }, [])
 
   if (error) {
-    return <Card><p className="text-sm text-danger">{t('errors.generic')}</p></Card>
+    return (
+      <Stack gap="lg">
+        <Card><p role="alert" className="text-sm text-danger-ink">{t('errors.generic')}</p></Card>
+        <DailyWordCounts />
+        <WeeklyGoal />
+      </Stack>
+    )
   }
   if (!plan) {
     return <Card><p className="text-sm text-muted">{t('common.loading')}</p></Card>
@@ -56,18 +64,18 @@ export function TodayCard() {
 
   return (
     <Stack gap="lg">
-      <Card>
+      <Card tone="featured" constrained={false}>
         <Stack gap="md">
           <Stack gap="none">
             <Row gap="sm" justify="between">
               <span className="text-xs tracking-wide text-muted uppercase">
                 {t('today.day', { day: plan.dayNumber, total: plan.totalDays })}
               </span>
-              <span className="rounded-pill bg-soft2 px-2 py-0.5 text-xs text-accent-ink">
+              <span className="rounded-pill bg-card px-2.5 py-1 text-xs font-medium text-muted">
                 {KIND_LABEL[day.kind]}
               </span>
             </Row>
-            <h1 className="text-xl font-semibold">{day.topic}</h1>
+            <h2 className="mt-1 text-2xl font-semibold leading-tight tracking-tight sm:text-3xl">{day.topic}</h2>
             <span className="text-sm text-muted">
               Неделя {day.week} · {day.phaseTitle} · тема «{day.themeRu}»
             </span>
@@ -99,16 +107,16 @@ export function TodayCard() {
             </p>
           ))}
 
-          <Link href="/lesson" className="w-full">
-            <Button size="lg" full>
-              {t('today.start', { minutes })}
-            </Button>
+          <Link href="/lesson" className={buttonStyles({ size: 'lg', full: true })}>
+            {t('today.start', { minutes })}
+            <AppIcon name="arrow" className="size-5 shrink-0" />
           </Link>
 
           <p className="text-xs text-muted">{day.expectedOutcome}</p>
         </Stack>
       </Card>
 
+      <DailyWordCounts />
       <WeeklyGoal />
 
       {grammar?.rule && (
@@ -120,8 +128,8 @@ export function TodayCard() {
               <span className="text-sm text-muted">{grammar.rule.title}</span>
             </Stack>
             <p className="text-sm text-muted">{grammar.rule.summary}</p>
-            <Link href="/grammar" className="w-full">
-              <Button variant="outline" full>Тренажёр грамматики</Button>
+            <Link href="/grammar" className={buttonStyles({ variant: 'outline', full: true })}>
+              Тренажёр грамматики
             </Link>
           </Stack>
         </Card>
