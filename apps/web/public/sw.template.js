@@ -68,18 +68,17 @@ self.addEventListener('fetch', (event) => {
   // 1. Навигация — network-first: онлайн всегда свежая страница,
   //    офлайн отдаём из кэша, в крайнем случае /offline/.
   if (request.mode === 'navigate') {
-    event.respondWith(
-      fetch(request, { cache: 'no-cache' })
-        .then(async (res) => {
-          if (res.ok && !res.redirected && res.headers.get('content-type')?.includes('text/html')) {
-            await caches.open(SHELL_CACHE).then((cache) => cache.put(request, res.clone())).catch(() => {})
-          }
-          return res
-        })
-        .catch(() => caches.open(SHELL_CACHE)
-          .then(async (cache) => (await cache.match(request)) ?? cache.match('/offline/'))
-          .then((hit) => hit ?? Response.error())),
-    )
+    const navigation = fetch(request, { cache: 'no-cache' })
+    // Keep the cache write alive without holding up the page response.
+    event.waitUntil(navigation.then((response) => {
+      if (!response.ok || response.redirected || !response.headers.get('content-type')?.includes('text/html')) return
+      const copy = response.clone()
+      return caches.open(SHELL_CACHE).then((cache) => cache.put(request, copy))
+    }).catch(() => {}))
+    event.respondWith(navigation.catch(async () => {
+      const cache = await caches.open(SHELL_CACHE)
+      return (await cache.match(request)) ?? (await cache.match('/offline/')) ?? Response.error()
+    }))
     return
   }
 
