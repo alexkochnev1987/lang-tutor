@@ -1,3 +1,5 @@
+import type { ProfileName } from './profile-name'
+
 /**
  * Формы строк, как они приходят из API.
  *
@@ -103,7 +105,7 @@ export interface UserCourseRow {
   dailyBudgetMinutes: number
 }
 
-export interface SessionUser {
+export interface SessionUser extends ProfileName {
   id: string
   signedIn: boolean
   name: string | null

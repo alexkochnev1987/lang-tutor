@@ -62,6 +62,12 @@
     "targetLanguage": "Изучаемый язык"
   },
   "profile": {
+    "editProfile": "Редактировать профиль",
+    "firstName": "Имя",
+    "lastName": "Фамилия",
+    "nameMissing": "Имя не указано",
+    "cancelEdit": "Отмена",
+    "invalidName": "Введите имя. Длина каждого поля — до 80 символов.",
     "account": "Аккаунт",
     "guest": "Гостевой режим",
     "languageAndAppearance": "Язык и оформление",

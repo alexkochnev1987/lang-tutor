@@ -62,6 +62,12 @@
     "targetLanguage": "Мова вивчення"
   },
   "profile": {
+    "editProfile": "Редагувати профіль",
+    "firstName": "Ім’я",
+    "lastName": "Прізвище",
+    "nameMissing": "Ім’я не вказано",
+    "cancelEdit": "Скасувати",
+    "invalidName": "Введіть ім’я. Довжина кожного поля — до 80 символів.",
     "account": "Обліковий запис",
     "guest": "Гостьовий режим",
     "languageAndAppearance": "Мова й оформлення",

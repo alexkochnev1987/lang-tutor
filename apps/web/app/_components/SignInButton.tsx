@@ -20,7 +20,7 @@ import { signInWithGoogle, signOut, useAppState } from '@/lib/data/store'
  * ID-токен здесь не хранится и не разбирается: он уходит на сервер,
  * тот проверяет подпись и ставит свою httpOnly-сессию.
  */
-export function SignInButton() {
+export function SignInButton({ showName = true }: { showName?: boolean }) {
   const t = useTranslations('auth')
   const common = useTranslations('common')
   const [open, setOpen] = useState(false)
@@ -52,7 +52,7 @@ export function SignInButton() {
   if (user?.signedIn) {
     return (
       <Row gap="sm" justify="between" wrap>
-        <span className="min-w-0 flex-1 basis-40 text-sm text-muted [overflow-wrap:anywhere]">{user.name ?? user.email}</span>
+        {showName && <span className="min-w-0 flex-1 basis-40 text-sm text-muted [overflow-wrap:anywhere]">{user.name ?? user.email}</span>}
         <Button variant="ghost" size="sm" onClick={handleSignOut}>{t('signOut')}</Button>
       </Row>
     )

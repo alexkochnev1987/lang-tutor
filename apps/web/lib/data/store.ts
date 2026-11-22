@@ -14,11 +14,12 @@
  * того, чего в базе нет.
  */
 import { useSyncExternalStore } from 'react'
+import type { ProfileName } from './profile-name'
 import { brainstormWordSession, type DailyWordSubmission } from '@/lib/engine/daily-words'
 import {
   DEFAULT_SETTINGS,
   type AppState, type ExerciseResultRow, type LessonSessionRow, type LexemeStatusRow, type PersonalWordRow,
-  type RuleMasteryRow, type Settings, type StudyItemRow,
+  type RuleMasteryRow, type SessionUser, type Settings, type StudyItemRow,
 } from './types'
 
 let snapshot: AppState | null = null
@@ -335,6 +336,16 @@ export async function resetExerciseResults(dayNumber: number, exerciseIds: strin
 export function knownLexemeIds(state: AppState | null): ReadonlySet<string> {
   return new Set(
     (state?.lexemeStatus ?? []).filter((l) => l.status === 'known').map((l) => l.lexemeId))
+}
+
+export async function saveProfileName(name: ProfileName): Promise<void> {
+  const updated = await request<Pick<SessionUser, 'id' | 'name' | 'firstName' | 'lastName'>>('/api/profile/', {
+    method: 'PATCH',
+    body: JSON.stringify(name),
+  })
+  patch((state) => state.user.id === updated.id
+    ? { ...state, user: { ...state.user, ...updated } }
+    : state)
 }
 
 export async function signInWithGoogle(idToken: string): Promise<void> {

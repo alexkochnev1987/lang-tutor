@@ -20,6 +20,7 @@ import {
   wordStudySkips,
 } from "@/lib/db/schema";
 import { withUser } from "@/lib/api/handler";
+import { fullProfileName, parseProfileName, profileNameFromAccount } from "@/lib/data/profile-name";
 
 export const runtime = "nodejs"; // node-postgres на edge не работает
 export const dynamic = "force-dynamic"; // ответ зависит от cookie
@@ -114,15 +115,19 @@ export const GET = withUser(async ({ userId }) => {
       ),
   ]);
 
+  const { profileName: savedName, ...settings } = (user?.settings ?? {}) as Record<string, unknown>;
+  const profileName = parseProfileName(savedName) ?? profileNameFromAccount(user?.name ?? null);
+
   return {
     user: {
       id: userId,
       signedIn: Boolean(user?.googleSub),
-      name: user?.name ?? null,
+      ...profileName,
+      name: fullProfileName(profileName),
       email: user?.email ?? null,
       picture: user?.picture ?? null,
     },
-    settings: user?.settings ?? {},
+    settings,
     course: course[0] ?? null,
     studyItems: items,
     mastery,

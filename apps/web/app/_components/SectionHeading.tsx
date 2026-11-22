@@ -4,6 +4,7 @@ import Link from 'next/link'
 import { useTranslations } from 'next-intl'
 import { Row, Stack } from '@polski/ui'
 import { useAppState } from '@/lib/data/store'
+import { UserAvatar } from './UserAvatar'
 
 export function SectionHeading({ section }: {
   section: 'today' | 'course' | 'words' | 'grammar' | 'profile'
@@ -19,16 +20,17 @@ export function SectionHeading({ section }: {
         </h1>
         {section === 'today' && <p className="mt-0.5 text-sm text-muted">{t('app.tagline')}</p>}
       </Stack>
-      {user && section !== 'profile' && (
-        <Link
-          href={user.signedIn ? '/profile/' : '/profile/#profile-account'}
-          className="flex min-h-11 min-w-0 max-w-[42%] shrink-0 items-center rounded-control px-3 text-sm font-medium text-accent-ink hover:bg-soft active:bg-soft2"
-        >
-          <span className="truncate">
-            {user.signedIn ? user.name || t('nav.profile') : t('auth.signIn')}
-          </span>
+      {user && section !== 'profile' && (user.signedIn ? (
+        <Link href="/profile/" aria-label={t('nav.profile')}
+          className="grid size-11 shrink-0 place-items-center rounded-full hover:bg-soft active:bg-soft2">
+          <UserAvatar user={user} />
         </Link>
-      )}
+      ) : (
+        <Link href="/profile/#profile-account"
+          className="flex min-h-11 shrink-0 items-center rounded-control px-3 text-sm font-medium text-accent-ink hover:bg-soft active:bg-soft2">
+          {t('auth.signIn')}
+        </Link>
+      ))}
     </Row>
   )
 }
