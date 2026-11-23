@@ -123,6 +123,7 @@ export default function LessonPage() {
   const [special, setSpecial] = useState<"diagnostic" | "empty" | null>(null);
   const startedAt = useRef(Date.now());
   const wordMain = useRef<HTMLElement>(null);
+  const [answerTarget, setAnswerTarget] = useState<HTMLDivElement | null>(null);
   const [reviewWrites, setReviewWrites] = useState<Record<string, ReviewWrite>>({});
   const lessonSave = useSaveLessonResult();
   const [queueStatus, setQueueStatus] = useState<"ready" | "checking" | "error">("ready");
@@ -150,10 +151,10 @@ export default function LessonPage() {
 
   const slot = slots[i];
   const wordScreen = slot?.stage.id === "words";
-  const wordStudyExercise =
-    slot?.kind === "step" &&
-    slot.step.kind === "exercise" &&
-    slot.stage.id === "words" && Boolean(slot.step.ex.lexemeId);
+  const wordExercise = slot?.kind === "step" && slot.step.kind === "exercise"
+    && wordScreen && slot.step.ex.lexemeId ? slot.step.ex : undefined;
+  const wordStudyExercise = Boolean(wordExercise);
+  const wordFormId = wordExercise?.mode === "typed" ? WORD_FORM_ID : undefined;
   const reviewLexemeId =
     slot?.kind === "step" && slot.step.kind === "exercise" && slot.step.review
       ? slot.step.ex.lexemeId
@@ -508,7 +509,7 @@ export default function LessonPage() {
             )}
           </Row>
         </Row>
-        <div className="u-hide-on-short mt-2 h-1 overflow-hidden rounded-pill bg-soft">
+        <div className="word-practice-metadata u-hide-on-short mt-2 h-1 overflow-hidden rounded-pill bg-soft">
           <div
             className="h-full bg-primary transition-all"
             style={{ width: `${((i + 1) / Math.max(1, slots.length)) * 100}%` }}
@@ -654,7 +655,8 @@ export default function LessonPage() {
                 exercise={slot.step.ex}
                 autoFocus={!wordStudyExercise}
                 showSpeakButton={!wordStudyExercise || formatOfWordExercise(slot.step.ex) === "translation" || Boolean(restoredResult)}
-                submitFormId={wordStudyExercise && slot.step.ex.mode === "typed" ? WORD_FORM_ID : undefined}
+                submitFormId={wordFormId}
+                answerTarget={answerTarget}
                 topLeftStatus={
                   exerciseLexemeId ? (
                     <LexemeSkillLevel
@@ -704,10 +706,9 @@ export default function LessonPage() {
         <WordPracticeFooter
           busyLabel={queueStatus === "checking" ? t("loading")
             : reviewPending || lessonSave.status === "saving" ? t("saving") : undefined}
-          label={failedReview ? t("retry") : wordStudyExercise && slot.step.kind === "exercise"
-              && slot.step.ex.mode === "typed" && !canAdvance && !restoredResult ? t("check") : t("next")}
-          formId={wordStudyExercise && slot.step.kind === "exercise" && slot.step.ex.mode === "typed"
-            && !canAdvance && !restoredResult && !reviewPending && !failedReview ? WORD_FORM_ID : undefined}
+          label={failedReview ? t("retry") : wordFormId && !canAdvance && !restoredResult ? t("check") : t("next")}
+          formId={!canAdvance && !restoredResult && !reviewPending && !failedReview ? wordFormId : undefined}
+          answerTargetRef={wordFormId ? setAnswerTarget : undefined}
           disabled={queueStatus === "checking" || reviewPending || lessonSave.status === "saving"
             || (wordStudyExercise && slot.step.kind === "exercise" && slot.step.ex.mode !== "typed"
               && !canAdvance && !restoredResult && !failedReview)}

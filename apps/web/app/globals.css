@@ -122,7 +122,19 @@ input, select, textarea {
 }
 
 .word-practice-screen {
+  position: relative;
+  top: var(--study-viewport-top, 0px);
   height: var(--study-viewport-height, 100dvh);
+}
+
+@media (max-width: 40rem) {
+  .word-practice-screen:has([data-word-answer]:focus) .word-practice-metadata {
+    display: none;
+  }
+
+  .word-practice-footer:has([data-word-answer]:focus) {
+    padding-bottom: 0.5rem;
+  }
 }
 
 /* Both word practice formats own their full-screen layout and safe areas. */

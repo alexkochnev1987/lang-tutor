@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import type { ReactNode } from "react";
+import { createPortal } from "react-dom";
 import { Button, Card, OptionRow, Row, Stack } from "@polski/ui";
 import { check, type CheckResult, type Exercise } from "@polski/engine";
 import { usePronounce } from "@/lib/speech/usePronounce";
@@ -452,6 +453,7 @@ export function ExerciseView({
   topLeftStatus,
   topRightAction,
   submitFormId,
+  answerTarget,
 }: {
   exercise: Exercise;
   onAnswered: (
@@ -481,6 +483,7 @@ export function ExerciseView({
   topLeftStatus?: ReactNode;
   topRightAction?: ReactNode;
   submitFormId?: string;
+  answerTarget?: HTMLDivElement | null;
 }) {
   const [result, setResult] = useState<CheckResult | null>(null);
   const [feedback, setFeedback] = useState<CheckResult | null>(null);
@@ -491,6 +494,7 @@ export function ExerciseView({
   const started = useRef(Date.now());
   const lastCheckedValue = useRef<string | null>(null);
   const autoPronouncedExercise = useRef<string | null>(null);
+  const dockedInput = useRef<HTMLInputElement>(null);
   const { pronounce } = usePronounce();
 
   useEffect(() => {
@@ -580,6 +584,7 @@ export function ExerciseView({
     const nextWrongTries = r.correct ? wrongTries : [...wrongTries, answer];
     if (!r.correct) setWrongTries(nextWrongTries);
     setResult(r);
+    dockedInput.current?.blur();
     if (typeof navigator !== "undefined" && "vibrate" in navigator) {
       navigator.vibrate(r.correct ? 12 : [18, 35, 18]);
     }
@@ -612,6 +617,56 @@ export function ExerciseView({
     }
     setBuiltIndexes((current) => [...current, index]);
   }
+
+  const answerField = exercise.mode === "typed" && !isInlineForm && (
+    <input
+      autoFocus={autoFocus}
+      value={typed}
+      disabled={Boolean(result)}
+      ref={submitFormId ? dockedInput : undefined}
+      data-word-answer={submitFormId ? "" : undefined}
+      aria-label={exercise.instruction}
+      enterKeyHint={submitFormId ? "done" : undefined}
+      required={Boolean(submitFormId)}
+      onFocus={submitFormId ? undefined : (event) => keepInputVisible(event.currentTarget)}
+      onChange={(e) => updateTyped(e.target.value)}
+      onBlur={submitFormId ? undefined : () => submit(typed)}
+      onKeyDown={submitFormId ? undefined : (e) => {
+        if (e.key === "Enter") submit(typed);
+      }}
+      placeholder={
+        exercise.kind === "sentence-write"
+          ? "Napisz zdanie"
+          : exercise.kind === "sentence-typed"
+            ? "Wpisz słowo"
+            : exercise.kind === "listen-write"
+              ? "Wpisz usłyszane słowo"
+              : "Wpisz formę"
+      }
+      className="min-h-12 w-full rounded-card border border-line bg-card px-3 text-center text-xl text-ink"
+      lang="pl"
+      autoCapitalize="off"
+      autoCorrect="off"
+      spellCheck={false}
+    />
+  );
+
+  const answerFeedback = feedback?.correct ? (
+    <p className="font-medium text-ok-ink">Poprawnie</p>
+  ) : feedback && exercise.mode !== "choice" && result ? (
+    <p className="text-ok-ink">Poprawna odpowiedź: <strong>{feedback.expected}</strong></p>
+  ) : null;
+
+  const dockedAnswer = submitFormId && answerTarget && answerField && createPortal(
+    <form id={submitFormId} className="pb-2" onSubmit={(event) => {
+      event.preventDefault();
+      submit(typed);
+    }}>
+      {answerField}
+      <div role="status" className="text-sm [&>p]:mt-1.5">{answerFeedback}</div>
+    </form>,
+    answerTarget,
+  );
 
   const content = (
     <Stack gap={compactSentence ? "xs" : "lg"} className="w-full">
@@ -743,43 +798,7 @@ export function ExerciseView({
 
       {isListenChoice && result && speakText && <p lang="pl" className="text-center font-medium">{speakText}</p>}
 
-      {exercise.mode === "typed" && (
-        <Stack gap="sm">
-          {submitFormId && <form id={submitFormId} onSubmit={(event) => {
-            event.preventDefault();
-            submit(typed);
-          }} />}
-          {!isInlineForm && (
-            <input
-              autoFocus={autoFocus}
-              value={typed}
-              disabled={Boolean(result)}
-              form={submitFormId}
-              required={Boolean(submitFormId)}
-              onFocus={submitFormId ? undefined : (event) => keepInputVisible(event.currentTarget)}
-              onChange={(e) => updateTyped(e.target.value)}
-              onBlur={submitFormId ? undefined : () => submit(typed)}
-              onKeyDown={submitFormId ? undefined : (e) => {
-                if (e.key === "Enter") submit(typed);
-              }}
-              placeholder={
-                exercise.kind === "sentence-write"
-                  ? "Napisz zdanie"
-                  : exercise.kind === "sentence-typed"
-                    ? "Wpisz słowo"
-                    : exercise.kind === "listen-write"
-                      ? "Wpisz usłyszane słowo"
-                      : "Wpisz formę"
-              }
-              className="min-h-12 w-full rounded-card border border-line bg-card px-3 text-center text-xl text-ink"
-              lang="pl"
-              autoCapitalize="off"
-              autoCorrect="off"
-              spellCheck={false}
-            />
-          )}
-        </Stack>
-      )}
+      {!submitFormId && answerField}
 
       {exercise.mode === "assemble" && (
         <Stack gap="md">
@@ -849,33 +868,21 @@ export function ExerciseView({
         </Stack>
       )}
 
-      <div className={compactSentence ? "empty:hidden text-sm" : "min-h-6 text-sm"}>
-        {feedback?.correct && (
-          <p className="font-medium text-ok-ink">Poprawnie</p>
-        )}
-        {feedback && !feedback.correct && (
-          <Stack gap="xs">
-            {exercise.mode !== "choice" && result && (
-              <p className="text-ok-ink">
-                Poprawna odpowiedź: <strong>{feedback.expected}</strong>
-              </p>
-            )}
-          </Stack>
-        )}
-      </div>
+      {!submitFormId && <div className={compactSentence ? "empty:hidden text-sm" : "min-h-6 text-sm"}>{answerFeedback}</div>}
     </Stack>
   );
 
-  if (bare) return content;
+  if (bare) return <>{content}{dockedAnswer}</>;
   return (
     <Card tone={result ? (result.correct ? "correct" : "wrong") : "neutral"}>
       {(topLeftStatus || topRightAction) && (
-        <div className="mb-2 flex flex-wrap items-center justify-between gap-3">
+        <div className="word-practice-metadata mb-2 flex flex-wrap items-center justify-between gap-3">
           <div>{topLeftStatus}</div>
           {topRightAction}
         </div>
       )}
       {content}
+      {dockedAnswer}
     </Card>
   );
 }
