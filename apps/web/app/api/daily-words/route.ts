@@ -20,27 +20,25 @@ function calendar(userId: string) {
 
 export const GET = withUser(async ({ userId }) => {
   const { rows } = await pg.execute<{
-    id: string; seen: boolean; eligible: boolean; day: string
+    id: string; seen: boolean; eligible: boolean; day: string; next_review_at: Date | string | null
   }>(sql`
     WITH calendar AS (${calendar(userId)}),
     skills AS (
-      SELECT ref_id, bool_or(last_review IS NOT NULL) AS seen, COALESCE(min(due) FILTER (WHERE last_review IS NOT NULL), min(due)) AS due,
+      SELECT ref_id, bool_or(last_review IS NOT NULL) AS seen, min(due) AS due,
         max(last_review) AS last_review
       FROM study_items
       WHERE user_id = ${userId} AND course_id = ${courseId} AND kind LIKE 'lexeme-%'
       GROUP BY ref_id
     )
     SELECT pool.id, calendar.day::text AS day, COALESCE(skills.seen, false) AS seen,
-      (known.lexeme_id IS NULL AND answered.lexeme_id IS NULL
-        AND (skills.last_review IS NULL OR (skills.last_review AT TIME ZONE calendar.zone)::date < calendar.day)
-        AND (skills.due IS NULL OR skills.due <= calendar.now)) AS eligible
+      (known.lexeme_id IS NULL AND (skills.due IS NULL OR skills.due <= calendar.now)) AS eligible,
+      MIN(skills.due) FILTER (WHERE known.lexeme_id IS NULL
+        AND skills.seen AND skills.due > calendar.now) OVER () AS next_review_at
     FROM jsonb_array_elements_text(${JSON.stringify(lexemeIds)}::jsonb) AS pool(id)
     CROSS JOIN calendar
     LEFT JOIN skills ON skills.ref_id = pool.id
     LEFT JOIN lexeme_status AS known ON known.user_id = ${userId} AND known.course_id = ${courseId}
       AND known.lexeme_id = pool.id AND known.status = 'known'
-    LEFT JOIN daily_word_reviews AS answered ON answered.user_id = ${userId}
-      AND answered.course_id = ${courseId} AND answered.day = calendar.day::text AND answered.lexeme_id = pool.id
     ORDER BY skills.due NULLS LAST, pool.id
   `)
   // A new word counts once on the calendar day of its first-ever review,
@@ -63,6 +61,9 @@ export const GET = withUser(async ({ userId }) => {
     learn: rows.filter((row) => row.eligible && !row.seen).map(({ id }) => id),
     review: rows.filter((row) => row.eligible && row.seen).map(({ id }) => id),
     learnedToday: Number(learned.rows[0]?.total ?? 0),
+    nextReviewAt: rows[0]?.next_review_at
+      ? new Date(rows[0].next_review_at).toISOString()
+      : null,
   }
 })
 
@@ -135,9 +136,20 @@ export const POST = withUser(async ({ userId, req }) => {
         AND NOT EXISTS (
           SELECT 1 FROM study_items WHERE user_id = ${userId} AND course_id = ${courseId}
             AND ref_id = ${item.refId} AND kind LIKE 'lexeme-%'
-          GROUP BY ref_id HAVING COALESCE(min(due) FILTER (WHERE last_review IS NOT NULL), min(due)) > calendar.now OR (max(last_review) AT TIME ZONE calendar.zone)::date >= calendar.day
+          GROUP BY ref_id HAVING min(due) > calendar.now
         )
-      ON CONFLICT DO NOTHING RETURNING answered_at
+      -- Keep one row per word/day as an atomic claim for the latest attempt.
+      -- This must not be a one-attempt-per-day limit: failed FSRS cards are
+      -- often due again in minutes. The conflict row serializes concurrent
+      -- submissions; a short minimum gap prevents two simultaneous answers
+      -- from applying the same stale FSRS schedule.
+      ON CONFLICT (user_id, course_id, day, lexeme_id) DO UPDATE SET
+        answer_id = EXCLUDED.answer_id,
+        format = EXCLUDED.format,
+        answered_at = EXCLUDED.answered_at
+      WHERE daily_word_reviews.answered_at <= statement_timestamp() - interval '30 seconds'
+        AND daily_word_reviews.answer_id <> EXCLUDED.answer_id
+      RETURNING answered_at
     ), scheduled AS (
       INSERT INTO study_items (
         id, user_id, course_id, kind, ref_id, due, stability, difficulty, elapsed_days,

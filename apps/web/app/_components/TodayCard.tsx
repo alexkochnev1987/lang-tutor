@@ -24,6 +24,7 @@ const KIND_LABEL: Record<CurriculumDay['kind'], string> = {
 
 function stageSummary(stage: Stage, plan: TodayPlan): string {
   const exercises = stage.steps.filter((s) => s.kind === 'exercise').length
+  if (stage.id === 'brainstorm') return `${plan.newWords.length} новых слов`
   if (stage.id === 'words') {
     const parts: string[] = []
     if (plan.reviewCount) parts.push(`${plan.reviewCount} на повторение`)
@@ -119,11 +120,16 @@ function TodayLessonCard({ plan }: { plan: TodayPlan }) {
 
         {plan.deferredCount > 0 && (
           <Row gap="sm" justify="between" className="rounded-card bg-soft2 px-3 py-2">
-            <span className="text-sm text-accent-ink">Не поместилось в бюджет</span>
+            <span className="text-sm text-accent-ink">Повторений вне плана (карточек)</span>
             <span className="text-sm font-semibold tabular-nums text-accent-ink">
               {plan.deferredCount}
             </span>
           </Row>
+        )}
+        {plan.deferredCount > 0 && (
+          <p className="text-xs text-muted">
+            Они не пропали — повторения доступны во вкладке «Слова», когда наступит срок FSRS.
+          </p>
         )}
 
         <Stack gap="xs">

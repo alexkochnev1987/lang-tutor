@@ -171,6 +171,7 @@
     "selectWord": "Select “{word}”",
     "showMore": "Show more · {count} remaining",
     "learn": "Learn",
+    "nextReviewAt": "Next review at {time}",
     "review": "Review today",
     "translation": "Translate",
     "reverse": "Reverse translation",

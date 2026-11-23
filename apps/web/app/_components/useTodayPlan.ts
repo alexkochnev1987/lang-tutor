@@ -1,7 +1,7 @@
 'use client'
 
 import { useEffect, useState } from 'react'
-import { loadState, useAppState } from '@/lib/data/store'
+import { loadState, subscribeDailyWords, useAppState } from '@/lib/data/store'
 import type { AppState } from '@/lib/data/types'
 import { studyDayKey } from '@/lib/data/study-day'
 import { buildTodayPlan, type TodayPlan } from '@/lib/engine/plan'
@@ -22,6 +22,9 @@ export function useTodayPlan() {
   const state = useAppState()
   const key = state ? planKey(state) : null
   const [attempt, setAttempt] = useState(0)
+  // A scheduled review can become due without a date or settings change.
+  // Listen to the shared word-queue timer, writes, tab changes and focus.
+  useEffect(() => subscribeDailyWords(() => setAttempt((count) => count + 1)), [])
   const [result, setResult] = useState<{ key: string | null; plan: TodayPlan | null } | null>(
     () => cachedPlan && cachedPlan.key === key ? cachedPlan : null,
   )
