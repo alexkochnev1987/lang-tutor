@@ -1,7 +1,4 @@
-import {
-  hashString,
-  type Exercise,
-} from "@polski/engine";
+import type { Exercise } from "@polski/engine";
 import {
   currentDayNumber,
   loadCollocations,
@@ -406,7 +403,8 @@ function buildDrillSteps(
   const requested = settings.grammarExercisesPerDay;
   if (requested <= 0) return [];
   const selected = settings.grammarLessonFormats;
-  const candidates: Record<'choice' | 'typed' | 'write', Array<Step & { sourceKey: string }>> = {
+  type DrillCandidate = Extract<Step, { kind: 'exercise' }> & { sourceKey: string }
+  const candidates: Record<'choice' | 'typed' | 'write', DrillCandidate[]> = {
     choice: [], typed: [], write: [],
   };
   const seenIds = new Set<string>();
