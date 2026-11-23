@@ -43,10 +43,26 @@ export const GET = withUser(async ({ userId }) => {
       AND answered.course_id = ${courseId} AND answered.day = calendar.day::text AND answered.lexeme_id = pool.id
     ORDER BY skills.due NULLS LAST, pool.id
   `)
+  // A new word counts once on the calendar day of its first-ever review,
+  // regardless of whether it was learned in the lesson or in /words.
+  const learned = await pg.execute<{ total: number }>(sql`
+    WITH calendar AS (${calendar(userId)})
+    SELECT COUNT(*)::int AS total FROM (
+      SELECT item.ref_id
+      FROM study_items item
+      JOIN review_logs log ON log.user_id = item.user_id AND log.study_item_id = item.id
+      CROSS JOIN calendar
+      WHERE item.user_id = ${userId} AND item.course_id = ${courseId}
+        AND item.kind LIKE 'lexeme-%'
+      GROUP BY item.ref_id, calendar.day, calendar.zone
+      HAVING (MIN(log.reviewed_at) AT TIME ZONE calendar.zone)::date = calendar.day
+    ) first_reviews
+  `)
   return {
     day: rows[0]?.day ?? "",
     learn: rows.filter((row) => row.eligible && !row.seen).map(({ id }) => id),
     review: rows.filter((row) => row.eligible && row.seen).map(({ id }) => id),
+    learnedToday: Number(learned.rows[0]?.total ?? 0),
   }
 })
 

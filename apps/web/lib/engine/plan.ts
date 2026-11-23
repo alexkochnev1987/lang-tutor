@@ -31,7 +31,7 @@ import {
   sentenceWriteDrills,
   type SentenceMode,
 } from "./exercises";
-import { dailyWordExercise, WORD_FORMATS, wordSkill } from "./daily-words";
+import { WORD_FORMATS, wordSkill } from "./daily-words";
 import { buildTodayLesson } from "./session";
 
 export type { SentenceMode } from "./exercises";
@@ -83,11 +83,7 @@ export interface TodayPlan {
 }
 
 const RULE_INTRO_SEC = 60;
-const DRILLS_PER_RULE = 10;
-
 const EXAM_TASK_COUNT = 10;
-const MINIMUM_WORDS_PER_MODE = 10;
-const MINIMUM_WORD_BATCH_SIZE = MINIMUM_WORDS_PER_MODE * 2;
 const COLLOCATION_LIMIT = 3;
 const STRONG_RULE_THRESHOLD = 0.85;
 const MINIMUM_RULE_ATTEMPTS = 3;
@@ -168,7 +164,7 @@ export async function buildTodayPlan(): Promise<TodayPlan> {
   const candidates = [...new Set([...curriculumIds, ...plannedIds, ...dailyQueue.learn])];
   const newWords = candidates
     .filter((id) => learnIds.has(id))
-    .slice(0, state.settings.newWordsPerDay)
+    .slice(0, Math.max(0, state.settings.newWordsPerDay - (dailyQueue.learnedToday ?? 0)))
     .flatMap((id) => vocabulary.get(id) ?? []);
 
   const drillRuleIds =

@@ -210,7 +210,7 @@ export function sentenceDrillsForRule(
       distractors: g.distractors,
     };
     const variants = sentenceDrillVariants(item, ruleId, morphology, salt);
-    const ex = variants[mode] ?? variants.choice ?? variants.typed;
+    const ex = variants[mode];
     if (ex) out.push({ ex, variants, sourceSentence: g.pl.trim().replace(/\s+/g, ' ').toLowerCase() });
   }
   return out;

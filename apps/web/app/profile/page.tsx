@@ -253,7 +253,7 @@ function LessonSettings({ settings }: { settings: LessonPreferences }) {
             ))}
             <p className="text-xs text-muted">{t('grammarLessonHint')}</p>
             <Button type="submit" disabled={!draft} busy={status === 'saving'} busyLabel={t('saving')}>
-              {t('saved') === '' ? 'Save' : t('saveLessonSettings')}
+              {t('saveLessonSettings')}
             </Button>
             {status === 'saved' && <p role="status" className="text-sm text-ok-ink">{t('saved')}</p>}
             {status === 'error' && <p role="alert" className="text-sm text-danger-ink">{t('saveError')}</p>}
