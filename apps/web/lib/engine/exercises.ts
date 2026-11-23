@@ -180,6 +180,7 @@ export function exercisesForRule(
 export type SentenceMode = "choice" | "typed";
 
 export interface SentenceDrill {
+  sourceSentence: string;
   ex: Exercise;
   variants: Partial<Record<SentenceMode, Exercise>>;
 }
@@ -209,8 +210,8 @@ export function sentenceDrillsForRule(
       distractors: g.distractors,
     };
     const variants = sentenceDrillVariants(item, ruleId, morphology, salt);
-    const ex = variants[mode] ?? variants.choice ?? variants.typed;
-    if (ex) out.push({ ex, variants });
+    const ex = variants[mode];
+    if (ex) out.push({ ex, variants, sourceSentence: g.pl.trim().replace(/\s+/g, ' ').toLowerCase() });
   }
   return out;
 }

@@ -42,6 +42,18 @@ function parse(raw: Record<string, unknown>): AppState {
   settings.dailyBudgetMinutes = typeof budget === 'number' && Number.isInteger(budget) && budget >= 5 && budget <= 90
     ? budget
     : DEFAULT_SETTINGS.dailyBudgetMinutes
+  for (const [field, max] of [['newWordsPerDay', 10], ['grammarExercisesPerDay', 20]] as const) {
+    if (!Number.isInteger(settings[field]) || settings[field] < 0 || settings[field] > max) {
+      settings[field] = DEFAULT_SETTINGS[field]
+    }
+  }
+  const validFormats: Settings['grammarLessonFormats'] = ['choice', 'typed', 'write']
+  settings.grammarLessonFormats = Array.isArray(settings.grammarLessonFormats)
+    && settings.grammarLessonFormats.length > 0
+    && new Set(settings.grammarLessonFormats).size === settings.grammarLessonFormats.length
+    && settings.grammarLessonFormats.every((format) => validFormats.includes(format))
+    ? settings.grammarLessonFormats
+    : [...DEFAULT_SETTINGS.grammarLessonFormats]
   if (!Number.isFinite(settings.ttsRate) || settings.ttsRate < 0.5 || settings.ttsRate > 1.5) {
     settings.ttsRate = DEFAULT_SETTINGS.ttsRate
   }

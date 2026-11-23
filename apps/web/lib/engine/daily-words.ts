@@ -18,7 +18,7 @@ export type WordPracticeFormat = (typeof WORD_PRACTICE_FORMATS)[number]
 
 export const wordSkill = (format: WordFormat) => skills[format]
 
-export type DailyWordQueue = { day: string; learn: string[]; review: string[] }
+export type DailyWordQueue = { day: string; learn: string[]; review: string[]; learnedToday?: number }
 export type DailyWordList = 'learn' | 'review'
 export type DailyWordAnswer = AnswerPayload & {
   log: NonNullable<AnswerPayload['log']>

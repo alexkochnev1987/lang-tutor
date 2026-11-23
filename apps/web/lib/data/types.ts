@@ -113,6 +113,8 @@ export interface SessionUser extends ProfileName {
   picture: string | null
 }
 
+export type GrammarLessonFormat = 'choice' | 'typed' | 'write'
+
 export interface Settings {
   uiLanguage: string      // язык интерфейса
   sourceLanguage: string  // язык переводов слов — может отличаться от UI
@@ -120,6 +122,9 @@ export interface Settings {
   ruleLanguage: string
   theme: 'light' | 'dark' | 'system'
   dailyBudgetMinutes: number
+  newWordsPerDay: number
+  grammarExercisesPerDay: number
+  grammarLessonFormats: GrammarLessonFormat[]
   ttsVoiceURI: string | null
   timeZone: string
   ttsRate: number
@@ -132,6 +137,9 @@ export const DEFAULT_SETTINGS: Settings = {
   ruleLanguage: 'ru',
   theme: 'system',
   dailyBudgetMinutes: 15,
+  newWordsPerDay: 4,
+  grammarExercisesPerDay: 10,
+  grammarLessonFormats: ['choice', 'typed', 'write'],
   ttsVoiceURI: null,
   timeZone: 'Europe/Warsaw',
   ttsRate: 0.95,

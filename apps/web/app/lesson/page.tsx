@@ -2,6 +2,8 @@
 
 import { useCallback, useEffect, useRef, useState } from "react";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
+import { BrainstormPractice } from "@/app/_components/BrainstormPractice";
 import { LoadingSkeleton, SkeletonBlock } from "@/app/_components/LoadingSkeleton";
 import { Button, Card, Row, Screen, Stack } from "@polski/ui";
 import type { CheckResult, Exercise } from "@polski/engine";
@@ -70,13 +72,15 @@ type Slot =
     };
 
 const STAGE_LEAD: Record<StageId, string> = {
-  words: "Powtarzamy i poznajemy słowa. Gramatyka będzie osobnym blokiem.",
+  brainstorm: "Poznajemy nowe słowa: cztery zadania na każde.",
+  words: "Powtarzamy poznane słowa. Gramatyka będzie osobnym blokiem.",
   grammar: "Najpierw reguła, potem ćwiczenia. Regułę otworzysz przyciskiem.",
   collocations: "Łączymy znane słowa. Każde słowo ćwiczy własną regułę.",
   exam: "Zadanie w formacie egzaminacyjnym: reguły są wymieszane jak na prawdziwym arkuszu.",
 };
 
 const STAGE_TITLE_PL: Record<StageId, string> = {
+  brainstorm: "Nowe słowa",
   words: "Słowa",
   grammar: "Gramatyka",
   collocations: "Połączenia słów",
@@ -109,6 +113,8 @@ function toSlots(stages: Stage[]): Slot[] {
 }
 
 export default function LessonPage() {
+  const router = useRouter();
+  const [brainstormId] = useState(() => crypto.randomUUID());
   const appState = useAppState();
   const common = useTranslations("common");
   const t = useTranslations("dailyWords");
@@ -480,6 +486,27 @@ export default function LessonPage() {
     );
   }
 
+  if (slot?.kind === "step" && slot.step.kind === "brainstorm") {
+    return <BrainstormPractice
+      key={brainstormId}
+      id={brainstormId}
+      words={slot.step.words}
+      pool={slot.step.pool}
+      dayNumber={plan.dayNumber}
+      canContinue
+      checking={false}
+      loadError={false}
+      onConsume={(_wordId, correct = 0, total = 0) => {
+        setStats((previous) => ({
+          correct: previous.correct + correct,
+          total: previous.total + total,
+        }));
+      }}
+      onContinue={next}
+      onExit={() => router.push("/")}
+    />;
+  }
+
   return (
     <Screen className={wordScreen ? "word-practice-screen" : undefined}>
       <header className="mx-auto w-full max-w-2xl px-4 py-3">
@@ -723,11 +750,13 @@ function StageStart({ stage, onNext }: { stage: Stage; onNext: () => void }) {
   const exercises = stage.steps.reduce(
     (count, step) =>
       count +
-      (step.kind === "exercise"
-        ? 1
-        : step.kind === "exercise-batch"
-          ? step.exercises.length
-          : 0),
+      (step.kind === "brainstorm"
+        ? step.words.length * 4
+        : step.kind === "exercise"
+          ? 1
+          : step.kind === "exercise-batch"
+            ? step.exercises.length
+            : 0),
     0,
   );
   return (

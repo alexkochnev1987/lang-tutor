@@ -32,7 +32,7 @@ export function BrainstormPractice({ id, words, pool, dayNumber, canContinue, ch
   canContinue: boolean
   checking: boolean
   loadError: boolean
-  onConsume: (wordId: string) => void
+  onConsume: (wordId: string, correct?: number, total?: number) => void
   onContinue: () => void
   onExit: () => void
 }) {
@@ -149,7 +149,7 @@ export function BrainstormPractice({ id, words, pool, dayNumber, canContinue, ch
       }
       const accepted = await saveDailyWordAnswer(pending.current)
       pending.current = null
-      onConsume(word.id)
+      if (accepted) onConsume(word.id, finalStages.filter(({ step }) => responses[step.ex.id]?.result.correct).length, finalStages.length)
       setUnavailable(!accepted)
       updateProgress(accepted ? next : { ...progress, unavailable: [...progress.unavailable, word.id] })
     } catch {

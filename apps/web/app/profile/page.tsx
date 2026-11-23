@@ -10,12 +10,13 @@ import { ThemePicker } from '@/app/_components/ThemePicker'
 import { SettingsRow } from '@/app/_components/SettingsRow'
 import { SignInButton } from '@/app/_components/SignInButton'
 import { loadState, saveSettings, useAppState } from '@/lib/data/store'
-import type { Settings } from '@/lib/data/types'
+import type { GrammarLessonFormat, Settings } from '@/lib/data/types'
 import { usePronounce } from '@/lib/speech/usePronounce'
 import { voicesForLanguage } from '@/lib/speech/tts'
 import { speechTagForLanguage } from '@/lib/speech/recognition'
 
 type StudySettings = Pick<Settings, 'targetLanguage' | 'dailyBudgetMinutes' | 'ttsVoiceURI' | 'ttsRate'>
+type LessonPreferences = Pick<Settings, 'newWordsPerDay' | 'grammarExercisesPerDay' | 'grammarLessonFormats'>
 
 export default function ProfilePage() {
   const t = useTranslations()
@@ -79,6 +80,7 @@ export default function ProfilePage() {
             </Stack>
           </Card>
         )}
+        {state && <LessonSettings key={`lesson-${state.user.id}`} settings={state.settings} />}
       </Stack>
     </TabBody>
   )
@@ -178,6 +180,83 @@ function StudyPreferences({ settings }: { settings: StudySettings }) {
             </Button>
             {status === 'saved' && <p role="status" className="text-sm text-ok-ink">{t('profile.saved')}</p>}
             {status === 'error' && <p role="alert" className="text-sm text-danger-ink">{t('profile.saveError')}</p>}
+          </Stack>
+        </fieldset>
+      </form>
+    </Card>
+  )
+}
+
+
+function LessonSettings({ settings }: { settings: LessonPreferences }) {
+  const t = useTranslations('profile')
+  const [draft, setDraft] = useState<LessonPreferences | null>(null)
+  const [status, setStatus] = useState<'idle' | 'saving' | 'saved' | 'error'>('idle')
+  const values = draft ?? settings
+  const formats: { id: GrammarLessonFormat; label: string }[] = [
+    { id: 'choice', label: t('lessonChoice') },
+    { id: 'typed', label: t('lessonTyped') },
+    { id: 'write', label: t('lessonWrite') },
+  ]
+
+  function change(patch: Partial<LessonPreferences>) {
+    setDraft({ ...values, ...patch })
+    setStatus('idle')
+  }
+
+  async function save() {
+    if (!draft || status === 'saving') return
+    setStatus('saving')
+    try {
+      await saveSettings(draft)
+      setDraft(null)
+      setStatus('saved')
+    } catch {
+      setStatus('error')
+    }
+  }
+
+  return (
+    <Card>
+      <form onSubmit={(event) => { event.preventDefault(); void save() }}>
+        <fieldset disabled={status === 'saving'} className="min-w-0">
+          <legend className="mb-3 text-lg font-semibold tracking-tight">{t('lessonSettings')}</legend>
+          <Stack gap="md">
+            <label className="flex flex-col gap-1 text-sm font-medium">
+              {t('newWordsPerDay')}
+              <input type="number" min={0} max={10} required
+                value={values.newWordsPerDay}
+                onChange={(event) => change({ newWordsPerDay: event.target.valueAsNumber })}
+                className="min-h-11 w-24 rounded-card border border-line bg-card px-2" />
+            </label>
+            <p className="text-xs text-muted">{t('newWordsHint')}</p>
+            <label className="flex flex-col gap-1 text-sm font-medium">
+              {t('grammarExercisesPerDay')}
+              <input type="number" min={0} max={20} required
+                value={values.grammarExercisesPerDay}
+                onChange={(event) => change({ grammarExercisesPerDay: event.target.valueAsNumber })}
+                className="min-h-11 w-24 rounded-card border border-line bg-card px-2" />
+            </label>
+            <p className="text-sm font-medium">{t('grammarLessonFormats')}</p>
+            {formats.map(({ id, label }) => (
+              <label key={id} className="flex min-h-10 items-center gap-3 text-sm">
+                <input type="checkbox" className="size-5 accent-primary"
+                  checked={values.grammarLessonFormats.includes(id)}
+                  disabled={values.grammarLessonFormats.length === 1 && values.grammarLessonFormats.includes(id)}
+                  onChange={(event) => change({
+                    grammarLessonFormats: event.target.checked
+                      ? [...values.grammarLessonFormats, id]
+                      : values.grammarLessonFormats.filter((format) => format !== id),
+                  })} />
+                {label}
+              </label>
+            ))}
+            <p className="text-xs text-muted">{t('grammarLessonHint')}</p>
+            <Button type="submit" disabled={!draft} busy={status === 'saving'} busyLabel={t('saving')}>
+              {t('saveLessonSettings')}
+            </Button>
+            {status === 'saved' && <p role="status" className="text-sm text-ok-ink">{t('saved')}</p>}
+            {status === 'error' && <p role="alert" className="text-sm text-danger-ink">{t('saveError')}</p>}
           </Stack>
         </fieldset>
       </form>
