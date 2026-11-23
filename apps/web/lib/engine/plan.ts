@@ -1,4 +1,4 @@
-import type { Exercise } from "@polski/engine";
+import { hashString, type Exercise } from "@polski/engine";
 import {
   currentDayNumber,
   loadCollocations,
@@ -31,7 +31,7 @@ import {
   sentenceWriteDrills,
   type SentenceMode,
 } from "./exercises";
-import { WORD_FORMATS, wordSkill } from "./daily-words";
+import { dailyWordExercise, WORD_FORMATS, wordSkill } from "./daily-words";
 import { buildTodayLesson } from "./session";
 
 export type { SentenceMode } from "./exercises";
