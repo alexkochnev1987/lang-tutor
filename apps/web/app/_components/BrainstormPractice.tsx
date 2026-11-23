@@ -52,6 +52,7 @@ export function BrainstormPractice({ id, words, pool, dayNumber, canContinue, ch
   const pending = useRef<DailyWordSubmission | null>(null)
   const writing = useRef(false)
   const main = useRef<HTMLElement>(null)
+  const [answerTarget, setAnswerTarget] = useState<HTMLDivElement | null>(null)
   const prefix = `${id}:`
   const base = useMemo(() => oneAttemptWordSteps(buildWordStudySteps(words, pool, prefix)), [words, pool, prefix])
   const stages = useMemo(() => {
@@ -188,7 +189,7 @@ export function BrainstormPractice({ id, words, pool, dayNumber, canContinue, ch
         {exercise && (
           <ExerciseView key={exercise.id} exercise={exercise} onAnswered={remember} autoFocus={false}
             showSpeakButton={exercise.kind === 'listen-write' || exercise.kind === 'translate-recognition'
-              || exercise.kind === 'false-friend-contrast' || Boolean(response)} submitFormId={formId} />
+              || exercise.kind === 'false-friend-contrast' || Boolean(response)} submitFormId={formId} answerTarget={answerTarget} />
         )}
         {!step && (
           <Card><Stack gap="sm">
@@ -205,6 +206,7 @@ export function BrainstormPractice({ id, words, pool, dayNumber, canContinue, ch
         label={failed ? t('retry')
           : formId && !response ? t('check') : step ? t('next') : canContinue ? t('continue') : t('backToFormats')}
         formId={response ? undefined : formId}
+        answerTargetRef={formId ? setAnswerTarget : undefined}
         disabled={saving || checking || Boolean(exercise && !formId && !response)}
         onNext={step ? () => void advance() : canContinue ? onContinue : () => leave(onExit)}
       />
