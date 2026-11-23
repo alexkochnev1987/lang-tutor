@@ -25,7 +25,7 @@ import {
   type RuleLanguage,
 } from "@/lib/content/rules";
 import { knownLexemeIds, loadDailyWords, loadState } from "@/lib/data/store";
-import type { StudyItemRow } from "@/lib/data/types";
+import type { Settings, StudyItemRow } from "@/lib/data/types";
 import {
   collocationDrills,
   exercisesForRule,
@@ -39,15 +39,17 @@ import { buildTodayLesson } from "./session";
 
 export type { SentenceMode } from "./exercises";
 
-export type StageId = "words" | "grammar" | "collocations" | "exam";
+export type StageId = "brainstorm" | "words" | "grammar" | "collocations" | "exam";
 
 export const STAGE_TITLE: Record<StageId, string> = {
+  brainstorm: "Новые слова",
   words: "Слова",
   grammar: "Грамматика",
   collocations: "Сочетания",
   exam: "Экзаменационное задание",
 };
 export type Step =
+  | { kind: "brainstorm"; words: Lexeme[]; pool: Lexeme[] }
   | { kind: "rule-intro"; rule: LocalizedRule }
   | {
       kind: "exercise-batch";
@@ -85,8 +87,7 @@ export interface TodayPlan {
 
 const RULE_INTRO_SEC = 60;
 const DRILLS_PER_RULE = 10;
-const MIN_GRAMMAR_EXAMPLES_PER_TYPE = 10;
-const WRITE_TASKS_PER_RULE = 2;
+
 const EXAM_TASK_COUNT = 10;
 const MINIMUM_WORDS_PER_MODE = 10;
 const MINIMUM_WORD_BATCH_SIZE = MINIMUM_WORDS_PER_MODE * 2;
@@ -114,8 +115,10 @@ const MISSING_CONTENT_FOR_MODULE: Record<string, string> = {
 };
 
 const stepSec = (step: Step): number =>
-  step.kind === "exercise"
-    ? step.ex.estimatedSec
+  step.kind === "brainstorm"
+    ? step.words.length * 80
+    : step.kind === "exercise"
+      ? step.ex.estimatedSec
     : step.kind === "exercise-batch"
       ? step.exercises.reduce((sec, exercise) => sec + exercise.estimatedSec, 0)
       : RULE_INTRO_SEC;
@@ -161,26 +164,15 @@ export async function buildTodayPlan(): Promise<TodayPlan> {
   const reviewSteps = buildReviewSteps(
     lesson.activities, state.studyItems, vocabulary, practisedPool, reviewIds,
   );
-  const newWords = [...new Set(
-    lesson.activities.find((activity) => activity.kind === "new-words")?.refIds ?? [],
-  )].flatMap((id) => {
-    const word = vocabulary.get(id);
-    return word && learnIds.has(id) ? [word] : [];
-  });
-  const newWordSteps = newWords.map((word): Step => ({
-    kind: "exercise", ex: dailyWordExercise(word, practisedPool, "translation", hashString(word.id)),
-    review: false, rule: null, newWord: word,
-  }));
-  const usedWordIds = new Set([
-    ...newWords.map(({ id }) => id),
-    ...reviewSteps.flatMap((step) => step.kind === "exercise" && step.ex.lexemeId ? [step.ex.lexemeId] : []),
-  ]);
-  const courseWords = curriculum.days.slice(0, dayNumber).reverse().flatMap(({ lexemeIds }) => lexemeIds ?? []);
-  const minimumWordCandidates = [...new Set([...reviewIds, ...courseWords, ...learnIds])]
-    .filter((id) => (reviewIds.has(id) || learnIds.has(id)) && !usedWordIds.has(id));
-  const minimumWordBatch = buildMinimumWordBatch(
-    dayNumber, practisedPool, minimumWordCandidates, vocabulary,
-  );
+  // Use an ordered curriculum backlog instead of selecting fresh words every
+  // render. Consume only entries still eligible in the shared daily queue.
+  const plannedIds = lesson.activities.find((activity) => activity.kind === "new-words")?.refIds ?? [];
+  const curriculumIds = curriculum.days.slice(0, dayNumber).flatMap(({ lexemeIds }) => lexemeIds ?? []);
+  const candidates = [...new Set([...curriculumIds, ...plannedIds, ...dailyQueue.learn])];
+  const newWords = candidates
+    .filter((id) => learnIds.has(id))
+    .slice(0, state.settings.newWordsPerDay)
+    .flatMap((id) => vocabulary.get(id) ?? []);
 
   const drillRuleIds =
     lesson.activities.find((a) => a.kind === "grammar-drill")?.refIds ?? [];
@@ -195,6 +187,7 @@ export async function buildTodayPlan(): Promise<TodayPlan> {
     sentences,
     localized,
     dayNumber,
+    state.settings,
   );
   const collocationSteps = buildCollocationSteps(collocations, state, localized, dayNumber);
 
@@ -218,12 +211,18 @@ export async function buildTodayPlan(): Promise<TodayPlan> {
 
   const stages: Stage[] = [];
 
-  const wordSteps = [...reviewSteps, ...newWordSteps].map((step) => step.kind === "exercise"
+  if (newWords.length) {
+    stages.push({
+      id: "brainstorm",
+      steps: [{ kind: "brainstorm", words: newWords, pool: practisedPool }],
+      estimatedSec: newWords.length * 80,
+      rule: null,
+      missingContent: null,
+    });
+  }
+
+  const wordSteps = reviewSteps.map((step) => step.kind === "exercise"
     ? { ...step, ex: { ...step.ex, id: `${dailyQueue.day}:${step.ex.id}` } } : step);
-  if (minimumWordBatch) wordSteps.push({
-    ...minimumWordBatch,
-    exercises: minimumWordBatch.exercises.map((exercise) => ({ ...exercise, id: `${dailyQueue.day}:${exercise.id}` })),
-  });
   if (wordSteps.length) {
     stages.push({
       id: "words",
@@ -234,7 +233,7 @@ export async function buildTodayPlan(): Promise<TodayPlan> {
     });
   }
 
-  if (dayRule || drillSteps.length) {
+  if (state.settings.grammarExercisesPerDay > 0 && (dayRule || drillSteps.length)) {
     const steps: Step[] = dayRule
       ? [{ kind: "rule-intro", rule: dayRule }, ...drillSteps]
       : drillSteps;
@@ -281,39 +280,6 @@ export async function buildTodayPlan(): Promise<TodayPlan> {
     newWords,
     reviewCount: reviewSteps.length,
     deferredCount: lesson.queue.deferred,
-  };
-}
-
-function buildMinimumWordBatch(
-  dayNumber: number,
-  pool: Lexeme[],
-  available: string[],
-  vocabulary: Map<string, Lexeme>,
-): Extract<Step, { kind: "exercise-batch" }> | null {
-  const usedTranslations = new Set<string>();
-  const words: Lexeme[] = [];
-  for (const id of available) {
-    const word = vocabulary.get(id);
-    if (!word) continue;
-    const translation = word.translation.trim().toLocaleLowerCase();
-    if (!translation || usedTranslations.has(translation)) continue;
-    usedTranslations.add(translation);
-    words.push(word);
-    if (words.length >= MINIMUM_WORD_BATCH_SIZE) break;
-  }
-  if (!words.length) return null;
-  const writingCount = Math.min(MINIMUM_WORDS_PER_MODE, Math.ceil(words.length / 2));
-  return {
-    kind: "exercise-batch",
-    exercises: words.map((word, index) => {
-      const format = index < writingCount ? "writing" : "translation";
-      return {
-        ...dailyWordExercise(word, pool, format, hashString(`minimum-words:${dayNumber}:${word.id}`)),
-        id: `ex.minimum-words.${dayNumber}.${format}.${word.id}`,
-      };
-    }),
-    title: "Minimum leksykalne",
-    description: `Wpisz ${writingCount}, wybierz ${words.length - writingCount}.`,
   };
 }
 
@@ -435,61 +401,63 @@ function buildDrillSteps(
   sentences: SentencePack,
   localized: (id: string) => LocalizedRule | null,
   dayNumber: number,
+  settings: Pick<Settings, 'grammarExercisesPerDay' | 'grammarLessonFormats'>,
 ): Step[] {
-  // Each answer mode gets its own quota. We deliberately build both pools
-  // from the same sentence pack instead of choosing one mode per rule: one
-  // rule must never produce ten typed items and only two choice items.
-  function buildModeSteps(mode: SentenceMode): Step[] {
-    const candidates: Step[] = [];
-    const used = new Set<string>();
-
-    for (const ruleId of ruleIds) {
-      if (candidates.length >= MIN_GRAMMAR_EXAMPLES_PER_TYPE) break;
-      const rule = localized(ruleId);
-      const drills = sentenceDrillsForRule(
-        ruleId,
-        sentences,
-        morphology,
-        mode,
-        dayNumber,
-        MIN_GRAMMAR_EXAMPLES_PER_TYPE - candidates.length,
-      );
-      for (const d of drills) {
-        if (used.has(d.ex.id)) continue;
-        used.add(d.ex.id);
-        candidates.push({
-          kind: "exercise",
-          ex: d.ex,
-          review: false,
-          rule,
-          variants: d.variants,
-        });
-        if (candidates.length >= MIN_GRAMMAR_EXAMPLES_PER_TYPE) break;
-      }
-    }
-
-    // An incomplete block is worse than no block: the content pack must be
-    // extended instead of silently replacing sentence exercises with a
-    // one-word paradigm drill.
-    return candidates.length >= MIN_GRAMMAR_EXAMPLES_PER_TYPE ? candidates : [];
-  }
-
-  const choiceSteps = buildModeSteps("choice");
-  const typedSteps = buildModeSteps("typed");
-  const steps = [...choiceSteps, ...typedSteps];
+  const requested = settings.grammarExercisesPerDay;
+  if (requested <= 0) return [];
+  const selected = settings.grammarLessonFormats;
+  const candidates: Record<'choice' | 'typed' | 'write', Array<Step & { sourceKey: string }>> = {
+    choice: [], typed: [], write: [],
+  };
+  const seenIds = new Set<string>();
 
   for (const ruleId of ruleIds) {
     const rule = localized(ruleId);
-    steps.push(
-      ...sentenceWriteDrills(
-        ruleId,
-        sentences,
-        dayNumber,
-        WRITE_TASKS_PER_RULE,
-      ).map((ex): Step => ({ kind: "exercise", ex, review: false, rule })),
-    );
+    for (const mode of ['choice', 'typed'] as const) {
+      if (!selected.includes(mode)) continue;
+      for (const drill of sentenceDrillsForRule(ruleId, sentences, morphology, mode, dayNumber, requested)) {
+        if (seenIds.has(drill.ex.id)) continue;
+        seenIds.add(drill.ex.id);
+        candidates[mode].push({
+          kind: 'exercise', ex: drill.ex, review: false, rule,
+          variants: drill.variants, sourceKey: drill.sourceSentence,
+        });
+      }
+    }
+    if (selected.includes('write')) {
+      for (const ex of sentenceWriteDrills(ruleId, sentences, dayNumber, requested)) {
+        if (seenIds.has(ex.id)) continue;
+        seenIds.add(ex.id);
+        candidates.write.push({
+          kind: 'exercise', ex, review: false, rule, sourceKey: ex.prompt.trim().toLowerCase(),
+        });
+      }
+    }
   }
 
+  const steps: Step[] = [];
+  const usedSources = new Set<string>();
+  const usedExercises = new Set<string>();
+  // Distribute the requested total across enabled types, without repeating a
+  // sentence when choice and typed versions share the same corpus record.
+  let remaining = requested;
+  while (remaining > 0) {
+    let added = false;
+    for (const mode of selected) {
+      const pool = candidates[mode];
+      const nextIndex = pool.findIndex(({ sourceKey, ex }) => !usedSources.has(sourceKey) && !usedExercises.has(ex.id));
+      if (nextIndex < 0) continue;
+      const next = pool.splice(nextIndex, 1)[0]!;
+      const { sourceKey, ...step } = next;
+      usedSources.add(sourceKey);
+      usedExercises.add(step.ex.id);
+      steps.push(step);
+      remaining--;
+      added = true;
+      if (remaining === 0) break;
+    }
+    if (!added) break;
+  }
   return steps;
 }
 
