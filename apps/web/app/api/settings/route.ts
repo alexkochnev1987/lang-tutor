@@ -14,7 +14,8 @@ export const dynamic = 'force-dynamic'
 
 const ALLOWED = new Set([
   'uiLanguage', 'sourceLanguage', 'targetLanguage', 'ruleLanguage',
-  'theme', 'dailyBudgetMinutes', 'ttsVoiceURI', 'ttsRate', 'timeZone',
+  'theme', 'dailyBudgetMinutes', 'newWordsPerDay', 'grammarExercisesPerDay',
+  'grammarLessonFormats', 'ttsVoiceURI', 'ttsRate', 'timeZone',
 ])
 
 export const PATCH = withUser(async ({ userId, req }) => {
@@ -25,7 +26,17 @@ export const PATCH = withUser(async ({ userId, req }) => {
   if (clean.targetLanguage !== undefined && clean.targetLanguage !== 'pl') {
     throw new Error('unsupported_target_language')
   }
-  const { dailyBudgetMinutes, ttsRate, ttsVoiceURI, timeZone } = clean
+  const { dailyBudgetMinutes, newWordsPerDay, grammarExercisesPerDay, grammarLessonFormats, ttsRate, ttsVoiceURI, timeZone } = clean
+  for (const [value, max] of [[newWordsPerDay, 10], [grammarExercisesPerDay, 20]] as const) {
+    if (value !== undefined && (typeof value !== 'number' || !Number.isInteger(value) || value < 0 || value > max)) {
+      throw new Error('bad_lesson_settings')
+    }
+  }
+  if (grammarLessonFormats !== undefined && (
+    !Array.isArray(grammarLessonFormats) || grammarLessonFormats.length === 0
+    || grammarLessonFormats.length > 3 || new Set(grammarLessonFormats).size !== grammarLessonFormats.length
+    || !grammarLessonFormats.every((format) => typeof format === 'string' && ['choice', 'typed', 'write'].includes(format))
+  )) throw new Error('bad_grammar_formats')
   if (timeZone !== undefined) {
     if (typeof timeZone !== 'string' || !timeZone || timeZone.startsWith('+') || timeZone.startsWith('-')) {
       throw new Error('bad_time_zone')

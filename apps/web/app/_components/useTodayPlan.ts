@@ -13,7 +13,8 @@ function planKey(state: AppState): string {
   const completedDays = state.sessions.filter((session) => session.kind === 'day' && session.completedAt)
   return JSON.stringify([
     state.user.id, settings.timeZone, studyDayKey(settings.timeZone), settings.ruleLanguage,
-    settings.dailyBudgetMinutes, state.course?.startedAt, completedDays.map(({ dayNumber }) => dayNumber).sort(),
+    settings.dailyBudgetMinutes, settings.newWordsPerDay, settings.grammarExercisesPerDay,
+    settings.grammarLessonFormats, state.course?.startedAt, completedDays.map(({ dayNumber }) => dayNumber).sort(),
   ])
 }
 
