@@ -561,6 +561,13 @@ export function ExerciseView({
         () => result ? (result.correct ? typed.trim() : result.expected) : "…",
       )
     : speakableTextOf(exercise);
+  // Word exercises sometimes unlock pronunciation only after an answer.
+  // Reserve its place beside the prompt from the start so that revealing
+  // the control never pushes answer choices down the mobile screen.
+  const wordSpeakerSlot = Boolean(
+    exercise.lexemeId && speakText && !isSentence && !isReading &&
+    !isListenChoice && !isListenWrite,
+  );
 
   function updateTyped(value: string) {
     lastCheckedValue.current = null;
@@ -699,8 +706,10 @@ export function ExerciseView({
         <Row
           gap="sm"
           justify={leadingNumber !== undefined ? "start" : "center"}
-          align="baseline"
-          className={leadingNumber !== undefined ? "w-full" : undefined}
+          align={wordSpeakerSlot ? "center" : "baseline"}
+          className={wordSpeakerSlot
+            ? "relative min-h-12 w-full px-14"
+            : leadingNumber !== undefined ? "w-full" : undefined}
         >
           {leadingNumber !== undefined && (
             <span className={`shrink-0 font-semibold text-muted ${compactSentence ? "text-sm" : "text-base sm:text-lg"}`}>
@@ -760,10 +769,15 @@ export function ExerciseView({
               />
             </div>
           )}
+          {wordSpeakerSlot && showSpeakButton && speakText && (
+            <div className="absolute right-0 top-1/2 -translate-y-1/2">
+              <SpeakIcon text={speakText} ariaLabel="Odtwórz wymowę" />
+            </div>
+          )}
         </Row>
       </Stack>
 
-      {!compactSentence && (showSpeakButton || isListenChoice) && speakText && (
+      {!compactSentence && !wordSpeakerSlot && (showSpeakButton || isListenChoice) && speakText && (
         <div className="flex justify-center">
           <SpeakIcon
             text={speakText}
@@ -868,7 +882,12 @@ export function ExerciseView({
         </Stack>
       )}
 
-      {!submitFormId && <div className={compactSentence ? "empty:hidden text-sm" : "min-h-6 text-sm"}>{answerFeedback}</div>}
+      {!submitFormId && (
+        <div role="status" aria-live="polite"
+          className={compactSentence ? "empty:hidden text-sm" : "min-h-7 text-sm"}>
+          {answerFeedback}
+        </div>
+      )}
     </Stack>
   );
 
