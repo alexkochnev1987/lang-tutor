@@ -47,6 +47,11 @@ export function DailyWordCounts() {
           )}
         </Link>
       ))}
+      {queue?.review.length === 0 && queue.nextReviewAt && (
+        <p role="status" className="col-span-2 text-xs text-muted">
+          {t('nextReviewAt', { time: new Date(queue.nextReviewAt).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }) })}
+        </p>
+      )}
       {!queue && !failed && <p role="status" className="col-span-2 text-xs text-muted">{loading('wordCounts')}</p>}
     </div>
   )

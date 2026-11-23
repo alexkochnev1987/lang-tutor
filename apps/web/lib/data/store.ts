@@ -421,10 +421,30 @@ export function subscribeDailyWords(listener: () => void) {
 
 let dailyQueueRequest: Promise<DailyWordQueue> | null = null
 let dailyQueueSnapshot: { userId: string; timeZone: string; queue: DailyWordQueue } | null = null
+let nextReviewTimer: ReturnType<typeof setTimeout> | null = null
+
+function clearNextReviewTimer() {
+  if (nextReviewTimer !== null) clearTimeout(nextReviewTimer)
+  nextReviewTimer = null
+}
 
 function invalidateDailyWords() {
+  clearNextReviewTimer()
   dailyQueueRequest = null
   dailyQueueSnapshot = null
+}
+
+function scheduleNextReview(queue: DailyWordQueue) {
+  clearNextReviewTimer()
+  if (!queue.nextReviewAt) return
+  const dueAt = Date.parse(queue.nextReviewAt)
+  if (!Number.isFinite(dueAt)) return
+  // Offset past the due boundary to avoid clock precision / request races.
+  const delay = Math.max(1000, dueAt - Date.now() + 500)
+  nextReviewTimer = setTimeout(() => {
+    invalidateDailyWords()
+    window.dispatchEvent(new Event(DAILY_WORD_EVENT))
+  }, Math.min(delay, 2_147_483_647))
 }
 
 export function getCachedDailyWords(): DailyWordQueue | null {
@@ -443,6 +463,7 @@ export function loadDailyWords() {
     if (dailyQueueRequest === pending && snapshot?.user.id === user.id &&
       snapshot.settings.timeZone === settings.timeZone) {
       dailyQueueSnapshot = { userId: user.id, timeZone: settings.timeZone, queue }
+      scheduleNextReview(queue)
     }
     return queue
   }).finally(() => { if (dailyQueueRequest === pending) dailyQueueRequest = null })

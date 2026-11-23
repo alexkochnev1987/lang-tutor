@@ -44,6 +44,34 @@ describe('FSRS-обёртка', () => {
     expect(log.rating).toBe(Rating.Good)
   })
 
+  it('ошибку нужно повторить сегодня в момент FSRS due, а не завтра', () => {
+    const scheduler = createScheduler()
+    const id = 'lexeme-recognition:pl.sklep'
+    const first = rate(
+      scheduler,
+      newItem(id, 'lexeme-recognition', 'pl.sklep', NOW),
+      Rating.Again,
+      NOW,
+    ).item
+    const nextDue = first.card.due.getTime()
+    expect(nextDue).toBeGreaterThan(NOW.getTime())
+    expect(nextDue - NOW.getTime()).toBeLessThanOrEqual(10 * 60_000)
+
+    const early = buildQueue({
+      scheduler, items: [first], now: new Date(nextDue - 1), budgetSec: 600,
+    })
+    expect(early.due).toHaveLength(0)
+
+    const atDue = buildQueue({
+      scheduler, items: [first], now: new Date(nextDue), budgetSec: 600,
+    })
+    expect(atDue.due.map(({ id }) => id)).toEqual([id])
+
+    const second = rate(scheduler, first, Rating.Good, new Date(nextDue)).item
+    expect(second.card.last_review?.getTime()).toBe(nextDue)
+    expect(second.card.due.getTime()).toBeGreaterThan(nextDue)
+  })
+
   it('Again назначает более ранний повтор, чем Easy', () => {
     const s = createScheduler()
     const item = newItem('a', 'lexeme-recognition', 'pl.dom', NOW)
