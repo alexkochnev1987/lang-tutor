@@ -44,7 +44,7 @@ export function wordsForFormat(queue: DailyWordQueue | null, list: DailyWordList
 export function buildDailyWordLists(rows: readonly {
   id: string; seen: boolean; known: boolean; kinds: string[] | null; due_kinds: string[] | null
 }[]): Pick<DailyWordQueue, 'learn' | 'review' | 'reviewByFormat'> {
-  const reviewByFormat = Object.fromEntries(WORD_SKILL_FORMATS.map((format) => [format, []])) as Record<WordFormat, string[]>
+  const reviewByFormat: Record<WordFormat, string[]> = { translation: [], reverse: [], writing: [], listening: [], pronunciation: [] }
   const learn: string[] = []
   const review: string[] = []
   for (const row of rows) {
