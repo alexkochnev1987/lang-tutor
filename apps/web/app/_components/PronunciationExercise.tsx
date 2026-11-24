@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from 'react'
 import { useTranslations } from 'next-intl'
 import { Button, Row, Stack } from '@polski/ui'
-import { ExerciseActions, ExerciseCard, ExerciseFeedback, ExerciseSlot } from './exercise/ExerciseCard'
+import { ExerciseActions, ExerciseCard, ExerciseContent, ExerciseFeedback, ExercisePromptArea, ExerciseSlot } from './exercise/ExerciseCard'
 import type { CheckResult } from '@polski/engine'
 import { useSettings } from '@/lib/data/store'
 import { createBrowserRecognition, pronunciationMatches, speechTagForLanguage, type BrowserRecognition } from '@/lib/speech/recognition'
@@ -133,9 +133,11 @@ export function PronunciationExercise({ mode = 'word', prompt, expected, matches
 
   return (
     <ExerciseCard tone={finished ? (feedback?.correct ? 'correct' : 'wrong') : 'neutral'}>
-      <Stack gap="sm">
-        <p className="text-sm text-muted">{isPhrase ? phrase('say') : t('instruction')}</p>
-        {prompt && <p className="text-xl font-semibold" lang="ru">{prompt}</p>}
+      <ExerciseContent compact>
+        <ExercisePromptArea practice={!isPhrase}>
+          <p className="text-center text-sm text-muted">{isPhrase ? phrase('say') : t('instruction')}</p>
+          {prompt && <p className="text-center text-xl font-semibold break-words" lang="ru">{prompt}</p>}
+        </ExercisePromptArea>
         <div>
           <Button variant="ghost" size="sm" onClick={() => setHintVisible((visible) => !visible)}>
             {isPhrase ? phrase(hintVisible ? 'hideHint' : 'showHint') : t(hintVisible ? 'hideHint' : 'showHint')}
@@ -176,7 +178,7 @@ export function PronunciationExercise({ mode = 'word', prompt, expected, matches
             {onSkip && <Button variant="ghost" onClick={onSkip} disabled={listening}>{isPhrase ? phrase('skipMic') : t('skip')}</Button>}
           </Row>
         </ExerciseActions>
-      </Stack>
+      </ExerciseContent>
     </ExerciseCard>
   )
 }

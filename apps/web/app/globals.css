@@ -127,14 +127,18 @@ input, select, textarea {
   height: var(--study-viewport-height, 100dvh);
 }
 
-@media (max-width: 40rem) {
-  .word-practice-screen:has([data-word-answer]:focus) .word-practice-metadata {
-    display: none;
-  }
+/* The keyboard changes the available scroll area, never the card's layout.
+   On short screens scroll only the main region, not the header/footer. */
+.word-practice-screen > main {
+  min-height: 0;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  overflow-anchor: none;
+}
 
-  .word-practice-footer:has([data-word-answer]:focus) {
-    padding-bottom: 0.5rem;
-  }
+.word-practice-screen > header,
+.word-practice-screen > footer {
+  flex-shrink: 0;
 }
 
 /* Both word practice formats own their full-screen layout and safe areas. */

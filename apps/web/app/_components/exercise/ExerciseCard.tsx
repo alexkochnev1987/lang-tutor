@@ -10,9 +10,25 @@ export function ExerciseCard({ children, tone = 'neutral', metadata, bare = fals
 }) {
   if (bare) return <>{children}</>
   return <Card tone={tone} data-exercise-card="">
-    {metadata && <div className="word-practice-metadata mb-2 flex flex-wrap items-center justify-between gap-3">{metadata}</div>}
+    {metadata && <div className="mb-2 flex flex-wrap items-center justify-between gap-3">{metadata}</div>}
     {children}
   </Card>
+}
+
+/** The prompt keeps its footprint regardless of keyboard or grading state. */
+export function ExercisePromptArea({ children, practice = false }: { children: ReactNode; practice?: boolean }) {
+  return practice
+    ? <div data-exercise-prompt-area="" className="flex min-h-28 w-full min-w-0 flex-col justify-center rounded-card bg-soft px-3 py-3">{children}</div>
+    : <>{children}</>
+}
+
+/** The input stays in the card; the shared footer submits it by form ID. */
+export function ExerciseAnswerForm({ children, formId, onSubmit }: { children: ReactNode; formId?: string; onSubmit: () => void }) {
+  if (!formId) return <>{children}</>
+  return <form id={formId} className="w-full min-w-0" onSubmit={(event) => {
+    event.preventDefault()
+    onSubmit()
+  }}>{children}</form>
 }
 
 export function ExerciseContent({ children, compact = false }: { children: ReactNode; compact?: boolean }) {

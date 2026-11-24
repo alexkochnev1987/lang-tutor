@@ -2,9 +2,8 @@
 
 import { useEffect, useRef, useState } from "react";
 import type { ReactNode } from "react";
-import { createPortal } from "react-dom";
 import { Button, OptionRow, Row, Stack } from "@polski/ui";
-import { ExerciseCard, ExerciseContent, ExerciseFeedback, ExercisePrompt, ExerciseSlot } from "./exercise/ExerciseCard";
+import { ExerciseAnswerForm, ExerciseCard, ExerciseContent, ExerciseFeedback, ExercisePrompt, ExercisePromptArea, ExerciseSlot } from "./exercise/ExerciseCard";
 import { check, type CheckResult, type Exercise } from "@polski/engine";
 import { usePronounce } from "@/lib/speech/usePronounce";
 import { getCachedVocabulary } from "@/lib/content/curriculum";
@@ -17,11 +16,11 @@ export function SpeakIcon({
   ariaLabel,
 }: {
   text: string;
-  size?: "sm" | "md";
+  size?: "sm" | "md" | "lg";
   ariaLabel?: string;
 }) {
   const { pronounce, message } = usePronounce();
-  const cls = size === "sm" ? "size-10 text-sm" : "size-12 text-xl";
+  const cls = size === "sm" ? "size-10 text-sm" : size === "lg" ? "size-16 text-2xl" : "size-12 text-xl";
   return (
     <button
       type="button"
@@ -456,7 +455,7 @@ export function ExerciseView({
   topLeftStatus,
   topRightAction,
   submitFormId,
-  answerTarget,
+  practice = false,
 }: {
   exercise: Exercise;
   onAnswered: (
@@ -486,7 +485,7 @@ export function ExerciseView({
   topLeftStatus?: ReactNode;
   topRightAction?: ReactNode;
   submitFormId?: string;
-  answerTarget?: HTMLDivElement | null;
+  practice?: boolean;
 }) {
   const t = useTranslations("dailyWords");
   const [result, setResult] = useState<CheckResult | null>(null);
@@ -498,7 +497,7 @@ export function ExerciseView({
   const started = useRef(Date.now());
   const lastCheckedValue = useRef<string | null>(null);
   const autoPronouncedExercise = useRef<string | null>(null);
-  const dockedInput = useRef<HTMLInputElement>(null);
+  const answerInput = useRef<HTMLInputElement>(null);
   const { pronounce } = usePronounce();
 
   useEffect(() => {
@@ -596,7 +595,7 @@ export function ExerciseView({
     const nextWrongTries = r.correct ? wrongTries : [...wrongTries, answer];
     if (!r.correct) setWrongTries(nextWrongTries);
     setResult(r);
-    dockedInput.current?.blur();
+    answerInput.current?.blur();
     if (typeof navigator !== "undefined" && "vibrate" in navigator) {
       navigator.vibrate(r.correct ? 12 : [18, 35, 18]);
     }
@@ -635,7 +634,7 @@ export function ExerciseView({
       autoFocus={autoFocus}
       value={typed}
       disabled={Boolean(result)}
-      ref={submitFormId ? dockedInput : undefined}
+      ref={submitFormId ? answerInput : undefined}
       data-word-answer={submitFormId ? "" : undefined}
       aria-label={exercise.instruction}
       enterKeyHint={submitFormId ? "done" : undefined}
@@ -683,8 +682,7 @@ export function ExerciseView({
     </div>
   ) : answerStatus;
 
-  // Reserve room for both the longest answer and its meaning before
-  // grading, so the iPhone's docked input and Next button do not shift.
+  // Reserve feedback before grading so the input and subsequent controls stay put.
   const feedbackReserve = listeningMeaning ? (
     <div className="space-y-1">
       <p>Poprawna odpowiedź: <strong>{exercise.mode === "typed" ? exercise.accepted[0] : exercise.answer}</strong></p>
@@ -694,108 +692,95 @@ export function ExerciseView({
     ? <p className="font-medium">Poprawnie</p>
     : <p>Poprawna odpowiedź: <strong>{exercise.mode === "typed" ? exercise.accepted[0] : exercise.answer}</strong></p>;
 
-  const dockedAnswer = submitFormId && answerTarget && answerField && createPortal(
-    <form id={submitFormId} className="pb-2" onSubmit={(event) => {
-      event.preventDefault();
-      submit(typed);
-    }}>
-      {answerField}
-      <ExerciseFeedback size={listeningMeaning ? "speech" : "double"} reserve={feedbackReserve}>{answerFeedback}</ExerciseFeedback>
-    </form>,
-    answerTarget,
-  );
-
   const content = (
     <ExerciseContent compact={compactSentence}>
-      <Stack gap="sm" align="center">
-        {showInstruction && (
-          <span className="text-center text-xs tracking-wide text-muted uppercase">
-            {exercise.instruction}
-          </span>
-        )}
-        {exercise.kind === "collocation-guided" &&
-          exercise.mode === "choice" &&
-          exercise.translation && (
-            <span className="text-center text-sm text-muted" lang="ru">
-              {exercise.translation}
+      <ExercisePromptArea practice={practice}>
+        <Stack gap="sm" align="center">
+          {showInstruction && (
+            <span className="text-center text-xs tracking-wide text-muted uppercase">
+              {exercise.instruction}
             </span>
           )}
-        {showReadingText &&
-          exercise.mode === "choice" &&
-          isReading &&
-          exercise.readingText && (
-            <div className="w-full rounded-card bg-soft2 p-4" lang="pl">
-              <p className="mb-2 text-xs tracking-wide text-muted uppercase">
-                Tekst
-              </p>
-              <p className="whitespace-pre-wrap text-left text-base leading-7">
-                {exercise.readingText}
-              </p>
-            </div>
-          )}
-        <ExercisePrompt
-          numbered={leadingNumber !== undefined}
-          compact={compactSentence}
-          placement={compactSentence || leadingNumber !== undefined || isSentence || isInlineForm ? "inline" : "side"}
-          audio={promptAudio}
-          audioVisible={showSpeakButton}
-        >
-          {leadingNumber !== undefined && (
-            <span className={`shrink-0 font-semibold text-muted ${compactSentence ? "text-sm" : "text-base sm:text-lg"}`}>
-              {leadingNumber}.
-            </span>
-          )}
-          {!isListenWrite && !isListenChoice && (
-            <span
-              className={
-                isReading
-                  ? "whitespace-pre-wrap text-left text-base leading-7"
-                  : compactSentence
-                    ? "min-w-0 flex-1 break-words text-left text-base leading-snug"
-                    : `${leadingNumber !== undefined ? "text-left" : "text-center"} font-semibold ${isSentence ? "text-base sm:text-lg" : "text-lg sm:text-xl"}`
-              }
-            >
-              {isInlineForm && exercise.mode !== "assemble" ? (
-                isGapSentence ? (
-                  <InlineSentencePrompt
-                    exercise={exercise}
-                    compact={compactSentence}
-                    value={typed}
-                    disabled={Boolean(result)}
-                    status={inlineStatus}
-                    attemptsAllowed={attemptsAllowed}
-                    wrongCount={wrongTries.length}
-                    result={result}
-                    autoFocus={autoFocus && exercise.mode === "typed"}
-                    onChange={updateTyped}
-                    onSubmit={submit}
-                  />
+          {exercise.kind === "collocation-guided" &&
+            exercise.mode === "choice" &&
+            exercise.translation && (
+              <span className="text-center text-sm text-muted" lang="ru">
+                {exercise.translation}
+              </span>
+            )}
+          {showReadingText &&
+            exercise.mode === "choice" &&
+            isReading &&
+            exercise.readingText && (
+              <div className="w-full rounded-card bg-soft2 p-4" lang="pl">
+                <p className="mb-2 text-xs tracking-wide text-muted uppercase">
+                  Tekst
+                </p>
+                <p className="whitespace-pre-wrap text-left text-base leading-7">
+                  {exercise.readingText}
+                </p>
+              </div>
+            )}
+          {!isListenWrite && !isListenChoice && <ExercisePrompt
+            numbered={leadingNumber !== undefined}
+            compact={compactSentence}
+            placement={compactSentence || leadingNumber !== undefined || isSentence || isInlineForm ? "inline" : "side"}
+            audio={promptAudio}
+            audioVisible={showSpeakButton}
+          >
+            {leadingNumber !== undefined && (
+              <span className={`shrink-0 font-semibold text-muted ${compactSentence ? "text-sm" : "text-base sm:text-lg"}`}>
+                {leadingNumber}.
+              </span>
+            )}
+              <span
+                className={
+                  isReading
+                    ? "whitespace-pre-wrap text-left text-base leading-7"
+                    : compactSentence
+                      ? "min-w-0 flex-1 break-words text-left text-base leading-snug"
+                      : `${leadingNumber !== undefined ? "text-left" : "text-center"} font-semibold ${isSentence ? "text-base sm:text-lg" : "text-lg sm:text-xl"}`
+                }
+              >
+                {isInlineForm && exercise.mode !== "assemble" ? (
+                  isGapSentence ? (
+                    <InlineSentencePrompt
+                      exercise={exercise}
+                      compact={compactSentence}
+                      value={typed}
+                      disabled={Boolean(result)}
+                      status={inlineStatus}
+                      attemptsAllowed={attemptsAllowed}
+                      wrongCount={wrongTries.length}
+                      result={result}
+                      autoFocus={autoFocus && exercise.mode === "typed"}
+                      onChange={updateTyped}
+                      onSubmit={submit}
+                    />
+                  ) : (
+                    <InlineWordPrompt
+                      exercise={exercise}
+                      value={typed}
+                      disabled={Boolean(result)}
+                      status={inlineStatus}
+                      attemptsAllowed={attemptsAllowed}
+                      wrongCount={wrongTries.length}
+                      result={result}
+                      autoFocus={autoFocus && exercise.mode === "typed"}
+                      onChange={updateTyped}
+                      onSubmit={submit}
+                    />
+                  )
                 ) : (
-                  <InlineWordPrompt
-                    exercise={exercise}
-                    value={typed}
-                    disabled={Boolean(result)}
-                    status={inlineStatus}
-                    attemptsAllowed={attemptsAllowed}
-                    wrongCount={wrongTries.length}
-                    result={result}
-                    autoFocus={autoFocus && exercise.mode === "typed"}
-                    onChange={updateTyped}
-                    onSubmit={submit}
-                  />
-                )
-              ) : (
-                exercise.prompt
-              )}
-            </span>
+                  exercise.prompt
+                )}
+              </span>
+          </ExercisePrompt>}
+          {(isListenWrite || isListenChoice) && speakText && (
+            <ExercisePrompt placement="center" audio={<SpeakIcon text={speakText} size={practice ? "lg" : "md"} ariaLabel="Odtwórz wymowę" />} />
           )}
-        </ExercisePrompt>
-      </Stack>
-
-      {(isListenWrite || isListenChoice) && speakText && (
-        <ExercisePrompt placement="center" audioVisible={showSpeakButton || isListenChoice}
-          audio={<SpeakIcon text={speakText} ariaLabel="Odtwórz wymowę" />} />
-      )}
+        </Stack>
+      </ExercisePromptArea>
 
       {exercise.mode === "choice" && !isInlineForm && (
         <Stack gap="xs">
@@ -823,13 +808,13 @@ export function ExerciseView({
 
       {isListenChoice && speakText && <ExerciseSlot visible={Boolean(result)} className="text-center font-medium"><p lang="pl">{speakText}</p></ExerciseSlot>}
 
-      {!submitFormId && answerField}
+      {answerField && <ExerciseAnswerForm formId={submitFormId} onSubmit={() => submit(typed)}>{answerField}</ExerciseAnswerForm>}
 
       {exercise.mode === "assemble" && (
         <Stack gap="md">
           <div className="flex items-center gap-2">
             <div
-              className={`min-h-12 flex-1 rounded-card border px-3 py-2 text-center text-2xl tracking-widest ${
+              className={`min-h-12 min-w-0 flex-1 overflow-x-auto whitespace-nowrap rounded-card border px-3 py-2 text-center text-2xl tracking-widest ${
                 result
                   ? result.correct
                     ? "border-ok bg-ok-bg text-ok-ink"
@@ -846,6 +831,7 @@ export function ExerciseView({
                       <button
                         key={`${index}-${position}`}
                         type="button"
+                        disabled={Boolean(result)}
                         aria-label={`Usuń literę ${exercise.letters[index]}`}
                         onClick={() =>
                           setBuiltIndexes((current) =>
@@ -890,16 +876,14 @@ export function ExerciseView({
         </Stack>
       )}
 
-      {!submitFormId && <ExerciseFeedback size={listeningMeaning ? "speech" : exercise.mode === "typed" ? "double" : "single"} reserve={feedbackReserve}>{answerFeedback}</ExerciseFeedback>}
+      <ExerciseFeedback size={listeningMeaning ? "speech" : exercise.mode === "typed" ? "double" : "single"} reserve={feedbackReserve}>{answerFeedback}</ExerciseFeedback>
     </ExerciseContent>
   );
 
-  if (bare) return <ExerciseCard bare>{content}{dockedAnswer}</ExerciseCard>;
   return (
-    <ExerciseCard tone={result ? (result.correct ? "correct" : "wrong") : "neutral"}
+    <ExerciseCard bare={bare} tone={result ? (result.correct ? "correct" : "wrong") : "neutral"}
       metadata={(topLeftStatus || topRightAction) && <><div>{topLeftStatus}</div>{topRightAction}</>}>
       {content}
-      {dockedAnswer}
     </ExerciseCard>
   );
 }
