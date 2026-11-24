@@ -1,6 +1,6 @@
 import { createElement as h } from 'react'
 import { renderToStaticMarkup } from 'react-dom/server'
-import { ExerciseActions, ExerciseAnswerForm, ExerciseFeedback, ExercisePrompt, ExercisePromptArea, ExerciseSlot } from '../app/_components/exercise/ExerciseCard'
+import { ExerciseActions, ExerciseAnswerForm, ExerciseCard, ExerciseFeedback, ExercisePrompt, ExercisePromptArea, ExerciseSlot } from '../app/_components/exercise/ExerciseCard'
 
 const render = (component, props, children) => renderToStaticMarkup(h(component, props, children))
 const audio = h('button', { type: 'button' }, 'Play')
@@ -54,6 +54,13 @@ describe('stable exercise presentation', () => {
 })
 
 describe('shared full-screen practice slots', () => {
+  it('puts secondary word details after the question and keeps them collapsed', () => {
+    const markup = render(ExerciseCard, { metadata: h('span', null, 'Mastery'), metadataLabel: 'Word details' }, h('input', { 'data-word-answer': '' }))
+    expect(markup.indexOf('data-word-answer')).toBeLessThan(markup.indexOf('<details'))
+    expect(markup).not.toMatch(/<details[^>]*\sopen(?:[\s=>])/)
+    expect(markup).toContain('Mastery')
+    expect(markup).toContain('Word details')
+  })
   it('uses the same prompt area for word and audio exercises', () => {
     for (const child of [h('span', null, 'silk'), audio]) {
       const markup = render(ExercisePromptArea, { practice: true }, child)

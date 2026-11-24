@@ -642,8 +642,14 @@ export function ExerciseView({
       onFocus={submitFormId ? undefined : (event) => keepInputVisible(event.currentTarget)}
       onChange={(e) => updateTyped(e.target.value)}
       onBlur={submitFormId ? undefined : () => submit(typed)}
-      onKeyDown={submitFormId ? undefined : (e) => {
-        if (e.key === "Enter") submit(typed);
+      onKeyDown={(e) => {
+        if (e.key !== "Enter" || e.nativeEvent.isComposing || e.nativeEvent.keyCode === 229) return;
+        e.preventDefault();
+        if (submitFormId) {
+          e.currentTarget.form?.requestSubmit();
+        } else {
+          submit(typed);
+        }
       }}
       placeholder={
         exercise.kind === "sentence-write"
@@ -882,6 +888,7 @@ export function ExerciseView({
 
   return (
     <ExerciseCard bare={bare} tone={result ? (result.correct ? "correct" : "wrong") : "neutral"}
+      metadataLabel={practice ? t("wordDetails") : undefined}
       metadata={(topLeftStatus || topRightAction) && <><div>{topLeftStatus}</div>{topRightAction}</>}>
       {content}
     </ExerciseCard>

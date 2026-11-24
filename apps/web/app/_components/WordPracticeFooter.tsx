@@ -34,7 +34,7 @@ export function WordPracticeFooter({ label, busyLabel, onNext, formId, disabled 
   }, [])
 
   return (
-    <footer ref={footer} className="word-practice-footer border-t border-line bg-bg px-4 pt-2 pb-[max(0.5rem,env(safe-area-inset-bottom))]">
+    <footer ref={footer} data-awaiting-word-answer={formId ? "" : undefined} className="word-practice-footer border-t border-line bg-bg px-4 pt-2 pb-[max(0.5rem,env(safe-area-inset-bottom))]">
       <div className="mx-auto w-full max-w-(--container-exercise)">
         <WordSaveIndicator />
         <Button size="lg" full form={formId} type={formId ? 'submit' : 'button'} onClick={formId ? undefined : onNext}

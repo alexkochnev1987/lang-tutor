@@ -2,16 +2,25 @@ import type { ReactNode } from 'react'
 import { Card, Row, Stack } from '@polski/ui'
 
 /** Shared presentation only: grading, persistence and navigation stay with the exercise. */
-export function ExerciseCard({ children, tone = 'neutral', metadata, bare = false }: {
+export function ExerciseCard({ children, tone = 'neutral', metadata, metadataLabel, bare = false }: {
   children: ReactNode
   tone?: 'neutral' | 'correct' | 'wrong'
   metadata?: ReactNode
+  /** Practice puts secondary controls in a collapsed section below the answer. */
+  metadataLabel?: string
   bare?: boolean
 }) {
   if (bare) return <>{children}</>
+  const metadataContent = metadata && <div className="flex flex-wrap items-center justify-between gap-3">{metadata}</div>
   return <Card tone={tone} data-exercise-card="">
-    {metadata && <div className="mb-2 flex flex-wrap items-center justify-between gap-3">{metadata}</div>}
+    {!metadataLabel && metadataContent && <div className="mb-2">{metadataContent}</div>}
     {children}
+    {metadataLabel && metadataContent && (
+      <details className="mt-3 border-t border-line pt-2 text-sm text-muted">
+        <summary className="min-h-10 cursor-pointer py-2">{metadataLabel}</summary>
+        {metadataContent}
+      </details>
+    )}
   </Card>
 }
 
