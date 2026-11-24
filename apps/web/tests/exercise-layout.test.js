@@ -1,6 +1,6 @@
 import { createElement as h } from 'react'
 import { renderToStaticMarkup } from 'react-dom/server'
-import { ExerciseActions, ExerciseAnswerForm, ExerciseCard, ExerciseFeedback, ExerciseOptions, ExercisePrompt, ExercisePromptArea, ExerciseSlot } from '../app/_components/exercise/ExerciseCard'
+import { ExerciseActions, ExerciseAnswerForm, ExerciseCard, ExerciseFeedback, ExerciseOptions, ExercisePrompt, ExercisePromptArea, ExerciseResultMark, ExerciseSlot } from '../app/_components/exercise/ExerciseCard'
 
 const render = (component, props, children) => renderToStaticMarkup(h(component, props, children))
 const audio = h('button', { type: 'button' }, 'Play')
@@ -54,12 +54,15 @@ describe('stable exercise presentation', () => {
 })
 
 describe('shared full-screen practice slots', () => {
-  it('puts secondary word details after the question and keeps them collapsed', () => {
-    const markup = render(ExerciseCard, { metadata: h('span', null, 'Mastery'), metadataLabel: 'Word details' }, h('input', { 'data-word-answer': '' }))
-    expect(markup.indexOf('data-word-answer')).toBeLessThan(markup.indexOf('<details'))
-    expect(markup).not.toMatch(/<details[^>]*\sopen(?:[\s=>])/)
-    expect(markup).toContain('Mastery')
-    expect(markup).toContain('Word details')
+  it('reserves the same compact top row before and after grading', () => {
+    for (const visible of [false, true]) {
+      const markup = render(ExerciseCard, { practice: true, metadata: h('span', null, 'Mastery'), metadataVisible: visible }, h('input', { 'data-word-answer': '' }))
+      expect(markup.indexOf('Mastery')).toBeLessThan(markup.indexOf('data-word-answer'))
+      expect(markup).not.toContain('<details')
+      expect(markup).toContain('mb-2 flex min-h-11 items-center justify-between gap-1')
+      expect(markup.includes('inert=""')).toBe(!visible)
+      expect(markup.includes('aria-hidden="true"')).toBe(!visible)
+    }
   })
   it('uses the same prompt area for word and audio exercises', () => {
     for (const child of [h('span', null, 'silk'), audio]) {
@@ -74,6 +77,7 @@ describe('shared full-screen practice slots', () => {
     const markup = render(ExerciseAnswerForm, { formId: 'practice-answer', onSubmit: () => {} }, input)
     expect(markup).toMatch(/^<form id="practice-answer"/)
     expect(markup).toContain('data-word-answer')
+    expect(markup).toContain('noValidate=""')
     expect(markup).toMatch(/<\/form>$/)
     expect(render(ExerciseAnswerForm, { onSubmit: () => {} }, input)).not.toContain('<form')
   })
@@ -93,15 +97,31 @@ describe('compact practice', () => {
     }
   })
   it('uses a flat practice card and reserves a hidden details slot before grading', () => {
-    const props = { practice: true, metadata: expected, metadataLabel: 'Details' }
+    const props = { practice: true, metadata: expected }
     const before = render(ExerciseCard, { ...props, metadataVisible: false }, audio)
     const after = render(ExerciseCard, { ...props, metadataVisible: true }, audio)
     for (const markup of [before, after]) {
       expect(markup).toContain('data-practice-card')
       expect(markup).not.toContain('shadow-card')
-      expect(markup).toContain('Details')
+      expect(markup).toContain('Expected answer')
     }
     expect(before).toContain('inert=""')
     expect(after).not.toContain('inert=""')
+  })
+})
+
+
+describe('compact outcome marks', () => {
+  it('reserves the same icon footprint before and after grading without visible captions', () => {
+    for (const correct of [undefined, true, false]) {
+      const markup = render(ExerciseResultMark, { correct, label: correct ? 'Correct' : 'Incorrect' })
+      expect(markup).toContain('size-5 shrink-0')
+      expect(markup.includes('invisible')).toBe(correct === undefined)
+      if (correct !== undefined) {
+        expect(markup).toContain(correct ? 'text-ok-ink' : 'text-danger-ink')
+        expect(markup).toContain(correct ? 'aria-label="Correct"' : 'aria-label="Incorrect"')
+        expect(markup).not.toContain(correct ? '>Correct<' : '>Incorrect<')
+      }
+    }
   })
 })

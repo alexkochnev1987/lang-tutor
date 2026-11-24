@@ -2,29 +2,25 @@ import type { ReactNode } from 'react'
 import { Card, OptionRow, Row, Stack } from '@polski/ui'
 
 /** Shared presentation only: grading, persistence and navigation stay with the exercise. */
-export function ExerciseCard({ children, tone = 'neutral', metadata, metadataLabel, metadataVisible = true, practice = false, bare = false }: {
+export function ExerciseCard({ children, tone = 'neutral', metadata, metadataVisible = true, practice = false, bare = false }: {
   children: ReactNode
   tone?: 'neutral' | 'correct' | 'wrong'
   metadata?: ReactNode
-  /** Practice puts secondary controls in a collapsed section below the answer. */
-  metadataLabel?: string
+  /** Practice reveals secondary controls after grading. */
   metadataVisible?: boolean
   practice?: boolean
   bare?: boolean
 }) {
   if (bare) return <>{children}</>
-  const metadataContent = metadata && <div className="flex flex-wrap items-center justify-between gap-3">{metadata}</div>
   const content = <>
-    {!metadataLabel && metadataContent && <div className="mb-2">{metadataContent}</div>}
-    {children}
-    {metadataLabel && metadataContent && (
-      <ExerciseSlot visible={metadataVisible} className="mt-2 text-sm text-muted">
-        <details>
-          <summary className="min-h-10 cursor-pointer py-2">{metadataLabel}</summary>
-          {metadataContent}
-        </details>
+    {!practice && metadata && <div className="mb-2 flex flex-wrap items-center justify-between gap-3">{metadata}</div>}
+    {practice && metadata && (
+      // Reserve the same top row before and after grading. Only visibility changes.
+      <ExerciseSlot visible={metadataVisible} className="mb-2 flex min-h-11 items-center justify-between gap-1 text-muted">
+        {metadata}
       </ExerciseSlot>
     )}
+    {children}
   </>
   if (practice) return <div data-exercise-card="" data-practice-card="" className="mx-auto w-full min-w-0 max-w-(--container-exercise)">{content}</div>
   return <Card tone={tone} data-exercise-card="">{content}</Card>
@@ -40,7 +36,7 @@ export function ExercisePromptArea({ children, practice = false }: { children: R
 /** The input stays in the card; the shared footer submits it by form ID. */
 export function ExerciseAnswerForm({ children, formId, onSubmit }: { children: ReactNode; formId?: string; onSubmit: () => void }) {
   if (!formId) return <>{children}</>
-  return <form id={formId} className="w-full min-w-0" onSubmit={(event) => {
+  return <form id={formId} noValidate className="w-full min-w-0" onSubmit={(event) => {
     event.preventDefault()
     onSubmit()
   }}>{children}</form>
@@ -101,6 +97,14 @@ export function ExercisePrompt({ children, audio, audioVisible = true, placement
     {children}
     {audio && <ExerciseSlot visible={audioVisible} className={`shrink-0 self-start ${compact ? 'min-w-10' : 'min-w-12'}`}>{audio}</ExerciseSlot>}
   </Row>
+}
+
+/** A fixed-size outcome marker; no visible success/failure caption is needed. */
+export function ExerciseResultMark({ correct, label }: { correct?: boolean; label?: string }) {
+  return <span data-exercise-result-mark="" className={`inline-flex size-5 shrink-0 items-center justify-center font-semibold ${correct === undefined ? 'invisible' : correct ? 'text-ok-ink' : 'text-danger-ink'}`}
+    role={correct === undefined ? undefined : 'img'} aria-label={correct === undefined ? undefined : label} aria-hidden={correct === undefined || !label ? true : undefined}>
+    <span aria-hidden="true">{correct === false ? '×' : '✓'}</span>
+  </span>
 }
 
 /** Reserve common one/two-line feedback; longer accessible content may naturally grow. */
