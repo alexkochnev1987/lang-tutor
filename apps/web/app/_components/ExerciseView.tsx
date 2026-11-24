@@ -271,7 +271,8 @@ function InlineFormControl({
       ) : (
         <input
           {...common}
-          autoFocus={autoFocus}
+          autoFocus={autoFocus && !disabled}
+          enterKeyHint="done"
           value={value}
           placeholder="wpisz formę"
           autoCapitalize="off"
@@ -287,7 +288,9 @@ function InlineFormControl({
             if (value.trim()) onSubmit(value);
           }}
           onKeyDown={(e) => {
-            if (e.key === "Enter") onSubmit(value);
+            if (e.key !== "Enter" || e.nativeEvent.isComposing || e.nativeEvent.keyCode === 229) return;
+            e.preventDefault();
+            onSubmit(e.currentTarget.value);
           }}
         />
       )}
@@ -629,17 +632,18 @@ export function ExerciseView({
     setBuiltIndexes((current) => [...current, index]);
   }
 
+  const shouldAutoFocus = autoFocus && exercise.mode === "typed" && exercise.kind !== "pronunciation" && !result && !restoredResult;
   const typedOutcome = result?.correct ?? (feedback && !feedback.correct && !typed ? false : undefined);
   const resultLabel = (correct: boolean) => t(correct ? "speech.correct" : "speech.incorrect");
   const answerField = exercise.mode === "typed" && !isInlineForm && (
     <input
-      autoFocus={autoFocus}
+      autoFocus={shouldAutoFocus}
       value={typed}
       disabled={Boolean(result)}
       ref={submitFormId ? answerInput : undefined}
       data-word-answer={submitFormId ? "" : undefined}
       aria-label={exercise.instruction}
-      enterKeyHint={submitFormId ? "done" : undefined}
+      enterKeyHint="done"
       aria-required={submitFormId ? true : undefined}
       onFocus={submitFormId ? undefined : (event) => keepInputVisible(event.currentTarget)}
       onChange={(e) => updateTyped(e.target.value)}
@@ -768,7 +772,7 @@ export function ExerciseView({
                       attemptsAllowed={attemptsAllowed}
                       wrongCount={wrongTries.length}
                       result={result}
-                      autoFocus={autoFocus && exercise.mode === "typed"}
+                      autoFocus={shouldAutoFocus}
                       onChange={updateTyped}
                       onSubmit={submit}
                     />
@@ -781,7 +785,7 @@ export function ExerciseView({
                       attemptsAllowed={attemptsAllowed}
                       wrongCount={wrongTries.length}
                       result={result}
-                      autoFocus={autoFocus && exercise.mode === "typed"}
+                      autoFocus={shouldAutoFocus}
                       onChange={updateTyped}
                       onSubmit={submit}
                     />

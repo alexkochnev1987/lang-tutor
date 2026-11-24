@@ -89,7 +89,7 @@ export function BrainstormPractice({ id, words, pool, dayNumber, reviewFormats, 
   const step = baseStep ?? retryStep
   const exercise = step?.kind === 'exercise' ? step.ex : null
   const done = Object.values(progress.responses)
-  const formId = exercise?.mode === 'typed' ? FORM_ID : undefined
+  const formId = exercise?.mode === 'typed' && exercise.kind !== 'pronunciation' ? FORM_ID : undefined
 
   function updateProgress(next: Progress) {
     setProgress(next)
@@ -187,7 +187,7 @@ export function BrainstormPractice({ id, words, pool, dayNumber, reviewFormats, 
           </ExerciseCard>
         )}
         {exercise && (
-          <ExerciseView key={exercise.id} exercise={exercise} onAnswered={remember} autoFocus={false}
+          <ExerciseView key={exercise.id} exercise={exercise} onAnswered={remember}
             showSpeakButton={exercise.kind === 'listen-write' || exercise.kind === 'translate-recognition'
               || exercise.kind === 'false-friend-contrast' || Boolean(response)} submitFormId={formId} practice />
         )}

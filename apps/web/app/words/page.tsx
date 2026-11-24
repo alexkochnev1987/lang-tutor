@@ -272,7 +272,7 @@ function WordPractice({ initialList, initialFormat }: { initialList?: DailyWordL
                   onAnswered={answer} onSkip={status === 'ready' ? advance : undefined} />
               ) : (
                 <ExerciseView key={exercise.id} exercise={exercise} onAnswered={answer}
-                  autoFocus={false} practice submitFormId={formId} showSpeakButton={session.format === 'translation' || status === 'saved'} />
+                  practice submitFormId={formId} showSpeakButton={session.format === 'translation' || status === 'saved'} />
               )}
               {status === 'unavailable' && <p role="status" className="text-sm text-muted">{t('unavailable')}</p>}
             </Stack>

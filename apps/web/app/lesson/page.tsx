@@ -162,7 +162,7 @@ export default function LessonPage() {
   const wordExercise = slot?.kind === "step" && slot.step.kind === "exercise"
     && wordScreen && slot.step.ex.lexemeId ? slot.step.ex : undefined;
   const wordStudyExercise = Boolean(wordExercise);
-  const wordFormId = wordExercise?.mode === "typed" ? WORD_FORM_ID : undefined;
+  const wordFormId = wordExercise?.mode === "typed" && wordExercise.kind !== "pronunciation" ? WORD_FORM_ID : undefined;
   const reviewLexemeId =
     slot?.kind === "step" && slot.step.kind === "exercise" && slot.step.review
       ? slot.step.ex.lexemeId
@@ -673,7 +673,6 @@ export default function LessonPage() {
               <ExerciseView
                 key={`${i}-${slot.step.ex.id}`}
                 exercise={slot.step.ex}
-                autoFocus={!wordStudyExercise}
                 showSpeakButton={!wordStudyExercise || formatOfWordExercise(slot.step.ex) === "translation" || Boolean(restoredResult)}
                 submitFormId={wordFormId}
                 practice={Boolean(wordStudyExercise)}
