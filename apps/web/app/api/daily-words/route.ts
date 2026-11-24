@@ -2,7 +2,7 @@ import { sql } from 'drizzle-orm'
 import { withUser } from '@/lib/api/handler'
 import { pg } from '@/lib/db/pg'
 import vocabulary from '../../../../../content/pl-b1-ru/vocabulary.json'
-import { brainstormWordSession, WORD_FORMATS, wordSkill, type DailyWordAnswer, type DailyWordSubmission } from '@/lib/engine/daily-words'
+import { brainstormWordSession, buildDailyWordLists, WORD_FORMATS, wordSkill, type DailyWordAnswer, type DailyWordSubmission } from '@/lib/engine/daily-words'
 
 export const runtime = 'nodejs'
 export const dynamic = 'force-dynamic'
@@ -20,20 +20,22 @@ function calendar(userId: string) {
 
 export const GET = withUser(async ({ userId }) => {
   const { rows } = await pg.execute<{
-    id: string; seen: boolean; eligible: boolean; day: string; next_review_at: Date | string | null
+    id: string; seen: boolean; known: boolean; day: string; kinds: string[] | null;
+    due_kinds: string[] | null; next_review_at: Date | string | null
   }>(sql`
     WITH calendar AS (${calendar(userId)}),
     skills AS (
       SELECT ref_id, bool_or(last_review IS NOT NULL) AS seen, min(due) AS due,
-        max(last_review) AS last_review
-      FROM study_items
+        jsonb_agg(kind) AS kinds,
+        jsonb_agg(kind) FILTER (WHERE due <= calendar.now) AS due_kinds,
+        min(due) FILTER (WHERE due > calendar.now) AS next_due
+      FROM study_items CROSS JOIN calendar
       WHERE user_id = ${userId} AND course_id = ${courseId} AND kind LIKE 'lexeme-%'
       GROUP BY ref_id
     )
     SELECT pool.id, calendar.day::text AS day, COALESCE(skills.seen, false) AS seen,
-      (known.lexeme_id IS NULL AND (skills.due IS NULL OR skills.due <= calendar.now)) AS eligible,
-      MIN(skills.due) FILTER (WHERE known.lexeme_id IS NULL
-        AND skills.seen AND skills.due > calendar.now) OVER () AS next_review_at
+      (known.lexeme_id IS NOT NULL) AS known, skills.kinds, skills.due_kinds,
+      MIN(skills.next_due) FILTER (WHERE known.lexeme_id IS NULL AND skills.seen) OVER () AS next_review_at
     FROM jsonb_array_elements_text(${JSON.stringify(lexemeIds)}::jsonb) AS pool(id)
     CROSS JOIN calendar
     LEFT JOIN skills ON skills.ref_id = pool.id
@@ -41,29 +43,28 @@ export const GET = withUser(async ({ userId }) => {
       AND known.lexeme_id = pool.id AND known.status = 'known'
     ORDER BY skills.due NULLS LAST, pool.id
   `)
-  // A new word counts once on the calendar day of its first-ever review,
-  // regardless of whether it was learned in the lesson or in /words.
-  const learned = await pg.execute<{ total: number }>(sql`
+  const activity = await pg.execute<{ learned: number; practiced: number }>(sql`
     WITH calendar AS (${calendar(userId)})
-    SELECT COUNT(*)::int AS total FROM (
-      SELECT item.ref_id
+    SELECT COUNT(*) FILTER (WHERE first_day = day)::int AS learned,
+      COUNT(*) FILTER (WHERE last_day = day)::int AS practiced
+    FROM (
+      SELECT item.ref_id, calendar.day,
+        (MIN(log.reviewed_at) AT TIME ZONE calendar.zone)::date AS first_day,
+        (MAX(log.reviewed_at) AT TIME ZONE calendar.zone)::date AS last_day
       FROM study_items item
       JOIN review_logs log ON log.user_id = item.user_id AND log.study_item_id = item.id
       CROSS JOIN calendar
       WHERE item.user_id = ${userId} AND item.course_id = ${courseId}
         AND item.kind LIKE 'lexeme-%'
       GROUP BY item.ref_id, calendar.day, calendar.zone
-      HAVING (MIN(log.reviewed_at) AT TIME ZONE calendar.zone)::date = calendar.day
-    ) first_reviews
+    ) activity
   `)
   return {
-    day: rows[0]?.day ?? "",
-    learn: rows.filter((row) => row.eligible && !row.seen).map(({ id }) => id),
-    review: rows.filter((row) => row.eligible && row.seen).map(({ id }) => id),
-    learnedToday: Number(learned.rows[0]?.total ?? 0),
-    nextReviewAt: rows[0]?.next_review_at
-      ? new Date(rows[0].next_review_at).toISOString()
-      : null,
+    day: rows[0]?.day ?? '',
+    ...buildDailyWordLists(rows),
+    learnedToday: Number(activity.rows[0]?.learned ?? 0),
+    practicedToday: Number(activity.rows[0]?.practiced ?? 0),
+    nextReviewAt: rows[0]?.next_review_at ? new Date(rows[0].next_review_at).toISOString() : null,
   }
 })
 
@@ -86,7 +87,7 @@ export const POST = withUser(async ({ userId, req }) => {
   const first = Array.isArray(answers) ? answers[0] : undefined
   const lexemeId = first?.item?.refId
   if (!first || !lexemeId || !lexemes.has(lexemeId)
-    || answers.length !== (isBrainstorm ? WORD_FORMATS.length : 1)
+    || (isBrainstorm ? answers.length < 1 || answers.length > WORD_FORMATS.length : answers.length !== 1)
     || !answers.every((answer) => validAnswer(answer, lexemeId, isBrainstorm))
     || new Set(answers.map(({ format }) => format)).size !== answers.length
     || new Set(answers.map(({ log }) => log.id)).size !== answers.length
@@ -99,7 +100,7 @@ export const POST = withUser(async ({ userId, req }) => {
     throw new Error('bad_daily_word_answer')
   }
 
-  const { item, log } = first
+  const { item } = first
   const session = isBrainstorm ? brainstormWordSession(submission) : null
   const data = answers.map(({ item, log, result }) => ({
     item_id: item.id, kind: item.kind, due: item.due, reviewed_at: log.reviewedAt,
@@ -112,9 +113,9 @@ export const POST = withUser(async ({ userId, req }) => {
     attempts: result.attempts, correct: Number(result.correct), answer: result.answer.slice(0, 1000),
     expected: result.expected.slice(0, 1000), error_kind: result.errorKind,
   }))
-  // A single statement is atomic with either Postgres driver. Losing the
-  // unique-key race writes neither a schedule nor an exercise result.
-  const { rows } = await pg.execute<{ answered_at: string | Date | null }>(sql`
+  // A single statement is atomic with either Postgres driver. The guarded
+  // per-skill upsert decides which results may be logged; the daily row is only activity.
+  const { rows } = await pg.execute<{ id: string; reviewed_at: string | Date }>(sql`
     WITH calendar AS (${calendar(userId)}), input AS (
       SELECT * FROM jsonb_to_recordset(${JSON.stringify(data)}::jsonb) AS a(
         item_id text, kind text, due timestamptz, reviewed_at timestamptz, stability real,
@@ -124,32 +125,14 @@ export const POST = withUser(async ({ userId, req }) => {
         response_ms integer, day_number integer, exercise_id text, attempts integer, correct integer,
         answer text, expected text, error_kind text
       )
-    ), claimed AS (
-      INSERT INTO daily_word_reviews (user_id, course_id, day, lexeme_id, answer_id, format)
-      SELECT ${userId}, ${courseId}, day::text, ${item.refId}, ${log.id}, ${submission.format}
-      FROM calendar
-      WHERE NOT EXISTS (SELECT 1 FROM review_logs JOIN input ON review_logs.id = input.log_id)
+    ), eligible AS (
+      SELECT calendar.now AS answered_at, input.*
+      FROM calendar CROSS JOIN input
+      WHERE NOT EXISTS (SELECT 1 FROM review_logs WHERE review_logs.id = input.log_id)
         AND NOT EXISTS (
           SELECT 1 FROM lexeme_status WHERE user_id = ${userId} AND course_id = ${courseId}
             AND lexeme_id = ${item.refId} AND status = 'known'
         )
-        AND NOT EXISTS (
-          SELECT 1 FROM study_items WHERE user_id = ${userId} AND course_id = ${courseId}
-            AND ref_id = ${item.refId} AND kind LIKE 'lexeme-%'
-          GROUP BY ref_id HAVING min(due) > calendar.now
-        )
-      -- Keep one row per word/day as an atomic claim for the latest attempt.
-      -- This must not be a one-attempt-per-day limit: failed FSRS cards are
-      -- often due again in minutes. The conflict row serializes concurrent
-      -- submissions; a short minimum gap prevents two simultaneous answers
-      -- from applying the same stale FSRS schedule.
-      ON CONFLICT (user_id, course_id, day, lexeme_id) DO UPDATE SET
-        answer_id = EXCLUDED.answer_id,
-        format = EXCLUDED.format,
-        answered_at = EXCLUDED.answered_at
-      WHERE daily_word_reviews.answered_at <= statement_timestamp() - interval '30 seconds'
-        AND daily_word_reviews.answer_id <> EXCLUDED.answer_id
-      RETURNING answered_at
     ), scheduled AS (
       INSERT INTO study_items (
         id, user_id, course_id, kind, ref_id, due, stability, difficulty, elapsed_days,
@@ -158,41 +141,60 @@ export const POST = withUser(async ({ userId, req }) => {
       SELECT item_id, ${userId}, ${courseId}, kind, ${lexemeId},
         answered_at + greatest(interval '0 seconds', due - reviewed_at),
         stability, difficulty, elapsed_days, scheduled_days, learning_steps, reps, lapses,
-        state, answered_at FROM claimed CROSS JOIN input
+        state, answered_at FROM eligible ORDER BY item_id
       ON CONFLICT (user_id, id) DO UPDATE SET due = excluded.due, stability = excluded.stability,
         difficulty = excluded.difficulty, elapsed_days = excluded.elapsed_days, scheduled_days = excluded.scheduled_days,
         learning_steps = excluded.learning_steps, reps = excluded.reps, lapses = excluded.lapses,
         state = excluded.state, last_review = excluded.last_review, updated_at = now()
+      WHERE study_items.due <= excluded.last_review
+        AND (study_items.last_review IS NULL OR study_items.last_review < excluded.last_review)
+      RETURNING id
     ), logged AS (
       INSERT INTO review_logs (id, user_id, study_item_id, rating, state, stability, difficulty,
         elapsed_days, scheduled_days, reviewed_at, exercise_id, response_ms)
       SELECT log_id, ${userId}, item_id, rating, log_state, log_stability, log_difficulty,
         log_elapsed_days, log_scheduled_days, answered_at, exercise_id, response_ms
-      FROM claimed CROSS JOIN input
+      FROM eligible JOIN scheduled ON scheduled.id = eligible.item_id
+      RETURNING id, reviewed_at
     ), recorded AS (
       INSERT INTO exercise_results (user_id, course_id, day_number, exercise_id, attempts, correct, answer, expected, error_kind, completed_at)
       SELECT ${userId}, ${courseId}, day_number, exercise_id, attempts, correct,
-        answer, expected, error_kind, answered_at FROM claimed CROSS JOIN input
+        answer, expected, error_kind, answered_at FROM eligible JOIN logged ON logged.id = eligible.log_id
       ON CONFLICT (user_id, course_id, day_number, exercise_id) DO UPDATE SET attempts = excluded.attempts,
         correct = excluded.correct, answer = excluded.answer, expected = excluded.expected,
         error_kind = excluded.error_kind, completed_at = excluded.completed_at, updated_at = now()
+    ), daily_activity AS (
+      INSERT INTO daily_word_reviews (user_id, course_id, day, lexeme_id, answer_id, format, answered_at)
+      SELECT ${userId}, ${courseId}, calendar.day::text, ${lexemeId}, logged.id, ${submission.format}, logged.reviewed_at
+      FROM logged CROSS JOIN calendar ORDER BY logged.id LIMIT 1
+      ON CONFLICT (user_id, course_id, day, lexeme_id) DO UPDATE SET
+        answer_id = excluded.answer_id, format = excluded.format, answered_at = excluded.answered_at
+      WHERE daily_word_reviews.answered_at < excluded.answered_at
     )${session ? sql`, completed_word AS (
       INSERT INTO lesson_sessions (id, user_id, course_id, day_number, kind, started_at,
         completed_at, planned_budget_ms, actual_ms, items_reviewed, items_correct)
-      SELECT ${session.id}, ${userId}, ${courseId}, ${session.dayNumber}, ${session.kind},
-        least(${session.startedAt.toISOString()}::timestamptz, answered_at), answered_at, ${session.plannedBudgetMs},
-        least(2147483647, greatest(0, extract(epoch FROM answered_at - ${session.startedAt.toISOString()}::timestamptz) * 1000))::integer,
-        ${session.itemsReviewed}, ${session.itemsCorrect} FROM claimed
+      SELECT ${session.id}, ${userId}, ${courseId}, ${session.dayNumber},
+        CASE WHEN bool_and(eligible.correct = 1) THEN 'words' ELSE 'words-failed' END,
+        least(${session.startedAt.toISOString()}::timestamptz, min(eligible.answered_at)), max(eligible.answered_at),
+        sum(eligible.attempts)::integer * 20000,
+        least(2147483647, greatest(0, extract(epoch FROM max(eligible.answered_at) - ${session.startedAt.toISOString()}::timestamptz) * 1000))::integer,
+        sum(eligible.attempts)::integer, sum(eligible.correct)::integer
+      FROM eligible JOIN logged ON logged.id = eligible.log_id
+      HAVING count(*) > 0
       ON CONFLICT (user_id, id) DO NOTHING
     )` : sql.empty()}
-    SELECT COALESCE((SELECT answered_at FROM claimed), (
-      SELECT reviewed_at FROM review_logs WHERE id = ${log.id} AND user_id = ${userId} AND study_item_id = ${item.id}
-    )) AS answered_at
-  `)
-  if (rows[0]?.answered_at) return { answeredAt: rows[0].answered_at }
+    SELECT id, reviewed_at FROM logged
+    UNION ALL
+    SELECT review_logs.id, review_logs.reviewed_at FROM review_logs JOIN input ON review_logs.id = input.log_id
+      AND review_logs.study_item_id = input.item_id WHERE review_logs.user_id = ${userId}
 
-  // A retry racing the original request can miss its commit in the statement snapshot.
-  const replay = await pg.execute<{ reviewed_at: string | Date }>(sql`SELECT reviewed_at FROM review_logs
-    WHERE id = ${log.id} AND user_id = ${userId} AND study_item_id = ${item.id}`)
-  return { answeredAt: replay.rows[0]?.reviewed_at ?? null }
+  `)
+  // A concurrent idempotent retry may not see the first statement's commit.
+  const accepted = rows.length ? rows : (await pg.execute<{ id: string; reviewed_at: string | Date }>(sql`
+    SELECT logs.id, logs.reviewed_at FROM review_logs logs
+      JOIN jsonb_to_recordset(${JSON.stringify(answers.map(({ log, item }) => ({ id: log.id, item_id: item.id })))}::jsonb)
+        AS submitted(id text, item_id text) ON submitted.id = logs.id AND submitted.item_id = logs.study_item_id
+      WHERE logs.user_id = ${userId}
+  `)).rows
+  return { answeredAt: accepted[0]?.reviewed_at ?? null, acceptedLogIds: accepted.map(({ id }) => id) }
 })

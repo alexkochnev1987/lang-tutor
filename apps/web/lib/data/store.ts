@@ -16,7 +16,7 @@
 import { useSyncExternalStore } from 'react'
 import { studyDayKey } from './study-day'
 import type { ProfileName } from './profile-name'
-import { brainstormWordSession, type DailyWordQueue, type DailyWordSubmission } from '@/lib/engine/daily-words'
+import { brainstormWordSession, projectDailyWordQueue, type DailyWordAnswer, type DailyWordQueue, type DailyWordSubmission } from '@/lib/engine/daily-words'
 import {
   DEFAULT_SETTINGS,
   type AppState, type ExerciseResultRow, type LessonSessionRow, type LexemeStatusRow, type PersonalWordRow,
@@ -214,6 +214,7 @@ export async function saveAnswer(p: AnswerPayload): Promise<void> {
   }))
   try {
     await request('/api/answer/', { method: 'POST', body: JSON.stringify(p) })
+    if (p.item.kind.startsWith('lexeme-')) publishDailyWordsChange(p.log?.id ?? crypto.randomUUID())
   } catch (e) {
     console.error('[answer]', e)
     void refresh()
@@ -235,6 +236,7 @@ export async function saveScheduledReview(payload: AnswerPayload): Promise<boole
     if (previous?.lastReview && (!item.lastReview || previous.lastReview > item.lastReview)) return state
     return { ...state, studyItems: [...state.studyItems.filter((row) => row.id !== item.id), item] }
   })
+  if (item.kind.startsWith('lexeme-')) publishDailyWordsChange(payload.log?.id ?? crypto.randomUUID())
   return true
 }
 
@@ -421,6 +423,7 @@ export function subscribeDailyWords(listener: () => void) {
 
 let dailyQueueRequest: Promise<DailyWordQueue> | null = null
 let dailyQueueSnapshot: { userId: string; timeZone: string; queue: DailyWordQueue } | null = null
+const pendingQueueAnswers = new Map<string, { userId: string; answers: DailyWordAnswer[] }>()
 let nextReviewTimer: ReturnType<typeof setTimeout> | null = null
 
 function clearNextReviewTimer() {
@@ -453,10 +456,12 @@ export function getCachedDailyWords(): DailyWordQueue | null {
   return snapshot.user.id === userId
     && snapshot.settings.timeZone === timeZone
     && queue.day === studyDayKey(timeZone)
-    ? queue : null
+    ? [...pendingQueueAnswers.values()].filter((entry) => entry.userId === userId).reduce((value, entry) => projectDailyWordQueue(value, entry.answers), queue) : null
 }
 
 export function loadDailyWords() {
+  const projected = getCachedDailyWords()
+  if (projected && [...pendingQueueAnswers.values()].some((entry) => entry.userId === snapshot?.user.id)) return Promise.resolve(projected)
   if (dailyQueueRequest) return dailyQueueRequest
   const pending = loadState().then(async ({ user, settings }) => {
     const queue = await request<DailyWordQueue>('/api/daily-words/', { cache: 'no-store' })
@@ -465,20 +470,38 @@ export function loadDailyWords() {
       dailyQueueSnapshot = { userId: user.id, timeZone: settings.timeZone, queue }
       scheduleNextReview(queue)
     }
-    return queue
+    return getCachedDailyWords() ?? queue
   }).finally(() => { if (dailyQueueRequest === pending) dailyQueueRequest = null })
   dailyQueueRequest = pending
   return pending
 }
 
 export async function saveDailyWordAnswer(payload: DailyWordSubmission) {
-  const { answeredAt } = await request<{ answeredAt: string | null }>('/api/daily-words/', {
-    method: 'POST',
-    body: JSON.stringify(payload),
-  })
-  if (!answeredAt) return false
-
-  const answers = payload.format === 'brainstorm' ? payload.answers : [payload]
+  const submitted = payload.format === 'brainstorm' ? payload.answers : [payload]
+  const key = submitted[0]!.log.id
+  const userId = snapshot?.user.id
+  if (userId) {
+    pendingQueueAnswers.set(key, { userId, answers: submitted })
+    window.dispatchEvent(new Event(DAILY_WORD_EVENT))
+  }
+  let response: { answeredAt: string | null; acceptedLogIds?: string[] }
+  try {
+    response = await request<typeof response>('/api/daily-words/', {
+      method: 'POST',
+      body: JSON.stringify(payload),
+    })
+  } catch (error) {
+    pendingQueueAnswers.delete(key)
+    publishDailyWordsChange(key)
+    throw error
+  }
+  pendingQueueAnswers.delete(key)
+  const { answeredAt, acceptedLogIds } = response
+  const answers = acceptedLogIds ? submitted.filter(({ log }) => acceptedLogIds.includes(log.id)) : submitted
+  if (!answeredAt || !answers.length || (userId && snapshot?.user.id !== userId)) {
+    publishDailyWordsChange(key)
+    return false
+  }
   const completedAt = new Date(answeredAt)
   const currentItems = new Map(answers.map(({ item, log }) => [item.id, {
     ...item,
@@ -486,7 +509,7 @@ export async function saveDailyWordAnswer(payload: DailyWordSubmission) {
     lastReview: completedAt,
   }]))
   const results = answers.map(({ result }) => ({ ...result, courseId: COURSE_ID, completedAt }))
-  const wordSession = payload.format === 'brainstorm' ? brainstormWordSession(payload) : null
+  const wordSession = payload.format === 'brainstorm' ? brainstormWordSession({ ...payload, answers }) : null
   patch((state) => {
     const studyItems = state.studyItems.filter((row) => {
       if (!currentItems.has(row.id)) return true

@@ -7,7 +7,7 @@ import { Button, Card, Row, Screen, Stack } from '@polski/ui'
 import type { CheckResult } from '@polski/engine'
 import type { Lexeme } from '@/lib/content/curriculum'
 import { loadState, saveDailyWordAnswer } from '@/lib/data/store'
-import { formatOfWordExercise, wordSkill, type DailyWordAnswer, type DailyWordSubmission } from '@/lib/engine/daily-words'
+import { formatOfWordExercise, wordSkill, type DailyWordAnswer, type DailyWordSubmission, type WordFormat } from '@/lib/engine/daily-words'
 import { prepareLexemeReview, Rating } from '@/lib/engine/session'
 import { buildWordStageRetryStep, buildWordStudySteps, oneAttemptWordSteps, WORD_STAGE_RETRY_LIMIT, type WordExerciseStep } from '@/lib/engine/word-study'
 import { ExerciseView, SpeakIcon } from './ExerciseView'
@@ -24,11 +24,12 @@ type Progress = {
   unavailable: string[]
 }
 
-export function BrainstormPractice({ id, words, pool, dayNumber, canContinue, checking, loadError, onConsume, onContinue, onExit }: {
+export function BrainstormPractice({ id, words, pool, dayNumber, reviewFormats, canContinue, checking, loadError, onConsume, onContinue, onExit }: {
   id: string
   words: Lexeme[]
   pool: Lexeme[]
   dayNumber: number
+  reviewFormats?: Record<string, WordFormat[]>
   canContinue: boolean
   checking: boolean
   loadError: boolean
@@ -54,20 +55,22 @@ export function BrainstormPractice({ id, words, pool, dayNumber, canContinue, ch
   const main = useRef<HTMLElement>(null)
   const [answerTarget, setAnswerTarget] = useState<HTMLDivElement | null>(null)
   const prefix = `${id}:`
-  const base = useMemo(() => oneAttemptWordSteps(buildWordStudySteps(words, pool, prefix)), [words, pool, prefix])
+  const allSteps = useMemo(() => oneAttemptWordSteps(buildWordStudySteps(words, pool, prefix)), [words, pool, prefix])
+  const base = useMemo(() => allSteps.filter((step) => step.kind === 'word-intro' || !reviewFormats || reviewFormats[step.word.id]?.includes(formatOfWordExercise(step.ex))), [allSteps, reviewFormats])
   const stages = useMemo(() => {
     const byWord = new Map<string, WordExerciseStep[]>()
-    for (const step of base) {
+    for (const step of allSteps) {
       if (step.kind !== 'exercise') continue
       const list = byWord.get(step.word.id) ?? []
       list.push(step)
       byWord.set(step.word.id, list)
     }
     return byWord
-  }, [base])
+  }, [allSteps])
 
   function stagesFor(word: Lexeme, responses: Progress['responses']) {
     return (stages.get(word.id) ?? []).map((first, stageIndex) => {
+      if (reviewFormats && !reviewFormats[word.id]?.includes(formatOfWordExercise(first.ex))) return []
       const attempts = [first]
       for (let round = 1; round <= WORD_STAGE_RETRY_LIMIT; round += 1) {
         const previous = responses[attempts[attempts.length - 1]!.ex.id]
@@ -77,7 +80,7 @@ export function BrainstormPractice({ id, words, pool, dayNumber, canContinue, ch
         attempts.push(retry)
       }
       return attempts
-    })
+    }).filter((attempts) => attempts.length > 0)
   }
 
   const active = (word: Lexeme) => !progress.unavailable.includes(word.id)
