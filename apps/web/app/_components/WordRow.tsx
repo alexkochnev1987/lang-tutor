@@ -116,11 +116,13 @@ export function KnownToggle({
   onMarked,
   polishLabels = false,
   removeFromStudy = false,
+  iconOnly = false,
 }: {
   lexemeId: string;
   onMarked?: (known: boolean) => void;
   polishLabels?: boolean;
   removeFromStudy?: boolean;
+  iconOnly?: boolean;
 }) {
   const state = useAppState();
   const known =
@@ -149,7 +151,9 @@ export function KnownToggle({
         <button
           type="button"
           onClick={toggleKnown}
-          className="ml-auto inline-flex min-h-11 shrink-0 items-center gap-1.5 rounded-pill bg-soft px-3 text-xs font-medium text-ink transition-colors hover:bg-soft2 active:bg-soft2"
+          aria-label={label}
+          title={iconOnly ? label : undefined}
+          className={`ml-auto inline-flex min-h-11 shrink-0 items-center justify-center gap-1.5 rounded-pill bg-soft text-xs font-medium text-ink transition-colors hover:bg-soft2 active:bg-soft2 ${iconOnly ? "size-11" : "px-3"}`}
         >
           <svg
             aria-hidden="true"
@@ -165,7 +169,7 @@ export function KnownToggle({
             <path d="M4 8v11a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8M9 13h6" />
             {known && <path d="M12 10v6" />}
           </svg>
-          {label}
+          {!iconOnly && label}
         </button>
       </StudyTooltip>
     );

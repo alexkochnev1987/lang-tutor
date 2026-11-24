@@ -683,6 +683,7 @@ export default function LessonPage() {
                       progress={lexemeSkillProgress(appState, exerciseLexemeId)}
                       nextReview={nextLexemeReview(appState, exerciseLexemeId)}
                       reviewPending={reviewPending}
+                      compact={wordStudyExercise}
                     />
                   ) : undefined
                 }
@@ -691,6 +692,7 @@ export default function LessonPage() {
                     <KnownToggle
                       lexemeId={reviewLexemeId}
                       removeFromStudy
+                      iconOnly={wordStudyExercise}
                       onMarked={(known) => known && skipWord()}
                     />
                   ) : undefined
@@ -925,10 +927,12 @@ function LexemeSkillLevel({
   progress,
   nextReview,
   reviewPending = false,
+  compact = false,
 }: {
   progress: ReturnType<typeof lexemeSkillProgress>;
   nextReview: ReturnType<typeof nextLexemeReview>;
   reviewPending?: boolean;
+  compact?: boolean;
 }) {
   const daysUntilReview = nextReview
     ? (nextReview.due.getTime() - Date.now()) / MILLISECONDS_PER_DAY
@@ -947,7 +951,7 @@ function LexemeSkillLevel({
       role="group"
       aria-label="Шкала повторения слова"
     >
-      <div className="mb-1 flex items-center gap-1.5">
+      {!compact && <div className="mb-1 flex items-center gap-1.5">
         <p className="text-xs text-muted">Уровень освоения</p>
         <StudyTooltip
           description="Длина дуги показывает, как даётся навык. Правильный ответ удлиняет дугу, ошибка укорачивает. Цвет обозначает уровень."
@@ -961,8 +965,8 @@ function LexemeSkillLevel({
             i
           </button>
         </StudyTooltip>
-      </div>
-      <div className="flex flex-wrap gap-1">
+      </div>}
+      <div className={compact ? "grid grid-cols-6 items-center gap-0.5" : "flex flex-wrap gap-1"}>
         {LEXEME_SKILL_KINDS.map((kind) => {
           const { label, description, icon } = SKILL_INDICATORS[kind];
           const result = progress[kind];
@@ -981,9 +985,9 @@ function LexemeSkillLevel({
               <button
                 type="button"
                 aria-label={`${label}: ${level.label}`}
-                className={`grid size-11 place-items-center rounded-pill hover:bg-soft ${level.color}`}
+                className={`grid place-items-center rounded-pill hover:bg-soft ${compact ? "min-h-11 w-full max-w-11 min-w-0" : "size-11"} ${level.color}`}
               >
-                <svg aria-hidden="true" className="size-10" viewBox="0 0 40 40" fill="none">
+                <svg aria-hidden="true" className="size-10 max-w-full" viewBox="0 0 40 40" fill="none">
                   <IndicatorArc value={value} />
                   <svg x="11" y="11" width="18" height="18" viewBox="0 0 24 24">
                     <path d={icon} stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
@@ -998,9 +1002,9 @@ function LexemeSkillLevel({
             type="button"
             aria-label={reviewPending ? "Назначаем повторение…" : nextReview ? `Следующее повторение — ${reviewBadgeText}` : reviewDescription}
             aria-busy={reviewPending}
-            className={`grid size-11 place-items-center rounded-pill hover:bg-soft ${reviewColor(daysUntilReview)}`}
+            className={`grid place-items-center rounded-pill hover:bg-soft ${compact ? "min-h-11 w-full max-w-11 min-w-0" : "size-11"} ${reviewColor(daysUntilReview)}`}
           >
-            <svg aria-hidden="true" className="size-10" viewBox="0 0 40 40" fill="none">
+            <svg aria-hidden="true" className="size-10 max-w-full" viewBox="0 0 40 40" fill="none">
               <IndicatorArc value={reviewPending ? 0 : reviewFill} />
               {reviewPending && (
                 <circle

@@ -54,12 +54,11 @@ describe('stable exercise presentation', () => {
 })
 
 describe('shared full-screen practice slots', () => {
-  it('puts secondary word details after the question and keeps them collapsed', () => {
-    const markup = render(ExerciseCard, { metadata: h('span', null, 'Mastery'), metadataLabel: 'Word details' }, h('input', { 'data-word-answer': '' }))
-    expect(markup.indexOf('data-word-answer')).toBeLessThan(markup.indexOf('<details'))
-    expect(markup).not.toMatch(/<details[^>]*\sopen(?:[\s=>])/)
-    expect(markup).toContain('Mastery')
-    expect(markup).toContain('Word details')
+  it('puts secondary word controls directly below the question in one row', () => {
+    const markup = render(ExerciseCard, { practice: true, metadata: h('span', null, 'Mastery') }, h('input', { 'data-word-answer': '' }))
+    expect(markup.indexOf('data-word-answer')).toBeLessThan(markup.indexOf('Mastery'))
+    expect(markup).not.toContain('<details')
+    expect(markup).toContain('flex items-center justify-between gap-1')
   })
   it('uses the same prompt area for word and audio exercises', () => {
     for (const child of [h('span', null, 'silk'), audio]) {
@@ -74,6 +73,7 @@ describe('shared full-screen practice slots', () => {
     const markup = render(ExerciseAnswerForm, { formId: 'practice-answer', onSubmit: () => {} }, input)
     expect(markup).toMatch(/^<form id="practice-answer"/)
     expect(markup).toContain('data-word-answer')
+    expect(markup).toContain('noValidate=""')
     expect(markup).toMatch(/<\/form>$/)
     expect(render(ExerciseAnswerForm, { onSubmit: () => {} }, input)).not.toContain('<form')
   })
@@ -93,13 +93,13 @@ describe('compact practice', () => {
     }
   })
   it('uses a flat practice card and reserves a hidden details slot before grading', () => {
-    const props = { practice: true, metadata: expected, metadataLabel: 'Details' }
+    const props = { practice: true, metadata: expected }
     const before = render(ExerciseCard, { ...props, metadataVisible: false }, audio)
     const after = render(ExerciseCard, { ...props, metadataVisible: true }, audio)
     for (const markup of [before, after]) {
       expect(markup).toContain('data-practice-card')
       expect(markup).not.toContain('shadow-card')
-      expect(markup).toContain('Details')
+      expect(markup).toContain('Expected answer')
     }
     expect(before).toContain('inert=""')
     expect(after).not.toContain('inert=""')

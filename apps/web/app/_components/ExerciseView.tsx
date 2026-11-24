@@ -638,18 +638,16 @@ export function ExerciseView({
       data-word-answer={submitFormId ? "" : undefined}
       aria-label={exercise.instruction}
       enterKeyHint={submitFormId ? "done" : undefined}
-      required={Boolean(submitFormId)}
+      aria-required={submitFormId ? true : undefined}
       onFocus={submitFormId ? undefined : (event) => keepInputVisible(event.currentTarget)}
       onChange={(e) => updateTyped(e.target.value)}
       onBlur={submitFormId ? undefined : () => submit(typed)}
       onKeyDown={(e) => {
         if (e.key !== "Enter" || e.nativeEvent.isComposing || e.nativeEvent.keyCode === 229) return;
         e.preventDefault();
-        if (submitFormId) {
-          e.currentTarget.form?.requestSubmit();
-        } else {
-          submit(typed);
-        }
+        // Grade immediately from the native keyboard action. Empty input
+        // is ignored by submit(), without the browser's validation popup.
+        submit(e.currentTarget.value);
       }}
       placeholder={
         exercise.kind === "sentence-write"
@@ -878,8 +876,7 @@ export function ExerciseView({
 
   return (
     <ExerciseCard bare={bare} practice={practice} metadataVisible={Boolean(result)} tone={result ? (result.correct ? "correct" : "wrong") : "neutral"}
-      metadataLabel={practice ? t("wordDetails") : undefined}
-      metadata={(topLeftStatus || topRightAction) && <><div>{topLeftStatus}</div>{topRightAction}</>}>
+      metadata={(topLeftStatus || topRightAction) && <>{topLeftStatus && <div className={practice ? "min-w-0 flex-1" : undefined}>{topLeftStatus}</div>}{topRightAction}</>}>
       {content}
     </ExerciseCard>
   );

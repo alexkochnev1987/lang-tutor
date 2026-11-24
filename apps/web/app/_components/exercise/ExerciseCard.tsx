@@ -2,27 +2,22 @@ import type { ReactNode } from 'react'
 import { Card, OptionRow, Row, Stack } from '@polski/ui'
 
 /** Shared presentation only: grading, persistence and navigation stay with the exercise. */
-export function ExerciseCard({ children, tone = 'neutral', metadata, metadataLabel, metadataVisible = true, practice = false, bare = false }: {
+export function ExerciseCard({ children, tone = 'neutral', metadata, metadataVisible = true, practice = false, bare = false }: {
   children: ReactNode
   tone?: 'neutral' | 'correct' | 'wrong'
   metadata?: ReactNode
-  /** Practice puts secondary controls in a collapsed section below the answer. */
-  metadataLabel?: string
+  /** Practice reveals secondary controls after grading. */
   metadataVisible?: boolean
   practice?: boolean
   bare?: boolean
 }) {
   if (bare) return <>{children}</>
-  const metadataContent = metadata && <div className="flex flex-wrap items-center justify-between gap-3">{metadata}</div>
   const content = <>
-    {!metadataLabel && metadataContent && <div className="mb-2">{metadataContent}</div>}
+    {!practice && metadata && <div className="mb-2 flex flex-wrap items-center justify-between gap-3">{metadata}</div>}
     {children}
-    {metadataLabel && metadataContent && (
-      <ExerciseSlot visible={metadataVisible} className="mt-2 text-sm text-muted">
-        <details>
-          <summary className="min-h-10 cursor-pointer py-2">{metadataLabel}</summary>
-          {metadataContent}
-        </details>
+    {practice && metadata && (
+      <ExerciseSlot visible={metadataVisible} className="mt-2 flex items-center justify-between gap-1 text-muted" >
+        {metadata}
       </ExerciseSlot>
     )}
   </>
@@ -40,7 +35,7 @@ export function ExercisePromptArea({ children, practice = false }: { children: R
 /** The input stays in the card; the shared footer submits it by form ID. */
 export function ExerciseAnswerForm({ children, formId, onSubmit }: { children: ReactNode; formId?: string; onSubmit: () => void }) {
   if (!formId) return <>{children}</>
-  return <form id={formId} className="w-full min-w-0" onSubmit={(event) => {
+  return <form id={formId} noValidate className="w-full min-w-0" onSubmit={(event) => {
     event.preventDefault()
     onSubmit()
   }}>{children}</form>
