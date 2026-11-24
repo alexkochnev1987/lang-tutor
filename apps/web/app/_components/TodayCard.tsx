@@ -5,7 +5,7 @@ import { useTranslations } from 'next-intl'
 import { Button, buttonStyles, Card, Row, Stack } from '@polski/ui'
 import { STAGE_TITLE, type Stage, type TodayPlan } from '@/lib/engine/plan'
 import type { CurriculumDay } from '@/lib/content/curriculum'
-import { LoadingSkeleton } from './LoadingSkeleton'
+import { LoadingSlot, SkeletonBlock } from './LoadingSkeleton'
 import { WordRow } from './WordRow'
 import { AppIcon } from './AppIcon'
 import { GrammarLink } from './GrammarLink'
@@ -53,7 +53,7 @@ export function TodayCard() {
           </Stack>
         </Card>
       ) : plan ? <TodayLessonCard plan={plan} /> : (
-        <LoadingSkeleton variant="today" label={t('loadingSections.lessonPlan')} />
+        <TodayLessonCard />
       )}
       <DailyWordCounts />
       <WeeklyGoal />
@@ -95,14 +95,24 @@ export function TodayCard() {
   )
 }
 
-function TodayLessonCard({ plan }: { plan: TodayPlan }) {
+function TodayLessonCard({ plan }: { plan?: TodayPlan }) {
   const t = useTranslations()
-  const { day } = plan
-  const minutes = Math.max(1, Math.round(plan.estimatedSec / 60))
+  const day = plan?.day
+  const minutes = Math.max(1, Math.round((plan?.estimatedSec ?? 0) / 60))
 
   return (
     <Card tone="featured" constrained={false}>
       <Stack gap="md">
+        <LoadingSlot loading={!plan} label={t('loadingSections.lessonPlan')} fallback={<>
+          <Stack gap="none">
+            <Row gap="sm" justify="between"><SkeletonBlock className="h-4 w-24" /><SkeletonBlock className="h-6 w-24 rounded-pill" /></Row>
+            <SkeletonBlock className="mt-1 h-8 w-2/3" />
+            <SkeletonBlock className="h-5 w-4/5" />
+          </Stack>
+          <Stack gap="xs">{Array.from({length: 3}, (_, i) => <Row key={i} gap="sm" justify="between"><SkeletonBlock className="h-5 w-28" /><SkeletonBlock className="h-5 w-20" /></Row>)}</Stack>
+          <SkeletonBlock className="h-14 w-full" />
+          <SkeletonBlock className="h-4 w-4/5" />
+        </>}>{plan && day && <>
         <Stack gap="none">
           <Row gap="sm" justify="between">
             <span className="text-xs tracking-wide text-muted uppercase">
@@ -155,6 +165,7 @@ function TodayLessonCard({ plan }: { plan: TodayPlan }) {
         </Link>
 
         <p className="text-xs text-muted">{day.expectedOutcome}</p>
+        </>}</LoadingSlot>
       </Stack>
     </Card>
 

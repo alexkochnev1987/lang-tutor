@@ -4,9 +4,9 @@ import { TabBody } from '@/app/_components/TabBody'
 import { useEffect, useMemo, useState } from 'react'
 import { useTranslations } from 'next-intl'
 import { Button, Card, Row, Segmented, Stack } from '@polski/ui'
-import { LoadingSkeleton, SkeletonBlock } from '@/app/_components/LoadingSkeleton'
+import { SkeletonBlock } from '@/app/_components/LoadingSkeleton'
 import { SectionNav } from '@/app/_components/SectionNav'
-import { WordRow } from '@/app/_components/WordRow'
+import { WordList, WordRow } from '@/app/_components/WordRow'
 import { getCachedVocabulary, loadVocabulary, type Lexeme } from '@/lib/content/curriculum'
 import { loadState, useAppState } from '@/lib/data/store'
 
@@ -184,7 +184,7 @@ export default function DictionaryPage() {
           </Stack></Card>
         )}
         {((!words && !vocabularyError) || (words && loadingFilter && !stateError)) && (
-          <LoadingSkeleton variant="list" visible label={loading(loadingFilter && words ? 'wordStatuses' : 'vocabulary')} />
+          <WordList loading label={loading(loadingFilter && words ? 'wordStatuses' : 'vocabulary')} />
         )}
 
         {words && !loadingFilter && visible.length === 0 && (
@@ -192,13 +192,11 @@ export default function DictionaryPage() {
         )}
 
         {!loadingFilter && visible.length > 0 && (
-          <Card>
-            <div className="-my-2">
+          <WordList>
               {visible.slice(0, limit).map((w) => (
                 <WordRow key={w.id} word={w} completed={completedIds.has(w.id)} />
               ))}
-            </div>
-          </Card>
+          </WordList>
         )}
 
         {!loadingFilter && visible.length > limit && (

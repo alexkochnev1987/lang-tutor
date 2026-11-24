@@ -73,9 +73,10 @@ export function WeeklyGoal() {
     return (
       <Card constrained={false}>
         <Stack gap="sm">
-          <Row gap="sm">
-            <GoalIcon name="calendar" className="size-5 shrink-0 text-accent-ink" />
-            <h2 className="text-sm font-semibold">{t('title')}</h2>
+          <Row gap="sm" justify="between">
+            <Row gap="sm"><GoalIcon name="calendar" className="size-5 shrink-0 text-accent-ink" />
+            <h2 className="text-sm font-semibold">{t('title')}</h2></Row>
+            {!failed && <SkeletonBlock className="h-5 w-12" />}
           </Row>
           {failed ? (
             <>
@@ -87,12 +88,16 @@ export function WeeklyGoal() {
             </>
           ) : (
             <>
-              <div className="grid grid-cols-7 justify-items-center gap-1">
+              <ol className="grid grid-cols-7 gap-1">
                 {Array.from({ length: 7 }, (_, index) => (
-                  <SkeletonBlock key={index} className="size-7 rounded-full" />
+                  <li key={index} className="flex flex-col items-center gap-1">
+                    <SkeletonBlock className="h-4 w-6" />
+                    <SkeletonBlock className="size-7 rounded-full" />
+                  </li>
                 ))}
-              </div>
-              <p role="status" className="text-xs text-muted">{loading('weeklyGoal')}</p>
+              </ol>
+              <SkeletonBlock className="h-4 w-4/5" />
+              <p role="status" className="sr-only">{loading('weeklyGoal')}</p>
             </>
           )}
         </Stack>

@@ -123,7 +123,25 @@ input, select, textarea {
 
 /* One height owner for the practice screen. The browser may pan its visual
    viewport on focus; never also move our layout using viewport.offsetTop. */
+/* Practice owns its scrollport; focusing an input must not scroll the document
+   or the persistent tab shell. Scope the lock to the mounted practice screen. */
+html:has(.word-practice-screen),
+body:has(.word-practice-screen) {
+  height: 100%;
+  overflow: hidden;
+  overscroll-behavior: none;
+}
+
+body:has(.word-practice-screen) {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+}
+
 .word-practice-screen {
+  position: fixed;
+  top: 0;
+  inset-inline: 0;
   height: var(--study-viewport-height, 100dvh);
   flex-shrink: 0;
 }

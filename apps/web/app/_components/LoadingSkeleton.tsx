@@ -1,9 +1,18 @@
+import type { ReactNode } from 'react'
 import { useTranslations } from 'next-intl'
 import { Card, cn } from '@polski/ui'
 
 export function SkeletonBlock({ className }: { className: string }) {
   return <div aria-hidden="true"
     className={cn('rounded-control bg-soft motion-safe:animate-pulse [animation-delay:180ms]', className)} />
+}
+
+/** Only the slot's value changes; its owning layout stays mounted. */
+export function LoadingSlot({ loading, fallback, children, label }: {
+  loading: boolean; fallback: ReactNode; children: ReactNode; label?: string
+}) {
+  const t = useTranslations('common')
+  return loading ? <>{fallback}<span className="sr-only" role="status">{label ?? t('loading')}</span></> : <>{children}</>
 }
 
 export function LoadingSkeleton({ variant = 'card', label, visible }: {

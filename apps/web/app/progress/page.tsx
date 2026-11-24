@@ -3,7 +3,7 @@
 import { useEffect, useState } from 'react'
 import { useTranslations } from 'next-intl'
 import { Card, Meter, Row, Stack, Stat } from '@polski/ui'
-import { LoadingSkeleton } from '@/app/_components/LoadingSkeleton'
+import { LoadingSlot, SkeletonBlock } from '@/app/_components/LoadingSkeleton'
 import { CourseShell } from '@/app/_components/CourseShell'
 import { loadProgress, type Progress, type RuleProgress } from '@/lib/engine/progress'
 
@@ -34,21 +34,25 @@ export default function ProgressPage() {
   }, [])
 
   if (error) return <CourseShell current="/progress"><Card><p className="text-sm text-danger">{t('errors.generic')}</p></Card></CourseShell>
-  if (!p) return <CourseShell current="/progress"><LoadingSkeleton /></CourseShell>
 
   return (
     <CourseShell current="/progress">
       <Card>
         <Row gap="lg" wrap>
-          <Stat value={`${p.day}/${p.totalDays}`} label="день программы" />
-          <Stat value={p.streak} label="дней подряд" />
-          <Stat value={p.lexemes.known} label="слов освоено"
-                hint={`+${p.lexemes.learning} в работе`} />
-          <Stat value={`${p.rules.introduced}/${p.rules.total}`} label="правил введено"
-                hint={`${p.rules.strong} освоено`} />
+          <Stat value={p ? `${p.day}/${p.totalDays}` : <SkeletonBlock className="h-8 w-16" />} label="день программы" />
+          <Stat value={p ? p.streak : <SkeletonBlock className="h-8 w-12" />} label="дней подряд" />
+          <Stat value={p ? p.lexemes.known : <SkeletonBlock className="h-8 w-12" />} label="слов освоено"
+                hint={p ? `+${p.lexemes.learning} в работе` : undefined} />
+          <Stat value={p ? `${p.rules.introduced}/${p.rules.total}` : <SkeletonBlock className="h-8 w-16" />} label="правил введено"
+                hint={p ? `${p.rules.strong} освоено` : undefined} />
         </Row>
       </Card>
 
+      <LoadingSlot loading={!p} fallback={<>
+        <Card><Stack gap="md"><h2 className="font-semibold">Сколько осталось до B1</h2><SkeletonBlock className="h-8 w-full" /><SkeletonBlock className="h-5 w-3/4" /><SkeletonBlock className="h-2 w-full rounded-pill" /><Row gap="lg" wrap>{[0,1,2].map(i => <SkeletonBlock key={i} className="h-14 w-24" />)}</Row></Stack></Card>
+        <Card><Stack gap="md"><h2 className="font-semibold">{t('exam.readiness')}</h2><SkeletonBlock className="h-8 w-full" />{[0,1,2,3].map(i => <Stack key={i} gap="xs"><SkeletonBlock className="h-5 w-1/2" /><SkeletonBlock className="h-2 w-full rounded-pill" /></Stack>)}</Stack></Card>
+        <Card><Stack gap="md"><h2 className="font-semibold">Что сделано</h2><SkeletonBlock className="h-12 w-full" /><Row gap="lg" wrap>{[0,1,2,3].map(i => <SkeletonBlock key={i} className="h-14 w-24" />)}</Row></Stack></Card>
+      </>}>{p && <>
       <Card>
         <Stack gap="md">
           <Stack gap="none">
@@ -226,6 +230,7 @@ export default function ProgressPage() {
           </Stack>
         </Card>
       )}
+      </>}</LoadingSlot>
     </CourseShell>
   )
 }
