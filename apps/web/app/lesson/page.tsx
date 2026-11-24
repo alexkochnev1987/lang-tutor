@@ -4,7 +4,7 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { BrainstormPractice } from "@/app/_components/BrainstormPractice";
-import { LoadingSkeleton, SkeletonBlock } from "@/app/_components/LoadingSkeleton";
+import { LoadingSlot, SkeletonBlock } from "@/app/_components/LoadingSkeleton";
 import { Button, Card, Row, Screen, Stack } from "@polski/ui";
 import type { CheckResult, Exercise } from "@polski/engine";
 import {
@@ -400,19 +400,11 @@ export default function LessonPage() {
 
 
   if (!plan) {
-    return (
-      <Screen>
-        <Centered>
-          {planError ? <Button onClick={() => setPlanAttempt((attempt) => attempt + 1)}>{t("reload")}</Button>
-            : <LoadingSkeleton variant="lesson" label={common("loadingLesson")} />}
-        </Centered>
-        {!planError && (
-          <footer aria-hidden="true" className="border-t border-line px-4 pt-2 pb-[max(0.5rem,env(safe-area-inset-bottom))]">
-            <SkeletonBlock className="mx-auto h-14 w-full max-w-(--container-exercise)" />
-          </footer>
-        )}
-      </Screen>
-    );
+    return <LessonLayout status={<SkeletonBlock className="h-5 w-28" />} progress={0}>
+      <LoadingSlot loading={!planError} label={common("loadingLesson")} fallback={<StageStartCard />}>
+        <Card><Button full onClick={() => setPlanAttempt((attempt) => attempt + 1)}>{t("reload")}</Button></Card>
+      </LoadingSlot>
+    </LessonLayout>;
   }
 
   const phrase = lessonPhraseFor(plan.dayNumber, appState?.settings.targetLanguage ?? "pl");
@@ -524,17 +516,8 @@ export default function LessonPage() {
   </>;
 
   return (
-    <WordPracticeScreen enabled={wordScreen}>
-      <header className="mx-auto w-full max-w-2xl px-4 py-3">
-        <Row justify="between">
-          <Link
-            href="/"
-            className="inline-flex min-h-10 items-center text-sm text-muted hover:text-ink"
-          >
-            ← Wyjdź
-          </Link>
-          <Row gap="sm">
-            {slot && (
+    <LessonLayout wordScreen={wordScreen} mainRef={wordMain}
+      status={<>{slot && (
               <span className="text-sm text-muted">
                 {grammarExerciseIndex
                   ? "Gramatyka"
@@ -549,18 +532,18 @@ export default function LessonPage() {
                   </span>
                 )}
               </span>
-            )}
-          </Row>
-        </Row>
-        <div className={`mt-2 h-1 overflow-hidden rounded-pill bg-soft ${wordScreen ? "" : "u-hide-on-short"}`}>
-          <div
-            className="h-full bg-primary transition-all"
-            style={{ width: `${((i + 1) / Math.max(1, slots.length)) * 100}%` }}
-          />
-        </div>
-      </header>
-
-      <main ref={wordMain} className="mx-auto flex min-h-0 w-full max-w-2xl flex-1 flex-col justify-start overflow-y-auto overscroll-contain px-4 pb-4">
+            )}</>}
+      progress={((i + 1) / Math.max(1, slots.length)) * 100}
+      footer={wordScreen && slot?.kind === "step" && (
+        <WordPracticeFooter
+          busyLabel={lessonSave.status === "saving" ? t("saving") : undefined}
+          label={failedReview ? t("retry") : t("next")}
+          disabled={lessonSave.status === "saving"
+            || (wordStudyExercise && slot.step.kind === "exercise"
+              && !canAdvance && !restoredResult && !failedReview)}
+          onNext={failedReview ? failedReview.retry : next}
+        />
+      )}>
         {!wordScreen && screenNotices}
         {slot?.kind === "stage-start" && (
           <StageStart stage={slot.stage} onNext={next} />
@@ -734,19 +717,43 @@ export default function LessonPage() {
           </Stack>
         )}
         {wordScreen && screenNotices}
-      </main>
-      {wordScreen && slot?.kind === "step" && (
-        <WordPracticeFooter
-          busyLabel={lessonSave.status === "saving" ? t("saving") : undefined}
-          label={failedReview ? t("retry") : t("next")}
-          disabled={lessonSave.status === "saving"
-            || (wordStudyExercise && slot.step.kind === "exercise"
-              && !canAdvance && !restoredResult && !failedReview)}
-          onNext={failedReview ? failedReview.retry : next}
-        />
-      )}
-    </WordPracticeScreen>
+    </LessonLayout>
   );
+}
+
+function LessonLayout({ children, status, progress, wordScreen = false, footer, mainRef }: {
+  children: React.ReactNode; status: React.ReactNode; progress: number; wordScreen?: boolean;
+  footer?: React.ReactNode; mainRef?: React.Ref<HTMLElement>;
+}) {
+  return <WordPracticeScreen enabled={wordScreen}>
+    <header className="mx-auto w-full max-w-2xl px-4 py-3">
+      <Row justify="between">
+        <Link href="/" className="inline-flex min-h-10 items-center text-sm text-muted hover:text-ink">← Wyjdź</Link>
+        <Row gap="sm">{status}</Row>
+      </Row>
+      <div className={`mt-2 h-1 overflow-hidden rounded-pill bg-soft ${wordScreen ? "" : "u-hide-on-short"}`}>
+        <div className="h-full bg-primary transition-all" style={{ width: `${progress}%` }} />
+      </div>
+    </header>
+    <main ref={mainRef} className="mx-auto flex min-h-0 w-full max-w-2xl flex-1 flex-col justify-start overflow-y-auto overscroll-contain px-4 pb-4">
+      {children}
+    </main>
+    {footer}
+  </WordPracticeScreen>;
+}
+
+function StageStartCard({ children }: { children?: React.ReactNode }) {
+  return <Card>
+    <Stack gap="md" align="center">
+      <span className="text-xs tracking-wide text-muted uppercase">Blok lekcji</span>
+      {children ?? <>
+        <SkeletonBlock className="h-8 w-2/3" />
+        <SkeletonBlock className="h-5 w-4/5" />
+        <SkeletonBlock className="h-5 w-1/3" />
+        <SkeletonBlock className="h-14 w-full" />
+      </>}
+    </Stack>
+  </Card>;
 }
 
 function StageStart({ stage, onNext }: { stage: Stage; onNext: () => void }) {
@@ -763,11 +770,7 @@ function StageStart({ stage, onNext }: { stage: Stage; onNext: () => void }) {
     0,
   );
   return (
-    <Card>
-      <Stack gap="md" align="center">
-        <span className="text-xs tracking-wide text-muted uppercase">
-          Blok lekcji
-        </span>
+    <StageStartCard>
         <h1 className="text-2xl font-semibold tracking-tight">{STAGE_TITLE_PL[stage.id]}</h1>
         <p className="text-center text-sm text-muted">{STAGE_LEAD[stage.id]}</p>
         {exercises > 0 && (
@@ -784,8 +787,7 @@ function StageStart({ stage, onNext }: { stage: Stage; onNext: () => void }) {
         <Button variant="outline" size="lg" full onClick={onNext}>
           {stage.steps.length ? "Rozpocznij blok" : "Pomiń"}
         </Button>
-      </Stack>
-    </Card>
+    </StageStartCard>
   );
 }
 

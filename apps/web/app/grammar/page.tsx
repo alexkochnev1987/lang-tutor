@@ -12,10 +12,9 @@ import { useSaveLessonResult } from '@/app/_components/useSaveLessonResult'
 import { GrammarExerciseBatch } from '@/app/_components/ExerciseView'
 import { RuleSheet } from '@/app/_components/RuleSheet'
 import { RuleView } from '@/app/_components/RuleView'
-import { LoadingSkeleton } from '@/app/_components/LoadingSkeleton'
 import { WeeklyGoalCredit } from '@/app/_components/WeeklyGoal'
 import { AppIcon } from '@/app/_components/AppIcon'
-import { TodayGrammarOptions } from '@/app/_components/TodayGrammarOptions'
+import { TodayGrammarOptions, TodayGrammarOptionsSkeleton } from '@/app/_components/TodayGrammarOptions'
 import { grammarPracticePlan } from '@/lib/engine/grammar-practice-plan'
 import type { LocalizedRule } from '@/lib/content/rules'
 import { useTodayPlan } from '@/app/_components/useTodayPlan'
@@ -125,7 +124,7 @@ function TodayGrammar({ onPractice }: { onPractice: () => void }) {
   }
 
   if (!plan && !error && !selection) {
-    return <LoadingSkeleton variant="list" visible label={t('loadingSections.grammar')} />
+    return <TodayGrammarOptionsSkeleton label={t('loadingSections.grammar')} />
   }
 
   if (error && !selection) {

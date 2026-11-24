@@ -3,7 +3,7 @@
 import { useEffect, useMemo, useState } from 'react'
 import { Button, Card, Row, Stack } from '@polski/ui'
 import { shuffle, type Exercise } from '@polski/engine'
-import { LoadingSkeleton } from './LoadingSkeleton'
+import { LoadingSlot, SkeletonBlock } from './LoadingSkeleton'
 import { ExerciseView } from './ExerciseView'
 import { RuleSheet } from './RuleSheet'
 import { RuleView } from './RuleView'
@@ -95,7 +95,13 @@ export function GrammarPractice() {
   )
 
   if (error) return <Card><p role="alert">Не удалось загрузить правила.</p></Card>
-  if (!rules) return <LoadingSkeleton label="Загружаем правила…" />
+  if (!rules) return <Card><Stack gap="sm">
+    <h2 className="font-semibold">Тип тренировки</h2>
+    <div className="grid gap-2 sm:grid-cols-2">
+      {FORMATS.map(({ id }) => <SkeletonBlock key={id} className="h-17 rounded-card" />)}
+    </div>
+    <p role="status" className="sr-only">Загружаем правила…</p>
+  </Stack></Card>
   const selectedRule = rules.get(ruleId)
   const language = isRuleLanguage(ruleLanguage) ? ruleLanguage : PACK_ORIGINAL_LANGUAGE
   const rule = selectedRule ? localizeRule(selectedRule, language) : null
@@ -197,7 +203,7 @@ export function GrammarPractice() {
             ))}
           </div>
           {format && !data && !legacyUnavailable && availableRules.length === 0 && (
-            <LoadingSkeleton variant="list" label="Загружаем примеры…" />
+            <LoadingSlot loading fallback={<><span className="text-sm font-medium">Правило</span><SkeletonBlock className="h-11 w-full rounded-card" /></>} label="Загружаем примеры…">{null}</LoadingSlot>
           )}
           {format && (data || legacyUnavailable) && availableRules.length === 0 && (
             <p role="status" className="text-sm text-muted">

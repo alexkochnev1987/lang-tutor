@@ -10,12 +10,12 @@ import { hashString, spelling, type CheckResult } from '@polski/engine'
 import { BrainstormPractice } from '@/app/_components/BrainstormPractice'
 import { PronunciationExercise } from '@/app/_components/PronunciationExercise'
 import { ExerciseView } from '@/app/_components/ExerciseView'
-import { LoadingSkeleton, SkeletonBlock } from '@/app/_components/LoadingSkeleton'
+import { SkeletonBlock } from '@/app/_components/LoadingSkeleton'
 import { SectionNav } from '@/app/_components/SectionNav'
 import { WordPracticeFooter } from '@/app/_components/WordPracticeFooter'
 import { WordPracticeScreen } from '@/app/_components/WordPracticeScreen'
 import { WordSaveIndicator } from '@/app/_components/WordSaveIndicator'
-import { WordRow } from '@/app/_components/WordRow'
+import { WordList, WordRow } from '@/app/_components/WordRow'
 import { currentDayNumber, getCachedVocabulary, loadCurriculum, loadVocabulary, type Lexeme } from '@/lib/content/curriculum'
 import { getCachedDailyWords, getLoadedState, loadDailyWords, queueDailyWordAnswer, subscribeDailyWords } from '@/lib/data/store'
 import { dailyWordExercise, WORD_PRACTICE_FORMATS, wordSkill, wordsForFormat, reviewFormatsForWord, type WordFormat, type DailyWordAnswer, type DailyWordList, type DailyWordQueue, type WordPracticeFormat } from '@/lib/engine/daily-words'
@@ -37,7 +37,7 @@ type Session = {
 }
 
 export default function WordsPage() {
-  return <Suspense fallback={<WordsShell><LoadingSkeleton variant="list" /></WordsShell>}><WordsWithList /></Suspense>
+  return <Suspense fallback={<WordsShell><WordsSetupSkeleton /></WordsShell>}><WordsWithList /></Suspense>
 }
 
 function WordsWithList() {
@@ -325,7 +325,7 @@ function WordPractice({ initialList, initialFormat }: { initialList?: DailyWordL
         </fieldset>
         {loadError && <Button variant="outline" onClick={load}>{t('reload')}</Button>}
         {!queue || (queue[list].length > 0 && !vocabulary) ? (
-          !loadError && <LoadingSkeleton variant="list" visible label={loading(queue ? 'vocabulary' : 'wordCounts')} />
+          !loadError && <WordSelectionSkeleton label={loading(queue ? 'vocabulary' : 'wordCounts')} />
         ) : !wordsForFormat(queue, list, format).length ? <p role="status">{t('empty')}</p> : (
           <>
             <Button full disabled={loadError} busy={initializing || status === 'checking'}
@@ -335,9 +335,8 @@ function WordPractice({ initialList, initialFormat }: { initialList?: DailyWordL
             <input value={query} onChange={(event) => { setQuery(event.target.value); setLimit(PAGE_SIZE) }} placeholder={t('search')} aria-label={t('search')}
               className="min-h-12 rounded-card border border-line bg-card px-3" />
             <p className="text-sm text-muted">{t('selected', { selected: selectedIds.length, limit: sessionSize })}</p>
-            <Card>
-              {visibleIds.length === 0 && <p className="text-sm text-muted">{t('noMatches')}</p>}
-              <div className="-my-2">
+            <WordList>
+              {visibleIds.length === 0 && <p className="py-2 text-sm text-muted">{t('noMatches')}</p>}
                 {visibleIds.slice(0, limit).map((id) => {
                   const candidate = vocabulary?.get(id)
                   if (!candidate) return null
@@ -351,8 +350,7 @@ function WordPractice({ initialList, initialFormat }: { initialList?: DailyWordL
                     </label>
                   } />
                 })}
-              </div>
-            </Card>
+            </WordList>
             {visibleIds.length > limit && (
               <Button variant="outline" full onClick={() => setLimit(limit + PAGE_SIZE)}>{t('showMore', { count: visibleIds.length - limit })}</Button>
             )}
@@ -361,6 +359,26 @@ function WordPractice({ initialList, initialFormat }: { initialList?: DailyWordL
       </Stack>
     </WordsShell>
   )
+}
+
+function WordSelectionSkeleton({ label }: { label?: string }) {
+  return <>
+    <SkeletonBlock className="h-11 w-full" />
+    <SkeletonBlock className="h-12 w-full rounded-card" />
+    <SkeletonBlock className="h-5 w-36" />
+    <WordList loading label={label} selectable />
+  </>
+}
+
+function WordsSetupSkeleton() {
+  return <Stack gap="sm">
+    <Row gap="xs"><SkeletonBlock className="h-11 w-28" /><SkeletonBlock className="h-11 w-28" /></Row>
+    <div className="grid grid-cols-2 gap-2">
+      <SkeletonBlock className="col-span-2 h-5 w-36" />
+      {WORD_PRACTICE_FORMATS.map(mode => <SkeletonBlock key={mode} className={`min-h-12 h-20 rounded-card ${mode === 'brainstorm' ? 'col-span-2' : ''}`} />)}
+    </div>
+    <WordSelectionSkeleton />
+  </Stack>
 }
 
 function WordsShell({ children }: { children: React.ReactNode }) {

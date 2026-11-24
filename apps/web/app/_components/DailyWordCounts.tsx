@@ -47,22 +47,22 @@ export function DailyWordCounts() {
           )}
         </Link>
       ))}
-      {queue?.reviewByFormat && (
+      {(queue?.reviewByFormat || (!queue && !failed)) && (
         <div className="col-span-2 rounded-card border border-line bg-card p-3">
           <p className="mb-2 text-sm font-medium">{t('availableByFormat')}</p>
           <div className="space-y-2">
             {WORD_SKILL_FORMATS.map((format) => (
               <Link key={format} href={`/words/?list=review&format=${format}`} className="block rounded-control py-1">
                 <div className="flex justify-between gap-2 text-sm">
-                  <span>{t(format)}</span><strong className="tabular-nums">{wordsForFormat(queue, 'review', format).length}</strong>
+                  <span>{t(format)}</span>{queue ? <strong className="tabular-nums">{wordsForFormat(queue, 'review', format).length}</strong> : <SkeletonBlock className="h-5 w-7" />}
                 </div>
                 <div className="mt-1 h-1.5 overflow-hidden rounded-full bg-soft2">
-                  <div className="h-full rounded-full bg-primary" style={{ width: `${queue.review.length ? wordsForFormat(queue, 'review', format).length / queue.review.length * 100 : 0}%` }} />
+                  {queue ? <div className="h-full rounded-full bg-primary" style={{ width: `${queue.review.length ? wordsForFormat(queue, 'review', format).length / queue.review.length * 100 : 0}%` }} /> : <SkeletonBlock className="h-full w-full" />}
                 </div>
               </Link>
             ))}
           </div>
-          <p className="mt-3 border-t border-line pt-2 text-sm text-muted">{t('practicedToday', { count: queue.practicedToday })}</p>
+          <p className="mt-3 border-t border-line pt-2 text-sm text-muted">{queue ? t('practicedToday', { count: queue.practicedToday }) : <SkeletonBlock className="h-5 w-40" />}</p>
         </div>
       )}
       {queue?.nextReviewAt && (
@@ -70,7 +70,7 @@ export function DailyWordCounts() {
           {t('nextReviewAt', { time: new Date(queue.nextReviewAt).toLocaleString([], { month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit' }) })}
         </p>
       )}
-      {!queue && !failed && <p role="status" className="col-span-2 text-xs text-muted">{loading('wordCounts')}</p>}
+      {!queue && !failed && <p role="status" className="sr-only">{loading('wordCounts')}</p>}
     </div>
   )
 }

@@ -1,7 +1,8 @@
 "use client";
 
 import type { ReactNode } from "react";
-import { Row } from "@polski/ui";
+import { Card, Row } from "@polski/ui";
+import { LoadingSlot, SkeletonBlock } from "./LoadingSkeleton";
 import { AppIcon } from "./AppIcon";
 import { StudyTooltip } from "./StudyTooltip";
 import { usePronounce } from "@/lib/speech/usePronounce";
@@ -25,6 +26,37 @@ const BADGE: Record<
   },
 };
 
+function WordRowLayout({ leading, text, actions, children }: {
+  leading: ReactNode; text: ReactNode; actions: ReactNode; children?: ReactNode
+}) {
+  return <div className="border-b border-line py-2 last:border-0">
+    <Row gap="sm" justify="between" wrap>
+      <Row gap="sm" className="min-w-0 flex-1 basis-36">
+        {leading}
+        <div className="min-w-0 break-words">{text}</div>
+      </Row>
+      <Row gap="xs" wrap justify="end" className="ml-auto">{actions}</Row>
+    </Row>
+    {children}
+  </div>
+}
+
+export function WordList({ children, loading = false, label, selectable = false }: {
+  children?: ReactNode; loading?: boolean; label?: string; selectable?: boolean
+}) {
+  return <Card>
+    <div className="-my-2" aria-busy={loading}>
+      <LoadingSlot loading={loading} label={label} fallback={
+        Array.from({ length: 3 }, (_, index) => <WordRowLayout key={index}
+          leading={<SkeletonBlock className="size-12 shrink-0" />}
+          text={<div className="grid gap-1"><SkeletonBlock className="h-6 w-24 max-w-full" /><SkeletonBlock className="h-5 w-28 max-w-full" /><SkeletonBlock className="h-6 w-20 rounded-pill" /></div>}
+          actions={<><SkeletonBlock className="h-4 w-12" /><SkeletonBlock className="h-12 w-16 rounded-pill" />{selectable && <SkeletonBlock className="size-12" />}</>}
+        />)
+      }>{children}</LoadingSlot>
+    </div>
+  </Card>
+}
+
 export function WordRow({
   word,
   completed = false,
@@ -44,18 +76,14 @@ export function WordRow({
   const studyStatus = getLexemeStudyStatus(state, word.id);
 
   return (
-    <div className="border-b border-line py-2 last:border-0">
-      <Row gap="sm" justify="between" wrap>
-        <Row gap="sm" className="min-w-0 flex-1 basis-36">
-          <button
+    <WordRowLayout leading={<button
             type="button"
             onClick={() => pronounce(word.lemma)}
             aria-label={`Wymów ${word.lemma}`}
             className="flex size-12 shrink-0 items-center justify-center rounded-control bg-soft2 text-accent-ink transition-colors hover:brightness-95 active:brightness-90"
           >
             <AppIcon name={message ? "muted" : "speaker"} className="size-5" />
-          </button>
-          <div className="min-w-0 break-words">
+          </button>} text={<>
             <div
               lang="pl"
               className={`text-base font-medium ${known ? "text-muted" : ""}`}
@@ -64,9 +92,7 @@ export function WordRow({
             </div>
             <div className="text-sm text-muted">{word.translation}</div>
             <StudyStatusBadge status={studyStatus} />
-          </div>
-        </Row>
-        <Row gap="xs" wrap justify="end" className="ml-auto">
+          </>} actions={<>
           {badge && !known && (
             <span
               className={`shrink-0 rounded-pill px-2 py-0.5 text-xs ${badge.cls}`}
@@ -76,9 +102,7 @@ export function WordRow({
           )}
           <KnownToggle lexemeId={word.id} polishLabels />
           {selectionControl}
-        </Row>
-      </Row>
-
+      </>}>
       {completed && !known && (
         <p className="mt-1 ml-12 text-xs text-ok-ink">
           ✓ слово пройдено и добавлено в повторение
@@ -107,7 +131,7 @@ export function WordRow({
           {message}
         </p>
       )}
-    </div>
+    </WordRowLayout>
   );
 }
 

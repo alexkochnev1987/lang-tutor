@@ -1,8 +1,19 @@
+import { SkeletonBlock } from './LoadingSkeleton'
 import { useTranslations } from 'next-intl'
 import { Button, Card, Stack } from '@polski/ui'
 import type { Exercise } from '@polski/engine'
 import type { LocalizedRule } from '@/lib/content/rules'
 import { GRAMMAR_FORMATS, grammarFormat, type grammarPracticePlan } from '@/lib/engine/grammar-practice-plan'
+
+export function TodayGrammarOptionsSkeleton({ label }: { label: string }) {
+  const t = useTranslations('grammarToday')
+  return <Stack gap="md">
+    <Card tone="featured"><Stack gap="sm"><SkeletonBlock className="h-14 w-full" /><SkeletonBlock className="h-5 w-2/3" /></Stack></Card>
+    <h2 className="mx-auto w-full max-w-(--container-exercise) text-lg font-semibold">{t('topics')}</h2>
+    {[0, 1].map(i => <Card key={i}><Stack gap="sm"><SkeletonBlock className="h-6 w-2/3" /><SkeletonBlock className="h-5 w-4/5" /><SkeletonBlock className="h-11 w-full" /></Stack></Card>)}
+    <p role="status" className="sr-only">{label}</p>
+  </Stack>
+}
 
 export function TodayGrammarOptions({ plan, onStart }: {
   plan: ReturnType<typeof grammarPracticePlan>

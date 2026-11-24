@@ -4,7 +4,7 @@ import { TabBody } from '@/app/_components/TabBody'
 import { useEffect, useState } from 'react'
 import { useTranslations } from 'next-intl'
 import { Button, Card, Stack } from '@polski/ui'
-import { LoadingSkeleton, SkeletonBlock } from '@/app/_components/LoadingSkeleton'
+import { LoadingSlot, SkeletonBlock } from '@/app/_components/LoadingSkeleton'
 import { ProfileIdentity } from '@/app/_components/ProfileIdentity'
 import { ThemePicker } from '@/app/_components/ThemePicker'
 import { SettingsRow } from '@/app/_components/SettingsRow'
@@ -44,18 +44,18 @@ export default function ProfilePage() {
             </Stack>
           </Card>
         )}
-        {!state && !loadFailed && <LoadingSkeleton variant="profile" visible label={t('loadingSections.account')} />}
-        {state && (
+        {(state || !loadFailed) && (
           <Card>
             <Stack gap="sm">
               <h2 id="profile-account" className="scroll-mt-4 text-lg font-semibold tracking-tight">{t('profile.account')}</h2>
-              {state.user.signedIn ? <ProfileIdentity key={state.user.id} user={state.user} /> : (
+              <LoadingSlot loading={!state} label={t('loadingSections.account')} fallback={<><div className="flex items-center gap-3"><SkeletonBlock className="size-16 rounded-full" /><div className="flex-1 space-y-2"><SkeletonBlock className="h-5 w-2/3" /><SkeletonBlock className="h-4 w-4/5" /></div></div><SkeletonBlock className="h-11 w-full" /></>}>{state && <>{state.user.signedIn ? <ProfileIdentity key={state.user.id} user={state.user} /> : (
                 <div className="text-sm text-muted">
                   <p className="font-medium text-ink">{t('profile.guest')}</p>
                   <p>{t('auth.localOnly')}</p>
                 </div>
               )}
               <SignInButton showName={false} />
+              </>}</LoadingSlot>
             </Stack>
           </Card>
         )}
@@ -64,7 +64,7 @@ export default function ProfilePage() {
             <h2 className="text-lg font-semibold tracking-tight">{t('profile.languageAndAppearance')}</h2>
             {state ? <SettingsRow /> : !loadFailed && (
               <Stack gap="sm">
-                <p role="status" className="text-xs text-muted">{t('loadingSections.preferences')}</p>
+                <p role="status" className="sr-only">{t('loadingSections.preferences')}</p>
                 <SkeletonBlock className="h-12 w-full" />
               </Stack>
             )}
@@ -73,17 +73,35 @@ export default function ProfilePage() {
         </Card>
         {state ? <StudyPreferences key={state.user.id} settings={state.settings} /> : !loadFailed && (
           <Card>
-            <Stack gap="sm">
+            <Stack gap="md">
               <h2 className="text-lg font-semibold tracking-tight">{t('profile.study')}</h2>
-              <SkeletonBlock className="h-12 w-full" />
-              <SkeletonBlock className="h-12 w-24" />
+              <SettingsFieldSkeleton label={t('settings.targetLanguage')} />
+              <SettingsFieldSkeleton label={t('settings.dailyBudget')} narrow />
+              <p className="text-xs text-muted">{t('profile.budgetHint')}</p>
+              <SettingsFieldSkeleton label={t('settings.voice')} />
+              <SettingsFieldSkeleton label={t('settings.rate')} />
+              <SkeletonBlock className="h-11 w-full" />
+              <SkeletonBlock className="h-11 w-full" />
             </Stack>
           </Card>
         )}
-        {state && <LessonSettings key={`lesson-${state.user.id}`} settings={state.settings} />}
+        {state ? <LessonSettings key={`lesson-${state.user.id}`} settings={state.settings} /> : !loadFailed && <Card><Stack gap="md">
+          <h2 className="text-lg font-semibold tracking-tight">{t('profile.lessonSettings')}</h2>
+          <SettingsFieldSkeleton label={t('profile.newWordsPerDay')} narrow />
+          <p className="text-xs text-muted">{t('profile.newWordsHint')}</p>
+          <SettingsFieldSkeleton label={t('profile.grammarExercisesPerDay')} narrow />
+          <p className="text-sm font-medium">{t('profile.grammarLessonFormats')}</p>
+          {['lessonChoice','lessonTyped','lessonWrite'].map(key => <div key={key} className="flex min-h-10 items-center gap-3"><SkeletonBlock className="size-5" /><SkeletonBlock className="h-5 w-32" /></div>)}
+          <p className="text-xs text-muted">{t('profile.grammarLessonHint')}</p>
+          <SkeletonBlock className="h-11 w-full" />
+        </Stack></Card>}
       </Stack>
     </TabBody>
   )
+}
+
+function SettingsFieldSkeleton({ label, narrow = false }: { label: string; narrow?: boolean }) {
+  return <div className="flex flex-col gap-1 text-sm font-medium">{label}<SkeletonBlock className={`h-11 ${narrow ? 'w-24' : 'w-full'} rounded-card`} /></div>
 }
 
 function StudyPreferences({ settings }: { settings: StudySettings }) {

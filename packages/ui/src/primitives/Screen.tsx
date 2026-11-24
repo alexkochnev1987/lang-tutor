@@ -15,7 +15,7 @@ export function Screen({ className, children, ref }: { className?: string; child
         className,
       )}
       style={{
-        paddingTop: 'max(0.5rem, env(safe-area-inset-top))',
+        paddingTop: 'var(--screen-safe-top, max(0.5rem, env(safe-area-inset-top)))',
         // Нижняя навигация сама учитывает safe-area, чтобы не создавать
         // двойной отступ и оставаться у физического края экрана.
         paddingBottom: '0px',
