@@ -13,9 +13,10 @@ import { ExerciseView } from '@/app/_components/ExerciseView'
 import { LoadingSkeleton, SkeletonBlock } from '@/app/_components/LoadingSkeleton'
 import { SectionNav } from '@/app/_components/SectionNav'
 import { WordPracticeFooter } from '@/app/_components/WordPracticeFooter'
+import { WordSaveIndicator } from '@/app/_components/WordSaveIndicator'
 import { WordRow } from '@/app/_components/WordRow'
 import { currentDayNumber, getCachedVocabulary, loadCurriculum, loadVocabulary, type Lexeme } from '@/lib/content/curriculum'
-import { getCachedDailyWords, loadDailyWords, loadState, saveDailyWordAnswer, subscribeDailyWords } from '@/lib/data/store'
+import { getCachedDailyWords, getLoadedState, loadDailyWords, queueDailyWordAnswer, subscribeDailyWords } from '@/lib/data/store'
 import { dailyWordExercise, WORD_PRACTICE_FORMATS, wordSkill, wordsForFormat, reviewFormatsForWord, type WordFormat, type DailyWordAnswer, type DailyWordList, type DailyWordQueue, type WordPracticeFormat } from '@/lib/engine/daily-words'
 import { prepareLexemeReview, Rating } from '@/lib/engine/session'
 
@@ -61,7 +62,6 @@ function WordPractice({ initialList, initialFormat }: { initialList?: DailyWordL
   const [selected, setSelected] = useState<string[]>([])
   const [session, setSession] = useState<Session | null>(null)
   const [status, setStatus] = useState<'ready' | 'checking' | 'saving' | 'saved' | 'failed' | 'unavailable'>('ready')
-  const pending = useRef<(() => Promise<DailyWordAnswer>) | null>(null)
   const answering = useRef(false)
   const main = useRef<HTMLElement>(null)
   const initialized = useRef(false)
@@ -205,47 +205,36 @@ function WordPractice({ initialList, initialFormat }: { initialList?: DailyWordL
     main.current?.scrollTo({ top: 0 })
   }
 
-  async function persist() {
-    const prepareAnswer = pending.current
-    if (!prepareAnswer) return
-    setStatus('saving')
-    try {
-      const payload = await prepareAnswer()
-      const accepted = await saveDailyWordAnswer(payload)
-      pending.current = null
-      setStatus(accepted ? 'saved' : 'unavailable')
-      refreshQueue()
-      if (accepted) setSession((current) => current && ({
-        ...current, answered: current.answered + 1, correct: current.correct + Number(payload.result.correct),
-      }))
-    } catch {
-      setStatus('failed')
-    }
-  }
-
-  async function answer(result: CheckResult, ms: number, attempts: number, response: string) {
+  function answer(result: CheckResult, ms: number, attempts: number, response: string) {
     if (!session || session.format === 'brainstorm' || !word || !exercise || answering.current) return
     answering.current = true
-    const { format } = session
-    let payload: DailyWordAnswer | undefined
-    pending.current = async () => {
-      if (payload) return payload
-      const state = await loadState()
-      payload = {
+    try {
+      const state = getLoadedState()
+      if (!state) throw new Error('word_state_not_loaded')
+      const { format } = session
+      const payload: DailyWordAnswer = {
         ...prepareLexemeReview(state.studyItems, word.id, wordSkill(format), result.correct ? Rating.Good : Rating.Again, ms),
         format,
         result: { dayNumber, exerciseId: exercise.id, attempts, correct: result.correct,
           answer: response, expected: result.expected, errorKind: result.errorKind ?? null },
       }
-      return payload
+      // The shared outbox applies the FSRS result immediately and persists it
+      // independently of this screen. No button ever waits for the POST.
+      queueDailyWordAnswer(payload)
+      setSession((current) => current && ({
+        ...current, answered: current.answered + 1, correct: current.correct + Number(result.correct),
+      }))
+      setStatus('saved')
+    } catch (error) {
+      console.error('[word-practice]', error)
+      setStatus('failed')
+    } finally {
+      answering.current = false
     }
-    await persist()
-    answering.current = false
   }
 
   function exit() {
     try { sessionStorage.removeItem(SESSION_KEY) } catch { /* Session storage may be unavailable. */ }
-    pending.current = null
     setSession(null)
     setSelected([])
     setStatus('ready')
@@ -267,7 +256,7 @@ function WordPractice({ initialList, initialFormat }: { initialList?: DailyWordL
       <Screen className="word-practice-screen">
         <header className="mx-auto w-full max-w-2xl px-4 py-2">
           <Row justify="between" wrap>
-            <Button variant="outline" size="sm" onClick={exit} disabled={status === 'saving' || status === 'checking'}>
+            <Button variant="outline" size="sm" onClick={exit} disabled={status === 'checking'}>
               <AppIcon name="back" className="size-4 shrink-0" />
               {t('back')}
             </Button>
@@ -279,9 +268,9 @@ function WordPractice({ initialList, initialFormat }: { initialList?: DailyWordL
             <Stack gap="xs">
               {exercise.kind === 'pronunciation' && exercise.mode === 'typed' ? (
                 <PronunciationExercise key={exercise.id} prompt={exercise.prompt} expected={exercise.accepted[0]!}
-                  onAnswered={(...args) => void answer(...args)} onSkip={status === 'ready' ? advance : undefined} />
+                  onAnswered={answer} onSkip={status === 'ready' ? advance : undefined} />
               ) : (
-                <ExerciseView key={exercise.id} exercise={exercise} onAnswered={(...args) => void answer(...args)}
+                <ExerciseView key={exercise.id} exercise={exercise} onAnswered={answer}
                   autoFocus={false} showSpeakButton={session.format === 'translation' || status === 'saved'} />
               )}
               {status === 'unavailable' && <p role="status" className="text-sm text-muted">{t('unavailable')}</p>}
@@ -292,10 +281,10 @@ function WordPractice({ initialList, initialFormat }: { initialList?: DailyWordL
           {loadError && <p role="alert" className="mt-2 text-sm text-danger-ink">{t('error')}</p>}
         </main>
         <WordPracticeFooter
-          busyLabel={status === 'saving' ? t('saving') : status === 'checking' ? t('loading') : undefined}
-          label={status === 'failed' ? t('retry') : exercise ? t('next') : canContinue ? t('continue') : t('backToFormats')}
+          busyLabel={status === 'checking' ? t('loading') : undefined}
+          label={status === 'failed' ? t('backToFormats') : exercise ? t('next') : canContinue ? t('continue') : t('backToFormats')}
           disabled={!(canAdvance || status === 'failed' || !exercise) || status === 'checking'}
-          onNext={status === 'failed' ? () => void persist()
+          onNext={status === 'failed' ? exit
             : exercise ? advance : canContinue ? () => void startBatch(session.list, session.format) : exit}
         />
       </Screen>
@@ -305,6 +294,7 @@ function WordPractice({ initialList, initialFormat }: { initialList?: DailyWordL
   return (
     <WordsShell>
       <Stack gap="sm">
+        <WordSaveIndicator />
         <Row wrap gap="xs">
           {(['learn', 'review'] as const).map((kind) => (
             <Button key={kind} variant={list === kind ? 'primary' : 'outline'} aria-pressed={list === kind}

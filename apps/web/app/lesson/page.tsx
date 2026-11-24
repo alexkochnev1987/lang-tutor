@@ -23,8 +23,9 @@ import {
   Rating,
 } from "@/lib/engine/session";
 import {
+  getCachedDailyWords,
   loadDailyWords,
-  saveDailyWordAnswer,
+  queueDailyWordAnswer,
   saveExerciseResult,
   saveLessonSession,
   useAppState,
@@ -47,6 +48,7 @@ import { LessonPhrasePractice } from "@/app/_components/LessonPhrasePractice";
 import { formatOfWordExercise, wordSkill } from "@/lib/engine/daily-words";
 import { WeeklyGoalCredit } from "@/app/_components/WeeklyGoal";
 import { WordPracticeFooter } from "@/app/_components/WordPracticeFooter";
+import { WordSaveIndicator } from "@/app/_components/WordSaveIndicator";
 import { useTranslations } from "next-intl";
 
 const WORD_FORM_ID = "lesson-word-response";
@@ -131,6 +133,7 @@ export default function LessonPage() {
   const wordMain = useRef<HTMLElement>(null);
   const [answerTarget, setAnswerTarget] = useState<HTMLDivElement | null>(null);
   const [reviewWrites, setReviewWrites] = useState<Record<string, ReviewWrite>>({});
+  const queuedWordExercises = useRef(new Set<string>());
   const lessonSave = useSaveLessonResult();
   const [queueStatus, setQueueStatus] = useState<"ready" | "checking" | "error">("ready");
   const [unavailableWord, setUnavailableWord] = useState(false);
@@ -260,20 +263,25 @@ export default function LessonPage() {
       errorKind: r.errorKind ?? null,
     };
     if (slot?.stage.id === "words" && ex.lexemeId) {
+      if (queuedWordExercises.current.has(ex.id)) return;
       const lexemeId = ex.lexemeId;
       const format = formatOfWordExercise(ex);
       const payload = {
-        ...prepareLexemeReview(appState?.studyItems ?? [], lexemeId, wordSkill(format), r.correct ? Rating.Good : Rating.Again, ms),
+        ...prepareLexemeReview(appState?.studyItems ?? [], lexemeId,
+          wordSkill(format), r.correct ? Rating.Good : Rating.Again, ms),
         format,
         result: exerciseResult,
       };
-      await trackReviewWrite(ex.id, lexemeId, async () => {
-        const accepted = await saveDailyWordAnswer(payload);
-        setUnavailableWord(!accepted);
-        if (accepted) setStats((previous) => ({
-          correct: previous.correct + Number(r.correct), total: previous.total + 1,
-        }));
-        if (complete) setCanAdvance(true);
+      queuedWordExercises.current.add(ex.id);
+      setStats((previous) => ({
+        correct: previous.correct + Number(r.correct), total: previous.total + 1,
+      }));
+      if (complete) setCanAdvance(true);
+      // Enqueue instantly; the global outbox owns the network request,
+      // retry, rollback and visible background-save status.
+      void trackReviewWrite(ex.id, lexemeId, async () => {
+        queueDailyWordAnswer(payload);
+        setUnavailableWord(false);
         return true;
       });
       return;
@@ -326,30 +334,27 @@ export default function LessonPage() {
     void finish();
   }
 
-  async function advanceWordBlock(skippedId?: string) {
-    setQueueStatus("checking");
-    try {
-      const queue = await loadDailyWords();
-      const available = new Set([...queue.learn, ...queue.review]);
-      const upcoming = slots.slice(i + 1).filter((candidate) => {
-        if (candidate.kind !== "step" || candidate.stage.id !== "words") return true;
-        const step = candidate.step;
-        const id = step.kind === "exercise" ? step.ex.lexemeId : undefined;
-        return !id || (id !== skippedId && available.has(id));
-      });
-      setQueueStatus("ready");
-      setCanAdvance(false);
-      setUnavailableWord(false);
-      if (!upcoming.length) {
-        await finish();
-        return;
-      }
-      setSlots([...slots.slice(0, i + 1), ...upcoming]);
-      setI(i + 1);
-      wordMain.current?.scrollTo({ top: 0 });
-    } catch {
-      setQueueStatus("error");
+  function advanceWordBlock(skippedId?: string) {
+    const queue = getCachedDailyWords();
+    const available = queue ? new Set([...queue.learn, ...queue.review]) : null;
+    const upcoming = slots.slice(i + 1).filter((candidate) => {
+      if (candidate.kind !== "step" || candidate.stage.id !== "words") return true;
+      const nextStep = candidate.step;
+      const id = nextStep.kind === "exercise" ? nextStep.ex.lexemeId : undefined;
+      return !id || (id !== skippedId && (!available || available.has(id)));
+    });
+    setQueueStatus("ready");
+    setCanAdvance(false);
+    setUnavailableWord(false);
+    if (!upcoming.length) {
+      void finish();
+      return;
     }
+    setSlots([...slots.slice(0, i + 1), ...upcoming]);
+    setI(i + 1);
+    wordMain.current?.scrollTo({ top: 0 });
+    // Do not block navigation while reconciling with the server.
+    void loadDailyWords().catch(() => setQueueStatus("error"));
   }
 
   async function afterDiagnostic() {
@@ -451,9 +456,7 @@ export default function LessonPage() {
               ))}
               <WeeklyGoalCredit />
               {reviewFeedback}
-              {Object.values(reviewWrites).some((write) => write.status === "pending") && (
-                <p role="status" className="text-sm text-muted">Сохраняем сроки повторения…</p>
-              )}
+              <WordSaveIndicator />
               {phrasePractice}
               <Link href="/" className="w-full">
                 <Button variant="outline" size="lg" full>
@@ -731,12 +734,11 @@ export default function LessonPage() {
       </main>
       {wordScreen && slot?.kind === "step" && (
         <WordPracticeFooter
-          busyLabel={queueStatus === "checking" ? t("loading")
-            : reviewPending || lessonSave.status === "saving" ? t("saving") : undefined}
+          busyLabel={lessonSave.status === "saving" ? t("saving") : undefined}
           label={failedReview ? t("retry") : wordFormId && !canAdvance && !restoredResult ? t("check") : t("next")}
-          formId={!canAdvance && !restoredResult && !reviewPending && !failedReview ? wordFormId : undefined}
+          formId={!canAdvance && !restoredResult && !failedReview ? wordFormId : undefined}
           answerTargetRef={wordFormId ? setAnswerTarget : undefined}
-          disabled={queueStatus === "checking" || reviewPending || lessonSave.status === "saving"
+          disabled={lessonSave.status === "saving"
             || (wordStudyExercise && slot.step.kind === "exercise" && slot.step.ex.mode !== "typed"
               && !canAdvance && !restoredResult && !failedReview)}
           onNext={failedReview ? failedReview.retry : next}

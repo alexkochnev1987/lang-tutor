@@ -159,6 +159,8 @@ export function useSettings(): Settings {
   return useAppState()?.settings ?? DEFAULT_SETTINGS
 }
 
+export function getLoadedState(): AppState | null { return snapshot }
+
 export function getSettings(): Settings {
   return snapshot?.settings ?? DEFAULT_SETTINGS
 }
@@ -383,8 +385,10 @@ export async function signInWithGoogle(idToken: string): Promise<void> {
   if (snapshot && snapshot.user.id !== userId) {
     snapshot = null
     emit()
+    emitSaveStatus()
   }
   await refresh()
+  emitSaveStatus()
 }
 
 export async function signOut(): Promise<void> {
@@ -392,7 +396,9 @@ export async function signOut(): Promise<void> {
   invalidateDailyWords()
   snapshot = null
   emit()
+  emitSaveStatus()
   await refresh()
+  emitSaveStatus()
 }
 
 const DAILY_WORD_EVENT = 'daily-words-changed'
@@ -489,6 +495,7 @@ export async function saveDailyWordAnswer(payload: DailyWordSubmission) {
     response = await request<typeof response>('/api/daily-words/', {
       method: 'POST',
       body: JSON.stringify(payload),
+      keepalive: true,
     })
   } catch (error) {
     pendingQueueAnswers.delete(key)
@@ -533,4 +540,163 @@ export async function saveDailyWordAnswer(payload: DailyWordSubmission) {
   })
   publishDailyWordsChange(answers[0]!.log.id)
   return true
+}
+
+
+/** Pending word answers survive route changes and can be retried on failure. */
+type WordSaveJob = {
+  id: string
+  userId: string
+  payload: DailyWordSubmission
+  status: 'pending' | 'failed'
+  rollback?: () => void
+}
+type WordSaveStatus = { pending: number; failed: number }
+const EMPTY_SAVE_STATUS: WordSaveStatus = { pending: 0, failed: 0 }
+let saveStatus: WordSaveStatus = EMPTY_SAVE_STATUS
+const saveListeners = new Set<() => void>()
+const saveJobs = new Map<string, WordSaveJob>()
+const WORD_OUTBOX_KEY = 'word-outbox-v1'
+
+function emitSaveStatus() {
+  const userId = snapshot?.user.id
+  saveStatus = {
+    pending: [...saveJobs.values()].filter((job) => job.userId === userId && job.status === 'pending').length,
+    failed: [...saveJobs.values()].filter((job) => job.userId === userId && job.status === 'failed').length,
+  }
+  for (const listener of saveListeners) listener()
+  try {
+    if (userId) sessionStorage.setItem(WORD_OUTBOX_KEY + ':' + userId, JSON.stringify(
+      [...saveJobs.values()].filter((job) => job.userId === userId)
+        .map(({ id, payload }) => ({ id, payload })),
+    ))
+  } catch { /* Session storage can be disabled. */ }
+}
+
+export function useWordSaveStatus(): WordSaveStatus {
+  return useSyncExternalStore(
+    (listener) => {
+      saveListeners.add(listener)
+      return () => { saveListeners.delete(listener) }
+    },
+    () => saveStatus,
+    () => EMPTY_SAVE_STATUS,
+  )
+}
+
+function applyOptimisticWordAnswer(payload: DailyWordSubmission): () => void {
+  const answers = payload.format === 'brainstorm' ? payload.answers : [payload]
+  const originalItems = new Map(answers.map(({ item }) =>
+    [item.id, snapshot?.studyItems.find(({ id }) => id === item.id)]))
+  const originalResults = new Map(answers.map(({ result }) =>
+    [result.exerciseId, snapshot?.exerciseResults.find(({ exerciseId, dayNumber }) =>
+      exerciseId === result.exerciseId && dayNumber === result.dayNumber)]))
+  const now = new Date()
+  const optimisticItems = new Map(answers.map(({ item, log }) => [item.id, {
+    ...item,
+    // Keep lastReview from the authoritative row, so a server response with
+    // an earlier clock timestamp can still replace the optimistic result.
+    lastReview: originalItems.get(item.id)?.lastReview ?? null,
+    due: new Date(now.getTime() + Math.max(0, item.due.getTime() - log.reviewedAt.getTime())),
+  }]))
+  const optimisticResults = answers.map(({ result }) =>
+    ({ ...result, courseId: COURSE_ID, completedAt: now }))
+  const resultIds = new Set(optimisticResults.map(({ exerciseId }) => exerciseId))
+  const session = payload.format === 'brainstorm' ? brainstormWordSession(payload) : null
+  const originalSession = session && snapshot?.sessions.find(({ id }) => id === session.id)
+  const optimisticSession = session
+    ? { ...session, completedAt: now, actualMs: Math.max(0, now.getTime() - session.startedAt.getTime()) }
+    : null
+
+  patch((state) => ({
+    ...state,
+    studyItems: [...state.studyItems.filter(({ id }) => !optimisticItems.has(id)), ...optimisticItems.values()],
+    exerciseResults: [...state.exerciseResults.filter(({ exerciseId }) => !resultIds.has(exerciseId)), ...optimisticResults],
+    sessions: optimisticSession ? [
+      ...state.sessions.filter(({ id }) => id !== optimisticSession.id),
+      optimisticSession,
+    ] : state.sessions,
+  }))
+
+  return () => patch((state) => {
+    // Never roll back a newer, independently confirmed review.
+    const itemIds = [...optimisticItems].filter(([id, item]) => {
+      const current = state.studyItems.find((row) => row.id === id)
+      return current === item
+    }).map(([id]) => id)
+    const ids = optimisticResults.filter((result) =>
+      state.exerciseResults.some((row) => row === result))
+      .map(({ exerciseId }) => exerciseId)
+    const revertSession = optimisticSession && state.sessions.includes(optimisticSession)
+    return {
+      ...state,
+      studyItems: [...state.studyItems.filter(({ id }) => !itemIds.includes(id)),
+        ...itemIds.flatMap((id) => originalItems.get(id) ?? [])],
+      exerciseResults: [...state.exerciseResults.filter(({ exerciseId }) => !ids.includes(exerciseId)),
+        ...ids.flatMap((id) => originalResults.get(id) ?? [])],
+      sessions: revertSession && session
+        ? [...state.sessions.filter(({ id }) => id !== session.id), ...(originalSession ? [originalSession] : [])]
+        : state.sessions,
+    }
+  })
+}
+
+function sendWordSave(job: WordSaveJob) {
+  if (job.status === 'pending') return
+  job.status = 'pending'
+  job.rollback = applyOptimisticWordAnswer(job.payload)
+  emitSaveStatus()
+  void saveDailyWordAnswer(job.payload).then((accepted) => {
+    if (!accepted) throw new Error('word_save_rejected')
+    // Partial acceptance can leave unconfirmed optimistic skill rows.
+    // Roll back only the exact optimistic objects: confirmed rows were
+    // replaced with distinct authoritative objects in saveDailyWordAnswer.
+    if (snapshot?.user.id === job.userId) job.rollback?.()
+    saveJobs.delete(job.id)
+    emitSaveStatus()
+  }).catch((error) => {
+    console.error('[word-save]', error)
+    if (snapshot?.user.id === job.userId) job.rollback?.()
+    job.rollback = undefined
+    job.status = 'failed'
+    emitSaveStatus()
+  })
+}
+
+/** Synchronous enqueue. Callers can enable Next immediately. */
+export function queueDailyWordAnswer(payload: DailyWordSubmission): void {
+  const userId = snapshot?.user.id
+  if (!userId) throw new Error('word_save_without_user')
+  const first = payload.format === 'brainstorm' ? payload.answers[0] : payload
+  if (!first || saveJobs.has(first.log.id)) return
+  const job: WordSaveJob = { id: first.log.id, userId, payload, status: 'failed' }
+  saveJobs.set(job.id, job)
+  sendWordSave(job)
+}
+
+export function retryFailedWordAnswers(): void {
+  const userId = snapshot?.user.id
+  for (const job of saveJobs.values())
+    if (job.userId === userId && job.status === 'failed') sendWordSave(job)
+}
+
+/** Replay unacknowledged requests after refreshing the PWA, preserving log IDs. */
+export function restoreWordAnswers(): void {
+  const userId = snapshot?.user.id
+  if (!userId) return
+  try {
+    const raw = sessionStorage.getItem(WORD_OUTBOX_KEY + ':' + userId)
+    const entries = raw ? JSON.parse(raw) as { id: string; payload: DailyWordSubmission }[] : []
+    if (!Array.isArray(entries)) return
+    for (const entry of entries) {
+      if (!entry.id || saveJobs.has(entry.id)) continue
+      const answers = entry.payload.format === 'brainstorm' ? entry.payload.answers : [entry.payload]
+      for (const { item, log } of answers) {
+        item.due = new Date(item.due)
+        item.lastReview = item.lastReview ? new Date(item.lastReview) : null
+        log.reviewedAt = new Date(log.reviewedAt)
+      }
+      queueDailyWordAnswer(entry.payload)
+    }
+  } catch (error) { console.error('[word-save-restore]', error) }
 }

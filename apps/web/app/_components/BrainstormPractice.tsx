@@ -6,7 +6,7 @@ import { AppIcon } from './AppIcon'
 import { Button, Card, Row, Screen, Stack } from '@polski/ui'
 import type { CheckResult } from '@polski/engine'
 import type { Lexeme } from '@/lib/content/curriculum'
-import { loadState, saveDailyWordAnswer } from '@/lib/data/store'
+import { getLoadedState, queueDailyWordAnswer } from '@/lib/data/store'
 import { formatOfWordExercise, wordSkill, type DailyWordAnswer, type DailyWordSubmission, type WordFormat } from '@/lib/engine/daily-words'
 import { prepareLexemeReview, Rating } from '@/lib/engine/session'
 import { buildWordStageRetryStep, buildWordStudySteps, oneAttemptWordSteps, WORD_STAGE_RETRY_LIMIT, type WordExerciseStep } from '@/lib/engine/word-study'
@@ -47,10 +47,7 @@ export function BrainstormPractice({ id, words, pool, dayNumber, reviewFormats, 
     return { startedAt: new Date().toISOString(), introduced: [], responses: {}, unavailable: [] }
   })
   const [response, setResponse] = useState<Response | null>(null)
-  const [saving, setSaving] = useState(false)
   const [failed, setFailed] = useState(false)
-  const [unavailable, setUnavailable] = useState(false)
-  const pending = useRef<DailyWordSubmission | null>(null)
   const writing = useRef(false)
   const main = useRef<HTMLElement>(null)
   const [answerTarget, setAnswerTarget] = useState<HTMLDivElement | null>(null)
@@ -109,9 +106,8 @@ export function BrainstormPractice({ id, words, pool, dayNumber, reviewFormats, 
     } })
   }
 
-  async function advance() {
+  function advance() {
     if (!step || writing.current) return
-    setUnavailable(false)
     const word = step.word
     if (step.kind === 'word-intro') {
       updateProgress({ ...progress, introduced: [...progress.introduced, word.id] })
@@ -130,36 +126,35 @@ export function BrainstormPractice({ id, words, pool, dayNumber, reviewFormats, 
     }
 
     writing.current = true
-    setSaving(true)
     setFailed(false)
     try {
-      if (!pending.current) {
-        const { studyItems } = await loadState()
-        const now = new Date()
-        pending.current = {
-          format: 'brainstorm',
-          sessionId: id,
-          startedAt: progress.startedAt,
-          answers: finalStages.map(({ step, attempts }) => {
-            const { result, ms } = responses[step.ex.id]!
-            const format = formatOfWordExercise(step.ex)
-            return {
-              ...prepareLexemeReview(studyItems, word.id, wordSkill(format), result.correct ? Rating.Good : Rating.Again, ms, now),
-              format, result: { ...result, attempts },
-            }
-          }),
-        }
+      const state = getLoadedState()
+      if (!state) throw new Error('word_state_not_loaded')
+      const now = new Date()
+      const payload: DailyWordSubmission = {
+        format: 'brainstorm',
+        sessionId: id,
+        startedAt: progress.startedAt,
+        answers: finalStages.map(({ step, attempts }) => {
+          const { result, ms } = responses[step.ex.id]!
+          const format = formatOfWordExercise(step.ex)
+          return {
+            ...prepareLexemeReview(state.studyItems, word.id, wordSkill(format),
+              result.correct ? Rating.Good : Rating.Again, ms, now),
+            format, result: { ...result, attempts },
+          }
+        }),
       }
-      const accepted = await saveDailyWordAnswer(pending.current)
-      pending.current = null
-      if (accepted) onConsume(word.id, finalStages.filter(({ step }) => responses[step.ex.id]?.result.correct).length, finalStages.length)
-      setUnavailable(!accepted)
-      updateProgress(accepted ? next : { ...progress, unavailable: [...progress.unavailable, word.id] })
-    } catch {
+      queueDailyWordAnswer(payload)
+      onConsume(word.id, finalStages.filter(({ step }) => responses[step.ex.id]?.result.correct).length, finalStages.length)
+      // Do not block the next word on the server. Failures remain in the
+      // shared outbox and are retryable from any word exercise footer.
+      updateProgress(next)
+    } catch (error) {
+      console.error('[brainstorm]', error)
       setFailed(true)
     } finally {
       writing.current = false
-      setSaving(false)
     }
   }
 
@@ -172,7 +167,7 @@ export function BrainstormPractice({ id, words, pool, dayNumber, reviewFormats, 
     <Screen className="word-practice-screen">
       <header className="mx-auto w-full max-w-2xl px-4 py-2">
         <Row justify="between" wrap>
-          <Button variant="outline" size="sm" disabled={saving || checking} onClick={() => leave(onExit)}>
+          <Button variant="outline" size="sm" disabled={checking} onClick={() => leave(onExit)}>
             <AppIcon name="back" className="size-4 shrink-0" />
             {t('back')}
           </Button>
@@ -201,17 +196,16 @@ export function BrainstormPractice({ id, words, pool, dayNumber, reviewFormats, 
             <WeeklyGoalCredit />
           </Stack></Card>
         )}
-        {unavailable && <p role="status" className="mt-2 text-sm text-muted">{t('unavailable')}</p>}
         {loadError && <p role="alert" className="mt-2 text-sm text-danger-ink">{t('error')}</p>}
       </main>
       <WordPracticeFooter
-        busyLabel={checking ? t('loading') : saving ? t('saving') : undefined}
+        busyLabel={checking ? t('loading') : undefined}
         label={failed ? t('retry')
           : formId && !response ? t('check') : step ? t('next') : canContinue ? t('continue') : t('backToFormats')}
         formId={response ? undefined : formId}
         answerTargetRef={formId ? setAnswerTarget : undefined}
-        disabled={saving || checking || Boolean(exercise && !formId && !response)}
-        onNext={step ? () => void advance() : canContinue ? onContinue : () => leave(onExit)}
+        disabled={checking || Boolean(exercise && !formId && !response)}
+        onNext={step ? advance : canContinue ? onContinue : () => leave(onExit)}
       />
     </Screen>
   )
