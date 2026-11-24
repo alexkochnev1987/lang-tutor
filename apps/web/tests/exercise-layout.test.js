@@ -54,11 +54,15 @@ describe('stable exercise presentation', () => {
 })
 
 describe('shared full-screen practice slots', () => {
-  it('puts secondary word controls directly below the question in one row', () => {
-    const markup = render(ExerciseCard, { practice: true, metadata: h('span', null, 'Mastery') }, h('input', { 'data-word-answer': '' }))
-    expect(markup.indexOf('data-word-answer')).toBeLessThan(markup.indexOf('Mastery'))
-    expect(markup).not.toContain('<details')
-    expect(markup).toContain('flex items-center justify-between gap-1')
+  it('reserves the same compact top row before and after grading', () => {
+    for (const visible of [false, true]) {
+      const markup = render(ExerciseCard, { practice: true, metadata: h('span', null, 'Mastery'), metadataVisible: visible }, h('input', { 'data-word-answer': '' }))
+      expect(markup.indexOf('Mastery')).toBeLessThan(markup.indexOf('data-word-answer'))
+      expect(markup).not.toContain('<details')
+      expect(markup).toContain('mb-2 flex min-h-11 items-center justify-between gap-1')
+      expect(markup.includes('inert=""')).toBe(!visible)
+      expect(markup.includes('aria-hidden="true"')).toBe(!visible)
+    }
   })
   it('uses the same prompt area for word and audio exercises', () => {
     for (const child of [h('span', null, 'silk'), audio]) {

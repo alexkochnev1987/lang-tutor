@@ -14,12 +14,13 @@ export function ExerciseCard({ children, tone = 'neutral', metadata, metadataVis
   if (bare) return <>{children}</>
   const content = <>
     {!practice && metadata && <div className="mb-2 flex flex-wrap items-center justify-between gap-3">{metadata}</div>}
-    {children}
     {practice && metadata && (
-      <ExerciseSlot visible={metadataVisible} className="mt-2 flex items-center justify-between gap-1 text-muted" >
+      // Reserve the same top row before and after grading. Only visibility changes.
+      <ExerciseSlot visible={metadataVisible} className="mb-2 flex min-h-11 items-center justify-between gap-1 text-muted">
         {metadata}
       </ExerciseSlot>
     )}
+    {children}
   </>
   if (practice) return <div data-exercise-card="" data-practice-card="" className="mx-auto w-full min-w-0 max-w-(--container-exercise)">{content}</div>
   return <Card tone={tone} data-exercise-card="">{content}</Card>
