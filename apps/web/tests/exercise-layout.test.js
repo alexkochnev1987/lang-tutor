@@ -1,6 +1,6 @@
 import { createElement as h } from 'react'
 import { renderToStaticMarkup } from 'react-dom/server'
-import { ExerciseActions, ExerciseAnswerForm, ExerciseCard, ExerciseFeedback, ExerciseOptions, ExercisePrompt, ExercisePromptArea, ExerciseSlot } from '../app/_components/exercise/ExerciseCard'
+import { ExerciseActions, ExerciseAnswerForm, ExerciseCard, ExerciseFeedback, ExerciseOptions, ExercisePrompt, ExercisePromptArea, ExerciseResultMark, ExerciseSlot } from '../app/_components/exercise/ExerciseCard'
 
 const render = (component, props, children) => renderToStaticMarkup(h(component, props, children))
 const audio = h('button', { type: 'button' }, 'Play')
@@ -107,5 +107,21 @@ describe('compact practice', () => {
     }
     expect(before).toContain('inert=""')
     expect(after).not.toContain('inert=""')
+  })
+})
+
+
+describe('compact outcome marks', () => {
+  it('reserves the same icon footprint before and after grading without visible captions', () => {
+    for (const correct of [undefined, true, false]) {
+      const markup = render(ExerciseResultMark, { correct, label: correct ? 'Correct' : 'Incorrect' })
+      expect(markup).toContain('size-5 shrink-0')
+      expect(markup.includes('invisible')).toBe(correct === undefined)
+      if (correct !== undefined) {
+        expect(markup).toContain(correct ? 'text-ok-ink' : 'text-danger-ink')
+        expect(markup).toContain(correct ? 'aria-label="Correct"' : 'aria-label="Incorrect"')
+        expect(markup).not.toContain(correct ? '>Correct<' : '>Incorrect<')
+      }
+    }
   })
 })

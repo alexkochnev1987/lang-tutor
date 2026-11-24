@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from 'react'
 import { useTranslations } from 'next-intl'
 import { Button, Row, Stack } from '@polski/ui'
-import { ExerciseActions, ExerciseCard, ExerciseContent, ExerciseFeedback, ExercisePromptArea, ExerciseSlot } from './exercise/ExerciseCard'
+import { ExerciseActions, ExerciseCard, ExerciseContent, ExerciseFeedback, ExercisePromptArea, ExerciseResultMark, ExerciseSlot } from './exercise/ExerciseCard'
 import type { CheckResult } from '@polski/engine'
 import { useSettings } from '@/lib/data/store'
 import { createBrowserRecognition, pronunciationMatches, speechTagForLanguage, type BrowserRecognition } from '@/lib/speech/recognition'
@@ -151,7 +151,7 @@ export function PronunciationExercise({ mode = 'word', prompt, expected, matches
         </div>
         <ExerciseFeedback size="speech" reserve={<>
           <p>{t('recognized')} <strong lang="pl">{expected}</strong></p>
-          <p>{isPhrase ? phrase('notMatched') : t('incorrect')}</p>
+          {isPhrase && <p>{phrase('notMatched')}</p>}
           <p>{t('remaining', { count: MAX_ATTEMPTS })}</p>
         </>}>
           {listening && <p>{t('listening')}</p>}
@@ -159,8 +159,11 @@ export function PronunciationExercise({ mode = 'word', prompt, expected, matches
           {!languageTag && <p className="text-danger-ink">{t('unsupported')}</p>}
           {feedback && (
             <>
-              <p>{t('recognized')} <strong lang="pl">{feedback.transcript}</strong></p>
-              <p className={feedback.correct ? 'text-ok-ink' : 'text-danger-ink'}>{isPhrase && !feedback.correct ? phrase('notMatched') : t(feedback.correct ? 'correct' : 'incorrect')}</p>
+              <p className={isPhrase ? undefined : `flex items-center gap-1 ${feedback.correct ? 'text-ok-ink' : 'text-danger-ink'}`}>
+                {t('recognized')} <strong lang="pl" className="min-w-0 break-words">{feedback.transcript}</strong>
+                {!isPhrase && <ExerciseResultMark correct={feedback.correct} label={t(feedback.correct ? 'correct' : 'incorrect')} />}
+              </p>
+              {isPhrase && <p className={feedback.correct ? 'text-ok-ink' : 'text-danger-ink'}>{feedback.correct ? t('correct') : phrase('notMatched')}</p>}
               {!finished && <p>{t('remaining', { count: MAX_ATTEMPTS - feedback.attempts })}</p>}
             </>
           )}

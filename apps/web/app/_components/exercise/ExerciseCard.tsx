@@ -99,6 +99,14 @@ export function ExercisePrompt({ children, audio, audioVisible = true, placement
   </Row>
 }
 
+/** A fixed-size outcome marker; no visible success/failure caption is needed. */
+export function ExerciseResultMark({ correct, label }: { correct?: boolean; label?: string }) {
+  return <span data-exercise-result-mark="" className={`inline-flex size-5 shrink-0 items-center justify-center font-semibold ${correct === undefined ? 'invisible' : correct ? 'text-ok-ink' : 'text-danger-ink'}`}
+    role={correct === undefined ? undefined : 'img'} aria-label={correct === undefined ? undefined : label} aria-hidden={correct === undefined || !label ? true : undefined}>
+    <span aria-hidden="true">{correct === false ? '×' : '✓'}</span>
+  </span>
+}
+
 /** Reserve common one/two-line feedback; longer accessible content may naturally grow. */
 export function ExerciseFeedback({ children, reserve, size = 'single', className = '' }: {
   children?: ReactNode; reserve?: ReactNode; size?: 'single' | 'double' | 'speech'; className?: string

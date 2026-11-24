@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import type { ReactNode } from "react";
 import { Button, Row, Stack } from "@polski/ui";
-import { ExerciseAnswerForm, ExerciseCard, ExerciseContent, ExerciseFeedback, ExerciseOptions, ExercisePrompt, ExercisePromptArea, ExerciseSlot } from "./exercise/ExerciseCard";
+import { ExerciseAnswerForm, ExerciseCard, ExerciseContent, ExerciseFeedback, ExerciseOptions, ExercisePrompt, ExercisePromptArea, ExerciseResultMark, ExerciseSlot } from "./exercise/ExerciseCard";
 import { check, type CheckResult, type Exercise } from "@polski/engine";
 import { usePronounce } from "@/lib/speech/usePronounce";
 import { getCachedVocabulary } from "@/lib/content/curriculum";
@@ -629,6 +629,8 @@ export function ExerciseView({
     setBuiltIndexes((current) => [...current, index]);
   }
 
+  const typedOutcome = result?.correct ?? (feedback && !feedback.correct && !typed ? false : undefined);
+  const resultLabel = (correct: boolean) => t(correct ? "speech.correct" : "speech.incorrect");
   const answerField = exercise.mode === "typed" && !isInlineForm && (
     <input
       autoFocus={autoFocus}
@@ -658,7 +660,10 @@ export function ExerciseView({
               ? "Wpisz usłyszane słowo"
               : "Wpisz formę"
       }
-      className="min-h-12 w-full rounded-card border border-line bg-card px-3 text-center text-xl text-ink"
+      aria-invalid={practice && typedOutcome === false ? true : undefined}
+      className={`min-h-12 w-full rounded-card border text-center text-xl disabled:opacity-100 ${practice ? "px-10" : "px-3"} ${practice && typedOutcome !== undefined
+        ? typedOutcome ? "border-ok bg-ok-bg text-ok-ink" : "border-danger bg-danger-bg text-danger-ink"
+        : "border-line bg-card text-ink"}`}
       lang="pl"
       autoCapitalize="off"
       autoCorrect="off"
@@ -667,10 +672,11 @@ export function ExerciseView({
   );
 
   const answerStatus = feedback?.correct ? (
-    <p className="font-medium text-ok-ink">Poprawnie</p>
+    practice ? <span className="sr-only">{resultLabel(true)}</span> : <p className="font-medium text-ok-ink">Poprawnie</p>
   ) : feedback && exercise.mode !== "choice" && result ? (
-    <p className="text-ok-ink">Poprawna odpowiedź: <strong>{feedback.expected}</strong></p>
-  ) : null;
+    practice ? <p className="flex items-center gap-2 text-ok-ink"><span className="sr-only">Poprawna odpowiedź:</span><ExerciseResultMark correct /><strong>{feedback.expected}</strong></p>
+      : <p className="text-ok-ink">Poprawna odpowiedź: <strong>{feedback.expected}</strong></p>
+  ) : practice && result ? <span className="sr-only">{resultLabel(result.correct)}</span> : null;
 
   const meaningLine = listeningMeaning ? (
     <p lang="ru" className="text-ink">
@@ -680,7 +686,7 @@ export function ExerciseView({
   ) : null;
 
   const answerFeedback = practice && isListenChoice && speakText ? (
-    result && <p className={result.correct ? "font-medium text-ok-ink" : "font-medium text-danger-ink"}>{result.correct ? "✓" : "×"} <strong lang="pl">{speakText}</strong></p>
+    result && <p className="flex items-center gap-2 font-medium text-ok-ink"><ExerciseResultMark correct={result.correct} label={resultLabel(result.correct)} /><strong lang="pl">{speakText}</strong></p>
   ) : listeningMeaning ? (
     <div className="space-y-1">
       {answerStatus}
@@ -802,7 +808,14 @@ export function ExerciseView({
 
       {isListenChoice && speakText && !practice && <ExerciseSlot visible={Boolean(result)} className="text-center font-medium"><p lang="pl">{speakText}</p></ExerciseSlot>}
 
-      {answerField && <ExerciseAnswerForm formId={submitFormId} onSubmit={() => submit(typed)}>{answerField}</ExerciseAnswerForm>}
+      {answerField && <ExerciseAnswerForm formId={submitFormId} onSubmit={() => submit(typed)}>
+        {practice ? <div className="relative">
+          {answerField}
+          <div className="pointer-events-none absolute inset-y-0 right-3 flex items-center">
+            <ExerciseResultMark correct={typedOutcome} label={typedOutcome === undefined ? undefined : resultLabel(typedOutcome)} />
+          </div>
+        </div> : answerField}
+      </ExerciseAnswerForm>}
 
       {exercise.mode === "assemble" && (
         <Stack gap={practice ? "sm" : "md"}>
@@ -839,6 +852,7 @@ export function ExerciseView({
                     ))
                   : " "}
             </div>
+            {practice && <ExerciseResultMark correct={result?.correct ?? (feedback && !feedback.correct ? false : undefined)} label={feedback ? resultLabel(feedback.correct) : undefined} />}
             <AttemptDots
               attemptsAllowed={attemptsAllowed}
               wrongCount={wrongTries.length}
