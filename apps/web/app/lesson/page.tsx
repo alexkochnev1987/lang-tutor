@@ -131,7 +131,6 @@ export default function LessonPage() {
   const [special, setSpecial] = useState<"diagnostic" | "empty" | null>(null);
   const startedAt = useRef(Date.now());
   const wordMain = useRef<HTMLElement>(null);
-  const [answerTarget, setAnswerTarget] = useState<HTMLDivElement | null>(null);
   const [reviewWrites, setReviewWrites] = useState<Record<string, ReviewWrite>>({});
   const queuedWordExercises = useRef(new Set<string>());
   const lessonSave = useSaveLessonResult();
@@ -539,7 +538,7 @@ export default function LessonPage() {
             )}
           </Row>
         </Row>
-        <div className="word-practice-metadata u-hide-on-short mt-2 h-1 overflow-hidden rounded-pill bg-soft">
+        <div className={`mt-2 h-1 overflow-hidden rounded-pill bg-soft ${wordScreen ? "" : "u-hide-on-short"}`}>
           <div
             className="h-full bg-primary transition-all"
             style={{ width: `${((i + 1) / Math.max(1, slots.length)) * 100}%` }}
@@ -686,7 +685,7 @@ export default function LessonPage() {
                 autoFocus={!wordStudyExercise}
                 showSpeakButton={!wordStudyExercise || formatOfWordExercise(slot.step.ex) === "translation" || Boolean(restoredResult)}
                 submitFormId={wordFormId}
-                answerTarget={answerTarget}
+                practice={Boolean(wordStudyExercise)}
                 topLeftStatus={
                   exerciseLexemeId ? (
                     <LexemeSkillLevel
@@ -737,7 +736,6 @@ export default function LessonPage() {
           busyLabel={lessonSave.status === "saving" ? t("saving") : undefined}
           label={failedReview ? t("retry") : wordFormId && !canAdvance && !restoredResult ? t("check") : t("next")}
           formId={!canAdvance && !restoredResult && !failedReview ? wordFormId : undefined}
-          answerTargetRef={wordFormId ? setAnswerTarget : undefined}
           disabled={lessonSave.status === "saving"
             || (wordStudyExercise && slot.step.kind === "exercise" && slot.step.ex.mode !== "typed"
               && !canAdvance && !restoredResult && !failedReview)}

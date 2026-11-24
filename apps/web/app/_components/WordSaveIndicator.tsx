@@ -15,7 +15,7 @@ export function WordSaveIndicator() {
   }, [])
 
   return (
-    <div className="flex min-h-6 flex-wrap items-center justify-between gap-x-2 text-xs text-muted"
+    <div className="flex min-h-8 flex-wrap items-center justify-between gap-x-2 text-xs text-muted"
       role="status" aria-live="polite">
       {pending > 0 && <span>{t('savingInBackground', { count: pending })}</span>}
       {failed > 0 && (

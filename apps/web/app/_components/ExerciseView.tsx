@@ -2,9 +2,8 @@
 
 import { useEffect, useRef, useState } from "react";
 import type { ReactNode } from "react";
-import { createPortal } from "react-dom";
 import { Button, OptionRow, Row, Stack } from "@polski/ui";
-import { ExerciseCard, ExerciseContent, ExerciseFeedback, ExercisePrompt, ExerciseSlot } from "./exercise/ExerciseCard";
+import { ExerciseAnswerForm, ExerciseCard, ExerciseContent, ExerciseFeedback, ExercisePrompt, ExercisePromptArea, ExerciseSlot } from "./exercise/ExerciseCard";
 import { check, type CheckResult, type Exercise } from "@polski/engine";
 import { usePronounce } from "@/lib/speech/usePronounce";
 import { getCachedVocabulary } from "@/lib/content/curriculum";
@@ -17,11 +16,11 @@ export function SpeakIcon({
   ariaLabel,
 }: {
   text: string;
-  size?: "sm" | "md";
+  size?: "sm" | "md" | "lg";
   ariaLabel?: string;
 }) {
   const { pronounce, message } = usePronounce();
-  const cls = size === "sm" ? "size-10 text-sm" : "size-12 text-xl";
+  const cls = size === "sm" ? "size-10 text-sm" : size === "lg" ? "size-16 text-2xl" : "size-12 text-xl";
   return (
     <button
       type="button"
@@ -456,7 +455,7 @@ export function ExerciseView({
   topLeftStatus,
   topRightAction,
   submitFormId,
-  answerTarget,
+  practice = false,
 }: {
   exercise: Exercise;
   onAnswered: (
@@ -486,7 +485,7 @@ export function ExerciseView({
   topLeftStatus?: ReactNode;
   topRightAction?: ReactNode;
   submitFormId?: string;
-  answerTarget?: HTMLDivElement | null;
+  practice?: boolean;
 }) {
   const t = useTranslations("dailyWords");
   const [result, setResult] = useState<CheckResult | null>(null);
@@ -498,7 +497,7 @@ export function ExerciseView({
   const started = useRef(Date.now());
   const lastCheckedValue = useRef<string | null>(null);
   const autoPronouncedExercise = useRef<string | null>(null);
-  const dockedInput = useRef<HTMLInputElement>(null);
+  const answerInput = useRef<HTMLInputElement>(null);
   const { pronounce } = usePronounce();
 
   useEffect(() => {
@@ -596,7 +595,7 @@ export function ExerciseView({
     const nextWrongTries = r.correct ? wrongTries : [...wrongTries, answer];
     if (!r.correct) setWrongTries(nextWrongTries);
     setResult(r);
-    dockedInput.current?.blur();
+    answerInput.current?.blur();
     if (typeof navigator !== "undefined" && "vibrate" in navigator) {
       navigator.vibrate(r.correct ? 12 : [18, 35, 18]);
     }
@@ -635,7 +634,7 @@ export function ExerciseView({
       autoFocus={autoFocus}
       value={typed}
       disabled={Boolean(result)}
-      ref={submitFormId ? dockedInput : undefined}
+      ref={submitFormId ? answerInput : undefined}
       data-word-answer={submitFormId ? "" : undefined}
       aria-label={exercise.instruction}
       enterKeyHint={submitFormId ? "done" : undefined}
@@ -683,8 +682,7 @@ export function ExerciseView({
     </div>
   ) : answerStatus;
 
-  // Reserve room for both the longest answer and its meaning before
-  // grading, so the iPhone's docked input and Next button do not shift.
+  // Reserve feedback before grading so the input and subsequent controls stay put.
   const feedbackReserve = listeningMeaning ? (
     <div className="space-y-1">
       <p>Poprawna odpowiedź: <strong>{exercise.mode === "typed" ? exercise.accepted[0] : exercise.answer}</strong></p>
@@ -694,19 +692,9 @@ export function ExerciseView({
     ? <p className="font-medium">Poprawnie</p>
     : <p>Poprawna odpowiedź: <strong>{exercise.mode === "typed" ? exercise.accepted[0] : exercise.answer}</strong></p>;
 
-  const dockedAnswer = submitFormId && answerTarget && answerField && createPortal(
-    <form id={submitFormId} className="pb-2" onSubmit={(event) => {
-      event.preventDefault();
-      submit(typed);
-    }}>
-      {answerField}
-      <ExerciseFeedback size={listeningMeaning ? "speech" : "double"} reserve={feedbackReserve}>{answerFeedback}</ExerciseFeedback>
-    </form>,
-    answerTarget,
-  );
-
   const content = (
     <ExerciseContent compact={compactSentence}>
+      <ExercisePromptArea practice={practice}>
       <Stack gap="sm" align="center">
         {showInstruction && (
           <span className="text-center text-xs tracking-wide text-muted uppercase">
@@ -733,7 +721,7 @@ export function ExerciseView({
               </p>
             </div>
           )}
-        <ExercisePrompt
+        {!isListenWrite && !isListenChoice && <ExercisePrompt
           numbered={leadingNumber !== undefined}
           compact={compactSentence}
           placement={compactSentence || leadingNumber !== undefined || isSentence || isInlineForm ? "inline" : "side"}
@@ -789,13 +777,12 @@ export function ExerciseView({
               )}
             </span>
           )}
-        </ExercisePrompt>
+        </ExercisePrompt>}
+        {(isListenWrite || isListenChoice) && speakText && (
+          <ExercisePrompt placement="center" audio={<SpeakIcon text={speakText} size={practice ? "lg" : "md"} ariaLabel="Odtwórz wymowę" />} />
+        )}
       </Stack>
-
-      {(isListenWrite || isListenChoice) && speakText && (
-        <ExercisePrompt placement="center" audioVisible={showSpeakButton || isListenChoice}
-          audio={<SpeakIcon text={speakText} ariaLabel="Odtwórz wymowę" />} />
-      )}
+      </ExercisePromptArea>
 
       {exercise.mode === "choice" && !isInlineForm && (
         <Stack gap="xs">
@@ -823,13 +810,13 @@ export function ExerciseView({
 
       {isListenChoice && speakText && <ExerciseSlot visible={Boolean(result)} className="text-center font-medium"><p lang="pl">{speakText}</p></ExerciseSlot>}
 
-      {!submitFormId && answerField}
+      {answerField && <ExerciseAnswerForm formId={submitFormId} onSubmit={() => submit(typed)}>{answerField}</ExerciseAnswerForm>}
 
       {exercise.mode === "assemble" && (
         <Stack gap="md">
           <div className="flex items-center gap-2">
             <div
-              className={`min-h-12 flex-1 rounded-card border px-3 py-2 text-center text-2xl tracking-widest ${
+              className={`min-h-12 min-w-0 flex-1 overflow-x-auto whitespace-nowrap rounded-card border px-3 py-2 text-center text-2xl tracking-widest ${
                 result
                   ? result.correct
                     ? "border-ok bg-ok-bg text-ok-ink"
@@ -890,16 +877,15 @@ export function ExerciseView({
         </Stack>
       )}
 
-      {!submitFormId && <ExerciseFeedback size={listeningMeaning ? "speech" : exercise.mode === "typed" ? "double" : "single"} reserve={feedbackReserve}>{answerFeedback}</ExerciseFeedback>}
+      <ExerciseFeedback size={listeningMeaning ? "speech" : exercise.mode === "typed" ? "double" : "single"} reserve={feedbackReserve}>{answerFeedback}</ExerciseFeedback>
     </ExerciseContent>
   );
 
-  if (bare) return <ExerciseCard bare>{content}{dockedAnswer}</ExerciseCard>;
+  if (bare) return <ExerciseCard bare>{content}</ExerciseCard>;
   return (
     <ExerciseCard tone={result ? (result.correct ? "correct" : "wrong") : "neutral"}
       metadata={(topLeftStatus || topRightAction) && <><div>{topLeftStatus}</div>{topRightAction}</>}>
       {content}
-      {dockedAnswer}
     </ExerciseCard>
   );
 }

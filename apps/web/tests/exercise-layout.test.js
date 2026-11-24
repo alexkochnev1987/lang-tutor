@@ -1,6 +1,6 @@
 import { createElement as h } from 'react'
 import { renderToStaticMarkup } from 'react-dom/server'
-import { ExerciseActions, ExerciseFeedback, ExercisePrompt, ExerciseSlot } from '../app/_components/exercise/ExerciseCard'
+import { ExerciseActions, ExerciseAnswerForm, ExerciseFeedback, ExercisePrompt, ExercisePromptArea, ExerciseSlot } from '../app/_components/exercise/ExerciseCard'
 
 const render = (component, props, children) => renderToStaticMarkup(h(component, props, children))
 const audio = h('button', { type: 'button' }, 'Play')
@@ -52,3 +52,22 @@ describe('stable exercise presentation', () => {
     }
   })
 })
+
+  describe('shared full-screen practice slots', () => {
+    it('uses the same prompt area for word and audio exercises', () => {
+      for (const child of [h('span', null, 'silk'), audio]) {
+        const markup = render(ExercisePromptArea, { practice: true }, child)
+        expect(markup).toContain('data-exercise-prompt-area')
+        expect(markup).toContain('min-h-28')
+      }
+      expect(render(ExercisePromptArea, {}, expected)).not.toContain('data-exercise-prompt-area')
+    })
+    it('keeps the input inside an externally submittable form', () => {
+      const input = h('input', { 'data-word-answer': '' })
+      const markup = render(ExerciseAnswerForm, { formId: 'practice-answer', onSubmit: () => {} }, input)
+      expect(markup).toMatch(/^<form id="practice-answer"/)
+      expect(markup).toContain('data-word-answer')
+      expect(markup).toMatch(/<\/form>$/)
+      expect(render(ExerciseAnswerForm, { onSubmit: () => {} }, input)).not.toContain('<form')
+    })
+  })

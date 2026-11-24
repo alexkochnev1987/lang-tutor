@@ -50,7 +50,6 @@ export function BrainstormPractice({ id, words, pool, dayNumber, reviewFormats, 
   const [failed, setFailed] = useState(false)
   const writing = useRef(false)
   const main = useRef<HTMLElement>(null)
-  const [answerTarget, setAnswerTarget] = useState<HTMLDivElement | null>(null)
   const prefix = `${id}:`
   const allSteps = useMemo(() => oneAttemptWordSteps(buildWordStudySteps(words, pool, prefix)), [words, pool, prefix])
   const base = useMemo(() => allSteps.filter((step) => step.kind === 'word-intro' || !reviewFormats || reviewFormats[step.word.id]?.includes(formatOfWordExercise(step.ex))), [allSteps, reviewFormats])
@@ -187,7 +186,7 @@ export function BrainstormPractice({ id, words, pool, dayNumber, reviewFormats, 
         {exercise && (
           <ExerciseView key={exercise.id} exercise={exercise} onAnswered={remember} autoFocus={false}
             showSpeakButton={exercise.kind === 'listen-write' || exercise.kind === 'translate-recognition'
-              || exercise.kind === 'false-friend-contrast' || Boolean(response)} submitFormId={formId} answerTarget={answerTarget} />
+              || exercise.kind === 'false-friend-contrast' || Boolean(response)} submitFormId={formId} practice />
         )}
         {!step && (
           <Card><Stack gap="sm">
@@ -203,7 +202,6 @@ export function BrainstormPractice({ id, words, pool, dayNumber, reviewFormats, 
         label={failed ? t('retry')
           : formId && !response ? t('check') : step ? t('next') : canContinue ? t('continue') : t('backToFormats')}
         formId={response ? undefined : formId}
-        answerTargetRef={formId ? setAnswerTarget : undefined}
         disabled={checking || Boolean(exercise && !formId && !response)}
         onNext={step ? advance : canContinue ? onContinue : () => leave(onExit)}
       />
