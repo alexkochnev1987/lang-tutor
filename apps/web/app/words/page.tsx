@@ -16,7 +16,7 @@ import { WordPracticeFooter } from '@/app/_components/WordPracticeFooter'
 import { WordRow } from '@/app/_components/WordRow'
 import { currentDayNumber, getCachedVocabulary, loadCurriculum, loadVocabulary, type Lexeme } from '@/lib/content/curriculum'
 import { getCachedDailyWords, loadDailyWords, loadState, saveDailyWordAnswer, subscribeDailyWords } from '@/lib/data/store'
-import { dailyWordExercise, WORD_PRACTICE_FORMATS, wordSkill, type DailyWordAnswer, type DailyWordList, type DailyWordQueue, type WordPracticeFormat } from '@/lib/engine/daily-words'
+import { dailyWordExercise, WORD_PRACTICE_FORMATS, wordSkill, wordsForFormat, reviewFormatsForWord, type WordFormat, type DailyWordAnswer, type DailyWordList, type DailyWordQueue, type WordPracticeFormat } from '@/lib/engine/daily-words'
 import { prepareLexemeReview, Rating } from '@/lib/engine/session'
 
 const SESSION_SIZE: Record<WordPracticeFormat, number> = { brainstorm: 5, translation: 10, reverse: 10, writing: 5, listening: 5, pronunciation: 5 }
@@ -31,6 +31,7 @@ type Session = {
   index: number
   correct: number
   answered: number
+  reviewFormats?: Record<string, WordFormat[]>
 }
 
 export default function WordsPage() {
@@ -40,10 +41,12 @@ export default function WordsPage() {
 function WordsWithList() {
   const requested = useSearchParams().get('list')
   const initialList = requested === 'review' || requested === 'learn' ? requested : undefined
-  return <WordPractice key={initialList ?? 'default'} initialList={initialList} />
+  const requestedFormat = useSearchParams().get('format') as WordPracticeFormat | null
+  const initialFormat = requestedFormat && WORD_PRACTICE_FORMATS.includes(requestedFormat) ? requestedFormat : undefined
+  return <WordPractice key={`${initialList ?? 'default'}:${initialFormat}`} initialList={initialList} initialFormat={initialFormat} />
 }
 
-function WordPractice({ initialList }: { initialList?: DailyWordList }) {
+function WordPractice({ initialList, initialFormat }: { initialList?: DailyWordList; initialFormat?: WordPracticeFormat }) {
   const t = useTranslations('dailyWords')
   const loading = useTranslations('loadingSections')
   const [initializing, setInitializing] = useState(true)
@@ -51,7 +54,7 @@ function WordPractice({ initialList }: { initialList?: DailyWordList }) {
   const [queue, setQueue] = useState<DailyWordQueue | null>(getCachedDailyWords)
   const [dayNumber, setDayNumber] = useState(1)
   const [loadError, setLoadError] = useState(false)
-  const [format, setFormat] = useState<WordPracticeFormat>('brainstorm')
+  const [format, setFormat] = useState<WordPracticeFormat>(initialFormat ?? 'brainstorm')
   const [list, setList] = useState<DailyWordList>(initialList ?? 'learn')
   const [query, setQuery] = useState('')
   const [limit, setLimit] = useState(PAGE_SIZE)
@@ -90,13 +93,14 @@ function WordPractice({ initialList }: { initialList?: DailyWordList }) {
           const saved = JSON.parse(raw) as Omit<Session, 'words' | 'index' | 'list'> & { ids: string[]; list?: DailyWordList }
           if (saved.day !== nextQueue.day || !WORD_PRACTICE_FORMATS.includes(saved.format)) return
           const restoredList = saved.list ?? (saved.ids.some((id) => nextQueue.review.includes(id)) ? 'review' : 'learn')
-          if (initialList && initialList !== restoredList) return
-          const available = new Set(nextQueue[restoredList])
+          if ((initialList && initialList !== restoredList) || (initialFormat && initialFormat !== saved.format)) return
+          const available = new Set(wordsForFormat(nextQueue, restoredList, saved.format))
           const remaining = saved.ids.flatMap((id) => available.has(id) ? words.get(id) ?? [] : [])
           if (remaining.length) {
             setList(restoredList)
             setFormat(saved.format)
-            setSession({ ...saved, list: restoredList, words: remaining, index: 0 })
+            setSession({ ...saved, list: restoredList, words: remaining, index: 0,
+              reviewFormats: restoredList === 'review' ? Object.fromEntries(remaining.map(({ id }) => [id, saved.reviewFormats?.[id] ?? reviewFormatsForWord(nextQueue, id)])) : undefined })
           }
         } catch { /* Session storage may be unavailable. */ }
       })
@@ -113,10 +117,11 @@ function WordPractice({ initialList }: { initialList?: DailyWordList }) {
     let active = true
     const unsubscribe = subscribeDailyWords(() => {
       void loadDailyWords().then((fresh) => {
-        if (!active || answering.current) return
+        if (!active) return
         setQueue(fresh)
+        if (answering.current) return
         if (!session || session.format === 'brainstorm') return
-        const available = new Set(fresh[session.list])
+        const available = new Set(wordsForFormat(fresh, session.list, session.format))
         const remaining = session.words.slice(session.index).filter(({ id }) => available.has(id))
         if (fresh.day !== session.day || remaining.length !== session.words.length - session.index) {
           setSession({ ...session, day: fresh.day, words: [...session.words.slice(0, session.index), ...remaining] })
@@ -126,6 +131,14 @@ function WordPractice({ initialList }: { initialList?: DailyWordList }) {
     })
     return () => { active = false; unsubscribe() }
   }, [session, status])
+
+  // A write can complete while the ready-only subscription is detached.
+  useEffect(() => {
+    if (status !== 'ready') return
+    let active = true
+    void loadDailyWords().then((fresh) => { if (active) setQueue(fresh) }).catch(() => { if (active) setLoadError(true) })
+    return () => { active = false }
+  }, [status])
 
   useEffect(() => {
     if (!session) return
@@ -141,13 +154,13 @@ function WordPractice({ initialList }: { initialList?: DailyWordList }) {
   const pool = useMemo(() => [...(vocabulary?.values() ?? [])], [vocabulary])
   const visibleIds = useMemo(() => {
     const search = query.trim().toLocaleLowerCase()
-    return (queue?.[list] ?? []).filter((id) => {
+    return wordsForFormat(queue, list, format).filter((id) => {
       const word = vocabulary?.get(id)
       return word && (!search || word.lemma.toLocaleLowerCase().includes(search)
         || word.translation.toLocaleLowerCase().includes(search))
     })
-  }, [list, query, queue, vocabulary])
-  const selectedIds = selected.filter((id) => queue?.[list].includes(id))
+  }, [list, format, query, queue, vocabulary])
+  const selectedIds = selected.filter((id) => wordsForFormat(queue, list, format).includes(id))
   const sessionSize = SESSION_SIZE[format]
   const word = session?.words[session.index]
   const exercise = useMemo(() => {
@@ -166,10 +179,11 @@ function WordPractice({ initialList }: { initialList?: DailyWordList }) {
     try {
       const fresh = await loadDailyWords()
       setQueue(fresh)
-      const ids = fresh[batchList].filter((id) => !picked.length || picked.includes(id))
+      const ids = wordsForFormat(fresh, batchList, batchFormat).filter((id) => !picked.length || picked.includes(id))
       const words = ids.slice(0, SESSION_SIZE[batchFormat]).flatMap((id) => vocabulary.get(id) ?? [])
       if (words.length) {
-        setSession({ format: batchFormat, list: batchList, day: fresh.day, id: crypto.randomUUID(), index: 0, words, correct: 0, answered: 0 })
+        setSession({ format: batchFormat, list: batchList, day: fresh.day, id: crypto.randomUUID(), index: 0, words, correct: 0, answered: 0,
+          reviewFormats: batchList === 'review' ? Object.fromEntries(words.map(({ id }) => [id, reviewFormatsForWord(fresh, id)])) : undefined })
         main.current?.scrollTo({ top: 0 })
       }
     } catch {
@@ -179,12 +193,8 @@ function WordPractice({ initialList }: { initialList?: DailyWordList }) {
     }
   }
 
-  function consumeWord(wordId: string) {
-    setQueue((current) => current && ({
-      ...current,
-      learn: current.learn.filter((id) => id !== wordId),
-      review: current.review.filter((id) => id !== wordId),
-    }))
+  function refreshQueue() {
+    void loadDailyWords().then(setQueue).catch(() => setLoadError(true))
   }
 
   function advance() {
@@ -204,7 +214,7 @@ function WordPractice({ initialList }: { initialList?: DailyWordList }) {
       const accepted = await saveDailyWordAnswer(payload)
       pending.current = null
       setStatus(accepted ? 'saved' : 'unavailable')
-      consumeWord(payload.item.refId)
+      refreshQueue()
       if (accepted) setSession((current) => current && ({
         ...current, answered: current.answered + 1, correct: current.correct + Number(payload.result.correct),
       }))
@@ -245,14 +255,14 @@ function WordPractice({ initialList }: { initialList?: DailyWordList }) {
 
   if (session?.format === 'brainstorm') {
     return <BrainstormPractice key={session.id} id={session.id} words={session.words} pool={pool}
-      dayNumber={dayNumber} canContinue={Boolean(queue?.[session.list].length)}
-      checking={status === 'checking'} loadError={loadError} onConsume={consumeWord}
+      dayNumber={dayNumber} reviewFormats={session.reviewFormats} canContinue={Boolean(wordsForFormat(queue, session.list, session.format).length)}
+      checking={status === 'checking'} loadError={loadError} onConsume={refreshQueue}
       onContinue={() => void startBatch(session.list, session.format)} onExit={exit} />
   }
 
   if (session) {
     const canAdvance = status === 'saved' || status === 'unavailable'
-    const canContinue = Boolean(queue?.[session.list].length)
+    const canContinue = Boolean(wordsForFormat(queue, session.list, session.format).length)
     return (
       <Screen className="word-practice-screen">
         <header className="mx-auto w-full max-w-2xl px-4 py-2">
@@ -311,11 +321,12 @@ function WordPractice({ initialList }: { initialList?: DailyWordList }) {
             <label key={mode} className={`flex min-h-12 cursor-pointer items-start gap-2 rounded-card border px-3 py-2 focus-within:ring-2 focus-within:ring-primary ${mode === 'brainstorm' ? 'col-span-2' : ''} ${format === mode ? 'border-primary bg-primary/5' : 'border-line bg-card hover:bg-soft'}`}>
               <input type="radio" name="word-format" className="mt-1 shrink-0 accent-primary" checked={format === mode}
                 aria-label={t(mode)} aria-describedby={`word-format-${mode}`}
-                onChange={() => { setFormat(mode); setSelected(selectedIds.slice(0, SESSION_SIZE[mode])) }} />
+                onChange={() => { setFormat(mode); setSelected(selectedIds.filter((id) => wordsForFormat(queue, list, mode).includes(id)).slice(0, SESSION_SIZE[mode])) }} />
               <span className="min-w-0 flex-1">
                 <span className="block text-sm font-medium">{t(mode)}</span>
                 <span id={`word-format-${mode}`} className="block text-xs text-muted">
                   {t('batchWords', { count: SESSION_SIZE[mode] })} · {t(`formatHint.${mode}`)}
+                  {queue && list === 'review' && <span className="mt-1 block font-medium text-foreground">{t('availableCount', { count: wordsForFormat(queue, list, mode).length })}</span>}
                 </span>
               </span>
             </label>
@@ -324,7 +335,7 @@ function WordPractice({ initialList }: { initialList?: DailyWordList }) {
         {loadError && <Button variant="outline" onClick={load}>{t('reload')}</Button>}
         {!queue || (queue[list].length > 0 && !vocabulary) ? (
           !loadError && <LoadingSkeleton variant="list" visible label={loading(queue ? 'vocabulary' : 'wordCounts')} />
-        ) : !queue[list].length ? <p role="status">{t('empty')}</p> : (
+        ) : !wordsForFormat(queue, list, format).length ? <p role="status">{t('empty')}</p> : (
           <>
             <Button full disabled={loadError} busy={initializing || status === 'checking'}
               busyLabel={initializing ? loading('practice') : t('loading')} onClick={() => void startBatch(list, format, selectedIds)}>

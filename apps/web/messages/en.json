@@ -110,7 +110,9 @@
     "saved": "Settings saved",
     "saveError": "Could not save settings. Try again."
   },
-  "languages": { "pl": "Polish" },
+  "languages": {
+    "pl": "Polish"
+  },
   "auth": {
     "signIn": "Sign in",
     "signOut": "Sign out",
@@ -186,7 +188,7 @@
     "loading": "Checking the queue…",
     "saving": "Saving your answer…",
     "retry": "Retry saving",
-    "unavailable": "This word is no longer available for review today.",
+    "unavailable": "This skill is not currently due for review.",
     "done": "Practice complete",
     "score": "{correct} of {total} correct",
     "empty": "No words are available today.",
@@ -195,7 +197,10 @@
     "search": "Search by word or translation",
     "reload": "Retry loading",
     "useTimeZone": "Use the device time zone",
-    "timeZone": "Time zone: {zone}"
+    "timeZone": "Time zone: {zone}",
+    "availableByFormat": "Available by practice type",
+    "practicedToday": "Practised today: {count}",
+    "availableCount": "Available: {count}"
   },
   "weeklyGoal": {
     "title": "Weekly goal",
