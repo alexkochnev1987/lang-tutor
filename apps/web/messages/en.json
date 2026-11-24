@@ -190,6 +190,7 @@
     "savingInBackground": "Saving in the background: {count}",
     "saveFailed": "Answers not saved: {count}",
     "retrySave": "Retry saving",
+    "wordMeaning": "Meaning",
     "retry": "Retry saving",
     "unavailable": "This skill is not currently due for review.",
     "done": "Practice complete",
