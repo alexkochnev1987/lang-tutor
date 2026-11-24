@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import type { ReactNode } from "react";
-import { useKeyboardDismissSubmit } from "./exercise/useKeyboardDismissSubmit";
+import { useAnswerInput } from "./exercise/useAnswerInput";
 import { Button, Row, Stack } from "@polski/ui";
 import { exerciseLayout, ExerciseAnswerForm, ExerciseCard, ExerciseContent, ExerciseFeedback, ExerciseOptions, ExercisePrompt, ExercisePromptArea, ExerciseResultMark, ExerciseSlot } from "./exercise/ExerciseCard";
 import { check, type CheckResult, type Exercise } from "@polski/engine";
@@ -225,8 +225,7 @@ function InlineFormControl({
         ? "border-danger bg-danger-bg"
         : "border-line bg-soft";
   const [focused, setFocused] = useState(false);
-  const inputRef = useRef<HTMLInputElement>(null);
-  useKeyboardDismissSubmit(inputRef, onSubmit, mode === "typed" && !disabled);
+  const answerInput = useAnswerInput(onSubmit, mode === "typed" && !disabled);
   const focusClass =
     status === "empty" ? "focus-within:border-muted focus-within:bg-card" : "";
   const textClass =
@@ -281,7 +280,7 @@ function InlineFormControl({
       ) : (
         <input
           {...common}
-          ref={inputRef}
+          {...answerInput}
           autoFocus={autoFocus && !disabled}
           enterKeyHint="done"
           value={value}
@@ -296,12 +295,7 @@ function InlineFormControl({
           onChange={(e) => onChange(e.target.value)}
           onBlur={(event) => {
             setFocused(false);
-            onSubmit(event.currentTarget.value);
-          }}
-          onKeyDown={(e) => {
-            if (e.key !== "Enter" || e.nativeEvent.isComposing || e.nativeEvent.keyCode === 229) return;
-            e.preventDefault();
-            onSubmit(e.currentTarget.value);
+            answerInput.onBlur(event);
           }}
         />
       )}
@@ -509,7 +503,6 @@ export function ExerciseView({
   const started = useRef(Date.now());
   const lastCheckedValue = useRef<string | null>(null);
   const autoPronouncedExercise = useRef<string | null>(null);
-  const answerInput = useRef<HTMLInputElement>(null);
   const { pronounce } = usePronounce();
 
   useEffect(() => {
@@ -607,7 +600,7 @@ export function ExerciseView({
     const nextWrongTries = r.correct ? wrongTries : [...wrongTries, answer];
     if (!r.correct) setWrongTries(nextWrongTries);
     setResult(r);
-    answerInput.current?.blur();
+    answerInput.ref.current?.blur();
     if (typeof navigator !== "undefined" && "vibrate" in navigator) {
       navigator.vibrate(r.correct ? 12 : [18, 35, 18]);
     }
@@ -641,7 +634,7 @@ export function ExerciseView({
     setBuiltIndexes((current) => [...current, index]);
   }
 
-  useKeyboardDismissSubmit(answerInput, submit, exercise.mode === "typed" && !isInlineForm && !result && !restoredResult);
+  const answerInput = useAnswerInput(submit, exercise.mode === "typed" && !isInlineForm && !result && !restoredResult);
   const shouldAutoFocus = autoFocus && exercise.mode === "typed" && exercise.kind !== "pronunciation" && !result && !restoredResult;
   const typedOutcome = result?.correct ?? (feedback && !feedback.correct && !typed ? false : undefined);
   const resultLabel = (correct: boolean) => t(correct ? "speech.correct" : "speech.incorrect");
@@ -650,21 +643,13 @@ export function ExerciseView({
       autoFocus={shouldAutoFocus}
       value={typed}
       disabled={Boolean(result)}
-      ref={answerInput}
+      {...answerInput}
       data-word-answer=""
       aria-label={exercise.instruction}
       enterKeyHint="done"
       aria-required="true"
       onFocus={practice ? undefined : (event) => keepInputVisible(event.currentTarget)}
       onChange={(e) => updateTyped(e.target.value)}
-      onBlur={(event) => submit(event.currentTarget.value)}
-      onKeyDown={(e) => {
-        if (e.key !== "Enter" || e.nativeEvent.isComposing || e.nativeEvent.keyCode === 229) return;
-        e.preventDefault();
-        // Grade immediately from the native keyboard action. Empty input
-        // is ignored by submit(), without the browser's validation popup.
-        submit(e.currentTarget.value);
-      }}
       placeholder={
         exercise.kind === "sentence-write"
           ? "Napisz zdanie"
@@ -823,7 +808,7 @@ export function ExerciseView({
 
       {isListenChoice && speakText && !practice && <ExerciseSlot visible={Boolean(result)} className="text-center font-medium"><p lang="pl">{speakText}</p></ExerciseSlot>}
 
-      {answerField && <ExerciseAnswerForm onSubmit={() => submit(answerInput.current?.value ?? typed)}>
+      {answerField && <ExerciseAnswerForm onSubmit={() => submit(answerInput.ref.current?.value ?? typed)}>
         {practice ? <div className="relative">
           {answerField}
           <div className="absolute inset-y-0 right-0 flex w-11 items-center justify-center">
