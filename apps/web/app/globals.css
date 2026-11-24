@@ -127,6 +127,12 @@ input, select, textarea {
   height: var(--study-viewport-height, 100dvh);
 }
 
+/* Short text exercises stay anchored at the layout origin, rather than
+   following transient visualViewport offset changes during keyboard animation. */
+.word-practice-screen:has([data-exercise-layout="fixed-input"]) {
+  top: 0;
+}
+
 /* The keyboard changes the available scroll area, never the card's layout.
    On short screens scroll only the main region, not the header/footer. */
 .word-practice-screen > main {

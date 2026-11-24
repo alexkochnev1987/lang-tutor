@@ -1,6 +1,6 @@
 import { createElement as h } from 'react'
 import { renderToStaticMarkup } from 'react-dom/server'
-import { ExerciseActions, ExerciseAnswerForm, ExerciseCard, ExerciseFeedback, ExerciseOptions, ExercisePrompt, ExercisePromptArea, ExerciseResultMark, ExerciseSlot } from '../app/_components/exercise/ExerciseCard'
+import { exerciseLayout, ExerciseActions, ExerciseAnswerForm, ExerciseCard, ExerciseFeedback, ExerciseOptions, ExercisePrompt, ExercisePromptArea, ExerciseResultMark, ExerciseSlot } from '../app/_components/exercise/ExerciseCard'
 
 const render = (component, props, children) => renderToStaticMarkup(h(component, props, children))
 const audio = h('button', { type: 'button' }, 'Play')
@@ -54,15 +54,30 @@ describe('stable exercise presentation', () => {
 })
 
 describe('shared full-screen practice slots', () => {
-  it('reserves the same compact top row before and after grading', () => {
-    for (const visible of [false, true]) {
-      const markup = render(ExerciseCard, { practice: true, metadata: h('span', null, 'Mastery'), metadataVisible: visible }, h('input', { 'data-word-answer': '' }))
-      expect(markup.indexOf('Mastery')).toBeLessThan(markup.indexOf('data-word-answer'))
-      expect(markup).not.toContain('<details')
-      expect(markup).toContain('mb-2 flex min-h-11 items-center justify-between gap-1')
-      expect(markup.includes('inert=""')).toBe(!visible)
-      expect(markup.includes('aria-hidden="true"')).toBe(!visible)
+  it('keeps word metadata visible and above the input throughout practice', () => {
+    const markup = render(ExerciseCard, { practice: true, metadata: h('span', null, 'Mastery'), layout: 'fixed-input' }, h('input', { 'data-word-answer': '' }))
+    expect(markup.indexOf('Mastery')).toBeLessThan(markup.indexOf('data-word-answer'))
+    expect(markup).toContain('data-exercise-metadata')
+    expect(markup).toContain('mb-2 flex min-h-11 shrink-0')
+    expect(markup).not.toContain('inert=""')
+    expect(markup).not.toContain('<details')
+  })
+  it('uses a fixed prompt slot only for short text exercises', () => {
+    for (const kind of ['translate-production', 'listen-write']) {
+      expect(exerciseLayout({ kind, mode: 'typed' }, true)).toBe('fixed-input')
+      expect(exerciseLayout({ kind, mode: 'typed' }, false)).toBe('adaptive')
     }
+    for (const [kind, mode] of [['translate-production', 'choice'], ['sentence-write', 'typed'], ['sentence-typed', 'typed'], ['inflect', 'typed'], ['pronunciation', 'typed'], ['reading-choice', 'choice'], ['spelling', 'assemble'], ['listen-choice', 'choice']]) {
+      expect(exerciseLayout({ kind, mode }, true)).toBe('adaptive')
+    }
+    expect(exerciseLayout({ kind: 'translate-production', mode: 'typed', baseForm: 'test' }, true)).toBe('adaptive')
+    const fixed = render(ExercisePromptArea, { practice: true, layout: 'fixed-input' }, expected)
+    expect(fixed).toContain('h-24 shrink-0')
+    expect(fixed).toContain('overflow-y-auto')
+    expect(fixed).toContain('Expected answer')
+    const adaptive = render(ExercisePromptArea, { practice: true }, expected)
+    expect(adaptive).toContain('min-h-16')
+    expect(adaptive).not.toContain('h-24')
   })
   it('uses the same prompt area for word and audio exercises', () => {
     for (const child of [h('span', null, 'silk'), audio]) {
@@ -96,17 +111,12 @@ describe('compact practice', () => {
       for (const option of options) expect(markup).toContain(option)
     }
   })
-  it('uses a flat practice card and reserves a hidden details slot before grading', () => {
-    const props = { practice: true, metadata: expected }
-    const before = render(ExerciseCard, { ...props, metadataVisible: false }, audio)
-    const after = render(ExerciseCard, { ...props, metadataVisible: true }, audio)
-    for (const markup of [before, after]) {
-      expect(markup).toContain('data-practice-card')
-      expect(markup).not.toContain('shadow-card')
-      expect(markup).toContain('Expected answer')
-    }
-    expect(before).toContain('inert=""')
-    expect(after).not.toContain('inert=""')
+  it('uses a flat practice card with always-visible metadata', () => {
+    const markup = render(ExerciseCard, { practice: true, metadata: expected }, audio)
+    expect(markup).toContain('data-practice-card')
+    expect(markup).not.toContain('shadow-card')
+    expect(markup).toContain('Expected answer')
+    expect(markup).not.toContain('inert=""')
   })
 })
 

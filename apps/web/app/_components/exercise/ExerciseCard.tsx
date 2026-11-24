@@ -1,13 +1,22 @@
 import type { ReactNode } from 'react'
+import type { Exercise } from '@polski/engine'
 import { Card, OptionRow, Row, Stack } from '@polski/ui'
 
+export type ExerciseLayout = 'adaptive' | 'fixed-input'
+
+/** Only standalone, short vocabulary inputs use a fixed question slot. */
+export function exerciseLayout(exercise: Exercise, practice: boolean): ExerciseLayout {
+  return practice && exercise.mode === 'typed' && !exercise.baseForm &&
+    (exercise.kind === 'translate-production' || exercise.kind === 'listen-write')
+    ? 'fixed-input' : 'adaptive'
+}
+
 /** Shared presentation only: grading, persistence and navigation stay with the exercise. */
-export function ExerciseCard({ children, tone = 'neutral', metadata, metadataVisible = true, practice = false, bare = false }: {
+export function ExerciseCard({ children, tone = 'neutral', metadata, practice = false, bare = false, layout = 'adaptive' }: {
   children: ReactNode
   tone?: 'neutral' | 'correct' | 'wrong'
   metadata?: ReactNode
-  /** Practice reveals secondary controls after grading. */
-  metadataVisible?: boolean
+  layout?: ExerciseLayout
   practice?: boolean
   bare?: boolean
 }) {
@@ -15,22 +24,25 @@ export function ExerciseCard({ children, tone = 'neutral', metadata, metadataVis
   const content = <>
     {!practice && metadata && <div className="mb-2 flex flex-wrap items-center justify-between gap-3">{metadata}</div>}
     {practice && metadata && (
-      // Reserve the same top row before and after grading. Only visibility changes.
-      <ExerciseSlot visible={metadataVisible} className="mb-2 flex min-h-11 items-center justify-between gap-1 text-muted">
+      <div data-exercise-metadata="" className="mb-2 flex min-h-11 shrink-0 items-center justify-between gap-1 text-muted">
         {metadata}
-      </ExerciseSlot>
+      </div>
     )}
     {children}
   </>
-  if (practice) return <div data-exercise-card="" data-practice-card="" className="mx-auto w-full min-w-0 max-w-(--container-exercise)">{content}</div>
+  if (practice) return <div data-exercise-card="" data-practice-card="" data-exercise-layout={layout} className="mx-auto w-full min-w-0 max-w-(--container-exercise)">{content}</div>
   return <Card tone={tone} data-exercise-card="">{content}</Card>
 }
 
 /** The prompt keeps its footprint regardless of keyboard or grading state. */
-export function ExercisePromptArea({ children, practice = false }: { children: ReactNode; practice?: boolean }) {
-  return practice
-    ? <div data-exercise-prompt-area="" className="flex min-h-16 w-full min-w-0 flex-col justify-center rounded-card bg-soft px-3 py-2">{children}</div>
-    : <>{children}</>
+export function ExercisePromptArea({ children, practice = false, layout = 'adaptive' }: { children: ReactNode; practice?: boolean; layout?: ExerciseLayout }) {
+  if (!practice) return <>{children}</>
+  if (layout === 'fixed-input') return (
+    <div data-exercise-prompt-area="" data-fixed-prompt="" className="h-24 shrink-0 w-full min-w-0 overflow-y-auto overscroll-contain rounded-card bg-soft px-3 py-2" tabIndex={0}>
+      <div className="flex min-h-full min-w-0 flex-col justify-center">{children}</div>
+    </div>
+  )
+  return <div data-exercise-prompt-area="" className="flex min-h-16 w-full min-w-0 flex-col justify-center rounded-card bg-soft px-3 py-2">{children}</div>
 }
 
 /** The text exercise owns its form, independently of screen navigation. */

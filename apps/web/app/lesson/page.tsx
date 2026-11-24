@@ -507,6 +507,21 @@ export default function LessonPage() {
     />;
   }
 
+  const screenNotices = <>
+        {reviewFeedback}
+        {unavailableWord && <p role="status" className="text-sm text-muted">{t("unavailable")}</p>}
+        {queueStatus === "error" && <p role="alert" className="text-sm text-danger-ink">{t("error")}</p>}
+        {lessonSave.status === "saving" && !restoredResult && !wordStudyExercise && (
+          <p role="status" className="my-2 text-sm text-muted">Сохраняем итог…</p>
+        )}
+        {lessonSave.status === "error" && (
+          <div role="alert" className="my-2 flex flex-wrap items-center justify-between gap-2 text-sm text-danger-ink">
+            <span>Не удалось сохранить итог.</span>
+            <Button variant="outline" size="sm" onClick={() => void finish()}>Повторить</Button>
+          </div>
+        )}
+  </>;
+
   return (
     <Screen className={wordScreen ? "word-practice-screen" : undefined}>
       <header className="mx-auto w-full max-w-2xl px-4 py-3">
@@ -545,18 +560,7 @@ export default function LessonPage() {
       </header>
 
       <main ref={wordMain} className="mx-auto flex min-h-0 w-full max-w-2xl flex-1 flex-col justify-start overflow-y-auto overscroll-contain px-4 pb-4">
-        {reviewFeedback}
-        {unavailableWord && <p role="status" className="text-sm text-muted">{t("unavailable")}</p>}
-        {queueStatus === "error" && <p role="alert" className="text-sm text-danger-ink">{t("error")}</p>}
-        {lessonSave.status === "saving" && !restoredResult && !wordStudyExercise && (
-          <p role="status" className="my-2 text-sm text-muted">Сохраняем итог…</p>
-        )}
-        {lessonSave.status === "error" && (
-          <div role="alert" className="my-2 flex flex-wrap items-center justify-between gap-2 text-sm text-danger-ink">
-            <span>Не удалось сохранить итог.</span>
-            <Button variant="outline" size="sm" onClick={() => void finish()}>Повторить</Button>
-          </div>
-        )}
+        {!wordScreen && screenNotices}
         {slot?.kind === "stage-start" && (
           <StageStart stage={slot.stage} onNext={next} />
         )}
@@ -728,6 +732,7 @@ export default function LessonPage() {
             )}
           </Stack>
         )}
+        {wordScreen && screenNotices}
       </main>
       {wordScreen && slot?.kind === "step" && (
         <WordPracticeFooter

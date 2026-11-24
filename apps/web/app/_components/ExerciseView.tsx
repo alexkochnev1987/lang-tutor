@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import type { ReactNode } from "react";
 import { useKeyboardDismissSubmit } from "./exercise/useKeyboardDismissSubmit";
 import { Button, Row, Stack } from "@polski/ui";
-import { ExerciseAnswerForm, ExerciseCard, ExerciseContent, ExerciseFeedback, ExerciseOptions, ExercisePrompt, ExercisePromptArea, ExerciseResultMark, ExerciseSlot } from "./exercise/ExerciseCard";
+import { exerciseLayout, ExerciseAnswerForm, ExerciseCard, ExerciseContent, ExerciseFeedback, ExerciseOptions, ExercisePrompt, ExercisePromptArea, ExerciseResultMark, ExerciseSlot } from "./exercise/ExerciseCard";
 import { check, type CheckResult, type Exercise } from "@polski/engine";
 import { usePronounce } from "@/lib/speech/usePronounce";
 import { getCachedVocabulary } from "@/lib/content/curriculum";
@@ -711,9 +711,10 @@ export function ExerciseView({
     ? <p className="font-medium">Poprawnie</p>
     : <p>Poprawna odpowiedź: <strong>{exercise.mode === "typed" ? exercise.accepted[0] : exercise.answer}</strong></p>;
 
+  const layout = exerciseLayout(exercise, practice);
   const content = (
     <ExerciseContent compact={compactSentence} practice={practice}>
-      <ExercisePromptArea practice={practice}>
+      <ExercisePromptArea practice={practice} layout={layout}>
         <Stack gap="sm" align="center">
           {showInstruction && (
             <div className={practice && (isListenWrite || isListenChoice) ? "flex w-full items-center justify-between gap-2" : "text-center"}>
@@ -904,7 +905,7 @@ export function ExerciseView({
   );
 
   return (
-    <ExerciseCard bare={bare} practice={practice} metadataVisible={Boolean(result)} tone={result ? (result.correct ? "correct" : "wrong") : "neutral"}
+    <ExerciseCard bare={bare} practice={practice} layout={layout} tone={result ? (result.correct ? "correct" : "wrong") : "neutral"}
       metadata={(topLeftStatus || topRightAction) && <>{topLeftStatus && <div className={practice ? "min-w-0 flex-1" : undefined}>{topLeftStatus}</div>}{topRightAction}</>}>
       {content}
     </ExerciseCard>
