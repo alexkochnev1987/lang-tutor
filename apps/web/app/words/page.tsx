@@ -5,7 +5,7 @@ import { Suspense, useEffect, useMemo, useRef, useState } from 'react'
 import { useSearchParams } from 'next/navigation'
 import { useTranslations } from 'next-intl'
 import { AppIcon } from '@/app/_components/AppIcon'
-import { Button, Card, Row, Screen, Stack } from '@polski/ui'
+import { Button, Card, Row, Stack } from '@polski/ui'
 import { hashString, spelling, type CheckResult } from '@polski/engine'
 import { BrainstormPractice } from '@/app/_components/BrainstormPractice'
 import { PronunciationExercise } from '@/app/_components/PronunciationExercise'
@@ -13,6 +13,7 @@ import { ExerciseView } from '@/app/_components/ExerciseView'
 import { LoadingSkeleton, SkeletonBlock } from '@/app/_components/LoadingSkeleton'
 import { SectionNav } from '@/app/_components/SectionNav'
 import { WordPracticeFooter } from '@/app/_components/WordPracticeFooter'
+import { WordPracticeScreen } from '@/app/_components/WordPracticeScreen'
 import { WordSaveIndicator } from '@/app/_components/WordSaveIndicator'
 import { WordRow } from '@/app/_components/WordRow'
 import { currentDayNumber, getCachedVocabulary, loadCurriculum, loadVocabulary, type Lexeme } from '@/lib/content/curriculum'
@@ -253,7 +254,7 @@ function WordPractice({ initialList, initialFormat }: { initialList?: DailyWordL
     const canAdvance = status === 'saved' || status === 'unavailable'
     const canContinue = Boolean(wordsForFormat(queue, session.list, session.format).length)
     return (
-      <Screen className="word-practice-screen">
+      <WordPracticeScreen>
         <header className="mx-auto w-full max-w-2xl px-4 py-2">
           <Row justify="between" wrap>
             <Button variant="outline" size="sm" onClick={exit} disabled={status === 'checking'}>
@@ -287,7 +288,7 @@ function WordPractice({ initialList, initialFormat }: { initialList?: DailyWordL
           onNext={status === 'failed' ? exit
             : exercise ? advance : canContinue ? () => void startBatch(session.list, session.format) : exit}
         />
-      </Screen>
+      </WordPracticeScreen>
     )
   }
 

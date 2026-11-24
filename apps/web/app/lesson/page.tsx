@@ -48,6 +48,7 @@ import { LessonPhrasePractice } from "@/app/_components/LessonPhrasePractice";
 import { formatOfWordExercise, wordSkill } from "@/lib/engine/daily-words";
 import { WeeklyGoalCredit } from "@/app/_components/WeeklyGoal";
 import { WordPracticeFooter } from "@/app/_components/WordPracticeFooter";
+import { WordPracticeScreen } from "@/app/_components/WordPracticeScreen";
 import { WordSaveIndicator } from "@/app/_components/WordSaveIndicator";
 import { useTranslations } from "next-intl";
 
@@ -523,7 +524,7 @@ export default function LessonPage() {
   </>;
 
   return (
-    <Screen className={wordScreen ? "word-practice-screen" : undefined}>
+    <WordPracticeScreen enabled={wordScreen}>
       <header className="mx-auto w-full max-w-2xl px-4 py-3">
         <Row justify="between">
           <Link
@@ -744,7 +745,7 @@ export default function LessonPage() {
           onNext={failedReview ? failedReview.retry : next}
         />
       )}
-    </Screen>
+    </WordPracticeScreen>
   );
 }
 

@@ -136,7 +136,14 @@ function hintForExercise(exercise: InlineExercise): string | undefined {
 function keepInputVisible(element: HTMLElement): void {
   if (typeof window === "undefined") return;
   window.requestAnimationFrame(() => {
-    element.scrollIntoView({ block: "center", behavior: "smooth" });
+    if (document.activeElement !== element) return;
+    const rect = element.getBoundingClientRect();
+    const viewport = window.visualViewport;
+    const top = viewport?.offsetTop ?? 0;
+    const bottom = top + (viewport?.height ?? window.innerHeight);
+    // Do not compete with native focus scrolling when the field is visible.
+    if (rect.top >= top && rect.bottom <= bottom) return;
+    element.scrollIntoView({ block: "nearest", behavior: "instant" });
   });
 }
 

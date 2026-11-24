@@ -3,7 +3,7 @@
 import { useMemo, useRef, useState } from 'react'
 import { useTranslations } from 'next-intl'
 import { AppIcon } from './AppIcon'
-import { Button, Card, Row, Screen, Stack } from '@polski/ui'
+import { Button, Card, Row, Stack } from '@polski/ui'
 import type { CheckResult } from '@polski/engine'
 import type { Lexeme } from '@/lib/content/curriculum'
 import { getLoadedState, queueDailyWordAnswer } from '@/lib/data/store'
@@ -14,6 +14,7 @@ import { ExerciseView, SpeakIcon } from './ExerciseView'
 import { ExerciseCard, ExercisePromptArea } from './exercise/ExerciseCard'
 import { WeeklyGoalCredit } from './WeeklyGoal'
 import { WordPracticeFooter } from './WordPracticeFooter'
+import { WordPracticeScreen } from './WordPracticeScreen'
 
 const STORAGE_KEY = 'brainstorm-progress'
 type Response = { result: DailyWordAnswer['result']; ms: number }
@@ -162,7 +163,7 @@ export function BrainstormPractice({ id, words, pool, dayNumber, reviewFormats, 
   }
 
   return (
-    <Screen className="word-practice-screen">
+    <WordPracticeScreen>
       <header className="mx-auto w-full max-w-2xl px-4 py-2">
         <Row justify="between" wrap>
           <Button variant="outline" size="sm" disabled={checking} onClick={() => leave(onExit)}>
@@ -205,6 +206,6 @@ export function BrainstormPractice({ id, words, pool, dayNumber, reviewFormats, 
         disabled={checking || Boolean(exercise && !response)}
         onNext={step ? advance : canContinue ? onContinue : () => leave(onExit)}
       />
-    </Screen>
+    </WordPracticeScreen>
   )
 }

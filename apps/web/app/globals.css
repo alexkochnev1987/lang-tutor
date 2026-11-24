@@ -121,16 +121,11 @@ input, select, textarea {
   }
 }
 
+/* One height owner for the practice screen. The browser may pan its visual
+   viewport on focus; never also move our layout using viewport.offsetTop. */
 .word-practice-screen {
-  position: relative;
-  top: var(--study-viewport-top, 0px);
   height: var(--study-viewport-height, 100dvh);
-}
-
-/* Short text exercises stay anchored at the layout origin, rather than
-   following transient visualViewport offset changes during keyboard animation. */
-.word-practice-screen:has([data-exercise-layout="fixed-input"]) {
-  top: 0;
+  flex-shrink: 0;
 }
 
 /* The keyboard changes the available scroll area, never the card's layout.
