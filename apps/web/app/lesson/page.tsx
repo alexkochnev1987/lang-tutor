@@ -592,8 +592,8 @@ export default function LessonPage() {
         )}
 
         {slot?.kind === "step" && slot.step.kind === "exercise" && (
-          <Stack gap="md">
-            {slot.kind === "step" && slot.batchProgress ? (
+          <Stack gap={wordStudyExercise ? "xs" : "md"}>
+            {!wordStudyExercise && slot.kind === "step" && slot.batchProgress ? (
               <div className="mx-auto w-full max-w-(--container-exercise)">
                 <div className="mb-2 flex items-start justify-between gap-3">
                   <div>
@@ -624,20 +624,11 @@ export default function LessonPage() {
                   />
                 </div>
               </div>
-            ) : slot.step.review ? (
+            ) : !wordStudyExercise && slot.step.review ? (
               <p className="text-center text-xs tracking-wide text-muted uppercase">
                 Powtórka
               </p>
             ) : null}
-            {slot.step.newWord && (
-              <details key={slot.step.newWord.id} className="text-sm">
-                <summary className="cursor-pointer">Nowe słowo</summary>
-                <WordIntro word={slot.step.newWord}
-                  skillProgress={lexemeSkillProgress(appState, slot.step.newWord.id)}
-                  nextReview={nextLexemeReview(appState, slot.step.newWord.id)}
-                  onMarkedKnown={skipWord} />
-              </details>
-            )}
             {grammarExerciseIndex === 1 ? (
               <GrammarExerciseBatch
                 key={grammarExerciseSlots
@@ -719,6 +710,15 @@ export default function LessonPage() {
                   }
                 }}
               />
+            )}
+            {slot.step.newWord && (
+              <details key={slot.step.newWord.id} className="text-sm">
+                <summary className="cursor-pointer">Nowe słowo</summary>
+                <WordIntro word={slot.step.newWord}
+                  skillProgress={lexemeSkillProgress(appState, slot.step.newWord.id)}
+                  nextReview={nextLexemeReview(appState, slot.step.newWord.id)}
+                  onMarkedKnown={skipWord} />
+              </details>
             )}
             <Row gap="sm" justify="center">
               {slot.step.rule && <RuleSheet rule={slot.step.rule} />}

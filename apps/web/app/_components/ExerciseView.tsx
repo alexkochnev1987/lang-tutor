@@ -2,8 +2,8 @@
 
 import { useEffect, useRef, useState } from "react";
 import type { ReactNode } from "react";
-import { Button, OptionRow, Row, Stack } from "@polski/ui";
-import { ExerciseAnswerForm, ExerciseCard, ExerciseContent, ExerciseFeedback, ExercisePrompt, ExercisePromptArea, ExerciseSlot } from "./exercise/ExerciseCard";
+import { Button, Row, Stack } from "@polski/ui";
+import { ExerciseAnswerForm, ExerciseCard, ExerciseContent, ExerciseFeedback, ExerciseOptions, ExercisePrompt, ExercisePromptArea, ExerciseSlot } from "./exercise/ExerciseCard";
 import { check, type CheckResult, type Exercise } from "@polski/engine";
 import { usePronounce } from "@/lib/speech/usePronounce";
 import { getCachedVocabulary } from "@/lib/content/curriculum";
@@ -16,11 +16,11 @@ export function SpeakIcon({
   ariaLabel,
 }: {
   text: string;
-  size?: "sm" | "md" | "lg";
+  size?: "sm" | "md" | "lg" | "compact";
   ariaLabel?: string;
 }) {
   const { pronounce, message } = usePronounce();
-  const cls = size === "sm" ? "size-10 text-sm" : size === "lg" ? "size-16 text-2xl" : "size-12 text-xl";
+  const cls = size === "compact" ? "size-11 text-lg" : size === "sm" ? "size-10 text-sm" : size === "lg" ? "size-16 text-2xl" : "size-12 text-xl";
   return (
     <button
       type="button"
@@ -571,7 +571,7 @@ export function ExerciseView({
     : speakableTextOf(exercise);
 
   const hasPromptAudio = Boolean(speakText) && !isListenChoice && !isListenWrite;
-  const promptAudio = hasPromptAudio && speakText ? <SpeakIcon text={speakText} size={compactSentence ? "sm" : "md"} ariaLabel={compactSentence ? `Odtwórz zdanie: ${speakText}` : undefined} /> : undefined;
+  const promptAudio = hasPromptAudio && speakText ? <SpeakIcon text={speakText} size={practice ? "compact" : compactSentence ? "sm" : "md"} ariaLabel={compactSentence ? `Odtwórz zdanie: ${speakText}` : undefined} /> : undefined;
 
   function updateTyped(value: string) {
     lastCheckedValue.current = null;
@@ -681,7 +681,9 @@ export function ExerciseView({
     </p>
   ) : null;
 
-  const answerFeedback = listeningMeaning ? (
+  const answerFeedback = practice && isListenChoice && speakText ? (
+    result && <p className={result.correct ? "font-medium text-ok-ink" : "font-medium text-danger-ink"}>{result.correct ? "✓" : "×"} <strong lang="pl">{speakText}</strong></p>
+  ) : listeningMeaning ? (
     <div className="space-y-1">
       {answerStatus}
       {result && meaningLine}
@@ -689,7 +691,7 @@ export function ExerciseView({
   ) : answerStatus;
 
   // Reserve feedback before grading so the input and subsequent controls stay put.
-  const feedbackReserve = listeningMeaning ? (
+  const feedbackReserve = practice && isListenChoice && speakText ? <p className="font-medium">✓ {speakText}</p> : listeningMeaning ? (
     <div className="space-y-1">
       <p>Poprawna odpowiedź: <strong>{exercise.mode === "typed" ? exercise.accepted[0] : exercise.answer}</strong></p>
       {meaningLine}
@@ -699,13 +701,16 @@ export function ExerciseView({
     : <p>Poprawna odpowiedź: <strong>{exercise.mode === "typed" ? exercise.accepted[0] : exercise.answer}</strong></p>;
 
   const content = (
-    <ExerciseContent compact={compactSentence}>
+    <ExerciseContent compact={compactSentence} practice={practice}>
       <ExercisePromptArea practice={practice}>
         <Stack gap="sm" align="center">
           {showInstruction && (
-            <span className="text-center text-xs tracking-wide text-muted uppercase">
-              {exercise.instruction}
-            </span>
+            <div className={practice && (isListenWrite || isListenChoice) ? "flex w-full items-center justify-between gap-2" : "text-center"}>
+              <span className="text-xs tracking-wide text-muted uppercase">{exercise.instruction}</span>
+              {practice && (isListenWrite || isListenChoice) && speakText && (
+                <SpeakIcon text={speakText} size="compact" ariaLabel="Odtwórz wymowę" />
+              )}
+            </div>
           )}
           {exercise.kind === "collocation-guided" &&
             exercise.mode === "choice" &&
@@ -782,42 +787,27 @@ export function ExerciseView({
                 )}
               </span>
           </ExercisePrompt>}
-          {(isListenWrite || isListenChoice) && speakText && (
-            <ExercisePrompt placement="center" audio={<SpeakIcon text={speakText} size={practice ? "lg" : "md"} ariaLabel="Odtwórz wymowę" />} />
+          {(isListenWrite || isListenChoice) && speakText && (!practice || !showInstruction) && (
+            <ExercisePrompt placement="center" audio={<SpeakIcon text={speakText} size={practice ? "compact" : "md"} ariaLabel="Odtwórz wymowę" />} />
           )}
         </Stack>
       </ExercisePromptArea>
 
       {exercise.mode === "choice" && !isInlineForm && (
-        <Stack gap="xs">
-          {exercise.options.map((o) => (
-            <OptionRow
-              key={o}
-              outcome={
-                feedback && !feedback.correct && o === feedback.expected
-                  ? "correct"
-                  : result && o === exercise.answer
-                    ? "correct"
-                    : wrongTries.includes(o)
-                      ? "wrong"
-                      : "none"
-              }
-              selected={false}
-              disabled={Boolean(result) || wrongTries.includes(o)}
-              onClick={() => submit(o)}
-            >
-              {o}
-            </OptionRow>
-          ))}
-        </Stack>
+        <ExerciseOptions practice={practice} options={exercise.options}
+          outcomeFor={(option) => feedback && !feedback.correct && option === feedback.expected
+            ? "correct" : result && option === exercise.answer ? "correct"
+              : wrongTries.includes(option) ? "wrong" : "none"}
+          disabledFor={(option) => Boolean(result) || wrongTries.includes(option)}
+          onSelect={submit} />
       )}
 
-      {isListenChoice && speakText && <ExerciseSlot visible={Boolean(result)} className="text-center font-medium"><p lang="pl">{speakText}</p></ExerciseSlot>}
+      {isListenChoice && speakText && !practice && <ExerciseSlot visible={Boolean(result)} className="text-center font-medium"><p lang="pl">{speakText}</p></ExerciseSlot>}
 
       {answerField && <ExerciseAnswerForm formId={submitFormId} onSubmit={() => submit(typed)}>{answerField}</ExerciseAnswerForm>}
 
       {exercise.mode === "assemble" && (
-        <Stack gap="md">
+        <Stack gap={practice ? "sm" : "md"}>
           <div className="flex items-center gap-2">
             <div
               className={`min-h-12 min-w-0 flex-1 overflow-x-auto whitespace-nowrap rounded-card border px-3 py-2 text-center text-2xl tracking-widest ${
@@ -858,7 +848,7 @@ export function ExerciseView({
               focused={false}
             />
           </div>
-          <Row gap="xs" wrap justify="center">
+          <div className="flex flex-wrap justify-center gap-1" data-exercise-letters="">
             {exercise.letters.map((l, idx) =>
               (
                 <button
@@ -867,13 +857,13 @@ export function ExerciseView({
                   disabled={Boolean(result) || builtIndexes.includes(idx)}
                   aria-hidden={builtIndexes.includes(idx) || undefined}
                   onClick={() => selectAssembledLetter(idx)}
-                  className={`size-12 rounded-card bg-soft text-xl font-medium hover:bg-soft2 disabled:opacity-40 ${builtIndexes.includes(idx) ? "invisible" : ""}`}
+                  className={`${practice ? "size-11" : "size-12"} rounded-card bg-soft text-xl font-medium hover:bg-soft2 disabled:opacity-40 ${builtIndexes.includes(idx) ? "invisible" : ""}`}
                 >
                   {l}
                 </button>
               ),
             )}
-          </Row>
+          </div>
           <ExerciseSlot visible={builtIndexes.length > 0 && !result}>
             <Button variant="ghost" size="sm" disabled={builtIndexes.length === 0 || Boolean(result)} onClick={() => setBuiltIndexes([])}>
               Wyczyść
@@ -887,7 +877,7 @@ export function ExerciseView({
   );
 
   return (
-    <ExerciseCard bare={bare} tone={result ? (result.correct ? "correct" : "wrong") : "neutral"}
+    <ExerciseCard bare={bare} practice={practice} metadataVisible={Boolean(result)} tone={result ? (result.correct ? "correct" : "wrong") : "neutral"}
       metadataLabel={practice ? t("wordDetails") : undefined}
       metadata={(topLeftStatus || topRightAction) && <><div>{topLeftStatus}</div>{topRightAction}</>}>
       {content}

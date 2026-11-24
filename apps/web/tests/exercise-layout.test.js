@@ -1,6 +1,6 @@
 import { createElement as h } from 'react'
 import { renderToStaticMarkup } from 'react-dom/server'
-import { ExerciseActions, ExerciseAnswerForm, ExerciseCard, ExerciseFeedback, ExercisePrompt, ExercisePromptArea, ExerciseSlot } from '../app/_components/exercise/ExerciseCard'
+import { ExerciseActions, ExerciseAnswerForm, ExerciseCard, ExerciseFeedback, ExerciseOptions, ExercisePrompt, ExercisePromptArea, ExerciseSlot } from '../app/_components/exercise/ExerciseCard'
 
 const render = (component, props, children) => renderToStaticMarkup(h(component, props, children))
 const audio = h('button', { type: 'button' }, 'Play')
@@ -65,7 +65,7 @@ describe('shared full-screen practice slots', () => {
     for (const child of [h('span', null, 'silk'), audio]) {
       const markup = render(ExercisePromptArea, { practice: true }, child)
       expect(markup).toContain('data-exercise-prompt-area')
-      expect(markup).toContain('min-h-28')
+      expect(markup).toContain('min-h-16')
     }
     expect(render(ExercisePromptArea, {}, expected)).not.toContain('data-exercise-prompt-area')
   })
@@ -76,5 +76,32 @@ describe('shared full-screen practice slots', () => {
     expect(markup).toContain('data-word-answer')
     expect(markup).toMatch(/<\/form>$/)
     expect(render(ExerciseAnswerForm, { onSubmit: () => {} }, input)).not.toContain('<form')
+  })
+})
+
+
+describe('compact practice', () => {
+  it('uses two columns, gives long labels the full row and keeps grading geometry', () => {
+    const options = ['паром', 'женщина', 'укол', 'осматривать, ходить по достопримечательностям']
+    const before = render(ExerciseOptions, { options, practice: true, outcomeFor: () => 'none', disabledFor: () => false, onSelect: () => {} })
+    const after = render(ExerciseOptions, { options, practice: true, outcomeFor: option => option === 'женщина' ? 'correct' : 'none', disabledFor: () => true, onSelect: () => {} })
+    for (const markup of [before, after]) {
+      expect(markup).toContain('grid-cols-2')
+      expect(markup.match(/col-span-2/g)).toHaveLength(1)
+      expect(markup.match(/min-h-12/g)).toHaveLength(4)
+      for (const option of options) expect(markup).toContain(option)
+    }
+  })
+  it('uses a flat practice card and reserves a hidden details slot before grading', () => {
+    const props = { practice: true, metadata: expected, metadataLabel: 'Details' }
+    const before = render(ExerciseCard, { ...props, metadataVisible: false }, audio)
+    const after = render(ExerciseCard, { ...props, metadataVisible: true }, audio)
+    for (const markup of [before, after]) {
+      expect(markup).toContain('data-practice-card')
+      expect(markup).not.toContain('shadow-card')
+      expect(markup).toContain('Details')
+    }
+    expect(before).toContain('inert=""')
+    expect(after).not.toContain('inert=""')
   })
 })

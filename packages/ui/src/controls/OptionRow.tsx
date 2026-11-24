@@ -10,6 +10,7 @@ const row = tv({
     'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary',
   ],
   variants: {
+    compact: { true: 'h-full min-w-0 gap-1.5 px-2.5 py-2' },
     selected: {
       true:  'border-accent-ink bg-soft2 text-ink',
       false: 'border-line bg-soft/50 text-ink hover:bg-soft',
@@ -27,24 +28,25 @@ const row = tv({
 
 type OptionRowProps = React.ComponentProps<'button'> & {
   selected?: boolean
+  compact?: boolean
   outcome?: 'none' | 'correct' | 'wrong'
 }
 
-export function OptionRow({ selected, outcome, children, ...rest }: OptionRowProps) {
+export function OptionRow({ selected, outcome, children, compact, ...rest }: OptionRowProps) {
   const mark = outcome === 'correct' ? '✓' : outcome === 'wrong' ? '×' : selected ? '●' : null
   const showMarker = selected !== undefined || Boolean(mark)
   const graded = outcome === 'correct' || outcome === 'wrong'
   return (
     <button
       type="button"
-      className={row({ selected: outcome && outcome !== 'none' ? false : selected, outcome })}
+      className={row({ selected: outcome && outcome !== 'none' ? false : selected, outcome, compact })}
       aria-pressed={selected}
       {...rest}
     >
-      {children}
+      {compact ? <span className="min-w-0 flex-1 break-words text-center leading-snug">{children}</span> : children}
       {showMarker && (
         <span
-          className={`ml-auto flex size-5 shrink-0 items-center justify-center rounded-full border text-xs ${mark ? 'border-current' : 'border-muted/60'} ${graded ? '' : 'text-accent-ink'}`}
+          className={`ml-auto flex ${compact ? "size-4" : "size-5"} shrink-0 items-center justify-center rounded-full border text-xs ${mark ? 'border-current' : 'border-muted/60'} ${graded ? '' : 'text-accent-ink'}`}
           aria-hidden
         >
           {mark}

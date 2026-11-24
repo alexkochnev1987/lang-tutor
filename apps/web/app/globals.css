@@ -134,6 +134,21 @@ input, select, textarea {
   overflow-y: auto;
   overscroll-behavior: contain;
   overflow-anchor: none;
+  container-type: inline-size;
+}
+
+.word-practice-screen > header {
+  padding-block: 0.25rem;
+}
+
+/* Narrow or zoomed screens keep readable answers without clipping. */
+@container (max-width: 15rem) {
+  [data-practice-card] [data-exercise-options] {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  [data-practice-card] [data-exercise-options] > div {
+    grid-column: 1 / -1;
+  }
 }
 
 .word-practice-screen > header,
