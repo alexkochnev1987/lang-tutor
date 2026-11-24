@@ -11,6 +11,7 @@ import { formatOfWordExercise, wordSkill, type DailyWordAnswer, type DailyWordSu
 import { prepareLexemeReview, Rating } from '@/lib/engine/session'
 import { buildWordStageRetryStep, buildWordStudySteps, oneAttemptWordSteps, WORD_STAGE_RETRY_LIMIT, type WordExerciseStep } from '@/lib/engine/word-study'
 import { ExerciseView, SpeakIcon } from './ExerciseView'
+import { ExerciseCard, ExercisePromptArea } from './exercise/ExerciseCard'
 import { WeeklyGoalCredit } from './WeeklyGoal'
 import { WordPracticeFooter } from './WordPracticeFooter'
 
@@ -175,13 +176,15 @@ export function BrainstormPractice({ id, words, pool, dayNumber, reviewFormats, 
       </header>
       <main ref={main} className="mx-auto w-full max-w-2xl flex-1 px-4 pb-2">
         {step?.kind === 'word-intro' && (
-          <Card>
-            <Stack gap="sm" align="center">
-              <p className="text-3xl font-semibold" lang="pl">{step.word.lemma}</p>
-              <p className="text-lg">{step.word.translation}</p>
-              <SpeakIcon text={step.word.lemma} ariaLabel={t('pronounceWord')} />
-            </Stack>
-          </Card>
+          <ExerciseCard practice>
+            <ExercisePromptArea practice>
+              <Stack gap="sm" align="center">
+                <Row gap="sm"><p className="text-3xl font-semibold break-words" lang="pl">{step.word.lemma}</p>
+                  <SpeakIcon text={step.word.lemma} size="compact" ariaLabel={t('pronounceWord')} /></Row>
+                <p className="text-lg text-center">{step.word.translation}</p>
+              </Stack>
+            </ExercisePromptArea>
+          </ExerciseCard>
         )}
         {exercise && (
           <ExerciseView key={exercise.id} exercise={exercise} onAnswered={remember} autoFocus={false}

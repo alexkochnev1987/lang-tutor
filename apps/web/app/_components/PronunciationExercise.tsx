@@ -132,8 +132,8 @@ export function PronunciationExercise({ mode = 'word', prompt, expected, matches
   }, [])
 
   return (
-    <ExerciseCard tone={finished ? (feedback?.correct ? 'correct' : 'wrong') : 'neutral'}>
-      <ExerciseContent compact>
+    <ExerciseCard practice={!isPhrase} tone={finished ? (feedback?.correct ? 'correct' : 'wrong') : 'neutral'}>
+      <ExerciseContent compact practice={!isPhrase}>
         <ExercisePromptArea practice={!isPhrase}>
           <p className="text-center text-sm text-muted">{isPhrase ? phrase('say') : t('instruction')}</p>
           {prompt && <p className="text-center text-xl font-semibold break-words" lang="ru">{prompt}</p>}
@@ -167,7 +167,7 @@ export function PronunciationExercise({ mode = 'word', prompt, expected, matches
         </ExerciseFeedback>
         <ExerciseActions finished={finished} completed={
           <Stack gap="sm">
-            <Row gap="sm"><p>{t('answer')} <strong lang="pl">{expected}</strong></p><SpeakIcon text={expected} ariaLabel={t('playAnswer')} /></Row>
+            <Row gap="sm"><p>{t('answer')} <strong lang="pl">{expected}</strong></p><SpeakIcon text={expected} size="compact" ariaLabel={t('playAnswer')} /></Row>
             {isPhrase && onSkip && <Button type="button" onClick={onSkip}>{phrase('showDialogue')}</Button>}
           </Stack>
         }>

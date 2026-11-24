@@ -1,24 +1,39 @@
 import type { ReactNode } from 'react'
-import { Card, Row, Stack } from '@polski/ui'
+import { Card, OptionRow, Row, Stack } from '@polski/ui'
 
 /** Shared presentation only: grading, persistence and navigation stay with the exercise. */
-export function ExerciseCard({ children, tone = 'neutral', metadata, bare = false }: {
+export function ExerciseCard({ children, tone = 'neutral', metadata, metadataLabel, metadataVisible = true, practice = false, bare = false }: {
   children: ReactNode
   tone?: 'neutral' | 'correct' | 'wrong'
   metadata?: ReactNode
+  /** Practice puts secondary controls in a collapsed section below the answer. */
+  metadataLabel?: string
+  metadataVisible?: boolean
+  practice?: boolean
   bare?: boolean
 }) {
   if (bare) return <>{children}</>
-  return <Card tone={tone} data-exercise-card="">
-    {metadata && <div className="mb-2 flex flex-wrap items-center justify-between gap-3">{metadata}</div>}
+  const metadataContent = metadata && <div className="flex flex-wrap items-center justify-between gap-3">{metadata}</div>
+  const content = <>
+    {!metadataLabel && metadataContent && <div className="mb-2">{metadataContent}</div>}
     {children}
-  </Card>
+    {metadataLabel && metadataContent && (
+      <ExerciseSlot visible={metadataVisible} className="mt-2 text-sm text-muted">
+        <details>
+          <summary className="min-h-10 cursor-pointer py-2">{metadataLabel}</summary>
+          {metadataContent}
+        </details>
+      </ExerciseSlot>
+    )}
+  </>
+  if (practice) return <div data-exercise-card="" data-practice-card="" className="mx-auto w-full min-w-0 max-w-(--container-exercise)">{content}</div>
+  return <Card tone={tone} data-exercise-card="">{content}</Card>
 }
 
 /** The prompt keeps its footprint regardless of keyboard or grading state. */
 export function ExercisePromptArea({ children, practice = false }: { children: ReactNode; practice?: boolean }) {
   return practice
-    ? <div data-exercise-prompt-area="" className="flex min-h-28 w-full min-w-0 flex-col justify-center rounded-card bg-soft px-3 py-3">{children}</div>
+    ? <div data-exercise-prompt-area="" className="flex min-h-16 w-full min-w-0 flex-col justify-center rounded-card bg-soft px-3 py-2">{children}</div>
     : <>{children}</>
 }
 
@@ -31,8 +46,33 @@ export function ExerciseAnswerForm({ children, formId, onSubmit }: { children: R
   }}>{children}</form>
 }
 
-export function ExerciseContent({ children, compact = false }: { children: ReactNode; compact?: boolean }) {
-  return <Stack gap={compact ? 'xs' : 'lg'} className="w-full min-w-0">{children}</Stack>
+export function ExerciseContent({ children, compact = false, practice = false }: { children: ReactNode; compact?: boolean; practice?: boolean }) {
+  return <Stack gap={practice ? 'sm' : compact ? 'xs' : 'lg'} className="w-full min-w-0">{children}</Stack>
+}
+
+/** Layout is decided from answer text, never from grading state. Long labels
+ * get the entire row; source order stays the same for reading and tabbing. */
+export function isWideExerciseOption(option: string): boolean {
+  return Array.from(option.trim()).length > 22 || option.trim().split(/\s+/).some(word => Array.from(word).length > 16)
+}
+
+export function ExerciseOptions({ options, practice = false, outcomeFor, disabledFor, onSelect }: {
+  options: string[]
+  practice?: boolean
+  outcomeFor: (option: string) => 'none' | 'correct' | 'wrong'
+  disabledFor: (option: string) => boolean
+  onSelect: (option: string) => void
+}) {
+  return <div data-exercise-options="" className={practice ? 'grid grid-cols-2 items-stretch gap-2' : 'grid gap-1'}>
+    {options.map(option => (
+      <div key={option} className={practice && isWideExerciseOption(option) ? 'col-span-2 min-w-0' : 'min-w-0'}>
+        <OptionRow compact={practice} selected={false} outcome={outcomeFor(option)}
+          disabled={disabledFor(option)} onClick={() => onSelect(option)}>
+          {option}
+        </OptionRow>
+      </div>
+    ))}
+  </div>
 }
 
 /** Keep a control's footprint while unavailable; invisible controls cannot be focused or tapped. */

@@ -134,11 +134,35 @@ input, select, textarea {
   overflow-y: auto;
   overscroll-behavior: contain;
   overflow-anchor: none;
+  container-type: inline-size;
+}
+
+.word-practice-screen > header {
+  padding-block: 0.25rem;
+}
+
+/* Narrow or zoomed screens keep readable answers without clipping. */
+@container (max-width: 15rem) {
+  [data-practice-card] [data-exercise-options] {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  [data-practice-card] [data-exercise-options] > div {
+    grid-column: 1 / -1;
+  }
 }
 
 .word-practice-screen > header,
 .word-practice-screen > footer {
   flex-shrink: 0;
+}
+
+/* The native keyboard action submits the form. Keep the fallback Check
+   button when the input is not focused, and keep Next after grading.
+   Removing only the footer gives the prompt and field more visible space. */
+@media (pointer: coarse) {
+  .word-practice-screen:has([data-word-answer]:focus) > footer[data-awaiting-word-answer] {
+    display: none;
+  }
 }
 
 /* Both word practice formats own their full-screen layout and safe areas. */
