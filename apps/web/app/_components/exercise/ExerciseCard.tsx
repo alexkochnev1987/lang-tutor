@@ -10,7 +10,7 @@ export function ExerciseCard({ children, tone = 'neutral', metadata, bare = fals
 }) {
   if (bare) return <>{children}</>
   return <Card tone={tone} data-exercise-card="">
-    {metadata && <div className="word-practice-metadata mb-2 flex flex-wrap items-center justify-between gap-3">{metadata}</div>}
+    {metadata && <div className="mb-2 flex flex-wrap items-center justify-between gap-3">{metadata}</div>}
     {children}
   </Card>
 }

@@ -695,93 +695,91 @@ export function ExerciseView({
   const content = (
     <ExerciseContent compact={compactSentence}>
       <ExercisePromptArea practice={practice}>
-      <Stack gap="sm" align="center">
-        {showInstruction && (
-          <span className="text-center text-xs tracking-wide text-muted uppercase">
-            {exercise.instruction}
-          </span>
-        )}
-        {exercise.kind === "collocation-guided" &&
-          exercise.mode === "choice" &&
-          exercise.translation && (
-            <span className="text-center text-sm text-muted" lang="ru">
-              {exercise.translation}
+        <Stack gap="sm" align="center">
+          {showInstruction && (
+            <span className="text-center text-xs tracking-wide text-muted uppercase">
+              {exercise.instruction}
             </span>
           )}
-        {showReadingText &&
-          exercise.mode === "choice" &&
-          isReading &&
-          exercise.readingText && (
-            <div className="w-full rounded-card bg-soft2 p-4" lang="pl">
-              <p className="mb-2 text-xs tracking-wide text-muted uppercase">
-                Tekst
-              </p>
-              <p className="whitespace-pre-wrap text-left text-base leading-7">
-                {exercise.readingText}
-              </p>
-            </div>
-          )}
-        {!isListenWrite && !isListenChoice && <ExercisePrompt
-          numbered={leadingNumber !== undefined}
-          compact={compactSentence}
-          placement={compactSentence || leadingNumber !== undefined || isSentence || isInlineForm ? "inline" : "side"}
-          audio={promptAudio}
-          audioVisible={showSpeakButton}
-        >
-          {leadingNumber !== undefined && (
-            <span className={`shrink-0 font-semibold text-muted ${compactSentence ? "text-sm" : "text-base sm:text-lg"}`}>
-              {leadingNumber}.
-            </span>
-          )}
-          {!isListenWrite && !isListenChoice && (
-            <span
-              className={
-                isReading
-                  ? "whitespace-pre-wrap text-left text-base leading-7"
-                  : compactSentence
-                    ? "min-w-0 flex-1 break-words text-left text-base leading-snug"
-                    : `${leadingNumber !== undefined ? "text-left" : "text-center"} font-semibold ${isSentence ? "text-base sm:text-lg" : "text-lg sm:text-xl"}`
-              }
-            >
-              {isInlineForm && exercise.mode !== "assemble" ? (
-                isGapSentence ? (
-                  <InlineSentencePrompt
-                    exercise={exercise}
-                    compact={compactSentence}
-                    value={typed}
-                    disabled={Boolean(result)}
-                    status={inlineStatus}
-                    attemptsAllowed={attemptsAllowed}
-                    wrongCount={wrongTries.length}
-                    result={result}
-                    autoFocus={autoFocus && exercise.mode === "typed"}
-                    onChange={updateTyped}
-                    onSubmit={submit}
-                  />
+          {exercise.kind === "collocation-guided" &&
+            exercise.mode === "choice" &&
+            exercise.translation && (
+              <span className="text-center text-sm text-muted" lang="ru">
+                {exercise.translation}
+              </span>
+            )}
+          {showReadingText &&
+            exercise.mode === "choice" &&
+            isReading &&
+            exercise.readingText && (
+              <div className="w-full rounded-card bg-soft2 p-4" lang="pl">
+                <p className="mb-2 text-xs tracking-wide text-muted uppercase">
+                  Tekst
+                </p>
+                <p className="whitespace-pre-wrap text-left text-base leading-7">
+                  {exercise.readingText}
+                </p>
+              </div>
+            )}
+          {!isListenWrite && !isListenChoice && <ExercisePrompt
+            numbered={leadingNumber !== undefined}
+            compact={compactSentence}
+            placement={compactSentence || leadingNumber !== undefined || isSentence || isInlineForm ? "inline" : "side"}
+            audio={promptAudio}
+            audioVisible={showSpeakButton}
+          >
+            {leadingNumber !== undefined && (
+              <span className={`shrink-0 font-semibold text-muted ${compactSentence ? "text-sm" : "text-base sm:text-lg"}`}>
+                {leadingNumber}.
+              </span>
+            )}
+              <span
+                className={
+                  isReading
+                    ? "whitespace-pre-wrap text-left text-base leading-7"
+                    : compactSentence
+                      ? "min-w-0 flex-1 break-words text-left text-base leading-snug"
+                      : `${leadingNumber !== undefined ? "text-left" : "text-center"} font-semibold ${isSentence ? "text-base sm:text-lg" : "text-lg sm:text-xl"}`
+                }
+              >
+                {isInlineForm && exercise.mode !== "assemble" ? (
+                  isGapSentence ? (
+                    <InlineSentencePrompt
+                      exercise={exercise}
+                      compact={compactSentence}
+                      value={typed}
+                      disabled={Boolean(result)}
+                      status={inlineStatus}
+                      attemptsAllowed={attemptsAllowed}
+                      wrongCount={wrongTries.length}
+                      result={result}
+                      autoFocus={autoFocus && exercise.mode === "typed"}
+                      onChange={updateTyped}
+                      onSubmit={submit}
+                    />
+                  ) : (
+                    <InlineWordPrompt
+                      exercise={exercise}
+                      value={typed}
+                      disabled={Boolean(result)}
+                      status={inlineStatus}
+                      attemptsAllowed={attemptsAllowed}
+                      wrongCount={wrongTries.length}
+                      result={result}
+                      autoFocus={autoFocus && exercise.mode === "typed"}
+                      onChange={updateTyped}
+                      onSubmit={submit}
+                    />
+                  )
                 ) : (
-                  <InlineWordPrompt
-                    exercise={exercise}
-                    value={typed}
-                    disabled={Boolean(result)}
-                    status={inlineStatus}
-                    attemptsAllowed={attemptsAllowed}
-                    wrongCount={wrongTries.length}
-                    result={result}
-                    autoFocus={autoFocus && exercise.mode === "typed"}
-                    onChange={updateTyped}
-                    onSubmit={submit}
-                  />
-                )
-              ) : (
-                exercise.prompt
-              )}
-            </span>
+                  exercise.prompt
+                )}
+              </span>
+          </ExercisePrompt>}
+          {(isListenWrite || isListenChoice) && speakText && (
+            <ExercisePrompt placement="center" audio={<SpeakIcon text={speakText} size={practice ? "lg" : "md"} ariaLabel="Odtwórz wymowę" />} />
           )}
-        </ExercisePrompt>}
-        {(isListenWrite || isListenChoice) && speakText && (
-          <ExercisePrompt placement="center" audio={<SpeakIcon text={speakText} size={practice ? "lg" : "md"} ariaLabel="Odtwórz wymowę" />} />
-        )}
-      </Stack>
+        </Stack>
       </ExercisePromptArea>
 
       {exercise.mode === "choice" && !isInlineForm && (
@@ -833,6 +831,7 @@ export function ExerciseView({
                       <button
                         key={`${index}-${position}`}
                         type="button"
+                        disabled={Boolean(result)}
                         aria-label={`Usuń literę ${exercise.letters[index]}`}
                         onClick={() =>
                           setBuiltIndexes((current) =>
@@ -881,9 +880,8 @@ export function ExerciseView({
     </ExerciseContent>
   );
 
-  if (bare) return <ExerciseCard bare>{content}</ExerciseCard>;
   return (
-    <ExerciseCard tone={result ? (result.correct ? "correct" : "wrong") : "neutral"}
+    <ExerciseCard bare={bare} tone={result ? (result.correct ? "correct" : "wrong") : "neutral"}
       metadata={(topLeftStatus || topRightAction) && <><div>{topLeftStatus}</div>{topRightAction}</>}>
       {content}
     </ExerciseCard>

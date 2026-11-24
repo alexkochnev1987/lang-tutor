@@ -133,10 +133,10 @@ export function PronunciationExercise({ mode = 'word', prompt, expected, matches
 
   return (
     <ExerciseCard tone={finished ? (feedback?.correct ? 'correct' : 'wrong') : 'neutral'}>
-      <ExerciseContent>
+      <ExerciseContent compact>
         <ExercisePromptArea practice={!isPhrase}>
-        <p className="text-sm text-muted">{isPhrase ? phrase('say') : t('instruction')}</p>
-        {prompt && <p className="text-xl font-semibold" lang="ru">{prompt}</p>}
+          <p className="text-center text-sm text-muted">{isPhrase ? phrase('say') : t('instruction')}</p>
+          {prompt && <p className="text-center text-xl font-semibold break-words" lang="ru">{prompt}</p>}
         </ExercisePromptArea>
         <div>
           <Button variant="ghost" size="sm" onClick={() => setHintVisible((visible) => !visible)}>
