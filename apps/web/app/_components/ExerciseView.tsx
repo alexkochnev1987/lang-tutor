@@ -7,6 +7,8 @@ import { Button, OptionRow, Row, Stack } from "@polski/ui";
 import { ExerciseCard, ExerciseContent, ExerciseFeedback, ExercisePrompt, ExerciseSlot } from "./exercise/ExerciseCard";
 import { check, type CheckResult, type Exercise } from "@polski/engine";
 import { usePronounce } from "@/lib/speech/usePronounce";
+import { getCachedVocabulary } from "@/lib/content/curriculum";
+import { useTranslations } from "next-intl";
 import { resetExerciseResults, useAppState } from "@/lib/data/store";
 
 export function SpeakIcon({
@@ -486,6 +488,7 @@ export function ExerciseView({
   submitFormId?: string;
   answerTarget?: HTMLDivElement | null;
 }) {
+  const t = useTranslations("dailyWords");
   const [result, setResult] = useState<CheckResult | null>(null);
   const [feedback, setFeedback] = useState<CheckResult | null>(null);
   const [typed, setTyped] = useState("");
@@ -542,6 +545,11 @@ export function ExerciseView({
   const compactSentence = isGapSentence && leadingNumber !== undefined;
   const isReading = exercise.kind === "reading-choice";
   const isListenWrite = exercise.kind === "listen-write";
+  // The meaning must remain hidden until this listening answer is graded.
+  // Vocabulary is already loaded by every word-practice entry point.
+  const listeningMeaning = isListenWrite && exercise.lexemeId
+    ? getCachedVocabulary()?.get(exercise.lexemeId)?.translation
+    : undefined;
   const isListenChoice = exercise.kind === "listen-choice";
   const isSentence = isGapSentence || exercise.kind === "sentence-write";
   const baseForm =
@@ -655,13 +663,34 @@ export function ExerciseView({
     />
   );
 
-  const answerFeedback = feedback?.correct ? (
+  const answerStatus = feedback?.correct ? (
     <p className="font-medium text-ok-ink">Poprawnie</p>
   ) : feedback && exercise.mode !== "choice" && result ? (
     <p className="text-ok-ink">Poprawna odpowiedź: <strong>{feedback.expected}</strong></p>
   ) : null;
 
-  const feedbackReserve = exercise.mode === "choice"
+  const meaningLine = listeningMeaning ? (
+    <p lang="ru" className="text-ink">
+      <span className="text-muted">{t("wordMeaning")}: </span>
+      <strong>{listeningMeaning}</strong>
+    </p>
+  ) : null;
+
+  const answerFeedback = listeningMeaning ? (
+    <div className="space-y-1">
+      {answerStatus}
+      {result && meaningLine}
+    </div>
+  ) : answerStatus;
+
+  // Reserve room for both the longest answer and its meaning before
+  // grading, so the iPhone's docked input and Next button do not shift.
+  const feedbackReserve = listeningMeaning ? (
+    <div className="space-y-1">
+      <p>Poprawna odpowiedź: <strong>{exercise.mode === "typed" ? exercise.accepted[0] : exercise.answer}</strong></p>
+      {meaningLine}
+    </div>
+  ) : exercise.mode === "choice"
     ? <p className="font-medium">Poprawnie</p>
     : <p>Poprawna odpowiedź: <strong>{exercise.mode === "typed" ? exercise.accepted[0] : exercise.answer}</strong></p>;
 
@@ -671,7 +700,7 @@ export function ExerciseView({
       submit(typed);
     }}>
       {answerField}
-      <ExerciseFeedback size="double" reserve={feedbackReserve}>{answerFeedback}</ExerciseFeedback>
+      <ExerciseFeedback size={listeningMeaning ? "speech" : "double"} reserve={feedbackReserve}>{answerFeedback}</ExerciseFeedback>
     </form>,
     answerTarget,
   );
@@ -861,7 +890,7 @@ export function ExerciseView({
         </Stack>
       )}
 
-      {!submitFormId && <ExerciseFeedback size={exercise.mode === "typed" ? "double" : "single"} reserve={feedbackReserve}>{answerFeedback}</ExerciseFeedback>}
+      {!submitFormId && <ExerciseFeedback size={listeningMeaning ? "speech" : exercise.mode === "typed" ? "double" : "single"} reserve={feedbackReserve}>{answerFeedback}</ExerciseFeedback>}
     </ExerciseContent>
   );
 
