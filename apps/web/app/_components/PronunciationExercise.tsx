@@ -2,7 +2,8 @@
 
 import { useEffect, useRef, useState } from 'react'
 import { useTranslations } from 'next-intl'
-import { Button, Card, Row, Stack } from '@polski/ui'
+import { Button, Row, Stack } from '@polski/ui'
+import { ExerciseActions, ExerciseCard, ExerciseFeedback, ExerciseSlot } from './exercise/ExerciseCard'
 import type { CheckResult } from '@polski/engine'
 import { useSettings } from '@/lib/data/store'
 import { createBrowserRecognition, pronunciationMatches, speechTagForLanguage, type BrowserRecognition } from '@/lib/speech/recognition'
@@ -131,7 +132,7 @@ export function PronunciationExercise({ mode = 'word', prompt, expected, matches
   }, [])
 
   return (
-    <Card tone={finished ? (feedback?.correct ? 'correct' : 'wrong') : 'neutral'}>
+    <ExerciseCard tone={finished ? (feedback?.correct ? 'correct' : 'wrong') : 'neutral'}>
       <Stack gap="sm">
         <p className="text-sm text-muted">{isPhrase ? phrase('say') : t('instruction')}</p>
         {prompt && <p className="text-xl font-semibold" lang="ru">{prompt}</p>}
@@ -139,14 +140,18 @@ export function PronunciationExercise({ mode = 'word', prompt, expected, matches
           <Button variant="ghost" size="sm" onClick={() => setHintVisible((visible) => !visible)}>
             {isPhrase ? phrase(hintVisible ? 'hideHint' : 'showHint') : t(hintVisible ? 'hideHint' : 'showHint')}
           </Button>
-          {hintVisible && (
+          <ExerciseSlot visible={hintVisible}>
             <Row gap="sm">
               <p className="mt-1 text-lg font-semibold" lang="pl">{expected}</p>
-              {isPhrase && !listening && <SpeakIcon text={expected} ariaLabel={phrase('listen')} />}
+              {isPhrase && <ExerciseSlot visible={!listening}><SpeakIcon text={expected} ariaLabel={phrase('listen')} /></ExerciseSlot>}
             </Row>
-          )}
+          </ExerciseSlot>
         </div>
-        <div role="status">
+        <ExerciseFeedback size="speech" reserve={<>
+          <p>{t('recognized')} <strong lang="pl">{expected}</strong></p>
+          <p>{isPhrase ? phrase('notMatched') : t('incorrect')}</p>
+          <p>{t('remaining', { count: MAX_ATTEMPTS })}</p>
+        </>}>
           {listening && <p>{t('listening')}</p>}
           {issue && <p className="text-danger-ink">{isPhrase && issue === 'noSpeech' ? phrase('notRecognized') : t(issue)}</p>}
           {!languageTag && <p className="text-danger-ink">{t('unsupported')}</p>}
@@ -157,20 +162,21 @@ export function PronunciationExercise({ mode = 'word', prompt, expected, matches
               {!finished && <p>{t('remaining', { count: MAX_ATTEMPTS - feedback.attempts })}</p>}
             </>
           )}
-        </div>
-        {finished ? (
+        </ExerciseFeedback>
+        <ExerciseActions finished={finished} completed={
           <Stack gap="sm">
             <Row gap="sm"><p>{t('answer')} <strong lang="pl">{expected}</strong></p><SpeakIcon text={expected} ariaLabel={t('playAnswer')} /></Row>
             {isPhrase && onSkip && <Button type="button" onClick={onSkip}>{phrase('showDialogue')}</Button>}
           </Stack>
-        ) : (
+        }>
           <Row wrap gap="sm">
-            {listening && <Button variant="ghost" onClick={stopListening}>{t('stop')}</Button>}
-            {!listening && <Button onClick={listen} disabled={!languageTag}>{t(isPhrase && !issue && !feedback ? 'start' : 'retry')}</Button>}
+            <ExerciseActions finished={listening} completed={<Button variant="ghost" onClick={stopListening}>{t('stop')}</Button>}>
+              <Button onClick={listen} disabled={!languageTag}>{t(isPhrase && !issue && !feedback ? 'start' : 'retry')}</Button>
+            </ExerciseActions>
             {onSkip && <Button variant="ghost" onClick={onSkip} disabled={listening}>{isPhrase ? phrase('skipMic') : t('skip')}</Button>}
           </Row>
-        )}
+        </ExerciseActions>
       </Stack>
-    </Card>
+    </ExerciseCard>
   )
 }

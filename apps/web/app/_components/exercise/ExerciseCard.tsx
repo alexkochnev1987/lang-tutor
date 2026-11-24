@@ -1,0 +1,69 @@
+import type { ReactNode } from 'react'
+import { Card, Row, Stack } from '@polski/ui'
+
+/** Shared presentation only: grading, persistence and navigation stay with the exercise. */
+export function ExerciseCard({ children, tone = 'neutral', metadata, bare = false }: {
+  children: ReactNode
+  tone?: 'neutral' | 'correct' | 'wrong'
+  metadata?: ReactNode
+  bare?: boolean
+}) {
+  if (bare) return <>{children}</>
+  return <Card tone={tone} data-exercise-card="">
+    {metadata && <div className="word-practice-metadata mb-2 flex flex-wrap items-center justify-between gap-3">{metadata}</div>}
+    {children}
+  </Card>
+}
+
+export function ExerciseContent({ children, compact = false }: { children: ReactNode; compact?: boolean }) {
+  return <Stack gap={compact ? 'xs' : 'lg'} className="w-full min-w-0">{children}</Stack>
+}
+
+/** Keep a control's footprint while unavailable; invisible controls cannot be focused or tapped. */
+export function ExerciseSlot({ children, visible = true, className = '', as: Tag = 'div' }: {
+  children: ReactNode; visible?: boolean; className?: string; as?: 'div' | 'span'
+}) {
+  return <Tag className={`${className} ${visible ? '' : 'invisible pointer-events-none'}`} aria-hidden={!visible || undefined} inert={!visible}>{children}</Tag>
+}
+
+export function ExercisePrompt({ children, audio, audioVisible = true, placement = 'side', numbered = false, compact = false }: {
+  children?: ReactNode
+  audio?: ReactNode
+  audioVisible?: boolean
+  placement?: 'side' | 'inline' | 'center'
+  numbered?: boolean
+  compact?: boolean
+}) {
+  if (placement === 'center') return <ExerciseSlot visible={audioVisible} className="flex min-h-12 justify-center items-center" >{audio}</ExerciseSlot>
+  if (placement === 'side' && audio) return (
+    <div data-exercise-prompt="" className="relative flex min-h-12 w-full min-w-0 items-center justify-center px-14 [&>span]:min-w-0 [&>span]:break-words">
+      {children}
+      <ExerciseSlot visible={audioVisible} className="absolute right-0 top-1/2 -translate-y-1/2">{audio}</ExerciseSlot>
+    </div>
+  )
+  return <Row gap="sm" justify={numbered ? 'start' : 'center'} align="baseline" className={numbered || audio ? 'w-full' : undefined}>
+    {children}
+    {audio && <ExerciseSlot visible={audioVisible} className={`shrink-0 self-start ${compact ? 'min-w-10' : 'min-w-12'}`}>{audio}</ExerciseSlot>}
+  </Row>
+}
+
+/** Reserve common one/two-line feedback; longer accessible content may naturally grow. */
+export function ExerciseFeedback({ children, reserve, size = 'single', className = '' }: {
+  children?: ReactNode; reserve?: ReactNode; size?: 'single' | 'double' | 'speech'; className?: string
+}) {
+  const height = size === 'speech' ? 'min-h-20' : size === 'double' ? 'min-h-12' : 'min-h-7'
+  return <div data-exercise-feedback="" className={`grid ${height} text-sm break-words ${className}`}>
+    {reserve && <ExerciseSlot visible={false} className="col-start-1 row-start-1">{reserve}</ExerciseSlot>}
+    <div role="status" aria-live="polite" className="col-start-1 row-start-1">{children}</div>
+  </div>
+}
+
+/** Alternative action states occupy the same responsive grid area. */
+export function ExerciseActions({ children, completed, finished = false }: {
+  children: ReactNode; completed: ReactNode; finished?: boolean
+}) {
+  return <div className="grid min-w-0">
+    <ExerciseSlot visible={!finished} className="col-start-1 row-start-1">{children}</ExerciseSlot>
+    <ExerciseSlot visible={finished} className="col-start-1 row-start-1">{completed}</ExerciseSlot>
+  </div>
+}
