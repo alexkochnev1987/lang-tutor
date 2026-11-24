@@ -5,7 +5,7 @@ import { Suspense, useEffect, useMemo, useRef, useState } from 'react'
 import { useSearchParams } from 'next/navigation'
 import { useTranslations } from 'next-intl'
 import { AppIcon } from '@/app/_components/AppIcon'
-import { Button, Card, Row, Screen, Stack } from '@polski/ui'
+import { Button, Card, Row, Stack } from '@polski/ui'
 import { hashString, spelling, type CheckResult } from '@polski/engine'
 import { BrainstormPractice } from '@/app/_components/BrainstormPractice'
 import { PronunciationExercise } from '@/app/_components/PronunciationExercise'
@@ -13,6 +13,7 @@ import { ExerciseView } from '@/app/_components/ExerciseView'
 import { LoadingSkeleton, SkeletonBlock } from '@/app/_components/LoadingSkeleton'
 import { SectionNav } from '@/app/_components/SectionNav'
 import { WordPracticeFooter } from '@/app/_components/WordPracticeFooter'
+import { WordPracticeScreen } from '@/app/_components/WordPracticeScreen'
 import { WordSaveIndicator } from '@/app/_components/WordSaveIndicator'
 import { WordRow } from '@/app/_components/WordRow'
 import { currentDayNumber, getCachedVocabulary, loadCurriculum, loadVocabulary, type Lexeme } from '@/lib/content/curriculum'
@@ -251,10 +252,9 @@ function WordPractice({ initialList, initialFormat }: { initialList?: DailyWordL
 
   if (session) {
     const canAdvance = status === 'saved' || status === 'unavailable'
-    const formId = exercise?.mode === 'typed' && exercise.kind !== 'pronunciation' ? 'word-practice-response' : undefined
     const canContinue = Boolean(wordsForFormat(queue, session.list, session.format).length)
     return (
-      <Screen className="word-practice-screen">
+      <WordPracticeScreen>
         <header className="mx-auto w-full max-w-2xl px-4 py-2">
           <Row justify="between" wrap>
             <Button variant="outline" size="sm" onClick={exit} disabled={status === 'checking'}>
@@ -272,7 +272,7 @@ function WordPractice({ initialList, initialFormat }: { initialList?: DailyWordL
                   onAnswered={answer} onSkip={status === 'ready' ? advance : undefined} />
               ) : (
                 <ExerciseView key={exercise.id} exercise={exercise} onAnswered={answer}
-                  practice submitFormId={formId} showSpeakButton={session.format === 'translation' || status === 'saved'} />
+                  practice showSpeakButton={session.format === 'translation' || status === 'saved'} />
               )}
               {status === 'unavailable' && <p role="status" className="text-sm text-muted">{t('unavailable')}</p>}
             </Stack>
@@ -283,13 +283,12 @@ function WordPractice({ initialList, initialFormat }: { initialList?: DailyWordL
         </main>
         <WordPracticeFooter
           busyLabel={status === 'checking' ? t('loading') : undefined}
-          formId={!canAdvance && status !== 'failed' ? formId : undefined}
-          label={status === 'failed' ? t('backToFormats') : exercise ? formId && !canAdvance ? t('check') : t('next') : canContinue ? t('continue') : t('backToFormats')}
-          disabled={!(canAdvance || status === 'failed' || !exercise || formId) || status === 'checking'}
+          label={status === 'failed' ? t('backToFormats') : exercise ? t('next') : canContinue ? t('continue') : t('backToFormats')}
+          disabled={!(canAdvance || status === 'failed' || !exercise) || status === 'checking'}
           onNext={status === 'failed' ? exit
             : exercise ? advance : canContinue ? () => void startBatch(session.list, session.format) : exit}
         />
-      </Screen>
+      </WordPracticeScreen>
     )
   }
 

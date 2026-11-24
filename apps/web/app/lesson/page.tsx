@@ -48,10 +48,10 @@ import { LessonPhrasePractice } from "@/app/_components/LessonPhrasePractice";
 import { formatOfWordExercise, wordSkill } from "@/lib/engine/daily-words";
 import { WeeklyGoalCredit } from "@/app/_components/WeeklyGoal";
 import { WordPracticeFooter } from "@/app/_components/WordPracticeFooter";
+import { WordPracticeScreen } from "@/app/_components/WordPracticeScreen";
 import { WordSaveIndicator } from "@/app/_components/WordSaveIndicator";
 import { useTranslations } from "next-intl";
 
-const WORD_FORM_ID = "lesson-word-response";
 
 type ReviewWrite = {
   lexemeId: string;
@@ -162,7 +162,6 @@ export default function LessonPage() {
   const wordExercise = slot?.kind === "step" && slot.step.kind === "exercise"
     && wordScreen && slot.step.ex.lexemeId ? slot.step.ex : undefined;
   const wordStudyExercise = Boolean(wordExercise);
-  const wordFormId = wordExercise?.mode === "typed" && wordExercise.kind !== "pronunciation" ? WORD_FORM_ID : undefined;
   const reviewLexemeId =
     slot?.kind === "step" && slot.step.kind === "exercise" && slot.step.review
       ? slot.step.ex.lexemeId
@@ -509,8 +508,23 @@ export default function LessonPage() {
     />;
   }
 
+  const screenNotices = <>
+        {reviewFeedback}
+        {unavailableWord && <p role="status" className="text-sm text-muted">{t("unavailable")}</p>}
+        {queueStatus === "error" && <p role="alert" className="text-sm text-danger-ink">{t("error")}</p>}
+        {lessonSave.status === "saving" && !restoredResult && !wordStudyExercise && (
+          <p role="status" className="my-2 text-sm text-muted">Сохраняем итог…</p>
+        )}
+        {lessonSave.status === "error" && (
+          <div role="alert" className="my-2 flex flex-wrap items-center justify-between gap-2 text-sm text-danger-ink">
+            <span>Не удалось сохранить итог.</span>
+            <Button variant="outline" size="sm" onClick={() => void finish()}>Повторить</Button>
+          </div>
+        )}
+  </>;
+
   return (
-    <Screen className={wordScreen ? "word-practice-screen" : undefined}>
+    <WordPracticeScreen enabled={wordScreen}>
       <header className="mx-auto w-full max-w-2xl px-4 py-3">
         <Row justify="between">
           <Link
@@ -547,18 +561,7 @@ export default function LessonPage() {
       </header>
 
       <main ref={wordMain} className="mx-auto flex min-h-0 w-full max-w-2xl flex-1 flex-col justify-start overflow-y-auto overscroll-contain px-4 pb-4">
-        {reviewFeedback}
-        {unavailableWord && <p role="status" className="text-sm text-muted">{t("unavailable")}</p>}
-        {queueStatus === "error" && <p role="alert" className="text-sm text-danger-ink">{t("error")}</p>}
-        {lessonSave.status === "saving" && !restoredResult && !wordStudyExercise && (
-          <p role="status" className="my-2 text-sm text-muted">Сохраняем итог…</p>
-        )}
-        {lessonSave.status === "error" && (
-          <div role="alert" className="my-2 flex flex-wrap items-center justify-between gap-2 text-sm text-danger-ink">
-            <span>Не удалось сохранить итог.</span>
-            <Button variant="outline" size="sm" onClick={() => void finish()}>Повторить</Button>
-          </div>
-        )}
+        {!wordScreen && screenNotices}
         {slot?.kind === "stage-start" && (
           <StageStart stage={slot.stage} onNext={next} />
         )}
@@ -674,7 +677,6 @@ export default function LessonPage() {
                 key={`${i}-${slot.step.ex.id}`}
                 exercise={slot.step.ex}
                 showSpeakButton={!wordStudyExercise || formatOfWordExercise(slot.step.ex) === "translation" || Boolean(restoredResult)}
-                submitFormId={wordFormId}
                 practice={Boolean(wordStudyExercise)}
                 topLeftStatus={
                   exerciseLexemeId ? (
@@ -731,19 +733,19 @@ export default function LessonPage() {
             )}
           </Stack>
         )}
+        {wordScreen && screenNotices}
       </main>
       {wordScreen && slot?.kind === "step" && (
         <WordPracticeFooter
           busyLabel={lessonSave.status === "saving" ? t("saving") : undefined}
-          label={failedReview ? t("retry") : wordFormId && !canAdvance && !restoredResult ? t("check") : t("next")}
-          formId={!canAdvance && !restoredResult && !failedReview ? wordFormId : undefined}
+          label={failedReview ? t("retry") : t("next")}
           disabled={lessonSave.status === "saving"
-            || (wordStudyExercise && slot.step.kind === "exercise" && slot.step.ex.mode !== "typed"
+            || (wordStudyExercise && slot.step.kind === "exercise"
               && !canAdvance && !restoredResult && !failedReview)}
           onNext={failedReview ? failedReview.retry : next}
         />
       )}
-    </Screen>
+    </WordPracticeScreen>
   );
 }
 

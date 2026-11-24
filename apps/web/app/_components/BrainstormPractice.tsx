@@ -3,7 +3,7 @@
 import { useMemo, useRef, useState } from 'react'
 import { useTranslations } from 'next-intl'
 import { AppIcon } from './AppIcon'
-import { Button, Card, Row, Screen, Stack } from '@polski/ui'
+import { Button, Card, Row, Stack } from '@polski/ui'
 import type { CheckResult } from '@polski/engine'
 import type { Lexeme } from '@/lib/content/curriculum'
 import { getLoadedState, queueDailyWordAnswer } from '@/lib/data/store'
@@ -14,8 +14,8 @@ import { ExerciseView, SpeakIcon } from './ExerciseView'
 import { ExerciseCard, ExercisePromptArea } from './exercise/ExerciseCard'
 import { WeeklyGoalCredit } from './WeeklyGoal'
 import { WordPracticeFooter } from './WordPracticeFooter'
+import { WordPracticeScreen } from './WordPracticeScreen'
 
-const FORM_ID = 'brainstorm-response'
 const STORAGE_KEY = 'brainstorm-progress'
 type Response = { result: DailyWordAnswer['result']; ms: number }
 type Progress = {
@@ -89,7 +89,6 @@ export function BrainstormPractice({ id, words, pool, dayNumber, reviewFormats, 
   const step = baseStep ?? retryStep
   const exercise = step?.kind === 'exercise' ? step.ex : null
   const done = Object.values(progress.responses)
-  const formId = exercise?.mode === 'typed' && exercise.kind !== 'pronunciation' ? FORM_ID : undefined
 
   function updateProgress(next: Progress) {
     setProgress(next)
@@ -164,7 +163,7 @@ export function BrainstormPractice({ id, words, pool, dayNumber, reviewFormats, 
   }
 
   return (
-    <Screen className="word-practice-screen">
+    <WordPracticeScreen>
       <header className="mx-auto w-full max-w-2xl px-4 py-2">
         <Row justify="between" wrap>
           <Button variant="outline" size="sm" disabled={checking} onClick={() => leave(onExit)}>
@@ -189,7 +188,7 @@ export function BrainstormPractice({ id, words, pool, dayNumber, reviewFormats, 
         {exercise && (
           <ExerciseView key={exercise.id} exercise={exercise} onAnswered={remember}
             showSpeakButton={exercise.kind === 'listen-write' || exercise.kind === 'translate-recognition'
-              || exercise.kind === 'false-friend-contrast' || Boolean(response)} submitFormId={formId} practice />
+              || exercise.kind === 'false-friend-contrast' || Boolean(response)} practice />
         )}
         {!step && (
           <Card><Stack gap="sm">
@@ -203,11 +202,10 @@ export function BrainstormPractice({ id, words, pool, dayNumber, reviewFormats, 
       <WordPracticeFooter
         busyLabel={checking ? t('loading') : undefined}
         label={failed ? t('retry')
-          : formId && !response ? t('check') : step ? t('next') : canContinue ? t('continue') : t('backToFormats')}
-        formId={response ? undefined : formId}
-        disabled={checking || Boolean(exercise && !formId && !response)}
+          : step ? t('next') : canContinue ? t('continue') : t('backToFormats')}
+        disabled={checking || Boolean(exercise && !response)}
         onNext={step ? advance : canContinue ? onContinue : () => leave(onExit)}
       />
-    </Screen>
+    </WordPracticeScreen>
   )
 }

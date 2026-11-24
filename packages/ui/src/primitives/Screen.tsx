@@ -5,9 +5,10 @@ import { cn } from '../cn'
  * UX_UI.md §1.5: 100dvh вместо 100vh и safe-area по краям,
  * иначе нижние кнопки уезжают под индикатор Home на iOS.
  */
-export function Screen({ className, children }: { className?: string; children: React.ReactNode }) {
+export function Screen({ className, children, ref }: { className?: string; children: React.ReactNode; ref?: React.Ref<HTMLDivElement> }) {
   return (
     <div
+      ref={ref}
       className={cn(
         'flex h-dvh min-h-0 flex-col overflow-hidden bg-bg text-ink',
         '[&>header]:shrink-0 [&>main]:min-h-0 [&>main]:overflow-y-auto [&>main]:overscroll-contain [&>footer]:shrink-0',
