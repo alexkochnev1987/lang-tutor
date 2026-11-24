@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import type { ReactNode } from "react";
+import { useKeyboardDismissSubmit } from "./exercise/useKeyboardDismissSubmit";
 import { Button, Row, Stack } from "@polski/ui";
 import { ExerciseAnswerForm, ExerciseCard, ExerciseContent, ExerciseFeedback, ExerciseOptions, ExercisePrompt, ExercisePromptArea, ExerciseResultMark, ExerciseSlot } from "./exercise/ExerciseCard";
 import { check, type CheckResult, type Exercise } from "@polski/engine";
@@ -217,6 +218,8 @@ function InlineFormControl({
         ? "border-danger bg-danger-bg"
         : "border-line bg-soft";
   const [focused, setFocused] = useState(false);
+  const inputRef = useRef<HTMLInputElement>(null);
+  useKeyboardDismissSubmit(inputRef, onSubmit, mode === "typed" && !disabled);
   const focusClass =
     status === "empty" ? "focus-within:border-muted focus-within:bg-card" : "";
   const textClass =
@@ -271,6 +274,7 @@ function InlineFormControl({
       ) : (
         <input
           {...common}
+          ref={inputRef}
           autoFocus={autoFocus && !disabled}
           enterKeyHint="done"
           value={value}
@@ -283,9 +287,9 @@ function InlineFormControl({
             keepInputVisible(event.currentTarget);
           }}
           onChange={(e) => onChange(e.target.value)}
-          onBlur={() => {
+          onBlur={(event) => {
             setFocused(false);
-            if (value.trim()) onSubmit(value);
+            onSubmit(event.currentTarget.value);
           }}
           onKeyDown={(e) => {
             if (e.key !== "Enter" || e.nativeEvent.isComposing || e.nativeEvent.keyCode === 229) return;
@@ -457,7 +461,6 @@ export function ExerciseView({
   showSpeakButton = true,
   topLeftStatus,
   topRightAction,
-  submitFormId,
   practice = false,
 }: {
   exercise: Exercise;
@@ -487,7 +490,6 @@ export function ExerciseView({
   showSpeakButton?: boolean;
   topLeftStatus?: ReactNode;
   topRightAction?: ReactNode;
-  submitFormId?: string;
   practice?: boolean;
 }) {
   const t = useTranslations("dailyWords");
@@ -632,6 +634,7 @@ export function ExerciseView({
     setBuiltIndexes((current) => [...current, index]);
   }
 
+  useKeyboardDismissSubmit(answerInput, submit, exercise.mode === "typed" && !isInlineForm && !result && !restoredResult);
   const shouldAutoFocus = autoFocus && exercise.mode === "typed" && exercise.kind !== "pronunciation" && !result && !restoredResult;
   const typedOutcome = result?.correct ?? (feedback && !feedback.correct && !typed ? false : undefined);
   const resultLabel = (correct: boolean) => t(correct ? "speech.correct" : "speech.incorrect");
@@ -640,14 +643,14 @@ export function ExerciseView({
       autoFocus={shouldAutoFocus}
       value={typed}
       disabled={Boolean(result)}
-      ref={submitFormId ? answerInput : undefined}
-      data-word-answer={submitFormId ? "" : undefined}
+      ref={answerInput}
+      data-word-answer=""
       aria-label={exercise.instruction}
       enterKeyHint="done"
-      aria-required={submitFormId ? true : undefined}
-      onFocus={submitFormId ? undefined : (event) => keepInputVisible(event.currentTarget)}
+      aria-required="true"
+      onFocus={practice ? undefined : (event) => keepInputVisible(event.currentTarget)}
       onChange={(e) => updateTyped(e.target.value)}
-      onBlur={submitFormId ? undefined : () => submit(typed)}
+      onBlur={(event) => submit(event.currentTarget.value)}
       onKeyDown={(e) => {
         if (e.key !== "Enter" || e.nativeEvent.isComposing || e.nativeEvent.keyCode === 229) return;
         e.preventDefault();
@@ -665,9 +668,9 @@ export function ExerciseView({
               : "Wpisz formę"
       }
       aria-invalid={practice && typedOutcome === false ? true : undefined}
-      className={`min-h-12 w-full rounded-card border text-center text-xl disabled:opacity-100 ${practice ? "px-10" : "px-3"} ${practice && typedOutcome !== undefined
+      className={`h-12 w-full box-border appearance-none rounded-card border-2 text-center text-xl outline-none disabled:opacity-100 ${practice ? "px-10" : "px-3"} ${practice && typedOutcome !== undefined
         ? typedOutcome ? "border-ok bg-ok-bg text-ok-ink" : "border-danger bg-danger-bg text-danger-ink"
-        : "border-line bg-card text-ink"}`}
+        : "border-line bg-card text-ink focus:border-primary"}`}
       lang="pl"
       autoCapitalize="off"
       autoCorrect="off"
@@ -812,11 +815,19 @@ export function ExerciseView({
 
       {isListenChoice && speakText && !practice && <ExerciseSlot visible={Boolean(result)} className="text-center font-medium"><p lang="pl">{speakText}</p></ExerciseSlot>}
 
-      {answerField && <ExerciseAnswerForm formId={submitFormId} onSubmit={() => submit(typed)}>
+      {answerField && <ExerciseAnswerForm onSubmit={() => submit(answerInput.current?.value ?? typed)}>
         {practice ? <div className="relative">
           {answerField}
-          <div className="pointer-events-none absolute inset-y-0 right-3 flex items-center">
-            <ExerciseResultMark correct={typedOutcome} label={typedOutcome === undefined ? undefined : resultLabel(typedOutcome)} />
+          <div className="absolute inset-y-0 right-0 flex w-11 items-center justify-center">
+            {result || typedOutcome === false ? (
+              <ExerciseResultMark correct={typedOutcome} label={typedOutcome === undefined ? undefined : resultLabel(typedOutcome)} />
+            ) : (
+              <button type="submit" aria-label={t("check")} title={t("check")} disabled={!typed.trim()}
+                onPointerDown={(event) => event.preventDefault()}
+                className="flex size-11 items-center justify-center rounded-card text-primary disabled:opacity-30 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-primary">
+                <span aria-hidden="true">→</span>
+              </button>
+            )}
           </div>
         </div> : answerField}
       </ExerciseAnswerForm>}

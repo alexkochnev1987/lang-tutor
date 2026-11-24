@@ -251,7 +251,6 @@ function WordPractice({ initialList, initialFormat }: { initialList?: DailyWordL
 
   if (session) {
     const canAdvance = status === 'saved' || status === 'unavailable'
-    const formId = exercise?.mode === 'typed' && exercise.kind !== 'pronunciation' ? 'word-practice-response' : undefined
     const canContinue = Boolean(wordsForFormat(queue, session.list, session.format).length)
     return (
       <Screen className="word-practice-screen">
@@ -272,7 +271,7 @@ function WordPractice({ initialList, initialFormat }: { initialList?: DailyWordL
                   onAnswered={answer} onSkip={status === 'ready' ? advance : undefined} />
               ) : (
                 <ExerciseView key={exercise.id} exercise={exercise} onAnswered={answer}
-                  practice submitFormId={formId} showSpeakButton={session.format === 'translation' || status === 'saved'} />
+                  practice showSpeakButton={session.format === 'translation' || status === 'saved'} />
               )}
               {status === 'unavailable' && <p role="status" className="text-sm text-muted">{t('unavailable')}</p>}
             </Stack>
@@ -283,9 +282,8 @@ function WordPractice({ initialList, initialFormat }: { initialList?: DailyWordL
         </main>
         <WordPracticeFooter
           busyLabel={status === 'checking' ? t('loading') : undefined}
-          formId={!canAdvance && status !== 'failed' ? formId : undefined}
-          label={status === 'failed' ? t('backToFormats') : exercise ? formId && !canAdvance ? t('check') : t('next') : canContinue ? t('continue') : t('backToFormats')}
-          disabled={!(canAdvance || status === 'failed' || !exercise || formId) || status === 'checking'}
+          label={status === 'failed' ? t('backToFormats') : exercise ? t('next') : canContinue ? t('continue') : t('backToFormats')}
+          disabled={!(canAdvance || status === 'failed' || !exercise) || status === 'checking'}
           onNext={status === 'failed' ? exit
             : exercise ? advance : canContinue ? () => void startBatch(session.list, session.format) : exit}
         />

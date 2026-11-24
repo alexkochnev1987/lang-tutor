@@ -33,10 +33,9 @@ export function ExercisePromptArea({ children, practice = false }: { children: R
     : <>{children}</>
 }
 
-/** The input stays in the card; the shared footer submits it by form ID. */
-export function ExerciseAnswerForm({ children, formId, onSubmit }: { children: ReactNode; formId?: string; onSubmit: () => void }) {
-  if (!formId) return <>{children}</>
-  return <form id={formId} noValidate className="w-full min-w-0" onSubmit={(event) => {
+/** The text exercise owns its form, independently of screen navigation. */
+export function ExerciseAnswerForm({ children, onSubmit }: { children: ReactNode; onSubmit: () => void }) {
+  return <form noValidate className="w-full min-w-0" onSubmit={(event) => {
     event.preventDefault()
     onSubmit()
   }}>{children}</form>

@@ -156,13 +156,10 @@ input, select, textarea {
   flex-shrink: 0;
 }
 
-/* The native keyboard action submits the form. Keep the fallback Check
-   button when the input is not focused, and keep Next after grading.
-   Removing only the footer gives the prompt and field more visible space. */
-@media (pointer: coarse) {
-  .word-practice-screen:has([data-word-answer]:focus) > footer[data-awaiting-word-answer] {
-    display: none;
-  }
+/* Text fields own a permanent two-pixel border; focus changes only its color. */
+[data-word-answer]:focus-visible {
+  outline: none;
+  outline-offset: 0;
 }
 
 /* Both word practice formats own their full-screen layout and safe areas. */

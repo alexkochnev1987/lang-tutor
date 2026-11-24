@@ -72,14 +72,14 @@ describe('shared full-screen practice slots', () => {
     }
     expect(render(ExercisePromptArea, {}, expected)).not.toContain('data-exercise-prompt-area')
   })
-  it('keeps the input inside an externally submittable form', () => {
+  it('owns the answer form locally without an external form id', () => {
     const input = h('input', { 'data-word-answer': '' })
-    const markup = render(ExerciseAnswerForm, { formId: 'practice-answer', onSubmit: () => {} }, input)
-    expect(markup).toMatch(/^<form id="practice-answer"/)
+    const markup = render(ExerciseAnswerForm, { onSubmit: () => {} }, input)
+    expect(markup).toMatch(/^<form /)
+    expect(markup).not.toContain(' id=')
     expect(markup).toContain('data-word-answer')
     expect(markup).toContain('noValidate=""')
     expect(markup).toMatch(/<\/form>$/)
-    expect(render(ExerciseAnswerForm, { onSubmit: () => {} }, input)).not.toContain('<form')
   })
 })
 

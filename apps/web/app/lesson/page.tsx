@@ -51,7 +51,6 @@ import { WordPracticeFooter } from "@/app/_components/WordPracticeFooter";
 import { WordSaveIndicator } from "@/app/_components/WordSaveIndicator";
 import { useTranslations } from "next-intl";
 
-const WORD_FORM_ID = "lesson-word-response";
 
 type ReviewWrite = {
   lexemeId: string;
@@ -162,7 +161,6 @@ export default function LessonPage() {
   const wordExercise = slot?.kind === "step" && slot.step.kind === "exercise"
     && wordScreen && slot.step.ex.lexemeId ? slot.step.ex : undefined;
   const wordStudyExercise = Boolean(wordExercise);
-  const wordFormId = wordExercise?.mode === "typed" && wordExercise.kind !== "pronunciation" ? WORD_FORM_ID : undefined;
   const reviewLexemeId =
     slot?.kind === "step" && slot.step.kind === "exercise" && slot.step.review
       ? slot.step.ex.lexemeId
@@ -674,7 +672,6 @@ export default function LessonPage() {
                 key={`${i}-${slot.step.ex.id}`}
                 exercise={slot.step.ex}
                 showSpeakButton={!wordStudyExercise || formatOfWordExercise(slot.step.ex) === "translation" || Boolean(restoredResult)}
-                submitFormId={wordFormId}
                 practice={Boolean(wordStudyExercise)}
                 topLeftStatus={
                   exerciseLexemeId ? (
@@ -735,10 +732,9 @@ export default function LessonPage() {
       {wordScreen && slot?.kind === "step" && (
         <WordPracticeFooter
           busyLabel={lessonSave.status === "saving" ? t("saving") : undefined}
-          label={failedReview ? t("retry") : wordFormId && !canAdvance && !restoredResult ? t("check") : t("next")}
-          formId={!canAdvance && !restoredResult && !failedReview ? wordFormId : undefined}
+          label={failedReview ? t("retry") : t("next")}
           disabled={lessonSave.status === "saving"
-            || (wordStudyExercise && slot.step.kind === "exercise" && slot.step.ex.mode !== "typed"
+            || (wordStudyExercise && slot.step.kind === "exercise"
               && !canAdvance && !restoredResult && !failedReview)}
           onNext={failedReview ? failedReview.retry : next}
         />

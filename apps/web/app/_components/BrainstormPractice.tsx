@@ -15,7 +15,6 @@ import { ExerciseCard, ExercisePromptArea } from './exercise/ExerciseCard'
 import { WeeklyGoalCredit } from './WeeklyGoal'
 import { WordPracticeFooter } from './WordPracticeFooter'
 
-const FORM_ID = 'brainstorm-response'
 const STORAGE_KEY = 'brainstorm-progress'
 type Response = { result: DailyWordAnswer['result']; ms: number }
 type Progress = {
@@ -89,7 +88,6 @@ export function BrainstormPractice({ id, words, pool, dayNumber, reviewFormats, 
   const step = baseStep ?? retryStep
   const exercise = step?.kind === 'exercise' ? step.ex : null
   const done = Object.values(progress.responses)
-  const formId = exercise?.mode === 'typed' && exercise.kind !== 'pronunciation' ? FORM_ID : undefined
 
   function updateProgress(next: Progress) {
     setProgress(next)
@@ -189,7 +187,7 @@ export function BrainstormPractice({ id, words, pool, dayNumber, reviewFormats, 
         {exercise && (
           <ExerciseView key={exercise.id} exercise={exercise} onAnswered={remember}
             showSpeakButton={exercise.kind === 'listen-write' || exercise.kind === 'translate-recognition'
-              || exercise.kind === 'false-friend-contrast' || Boolean(response)} submitFormId={formId} practice />
+              || exercise.kind === 'false-friend-contrast' || Boolean(response)} practice />
         )}
         {!step && (
           <Card><Stack gap="sm">
@@ -203,9 +201,8 @@ export function BrainstormPractice({ id, words, pool, dayNumber, reviewFormats, 
       <WordPracticeFooter
         busyLabel={checking ? t('loading') : undefined}
         label={failed ? t('retry')
-          : formId && !response ? t('check') : step ? t('next') : canContinue ? t('continue') : t('backToFormats')}
-        formId={response ? undefined : formId}
-        disabled={checking || Boolean(exercise && !formId && !response)}
+          : step ? t('next') : canContinue ? t('continue') : t('backToFormats')}
+        disabled={checking || Boolean(exercise && !response)}
         onNext={step ? advance : canContinue ? onContinue : () => leave(onExit)}
       />
     </Screen>
