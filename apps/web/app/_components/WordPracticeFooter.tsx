@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, type RefCallback } from 'react'
 import { Button } from '@polski/ui'
+import { WordSaveIndicator } from './WordSaveIndicator'
 
 export function WordPracticeFooter({ label, busyLabel, onNext, formId, disabled, answerTargetRef }: {
   label: string
@@ -36,17 +37,4 @@ export function WordPracticeFooter({ label, busyLabel, onNext, formId, disabled,
   return (
     <footer ref={footer} className="word-practice-footer border-t border-line bg-bg px-4 pt-2 pb-[max(0.5rem,env(safe-area-inset-bottom))]">
       <div className="mx-auto w-full max-w-(--container-exercise)">
-        {answerTargetRef && <div ref={answerTargetRef} />}
-        <Button size="lg" full form={formId} type={formId ? 'submit' : 'button'} onClick={formId ? undefined : onNext}
-          onPointerDown={(event) => {
-            // Keep the keyboard open until the submit click reaches the form.
-            const input = event.currentTarget.form?.ownerDocument.activeElement
-            if (input?.matches('[data-word-answer]') && event.currentTarget.form?.contains(input)) event.preventDefault()
-          }}
-          disabled={disabled} busy={Boolean(busyLabel)} busyLabel={busyLabel}>
-          {label}
-        </Button>
-      </div>
-    </footer>
-  )
-}
+        {answerTargetRef && <¶»§q«^
