@@ -6,6 +6,7 @@ import { Button, Row, Stack } from '@polski/ui'
 import { shuffle } from '@polski/engine'
 import type { LessonPhrase } from '@/lib/content/lesson-phrases'
 import { SpeakIcon } from './ExerciseView'
+import { ExerciseFeedback } from './exercise/ExerciseCard'
 import { PronunciationExercise } from './PronunciationExercise'
 
 type Step = 'invite' | 'assemble' | 'write' | 'say' | 'done'
@@ -96,7 +97,7 @@ export function LessonPhrasePractice({ phrase, day }: { phrase: LessonPhrase; da
                 </Button>
               ))}
             </Row>
-            {wrong && <p role="status" className="text-sm text-danger-ink">{t('tryOrder')}</p>}
+            <ExerciseFeedback size="double" reserve={t('tryOrder')} className="text-danger-ink">{wrong && t('tryOrder')}</ExerciseFeedback>
             <Button type="button" full disabled={picked.length !== words.length} onClick={checkAssembly}>{t('check')}</Button>
           </Stack>
         )}
@@ -107,7 +108,7 @@ export function LessonPhrasePractice({ phrase, day }: { phrase: LessonPhrase; da
               <input id="lesson-phrase-answer" lang="pl" type="text" autoComplete="off" autoCorrect="off" spellCheck={false}
                 enterKeyHint="done" value={written} onChange={(event) => { setWritten(event.target.value); setWrong(false) }}
                 className="w-full rounded-control border border-line bg-card px-3 py-2 text-base text-ink" />
-              {wrong && <p role="status" className="text-sm text-danger-ink">{t('tryWriting')}</p>}
+              <ExerciseFeedback size="double" reserve={t('tryWriting')} className="text-danger-ink">{wrong && t('tryWriting')}</ExerciseFeedback>
               <Row wrap gap="xs">
                 <Button type="button" variant="ghost" size="sm" onClick={() => changeStep('assemble')}>{t('back')}</Button>
                 <Button type="submit" disabled={!written.trim()} className="flex-1">{t('check')}</Button>

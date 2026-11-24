@@ -1,5 +1,5 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
-  "buildCommand": "cd ../.. && pnpm build && if [ \"$VERCEL_ENV\" = production ] && [ -n \"$DATABASE_URL\" ]; then pnpm db:migrate; else echo 'миграции пропущены: не production или нет DATABASE_URL'; fi",
+  "buildCommand": "cd ../.. && pnpm --filter @polski/engine test && pnpm --filter @polski/engine exec vitest run --root ../../apps/web --globals tests/exercise-layout.test.js && pnpm build && if [ \"$VERCEL_ENV\" = production ] && [ -n \"$DATABASE_URL\" ]; then pnpm db:migrate; else echo 'миграции пропущены: не production или нет DATABASE_URL'; fi",
   "installCommand": "cd ../.. && pnpm install --frozen-lockfile"
 }

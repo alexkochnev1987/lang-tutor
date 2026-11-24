@@ -4,6 +4,7 @@ import { useEffect, useMemo, useRef, useState } from 'react'
 import { SENTENCE_ATTEMPTS, shuffle } from '@polski/engine'
 import { Button, Card, OptionRow, Row, Stack } from '@polski/ui'
 import { usePronounce } from '@/lib/speech/usePronounce'
+import { ExerciseCard, ExerciseFeedback } from './exercise/ExerciseCard'
 import { annotatedLinkedSentence, sampleAnnotated } from '@/lib/engine/annotated-corpus'
 import type { CorpusIndex, Paradigm } from '@/lib/content/curriculum'
 import { linkedGapOptions, matchesRulePair, normalizeLinkedAnswer, type LinkedSentence } from '@/lib/engine/sentence-corpus'
@@ -198,7 +199,7 @@ function LinkedSentenceCard({ card, options, last, onNext }: {
   }
 
   return (
-    <Card tone={gap ? 'neutral' : hadError ? 'wrong' : 'correct'}>
+    <ExerciseCard tone={gap ? 'neutral' : hadError ? 'wrong' : 'correct'}>
       <form onSubmit={(event) => {
         event.preventDefault()
         if (!options) checkWord(typed)
@@ -236,7 +237,7 @@ function LinkedSentenceCard({ card, options, last, onNext }: {
               <h3 ref={stepTitle} tabIndex={-1} className="text-sm font-medium">
                 Слово {index + 1} из {card.gaps.length}
               </h3>
-              <p role="status" className={wrong.length ? 'text-sm text-danger-ink' : 'text-sm text-muted'}>
+              <ExerciseFeedback size="double" className={wrong.length ? 'text-danger-ink' : 'text-muted'}>
                 {needsReveal ? (
                   <>Правильный ответ — <strong lang="pl">{gap.accepted[0]}</strong>.</>
                 ) : wrong.length ? (
@@ -244,7 +245,7 @@ function LinkedSentenceCard({ card, options, last, onNext }: {
                 ) : (
                   <>Попыток: {remaining}.</>
                 )}
-              </p>
+              </ExerciseFeedback>
               {needsReveal ? (
                 <Button type="button" onClick={() => finishWord(true)}>
                   {index + 1 === card.gaps.length ? 'К результату' : 'Следующее слово'}
@@ -307,6 +308,6 @@ function LinkedSentenceCard({ card, options, last, onNext }: {
           )}
         </Stack>
       </form>
-    </Card>
+    </ExerciseCard>
   )
 }
