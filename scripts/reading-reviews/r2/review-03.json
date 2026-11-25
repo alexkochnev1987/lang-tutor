@@ -1,0 +1,608 @@
+{
+  "passages": [
+    {
+      "id": "pl-b1.reading.day-021",
+      "scores": {
+        "naturalness": 97,
+        "level": 79,
+        "questions": 87,
+        "ambiguity": 96,
+        "theme": 100,
+        "vocabulary": 89
+      },
+      "criticalIssues": [],
+      "notes": "A coherent everyday present-tense story. The basic family, food and park vocabulary fits A1, while 'spędzić', the longer litter-disposal sentence, and 'wykorzystać' in Q3 make it better suited to late A1 or early A2.",
+      "items": [
+        {
+          "id": "q1",
+          "option": "B",
+          "evidence": "Tata przygotowuje kanapki, mama pakuje owoce, a dzieci biorą piłkę i koc. Rodzina jedzie autobusem do dużego parku.",
+          "ambiguous": false,
+          "distractorScore": 68,
+          "skillMatches": true,
+          "notes": "The usual restaurant meal is a credible opening lure. A school match is barely connected. A family outing focused on a walk by the lake would be a closer distractor."
+        },
+        {
+          "id": "q2",
+          "option": "C",
+          "evidence": "Tata przygotowuje kanapki, mama pakuje owoce, a dzieci biorą piłkę i koc.",
+          "ambiguous": false,
+          "distractorScore": 78,
+          "skillMatches": true,
+          "notes": "The text says she packs fruit and does not specify the container. Ask 'Co mama pakuje przed wyjazdem?' The ball and newspaper are both text-based distractors."
+        },
+        {
+          "id": "q3",
+          "option": "C",
+          "evidence": "Dzisiaj pogoda jest piękna, więc wszyscy chcą spędzić więcej czasu na dworze.",
+          "ambiguous": false,
+          "distractorScore": 69,
+          "skillMatches": true,
+          "notes": "The lake distractor borrows a later activity. Playing with another family introduces people never mentioned, and 'wykorzystać' raises the lexical load."
+        },
+        {
+          "id": "q4",
+          "option": "C",
+          "evidence": "Nie zostawiają po sobie śmieci: wkładają je do torby i wyrzucają do kosza.",
+          "ambiguous": false,
+          "distractorScore": 76,
+          "skillMatches": true,
+          "notes": "Applies disposal information to a later visitor. The answer describes the family's effect on the spot. 'Jak Nowakowie zostawią to miejsce?' would exclude outside causes, though it would turn the item into retrieval."
+        },
+        {
+          "id": "q5",
+          "option": "B",
+          "evidence": "W parku jest dużo ludzi, ale znajdują spokojne miejsce pod drzewem. Dzieci grają w piłkę, a rodzice czytają gazetę.",
+          "ambiguous": false,
+          "distractorScore": 72,
+          "skillMatches": true,
+          "notes": "Tests recognition of an outdoor setting. A kitchen and the inside of a bus give a straightforward contrast."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-022",
+      "scores": {
+        "naturalness": 95,
+        "level": 76,
+        "questions": 79,
+        "ambiguity": 76,
+        "theme": 98,
+        "vocabulary": 88
+      },
+      "criticalIssues": [
+        "Q4 gives Ola's finish time and says she works in the morning, but gives no start time. Only Marek is the expected answer, yet the schedule does not establish that Ola is working at 11:00. Give her a shift spanning that time."
+      ],
+      "notes": "The routine planning dialogue is natural. Several close clock times, exhibition vocabulary, and clause-level scheduling calculations suit a strong A1 learner or early A2. Q3's assumed time pressure would read more convincingly with a clearer travel constraint.",
+      "items": [
+        {
+          "id": "q1",
+          "option": "C",
+          "evidence": "— Co robimy w sobotę? — pyta Ola.",
+          "ambiguous": false,
+          "distractorScore": 69,
+          "skillMatches": true,
+          "notes": "The joint exhibition is a plausible alternative from the conversation. Commuting jointly is incidental to none of the plans."
+        },
+        {
+          "id": "q2",
+          "option": "C",
+          "evidence": "— O której zaczyna grać?\n\n— O siedemnastej.",
+          "ambiguous": false,
+          "distractorScore": 92,
+          "skillMatches": true,
+          "notes": "Both alternative times are real details assigned to other events."
+        },
+        {
+          "id": "q3",
+          "option": "C",
+          "evidence": "A wystawa jest otwarta od dziesiątej do piętnastej.\n\nOla chce zobaczyć zdjęcia na wystawie, ale rano pracuje. Kończy o czternastej i jedzie do domu pół godziny.",
+          "ambiguous": false,
+          "distractorScore": 55,
+          "skillMatches": true,
+          "notes": "The short window is supported by the closing time and her work schedule, with no route to the exhibition given. B is awkward and advertises an inverted chronology. A nearer lure could cite the Saturday meeting at the park."
+        },
+        {
+          "id": "q4",
+          "option": null,
+          "evidence": "A wystawa jest otwarta od dziesiątej do piętnastej.\n\nOla chce zobaczyć zdjęcia na wystawie, ale rano pracuje. Kończy o czternastej i jedzie do domu pół godziny. Marek ma wolny cały dzień.",
+          "ambiguous": true,
+          "distractorScore": 73,
+          "skillMatches": true,
+          "notes": "C follows if Ola has started work by 11:00. A remains possible if her morning shift starts after 11:00. State her work hours or move the scenario to an hour explicitly inside the shift."
+        },
+        {
+          "id": "q5",
+          "option": "A",
+          "evidence": "W parku gra mały zespół jazzowy. Wstęp jest wolny.",
+          "ambiguous": false,
+          "distractorScore": 67,
+          "skillMatches": true,
+          "notes": "A correctly defines the phrase. Paying after the concert is a weak distractor, and a low-price versus free distinction is useful. The context explicitly supplies little about price, so learners largely rely on phrase knowledge."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-023",
+      "scores": {
+        "naturalness": 96,
+        "level": 72,
+        "questions": 91,
+        "ambiguity": 98,
+        "theme": 99,
+        "vocabulary": 93
+      },
+      "criticalIssues": [],
+      "notes": "The announcement format is suitable for beginners, but 'bezpłatny dzień otwarty', 'dla początkujących', 'własny sprzęt' and 'wcześniejsze zapisy' cluster at late A1 or A2. 'Na sali' is an ordinary usage in this sports context. 'W sali' is also available.",
+      "items": [
+        {
+          "id": "q1",
+          "option": "A",
+          "evidence": "Nasz klub zaprasza na bezpłatny dzień otwarty w sobotę.",
+          "ambiguous": false,
+          "distractorScore": 70,
+          "skillMatches": true,
+          "notes": "Summarizes the announcement's purpose. Shopping is weak as the text has no retail cue. The café is a more plausible secondary-purpose lure."
+        },
+        {
+          "id": "q2",
+          "option": "B",
+          "evidence": "Każde zajęcia trwają czterdzieści pięć minut.",
+          "ambiguous": false,
+          "distractorScore": 81,
+          "skillMatches": true,
+          "notes": "The three durations are credible for a trial class."
+        },
+        {
+          "id": "q3",
+          "option": "B",
+          "evidence": "Sala jest mała, dlatego prosimy o wcześniejsze zapisy przez internet.",
+          "ambiguous": false,
+          "distractorScore": 76,
+          "skillMatches": true,
+          "notes": "Mat reservation is a plausible sports-context lure, while choosing the music is weak as an explanation for participant registration."
+        },
+        {
+          "id": "q4",
+          "option": "B",
+          "evidence": "O dziewiątej jest gimnastyka, o jedenastej taniec, a po południu ćwiczenia z małymi ciężarkami dla początkujących. Każde zajęcia trwają czterdzieści pięć minut.",
+          "ambiguous": false,
+          "distractorScore": 92,
+          "skillMatches": true,
+          "notes": "Applies the schedule and class duration to a noon finish. Because the exact afternoon start and travel time are absent, 'Które zajęcia zaczynają się po pracy Ewy?' would make the timing claim exact."
+        },
+        {
+          "id": "q5",
+          "option": "A",
+          "evidence": "Chcesz zacząć uprawiać sport, ale nie wiesz, które zajęcia wybrać? Nasz klub zaprasza na bezpłatny dzień otwarty w sobotę. O dziewiątej jest gimnastyka, o jedenastej taniec, a po południu ćwiczenia z małymi ciężarkami dla początkujących.",
+          "ambiguous": false,
+          "distractorScore": 77,
+          "skillMatches": true,
+          "notes": "The opening line supplies a contextual paraphrase. The instructor and experienced-participant distractors fit the event setting but work as clear contrasts."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-024",
+      "scores": {
+        "naturalness": 98,
+        "level": 69,
+        "questions": 91,
+        "ambiguity": 98,
+        "theme": 99,
+        "vocabulary": 93
+      },
+      "criticalIssues": [],
+      "notes": "A natural invitation and familiar setting. The conditional weather plan, plural imperatives, 'prognoza pogody', and comparative 'wygodniejsza' make the language closer to A2. 'Czapkę z daszkiem' would be a more idiomatic Q4 distractor than 'czapkę od słońca'.",
+      "items": [
+        {
+          "id": "q1",
+          "option": "C",
+          "evidence": "Dzisiaj po południu mam czas, więc możemy się spotkać.",
+          "ambiguous": false,
+          "distractorScore": 71,
+          "skillMatches": true,
+          "notes": "The text offers shared plans. Both distractors borrow details but add unsupported actions. Asking Tomek to choose a meeting place would be a closer distractor if the stem explicitly asked for the main purpose."
+        },
+        {
+          "id": "q2",
+          "option": "C",
+          "evidence": "Film zaczyna się o szóstej, ale bilety kosztują dość dużo.",
+          "ambiguous": false,
+          "distractorScore": 81,
+          "skillMatches": true,
+          "notes": "Five is grounded in a proposed meeting time. Seven is a plausible clock time with no text anchor."
+        },
+        {
+          "id": "q3",
+          "option": "B",
+          "evidence": "Ja wolę spacer, ponieważ przez cały tydzień siedzę przy komputerze.",
+          "ambiguous": false,
+          "distractorScore": 76,
+          "skillMatches": true,
+          "notes": "'Chce się ruszyć' reasonably spells out why sitting all week leads to the preference."
+        },
+        {
+          "id": "q4",
+          "option": "A",
+          "evidence": "Prognoza pogody jest dobra, choć wieczorem może być chłodno.\n\nJa wolę spacer, ponieważ przez cały tydzień siedzę przy komputerze. Jeśli jednak będzie padał deszcz, wybierzmy kino. Przyjdź do mnie o piątej albo spotkajmy się od razu przy dworcu. Napisz, która opcja jest dla ciebie wygodniejsza. Wezmę dodatkową bluzę.",
+          "ambiguous": false,
+          "distractorScore": 64,
+          "skillMatches": true,
+          "notes": "A fits the cold evening and the extra garment already named. The repeated 'bluzę' makes the inference quite easy. A plausible rain-related alternative would better distinguish the text's weather conditions."
+        },
+        {
+          "id": "q5",
+          "option": "C",
+          "evidence": "Prognoza pogody jest dobra, choć wieczorem może być chłodno.",
+          "ambiguous": false,
+          "distractorScore": 82,
+          "skillMatches": true,
+          "notes": "Past observation, current observation, and future forecast make a focused lexical distinction. C also echoes the passage closely."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-025",
+      "scores": {
+        "naturalness": 95,
+        "level": 70,
+        "questions": 81,
+        "ambiguity": 80,
+        "theme": 98,
+        "vocabulary": 91
+      },
+      "criticalIssues": [
+        "Q5's present-tense stem asks which camera already belongs to the narrator, but the passage says only that the narrator wants to buy one, and B describes a future purchase. Ask 'Co autor ma na myśli, mówiąc o własnym aparacie?' or use a conditional ownership scenario."
+      ],
+      "notes": "The family and hobby storyline is natural. Domain vocabulary, 'związanych z tymi zdjęciami', and the constructions in Q3 and Q5 fit A2 more comfortably than core A1. 'Jego ulubione hobby to fotografia' is a lighter stylistic alternative to the original phrasing.",
+      "items": [
+        {
+          "id": "q1",
+          "option": "A",
+          "evidence": "W tym miesiącu chcę kupić własny aparat. Moja koleżanka ma mały aparat cyfrowy i pokazuje mi, jak robić zdjęcia.",
+          "ambiguous": false,
+          "distractorScore": 61,
+          "skillMatches": true,
+          "notes": "The central thread is taking up photography. The former home is a small but real tangent. A meeting between the father and friend is invented and weak."
+        },
+        {
+          "id": "q2",
+          "option": "B",
+          "evidence": "Kiedy jestem w domu rodziców, często oglądamy razem jego albumy.",
+          "ambiguous": false,
+          "distractorScore": 79,
+          "skillMatches": true,
+          "notes": "The possessive refers back to the narrator's father. Sister and friend are coherent people from the passage."
+        },
+        {
+          "id": "q3",
+          "option": "C",
+          "evidence": "Nie chcę od razu kupować drogiego sprzętu, bo dopiero uczę się fotografii.",
+          "ambiguous": false,
+          "distractorScore": 72,
+          "skillMatches": true,
+          "notes": "Waiting to inherit or borrow a camera is plausible in context. Selling family pictures is a weak lure."
+        },
+        {
+          "id": "q4",
+          "option": "A",
+          "evidence": "Na jednej fotografii jest nasz dawny dom, na innej moja siostra i jej pies. Tata pamięta wiele historii związanych z tymi zdjęciami.",
+          "ambiguous": false,
+          "distractorScore": 78,
+          "skillMatches": true,
+          "notes": "Applies the father's knowledge to a specific information-seeking situation. The sister is a credible alternative, whereas the friend has no established knowledge of the family photos."
+        },
+        {
+          "id": "q5",
+          "option": null,
+          "evidence": "W tym miesiącu chcę kupić własny aparat. Moja koleżanka ma mały aparat cyfrowy i pokazuje mi, jak robić zdjęcia.",
+          "ambiguous": true,
+          "distractorScore": 78,
+          "skillMatches": true,
+          "notes": "B alone demonstrates ownership in a hypothetical future scenario, but the literal present-tense stem has no supported answer. Reframe the question and options explicitly as hypothetical to retain the ownership versus temporary access contrast."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-026",
+      "scores": {
+        "naturalness": 97,
+        "level": 61,
+        "questions": 92,
+        "ambiguity": 99,
+        "theme": 99,
+        "vocabulary": 93
+      },
+      "criticalIssues": [],
+      "notes": "The concert recollection is idiomatic. Sustained past tense, aspectual and temporal shifts, 'żadnego utworu', instrument names and 'z zainteresowaniem' make it more suitable for A2 than core A1. Early learners could use a shorter past narrative with fewer specialized terms.",
+      "items": [
+        {
+          "id": "q1",
+          "option": "B",
+          "evidence": "Wczoraj wieczorem byłam na swoim pierwszym koncercie jazzowym.",
+          "ambiguous": false,
+          "distractorScore": 64,
+          "skillMatches": true,
+          "notes": "Opening directly states the topic. The two lures reuse objects from the passage but turn the narrator into a performer with no textual cue."
+        },
+        {
+          "id": "q2",
+          "option": "B",
+          "evidence": "Po koncercie wróciłam do domu tramwajem.",
+          "ambiguous": false,
+          "distractorScore": 78,
+          "skillMatches": true,
+          "notes": "Straightforward detail with credible transport alternatives."
+        },
+        {
+          "id": "q3",
+          "option": "A",
+          "evidence": "Sala była mała, więc dobrze widziałam scenę.",
+          "ambiguous": false,
+          "distractorScore": 89,
+          "skillMatches": true,
+          "notes": "The front row and proximity are convincing generic explanations. Only A is causally established by the text."
+        },
+        {
+          "id": "q4",
+          "option": "A",
+          "evidence": "Dzisiaj rano znalazłam w internecie muzykę tego zespołu i słuchałam jej podczas śniadania. Chcę pójść na kolejny koncert, kiedy zespół znów przyjedzie do naszego miasta.",
+          "ambiguous": false,
+          "distractorScore": 83,
+          "skillMatches": true,
+          "notes": "Combines listening afterward with the wish to attend again. 'Lepiej poznać muzykę tego zespołu' would specify the kind of interest more precisely."
+        },
+        {
+          "id": "q5",
+          "option": "A",
+          "evidence": "Na początku nie znałam żadnego utworu, ale szybko zaczęłam słuchać z zainteresowaniem. Muzycy grali na trąbce, pianinie i perkusji.",
+          "ambiguous": false,
+          "distractorScore": 75,
+          "skillMatches": true,
+          "notes": "The context contrasts the music played with the instruments. 'Jedna kompozycja, którą gra zespół' is semantically precise but may be less accessible than the colloquial 'kawałek'."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-027",
+      "scores": {
+        "naturalness": 96,
+        "level": 57,
+        "questions": 88,
+        "ambiguity": 98,
+        "theme": 99,
+        "vocabulary": 94
+      },
+      "criticalIssues": [],
+      "notes": "A coherent museum visit whose sustained past tense, exhibit vocabulary, relative sequencing and forms such as 'najbardziej podobał mu się' and 'postanowiliśmy' are better suited to A2. 'Czytał opisy eksponatów' would be more museum-specific than 'czytał napisy', as a stylistic option.",
+      "items": [
+        {
+          "id": "q1",
+          "option": "C",
+          "evidence": "W niedzielę poszliśmy z rodziną do muzeum. Nasz syn interesuje się techniką, dlatego wybraliśmy wystawę starych urządzeń.",
+          "ambiguous": false,
+          "distractorScore": 69,
+          "skillMatches": true,
+          "notes": "The wrong options recombine secondary details from separate episodes and are fairly easy to dismiss."
+        },
+        {
+          "id": "q2",
+          "option": "C",
+          "evidence": "Najbardziej podobał mu się stary aparat fotograficzny.",
+          "ambiguous": false,
+          "distractorScore": 92,
+          "skillMatches": true,
+          "notes": "Both distractors are genuine exhibits, so the learner must read for the reported preference."
+        },
+        {
+          "id": "q3",
+          "option": "B",
+          "evidence": "Nie zobaczyliśmy całego muzeum, ponieważ córka była już zmęczona.",
+          "ambiguous": false,
+          "distractorScore": 78,
+          "skillMatches": true,
+          "notes": "B is a sensible paraphrase of fatigue. The wording 'skończyła zwiedzanie wcześniej' implies an unstated schedule. Ask why the family did not see the whole museum."
+        },
+        {
+          "id": "q4",
+          "option": "C",
+          "evidence": "Nasz syn interesuje się techniką, dlatego wybraliśmy wystawę starych urządzeń. W pierwszej sali były telefony i radia, w drugiej można było zobaczyć pierwsze komputery. Syn czytał napisy i zadawał wiele pytań.",
+          "ambiguous": false,
+          "distractorScore": 62,
+          "skillMatches": true,
+          "notes": "Infers from curiosity and the son's reported interest to a new visit. Conditioning attendance on cake is trivial, and 'przyjmie zaproszenie' makes rejecting it less available through the stem."
+        },
+        {
+          "id": "q5",
+          "option": "C",
+          "evidence": "Kupiliśmy więc mały przewodnik i postanowiliśmy wrócić za miesiąc.",
+          "ambiguous": false,
+          "distractorScore": 92,
+          "skillMatches": true,
+          "notes": "The human-guide sense is a meaningful lexical distractor, and a ticket fits purchase and a return visit. 'Mały' and 'kupiliśmy' favor the booklet sense."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-028",
+      "scores": {
+        "naturalness": 91,
+        "level": 57,
+        "questions": 88,
+        "ambiguity": 96,
+        "theme": 98,
+        "vocabulary": 92
+      },
+      "criticalIssues": [],
+      "notes": "Natural narrative sequencing around a familiar outing. Numerous first-person plural past forms and terms such as 'działka', 'przenieśliśmy się', and 'gospodarzom' suggest A2. 'Wszyscy dobrze spędzili czas' is understandable but collocationally stilted. 'Wszyscy miło spędzili czas' would be smoother.",
+      "items": [
+        {
+          "id": "q1",
+          "option": "B",
+          "evidence": "W ostatnią sobotę odwiedziliśmy znajomych na działce.",
+          "ambiguous": false,
+          "distractorScore": 68,
+          "skillMatches": true,
+          "notes": "The distractors reuse ball play and the cabin but invent match preparation and construction work. An account focused on getting through the rain would be a more credible secondary focus."
+        },
+        {
+          "id": "q2",
+          "option": "C",
+          "evidence": "Przywieźliśmy owoce i chleb, a oni przygotowali sałatkę i zupę.",
+          "ambiguous": false,
+          "distractorScore": 94,
+          "skillMatches": true,
+          "notes": "Every food appears in the same sentence, and the answer requires distinguishing guests from hosts."
+        },
+        {
+          "id": "q3",
+          "option": "B",
+          "evidence": "Było ciepło, ale po obiedzie pojawiły się ciemne chmury.\n\nZebraliśmy rzeczy z ogrodu i przenieśliśmy się do małego domku.",
+          "ambiguous": false,
+          "distractorScore": 78,
+          "skillMatches": true,
+          "notes": "The dark clouds support anticipated rain. Both distractors borrow activities the text places at other times."
+        },
+        {
+          "id": "q4",
+          "option": "A",
+          "evidence": "Zebraliśmy rzeczy z ogrodu i przenieśliśmy się do małego domku. Tam graliśmy w karty i słuchaliśmy muzyki. Deszcz trwał tylko pół godziny.",
+          "ambiguous": false,
+          "distractorScore": 86,
+          "skillMatches": true,
+          "notes": "Applies the indoor activity to a future rainy visit. The outdoor alternatives would have been useful at other points of the same trip."
+        },
+        {
+          "id": "q5",
+          "option": "A",
+          "evidence": "W ostatnią sobotę odwiedziliśmy znajomych na działce. Przywieźliśmy owoce i chleb, a oni przygotowali sałatkę i zupę.",
+          "ambiguous": false,
+          "distractorScore": 77,
+          "skillMatches": true,
+          "notes": "Correctly maps 'gospodarze' to the friends receiving the visitors. The explicit invitation is unstated, and the stem repeats 'pomagali' awkwardly. Use 'Kim byli gospodarze?' and 'Znajomymi, których odwiedzili' if the stem changes to require instrumental case."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-029",
+      "scores": {
+        "naturalness": 96,
+        "level": 91,
+        "questions": 90,
+        "ambiguity": 98,
+        "theme": 100,
+        "vocabulary": 96
+      },
+      "criticalIssues": [],
+      "notes": "A clear upper-A2 travel narrative with familiar activities, past chronology, and fairly transparent domain vocabulary. Some reflection and syntax stretch the level productively. 'Przed następnym wyjazdem' is a stylistic alternative to 'Na następny wyjazd' where the timing of planning is meant.",
+      "items": [
+        {
+          "id": "q1",
+          "option": "B",
+          "evidence": "Karol zauważył, że nie wszystko trzeba wcześniej planować. Rezerwacja noclegu była przydatna, ale wolny czas pozwolił im odkryć coś nowego.",
+          "ambiguous": false,
+          "distractorScore": 83,
+          "skillMatches": true,
+          "notes": "B synthesizes the two sides of the conclusion. Accommodation and guidebook-based sightseeing are credible opposing emphases."
+        },
+        {
+          "id": "q2",
+          "option": "C",
+          "evidence": "Po drodze znaleźli małą piekarnię, porozmawiali ze sprzedawcą i dowiedzieli się o wystawie fotografii.",
+          "ambiguous": false,
+          "distractorScore": 76,
+          "skillMatches": true,
+          "notes": "A hotel worker is plausible. An autobus driver lacks a text anchor in a trip framed as rail travel."
+        },
+        {
+          "id": "q3",
+          "option": "B",
+          "evidence": "Później chcieli odwiedzić ogród botaniczny, lecz zaczął padać deszcz. Zamiast tego poszli do muzeum.",
+          "ambiguous": false,
+          "distractorScore": 83,
+          "skillMatches": true,
+          "notes": "The completed exhibition offers a plausible nearby time-based lure. The reservation lure borrows a detail associated with lodging."
+        },
+        {
+          "id": "q4",
+          "option": "B",
+          "evidence": "Po drodze znaleźli małą piekarnię, porozmawiali ze sprzedawcą i dowiedzieli się o wystawie fotografii. Nie było jej w ich przewodniku.",
+          "ambiguous": false,
+          "distractorScore": 56,
+          "skillMatches": true,
+          "notes": "Applies a stated fact about the guidebook to a counterfactual plan. The station they must arrive at and hotel booked in advance are conspicuously poor alternatives to a sightseeing stop."
+        },
+        {
+          "id": "q5",
+          "option": "A",
+          "evidence": "Na następny wyjazd zamierza znów przygotować podstawowy plan, a o reszcie zdecydować na miejscu.",
+          "ambiguous": false,
+          "distractorScore": 63,
+          "skillMatches": true,
+          "notes": "A is directionally right but 'podczas podróży' can include the journey before arrival. 'Chce wybrać część zajęć dopiero po przyjeździe' would give the intended meaning precisely. The change-of-date distractor is weak."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-030",
+      "scores": {
+        "naturalness": 94,
+        "level": 80,
+        "questions": 93,
+        "ambiguity": 98,
+        "theme": 99,
+        "vocabulary": 94
+      },
+      "criticalIssues": [],
+      "notes": "The travel task and sequence fit upper A2, but 'biuro zostanie wcześniej zamknięte', 'przewoźnik', 'dopłacać', and 'początkowo planowała tylko zameldować się' cluster near early B1. 'Z listy dokumentów na podróż' is understandable, although 'z listy biletów w telefonie' would be more concrete if that is the intended list.",
+      "items": [
+        {
+          "id": "q1",
+          "option": "B",
+          "evidence": "Aneta postanowiła zmienić bilet, żeby spędzić więcej czasu nad morzem.",
+          "ambiguous": false,
+          "distractorScore": 70,
+          "skillMatches": true,
+          "notes": "The ticket change is central. The first ticket purchase and hotel are incidental details, and the phone belongs to the replacement-ticket sequence."
+        },
+        {
+          "id": "q2",
+          "option": "C",
+          "evidence": "Aneta porównała ceny i wybrała pociąg o piętnastej.",
+          "ambiguous": false,
+          "distractorScore": 95,
+          "skillMatches": true,
+          "notes": "The two alternative times are exactly the original and rejected departure times."
+        },
+        {
+          "id": "q3",
+          "option": "B",
+          "evidence": "Zwykła zmiana biletu kosztowała niewiele, ale w tym pociągu zostały tylko miejsca w pierwszej klasie. Aneta porównała ceny i wybrała pociąg o piętnastej. Podróż trwała o dwadzieścia minut dłużej, lecz bilet był tańszy i nie musiała dopłacać za wyższą klasę.",
+          "ambiguous": false,
+          "distractorScore": 87,
+          "skillMatches": true,
+          "notes": "B accounts for both the available class and cost. A reverses the travel-duration comparison, and C overlooks available first-class seats."
+        },
+        {
+          "id": "q4",
+          "option": "B",
+          "evidence": "Aneta postanowiła zmienić bilet, żeby spędzić więcej czasu nad morzem.\n\nNa stronie przewoźnika znalazła połączenie o czternastej. Zwykła zmiana biletu kosztowała niewiele, ale w tym pociągu zostały tylko miejsca w pierwszej klasie. Aneta porównała ceny i wybrała pociąg o piętnastej. Podróż trwała o dwadzieścia minut dłużej, lecz bilet był tańszy i nie musiała dopłacać za wyższą klasę.",
+          "ambiguous": false,
+          "distractorScore": 81,
+          "skillMatches": true,
+          "notes": "Combines her motive for changing trains with the trade-off in choosing between the earlier departures. The responses with first-class and a later departure test whether the learner integrates both facts."
+        },
+        {
+          "id": "q5",
+          "option": "C",
+          "evidence": "Przy starym bilecie pojawił się napis „anulowany”, więc usunęła go z listy dokumentów na podróż.",
+          "ambiguous": false,
+          "distractorScore": 81,
+          "skillMatches": true,
+          "notes": "Deletion provides a contextual cue that it was invalid. A two-ticket requirement and a print requirement are recognizable travel procedures and clear distractors in this context."
+        }
+      ]
+    }
+  ]
+}

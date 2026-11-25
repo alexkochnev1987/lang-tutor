@@ -1,0 +1,437 @@
+{
+  "passages": [
+    {
+      "id": "pl-b1.reading.day-051",
+      "scores": {
+        "naturalness": 84,
+        "level": 54,
+        "questions": 69,
+        "ambiguity": 99,
+        "theme": 95,
+        "vocabulary": 77
+      },
+      "criticalIssues": [
+        "Copies the rule verbatim. Ask whether two colleagues who want to read and then create an exercise will need the same access.",
+        "Several abstract administrative expressions exceed A2. Simplify „funkcji użytkownika” and „ogólnodostępne treści” in surrounding prose; the noun phrase about paid textbooks is unnecessarily indirect."
+      ],
+      "notes": "Several abstract administrative expressions exceed A2. Simplify „funkcji użytkownika” and „ogólnodostępne treści” in surrounding prose; the noun phrase about paid textbooks is unnecessarily indirect.",
+      "items": [
+        {
+          "id": "q1",
+          "option": "A",
+          "evidence": "To serwis z bezpłatnymi materiałami",
+          "ambiguous": false,
+          "distractorScore": 38,
+          "skillMatches": true,
+          "notes": "B is unrelated; use a narrower summary about preparing for the history test."
+        },
+        {
+          "id": "q2",
+          "option": "B",
+          "evidence": "Marek przygotowuje się do sprawdzianu z historii.",
+          "ambiguous": false,
+          "distractorScore": 72,
+          "skillMatches": true,
+          "notes": "Clear factual detail; the alternative subjects are credible."
+        },
+        {
+          "id": "q3",
+          "option": "C",
+          "evidence": "W szkole nie zdążył dokładnie zapisać informacji o jednym wydarzeniu.",
+          "ambiguous": false,
+          "distractorScore": 77,
+          "skillMatches": true,
+          "notes": "Clear motive; the options refer to distinct school tasks."
+        },
+        {
+          "id": "q4",
+          "option": "A",
+          "evidence": "do korzystania z edytora i funkcji użytkownika trzeba się zalogować",
+          "ambiguous": false,
+          "distractorScore": 37,
+          "skillMatches": false,
+          "notes": "Copies the rule verbatim. Ask whether two colleagues who want to read and then create an exercise will need the same access."
+        },
+        {
+          "id": "q5",
+          "option": "B",
+          "evidence": "Ta sytuacja pokazuje, że nie każdy sposób korzystania z serwisu wymaga konta.",
+          "ambiguous": false,
+          "distractorScore": 74,
+          "skillMatches": true,
+          "notes": "The account contrast gives a usable context clue."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-052",
+      "scores": {
+        "naturalness": 81,
+        "level": 52,
+        "questions": 56,
+        "ambiguity": 99,
+        "theme": 95,
+        "vocabulary": 77
+      },
+      "criticalIssues": [
+        "Nominalizations and participles make the expository sections dense for A2. Replace „szkoła korzystająca z odpowiedniego wsparcia” with a finite clause. „Lista zakupów nie jest wyłącznie decyzją” is awkward; write „O zakupach decyduje więc więcej niż jedna osoba”."
+      ],
+      "notes": "Nominalizations and participles make the expository sections dense for A2. Replace „szkoła korzystająca z odpowiedniego wsparcia” with a finite clause. „Lista zakupów nie jest wyłącznie decyzją” is awkward; write „O zakupach decyduje więc więcej niż jedna osoba”.",
+      "items": [
+        {
+          "id": "q1",
+          "option": "C",
+          "evidence": "Dlatego warto łączyć zakupy z zajęciami, które zachęcają młodych ludzi do sięgania po literaturę.",
+          "ambiguous": false,
+          "distractorScore": 30,
+          "skillMatches": true,
+          "notes": "Two extremes give C away; offer partial summaries of consultation and lending."
+        },
+        {
+          "id": "q2",
+          "option": "A",
+          "evidence": "z przedstawicielami rodziców oraz uczniów",
+          "ambiguous": false,
+          "distractorScore": 29,
+          "skillMatches": true,
+          "notes": "Wrong options both contain exclusivity markers; use parallel pairs without „tylko”."
+        },
+        {
+          "id": "q3",
+          "option": "B",
+          "evidence": "Nie wszystkie tytuły można kupić naraz.",
+          "ambiguous": false,
+          "distractorScore": 24,
+          "skillMatches": true,
+          "notes": "Both distractors conflict dramatically with the story. Use competing purchase priorities."
+        },
+        {
+          "id": "q4",
+          "option": "C",
+          "evidence": "Mogą na przykład zaplanować spotkanie poświęcone wybranemu tematowi.",
+          "ambiguous": false,
+          "distractorScore": 33,
+          "skillMatches": true,
+          "notes": "Applies the example to a new class discussion, but two anti-reader options give the answer away. Offer three feasible projects."
+        },
+        {
+          "id": "q5",
+          "option": "A",
+          "evidence": "Nowa książka na półce nie zawsze oznacza, że ktoś ją przeczyta.",
+          "ambiguous": false,
+          "distractorScore": 18,
+          "skillMatches": true,
+          "notes": "Moving shelves is absurd. Use alternatives involving borrowing, recommending and discussing books."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-053",
+      "scores": {
+        "naturalness": 90,
+        "level": 76,
+        "questions": 66,
+        "ambiguity": 99,
+        "theme": 94,
+        "vocabulary": 80
+      },
+      "criticalIssues": [
+        "Direct restatement. Give a sample of her notes from two chapters and ask which chapter she would review first."
+      ],
+      "notes": "Familiar language-learning actions suit A2. Simplify the first paragraph’s level descriptions, especially the elliptical „obejmują A2”. The certificate aside is abrupt.",
+      "items": [
+        {
+          "id": "q1",
+          "option": "B",
+          "evidence": "Postanawia korzystać z materiałów w wybranej kolejności, zgodnie ze swoimi potrzebami.",
+          "ambiguous": false,
+          "distractorScore": 52,
+          "skillMatches": true,
+          "notes": "Certificate distractor uses a real aside; course prices are absent throughout."
+        },
+        {
+          "id": "q2",
+          "option": "C",
+          "evidence": "Potrafi zrobić zakupy i krótko opowiedzieć o sobie",
+          "ambiguous": false,
+          "distractorScore": 36,
+          "skillMatches": true,
+          "notes": "C copies the text; running a B1 course is implausible. Use three similar everyday abilities."
+        },
+        {
+          "id": "q3",
+          "option": "A",
+          "evidence": "Nie chce od razu czytać najtrudniejszego podręcznika.",
+          "ambiguous": false,
+          "distractorScore": 60,
+          "skillMatches": true,
+          "notes": "Motive supported; replace the implausible B1 certificate with a reason connected to her routine."
+        },
+        {
+          "id": "q4",
+          "option": "B",
+          "evidence": "Kiedy nie rozumie najważniejszych informacji, wraca do łatwiejszych ćwiczeń.",
+          "ambiguous": false,
+          "distractorScore": 21,
+          "skillMatches": false,
+          "notes": "Direct restatement. Give a sample of her notes from two chapters and ask which chapter she would review first."
+        },
+        {
+          "id": "q5",
+          "option": "C",
+          "evidence": "inne obejmują A2 z elementami B1",
+          "ambiguous": false,
+          "distractorScore": 48,
+          "skillMatches": true,
+          "notes": "Two distractors use exclusion or negation; offer interpretations of how much B1 material is included."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-064",
+      "scores": {
+        "naturalness": 79,
+        "level": 59,
+        "questions": 68,
+        "ambiguity": 99,
+        "theme": 96,
+        "vocabulary": 80
+      },
+      "criticalIssues": [
+        "Direct retrieval even for Emilia specifically. Ask which of several planned errands she could combine with her next shop.",
+        "The shopping sequence is accessible but „opakowaniu objętym tym systemem” and „zasadami dotyczącymi odpadów” are dense at A2. Prefer „liczby opakowań” for countable packages and „ponownie wykorzystać surowce” for the final clause."
+      ],
+      "notes": "The shopping sequence is accessible but „opakowaniu objętym tym systemem” and „zasadami dotyczącymi odpadów” are dense at A2. Prefer „liczby opakowań” for countable packages and „ponownie wykorzystać surowce” for the final clause.",
+      "items": [
+        {
+          "id": "q1",
+          "option": "C",
+          "evidence": "Później może oddać puste opakowanie w punkcie zbiórki i odzyskać tę kwotę.",
+          "ambiguous": false,
+          "distractorScore": 51,
+          "skillMatches": true,
+          "notes": "Alternatives focus on prices and receipts; substitute summaries of two real subtopics."
+        },
+        {
+          "id": "q2",
+          "option": "A",
+          "evidence": "Ważne jest odpowiednie oznaczenie opakowania.",
+          "ambiguous": false,
+          "distractorScore": 44,
+          "skillMatches": true,
+          "notes": "Size of the whole shopping basket is a weak alternative; use bottle characteristics for all options."
+        },
+        {
+          "id": "q3",
+          "option": "B",
+          "evidence": "Jedna ma znak systemu kaucyjnego, a druga go nie ma.",
+          "ambiguous": false,
+          "distractorScore": 70,
+          "skillMatches": true,
+          "notes": "The reason is supported and the alternatives are competing return rules."
+        },
+        {
+          "id": "q4",
+          "option": "C",
+          "evidence": "Nie musi wracać do domu po paragon.",
+          "ambiguous": false,
+          "distractorScore": 62,
+          "skillMatches": false,
+          "notes": "Direct retrieval even for Emilia specifically. Ask which of several planned errands she could combine with her next shop."
+        },
+        {
+          "id": "q5",
+          "option": "A",
+          "evidence": "klient płaci także kaucję. Później może oddać puste opakowanie w punkcie zbiórki i odzyskać tę kwotę.",
+          "ambiguous": false,
+          "distractorScore": 70,
+          "skillMatches": true,
+          "notes": "A clear contextual paraphrase; make B a plausible competing payment outcome."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-078",
+      "scores": {
+        "naturalness": 78,
+        "level": 39,
+        "questions": 57,
+        "ambiguity": 98,
+        "theme": 93,
+        "vocabulary": 78
+      },
+      "criticalIssues": [
+        "All actions explicitly listed and unsafe distractors are self-evident. Infer his likely next step after completing the loan using his stated goal.",
+        "Repeated abstract legal vocabulary, passive meanings and long nominal chains exceed independent A2 reading. Introduce the term using a concrete situation. For idiomatic bank language prefer „umowę pożyczki” or „wziąć pożyczkę”."
+      ],
+      "notes": "Repeated abstract legal vocabulary, passive meanings and long nominal chains exceed independent A2 reading. Introduce the term using a concrete situation. For idiomatic bank language prefer „umowę pożyczki” or „wziąć pożyczkę”.",
+      "items": [
+        {
+          "id": "q1",
+          "option": "A",
+          "evidence": "Widzi, że zastrzeżenie i jego cofnięcie to dwie różne operacje.",
+          "ambiguous": false,
+          "distractorScore": 73,
+          "skillMatches": true,
+          "notes": "Both distractors concern banking or identity and the passage distinguishes the main goal."
+        },
+        {
+          "id": "q2",
+          "option": "B",
+          "evidence": "Pewnego dnia planuje jednak zawrzeć w banku umowę o pożyczkę.",
+          "ambiguous": false,
+          "distractorScore": 73,
+          "skillMatches": true,
+          "notes": "Clear detail. Prefer „umowę pożyczki” and „umowę najmu mieszkania”."
+        },
+        {
+          "id": "q3",
+          "option": "C",
+          "evidence": "Przed podpisaniem dokumentów pyta pracownika banku, jakie warunki musi spełnić.",
+          "ambiguous": false,
+          "distractorScore": 19,
+          "skillMatches": true,
+          "notes": "Circular: asking for requirements means wanting to know requirements. Ask why he wants to check his PESEL status before signing."
+        },
+        {
+          "id": "q4",
+          "option": "A",
+          "evidence": "Tomasz czyta informacje w oficjalnym serwisie, ponieważ chce uniknąć nieporozumień.",
+          "ambiguous": false,
+          "distractorScore": 12,
+          "skillMatches": false,
+          "notes": "All actions explicitly listed and unsafe distractors are self-evident. Infer his likely next step after completing the loan using his stated goal."
+        },
+        {
+          "id": "q5",
+          "option": "B",
+          "evidence": "Widzi, że zastrzeżenie i jego cofnięcie to dwie różne operacje. Po załatwieniu sprawy chce ponownie zabezpieczyć swoje dane.",
+          "ambiguous": false,
+          "distractorScore": 70,
+          "skillMatches": true,
+          "notes": "Contrasting actions and his later intention support the meaning indirectly."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-092",
+      "scores": {
+        "naturalness": 86,
+        "level": 89,
+        "questions": 73,
+        "ambiguity": 98,
+        "theme": 94,
+        "vocabulary": 87
+      },
+      "criticalIssues": [],
+      "notes": "Generally coherent at B1. „Ma inny cel” implies an unexplained contrast between collection routes; specify a concrete difference already established in the passage. In Q2 a container does not idiomatically „obejmować” waste.",
+      "items": [
+        {
+          "id": "q1",
+          "option": "B",
+          "evidence": "Segregacja to ważna czynność, ale nie jest jedynym sposobem dbania o środowisko.",
+          "ambiguous": false,
+          "distractorScore": 48,
+          "skillMatches": true,
+          "notes": "The balanced answer is also the longest. Give equally broad alternatives without all-or-nothing wording."
+        },
+        {
+          "id": "q2",
+          "option": "C",
+          "evidence": "W zwykłym systemie nie ma szóstego pojemnika przeznaczonego wyłącznie na tekstylia.",
+          "ambiguous": false,
+          "distractorScore": 80,
+          "skillMatches": true,
+          "notes": "Rewrite as „Na które odpady nie ma osobnego pojemnika w podstawowym systemie?”"
+        },
+        {
+          "id": "q3",
+          "option": "A",
+          "evidence": "Osoba, która porządkuje szafę, powinna sprawdzić miejscowe zasady zbierania takich odpadów.",
+          "ambiguous": false,
+          "distractorScore": 29,
+          "skillMatches": true,
+          "notes": "C is unrelated. Use motives tied to sorting and reusing as alternatives."
+        },
+        {
+          "id": "q4",
+          "option": "B",
+          "evidence": "naprawianie przedmiotów oraz dłuższe korzystanie z tego, co już posiadamy. Dzięki temu część rzeczy w ogóle nie staje się odpadami.",
+          "ambiguous": false,
+          "distractorScore": 62,
+          "skillMatches": true,
+          "notes": "Applies prevention to a concrete bag. Replace the odd sequence of sorting after disposal with sorting the bag before collection."
+        },
+        {
+          "id": "q5",
+          "option": "C",
+          "evidence": "przygotowuje jedno dodatkowe miejsce na rzeczy wymagające osobnego postępowania. Przed oddaniem danej rzeczy sprawdza informacje w oficjalnych źródłach.",
+          "ambiguous": false,
+          "distractorScore": 34,
+          "skillMatches": true,
+          "notes": "Extreme „zawsze”, „dowolnego”, „koniecznie” make elimination too easy; use narrower alternatives such as home storage or return to a retailer."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-099",
+      "scores": {
+        "naturalness": 94,
+        "level": 91,
+        "questions": 78,
+        "ambiguity": 99,
+        "theme": 97,
+        "vocabulary": 90
+      },
+      "criticalIssues": [],
+      "notes": "Fluent cultural narrative at B1 with a clear learner perspective. The shift from „przyznaje” to reporting the completed event is intelligible. Distractors often rely on implausible absolutes.",
+      "items": [
+        {
+          "id": "q1",
+          "option": "A",
+          "evidence": "Takie wydarzenie może być okazją nie tylko do lektury, lecz także do rozmowy o kulturze.",
+          "ambiguous": false,
+          "distractorScore": 52,
+          "skillMatches": true,
+          "notes": "Both alternatives imply restricted participation. Use a plausible narrow summary about preparing for reading."
+        },
+        {
+          "id": "q2",
+          "option": "B",
+          "evidence": "w 2026 roku wybrano „Dziady” Adama Mickiewicza.",
+          "ambiguous": false,
+          "distractorScore": 72,
+          "skillMatches": true,
+          "notes": "The other year’s author works as a distractor; replace A with another specific work for parallel options."
+        },
+        {
+          "id": "q3",
+          "option": "C",
+          "evidence": "Nie wszyscy rozumieją dawne słownictwo i nie wszyscy znają historię literatury.",
+          "ambiguous": false,
+          "distractorScore": 54,
+          "skillMatches": true,
+          "notes": "Reason clear. An exam for every participant is weak; use a motive connected to interpreting the fragments."
+        },
+        {
+          "id": "q4",
+          "option": "A",
+          "evidence": "Postanowiła wrócić do wybranego fragmentu w domu.",
+          "ambiguous": false,
+          "distractorScore": 53,
+          "skillMatches": true,
+          "notes": "A supported inference about motivation from her plan; alternatives „całe dzieło” and „już nigdy” are extreme."
+        },
+        {
+          "id": "q5",
+          "option": "B",
+          "evidence": "wcześniej omijała klasyczne utwory, ponieważ wydawały się jej zbyt trudne",
+          "ambiguous": false,
+          "distractorScore": 62,
+          "skillMatches": true,
+          "notes": "The reason supplies a good meaning clue. Replace „zawsze” with a plausible mistaken reading of her earlier behaviour."
+        }
+      ]
+    }
+  ]
+}

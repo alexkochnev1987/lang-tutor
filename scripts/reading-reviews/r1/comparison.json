@@ -1,0 +1,3080 @@
+{
+  "snapshot": "2409121e94d58376a713f5274333c009b6d7f424",
+  "reviewerModel": "gpt-6.2-astra",
+  "weights": {
+    "naturalness": 25,
+    "level": 20,
+    "questions": 20,
+    "ambiguity": 20,
+    "theme": 10,
+    "vocabulary": 5
+  },
+  "distractorThreshold": 75,
+  "batches": [
+    {
+      "batch": "batch-01",
+      "inputSHA256": "ca90fdbd07854d94be765997916558521502ec7debb7a695b5ec7c400a88d3a2",
+      "stats": {
+        "passages": 10,
+        "questions": 50,
+        "meanScore": 86.73,
+        "minScore": 80.2,
+        "maxScore": 91.65,
+        "scoreAtLeast90": 3,
+        "approved": 0,
+        "matchingKeys": 50,
+        "exactEvidence": 50,
+        "ambiguous": 0,
+        "criticalPassages": 5,
+        "skillMismatch": 4,
+        "weakDistractors": 37
+      }
+    },
+    {
+      "batch": "batch-02",
+      "inputSHA256": "42fb55339bd149837e5843463e59427fef4455bc00c033ff5188cae441da6f72",
+      "stats": {
+        "passages": 10,
+        "questions": 50,
+        "meanScore": 87.33,
+        "minScore": 81.15,
+        "maxScore": 91.85,
+        "scoreAtLeast90": 3,
+        "approved": 0,
+        "matchingKeys": 50,
+        "exactEvidence": 50,
+        "ambiguous": 0,
+        "criticalPassages": 6,
+        "skillMismatch": 5,
+        "weakDistractors": 40
+      }
+    },
+    {
+      "batch": "batch-03",
+      "inputSHA256": "203f9121f0397181385e8f67daee0d8b42f1f351b8d9a15ccf558fa59c937529",
+      "stats": {
+        "passages": 10,
+        "questions": 50,
+        "meanScore": 85.85,
+        "minScore": 80.5,
+        "maxScore": 90.8,
+        "scoreAtLeast90": 1,
+        "approved": 0,
+        "matchingKeys": 50,
+        "exactEvidence": 50,
+        "ambiguous": 2,
+        "criticalPassages": 8,
+        "skillMismatch": 6,
+        "weakDistractors": 37
+      }
+    },
+    {
+      "batch": "batch-04",
+      "inputSHA256": "a27d8504002f3bd382ed155acd4d93f104a0b03811d08780f38de69a7d6ee359",
+      "stats": {
+        "passages": 10,
+        "questions": 50,
+        "meanScore": 85.19,
+        "minScore": 77.35,
+        "maxScore": 88.85,
+        "scoreAtLeast90": 0,
+        "approved": 0,
+        "matchingKeys": 50,
+        "exactEvidence": 50,
+        "ambiguous": 0,
+        "criticalPassages": 9,
+        "skillMismatch": 9,
+        "weakDistractors": 44
+      }
+    },
+    {
+      "batch": "batch-05",
+      "inputSHA256": "61f2731ab32bc036a24158b4aacc58f33ab3998a9b882ff4acfe4b2435a65a8d",
+      "stats": {
+        "passages": 10,
+        "questions": 50,
+        "meanScore": 84.42,
+        "minScore": 79.2,
+        "maxScore": 93.65,
+        "scoreAtLeast90": 1,
+        "approved": 0,
+        "matchingKeys": 50,
+        "exactEvidence": 50,
+        "ambiguous": 0,
+        "criticalPassages": 6,
+        "skillMismatch": 4,
+        "weakDistractors": 44
+      }
+    },
+    {
+      "batch": "batch-06",
+      "inputSHA256": "7b63a4b17f87b92b028949d92c2b2413492f8a2319fae04265f38b9d87da7eae",
+      "stats": {
+        "passages": 7,
+        "questions": 35,
+        "meanScore": 80.92,
+        "minScore": 71.5,
+        "maxScore": 91.3,
+        "scoreAtLeast90": 1,
+        "approved": 0,
+        "matchingKeys": 35,
+        "exactEvidence": 35,
+        "ambiguous": 0,
+        "criticalPassages": 5,
+        "skillMismatch": 4,
+        "weakDistractors": 33
+      }
+    }
+  ],
+  "totals": {
+    "passages": 57,
+    "questions": 285,
+    "meanScore": 85.29,
+    "minScore": 71.5,
+    "maxScore": 93.65,
+    "scoreAtLeast90": 9,
+    "approved": 0,
+    "matchingKeys": 285,
+    "exactEvidence": 285,
+    "ambiguous": 2,
+    "criticalPassages": 39,
+    "skillMismatch": 32,
+    "weakDistractors": 235
+  },
+  "passages": [
+    {
+      "id": "pl-b1.reading.day-001",
+      "day": 1,
+      "level": "A1",
+      "score": 90.5,
+      "fingerprint": "0e90f14e50274f4f17fc47c30e3ec2e1d18e9b7a0439e4da675347d1e3920b7b",
+      "criticalIssues": [
+        "Q4 mierzy głównie odczytanie podanego dnia."
+      ],
+      "itemResults": [
+        {
+          "id": "q1",
+          "expectedOption": "C",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q2",
+          "expectedOption": "A",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q3",
+          "expectedOption": "B",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q4",
+          "expectedOption": "C",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q5",
+          "expectedOption": "A",
+          "matchesKey": true,
+          "literalEvidence": true
+        }
+      ],
+      "checks": {
+        "scoreAtLeast90": true,
+        "noCriticalIssues": false,
+        "allKeysMatch": true,
+        "noAmbiguousItems": true,
+        "allHaveLiteralEvidence": true,
+        "allMatchSkill": false,
+        "allDistractorsPlausible": false
+      },
+      "approved": false
+    },
+    {
+      "id": "pl-b1.reading.day-002",
+      "day": 2,
+      "level": "A1",
+      "score": 87.75,
+      "fingerprint": "87750960029bb875ef2b1279579f7999a5e057e5e9bbf460aabd72f7d39da2a6",
+      "criticalIssues": [
+        "Q4 niemal powtarza ofertę Ewy."
+      ],
+      "itemResults": [
+        {
+          "id": "q1",
+          "expectedOption": "B",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q2",
+          "expectedOption": "C",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q3",
+          "expectedOption": "A",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q4",
+          "expectedOption": "B",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q5",
+          "expectedOption": "C",
+          "matchesKey": true,
+          "literalEvidence": true
+        }
+      ],
+      "checks": {
+        "scoreAtLeast90": false,
+        "noCriticalIssues": false,
+        "allKeysMatch": true,
+        "noAmbiguousItems": true,
+        "allHaveLiteralEvidence": true,
+        "allMatchSkill": false,
+        "allDistractorsPlausible": false
+      },
+      "approved": false
+    },
+    {
+      "id": "pl-b1.reading.day-003",
+      "day": 3,
+      "level": "A1",
+      "score": 91.65,
+      "fingerprint": "8190e8a12878bb5071ac9f3367ed0a01e2c0dd1601448315a14e1d2a87572b65",
+      "criticalIssues": [],
+      "itemResults": [
+        {
+          "id": "q1",
+          "expectedOption": "A",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q2",
+          "expectedOption": "B",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q3",
+          "expectedOption": "C",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q4",
+          "expectedOption": "A",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q5",
+          "expectedOption": "B",
+          "matchesKey": true,
+          "literalEvidence": true
+        }
+      ],
+      "checks": {
+        "scoreAtLeast90": true,
+        "noCriticalIssues": true,
+        "allKeysMatch": true,
+        "noAmbiguousItems": true,
+        "allHaveLiteralEvidence": true,
+        "allMatchSkill": true,
+        "allDistractorsPlausible": false
+      },
+      "approved": false
+    },
+    {
+      "id": "pl-b1.reading.day-004",
+      "day": 4,
+      "level": "A1",
+      "score": 83.8,
+      "fingerprint": "bcbc62c97508f23a26837bd3162ed4ff14f7949043240a1f197d21008e8545a5",
+      "criticalIssues": [
+        "Q4 powtarza jawny wybór kanału kontaktu."
+      ],
+      "itemResults": [
+        {
+          "id": "q1",
+          "expectedOption": "C",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q2",
+          "expectedOption": "A",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q3",
+          "expectedOption": "B",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q4",
+          "expectedOption": "C",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q5",
+          "expectedOption": "A",
+          "matchesKey": true,
+          "literalEvidence": true
+        }
+      ],
+      "checks": {
+        "scoreAtLeast90": false,
+        "noCriticalIssues": false,
+        "allKeysMatch": true,
+        "noAmbiguousItems": true,
+        "allHaveLiteralEvidence": true,
+        "allMatchSkill": false,
+        "allDistractorsPlausible": false
+      },
+      "approved": false
+    },
+    {
+      "id": "pl-b1.reading.day-005",
+      "day": 5,
+      "level": "A1",
+      "score": 90.25,
+      "fingerprint": "11c248f12fd2085fb126e7ee6b0f8ffaf2501b6269680d3c26d5905cad331b74",
+      "criticalIssues": [],
+      "itemResults": [
+        {
+          "id": "q1",
+          "expectedOption": "B",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q2",
+          "expectedOption": "C",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q3",
+          "expectedOption": "A",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q4",
+          "expectedOption": "B",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q5",
+          "expectedOption": "C",
+          "matchesKey": true,
+          "literalEvidence": true
+        }
+      ],
+      "checks": {
+        "scoreAtLeast90": true,
+        "noCriticalIssues": true,
+        "allKeysMatch": true,
+        "noAmbiguousItems": true,
+        "allHaveLiteralEvidence": true,
+        "allMatchSkill": true,
+        "allDistractorsPlausible": false
+      },
+      "approved": false
+    },
+    {
+      "id": "pl-b1.reading.day-006",
+      "day": 6,
+      "level": "A1",
+      "score": 88.35,
+      "fingerprint": "8773488a8cb36b304e2ecf26f85f9924cef15a4bc4bd74280a2922a7a5fb37dc",
+      "criticalIssues": [],
+      "itemResults": [
+        {
+          "id": "q1",
+          "expectedOption": "A",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q2",
+          "expectedOption": "B",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q3",
+          "expectedOption": "C",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q4",
+          "expectedOption": "A",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q5",
+          "expectedOption": "B",
+          "matchesKey": true,
+          "literalEvidence": true
+        }
+      ],
+      "checks": {
+        "scoreAtLeast90": false,
+        "noCriticalIssues": true,
+        "allKeysMatch": true,
+        "noAmbiguousItems": true,
+        "allHaveLiteralEvidence": true,
+        "allMatchSkill": true,
+        "allDistractorsPlausible": false
+      },
+      "approved": false
+    },
+    {
+      "id": "pl-b1.reading.day-007",
+      "day": 7,
+      "level": "A1",
+      "score": 80.2,
+      "fingerprint": "c16de0a5fea51b9c4e8e85b15e8fe5e155f4ee31547646a8123766fc20e007ea",
+      "criticalIssues": [
+        "Q4 dosłownie odtwarza informację o braku opłaty."
+      ],
+      "itemResults": [
+        {
+          "id": "q1",
+          "expectedOption": "C",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q2",
+          "expectedOption": "A",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q3",
+          "expectedOption": "B",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q4",
+          "expectedOption": "C",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q5",
+          "expectedOption": "A",
+          "matchesKey": true,
+          "literalEvidence": true
+        }
+      ],
+      "checks": {
+        "scoreAtLeast90": false,
+        "noCriticalIssues": false,
+        "allKeysMatch": true,
+        "noAmbiguousItems": true,
+        "allHaveLiteralEvidence": true,
+        "allMatchSkill": false,
+        "allDistractorsPlausible": false
+      },
+      "approved": false
+    },
+    {
+      "id": "pl-b1.reading.day-008",
+      "day": 8,
+      "level": "A1",
+      "score": 86.55,
+      "fingerprint": "ad594ec7459bff37852ad2a330d33ea2943cac514c3b51ddc561225ab3282ab8",
+      "criticalIssues": [],
+      "itemResults": [
+        {
+          "id": "q1",
+          "expectedOption": "B",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q2",
+          "expectedOption": "C",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q3",
+          "expectedOption": "A",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q4",
+          "expectedOption": "B",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q5",
+          "expectedOption": "C",
+          "matchesKey": true,
+          "literalEvidence": true
+        }
+      ],
+      "checks": {
+        "scoreAtLeast90": false,
+        "noCriticalIssues": true,
+        "allKeysMatch": true,
+        "noAmbiguousItems": true,
+        "allHaveLiteralEvidence": true,
+        "allMatchSkill": true,
+        "allDistractorsPlausible": false
+      },
+      "approved": false
+    },
+    {
+      "id": "pl-b1.reading.day-009",
+      "day": 9,
+      "level": "A1",
+      "score": 80.75,
+      "fingerprint": "7b85d6f565bfdeeb533af1872c3ac073858325876500e2cbd0ac7bbdf2616187",
+      "criticalIssues": [
+        "Gęstość słownictwa urzędowego jest nieodpowiednia dla ogólnego A1 bez wsparcia."
+      ],
+      "itemResults": [
+        {
+          "id": "q1",
+          "expectedOption": "A",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q2",
+          "expectedOption": "B",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q3",
+          "expectedOption": "C",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q4",
+          "expectedOption": "A",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q5",
+          "expectedOption": "B",
+          "matchesKey": true,
+          "literalEvidence": true
+        }
+      ],
+      "checks": {
+        "scoreAtLeast90": false,
+        "noCriticalIssues": false,
+        "allKeysMatch": true,
+        "noAmbiguousItems": true,
+        "allHaveLiteralEvidence": true,
+        "allMatchSkill": true,
+        "allDistractorsPlausible": false
+      },
+      "approved": false
+    },
+    {
+      "id": "pl-b1.reading.day-010",
+      "day": 10,
+      "level": "A1",
+      "score": 87.5,
+      "fingerprint": "16d2263028af726981e3e47bfaf46303115b0c95938c0ba62af6338d71a449d1",
+      "criticalIssues": [],
+      "itemResults": [
+        {
+          "id": "q1",
+          "expectedOption": "C",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q2",
+          "expectedOption": "A",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q3",
+          "expectedOption": "B",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q4",
+          "expectedOption": "C",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q5",
+          "expectedOption": "A",
+          "matchesKey": true,
+          "literalEvidence": true
+        }
+      ],
+      "checks": {
+        "scoreAtLeast90": false,
+        "noCriticalIssues": true,
+        "allKeysMatch": true,
+        "noAmbiguousItems": true,
+        "allHaveLiteralEvidence": true,
+        "allMatchSkill": true,
+        "allDistractorsPlausible": false
+      },
+      "approved": false
+    },
+    {
+      "id": "pl-b1.reading.day-011",
+      "day": 11,
+      "level": "A1",
+      "score": 86.15,
+      "fingerprint": "7beb14e22be0115c94ee58e67a976c20647a4b69b3749f6c1c414fec137d1a78",
+      "criticalIssues": [
+        "Q4 repeats the rotation rule."
+      ],
+      "itemResults": [
+        {
+          "id": "q1",
+          "expectedOption": "B",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q2",
+          "expectedOption": "C",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q3",
+          "expectedOption": "A",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q4",
+          "expectedOption": "B",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q5",
+          "expectedOption": "C",
+          "matchesKey": true,
+          "literalEvidence": true
+        }
+      ],
+      "checks": {
+        "scoreAtLeast90": false,
+        "noCriticalIssues": false,
+        "allKeysMatch": true,
+        "noAmbiguousItems": true,
+        "allHaveLiteralEvidence": true,
+        "allMatchSkill": false,
+        "allDistractorsPlausible": false
+      },
+      "approved": false
+    },
+    {
+      "id": "pl-b1.reading.day-012",
+      "day": 12,
+      "level": "A1",
+      "score": 87.55,
+      "fingerprint": "fc73de54535f97448efac23d8d6167d7e010d7b9ef4d2e3572048a19e49c3bdf",
+      "criticalIssues": [],
+      "itemResults": [
+        {
+          "id": "q1",
+          "expectedOption": "A",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q2",
+          "expectedOption": "B",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q3",
+          "expectedOption": "C",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q4",
+          "expectedOption": "A",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q5",
+          "expectedOption": "B",
+          "matchesKey": true,
+          "literalEvidence": true
+        }
+      ],
+      "checks": {
+        "scoreAtLeast90": false,
+        "noCriticalIssues": true,
+        "allKeysMatch": true,
+        "noAmbiguousItems": true,
+        "allHaveLiteralEvidence": true,
+        "allMatchSkill": true,
+        "allDistractorsPlausible": false
+      },
+      "approved": false
+    },
+    {
+      "id": "pl-b1.reading.day-013",
+      "day": 13,
+      "level": "A1",
+      "score": 88.35,
+      "fingerprint": "0a9788cd1bda721147511a479b3d4274041720104716030ae5e09b334c56fd3d",
+      "criticalIssues": [],
+      "itemResults": [
+        {
+          "id": "q1",
+          "expectedOption": "C",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q2",
+          "expectedOption": "A",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q3",
+          "expectedOption": "B",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q4",
+          "expectedOption": "C",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q5",
+          "expectedOption": "A",
+          "matchesKey": true,
+          "literalEvidence": true
+        }
+      ],
+      "checks": {
+        "scoreAtLeast90": false,
+        "noCriticalIssues": true,
+        "allKeysMatch": true,
+        "noAmbiguousItems": true,
+        "allHaveLiteralEvidence": true,
+        "allMatchSkill": true,
+        "allDistractorsPlausible": false
+      },
+      "approved": false
+    },
+    {
+      "id": "pl-b1.reading.day-014",
+      "day": 14,
+      "level": "A1",
+      "score": 81.15,
+      "fingerprint": "d06887a4c055fb9a0013e2eea74841d5b91402cd1b88bb15ed556f52e8879f35",
+      "criticalIssues": [],
+      "itemResults": [
+        {
+          "id": "q1",
+          "expectedOption": "B",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q2",
+          "expectedOption": "C",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q3",
+          "expectedOption": "A",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q4",
+          "expectedOption": "B",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q5",
+          "expectedOption": "C",
+          "matchesKey": true,
+          "literalEvidence": true
+        }
+      ],
+      "checks": {
+        "scoreAtLeast90": false,
+        "noCriticalIssues": true,
+        "allKeysMatch": true,
+        "noAmbiguousItems": true,
+        "allHaveLiteralEvidence": true,
+        "allMatchSkill": true,
+        "allDistractorsPlausible": false
+      },
+      "approved": false
+    },
+    {
+      "id": "pl-b1.reading.day-015",
+      "day": 15,
+      "level": "A1",
+      "score": 86.3,
+      "fingerprint": "8ff11c96fa6c7b55f3731fc2f0f8ccae203daa6816e750a38035edf724ab75e0",
+      "criticalIssues": [
+        "Title places the friend in the morning, contradicting the passage."
+      ],
+      "itemResults": [
+        {
+          "id": "q1",
+          "expectedOption": "A",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q2",
+          "expectedOption": "B",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q3",
+          "expectedOption": "C",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q4",
+          "expectedOption": "A",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q5",
+          "expectedOption": "B",
+          "matchesKey": true,
+          "literalEvidence": true
+        }
+      ],
+      "checks": {
+        "scoreAtLeast90": false,
+        "noCriticalIssues": false,
+        "allKeysMatch": true,
+        "noAmbiguousItems": true,
+        "allHaveLiteralEvidence": true,
+        "allMatchSkill": true,
+        "allDistractorsPlausible": false
+      },
+      "approved": false
+    },
+    {
+      "id": "pl-b1.reading.day-016",
+      "day": 16,
+      "level": "A1",
+      "score": 90.4,
+      "fingerprint": "01c899d05cfb0ff51145e6f5eceeea6c01a14772b3144437338c6e3deca20a55",
+      "criticalIssues": [],
+      "itemResults": [
+        {
+          "id": "q1",
+          "expectedOption": "C",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q2",
+          "expectedOption": "A",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q3",
+          "expectedOption": "B",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q4",
+          "expectedOption": "C",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q5",
+          "expectedOption": "A",
+          "matchesKey": true,
+          "literalEvidence": true
+        }
+      ],
+      "checks": {
+        "scoreAtLeast90": true,
+        "noCriticalIssues": true,
+        "allKeysMatch": true,
+        "noAmbiguousItems": true,
+        "allHaveLiteralEvidence": true,
+        "allMatchSkill": true,
+        "allDistractorsPlausible": false
+      },
+      "approved": false
+    },
+    {
+      "id": "pl-b1.reading.day-017",
+      "day": 17,
+      "level": "A1",
+      "score": 84.8,
+      "fingerprint": "f61362d16a5b9ba2691a3fb3d6a359cb83f3e39ff3e0136be3c71dce3c295f93",
+      "criticalIssues": [
+        "Q4 is direct retrieval."
+      ],
+      "itemResults": [
+        {
+          "id": "q1",
+          "expectedOption": "B",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q2",
+          "expectedOption": "C",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q3",
+          "expectedOption": "A",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q4",
+          "expectedOption": "B",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q5",
+          "expectedOption": "C",
+          "matchesKey": true,
+          "literalEvidence": true
+        }
+      ],
+      "checks": {
+        "scoreAtLeast90": false,
+        "noCriticalIssues": false,
+        "allKeysMatch": true,
+        "noAmbiguousItems": true,
+        "allHaveLiteralEvidence": true,
+        "allMatchSkill": false,
+        "allDistractorsPlausible": false
+      },
+      "approved": false
+    },
+    {
+      "id": "pl-b1.reading.day-018",
+      "day": 18,
+      "level": "A1",
+      "score": 91.85,
+      "fingerprint": "b11258ed41d71800467153c497f038f56b13135a40d673e38fa7bb973db42021",
+      "criticalIssues": [
+        "Q4 is direct retrieval."
+      ],
+      "itemResults": [
+        {
+          "id": "q1",
+          "expectedOption": "A",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q2",
+          "expectedOption": "B",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q3",
+          "expectedOption": "C",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q4",
+          "expectedOption": "A",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q5",
+          "expectedOption": "B",
+          "matchesKey": true,
+          "literalEvidence": true
+        }
+      ],
+      "checks": {
+        "scoreAtLeast90": true,
+        "noCriticalIssues": false,
+        "allKeysMatch": true,
+        "noAmbiguousItems": true,
+        "allHaveLiteralEvidence": true,
+        "allMatchSkill": false,
+        "allDistractorsPlausible": false
+      },
+      "approved": false
+    },
+    {
+      "id": "pl-b1.reading.day-019",
+      "day": 19,
+      "level": "A1",
+      "score": 90.2,
+      "fingerprint": "ecfcde51c7295b71b66d455e30a20234c0fbdf19213e567de24c61cc81180754",
+      "criticalIssues": [
+        "Q4 is direct retrieval."
+      ],
+      "itemResults": [
+        {
+          "id": "q1",
+          "expectedOption": "C",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q2",
+          "expectedOption": "A",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q3",
+          "expectedOption": "B",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q4",
+          "expectedOption": "C",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q5",
+          "expectedOption": "A",
+          "matchesKey": true,
+          "literalEvidence": true
+        }
+      ],
+      "checks": {
+        "scoreAtLeast90": true,
+        "noCriticalIssues": false,
+        "allKeysMatch": true,
+        "noAmbiguousItems": true,
+        "allHaveLiteralEvidence": true,
+        "allMatchSkill": false,
+        "allDistractorsPlausible": false
+      },
+      "approved": false
+    },
+    {
+      "id": "pl-b1.reading.day-020",
+      "day": 20,
+      "level": "A1",
+      "score": 86.5,
+      "fingerprint": "e66be01ee989b2a4c3e367b54d9976e6a2644061fbf0274a7055565c645d492f",
+      "criticalIssues": [
+        "Q4 is effectively direct retrieval."
+      ],
+      "itemResults": [
+        {
+          "id": "q1",
+          "expectedOption": "B",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q2",
+          "expectedOption": "C",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q3",
+          "expectedOption": "A",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q4",
+          "expectedOption": "B",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q5",
+          "expectedOption": "C",
+          "matchesKey": true,
+          "literalEvidence": true
+        }
+      ],
+      "checks": {
+        "scoreAtLeast90": false,
+        "noCriticalIssues": false,
+        "allKeysMatch": true,
+        "noAmbiguousItems": true,
+        "allHaveLiteralEvidence": true,
+        "allMatchSkill": false,
+        "allDistractorsPlausible": false
+      },
+      "approved": false
+    },
+    {
+      "id": "pl-b1.reading.day-021",
+      "day": 21,
+      "level": "A1",
+      "score": 87.2,
+      "fingerprint": "388db90a6b35dfa30f3468f5ee667f84c4e3bf1d24d5d7f8414962274dcb95e4",
+      "criticalIssues": [
+        "Q4 retrieves an explicit action."
+      ],
+      "itemResults": [
+        {
+          "id": "q1",
+          "expectedOption": "A",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q2",
+          "expectedOption": "B",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q3",
+          "expectedOption": "C",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q4",
+          "expectedOption": "A",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q5",
+          "expectedOption": "B",
+          "matchesKey": true,
+          "literalEvidence": true
+        }
+      ],
+      "checks": {
+        "scoreAtLeast90": false,
+        "noCriticalIssues": false,
+        "allKeysMatch": true,
+        "noAmbiguousItems": true,
+        "allHaveLiteralEvidence": true,
+        "allMatchSkill": false,
+        "allDistractorsPlausible": false
+      },
+      "approved": false
+    },
+    {
+      "id": "pl-b1.reading.day-022",
+      "day": 22,
+      "level": "A1",
+      "score": 89.65,
+      "fingerprint": "53a6a475d4802fab5050ea1758a2554d31c0d826f035e4a02436b42363f7f7b0",
+      "criticalIssues": [],
+      "itemResults": [
+        {
+          "id": "q1",
+          "expectedOption": "C",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q2",
+          "expectedOption": "A",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q3",
+          "expectedOption": "B",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q4",
+          "expectedOption": "C",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q5",
+          "expectedOption": "A",
+          "matchesKey": true,
+          "literalEvidence": true
+        }
+      ],
+      "checks": {
+        "scoreAtLeast90": false,
+        "noCriticalIssues": true,
+        "allKeysMatch": true,
+        "noAmbiguousItems": true,
+        "allHaveLiteralEvidence": true,
+        "allMatchSkill": true,
+        "allDistractorsPlausible": false
+      },
+      "approved": false
+    },
+    {
+      "id": "pl-b1.reading.day-023",
+      "day": 23,
+      "level": "A1",
+      "score": 80.5,
+      "fingerprint": "cd5050c76cdc8f565e6e5bae4a7ea30d9f95fbc9494022ce5064bb0379f9a44a",
+      "criticalIssues": [
+        "Q4 repeats an explicit permission."
+      ],
+      "itemResults": [
+        {
+          "id": "q1",
+          "expectedOption": "B",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q2",
+          "expectedOption": "C",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q3",
+          "expectedOption": "A",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q4",
+          "expectedOption": "B",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q5",
+          "expectedOption": "C",
+          "matchesKey": true,
+          "literalEvidence": true
+        }
+      ],
+      "checks": {
+        "scoreAtLeast90": false,
+        "noCriticalIssues": false,
+        "allKeysMatch": true,
+        "noAmbiguousItems": true,
+        "allHaveLiteralEvidence": true,
+        "allMatchSkill": false,
+        "allDistractorsPlausible": false
+      },
+      "approved": false
+    },
+    {
+      "id": "pl-b1.reading.day-024",
+      "day": 24,
+      "level": "A1",
+      "score": 83.5,
+      "fingerprint": "59da67d0c1236f5bb8b744cc9ad05219a02419f49cd49ded0340bf118b70ab76",
+      "criticalIssues": [
+        "Q4 repeats the explicit rain plan."
+      ],
+      "itemResults": [
+        {
+          "id": "q1",
+          "expectedOption": "A",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q2",
+          "expectedOption": "B",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q3",
+          "expectedOption": "C",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q4",
+          "expectedOption": "A",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q5",
+          "expectedOption": "B",
+          "matchesKey": true,
+          "literalEvidence": true
+        }
+      ],
+      "checks": {
+        "scoreAtLeast90": false,
+        "noCriticalIssues": false,
+        "allKeysMatch": true,
+        "noAmbiguousItems": true,
+        "allHaveLiteralEvidence": true,
+        "allMatchSkill": false,
+        "allDistractorsPlausible": false
+      },
+      "approved": false
+    },
+    {
+      "id": "pl-b1.reading.day-025",
+      "day": 25,
+      "level": "A1",
+      "score": 83.35,
+      "fingerprint": "85fcc27275011a13f1fdbd42a50ca927c810fbb61f2d5fd452129f3915f80b39",
+      "criticalIssues": [
+        "Title mischaracterizes narrator’s new interest."
+      ],
+      "itemResults": [
+        {
+          "id": "q1",
+          "expectedOption": "C",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q2",
+          "expectedOption": "A",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q3",
+          "expectedOption": "B",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q4",
+          "expectedOption": "C",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q5",
+          "expectedOption": "A",
+          "matchesKey": true,
+          "literalEvidence": true
+        }
+      ],
+      "checks": {
+        "scoreAtLeast90": false,
+        "noCriticalIssues": false,
+        "allKeysMatch": true,
+        "noAmbiguousItems": true,
+        "allHaveLiteralEvidence": true,
+        "allMatchSkill": true,
+        "allDistractorsPlausible": false
+      },
+      "approved": false
+    },
+    {
+      "id": "pl-b1.reading.day-026",
+      "day": 26,
+      "level": "A1",
+      "score": 84.25,
+      "fingerprint": "23982dc6d301fc50cfaab7e4a042944c7c398a1bb2d72692cfad0a92c462ed8d",
+      "criticalIssues": [
+        "Q4 weakly establishes a change of attitude."
+      ],
+      "itemResults": [
+        {
+          "id": "q1",
+          "expectedOption": "B",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q2",
+          "expectedOption": "C",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q3",
+          "expectedOption": "A",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q4",
+          "expectedOption": "B",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q5",
+          "expectedOption": "C",
+          "matchesKey": true,
+          "literalEvidence": true
+        }
+      ],
+      "checks": {
+        "scoreAtLeast90": false,
+        "noCriticalIssues": false,
+        "allKeysMatch": true,
+        "noAmbiguousItems": false,
+        "allHaveLiteralEvidence": true,
+        "allMatchSkill": true,
+        "allDistractorsPlausible": false
+      },
+      "approved": false
+    },
+    {
+      "id": "pl-b1.reading.day-027",
+      "day": 27,
+      "level": "A1",
+      "score": 88.4,
+      "fingerprint": "ebb10df72c4dc719a910613cdddd97a50431383bbd92e226989dc973e54189da",
+      "criticalIssues": [],
+      "itemResults": [
+        {
+          "id": "q1",
+          "expectedOption": "A",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q2",
+          "expectedOption": "B",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q3",
+          "expectedOption": "C",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q4",
+          "expectedOption": "A",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q5",
+          "expectedOption": "B",
+          "matchesKey": true,
+          "literalEvidence": true
+        }
+      ],
+      "checks": {
+        "scoreAtLeast90": false,
+        "noCriticalIssues": true,
+        "allKeysMatch": true,
+        "noAmbiguousItems": true,
+        "allHaveLiteralEvidence": true,
+        "allMatchSkill": true,
+        "allDistractorsPlausible": false
+      },
+      "approved": false
+    },
+    {
+      "id": "pl-b1.reading.day-028",
+      "day": 28,
+      "level": "A1",
+      "score": 80.9,
+      "fingerprint": "85ce11c574e0243f4534b50c50771894b42cbd986565b081130f86f1e6203a78",
+      "criticalIssues": [
+        "Q3 assumes precise rain timing; Q4 retrieves explicit verdict."
+      ],
+      "itemResults": [
+        {
+          "id": "q1",
+          "expectedOption": "C",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q2",
+          "expectedOption": "A",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q3",
+          "expectedOption": "B",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q4",
+          "expectedOption": "C",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q5",
+          "expectedOption": "A",
+          "matchesKey": true,
+          "literalEvidence": true
+        }
+      ],
+      "checks": {
+        "scoreAtLeast90": false,
+        "noCriticalIssues": false,
+        "allKeysMatch": true,
+        "noAmbiguousItems": false,
+        "allHaveLiteralEvidence": true,
+        "allMatchSkill": false,
+        "allDistractorsPlausible": false
+      },
+      "approved": false
+    },
+    {
+      "id": "pl-b1.reading.day-029",
+      "day": 29,
+      "level": "A2",
+      "score": 90.8,
+      "fingerprint": "ca5bd322dbfd11e7bdc8e9b2b619870158b0dd52282c98b916d69f593adaef83",
+      "criticalIssues": [
+        "Q4 duplicates Q1 and the stated conclusion."
+      ],
+      "itemResults": [
+        {
+          "id": "q1",
+          "expectedOption": "B",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q2",
+          "expectedOption": "C",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q3",
+          "expectedOption": "A",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q4",
+          "expectedOption": "B",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q5",
+          "expectedOption": "C",
+          "matchesKey": true,
+          "literalEvidence": true
+        }
+      ],
+      "checks": {
+        "scoreAtLeast90": true,
+        "noCriticalIssues": false,
+        "allKeysMatch": true,
+        "noAmbiguousItems": true,
+        "allHaveLiteralEvidence": true,
+        "allMatchSkill": false,
+        "allDistractorsPlausible": false
+      },
+      "approved": false
+    },
+    {
+      "id": "pl-b1.reading.day-030",
+      "day": 30,
+      "level": "A2",
+      "score": 89.95,
+      "fingerprint": "fccaa5bea0272a3077284a7586586ade9c51151c080e4c5ffc51d85816005e0d",
+      "criticalIssues": [
+        "Q1 asks for a cause rather than a summary."
+      ],
+      "itemResults": [
+        {
+          "id": "q1",
+          "expectedOption": "A",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q2",
+          "expectedOption": "B",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q3",
+          "expectedOption": "C",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q4",
+          "expectedOption": "A",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q5",
+          "expectedOption": "B",
+          "matchesKey": true,
+          "literalEvidence": true
+        }
+      ],
+      "checks": {
+        "scoreAtLeast90": false,
+        "noCriticalIssues": false,
+        "allKeysMatch": true,
+        "noAmbiguousItems": true,
+        "allHaveLiteralEvidence": true,
+        "allMatchSkill": false,
+        "allDistractorsPlausible": false
+      },
+      "approved": false
+    },
+    {
+      "id": "pl-b1.reading.day-031",
+      "day": 31,
+      "level": "A2",
+      "score": 87.15,
+      "fingerprint": "2cb9a57727d657feb2f87dd49409e60614c68e166a85f50abcdac360a996df68",
+      "criticalIssues": [
+        "Q4 tests retrieval of an explicit plan, rule or strategy."
+      ],
+      "itemResults": [
+        {
+          "id": "q1",
+          "expectedOption": "C",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q2",
+          "expectedOption": "A",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q3",
+          "expectedOption": "B",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q4",
+          "expectedOption": "C",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q5",
+          "expectedOption": "A",
+          "matchesKey": true,
+          "literalEvidence": true
+        }
+      ],
+      "checks": {
+        "scoreAtLeast90": false,
+        "noCriticalIssues": false,
+        "allKeysMatch": true,
+        "noAmbiguousItems": true,
+        "allHaveLiteralEvidence": true,
+        "allMatchSkill": false,
+        "allDistractorsPlausible": false
+      },
+      "approved": false
+    },
+    {
+      "id": "pl-b1.reading.day-032",
+      "day": 32,
+      "level": "A2",
+      "score": 80.5,
+      "fingerprint": "f9948dd490d955c82acc6381aa20e9c9ecac14bc397063e21436b09df4fb5c57",
+      "criticalIssues": [
+        "Q4 tests retrieval of an explicit plan, rule or strategy."
+      ],
+      "itemResults": [
+        {
+          "id": "q1",
+          "expectedOption": "B",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q2",
+          "expectedOption": "C",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q3",
+          "expectedOption": "A",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q4",
+          "expectedOption": "B",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q5",
+          "expectedOption": "C",
+          "matchesKey": true,
+          "literalEvidence": true
+        }
+      ],
+      "checks": {
+        "scoreAtLeast90": false,
+        "noCriticalIssues": false,
+        "allKeysMatch": true,
+        "noAmbiguousItems": true,
+        "allHaveLiteralEvidence": true,
+        "allMatchSkill": false,
+        "allDistractorsPlausible": false
+      },
+      "approved": false
+    },
+    {
+      "id": "pl-b1.reading.day-033",
+      "day": 33,
+      "level": "A2",
+      "score": 88.65,
+      "fingerprint": "9ef2c8df69be3c49a126a42285c0e241ce2b3cf86157982a60dd28a67d7af070",
+      "criticalIssues": [
+        "Q4 tests retrieval of an explicit plan, rule or strategy."
+      ],
+      "itemResults": [
+        {
+          "id": "q1",
+          "expectedOption": "A",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q2",
+          "expectedOption": "B",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q3",
+          "expectedOption": "C",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q4",
+          "expectedOption": "A",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q5",
+          "expectedOption": "B",
+          "matchesKey": true,
+          "literalEvidence": true
+        }
+      ],
+      "checks": {
+        "scoreAtLeast90": false,
+        "noCriticalIssues": false,
+        "allKeysMatch": true,
+        "noAmbiguousItems": true,
+        "allHaveLiteralEvidence": true,
+        "allMatchSkill": false,
+        "allDistractorsPlausible": false
+      },
+      "approved": false
+    },
+    {
+      "id": "pl-b1.reading.day-034",
+      "day": 34,
+      "level": "A2",
+      "score": 84.85,
+      "fingerprint": "2feafb1feecba9609cc3a0bca98bd75a5bdeb2d6d699f39d8e605bbdd3c38ee6",
+      "criticalIssues": [
+        "Q4 tests retrieval of an explicit plan, rule or strategy."
+      ],
+      "itemResults": [
+        {
+          "id": "q1",
+          "expectedOption": "C",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q2",
+          "expectedOption": "A",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q3",
+          "expectedOption": "B",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q4",
+          "expectedOption": "C",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q5",
+          "expectedOption": "A",
+          "matchesKey": true,
+          "literalEvidence": true
+        }
+      ],
+      "checks": {
+        "scoreAtLeast90": false,
+        "noCriticalIssues": false,
+        "allKeysMatch": true,
+        "noAmbiguousItems": true,
+        "allHaveLiteralEvidence": true,
+        "allMatchSkill": false,
+        "allDistractorsPlausible": false
+      },
+      "approved": false
+    },
+    {
+      "id": "pl-b1.reading.day-035",
+      "day": 35,
+      "level": "A2",
+      "score": 87.6,
+      "fingerprint": "b7683c61d5ba16f5294b6232ea56ce88487afea02716ffcf88b4e68fad34694d",
+      "criticalIssues": [
+        "Q4 tests retrieval of an explicit plan, rule or strategy."
+      ],
+      "itemResults": [
+        {
+          "id": "q1",
+          "expectedOption": "B",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q2",
+          "expectedOption": "C",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q3",
+          "expectedOption": "A",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q4",
+          "expectedOption": "B",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q5",
+          "expectedOption": "C",
+          "matchesKey": true,
+          "literalEvidence": true
+        }
+      ],
+      "checks": {
+        "scoreAtLeast90": false,
+        "noCriticalIssues": false,
+        "allKeysMatch": true,
+        "noAmbiguousItems": true,
+        "allHaveLiteralEvidence": true,
+        "allMatchSkill": false,
+        "allDistractorsPlausible": false
+      },
+      "approved": false
+    },
+    {
+      "id": "pl-b1.reading.day-036",
+      "day": 36,
+      "level": "A2",
+      "score": 86.05,
+      "fingerprint": "d4a577bf4a8a255944765bf6816b62da9c3d71badf61648c231f448e66555bd8",
+      "criticalIssues": [
+        "Q4 tests retrieval of an explicit plan, rule or strategy."
+      ],
+      "itemResults": [
+        {
+          "id": "q1",
+          "expectedOption": "A",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q2",
+          "expectedOption": "B",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q3",
+          "expectedOption": "C",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q4",
+          "expectedOption": "A",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q5",
+          "expectedOption": "B",
+          "matchesKey": true,
+          "literalEvidence": true
+        }
+      ],
+      "checks": {
+        "scoreAtLeast90": false,
+        "noCriticalIssues": false,
+        "allKeysMatch": true,
+        "noAmbiguousItems": true,
+        "allHaveLiteralEvidence": true,
+        "allMatchSkill": false,
+        "allDistractorsPlausible": false
+      },
+      "approved": false
+    },
+    {
+      "id": "pl-b1.reading.day-037",
+      "day": 37,
+      "level": "A2",
+      "score": 83.4,
+      "fingerprint": "87862ee659868d468b41ea95aad0058ef6462a6a9d1f701e22fbe2a74eea8348",
+      "criticalIssues": [
+        "Q4 tests retrieval of an explicit plan, rule or strategy."
+      ],
+      "itemResults": [
+        {
+          "id": "q1",
+          "expectedOption": "C",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q2",
+          "expectedOption": "A",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q3",
+          "expectedOption": "B",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q4",
+          "expectedOption": "C",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q5",
+          "expectedOption": "A",
+          "matchesKey": true,
+          "literalEvidence": true
+        }
+      ],
+      "checks": {
+        "scoreAtLeast90": false,
+        "noCriticalIssues": false,
+        "allKeysMatch": true,
+        "noAmbiguousItems": true,
+        "allHaveLiteralEvidence": true,
+        "allMatchSkill": false,
+        "allDistractorsPlausible": false
+      },
+      "approved": false
+    },
+    {
+      "id": "pl-b1.reading.day-038",
+      "day": 38,
+      "level": "A2",
+      "score": 88.85,
+      "fingerprint": "13b2a951e510e0656e38214c077e592eb1a228bd109c354319273b41393147da",
+      "criticalIssues": [],
+      "itemResults": [
+        {
+          "id": "q1",
+          "expectedOption": "B",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q2",
+          "expectedOption": "C",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q3",
+          "expectedOption": "A",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q4",
+          "expectedOption": "B",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q5",
+          "expectedOption": "C",
+          "matchesKey": true,
+          "literalEvidence": true
+        }
+      ],
+      "checks": {
+        "scoreAtLeast90": false,
+        "noCriticalIssues": true,
+        "allKeysMatch": true,
+        "noAmbiguousItems": true,
+        "allHaveLiteralEvidence": true,
+        "allMatchSkill": true,
+        "allDistractorsPlausible": false
+      },
+      "approved": false
+    },
+    {
+      "id": "pl-b1.reading.day-039",
+      "day": 39,
+      "level": "A2",
+      "score": 77.35,
+      "fingerprint": "23d6af0ddaabaa02718b2e75ecc9eb6c567d085edc0c2ec00e402d6c1031bca4",
+      "criticalIssues": [
+        "Q4 tests retrieval of an explicit plan, rule or strategy."
+      ],
+      "itemResults": [
+        {
+          "id": "q1",
+          "expectedOption": "A",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q2",
+          "expectedOption": "B",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q3",
+          "expectedOption": "C",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q4",
+          "expectedOption": "A",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q5",
+          "expectedOption": "B",
+          "matchesKey": true,
+          "literalEvidence": true
+        }
+      ],
+      "checks": {
+        "scoreAtLeast90": false,
+        "noCriticalIssues": false,
+        "allKeysMatch": true,
+        "noAmbiguousItems": true,
+        "allHaveLiteralEvidence": true,
+        "allMatchSkill": false,
+        "allDistractorsPlausible": false
+      },
+      "approved": false
+    },
+    {
+      "id": "pl-b1.reading.day-040",
+      "day": 40,
+      "level": "A2",
+      "score": 87.55,
+      "fingerprint": "4760e62e0ec213098bdcb9b54109350c3f7b62537d875344b8202af3c6ab7804",
+      "criticalIssues": [
+        "Q4 tests retrieval of an explicit plan, rule or strategy."
+      ],
+      "itemResults": [
+        {
+          "id": "q1",
+          "expectedOption": "C",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q2",
+          "expectedOption": "A",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q3",
+          "expectedOption": "B",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q4",
+          "expectedOption": "C",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q5",
+          "expectedOption": "A",
+          "matchesKey": true,
+          "literalEvidence": true
+        }
+      ],
+      "checks": {
+        "scoreAtLeast90": false,
+        "noCriticalIssues": false,
+        "allKeysMatch": true,
+        "noAmbiguousItems": true,
+        "allHaveLiteralEvidence": true,
+        "allMatchSkill": false,
+        "allDistractorsPlausible": false
+      },
+      "approved": false
+    },
+    {
+      "id": "pl-b1.reading.day-041",
+      "day": 41,
+      "level": "A2",
+      "score": 84.65,
+      "fingerprint": "f184a5c23291d1e54005502d7c5e3c2a514b0193bc821652b4bc7d7cede70f37",
+      "criticalIssues": [
+        "q4: Explicit purpose. Ask which event would suit an outsider unable to tend a bed regularly."
+      ],
+      "itemResults": [
+        {
+          "id": "q1",
+          "expectedOption": "B",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q2",
+          "expectedOption": "C",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q3",
+          "expectedOption": "A",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q4",
+          "expectedOption": "B",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q5",
+          "expectedOption": "C",
+          "matchesKey": true,
+          "literalEvidence": true
+        }
+      ],
+      "checks": {
+        "scoreAtLeast90": false,
+        "noCriticalIssues": false,
+        "allKeysMatch": true,
+        "noAmbiguousItems": true,
+        "allHaveLiteralEvidence": true,
+        "allMatchSkill": false,
+        "allDistractorsPlausible": false
+      },
+      "approved": false
+    },
+    {
+      "id": "pl-b1.reading.day-042",
+      "day": 42,
+      "level": "A2",
+      "score": 82.55,
+      "fingerprint": "9f3022c895f97c08628f1c7d3eafbc7c73e575f4490651fcf5de70b7c5f46187",
+      "criticalIssues": [
+        "Formal vocabulary and sentence density exceed typical independent A2 reading.",
+        "Q5 keyed definition uses the faulty collocation przekraczać pieniądze."
+      ],
+      "itemResults": [
+        {
+          "id": "q1",
+          "expectedOption": "A",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q2",
+          "expectedOption": "B",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q3",
+          "expectedOption": "C",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q4",
+          "expectedOption": "A",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q5",
+          "expectedOption": "B",
+          "matchesKey": true,
+          "literalEvidence": true
+        }
+      ],
+      "checks": {
+        "scoreAtLeast90": false,
+        "noCriticalIssues": false,
+        "allKeysMatch": true,
+        "noAmbiguousItems": true,
+        "allHaveLiteralEvidence": true,
+        "allMatchSkill": true,
+        "allDistractorsPlausible": false
+      },
+      "approved": false
+    },
+    {
+      "id": "pl-b1.reading.day-043",
+      "day": 43,
+      "level": "A2",
+      "score": 93.65,
+      "fingerprint": "cad67673799409bd659a6753cf2c6cb7eecf9f7b6224591b4986d70748ec3f40",
+      "criticalIssues": [],
+      "itemResults": [
+        {
+          "id": "q1",
+          "expectedOption": "C",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q2",
+          "expectedOption": "A",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q3",
+          "expectedOption": "B",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q4",
+          "expectedOption": "C",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q5",
+          "expectedOption": "A",
+          "matchesKey": true,
+          "literalEvidence": true
+        }
+      ],
+      "checks": {
+        "scoreAtLeast90": true,
+        "noCriticalIssues": true,
+        "allKeysMatch": true,
+        "noAmbiguousItems": true,
+        "allHaveLiteralEvidence": true,
+        "allMatchSkill": true,
+        "allDistractorsPlausible": false
+      },
+      "approved": false
+    },
+    {
+      "id": "pl-b1.reading.day-044",
+      "day": 44,
+      "level": "A2",
+      "score": 85.65,
+      "fingerprint": "3cf73167ca213a32f8665f8d5c7d82ee335ab1d23c1018794374ff9e5223ac8f",
+      "criticalIssues": [],
+      "itemResults": [
+        {
+          "id": "q1",
+          "expectedOption": "B",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q2",
+          "expectedOption": "C",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q3",
+          "expectedOption": "A",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q4",
+          "expectedOption": "B",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q5",
+          "expectedOption": "C",
+          "matchesKey": true,
+          "literalEvidence": true
+        }
+      ],
+      "checks": {
+        "scoreAtLeast90": false,
+        "noCriticalIssues": true,
+        "allKeysMatch": true,
+        "noAmbiguousItems": true,
+        "allHaveLiteralEvidence": true,
+        "allMatchSkill": true,
+        "allDistractorsPlausible": false
+      },
+      "approved": false
+    },
+    {
+      "id": "pl-b1.reading.day-045",
+      "day": 45,
+      "level": "A2",
+      "score": 79.2,
+      "fingerprint": "7326bc35e25aabcdf700947a8dc2a0c7cfd3e56e0e9d26814831c6ff6cd29797",
+      "criticalIssues": [
+        "q4: Direct retrieval; spełnić zasady is awkward. Ask what a manager could tell a colleague asking about an individual result.",
+        "Formal vocabulary and sentence density exceed typical independent A2 reading.",
+        "Q3 overstates the stated difficulty as failure to book."
+      ],
+      "itemResults": [
+        {
+          "id": "q1",
+          "expectedOption": "A",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q2",
+          "expectedOption": "B",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q3",
+          "expectedOption": "C",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q4",
+          "expectedOption": "A",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q5",
+          "expectedOption": "B",
+          "matchesKey": true,
+          "literalEvidence": true
+        }
+      ],
+      "checks": {
+        "scoreAtLeast90": false,
+        "noCriticalIssues": false,
+        "allKeysMatch": true,
+        "noAmbiguousItems": true,
+        "allHaveLiteralEvidence": true,
+        "allMatchSkill": false,
+        "allDistractorsPlausible": false
+      },
+      "approved": false
+    },
+    {
+      "id": "pl-b1.reading.day-046",
+      "day": 46,
+      "level": "A2",
+      "score": 81.1,
+      "fingerprint": "36c8189c57253bdfbce648a5adc53314cce37a2436892fd59c857e40fa365d4a",
+      "criticalIssues": [],
+      "itemResults": [
+        {
+          "id": "q1",
+          "expectedOption": "C",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q2",
+          "expectedOption": "A",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q3",
+          "expectedOption": "B",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q4",
+          "expectedOption": "C",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q5",
+          "expectedOption": "A",
+          "matchesKey": true,
+          "literalEvidence": true
+        }
+      ],
+      "checks": {
+        "scoreAtLeast90": false,
+        "noCriticalIssues": true,
+        "allKeysMatch": true,
+        "noAmbiguousItems": true,
+        "allHaveLiteralEvidence": true,
+        "allMatchSkill": true,
+        "allDistractorsPlausible": false
+      },
+      "approved": false
+    },
+    {
+      "id": "pl-b1.reading.day-047",
+      "day": 47,
+      "level": "A2",
+      "score": 80.45,
+      "fingerprint": "d12d222cac87af1c942a69d24fdf28bd8dae7e1489dc07eeed3d4d277abbc253",
+      "criticalIssues": [
+        "q4: Verbatim recommendation; bus timetable gives away answer. Ask which bag compartment she would choose at a station."
+      ],
+      "itemResults": [
+        {
+          "id": "q1",
+          "expectedOption": "B",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q2",
+          "expectedOption": "C",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q3",
+          "expectedOption": "A",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q4",
+          "expectedOption": "B",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q5",
+          "expectedOption": "C",
+          "matchesKey": true,
+          "literalEvidence": true
+        }
+      ],
+      "checks": {
+        "scoreAtLeast90": false,
+        "noCriticalIssues": false,
+        "allKeysMatch": true,
+        "noAmbiguousItems": true,
+        "allHaveLiteralEvidence": true,
+        "allMatchSkill": false,
+        "allDistractorsPlausible": false
+      },
+      "approved": false
+    },
+    {
+      "id": "pl-b1.reading.day-048",
+      "day": 48,
+      "level": "A2",
+      "score": 86.45,
+      "fingerprint": "853721b6703841b61dc2048eb59bb855367ca6702f07ae39f6d88fcdfcbd6209",
+      "criticalIssues": [
+        "q4: Explicit retrospective plus stated intention. Ask how she would respond to a proposed strict hourly schedule."
+      ],
+      "itemResults": [
+        {
+          "id": "q1",
+          "expectedOption": "A",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q2",
+          "expectedOption": "B",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q3",
+          "expectedOption": "C",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q4",
+          "expectedOption": "A",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q5",
+          "expectedOption": "B",
+          "matchesKey": true,
+          "literalEvidence": true
+        }
+      ],
+      "checks": {
+        "scoreAtLeast90": false,
+        "noCriticalIssues": false,
+        "allKeysMatch": true,
+        "noAmbiguousItems": true,
+        "allHaveLiteralEvidence": true,
+        "allMatchSkill": false,
+        "allDistractorsPlausible": false
+      },
+      "approved": false
+    },
+    {
+      "id": "pl-b1.reading.day-049",
+      "day": 49,
+      "level": "A2",
+      "score": 81.35,
+      "fingerprint": "b976dc77058a6bf88f67015b4e1a37257a7758765d37c339c1893647cf7c197d",
+      "criticalIssues": [
+        "Formal vocabulary and sentence density exceed typical independent A2 reading."
+      ],
+      "itemResults": [
+        {
+          "id": "q1",
+          "expectedOption": "C",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q2",
+          "expectedOption": "A",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q3",
+          "expectedOption": "B",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q4",
+          "expectedOption": "C",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q5",
+          "expectedOption": "A",
+          "matchesKey": true,
+          "literalEvidence": true
+        }
+      ],
+      "checks": {
+        "scoreAtLeast90": false,
+        "noCriticalIssues": false,
+        "allKeysMatch": true,
+        "noAmbiguousItems": true,
+        "allHaveLiteralEvidence": true,
+        "allMatchSkill": true,
+        "allDistractorsPlausible": false
+      },
+      "approved": false
+    },
+    {
+      "id": "pl-b1.reading.day-050",
+      "day": 50,
+      "level": "A2",
+      "score": 89.1,
+      "fingerprint": "20df4cbccbe4e399faf42483715341ff505497ca68aae9a6d9682630742fbd27",
+      "criticalIssues": [],
+      "itemResults": [
+        {
+          "id": "q1",
+          "expectedOption": "B",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q2",
+          "expectedOption": "C",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q3",
+          "expectedOption": "A",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q4",
+          "expectedOption": "B",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q5",
+          "expectedOption": "C",
+          "matchesKey": true,
+          "literalEvidence": true
+        }
+      ],
+      "checks": {
+        "scoreAtLeast90": false,
+        "noCriticalIssues": true,
+        "allKeysMatch": true,
+        "noAmbiguousItems": true,
+        "allHaveLiteralEvidence": true,
+        "allMatchSkill": true,
+        "allDistractorsPlausible": false
+      },
+      "approved": false
+    },
+    {
+      "id": "pl-b1.reading.day-051",
+      "day": 51,
+      "level": "A2",
+      "score": 78.75,
+      "fingerprint": "25ef5d930792dd9be8e21752ea0b5a5dbde9e5372f0249acf1126d8504b3ecbb",
+      "criticalIssues": [
+        "Copies the rule verbatim. Ask whether two colleagues who want to read and then create an exercise will need the same access.",
+        "Several abstract administrative expressions exceed A2. Simplify „funkcji użytkownika” and „ogólnodostępne treści” in surrounding prose; the noun phrase about paid textbooks is unnecessarily indirect."
+      ],
+      "itemResults": [
+        {
+          "id": "q1",
+          "expectedOption": "A",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q2",
+          "expectedOption": "B",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q3",
+          "expectedOption": "C",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q4",
+          "expectedOption": "A",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q5",
+          "expectedOption": "B",
+          "matchesKey": true,
+          "literalEvidence": true
+        }
+      ],
+      "checks": {
+        "scoreAtLeast90": false,
+        "noCriticalIssues": false,
+        "allKeysMatch": true,
+        "noAmbiguousItems": true,
+        "allHaveLiteralEvidence": true,
+        "allMatchSkill": false,
+        "allDistractorsPlausible": false
+      },
+      "approved": false
+    },
+    {
+      "id": "pl-b1.reading.day-052",
+      "day": 52,
+      "level": "A2",
+      "score": 75.0,
+      "fingerprint": "f6a4f56a046a814f7cebd72cb33c16c71de951949b4d7b8d2ef3e946f19ac21d",
+      "criticalIssues": [
+        "Nominalizations and participles make the expository sections dense for A2. Replace „szkoła korzystająca z odpowiedniego wsparcia” with a finite clause. „Lista zakupów nie jest wyłącznie decyzją” is awkward; write „O zakupach decyduje więc więcej niż jedna osoba”."
+      ],
+      "itemResults": [
+        {
+          "id": "q1",
+          "expectedOption": "C",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q2",
+          "expectedOption": "A",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q3",
+          "expectedOption": "B",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q4",
+          "expectedOption": "C",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q5",
+          "expectedOption": "A",
+          "matchesKey": true,
+          "literalEvidence": true
+        }
+      ],
+      "checks": {
+        "scoreAtLeast90": false,
+        "noCriticalIssues": false,
+        "allKeysMatch": true,
+        "noAmbiguousItems": true,
+        "allHaveLiteralEvidence": true,
+        "allMatchSkill": true,
+        "allDistractorsPlausible": false
+      },
+      "approved": false
+    },
+    {
+      "id": "pl-b1.reading.day-053",
+      "day": 53,
+      "level": "A2",
+      "score": 84.1,
+      "fingerprint": "1dcbbe4396e8d0a6ab1bb42e11d57c551f7a32fe9255460a546cdc8677b33e14",
+      "criticalIssues": [
+        "Direct restatement. Give a sample of her notes from two chapters and ask which chapter she would review first."
+      ],
+      "itemResults": [
+        {
+          "id": "q1",
+          "expectedOption": "B",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q2",
+          "expectedOption": "C",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q3",
+          "expectedOption": "A",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q4",
+          "expectedOption": "B",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q5",
+          "expectedOption": "C",
+          "matchesKey": true,
+          "literalEvidence": true
+        }
+      ],
+      "checks": {
+        "scoreAtLeast90": false,
+        "noCriticalIssues": false,
+        "allKeysMatch": true,
+        "noAmbiguousItems": true,
+        "allHaveLiteralEvidence": true,
+        "allMatchSkill": false,
+        "allDistractorsPlausible": false
+      },
+      "approved": false
+    },
+    {
+      "id": "pl-b1.reading.day-064",
+      "day": 64,
+      "level": "A2",
+      "score": 78.55,
+      "fingerprint": "89604d0a2d723f9e8e9ef9e856ab85489fd13d42069d1207e8b148ea1b0a64b3",
+      "criticalIssues": [
+        "Direct retrieval even for Emilia specifically. Ask which of several planned errands she could combine with her next shop.",
+        "The shopping sequence is accessible but „opakowaniu objętym tym systemem” and „zasadami dotyczącymi odpadów” are dense at A2. Prefer „liczby opakowań” for countable packages and „ponownie wykorzystać surowce” for the final clause."
+      ],
+      "itemResults": [
+        {
+          "id": "q1",
+          "expectedOption": "C",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q2",
+          "expectedOption": "A",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q3",
+          "expectedOption": "B",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q4",
+          "expectedOption": "C",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q5",
+          "expectedOption": "A",
+          "matchesKey": true,
+          "literalEvidence": true
+        }
+      ],
+      "checks": {
+        "scoreAtLeast90": false,
+        "noCriticalIssues": false,
+        "allKeysMatch": true,
+        "noAmbiguousItems": true,
+        "allHaveLiteralEvidence": true,
+        "allMatchSkill": false,
+        "allDistractorsPlausible": false
+      },
+      "approved": false
+    },
+    {
+      "id": "pl-b1.reading.day-078",
+      "day": 78,
+      "level": "A2",
+      "score": 71.5,
+      "fingerprint": "c19dba0795d1d90b3be1a171a750cdabeddd142b300f23410c093c1ccd0a970b",
+      "criticalIssues": [
+        "All actions explicitly listed and unsafe distractors are self-evident. Infer his likely next step after completing the loan using his stated goal.",
+        "Repeated abstract legal vocabulary, passive meanings and long nominal chains exceed independent A2 reading. Introduce the term using a concrete situation. For idiomatic bank language prefer „umowę pożyczki” or „wziąć pożyczkę”."
+      ],
+      "itemResults": [
+        {
+          "id": "q1",
+          "expectedOption": "A",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q2",
+          "expectedOption": "B",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q3",
+          "expectedOption": "C",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q4",
+          "expectedOption": "A",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q5",
+          "expectedOption": "B",
+          "matchesKey": true,
+          "literalEvidence": true
+        }
+      ],
+      "checks": {
+        "scoreAtLeast90": false,
+        "noCriticalIssues": false,
+        "allKeysMatch": true,
+        "noAmbiguousItems": true,
+        "allHaveLiteralEvidence": true,
+        "allMatchSkill": false,
+        "allDistractorsPlausible": false
+      },
+      "approved": false
+    },
+    {
+      "id": "pl-b1.reading.day-092",
+      "day": 92,
+      "level": "B1",
+      "score": 87.25,
+      "fingerprint": "6b9d2849b5b26fa8336ac96f8a36156726eb8dd7d0eeea1dbef4b192736c1c1d",
+      "criticalIssues": [],
+      "itemResults": [
+        {
+          "id": "q1",
+          "expectedOption": "B",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q2",
+          "expectedOption": "C",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q3",
+          "expectedOption": "A",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q4",
+          "expectedOption": "B",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q5",
+          "expectedOption": "C",
+          "matchesKey": true,
+          "literalEvidence": true
+        }
+      ],
+      "checks": {
+        "scoreAtLeast90": false,
+        "noCriticalIssues": true,
+        "allKeysMatch": true,
+        "noAmbiguousItems": true,
+        "allHaveLiteralEvidence": true,
+        "allMatchSkill": true,
+        "allDistractorsPlausible": false
+      },
+      "approved": false
+    },
+    {
+      "id": "pl-b1.reading.day-099",
+      "day": 99,
+      "level": "B1",
+      "score": 91.3,
+      "fingerprint": "bb243e13c60addce7aacd4fd5a8b314a5a715f7d41c3e817f55748b3d65305eb",
+      "criticalIssues": [],
+      "itemResults": [
+        {
+          "id": "q1",
+          "expectedOption": "A",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q2",
+          "expectedOption": "B",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q3",
+          "expectedOption": "C",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q4",
+          "expectedOption": "A",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q5",
+          "expectedOption": "B",
+          "matchesKey": true,
+          "literalEvidence": true
+        }
+      ],
+      "checks": {
+        "scoreAtLeast90": true,
+        "noCriticalIssues": true,
+        "allKeysMatch": true,
+        "noAmbiguousItems": true,
+        "allHaveLiteralEvidence": true,
+        "allMatchSkill": true,
+        "allDistractorsPlausible": false
+      },
+      "approved": false
+    }
+  ]
+}

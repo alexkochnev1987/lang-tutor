@@ -1,0 +1,620 @@
+{
+  "passages": [
+    {
+      "id": "pl-b1.reading.day-021",
+      "scores": {
+        "naturalness": 94,
+        "level": 84,
+        "questions": 65,
+        "ambiguity": 99,
+        "theme": 98,
+        "vocabulary": 86
+      },
+      "criticalIssues": [
+        "Q4 retrieves an explicit action."
+      ],
+      "notes": "Replace q4 retrieval with a prediction about the condition of the picnic spot after departure.",
+      "items": [
+        {
+          "id": "q1",
+          "option": "A",
+          "evidence": "Rodzina jedzie autobusem do dużego parku.",
+          "ambiguous": false,
+          "distractorScore": 52,
+          "skillMatches": true,
+          "notes": "Restaurant is a good habitual-plan foil. Garden is unrelated."
+        },
+        {
+          "id": "q2",
+          "option": "B",
+          "evidence": "mama pakuje owoce",
+          "ambiguous": false,
+          "distractorScore": 92,
+          "skillMatches": true,
+          "notes": "All three objects belong to the outing."
+        },
+        {
+          "id": "q3",
+          "option": "C",
+          "evidence": "Dzisiaj pogoda jest piękna, więc wszyscy chcą spędzić więcej czasu na dworze.",
+          "ambiguous": false,
+          "distractorScore": 48,
+          "skillMatches": true,
+          "notes": "Sunday school is an implausible foil."
+        },
+        {
+          "id": "q4",
+          "option": "A",
+          "evidence": "Nie zostawiają po sobie śmieci: wkładają je do torby i wyrzucają do kosza.",
+          "ambiguous": false,
+          "distractorScore": 12,
+          "skillMatches": false,
+          "notes": "Directly stated. Both foils describe littering and can be eliminated without reading."
+        },
+        {
+          "id": "q5",
+          "option": "B",
+          "evidence": "spędzić więcej czasu na dworze",
+          "ambiguous": false,
+          "distractorScore": 63,
+          "skillMatches": true,
+          "notes": "Two indoor locations yield an easy outdoor/indoor contrast."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-022",
+      "scores": {
+        "naturalness": 96,
+        "level": 80,
+        "questions": 81,
+        "ambiguity": 97,
+        "theme": 98,
+        "vocabulary": 85
+      },
+      "criticalIssues": [],
+      "notes": "Time comparisons give this short dialogue a real reading purpose. Simplify the nominal options in q1 for A1.",
+      "items": [
+        {
+          "id": "q1",
+          "option": "C",
+          "evidence": "Możemy iść na wystawę albo na koncert",
+          "ambiguous": false,
+          "distractorScore": 38,
+          "skillMatches": true,
+          "notes": "Both foils use details peripheral to making plans."
+        },
+        {
+          "id": "q2",
+          "option": "A",
+          "evidence": "O siedemnastej. A wystawa jest otwarta do piętnastej.",
+          "ambiguous": false,
+          "distractorScore": 98,
+          "skillMatches": true,
+          "notes": "Alternatives are other times in the dialogue."
+        },
+        {
+          "id": "q3",
+          "option": "B",
+          "evidence": "Ola chce zobaczyć zdjęcia na wystawie, ale rano pracuje. Kończy o czternastej i jedzie do domu pół godziny.",
+          "ambiguous": false,
+          "distractorScore": 32,
+          "skillMatches": true,
+          "notes": "Concert price does not explain skipping an exhibition."
+        },
+        {
+          "id": "q4",
+          "option": "C",
+          "evidence": "O siedemnastej. A wystawa jest otwarta do piętnastej.\n\nOla chce zobaczyć zdjęcia na wystawie, ale rano pracuje. Kończy o czternastej i jedzie do domu pół godziny. Marek ma wolny cały dzień.",
+          "ambiguous": false,
+          "distractorScore": 77,
+          "skillMatches": true,
+          "notes": "Feasibility is inferred from availability and opening hours, although the answer reproduces the strongest cue."
+        },
+        {
+          "id": "q5",
+          "option": "A",
+          "evidence": "Wstęp jest wolny.",
+          "ambiguous": false,
+          "distractorScore": 49,
+          "skillMatches": true,
+          "notes": "Replace cancellation with a plausible access condition, e.g. registration."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-023",
+      "scores": {
+        "naturalness": 83,
+        "level": 64,
+        "questions": 65,
+        "ambiguity": 99,
+        "theme": 97,
+        "vocabulary": 89
+      },
+      "criticalIssues": [
+        "Q4 repeats an explicit permission."
+      ],
+      "notes": "Dense for A1: trening siłowy, sprzęt, ciężarki, ograniczona. Prefer „Klub udostępnia maty” and „prosimy o wcześniejsze zapisy” as idiomatic stylistic edits.",
+      "items": [
+        {
+          "id": "q1",
+          "option": "B",
+          "evidence": "Nasz klub zaprasza na bezpłatny dzień otwarty w sobotę.",
+          "ambiguous": false,
+          "distractorScore": 48,
+          "skillMatches": true,
+          "notes": "The café and equipment are incidental."
+        },
+        {
+          "id": "q2",
+          "option": "C",
+          "evidence": "Każde zajęcia trwają czterdzieści pięć minut.",
+          "ambiguous": false,
+          "distractorScore": 85,
+          "skillMatches": true,
+          "notes": "Plausible durations."
+        },
+        {
+          "id": "q3",
+          "option": "A",
+          "evidence": "Liczba miejsc jest ograniczona, dlatego prosimy o wcześniejszy zapis przez internet.",
+          "ambiguous": false,
+          "distractorScore": 22,
+          "skillMatches": true,
+          "notes": "Other reasons contradict the notice and poorly motivate registration."
+        },
+        {
+          "id": "q4",
+          "option": "B",
+          "evidence": "Nie musisz mieć własnego sprzętu. Klub daje maty i małe ciężarki.",
+          "ambiguous": false,
+          "distractorScore": 22,
+          "skillMatches": false,
+          "notes": "Permission is already explicit. Ask which session suits someone unavailable before noon."
+        },
+        {
+          "id": "q5",
+          "option": "C",
+          "evidence": "trening siłowy dla początkujących",
+          "ambiguous": false,
+          "distractorScore": 56,
+          "skillMatches": true,
+          "notes": "Professional athletes are a logical opposite. Club employees are a weak foil."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-024",
+      "scores": {
+        "naturalness": 95,
+        "level": 72,
+        "questions": 58,
+        "ambiguity": 99,
+        "theme": 98,
+        "vocabulary": 83
+      },
+      "criticalIssues": [
+        "Q4 repeats the explicit rain plan."
+      ],
+      "notes": "Concessive and conditional clauses stretch A1. Rebuild q4 around the unstated reason for bringing a sweatshirt.",
+      "items": [
+        {
+          "id": "q1",
+          "option": "A",
+          "evidence": "Dzisiaj po południu mam czas, więc możemy się spotkać.",
+          "ambiguous": false,
+          "distractorScore": 30,
+          "skillMatches": true,
+          "notes": "Work and computer purchases are incidental or absent."
+        },
+        {
+          "id": "q2",
+          "option": "B",
+          "evidence": "Film zaczyna się o szóstej",
+          "ambiguous": false,
+          "distractorScore": 88,
+          "skillMatches": true,
+          "notes": "Plausible adjacent hours, including meeting time."
+        },
+        {
+          "id": "q3",
+          "option": "C",
+          "evidence": "Ja wolę spacer, ponieważ przez cały tydzień siedzę przy komputerze.",
+          "ambiguous": false,
+          "distractorScore": 15,
+          "skillMatches": true,
+          "notes": "Disliking ice cream poorly motivates a walk to buy it. Use the ticket cost as a text-based foil."
+        },
+        {
+          "id": "q4",
+          "option": "A",
+          "evidence": "Jeśli jednak będzie padał deszcz, wybierzmy kino.",
+          "ambiguous": false,
+          "distractorScore": 18,
+          "skillMatches": false,
+          "notes": "The conditional plan is explicitly stated. Buying a computer is trivial."
+        },
+        {
+          "id": "q5",
+          "option": "B",
+          "evidence": "Prognoza pogody jest dobra, choć wieczorem może być chłodno.",
+          "ambiguous": false,
+          "distractorScore": 16,
+          "skillMatches": true,
+          "notes": "Only the answer mentions weather. Distinguish a forecast from a report about yesterday."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-025",
+      "scores": {
+        "naturalness": 92,
+        "level": 82,
+        "questions": 69,
+        "ambiguity": 91,
+        "theme": 78,
+        "vocabulary": 83
+      },
+      "criticalIssues": [
+        "Title mischaracterizes narrator’s new interest."
+      ],
+      "notes": "Title „Moje stare hobby” conflicts with a narrator only beginning photography. Use „Mój pierwszy aparat”.",
+      "items": [
+        {
+          "id": "q1",
+          "option": "C",
+          "evidence": "Jego ulubionym hobby jest fotografia.",
+          "ambiguous": false,
+          "distractorScore": 26,
+          "skillMatches": true,
+          "notes": "House and dog are only subjects in photographs."
+        },
+        {
+          "id": "q2",
+          "option": "A",
+          "evidence": "często oglądamy razem jego albumy",
+          "ambiguous": false,
+          "distractorScore": 84,
+          "skillMatches": true,
+          "notes": "Credible named alternatives."
+        },
+        {
+          "id": "q3",
+          "option": "B",
+          "evidence": "Nie chcę od razu kupować drogiego sprzętu, bo dopiero uczę się fotografii.",
+          "ambiguous": false,
+          "distractorScore": 42,
+          "skillMatches": true,
+          "notes": "Father forbidding a purchase is conceivable. Dislike is implausible."
+        },
+        {
+          "id": "q4",
+          "option": "C",
+          "evidence": "Jego ulubionym hobby jest fotografia.",
+          "ambiguous": false,
+          "distractorScore": 31,
+          "skillMatches": true,
+          "notes": "Father is a plausible potential helper and the friend explicitly teaches. The two „tylko” foils telegraph the answer. Ask which family member might offer advice and give three names."
+        },
+        {
+          "id": "q5",
+          "option": "A",
+          "evidence": "W tym miesiącu chcę kupić własny aparat.",
+          "ambiguous": false,
+          "distractorScore": 57,
+          "skillMatches": true,
+          "notes": "Borrowing is a good contrast. An apparatus in an album is implausible."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-026",
+      "scores": {
+        "naturalness": 95,
+        "level": 75,
+        "questions": 68,
+        "ambiguity": 88,
+        "theme": 98,
+        "vocabulary": 90
+      },
+      "criticalIssues": [
+        "Q4 weakly establishes a change of attitude."
+      ],
+      "notes": "Past narrative and instrument vocabulary are demanding at A1. Q4 should ask about current intention, since prior attitude to jazz is unclear.",
+      "items": [
+        {
+          "id": "q1",
+          "option": "B",
+          "evidence": "Wczoraj wieczorem byłam na moim pierwszym koncercie jazzowym.",
+          "ambiguous": false,
+          "distractorScore": 44,
+          "skillMatches": true,
+          "notes": "The title and first sentence supply the answer."
+        },
+        {
+          "id": "q2",
+          "option": "C",
+          "evidence": "Po koncercie wróciłam do domu tramwajem.",
+          "ambiguous": false,
+          "distractorScore": 87,
+          "skillMatches": true,
+          "notes": "Natural transport alternatives."
+        },
+        {
+          "id": "q3",
+          "option": "A",
+          "evidence": "Sala była mała, więc dobrze widziałam scenę.",
+          "ambiguous": false,
+          "distractorScore": 23,
+          "skillMatches": true,
+          "notes": "Prefer proximity or front-row seats over performing on stage as a foil."
+        },
+        {
+          "id": "q4",
+          "option": "B",
+          "evidence": "Na początku nie znałam żadnego utworu, ale szybko zaczęłam słuchać z zainteresowaniem.",
+          "ambiguous": true,
+          "distractorScore": 27,
+          "skillMatches": true,
+          "notes": "B is the best reading of emerging interest, but not recognizing pieces does not establish her previous attitude toward jazz. Ask what her breakfast choice suggests."
+        },
+        {
+          "id": "q5",
+          "option": "C",
+          "evidence": "Na początku nie znałam żadnego utworu, ale szybko zaczęłam słuchać z zainteresowaniem.",
+          "ambiguous": false,
+          "distractorScore": 52,
+          "skillMatches": true,
+          "notes": "Instrument works as a foil. Tram ticket is unrelated. Simplify „pojedyncza kompozycja muzyczna” for A1."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-027",
+      "scores": {
+        "naturalness": 96,
+        "level": 74,
+        "questions": 77,
+        "ambiguity": 99,
+        "theme": 98,
+        "vocabulary": 92
+      },
+      "criticalIssues": [],
+      "notes": "Impersonal past „robiono” and a long plural past narrative stretch A1. Q4 links two separate observations.",
+      "items": [
+        {
+          "id": "q1",
+          "option": "A",
+          "evidence": "Nasz syn interesuje się techniką, dlatego wybraliśmy wystawę starych urządzeń.",
+          "ambiguous": false,
+          "distractorScore": 40,
+          "skillMatches": true,
+          "notes": "Buying a computer and a birthday reuse isolated nouns."
+        },
+        {
+          "id": "q2",
+          "option": "B",
+          "evidence": "Najbardziej podobał mu się stary aparat fotograficzny.",
+          "ambiguous": false,
+          "distractorScore": 79,
+          "skillMatches": true,
+          "notes": "Prefer old radio over new radio so the option fits the exhibition."
+        },
+        {
+          "id": "q3",
+          "option": "C",
+          "evidence": "Nie zobaczyliśmy całego muzeum, ponieważ córka była już zmęczona.",
+          "ambiguous": false,
+          "distractorScore": 61,
+          "skillMatches": true,
+          "notes": "Closure is plausible. The son’s lack of interest contradicts the opening."
+        },
+        {
+          "id": "q4",
+          "option": "A",
+          "evidence": "Syn czytał napisy i zadawał wiele pytań.",
+          "ambiguous": false,
+          "distractorScore": 47,
+          "skillMatches": true,
+          "notes": "Infers interest from behaviour, also supported by the final sentence. Both foils are signs of disengagement."
+        },
+        {
+          "id": "q5",
+          "option": "B",
+          "evidence": "Kupiliśmy więc mały przewodnik",
+          "ambiguous": false,
+          "distractorScore": 35,
+          "skillMatches": true,
+          "notes": "Use a person showing visitors around as a genuine alternative meaning to the book."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-028",
+      "scores": {
+        "naturalness": 85,
+        "level": 71,
+        "questions": 68,
+        "ambiguity": 88,
+        "theme": 98,
+        "vocabulary": 89
+      },
+      "criticalIssues": [
+        "Q3 assumes precise rain timing; Q4 retrieves explicit verdict."
+      ],
+      "notes": "„Było ciepło” sounds more natural than „Pogoda była ciepła”. Several past plural verbs and dative gospodarzom stretch A1.",
+      "items": [
+        {
+          "id": "q1",
+          "option": "C",
+          "evidence": "W ostatnią sobotę odwiedziliśmy znajomych na działce.",
+          "ambiguous": false,
+          "distractorScore": 28,
+          "skillMatches": true,
+          "notes": "Correct option conspicuously longer. Use three comparable outing summaries."
+        },
+        {
+          "id": "q2",
+          "option": "A",
+          "evidence": "Przywieźliśmy owoce i chleb, a oni przygotowali sałatkę i zupę.",
+          "ambiguous": false,
+          "distractorScore": 64,
+          "skillMatches": true,
+          "notes": "Hosts’ food is a good foil. Computer is weak."
+        },
+        {
+          "id": "q3",
+          "option": "B",
+          "evidence": "po obiedzie pojawiły się ciemne chmury.",
+          "ambiguous": true,
+          "distractorScore": 33,
+          "skillMatches": true,
+          "notes": "Rain is the likely motive, but its onset before entering is not explicit. Rewrite B as „Widzieli ciemne chmury i spodziewali się deszczu”."
+        },
+        {
+          "id": "q4",
+          "option": "C",
+          "evidence": "Nie musieliśmy wiele planować, a wszyscy dobrze spędzili czas.",
+          "ambiguous": false,
+          "distractorScore": 26,
+          "skillMatches": false,
+          "notes": "Explicit overall verdict answers the question directly. Ask what they might do if it rains on another visit."
+        },
+        {
+          "id": "q5",
+          "option": "A",
+          "evidence": "W ostatnią sobotę odwiedziliśmy znajomych na działce.",
+          "ambiguous": false,
+          "distractorScore": 26,
+          "skillMatches": true,
+          "notes": "Ask learners to distinguish guests from hosts. Passengers and shopkeepers are irrelevant."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-029",
+      "scores": {
+        "naturalness": 91,
+        "level": 94,
+        "questions": 75,
+        "ambiguity": 99,
+        "theme": 98,
+        "vocabulary": 93
+      },
+      "criticalIssues": [
+        "Q4 duplicates Q1 and the stated conclusion."
+      ],
+      "notes": "Clear A2 narrative. „A o reszcie zdecydować na miejscu” is more idiomatic than „a resztę zostawić otwartą”. Q1 and q4 test the same conclusion.",
+      "items": [
+        {
+          "id": "q1",
+          "option": "B",
+          "evidence": "Rezerwacja noclegu była przydatna, ale wolny czas pozwolił im odkryć coś nowego.",
+          "ambiguous": false,
+          "distractorScore": 46,
+          "skillMatches": true,
+          "notes": "„zawsze” and „co do minuty” make both alternatives easy to reject."
+        },
+        {
+          "id": "q2",
+          "option": "C",
+          "evidence": "znaleźli małą piekarnię, porozmawiali ze sprzedawcą i dowiedzieli się o wystawie fotografii.",
+          "ambiguous": false,
+          "distractorScore": 87,
+          "skillMatches": true,
+          "notes": "All choices are possible information sources on a trip."
+        },
+        {
+          "id": "q3",
+          "option": "A",
+          "evidence": "Później chcieli odwiedzić ogród botaniczny, lecz zaczął padać deszcz.",
+          "ambiguous": false,
+          "distractorScore": 35,
+          "skillMatches": true,
+          "notes": "Failure to buy tickets to a city they have reached is a trivial foil."
+        },
+        {
+          "id": "q4",
+          "option": "B",
+          "evidence": "Rezerwacja noclegu była przydatna, ale wolny czas pozwolił im odkryć coś nowego.",
+          "ambiguous": false,
+          "distractorScore": 57,
+          "skillMatches": false,
+          "notes": "Direct paraphrase of conclusion and q1. Ask what they would probably have missed with a fixed itinerary."
+        },
+        {
+          "id": "q5",
+          "option": "C",
+          "evidence": "przygotować podstawowy plan, a resztę zostawić otwartą.",
+          "ambiguous": false,
+          "distractorScore": 53,
+          "skillMatches": true,
+          "notes": "Both foils are literal readings. Add an alternative about postponing the whole trip."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-030",
+      "scores": {
+        "naturalness": 86,
+        "level": 84,
+        "questions": 88,
+        "ambiguity": 99,
+        "theme": 97,
+        "vocabulary": 91
+      },
+      "criticalIssues": [
+        "Q1 asks for a cause rather than a summary."
+      ],
+      "notes": "Prefer „biuro zostanie wcześniej zamknięte” and „stary bilet był już nieważny” to the bureaucratic status construction. Clear trade-off in q4.",
+      "items": [
+        {
+          "id": "q1",
+          "option": "A",
+          "evidence": "Aneta postanowiła zmienić bilet, żeby spędzić więcej czasu nad morzem.",
+          "ambiguous": false,
+          "distractorScore": 80,
+          "skillMatches": false,
+          "notes": "Tests the cause of the central action. Ask what the passage recounts to test main idea distinctly."
+        },
+        {
+          "id": "q2",
+          "option": "B",
+          "evidence": "Aneta porównała ceny i wybrała pociąg o piętnastej.",
+          "ambiguous": false,
+          "distractorScore": 99,
+          "skillMatches": true,
+          "notes": "All options correspond to distinct trains in the text."
+        },
+        {
+          "id": "q3",
+          "option": "C",
+          "evidence": "w tym pociągu zostały tylko miejsca w pierwszej klasie.",
+          "ambiguous": false,
+          "distractorScore": 94,
+          "skillMatches": true,
+          "notes": "No seats versus only premium seats is a meaningful distinction."
+        },
+        {
+          "id": "q4",
+          "option": "A",
+          "evidence": "Podróż trwała o dwadzieścia minut dłużej, lecz bilet był tańszy i nie musiała dopłacać za wyższą klasę.",
+          "ambiguous": false,
+          "distractorScore": 79,
+          "skillMatches": true,
+          "notes": "Trade-off supported by the earlier decision to leave sooner. Remove absolutes from foils."
+        },
+        {
+          "id": "q5",
+          "option": "B",
+          "evidence": "Stary bilet otrzymał status anulowanego, więc usunęła go z listy dokumentów na podróż.",
+          "ambiguous": false,
+          "distractorScore": 67,
+          "skillMatches": true,
+          "notes": "Invalidity is clear in context. A common ticket-status alternative would improve the printout foil."
+        }
+      ]
+    }
+  ]
+}

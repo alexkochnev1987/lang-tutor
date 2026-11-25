@@ -1,0 +1,428 @@
+{
+  "passages": [
+    {
+      "id": "pl-b1.reading.day-051",
+      "scores": {
+        "naturalness": 94,
+        "level": 90,
+        "questions": 87,
+        "ambiguity": 98,
+        "theme": 97,
+        "vocabulary": 93
+      },
+      "criticalIssues": [],
+      "notes": "A familiar school task provides a clear reason to compare public reading access with an editor that requires a login. Uzupełnić notatki and ogólnodostępne stretch A2, but their concrete context helps. Marek też pyta o konto is slightly underspecified, and a direct question about needing an account would make the transition smoother.",
+      "items": [
+        {
+          "id": "q1",
+          "option": "C",
+          "evidence": "Marek znajduje tekst o tym samym wydarzeniu. Czyta go dwa razy, a potem zapisuje w zeszycie kilka zdań własnymi słowami. Jutro przed lekcją porówna je z notatkami kolegi. Dziś nie musi już czekać, aż kolega wróci z treningu.\n\nSiostra Marka uczy w szkole. Chce przygotować na platformie ćwiczenie dla swojej klasy.",
+          "ambiguous": false,
+          "distractorScore": 80,
+          "skillMatches": true,
+          "notes": "C includes both the student’s and teacher’s uses of the same site. A assigns the sister’s activity to both and changes whose class it is. B misapplies Marek’s plan with his classmate."
+        },
+        {
+          "id": "q2",
+          "option": "B",
+          "evidence": "Jutro przed lekcją porówna je z notatkami kolegi. Dziś nie musi już czekać, aż kolega wróci z treningu.",
+          "ambiguous": false,
+          "distractorScore": 85,
+          "skillMatches": true,
+          "notes": "Both lures borrow genuine schedule cues. The answer quotes the correct time directly."
+        },
+        {
+          "id": "q3",
+          "option": "C",
+          "evidence": "Kiedy nauczyciel skończył mówić, w zeszycie Marka brakowało kilku zdań. Za dwa dni klasa pisze sprawdzian, więc po powrocie do domu Marek chce uzupełnić notatki.",
+          "ambiguous": false,
+          "distractorScore": 78,
+          "skillMatches": true,
+          "notes": "The gaps and the approaching test motivate the search. The other choices reuse the class and classmate with changed goals."
+        },
+        {
+          "id": "q4",
+          "option": "B",
+          "evidence": "Marek znajduje tekst o tym samym wydarzeniu. Czyta go dwa razy, a potem zapisuje w zeszycie kilka zdań własnymi słowami. Jutro przed lekcją porówna je z notatkami kolegi. Dziś nie musi już czekać, aż kolega wróci z treningu.",
+          "ambiguous": false,
+          "distractorScore": 77,
+          "skillMatches": true,
+          "notes": "Applies his ability to work independently to a longer delay. A confuses the reference text with his classmate’s record. C is deferred until tomorrow. Uzupełnić własne notatki would avoid the implication of an agreed division of work in swoją część notatek."
+        },
+        {
+          "id": "q5",
+          "option": "A",
+          "evidence": "Marek też pyta o konto. Siostra pokazuje mu na ekranie inne ogólnodostępne teksty. Każdy może je otworzyć i przeczytać, tak jak Marek przed chwilą.",
+          "ambiguous": false,
+          "distractorScore": 76,
+          "skillMatches": true,
+          "notes": "The contrast with the login requirement makes A the contextual meaning. The sister shows the texts, while the narration labels them ogólnodostępne. Co znaczy, że te teksty są ogólnodostępne? would avoid attributing unquoted speech to her."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-052",
+      "scores": {
+        "naturalness": 93,
+        "level": 91,
+        "questions": 83,
+        "ambiguity": 96,
+        "theme": 98,
+        "vocabulary": 93
+      },
+      "criticalIssues": [],
+      "notes": "The progression from consultation to selection and follow-up reading is coherent. Everyday school vocabulary supports somewhat harder phrases such as przedstawiciele and sięgnąć po. The final phrase podczas przerwy w nauce leaves unclear whether it means a holiday or a break in the school day. Use a specific period if the distinction matters.",
+      "items": [
+        {
+          "id": "q1",
+          "option": "C",
+          "evidence": "Zanim bibliotekarka zrobi zakupy, spotyka się z przedstawicielami uczniów i rodziców. Prosi ich o tytuły i pyta, kto chciałby czytać takie książki. Na kartce zapisuje wszystkie pomysły.\n\nUczniowie z klasy Oli proszą o książki o przyrodzie. Ola interesuje się ptakami i proponuje książkę o ich życiu. Jej kolega woli czytać o drzewach. Rodzice też mają kilka pomysłów. Lista jest długa, a teraz szkoła może kupić tylko część tytułów. Bibliotekarka chce więc wiedzieć, które książki przydadzą się większej grupie.\n\nSam zakup książek to dopiero początek. Klasa planuje spotkanie o ptakach. Uczniowie przeczytają fragmenty nowych książek i opowiedzą, co ich zaciekawiło.",
+          "ambiguous": false,
+          "distractorScore": 80,
+          "skillMatches": true,
+          "notes": "C summarizes the consultation and the planned bird activity. B is a useful wrong-agent lure because the readers are students. A changes consultation into purchasing authority. Pyta uczniów i rodziców o propozycje książek would be a more idiomatic wording for the first half of C."
+        },
+        {
+          "id": "q2",
+          "option": "B",
+          "evidence": "Prosi ich o tytuły i pyta, kto chciałby czytać takie książki. Na kartce zapisuje wszystkie pomysły.",
+          "ambiguous": false,
+          "distractorScore": 84,
+          "skillMatches": true,
+          "notes": "A is a plausible misreading of the question about prospective readers. C reverses the order of purchase and discussion."
+        },
+        {
+          "id": "q3",
+          "option": "C",
+          "evidence": "Lista jest długa, a teraz szkoła może kupić tylko część tytułów. Bibliotekarka chce więc wiedzieć, które książki przydadzą się większej grupie.",
+          "ambiguous": false,
+          "distractorScore": 77,
+          "skillMatches": true,
+          "notes": "Limited purchasing capacity is the explicit reason. B gives a plausible library-related motive with no evidence, while A borrows an interest unrelated to the selection decision."
+        },
+        {
+          "id": "q4",
+          "option": "B",
+          "evidence": "Klasa planuje spotkanie o ptakach. Uczniowie przeczytają fragmenty nowych książek i opowiedzą, co ich zaciekawiło.",
+          "ambiguous": false,
+          "distractorScore": 39,
+          "skillMatches": true,
+          "notes": "Applies the stated meeting purpose to a new case. The feminine pronoun in informacja o niej can refer to Ola or the book, but B is preferred on either reading. Explicitly name the book or ask Czym Ola może zainteresować klasę na spotkaniu? C is nonsensical given that the list is of books. A concerns cataloguing rather than discussion."
+        },
+        {
+          "id": "q5",
+          "option": "B",
+          "evidence": "Osoby, które będą chciały sięgnąć po następną książkę, będą mogły wypożyczyć ją także podczas przerwy w nauce.",
+          "ambiguous": false,
+          "distractorScore": 75,
+          "skillMatches": true,
+          "notes": "The invitation to borrow supports selecting another book to read. The lures conflate reading with purchasing or the earlier consultation."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-053",
+      "scores": {
+        "naturalness": 91,
+        "level": 92,
+        "questions": 86,
+        "ambiguity": 98,
+        "theme": 98,
+        "vocabulary": 91
+      },
+      "criticalIssues": [],
+      "notes": "The self-study context suits A2, with transparent sequence and repeated learning vocabulary. The two lists contain topics, but the final sentence says Daria picks exercises directly from the second list. Change it to wybiera ćwiczenia dotyczące tematów z drugiej listy to repair the reference.",
+      "items": [
+        {
+          "id": "q1",
+          "option": "B",
+          "evidence": "W zeszycie robi dwie listy. Na pierwszej zapisuje tematy, które już zna, a na drugiej te, do których chce wrócić. Na następny wieczór wybiera ćwiczenia z drugiej listy.",
+          "ambiguous": false,
+          "distractorScore": 48,
+          "skillMatches": true,
+          "notes": "B captures the selection and planning. A creates an unsupported relationship between a message and shopping. C turns a learner into a coursebook author. Plausible partial strategies would improve both lures."
+        },
+        {
+          "id": "q2",
+          "option": "B",
+          "evidence": "W poniedziałek Daria czyta rozdział o zakupach. Rozumie tekst i dobrze odpowiada na pytania. We wtorek próbuje przeczytać wiadomość o spotkaniu.",
+          "ambiguous": false,
+          "distractorScore": 84,
+          "skillMatches": true,
+          "notes": "C swaps Monday’s and Tuesday’s texts. A combines the classmate’s message and Daria’s self-made lists."
+        },
+        {
+          "id": "q3",
+          "option": "B",
+          "evidence": "Kiedy jednak dostaje od koleżanki długą wiadomość po polsku, nieraz musi ją przeczytać kilka razy. Dlatego chce więcej czytać w domu.",
+          "ambiguous": false,
+          "distractorScore": 72,
+          "skillMatches": true,
+          "notes": "B paraphrases the stated difficulty. C misuses the earlier fact that she already handles shopping, and A invents a goal for the classmate."
+        },
+        {
+          "id": "q4",
+          "option": "B",
+          "evidence": "We wtorek próbuje przeczytać wiadomość o spotkaniu. Zna kilka słów, ale nie wie, o co prosi autor. W zeszycie robi dwie listy. Na pierwszej zapisuje tematy, które już zna, a na drugiej te, do których chce wrócić. Na następny wieczór wybiera ćwiczenia z drugiej listy.",
+          "ambiguous": false,
+          "distractorScore": 90,
+          "skillMatches": true,
+          "notes": "Combines the troublesome task with her selection rule and transfers it to a new exercise. All alternatives are realistic training activities and correspond to specific domains in the text."
+        },
+        {
+          "id": "q5",
+          "option": "C",
+          "evidence": "Są tam książki dla początkujących, materiały A2 z elementami B1 oraz materiały dla osób, które znają już polski na poziomie B1. Daria na początek wybiera książkę A2. Nie chce zaczynać od bardzo trudnych tekstów.",
+          "ambiguous": false,
+          "distractorScore": 55,
+          "skillMatches": true,
+          "notes": "C captures the base level with some higher-level content. The passage distinguishes the mixed materials from B1 materials. A’s całego and B’s po każdym are easy-to-dismiss extremes. A material entirely between two levels would be a subtler lure."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-064",
+      "scores": {
+        "naturalness": 96,
+        "level": 90,
+        "questions": 78,
+        "ambiguity": 78,
+        "theme": 98,
+        "vocabulary": 94
+      },
+      "criticalIssues": [
+        "Q4 is ambiguous. A clearly works, but B can also work if the brother brings the bag to Emilia after shopping while she is still out. The stem does not require returning the bottle before shopping or forbid help during the outing."
+      ],
+      "notes": "The bottle comparison provides a concrete way to introduce kaucja, opakowanie and punkt zbiórki at A2. The story reads naturally. Kwota is slightly more idiomatic than suma in the definition, but the present wording is grammatical.",
+      "items": [
+        {
+          "id": "q1",
+          "option": "C",
+          "evidence": "Emilia wraca ze sklepu z dwiema butelkami wody. Obie są podobne, ale tylko na jednej widzi znak systemu kaucyjnego. W Polsce taki system działa od października 2025 roku. Gdy Emilia kupuje wodę w oznaczonej butelce, płaci za wodę i dodatkowo za opakowanie. Ta dodatkowa suma to kaucja. Emilia odzyska ją, jeśli odda pustą butelkę do punktu zbiórki.",
+          "ambiguous": false,
+          "distractorScore": 74,
+          "skillMatches": true,
+          "notes": "C covers identification and refund. The shopping list is peripheral. Cheaper water confuses the refundable amount with the price of the drink."
+        },
+        {
+          "id": "q2",
+          "option": "B",
+          "evidence": "Butelkę ze znakiem wkłada do torby na zakupy. Drugą odkłada osobno, żeby wyrzucić ją zgodnie z zasadami segregacji.",
+          "ambiguous": false,
+          "distractorScore": 83,
+          "skillMatches": true,
+          "notes": "A jumps ahead to the collection point. C swaps the bottle categories."
+        },
+        {
+          "id": "q3",
+          "option": "C",
+          "evidence": "Wieczorem obie butelki są już puste. Emilia ogląda je jeszcze raz. Butelkę ze znakiem wkłada do torby na zakupy. Drugą odkłada osobno, żeby wyrzucić ją zgodnie z zasadami segregacji.",
+          "ambiguous": false,
+          "distractorScore": 62,
+          "skillMatches": true,
+          "notes": "The sorting immediately after inspection supports C. A and B use the brother and shopping list, but neither is linked to the inspection."
+        },
+        {
+          "id": "q4",
+          "option": null,
+          "evidence": "W sobotę Emilia znów wybiera się po zakupy. Po drodze do sklepu minie punkt zbiórki. Torbę z butelką stawia przy drzwiach, obok listy zakupów. Dzięki temu załatwi dwie sprawy podczas jednego wyjścia.",
+          "ambiguous": true,
+          "distractorScore": 82,
+          "skillMatches": true,
+          "notes": "A follows the stated plan. B does not say where the brother will bring the bag after shopping or that Emilia will have to go home, so she could still stop at the point during the same outing. State in B that they will both return home for the bag, or require a stop before shopping in the stem. C adds a needless receipt search."
+        },
+        {
+          "id": "q5",
+          "option": "B",
+          "evidence": "Gdy Emilia kupuje wodę w oznaczonej butelce, płaci za wodę i dodatkowo za opakowanie. Ta dodatkowa suma to kaucja. Emilia odzyska ją, jeśli odda pustą butelkę do punktu zbiórki.",
+          "ambiguous": false,
+          "distractorScore": 76,
+          "skillMatches": true,
+          "notes": "B paraphrases both receiving something back and its referent. The two lures concern prices rather than a refund."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-078",
+      "scores": {
+        "naturalness": 94,
+        "level": 83,
+        "questions": 85,
+        "ambiguity": 98,
+        "theme": 94,
+        "vocabulary": 92
+      },
+      "criticalIssues": [],
+      "notes": "The narrative distinguishes a protective step from the work the customer needs to do around his own agreement. The density of formal terms makes this upper A2 at best despite short sentences and repetition. Sam zajmie się swoim kontem introduces an undefined account at the end. Removing that sentence would tighten the focus. The transition between umowa kredytowa and pożyczyć pieniądze is comprehensible, but consistent terminology would help learners.",
+      "items": [
+        {
+          "id": "q1",
+          "option": "C",
+          "evidence": "Tomasz zastrzegł ten numer. Co to dla niego znaczy? Kiedy ktoś chce podpisać umowę kredytową, bank sprawdza, czy numer jest zastrzeżony. Dzięki temu innej osobie trudniej jest wykorzystać dane Tomasza.\n\nTeraz sam Tomasz chce pożyczyć pieniądze z banku. Zanim podpisze umowę, rozmawia z pracownicą banku. Pyta, co ma zrobić z zastrzeżonym numerem.",
+          "ambiguous": false,
+          "distractorScore": 77,
+          "skillMatches": true,
+          "notes": "C captures both protective action and the planned borrowing. The amount is never discussed. The new-account lure draws on an underexplained reference in the final sentence."
+        },
+        {
+          "id": "q2",
+          "option": "C",
+          "evidence": "Tomasz zapisuje nazwę usługi, żeby później spokojnie przeczytać o niej w domu.",
+          "ambiguous": false,
+          "distractorScore": 74,
+          "skillMatches": true,
+          "notes": "The distractors are sensible things to note at a bank, but the purpose of reading about the service supports the answer."
+        },
+        {
+          "id": "q3",
+          "option": "C",
+          "evidence": "Teraz sam Tomasz chce pożyczyć pieniądze z banku. Zanim podpisze umowę, rozmawia z pracownicą banku. Pyta, co ma zrobić z zastrzeżonym numerem.",
+          "ambiguous": false,
+          "distractorScore": 70,
+          "skillMatches": true,
+          "notes": "The situation supplies the purpose. B borrows the bank’s checking activity but shifts it to a history of access. A invents a number change."
+        },
+        {
+          "id": "q4",
+          "option": "A",
+          "evidence": "Dowiaduje się, że może cofnąć zastrzeżenie, a później znów zastrzec numer. Po podpisaniu umowy chce dalej chronić swoje dane tak jak wcześniej. W kalendarzu zostawia więc miejsce na jeszcze jedną sprawę po wizycie w banku.",
+          "ambiguous": false,
+          "distractorScore": 60,
+          "skillMatches": true,
+          "notes": "Combines the available action and his stated protection goal to infer the calendar entry. B is chronologically impossible in the new situation. C has no credible link to the stated goal."
+        },
+        {
+          "id": "q5",
+          "option": "B",
+          "evidence": "Dowiaduje się, że może cofnąć zastrzeżenie, a później znów zastrzec numer.",
+          "ambiguous": false,
+          "distractorScore": 78,
+          "skillMatches": true,
+          "notes": "The contrast with turning the protection back on supports B. C deliberately reverses the action. A repurposes the earlier bank check."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-092",
+      "scores": {
+        "naturalness": 94,
+        "level": 94,
+        "questions": 88,
+        "ambiguity": 98,
+        "theme": 99,
+        "vocabulary": 94
+      },
+      "criticalIssues": [],
+      "notes": "The story supports B1 reading across concrete examples and a final generalization. Local disposal terms and household vocabulary are varied and anchored in actions. Bioodpady and odpady zmieszane would be more idiomatic category labels in this context. The final sentence ties back to the bins, although the preceding conclusion would also close the narrative well.",
+      "items": [
+        {
+          "id": "q1",
+          "option": "C",
+          "evidence": "Rozumie, że o ilości śmieci decyduje również to, co zrobi z przedmiotem, zanim uzna go za odpad. Czasem wystarczy chwila pracy albo rozmowa z kimś, komu dana rzecz nadal może się przydać.",
+          "ambiguous": false,
+          "distractorScore": 73,
+          "skillMatches": true,
+          "notes": "C summarizes the combination of item-specific decisions and reuse. Both lures impose one sorting solution despite the examples. Co może się jeszcze komuś przydać would sound more natural than co może jeszcze służyć ludziom."
+        },
+        {
+          "id": "q2",
+          "option": "B",
+          "evidence": "Zostają jeszcze mocno zniszczone ubrania. W podstawowym systemie nie ma osobnego, szóstego pojemnika na tekstylia. Ewa sprawdza więc na stronie swojej gminy, gdzie oddać takie rzeczy.",
+          "ambiguous": false,
+          "distractorScore": 89,
+          "skillMatches": true,
+          "notes": "The lures are real actions for other items. The correct answer requires resolving takie rzeczy."
+        },
+        {
+          "id": "q3",
+          "option": "C",
+          "evidence": "Kurtkę przymierzy jutro jej siostra. Jeśli będzie na nią dobra, chętnie zabierze ją na jesienny wyjazd. W ten sposób ubranie może dalej komuś służyć.",
+          "ambiguous": false,
+          "distractorScore": 82,
+          "skillMatches": true,
+          "notes": "C preserves the conditional fit and the intended use. A transfers the procedure for damaged clothes. B transfers the reason to repair the bag."
+        },
+        {
+          "id": "q4",
+          "option": "B",
+          "evidence": "Na dnie szafy leży torba z urwanym uchem, a obok niej kurtka, która jest na Ewę za mała. Materiał torby jest mocny. Ewa odkłada ją na krzesło obok pudełka z igłami i nićmi.",
+          "ambiguous": false,
+          "distractorScore": 84,
+          "skillMatches": true,
+          "notes": "The sound fabric, broken handle and sewing supplies jointly suggest repair, accounting for crossing out the replacement later. The lures recombine other events into unsupported barter or disposal."
+        },
+        {
+          "id": "q5",
+          "option": "C",
+          "evidence": "Po sprzątaniu Ewa skreśla nową torbę z listy zakupów. Rozumie, że o ilości śmieci decyduje również to, co zrobi z przedmiotem, zanim uzna go za odpad.",
+          "ambiguous": false,
+          "distractorScore": 51,
+          "skillMatches": true,
+          "notes": "The new purchase is removed from the plan. A reverses skreśla and implausibly makes a bag something to try on. B changes both which bag and what is done to it. A more realistic lure could contrast putting off the purchase with cancelling it."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-099",
+      "scores": {
+        "naturalness": 91,
+        "level": 95,
+        "questions": 89,
+        "ambiguity": 98,
+        "theme": 97,
+        "vocabulary": 96
+      },
+      "criticalIssues": [
+        "The passage has an unnatural verb–object combination in bibliotekarka najpierw opowiedziała kilka zdań o autorze. Use powiedziała kilka zdań o autorze or krótko opowiedziała o autorze."
+      ],
+      "notes": "The passage provides a B1 challenge through cultural context, unfamiliar literature and a change in the reader’s attitude. The selected event details support the experience without requiring prior literary knowledge. Wybór tekstu zmienia się w kolejnych latach is grammatical but stiff. Co roku wybiera się inny tekst would be more idiomatic.",
+      "items": [
+        {
+          "id": "q1",
+          "option": "A",
+          "evidence": "Po spotkaniu Ania nadal miała w zeszycie kilka wyrażeń do sprawdzenia. Tym razem jednak zaznaczyła też stronę, do której chciała wrócić w domu. Obok zapisała pytanie o to, dlaczego dwoje czytelników tak różnie zrozumiało ostatnie zdanie.",
+          "ambiguous": false,
+          "distractorScore": 72,
+          "skillMatches": true,
+          "notes": "A combines the previous avoidance of older language with her new desire to reread and discuss it. B conflicts with her participation as a listener. C borrows the introductory programme detail. Co historia Ani pokazuje na temat wspólnego czytania? would sound more idiomatic than the current stem."
+        },
+        {
+          "id": "q2",
+          "option": "C",
+          "evidence": "Bibliotekarka najpierw opowiedziała kilka zdań o autorze i wyjaśniła, czego dotyczy wybrany fragment. Wiedziała, że część grupy dopiero poznaje polską literaturę. Potem zaprosiła chętnych do głośnego czytania.",
+          "ambiguous": false,
+          "distractorScore": 86,
+          "skillMatches": true,
+          "notes": "The lures repurpose real elements of the later discussion. The correct option is a clear paraphrase of the introduction."
+        },
+        {
+          "id": "q3",
+          "option": "A",
+          "evidence": "Wcześniej omijała klasyczne utwory, bo dawny język wydawał jej się za trudny. Gdy miała do wyboru kilka książek, zwykle brała do domu współczesną powieść.",
+          "ambiguous": false,
+          "distractorScore": 61,
+          "skillMatches": true,
+          "notes": "The reason is explicit. Both alternatives misplace later events in a time when she was avoiding classic texts, and the other ending in C is invented."
+        },
+        {
+          "id": "q4",
+          "option": "C",
+          "evidence": "Inna osoba zwróciła uwagę na słowa, których Ania wcześniej nawet nie zauważyła.\n\nPo spotkaniu Ania nadal miała w zeszycie kilka wyrażeń do sprawdzenia. Tym razem jednak zaznaczyła też stronę, do której chciała wrócić w domu. Obok zapisała pytanie o to, dlaczego dwoje czytelników tak różnie zrozumiało ostatnie zdanie. Zamierzała jeszcze raz przeczytać je sama, zanim porozmawia o nim z koleżanką.",
+          "ambiguous": false,
+          "distractorScore": 80,
+          "skillMatches": true,
+          "notes": "Combines her attention to wording and her question about two interpretations to infer what she may look for when rereading. The new focus on specific words is a reasonable hypothesis. The other choices reuse real activities or preferences without evidence that they motivate this reread."
+        },
+        {
+          "id": "q5",
+          "option": "B",
+          "evidence": "Wcześniej omijała klasyczne utwory, bo dawny język wydawał jej się za trudny. Gdy miała do wyboru kilka książek, zwykle brała do domu współczesną powieść.",
+          "ambiguous": false,
+          "distractorScore": 85,
+          "skillMatches": true,
+          "notes": "B distinguishes avoiding whole works when choosing a book from skipping passages while reading, a credible alternative sense of omijać. A weakly links book selection with shelving."
+        }
+      ]
+    }
+  ]
+}

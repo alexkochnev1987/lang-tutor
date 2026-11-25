@@ -1,0 +1,3016 @@
+{
+  "snapshot": "revised drafts in this working tree",
+  "reviewerModel": "gpt-6.2-sol",
+  "weights": {
+    "naturalness": 25,
+    "level": 20,
+    "questions": 20,
+    "ambiguity": 20,
+    "theme": 10,
+    "vocabulary": 5
+  },
+  "distractorThreshold": 75,
+  "batches": [
+    {
+      "batch": "batch-01",
+      "inputSHA256": "a0f96feec2802541208f1583b23236a1004e91c9b50dc6b989a9bf355b5b8fa2",
+      "stats": {
+        "passages": 10,
+        "questions": 50,
+        "meanScore": 90.44,
+        "minScore": 86.6,
+        "maxScore": 93.1,
+        "scoreAtLeast90": 6,
+        "approved": 0,
+        "matchingKeys": 50,
+        "exactEvidence": 50,
+        "ambiguous": 0,
+        "criticalPassages": 1,
+        "skillMismatch": 1,
+        "weakDistractors": 27
+      }
+    },
+    {
+      "batch": "batch-02",
+      "inputSHA256": "10780815a4632166188b6022f6af6dd4aecdf3efd43e6e4279300fa1e112e658",
+      "stats": {
+        "passages": 10,
+        "questions": 50,
+        "meanScore": 90.48,
+        "minScore": 87.5,
+        "maxScore": 93.1,
+        "scoreAtLeast90": 6,
+        "approved": 0,
+        "matchingKeys": 50,
+        "exactEvidence": 50,
+        "ambiguous": 0,
+        "criticalPassages": 3,
+        "skillMismatch": 1,
+        "weakDistractors": 35
+      }
+    },
+    {
+      "batch": "batch-03",
+      "inputSHA256": "4c408d6aa4d7e623d3005658f06d3524e127b10c85737bfe25610787bf42d9c2",
+      "stats": {
+        "passages": 10,
+        "questions": 50,
+        "meanScore": 88.96,
+        "minScore": 84.15,
+        "maxScore": 94.6,
+        "scoreAtLeast90": 5,
+        "approved": 0,
+        "matchingKeys": 48,
+        "exactEvidence": 50,
+        "ambiguous": 2,
+        "criticalPassages": 2,
+        "skillMismatch": 0,
+        "weakDistractors": 19
+      }
+    },
+    {
+      "batch": "batch-04",
+      "inputSHA256": "4a3745240f1fb129988b0acb61e313336e7d7d411d283d84dbd75b56ef7bbf90",
+      "stats": {
+        "passages": 10,
+        "questions": 50,
+        "meanScore": 88.79,
+        "minScore": 85.8,
+        "maxScore": 91.85,
+        "scoreAtLeast90": 3,
+        "approved": 0,
+        "matchingKeys": 50,
+        "exactEvidence": 50,
+        "ambiguous": 0,
+        "criticalPassages": 2,
+        "skillMismatch": 2,
+        "weakDistractors": 42
+      }
+    },
+    {
+      "batch": "batch-05",
+      "inputSHA256": "cef6309cc4e63c2130b03a5c54608de05a84041b1b18d6a0096a6de22f26fe82",
+      "stats": {
+        "passages": 10,
+        "questions": 50,
+        "meanScore": 92.72,
+        "minScore": 89.9,
+        "maxScore": 94.95,
+        "scoreAtLeast90": 9,
+        "approved": 3,
+        "matchingKeys": 50,
+        "exactEvidence": 50,
+        "ambiguous": 0,
+        "criticalPassages": 0,
+        "skillMismatch": 1,
+        "weakDistractors": 9
+      }
+    },
+    {
+      "batch": "batch-06",
+      "inputSHA256": "99fa4096c04748689484ff613518eaf176c1885d79d48b73200f6b540ea2ccea",
+      "stats": {
+        "passages": 7,
+        "questions": 35,
+        "meanScore": 91.86,
+        "minScore": 87.7,
+        "maxScore": 94.1,
+        "scoreAtLeast90": 6,
+        "approved": 1,
+        "matchingKeys": 34,
+        "exactEvidence": 35,
+        "ambiguous": 1,
+        "criticalPassages": 2,
+        "skillMismatch": 0,
+        "weakDistractors": 13
+      }
+    }
+  ],
+  "totals": {
+    "passages": 57,
+    "questions": 285,
+    "meanScore": 90.47,
+    "minScore": 84.15,
+    "maxScore": 94.95,
+    "scoreAtLeast90": 35,
+    "approved": 4,
+    "matchingKeys": 282,
+    "exactEvidence": 285,
+    "ambiguous": 3,
+    "criticalPassages": 10,
+    "skillMismatch": 5,
+    "weakDistractors": 145
+  },
+  "passages": [
+    {
+      "id": "pl-b1.reading.day-001",
+      "day": 1,
+      "level": "A1",
+      "score": 93.1,
+      "fingerprint": "cb20d5872f74b9030aa0a9551890e952f06b44c711042dbd60072937b4d93aaf",
+      "criticalIssues": [],
+      "itemResults": [
+        {
+          "id": "q1",
+          "expectedOption": "C",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q2",
+          "expectedOption": "B",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q3",
+          "expectedOption": "A",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q4",
+          "expectedOption": "C",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q5",
+          "expectedOption": "A",
+          "matchesKey": true,
+          "literalEvidence": true
+        }
+      ],
+      "checks": {
+        "scoreAtLeast90": true,
+        "noCriticalIssues": true,
+        "allKeysMatch": true,
+        "noAmbiguousItems": true,
+        "allHaveLiteralEvidence": true,
+        "allMatchSkill": true,
+        "allDistractorsPlausible": false
+      },
+      "approved": false
+    },
+    {
+      "id": "pl-b1.reading.day-002",
+      "day": 2,
+      "level": "A1",
+      "score": 91.95,
+      "fingerprint": "ecb57e30d5985b161315c536129ca640baa0b1de7eafb9a177929dedcae42ae1",
+      "criticalIssues": [],
+      "itemResults": [
+        {
+          "id": "q1",
+          "expectedOption": "B",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q2",
+          "expectedOption": "C",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q3",
+          "expectedOption": "B",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q4",
+          "expectedOption": "A",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q5",
+          "expectedOption": "C",
+          "matchesKey": true,
+          "literalEvidence": true
+        }
+      ],
+      "checks": {
+        "scoreAtLeast90": true,
+        "noCriticalIssues": true,
+        "allKeysMatch": true,
+        "noAmbiguousItems": true,
+        "allHaveLiteralEvidence": true,
+        "allMatchSkill": true,
+        "allDistractorsPlausible": false
+      },
+      "approved": false
+    },
+    {
+      "id": "pl-b1.reading.day-003",
+      "day": 3,
+      "level": "A1",
+      "score": 93.05,
+      "fingerprint": "daf86a2a122060db4cd3fc60b5173cf107e88f313659d681ff782e8e5ab86ecc",
+      "criticalIssues": [],
+      "itemResults": [
+        {
+          "id": "q1",
+          "expectedOption": "B",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q2",
+          "expectedOption": "A",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q3",
+          "expectedOption": "C",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q4",
+          "expectedOption": "B",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q5",
+          "expectedOption": "C",
+          "matchesKey": true,
+          "literalEvidence": true
+        }
+      ],
+      "checks": {
+        "scoreAtLeast90": true,
+        "noCriticalIssues": true,
+        "allKeysMatch": true,
+        "noAmbiguousItems": true,
+        "allHaveLiteralEvidence": true,
+        "allMatchSkill": true,
+        "allDistractorsPlausible": false
+      },
+      "approved": false
+    },
+    {
+      "id": "pl-b1.reading.day-004",
+      "day": 4,
+      "level": "A1",
+      "score": 86.6,
+      "fingerprint": "98a8a6e7b409fb1e0a9dd921607416cc09353b6cb153e3a11a53cc33d504783f",
+      "criticalIssues": [
+        "Q4 introduces possession and use of an e-mail address. The passage establishes written messages on a computer, but the school is shown asking only for a phone number and the channel is unspecified. Mention e-mail during registration or ask about a written message without specifying the channel."
+      ],
+      "itemResults": [
+        {
+          "id": "q1",
+          "expectedOption": "B",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q2",
+          "expectedOption": "B",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q3",
+          "expectedOption": "A",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q4",
+          "expectedOption": "B",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q5",
+          "expectedOption": "B",
+          "matchesKey": true,
+          "literalEvidence": true
+        }
+      ],
+      "checks": {
+        "scoreAtLeast90": false,
+        "noCriticalIssues": false,
+        "allKeysMatch": true,
+        "noAmbiguousItems": true,
+        "allHaveLiteralEvidence": true,
+        "allMatchSkill": true,
+        "allDistractorsPlausible": false
+      },
+      "approved": false
+    },
+    {
+      "id": "pl-b1.reading.day-005",
+      "day": 5,
+      "level": "A1",
+      "score": 89.85,
+      "fingerprint": "50e4baa3fda92d0875d1060d45497900ba49e4dabaf09370e73568a24d1a6e4b",
+      "criticalIssues": [],
+      "itemResults": [
+        {
+          "id": "q1",
+          "expectedOption": "B",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q2",
+          "expectedOption": "C",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q3",
+          "expectedOption": "C",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q4",
+          "expectedOption": "B",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q5",
+          "expectedOption": "C",
+          "matchesKey": true,
+          "literalEvidence": true
+        }
+      ],
+      "checks": {
+        "scoreAtLeast90": false,
+        "noCriticalIssues": true,
+        "allKeysMatch": true,
+        "noAmbiguousItems": true,
+        "allHaveLiteralEvidence": true,
+        "allMatchSkill": false,
+        "allDistractorsPlausible": false
+      },
+      "approved": false
+    },
+    {
+      "id": "pl-b1.reading.day-006",
+      "day": 6,
+      "level": "A1",
+      "score": 90.55,
+      "fingerprint": "f530d6217a0267ef4427cfd4bc4c49325f382e67b09e12909a0f0a0501bfc62f",
+      "criticalIssues": [],
+      "itemResults": [
+        {
+          "id": "q1",
+          "expectedOption": "C",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q2",
+          "expectedOption": "C",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q3",
+          "expectedOption": "B",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q4",
+          "expectedOption": "C",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q5",
+          "expectedOption": "C",
+          "matchesKey": true,
+          "literalEvidence": true
+        }
+      ],
+      "checks": {
+        "scoreAtLeast90": true,
+        "noCriticalIssues": true,
+        "allKeysMatch": true,
+        "noAmbiguousItems": true,
+        "allHaveLiteralEvidence": true,
+        "allMatchSkill": true,
+        "allDistractorsPlausible": false
+      },
+      "approved": false
+    },
+    {
+      "id": "pl-b1.reading.day-007",
+      "day": 7,
+      "level": "A1",
+      "score": 90.35,
+      "fingerprint": "fb440ac476ce2ea3b01698e4d71518f153a64c965c162492669bbbc9309c4c22",
+      "criticalIssues": [],
+      "itemResults": [
+        {
+          "id": "q1",
+          "expectedOption": "B",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q2",
+          "expectedOption": "C",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q3",
+          "expectedOption": "B",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q4",
+          "expectedOption": "A",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q5",
+          "expectedOption": "A",
+          "matchesKey": true,
+          "literalEvidence": true
+        }
+      ],
+      "checks": {
+        "scoreAtLeast90": true,
+        "noCriticalIssues": true,
+        "allKeysMatch": true,
+        "noAmbiguousItems": true,
+        "allHaveLiteralEvidence": true,
+        "allMatchSkill": true,
+        "allDistractorsPlausible": false
+      },
+      "approved": false
+    },
+    {
+      "id": "pl-b1.reading.day-008",
+      "day": 8,
+      "level": "A1",
+      "score": 89.5,
+      "fingerprint": "70a27fe71694a27e307f476be505e4bb88c94a86050a20cc0dcb4f9dcdc052a4",
+      "criticalIssues": [],
+      "itemResults": [
+        {
+          "id": "q1",
+          "expectedOption": "B",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q2",
+          "expectedOption": "C",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q3",
+          "expectedOption": "C",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q4",
+          "expectedOption": "A",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q5",
+          "expectedOption": "B",
+          "matchesKey": true,
+          "literalEvidence": true
+        }
+      ],
+      "checks": {
+        "scoreAtLeast90": false,
+        "noCriticalIssues": true,
+        "allKeysMatch": true,
+        "noAmbiguousItems": true,
+        "allHaveLiteralEvidence": true,
+        "allMatchSkill": true,
+        "allDistractorsPlausible": false
+      },
+      "approved": false
+    },
+    {
+      "id": "pl-b1.reading.day-009",
+      "day": 9,
+      "level": "A1",
+      "score": 89.35,
+      "fingerprint": "0b11b750d20a5c6f929fea77c46996f722ee57cf57fdbe2d8dcc02b01ea2b6b5",
+      "criticalIssues": [],
+      "itemResults": [
+        {
+          "id": "q1",
+          "expectedOption": "A",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q2",
+          "expectedOption": "B",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q3",
+          "expectedOption": "B",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q4",
+          "expectedOption": "A",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q5",
+          "expectedOption": "A",
+          "matchesKey": true,
+          "literalEvidence": true
+        }
+      ],
+      "checks": {
+        "scoreAtLeast90": false,
+        "noCriticalIssues": true,
+        "allKeysMatch": true,
+        "noAmbiguousItems": true,
+        "allHaveLiteralEvidence": true,
+        "allMatchSkill": true,
+        "allDistractorsPlausible": false
+      },
+      "approved": false
+    },
+    {
+      "id": "pl-b1.reading.day-010",
+      "day": 10,
+      "level": "A1",
+      "score": 90.1,
+      "fingerprint": "81bac24d4aa483a980c60529a14ce635f5087ad2e52351411a49101e7d63e23e",
+      "criticalIssues": [],
+      "itemResults": [
+        {
+          "id": "q1",
+          "expectedOption": "C",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q2",
+          "expectedOption": "C",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q3",
+          "expectedOption": "A",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q4",
+          "expectedOption": "C",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q5",
+          "expectedOption": "C",
+          "matchesKey": true,
+          "literalEvidence": true
+        }
+      ],
+      "checks": {
+        "scoreAtLeast90": true,
+        "noCriticalIssues": true,
+        "allKeysMatch": true,
+        "noAmbiguousItems": true,
+        "allHaveLiteralEvidence": true,
+        "allMatchSkill": true,
+        "allDistractorsPlausible": false
+      },
+      "approved": false
+    },
+    {
+      "id": "pl-b1.reading.day-011",
+      "day": 11,
+      "level": "A1",
+      "score": 93.1,
+      "fingerprint": "9f216179ae2543b75c5ab497b28cf2bf3ad0087ebb72ca139b589dd3d09c5161",
+      "criticalIssues": [],
+      "itemResults": [
+        {
+          "id": "q1",
+          "expectedOption": "A",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q2",
+          "expectedOption": "A",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q3",
+          "expectedOption": "B",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q4",
+          "expectedOption": "C",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q5",
+          "expectedOption": "B",
+          "matchesKey": true,
+          "literalEvidence": true
+        }
+      ],
+      "checks": {
+        "scoreAtLeast90": true,
+        "noCriticalIssues": true,
+        "allKeysMatch": true,
+        "noAmbiguousItems": true,
+        "allHaveLiteralEvidence": true,
+        "allMatchSkill": true,
+        "allDistractorsPlausible": false
+      },
+      "approved": false
+    },
+    {
+      "id": "pl-b1.reading.day-012",
+      "day": 12,
+      "level": "A1",
+      "score": 88.3,
+      "fingerprint": "fd4ce91bef9adf58d0578313f0e299b0ff4d334957fc1988aa7a354bda2a6b4f",
+      "criticalIssues": [
+        "Q1 has a question–answer grammar mismatch in every option. The stem O czym jest cały tekst? calls for O + locative, but all three answers are bare accusative noun phrases."
+      ],
+      "itemResults": [
+        {
+          "id": "q1",
+          "expectedOption": "B",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q2",
+          "expectedOption": "C",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q3",
+          "expectedOption": "A",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q4",
+          "expectedOption": "B",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q5",
+          "expectedOption": "C",
+          "matchesKey": true,
+          "literalEvidence": true
+        }
+      ],
+      "checks": {
+        "scoreAtLeast90": false,
+        "noCriticalIssues": false,
+        "allKeysMatch": true,
+        "noAmbiguousItems": true,
+        "allHaveLiteralEvidence": true,
+        "allMatchSkill": true,
+        "allDistractorsPlausible": false
+      },
+      "approved": false
+    },
+    {
+      "id": "pl-b1.reading.day-013",
+      "day": 13,
+      "level": "A1",
+      "score": 90.9,
+      "fingerprint": "26c0c9eefb2de9412ec6999576bf517df1edc1647d1b89bf9c306adf6c79df83",
+      "criticalIssues": [],
+      "itemResults": [
+        {
+          "id": "q1",
+          "expectedOption": "C",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q2",
+          "expectedOption": "A",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q3",
+          "expectedOption": "A",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q4",
+          "expectedOption": "B",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q5",
+          "expectedOption": "B",
+          "matchesKey": true,
+          "literalEvidence": true
+        }
+      ],
+      "checks": {
+        "scoreAtLeast90": true,
+        "noCriticalIssues": true,
+        "allKeysMatch": true,
+        "noAmbiguousItems": true,
+        "allHaveLiteralEvidence": true,
+        "allMatchSkill": true,
+        "allDistractorsPlausible": false
+      },
+      "approved": false
+    },
+    {
+      "id": "pl-b1.reading.day-014",
+      "day": 14,
+      "level": "A1",
+      "score": 88.45,
+      "fingerprint": "e8e38c444da58baf2d0f6f79c745f12e2fd7c7a64976bff9264aab67c74d4583",
+      "criticalIssues": [
+        "Q3’s only supported option repeats the meaning of dostawa do domu. It misses the cause/purpose construct and partly gives away Q5."
+      ],
+      "itemResults": [
+        {
+          "id": "q1",
+          "expectedOption": "B",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q2",
+          "expectedOption": "B",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q3",
+          "expectedOption": "B",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q4",
+          "expectedOption": "A",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q5",
+          "expectedOption": "C",
+          "matchesKey": true,
+          "literalEvidence": true
+        }
+      ],
+      "checks": {
+        "scoreAtLeast90": false,
+        "noCriticalIssues": false,
+        "allKeysMatch": true,
+        "noAmbiguousItems": true,
+        "allHaveLiteralEvidence": true,
+        "allMatchSkill": false,
+        "allDistractorsPlausible": false
+      },
+      "approved": false
+    },
+    {
+      "id": "pl-b1.reading.day-015",
+      "day": 15,
+      "level": "A1",
+      "score": 91.0,
+      "fingerprint": "87348b239a00575a9819f9ac03a378ffa664599112d205032fbb68cf59002304",
+      "criticalIssues": [],
+      "itemResults": [
+        {
+          "id": "q1",
+          "expectedOption": "C",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q2",
+          "expectedOption": "C",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q3",
+          "expectedOption": "C",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q4",
+          "expectedOption": "A",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q5",
+          "expectedOption": "B",
+          "matchesKey": true,
+          "literalEvidence": true
+        }
+      ],
+      "checks": {
+        "scoreAtLeast90": true,
+        "noCriticalIssues": true,
+        "allKeysMatch": true,
+        "noAmbiguousItems": true,
+        "allHaveLiteralEvidence": true,
+        "allMatchSkill": true,
+        "allDistractorsPlausible": false
+      },
+      "approved": false
+    },
+    {
+      "id": "pl-b1.reading.day-016",
+      "day": 16,
+      "level": "A1",
+      "score": 87.5,
+      "fingerprint": "ecf688f0eacc3ac04fe3eb1b33fd6b8a2e47e585f97512102e19cbff765b492c",
+      "criticalIssues": [
+        "Q4 supplies an unsupported detail by assuming the mother intends to give the son food to eat at work. The text supports the sandwiches as the only meal option, while the intended place of eating is unstated."
+      ],
+      "itemResults": [
+        {
+          "id": "q1",
+          "expectedOption": "B",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q2",
+          "expectedOption": "B",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q3",
+          "expectedOption": "C",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q4",
+          "expectedOption": "C",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q5",
+          "expectedOption": "A",
+          "matchesKey": true,
+          "literalEvidence": true
+        }
+      ],
+      "checks": {
+        "scoreAtLeast90": false,
+        "noCriticalIssues": false,
+        "allKeysMatch": true,
+        "noAmbiguousItems": true,
+        "allHaveLiteralEvidence": true,
+        "allMatchSkill": true,
+        "allDistractorsPlausible": false
+      },
+      "approved": false
+    },
+    {
+      "id": "pl-b1.reading.day-017",
+      "day": 17,
+      "level": "A1",
+      "score": 89.4,
+      "fingerprint": "ed2c2d7bcc8a59ae64bdf13994a2bf6009ea67c7aa535d2f2b704c3445b4ce9f",
+      "criticalIssues": [],
+      "itemResults": [
+        {
+          "id": "q1",
+          "expectedOption": "C",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q2",
+          "expectedOption": "A",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q3",
+          "expectedOption": "A",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q4",
+          "expectedOption": "B",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q5",
+          "expectedOption": "A",
+          "matchesKey": true,
+          "literalEvidence": true
+        }
+      ],
+      "checks": {
+        "scoreAtLeast90": false,
+        "noCriticalIssues": true,
+        "allKeysMatch": true,
+        "noAmbiguousItems": true,
+        "allHaveLiteralEvidence": true,
+        "allMatchSkill": true,
+        "allDistractorsPlausible": false
+      },
+      "approved": false
+    },
+    {
+      "id": "pl-b1.reading.day-018",
+      "day": 18,
+      "level": "A1",
+      "score": 92.4,
+      "fingerprint": "fe318c04d10604eb631f4083bf6bfe54cd48e9a0f88bc289aa4aa7b8826524dc",
+      "criticalIssues": [],
+      "itemResults": [
+        {
+          "id": "q1",
+          "expectedOption": "B",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q2",
+          "expectedOption": "C",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q3",
+          "expectedOption": "C",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q4",
+          "expectedOption": "C",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q5",
+          "expectedOption": "A",
+          "matchesKey": true,
+          "literalEvidence": true
+        }
+      ],
+      "checks": {
+        "scoreAtLeast90": true,
+        "noCriticalIssues": true,
+        "allKeysMatch": true,
+        "noAmbiguousItems": true,
+        "allHaveLiteralEvidence": true,
+        "allMatchSkill": true,
+        "allDistractorsPlausible": false
+      },
+      "approved": false
+    },
+    {
+      "id": "pl-b1.reading.day-019",
+      "day": 19,
+      "level": "A1",
+      "score": 91.75,
+      "fingerprint": "b4cdd7fb24e76ecda034596f8b20b52f0954dc6954cc327384e682d1733aa098",
+      "criticalIssues": [],
+      "itemResults": [
+        {
+          "id": "q1",
+          "expectedOption": "C",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q2",
+          "expectedOption": "A",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q3",
+          "expectedOption": "A",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q4",
+          "expectedOption": "B",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q5",
+          "expectedOption": "C",
+          "matchesKey": true,
+          "literalEvidence": true
+        }
+      ],
+      "checks": {
+        "scoreAtLeast90": true,
+        "noCriticalIssues": true,
+        "allKeysMatch": true,
+        "noAmbiguousItems": true,
+        "allHaveLiteralEvidence": true,
+        "allMatchSkill": true,
+        "allDistractorsPlausible": false
+      },
+      "approved": false
+    },
+    {
+      "id": "pl-b1.reading.day-020",
+      "day": 20,
+      "level": "A1",
+      "score": 92.0,
+      "fingerprint": "553a57eda70a067ce72a13e74b0d83e60001b8dbaadeb23e5b60d3654441300d",
+      "criticalIssues": [],
+      "itemResults": [
+        {
+          "id": "q1",
+          "expectedOption": "B",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q2",
+          "expectedOption": "B",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q3",
+          "expectedOption": "C",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q4",
+          "expectedOption": "A",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q5",
+          "expectedOption": "C",
+          "matchesKey": true,
+          "literalEvidence": true
+        }
+      ],
+      "checks": {
+        "scoreAtLeast90": true,
+        "noCriticalIssues": true,
+        "allKeysMatch": true,
+        "noAmbiguousItems": true,
+        "allHaveLiteralEvidence": true,
+        "allMatchSkill": true,
+        "allDistractorsPlausible": false
+      },
+      "approved": false
+    },
+    {
+      "id": "pl-b1.reading.day-021",
+      "day": 21,
+      "level": "A1",
+      "score": 91.1,
+      "fingerprint": "32f775458d0e25bce4c6351f8b799d093e4520c8ee11e52800fa98090a701b2b",
+      "criticalIssues": [],
+      "itemResults": [
+        {
+          "id": "q1",
+          "expectedOption": "B",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q2",
+          "expectedOption": "C",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q3",
+          "expectedOption": "C",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q4",
+          "expectedOption": "C",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q5",
+          "expectedOption": "B",
+          "matchesKey": true,
+          "literalEvidence": true
+        }
+      ],
+      "checks": {
+        "scoreAtLeast90": true,
+        "noCriticalIssues": true,
+        "allKeysMatch": true,
+        "noAmbiguousItems": true,
+        "allHaveLiteralEvidence": true,
+        "allMatchSkill": true,
+        "allDistractorsPlausible": false
+      },
+      "approved": false
+    },
+    {
+      "id": "pl-b1.reading.day-022",
+      "day": 22,
+      "level": "A1",
+      "score": 84.15,
+      "fingerprint": "920faeb8b3969612b2f715d8d02829b9027640f4178e6dd3562a7ed755e93286",
+      "criticalIssues": [
+        "Q4 gives Ola's finish time and says she works in the morning, but gives no start time. Only Marek is the expected answer, yet the schedule does not establish that Ola is working at 11:00. Give her a shift spanning that time."
+      ],
+      "itemResults": [
+        {
+          "id": "q1",
+          "expectedOption": "C",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q2",
+          "expectedOption": "C",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q3",
+          "expectedOption": "C",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q4",
+          "expectedOption": "C",
+          "matchesKey": false,
+          "literalEvidence": true
+        },
+        {
+          "id": "q5",
+          "expectedOption": "A",
+          "matchesKey": true,
+          "literalEvidence": true
+        }
+      ],
+      "checks": {
+        "scoreAtLeast90": false,
+        "noCriticalIssues": false,
+        "allKeysMatch": false,
+        "noAmbiguousItems": false,
+        "allHaveLiteralEvidence": true,
+        "allMatchSkill": true,
+        "allDistractorsPlausible": false
+      },
+      "approved": false
+    },
+    {
+      "id": "pl-b1.reading.day-023",
+      "day": 23,
+      "level": "A1",
+      "score": 90.75,
+      "fingerprint": "e77856818d598d97dc9f1a90542964e5ebe252b4a1b48ff6a54903f8d83c150d",
+      "criticalIssues": [],
+      "itemResults": [
+        {
+          "id": "q1",
+          "expectedOption": "A",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q2",
+          "expectedOption": "B",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q3",
+          "expectedOption": "B",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q4",
+          "expectedOption": "B",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q5",
+          "expectedOption": "A",
+          "matchesKey": true,
+          "literalEvidence": true
+        }
+      ],
+      "checks": {
+        "scoreAtLeast90": true,
+        "noCriticalIssues": true,
+        "allKeysMatch": true,
+        "noAmbiguousItems": true,
+        "allHaveLiteralEvidence": true,
+        "allMatchSkill": true,
+        "allDistractorsPlausible": false
+      },
+      "approved": false
+    },
+    {
+      "id": "pl-b1.reading.day-024",
+      "day": 24,
+      "level": "A1",
+      "score": 90.65,
+      "fingerprint": "550b105811933a9a229377c9d41abf77bf4df5c503884c34af77160528361a83",
+      "criticalIssues": [],
+      "itemResults": [
+        {
+          "id": "q1",
+          "expectedOption": "C",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q2",
+          "expectedOption": "C",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q3",
+          "expectedOption": "B",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q4",
+          "expectedOption": "A",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q5",
+          "expectedOption": "C",
+          "matchesKey": true,
+          "literalEvidence": true
+        }
+      ],
+      "checks": {
+        "scoreAtLeast90": true,
+        "noCriticalIssues": true,
+        "allKeysMatch": true,
+        "noAmbiguousItems": true,
+        "allHaveLiteralEvidence": true,
+        "allMatchSkill": true,
+        "allDistractorsPlausible": false
+      },
+      "approved": false
+    },
+    {
+      "id": "pl-b1.reading.day-025",
+      "day": 25,
+      "level": "A1",
+      "score": 84.3,
+      "fingerprint": "6204330db1aff001219879b011db1852281215eaa05518747a7acc2eaaec18a0",
+      "criticalIssues": [
+        "Q5's present-tense stem asks which camera already belongs to the narrator, but the passage says only that the narrator wants to buy one, and B describes a future purchase. Ask 'Co autor ma na myśli, mówiąc o własnym aparacie?' or use a conditional ownership scenario."
+      ],
+      "itemResults": [
+        {
+          "id": "q1",
+          "expectedOption": "A",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q2",
+          "expectedOption": "B",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q3",
+          "expectedOption": "C",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q4",
+          "expectedOption": "A",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q5",
+          "expectedOption": "B",
+          "matchesKey": false,
+          "literalEvidence": true
+        }
+      ],
+      "checks": {
+        "scoreAtLeast90": false,
+        "noCriticalIssues": false,
+        "allKeysMatch": false,
+        "noAmbiguousItems": false,
+        "allHaveLiteralEvidence": true,
+        "allMatchSkill": true,
+        "allDistractorsPlausible": false
+      },
+      "approved": false
+    },
+    {
+      "id": "pl-b1.reading.day-026",
+      "day": 26,
+      "level": "A1",
+      "score": 89.2,
+      "fingerprint": "a8437a4fac3e1ac893439dde8896b7f5c4b8a580451ab23f59ca2eff45cc2692",
+      "criticalIssues": [],
+      "itemResults": [
+        {
+          "id": "q1",
+          "expectedOption": "B",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q2",
+          "expectedOption": "B",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q3",
+          "expectedOption": "A",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q4",
+          "expectedOption": "A",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q5",
+          "expectedOption": "A",
+          "matchesKey": true,
+          "literalEvidence": true
+        }
+      ],
+      "checks": {
+        "scoreAtLeast90": false,
+        "noCriticalIssues": true,
+        "allKeysMatch": true,
+        "noAmbiguousItems": true,
+        "allHaveLiteralEvidence": true,
+        "allMatchSkill": true,
+        "allDistractorsPlausible": false
+      },
+      "approved": false
+    },
+    {
+      "id": "pl-b1.reading.day-027",
+      "day": 27,
+      "level": "A1",
+      "score": 87.2,
+      "fingerprint": "e21fbb9424451101b25d3c7b353a1ac07e4ff4aee12015d744c29e3053120332",
+      "criticalIssues": [],
+      "itemResults": [
+        {
+          "id": "q1",
+          "expectedOption": "C",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q2",
+          "expectedOption": "C",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q3",
+          "expectedOption": "B",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q4",
+          "expectedOption": "C",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q5",
+          "expectedOption": "C",
+          "matchesKey": true,
+          "literalEvidence": true
+        }
+      ],
+      "checks": {
+        "scoreAtLeast90": false,
+        "noCriticalIssues": true,
+        "allKeysMatch": true,
+        "noAmbiguousItems": true,
+        "allHaveLiteralEvidence": true,
+        "allMatchSkill": true,
+        "allDistractorsPlausible": false
+      },
+      "approved": false
+    },
+    {
+      "id": "pl-b1.reading.day-028",
+      "day": 28,
+      "level": "A1",
+      "score": 85.35,
+      "fingerprint": "3b153ef6206e1827fe8a1bbf3e50be38c8ab3fe420e3825712fe21554d2c480b",
+      "criticalIssues": [],
+      "itemResults": [
+        {
+          "id": "q1",
+          "expectedOption": "B",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q2",
+          "expectedOption": "C",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q3",
+          "expectedOption": "B",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q4",
+          "expectedOption": "A",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q5",
+          "expectedOption": "A",
+          "matchesKey": true,
+          "literalEvidence": true
+        }
+      ],
+      "checks": {
+        "scoreAtLeast90": false,
+        "noCriticalIssues": true,
+        "allKeysMatch": true,
+        "noAmbiguousItems": true,
+        "allHaveLiteralEvidence": true,
+        "allMatchSkill": true,
+        "allDistractorsPlausible": false
+      },
+      "approved": false
+    },
+    {
+      "id": "pl-b1.reading.day-029",
+      "day": 29,
+      "level": "A2",
+      "score": 94.6,
+      "fingerprint": "7b8e86f7ce46097c77e3286a758a564d3d9aa589aadbe26fe6efe2ed9a61e76a",
+      "criticalIssues": [],
+      "itemResults": [
+        {
+          "id": "q1",
+          "expectedOption": "B",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q2",
+          "expectedOption": "C",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q3",
+          "expectedOption": "B",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q4",
+          "expectedOption": "B",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q5",
+          "expectedOption": "A",
+          "matchesKey": true,
+          "literalEvidence": true
+        }
+      ],
+      "checks": {
+        "scoreAtLeast90": true,
+        "noCriticalIssues": true,
+        "allKeysMatch": true,
+        "noAmbiguousItems": true,
+        "allHaveLiteralEvidence": true,
+        "allMatchSkill": true,
+        "allDistractorsPlausible": false
+      },
+      "approved": false
+    },
+    {
+      "id": "pl-b1.reading.day-030",
+      "day": 30,
+      "level": "A2",
+      "score": 92.3,
+      "fingerprint": "ccd32b014401fd287b27da4bb3dbbdade2171dc6d9630d76be16549dd1e17c34",
+      "criticalIssues": [],
+      "itemResults": [
+        {
+          "id": "q1",
+          "expectedOption": "B",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q2",
+          "expectedOption": "C",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q3",
+          "expectedOption": "B",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q4",
+          "expectedOption": "B",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q5",
+          "expectedOption": "C",
+          "matchesKey": true,
+          "literalEvidence": true
+        }
+      ],
+      "checks": {
+        "scoreAtLeast90": true,
+        "noCriticalIssues": true,
+        "allKeysMatch": true,
+        "noAmbiguousItems": true,
+        "allHaveLiteralEvidence": true,
+        "allMatchSkill": true,
+        "allDistractorsPlausible": false
+      },
+      "approved": false
+    },
+    {
+      "id": "pl-b1.reading.day-031",
+      "day": 31,
+      "level": "A2",
+      "score": 91.85,
+      "fingerprint": "a8b6219595286dd42e77b67fcbbc167a12439633424c9670995a9dffd2a89ac6",
+      "criticalIssues": [],
+      "itemResults": [
+        {
+          "id": "q1",
+          "expectedOption": "C",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q2",
+          "expectedOption": "C",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q3",
+          "expectedOption": "C",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q4",
+          "expectedOption": "A",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q5",
+          "expectedOption": "A",
+          "matchesKey": true,
+          "literalEvidence": true
+        }
+      ],
+      "checks": {
+        "scoreAtLeast90": true,
+        "noCriticalIssues": true,
+        "allKeysMatch": true,
+        "noAmbiguousItems": true,
+        "allHaveLiteralEvidence": true,
+        "allMatchSkill": true,
+        "allDistractorsPlausible": false
+      },
+      "approved": false
+    },
+    {
+      "id": "pl-b1.reading.day-032",
+      "day": 32,
+      "level": "A2",
+      "score": 86.05,
+      "fingerprint": "0dae8ce914316c47f67db556873fb45c075c0b487f84c9ceddb3622e77029ebd",
+      "criticalIssues": [
+        "Missing closing comma after jedziemy in „sprawdzić pogodę tam, dokąd jedziemy i zapisać”. Write „sprawdzić pogodę tam, dokąd jedziemy, i zapisać”."
+      ],
+      "itemResults": [
+        {
+          "id": "q1",
+          "expectedOption": "B",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q2",
+          "expectedOption": "C",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q3",
+          "expectedOption": "B",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q4",
+          "expectedOption": "A",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q5",
+          "expectedOption": "A",
+          "matchesKey": true,
+          "literalEvidence": true
+        }
+      ],
+      "checks": {
+        "scoreAtLeast90": false,
+        "noCriticalIssues": false,
+        "allKeysMatch": true,
+        "noAmbiguousItems": true,
+        "allHaveLiteralEvidence": true,
+        "allMatchSkill": true,
+        "allDistractorsPlausible": false
+      },
+      "approved": false
+    },
+    {
+      "id": "pl-b1.reading.day-033",
+      "day": 33,
+      "level": "A2",
+      "score": 89.95,
+      "fingerprint": "a1d11aef0a82090c948be626dfa34c0c2f8ef5c10cf0d959798b67b6d4c15062",
+      "criticalIssues": [],
+      "itemResults": [
+        {
+          "id": "q1",
+          "expectedOption": "A",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q2",
+          "expectedOption": "A",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q3",
+          "expectedOption": "A",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q4",
+          "expectedOption": "A",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q5",
+          "expectedOption": "B",
+          "matchesKey": true,
+          "literalEvidence": true
+        }
+      ],
+      "checks": {
+        "scoreAtLeast90": false,
+        "noCriticalIssues": true,
+        "allKeysMatch": true,
+        "noAmbiguousItems": true,
+        "allHaveLiteralEvidence": true,
+        "allMatchSkill": true,
+        "allDistractorsPlausible": false
+      },
+      "approved": false
+    },
+    {
+      "id": "pl-b1.reading.day-034",
+      "day": 34,
+      "level": "A2",
+      "score": 89.8,
+      "fingerprint": "f769c3b7f5503adda52a24d3e9b8c1814f6abda90e02c6b0212f62bd6c870b66",
+      "criticalIssues": [],
+      "itemResults": [
+        {
+          "id": "q1",
+          "expectedOption": "A",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q2",
+          "expectedOption": "C",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q3",
+          "expectedOption": "A",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q4",
+          "expectedOption": "C",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q5",
+          "expectedOption": "A",
+          "matchesKey": true,
+          "literalEvidence": true
+        }
+      ],
+      "checks": {
+        "scoreAtLeast90": false,
+        "noCriticalIssues": true,
+        "allKeysMatch": true,
+        "noAmbiguousItems": true,
+        "allHaveLiteralEvidence": true,
+        "allMatchSkill": true,
+        "allDistractorsPlausible": false
+      },
+      "approved": false
+    },
+    {
+      "id": "pl-b1.reading.day-035",
+      "day": 35,
+      "level": "A2",
+      "score": 86.9,
+      "fingerprint": "28a94cb7008f5eb94a29135c1cca97124b6e50b48a6a944ecb99d32d3d525d2b",
+      "criticalIssues": [],
+      "itemResults": [
+        {
+          "id": "q1",
+          "expectedOption": "C",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q2",
+          "expectedOption": "A",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q3",
+          "expectedOption": "B",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q4",
+          "expectedOption": "A",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q5",
+          "expectedOption": "A",
+          "matchesKey": true,
+          "literalEvidence": true
+        }
+      ],
+      "checks": {
+        "scoreAtLeast90": false,
+        "noCriticalIssues": true,
+        "allKeysMatch": true,
+        "noAmbiguousItems": true,
+        "allHaveLiteralEvidence": true,
+        "allMatchSkill": false,
+        "allDistractorsPlausible": false
+      },
+      "approved": false
+    },
+    {
+      "id": "pl-b1.reading.day-036",
+      "day": 36,
+      "level": "A2",
+      "score": 90.05,
+      "fingerprint": "9422e2822b4f08d69165a0849feec29368726bf118bfcf226628b53970046690",
+      "criticalIssues": [],
+      "itemResults": [
+        {
+          "id": "q1",
+          "expectedOption": "B",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q2",
+          "expectedOption": "A",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q3",
+          "expectedOption": "B",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q4",
+          "expectedOption": "C",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q5",
+          "expectedOption": "A",
+          "matchesKey": true,
+          "literalEvidence": true
+        }
+      ],
+      "checks": {
+        "scoreAtLeast90": true,
+        "noCriticalIssues": true,
+        "allKeysMatch": true,
+        "noAmbiguousItems": true,
+        "allHaveLiteralEvidence": true,
+        "allMatchSkill": true,
+        "allDistractorsPlausible": false
+      },
+      "approved": false
+    },
+    {
+      "id": "pl-b1.reading.day-037",
+      "day": 37,
+      "level": "A2",
+      "score": 85.8,
+      "fingerprint": "0b573b41d6fddd2311e7c0a6b6c02d5766949f68942c1cba6b7fc5b29dc63b92",
+      "criticalIssues": [
+        "„Każdy odpowiada na te, które pasują do jego możliwości” has no explicit antecedent for te. Supply „na te prośby, które pasują do jego możliwości” or „odpowiada, gdy może w czymś pomóc”."
+      ],
+      "itemResults": [
+        {
+          "id": "q1",
+          "expectedOption": "C",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q2",
+          "expectedOption": "B",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q3",
+          "expectedOption": "B",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q4",
+          "expectedOption": "B",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q5",
+          "expectedOption": "C",
+          "matchesKey": true,
+          "literalEvidence": true
+        }
+      ],
+      "checks": {
+        "scoreAtLeast90": false,
+        "noCriticalIssues": false,
+        "allKeysMatch": true,
+        "noAmbiguousItems": true,
+        "allHaveLiteralEvidence": true,
+        "allMatchSkill": true,
+        "allDistractorsPlausible": false
+      },
+      "approved": false
+    },
+    {
+      "id": "pl-b1.reading.day-038",
+      "day": 38,
+      "level": "A2",
+      "score": 89.15,
+      "fingerprint": "69231dff0c7d6bc2e25c7ef28c894a1d48e33c7221411e1b9496d3ca4d33bc52",
+      "criticalIssues": [],
+      "itemResults": [
+        {
+          "id": "q1",
+          "expectedOption": "B",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q2",
+          "expectedOption": "B",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q3",
+          "expectedOption": "B",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q4",
+          "expectedOption": "B",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q5",
+          "expectedOption": "C",
+          "matchesKey": true,
+          "literalEvidence": true
+        }
+      ],
+      "checks": {
+        "scoreAtLeast90": false,
+        "noCriticalIssues": true,
+        "allKeysMatch": true,
+        "noAmbiguousItems": true,
+        "allHaveLiteralEvidence": true,
+        "allMatchSkill": false,
+        "allDistractorsPlausible": false
+      },
+      "approved": false
+    },
+    {
+      "id": "pl-b1.reading.day-039",
+      "day": 39,
+      "level": "A2",
+      "score": 88.3,
+      "fingerprint": "c7c0d53dd749fab8d86062e59dc1f4926bdd390490351beacef83086c887a51c",
+      "criticalIssues": [],
+      "itemResults": [
+        {
+          "id": "q1",
+          "expectedOption": "B",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q2",
+          "expectedOption": "B",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q3",
+          "expectedOption": "B",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q4",
+          "expectedOption": "A",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q5",
+          "expectedOption": "A",
+          "matchesKey": true,
+          "literalEvidence": true
+        }
+      ],
+      "checks": {
+        "scoreAtLeast90": false,
+        "noCriticalIssues": true,
+        "allKeysMatch": true,
+        "noAmbiguousItems": true,
+        "allHaveLiteralEvidence": true,
+        "allMatchSkill": true,
+        "allDistractorsPlausible": false
+      },
+      "approved": false
+    },
+    {
+      "id": "pl-b1.reading.day-040",
+      "day": 40,
+      "level": "A2",
+      "score": 90.05,
+      "fingerprint": "d00f11a4e4bbce78381a0dcb2ca5cc7986e0667a4a8e44474021fdcb0a26e436",
+      "criticalIssues": [],
+      "itemResults": [
+        {
+          "id": "q1",
+          "expectedOption": "B",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q2",
+          "expectedOption": "C",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q3",
+          "expectedOption": "B",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q4",
+          "expectedOption": "C",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q5",
+          "expectedOption": "B",
+          "matchesKey": true,
+          "literalEvidence": true
+        }
+      ],
+      "checks": {
+        "scoreAtLeast90": true,
+        "noCriticalIssues": true,
+        "allKeysMatch": true,
+        "noAmbiguousItems": true,
+        "allHaveLiteralEvidence": true,
+        "allMatchSkill": true,
+        "allDistractorsPlausible": false
+      },
+      "approved": false
+    },
+    {
+      "id": "pl-b1.reading.day-041",
+      "day": 41,
+      "level": "A2",
+      "score": 93.2,
+      "fingerprint": "c370e81090a15a73b276d5a78d22cdd3085a74b464dc8fb140a2ae7f19dec679",
+      "criticalIssues": [],
+      "itemResults": [
+        {
+          "id": "q1",
+          "expectedOption": "C",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q2",
+          "expectedOption": "A",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q3",
+          "expectedOption": "C",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q4",
+          "expectedOption": "A",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q5",
+          "expectedOption": "C",
+          "matchesKey": true,
+          "literalEvidence": true
+        }
+      ],
+      "checks": {
+        "scoreAtLeast90": true,
+        "noCriticalIssues": true,
+        "allKeysMatch": true,
+        "noAmbiguousItems": true,
+        "allHaveLiteralEvidence": true,
+        "allMatchSkill": true,
+        "allDistractorsPlausible": false
+      },
+      "approved": false
+    },
+    {
+      "id": "pl-b1.reading.day-042",
+      "day": 42,
+      "level": "A2",
+      "score": 89.9,
+      "fingerprint": "d4d01d7c247c2ff83773cd5174f8faa311954edada61d0908c3fb5e983a21eee",
+      "criticalIssues": [],
+      "itemResults": [
+        {
+          "id": "q1",
+          "expectedOption": "C",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q2",
+          "expectedOption": "A",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q3",
+          "expectedOption": "B",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q4",
+          "expectedOption": "B",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q5",
+          "expectedOption": "B",
+          "matchesKey": true,
+          "literalEvidence": true
+        }
+      ],
+      "checks": {
+        "scoreAtLeast90": false,
+        "noCriticalIssues": true,
+        "allKeysMatch": true,
+        "noAmbiguousItems": true,
+        "allHaveLiteralEvidence": true,
+        "allMatchSkill": false,
+        "allDistractorsPlausible": false
+      },
+      "approved": false
+    },
+    {
+      "id": "pl-b1.reading.day-043",
+      "day": 43,
+      "level": "A2",
+      "score": 94.3,
+      "fingerprint": "599e9d66552d6c03c55011b8f2be93d5a61a4a99c25a5cad4f9ed19c695a1994",
+      "criticalIssues": [],
+      "itemResults": [
+        {
+          "id": "q1",
+          "expectedOption": "A",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q2",
+          "expectedOption": "A",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q3",
+          "expectedOption": "B",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q4",
+          "expectedOption": "A",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q5",
+          "expectedOption": "C",
+          "matchesKey": true,
+          "literalEvidence": true
+        }
+      ],
+      "checks": {
+        "scoreAtLeast90": true,
+        "noCriticalIssues": true,
+        "allKeysMatch": true,
+        "noAmbiguousItems": true,
+        "allHaveLiteralEvidence": true,
+        "allMatchSkill": true,
+        "allDistractorsPlausible": true
+      },
+      "approved": true
+    },
+    {
+      "id": "pl-b1.reading.day-044",
+      "day": 44,
+      "level": "A2",
+      "score": 94.95,
+      "fingerprint": "715cb0e7c64af550424b4e88ed7c41c916f773596bcb74292794639a739c3bb7",
+      "criticalIssues": [],
+      "itemResults": [
+        {
+          "id": "q1",
+          "expectedOption": "C",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q2",
+          "expectedOption": "A",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q3",
+          "expectedOption": "A",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q4",
+          "expectedOption": "A",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q5",
+          "expectedOption": "C",
+          "matchesKey": true,
+          "literalEvidence": true
+        }
+      ],
+      "checks": {
+        "scoreAtLeast90": true,
+        "noCriticalIssues": true,
+        "allKeysMatch": true,
+        "noAmbiguousItems": true,
+        "allHaveLiteralEvidence": true,
+        "allMatchSkill": true,
+        "allDistractorsPlausible": false
+      },
+      "approved": false
+    },
+    {
+      "id": "pl-b1.reading.day-045",
+      "day": 45,
+      "level": "A2",
+      "score": 90.6,
+      "fingerprint": "ae79ba7fe2c46d2e3b59d8f075eb4d91904b1f84a3109728d8a4b98865938377",
+      "criticalIssues": [],
+      "itemResults": [
+        {
+          "id": "q1",
+          "expectedOption": "B",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q2",
+          "expectedOption": "C",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q3",
+          "expectedOption": "C",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q4",
+          "expectedOption": "C",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q5",
+          "expectedOption": "B",
+          "matchesKey": true,
+          "literalEvidence": true
+        }
+      ],
+      "checks": {
+        "scoreAtLeast90": true,
+        "noCriticalIssues": true,
+        "allKeysMatch": true,
+        "noAmbiguousItems": true,
+        "allHaveLiteralEvidence": true,
+        "allMatchSkill": true,
+        "allDistractorsPlausible": false
+      },
+      "approved": false
+    },
+    {
+      "id": "pl-b1.reading.day-046",
+      "day": 46,
+      "level": "A2",
+      "score": 93.6,
+      "fingerprint": "0ae90d4052803aefdc5375ea1ad3949fef253d11e3d49e66fb1765005820f383",
+      "criticalIssues": [],
+      "itemResults": [
+        {
+          "id": "q1",
+          "expectedOption": "B",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q2",
+          "expectedOption": "A",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q3",
+          "expectedOption": "A",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q4",
+          "expectedOption": "A",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q5",
+          "expectedOption": "B",
+          "matchesKey": true,
+          "literalEvidence": true
+        }
+      ],
+      "checks": {
+        "scoreAtLeast90": true,
+        "noCriticalIssues": true,
+        "allKeysMatch": true,
+        "noAmbiguousItems": true,
+        "allHaveLiteralEvidence": true,
+        "allMatchSkill": true,
+        "allDistractorsPlausible": true
+      },
+      "approved": true
+    },
+    {
+      "id": "pl-b1.reading.day-047",
+      "day": 47,
+      "level": "A2",
+      "score": 91.75,
+      "fingerprint": "1983c29f97460d0cee958337eb7b071d6ad90ce05d75994180c718b9f7e709a4",
+      "criticalIssues": [],
+      "itemResults": [
+        {
+          "id": "q1",
+          "expectedOption": "C",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q2",
+          "expectedOption": "C",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q3",
+          "expectedOption": "C",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q4",
+          "expectedOption": "C",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q5",
+          "expectedOption": "A",
+          "matchesKey": true,
+          "literalEvidence": true
+        }
+      ],
+      "checks": {
+        "scoreAtLeast90": true,
+        "noCriticalIssues": true,
+        "allKeysMatch": true,
+        "noAmbiguousItems": true,
+        "allHaveLiteralEvidence": true,
+        "allMatchSkill": true,
+        "allDistractorsPlausible": false
+      },
+      "approved": false
+    },
+    {
+      "id": "pl-b1.reading.day-048",
+      "day": 48,
+      "level": "A2",
+      "score": 93.35,
+      "fingerprint": "7ac209951980d61d5a25d97d34cc898532a02d765bfab7d59cae59c46f873b25",
+      "criticalIssues": [],
+      "itemResults": [
+        {
+          "id": "q1",
+          "expectedOption": "B",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q2",
+          "expectedOption": "B",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q3",
+          "expectedOption": "C",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q4",
+          "expectedOption": "B",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q5",
+          "expectedOption": "A",
+          "matchesKey": true,
+          "literalEvidence": true
+        }
+      ],
+      "checks": {
+        "scoreAtLeast90": true,
+        "noCriticalIssues": true,
+        "allKeysMatch": true,
+        "noAmbiguousItems": true,
+        "allHaveLiteralEvidence": true,
+        "allMatchSkill": true,
+        "allDistractorsPlausible": false
+      },
+      "approved": false
+    },
+    {
+      "id": "pl-b1.reading.day-049",
+      "day": 49,
+      "level": "A2",
+      "score": 92.65,
+      "fingerprint": "8fa5a58026ddcb9fa85add5a8429a718ec48f69aed0e36acdcfe5a8a847e447e",
+      "criticalIssues": [],
+      "itemResults": [
+        {
+          "id": "q1",
+          "expectedOption": "C",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q2",
+          "expectedOption": "A",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q3",
+          "expectedOption": "A",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q4",
+          "expectedOption": "A",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q5",
+          "expectedOption": "C",
+          "matchesKey": true,
+          "literalEvidence": true
+        }
+      ],
+      "checks": {
+        "scoreAtLeast90": true,
+        "noCriticalIssues": true,
+        "allKeysMatch": true,
+        "noAmbiguousItems": true,
+        "allHaveLiteralEvidence": true,
+        "allMatchSkill": true,
+        "allDistractorsPlausible": true
+      },
+      "approved": true
+    },
+    {
+      "id": "pl-b1.reading.day-050",
+      "day": 50,
+      "level": "A2",
+      "score": 92.85,
+      "fingerprint": "0e0bdacfb31308a0770fbb6b98a6d1660f5b95e4f420c3f599f10744af4a7d3b",
+      "criticalIssues": [],
+      "itemResults": [
+        {
+          "id": "q1",
+          "expectedOption": "B",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q2",
+          "expectedOption": "A",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q3",
+          "expectedOption": "A",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q4",
+          "expectedOption": "B",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q5",
+          "expectedOption": "B",
+          "matchesKey": true,
+          "literalEvidence": true
+        }
+      ],
+      "checks": {
+        "scoreAtLeast90": true,
+        "noCriticalIssues": true,
+        "allKeysMatch": true,
+        "noAmbiguousItems": true,
+        "allHaveLiteralEvidence": true,
+        "allMatchSkill": true,
+        "allDistractorsPlausible": false
+      },
+      "approved": false
+    },
+    {
+      "id": "pl-b1.reading.day-051",
+      "day": 51,
+      "level": "A2",
+      "score": 92.85,
+      "fingerprint": "13d0db68d4a3d56b1e6fcac3eb55f7460d14a66d96651783f20f3158b1999414",
+      "criticalIssues": [],
+      "itemResults": [
+        {
+          "id": "q1",
+          "expectedOption": "C",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q2",
+          "expectedOption": "B",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q3",
+          "expectedOption": "C",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q4",
+          "expectedOption": "B",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q5",
+          "expectedOption": "A",
+          "matchesKey": true,
+          "literalEvidence": true
+        }
+      ],
+      "checks": {
+        "scoreAtLeast90": true,
+        "noCriticalIssues": true,
+        "allKeysMatch": true,
+        "noAmbiguousItems": true,
+        "allHaveLiteralEvidence": true,
+        "allMatchSkill": true,
+        "allDistractorsPlausible": true
+      },
+      "approved": true
+    },
+    {
+      "id": "pl-b1.reading.day-052",
+      "day": 52,
+      "level": "A2",
+      "score": 91.7,
+      "fingerprint": "deb4994e0a6ee390e4a53f9f78580e6a8c6df36fe8cc9f55f3bc80c9a33069d2",
+      "criticalIssues": [],
+      "itemResults": [
+        {
+          "id": "q1",
+          "expectedOption": "C",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q2",
+          "expectedOption": "B",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q3",
+          "expectedOption": "C",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q4",
+          "expectedOption": "B",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q5",
+          "expectedOption": "B",
+          "matchesKey": true,
+          "literalEvidence": true
+        }
+      ],
+      "checks": {
+        "scoreAtLeast90": true,
+        "noCriticalIssues": true,
+        "allKeysMatch": true,
+        "noAmbiguousItems": true,
+        "allHaveLiteralEvidence": true,
+        "allMatchSkill": true,
+        "allDistractorsPlausible": false
+      },
+      "approved": false
+    },
+    {
+      "id": "pl-b1.reading.day-053",
+      "day": 53,
+      "level": "A2",
+      "score": 92.3,
+      "fingerprint": "f38f7d46daddb656f2ae5c5d02a31a0d5e8d5a1762a6c660f1481a315445ede6",
+      "criticalIssues": [],
+      "itemResults": [
+        {
+          "id": "q1",
+          "expectedOption": "B",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q2",
+          "expectedOption": "B",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q3",
+          "expectedOption": "B",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q4",
+          "expectedOption": "B",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q5",
+          "expectedOption": "C",
+          "matchesKey": true,
+          "literalEvidence": true
+        }
+      ],
+      "checks": {
+        "scoreAtLeast90": true,
+        "noCriticalIssues": true,
+        "allKeysMatch": true,
+        "noAmbiguousItems": true,
+        "allHaveLiteralEvidence": true,
+        "allMatchSkill": true,
+        "allDistractorsPlausible": false
+      },
+      "approved": false
+    },
+    {
+      "id": "pl-b1.reading.day-064",
+      "day": 64,
+      "level": "A2",
+      "score": 87.7,
+      "fingerprint": "d392a9ef2c60082927b96ea6a8267875864d4e5fb942b95be3c24c05c53ef3e0",
+      "criticalIssues": [
+        "Q4 is ambiguous. A clearly works, but B can also work if the brother brings the bag to Emilia after shopping while she is still out. The stem does not require returning the bottle before shopping or forbid help during the outing."
+      ],
+      "itemResults": [
+        {
+          "id": "q1",
+          "expectedOption": "C",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q2",
+          "expectedOption": "B",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q3",
+          "expectedOption": "C",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q4",
+          "expectedOption": "A",
+          "matchesKey": false,
+          "literalEvidence": true
+        },
+        {
+          "id": "q5",
+          "expectedOption": "B",
+          "matchesKey": true,
+          "literalEvidence": true
+        }
+      ],
+      "checks": {
+        "scoreAtLeast90": false,
+        "noCriticalIssues": false,
+        "allKeysMatch": false,
+        "noAmbiguousItems": false,
+        "allHaveLiteralEvidence": true,
+        "allMatchSkill": true,
+        "allDistractorsPlausible": false
+      },
+      "approved": false
+    },
+    {
+      "id": "pl-b1.reading.day-078",
+      "day": 78,
+      "level": "A2",
+      "score": 90.7,
+      "fingerprint": "4df76944e4e98a86995bca4a0e899433de095ec5cb61a899320141b3ee711cd1",
+      "criticalIssues": [],
+      "itemResults": [
+        {
+          "id": "q1",
+          "expectedOption": "C",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q2",
+          "expectedOption": "C",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q3",
+          "expectedOption": "C",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q4",
+          "expectedOption": "A",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q5",
+          "expectedOption": "B",
+          "matchesKey": true,
+          "literalEvidence": true
+        }
+      ],
+      "checks": {
+        "scoreAtLeast90": true,
+        "noCriticalIssues": true,
+        "allKeysMatch": true,
+        "noAmbiguousItems": true,
+        "allHaveLiteralEvidence": true,
+        "allMatchSkill": true,
+        "allDistractorsPlausible": false
+      },
+      "approved": false
+    },
+    {
+      "id": "pl-b1.reading.day-092",
+      "day": 92,
+      "level": "B1",
+      "score": 94.1,
+      "fingerprint": "8e058c68093e48ce1d3bbec33c06030b4dd0d426d801f09ecc77bd9bba1f52c3",
+      "criticalIssues": [],
+      "itemResults": [
+        {
+          "id": "q1",
+          "expectedOption": "C",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q2",
+          "expectedOption": "B",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q3",
+          "expectedOption": "C",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q4",
+          "expectedOption": "B",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q5",
+          "expectedOption": "C",
+          "matchesKey": true,
+          "literalEvidence": true
+        }
+      ],
+      "checks": {
+        "scoreAtLeast90": true,
+        "noCriticalIssues": true,
+        "allKeysMatch": true,
+        "noAmbiguousItems": true,
+        "allHaveLiteralEvidence": true,
+        "allMatchSkill": true,
+        "allDistractorsPlausible": false
+      },
+      "approved": false
+    },
+    {
+      "id": "pl-b1.reading.day-099",
+      "day": 99,
+      "level": "B1",
+      "score": 93.65,
+      "fingerprint": "d575539e529940130162985a81004bc1c97c09022ce9c25b62941c360c12896c",
+      "criticalIssues": [
+        "The passage has an unnatural verb–object combination in bibliotekarka najpierw opowiedziała kilka zdań o autorze. Use powiedziała kilka zdań o autorze or krótko opowiedziała o autorze."
+      ],
+      "itemResults": [
+        {
+          "id": "q1",
+          "expectedOption": "A",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q2",
+          "expectedOption": "C",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q3",
+          "expectedOption": "A",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q4",
+          "expectedOption": "C",
+          "matchesKey": true,
+          "literalEvidence": true
+        },
+        {
+          "id": "q5",
+          "expectedOption": "B",
+          "matchesKey": true,
+          "literalEvidence": true
+        }
+      ],
+      "checks": {
+        "scoreAtLeast90": true,
+        "noCriticalIssues": false,
+        "allKeysMatch": true,
+        "noAmbiguousItems": true,
+        "allHaveLiteralEvidence": true,
+        "allMatchSkill": true,
+        "allDistractorsPlausible": false
+      },
+      "approved": false
+    }
+  ]
+}

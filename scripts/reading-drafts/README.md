@@ -2,7 +2,7 @@
 
 ## Scope
 
-The course contains 182 study days. The initial draft covers days 1–50 (50 original passages, 250 questions). Seven additional source-based drafts cover days 51, 52, 53, 64, 78, 92 and 99 (57 passages / 285 questions total). All 132 remaining-day topics are in scripts/reading-topic-plan.json; 125 passages still need authoring. None of the drafts has passed independent model evaluation yet. Day 1 is diagnostic in the current curriculum; a reading passage for that day is available but does not imply replacing the diagnostic. Drafts live under scripts/reading-drafts, outside the runtime content pack. Nothing here changes the existing lesson or production deployment.
+The course contains 182 study days. The initial draft covers days 1–50 (50 original passages, 250 questions). Seven additional source-based drafts cover days 51, 52, 53, 64, 78, 92 and 99 (57 passages / 285 questions total). All 132 remaining-day topics are in scripts/reading-topic-plan.json; 125 passages still need authoring. See the [blind review reports](../reading-reviews/README.md) for the current acceptance status. Day 1 is diagnostic in the current curriculum; a reading passage for that day is available but does not imply replacing the diagnostic. Drafts live under scripts/reading-drafts, outside the runtime content pack. Nothing here changes the existing lesson or production deployment.
 
 Target length bands are teaching design choices, not certified CEFR ratings:
 - Days 1–28: A1, 80–120 words.
@@ -30,11 +30,13 @@ export READING_REVIEW_MODEL="your-independent-model"
 node scripts/reading-pipeline.mjs review --from 1 --to 10
 ```
 
-The reviewer first solves questions without keys, then evaluates the complete text and item set in a separate request. Approval requires 5/5 blind matches, exact quoted evidence, no ambiguity or critical issues, passing per-item criteria, weighted score >=90. Reports include a SHA-256 content fingerprint and the model identity. Rejected drafts should be corrected; a changed fingerprint creates a new review file. Review reports are evidence of model evaluation, not a native-speaker or official exam certification. No review reports have been produced yet.
+The reviewer first solves questions without keys, then evaluates the complete text and item set in a separate request. Approval requires 5/5 blind matches, exact quoted evidence, no ambiguity or critical issues, passing per-item criteria, weighted score >=90. Reports include a SHA-256 content fingerprint and the model identity. Rejected drafts should be corrected; a changed fingerprint creates a new review file. Review reports are evidence of model evaluation, not a native-speaker or official exam certification. The [blind pilot review](../reading-reviews/README.md) used isolated reviewers and separate reports under `scripts/reading-reviews/`. The command above writes export-compatible per-text reports.
 
 ## Extend to remaining days
 
-Configure a separate author model using READING_AUTHOR_MODEL, READING_AUTHOR_API_KEY and optional READING_AUTHOR_BASE_URL. This uses current curriculum theme, rule IDs and vocabulary backlog; generation is limited to explicit batches of at most ten to control cost. Review each batch before expanding.
+See the [authoring prompt](../reading-reviews/authoring-prompt.md) for the independent author handoff. Start expanding after the pilot passes the blind review criteria.
+
+For API-based authoring, configure a separate author model using READING_AUTHOR_MODEL, READING_AUTHOR_API_KEY and optional READING_AUTHOR_BASE_URL. This uses current curriculum theme, rule IDs and vocabulary backlog; generation is limited to explicit batches of at most ten to control cost. Review each batch before expanding.
 
 ```sh
 node scripts/reading-pipeline.mjs author --from 51 --to 60

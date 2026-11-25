@@ -1,0 +1,619 @@
+{
+  "passages": [
+    {
+      "id": "pl-b1.reading.day-041",
+      "scores": {
+        "naturalness": 94,
+        "level": 68,
+        "questions": 68,
+        "ambiguity": 99,
+        "theme": 98,
+        "vocabulary": 87
+      },
+      "criticalIssues": [
+        "q4: Explicit purpose. Ask which event would suit an outsider unable to tend a bed regularly."
+      ],
+      "notes": "Several passives and terms such as grządka, harmonogram and nadmiar stretch A2. Gloss grządka or introduce it concretely.",
+      "items": [
+        {
+          "id": "q1",
+          "option": "B",
+          "evidence": "Ludzie, którzy wcześniej tylko mijali się na schodach, zaczęli spędzać razem czas.",
+          "ambiguous": false,
+          "distractorScore": 50,
+          "skillMatches": true,
+          "notes": "Contrast two benefits actually discussed."
+        },
+        {
+          "id": "q2",
+          "option": "C",
+          "evidence": "nadmiar trafia do kuchni społecznej",
+          "ambiguous": false,
+          "distractorScore": 28,
+          "skillMatches": true,
+          "notes": "Parking is an implausible destination; use the school kitchen."
+        },
+        {
+          "id": "q3",
+          "option": "A",
+          "evidence": "przy wspólnej pracy można lepiej wykorzystać dostępne miejsce oraz wodę.",
+          "ambiguous": false,
+          "distractorScore": 52,
+          "skillMatches": true,
+          "notes": "Use plausible scheduling motives."
+        },
+        {
+          "id": "q4",
+          "option": "B",
+          "evidence": "aby również osoby spoza osiedla mogły nauczyć się uprawiać rośliny w mieście.",
+          "ambiguous": false,
+          "distractorScore": 30,
+          "skillMatches": false,
+          "notes": "Explicit purpose. Ask which event would suit an outsider unable to tend a bed regularly."
+        },
+        {
+          "id": "q5",
+          "option": "C",
+          "evidence": "Zebrane warzywa są dzielone między uczestników, a nadmiar trafia do kuchni społecznej.",
+          "ambiguous": false,
+          "distractorScore": 35,
+          "skillMatches": true,
+          "notes": "Replace first harvest day with a reserved share of the harvest."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-042",
+      "scores": {
+        "naturalness": 91,
+        "level": 55,
+        "questions": 75,
+        "ambiguity": 98,
+        "theme": 98,
+        "vocabulary": 88
+      },
+      "criticalIssues": [
+        "Formal vocabulary and sentence density exceed typical independent A2 reading.",
+        "Q5 keyed definition uses the faulty collocation przekraczać pieniądze."
+      ],
+      "notes": "Administrative vocabulary and dense passive clauses approach B1. Use simpler wording such as Miasto ma na to określoną sumę.",
+      "items": [
+        {
+          "id": "q1",
+          "option": "A",
+          "evidence": "Potem mieszkańcy głosują przez internet lub osobiście w wybranych punktach.",
+          "ambiguous": false,
+          "distractorScore": 27,
+          "skillMatches": true,
+          "notes": "Both foils are distant; contrast proposing projects with reviewing last year’s work."
+        },
+        {
+          "id": "q2",
+          "option": "B",
+          "evidence": "mieszkańcy głosują przez internet lub osobiście",
+          "ambiguous": false,
+          "distractorScore": 75,
+          "skillMatches": true,
+          "notes": "Recognizable alternative channels."
+        },
+        {
+          "id": "q3",
+          "option": "C",
+          "evidence": "czy projekty można wykonać zgodnie z przepisami i w ramach dostępnego budżetu.",
+          "ambiguous": false,
+          "distractorScore": 47,
+          "skillMatches": true,
+          "notes": "Replace school-only foil with checking the number of supporters."
+        },
+        {
+          "id": "q4",
+          "option": "A",
+          "evidence": "Każdy pomysł musi dotyczyć miejsca dostępnego dla wszystkich",
+          "ambiguous": false,
+          "distractorScore": 60,
+          "skillMatches": true,
+          "notes": "Valid application; multiple family votes is an implausible exception."
+        },
+        {
+          "id": "q5",
+          "option": "B",
+          "evidence": "jego koszt nie może przekroczyć ustalonego limitu.",
+          "ambiguous": false,
+          "distractorScore": 59,
+          "skillMatches": true,
+          "notes": "Use Nie wydając więcej, niż zaplanowano. Przekracza się kwotę, nie pieniądze."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-043",
+      "scores": {
+        "naturalness": 95,
+        "level": 91,
+        "questions": 88,
+        "ambiguity": 100,
+        "theme": 99,
+        "vocabulary": 84
+      },
+      "criticalIssues": [],
+      "notes": "Authentic practical exchange; zaktualizować dane w dokumentacji is the main lexical stretch. The clock question combines information effectively.",
+      "items": [
+        {
+          "id": "q1",
+          "option": "C",
+          "evidence": "chciałabym przełożyć jutrzejszą wizytę.",
+          "ambiguous": false,
+          "distractorScore": 82,
+          "skillMatches": true,
+          "notes": "Both alternatives concern appointment decisions."
+        },
+        {
+          "id": "q2",
+          "option": "A",
+          "evidence": "a w piątek o piętnastej trzydzieści",
+          "ambiguous": false,
+          "distractorScore": 97,
+          "skillMatches": true,
+          "notes": "All three times occur in the passage."
+        },
+        {
+          "id": "q3",
+          "option": "B",
+          "evidence": "ponieważ trzeba zaktualizować dane w dokumentacji.",
+          "ambiguous": false,
+          "distractorScore": 49,
+          "skillMatches": true,
+          "notes": "Replace manager with a plausible reception task."
+        },
+        {
+          "id": "q4",
+          "option": "C",
+          "evidence": "Proszę przyjść dziesięć minut przed czasem",
+          "ambiguous": false,
+          "distractorScore": 96,
+          "skillMatches": true,
+          "notes": "Correctly subtract ten minutes from 15:30."
+        },
+        {
+          "id": "q5",
+          "option": "A",
+          "evidence": "Dzwoni więc do gabinetu, aby znaleźć inny termin.",
+          "ambiguous": false,
+          "distractorScore": 53,
+          "skillMatches": true,
+          "notes": "Use odwołać wizytę as a closer alternative."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-044",
+      "scores": {
+        "naturalness": 89,
+        "level": 79,
+        "questions": 69,
+        "ambiguity": 99,
+        "theme": 98,
+        "vocabulary": 84
+      },
+      "criticalIssues": [],
+      "notes": "Final relative clause który może utrzymać is awkward with ruch. Use np. Chce regularnie spacerować także wtedy, gdy ma dużo pracy.",
+      "items": [
+        {
+          "id": "q1",
+          "option": "B",
+          "evidence": "Chce przede wszystkim znaleźć sposób na regularny ruch",
+          "ambiguous": false,
+          "distractorScore": 35,
+          "skillMatches": true,
+          "notes": "Use options about motives for walking; simplify w realistyczny sposób."
+        },
+        {
+          "id": "q2",
+          "option": "C",
+          "evidence": "Umawia się też dwa razy w tygodniu z sąsiadem",
+          "ambiguous": false,
+          "distractorScore": 71,
+          "skillMatches": true,
+          "notes": "Specific frequency detail."
+        },
+        {
+          "id": "q3",
+          "option": "A",
+          "evidence": "Na początku nie zawsze pamiętał o swoim postanowieniu.",
+          "ambiguous": false,
+          "distractorScore": 47,
+          "skillMatches": true,
+          "notes": "Repairing shoes is an implausible foil."
+        },
+        {
+          "id": "q4",
+          "option": "B",
+          "evidence": "Nie traktuje jednego opuszczonego dnia jak porażki.",
+          "ambiguous": false,
+          "distractorScore": 43,
+          "skillMatches": true,
+          "notes": "Genuine prediction; alternatives are extreme. Offer making up the missed walk on the weekend."
+        },
+        {
+          "id": "q5",
+          "option": "C",
+          "evidence": "postanowił zacząć od krótkich spacerów.",
+          "ambiguous": false,
+          "distractorScore": 20,
+          "skillMatches": true,
+          "notes": "Rozkład jazdy is unrelated; use a wish or an invitation instead."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-045",
+      "scores": {
+        "naturalness": 90,
+        "level": 54,
+        "questions": 64,
+        "ambiguity": 95,
+        "theme": 97,
+        "vocabulary": 88
+      },
+      "criticalIssues": [
+        "q4: Direct retrieval; spełnić zasady is awkward. Ask what a manager could tell a colleague asking about an individual result.",
+        "Formal vocabulary and sentence density exceed typical independent A2 reading.",
+        "Q3 overstates the stated difficulty as failure to book."
+      ],
+      "notes": "Dense institutional register, including badania profilaktyczne, indywidualne dane and dalsza diagnostyka. Tell the event through a single employee’s experience.",
+      "items": [
+        {
+          "id": "q1",
+          "option": "A",
+          "evidence": "Pracownicy pewnej firmy otrzymali możliwość udziału w bezpłatnych badaniach profilaktycznych.",
+          "ambiguous": false,
+          "distractorScore": 44,
+          "skillMatches": true,
+          "notes": "Replace employee examination with a plausible occupational health event."
+        },
+        {
+          "id": "q2",
+          "option": "B",
+          "evidence": "Wyniki badań przekazywano bezpośrednio uczestnikom.",
+          "ambiguous": false,
+          "distractorScore": 62,
+          "skillMatches": true,
+          "notes": "Managers are plausible, form authors less so."
+        },
+        {
+          "id": "q3",
+          "option": "C",
+          "evidence": "Niektórym trudno było znaleźć wolny termin, dlatego organizatorzy dodali kilka miejsc drugiego dnia.",
+          "ambiguous": false,
+          "distractorScore": 66,
+          "skillMatches": true,
+          "notes": "C is the intended explanation, but trouble finding a slot does not entail failure. Say Wiele osób miało trudność ze znalezieniem terminu."
+        },
+        {
+          "id": "q4",
+          "option": "A",
+          "evidence": "udział nie był obowiązkowy.",
+          "ambiguous": false,
+          "distractorScore": 33,
+          "skillMatches": false,
+          "notes": "Direct retrieval; spełnić zasady is awkward. Ask what a manager could tell a colleague asking about an individual result."
+        },
+        {
+          "id": "q5",
+          "option": "B",
+          "evidence": "bez dostępu do indywidualnych danych.",
+          "ambiguous": false,
+          "distractorScore": 64,
+          "skillMatches": true,
+          "notes": "Overall count contrasts effectively; replace opening hours with group-level statistics."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-046",
+      "scores": {
+        "naturalness": 84,
+        "level": 65,
+        "questions": 67,
+        "ambiguity": 99,
+        "theme": 96,
+        "vocabulary": 86
+      },
+      "criticalIssues": [],
+      "notes": "Mixed list after w różnym wieku includes exercise history. Clarify shift from większość osób to Chwalili by writing Uczestnicy chwalili. Prefer powstała grupa over pojawiła się.",
+      "items": [
+        {
+          "id": "q1",
+          "option": "C",
+          "evidence": "każdy mógł wybrać łatwiejszą lub trudniejszą wersję ćwiczenia.",
+          "ambiguous": false,
+          "distractorScore": 27,
+          "skillMatches": true,
+          "notes": "Grupa ćwiczeń suggests a set of exercises. Use Zajęcia gimnastyczne dla osób o różnych możliwościach."
+        },
+        {
+          "id": "q2",
+          "option": "A",
+          "evidence": "Osoby potrzebujące odpoczynku robiły krótkie przerwy.",
+          "ambiguous": false,
+          "distractorScore": 25,
+          "skillMatches": true,
+          "notes": "Common sense suffices. Ask whether a break needs to be taken with the whole group; use gdy ktoś potrzebuje odpoczynku."
+        },
+        {
+          "id": "q3",
+          "option": "B",
+          "evidence": "część uczestników pracuje do późnego popołudnia.",
+          "ambiguous": false,
+          "distractorScore": 27,
+          "skillMatches": true,
+          "notes": "Both alternatives use extreme quantifiers. Suggest room or instructor availability instead."
+        },
+        {
+          "id": "q4",
+          "option": "C",
+          "evidence": "Podczas zajęć każdy mógł wybrać łatwiejszą lub trudniejszą wersję ćwiczenia.",
+          "ambiguous": false,
+          "distractorScore": 55,
+          "skillMatches": true,
+          "notes": "Genuine application; use a separate beginner session as a foil."
+        },
+        {
+          "id": "q5",
+          "option": "A",
+          "evidence": "każdy mógł wybrać łatwiejszą lub trudniejszą wersję ćwiczenia.",
+          "ambiguous": false,
+          "distractorScore": 39,
+          "skillMatches": true,
+          "notes": "Only mornings is unrelated; contrast following the trainer’s pace."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-047",
+      "scores": {
+        "naturalness": 89,
+        "level": 69,
+        "questions": 53,
+        "ambiguity": 99,
+        "theme": 98,
+        "vocabulary": 84
+      },
+      "criticalIssues": [
+        "q4: Verbatim recommendation; bus timetable gives away answer. Ask which bag compartment she would choose at a station."
+      ],
+      "notes": "Pharmacy setting is practical, but ochrony otarć sounds odd; say plastry na otarcia. Clarify Po powrocie z apteki.",
+      "items": [
+        {
+          "id": "q1",
+          "option": "B",
+          "evidence": "chciała uzupełnić swoją podręczną apteczkę.",
+          "ambiguous": false,
+          "distractorScore": 22,
+          "skillMatches": true,
+          "notes": "Buying an entire home pharmacy is implausible. Offer buying a replacement medicine."
+        },
+        {
+          "id": "q2",
+          "option": "C",
+          "evidence": "Jadę tylko na cztery dni.",
+          "ambiguous": false,
+          "distractorScore": 78,
+          "skillMatches": true,
+          "notes": "Works as a basic duration item."
+        },
+        {
+          "id": "q3",
+          "option": "A",
+          "evidence": "nie chcę kupować dużych opakowań. Jadę tylko na cztery dni.",
+          "ambiguous": false,
+          "distractorScore": 22,
+          "skillMatches": true,
+          "notes": "Backpack prohibition unrelated; no small products does not explain her preference."
+        },
+        {
+          "id": "q4",
+          "option": "B",
+          "evidence": "Farmaceutka poradziła sprawdzić informację w ulotce dołączonej do konkretnego opakowania.",
+          "ambiguous": false,
+          "distractorScore": 10,
+          "skillMatches": false,
+          "notes": "Verbatim recommendation; bus timetable gives away answer. Ask which bag compartment she would choose at a station."
+        },
+        {
+          "id": "q5",
+          "option": "C",
+          "evidence": "brakuje jej kilku podstawowych rzeczy.",
+          "ambiguous": false,
+          "distractorScore": 30,
+          "skillMatches": true,
+          "notes": "Locking the kit is arbitrary. Contrast topping up with replacing the existing contents."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-048",
+      "scores": {
+        "naturalness": 94,
+        "level": 77,
+        "questions": 69,
+        "ambiguity": 99,
+        "theme": 98,
+        "vocabulary": 83
+      },
+      "criticalIssues": [
+        "q4: Explicit retrospective plus stated intention. Ask how she would respond to a proposed strict hourly schedule."
+      ],
+      "notes": "Coherent routine. Shorten relative clauses and simplify the much harder wording of the Q4 answer.",
+      "items": [
+        {
+          "id": "q1",
+          "option": "A",
+          "evidence": "postanowiła przygotować prosty plan na nadchodzący tydzień.",
+          "ambiguous": false,
+          "distractorScore": 38,
+          "skillMatches": true,
+          "notes": "Use alternatives tied to meal preparation and evening activities."
+        },
+        {
+          "id": "q2",
+          "option": "B",
+          "evidence": "Telefon odkłada na półkę pół godziny przed snem",
+          "ambiguous": false,
+          "distractorScore": 62,
+          "skillMatches": true,
+          "notes": "A answers duration; give all options as times."
+        },
+        {
+          "id": "q3",
+          "option": "C",
+          "evidence": "ponieważ niektóre obowiązki w pracy pojawiają się niespodziewanie.",
+          "ambiguous": false,
+          "distractorScore": 45,
+          "skillMatches": true,
+          "notes": "Lack of a calendar is weak; try a reason involving changing meal plans."
+        },
+        {
+          "id": "q4",
+          "option": "A",
+          "evidence": "Uznała, że nie potrzebuje kolejnych skomplikowanych zasad. Postanowiła przez następny tydzień zachować te same zwyczaje",
+          "ambiguous": false,
+          "distractorScore": 42,
+          "skillMatches": false,
+          "notes": "Explicit retrospective plus stated intention. Ask how she would respond to a proposed strict hourly schedule."
+        },
+        {
+          "id": "q5",
+          "option": "B",
+          "evidence": "Nie zaplanowała każdej godziny, ponieważ niektóre obowiązki w pracy pojawiają się niespodziewanie.",
+          "ambiguous": false,
+          "distractorScore": 37,
+          "skillMatches": true,
+          "notes": "Replace on Sundays with a credible meaning such as w ostatniej chwili (distinguish via clearer context)."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-049",
+      "scores": {
+        "naturalness": 91,
+        "level": 52,
+        "questions": 72,
+        "ambiguity": 98,
+        "theme": 98,
+        "vocabulary": 88
+      },
+      "criticalIssues": [
+        "Formal vocabulary and sentence density exceed typical independent A2 reading."
+      ],
+      "notes": "Nominal style and specialist language (organizacja stanowiska pracy, indywidualne dolegliwości) exceed routine A2. Simplify Q4 poprzestać na spotkaniu.",
+      "items": [
+        {
+          "id": "q1",
+          "option": "C",
+          "evidence": "Celem wydarzenia było przekazanie ogólnych informacji o organizacji stanowiska pracy i znaczeniu regularnych przerw.",
+          "ambiguous": false,
+          "distractorScore": 55,
+          "skillMatches": true,
+          "notes": "The consultation foil is plausible; replace sales with a narrower session topic."
+        },
+        {
+          "id": "q2",
+          "option": "A",
+          "evidence": "Na zakończenie rozdano kartki z podsumowaniem oraz informacją, gdzie można umówić konsultację",
+          "ambiguous": false,
+          "distractorScore": 33,
+          "skillMatches": true,
+          "notes": "Free monitors are implausible. Use a questionnaire or printed exercises."
+        },
+        {
+          "id": "q3",
+          "option": "B",
+          "evidence": "dzięki czemu prowadzący mógł przygotować przykłady dotyczące najczęstszych problemów.",
+          "ambiguous": false,
+          "distractorScore": 39,
+          "skillMatches": true,
+          "notes": "Ask Co dało prowadzącemu wcześniejsze zebranie pytań? Text states effect, not participants’ intention."
+        },
+        {
+          "id": "q4",
+          "option": "C",
+          "evidence": "gdzie można umówić konsultację, jeśli ktoś potrzebuje indywidualnej pomocy.",
+          "ambiguous": false,
+          "distractorScore": 64,
+          "skillMatches": true,
+          "notes": "Application to an individual case, though close to explicit direction."
+        },
+        {
+          "id": "q5",
+          "option": "A",
+          "evidence": "kartki z podsumowaniem oraz informacją, gdzie można umówić konsultację",
+          "ambiguous": false,
+          "distractorScore": 66,
+          "skillMatches": true,
+          "notes": "Use harmonogram następnego spotkania as a natural, plausible foil."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-050",
+      "scores": {
+        "naturalness": 90,
+        "level": 85,
+        "questions": 77,
+        "ambiguity": 100,
+        "theme": 99,
+        "vocabulary": 86
+      },
+      "criticalIssues": [],
+      "notes": "Functional email; format greeting, closing and signature on separate lines and remove comma after Z poważaniem and period after name.",
+      "items": [
+        {
+          "id": "q1",
+          "option": "B",
+          "evidence": "chciałabym zapisać się na kurs języka polskiego na poziomie A2.",
+          "ambiguous": false,
+          "distractorScore": 58,
+          "skillMatches": true,
+          "notes": "Teaching job is a weak foil; use a request for feedback on a placement test."
+        },
+        {
+          "id": "q2",
+          "option": "C",
+          "evidence": "w poniedziałki i środy. Druga grupa jest dla mnie wygodniejsza",
+          "ambiguous": false,
+          "distractorScore": 78,
+          "skillMatches": true,
+          "notes": "Good competing weekday group; weekend is unmentioned."
+        },
+        {
+          "id": "q3",
+          "option": "A",
+          "evidence": "ponieważ w czwartki chodzę na basen.",
+          "ambiguous": false,
+          "distractorScore": 45,
+          "skillMatches": true,
+          "notes": "Closed school contradicts scheduled group. Offer a work-related conflict instead."
+        },
+        {
+          "id": "q4",
+          "option": "B",
+          "evidence": "Chciałabym też więcej mówić po polsku, szczególnie w pracy i w urzędzie. Czy na zajęciach uczniowie rozmawiają w parach? Czy nauczyciel sprawdza krótkie zadania pisemne?",
+          "ambiguous": false,
+          "distractorScore": 51,
+          "skillMatches": true,
+          "notes": "Combines goals; language course without exercises is a giveaway. Offer two realistic course descriptions."
+        },
+        {
+          "id": "q5",
+          "option": "C",
+          "evidence": "Czy podręcznik jest wliczony w cenę kursu? Jeśli nie, proszę o informację, gdzie można go kupić.",
+          "ambiguous": false,
+          "distractorScore": 44,
+          "skillMatches": true,
+          "notes": "Replace the textbook ban with a separate discounted school purchase."
+        }
+      ]
+    }
+  ]
+}

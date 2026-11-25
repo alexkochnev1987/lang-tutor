@@ -1,0 +1,606 @@
+{
+  "passages": [
+    {
+      "id": "pl-b1.reading.day-001",
+      "scores": {
+        "naturalness": 98,
+        "level": 88,
+        "questions": 83,
+        "ambiguity": 100,
+        "theme": 99,
+        "vocabulary": 90
+      },
+      "criticalIssues": [],
+      "notes": "Natural first-person description on an A1 topic. The question form 'spodobałby się' is a heavier demand than the passage, and both wrong plans conspicuously reverse the relaxed-morning preference.",
+      "items": [
+        {
+          "id": "q1",
+          "option": "C",
+          "evidence": "Mieszkam w Łodzi z mężem i córką. Nasze mieszkanie jest małe, ale jasne. Pracuję w sklepie od poniedziałku do piątku. Mój mąż jest kierowcą i często wraca późno. Nasza córka Ola ma osiem lat i lubi rysować.\n\nW sobotę zwykle jemy razem śniadanie.",
+          "ambiguous": false,
+          "distractorScore": 70,
+          "skillMatches": true,
+          "notes": "Wrong themes reuse real details but give them too much emphasis."
+        },
+        {
+          "id": "q2",
+          "option": "B",
+          "evidence": "Pracuję w sklepie od poniedziałku do piątku.",
+          "ambiguous": false,
+          "distractorScore": 78,
+          "skillMatches": true,
+          "notes": "Park comes from a different activity, while school is a plausible generic workplace."
+        },
+        {
+          "id": "q3",
+          "option": "A",
+          "evidence": "W niedzielę mamy mało planów, bo chcemy mieć czas dla siebie.",
+          "ambiguous": false,
+          "distractorScore": 60,
+          "skillMatches": true,
+          "notes": "Wrong options recycle details but are transparently unrelated to having a free day."
+        },
+        {
+          "id": "q4",
+          "option": "C",
+          "evidence": "Najbardziej lubię te spokojne poranki, kiedy nikt się nie spieszy.",
+          "ambiguous": false,
+          "distractorScore": 55,
+          "skillMatches": true,
+          "notes": "Applies the preference to a new breakfast plan. Replace one obviously rushed plan with a plausible quiet plan that involves splitting up or has a clear time constraint."
+        },
+        {
+          "id": "q5",
+          "option": "A",
+          "evidence": "te spokojne poranki, kiedy nikt się nie spieszy",
+          "ambiguous": false,
+          "distractorScore": 57,
+          "skillMatches": true,
+          "notes": "Only A agrees with 'spokojne'. 'Każdy może robić wszystko spokojnie' broadens the meaning slightly. 'Nikt nie musi robić nic szybko' would be more precise."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-002",
+      "scores": {
+        "naturalness": 96,
+        "level": 91,
+        "questions": 79,
+        "ambiguity": 99,
+        "theme": 97,
+        "vocabulary": 89
+      },
+      "criticalIssues": [],
+      "notes": "The meeting and language goals are credible. The main-idea stem and responses differ in grammatical form. Keep all three as answer phrases to 'O czym…?' so form does not compete with reading.",
+      "items": [
+        {
+          "id": "q1",
+          "option": "B",
+          "evidence": "— Świetnie! Ja też uczę się polskiego. Po zajęciach jestem zwykle w kawiarni obok szkoły. Możemy tam rozmawiać.\n\n— Dziękuję! Dzisiaj mam czas. Spotkajmy się o czwartej.",
+          "ambiguous": false,
+          "distractorScore": 52,
+          "skillMatches": true,
+          "notes": "B is clear, but only A is phrased as the topic of a conversation. Use 'O kursie polskiego i spotkaniu po zajęciach' and matching forms for distractors."
+        },
+        {
+          "id": "q2",
+          "option": "C",
+          "evidence": "Jestem z Czech, ale od roku mieszkam w Polsce.",
+          "ambiguous": false,
+          "distractorScore": 83,
+          "skillMatches": true,
+          "notes": "Poland is a credible confusion with present residence."
+        },
+        {
+          "id": "q3",
+          "option": "B",
+          "evidence": "W domu mówię po czesku. Chcę mówić po polsku z sąsiadami.",
+          "ambiguous": false,
+          "distractorScore": 76,
+          "skillMatches": true,
+          "notes": "Home language and school serve as plausible alternate motives."
+        },
+        {
+          "id": "q4",
+          "option": "A",
+          "evidence": "Po zajęciach jestem zwykle w kawiarni obok szkoły. Możemy tam rozmawiać.\n\n— Dziękuję! Dzisiaj mam czas. Spotkajmy się o czwartej.",
+          "ambiguous": false,
+          "distractorScore": 68,
+          "skillMatches": true,
+          "notes": "Combines the suggested location with acceptance and the later time. A table is incidental and unspecified. Use 'W kawiarni obok szkoły' as the location."
+        },
+        {
+          "id": "q5",
+          "option": "C",
+          "evidence": "— Czy zajęcia są trudne?\n\n— Na początku trochę, ale teraz jest łatwiej.",
+          "ambiguous": false,
+          "distractorScore": 60,
+          "skillMatches": true,
+          "notes": "The contrast with the current stage supports C. The two stems ask the same thing and could be consolidated. A recurring point within a lesson is the better distractor."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-003",
+      "scores": {
+        "naturalness": 97,
+        "level": 88,
+        "questions": 85,
+        "ambiguity": 100,
+        "theme": 97,
+        "vocabulary": 90
+      },
+      "criticalIssues": [],
+      "notes": "Coherent informal letter with useful everyday time and activity vocabulary. Main-idea and time options draw on actual details. An A1 reader has to follow a dense chain of time markers, which suits a later A1 task.",
+      "items": [
+        {
+          "id": "q1",
+          "option": "B",
+          "evidence": "Pytasz, jak wygląda mój dzień.",
+          "ambiguous": false,
+          "distractorScore": 83,
+          "skillMatches": true,
+          "notes": "Two actual activities serve as plausible but misleading purposes for writing."
+        },
+        {
+          "id": "q2",
+          "option": "A",
+          "evidence": "Rano wstaję o siódmej, jem śniadanie i zaczynam pracę o ósmej.",
+          "ambiguous": false,
+          "distractorScore": 91,
+          "skillMatches": true,
+          "notes": "Both incorrect times appear in the letter and belong to different activities."
+        },
+        {
+          "id": "q3",
+          "option": "C",
+          "evidence": "Wieczorem czytam książkę. Nie oglądam telewizji, bo wolę czytać.",
+          "ambiguous": false,
+          "distractorScore": 59,
+          "skillMatches": true,
+          "notes": "B combines activities and participants that are clearly distinct. A is plausible outside the letter but has no textual support."
+        },
+        {
+          "id": "q4",
+          "option": "B",
+          "evidence": "Razem spacerujemy, a kiedy pada deszcz, zostajemy u niej w domu i gramy w karty.",
+          "ambiguous": false,
+          "distractorScore": 85,
+          "skillMatches": true,
+          "notes": "Applies the rainy-day activity to a new packing choice. Both wrong choices echo other activities."
+        },
+        {
+          "id": "q5",
+          "option": "C",
+          "evidence": "W czasie przerwy słucham muzyki albo patrzę przez okno.",
+          "ambiguous": false,
+          "distractorScore": 78,
+          "skillMatches": true,
+          "notes": "The work routine contextualizes a temporary pause. Consider 'krótki czas, kiedy przestaje się pracować' to distinguish it cleanly from any time away from work."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-004",
+      "scores": {
+        "naturalness": 91,
+        "level": 81,
+        "questions": 73,
+        "ambiguity": 96,
+        "theme": 96,
+        "vocabulary": 85
+      },
+      "criticalIssues": [
+        "Q4 introduces possession and use of an e-mail address. The passage establishes written messages on a computer, but the school is shown asking only for a phone number and the channel is unspecified. Mention e-mail during registration or ask about a written message without specifying the channel."
+      ],
+      "notes": "Useful A1 reception scenario, though form vocabulary and administration details increase the load. 'Wszystkie litery są już poprawne' is understandable but less idiomatic than 'Nazwisko jest już zapisane poprawnie'. Changing the assessed wording requires coordinating Q5.",
+      "items": [
+        {
+          "id": "q1",
+          "option": "B",
+          "evidence": "W recepcji szkoły językowej jest nowy uczeń. Ma na imię Michał, a pani w recepcji zapisuje jego dane.\n\n— Proszę podać imię i nazwisko.\n\n— Michał Żak.",
+          "ambiguous": false,
+          "distractorScore": 72,
+          "skillMatches": true,
+          "notes": "A and C misuse facts about checking a surname and receiving a group number. The card purpose is confirmed later."
+        },
+        {
+          "id": "q2",
+          "option": "B",
+          "evidence": "— Czy nazwisko zaczyna się na Z?\n\n— Na Ż, z kropką. A moje imię ma literę ł.",
+          "ambiguous": false,
+          "distractorScore": 92,
+          "skillMatches": true,
+          "notes": "Strong contrast of all three letters with their actual roles."
+        },
+        {
+          "id": "q3",
+          "option": "A",
+          "evidence": "— Czy nazwisko zaczyna się na Z?\n\n— Na Ż, z kropką.",
+          "ambiguous": false,
+          "distractorScore": 32,
+          "skillMatches": true,
+          "notes": "Spelling motivates the later check. C has no connection to checking a surname, and B contradicts the card contents. Use a plausible alternative spelling or data-verification motive."
+        },
+        {
+          "id": "q4",
+          "option": "B",
+          "evidence": "Tak, ale w pracy nie odbieram telefonu. Mogę wtedy czytać wiadomości na komputerze.",
+          "ambiguous": false,
+          "distractorScore": 65,
+          "skillMatches": true,
+          "notes": "A message is the only viable timely choice, so B remains the unique best option. E-mail itself and whether the school has his address are left unstated."
+        },
+        {
+          "id": "q5",
+          "option": "B",
+          "evidence": "Michał widzi na ekranie swoje nazwisko. Wszystkie litery są już poprawne.",
+          "ambiguous": false,
+          "distractorScore": 77,
+          "skillMatches": true,
+          "notes": "Rechecking (A) and capitalization (C) are related to the spelling context without matching the meaning."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-005",
+      "scores": {
+        "naturalness": 96,
+        "level": 85,
+        "questions": 72,
+        "ambiguity": 100,
+        "theme": 99,
+        "vocabulary": 91
+      },
+      "criticalIssues": [],
+      "notes": "Clear prelude, choice, and gift preparation. 'Duży wybór', 'zapach malin' and 'kartka z życzeniami' add some stretch. Q3 and Q4 overlap, and the target in Q5 has little contextual support.",
+      "items": [
+        {
+          "id": "q1",
+          "option": "B",
+          "evidence": "Marta i jej brat Piotr szukają prezentu dla babci.",
+          "ambiguous": false,
+          "distractorScore": 56,
+          "skillMatches": true,
+          "notes": "Opening states the main idea. Both wrong summaries contain implausible twists, and 'rodzeństwo' introduces extra vocabulary."
+        },
+        {
+          "id": "q2",
+          "option": "C",
+          "evidence": "Na półce stoi niebieski kubek, obok leży zielona książka, a przy kasie jest żółte pudełko z herbatą.",
+          "ambiguous": false,
+          "distractorScore": 93,
+          "skillMatches": true,
+          "notes": "Each color belongs to a different item in the same sentence."
+        },
+        {
+          "id": "q3",
+          "option": "C",
+          "evidence": "Piotr chce kupić kubek, ale Marta wie, że babcia ma już wiele kubków.",
+          "ambiguous": false,
+          "distractorScore": 70,
+          "skillMatches": true,
+          "notes": "Color is a viable misreading of a real detail. The weight makes a generic shopping objection."
+        },
+        {
+          "id": "q4",
+          "option": "B",
+          "evidence": "Piotr chce kupić kubek, ale Marta wie, że babcia ma już wiele kubków. Książka też nie jest dobrym pomysłem, bo babcia już ją ma.",
+          "ambiguous": false,
+          "distractorScore": 50,
+          "skillMatches": true,
+          "notes": "Generalizes from both discarded gifts. One cue plus Q3 already gives away B, and both distractors introduce evidence absent from the passage. A new decision involving a gift she already owns would target transfer more clearly."
+        },
+        {
+          "id": "q5",
+          "option": "C",
+          "evidence": "W małym sklepie na rogu jest duży wybór prezentów.",
+          "ambiguous": false,
+          "distractorScore": 62,
+          "skillMatches": false,
+          "notes": "C is the conventional meaning, but the passage offers no clues about streets or a junction. The item tests prior knowledge of the phrase. Add a brief location cue before testing the expression."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-006",
+      "scores": {
+        "naturalness": 96,
+        "level": 85,
+        "questions": 77,
+        "ambiguity": 99,
+        "theme": 98,
+        "vocabulary": 91
+      },
+      "criticalIssues": [],
+      "notes": "Natural neighborly interaction. 'Obiecuje', 'cieszy się na' and 'z sąsiedztwa' stretch A1. 'Zofia już cieszy się na sobotę' is grammatical, with 'Zofia już się cieszy na sobotę' a smoother stylistic alternative.",
+      "items": [
+        {
+          "id": "q1",
+          "option": "C",
+          "evidence": "Jej nowy sąsiad, Tomek, pracuje w biurze. Czasem spotykają się na schodach i rozmawiają.\n\nDzisiaj Tomek widzi, że Zofia niesie ciężką torbę z zakupami. Pomaga jej, bo w budynku nie ma windy. Zofia zaprasza go na herbatę i kawałek ciasta.",
+          "ambiguous": false,
+          "distractorScore": 52,
+          "skillMatches": true,
+          "notes": "The dog is a plausible minor topical distraction. Office shopping is an arbitrary recombination."
+        },
+        {
+          "id": "q2",
+          "option": "C",
+          "evidence": "Pani Zofia mieszka sama na drugim piętrze.",
+          "ambiguous": false,
+          "distractorScore": 83,
+          "skillMatches": true,
+          "notes": "Parallel alternative floors."
+        },
+        {
+          "id": "q3",
+          "option": "B",
+          "evidence": "Dzisiaj Tomek widzi, że Zofia niesie ciężką torbę z zakupami. Pomaga jej, bo w budynku nie ma windy.",
+          "ambiguous": false,
+          "distractorScore": 48,
+          "skillMatches": true,
+          "notes": "The location-and-direction alternative does not fit help with a bag. Replace it with a reason that could prompt someone to carry a bag."
+        },
+        {
+          "id": "q4",
+          "option": "C",
+          "evidence": "Pomaga jej, bo w budynku nie ma windy. Zofia zaprasza go na herbatę i kawałek ciasta.",
+          "ambiguous": false,
+          "distractorScore": 55,
+          "skillMatches": true,
+          "notes": "Infers gratitude from the invitation following his help. Sociability is also a reasonable motive and is mentioned separately, but neither offered wrong choice expresses it. 'Co może znaczyć…?' would avoid asserting a single internal motive."
+        },
+        {
+          "id": "q5",
+          "option": "C",
+          "evidence": "Zofia już cieszy się na sobotę. Lubi poznawać ludzi z sąsiedztwa.",
+          "ambiguous": false,
+          "distractorScore": 72,
+          "skillMatches": true,
+          "notes": "The neighbor relationship earlier anchors the phrase, and workplace and visiting are only associated activities."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-007",
+      "scores": {
+        "naturalness": 94,
+        "level": 77,
+        "questions": 86,
+        "ambiguity": 99,
+        "theme": 98,
+        "vocabulary": 93
+      },
+      "criticalIssues": [],
+      "notes": "Credible public notice. Length, conditional weather contingency, future forms and words such as 'mieszkańców', 'organizujemy' and 'powiesimy' make this more realistic for strong A1 or A2. Repetition of 'miejsce' in the amenities sentence is stylistic.",
+      "items": [
+        {
+          "id": "q1",
+          "option": "B",
+          "evidence": "Zapraszamy wszystkich mieszkańców naszej ulicy na rodzinny piknik w niedzielę.",
+          "ambiguous": false,
+          "distractorScore": 77,
+          "skillMatches": true,
+          "notes": "Distractors repurpose the park and activity details into actions the announcement does not request."
+        },
+        {
+          "id": "q2",
+          "option": "C",
+          "evidence": "Spotykamy się o jedenastej w małym parku obok szkoły.",
+          "ambiguous": false,
+          "distractorScore": 79,
+          "skillMatches": true,
+          "notes": "Noon appears as the time of the games. Nine has no tie to the notice."
+        },
+        {
+          "id": "q3",
+          "option": "B",
+          "evidence": "Prosimy przynieść koc, bo jest mało ławek.",
+          "ambiguous": false,
+          "distractorScore": 73,
+          "skillMatches": true,
+          "notes": "B paraphrases the practical consequence. A and C connect to advertised activities and amenities."
+        },
+        {
+          "id": "q4",
+          "option": "A",
+          "evidence": "Jeśli w niedzielę będzie padać, spotkamy się w sali szkolnej o tej samej godzinie. W niedzielę rano przy wejściu do szkoły powiesimy kartkę. Napiszemy na niej, gdzie się spotykamy.",
+          "ambiguous": false,
+          "distractorScore": 88,
+          "skillMatches": true,
+          "notes": "Both alternative venues are plausible destinations without checking. 'Do wejścia do szkoły, żeby przeczytać kartkę' aligns with the notice better than 'pod drzwi'."
+        },
+        {
+          "id": "q5",
+          "option": "A",
+          "evidence": "Spotykamy się o jedenastej w małym parku obok szkoły. Na miejscu są stoły, ławki i miejsce do zabawy dla dzieci.",
+          "ambiguous": false,
+          "distractorScore": 72,
+          "skillMatches": true,
+          "notes": "The antecedent makes this a well-supported contextual phrase. 'W parku, gdzie ma być piknik' would make the immediate referent explicit."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-008",
+      "scores": {
+        "naturalness": 93,
+        "level": 76,
+        "questions": 83,
+        "ambiguity": 100,
+        "theme": 99,
+        "vocabulary": 91
+      },
+      "criticalIssues": [],
+      "notes": "A realistic rental notice and coherent domestic vocabulary, with 'nie stanowi problemu', 'zamknięta szopa' and viewing arrangements more demanding than standard A1. Repeating 'Mieszkanie' in consecutive final sentences is a stylistic issue.",
+      "items": [
+        {
+          "id": "q1",
+          "option": "B",
+          "evidence": "Do wynajęcia jest mieszkanie na parterze małego domu.",
+          "ambiguous": false,
+          "distractorScore": 84,
+          "skillMatches": true,
+          "notes": "Ownership, rental object and amenity distinctions give plausible wrong readings."
+        },
+        {
+          "id": "q2",
+          "option": "C",
+          "evidence": "Są w nim dwa pokoje, kuchnia i łazienka. Jeden pokój jest duży i jasny, drugi jest mały.",
+          "ambiguous": false,
+          "distractorScore": 86,
+          "skillMatches": true,
+          "notes": "Adjacent numbers give believable alternatives and the description verifies the count."
+        },
+        {
+          "id": "q3",
+          "option": "C",
+          "evidence": "Właściciel mieszka na pierwszym piętrze. Lubi zwierzęta, więc pies lub kot nie stanowi problemu.",
+          "ambiguous": false,
+          "distractorScore": 47,
+          "skillMatches": true,
+          "notes": "A's 'tylko w szopie' is particularly implausible as an answer to whether one can live with a dog. An erroneous explanation based on the garden would be stronger."
+        },
+        {
+          "id": "q4",
+          "option": "A",
+          "evidence": "Mieszkanie można obejrzeć w środę lub piątek po godzinie siedemnastej.",
+          "ambiguous": false,
+          "distractorScore": 85,
+          "skillMatches": true,
+          "notes": "The learner applies the permitted days and time to a person's schedule. C preserves a day but fails the time constraint."
+        },
+        {
+          "id": "q5",
+          "option": "B",
+          "evidence": "Mieszkanie jest wolne od pierwszego grudnia.",
+          "ambiguous": false,
+          "distractorScore": 75,
+          "skillMatches": true,
+          "notes": "The opening rental framing disambiguates 'wolne'. No-payment and purchase give recognizable potential confusion."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-009",
+      "scores": {
+        "naturalness": 95,
+        "level": 73,
+        "questions": 87,
+        "ambiguity": 100,
+        "theme": 92,
+        "vocabulary": 88
+      },
+      "criticalIssues": [],
+      "notes": "Credible notice with a fairly dense cluster of A2 technical or formal terms, including the title, 'hydraulik', 'piwnica' and 'cierpliwość'. The last spring-maintenance sentence weakens the focus after the conventional closing.",
+      "items": [
+        {
+          "id": "q1",
+          "option": "A",
+          "evidence": "Drodzy sąsiedzi, w czwartek rano w naszym budynku będzie pracował hydraulik. Od dziewiątej do jedenastej nie będzie zimnej wody.",
+          "ambiguous": false,
+          "distractorScore": 75,
+          "skillMatches": true,
+          "notes": "The alternatives misread an informative announcement as a call to arrange work."
+        },
+        {
+          "id": "q2",
+          "option": "B",
+          "evidence": "Drodzy sąsiedzi, w czwartek rano w naszym budynku będzie pracował hydraulik. Od dziewiątej do jedenastej nie będzie zimnej wody.",
+          "ambiguous": false,
+          "distractorScore": 88,
+          "skillMatches": true,
+          "notes": "Each wrong answer retains either the day or the time, testing both."
+        },
+        {
+          "id": "q3",
+          "option": "B",
+          "evidence": "Hydraulik będzie pracował w piwnicy, więc nie trzeba zostawiać kluczy do mieszkań.",
+          "ambiguous": false,
+          "distractorScore": 78,
+          "skillMatches": true,
+          "notes": "The other explanations for not leaving keys are reasonable possibilities but clearly differ from the actual announcement."
+        },
+        {
+          "id": "q4",
+          "option": "A",
+          "evidence": "Od dziewiątej do jedenastej nie będzie zimnej wody. Ciepłej wody też może przez ten czas nie być. Prosimy wcześniej przygotować wodę do picia i gotowania.",
+          "ambiguous": false,
+          "distractorScore": 78,
+          "skillMatches": true,
+          "notes": "Applies the outage interval to cooking at a supplied time. B is after the intended cooking time and uses the extra burden of 'wpół do'. The passage says work, while B calls it a repair."
+        },
+        {
+          "id": "q5",
+          "option": "A",
+          "evidence": "Przepraszamy za kłopot i dziękujemy za cierpliwość.",
+          "ambiguous": false,
+          "distractorScore": 74,
+          "skillMatches": true,
+          "notes": "The apology and temporary disruption support inconvenience or problem. The distractors are plausible notice topics but fit the sentence less well."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-010",
+      "scores": {
+        "naturalness": 96,
+        "level": 78,
+        "questions": 80,
+        "ambiguity": 100,
+        "theme": 99,
+        "vocabulary": 92
+      },
+      "criticalIssues": [],
+      "notes": "Natural, coherent rental dialogue. The fixed formulas are useful, though 'rozliczane osobno' and the wider negotiation load suit a strong A1 class or A2. Several questions use distractors that can be dismissed from common sense alone.",
+      "items": [
+        {
+          "id": "q1",
+          "option": "C",
+          "evidence": "— Dzień dobry, czy pokój jest jeszcze wolny?\n\n— Tak. Pokój ma duże okno, biurko i szafę. Kuchnia i łazienka są wspólne.",
+          "ambiguous": false,
+          "distractorScore": 60,
+          "skillMatches": true,
+          "notes": "A borrows the transport detail but introduces an odd route, 'z uczelni na zajęcia'. Replace it with 'O dojeździe autobusem do centrum' as a viable minor topic."
+        },
+        {
+          "id": "q2",
+          "option": "C",
+          "evidence": "Tak, internet jest w cenie. Woda i prąd są rozliczane osobno.",
+          "ambiguous": false,
+          "distractorScore": 92,
+          "skillMatches": true,
+          "notes": "Both wrong utilities are directly mentioned and contrasted with internet."
+        },
+        {
+          "id": "q3",
+          "option": "A",
+          "evidence": "Często wracam późno z zajęć. Czy mogę wtedy coś ugotować?",
+          "ambiguous": false,
+          "distractorScore": 56,
+          "skillMatches": true,
+          "notes": "The morning closure and cooking for others are weak alternatives to a stated reason. A competing personal schedule reason would be stronger."
+        },
+        {
+          "id": "q4",
+          "option": "C",
+          "evidence": "— Często wracam późno z zajęć. Czy mogę wtedy coś ugotować?\n\n— Oczywiście. Tylko po dziesiątej wieczorem prosimy o ciszę.",
+          "ambiguous": false,
+          "distractorScore": 42,
+          "skillMatches": true,
+          "notes": "Applies the rule to a new time. The two loud choices leave an answerable question even without reading. Add a schedule contrast or a less obviously noisy act."
+        },
+        {
+          "id": "q5",
+          "option": "C",
+          "evidence": "Tak, internet jest w cenie. Woda i prąd są rozliczane osobno.",
+          "ambiguous": false,
+          "distractorScore": 69,
+          "skillMatches": true,
+          "notes": "The contrast with the included internet supports C. The school paying is implausible and B is awkwardly worded. A normal alternative phrasing for inclusion would improve B."
+        }
+      ]
+    }
+  ]
+}

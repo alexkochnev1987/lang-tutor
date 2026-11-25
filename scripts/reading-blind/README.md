@@ -1,3 +1,5 @@
 # Independent blind review
 
-Snapshot of 57 drafts at c88ac303fa34c5f06f5b31734c7e3f229c10737d. Six JSON batches contain only passages, CEFR target, questions and options. No answer keys, author explanations, evidence or previous discussion. Send each batch separately to an independent model, with no repository access or conversation history. Compare its option IDs with original keys only after completion. A missing/ambiguous answer, critical language error or weighted score below 90 prevents approval. Recheck after revisions. Do not treat this snapshot as reviewed content. The reviewer has not been run.
+These six JSON packages cover the revised pilot of 57 passages and 285 questions. Each package includes passages, CEFR targets, questions and options. Give each reviewer only its assigned package and ask for an independent answer with exact evidence before comparing against the author key.
+
+Round 1 used the packages at commit `2409121e94d58376a713f5274333c009b6d7f424`. The files in this directory were regenerated for round 2 from the revised drafts. See [reading-reviews](../reading-reviews/README.md) for recorded scores, criteria and the handoff to the next author.

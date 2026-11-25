@@ -1,0 +1,608 @@
+{
+  "passages": [
+    {
+      "id": "pl-b1.reading.day-031",
+      "scores": {
+        "naturalness": 97,
+        "level": 86,
+        "questions": 83,
+        "ambiguity": 98,
+        "theme": 98,
+        "vocabulary": 88
+      },
+      "criticalIssues": [],
+      "notes": "Natural informal invitation with a coherent weekend schedule. Upper A2 load comes chiefly from stacked contingencies, położonych and żebyśmy miały. Could simplify the final sentence or one conditional while retaining the choice of activities.",
+      "items": [
+        {
+          "id": "q1",
+          "option": "C",
+          "evidence": "Napisz, czy taki plan ci odpowiada. Jeśli wolisz inne atrakcje, zmienimy kilka punktów.",
+          "ambiguous": false,
+          "distractorScore": 48,
+          "skillMatches": true,
+          "notes": "A and B borrow weekend and transport vocabulary, but neither reflects the purpose of the email."
+        },
+        {
+          "id": "q2",
+          "option": "C",
+          "evidence": "W sobotę rano odbiorę cię z dworca i pojedziemy tramwajem do mojego mieszkania. Zostawisz tam bagaż",
+          "ambiguous": false,
+          "distractorScore": 74,
+          "skillMatches": true,
+          "notes": "Both distractors are named places in the itinerary. Reading tam correctly resolves the detail."
+        },
+        {
+          "id": "q3",
+          "option": "C",
+          "evidence": "W soboty jest tam dużo turystów, więc chcę kupić bilety wcześniej. Jeśli nie będzie wolnych miejsc, wybierzemy spacer nad Wartą.",
+          "ambiguous": false,
+          "distractorScore": 74,
+          "skillMatches": true,
+          "notes": "Hours and walk-up prices are plausible advance-purchase reasons in general. The text connects Saturday crowds with possible lack of space."
+        },
+        {
+          "id": "q4",
+          "option": "A",
+          "evidence": "Twój pociąg odjeżdża o szesnastej, dlatego nie pojedziemy do miejsc położonych daleko od centrum. Możemy jeszcze odwiedzić targ i kupić coś na drogę.",
+          "ambiguous": false,
+          "distractorScore": 50,
+          "skillMatches": true,
+          "notes": "Applies the departure time and the Sunday market plan to a new meeting. B makes the meeting impossible on its face. C conflicts with the known Saturday attraction."
+        },
+        {
+          "id": "q5",
+          "option": "A",
+          "evidence": "Twój pociąg odjeżdża o szesnastej, dlatego nie pojedziemy do miejsc położonych daleko od centrum. Możemy jeszcze odwiedzić targ i kupić coś na drogę.",
+          "ambiguous": false,
+          "distractorScore": 53,
+          "skillMatches": true,
+          "notes": "Trip context supports A. The stem fixes both the purchase and buyer even though the email only proposes a joint possibility. Use Jeśli Maria kupi coś „na drogę”…"
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-032",
+      "scores": {
+        "naturalness": 88,
+        "level": 74,
+        "questions": 77,
+        "ambiguity": 98,
+        "theme": 97,
+        "vocabulary": 91
+      },
+      "criticalIssues": [
+        "Missing closing comma after jedziemy in „sprawdzić pogodę tam, dokąd jedziemy i zapisać”. Write „sprawdzić pogodę tam, dokąd jedziemy, i zapisać”."
+      ],
+      "notes": "Coherent, practical advice with varied travel vocabulary. Several phrases in close proximity, including nadają się na kilka różnych okazji, zapewnia, w torbie podręcznej and limity zależnie od rodzaju biletu, place the text above secure A2. The title is a slightly exaggerated but acceptable hook.",
+      "items": [
+        {
+          "id": "q1",
+          "option": "B",
+          "evidence": "Jeśli jedziemy na trzy dni, nie musimy pakować ubrań na cały tydzień.",
+          "ambiguous": false,
+          "distractorScore": 71,
+          "skillMatches": true,
+          "notes": "The packing theme covers all paragraphs. Airfare and hotel amenities are limited supporting details. The stem reads somewhat formally for A2."
+        },
+        {
+          "id": "q2",
+          "option": "C",
+          "evidence": "W małej torbie podręcznej powinny znaleźć się dokumenty, telefon, ładowarka, woda i potrzebne leki.",
+          "ambiguous": false,
+          "distractorScore": 75,
+          "skillMatches": true,
+          "notes": "Wrong options describe real objects nearby in the passage and test the distinction between packing categories."
+        },
+        {
+          "id": "q3",
+          "option": "B",
+          "evidence": "Sprawdzenie zasad przed wyjazdem pomaga uniknąć dodatkowych kosztów na lotnisku.",
+          "ambiguous": false,
+          "distractorScore": 42,
+          "skillMatches": true,
+          "notes": "A and C borrow the airport and cost themes, but airport transfer prices and shop prices have no credible link to luggage allowances. Try an alternative about calculating the permitted luggage weight or size."
+        },
+        {
+          "id": "q4",
+          "option": "A",
+          "evidence": "Ostatni krok to zostawienie odrobiny wolnego miejsca. Być może podczas podróży kupimy prezent lub pamiątkę, którą będziemy chcieli przywieźć do domu.",
+          "ambiguous": false,
+          "distractorScore": 51,
+          "skillMatches": true,
+          "notes": "Combines the hotel-supplied towel cue from the scenario with the passage’s advice about leaving room. B only partly solves the problem. C puts the souvenir in the suitcase before the trip and is temporally awkward."
+        },
+        {
+          "id": "q5",
+          "option": "A",
+          "evidence": "W małej torbie podręcznej powinny znaleźć się dokumenty, telefon, ładowarka, woda i potrzebne leki. Dzięki temu nie trzeba otwierać dużej walizki za każdym razem, gdy chcemy wyjąć jedną rzecz.",
+          "ambiguous": false,
+          "distractorScore": 51,
+          "skillMatches": true,
+          "notes": "The contrast with opening the suitcase provides a useful cue. C is implausible and could be replaced by a description of checked baggage."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-033",
+      "scores": {
+        "naturalness": 94,
+        "level": 81,
+        "questions": 84,
+        "ambiguity": 96,
+        "theme": 98,
+        "vocabulary": 89
+      },
+      "criticalIssues": [],
+      "notes": "Coherent account of a flexible trip. Mountain vocabulary and conditional language put it at upper A2. „Wychodzić wysoko w góry” is understandable, with „wchodzić wysoko w góry” a more conventional collocation here. The text switches between different future forms naturally.",
+      "items": [
+        {
+          "id": "q1",
+          "option": "A",
+          "evidence": "Nie chodzi im o zdobycie jak największej liczby szczytów, lecz o przyjemny i spokojny odpoczynek.",
+          "ambiguous": false,
+          "distractorScore": 70,
+          "skillMatches": true,
+          "notes": "B directly reverses the stated aim and C expands the single town visit. For smoother option A, use „Na spokojnym odpoczynku w tempie odpowiednim dla obu.”"
+        },
+        {
+          "id": "q2",
+          "option": "A",
+          "evidence": "Pierwszego dnia będą odpoczywać po podróży i zwiedzą miasteczko.",
+          "ambiguous": false,
+          "distractorScore": 81,
+          "skillMatches": true,
+          "notes": "B and C reuse plans for subsequent days, so the time reference matters."
+        },
+        {
+          "id": "q3",
+          "option": "A",
+          "evidence": "Monika lubi długie spacery, ale jej siostra dopiero zaczyna chodzić po górach.",
+          "ambiguous": false,
+          "distractorScore": 64,
+          "skillMatches": true,
+          "notes": "The preceding contrast gives the reason even without an explicit causal linker. In the stem, „wybiorą” would match the text’s timing better than „wybrały”."
+        },
+        {
+          "id": "q4",
+          "option": "A",
+          "evidence": "Jeśli obie będą się dobrze czuły, później zaplanują dłuższą trasę.",
+          "ambiguous": false,
+          "distractorScore": 62,
+          "skillMatches": true,
+          "notes": "A applies the shared fitness condition. B prioritizes weather alone and C invents an agreement, though repeating a short route could also be reasonable without the false premise. Place the tiredness the next morning so it clearly bears on the choice."
+        },
+        {
+          "id": "q5",
+          "option": "B",
+          "evidence": "Następnego dnia wybiorą łatwy szlak, który kończy się przy schronisku. Jeśli obie będą się dobrze czuły, później zaplanują dłuższą trasę.",
+          "ambiguous": false,
+          "distractorScore": 72,
+          "skillMatches": true,
+          "notes": "The path’s endpoint and the later „trasa” support the gloss. The distractors describe common places along a hiking route."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-034",
+      "scores": {
+        "naturalness": 95,
+        "level": 79,
+        "questions": 82,
+        "ambiguity": 98,
+        "theme": 98,
+        "vocabulary": 89
+      },
+      "criticalIssues": [],
+      "notes": "The narrative has a clear sequence and a credible resolution. Administrative and rail vocabulary, including formularz zgłoszenia zagubionej rzeczy and dane kontaktowe, increase the load for A2. „Pracownica punktu informacji” would be a more explicit version of „Pracownica informacji”.",
+      "items": [
+        {
+          "id": "q1",
+          "option": "A",
+          "evidence": "Po dwóch dniach odebrał ją w biurze rzeczy znalezionych.",
+          "ambiguous": false,
+          "distractorScore": 63,
+          "skillMatches": true,
+          "notes": "The recovery is the central outcome. B magnifies a genuine detail, while C changes what was lost."
+        },
+        {
+          "id": "q2",
+          "option": "C",
+          "evidence": "Nie pamiętał numeru wagonu, więc sprawdził go na bilecie w telefonie.",
+          "ambiguous": false,
+          "distractorScore": 67,
+          "skillMatches": true,
+          "notes": "The other two options reuse actual procedural details in the story. The text mentions returning to the platform but does not locate the form there."
+        },
+        {
+          "id": "q3",
+          "option": "A",
+          "evidence": "Aby potwierdzić, że należy do niego, musiał opisać przedmioty znajdujące się w środku.",
+          "ambiguous": false,
+          "distractorScore": 65,
+          "skillMatches": true,
+          "notes": "The ownership check is explicit. B is chronologically incompatible with the discovery of the bag, and C provides no link between the contents and which office to use."
+        },
+        {
+          "id": "q4",
+          "option": "C",
+          "evidence": "Aby potwierdzić, że należy do niego, musiał opisać przedmioty znajdujące się w środku.",
+          "ambiguous": false,
+          "distractorScore": 45,
+          "skillMatches": true,
+          "notes": "The scenario requires applying the identification rule to two similar bags and using the fact that the bag held a book. The distractors cannot identify a bag in the office. Consider alternatives based on less distinctive bag details."
+        },
+        {
+          "id": "q5",
+          "option": "A",
+          "evidence": "Następnego dnia otrzymał wiadomość, że obsługa znalazła podobną torbę na stacji końcowej.",
+          "ambiguous": false,
+          "distractorScore": 81,
+          "skillMatches": true,
+          "notes": "The chronology shows that the train continued beyond Paweł’s stop. Both distractors exploit confusion between the end of his journey and the end of the train’s route."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-035",
+      "scores": {
+        "naturalness": 94,
+        "level": 75,
+        "questions": 74,
+        "ambiguity": 97,
+        "theme": 97,
+        "vocabulary": 90
+      },
+      "criticalIssues": [],
+      "notes": "Authentic group-trip notice with clear pricing and participation rules. Multiple institutional phrases make this borderline A2/B1, particularly we własnym zakresie, udział jest dobrowolny, w razie and ośrodek. If the notice were operational, specify whether the Sunday return time is arrival or departure.",
+      "items": [
+        {
+          "id": "q1",
+          "option": "C",
+          "evidence": "Zapraszamy na weekendowy wyjazd nad jezioro dla osób, które chcą odpocząć od miasta.",
+          "ambiguous": false,
+          "distractorScore": 47,
+          "skillMatches": true,
+          "notes": "The options borrow words from the notice, but the guide training and all-summer room rental are implausible as summaries."
+        },
+        {
+          "id": "q2",
+          "option": "A",
+          "evidence": "Cena obejmuje przejazd autokarem, nocleg w dwuosobowym pokoju i śniadanie w niedzielę. Obiad oraz kolację uczestnicy organizują we własnym zakresie.",
+          "ambiguous": false,
+          "distractorScore": 82,
+          "skillMatches": true,
+          "notes": "The meal options are all locally relevant, and the contrast between included and self-organized meals determines the answer."
+        },
+        {
+          "id": "q3",
+          "option": "B",
+          "evidence": "Po środzie też można zrezygnować. Żeby jednak odzyskać pieniądze, trzeba znaleźć kogoś na swoje miejsce.",
+          "ambiguous": false,
+          "distractorScore": 68,
+          "skillMatches": true,
+          "notes": "B paraphrases the replacement condition. Alternatives about meal and room commitments are plausible trip policies in general but unsupported here."
+        },
+        {
+          "id": "q4",
+          "option": "A",
+          "evidence": "W sobotę po południu organizujemy krótką wycieczkę z przewodnikiem. Udział jest dobrowolny i nie wymaga dodatkowej opłaty.",
+          "ambiguous": false,
+          "distractorScore": 33,
+          "skillMatches": false,
+          "notes": "The budget scenario reduces to direct retrieval of a named free Saturday activity. Dinner is outside both the time and the price, and a lunch refund is implausible. An applied item could ask what two friends can each do if one wants a guided activity and the other wants to stay at the center."
+        },
+        {
+          "id": "q5",
+          "option": "A",
+          "evidence": "Cena obejmuje przejazd autokarem, nocleg w dwuosobowym pokoju i śniadanie w niedzielę. Obiad oraz kolację uczestnicy organizują we własnym zakresie.",
+          "ambiguous": false,
+          "distractorScore": 71,
+          "skillMatches": true,
+          "notes": "The price list and subject uczestnicy support independent arrangements. C is a useful contrast. B could be made more plausible by proposing that the organizer arranges the meal but charges separately."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-036",
+      "scores": {
+        "naturalness": 95,
+        "level": 81,
+        "questions": 81,
+        "ambiguity": 98,
+        "theme": 99,
+        "vocabulary": 88
+      },
+      "criticalIssues": [],
+      "notes": "Natural account of a neighborhood book exchange. Some higher-load words such as regał, świetlica and wypożyczenie are reasonably supported by context, making this upper A2. „Odwiedza regał” in q5 is understandable, though „zagląda do biblioteczki” is more idiomatic.",
+      "items": [
+        {
+          "id": "q1",
+          "option": "B",
+          "evidence": "Biblioteczka nie zastępuje dużej biblioteki miejskiej, lecz daje sąsiadom prosty sposób na dzielenie się książkami i poznawanie nowych ludzi.",
+          "ambiguous": false,
+          "distractorScore": 58,
+          "skillMatches": true,
+          "notes": "The wrong options turn incidental terms into different kinds of activity. A distractor about founding the book exchange could compete more closely with the broad point if the stem and alternatives distinguished coverage carefully."
+        },
+        {
+          "id": "q2",
+          "option": "A",
+          "evidence": "Mieszkańcy dostali zgodę na przeniesienie biblioteczki pod dach przy wejściu do świetlicy.",
+          "ambiguous": false,
+          "distractorScore": 71,
+          "skillMatches": true,
+          "notes": "The earlier location is a strong foil because the stem says obecnie. The municipal library has a weaker topical connection."
+        },
+        {
+          "id": "q3",
+          "option": "B",
+          "evidence": "Na początku regał stał na otwartym podwórku. Po kilku deszczowych dniach okazało się, że część książek jest wilgotna. Mieszkańcy dostali zgodę na przeniesienie biblioteczki pod dach przy wejściu do świetlicy.",
+          "ambiguous": false,
+          "distractorScore": 61,
+          "skillMatches": true,
+          "notes": "The causal sequence is clear. „Książki wilgotniały po deszczu” would more closely match the observed state without claiming direct exposure."
+        },
+        {
+          "id": "q4",
+          "option": "C",
+          "evidence": "Nie prowadzą listy wypożyczeń, ale proszą o zwracanie książek po przeczytaniu albo przyniesienie innych.",
+          "ambiguous": false,
+          "distractorScore": 42,
+          "skillMatches": true,
+          "notes": "The reader applies an exchange rule to an incomplete loan and another available book. Both wrong options reinstate systems explicitly excluded. A stronger foil could be waiting until she finishes the book to return it, with the stem retaining already today."
+        },
+        {
+          "id": "q5",
+          "option": "A",
+          "evidence": "Teraz mieszkańcy odwiedzają ją przy okazji spaceru lub powrotu z pracy.",
+          "ambiguous": false,
+          "distractorScore": 69,
+          "skillMatches": true,
+          "notes": "C tests intentional versus incidental visiting. Improve A by adding that the walk was already the reason for going out."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-037",
+      "scores": {
+        "naturalness": 83,
+        "level": 76,
+        "questions": 80,
+        "ambiguity": 98,
+        "theme": 97,
+        "vocabulary": 91
+      },
+      "criticalIssues": [
+        "„Każdy odpowiada na te, które pasują do jego możliwości” has no explicit antecedent for te. Supply „na te prośby, które pasują do jego możliwości” or „odpowiada, gdy może w czymś pomóc”."
+      ],
+      "notes": "The mutual-help example gives this topic a natural shape. Pracować zmianowo, dzielić się doświadczeniem and zaoferować make it upper A2. The final „Ważniejsze jest to” leaves the comparison unclear. „W tej grupie każdy może pomóc” would give the ending a firmer link to the example.",
+      "items": [
+        {
+          "id": "q1",
+          "option": "C",
+          "evidence": "Marta zobaczyła, że ona i sąsiad potrafią robić różne rzeczy i mogą się od siebie uczyć.",
+          "ambiguous": false,
+          "distractorScore": 50,
+          "skillMatches": true,
+          "notes": "The individual example illustrates reciprocal help, which is also the whole passage’s theme. A upgrades one repair into a course. B is more remote."
+        },
+        {
+          "id": "q2",
+          "option": "B",
+          "evidence": "Marta niedawno pomogła sąsiadowi zarezerwować wizytę przez internet. Kilka dni później sąsiad pokazał jej, jak naprawić zepsute krzesło.",
+          "ambiguous": false,
+          "distractorScore": 80,
+          "skillMatches": true,
+          "notes": "A reverses the direction of help. C borrows the real cooking activity from the opening paragraph."
+        },
+        {
+          "id": "q3",
+          "option": "B",
+          "evidence": "Kiedy Marta dołączyła do grupy, obawiała się, że nie znajdzie czasu na regularne spotkania. Pracuje zmianowo i nie zawsze wie, kiedy będzie wolna.",
+          "ambiguous": false,
+          "distractorScore": 65,
+          "skillMatches": true,
+          "notes": "The text expresses the cause across consecutive sentences. For precision, ask why she worried she would not have time to attend regularly."
+        },
+        {
+          "id": "q4",
+          "option": "B",
+          "evidence": "Okazało się jednak, że każdy może pomagać wtedy, gdy ma czas. Mieszkańcy piszą na wspólnym czacie, czego potrzebują.",
+          "ambiguous": false,
+          "distractorScore": 48,
+          "skillMatches": true,
+          "notes": "The new case combines unpredictable availability with cooking as a skill. A adds a quid pro quo and C adds a prior commitment. Mention „odpowiedzieć na czacie na prośbę osoby” for a clearer link to the rules."
+        },
+        {
+          "id": "q5",
+          "option": "C",
+          "evidence": "Starsi mieszkańcy dzielą się doświadczeniem, uczą gotować tradycyjne potrawy i opowiadają o historii okolicy.",
+          "ambiguous": false,
+          "distractorScore": 72,
+          "skillMatches": true,
+          "notes": "The cooking and storytelling examples support the phrase directly. The distractors describe nearby forms of group interaction but change who provides knowledge."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-038",
+      "scores": {
+        "naturalness": 95,
+        "level": 80,
+        "questions": 77,
+        "ambiguity": 99,
+        "theme": 98,
+        "vocabulary": 88
+      },
+      "criticalIssues": [],
+      "notes": "An authentic event announcement with coherent logistics. Specific expressions such as segregować odpady, nieznane substancje and wystarczającą liczbę increase the lexical load. „Sprzątanie potrwa około dwóch godzin” works with the explicit welcome for shorter help.",
+      "items": [
+        {
+          "id": "q1",
+          "option": "B",
+          "evidence": "W najbliższą sobotę organizujemy wspólne sprzątanie parku przy ulicy Lipowej. Chcemy przygotować teren do wiosennych spacerów.",
+          "ambiguous": false,
+          "distractorScore": 57,
+          "skillMatches": true,
+          "notes": "A turns the subsequent use of the park into the purpose of the notice. C overweights the later reference to the community center. „Po gotowym już parku” sounds forced."
+        },
+        {
+          "id": "q2",
+          "option": "B",
+          "evidence": "Otrzymasz rękawice, worki oraz krótką instrukcję, jak segregować odpady.",
+          "ambiguous": false,
+          "distractorScore": 75,
+          "skillMatches": true,
+          "notes": "A tests the distinction between supplied items and items to bring. C combines the organizer’s vest with a meal absent from the passage."
+        },
+        {
+          "id": "q3",
+          "option": "B",
+          "evidence": "Nie trzeba zapisywać się wcześniej, jednak osoby, które chcą przyjść z większą grupą, prosimy o wiadomość. Dzięki temu przygotujemy wystarczającą liczbę rękawic.",
+          "ambiguous": false,
+          "distractorScore": 74,
+          "skillMatches": true,
+          "notes": "Registration-related alternatives are credible in a group event, but the stated supply reason controls."
+        },
+        {
+          "id": "q4",
+          "option": "B",
+          "evidence": "Dzieci mogą brać udział w wydarzeniu tylko pod opieką osoby dorosłej.",
+          "ambiguous": false,
+          "distractorScore": 69,
+          "skillMatches": true,
+          "notes": "The separate statement „Nawet godzina pomocy będzie dla nas cenna” combines with the supervision rule for this scenario. A draws on the overall duration, making it a useful foil."
+        },
+        {
+          "id": "q5",
+          "option": "C",
+          "evidence": "Otrzymasz rękawice, worki oraz krótką instrukcję, jak segregować odpady.",
+          "ambiguous": false,
+          "distractorScore": 58,
+          "skillMatches": false,
+          "notes": "C is the unique dictionary sense, but the sentence only labels an unspecified instruction. All three actions could fit a generic clean-up notice. Add a cue such as putting glass and paper in separate bags so the intended meaning follows from the passage."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-039",
+      "scores": {
+        "naturalness": 92,
+        "level": 73,
+        "questions": 84,
+        "ambiguity": 98,
+        "theme": 97,
+        "vocabulary": 92
+      },
+      "criticalIssues": [],
+      "notes": "Cohesive civic report with several useful but mostly upper-A2 or B1 expressions, such as przedstawiciele rady, w pierwszej kolejności, zrealizować and informacje o postępie prac. The title „Spotkanie z radą osiedla” would match the participants without implying a venue. The second paragraph could frame the sequence of repairs and voting more clearly.",
+      "items": [
+        {
+          "id": "q1",
+          "option": "B",
+          "evidence": "W środę mieszkańcy spotkali się z przedstawicielami rady osiedla, żeby omówić problemy związane z placem zabaw.",
+          "ambiguous": false,
+          "distractorScore": 68,
+          "skillMatches": true,
+          "notes": "The opening names the subject and the later proposals establish priorities. A stays on the same topic but invents a second playground. C changes the purpose altogether."
+        },
+        {
+          "id": "q2",
+          "option": "B",
+          "evidence": "Rodzice małych dzieci zwrócili uwagę na brak cienia latem.",
+          "ambiguous": false,
+          "distractorScore": 86,
+          "skillMatches": true,
+          "notes": "Both distractors are genuine problems described by the passage. Identifying who mentioned what is necessary."
+        },
+        {
+          "id": "q3",
+          "option": "B",
+          "evidence": "Rada ma za mało pieniędzy, żeby zrobić wszystko od razu.",
+          "ambiguous": false,
+          "distractorScore": 60,
+          "skillMatches": true,
+          "notes": "Other logistical constraints sound possible in general but are absent. The budget cause is stated directly."
+        },
+        {
+          "id": "q4",
+          "option": "A",
+          "evidence": "Rada nie obiecuje, że wszystkie zwycięskie pomysły uda się zrealizować jeszcze w tym roku.",
+          "ambiguous": false,
+          "distractorScore": 79,
+          "skillMatches": true,
+          "notes": "Correctly applies a general caveat to the specific winning project. B converts a possible timeline into a guarantee. C reverses the stated repair priority."
+        },
+        {
+          "id": "q5",
+          "option": "A",
+          "evidence": "Mieszkańcy ustalili również, że informacje o postępie prac będą regularnie pojawiać się na tablicy ogłoszeń oraz na stronie internetowej osiedla.",
+          "ambiguous": false,
+          "distractorScore": 68,
+          "skillMatches": true,
+          "notes": "The published updates and separation from voting and project proposals support this interpretation. A would be fuller as „Wiadomości o tym, co już zrobiono i jak idą prace.”"
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-040",
+      "scores": {
+        "naturalness": 97,
+        "level": 81,
+        "questions": 81,
+        "ambiguity": 96,
+        "theme": 98,
+        "vocabulary": 88
+      },
+      "criticalIssues": [],
+      "notes": "Natural narrative about gaining confidence, with textbook-relevant vocabulary. Several abstract expressions such as dokończyć wypowiedź, porozumiewać się and zastanawiać się nad wyrażeniami raise it to upper A2. The contrast between earlier reluctance and later initiative makes the global point easy to trace.",
+      "items": [
+        {
+          "id": "q1",
+          "option": "B",
+          "evidence": "Po kilku tygodniach zaczął sam proponować tematy do rozmowy. Zauważył też, że łatwiej porozumiewa się z kolegami w pracy.",
+          "ambiguous": false,
+          "distractorScore": 51,
+          "skillMatches": true,
+          "notes": "A turns easier workplace conversation into teaching. C borrows the venue without a narrative basis."
+        },
+        {
+          "id": "q2",
+          "option": "C",
+          "evidence": "Pewnego dnia zobaczył informację o bezpłatnym klubie językowym, który spotyka się w bibliotece w każdy wtorek.",
+          "ambiguous": false,
+          "distractorScore": 65,
+          "skillMatches": true,
+          "notes": "The distractors borrow other settings where Igor uses Polish. „Biuro Igora” adds a workplace type the passage does not specify."
+        },
+        {
+          "id": "q3",
+          "option": "B",
+          "evidence": "Po zakończeniu zadania uczestnicy wspólnie zastanawiali się nad trudniejszymi wyrażeniami. Igor poczuł się swobodniej, ponieważ mógł dokończyć swoją wypowiedź.",
+          "ambiguous": false,
+          "distractorScore": 62,
+          "skillMatches": true,
+          "notes": "B alone identifies the cause, but „zanim omówiono błędy” is an unsupported extra detail. The text mentions discussing difficult expressions. Use „Mógł dokończyć swoją myśl bez ciągłego poprawiania”."
+        },
+        {
+          "id": "q4",
+          "option": "C",
+          "evidence": "Na pierwszym spotkaniu uczestnicy przedstawili się i podzielili na małe grupy. Rozmawiali o podróżach, pracy oraz codziennych zwyczajach. Prowadząca poprosiła, żeby nie poprawiać każdego błędu w trakcie rozmowy.",
+          "ambiguous": false,
+          "distractorScore": 63,
+          "skillMatches": true,
+          "notes": "Applies the small-group format and low-interruption rule to a learner experiencing the same difficulty. B directly conflicts with the rule, while A misunderstands the club format."
+        },
+        {
+          "id": "q5",
+          "option": "B",
+          "evidence": "Igor poczuł się swobodniej, ponieważ mógł dokończyć swoją wypowiedź.",
+          "ambiguous": false,
+          "distractorScore": 69,
+          "skillMatches": true,
+          "notes": "The earlier fear of speaking gives „swobodniej” its emotional sense. A exploits the nearby idea of having time to finish, whereas C is a weaker physical-feeling alternative."
+        }
+      ]
+    }
+  ]
+}
