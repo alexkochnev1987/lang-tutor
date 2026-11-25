@@ -1,0 +1,76 @@
+{
+  "id": "pl-b1.reading.day-166",
+  "day": 166,
+  "level": "B1",
+  "genre": "ogłoszenie",
+  "title": "Biblioteka w planie samokształcenia",
+  "text": "Biblioteka przy ulicy Ogrodowej zaprasza osoby dorosłe do udziału w nowym programie samodzielnej nauki. Nie organizujemy kursu jednego przedmiotu. Chcemy pomóc osobom, które mają własne zainteresowania, lecz potrzebują spokojnego miejsca, odpowiednich materiałów albo wskazówek dotyczących organizacji nauki.\n\nW każdy wtorek od szesnastej do osiemnastej pracownik biblioteki będzie pomagał zainteresowanym szukać książek i innych materiałów na wybrany temat. Nie będzie prowadził lekcji ani sprawdzał prac domowych. Może natomiast pokazać, jak korzystać z katalogu, porównać dostępne publikacje oraz przygotować listę źródeł do dalszej pracy.\n\nOsoby, które chcą korzystać wyłącznie z cichej sali do nauki, mogą zarezerwować miejsce również w inne dni robocze. W sali będzie kilka stolików i dostęp do komputerów. Jeśli ktoś potrzebuje komputera przez dłuższy czas, prosimy o wcześniejszą informację, żeby pracownik mógł sprawdzić dostępność stanowisk.\n\nRaz w miesiącu odbędzie się spotkanie uczestników programu. Każdy chętny będzie mógł opowiedzieć, czego się ostatnio nauczył, jakie pytanie było dla niego trudne albo który materiał okazał się szczególnie przydatny. Nie trzeba przygotowywać formalnego wystąpienia. Można również przyjść tylko po to, żeby posłuchać pomysłów innych osób.\n\nNa pierwsze spotkanie organizacyjne nie trzeba mieć gotowego planu nauki. Wystarczy zastanowić się, jaki temat nas interesuje i ile czasu możemy na niego przeznaczać. Biblioteka nie będzie wyznaczać wszystkim identycznego celu. Zależy nam raczej na tym, aby uczestnicy potrafili samodzielnie wybierać materiały i wracać do nauki w tempie, które pozwala im łączyć ją z innymi obowiązkami.",
+  "questions": [
+    {
+      "id": "main-idea",
+      "skill": "main-idea",
+      "question": "Co oferuje biblioteka?",
+      "options": [
+        "Zajęcia jednego przedmiotu według wspólnego programu dla wszystkich.",
+        "Wsparcie samodzielnej nauki przez dostęp do materiałów, miejsca i wymiany doświadczeń.",
+        "Obowiązkowy kurs z ocenami i sprawdzaniem prac domowych."
+      ],
+      "answer": "Wsparcie samodzielnej nauki przez dostęp do materiałów, miejsca i wymiany doświadczeń.",
+      "evidence": "Chcemy pomóc osobom, które mają własne zainteresowania, lecz potrzebują spokojnego miejsca, odpowiednich materiałów albo wskazówek dotyczących organizacji nauki.",
+      "explanation": "Program wspiera indywidualne cele."
+    },
+    {
+      "id": "detail",
+      "skill": "detail",
+      "question": "Kiedy pracownik pomaga szukać materiałów?",
+      "options": [
+        "Codziennie od ósmej do dziesiątej.",
+        "Wyłącznie podczas comiesięcznego spotkania.",
+        "We wtorki od szesnastej do osiemnastej."
+      ],
+      "answer": "We wtorki od szesnastej do osiemnastej.",
+      "evidence": "W każdy wtorek od szesnastej do osiemnastej pracownik biblioteki będzie pomagał zainteresowanym szukać książek",
+      "explanation": "Podano stałą porę pomocy."
+    },
+    {
+      "id": "cause",
+      "skill": "cause",
+      "question": "Dlaczego trzeba wcześniej zgłosić dłuższe korzystanie z komputera?",
+      "options": [
+        "Pracownik musi móc sprawdzić dostępność stanowiska.",
+        "Komputery są dostępne tylko dla prowadzących lekcje.",
+        "Biblioteka chce wybrać uczestników z najlepszymi wynikami."
+      ],
+      "answer": "Pracownik musi móc sprawdzić dostępność stanowiska.",
+      "evidence": "prosimy o wcześniejszą informację, żeby pracownik mógł sprawdzić dostępność stanowisk.",
+      "explanation": "Liczba stanowisk jest ograniczona."
+    },
+    {
+      "id": "inference",
+      "skill": "inference",
+      "question": "Uczestniczka zna już źródła, ale potrzebuje miejsca przy komputerze w czwartek i nie chce jeszcze opowiadać o postępach. Co może zrobić?",
+      "options": [
+        "Zapytać o rezerwację komputera w czwartek i ewentualnie przyjść na spotkanie jako słuchacz.",
+        "Przyjść tylko we wtorek i przygotować obowiązkowe wystąpienie.",
+        "Zrezygnować, ponieważ każdy uczestnik musi korzystać z pomocy pracownika."
+      ],
+      "answer": "Zapytać o rezerwację komputera w czwartek i ewentualnie przyjść na spotkanie jako słuchacz.",
+      "evidence": "Osoby, które chcą korzystać wyłącznie z cichej sali do nauki, mogą zarezerwować miejsce również w inne dni robocze. W sali będzie kilka stolików i dostęp do komputerów. Jeśli ktoś potrzebuje komputera przez dłuższy czas, prosimy o wcześniejszą informację, żeby pracownik mógł sprawdzić dostępność stanowisk.\n\nRaz w miesiącu odbędzie się spotkanie uczestników programu. Każdy chętny będzie mógł opowiedzieć, czego się ostatnio nauczył, jakie pytanie było dla niego trudne albo który materiał okazał się szczególnie przydatny. Nie trzeba przygotowywać formalnego wystąpienia. Można również przyjść tylko po to, żeby posłuchać pomysłów innych osób.",
+      "explanation": "Korzystanie z sali nie wymaga publicznego przedstawiania wyników."
+    },
+    {
+      "id": "vocabulary",
+      "skill": "vocabulary",
+      "question": "Co znaczy „samokształcenie”?",
+      "options": [
+        "Przygotowywanie materiałów dla wszystkich pracowników biblioteki.",
+        "Samodzielne zdobywanie wiedzy i umiejętności.",
+        "Uczestniczenie wyłącznie w obowiązkowych lekcjach szkolnych."
+      ],
+      "answer": "Samodzielne zdobywanie wiedzy i umiejętności.",
+      "evidence": "Zależy nam raczej na tym, aby uczestnicy potrafili samodzielnie wybierać materiały",
+      "explanation": "Samokształcenie opiera się na samodzielnym kierowaniu nauką."
+    }
+  ],
+  "publicationStatus": "practice"
+}

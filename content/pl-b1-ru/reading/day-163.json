@@ -1,0 +1,76 @@
+{
+  "id": "pl-b1.reading.day-163",
+  "day": 163,
+  "level": "B1",
+  "genre": "artykuł",
+  "title": "Kurs stacjonarny czy internetowy",
+  "text": "Dwie osoby zapisane na zajęcia językowe w tej samej szkole wybrały różne formy nauki. Kasia uczestniczyła w kursie stacjonarnym, natomiast Igor uczył się przez internet. Oboje korzystali z podobnych materiałów i mieli ten sam ogólny cel: swobodniej rozmawiać w codziennych sytuacjach.\n\nKasia wybrała zajęcia w budynku szkoły, ponieważ łatwiej było jej rozpocząć rozmowę z innymi uczestnikami, gdy siedzieli przy jednym stole. Po lekcji czasami zostawała z koleżanką, żeby powtórzyć nowe słowa. Dojazd na zajęcia i powrót zajmowały jej jednak łącznie prawie godzinę. W tygodniach, w których miała więcej obowiązków, zdarzało jej się opuszczać zajęcia.\n\nIgor pracował w różnych godzinach i nie mógł regularnie dojeżdżać do szkoły. Kurs internetowy pozwalał mu uczestniczyć w lekcjach z domu. Cenił także możliwość powrotu do krótkich nagrań z ćwiczeniami gramatycznymi. Zauważył jednak, że gdy podczas zajęć nie zabiera głosu, po lekcji trudno mu ocenić, czy umiałby wykorzystać nowe wyrażenia w rozmowie.\n\nPo miesiącu oboje postanowili uzupełnić swoje metody. Kasia zaczęła korzystać z nagrań dostępnych na stronie kursu, kiedy nie mogła przyjść do szkoły. Igor zapisał się na dodatkowe krótkie rozmowy w małej grupie przez internet. Dzięki temu nie musieli zmieniać wybranej formy nauki, lecz mogli lepiej wykorzystać jej możliwości.\n\nIch doświadczenia pokazują, że porównując kursy, warto pytać nie tylko o miejsce zajęć. Znaczenie mają także dostęp do ćwiczeń, możliwość rozmowy, sposób otrzymywania informacji o błędach i czas potrzebny na regularny udział. Właściwy wybór zależy od tego, których umiejętności dana osoba potrzebuje i w jakich warunkach rzeczywiście będzie się uczyć.",
+  "questions": [
+    {
+      "id": "main-idea",
+      "skill": "main-idea",
+      "question": "Jaki wniosek wynika z porównania kursów?",
+      "options": [
+        "Kurs stacjonarny zawsze daje lepszy wynik niezależnie od dostępności.",
+        "Warto wybrać formę dopasowaną do warunków i uzupełnić brakujące sposoby ćwiczenia.",
+        "Kurs internetowy nie może obejmować rozmów w małych grupach."
+      ],
+      "answer": "Warto wybrać formę dopasowaną do warunków i uzupełnić brakujące sposoby ćwiczenia.",
+      "evidence": "Dzięki temu nie musieli zmieniać wybranej formy nauki, lecz mogli lepiej wykorzystać jej możliwości.",
+      "explanation": "Oboje dostosowali metody zamiast uznawać jedną formę za zawsze lepszą."
+    },
+    {
+      "id": "detail",
+      "skill": "detail",
+      "question": "Ile łącznie czasu zajmował Kasi dojazd na zajęcia i powrót?",
+      "options": [
+        "Prawie godzinę.",
+        "Około kwadransa.",
+        "Prawie dwie godziny."
+      ],
+      "answer": "Prawie godzinę.",
+      "evidence": "Dojazd na zajęcia i powrót zajmowały jej jednak łącznie prawie godzinę.",
+      "explanation": "Podano łączny czas dojazdu."
+    },
+    {
+      "id": "cause",
+      "skill": "cause",
+      "question": "Dlaczego Igor zdecydował się na kurs internetowy?",
+      "options": [
+        "Nie chciał korzystać z żadnych nagrań gramatycznych.",
+        "Szkoła nie miała zajęć poświęconych rozmowie.",
+        "Jego zmienne godziny pracy utrudniały regularne dojazdy."
+      ],
+      "answer": "Jego zmienne godziny pracy utrudniały regularne dojazdy.",
+      "evidence": "Igor pracował w różnych godzinach i nie mógł regularnie dojeżdżać do szkoły.",
+      "explanation": "Forma zdalna pasowała do jego grafiku."
+    },
+    {
+      "id": "inference",
+      "skill": "inference",
+      "question": "Osoba uczy się online ze względu na dojazd, lecz rzadko ćwiczy mówienie. Co może zrobić na podstawie doświadczenia Igora?",
+      "options": [
+        "Pozostać przy kursie online i dodać regularne rozmowy w małej grupie.",
+        "Zmienić pracę, żeby obowiązkowo uczestniczyć w każdej lekcji stacjonarnej.",
+        "Zrezygnować z rozmów i korzystać wyłącznie ze słownika."
+      ],
+      "answer": "Pozostać przy kursie online i dodać regularne rozmowy w małej grupie.",
+      "evidence": "Igor zapisał się na dodatkowe krótkie rozmowy w małej grupie przez internet.",
+      "explanation": "Uzupełnienie ćwiczeń może rozwiązać konkretny brak bez zmiany całego kursu."
+    },
+    {
+      "id": "vocabulary",
+      "skill": "vocabulary",
+      "question": "Co oznacza „zabierać głos” podczas zajęć?",
+      "options": [
+        "Odtwarzać nagrania po zakończeniu lekcji.",
+        "Włączać się do rozmowy i wypowiadać własne zdania.",
+        "Zmieniać język wyświetlanych materiałów."
+      ],
+      "answer": "Włączać się do rozmowy i wypowiadać własne zdania.",
+      "evidence": "gdy podczas zajęć nie zabiera głosu",
+      "explanation": "Wyrażenie oznacza aktywny udział w rozmowie."
+    }
+  ],
+  "publicationStatus": "practice"
+}

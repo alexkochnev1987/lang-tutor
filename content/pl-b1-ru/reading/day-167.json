@@ -1,0 +1,76 @@
+{
+  "id": "pl-b1.reading.day-167",
+  "day": 167,
+  "level": "B1",
+  "genre": "opowiadanie",
+  "title": "Pytania do organizatora kursu",
+  "text": "Karol chciał zapisać się na kurs języka polskiego, ale nie był pewien, który poziom będzie dla niego odpowiedni. W codziennych rozmowach radził sobie dość dobrze, natomiast podczas pisania dłuższych wiadomości często popełniał błędy. Na stronie szkoły znalazł dwa opisy kursów i oba wydawały mu się interesujące.\n\nPierwszy kurs koncentrował się na krótkich rozmowach i podstawowych sytuacjach. Drugi zawierał więcej ćwiczeń związanych z pisaniem i rozumieniem dłuższych tekstów. Karol nie chciał wybrać tylko na podstawie nazwy poziomu, ponieważ wiedział, że jego umiejętności nie są jednakowo rozwinięte.\n\nNapisał więc do organizatora. Zapytał, czy przed zapisem można wykonać krótkie zadanie, a także jak często uczestnicy otrzymują indywidualne informacje o błędach. Wspomniał, że czasami pracuje w soboty, i poprosił o informację, co się dzieje, jeśli ktoś opuści pojedyncze zajęcia.\n\nOrganizator przesłał mu przykładowe ćwiczenia z obu kursów. Wyjaśnił również, że materiały po lekcji są dostępne dla zapisanych uczestników, ale nie wszystkie zadania grupowe można wykonać samodzielnie w domu. Zaproponował krótką rozmowę z prowadzącą przed dokonaniem wyboru.\n\nKarol rozwiązał przykładowe zadania. Pierwszy zestaw był dla niego łatwy, drugi wymagał więcej czasu, ale rozumiał jego polecenia. Podczas rozmowy z prowadzącą wyjaśnił, że zależy mu szczególnie na pisaniu. Ostatecznie zdecydował się na drugi kurs i ustalił, jak będzie uzupełniał materiał po nieobecności.\n\nPo kilku tygodniach był zadowolony z wyboru. Najważniejsze okazało się nie to, że wybrał wyższy poziom, lecz to, że wcześniej zadał pytania dotyczące rzeczywistego sposobu nauki i własnych potrzeb.",
+  "questions": [
+    {
+      "id": "main-idea",
+      "skill": "main-idea",
+      "question": "Co pomogło Karolowi wybrać kurs?",
+      "options": [
+        "Wybranie kursu wyłącznie na podstawie nazwy wyższego poziomu.",
+        "Zapisanie się na oba kursy bez sprawdzania programu.",
+        "Porównanie przykładowych zadań i wyjaśnienie swoich potrzeb oraz warunków udziału."
+      ],
+      "answer": "Porównanie przykładowych zadań i wyjaśnienie swoich potrzeb oraz warunków udziału.",
+      "evidence": "wcześniej zadał pytania dotyczące rzeczywistego sposobu nauki i własnych potrzeb.",
+      "explanation": "Decyzja wynikała z próby i rozmowy, nie samego poziomu."
+    },
+    {
+      "id": "detail",
+      "skill": "detail",
+      "question": "Na jakiej umiejętności szczególnie zależało Karolowi?",
+      "options": [
+        "Na przygotowywaniu materiałów dla szkoły.",
+        "Na pisaniu.",
+        "Na prowadzeniu zajęć grupowych."
+      ],
+      "answer": "Na pisaniu.",
+      "evidence": "zależy mu szczególnie na pisaniu.",
+      "explanation": "Pisanie było jego głównym celem."
+    },
+    {
+      "id": "cause",
+      "skill": "cause",
+      "question": "Dlaczego zapytał o opuszczanie pojedynczych lekcji?",
+      "options": [
+        "Czasami pracuje w soboty.",
+        "Nie chciał otrzymywać indywidualnych uwag.",
+        "Nie planował korzystać z żadnych materiałów w domu."
+      ],
+      "answer": "Czasami pracuje w soboty.",
+      "evidence": "Wspomniał, że czasami pracuje w soboty, i poprosił o informację, co się dzieje, jeśli ktoś opuści pojedyncze zajęcia.",
+      "explanation": "Jego grafik mógł powodować nieobecność."
+    },
+    {
+      "id": "inference",
+      "skill": "inference",
+      "question": "Inna osoba dobrze pisze, ale ma trudności z mówieniem i nie może chodzić na wszystkie spotkania. Co powinna sprawdzić przed wyborem kursu?",
+      "options": [
+        "Czy wszystkie zadania grupowe zawsze da się wykonać bez kontaktu z innymi.",
+        "Czy przykładowe zadania odpowiadają potrzebie rozmowy i jak można uzupełniać zajęcia po nieobecności.",
+        "Czy kurs ma najwyższą nazwę poziomu, bez sprawdzania ćwiczeń."
+      ],
+      "answer": "Czy przykładowe zadania odpowiadają potrzebie rozmowy i jak można uzupełniać zajęcia po nieobecności.",
+      "evidence": "Napisał więc do organizatora. Zapytał, czy przed zapisem można wykonać krótkie zadanie, a także jak często uczestnicy otrzymują indywidualne informacje o błędach. Wspomniał, że czasami pracuje w soboty, i poprosił o informację, co się dzieje, jeśli ktoś opuści pojedyncze zajęcia.\n\nOrganizator przesłał mu przykładowe ćwiczenia z obu kursów. Wyjaśnił również, że materiały po lekcji są dostępne dla zapisanych uczestników, ale nie wszystkie zadania grupowe można wykonać samodzielnie w domu. Zaproponował krótką rozmowę z prowadzącą przed dokonaniem wyboru.",
+      "explanation": "Trzeba uwzględnić cel językowy oraz realne możliwości udziału."
+    },
+    {
+      "id": "vocabulary",
+      "skill": "vocabulary",
+      "question": "Co oznacza „uzupełniać materiał po nieobecności”?",
+      "options": [
+        "Przerabiać treści i zadania pominięte z powodu opuszczonej lekcji.",
+        "Dodawać nowe tematy do programu prowadzącej.",
+        "Powtarzać tylko ćwiczenia wykonane wcześniej na zajęciach."
+      ],
+      "answer": "Przerabiać treści i zadania pominięte z powodu opuszczonej lekcji.",
+      "evidence": "ustalił, jak będzie uzupełniał materiał po nieobecności.",
+      "explanation": "Uzupełnianie pozwala wrócić do pominiętego materiału."
+    }
+  ],
+  "publicationStatus": "practice"
+}

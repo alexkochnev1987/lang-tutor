@@ -1,0 +1,76 @@
+{
+  "id": "pl-b1.reading.day-159",
+  "day": 159,
+  "level": "B1",
+  "genre": "ogłoszenie",
+  "title": "Aktywność w ciągu tygodnia",
+  "text": "Dom Kultury przygotowuje nowy cykl spotkań dla dorosłych, którzy chcieliby znaleźć w tygodniu czas na wspólną aktywność. Nie jest to program sportowy z określonym wynikiem do osiągnięcia. Chcemy zaoferować kilka możliwości spędzania czasu w grupie, a każdy uczestnik sam wybierze zajęcia odpowiadające jego zainteresowaniom.\n\nW poniedziałki rano planujemy spacery po najbliższej okolicy. Rozpoczynamy je przy głównym wejściu o dziewiątej, a kończymy około dziesiątej. W środy po południu w sali na parterze będą odbywały się zajęcia ruchowe przy muzyce. W soboty przygotujemy spotkania poświęcone różnym sposobom spędzania czasu na świeżym powietrzu, również tym, które nie wymagają długiego marszu.\n\nNa pierwsze dwa tygodnie można zapisać się tylko na wybrane spotkania. Nie wymagamy deklaracji udziału we wszystkich zajęciach do końca miesiąca. Osoby, które nie znają jeszcze prowadzących, mogą przyjść na jedno spotkanie organizacyjne w piątek i zapytać o przebieg zajęć. Prowadzący opiszą plan, wyposażenie oraz dostępne warunki, ale nie będą udzielać indywidualnych porad medycznych.\n\nW przypadku zmiany godzin uczestnicy otrzymają wiadomość. Jeżeli grupa spacerowa nie będzie mogła wyjść z powodu pogody, zaproponujemy spotkanie w sali. Osoby zapisane same zdecydują, czy chcą wziąć w nim udział.\n\nPo miesiącu zapytamy uczestników, które godziny i formy spotkań były dla nich najwygodniejsze. Zależy nam na stworzeniu programu, który można dopasować do różnych planów dnia. Nie chcemy mierzyć jego powodzenia wyłącznie liczbą osób obecnych na każdym spotkaniu. Ważne będzie także to, czy ludzie znaleźli formę aktywności, do której chcą wracać.",
+  "questions": [
+    {
+      "id": "main-idea",
+      "skill": "main-idea",
+      "question": "Co organizatorzy chcą osiągnąć?",
+      "options": [
+        "Dać mieszkańcom wybór form wspólnej aktywności odpowiadających ich potrzebom.",
+        "Przygotować wszystkich do zawodów sportowych na tych samych zasadach.",
+        "Wprowadzić obowiązkowy udział w zajęciach przez cały miesiąc."
+      ],
+      "answer": "Dać mieszkańcom wybór form wspólnej aktywności odpowiadających ich potrzebom.",
+      "evidence": "Zależy nam na stworzeniu programu, który można dopasować do różnych planów dnia.",
+      "explanation": "Program ma być elastyczny i oparty na wyborze."
+    },
+    {
+      "id": "detail",
+      "skill": "detail",
+      "question": "Gdzie odbywają się zajęcia w środę?",
+      "options": [
+        "Na trasie poniedziałkowych spacerów.",
+        "W sali na parterze.",
+        "Przy głównym wejściu na zewnątrz."
+      ],
+      "answer": "W sali na parterze.",
+      "evidence": "W środy po południu w sali na parterze będą odbywały się zajęcia ruchowe przy muzyce.",
+      "explanation": "Środowe zajęcia są w sali."
+    },
+    {
+      "id": "cause",
+      "skill": "cause",
+      "question": "Dlaczego organizatorzy zbiorą opinie po miesiącu?",
+      "options": [
+        "Chcą wybrać najlepszy wynik sportowy w grupie.",
+        "Zamierzają wykluczyć osoby, które opuściły jedno spotkanie.",
+        "Chcą sprawdzić, które formy i godziny są wygodne dla uczestników."
+      ],
+      "answer": "Chcą sprawdzić, które formy i godziny są wygodne dla uczestników.",
+      "evidence": "Po miesiącu zapytamy uczestników, które godziny i formy spotkań były dla nich najwygodniejsze.",
+      "explanation": "Opinie pomogą dopasować program."
+    },
+    {
+      "id": "inference",
+      "skill": "inference",
+      "question": "Osoba może uczestniczyć w regularnych zajęciach tylko w soboty, ale ma czas w piątek na spotkanie organizacyjne. Chce dowiedzieć się, czy trzeba dużo chodzić. Co może zrobić?",
+      "options": [
+        "Przyjść na piątkowe spotkanie organizacyjne, a następnie wybrać odpowiednie sobotnie zajęcia.",
+        "Poprosić prowadzącego o indywidualną diagnozę przed zapisaniem się.",
+        "Zapisać się na wszystkie poniedziałki, ponieważ soboty wymagają udziału w całym cyklu."
+      ],
+      "answer": "Przyjść na piątkowe spotkanie organizacyjne, a następnie wybrać odpowiednie sobotnie zajęcia.",
+      "evidence": "W soboty przygotujemy spotkania poświęcone różnym sposobom spędzania czasu na świeżym powietrzu, również tym, które nie wymagają długiego marszu.\n\nNa pierwsze dwa tygodnie można zapisać się tylko na wybrane spotkania. Nie wymagamy deklaracji udziału we wszystkich zajęciach do końca miesiąca. Osoby, które nie znają jeszcze prowadzących, mogą przyjść na jedno spotkanie organizacyjne w piątek i zapytać o przebieg zajęć.",
+      "explanation": "Można zapytać o warunki i wybrać tylko pasujące spotkania."
+    },
+    {
+      "id": "vocabulary",
+      "skill": "vocabulary",
+      "question": "Co znaczy „deklaracja udziału”?",
+      "options": [
+        "Wynik pomiaru osiągnięć sportowych.",
+        "Zobowiązanie, że będzie się uczestniczyć w określonych zajęciach.",
+        "Informacja o zamknięciu sali."
+      ],
+      "answer": "Zobowiązanie, że będzie się uczestniczyć w określonych zajęciach.",
+      "evidence": "Nie wymagamy deklaracji udziału we wszystkich zajęciach do końca miesiąca.",
+      "explanation": "Deklaracja to wcześniejsze potwierdzenie zamiaru udziału."
+    }
+  ],
+  "publicationStatus": "practice"
+}

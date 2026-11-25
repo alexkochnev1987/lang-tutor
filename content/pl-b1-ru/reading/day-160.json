@@ -1,0 +1,76 @@
+{
+  "id": "pl-b1.reading.day-160",
+  "day": 160,
+  "level": "B1",
+  "genre": "opowiadanie",
+  "title": "Informacja a indywidualna porada",
+  "text": "Tomek znalazł w internecie artykuł dotyczący organizowania codziennych posiłków. Tekst zawierał kilka ogólnych przykładów oraz opis doświadczeń osób, które zmieniły swoje zwyczaje. Ponieważ od pewnego czasu miał pytania związane z własnym zdrowiem, zaczął zastanawiać się, czy przedstawione rozwiązania byłyby odpowiednie również dla niego.\n\nNajpierw zapisał kilka zdań z artykułu w notatniku. Później przeczytał komentarze innych czytelników. Jedna osoba opisywała pozytywne doświadczenie, druga twierdziła, że u niej podobny sposób postępowania się nie sprawdził. Tomek nie wiedział, jak porównać te opinie, ponieważ autorzy nie podawali wszystkich informacji o swojej sytuacji.\n\nZamiast podejmować decyzję na podstawie komentarzy, postanowił przygotować pytania do umówionej wcześniej rozmowy z lekarzem. Pokazał mu artykuł i wyjaśnił, które fragmenty zwróciły jego uwagę. Lekarz zapytał o powód zainteresowania tekstem oraz o informacje, które wcześniej omawiali podczas wizyty.\n\nTomek zrozumiał wtedy, że ogólne materiały mogą pomóc mu poznać pojęcia i przygotować pytania. Nie musi jednak zakładać, że każdy opisany przykład dotyczy również jego sytuacji. To, że dwie osoby przeczytały ten sam artykuł, nie oznacza jeszcze, że potrzebują identycznej odpowiedzi.\n\nPo powrocie do domu uporządkował notatki. Osobno zapisał informacje z artykułu, własne pytania oraz ustalenia wynikające z rozmowy. Dzięki temu później nie musiał zgadywać, skąd pochodziło dane zdanie. Nadal interesował się tekstami o zdrowiu, ale zmienił sposób korzystania z nich. Chciał być lepiej przygotowany do rozmów ze specjalistami, a nie zastępować takie rozmowy wybieraniem najbardziej przekonujących historii w internecie.",
+  "questions": [
+    {
+      "id": "main-idea",
+      "skill": "main-idea",
+      "question": "Co Tomek zrozumiał dzięki opisanej sytuacji?",
+      "options": [
+        "Materiały o zdrowiu nie mogą zawierać żadnych przydatnych informacji.",
+        "Ogólna informacja pomaga przygotować pytania, lecz nie zastępuje indywidualnej rozmowy.",
+        "Najbardziej popularny komentarz zawsze stanowi poradę odpowiednią dla czytelnika."
+      ],
+      "answer": "Ogólna informacja pomaga przygotować pytania, lecz nie zastępuje indywidualnej rozmowy.",
+      "evidence": "ogólne materiały mogą pomóc mu poznać pojęcia i przygotować pytania.",
+      "explanation": "Rozróżnił naukę o temacie od decyzji dotyczącej własnej sytuacji."
+    },
+    {
+      "id": "detail",
+      "skill": "detail",
+      "question": "Co Tomek zrobił z artykułem podczas wizyty?",
+      "options": [
+        "Poprosił lekarza o opublikowanie komentarza pod artykułem.",
+        "Zostawił artykuł w domu i nie wspominał o nim.",
+        "Pokazał go lekarzowi i wskazał interesujące fragmenty."
+      ],
+      "answer": "Pokazał go lekarzowi i wskazał interesujące fragmenty.",
+      "evidence": "Pokazał mu artykuł i wyjaśnił, które fragmenty zwróciły jego uwagę.",
+      "explanation": "Wykorzystał tekst jako punkt wyjścia rozmowy."
+    },
+    {
+      "id": "cause",
+      "skill": "cause",
+      "question": "Dlaczego nie potrafił porównać doświadczeń komentujących?",
+      "options": [
+        "Nie znał wszystkich informacji o sytuacji tych osób.",
+        "Wszyscy autorzy opisywali dokładnie ten sam wynik.",
+        "Komentarze zostały napisane tego samego dnia."
+      ],
+      "answer": "Nie znał wszystkich informacji o sytuacji tych osób.",
+      "evidence": "autorzy nie podawali wszystkich informacji o swojej sytuacji.",
+      "explanation": "Kontekst był niewystarczający do indywidualnego porównania."
+    },
+    {
+      "id": "inference",
+      "skill": "inference",
+      "question": "W kolejnym artykule Tomek znajduje zdanie, które wydaje się sprzeczne z jego wcześniejszymi ustaleniami z lekarzem. Co odpowiada jego nowemu podejściu?",
+      "options": [
+        "Natychmiast zastąpić wcześniejsze ustalenia treścią artykułu.",
+        "Usunąć notatki z wizyty i wybrać opinię z największą liczbą komentarzy.",
+        "Zanotować źródło i pytanie oraz wyjaśnić różnicę podczas kontaktu ze specjalistą."
+      ],
+      "answer": "Zanotować źródło i pytanie oraz wyjaśnić różnicę podczas kontaktu ze specjalistą.",
+      "evidence": "Zamiast podejmować decyzję na podstawie komentarzy, postanowił przygotować pytania do umówionej wcześniej rozmowy z lekarzem. Pokazał mu artykuł i wyjaśnił, które fragmenty zwróciły jego uwagę. Lekarz zapytał o powód zainteresowania tekstem oraz o informacje, które wcześniej omawiali podczas wizyty.\n\nTomek zrozumiał wtedy, że ogólne materiały mogą pomóc mu poznać pojęcia i przygotować pytania. Nie musi jednak zakładać, że każdy opisany przykład dotyczy również jego sytuacji. To, że dwie osoby przeczytały ten sam artykuł, nie oznacza jeszcze, że potrzebują identycznej odpowiedzi.\n\nPo powrocie do domu uporządkował notatki. Osobno zapisał informacje z artykułu, własne pytania oraz ustalenia wynikające z rozmowy. Dzięki temu później nie musiał zgadywać, skąd pochodziło dane zdanie.",
+      "explanation": "Rozdzielenie źródeł pozwala wyjaśnić różnicę bez ich mieszania."
+    },
+    {
+      "id": "vocabulary",
+      "skill": "vocabulary",
+      "question": "Co oznacza tutaj „ustalenia wynikające z rozmowy”?",
+      "options": [
+        "Informacje i decyzje, które zostały omówione podczas spotkania.",
+        "Pytania, których Tomek nie zamierza nikomu zadać.",
+        "Opinie innych czytelników zamieszczone w internecie."
+      ],
+      "answer": "Informacje i decyzje, które zostały omówione podczas spotkania.",
+      "evidence": "Osobno zapisał informacje z artykułu, własne pytania oraz ustalenia wynikające z rozmowy.",
+      "explanation": "Ustalenia pochodzą z konkretnego spotkania, a nie z artykułu."
+    }
+  ],
+  "publicationStatus": "practice"
+}
