@@ -2,7 +2,7 @@
 
 ## Scope
 
-The course contains 182 study days. The initial draft covers days 1–50 (50 original passages, 250 questions). Days 51–182 remain to be authored and independently reviewed. Day 1 is diagnostic in the current curriculum; a reading passage for that day is available but does not imply replacing the diagnostic. Drafts live under scripts/reading-drafts, outside the runtime content pack. Nothing here changes the existing lesson or production deployment.
+The course contains 182 study days. The initial draft covers days 1–50 (50 original passages, 250 questions). Seven additional source-based drafts cover days 51, 52, 53, 64, 78, 92 and 99 (57 passages / 285 questions total). All 132 remaining-day topics are in scripts/reading-topic-plan.json; 125 passages still need authoring. None of the drafts has passed independent model evaluation yet. Day 1 is diagnostic in the current curriculum; a reading passage for that day is available but does not imply replacing the diagnostic. Drafts live under scripts/reading-drafts, outside the runtime content pack. Nothing here changes the existing lesson or production deployment.
 
 Target length bands are teaching design choices, not certified CEFR ratings:
 - Days 1–28: A1, 80–120 words.
@@ -50,3 +50,7 @@ node scripts/reading-pipeline.mjs export --from 1 --to 182 --out reading-reviewe
 ```
 
 The exporter refuses missing, rejected or stale reports and never overwrites the live reading pack. Integration should select by curriculum day (not modulo), add paragraph-aware pagination, preserve the passage for reopening during questions, and use the existing answer/result persistence. Do not merge into production before review and UI verification.
+
+## Source-grounded authoring
+
+`scripts/reading-sources.json` records checked source links and factual summaries. `scripts/reading-topic-plan.json` assigns a unique topic to each remaining curriculum day. Source-backed drafts carry per-item provenance. The author uses verified facts when assigned; other passages must use clearly fictional examples, not invented real-world claims. Official examination samples are format references only. Do not copy third-party teaching texts without confirming reuse rights for the specific item. The registry is a snapshot of reviewed facts, not a live feed or a complete license audit. Update facts before publication if rules or services change.

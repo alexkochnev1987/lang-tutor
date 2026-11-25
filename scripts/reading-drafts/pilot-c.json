@@ -219,9 +219,9 @@
           "options": [
             "Walizkę zostawioną w hotelu.",
             "Przesyłkę wysłaną pocztą.",
-            "Bagaż, który mamy przy sobie podczas podróży."
+            "Bagaż, który można mieć przy sobie podczas podróży."
           ],
-          "answer": "Bagaż, który mamy przy sobie podczas podróży.",
+          "answer": "Bagaż, który można mieć przy sobie podczas podróży.",
           "evidence": "W małej torbie podręcznej",
           "explanation": "Chodzi o rzeczy dostępne bez otwierania dużego bagażu."
         }

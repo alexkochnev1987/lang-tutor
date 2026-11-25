@@ -1,0 +1,1323 @@
+{
+  "version": 1,
+  "status": "editorial-plan",
+  "notes": "Topics for remaining days, not completed texts or verified external source assignments. Only source IDs listed in reading-sources.json are checked. Other scenarios require original fiction or separately researched factual sources. Titles may be adjusted after review.",
+  "days": [
+    {
+      "day": 51,
+      "theme": "Образование",
+      "ruleIds": [
+        "pl.gram.c-gen"
+      ],
+      "level": "A2",
+      "title": "Nauka po zakończeniu lekcji",
+      "sourceId": "zpe",
+      "genre": "artykuł"
+    },
+    {
+      "day": 52,
+      "theme": "Образование",
+      "ruleIds": [
+        "pl.gram.c-gen"
+      ],
+      "level": "A2",
+      "title": "Książki wybierane wspólnie",
+      "sourceId": "school",
+      "genre": "dialog"
+    },
+    {
+      "day": 53,
+      "theme": "Образование",
+      "ruleIds": [
+        "pl.gram.c-gen-negation"
+      ],
+      "level": "A2",
+      "title": "Materiały do nauki polskiego",
+      "sourceId": "courses",
+      "genre": "e-mail"
+    },
+    {
+      "day": 54,
+      "theme": "Образование",
+      "ruleIds": [
+        "pl.gram.c-gen-prepositions"
+      ],
+      "level": "A2",
+      "title": "Zapis na zajęcia dodatkowe",
+      "sourceId": null,
+      "genre": "ogłoszenie"
+    },
+    {
+      "day": 55,
+      "theme": "Образование",
+      "ruleIds": [],
+      "level": "A2",
+      "title": "Nauka w parze",
+      "sourceId": null,
+      "genre": "opowiadanie"
+    },
+    {
+      "day": 56,
+      "theme": "Образование",
+      "ruleIds": [],
+      "level": "A2",
+      "title": "Jak przygotować się do sprawdzianu",
+      "sourceId": null,
+      "genre": "poradnik"
+    },
+    {
+      "day": 57,
+      "theme": "Работа",
+      "ruleIds": [
+        "pl.gram.p-indefinite-negative"
+      ],
+      "level": "A2",
+      "title": "Pierwszy dzień w nowym zespole",
+      "sourceId": null,
+      "genre": "wiadomość"
+    },
+    {
+      "day": 58,
+      "theme": "Работа",
+      "ruleIds": [
+        "pl.gram.s-negation"
+      ],
+      "level": "A2",
+      "title": "Zmiana godzin pracy",
+      "sourceId": null,
+      "genre": "artykuł"
+    },
+    {
+      "day": 59,
+      "theme": "Работа",
+      "ruleIds": [
+        "pl.gram.c-gen-verbs"
+      ],
+      "level": "A2",
+      "title": "Rozmowa o zadaniach",
+      "sourceId": null,
+      "genre": "dialog"
+    },
+    {
+      "day": 60,
+      "theme": "Работа",
+      "ruleIds": [
+        "pl.gram.c-gen-verbs"
+      ],
+      "level": "A2",
+      "title": "Ogłoszenie o pracy",
+      "sourceId": null,
+      "genre": "e-mail"
+    },
+    {
+      "day": 61,
+      "theme": "Работа",
+      "ruleIds": [
+        "pl.gram.k-adj-agreement"
+      ],
+      "level": "A2",
+      "title": "Informacja zwrotna po projekcie",
+      "sourceId": null,
+      "genre": "ogłoszenie"
+    },
+    {
+      "day": 62,
+      "theme": "Работа",
+      "ruleIds": [],
+      "level": "A2",
+      "title": "Praca z domu a biuro",
+      "sourceId": null,
+      "genre": "opowiadanie"
+    },
+    {
+      "day": 63,
+      "theme": "Работа",
+      "ruleIds": [],
+      "level": "A2",
+      "title": "Plan rozwoju zawodowego",
+      "sourceId": null,
+      "genre": "poradnik"
+    },
+    {
+      "day": 64,
+      "theme": "Покупки",
+      "ruleIds": [
+        "pl.gram.k-adj-agreement"
+      ],
+      "level": "A2",
+      "title": "Butelka, za którą wracają pieniądze",
+      "sourceId": "deposit",
+      "genre": "wiadomość"
+    },
+    {
+      "day": 65,
+      "theme": "Покупки",
+      "ruleIds": [
+        "pl.gram.k-comparative"
+      ],
+      "level": "A2",
+      "title": "Porównanie dwóch ofert",
+      "sourceId": null,
+      "genre": "artykuł"
+    },
+    {
+      "day": 66,
+      "theme": "Покупки",
+      "ruleIds": [
+        "pl.gram.k-comparative"
+      ],
+      "level": "A2",
+      "title": "Zakup przez internet",
+      "sourceId": null,
+      "genre": "dialog"
+    },
+    {
+      "day": 67,
+      "theme": "Покупки",
+      "ruleIds": [
+        "pl.gram.k-adverb"
+      ],
+      "level": "A2",
+      "title": "Naprawa zamiast wymiany",
+      "sourceId": null,
+      "genre": "e-mail"
+    },
+    {
+      "day": 68,
+      "theme": "Покупки",
+      "ruleIds": [
+        "pl.gram.n-date-time"
+      ],
+      "level": "A2",
+      "title": "Godziny otwarcia sklepów",
+      "sourceId": null,
+      "genre": "ogłoszenie"
+    },
+    {
+      "day": 69,
+      "theme": "Покупки",
+      "ruleIds": [],
+      "level": "A2",
+      "title": "Lista zakupów na tydzień",
+      "sourceId": null,
+      "genre": "opowiadanie"
+    },
+    {
+      "day": 70,
+      "theme": "Покупки",
+      "ruleIds": [],
+      "level": "A2",
+      "title": "Reklamacja kurtki",
+      "sourceId": null,
+      "genre": "poradnik"
+    },
+    {
+      "day": 71,
+      "theme": "Еда и напитки",
+      "ruleIds": [
+        "pl.gram.n-date-time"
+      ],
+      "level": "A2",
+      "title": "Śniadanie w podróży",
+      "sourceId": null,
+      "genre": "wiadomość"
+    },
+    {
+      "day": 72,
+      "theme": "Еда и напитки",
+      "ruleIds": [
+        "pl.gram.c-gen-pl"
+      ],
+      "level": "A2",
+      "title": "Wspólne gotowanie",
+      "sourceId": null,
+      "genre": "artykuł"
+    },
+    {
+      "day": 73,
+      "theme": "Еда и напитки",
+      "ruleIds": [
+        "pl.gram.c-gen-pl"
+      ],
+      "level": "A2",
+      "title": "Przepis z rodzinnego zeszytu",
+      "sourceId": null,
+      "genre": "dialog"
+    },
+    {
+      "day": 74,
+      "theme": "Еда и напитки",
+      "ruleIds": [
+        "pl.gram.n-cardinal-5plus"
+      ],
+      "level": "A2",
+      "title": "Posiłki na kilka dni",
+      "sourceId": null,
+      "genre": "e-mail"
+    },
+    {
+      "day": 75,
+      "theme": "Еда и напитки",
+      "ruleIds": [
+        "pl.gram.n-cardinal-5plus"
+      ],
+      "level": "A2",
+      "title": "Zamówienie w kawiarni",
+      "sourceId": null,
+      "genre": "ogłoszenie"
+    },
+    {
+      "day": 76,
+      "theme": "Еда и напитки",
+      "ruleIds": [],
+      "level": "A2",
+      "title": "Kolacja dla gości",
+      "sourceId": null,
+      "genre": "opowiadanie"
+    },
+    {
+      "day": 77,
+      "theme": "Еда и напитки",
+      "ruleIds": [],
+      "level": "A2",
+      "title": "Mniej marnowania jedzenia",
+      "sourceId": null,
+      "genre": "poradnik"
+    },
+    {
+      "day": 78,
+      "theme": "Услуги",
+      "ruleIds": [
+        "pl.gram.c-gen-quantity"
+      ],
+      "level": "A2",
+      "title": "Sprawa w urzędzie i w banku",
+      "sourceId": "pesel",
+      "genre": "wiadomość"
+    },
+    {
+      "day": 79,
+      "theme": "Услуги",
+      "ruleIds": [
+        "pl.gram.c-gen-quantity"
+      ],
+      "level": "A2",
+      "title": "Wizyta w punkcie napraw",
+      "sourceId": null,
+      "genre": "artykuł"
+    },
+    {
+      "day": 80,
+      "theme": "Услуги",
+      "ruleIds": [
+        "pl.gram.c-loc"
+      ],
+      "level": "A2",
+      "title": "Przesyłka do odbioru",
+      "sourceId": null,
+      "genre": "dialog"
+    },
+    {
+      "day": 81,
+      "theme": "Услуги",
+      "ruleIds": [
+        "pl.gram.c-loc"
+      ],
+      "level": "A2",
+      "title": "Rozmowa z pracownikiem banku",
+      "sourceId": null,
+      "genre": "e-mail"
+    },
+    {
+      "day": 82,
+      "theme": "Услуги",
+      "ruleIds": [
+        "pl.gram.c-loc-prepositions"
+      ],
+      "level": "A2",
+      "title": "Wybór usługi przez internet",
+      "sourceId": null,
+      "genre": "ogłoszenie"
+    },
+    {
+      "day": 83,
+      "theme": "Услуги",
+      "ruleIds": [],
+      "level": "A2",
+      "title": "Zgłoszenie problemu z internetem",
+      "sourceId": null,
+      "genre": "opowiadanie"
+    },
+    {
+      "day": 84,
+      "theme": "Услуги",
+      "ruleIds": [],
+      "level": "A2",
+      "title": "Umówienie terminu w urzędzie",
+      "sourceId": null,
+      "genre": "poradnik"
+    },
+    {
+      "day": 85,
+      "theme": "Места",
+      "ruleIds": [
+        "pl.gram.c-voc"
+      ],
+      "level": "B1",
+      "title": "Spacer po nowej dzielnicy",
+      "sourceId": null,
+      "genre": "wiadomość"
+    },
+    {
+      "day": 86,
+      "theme": "Места",
+      "ruleIds": [
+        "pl.gram.c-dat"
+      ],
+      "level": "B1",
+      "title": "Informacja turystyczna",
+      "sourceId": null,
+      "genre": "artykuł"
+    },
+    {
+      "day": 87,
+      "theme": "Места",
+      "ruleIds": [
+        "pl.gram.c-dat"
+      ],
+      "level": "B1",
+      "title": "Droga do domu kultury",
+      "sourceId": null,
+      "genre": "dialog"
+    },
+    {
+      "day": 88,
+      "theme": "Места",
+      "ruleIds": [
+        "pl.gram.c-dat-verbs"
+      ],
+      "level": "B1",
+      "title": "Wycieczka do skansenu",
+      "sourceId": null,
+      "genre": "e-mail"
+    },
+    {
+      "day": 89,
+      "theme": "Места",
+      "ruleIds": [
+        "pl.gram.p-reflexive-siebie"
+      ],
+      "level": "B1",
+      "title": "Mapa miasta dla gości",
+      "sourceId": null,
+      "genre": "ogłoszenie"
+    },
+    {
+      "day": 90,
+      "theme": "Места",
+      "ruleIds": [],
+      "level": "B1",
+      "title": "Miejsce spotkań w centrum",
+      "sourceId": null,
+      "genre": "opowiadanie"
+    },
+    {
+      "day": 91,
+      "theme": "Места",
+      "ruleIds": [],
+      "level": "B1",
+      "title": "Dostępność budynków publicznych",
+      "sourceId": null,
+      "genre": "poradnik"
+    },
+    {
+      "day": 92,
+      "theme": "Природа",
+      "ruleIds": [
+        "pl.gram.p-personal"
+      ],
+      "level": "B1",
+      "title": "Nie każdy odpad trafia do jednego z pięciu koszy",
+      "sourceId": "waste",
+      "genre": "wiadomość"
+    },
+    {
+      "day": 93,
+      "theme": "Природа",
+      "ruleIds": [
+        "pl.gram.p-personal"
+      ],
+      "level": "B1",
+      "title": "Życie drzew w mieście",
+      "sourceId": null,
+      "genre": "artykuł"
+    },
+    {
+      "day": 94,
+      "theme": "Природа",
+      "ruleIds": [
+        "pl.gram.p-formal-pan"
+      ],
+      "level": "B1",
+      "title": "Obserwacja ptaków w parku",
+      "sourceId": null,
+      "genre": "dialog"
+    },
+    {
+      "day": 95,
+      "theme": "Природа",
+      "ruleIds": [
+        "pl.gram.t-registers"
+      ],
+      "level": "B1",
+      "title": "List do administracji o zieleni",
+      "sourceId": null,
+      "genre": "e-mail"
+    },
+    {
+      "day": 96,
+      "theme": "Природа",
+      "ruleIds": [
+        "pl.gram.t-figures"
+      ],
+      "level": "B1",
+      "title": "Wyprawa na szlak przyrodniczy",
+      "sourceId": null,
+      "genre": "ogłoszenie"
+    },
+    {
+      "day": 97,
+      "theme": "Природа",
+      "ruleIds": [],
+      "level": "B1",
+      "title": "Ochrona wody w domu",
+      "sourceId": null,
+      "genre": "opowiadanie"
+    },
+    {
+      "day": 98,
+      "theme": "Природа",
+      "ruleIds": [],
+      "level": "B1",
+      "title": "Ogród przyjazny owadom",
+      "sourceId": null,
+      "genre": "poradnik"
+    },
+    {
+      "day": 99,
+      "theme": "Традиции и праздники",
+      "ruleIds": [
+        "pl.gram.n-masc-personal"
+      ],
+      "level": "B1",
+      "title": "Wspólne czytanie jako tradycja",
+      "sourceId": "reading",
+      "genre": "wiadomość"
+    },
+    {
+      "day": 100,
+      "theme": "Традиции и праздники",
+      "ruleIds": [
+        "pl.gram.n-masc-personal"
+      ],
+      "level": "B1",
+      "title": "Przygotowania do Wigilii",
+      "sourceId": null,
+      "genre": "artykuł"
+    },
+    {
+      "day": 101,
+      "theme": "Традиции и праздники",
+      "ruleIds": [
+        "pl.gram.v-government"
+      ],
+      "level": "B1",
+      "title": "Rodzinny przepis na Wielkanoc",
+      "sourceId": null,
+      "genre": "dialog"
+    },
+    {
+      "day": 102,
+      "theme": "Традиции и праздники",
+      "ruleIds": [
+        "pl.gram.v-government"
+      ],
+      "level": "B1",
+      "title": "Odwiedziny na lokalnym jarmarku",
+      "sourceId": null,
+      "genre": "e-mail"
+    },
+    {
+      "day": 103,
+      "theme": "Традиции и праздники",
+      "ruleIds": [
+        "pl.gram.v-past-pl"
+      ],
+      "level": "B1",
+      "title": "Święta w dwóch rodzinach",
+      "sourceId": null,
+      "genre": "ogłoszenie"
+    },
+    {
+      "day": 104,
+      "theme": "Традиции и праздники",
+      "ruleIds": [],
+      "level": "B1",
+      "title": "Nowa tradycja sąsiedzka",
+      "sourceId": null,
+      "genre": "opowiadanie"
+    },
+    {
+      "day": 105,
+      "theme": "Традиции и праздники",
+      "ruleIds": [],
+      "level": "B1",
+      "title": "Wystawa o dawnych zwyczajach",
+      "sourceId": null,
+      "genre": "poradnik"
+    },
+    {
+      "day": 106,
+      "theme": "Общие темы",
+      "ruleIds": [
+        "pl.gram.v-past-pl"
+      ],
+      "level": "B1",
+      "title": "Czy warto pożyczać zamiast kupować?",
+      "sourceId": null,
+      "genre": "wiadomość"
+    },
+    {
+      "day": 107,
+      "theme": "Общие темы",
+      "ruleIds": [
+        "pl.gram.v-conditional"
+      ],
+      "level": "B1",
+      "title": "Co bym zmienił w swojej okolicy",
+      "sourceId": null,
+      "genre": "artykuł"
+    },
+    {
+      "day": 108,
+      "theme": "Общие темы",
+      "ruleIds": [
+        "pl.gram.v-conditional"
+      ],
+      "level": "B1",
+      "title": "Czas na naukę nowej umiejętności",
+      "sourceId": null,
+      "genre": "dialog"
+    },
+    {
+      "day": 109,
+      "theme": "Общие темы",
+      "ruleIds": [
+        "pl.gram.s-subordinate-ze"
+      ],
+      "level": "B1",
+      "title": "Jak odmawiać z szacunkiem",
+      "sourceId": null,
+      "genre": "e-mail"
+    },
+    {
+      "day": 110,
+      "theme": "Общие темы",
+      "ruleIds": [
+        "pl.gram.s-subordinate-cause-time"
+      ],
+      "level": "B1",
+      "title": "Dlaczego zmieniamy plany",
+      "sourceId": null,
+      "genre": "ogłoszenie"
+    },
+    {
+      "day": 111,
+      "theme": "Общие темы",
+      "ruleIds": [],
+      "level": "B1",
+      "title": "Wybór między dwiema możliwościami",
+      "sourceId": null,
+      "genre": "opowiadanie"
+    },
+    {
+      "day": 112,
+      "theme": "Общие темы",
+      "ruleIds": [],
+      "level": "B1",
+      "title": "Tydzień małych decyzji",
+      "sourceId": null,
+      "genre": "poradnik"
+    },
+    {
+      "day": 113,
+      "theme": "Человек",
+      "ruleIds": [
+        "pl.gram.s-conditional-clauses"
+      ],
+      "level": "B1",
+      "title": "Jak podtrzymywać przyjaźń na odległość",
+      "sourceId": null,
+      "genre": "wiadomość"
+    },
+    {
+      "day": 114,
+      "theme": "Человек",
+      "ruleIds": [
+        "pl.gram.s-conditional-clauses"
+      ],
+      "level": "B1",
+      "title": "Pomoc osobie, która dopiero przyjechała",
+      "sourceId": null,
+      "genre": "artykuł"
+    },
+    {
+      "day": 115,
+      "theme": "Человек",
+      "ruleIds": [
+        "pl.gram.s-correlative"
+      ],
+      "level": "B1",
+      "title": "Co daje wspólne hobby",
+      "sourceId": null,
+      "genre": "dialog"
+    },
+    {
+      "day": 116,
+      "theme": "Человек",
+      "ruleIds": [
+        "pl.gram.s-relative"
+      ],
+      "level": "B1",
+      "title": "Rozmowa międzypokoleniowa",
+      "sourceId": null,
+      "genre": "e-mail"
+    },
+    {
+      "day": 117,
+      "theme": "Человек",
+      "ruleIds": [
+        "pl.gram.s-relative"
+      ],
+      "level": "B1",
+      "title": "Człowiek, od którego się uczę",
+      "sourceId": null,
+      "genre": "ogłoszenie"
+    },
+    {
+      "day": 118,
+      "theme": "Человек",
+      "ruleIds": [],
+      "level": "B1",
+      "title": "Wspólna decyzja w rodzinie",
+      "sourceId": null,
+      "genre": "opowiadanie"
+    },
+    {
+      "day": 119,
+      "theme": "Человек",
+      "ruleIds": [],
+      "level": "B1",
+      "title": "Sposoby na nieporozumienia",
+      "sourceId": null,
+      "genre": "poradnik"
+    },
+    {
+      "day": 120,
+      "theme": "Дом и жильё",
+      "ruleIds": [
+        "pl.gram.v-movable-endings"
+      ],
+      "level": "B1",
+      "title": "Zebranie wspólnoty mieszkaniowej",
+      "sourceId": null,
+      "genre": "wiadomość"
+    },
+    {
+      "day": 121,
+      "theme": "Дом и жильё",
+      "ruleIds": [
+        "pl.gram.v-movable-endings"
+      ],
+      "level": "B1",
+      "title": "Małe mieszkanie z dużymi możliwościami",
+      "sourceId": null,
+      "genre": "artykuł"
+    },
+    {
+      "day": 122,
+      "theme": "Дом и жильё",
+      "ruleIds": [
+        "pl.gram.v-movable-endings"
+      ],
+      "level": "B1",
+      "title": "Umowa najmu bez niespodzianek",
+      "sourceId": null,
+      "genre": "dialog"
+    },
+    {
+      "day": 123,
+      "theme": "Дом и жильё",
+      "ruleIds": [
+        "pl.gram.v-movable-endings"
+      ],
+      "level": "B1",
+      "title": "Jak dzielić obowiązki domowe",
+      "sourceId": null,
+      "genre": "e-mail"
+    },
+    {
+      "day": 124,
+      "theme": "Дом и жильё",
+      "ruleIds": [
+        "pl.gram.v-movable-endings"
+      ],
+      "level": "B1",
+      "title": "Naprawa czy zakup nowych mebli",
+      "sourceId": null,
+      "genre": "ogłoszenie"
+    },
+    {
+      "day": 125,
+      "theme": "Дом и жильё",
+      "ruleIds": [],
+      "level": "B1",
+      "title": "Sąsiedzi i wspólna przestrzeń",
+      "sourceId": null,
+      "genre": "opowiadanie"
+    },
+    {
+      "day": 126,
+      "theme": "Дом и жильё",
+      "ruleIds": [],
+      "level": "B1",
+      "title": "Wybór dzielnicy do życia",
+      "sourceId": null,
+      "genre": "poradnik"
+    },
+    {
+      "day": 127,
+      "theme": "Повседневная жизнь",
+      "ruleIds": [
+        "pl.gram.v-movable-endings"
+      ],
+      "level": "B1",
+      "title": "Dzień pracy z przerwami",
+      "sourceId": null,
+      "genre": "wiadomość"
+    },
+    {
+      "day": 128,
+      "theme": "Повседневная жизнь",
+      "ruleIds": [
+        "pl.gram.v-movable-endings"
+      ],
+      "level": "B1",
+      "title": "Plan tygodnia w rodzinie",
+      "sourceId": null,
+      "genre": "artykuł"
+    },
+    {
+      "day": 129,
+      "theme": "Повседневная жизнь",
+      "ruleIds": [
+        "pl.gram.v-movable-endings"
+      ],
+      "level": "B1",
+      "title": "Równowaga między pracą a domem",
+      "sourceId": null,
+      "genre": "dialog"
+    },
+    {
+      "day": 130,
+      "theme": "Повседневная жизнь",
+      "ruleIds": [
+        "pl.gram.v-movable-endings"
+      ],
+      "level": "B1",
+      "title": "Gdy autobus zmienia trasę",
+      "sourceId": null,
+      "genre": "e-mail"
+    },
+    {
+      "day": 131,
+      "theme": "Повседневная жизнь",
+      "ruleIds": [
+        "pl.gram.v-movable-endings"
+      ],
+      "level": "B1",
+      "title": "Zakupy bez pośpiechu",
+      "sourceId": null,
+      "genre": "ogłoszenie"
+    },
+    {
+      "day": 132,
+      "theme": "Повседневная жизнь",
+      "ruleIds": [],
+      "level": "B1",
+      "title": "Wspólne korzystanie z rzeczy",
+      "sourceId": null,
+      "genre": "opowiadanie"
+    },
+    {
+      "day": 133,
+      "theme": "Повседневная жизнь",
+      "ruleIds": [],
+      "level": "B1",
+      "title": "Czas wolny bez sztywnego planu",
+      "sourceId": null,
+      "genre": "poradnik"
+    },
+    {
+      "day": 134,
+      "theme": "Досуг",
+      "ruleIds": [
+        "pl.gram.v-movable-endings"
+      ],
+      "level": "B1",
+      "title": "Klub filmowy i dyskusja",
+      "sourceId": null,
+      "genre": "wiadomość"
+    },
+    {
+      "day": 135,
+      "theme": "Досуг",
+      "ruleIds": [
+        "pl.gram.v-movable-endings"
+      ],
+      "level": "B1",
+      "title": "Kurs fotografii dla dorosłych",
+      "sourceId": null,
+      "genre": "artykuł"
+    },
+    {
+      "day": 136,
+      "theme": "Досуг",
+      "ruleIds": [
+        "pl.gram.v-movable-endings"
+      ],
+      "level": "B1",
+      "title": "Dwie opinie o wystawie",
+      "sourceId": null,
+      "genre": "dialog"
+    },
+    {
+      "day": 137,
+      "theme": "Досуг",
+      "ruleIds": [
+        "pl.gram.v-movable-endings"
+      ],
+      "level": "B1",
+      "title": "Czy hobby musi być drogie?",
+      "sourceId": null,
+      "genre": "e-mail"
+    },
+    {
+      "day": 138,
+      "theme": "Досуг",
+      "ruleIds": [
+        "pl.gram.v-movable-endings"
+      ],
+      "level": "B1",
+      "title": "Koncert w małym mieście",
+      "sourceId": null,
+      "genre": "ogłoszenie"
+    },
+    {
+      "day": 139,
+      "theme": "Досуг",
+      "ruleIds": [],
+      "level": "B1",
+      "title": "Biblioteka jako miejsce spotkań",
+      "sourceId": null,
+      "genre": "opowiadanie"
+    },
+    {
+      "day": 140,
+      "theme": "Досуг",
+      "ruleIds": [],
+      "level": "B1",
+      "title": "Weekend bez rezerwacji",
+      "sourceId": null,
+      "genre": "poradnik"
+    },
+    {
+      "day": 141,
+      "theme": "Путешествия",
+      "ruleIds": [],
+      "level": "B1",
+      "title": "Dokumenty przed podróżą do Europy",
+      "sourceId": "ekuz",
+      "genre": "wiadomość"
+    },
+    {
+      "day": 142,
+      "theme": "Путешествия",
+      "ruleIds": [],
+      "level": "B1",
+      "title": "Dwie trasy na urlop",
+      "sourceId": null,
+      "genre": "artykuł"
+    },
+    {
+      "day": 143,
+      "theme": "Путешествия",
+      "ruleIds": [],
+      "level": "B1",
+      "title": "Spóźniony pociąg i zmiana planów",
+      "sourceId": null,
+      "genre": "dialog"
+    },
+    {
+      "day": 144,
+      "theme": "Путешествия",
+      "ruleIds": [],
+      "level": "B1",
+      "title": "Nocleg blisko transportu publicznego",
+      "sourceId": null,
+      "genre": "e-mail"
+    },
+    {
+      "day": 145,
+      "theme": "Путешествия",
+      "ruleIds": [],
+      "level": "B1",
+      "title": "Wakacje poza sezonem",
+      "sourceId": null,
+      "genre": "ogłoszenie"
+    },
+    {
+      "day": 146,
+      "theme": "Путешествия",
+      "ruleIds": [],
+      "level": "B1",
+      "title": "Wycieczka dostępna dla różnych osób",
+      "sourceId": null,
+      "genre": "opowiadanie"
+    },
+    {
+      "day": 147,
+      "theme": "Путешествия",
+      "ruleIds": [],
+      "level": "B1",
+      "title": "Podróż z małym budżetem",
+      "sourceId": null,
+      "genre": "poradnik"
+    },
+    {
+      "day": 148,
+      "theme": "Общество",
+      "ruleIds": [],
+      "level": "B1",
+      "title": "Jak działa budżet obywatelski",
+      "sourceId": "budget",
+      "genre": "wiadomość"
+    },
+    {
+      "day": 149,
+      "theme": "Общество",
+      "ruleIds": [],
+      "level": "B1",
+      "title": "Wolontariat z elastycznym grafikiem",
+      "sourceId": null,
+      "genre": "artykuł"
+    },
+    {
+      "day": 150,
+      "theme": "Общество",
+      "ruleIds": [],
+      "level": "B1",
+      "title": "Wspólna przestrzeń dla mieszkańców",
+      "sourceId": null,
+      "genre": "dialog"
+    },
+    {
+      "day": 151,
+      "theme": "Общество",
+      "ruleIds": [],
+      "level": "B1",
+      "title": "Kiedy warto weryfikować wiadomości",
+      "sourceId": null,
+      "genre": "e-mail"
+    },
+    {
+      "day": 152,
+      "theme": "Общество",
+      "ruleIds": [],
+      "level": "B1",
+      "title": "Dyskusja o nowej inwestycji",
+      "sourceId": null,
+      "genre": "ogłoszenie"
+    },
+    {
+      "day": 153,
+      "theme": "Общество",
+      "ruleIds": [],
+      "level": "B1",
+      "title": "Spotkanie z nowymi sąsiadami",
+      "sourceId": null,
+      "genre": "opowiadanie"
+    },
+    {
+      "day": 154,
+      "theme": "Общество",
+      "ruleIds": [],
+      "level": "B1",
+      "title": "Pomoc po przeprowadzce",
+      "sourceId": null,
+      "genre": "poradnik"
+    },
+    {
+      "day": 155,
+      "theme": "Здоровье",
+      "ruleIds": [],
+      "level": "B1",
+      "title": "Dokumenty przed wizytą u lekarza",
+      "sourceId": null,
+      "genre": "wiadomość"
+    },
+    {
+      "day": 156,
+      "theme": "Здоровье",
+      "ruleIds": [],
+      "level": "B1",
+      "title": "Rozmowa o czasie odpoczynku",
+      "sourceId": null,
+      "genre": "artykuł"
+    },
+    {
+      "day": 157,
+      "theme": "Здоровье",
+      "ruleIds": [],
+      "level": "B1",
+      "title": "Odczytywanie informacji o badaniu",
+      "sourceId": null,
+      "genre": "dialog"
+    },
+    {
+      "day": 158,
+      "theme": "Здоровье",
+      "ruleIds": [],
+      "level": "B1",
+      "title": "Organizacja wizyty kontrolnej",
+      "sourceId": null,
+      "genre": "e-mail"
+    },
+    {
+      "day": 159,
+      "theme": "Здоровье",
+      "ruleIds": [],
+      "level": "B1",
+      "title": "Aktywność w ciągu tygodnia",
+      "sourceId": null,
+      "genre": "ogłoszenie"
+    },
+    {
+      "day": 160,
+      "theme": "Здоровье",
+      "ruleIds": [],
+      "level": "B1",
+      "title": "Informacja a indywidualna porada",
+      "sourceId": null,
+      "genre": "opowiadanie"
+    },
+    {
+      "day": 161,
+      "theme": "Здоровье",
+      "ruleIds": [],
+      "level": "B1",
+      "title": "Wybór terminu konsultacji",
+      "sourceId": null,
+      "genre": "poradnik"
+    },
+    {
+      "day": 162,
+      "theme": "Образование",
+      "ruleIds": [],
+      "level": "B1",
+      "title": "Nauka przez całe życie",
+      "sourceId": null,
+      "genre": "wiadomość"
+    },
+    {
+      "day": 163,
+      "theme": "Образование",
+      "ruleIds": [],
+      "level": "B1",
+      "title": "Kurs stacjonarny czy internetowy",
+      "sourceId": null,
+      "genre": "artykuł"
+    },
+    {
+      "day": 164,
+      "theme": "Образование",
+      "ruleIds": [],
+      "level": "B1",
+      "title": "Praca w grupie na zajęciach",
+      "sourceId": null,
+      "genre": "dialog"
+    },
+    {
+      "day": 165,
+      "theme": "Образование",
+      "ruleIds": [],
+      "level": "B1",
+      "title": "Ocena własnego postępu",
+      "sourceId": null,
+      "genre": "e-mail"
+    },
+    {
+      "day": 166,
+      "theme": "Образование",
+      "ruleIds": [],
+      "level": "B1",
+      "title": "Biblioteka w planie samokształcenia",
+      "sourceId": null,
+      "genre": "ogłoszenie"
+    },
+    {
+      "day": 167,
+      "theme": "Образование",
+      "ruleIds": [],
+      "level": "B1",
+      "title": "Pytania do organizatora kursu",
+      "sourceId": null,
+      "genre": "opowiadanie"
+    },
+    {
+      "day": 168,
+      "theme": "Образование",
+      "ruleIds": [],
+      "level": "B1",
+      "title": "Przygotowanie do egzaminu językowego",
+      "sourceId": null,
+      "genre": "poradnik"
+    },
+    {
+      "day": 169,
+      "theme": "Работа",
+      "ruleIds": [],
+      "level": "B1",
+      "title": "Ogłoszenie i rozmowa o pracy",
+      "sourceId": null,
+      "genre": "wiadomość"
+    },
+    {
+      "day": 170,
+      "theme": "Работа",
+      "ruleIds": [],
+      "level": "B1",
+      "title": "Dwa modele organizacji pracy",
+      "sourceId": null,
+      "genre": "artykuł"
+    },
+    {
+      "day": 171,
+      "theme": "Работа",
+      "ruleIds": [],
+      "level": "B1",
+      "title": "Zmiana zawodu w dorosłym wieku",
+      "sourceId": null,
+      "genre": "dialog"
+    },
+    {
+      "day": 172,
+      "theme": "Работа",
+      "ruleIds": [],
+      "level": "B1",
+      "title": "Wspólne planowanie projektu",
+      "sourceId": null,
+      "genre": "e-mail"
+    },
+    {
+      "day": 173,
+      "theme": "Работа",
+      "ruleIds": [],
+      "level": "B1",
+      "title": "Rozwiązywanie konfliktów w zespole",
+      "sourceId": null,
+      "genre": "ogłoszenie"
+    },
+    {
+      "day": 174,
+      "theme": "Работа",
+      "ruleIds": [],
+      "level": "B1",
+      "title": "Rozmowa o obowiązkach",
+      "sourceId": null,
+      "genre": "opowiadanie"
+    },
+    {
+      "day": 175,
+      "theme": "Работа",
+      "ruleIds": [],
+      "level": "B1",
+      "title": "Wybór miejsca pracy",
+      "sourceId": null,
+      "genre": "poradnik"
+    },
+    {
+      "day": 176,
+      "theme": "Покупки",
+      "ruleIds": [],
+      "level": "B1",
+      "title": "Zwrot zakupu z internetu",
+      "sourceId": "consumer",
+      "genre": "wiadomość"
+    },
+    {
+      "day": 177,
+      "theme": "Покупки",
+      "ruleIds": [],
+      "level": "B1",
+      "title": "Porównanie kosztów całego zamówienia",
+      "sourceId": null,
+      "genre": "artykuł"
+    },
+    {
+      "day": 178,
+      "theme": "Покупки",
+      "ruleIds": [],
+      "level": "B1",
+      "title": "Czy promocja naprawdę się opłaca?",
+      "sourceId": null,
+      "genre": "dialog"
+    },
+    {
+      "day": 179,
+      "theme": "Покупки",
+      "ruleIds": [],
+      "level": "B1",
+      "title": "Korzystanie z produktów używanych",
+      "sourceId": null,
+      "genre": "e-mail"
+    },
+    {
+      "day": 180,
+      "theme": "Покупки",
+      "ruleIds": [],
+      "level": "B1",
+      "title": "Opinie klientów i własne potrzeby",
+      "sourceId": null,
+      "genre": "ogłoszenie"
+    },
+    {
+      "day": 181,
+      "theme": "Покупки",
+      "ruleIds": [],
+      "level": "B1",
+      "title": "Zakupy z mniejszą ilością odpadów",
+      "sourceId": null,
+      "genre": "opowiadanie"
+    },
+    {
+      "day": 182,
+      "theme": "Покупки",
+      "ruleIds": [],
+      "level": "B1",
+      "title": "Jak podejmować świadome decyzje",
+      "sourceId": null,
+      "genre": "poradnik"
+    }
+  ]
+}

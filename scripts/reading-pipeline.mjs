@@ -30,6 +30,9 @@ const unique = list => new Set(list).size === list.length
 const nonempty = value => typeof value === 'string' && value.trim().length > 0
 
 const curriculum = await json(CURRICULUM)
+const editorialPlan = await json(join(ROOT, 'scripts/reading-topic-plan.json'))
+const sourceRegistry = await json(join(ROOT, 'scripts/reading-sources.json'))
+const planned = new Map(editorialPlan.days.map(day => [day.day, day]))
 const days = new Map(curriculum.days.map(day => [day.day, day]))
 function option(name, fallback) {
   const i = args.indexOf(name)
@@ -123,7 +126,7 @@ async function review(t, c) {
     const a = answers.find(x => x?.id === q.id)
     return a && a.answer === q.answer && a.ambiguous === false && nonempty(a.evidence) && t.text.includes(a.evidence)
   })
-  const editorial = await complete(c, reviewerInstructions + ' Review the complete item set including the proposed answer key. Score each dimension 0–100. Require realistic wrong options of similar grammatical type and plausibility, an actual inference for the inference item, and no grammatical errors. Assess against the provided curriculum context, not just length. Return {"scores":{"naturalness":0,"level":0,"questions":0,"ambiguity":0,"theme":0,"vocabulary":0},"criticalIssues":["..."],"items":[{"id":"...","singleCorrect":true,"evidenceSupports":true,"distractorsPlausible":true,"skillMatches":true,"notes":"..."}],"recommendations":["..."]}. Flag any language error or ambiguous correct answer as critical. No rewriting in this call.', {
+  const editorial = await complete(c, reviewerInstructions + ' Review the complete item set including the proposed answer key. Score each dimension 0–100. Require realistic wrong options of similar grammatical type and plausibility, an actual inference for the inference item, and no grammatical errors. Assess against the provided curriculum context, not just length. Check whether A1 passages contain too much unintroduced grammar; distinguish authentic inference from simple detail retrieval; reject cartoonishly implausible options, giveaway answer lengths and repeated facts across questions. If source metadata exists, verify that factual claims are supported by the listed facts and fictional examples are clearly identified; flag unsupported factual claims. A score is not CEFR certification. Return {"scores":{"naturalness":0,"level":0,"questions":0,"ambiguity":0,"theme":0,"vocabulary":0},"criticalIssues":["..."],"items":[{"id":"...","singleCorrect":true,"evidenceSupports":true,"distractorsPlausible":true,"skillMatches":true,"notes":"..."}],"recommendations":["..."]}. Flag any language error or ambiguous correct answer as critical. No rewriting in this call.', {
     target: days.get(t.day), text: t
   })
   const e = editorial.result
@@ -156,16 +159,18 @@ if (command === 'validate') {
     const previous = curriculum.days.filter(d => d.day < day)
     const [min, max] = limits[level(day)]
     const context = {
-      day, target, level: level(day), lengthWords: [min, max], skills: SKILLS,
+      day, target, editorialTopic: planned.get(day), verifiedSource: sourceRegistry.sources[planned.get(day)?.sourceId] ?? null, level: level(day), lengthWords: [min, max], skills: SKILLS,
       currentVocabulary: (target.lexemeIds || []).map(id => lexemes.get(id)).filter(Boolean),
       previousVocabulary: [...new Set(previous.flatMap(d => d.lexemeIds || []))].map(id => lexemes.get(id)).filter(Boolean),
       previousRules: [...new Set(previous.flatMap(d => d.grammarRuleIds || []))],
       existingTitles: [...drafts.values()].map(t => t.title)
     }
-    const { result, model } = await complete(c, 'Write original natural Polish reading practice for a learner. Follow the specified level and lesson theme; prioritize intelligibility, avoid assuming unintroduced grammar, and use current and previous vocabulary where natural. Mix genres across days. Write readable paragraphs separated by blank lines. Exactly five Polish questions with three credible options each; main idea, detail, cause, actual inference and contextual vocabulary. Do not repeat the same fact. One correct option, exact matching answer, exact source quote supporting the answer, Polish explanation. Return JSON {"title":"...","genre":"...","text":"...","questions":[{"id":"main-idea","skill":"main-idea","question":"...","options":["...","...","..."],"answer":"...","evidence":"...","explanation":"..."}]}; use all supplied skill IDs exactly once. Avoid implausible distractors, answer-length clues and copied exam material.', context)
+    const { result, model } = await complete(c, 'Write original natural Polish reading practice for a learner. Follow the specified level and lesson theme; prioritize intelligibility, avoid assuming unintroduced grammar, and use current and previous vocabulary where natural. Follow the editorial topic and genre when provided. If verifiedSource exists, use only the supplied verified facts, do not reproduce publisher phrasing, and clearly mark invented examples as hypothetical. Otherwise use original fictional scenarios; do not invent claims about actual services, laws or institutions. Mix genres across days. Write readable paragraphs separated by blank lines. Exactly five Polish questions with three credible options each; main idea, detail, cause, actual inference and contextual vocabulary. Do not repeat the same fact. One correct option, exact matching answer, exact source quote supporting the answer, Polish explanation. Return JSON {"title":"...","genre":"...","text":"...","questions":[{"id":"main-idea","skill":"main-idea","question":"...","options":["...","...","..."],"answer":"...","evidence":"...","explanation":"..."}]}; use all supplied skill IDs exactly once. Avoid implausible distractors, answer-length clues and copied exam material.', context)
     const t = { id: idFor(day), day, level: level(day), ...result, authorModel: model }
     // The model cannot override identity or target level.
     t.id = idFor(day); t.day = day; t.level = level(day)
+    delete t.source
+    if (context.verifiedSource) t.source = { ...context.verifiedSource, checked: sourceRegistry.checked, adaptation: 'Original educational text based on verified facts; examples are illustrative.' }
     const errors = validateText(t)
     if ([...drafts.values()].some(old => normalize(old.title) === normalize(t.title) || normalize(old.text) === normalize(t.text))) errors.push('Duplicate title/passage')
     if (errors.length) fail(errors.join('\n'))

@@ -206,8 +206,8 @@
           "question": "Która rzecz pasuje na prezent dla Ani?",
           "options": [
             "Ciekawa książka.",
-            "Bilet do kina zamiast książki.",
-            "Karnet na nocną zmianę w pracy."
+            "Nowy pilot do telewizora.",
+            "Bilet na wieczorny seans filmowy."
           ],
           "answer": "Ciekawa książka.",
           "evidence": "Wieczorem czytam książkę.",
@@ -344,7 +344,7 @@
           "options": [
             "Babcia ma już wiele kubków.",
             "Kubek jest za ciężki.",
-            "Babcia nie pije herbaty."
+            "Babcia nie lubi niebieskiego koloru."
           ],
           "answer": "Babcia ma już wiele kubków.",
           "evidence": "babcia ma już wiele kubków.",

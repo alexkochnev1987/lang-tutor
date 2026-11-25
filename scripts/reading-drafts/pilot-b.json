@@ -130,7 +130,7 @@
           "question": "Co syn może zabrać do pracy oprócz torby?",
           "options": [
             "Książkę taty.",
-            "Klucze mamy.",
+            "Telefon taty.",
             "Kanapki."
           ],
           "answer": "Kanapki.",
@@ -941,7 +941,7 @@
           "skill": "cause",
           "question": "Dlaczego rodzina nie obejrzała całego muzeum?",
           "options": [
-            "Muzeum spłonęło.",
+            "Wystawa była już zamknięta.",
             "Syn nie lubił techniki.",
             "Córka była zmęczona."
           ],
