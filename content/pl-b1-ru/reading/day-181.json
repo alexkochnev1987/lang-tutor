@@ -1,0 +1,76 @@
+{
+  "id": "pl-b1.reading.day-181",
+  "day": 181,
+  "level": "B1",
+  "genre": "opowiadanie",
+  "title": "Zakupy z mniejszą ilością odpadów",
+  "text": "Marek i Julia zauważyli, że po sobotnich zakupach w ich kuchni zostaje dużo opakowań. Nie chcieli jednak zmieniać wszystkich swoich zwyczajów jednocześnie. Postanowili przez miesiąc sprawdzać, które opakowania pojawiają się najczęściej i czy da się ich uniknąć bez marnowania jedzenia.\n\nW pierwszym tygodniu zrezygnowali z kupowania małych porcji produktu, który jedli prawie codziennie. Wybrali większe opakowanie i podzielili zawartość w domu. Było to dla nich wygodne, ponieważ zużyli wszystko przed kolejnymi zakupami. Przy innym produkcie postąpili podobnie, ale część jedzenia musieli później wyrzucić. Okazało się, że większa ilość nie zawsze odpowiada ich potrzebom.\n\nZaczęli też zabierać na zakupy własną torbę. Początkowo często o niej zapominali, dlatego zostawili jedną przy drzwiach, a drugą w plecaku, z którego Julia korzystała w drodze do pracy. Nie kupowali kolejnych toreb, ponieważ mieli ich już wystarczająco dużo.\n\nW pobliskim sklepie pojawiła się możliwość kupowania niektórych suchych produktów w ilości wybranej przez klienta. Marek zapytał pracownika, jakich pojemników można używać. Nie założył, że każdy przyniesiony z domu pojemnik będzie odpowiedni do każdego produktu. Następnym razem kupił w ten sposób tylko tyle, ile potrzebowali do dwóch posiłków.\n\nPod koniec miesiąca para porównała swoje obserwacje. Nie obliczała dokładnego wpływu każdego zakupu na środowisko. Zauważyła jednak, że rzadziej przynosi do domu niepotrzebne opakowania i lepiej dopasowuje ilość jedzenia do planu posiłków. Najbardziej przydatne okazały się te zmiany, które jednocześnie ograniczały odpady i nie utrudniały codziennych zakupów.",
+  "questions": [
+    {
+      "id": "main-idea",
+      "skill": "main-idea",
+      "question": "Jaki wniosek wyciągnęli Marek i Julia?",
+      "options": [
+        "Każde większe opakowanie zawsze oznacza mniej odpadów.",
+        "Najlepiej kupić wiele nowych toreb i pojemników przed zmianą nawyków.",
+        "Ograniczanie odpadów warto dopasować do ilości zużywanych produktów i codziennych zwyczajów."
+      ],
+      "answer": "Ograniczanie odpadów warto dopasować do ilości zużywanych produktów i codziennych zwyczajów.",
+      "evidence": "Najbardziej przydatne okazały się te zmiany, które jednocześnie ograniczały odpady i nie utrudniały codziennych zakupów.",
+      "explanation": "Ich doświadczenie pokazuje znaczenie ilości, ponownego użycia i wygody."
+    },
+    {
+      "id": "detail",
+      "skill": "detail",
+      "question": "Gdzie Julia miała jedną z własnych toreb?",
+      "options": [
+        "Przy stoisku z suchymi produktami.",
+        "W plecaku używanym w drodze do pracy.",
+        "W samochodzie pracownika sklepu."
+      ],
+      "answer": "W plecaku używanym w drodze do pracy.",
+      "evidence": "a drugą w plecaku, z którego Julia korzystała w drodze do pracy.",
+      "explanation": "Torba miała być łatwo dostępna podczas codziennych wyjść."
+    },
+    {
+      "id": "cause",
+      "skill": "cause",
+      "question": "Dlaczego większe opakowanie nie sprawdziło się przy drugim produkcie?",
+      "options": [
+        "Para nie zużyła całej zawartości i część jedzenia wyrzuciła.",
+        "Większe opakowanie zawierało wyłącznie suche produkty.",
+        "Nie było możliwości podzielenia żadnego produktu w domu."
+      ],
+      "answer": "Para nie zużyła całej zawartości i część jedzenia wyrzuciła.",
+      "evidence": "Przy innym produkcie postąpili podobnie, ale część jedzenia musieli później wyrzucić.",
+      "explanation": "Zmniejszenie liczby opakowań nie pomogło uniknąć marnowania żywności."
+    },
+    {
+      "id": "inference",
+      "skill": "inference",
+      "question": "Marek chce ograniczyć opakowania produktu, którego potrzebuje tylko w niewielkiej ilości raz na miesiąc. Co najlepiej odpowiada ich doświadczeniu?",
+      "options": [
+        "Wymienić wszystkie domowe pojemniki na nowe przed zakupem.",
+        "Sprawdzić możliwość zakupu potrzebnej ilości, zamiast automatycznie wybierać większe opakowanie.",
+        "Kupić największe dostępne opakowanie niezależnie od zużycia."
+      ],
+      "answer": "Sprawdzić możliwość zakupu potrzebnej ilości, zamiast automatycznie wybierać większe opakowanie.",
+      "evidence": "Przy innym produkcie postąpili podobnie, ale część jedzenia musieli później wyrzucić. Okazało się, że większa ilość nie zawsze odpowiada ich potrzebom.\n\nZaczęli też zabierać na zakupy własną torbę. Początkowo często o niej zapominali, dlatego zostawili jedną przy drzwiach, a drugą w plecaku, z którego Julia korzystała w drodze do pracy. Nie kupowali kolejnych toreb, ponieważ mieli ich już wystarczająco dużo.\n\nW pobliskim sklepie pojawiła się możliwość kupowania niektórych suchych produktów w ilości wybranej przez klienta. Marek zapytał pracownika, jakich pojemników można używać. Nie założył, że każdy przyniesiony z domu pojemnik będzie odpowiedni do każdego produktu. Następnym razem kupił w ten sposób tylko tyle, ile potrzebowali do dwóch posiłków.",
+      "explanation": "Przy rzadko używanym produkcie ilość powinna odpowiadać rzeczywistemu zużyciu."
+    },
+    {
+      "id": "vocabulary",
+      "skill": "vocabulary",
+      "question": "Co oznacza „zużyć zawartość”?",
+      "options": [
+        "Wykorzystać to, co znajduje się w opakowaniu.",
+        "Otworzyć opakowanie bez korzystania z produktu.",
+        "Przenieść opakowanie do innego sklepu."
+      ],
+      "answer": "Wykorzystać to, co znajduje się w opakowaniu.",
+      "evidence": "ponieważ zużyli wszystko przed kolejnymi zakupami.",
+      "explanation": "Zużycie oznacza wykorzystanie produktu."
+    }
+  ],
+  "publicationStatus": "practice"
+}
