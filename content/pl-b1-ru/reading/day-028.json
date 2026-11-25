@@ -1,0 +1,76 @@
+{
+  "id": "pl-b1.reading.day-028",
+  "day": 28,
+  "level": "A1",
+  "genre": "opowiadanie",
+  "title": "Wspólny dzień na działce",
+  "text": "W ostatnią sobotę odwiedziliśmy znajomych na działce. Przywieźliśmy owoce i chleb, a oni przygotowali sałatkę i zupę. Dzieci grały w piłkę, dorośli rozmawiali przy stole. Było ciepło, ale po obiedzie pojawiły się ciemne chmury.\n\nZebraliśmy rzeczy z ogrodu i przenieśliśmy się do małego domku. Tam graliśmy w karty i słuchaliśmy muzyki. Deszcz trwał tylko pół godziny. Kiedy znów wyszło słońce, poszliśmy na spacer po okolicy. Wieczorem pomagaliśmy gospodarzom sprzątać. Nie musieliśmy wiele planować, a wszyscy dobrze spędzili czas. Chcemy spotkać się w ten sposób jeszcze raz.",
+  "questions": [
+    {
+      "id": "main-idea",
+      "skill": "main-idea",
+      "question": "O czym jest tekst?",
+      "options": [
+        "O przygotowaniach do meczu na działce.",
+        "O dniu spędzonym na działce u znajomych.",
+        "O pracy przy nowym domku znajomych."
+      ],
+      "answer": "O dniu spędzonym na działce u znajomych.",
+      "evidence": "W ostatnią sobotę odwiedziliśmy znajomych na działce.",
+      "explanation": "Tekst opowiada o jedzeniu, zabawie i spacerze podczas odwiedzin."
+    },
+    {
+      "id": "detail",
+      "skill": "detail",
+      "question": "Co przywieźli goście?",
+      "options": [
+        "Sałatkę i zupę.",
+        "Chleb i sałatkę.",
+        "Owoce i chleb."
+      ],
+      "answer": "Owoce i chleb.",
+      "evidence": "Przywieźliśmy owoce i chleb, a oni przygotowali sałatkę i zupę.",
+      "explanation": "Goście przywieźli pierwsze dwa produkty, a znajomi przygotowali resztę."
+    },
+    {
+      "id": "cause",
+      "skill": "cause",
+      "question": "Dlaczego przenieśli się do domku?",
+      "options": [
+        "Chcieli tam zjeść obiad.",
+        "Zobaczyli chmury i spodziewali się deszczu.",
+        "Chcieli odpocząć po spacerze."
+      ],
+      "answer": "Zobaczyli chmury i spodziewali się deszczu.",
+      "evidence": "po obiedzie pojawiły się ciemne chmury.",
+      "explanation": "Schowali rzeczy i weszli do środka tuż przed deszczem."
+    },
+    {
+      "id": "inference",
+      "skill": "inference",
+      "question": "Co warto zabrać następnym razem, żeby podczas deszczu powtórzyć udaną zabawę?",
+      "options": [
+        "Karty do gry przy stole.",
+        "Wygodne buty na spacer.",
+        "Piłkę do gry w ogrodzie."
+      ],
+      "answer": "Karty do gry przy stole.",
+      "evidence": "Tam graliśmy w karty i słuchaliśmy muzyki.",
+      "explanation": "Goście dobrze się bawili także w domku. Karty pozwolą im znów zagrać, nawet jeśli będzie padać."
+    },
+    {
+      "id": "vocabulary",
+      "skill": "vocabulary",
+      "question": "Komu pomagali wieczorem, gdy pomagali gospodarzom?",
+      "options": [
+        "Znajomym, którzy ich zaprosili.",
+        "Dzieciom, które grały w piłkę.",
+        "Gościom, którzy przywieźli chleb."
+      ],
+      "answer": "Znajomym, którzy ich zaprosili.",
+      "evidence": "W ostatnią sobotę odwiedziliśmy znajomych na działce.",
+      "explanation": "Gospodarze to osoby, u których odbywało się spotkanie."
+    }
+  ],
+  "publicationStatus": "practice"
+}

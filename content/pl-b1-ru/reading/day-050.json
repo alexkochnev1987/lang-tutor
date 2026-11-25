@@ -1,0 +1,76 @@
+{
+  "id": "pl-b1.reading.day-050",
+  "day": 50,
+  "level": "A2",
+  "genre": "e-mail",
+  "title": "Kurs, który pasuje do mojego dnia",
+  "text": "Dzień dobry,\n\nchciałabym zapisać się na kurs języka polskiego na poziomie A2. Pracuję do godziny szesnastej, dlatego interesują mnie zajęcia wieczorowe. Na stronie szkoły widzę dwie grupy: we wtorki i czwartki oraz w poniedziałki i środy. Druga grupa jest dla mnie wygodniejsza, ponieważ w czwartki chodzę na basen.\n\nMam już za sobą podstawowy kurs, ale nadal trudno mi rozumieć dłuższe teksty. Chciałabym też więcej mówić po polsku, szczególnie w pracy i w urzędzie. Czy na zajęciach uczniowie rozmawiają w parach? Czy nauczyciel sprawdza krótkie zadania pisemne? Nie zależy mi tylko na nauce reguł gramatycznych.\n\nMam jeszcze pytanie o materiały. Czy podręcznik jest wliczony w cenę kursu? Jeśli nie, proszę o informację, gdzie można go kupić. W przyszłym tygodniu mogę przyjść do szkoły na rozmowę i test poziomujący. Proszę o odpowiedź e-mailem, ponieważ w godzinach pracy rzadko odbieram telefon.\n\nZ poważaniem\nNatalia Kowal",
+  "questions": [
+    {
+      "id": "main-idea",
+      "skill": "main-idea",
+      "question": "Po co Natalia pisze do szkoły?",
+      "options": [
+        "Chce poprosić nauczyciela o wynik napisanego testu.",
+        "Chce zapisać się na odpowiedni kurs i pyta o zajęcia.",
+        "Chce zmienić grupę na kursie, na który już chodzi."
+      ],
+      "answer": "Chce zapisać się na odpowiedni kurs i pyta o zajęcia.",
+      "evidence": "chciałabym zapisać się na kurs języka polskiego na poziomie A2.",
+      "explanation": "Natalia wybiera zajęcia i chce poznać szczegóły przed zapisem."
+    },
+    {
+      "id": "detail",
+      "skill": "detail",
+      "question": "W które dni Natalia woli chodzić na zajęcia?",
+      "options": [
+        "W poniedziałki i środy.",
+        "We wtorki i czwartki.",
+        "W poniedziałki i czwartki."
+      ],
+      "answer": "W poniedziałki i środy.",
+      "evidence": "w poniedziałki i środy. Druga grupa jest dla mnie wygodniejsza",
+      "explanation": "Natalia wskazuje drugą z dwóch grup."
+    },
+    {
+      "id": "cause",
+      "skill": "cause",
+      "question": "Dlaczego Natalia prosi o odpowiedź e-mailem?",
+      "options": [
+        "W pracy rzadko odbiera telefon.",
+        "Chce dostać pisemne zadanie przed testem.",
+        "Potrzebuje wiadomości, żeby kupić bilet na basen."
+      ],
+      "answer": "W pracy rzadko odbiera telefon.",
+      "evidence": "ponieważ w godzinach pracy rzadko odbieram telefon.",
+      "explanation": "E-mail jest dla niej wygodniejszy ze względu na pracę."
+    },
+    {
+      "id": "inference",
+      "skill": "inference",
+      "question": "Który opis zajęć najlepiej pasuje do potrzeb Natalii?",
+      "options": [
+        "Uczymy się słów z podręcznika i samodzielnie tłumaczymy zdania.",
+        "Czytamy i piszemy krótkie teksty oraz rozmawiamy w parach.",
+        "Słuchamy wykładów o gramatyce i robimy testy z reguł."
+      ],
+      "answer": "Czytamy i piszemy krótkie teksty oraz rozmawiamy w parach.",
+      "evidence": "Chciałabym też więcej mówić po polsku, szczególnie w pracy i w urzędzie. Czy na zajęciach uczniowie rozmawiają w parach? Czy nauczyciel sprawdza krótkie zadania pisemne?",
+      "explanation": "Natalia chce ćwiczyć różne umiejętności, w tym rozmowę i pisanie."
+    },
+    {
+      "id": "vocabulary",
+      "skill": "vocabulary",
+      "question": "Co znaczy, że podręcznik jest „wliczony w cenę kursu”?",
+      "options": [
+        "Uczestnik może kupić podręcznik w szkole po niższej cenie.",
+        "Opłata za kurs obejmuje też podręcznik.",
+        "Cenę podręcznika szkoła poda po zapisie na kurs."
+      ],
+      "answer": "Opłata za kurs obejmuje też podręcznik.",
+      "evidence": "Czy podręcznik jest wliczony w cenę kursu? Jeśli nie, proszę o informację, gdzie można go kupić.",
+      "explanation": "Jeśli podręcznik jest wliczony, nie trzeba za niego osobno płacić."
+    }
+  ],
+  "publicationStatus": "practice"
+}

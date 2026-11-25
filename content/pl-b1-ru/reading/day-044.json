@@ -1,0 +1,76 @@
+{
+  "id": "pl-b1.reading.day-044",
+  "day": 44,
+  "level": "A2",
+  "genre": "opowiadanie",
+  "title": "Spacer po pracy",
+  "text": "Robert pracuje przy komputerze. Po pracy często czuje się zmęczony i najchętniej siada przed telewizorem. Chciał jednak więcej się ruszać. Postanowił zacząć od spacerów po parku niedaleko domu. Na spacer zwykle przeznacza około dwudziestu minut. Nie planuje na razie długich treningów.\n\nNa początku często zapominał o swoim postanowieniu. Kiedy wreszcie wstawał sprzed telewizora, w parku było już ciemno. Teraz przed pracą stawia wygodne buty przy drzwiach. Gdy kończy pracę, widzi je i od razu pamięta o spacerze. Dwa razy w tygodniu umawia się z sąsiadem. W pozostałe dni może spacerować sam.\n\nPo miesiącu Robert zauważył, że coraz łatwiej jest mu wyjść z domu. Kiedy pada, czasem wybiera krótszą trasę, a czasem zostaje w domu. Jeden wieczór bez spaceru nie jest dla niego problemem. Zależy mu na tym, żeby regularnie się ruszać także wtedy, gdy ma dużo pracy.",
+  "questions": [
+    {
+      "id": "main-idea",
+      "skill": "main-idea",
+      "question": "O czym jest tekst?",
+      "options": [
+        "O tym, jak Robert i sąsiad przygotowują wspólny trening.",
+        "O tym, jak Robert szuka lepszej drogi z pracy do domu.",
+        "O tym, jak Robert wprowadza spacery do swojego dnia."
+      ],
+      "answer": "O tym, jak Robert wprowadza spacery do swojego dnia.",
+      "evidence": "Zależy mu na tym, żeby regularnie się ruszać także wtedy, gdy ma dużo pracy.",
+      "explanation": "Robert szuka prostego sposobu na regularny ruch po pracy."
+    },
+    {
+      "id": "detail",
+      "skill": "detail",
+      "question": "Jak często Robert planuje spacer z sąsiadem?",
+      "options": [
+        "Dwa razy w tygodniu.",
+        "Co wieczór po pracy.",
+        "W każdy weekend, raz w tygodniu."
+      ],
+      "answer": "Dwa razy w tygodniu.",
+      "evidence": "Dwa razy w tygodniu umawia się z sąsiadem.",
+      "explanation": "W inne dni może chodzić sam."
+    },
+    {
+      "id": "cause",
+      "skill": "cause",
+      "question": "Dlaczego Robert stawia buty przy drzwiach?",
+      "options": [
+        "Ich widok przypomina mu o spacerze.",
+        "Robert potrzebuje ich rano w drodze do pracy.",
+        "Sąsiad po butach poznaje, czy Robert jest w domu."
+      ],
+      "answer": "Ich widok przypomina mu o spacerze.",
+      "evidence": "Gdy kończy pracę, widzi je i od razu pamięta o spacerze.",
+      "explanation": "Przygotowane buty pomagają mu pamiętać o wyjściu."
+    },
+    {
+      "id": "inference",
+      "skill": "inference",
+      "question": "Co Robert prawdopodobnie zrobi po deszczowym wieczorze bez spaceru?",
+      "options": [
+        "Wróci do spacerów, kiedy znów będzie mógł wyjść.",
+        "Z kolejnym wyjściem zaczeka na spotkanie z sąsiadem.",
+        "Następny spacer zaplanuje dwa razy dłuższy."
+      ],
+      "answer": "Wróci do spacerów, kiedy znów będzie mógł wyjść.",
+      "evidence": "Jeden wieczór bez spaceru nie jest dla niego problemem.",
+      "explanation": "Robert chce spacerować regularnie i akceptuje dzień przerwy."
+    },
+    {
+      "id": "vocabulary",
+      "skill": "vocabulary",
+      "question": "Co oznacza tu „postanowienie”?",
+      "options": [
+        "Prośbę z pracy, żeby Robert więcej się ruszał.",
+        "Zaproszenie od sąsiada na spacer po parku.",
+        "Decyzję Roberta, że zacznie chodzić na spacery."
+      ],
+      "answer": "Decyzję Roberta, że zacznie chodzić na spacery.",
+      "evidence": "Postanowił zacząć od spacerów po parku niedaleko domu.",
+      "explanation": "Robert sam zdecydował, co zamierza robić."
+    }
+  ],
+  "publicationStatus": "practice"
+}

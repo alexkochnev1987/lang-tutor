@@ -1,0 +1,76 @@
+{
+  "id": "pl-b1.reading.day-035",
+  "day": 35,
+  "level": "A2",
+  "genre": "ogłoszenie",
+  "title": "Wolny weekend nad jeziorem",
+  "text": "Zapraszamy na weekendowy wyjazd nad jezioro dla osób, które chcą odpocząć od miasta. Wyruszamy w sobotę o ósmej rano spod domu kultury. Cena obejmuje przejazd autokarem, nocleg w dwuosobowym pokoju i śniadanie w niedzielę. Obiad oraz kolację uczestnicy organizują we własnym zakresie.\n\nNa miejscu można wypożyczyć rower, spacerować po lesie lub odpocząć na plaży. W sobotę po południu organizujemy krótką wycieczkę z przewodnikiem. Udział jest dobrowolny i nie wymaga dodatkowej opłaty. Osoby, które wolą spędzić czas samodzielnie, mogą pozostać w ośrodku.\n\nZgłoszenia przyjmujemy do środy. Po środzie też można zrezygnować. Żeby jednak odzyskać pieniądze, trzeba znaleźć kogoś na swoje miejsce. Prosimy zabrać wygodne buty oraz ubranie na chłodny wieczór. W razie silnego deszczu proponujemy zajęcia w świetlicy zamiast wycieczki. Powrót planujemy w niedzielę około dziewiętnastej. Po zapisaniu się otrzymasz szczegóły i numer telefonu organizatora.",
+  "questions": [
+    {
+      "id": "main-idea",
+      "skill": "main-idea",
+      "question": "Co można znaleźć w ogłoszeniu?",
+      "options": [
+        "Program weekendowego kursu dla przewodników.",
+        "Zasady wynajmu pokoju na całe wakacje.",
+        "Warunki krótkiego wyjazdu grupowego nad jezioro."
+      ],
+      "answer": "Warunki krótkiego wyjazdu grupowego nad jezioro.",
+      "evidence": "Zapraszamy na weekendowy wyjazd nad jezioro",
+      "explanation": "Organizator opisuje przejazd, nocleg, zajęcia i zapisy."
+    },
+    {
+      "id": "detail",
+      "skill": "detail",
+      "question": "Który posiłek jest w cenie?",
+      "options": [
+        "Niedzielne śniadanie.",
+        "Niedzielny obiad.",
+        "Sobotnia kolacja."
+      ],
+      "answer": "Niedzielne śniadanie.",
+      "evidence": "i śniadanie w niedzielę",
+      "explanation": "Za pozostałe posiłki odpowiadają uczestnicy."
+    },
+    {
+      "id": "cause",
+      "skill": "cause",
+      "question": "Dlaczego po środzie uczestnik może nie odzyskać pieniędzy?",
+      "options": [
+        "Może już być za późno na odwołanie posiłku.",
+        "Jego miejsca może nikt nie zająć.",
+        "Może już być za późno na zmianę pokoju."
+      ],
+      "answer": "Jego miejsca może nikt nie zająć.",
+      "evidence": "trzeba znaleźć kogoś na swoje miejsce",
+      "explanation": "Po środzie zwrot zależy od tego, czy pojedzie ktoś inny."
+    },
+    {
+      "id": "inference",
+      "skill": "inference",
+      "question": "Ola ma pieniądze na wyjazd i jedzenie, ale nie na dodatkowe atrakcje. Jak może spędzić sobotnie popołudnie bez dopłaty?",
+      "options": [
+        "Pójść z przewodnikiem na wycieczkę.",
+        "Zamówić kolację w ramach ceny wyjazdu.",
+        "Poprosić o zwrot kosztu obiadu zamiast spaceru."
+      ],
+      "answer": "Pójść z przewodnikiem na wycieczkę.",
+      "evidence": "Udział jest dobrowolny i nie wymaga dodatkowej opłaty.",
+      "explanation": "Ola może dołączyć do grupy bez dodatkowych wydatków; obiad i kolację organizuje sama."
+    },
+    {
+      "id": "vocabulary",
+      "skill": "vocabulary",
+      "question": "Co mają zrobić uczestnicy, skoro organizują kolację „we własnym zakresie”?",
+      "options": [
+        "Sami zadbać o wieczorny posiłek.",
+        "Podać organizatorowi godzinę wspólnej kolacji.",
+        "Wybrać jedno z dań wliczonych w cenę."
+      ],
+      "answer": "Sami zadbać o wieczorny posiłek.",
+      "evidence": "Obiad oraz kolację uczestnicy organizują we własnym zakresie.",
+      "explanation": "Organizator zapewnia śniadanie, a pozostałe posiłki uczestnicy planują sami."
+    }
+  ],
+  "publicationStatus": "practice"
+}

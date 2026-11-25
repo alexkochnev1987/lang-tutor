@@ -1,0 +1,76 @@
+{
+  "id": "pl-b1.reading.day-063",
+  "day": 63,
+  "level": "A2",
+  "genre": "poradnik",
+  "title": "Plan rozwoju zawodowego",
+  "text": "Chcesz nauczyć się czegoś nowego w pracy, ale nie wiesz, od czego zacząć? Zamiast zapisywać się od razu na kilka kursów, wybierz jedną umiejętność, która przyda ci się w codziennej pracy. Może to być przygotowywanie prezentacji, rozmowa z klientem albo pisanie raportów. Porozmawiaj z szefem lub kolegą, żeby dowiedzieć się, czego dokładnie potrzebujesz.\n\nNastępnie zaplanuj mały cel na najbliższy miesiąc. Jeśli chcesz lepiej przygotowywać prezentacje, zrób jedną krótką prezentację na temat, który dobrze znasz. Pokaż ją koledze i poproś o dwie konkretne uwagi. Nie zmieniaj od razu wszystkich elementów. Wybierz jedną rzecz, nad którą będziesz pracować w następnym tygodniu.\n\nPod koniec miesiąca wróć do pierwszej wersji swojej pracy i porównaj ją z ostatnią. Zapisz, co potrafisz zrobić samodzielnie, a przy czym nadal potrzebujesz pomocy. Jeżeli nie widzisz poprawy, sprawdź, czy masz dość czasu i możliwości, żeby ćwiczyć. Być może warto zmienić sposób nauki zamiast zaczynać naukę czegoś innego. Dopiero potem ustal kolejny cel.",
+  "questions": [
+    {
+      "id": "main-idea",
+      "skill": "main-idea",
+      "question": "Jak autor radzi uczyć się nowych rzeczy w pracy?",
+      "options": [
+        "Wybierać kilka potrzebnych rzeczy i ćwiczyć każdą przez tydzień.",
+        "Ćwiczyć jedną wybraną rzecz krok po kroku i sprawdzać, czy jest poprawa.",
+        "Ćwiczyć jedną rzecz przez miesiąc, zawsze w ten sam sposób."
+      ],
+      "answer": "Ćwiczyć jedną wybraną rzecz krok po kroku i sprawdzać, czy jest poprawa.",
+      "evidence": "Następnie zaplanuj mały cel na najbliższy miesiąc. Jeśli chcesz lepiej przygotowywać prezentacje, zrób jedną krótką prezentację na temat, który dobrze znasz.",
+      "explanation": "Cały poradnik opiera się na małym celu, praktyce, informacji zwrotnej i porównaniu wyników."
+    },
+    {
+      "id": "detail",
+      "skill": "detail",
+      "question": "O ile konkretnych uwag należy poprosić kolegę po pierwszej prezentacji?",
+      "options": [
+        "O jedną.",
+        "O trzy.",
+        "O dwie."
+      ],
+      "answer": "O dwie.",
+      "evidence": "Pokaż ją koledze i poproś o dwie konkretne uwagi.",
+      "explanation": "Liczba uwag jest podana wprost."
+    },
+    {
+      "id": "cause",
+      "skill": "cause",
+      "question": "Po co pod koniec miesiąca porównywać pierwszą i ostatnią wersję pracy?",
+      "options": [
+        "Żeby sprawdzić, czego się nauczyliśmy i co jest jeszcze trudne.",
+        "Żeby wybrać wersję pracy, którą pokażemy koledze.",
+        "Żeby sprawdzić, ile czasu zajmuje przygotowanie prezentacji."
+      ],
+      "answer": "Żeby sprawdzić, czego się nauczyliśmy i co jest jeszcze trudne.",
+      "evidence": "Pod koniec miesiąca wróć do pierwszej wersji swojej pracy i porównaj ją z ostatnią. Zapisz, co potrafisz zrobić samodzielnie, a przy czym nadal potrzebujesz pomocy.",
+      "explanation": "Porównanie dwóch wersji pozwala zobaczyć, czego udało się nauczyć i co nadal sprawia trudność."
+    },
+    {
+      "id": "inference",
+      "skill": "inference",
+      "question": "Tomek chciał poprawić rozmowy z klientami, ale przez miesiąc głównie czytał o nich i rozmawiał tylko z jednym klientem. Nie widzi poprawy. Co najlepiej odpowiada poradnikowi?",
+      "options": [
+        "Ćwiczyć rozmowy dalej, głównie czytając teksty o obsłudze klienta.",
+        "Zorganizować więcej prób rozmowy i ponownie ocenić tę umiejętność.",
+        "Najpierw przygotować prezentację, a rozmowy z klientami ćwiczyć w kolejnym miesiącu."
+      ],
+      "answer": "Zorganizować więcej prób rozmowy i ponownie ocenić tę umiejętność.",
+      "evidence": "Jeżeli nie widzisz poprawy, sprawdź, czy masz dość czasu i możliwości, żeby ćwiczyć. Być może warto zmienić sposób nauki zamiast zaczynać naukę czegoś innego.",
+      "explanation": "Brak praktyki wskazuje na potrzebę zmiany sposobu nauki, a nie automatyczną zmianę celu."
+    },
+    {
+      "id": "vocabulary",
+      "skill": "vocabulary",
+      "question": "Co znaczy „przyda ci się” w pierwszym akapicie?",
+      "options": [
+        "Będzie pomocne w twojej pracy.",
+        "Będzie konieczne, żeby dostać nową pracę.",
+        "Będzie należało do zadań, które musisz wykonywać codziennie."
+      ],
+      "answer": "Będzie pomocne w twojej pracy.",
+      "evidence": "wybierz jedną umiejętność, która przyda ci się w codziennej pracy.",
+      "explanation": "Chodzi o umiejętność, która pomoże wykonywać codzienne zadania."
+    }
+  ],
+  "publicationStatus": "practice"
+}

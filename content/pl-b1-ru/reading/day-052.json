@@ -1,0 +1,87 @@
+{
+  "id": "pl-b1.reading.day-052",
+  "day": 52,
+  "level": "A2",
+  "genre": "artykuł",
+  "title": "Co kupić do szkolnej biblioteki?",
+  "text": "W szkolnej bibliotece ma się pojawić kilka nowych książek. Szkoła korzysta z programu, który pomaga kupować książki do biblioteki. Zanim bibliotekarka zrobi zakupy, spotyka się z przedstawicielami uczniów i rodziców. Prosi ich o tytuły i pyta, kto chciałby czytać takie książki. Na kartce zapisuje wszystkie pomysły.\n\nUczniowie z klasy Oli proszą o książki o przyrodzie. Ola interesuje się ptakami i proponuje książkę o ich życiu. Jej kolega woli czytać o drzewach. Rodzice też mają kilka pomysłów. Lista jest długa, a teraz szkoła może kupić tylko część tytułów. Bibliotekarka chce więc wiedzieć, które książki przydadzą się większej grupie.\n\nSam zakup książek to dopiero początek. Klasa planuje spotkanie o ptakach. Uczniowie przeczytają fragmenty nowych książek i opowiedzą, co ich zaciekawiło. Osoby, które będą chciały sięgnąć po następną książkę, będą mogły wypożyczyć ją także podczas przerwy w nauce.",
+  "source": {
+    "url": "https://www.gov.pl/web/edukacja/pytania-i-odpowiedzi-npc",
+    "publisher": "Ministerstwo Edukacji Narodowej",
+    "title": "Pytania i odpowiedzi – Narodowy Program Rozwoju Czytelnictwa",
+    "facts": [
+      "Participating schools organize educational projects using their collections and consult pupils and parents on book purchases; school libraries organize access for holiday reading."
+    ],
+    "use": "facts-only",
+    "checked": "2026-11-25",
+    "adaptation": "Original Polish educational composition based on source facts; illustrative people/scenarios are fictional."
+  },
+  "questions": [
+    {
+      "id": "main-idea",
+      "skill": "main-idea",
+      "question": "Jak szkoła zachęca uczniów do czytania?",
+      "options": [
+        "Pozwala każdej klasie samodzielnie kupić książki na wybrany temat.",
+        "Zaprasza uczniów na spotkanie, podczas którego rodzice czytają im wybrane fragmenty.",
+        "Pyta czytelników o wybór książek i planuje zajęcia z nowymi tytułami."
+      ],
+      "answer": "Pyta czytelników o wybór książek i planuje zajęcia z nowymi tytułami.",
+      "evidence": "Uczniowie przeczytają fragmenty nowych książek i opowiedzą, co ich zaciekawiło.",
+      "explanation": "Szkoła zbiera propozycje, a potem wykorzystuje książki podczas spotkania."
+    },
+    {
+      "id": "detail",
+      "skill": "detail",
+      "question": "Co bibliotekarka zapisuje podczas rozmowy?",
+      "options": [
+        "Nazwiska uczniów, którzy wypożyczą nowe książki.",
+        "Wszystkie propozycje uczestników spotkania.",
+        "Tytuły książek już kupionych przez szkołę."
+      ],
+      "answer": "Wszystkie propozycje uczestników spotkania.",
+      "evidence": "Na kartce zapisuje wszystkie pomysły.",
+      "explanation": "Kartka służy do zebrania propozycji przed zakupami."
+    },
+    {
+      "id": "cause",
+      "skill": "cause",
+      "question": "Dlaczego bibliotekarka pyta, komu przydadzą się książki?",
+      "options": [
+        "Szkoła chce ustalić, kto opowie o drzewach na spotkaniu.",
+        "Szkoła musi wcześniej ustalić kolejność wypożyczania książek.",
+        "Szkoła musi wybrać część tytułów z długiej listy."
+      ],
+      "answer": "Szkoła musi wybrać część tytułów z długiej listy.",
+      "evidence": "Lista jest długa, a teraz szkoła może kupić tylko część tytułów.",
+      "explanation": "Odpowiedzi pomogą wybrać książki dla większej grupy."
+    },
+    {
+      "id": "inference",
+      "skill": "inference",
+      "question": "Ola przeczytała książkę o ptakach. Która informacja o niej najbardziej pomoże klasie podczas planowanego spotkania?",
+      "options": [
+        "W którym miejscu na półce stoi ta książka.",
+        "Który rozdział pomógł jej poznać zwyczaje ptaków.",
+        "Ile osób można dopisać do listy zakupów."
+      ],
+      "answer": "Który rozdział pomógł jej poznać zwyczaje ptaków.",
+      "evidence": "Uczniowie przeczytają fragmenty nowych książek i opowiedzą, co ich zaciekawiło.",
+      "explanation": "Ola może wskazać fragment i wyjaśnić, czego się z niego dowiedziała."
+    },
+    {
+      "id": "vocabulary",
+      "skill": "vocabulary",
+      "question": "Co znaczy tutaj „sięgnąć po następną książkę”?",
+      "options": [
+        "Dopisać kolejny tytuł do listy zakupów.",
+        "Wybrać kolejną książkę do czytania.",
+        "Przynieść kolejną książkę na spotkanie z rodzicami."
+      ],
+      "answer": "Wybrać kolejną książkę do czytania.",
+      "evidence": "będą mogły wypożyczyć ją także podczas przerwy w nauce.",
+      "explanation": "Możliwość wypożyczenia pozwoli uczniom przeczytać kolejną książkę."
+    }
+  ],
+  "publicationStatus": "practice"
+}

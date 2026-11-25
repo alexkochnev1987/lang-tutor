@@ -1,0 +1,76 @@
+{
+  "id": "pl-b1.reading.day-054",
+  "day": 54,
+  "level": "A2",
+  "genre": "ogłoszenie",
+  "title": "Zapis na zajęcia dodatkowe",
+  "text": "Uczniowie naszej szkoły mogą od grudnia chodzić na dodatkowe zajęcia z matematyki lub języka polskiego. Zajęcia są bezpłatne, ale w każdej grupie jest tylko osiem miejsc. Zajęcia z matematyki odbywają się w poniedziałki i środy od godziny piętnastej. Zajęcia z języka polskiego odbywają się we wtorki o tej samej porze. Jedna lekcja trwa godzinę.\n\nDo piątku trzeba oddać formularz w pokoju obok gabinetu dyrektora. W formularzu trzeba podać imię, nazwisko, klasę i wybrany przedmiot. Nie zapisujemy uczniów przez telefon, ponieważ nauczyciele potrzebują podpisanych formularzy. Długopisy są dostępne na miejscu. Podczas długiej przerwy można również porozmawiać z nauczycielem o poziomie zajęć.\n\nJeżeli w grupie nie ma już miejsca, nazwisko ucznia trafia na listę osób oczekujących. Nauczyciel skontaktuje się z uczniem, gdy ktoś zrezygnuje z zajęć. Osoby, które otrzymały miejsce, przynoszą na pierwszą lekcję tylko zeszyt i ołówek. Numer sali pojawi się na tablicy przy wejściu w ostatni poniedziałek listopada. Nie trzeba wcześniej kupować żadnego podręcznika.",
+  "questions": [
+    {
+      "id": "main-idea",
+      "skill": "main-idea",
+      "question": "Które zdanie najlepiej oddaje cel ogłoszenia?",
+      "options": [
+        "Szkoła wyjaśnia, jak wybrać odpowiedni poziom zajęć i nauczyciela.",
+        "Szkoła wyjaśnia, jak zapisać się na zajęcia i co zrobić, gdy zabraknie miejsc.",
+        "Szkoła wyjaśnia, jak będzie wyglądać nauka na zajęciach w grudniu."
+      ],
+      "answer": "Szkoła wyjaśnia, jak zapisać się na zajęcia i co zrobić, gdy zabraknie miejsc.",
+      "evidence": "Uczniowie naszej szkoły mogą od grudnia chodzić na dodatkowe zajęcia z matematyki lub języka polskiego. Zajęcia są bezpłatne, ale w każdej grupie jest tylko osiem miejsc. Zajęcia z matematyki odbywają się w poniedziałki i środy od godziny piętnastej. Zajęcia z języka polskiego odbywają się we wtorki o tej samej porze. Jedna lekcja trwa godzinę.\n\nDo piątku trzeba oddać formularz w pokoju obok gabinetu dyrektora. W formularzu trzeba podać imię, nazwisko, klasę i wybrany przedmiot. Nie zapisujemy uczniów przez telefon, ponieważ nauczyciele potrzebują podpisanych formularzy. Długopisy są dostępne na miejscu. Podczas długiej przerwy można również porozmawiać z nauczycielem o poziomie zajęć.\n\nJeżeli w grupie nie ma już miejsca, nazwisko ucznia trafia na listę osób oczekujących. Nauczyciel skontaktuje się z uczniem, gdy ktoś zrezygnuje z zajęć. Osoby, które otrzymały miejsce, przynoszą na pierwszą lekcję tylko zeszyt i ołówek. Numer sali pojawi się na tablicy przy wejściu w ostatni poniedziałek listopada. Nie trzeba wcześniej kupować żadnego podręcznika.",
+      "explanation": "Ogłoszenie przedstawia ofertę, zasady zgłoszeń i listę oczekujących, a także informacje o pierwszej lekcji."
+    },
+    {
+      "id": "detail",
+      "skill": "detail",
+      "question": "Kiedy będzie można sprawdzić numer sali?",
+      "options": [
+        "W ostatni poniedziałek listopada.",
+        "W pierwszy poniedziałek grudnia.",
+        "W piątek po lekcjach."
+      ],
+      "answer": "W ostatni poniedziałek listopada.",
+      "evidence": "Numer sali pojawi się na tablicy przy wejściu w ostatni poniedziałek listopada.",
+      "explanation": "Podano dokładny dzień publikacji numeru sali."
+    },
+    {
+      "id": "cause",
+      "skill": "cause",
+      "question": "Dlaczego szkoła nie przyjmuje zgłoszeń telefonicznych?",
+      "options": [
+        "Potrzebuje wcześniejszej rozmowy o poziomie.",
+        "Potrzebuje potwierdzenia wolnego miejsca.",
+        "Potrzebuje dokumentów z podpisem."
+      ],
+      "answer": "Potrzebuje dokumentów z podpisem.",
+      "evidence": "Nie zapisujemy uczniów przez telefon, ponieważ nauczyciele potrzebują podpisanych formularzy.",
+      "explanation": "Rozmowa telefoniczna nie zastępuje podpisanego formularza."
+    },
+    {
+      "id": "inference",
+      "skill": "inference",
+      "question": "Klara może zostać w szkole po lekcjach tylko we wtorki i czwartki. Chce dołączyć do jednej grupy. Co powinna zrobić?",
+      "options": [
+        "Wybrać matematykę i oddać formularz do piątku.",
+        "Wybrać polski i zgłosić się po raz pierwszy w grudniu.",
+        "Wybrać polski i oddać formularz do piątku."
+      ],
+      "answer": "Wybrać polski i oddać formularz do piątku.",
+      "evidence": "Zajęcia z matematyki odbywają się w poniedziałki i środy od godziny piętnastej. Zajęcia z języka polskiego odbywają się we wtorki o tej samej porze. Jedna lekcja trwa godzinę.\n\nDo piątku trzeba oddać formularz w pokoju obok gabinetu dyrektora.",
+      "explanation": "Wtorek pasuje do jej planu, a zgłoszenie trzeba oddać przed końcem zapisów."
+    },
+    {
+      "id": "vocabulary",
+      "skill": "vocabulary",
+      "question": "Co oznacza w tekście „lista osób oczekujących”?",
+      "options": [
+        "Lista uczniów, którzy już mają miejsce i czekają na numer sali.",
+        "Lista uczniów bez miejsca, którzy mogą je jeszcze dostać.",
+        "Lista uczniów, którzy oddali formularz, ale jeszcze nie wybrali przedmiotu."
+      ],
+      "answer": "Lista uczniów bez miejsca, którzy mogą je jeszcze dostać.",
+      "evidence": "Jeżeli w grupie nie ma już miejsca, nazwisko ucznia trafia na listę osób oczekujących. Nauczyciel skontaktuje się z uczniem, gdy ktoś zrezygnuje z zajęć.",
+      "explanation": "Uczeń czeka na zwolnienie miejsca w grupie."
+    }
+  ],
+  "publicationStatus": "practice"
+}

@@ -1,0 +1,76 @@
+{
+  "id": "pl-b1.reading.day-016",
+  "day": 16,
+  "level": "A1",
+  "genre": "dialog",
+  "title": "Te klucze są moje?",
+  "text": "— Mamo, gdzie są moje klucze? Zaraz wychodzę do pracy.\n\n— Te na stole?\n\n— Nie, te są twoje. Moje mają mały czerwony brelok.\n\n— A tamte przy oknie?\n\n— To klucze taty.\n\nMama patrzy na krzesło przy drzwiach. Na krześle leży niebieska torba. W torbie jest portfel i książka, ale nie ma kluczy.\n\n— Sprawdź kieszeń kurtki. Czy to ta kurtka, w której wychodzisz z psem?\n\n— Tak, to ta sama kurtka. O, są! Dziękuję.\n\nSyn bierze klucze i torbę. Mama przypomina mu jeszcze o śniadaniu. Na stole stoi pudełko z kanapkami.",
+  "questions": [
+    {
+      "id": "main-idea",
+      "skill": "main-idea",
+      "question": "Jaki problem chce rozwiązać syn przed wyjściem?",
+      "options": [
+        "Chce znaleźć kurtkę na spacer.",
+        "Chce znaleźć swoje klucze.",
+        "Chce znaleźć torbę do pracy."
+      ],
+      "answer": "Chce znaleźć swoje klucze.",
+      "evidence": "Mamo, gdzie są moje klucze?",
+      "explanation": "Rozmówcy sprawdzają kilka miejsc, aż syn odnajduje klucze."
+    },
+    {
+      "id": "detail",
+      "skill": "detail",
+      "question": "Po czym syn poznaje swoje klucze?",
+      "options": [
+        "Po małym niebieskim breloku.",
+        "Po małym czerwonym breloku.",
+        "Po dużym czerwonym breloku."
+      ],
+      "answer": "Po małym czerwonym breloku.",
+      "evidence": "Moje mają mały czerwony brelok.",
+      "explanation": "Ważne są kolor i wielkość breloka."
+    },
+    {
+      "id": "cause",
+      "skill": "cause",
+      "question": "Dlaczego syn zostawia klucze na stole?",
+      "options": [
+        "Bo należą do taty.",
+        "Bo są od drzwi do biura.",
+        "Bo należą do mamy."
+      ],
+      "answer": "Bo należą do mamy.",
+      "evidence": "Nie, te są twoje.",
+      "explanation": "Syn mówi do mamy, więc „twoje” wskazuje na jej klucze."
+    },
+    {
+      "id": "inference",
+      "skill": "inference",
+      "question": "Co mama chce dać synowi na posiłek w pracy?",
+      "options": [
+        "Coś z niebieskiej torby.",
+        "Coś z kieszeni kurtki.",
+        "Coś z pudełka na stole."
+      ],
+      "answer": "Coś z pudełka na stole.",
+      "evidence": "Mama przypomina mu jeszcze o śniadaniu. Na stole stoi pudełko z kanapkami.",
+      "explanation": "Zestawienie przypomnienia o śniadaniu z pudełkiem wskazuje na kanapki do zabrania."
+    },
+    {
+      "id": "vocabulary",
+      "skill": "vocabulary",
+      "question": "Czym jest „kieszeń” w tej historii?",
+      "options": [
+        "Częścią kurtki, do której można coś włożyć.",
+        "Częścią torby, za którą można ją trzymać.",
+        "Częścią kluczy, po której można je poznać."
+      ],
+      "answer": "Częścią kurtki, do której można coś włożyć.",
+      "evidence": "Sprawdź kieszeń kurtki.",
+      "explanation": "Mama proponuje zajrzeć do miejsca w kurtce, gdzie można schować klucze."
+    }
+  ],
+  "publicationStatus": "practice"
+}

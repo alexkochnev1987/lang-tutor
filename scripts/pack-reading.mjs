@@ -55,7 +55,7 @@ export function makeReadingPack({ legacy = [], daily = [], status = 'approved' }
     })
   }
   legacy.forEach((text, i) => add(text, 'legacy-' + String(i + 1).padStart(3, '0') + '.json', 'legacy'))
-  for (const text of [...daily].sort((a, b) => a.day - b.day)) add(text, dayName(text.day), status)
+  for (const text of [...daily].sort((a, b) => a.day - b.day)) add(text, dayName(text.day), status === 'preview' ? 'preview' : text.publicationStatus === 'practice' ? 'practice' : 'approved')
   assert(distinct(entries.map(e => e.id)), 'duplicate passage id')
   return { index: { version: 1, entries }, files }
 }

@@ -1,0 +1,76 @@
+{
+  "id": "pl-b1.reading.day-014",
+  "day": 14,
+  "level": "A1",
+  "genre": "opowiadanie",
+  "title": "Rzadziej samochodem",
+  "text": "Paweł i Magda mieszkają w domu na spokojnej ulicy. Wcześniej często jeździli samochodem, ale teraz chcą częściej chodzić pieszo i jeździć rowerem. Niedaleko domu są szkoła, apteka i dwa sklepy. Magda może dojechać do pracy autobusem. Paweł pracuje blisko stacji kolejowej.\n\nW garażu stoją dwa rowery. Magda jeździ rowerem na małe zakupy, a Paweł w weekendy jeździ do parku. Kiedy muszą kupić coś dużego, zamawiają dostawę do domu. Dzięki temu nie potrzebują codziennie samochodu. Nadal korzystają z niego podczas dłuższych wyjazdów, na przykład kiedy odwiedzają rodzinę poza miastem.",
+  "questions": [
+    {
+      "id": "main-idea",
+      "skill": "main-idea",
+      "question": "O czym przede wszystkim jest tekst?",
+      "options": [
+        "O tym, jak para planuje wyjazd do rodziny.",
+        "O tym, jak para rzadziej jeździ samochodem.",
+        "O tym, jak para wybiera nowe rowery."
+      ],
+      "answer": "O tym, jak para rzadziej jeździ samochodem.",
+      "evidence": "Wcześniej często jeździli samochodem, ale teraz chcą częściej chodzić pieszo i jeździć rowerem.",
+      "explanation": "Zakupy, dojazdy i wyjazdy pokazują, kiedy para potrzebuje samochodu."
+    },
+    {
+      "id": "detail",
+      "skill": "detail",
+      "question": "Co stoi w garażu?",
+      "options": [
+        "Jeden rower.",
+        "Dwa rowery.",
+        "Trzy rowery."
+      ],
+      "answer": "Dwa rowery.",
+      "evidence": "W garażu stoją dwa rowery.",
+      "explanation": "W garażu jest rower dla każdej z dwóch osób."
+    },
+    {
+      "id": "cause",
+      "skill": "cause",
+      "question": "Po co zamawiają dostawę dużych rzeczy?",
+      "options": [
+        "Żeby ktoś zostawił je u rodziny.",
+        "Żeby ktoś przywiózł je do ich domu.",
+        "Żeby odebrać je po pracy na stacji."
+      ],
+      "answer": "Żeby ktoś przywiózł je do ich domu.",
+      "evidence": "Kiedy muszą kupić coś dużego, zamawiają dostawę do domu.",
+      "explanation": "Dzięki dostawie sami nie muszą wieźć dużych rzeczy."
+    },
+    {
+      "id": "inference",
+      "skill": "inference",
+      "question": "Magda potrzebuje tylko chleba. Jak najłatwiej zrobi zakupy bez samochodu?",
+      "options": [
+        "Pojedzie rowerem do sklepu blisko domu.",
+        "Pojedzie pociągiem do rodziny.",
+        "Pojedzie autobusem do biura po zakupy."
+      ],
+      "answer": "Pojedzie rowerem do sklepu blisko domu.",
+      "evidence": "Magda jeździ rowerem na małe zakupy",
+      "explanation": "Chleb to mały zakup, a niedaleko domu są sklepy."
+    },
+    {
+      "id": "vocabulary",
+      "skill": "vocabulary",
+      "question": "Co znaczy „dostawa do domu”?",
+      "options": [
+        "Klient przynosi ze sklepu torby do domu.",
+        "Klient zamawia towar i odbiera go w sklepie.",
+        "Ktoś przywozi klientowi towar ze sklepu."
+      ],
+      "answer": "Ktoś przywozi klientowi towar ze sklepu.",
+      "evidence": "zamawiają dostawę do domu.",
+      "explanation": "Kupujący czekają w domu, aż ktoś przywiezie ich zakupy."
+    }
+  ],
+  "publicationStatus": "practice"
+}

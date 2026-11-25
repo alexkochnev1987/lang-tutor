@@ -1,0 +1,76 @@
+{
+  "id": "pl-b1.reading.day-039",
+  "day": 39,
+  "level": "A2",
+  "genre": "protokół",
+  "title": "Spotkanie w radzie osiedla",
+  "text": "W środę mieszkańcy spotkali się z przedstawicielami rady osiedla, żeby omówić problemy związane z placem zabaw. Niektóre urządzenia są już stare, a przy wejściu brakuje stojaków na rowery. Rodzice małych dzieci zwrócili uwagę na brak cienia latem. Inni mieszkańcy prosili o dodatkowe ławki dla osób starszych.\n\nRada ma za mało pieniędzy, żeby zrobić wszystko od razu. Przewodnicząca zaproponowała, żeby w pierwszej kolejności naprawić urządzenia. Następnie mieszkańcy będą mogli głosować na pozostałe pomysły. Poprosiła też mieszkańców, żeby przed końcem miesiąca przysłali do rady swoje pomysły.\n\nNa kolejnym spotkaniu rada poda wyniki głosowania. Rada nie obiecuje, że wszystkie zwycięskie pomysły uda się zrealizować jeszcze w tym roku. Chce jednak wiedzieć, czego mieszkańcy potrzebują najbardziej i na co warto wydać pieniądze. Mieszkańcy ustalili również, że informacje o postępie prac będą regularnie pojawiać się na tablicy ogłoszeń oraz na stronie internetowej osiedla.",
+  "questions": [
+    {
+      "id": "main-idea",
+      "skill": "main-idea",
+      "question": "Czego dotyczyło spotkanie mieszkańców z radą?",
+      "options": [
+        "Tego, gdzie zbudować drugi plac zabaw.",
+        "Tego, co poprawić na placu zabaw i od czego zacząć.",
+        "Tego, jak wybrać osoby do nowej rady osiedla."
+      ],
+      "answer": "Tego, co poprawić na placu zabaw i od czego zacząć.",
+      "evidence": "żeby omówić problemy związane z placem zabaw",
+      "explanation": "Rada i mieszkańcy rozmawiali o potrzebach i kolejności prac."
+    },
+    {
+      "id": "detail",
+      "skill": "detail",
+      "question": "Na co zwrócili uwagę rodzice małych dzieci?",
+      "options": [
+        "Na brak stojaków przy wejściu.",
+        "Na brak cienia latem.",
+        "Na brak dodatkowych ławek."
+      ],
+      "answer": "Na brak cienia latem.",
+      "evidence": "Rodzice małych dzieci zwrócili uwagę na brak cienia latem.",
+      "explanation": "W tekście wymieniono wszystkie trzy sprawy, ale rodzicom przypisano uwagę o cieniu."
+    },
+    {
+      "id": "cause",
+      "skill": "cause",
+      "question": "Dlaczego rada nie zajmie się wszystkim od razu?",
+      "options": [
+        "Najpierw trzeba wybrać nową przewodniczącą.",
+        "Nie wystarczy na to pieniędzy.",
+        "Trzeba poczekać, aż dzieci skończą wakacje."
+      ],
+      "answer": "Nie wystarczy na to pieniędzy.",
+      "evidence": "Rada ma za mało pieniędzy, żeby zrobić wszystko od razu.",
+      "explanation": "Ograniczone środki zmuszają radę do wyboru kolejności."
+    },
+    {
+      "id": "inference",
+      "skill": "inference",
+      "question": "Pomysł nowych ławek wygrał głosowanie. Co można teraz powiedzieć mieszkańcom?",
+      "options": [
+        "Rada zna ich wybór, ale na ławki być może trzeba będzie poczekać.",
+        "Rada postawi ławki jeszcze w tym roku, bo mieszkańcy je wybrali.",
+        "Rada zacznie od ławek, zanim zajmie się naprawą urządzeń."
+      ],
+      "answer": "Rada zna ich wybór, ale na ławki być może trzeba będzie poczekać.",
+      "evidence": "Rada nie obiecuje, że wszystkie zwycięskie pomysły uda się zrealizować jeszcze w tym roku.",
+      "explanation": "Dobry wynik pokazuje potrzebę mieszkańców, ale nie gwarantuje terminu prac."
+    },
+    {
+      "id": "vocabulary",
+      "skill": "vocabulary",
+      "question": "Co oznaczają „informacje o postępie prac”?",
+      "options": [
+        "Wiadomości o tym, co już udało się zrobić.",
+        "Ogłoszenia o terminie głosowania.",
+        "Prośby o zgłaszanie nowych pomysłów."
+      ],
+      "answer": "Wiadomości o tym, co już udało się zrobić.",
+      "evidence": "informacje o postępie prac będą regularnie pojawiać się na tablicy ogłoszeń",
+      "explanation": "Dzięki takim wiadomościom mieszkańcy śledzą, jak idą prace."
+    }
+  ],
+  "publicationStatus": "practice"
+}

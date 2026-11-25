@@ -1,0 +1,76 @@
+{
+  "id": "pl-b1.reading.day-011",
+  "day": 11,
+  "level": "A1",
+  "genre": "instrukcja",
+  "title": "Wspólna kuchnia",
+  "text": "W mieszkaniu przy ulicy Krótkiej są trzy pokoje. Mieszkają tu trzy osoby: Julia, Bartek i Nina. Każda osoba ma swój pokój, ale kuchnia jest wspólna. Na półkach są talerze, kubki i garnki. W lodówce każdy ma swoją półkę na jedzenie.\n\nNa drzwiach kuchni jest kartka z zasadami. Po gotowaniu trzeba umyć naczynia i wytrzeć stół. W sobotę jedna osoba sprząta kuchnię. W następną sobotę robi to ktoś inny. Jeśli w domu są goście, trzeba o tym powiedzieć innym. Dzięki tym prostym zasadom wszystkim dobrze się tu mieszka.",
+  "questions": [
+    {
+      "id": "main-idea",
+      "skill": "main-idea",
+      "question": "O czym opowiada cały tekst?",
+      "options": [
+        "O tym, jak mieszkańcy korzystają z jednej kuchni.",
+        "O tym, jak mieszkańcy urządzają swoje pokoje.",
+        "O tym, co mieszkańcy zwykle jedzą razem."
+      ],
+      "answer": "O tym, jak mieszkańcy korzystają z jednej kuchni.",
+      "evidence": "Każda osoba ma swój pokój, ale kuchnia jest wspólna.",
+      "explanation": "Tekst opisuje wspólną kuchnię i zasady dla trzech mieszkańców."
+    },
+    {
+      "id": "detail",
+      "skill": "detail",
+      "question": "Gdzie każdy trzyma swoje jedzenie?",
+      "options": [
+        "Na swojej półce w lodówce.",
+        "Na osobnej półce w swoim pokoju.",
+        "Na jednej wspólnej półce przy stole."
+      ],
+      "answer": "Na swojej półce w lodówce.",
+      "evidence": "W lodówce każdy ma swoją półkę na jedzenie.",
+      "explanation": "Każdy z mieszkańców ma w lodówce własne miejsce."
+    },
+    {
+      "id": "cause",
+      "skill": "cause",
+      "question": "Dlaczego mieszkańcy mają te zasady?",
+      "options": [
+        "Chcą, żeby wszyscy jedli o tej samej porze.",
+        "Chcą, żeby wszystkim dobrze się mieszkało.",
+        "Chcą, żeby co dzień gotowała inna osoba."
+      ],
+      "answer": "Chcą, żeby wszystkim dobrze się mieszkało.",
+      "evidence": "Dzięki tym prostym zasadom wszystkim dobrze się tu mieszka.",
+      "explanation": "Zasady pomagają trzem osobom zgodnie korzystać z kuchni."
+    },
+    {
+      "id": "inference",
+      "skill": "inference",
+      "question": "Nina właśnie zrobiła zupę. Stół jest czysty, a garnek jest brudny. Co Nina powinna teraz zrobić?",
+      "options": [
+        "Zostawić garnek dla osoby, która sprząta w sobotę.",
+        "Poczekać, aż ktoś jeszcze zrobi sobie zupę.",
+        "Umyć garnek, zanim wyjdzie z kuchni."
+      ],
+      "answer": "Umyć garnek, zanim wyjdzie z kuchni.",
+      "evidence": "Po gotowaniu trzeba umyć naczynia i wytrzeć stół.",
+      "explanation": "Garnek też jest naczyniem. Nina skończyła gotować, więc powinna go umyć."
+    },
+    {
+      "id": "vocabulary",
+      "skill": "vocabulary",
+      "question": "Co oznacza tutaj słowo „wspólna”?",
+      "options": [
+        "Mieszkańcy mogą gotować tylko wtedy, gdy są razem.",
+        "Wszyscy mieszkańcy mogą korzystać z tej samej kuchni.",
+        "Każda osoba ma taką samą kuchnię w swoim pokoju."
+      ],
+      "answer": "Wszyscy mieszkańcy mogą korzystać z tej samej kuchni.",
+      "evidence": "Każda osoba ma swój pokój, ale kuchnia jest wspólna.",
+      "explanation": "Pokoje są osobne, a z jednej kuchni korzystają trzy osoby."
+    }
+  ],
+  "publicationStatus": "practice"
+}

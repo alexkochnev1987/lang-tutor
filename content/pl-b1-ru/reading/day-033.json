@@ -1,0 +1,76 @@
+{
+  "id": "pl-b1.reading.day-033",
+  "day": 33,
+  "level": "A2",
+  "genre": "wiadomość",
+  "title": "Wakacje w górach",
+  "text": "Za dwa tygodnie Monika i jej siostra będą spędzać urlop w górach. Wynajęły mały apartament w pobliżu szlaków turystycznych. Nie chcą codziennie korzystać z samochodu, dlatego przed wyjazdem sprawdzą rozkład lokalnych autobusów. Monika lubi długie spacery, ale jej siostra dopiero zaczyna chodzić po górach.\n\nPierwszego dnia będą odpoczywać po podróży i zwiedzą miasteczko. Następnego dnia wybiorą łatwy szlak, który kończy się przy schronisku. Jeśli obie będą się dobrze czuły, później zaplanują dłuższą trasę. Nie zamierzają wychodzić wysoko w góry podczas burzy ani przy bardzo silnym wietrze.\n\nWieczorami będą przygotowywać kolację w apartamencie. Monika weźmie kilka książek, a jej siostra zabierze aparat fotograficzny. Gospodarz wysłał im listę pobliskich sklepów i numer telefonu do informacji turystycznej. Obie cieszą się, że będą mogły zmieniać plan zależnie od pogody. Nie chodzi im o zdobycie jak największej liczby szczytów, lecz o przyjemny i spokojny odpoczynek.",
+  "questions": [
+    {
+      "id": "main-idea",
+      "skill": "main-idea",
+      "question": "Na czym najbardziej zależy siostrom?",
+      "options": [
+        "Na odpoczynku w tempie dobrym dla obu.",
+        "Na przejściu jak największej liczby szlaków.",
+        "Na zwiedzaniu codziennie innej miejscowości."
+      ],
+      "answer": "Na odpoczynku w tempie dobrym dla obu.",
+      "evidence": "lecz o przyjemny i spokojny odpoczynek",
+      "explanation": "Dłuższe trasy zależą od samopoczucia obu sióstr."
+    },
+    {
+      "id": "detail",
+      "skill": "detail",
+      "question": "Jak siostry spędzą pierwszy dzień?",
+      "options": [
+        "Odpoczną i zwiedzą miasteczko.",
+        "Przejdą dłuższą trasę i wrócą autobusem.",
+        "Pójdą do schroniska i tam odpoczną."
+      ],
+      "answer": "Odpoczną i zwiedzą miasteczko.",
+      "evidence": "Pierwszego dnia będą odpoczywać po podróży i zwiedzą miasteczko.",
+      "explanation": "Wyjście na łatwy szlak planują dopiero następnego dnia."
+    },
+    {
+      "id": "cause",
+      "skill": "cause",
+      "question": "Dlaczego na początek wybrały łatwy szlak?",
+      "options": [
+        "Jedna z nich dopiero poznaje górskie wędrówki.",
+        "Jedna z nich umówiła się z gospodarzem w południe.",
+        "Jedna z nich chce wrócić do auta przy schronisku."
+      ],
+      "answer": "Jedna z nich dopiero poznaje górskie wędrówki.",
+      "evidence": "jej siostra dopiero zaczyna chodzić po górach",
+      "explanation": "Monika dopasowuje trudność trasy do doświadczenia siostry."
+    },
+    {
+      "id": "inference",
+      "skill": "inference",
+      "question": "Po powrocie ze schroniska siostra Moniki jest zmęczona. Co najlepiej pasuje do ich planu na jutro?",
+      "options": [
+        "Wybrać krótszy spacer, nawet przy ładnej pogodzie.",
+        "Wybrać dłuższą trasę, skoro jutro ma być pogodnie.",
+        "Powtórzyć trasę do schroniska, bo tak wcześniej ustaliły."
+      ],
+      "answer": "Wybrać krótszy spacer, nawet przy ładnej pogodzie.",
+      "evidence": "Jeśli obie będą się dobrze czuły, później zaplanują dłuższą trasę.",
+      "explanation": "Do dłuższego wyjścia potrzebne jest także dobre samopoczucie obu sióstr."
+    },
+    {
+      "id": "vocabulary",
+      "skill": "vocabulary",
+      "question": "Co tutaj oznacza „szlak”?",
+      "options": [
+        "Punkt, z którego turyści oglądają góry.",
+        "Trasę, którą turyści idą przez góry.",
+        "Miejsce, gdzie turyści odpoczywają po drodze."
+      ],
+      "answer": "Trasę, którą turyści idą przez góry.",
+      "evidence": "wybiorą łatwy szlak, który kończy się przy schronisku",
+      "explanation": "Szlakiem można dojść do schroniska."
+    }
+  ],
+  "publicationStatus": "practice"
+}

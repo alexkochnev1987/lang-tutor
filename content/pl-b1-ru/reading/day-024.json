@@ -1,0 +1,76 @@
+{
+  "id": "pl-b1.reading.day-024",
+  "day": 24,
+  "level": "A1",
+  "genre": "wiadomość",
+  "title": "Film czy spacer?",
+  "text": "Cześć, Tomku! Dzisiaj po południu mam czas, więc możemy się spotkać. W kinie obok dworca jest nowa komedia. Film zaczyna się o szóstej, ale bilety kosztują dość dużo. Możemy też pójść na spacer nad Wisłą i kupić lody. Prognoza pogody jest dobra, choć wieczorem może być chłodno.\n\nJa wolę spacer, ponieważ przez cały tydzień siedzę przy komputerze. Jeśli jednak będzie padał deszcz, wybierzmy kino. Przyjdź do mnie o piątej albo spotkajmy się od razu przy dworcu. Napisz, która opcja jest dla ciebie wygodniejsza. Wezmę dodatkową bluzę.",
+  "questions": [
+    {
+      "id": "main-idea",
+      "skill": "main-idea",
+      "question": "Po co autor pisze do Tomka?",
+      "options": [
+        "Żeby poprosić go o pomoc przy komputerze.",
+        "Żeby opowiedzieć mu o komedii, którą widział.",
+        "Żeby razem wybrali, co zrobią po południu."
+      ],
+      "answer": "Żeby razem wybrali, co zrobią po południu.",
+      "evidence": "Dzisiaj po południu mam czas, więc możemy się spotkać.",
+      "explanation": "Autor podaje dwa pomysły na wspólne popołudnie i prosi o odpowiedź."
+    },
+    {
+      "id": "detail",
+      "skill": "detail",
+      "question": "O której zaczyna się film?",
+      "options": [
+        "O piątej.",
+        "O siódmej.",
+        "O szóstej."
+      ],
+      "answer": "O szóstej.",
+      "evidence": "Film zaczyna się o szóstej",
+      "explanation": "O szóstej zaczyna się komedia, a o piątej mogą się spotkać."
+    },
+    {
+      "id": "cause",
+      "skill": "cause",
+      "question": "Dlaczego autor ma ochotę na spacer?",
+      "options": [
+        "Chce zrobić zdjęcia nad rzeką.",
+        "Chce się ruszyć po tygodniu przy komputerze.",
+        "Chce porozmawiać z Tomkiem o pracy."
+      ],
+      "answer": "Chce się ruszyć po tygodniu przy komputerze.",
+      "evidence": "Ja wolę spacer, ponieważ przez cały tydzień siedzę przy komputerze.",
+      "explanation": "Po wielu godzinach siedzenia autor woli spacer."
+    },
+    {
+      "id": "inference",
+      "skill": "inference",
+      "question": "Który przedmiot najlepiej zabrać na spacer, jeśli skończy się dopiero wieczorem?",
+      "options": [
+        "Ciepłą bluzę.",
+        "Czapkę od słońca.",
+        "Okulary przeciwsłoneczne."
+      ],
+      "answer": "Ciepłą bluzę.",
+      "evidence": "wieczorem może być chłodno.",
+      "explanation": "Autor planuje spacer i bierze bluzę, bo pod wieczór może potrzebować cieplejszego ubrania."
+    },
+    {
+      "id": "vocabulary",
+      "skill": "vocabulary",
+      "question": "Które zdanie jest prognozą pogody?",
+      "options": [
+        "Wczoraj nad rzeką było ciepło.",
+        "Teraz nad rzeką świeci słońce.",
+        "Wieczorem nad rzeką może być chłodno."
+      ],
+      "answer": "Wieczorem nad rzeką może być chłodno.",
+      "evidence": "Prognoza pogody jest dobra, choć wieczorem może być chłodno.",
+      "explanation": "Prognoza mówi, jakiej pogody można się spodziewać."
+    }
+  ],
+  "publicationStatus": "practice"
+}

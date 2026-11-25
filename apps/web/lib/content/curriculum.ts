@@ -302,11 +302,11 @@ export const loadCorpusChunk = (version: string, chunk: number) =>
   loadPack<AnnotatedSentence[]>(`sentence-corpus/${version}-${chunk}.json`)
 
 export async function loadLiveReadingCatalog(): Promise<ReadingCatalogEntry[]> {
-  return (await loadReadingCatalog('reading')).filter(entry => entry.status === 'approved' || entry.status === 'legacy')
+  return (await loadReadingCatalog('reading')).filter(entry => entry.status === 'approved' || entry.status === 'practice' || entry.status === 'legacy')
 }
 
 export async function loadLiveReadingText(entry: ReadingCatalogEntry): Promise<ReadingText> {
-  if (entry.status !== 'approved' && entry.status !== 'legacy') throw new Error('invalid_reading_status')
+  if (entry.status !== 'approved' && entry.status !== 'practice' && entry.status !== 'legacy') throw new Error('invalid_reading_status')
   return loadReadingEntry('reading', entry)
 }
 

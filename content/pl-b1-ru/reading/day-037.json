@@ -1,0 +1,76 @@
+{
+  "id": "pl-b1.reading.day-037",
+  "day": 37,
+  "level": "A2",
+  "genre": "opowiadanie",
+  "title": "Pomoc w sąsiedztwie",
+  "text": "W małej miejscowości powstała grupa sąsiedzka, do której należą osoby w różnym wieku. Jej członkowie pomagają sobie w prostych codziennych sprawach. Młodsi często robią zakupy osobom starszym albo pomagają im korzystać z internetu. Starsi mieszkańcy dzielą się doświadczeniem, uczą gotować tradycyjne potrawy i opowiadają o historii okolicy.\n\nKiedy Marta dołączyła do grupy, obawiała się, że nie znajdzie czasu na regularne spotkania. Pracuje zmianowo i nie zawsze wie, kiedy będzie wolna. Okazało się jednak, że każdy może pomagać wtedy, gdy ma czas. Mieszkańcy piszą na wspólnym czacie, czego potrzebują. Każdy odpowiada na te, które pasują do jego możliwości.\n\nMarta niedawno pomogła sąsiadowi zarezerwować wizytę przez internet. Kilka dni później sąsiad pokazał jej, jak naprawić zepsute krzesło. Marta zobaczyła, że ona i sąsiad potrafią robić różne rzeczy i mogą się od siebie uczyć. Ważniejsze jest to, że każdy może coś zaoferować, nawet jeśli nie ma dużo wolnego czasu.",
+  "questions": [
+    {
+      "id": "main-idea",
+      "skill": "main-idea",
+      "question": "Co pokazuje przykład Marty i jej sąsiada?",
+      "options": [
+        "Jak mieszkańcy prowadzą kurs naprawy mebli.",
+        "Jak mieszkańcy ustalają godziny zebrań.",
+        "Jak mieszkańcy pomagają sobie nawzajem."
+      ],
+      "answer": "Jak mieszkańcy pomagają sobie nawzajem.",
+      "evidence": "Kilka dni później sąsiad pokazał jej, jak naprawić zepsute krzesło.",
+      "explanation": "Najpierw pomogła Marta, a potem sąsiad podzielił się z nią swoją umiejętnością."
+    },
+    {
+      "id": "detail",
+      "skill": "detail",
+      "question": "W czym Marta pomogła sąsiadowi?",
+      "options": [
+        "W naprawie krzesła.",
+        "W rezerwacji wizyty przez internet.",
+        "W przygotowaniu tradycyjnego obiadu."
+      ],
+      "answer": "W rezerwacji wizyty przez internet.",
+      "evidence": "Marta niedawno pomogła sąsiadowi zarezerwować wizytę przez internet.",
+      "explanation": "To sąsiad pokazał Marcie, jak naprawić krzesło."
+    },
+    {
+      "id": "cause",
+      "skill": "cause",
+      "question": "Dlaczego Marta obawiała się regularnych spotkań?",
+      "options": [
+        "Prowadziła w tym czasie zajęcia z gotowania.",
+        "Pracowała na różne zmiany.",
+        "Musiała codziennie pomagać starszym sąsiadom."
+      ],
+      "answer": "Pracowała na różne zmiany.",
+      "evidence": "Pracuje zmianowo i nie zawsze wie, kiedy będzie wolna.",
+      "explanation": "Marta nie mogła z góry obiecać, że będzie wolna o stałej porze."
+    },
+    {
+      "id": "inference",
+      "skill": "inference",
+      "question": "Jan umie gotować i dopiero w sobotę rano będzie znał swój plan dnia. Jak może skorzystać z zasad grupy?",
+      "options": [
+        "Może pomóc tylko osobie, która już wcześniej coś dla niego ugotowała.",
+        "Gdy pozna plan, może odpowiedzieć komuś, kto chce nauczyć się gotować.",
+        "Przed sobotą musi znaleźć kogoś, kto go zastąpi przy gotowaniu."
+      ],
+      "answer": "Gdy pozna plan, może odpowiedzieć komuś, kto chce nauczyć się gotować.",
+      "evidence": "Każdy odpowiada na te, które pasują do jego możliwości.",
+      "explanation": "Jan może połączyć wolny czas ze swoją umiejętnością i wybrać odpowiednią prośbę."
+    },
+    {
+      "id": "vocabulary",
+      "skill": "vocabulary",
+      "question": "Co robią starsi mieszkańcy, kiedy „dzielą się doświadczeniem”?",
+      "options": [
+        "Ustalają, kto zajmie się kolejną prośbą.",
+        "Pytają innych, czego warto się nauczyć.",
+        "Pokazują innym to, czego sami się nauczyli."
+      ],
+      "answer": "Pokazują innym to, czego sami się nauczyli.",
+      "evidence": "uczą gotować tradycyjne potrawy i opowiadają o historii okolicy",
+      "explanation": "Starsi sąsiedzi przekazują swoją wiedzę."
+    }
+  ],
+  "publicationStatus": "practice"
+}

@@ -1,0 +1,76 @@
+{
+  "id": "pl-b1.reading.day-018",
+  "day": 18,
+  "level": "A1",
+  "genre": "wiadomość",
+  "title": "Zakupy na kolację",
+  "text": "Cześć, Piotrze! Wracam dziś później z pracy. Proszę, zrób małe zakupy na kolację. Potrzebujemy dwóch pomidorów, jednej cebuli, trzech jajek i czterech bułek. W lodówce jest już masło i ser, więc nie kupuj ich ponownie. Na stole leży lista zakupów.\n\nSklep przy domu jest czynny do ósmej wieczorem. Jeśli nie ma świeżych bułek, możesz kupić chleb. Chcę przygotować omlet z warzywami, a później zrobić kanapki na jutro. Nie potrzebujemy dużo jedzenia, ponieważ jutro idziemy na obiad do mojej mamy. Dziękuję za pomoc!\n\nAnia",
+  "questions": [
+    {
+      "id": "main-idea",
+      "skill": "main-idea",
+      "question": "Po co Ania pisze do Piotra?",
+      "options": [
+        "Zaprasza go dzisiaj na obiad do mamy.",
+        "Prosi go o zakupy na kolację.",
+        "Prosi go o zrobienie kanapek do pracy."
+      ],
+      "answer": "Prosi go o zakupy na kolację.",
+      "evidence": "Proszę, zrób małe zakupy na kolację.",
+      "explanation": "Wiadomość podaje produkty, które Piotr ma kupić."
+    },
+    {
+      "id": "detail",
+      "skill": "detail",
+      "question": "Ile jajek trzeba kupić?",
+      "options": [
+        "Dwa.",
+        "Cztery.",
+        "Trzy."
+      ],
+      "answer": "Trzy.",
+      "evidence": "trzech jajek",
+      "explanation": "Wśród produktów na liście są trzy jajka."
+    },
+    {
+      "id": "cause",
+      "skill": "cause",
+      "question": "Dlaczego nie trzeba kupować sera?",
+      "options": [
+        "Ser jest za drogi.",
+        "Piotr nie lubi sera.",
+        "Ser jest już w lodówce."
+      ],
+      "answer": "Ser jest już w lodówce.",
+      "evidence": "W lodówce jest już masło i ser",
+      "explanation": "Ania i Piotr mają już ser w domu."
+    },
+    {
+      "id": "inference",
+      "skill": "inference",
+      "question": "Piotr będzie przy sklepie o 20.15. Czy może wtedy zrobić zakupy w tym sklepie?",
+      "options": [
+        "Tak, sklep jest otwarty przez całą noc.",
+        "Tak, do zamknięcia ma jeszcze kwadrans.",
+        "Nie, sklep jest już zamknięty."
+      ],
+      "answer": "Nie, sklep jest już zamknięty.",
+      "evidence": "Sklep przy domu jest czynny do ósmej wieczorem.",
+      "explanation": "Ósma wieczorem to 20.00. Kwadrans później sklep jest zamknięty."
+    },
+    {
+      "id": "vocabulary",
+      "skill": "vocabulary",
+      "question": "Co oznacza „czynny” w zdaniu o sklepie?",
+      "options": [
+        "Klienci mogą wejść i zrobić zakupy.",
+        "Klienci czekają przed wejściem na otwarcie.",
+        "Klienci mogą odebrać tylko gotowe zamówienia."
+      ],
+      "answer": "Klienci mogą wejść i zrobić zakupy.",
+      "evidence": "Sklep przy domu jest czynny do ósmej wieczorem.",
+      "explanation": "Do tej godziny sklep jest otwarty dla klientów."
+    }
+  ],
+  "publicationStatus": "practice"
+}

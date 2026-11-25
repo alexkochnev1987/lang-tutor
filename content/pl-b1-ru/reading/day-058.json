@@ -1,0 +1,76 @@
+{
+  "id": "pl-b1.reading.day-058",
+  "day": 58,
+  "level": "A2",
+  "genre": "artykuł",
+  "title": "Zmiana godzin pracy",
+  "text": "W pewnej małej firmie pracownicy przez wiele lat zaczynali pracę o ósmej. Część z nich przyjeżdżała z małych miast i wsi w okolicy. Poranny pociąg przyjeżdżał za późno, a wcześniejszy pociąg oznaczał prawie godzinę czekania przed otwarciem biura. Pracownicy prosili więc szefa o zmianę godzin pracy.\n\nFirma przez miesiąc testowała nowy plan. Można było zaczynać między siódmą a dziewiątą, ale od dziesiątej do czternastej cały zespół musiał być w biurze. W tym czasie odbywały się spotkania z klientami. Nie zmieniła się liczba godzin pracy ani pensja. Osoby, które przychodziły później, także kończyły później.\n\nPo miesiącu szef zebrał opinie pracowników. Większość chciała zachować nowy plan. Niektórzy woleli jednak zaczynać o ósmej jak dawniej, ponieważ po pracy odbierali dzieci ze szkoły. Firma nie wprowadziła jednej nowej godziny dla wszystkich. Każdy mógł wybrać godzinę rozpoczęcia pracy między siódmą a dziewiątą i nie musiał zaczynać o tej samej godzinie każdego dnia. Dzięki temu pracownicy mogli lepiej planować dojazdy i sprawy rodzinne.",
+  "questions": [
+    {
+      "id": "main-idea",
+      "skill": "main-idea",
+      "question": "Co jest najważniejszą cechą nowego planu pracy?",
+      "options": [
+        "Wybór godziny rozpoczęcia pracy przy zachowaniu wspólnych godzin w biurze.",
+        "Krótszy dzień pracy bez zmiany pensji.",
+        "Wybór godzin spotkań z klientami przez każdego pracownika."
+      ],
+      "answer": "Wybór godziny rozpoczęcia pracy przy zachowaniu wspólnych godzin w biurze.",
+      "evidence": "Można było zaczynać między siódmą a dziewiątą, ale od dziesiątej do czternastej cały zespół musiał być w biurze. W tym czasie odbywały się spotkania z klientami. Nie zmieniła się liczba godzin pracy ani pensja.",
+      "explanation": "Elastyczny początek nie zmienia wspólnych obowiązków ani długości pracy."
+    },
+    {
+      "id": "detail",
+      "skill": "detail",
+      "question": "W jakich godzinach odbywały się spotkania z klientami?",
+      "options": [
+        "Między dziesiątą a czternastą.",
+        "Między siódmą a dziewiątą.",
+        "Między ósmą a dwunastą."
+      ],
+      "answer": "Między dziesiątą a czternastą.",
+      "evidence": "od dziesiątej do czternastej cały zespół musiał być w biurze. W tym czasie odbywały się spotkania z klientami.",
+      "explanation": "Spotkania zaplanowano w okresie wspólnej obecności."
+    },
+    {
+      "id": "cause",
+      "skill": "cause",
+      "question": "Dlaczego część pracowników chciała nadal zaczynać o ósmej?",
+      "options": [
+        "Po zmianie zarabiali mniej niż wcześniej.",
+        "Przed ósmą nie mogli dojechać do biura.",
+        "Po pracy mieli obowiązki związane z dziećmi."
+      ],
+      "answer": "Po pracy mieli obowiązki związane z dziećmi.",
+      "evidence": "Niektórzy woleli jednak zaczynać o ósmej jak dawniej, ponieważ po pracy odbierali dzieci ze szkoły.",
+      "explanation": "Wcześniejszy początek pozwalał im zachować dotychczasowy rytm rodzinny."
+    },
+    {
+      "id": "inference",
+      "skill": "inference",
+      "question": "Anna chce w poniedziałek przyjść o dziewiątej, a we wtorek o siódmej. Co wynika z opisanego planu?",
+      "options": [
+        "Może tak zrobić, jeśli we wtorek skończy o tej samej godzinie co w poniedziałek.",
+        "Może tak zrobić, jeśli przepracuje tyle samo godzin i będzie w biurze od dziesiątej do czternastej.",
+        "Musi wybrać jedną z tych godzin na cały tydzień, aby zachować pensję."
+      ],
+      "answer": "Może tak zrobić, jeśli przepracuje tyle samo godzin i będzie w biurze od dziesiątej do czternastej.",
+      "evidence": "Można było zaczynać między siódmą a dziewiątą, ale od dziesiątej do czternastej cały zespół musiał być w biurze. W tym czasie odbywały się spotkania z klientami. Nie zmieniła się liczba godzin pracy ani pensja. Osoby, które przychodziły później, także kończyły później.\n\nPo miesiącu szef zebrał opinie pracowników. Większość chciała zachować nowy plan. Niektórzy woleli jednak zaczynać o ósmej jak dawniej, ponieważ po pracy odbierali dzieci ze szkoły. Firma nie wprowadziła jednej nowej godziny dla wszystkich. Każdy mógł wybrać godzinę rozpoczęcia pracy między siódmą a dziewiątą i nie musiał zaczynać o tej samej godzinie każdego dnia.",
+      "explanation": "Obie godziny mieszczą się w dozwolonym przedziale. Początek dnia może się zmieniać, ale liczba godzin i obecność w biurze od dziesiątej do czternastej pozostają obowiązkowe."
+    },
+    {
+      "id": "vocabulary",
+      "skill": "vocabulary",
+      "question": "Co oznacza w artykule „zebrał opinie”?",
+      "options": [
+        "Dowiedział się, co pracownicy myślą o planie.",
+        "Sprawdził, z których nowych godzin pracownicy korzystali najczęściej.",
+        "Poprosił pracowników o ocenę pracy kolegów."
+      ],
+      "answer": "Dowiedział się, co pracownicy myślą o planie.",
+      "evidence": "Po miesiącu szef zebrał opinie pracowników. Większość chciała zachować nowy plan.",
+      "explanation": "Szef poznał zdanie osób, które korzystały z nowego planu."
+    }
+  ],
+  "publicationStatus": "practice"
+}

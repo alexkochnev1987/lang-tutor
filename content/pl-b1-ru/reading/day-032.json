@@ -1,0 +1,76 @@
+{
+  "id": "pl-b1.reading.day-032",
+  "day": 32,
+  "level": "A2",
+  "genre": "poradnik",
+  "title": "Walizka, której nie trzeba dźwigać",
+  "text": "Nawet na krótką podróż wiele osób zabiera zbyt dużo rzeczy. Najpierw warto sprawdzić pogodę tam, dokąd jedziemy i zapisać, co naprawdę będzie potrzebne. Jeśli jedziemy na trzy dni, nie musimy pakować ubrań na cały tydzień. Dobrze wybrać takie rzeczy, które pasują do siebie i nadają się na kilka różnych okazji.\n\nPrzed spakowaniem kosmetyków sprawdźmy, co zapewnia hotel. Ręczniki i mydło często czekają już w pokoju. W małej torbie podręcznej powinny znaleźć się dokumenty, telefon, ładowarka, woda i potrzebne leki. Dzięki temu nie trzeba otwierać dużej walizki za każdym razem, gdy chcemy wyjąć jedną rzecz.\n\nPo przygotowaniu bagażu warto go zważyć. Niektóre linie lotnicze mają różne limity zależnie od rodzaju biletu. Sprawdzenie zasad przed wyjazdem pomaga uniknąć dodatkowych kosztów na lotnisku. Ostatni krok to zostawienie odrobiny wolnego miejsca. Być może podczas podróży kupimy prezent lub pamiątkę, którą będziemy chcieli przywieźć do domu.",
+  "questions": [
+    {
+      "id": "main-idea",
+      "skill": "main-idea",
+      "question": "Jakiego pytania dotyczą wszystkie trzy części poradnika?",
+      "options": [
+        "Jak wybrać tani bilet lotniczy?",
+        "Jak spakować się na krótki wyjazd?",
+        "Jak znaleźć hotel z dobrym wyposażeniem?"
+      ],
+      "answer": "Jak spakować się na krótki wyjazd?",
+      "evidence": "Po przygotowaniu bagażu warto go zważyć.",
+      "explanation": "Pogoda, wyposażenie hotelu i zasady linii lotniczej pomagają zdecydować, co zabrać."
+    },
+    {
+      "id": "detail",
+      "skill": "detail",
+      "question": "Którą parę rzeczy autor radzi włożyć do małej torby?",
+      "options": [
+        "Mydło i ręcznik.",
+        "Ubrania i kosmetyki.",
+        "Dokumenty i ładowarkę."
+      ],
+      "answer": "Dokumenty i ładowarkę.",
+      "evidence": "dokumenty, telefon, ładowarka, woda i potrzebne leki",
+      "explanation": "Obie rzeczy są na liście przedmiotów do małej torby."
+    },
+    {
+      "id": "cause",
+      "skill": "cause",
+      "question": "Dlaczego przed lotem warto sprawdzić zasady przewozu bagażu?",
+      "options": [
+        "Żeby sprawdzić cenę przejazdu z lotniska do hotelu.",
+        "Żeby uniknąć dopłaty na lotnisku.",
+        "Żeby dowiedzieć się, ile kosztują zakupy na lotnisku."
+      ],
+      "answer": "Żeby uniknąć dopłaty na lotnisku.",
+      "evidence": "pomaga uniknąć dodatkowych kosztów na lotnisku",
+      "explanation": "Limit bagażu zależy od biletu, więc zbyt ciężka walizka może kosztować więcej."
+    },
+    {
+      "id": "inference",
+      "skill": "inference",
+      "question": "Ewa nie może zamknąć walizki. Hotel daje gościom ręczniki, a Ewa chce przywieźć prezent. Co najlepiej zrobić?",
+      "options": [
+        "Wyjąć własny ręcznik i zostawić wolne miejsce.",
+        "Wyjąć własny ręcznik i dołożyć drugi komplet ubrań.",
+        "Zostawić własny ręcznik i przełożyć prezent do walizki przed wyjazdem."
+      ],
+      "answer": "Wyjąć własny ręcznik i zostawić wolne miejsce.",
+      "evidence": "Ręczniki i mydło często czekają już w pokoju.",
+      "explanation": "Hotel zapewnia ręcznik, więc po wyjęciu własnego Ewa będzie mieć miejsce na prezent kupiony podczas podróży."
+    },
+    {
+      "id": "vocabulary",
+      "skill": "vocabulary",
+      "question": "Po czym poznać, że torba jest „podręczna” w tym tekście?",
+      "options": [
+        "Podróżny ma ją przy sobie i łatwo sięga do środka.",
+        "Podróżny wkłada ją do dużej walizki na czas lotu.",
+        "Podróżny zostawia ją na lotnisku do odbioru po powrocie."
+      ],
+      "answer": "Podróżny ma ją przy sobie i łatwo sięga do środka.",
+      "evidence": "Dzięki temu nie trzeba otwierać dużej walizki",
+      "explanation": "Torba podręczna pozwala mieć potrzebne rzeczy blisko siebie."
+    }
+  ],
+  "publicationStatus": "practice"
+}

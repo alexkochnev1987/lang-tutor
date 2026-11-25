@@ -1,0 +1,76 @@
+{
+  "id": "pl-b1.reading.day-057",
+  "day": 57,
+  "level": "A2",
+  "genre": "wiadomość",
+  "title": "Pierwszy dzień w nowym zespole",
+  "text": "Cześć, Doroto! Dzisiaj był mój pierwszy dzień w nowej pracy. W biurze nie znałem nikogo oprócz szefa, z którym rozmawiałem przed podpisaniem umowy. Rano jeden z pracowników pokazał mi moje miejsce i wyjaśnił, gdzie mogę znaleźć potrzebne dokumenty. Potem przy kawie poznałem innych pracowników.\n\nMiałem już zacząć pracę z klientem, ale szef powiedział, że przez pierwsze dwa dni nie będę rozmawiać z klientami sam. Jeśli zadzwoni klient, Marta poprowadzi rozmowę, a ja będę zapisywać informacje o zamówieniu. Mam pytać Martę, gdy nie wiem, gdzie coś zapisać. Marta dała mi też jedno małe zadanie na komputerze. Sprawdziła je razem ze mną przed obiadem, żebym nauczył się zapisywać zamówienia.\n\nNajbardziej zaskoczyła mnie atmosfera. Nikt nie myślał, że od razu będę wszystko wiedział. Kiedy czegoś nie rozumiałem, mogłem o to zapytać. Po południu dostałem plan na jutro i adres strony z materiałami do nauki. W środę mam już poprowadzić krótką rozmowę z klientem, a Marta będzie wtedy obok mnie. Chcę przygotować się do niej wieczorem. Pa, Daniel.",
+  "questions": [
+    {
+      "id": "main-idea",
+      "skill": "main-idea",
+      "question": "O czym przede wszystkim Daniel opowiada Dorocie?",
+      "options": [
+        "O tym, jak przygotowuje się do pierwszego zadania z klientem.",
+        "O tym, jak poznaje nową pracę i stopniowo otrzymuje obowiązki.",
+        "O tym, jak wygląda zwykły dzień zespołu po okresie nauki."
+      ],
+      "answer": "O tym, jak poznaje nową pracę i stopniowo otrzymuje obowiązki.",
+      "evidence": "Nikt nie myślał, że od razu będę wszystko wiedział. Kiedy czegoś nie rozumiałem, mogłem o to zapytać.",
+      "explanation": "Wiadomość opisuje poznanie współpracowników, naukę i pierwsze obowiązki."
+    },
+    {
+      "id": "detail",
+      "skill": "detail",
+      "question": "Co Daniel otrzymał po południu?",
+      "options": [
+        "Nową umowę i listę klientów.",
+        "Dokumenty o zamówieniach i zadanie na dziś.",
+        "Plan na kolejny dzień i adres strony z materiałami."
+      ],
+      "answer": "Plan na kolejny dzień i adres strony z materiałami.",
+      "evidence": "Po południu dostałem plan na jutro i adres strony z materiałami do nauki.",
+      "explanation": "Są to dwie rzeczy wymienione w ostatnim akapicie."
+    },
+    {
+      "id": "cause",
+      "skill": "cause",
+      "question": "Dlaczego Marta sprawdziła zadanie razem z Danielem?",
+      "options": [
+        "Marta chce nauczyć Daniela, jak zapisywać zamówienia.",
+        "Marta chce sprawdzić, czy Daniel umie znaleźć dokumenty.",
+        "Marta chce nauczyć Daniela, jak zaczynać rozmowę z klientem."
+      ],
+      "answer": "Marta chce nauczyć Daniela, jak zapisywać zamówienia.",
+      "evidence": "Marta dała mi też jedno małe zadanie na komputerze. Sprawdziła je razem ze mną przed obiadem, żebym nauczył się zapisywać zamówienia.",
+      "explanation": "Marta sprawdziła zadanie, aby Daniel nauczył się zapisywać zamówienia."
+    },
+    {
+      "id": "inference",
+      "skill": "inference",
+      "question": "Klient dzwoni do Daniela następnego dnia rano. Daniel nie wie, gdzie zapisać nowe zamówienie. Jak powinien postąpić zgodnie z planem?",
+      "options": [
+        "Samemu porozmawiać z klientem, a potem poprosić Martę o pomoc w zapisie.",
+        "Poprosić Martę, by poprowadziła rozmowę, i zapytać ją, gdzie zapisać zamówienie.",
+        "Poprosić klienta o telefon w środę, a Marcie przekazać tylko jego numer."
+      ],
+      "answer": "Poprosić Martę, by poprowadziła rozmowę, i zapytać ją, gdzie zapisać zamówienie.",
+      "evidence": "Miałem już zacząć pracę z klientem, ale szef powiedział, że przez pierwsze dwa dni nie będę rozmawiać z klientami sam. Jeśli zadzwoni klient, Marta poprowadzi rozmowę, a ja będę zapisywać informacje o zamówieniu. Mam pytać Martę, gdy nie wiem, gdzie coś zapisać.",
+      "explanation": "Przez pierwsze dwa dni Marta prowadzi rozmowy z klientami, a Daniel zapisuje informacje i pyta ją, gdy czegoś nie wie."
+    },
+    {
+      "id": "vocabulary",
+      "skill": "vocabulary",
+      "question": "Co znaczy tutaj „od razu”?",
+      "options": [
+        "Po kilku dniach ćwiczeń.",
+        "Jeszcze przed rozpoczęciem nowej pracy.",
+        "Natychmiast, bez czasu na przygotowanie."
+      ],
+      "answer": "Natychmiast, bez czasu na przygotowanie.",
+      "evidence": "Nikt nie myślał, że od razu będę wszystko wiedział.",
+      "explanation": "Współpracownicy nie oczekiwali pełnej wiedzy już pierwszego dnia."
+    }
+  ],
+  "publicationStatus": "practice"
+}
