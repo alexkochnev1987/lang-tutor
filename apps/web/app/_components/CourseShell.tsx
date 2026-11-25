@@ -4,7 +4,7 @@ import { TabBody } from './TabBody'
 
 export function CourseShell({ children, current }: {
   children: React.ReactNode
-  current: '/program' | '/progress'
+  current: '/program' | '/progress' | '/calendar'
 }) {
   return (
     <TabBody controls={<SectionNav section="course" current={current} />}>

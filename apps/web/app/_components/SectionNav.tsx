@@ -11,18 +11,19 @@ const sections = {
   course: [
     { href: '/program', label: 'plan' },
     { href: '/progress', label: 'progress' },
+    { href: '/calendar', label: 'calendar' },
   ],
 } as const
 
 type SectionNavProps =
   | { section: 'words'; current: '/words' | '/dictionary' }
-  | { section: 'course'; current: '/program' | '/progress' }
+  | { section: 'course'; current: '/program' | '/progress' | '/calendar' }
 
 export function SectionNav({ section, current }: SectionNavProps) {
   const t = useTranslations('nav')
 
   return (
-    <nav aria-label={t(section)} className="grid grid-cols-2 gap-1 rounded-card bg-soft p-1">
+    <nav aria-label={t(section)} className="grid grid-cols-3 gap-1 rounded-card bg-soft p-1">
       {sections[section].map(({ href, label }) => {
         const active = href === current
         return (
