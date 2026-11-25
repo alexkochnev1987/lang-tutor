@@ -1,0 +1,76 @@
+{
+  "id": "pl-b1.reading.day-172",
+  "day": 172,
+  "level": "B1",
+  "genre": "e-mail",
+  "title": "Wspólne planowanie projektu",
+  "text": "Cześć wszystkim!\n\nPo wczorajszym spotkaniu przygotowałam krótkie podsumowanie naszego planu dotyczącego nowej strony informacyjnej. Chcemy udostępnić pierwszą wersję pod koniec miesiąca, ale nie oznacza to, że do tego czasu musimy przygotować wszystkie pomysły zapisane podczas rozmowy.\n\nNajpierw skupimy się na trzech elementach: opisie usług, formularzu kontaktowym oraz podstawowych informacjach dla nowych klientów. Pozostałe propozycje umieścimy na osobnej liście. Jeżeli pierwsza wersja będzie gotowa wcześniej, zdecydujemy, które z nich warto dodać.\n\nMarek przygotuje teksty do środy. Julia zajmie się układem strony, ale potrzebuje wcześniej wiedzieć, jak długie będą główne opisy. Dlatego Marek nie musi kończyć wszystkich tekstów przed przekazaniem pierwszych szkiców. Wystarczy, jeśli w poniedziałek zapisze przewidywaną długość i strukturę każdej części.\n\nW piątek planujemy wspólny przegląd. Nie będzie to spotkanie służące jedynie do przekazania informacji o zakończonych zadaniach. Chcemy sprawdzić, czy elementy przygotowywane przez różne osoby pasują do siebie. Jeśli zauważymy problem, ustalimy, kto może podjąć decyzję i do kiedy trzeba ją podjąć.\n\nProszę również, żebyście zgłaszali przeszkody w trakcie tygodnia, zamiast czekać do piątku. Jeśli ktoś potrzebuje odpowiedzi od innej osoby, warto zapisać to w dokumencie obok zadania. Nie wszystkie pytania wymagają wspólnego spotkania.\n\nW przyszłym tygodniu sprawdzimy plan ponownie. Termin końcowy pozostaje ważny, ale zakres pierwszej wersji powinien odpowiadać temu, co rzeczywiście uda się przygotować i sprawdzić. Nie chcę, żebyśmy dodawali kolejne funkcje kosztem działania tych, które już uzgodniliśmy.\n\nPozdrawiam,\nPaulina",
+  "questions": [
+    {
+      "id": "main-idea",
+      "skill": "main-idea",
+      "question": "Jaki jest cel przedstawionego planu?",
+      "options": [
+        "Przekazanie wszystkich decyzji jednej osobie dopiero w piątek.",
+        "Ukończenie uzgodnionej pierwszej wersji z uwzględnieniem zależności między zadaniami.",
+        "Wprowadzenie wszystkich pomysłów przed końcem miesiąca niezależnie od czasu."
+      ],
+      "answer": "Ukończenie uzgodnionej pierwszej wersji z uwzględnieniem zależności między zadaniami.",
+      "evidence": "Nie chcę, żebyśmy dodawali kolejne funkcje kosztem działania tych, które już uzgodniliśmy.",
+      "explanation": "Plan ogranicza zakres i koordynuje pracę."
+    },
+    {
+      "id": "detail",
+      "skill": "detail",
+      "question": "Kiedy Marek ma przekazać strukturę opisów?",
+      "options": [
+        "W poniedziałek.",
+        "W środę po ukończeniu wszystkich tekstów.",
+        "Dopiero pod koniec miesiąca."
+      ],
+      "answer": "W poniedziałek.",
+      "evidence": "w poniedziałek zapisze przewidywaną długość i strukturę każdej części.",
+      "explanation": "Wstępne informacje mają pojawić się przed gotowymi tekstami."
+    },
+    {
+      "id": "cause",
+      "skill": "cause",
+      "question": "Dlaczego potrzebne są pierwsze szkice przed zakończeniem tekstów?",
+      "options": [
+        "Zespół chce zrezygnować z opisu usług.",
+        "Marek nie będzie uczestniczył w piątkowym spotkaniu.",
+        "Julia potrzebuje informacji o ich długości do przygotowania układu strony."
+      ],
+      "answer": "Julia potrzebuje informacji o ich długości do przygotowania układu strony.",
+      "evidence": "Julia zajmie się układem strony, ale potrzebuje wcześniej wiedzieć, jak długie będą główne opisy.",
+      "explanation": "Zadania Marka i Julii są od siebie zależne."
+    },
+    {
+      "id": "inference",
+      "skill": "inference",
+      "question": "W czwartek Julia zauważa, że brakuje jej informacji potrzebnej do dalszej pracy. Co powinna zrobić zgodnie z ustaleniami?",
+      "options": [
+        "Poczekać do końca miesiąca bez informowania zespołu.",
+        "Dodać nową funkcję, aby zastąpić brakujące informacje.",
+        "Zapisać potrzebną odpowiedź przy zadaniu i zgłosić przeszkodę przed piątkowym spotkaniem."
+      ],
+      "answer": "Zapisać potrzebną odpowiedź przy zadaniu i zgłosić przeszkodę przed piątkowym spotkaniem.",
+      "evidence": "Proszę również, żebyście zgłaszali przeszkody w trakcie tygodnia, zamiast czekać do piątku.",
+      "explanation": "Wczesna komunikacja pozwala uniknąć blokowania pracy."
+    },
+    {
+      "id": "vocabulary",
+      "skill": "vocabulary",
+      "question": "Co oznacza „zakres pierwszej wersji”?",
+      "options": [
+        "Okres między poniedziałkiem a piątkiem.",
+        "Zestaw elementów, które mają się znaleźć w pierwszym wydaniu strony.",
+        "Liczbę osób obecnych na każdym spotkaniu."
+      ],
+      "answer": "Zestaw elementów, które mają się znaleźć w pierwszym wydaniu strony.",
+      "evidence": "zakres pierwszej wersji powinien odpowiadać temu, co rzeczywiście uda się przygotować i sprawdzić.",
+      "explanation": "Zakres określa zawartość wydania."
+    }
+  ],
+  "publicationStatus": "practice"
+}

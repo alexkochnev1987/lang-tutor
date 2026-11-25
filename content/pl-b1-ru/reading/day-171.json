@@ -1,0 +1,76 @@
+{
+  "id": "pl-b1.reading.day-171",
+  "day": 171,
+  "level": "B1",
+  "genre": "dialog",
+  "title": "Zmiana zawodu w dorosłym wieku",
+  "text": "— Coraz częściej myślę o zmianie zawodu — powiedziała Beata podczas spotkania z dawną koleżanką. — Przez wiele lat pracowałam w sklepie. Lubię kontakt z ludźmi, ale chciałabym zajmować się także organizowaniem wydarzeń.\n\n— Czy rozmawiałaś już z kimś, kto wykonuje taką pracę? — zapytała Kamila. — Z zewnątrz często widzimy tylko gotowe wydarzenie, a nie wszystkie czynności potrzebne do jego przygotowania.\n\nBeata przyznała, że oglądała ogłoszenia o kursach, ale nie wiedziała, który wybrać. Kamila zaproponowała kontakt z organizatorką lokalnego festiwalu. Kilka dni później Beata spotkała się z nią na kawie. Dowiedziała się, że duża część pracy polega na uzgadnianiu terminów, przygotowywaniu informacji oraz reagowaniu na zmiany w planie.\n\nOrganizatorka zaproponowała Beacie pomoc przy jednym niewielkim wydarzeniu. Beata miała przygotować listę potrzebnych materiałów i sprawdzić, czy wszystkie osoby otrzymały informacje organizacyjne. Nie odpowiadała jeszcze za całość programu.\n\n— Chciałabym spróbować, ale nie mogę zrezygnować z obecnej pracy przed sprawdzeniem, czy nowy zawód mi odpowiada — powiedziała Beata.\n\nUzgodniły więc zadanie, które można było wykonać w dwa wolne popołudnia. Po wydarzeniu organizatorka omówiła z Beatą rezultaty. Zwróciła uwagę, że doświadczenie ze sklepu przydało się w rozmowach z uczestnikami, ale Beata potrzebuje więcej praktyki w planowaniu terminów kilku osób.\n\nBeata nie zapisała się od razu na najdroższy kurs. Wybrała krótkie szkolenie dotyczące właśnie organizacji pracy. Jej decyzja o zmianie zawodu nadal nie była ostateczna, lecz po praktycznym doświadczeniu potrafiła lepiej określić, czego chce się nauczyć i które dotychczasowe umiejętności może wykorzystać.",
+  "questions": [
+    {
+      "id": "main-idea",
+      "skill": "main-idea",
+      "question": "Jak Beata przygotowuje się do możliwej zmiany zawodu?",
+      "options": [
+        "Rezygnuje natychmiast z pracy, zanim pozna nowe obowiązki.",
+        "Zapisuje się na długi kurs bez sprawdzania swoich potrzeb.",
+        "Poznaje rzeczywistą pracę w małym projekcie i na tej podstawie wybiera dalszą naukę."
+      ],
+      "answer": "Poznaje rzeczywistą pracę w małym projekcie i na tej podstawie wybiera dalszą naukę.",
+      "evidence": "po praktycznym doświadczeniu potrafiła lepiej określić, czego chce się nauczyć",
+      "explanation": "Beata sprawdza nowe obowiązki i wykorzystuje wcześniejsze doświadczenie."
+    },
+    {
+      "id": "detail",
+      "skill": "detail",
+      "question": "Za co odpowiadała podczas próbnego wydarzenia?",
+      "options": [
+        "Za wybór wszystkich nowych pracowników.",
+        "Za listę materiałów i sprawdzenie przekazania informacji.",
+        "Za cały program festiwalu i budżet."
+      ],
+      "answer": "Za listę materiałów i sprawdzenie przekazania informacji.",
+      "evidence": "Beata miała przygotować listę potrzebnych materiałów i sprawdzić, czy wszystkie osoby otrzymały informacje organizacyjne.",
+      "explanation": "Otrzymała ograniczony zakres zadań."
+    },
+    {
+      "id": "cause",
+      "skill": "cause",
+      "question": "Dlaczego wybrała krótkie szkolenie dotyczące organizacji pracy?",
+      "options": [
+        "Praktyka ujawniła trudności w planowaniu terminów kilku osób.",
+        "Nie chciała już utrzymywać kontaktu z ludźmi.",
+        "Organizatorka wymagała zmiany zawodu przed kolejnym wydarzeniem."
+      ],
+      "answer": "Praktyka ujawniła trudności w planowaniu terminów kilku osób.",
+      "evidence": "Beata potrzebuje więcej praktyki w planowaniu terminów kilku osób.",
+      "explanation": "Szkolenie odpowiada konkretnej luce w umiejętnościach."
+    },
+    {
+      "id": "inference",
+      "skill": "inference",
+      "question": "Beata dobrze radzi sobie z uczestnikami, ale nie wie, czy odpowiada jej praca pod presją zmieniających się terminów. Co pasuje do jej podejścia?",
+      "options": [
+        "Wypróbować kolejne ograniczone zadanie związane z planowaniem, zanim podejmie ostateczną decyzję.",
+        "Odrzucić całe dotychczasowe doświadczenie zawodowe.",
+        "Uznać pozytywną rozmowę z uczestnikami za dowód gotowości do wszystkich obowiązków."
+      ],
+      "answer": "Wypróbować kolejne ograniczone zadanie związane z planowaniem, zanim podejmie ostateczną decyzję.",
+      "evidence": "nie mogę zrezygnować z obecnej pracy przed sprawdzeniem, czy nowy zawód mi odpowiada",
+      "explanation": "Praktyka ma pomóc ocenić również mniej znane części nowej pracy."
+    },
+    {
+      "id": "vocabulary",
+      "skill": "vocabulary",
+      "question": "Co znaczy „nie odpowiadała jeszcze za całość programu”?",
+      "options": [
+        "Nie uczestniczyła jeszcze w żadnym etapie wydarzenia.",
+        "Nie była jeszcze odpowiedzialna za wszystkie części wydarzenia.",
+        "Miała już kierować całym wydarzeniem samodzielnie."
+      ],
+      "answer": "Nie była jeszcze odpowiedzialna za wszystkie części wydarzenia.",
+      "evidence": "Nie odpowiadała jeszcze za całość programu.",
+      "explanation": "Jej obowiązki obejmowały tylko wybrane zadania, a nie całe wydarzenie."
+    }
+  ],
+  "publicationStatus": "practice"
+}

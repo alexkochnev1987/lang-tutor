@@ -1,0 +1,76 @@
+{
+  "id": "pl-b1.reading.day-173",
+  "day": 173,
+  "level": "B1",
+  "genre": "ogłoszenie",
+  "title": "Rozwiązywanie konfliktów w zespole",
+  "text": "Dział szkoleniowy zaprasza pracowników na warsztat poświęcony rozmowom w sytuacjach, w których członkowie zespołu inaczej rozumieją zadanie lub mają sprzeczne oczekiwania. Spotkanie nie będzie poświęcone ocenie konkretnych pracowników. Chcemy przećwiczyć sposoby wyjaśniania trudności, zanim staną się one powodem dalszych nieporozumień.\n\nNa początku uczestnicy otrzymają krótki opis fikcyjnej sytuacji. Dwie osoby pracują nad wspólnym zadaniem, ale każda inaczej rozumie termin jego ukończenia. W parach spróbujemy oddzielić informacje, które zostały rzeczywiście przekazane, od przypuszczeń dotyczących intencji drugiej osoby.\n\nW drugiej części prowadząca przedstawi przykłady pytań, które pomagają wyjaśnić rozbieżności. Uczestnicy przygotują również krótkie podsumowanie uzgodnionych działań. Nie chodzi o znalezienie jednego zdania odpowiedniego do każdej rozmowy. Ważne będzie dostosowanie pytań do konkretnej sytuacji.\n\nPodczas warsztatu nie wymagamy omawiania osobistych konfliktów z pracy. Jeśli ktoś chce podać własny przykład, powinien opisać problem bez ujawniania danych innych osób. Sprawy wymagające indywidualnego wyjaśnienia nie będą rozstrzygane publicznie podczas szkolenia.\n\nSpotkanie odbędzie się w czwartek od dziesiątej do dwunastej. Osoby, które nie mogą uczestniczyć przez cały ten czas, prosimy o wybranie późniejszego terminu. Większość ćwiczeń składa się z kilku powiązanych etapów, dlatego dołączenie dopiero w połowie utrudnia pracę pozostałym uczestnikom.\n\nPo warsztacie prześlemy krótką listę pytań pomocnych podczas podobnych rozmów. Osoby zainteresowane mogą również zgłosić temat kolejnego szkolenia. Nie oczekujemy, że jedno spotkanie rozwiąże wszystkie konflikty. Ma ono dostarczyć narzędzi, które można wykorzystać przy ustalaniu dalszego sposobu współpracy.",
+  "questions": [
+    {
+      "id": "main-idea",
+      "skill": "main-idea",
+      "question": "Jaki jest cel szkolenia?",
+      "options": [
+        "Ćwiczenie sposobów wyjaśniania rozbieżności i uzgadniania dalszych działań.",
+        "Publiczne rozstrzyganie wszystkich rzeczywistych konfliktów pracowników.",
+        "Ocena osobowości poszczególnych członków zespołu."
+      ],
+      "answer": "Ćwiczenie sposobów wyjaśniania rozbieżności i uzgadniania dalszych działań.",
+      "evidence": "Ma ono dostarczyć narzędzi, które można wykorzystać przy ustalaniu dalszego sposobu współpracy.",
+      "explanation": "Warsztat uczy komunikacji na przykładach."
+    },
+    {
+      "id": "detail",
+      "skill": "detail",
+      "question": "Ile trwa czwartkowe spotkanie?",
+      "options": [
+        "Trzy godziny.",
+        "Jedną godzinę.",
+        "Dwie godziny."
+      ],
+      "answer": "Dwie godziny.",
+      "evidence": "Spotkanie odbędzie się w czwartek od dziesiątej do dwunastej.",
+      "explanation": "Od 10:00 do 12:00 mijają dwie godziny."
+    },
+    {
+      "id": "cause",
+      "skill": "cause",
+      "question": "Dlaczego organizatorzy proszą o uczestnictwo od początku do końca?",
+      "options": [
+        "Wszystkie osobiste konflikty są rozstrzygane dopiero na końcu.",
+        "Ćwiczenia składają się z powiązanych etapów pracy grupowej.",
+        "Osoby przychodzące później muszą ponownie się rejestrować."
+      ],
+      "answer": "Ćwiczenia składają się z powiązanych etapów pracy grupowej.",
+      "evidence": "Większość ćwiczeń składa się z kilku powiązanych etapów, dlatego dołączenie dopiero w połowie utrudnia pracę pozostałym uczestnikom.",
+      "explanation": "Obecność podczas wszystkich etapów jest potrzebna do współpracy."
+    },
+    {
+      "id": "inference",
+      "skill": "inference",
+      "question": "Pracownik chce omówić konkretny konflikt z nazwiskami współpracowników, ale w czwartek może zostać tylko godzinę. Jak powinien skorzystać z oferty?",
+      "options": [
+        "Wybrać pełny późniejszy termin i nie ujawniać danych osób w przykładzie szkoleniowym.",
+        "Wysłać opis konfliktu wszystkim uczestnikom przed spotkaniem.",
+        "Przyjść na drugą godzinę i publicznie przedstawić wszystkie nazwiska."
+      ],
+      "answer": "Wybrać pełny późniejszy termin i nie ujawniać danych osób w przykładzie szkoleniowym.",
+      "evidence": "Podczas warsztatu nie wymagamy omawiania osobistych konfliktów z pracy. Jeśli ktoś chce podać własny przykład, powinien opisać problem bez ujawniania danych innych osób. Sprawy wymagające indywidualnego wyjaśnienia nie będą rozstrzygane publicznie podczas szkolenia.\n\nSpotkanie odbędzie się w czwartek od dziesiątej do dwunastej. Osoby, które nie mogą uczestniczyć przez cały ten czas, prosimy o wybranie późniejszego terminu. Większość ćwiczeń składa się z kilku powiązanych etapów, dlatego dołączenie dopiero w połowie utrudnia pracę pozostałym uczestnikom.",
+      "explanation": "Wymagane są pełny udział i poszanowanie prywatności."
+    },
+    {
+      "id": "vocabulary",
+      "skill": "vocabulary",
+      "question": "Co oznacza „rozbieżność”?",
+      "options": [
+        "Ostateczne porozumienie wszystkich uczestników.",
+        "Listę zadań wykonanych po szkoleniu.",
+        "Różnicę między sposobami rozumienia sprawy lub oczekiwaniami."
+      ],
+      "answer": "Różnicę między sposobami rozumienia sprawy lub oczekiwaniami.",
+      "evidence": "przykłady pytań, które pomagają wyjaśnić rozbieżności.",
+      "explanation": "Rozbieżność jest różnicą wymagającą wyjaśnienia."
+    }
+  ],
+  "publicationStatus": "practice"
+}

@@ -1,0 +1,76 @@
+{
+  "id": "pl-b1.reading.day-170",
+  "day": 170,
+  "level": "B1",
+  "genre": "artykuł",
+  "title": "Dwa modele organizacji pracy",
+  "text": "W dwóch zespołach tej samej firmy postanowiono inaczej zorganizować współpracę. Pierwszy zespół wybrał stałe godziny wspólnej pracy. Od dziesiątej do czternastej wszyscy pracownicy mieli być dostępni na rozmowy i szybkie konsultacje. Pozostały czas mogli ustalać samodzielnie, w granicach uzgodnionych obowiązków.\n\nDrugi zespół ograniczył liczbę wspólnych godzin. Pracownicy przekazywali sobie informacje głównie w dokumentach i krótkich wiadomościach. Raz w tygodniu spotykali się, aby omówić problemy, których nie dało się łatwo rozwiązać na piśmie. Kierownik prosił, żeby w wiadomości zawsze wskazywać, czy potrzebna jest odpowiedź i do kiedy.\n\nPo miesiącu zebrano opinie. W pierwszym zespole łatwiej było zadawać krótkie pytania, ale niektórym osobom trudno było znaleźć dłuższy czas na skupienie. W drugim pracownicy doceniali swobodę, jednak czasem zadanie czekało kilka godzin na odpowiedź, ponieważ nie było jasne, kto powinien ją przygotować.\n\nZespoły nie postanowiły wymienić się całymi systemami. Pierwszy ograniczył liczbę spotkań do tych, które wymagały rzeczywistej rozmowy. Drugi wyznaczył osoby odpowiedzialne za odpowiadanie na określone rodzaje pytań i wprowadził krótkie wspólne okno na pilne konsultacje.\n\nPo kolejnych tygodniach oba zespoły zauważyły poprawę w wybranych obszarach. Nie oznaczało to jednak, że jeden model stał się odpowiedni dla każdego rodzaju pracy. W zadaniach wymagających wielu szybkich uzgodnień wspólna dostępność może mieć większe znaczenie. Przy pracy, którą można wykonywać samodzielnie, ważniejsze bywają jasne informacje i możliwość skupienia. Porównanie pomogło zespołom zrozumieć, które trudności wynikają z samej organizacji, a nie z umiejętności poszczególnych pracowników.",
+  "questions": [
+    {
+      "id": "main-idea",
+      "skill": "main-idea",
+      "question": "Co wynika z porównania zespołów?",
+      "options": [
+        "Komunikacja pisemna całkowicie usuwa potrzebę konsultacji.",
+        "Każdy model ma zalety i ograniczenia zależne od charakteru zadań.",
+        "Wspólne godziny zawsze zmniejszają skuteczność pracy."
+      ],
+      "answer": "Każdy model ma zalety i ograniczenia zależne od charakteru zadań.",
+      "evidence": "Nie oznaczało to jednak, że jeden model stał się odpowiedni dla każdego rodzaju pracy.",
+      "explanation": "Modele dostosowano do konkretnych problemów."
+    },
+    {
+      "id": "detail",
+      "skill": "detail",
+      "question": "W jakich godzinach pierwszy zespół miał wspólną dostępność?",
+      "options": [
+        "Od ósmej do dwunastej.",
+        "Od czternastej do osiemnastej.",
+        "Od dziesiątej do czternastej."
+      ],
+      "answer": "Od dziesiątej do czternastej.",
+      "evidence": "Od dziesiątej do czternastej wszyscy pracownicy mieli być dostępni",
+      "explanation": "To czterogodzinne okno współpracy."
+    },
+    {
+      "id": "cause",
+      "skill": "cause",
+      "question": "Dlaczego w drugim zespole zadania czasami czekały na odpowiedź?",
+      "options": [
+        "Nie było jasne, kto odpowiada za przygotowanie odpowiedzi.",
+        "Kierownik zabronił wysyłania krótkich wiadomości.",
+        "Wszyscy pracownicy musieli w tym czasie uczestniczyć w spotkaniu."
+      ],
+      "answer": "Nie było jasne, kto odpowiada za przygotowanie odpowiedzi.",
+      "evidence": "nie było jasne, kto powinien ją przygotować.",
+      "explanation": "Problem dotyczył odpowiedzialności, nie samej formy pisemnej."
+    },
+    {
+      "id": "inference",
+      "skill": "inference",
+      "question": "Nowe zadanie wymaga wielu szybkich decyzji kilku osób. Jakie rozwiązanie można wybrać na podstawie doświadczeń zespołów?",
+      "options": [
+        "Całkowicie zabronić rozmów, nawet jeśli decyzje zależą od kilku osób.",
+        "Ustalić wspólny czas na potrzebne konsultacje, pozostawiając pozostałą pracę elastyczną.",
+        "Zastąpić wszystkie samodzielne zadania całodniowymi spotkaniami."
+      ],
+      "answer": "Ustalić wspólny czas na potrzebne konsultacje, pozostawiając pozostałą pracę elastyczną.",
+      "evidence": "W zadaniach wymagających wielu szybkich uzgodnień wspólna dostępność może mieć większe znaczenie.",
+      "explanation": "Wspólny czas można dopasować do zależności między zadaniami."
+    },
+    {
+      "id": "vocabulary",
+      "skill": "vocabulary",
+      "question": "Co oznacza „okno na pilne konsultacje”?",
+      "options": [
+        "Termin zakończenia całego projektu.",
+        "Program służący do pisania dokumentów.",
+        "Wyznaczony przedział czasu na rozmowy o pilnych sprawach."
+      ],
+      "answer": "Wyznaczony przedział czasu na rozmowy o pilnych sprawach.",
+      "evidence": "wprowadził krótkie wspólne okno na pilne konsultacje.",
+      "explanation": "Okno oznacza w tym kontekście przedział czasowy."
+    }
+  ],
+  "publicationStatus": "practice"
+}

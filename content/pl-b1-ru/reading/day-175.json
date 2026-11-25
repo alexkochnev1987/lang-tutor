@@ -1,0 +1,76 @@
+{
+  "id": "pl-b1.reading.day-175",
+  "day": 175,
+  "level": "B1",
+  "genre": "poradnik",
+  "title": "Wybór miejsca pracy",
+  "text": "Przy porównywaniu ofert pracy wiele osób patrzy przede wszystkim na wysokość wynagrodzenia. Jest to ważna informacja, ale warto również zrozumieć, jak będzie wyglądał zwykły tydzień na danym stanowisku. Nawet atrakcyjna oferta może nie odpowiadać osobie, której zależy na innym rodzaju obowiązków lub sposobie współpracy.\n\nZanim podejmiesz decyzję, zapisz kilka warunków, które mają dla ciebie największe znaczenie. Mogą dotyczyć godzin pracy, dojazdów, możliwości zdobywania doświadczenia czy zakresu samodzielności. Oddziel warunki konieczne od tych, które są jedynie dodatkową zaletą. Dzięki temu łatwiej będzie porównać oferty, które różnią się pod wieloma względami.\n\nW przykładowej sytuacji Lena otrzymała dwie propozycje. Pierwsza oferowała wyższe wynagrodzenie i pracę przy znanym już rodzaju projektów. Druga przewidywała niższą kwotę, ale możliwość nauczenia się nowych zadań pod opieką doświadczonej osoby. Lena nie uznała od razu, że druga propozycja zapewni lepszy rozwój. Zapytała, jak dokładnie wygląda wsparcie i ile czasu przewidziano na naukę.\n\nSprawdziła również całkowity czas dojazdu. W pierwszym przypadku musiałaby częściej pojawiać się w biurze, a w drugim niektóre spotkania odbywałyby się zdalnie. Obie oferty porównała z własnym budżetem i zobowiązaniami poza pracą.\n\nNie wszystkie warunki można łatwo zamienić na jedną liczbę. Jeśli dwie propozycje wydają się podobnie atrakcyjne, warto wrócić do najważniejszych potrzeb i zapytać o kwestie, które nadal są niejasne. Dobrze przygotowana decyzja nie oznacza pewności, że każde przyszłe doświadczenie będzie pozytywne. Pozwala jednak wybrać ofertę na podstawie sprawdzonych informacji, a nie wyłącznie pierwszego wrażenia.",
+  "questions": [
+    {
+      "id": "main-idea",
+      "skill": "main-idea",
+      "question": "Co zaleca poradnik przy wyborze pracy?",
+      "options": [
+        "Wybrać zawsze najwyższą kwotę bez analizowania obowiązków.",
+        "Porównać oferty według własnych priorytetów i wyjaśnić niejasne warunki.",
+        "Zdecydować wyłącznie na podstawie liczby dni pracy zdalnej."
+      ],
+      "answer": "Porównać oferty według własnych priorytetów i wyjaśnić niejasne warunki.",
+      "evidence": "Pozwala jednak wybrać ofertę na podstawie sprawdzonych informacji, a nie wyłącznie pierwszego wrażenia.",
+      "explanation": "Wybór uwzględnia finansowe i pozafinansowe warunki."
+    },
+    {
+      "id": "detail",
+      "skill": "detail",
+      "question": "Co oferowała druga firma Lenie?",
+      "options": [
+        "Niższe wynagrodzenie i możliwość nauki pod opieką doświadczonej osoby.",
+        "Pracę bez żadnych spotkań i wsparcia.",
+        "Wyższe wynagrodzenie przy wyłącznie znanych zadaniach."
+      ],
+      "answer": "Niższe wynagrodzenie i możliwość nauki pod opieką doświadczonej osoby.",
+      "evidence": "Druga przewidywała niższą kwotę, ale możliwość nauczenia się nowych zadań pod opieką doświadczonej osoby.",
+      "explanation": "Druga oferta różniła się możliwością zdobycia doświadczenia."
+    },
+    {
+      "id": "cause",
+      "skill": "cause",
+      "question": "Dlaczego Lena dopytała o wsparcie?",
+      "options": [
+        "Nie wiedziała, czy praca wymaga dojazdu.",
+        "Chciała od razu odrzucić możliwość rozwoju.",
+        "Chciała sprawdzić, czy obiecana nauka ma konkretną formę."
+      ],
+      "answer": "Chciała sprawdzić, czy obiecana nauka ma konkretną formę.",
+      "evidence": "Zapytała, jak dokładnie wygląda wsparcie i ile czasu przewidziano na naukę.",
+      "explanation": "Sama deklaracja możliwości rozwoju nie wystarczała."
+    },
+    {
+      "id": "inference",
+      "skill": "inference",
+      "question": "Osoba musi pracować w określonych godzinach z powodu innych zobowiązań, ale oferta nie podaje grafiku. Co powinna zrobić przed akceptacją?",
+      "options": [
+        "Sprawdzić zgodność grafiku z koniecznym warunkiem, nawet jeśli wynagrodzenie jest atrakcyjne.",
+        "Potraktować grafik jako nieistotną zaletę niezależnie od zobowiązań.",
+        "Założyć, że każda firma pozwala dowolnie wybierać godziny."
+      ],
+      "answer": "Sprawdzić zgodność grafiku z koniecznym warunkiem, nawet jeśli wynagrodzenie jest atrakcyjne.",
+      "evidence": "Oddziel warunki konieczne od tych, które są jedynie dodatkową zaletą.",
+      "explanation": "Konieczny warunek należy zweryfikować przed decyzją."
+    },
+    {
+      "id": "vocabulary",
+      "skill": "vocabulary",
+      "question": "Co oznaczają „zobowiązania poza pracą”?",
+      "options": [
+        "Wyłącznie dodatkowe zadania zlecone przez kierownika.",
+        "Obowiązki, które trzeba uwzględniać w życiu prywatnym.",
+        "Kwoty zapisane w ofercie pracy."
+      ],
+      "answer": "Obowiązki, które trzeba uwzględniać w życiu prywatnym.",
+      "evidence": "Obie oferty porównała z własnym budżetem i zobowiązaniami poza pracą.",
+      "explanation": "To inne obowiązki wpływające na dostępność."
+    }
+  ],
+  "publicationStatus": "practice"
+}
