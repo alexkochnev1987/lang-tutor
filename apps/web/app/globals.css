@@ -189,3 +189,10 @@ body:has(.word-practice-screen) {
 .app-tab-frame:has(.app-tab-content > .word-practice-screen) > :is(.app-tab-heading, nav) {
   display: none;
 }
+
+/* Keep the footer's layout footprint but do not reveal a newly available action
+   above a closing mobile keyboard. The practice screen owns viewport state. */
+.word-practice-screen[data-keyboard-occluded] > .word-practice-footer {
+  visibility: hidden;
+  pointer-events: none;
+}
