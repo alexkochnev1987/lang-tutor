@@ -1,0 +1,76 @@
+{
+  "id": "pl-b1.reading.day-158",
+  "day": 158,
+  "level": "B1",
+  "genre": "e-mail",
+  "title": "Organizacja wizyty kontrolnej",
+  "text": "Dzień dobry,\n\npiszę w sprawie wizyty kontrolnej, którą podczas ostatniego spotkania zaplanowaliśmy na początek przyszłego miesiąca. W recepcji otrzymałam dwa możliwe terminy: wtorek o dziewiątej oraz czwartek o piętnastej. Ponieważ w środę mam zaplanowany wyjazd służbowy, wolałabym przyjść we wtorek, o ile wizyta nadal jest dostępna.\n\nChciałabym także upewnić się, jakie dokumenty mam przygotować. Podczas poprzedniej wizyty lekarz prosił, żebym przyniosła zapisane informacje dotyczące okresu między spotkaniami. Mam krótkie notatki, ale nie wiem, czy powinnam przesłać je wcześniej, czy wystarczy pokazać je podczas rozmowy. Nie zamierzam przesyłać danych zdrowotnych na adres, który służy wyłącznie do rezerwacji terminów.\n\nW wiadomości z przychodni znajduje się informacja, że gabinet będzie w innym budynku niż poprzednio. Sprawdziłam adres, lecz nie znalazłam numeru wejścia. Czy mogliby Państwo potwierdzić, gdzie znajduje się recepcja dla pacjentów umówionych na wizyty kontrolne? Chciałabym uniknąć sytuacji, w której szukam właściwego miejsca już po rozpoczęciu wizyty.\n\nJeżeli wtorkowy termin został zajęty, proszę o informację o innych możliwościach w kolejnym tygodniu. W czwartek wrócę z wyjazdu dopiero wieczorem, więc podana godzina nie będzie dla mnie odpowiednia. Mogę natomiast przyjść w następny poniedziałek po południu.\n\nDziękuję za pomoc. Zależy mi przede wszystkim na potwierdzeniu terminu oraz sposobu przygotowania się do spotkania. Po otrzymaniu odpowiedzi zapiszę ustalenia w kalendarzu, żeby nie pomylić daty i adresu. Pytania dotyczące samego leczenia pozostawię do rozmowy z lekarzem.\n\nZ poważaniem,\nAlicja K.",
+  "questions": [
+    {
+      "id": "main-idea",
+      "skill": "main-idea",
+      "question": "Jaki jest główny cel e-maila?",
+      "options": [
+        "Odwołanie wszystkich kolejnych wizyt bez ustalania nowego terminu.",
+        "Uzyskanie przez e-mail szczegółowej porady dotyczącej leczenia.",
+        "Potwierdzenie terminu kontroli i potrzebnych informacji organizacyjnych."
+      ],
+      "answer": "Potwierdzenie terminu kontroli i potrzebnych informacji organizacyjnych.",
+      "evidence": "Zależy mi przede wszystkim na potwierdzeniu terminu oraz sposobu przygotowania się do spotkania.",
+      "explanation": "Alicja chce ustalić termin, dokumenty i miejsce wizyty."
+    },
+    {
+      "id": "detail",
+      "skill": "detail",
+      "question": "Który z podanych terminów Alicja preferuje?",
+      "options": [
+        "Wtorek o dziewiątej.",
+        "Czwartek o piętnastej.",
+        "Środę po południu."
+      ],
+      "answer": "Wtorek o dziewiątej.",
+      "evidence": "W recepcji otrzymałam dwa możliwe terminy: wtorek o dziewiątej oraz czwartek o piętnastej. Ponieważ w środę mam zaplanowany wyjazd służbowy, wolałabym przyjść we wtorek, o ile wizyta nadal jest dostępna.",
+      "explanation": "Wtorek jest jej pierwszym wyborem."
+    },
+    {
+      "id": "cause",
+      "skill": "cause",
+      "question": "Dlaczego pyta o wejście do budynku?",
+      "options": [
+        "Chce zmienić przychodnię na bliższą domu.",
+        "Gabinet znajduje się w innym budynku, a numeru wejścia nie znalazła.",
+        "Nie wie, czy w recepcji zmieniono godziny pracy."
+      ],
+      "answer": "Gabinet znajduje się w innym budynku, a numeru wejścia nie znalazła.",
+      "evidence": "W wiadomości z przychodni znajduje się informacja, że gabinet będzie w innym budynku niż poprzednio. Sprawdziłam adres, lecz nie znalazłam numeru wejścia.",
+      "explanation": "Nowa lokalizacja wymaga doprecyzowania."
+    },
+    {
+      "id": "inference",
+      "skill": "inference",
+      "question": "Recepcja informuje, że wtorek jest zajęty, a czwartek o piętnastej pozostaje wolny. Co może zrobić Alicja?",
+      "options": [
+        "Potwierdzić czwartek, choć wróci dopiero wieczorem.",
+        "Poprosić o dostępny termin w kolejnym tygodniu, na przykład w poniedziałek po południu.",
+        "Przesłać informacje o leczeniu na adres rezerwacji zamiast umawiać wizytę."
+      ],
+      "answer": "Poprosić o dostępny termin w kolejnym tygodniu, na przykład w poniedziałek po południu.",
+      "evidence": "W czwartek wrócę z wyjazdu dopiero wieczorem, więc podana godzina nie będzie dla mnie odpowiednia. Mogę natomiast przyjść w następny poniedziałek po południu.",
+      "explanation": "Czwartek koliduje z wyjazdem; podała alternatywę."
+    },
+    {
+      "id": "vocabulary",
+      "skill": "vocabulary",
+      "question": "Co oznacza „wizyta kontrolna” w kontekście wiadomości?",
+      "options": [
+        "Spotkanie dotyczące wyłącznie zmiany adresu przychodni.",
+        "Pierwszą rozmowę w recepcji bez kontaktu z lekarzem.",
+        "Kolejne spotkanie po wcześniejszej wizycie, służące omówieniu dalszej sytuacji."
+      ],
+      "answer": "Kolejne spotkanie po wcześniejszej wizycie, służące omówieniu dalszej sytuacji.",
+      "evidence": "Podczas poprzedniej wizyty lekarz prosił, żebym przyniosła zapisane informacje dotyczące okresu między spotkaniami.",
+      "explanation": "Kontrola nawiązuje do wcześniejszego spotkania."
+    }
+  ],
+  "publicationStatus": "practice"
+}

@@ -1,0 +1,76 @@
+{
+  "id": "pl-b1.reading.day-161",
+  "day": 161,
+  "level": "B1",
+  "genre": "poradnik",
+  "title": "Wybór terminu konsultacji",
+  "text": "Kiedy trzeba umówić konsultację, łatwo wybrać pierwszy wolny termin, nie sprawdzając, czy będzie można spokojnie z niego skorzystać. Oprócz godziny spotkania warto ustalić miejsce, przewidywany czas rozmowy oraz to, czy trzeba przygotować dodatkowe informacje. Dzięki temu później łatwiej połączyć wizytę z innymi obowiązkami.\n\nW wyobrażonej sytuacji Agata otrzymała dwie propozycje terminu konsultacji. Pierwsza była dostępna w środę rano w placówce po drugiej stronie miasta. Druga odbywała się w piątek po południu bliżej jej pracy. Środowy termin był wcześniejszy, ale wymagał zmiany dwóch zaplanowanych spotkań. Agata zapytała, czy różnica kilku dni ma znaczenie w jej konkretnej sprawie. Nie chciała sama oceniać, jak długo może czekać na konsultację.\n\nPo uzyskaniu odpowiedzi dotyczącej terminu Agata wybrała piątek. Poprosiła o potwierdzenie adresu i informację, czy rozmowa odbędzie się bezpośrednio w gabinecie, czy najpierw trzeba zgłosić się w recepcji. Zapisała również godzinę, o której powinna wyjść z pracy. Nie planowała kolejnego spotkania od razu po konsultacji, ponieważ nie znała dokładnego czasu jej zakończenia.\n\nJeśli okoliczności się zmienią i nie będziesz mógł przyjść, skontaktuj się z placówką w sposób podany w potwierdzeniu terminu. Nie zakładaj, że wiadomość wysłana na dowolny adres zostanie odczytana przez właściwą osobę. Sprawdź, czy otrzymałeś informację o zmianie rezerwacji.\n\nWarto odróżniać wybór wygodnej godziny od oceny pilności problemu zdrowotnego. Pierwsza sprawa dotyczy organizacji dnia, druga może wymagać odpowiedniej porady. Poradnik nie rozstrzyga, kiedy konkretna osoba potrzebuje pomocy. Pokazuje, jakie pytania organizacyjne można zadać, żeby dobrze przygotować zaplanowane spotkanie.",
+  "questions": [
+    {
+      "id": "main-idea",
+      "skill": "main-idea",
+      "question": "Jaka jest główna rada poradnika?",
+      "options": [
+        "Wybierać zawsze najpóźniejszą wizytę, aby nie zmieniać planu dnia.",
+        "Samodzielnie określać, jak długo można czekać, na podstawie odległości placówki.",
+        "Uzgodnić termin i przygotowania, oddzielając wygodę od oceny pilności problemu."
+      ],
+      "answer": "Uzgodnić termin i przygotowania, oddzielając wygodę od oceny pilności problemu.",
+      "evidence": "Warto odróżniać wybór wygodnej godziny od oceny pilności problemu zdrowotnego.",
+      "explanation": "Tekst dotyczy organizacji i uzyskania właściwych informacji."
+    },
+    {
+      "id": "detail",
+      "skill": "detail",
+      "question": "Gdzie miała odbywać się piątkowa konsultacja?",
+      "options": [
+        "Wyłącznie przez telefon.",
+        "Bliżej miejsca pracy Agaty.",
+        "Po drugiej stronie miasta, dalej od jej pracy."
+      ],
+      "answer": "Bliżej miejsca pracy Agaty.",
+      "evidence": "Druga odbywała się w piątek po południu bliżej jej pracy.",
+      "explanation": "Piątkowy termin był wygodniejszy pod względem lokalizacji."
+    },
+    {
+      "id": "cause",
+      "skill": "cause",
+      "question": "Dlaczego Agata nie zaplanowała spotkania bezpośrednio po konsultacji?",
+      "options": [
+        "Nie znała dokładnej godziny zakończenia wizyty.",
+        "Chciała odwołać wszystkie spotkania w piątek.",
+        "Nie wiedziała, czy może wejść do budynku przed środą."
+      ],
+      "answer": "Nie znała dokładnej godziny zakończenia wizyty.",
+      "evidence": "Nie planowała kolejnego spotkania od razu po konsultacji, ponieważ nie znała dokładnego czasu jej zakończenia.",
+      "explanation": "Zostawiła zapas czasu ze względu na niepewną długość wizyty."
+    },
+    {
+      "id": "inference",
+      "skill": "inference",
+      "question": "Osoba otrzymuje wcześniejszy termin daleko od domu i późniejszy blisko pracy, lecz nie wie, czy może czekać. Co powinna ustalić najpierw?",
+      "options": [
+        "Znaczenie różnicy terminów w swojej sytuacji, a dopiero potem porównać wygodę dojazdu.",
+        "Odwołać oba terminy, dopóki nie będzie znała dokładnej długości rozmowy.",
+        "Wybrać bliższe miejsce, zakładając, że późniejszy termin jest zawsze odpowiedni."
+      ],
+      "answer": "Znaczenie różnicy terminów w swojej sytuacji, a dopiero potem porównać wygodę dojazdu.",
+      "evidence": "Agata zapytała, czy różnica kilku dni ma znaczenie w jej konkretnej sprawie.",
+      "explanation": "Wygoda nie rozstrzyga o pilności."
+    },
+    {
+      "id": "vocabulary",
+      "skill": "vocabulary",
+      "question": "Co oznacza „potwierdzenie terminu”?",
+      "options": [
+        "Opis przebiegu każdego wcześniejszego badania.",
+        "Prośbę o znalezienie innej placówki bez umawiania spotkania.",
+        "Informację, że konkretna data i godzina spotkania zostały ustalone."
+      ],
+      "answer": "Informację, że konkretna data i godzina spotkania zostały ustalone.",
+      "evidence": "skontaktuj się z placówką w sposób podany w potwierdzeniu terminu.",
+      "explanation": "Potwierdzenie zawiera ustalenia dotyczące rezerwacji."
+    }
+  ],
+  "publicationStatus": "practice"
+}

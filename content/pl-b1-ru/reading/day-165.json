@@ -1,0 +1,76 @@
+{
+  "id": "pl-b1.reading.day-165",
+  "day": 165,
+  "level": "B1",
+  "genre": "e-mail",
+  "title": "Ocena własnego postępu",
+  "text": "Dzień dobry, Pani Katarzyno,\n\ndziękuję za ostatnią rozmowę po zajęciach. Zastanawiałem się nad pytaniem, po czym poznaję, że robię postępy w nauce języka. Do tej pory najczęściej patrzyłem na liczbę rozwiązanych ćwiczeń. Jeśli w jednym tygodniu zrobiłem ich mniej niż w poprzednim, miałem wrażenie, że uczę się gorzej, nawet jeśli ćwiczyłem trudniejsze zadania.\n\nPostanowiłem sprawdzić coś innego. Wybrałem trzy sytuacje, które były dla mnie trudne na początku kursu: zapytanie o drogę, krótką rozmowę w sklepie i napisanie wiadomości z prośbą o zmianę terminu. Zachowałem moje wcześniejsze odpowiedzi, a w weekend spróbowałem wykonać podobne zadania jeszcze raz.\n\nW wiadomości popełniłem kilka błędów gramatycznych, ale udało mi się wyjaśnić powód zmiany i zaproponować nowy termin bez korzystania z tłumacza. Podczas ćwiczenia rozmowy w sklepie nadal brakowało mi niektórych słów, lecz potrafiłem opisać potrzebny przedmiot w inny sposób. Zauważyłem więc postęp, którego nie widziałem w samej liczbie ukończonych ćwiczeń.\n\nNie oznacza to, że chcę zrezygnować z poprawiania błędów. Przeciwnie, zapisałem dwa problemy, które pojawiły się w kilku odpowiedziach. Chciałbym teraz przygotować na ich podstawie krótką listę tematów do powtórzenia.\n\nCzy podczas kolejnych zajęć moglibyśmy porównać moje wcześniejsze i nowsze odpowiedzi? Zależy mi na informacji, które różnice są istotne dla komunikacji, a które dotyczą przede wszystkim dokładności językowej. Mam nadzieję, że dzięki temu będę mógł lepiej wybierać ćwiczenia, zamiast po prostu zwiększać ich liczbę.\n\nPozdrawiam,\nArtur",
+  "questions": [
+    {
+      "id": "main-idea",
+      "skill": "main-idea",
+      "question": "Co Artur chce zmienić w ocenie własnej nauki?",
+      "options": [
+        "Oceniać rzeczywiste umiejętności i powtarzające się błędy, nie tylko liczbę ćwiczeń.",
+        "Przestać wykonywać zadania, które zawierają błędy gramatyczne.",
+        "Porównywać wyłącznie liczbę zadań rozwiązanych przez innych uczestników."
+      ],
+      "answer": "Oceniać rzeczywiste umiejętności i powtarzające się błędy, nie tylko liczbę ćwiczeń.",
+      "evidence": "Zauważyłem więc postęp, którego nie widziałem w samej liczbie ukończonych ćwiczeń.",
+      "explanation": "Artur porównuje wykonanie podobnych sytuacji, aby zobaczyć zmianę umiejętności."
+    },
+    {
+      "id": "detail",
+      "skill": "detail",
+      "question": "Ile sytuacji wybrał Artur do porównania?",
+      "options": [
+        "Cztery.",
+        "Trzy.",
+        "Dwie."
+      ],
+      "answer": "Trzy.",
+      "evidence": "Wybrałem trzy sytuacje, które były dla mnie trudne na początku kursu",
+      "explanation": "Wybrał trzy sytuacje komunikacyjne."
+    },
+    {
+      "id": "cause",
+      "skill": "cause",
+      "question": "Dlaczego zapisał dwa problemy do powtórzenia?",
+      "options": [
+        "Prowadząca zakazała powtarzania całych zadań.",
+        "Nie udało mu się ukończyć żadnej wiadomości.",
+        "Pojawiły się w kilku odpowiedziach i warto je osobno przećwiczyć."
+      ],
+      "answer": "Pojawiły się w kilku odpowiedziach i warto je osobno przećwiczyć.",
+      "evidence": "zapisałem dwa problemy, które pojawiły się w kilku odpowiedziach.",
+      "explanation": "Powtarzające się trudności pomagają wyznaczyć priorytety."
+    },
+    {
+      "id": "inference",
+      "skill": "inference",
+      "question": "Artur zrobił mniej ćwiczeń w kolejnym tygodniu, ale samodzielnie napisał zrozumiałą wiadomość z mniejszą liczbą błędów. Jak powinien ocenić zmianę zgodnie ze swoim podejściem?",
+      "options": [
+        "Zrezygnować z analizy błędów, ponieważ wiadomość była zrozumiała.",
+        "Porównać jakość i samodzielność odpowiedzi, nie uznając mniejszej liczby ćwiczeń za automatyczny spadek.",
+        "Uznać tydzień za gorszy wyłącznie dlatego, że rozwiązał mniej zadań."
+      ],
+      "answer": "Porównać jakość i samodzielność odpowiedzi, nie uznając mniejszej liczby ćwiczeń za automatyczny spadek.",
+      "evidence": "W wiadomości popełniłem kilka błędów gramatycznych, ale udało mi się wyjaśnić powód zmiany i zaproponować nowy termin bez korzystania z tłumacza. Podczas ćwiczenia rozmowy w sklepie nadal brakowało mi niektórych słów, lecz potrafiłem opisać potrzebny przedmiot w inny sposób. Zauważyłem więc postęp, którego nie widziałem w samej liczbie ukończonych ćwiczeń.\n\nNie oznacza to, że chcę zrezygnować z poprawiania błędów. Przeciwnie, zapisałem dwa problemy, które pojawiły się w kilku odpowiedziach. Chciałbym teraz przygotować na ich podstawie krótką listę tematów do powtórzenia.",
+      "explanation": "Nowy sposób oceny uwzględnia jakość działania i pozostające trudności."
+    },
+    {
+      "id": "vocabulary",
+      "skill": "vocabulary",
+      "question": "Co oznacza „dokładność językowa”?",
+      "options": [
+        "Liczbę minut spędzonych na rozwiązaniu zadania.",
+        "Łatwość znalezienia nowego terminu spotkania.",
+        "Stopień poprawności użytych form i wyrażeń."
+      ],
+      "answer": "Stopień poprawności użytych form i wyrażeń.",
+      "evidence": "które różnice są istotne dla komunikacji, a które dotyczą przede wszystkim dokładności językowej.",
+      "explanation": "Dokładność dotyczy poprawności języka, odrębnie od zrozumiałości."
+    }
+  ],
+  "publicationStatus": "practice"
+}

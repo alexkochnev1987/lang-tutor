@@ -1,0 +1,76 @@
+{
+  "id": "pl-b1.reading.day-162",
+  "day": 162,
+  "level": "B1",
+  "genre": "wiadomość",
+  "title": "Nauka przez całe życie",
+  "text": "Cześć, Elu!\n\nWiesz, że od kilku miesięcy uczę się obsługi nowego programu w pracy. Początkowo chciałem tylko wykonać kilka zadań, których potrzebowaliśmy w projekcie. W pewnym momencie zauważyłem jednak, że podoba mi się samo odkrywanie nowych możliwości, nawet jeśli nie wszystkie wykorzystuję od razu.\n\nZapisałem się na krótkie zajęcia dla dorosłych. W grupie są osoby o bardzo różnym doświadczeniu. Jedna uczestniczka pracuje w biurze, inny uczestnik prowadzi małą firmę, a ktoś inny chce korzystać z programu w związku ze swoim hobby. Nie wszyscy zaczynaliśmy od tego samego poziomu. Prowadząca poprosiła nas, żebyśmy na początku określili własny cel, zamiast porównywać wyniki z pozostałymi osobami.\n\nMój pierwszy cel był dość ogólny: chciałem lepiej znać program. Po tygodniu zmieniłem go na konkretną umiejętność. Chciałem przygotować prostą tabelę i samodzielnie poprawić w niej błąd. Dzięki temu wiedziałem, jakie ćwiczenia warto powtarzać w domu.\n\nNajbardziej pomogła mi rozmowa z uczestnikiem, który kiedyś pracował w zupełnie innym zawodzie. Powiedział, że nie musi opanować wszystkiego naraz. Uczy się wtedy, gdy pojawia się nowe zadanie, i zapisuje pytania, na które nie znalazł odpowiedzi. To podejście spodobało mi się bardziej niż próba przeczytania całego podręcznika w jeden weekend.\n\nPo zakończeniu zajęć nie planuję odkładać notatek do szuflady. Raz na jakiś czas wybiorę kolejne zadanie, którego wcześniej nie potrafiłem wykonać. Myślę, że nauka nie musi być oddzielnym etapem życia zakończonym wraz ze szkołą. Może towarzyszyć pracy, zainteresowaniom i zmianom, które pojawiają się później.\n\nPozdrawiam,\nGrzegorz",
+  "questions": [
+    {
+      "id": "main-idea",
+      "skill": "main-idea",
+      "question": "Co Grzegorz chce przekazać Eli?",
+      "options": [
+        "Nauka może trwać przez całe życie i wynikać z konkretnych potrzeb oraz zainteresowań.",
+        "Wszyscy dorośli powinni osiągać ten sam wynik w identycznym czasie.",
+        "Nauka nowych programów ma sens wyłącznie podczas formalnych zajęć."
+      ],
+      "answer": "Nauka może trwać przez całe życie i wynikać z konkretnych potrzeb oraz zainteresowań.",
+      "evidence": "Myślę, że nauka nie musi być oddzielnym etapem życia zakończonym wraz ze szkołą.",
+      "explanation": "Wiadomość przedstawia naukę jako proces związany z codziennym życiem."
+    },
+    {
+      "id": "detail",
+      "skill": "detail",
+      "question": "Jaką konkretną umiejętność wybrał Grzegorz?",
+      "options": [
+        "Przeczytanie całego podręcznika w weekend.",
+        "Prowadzenie własnych zajęć dla grupy.",
+        "Przygotowanie prostej tabeli i poprawienie w niej błędu."
+      ],
+      "answer": "Przygotowanie prostej tabeli i poprawienie w niej błędu.",
+      "evidence": "Chciałem przygotować prostą tabelę i samodzielnie poprawić w niej błąd.",
+      "explanation": "Zastąpił ogólny cel konkretnym działaniem."
+    },
+    {
+      "id": "cause",
+      "skill": "cause",
+      "question": "Dlaczego prowadząca prosiła o określenie własnego celu?",
+      "options": [
+        "Program nie był dostępny dla części grupy.",
+        "Uczestnicy mieli różne doświadczenia i potrzeby.",
+        "Wszyscy mieli wykonać jedno identyczne zadanie."
+      ],
+      "answer": "Uczestnicy mieli różne doświadczenia i potrzeby.",
+      "evidence": "Nie wszyscy zaczynaliśmy od tego samego poziomu.",
+      "explanation": "Indywidualny cel odpowiada różnicom w poziomie."
+    },
+    {
+      "id": "inference",
+      "skill": "inference",
+      "question": "Grzegorz ukończy zajęcia, ale w nowym projekcie napotka nieznane zadanie. Co najlepiej pasuje do jego planu?",
+      "options": [
+        "Uznać, że po ukończeniu zajęć nie powinien już potrzebować żadnej pomocy.",
+        "Spróbować rozwiązać konkretne zadanie, zapisać pytania i kontynuować naukę.",
+        "Wrócić do wszystkich rozdziałów podręcznika przed podjęciem jakiegokolwiek zadania."
+      ],
+      "answer": "Spróbować rozwiązać konkretne zadanie, zapisać pytania i kontynuować naukę.",
+      "evidence": "Raz na jakiś czas wybiorę kolejne zadanie, którego wcześniej nie potrafiłem wykonać.",
+      "explanation": "Nowa potrzeba staje się okazją do dalszej nauki."
+    },
+    {
+      "id": "vocabulary",
+      "skill": "vocabulary",
+      "question": "Co oznacza „opanować wszystko naraz”?",
+      "options": [
+        "Przygotować wszystkie materiały dla pozostałych osób.",
+        "Otworzyć kilka dokumentów jednocześnie.",
+        "Nauczyć się wszystkich umiejętności w jednym czasie."
+      ],
+      "answer": "Nauczyć się wszystkich umiejętności w jednym czasie.",
+      "evidence": "Powiedział, że nie musi opanować wszystkiego naraz.",
+      "explanation": "Opanować oznacza zdobyć umiejętność posługiwania się czymś."
+    }
+  ],
+  "publicationStatus": "practice"
+}

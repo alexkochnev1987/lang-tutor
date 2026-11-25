@@ -1,0 +1,76 @@
+{
+  "id": "pl-b1.reading.day-164",
+  "day": 164,
+  "level": "B1",
+  "genre": "dialog",
+  "title": "Praca w grupie na zajęciach",
+  "text": "— Mamy przygotować krótką prezentację o wybranym mieście — przypomniała prowadząca uczestnikom kursu. — Każda osoba powinna powiedzieć podczas niej przynajmniej kilka zdań.\n\nW grupie Magdy były cztery osoby. Na początku postanowili, że Adam przygotuje cały tekst, ponieważ najlepiej zna język. Magda miała znaleźć zdjęcia, a pozostali zaprojektować slajdy. Kiedy zobaczyli pierwszy szkic prezentacji, okazało się, że Adam użył wielu wyrażeń, których pozostali jeszcze nie umieli zastosować w rozmowie.\n\n— Potrafię przeczytać ten tekst, ale nie wiem, czy będę umiała odpowiedzieć na pytanie o jego treść — powiedziała Magda.\n\n— To może każdy przygotuje własny fragment? — zaproponował Adam. — Nie musimy przecież używać wszystkich trudnych słów.\n\nGrupa zmieniła podział pracy. Każda osoba wybrała jeden temat: położenie miasta, transport, miejsca do zwiedzania albo codzienne życie mieszkańców. Następnie uczestnicy wymienili się tekstami i zaznaczyli miejsca, które wymagały wyjaśnienia.\n\n— Chciałabym wiedzieć, czy moje zdania są zrozumiałe, a nie tylko poprawne gramatycznie — powiedziała Magda.\n\nPodczas próby Adam zadawał jej pytania, a ona sprawdzała, czy potrafi odpowiedzieć bez czytania z kartki. Kiedy nie znała jakiegoś słowa, szukała prostszego sposobu wyrażenia tej samej myśli. Pozostali również ćwiczyli w parach.\n\nOstateczna prezentacja była krótsza od pierwszej wersji, ale każdy uczestnik samodzielnie przedstawił swoją część. Prowadząca zwróciła uwagę, że zadanie grupowe nie służyło jedynie przygotowaniu ładnych slajdów. Miało także dać wszystkim okazję do używania języka. Dzięki zmianie podziału pracy każda osoba mogła ćwiczyć to, czego rzeczywiście miała się nauczyć.",
+  "questions": [
+    {
+      "id": "main-idea",
+      "skill": "main-idea",
+      "question": "Dlaczego grupa zmieniła sposób pracy?",
+      "options": [
+        "Postanowiła całkowicie zrezygnować ze wspólnego przygotowania.",
+        "Chciała przygotować najdłuższą prezentację na kursie.",
+        "Chciała zapewnić każdemu możliwość samodzielnego używania języka, a nie tylko wykonania pomocniczego zadania."
+      ],
+      "answer": "Chciała zapewnić każdemu możliwość samodzielnego używania języka, a nie tylko wykonania pomocniczego zadania.",
+      "evidence": "Miało także dać wszystkim okazję do używania języka.",
+      "explanation": "Nowy podział służył celowi edukacyjnemu każdego uczestnika."
+    },
+    {
+      "id": "detail",
+      "skill": "detail",
+      "question": "Ile osób było w grupie Magdy?",
+      "options": [
+        "Cztery.",
+        "Trzy.",
+        "Pięć."
+      ],
+      "answer": "Cztery.",
+      "evidence": "W grupie Magdy były cztery osoby.",
+      "explanation": "Liczba uczestników została podana wprost."
+    },
+    {
+      "id": "cause",
+      "skill": "cause",
+      "question": "Dlaczego Magda obawiała się pierwszej wersji tekstu?",
+      "options": [
+        "Adam nie chciał wybrać żadnego miasta.",
+        "Nie była pewna, czy zdoła samodzielnie odpowiedzieć na pytania o jego treść.",
+        "Nie potrafiła otworzyć przygotowanych zdjęć."
+      ],
+      "answer": "Nie była pewna, czy zdoła samodzielnie odpowiedzieć na pytania o jego treść.",
+      "evidence": "Potrafię przeczytać ten tekst, ale nie wiem, czy będę umiała odpowiedzieć na pytanie o jego treść",
+      "explanation": "Czytanie gotowego tekstu nie oznacza swobodnego użycia języka."
+    },
+    {
+      "id": "inference",
+      "skill": "inference",
+      "question": "Podczas kolejnego zadania jedna osoba bardzo dobrze zna temat, ale pozostali muszą ćwiczyć mówienie. Jaki podział najlepiej odpowiada doświadczeniu grupy?",
+      "options": [
+        "Najlepiej przygotować jeden trudny tekst i poprosić pozostałych o jego odczytanie.",
+        "Osoby słabiej mówiące zajmują się wyłącznie wyglądem slajdów.",
+        "Każdy przygotowuje zrozumiały fragment, a bardziej doświadczona osoba pomaga podczas próby."
+      ],
+      "answer": "Każdy przygotowuje zrozumiały fragment, a bardziej doświadczona osoba pomaga podczas próby.",
+      "evidence": "Grupa zmieniła podział pracy. Każda osoba wybrała jeden temat: położenie miasta, transport, miejsca do zwiedzania albo codzienne życie mieszkańców. Następnie uczestnicy wymienili się tekstami i zaznaczyli miejsca, które wymagały wyjaśnienia.\n\n— Chciałabym wiedzieć, czy moje zdania są zrozumiałe, a nie tylko poprawne gramatycznie — powiedziała Magda.\n\nPodczas próby Adam zadawał jej pytania, a ona sprawdzała, czy potrafi odpowiedzieć bez czytania z kartki. Kiedy nie znała jakiegoś słowa, szukała prostszego sposobu wyrażenia tej samej myśli. Pozostali również ćwiczyli w parach.",
+      "explanation": "Podział treści i wspólna próba pozwalają ćwiczyć wszystkim."
+    },
+    {
+      "id": "vocabulary",
+      "skill": "vocabulary",
+      "question": "Co znaczy „wyrazić tę samą myśl”?",
+      "options": [
+        "Przekazać to samo znaczenie, nawet używając innych słów.",
+        "Zmienić temat, aby uniknąć odpowiedzi.",
+        "Powtórzyć dokładnie tę samą kartkę bez żadnych zmian."
+      ],
+      "answer": "Przekazać to samo znaczenie, nawet używając innych słów.",
+      "evidence": "szukała prostszego sposobu wyrażenia tej samej myśli.",
+      "explanation": "Można przekazać identyczny sens prostszym językiem."
+    }
+  ],
+  "publicationStatus": "practice"
+}
