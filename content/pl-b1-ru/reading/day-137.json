@@ -1,0 +1,76 @@
+{
+  "id": "pl-b1.reading.day-137",
+  "day": 137,
+  "level": "B1",
+  "genre": "e-mail",
+  "title": "Czy hobby musi być drogie?",
+  "text": "Cześć, Basiu!\n\nWspominałaś, że chciałabyś zacząć rysować, ale nie wiesz, czy warto wydawać pieniądze na materiały. Dobrze pamiętam podobną sytuację sprzed roku. Oglądałam wtedy zestawy ołówków, farb i papieru, choć nie wiedziałam jeszcze, co najbardziej spodoba mi się w rysowaniu.\n\nNa początku kupiłam niewielki szkicownik i dwa ołówki. Przez miesiąc próbowałam rysować rzeczy, które miałam przed sobą: kubek, lampę, roślinę na parapecie. Czasem korzystałam z krótkich ćwiczeń znalezionych w internecie. Nie zawsze byłam zadowolona z wyniku, ale zaczęłam zauważać, jak ważna jest obserwacja kształtu przedmiotu.\n\nPóźniej poszłam na otwarte zajęcia w pracowni. Można było wypróbować tam różne materiały i zapytać prowadzącą o ich zastosowanie. Dzięki temu odkryłam, że najbardziej interesuje mnie rysowanie miękkim ołówkiem, a nie malowanie farbami. Dopiero wtedy kupiłam kilka dodatkowych narzędzi. Niektóre rzeczy nadal pożyczam, bo używam ich bardzo rzadko.\n\nNie chcę powiedzieć, że droższe materiały są zawsze niepotrzebne. Jeśli po pewnym czasie wiesz, czego ci brakuje, zakup może być uzasadniony. Na początku łatwo jednak pomylić brak doświadczenia z brakiem odpowiedniego sprzętu.\n\nJeśli chcesz, możemy w przyszłą sobotę spotkać się w parku i spróbować narysować to samo drzewo z dwóch różnych miejsc. Przyniosę zapasowy ołówek. Nie musisz wcześniej niczego kupować ani uczyć się zasad rysunku. Zobaczysz, czy takie spędzanie czasu sprawia ci przyjemność. Potem łatwiej będzie ci zdecydować, w co naprawdę chcesz zainwestować.\n\nPozdrawiam,\nEla",
+  "questions": [
+    {
+      "id": "main-idea",
+      "skill": "main-idea",
+      "question": "Jaką radę Ela daje Basi?",
+      "options": [
+        "Rozpocząć hobby od prostych prób, a sprzęt dobierać po poznaniu własnych potrzeb.",
+        "Od razu kupić pełny zestaw materiałów, aby nie tracić czasu.",
+        "Unikać zakupów nawet wtedy, gdy ma już jasno określone potrzeby."
+      ],
+      "answer": "Rozpocząć hobby od prostych prób, a sprzęt dobierać po poznaniu własnych potrzeb.",
+      "evidence": "Jeśli po pewnym czasie wiesz, czego ci brakuje, zakup może być uzasadniony.",
+      "explanation": "Ela nie wyklucza zakupów, ale proponuje najpierw zdobyć doświadczenie."
+    },
+    {
+      "id": "detail",
+      "skill": "detail",
+      "question": "Co Ela kupiła na początku?",
+      "options": [
+        "Kilka profesjonalnych aparatów.",
+        "Zestaw farb i duże płótno.",
+        "Szkicownik i dwa ołówki."
+      ],
+      "answer": "Szkicownik i dwa ołówki.",
+      "evidence": "Na początku kupiłam niewielki szkicownik i dwa ołówki.",
+      "explanation": "Pierwszy zestaw był niewielki."
+    },
+    {
+      "id": "cause",
+      "skill": "cause",
+      "question": "Dlaczego otwarte zajęcia były dla Eli pomocne?",
+      "options": [
+        "Otrzymała obowiązkową listę wszystkich narzędzi do kupienia.",
+        "Mogła wypróbować materiały i odkryć preferowany sposób rysowania.",
+        "Nie musiała już ćwiczyć obserwacji przedmiotów."
+      ],
+      "answer": "Mogła wypróbować materiały i odkryć preferowany sposób rysowania.",
+      "evidence": "Dzięki temu odkryłam, że najbardziej interesuje mnie rysowanie miękkim ołówkiem, a nie malowanie farbami.",
+      "explanation": "Próba pomogła wybrać materiały zgodne z zainteresowaniami."
+    },
+    {
+      "id": "inference",
+      "skill": "inference",
+      "question": "Basia po kilku tygodniach ćwiczeń chce sprawdzić pastele, ale nie wie, czy będzie ich często używać. Co odpowiada podejściu Eli?",
+      "options": [
+        "Zrezygnować z pasteli, ponieważ hobby powinno być bezpłatne.",
+        "Wypróbować lub pożyczyć pastele, a dopiero potem zdecydować o zakupie.",
+        "Kupić największy zestaw, ponieważ wcześniej używała ołówka."
+      ],
+      "answer": "Wypróbować lub pożyczyć pastele, a dopiero potem zdecydować o zakupie.",
+      "evidence": "Niektóre rzeczy nadal pożyczam, bo używam ich bardzo rzadko.",
+      "explanation": "Próba i częstotliwość użycia pomagają uzasadnić wydatek."
+    },
+    {
+      "id": "vocabulary",
+      "skill": "vocabulary",
+      "question": "Co oznacza „zainwestować” w tym e-mailu?",
+      "options": [
+        "Przeznaczyć pieniądze na coś, co będzie przydatne w dalszym rozwoju hobby.",
+        "Otrzymać pieniądze za sprzedaż pierwszego rysunku.",
+        "Odłożyć wszystkie materiały do szafki."
+      ],
+      "answer": "Przeznaczyć pieniądze na coś, co będzie przydatne w dalszym rozwoju hobby.",
+      "evidence": "Potem łatwiej będzie ci zdecydować, w co naprawdę chcesz zainwestować.",
+      "explanation": "Chodzi o przemyślany zakup potrzebnych materiałów."
+    }
+  ],
+  "publicationStatus": "practice"
+}

@@ -1,0 +1,76 @@
+{
+  "id": "pl-b1.reading.day-134",
+  "day": 134,
+  "level": "B1",
+  "genre": "wiadomość",
+  "title": "Klub filmowy i dyskusja",
+  "text": "Cześć, Magdo!\n\nWczoraj byłem po raz pierwszy na spotkaniu klubu filmowego w domu kultury. Myślałem, że obejrzymy film, a potem prowadzący opowie nam o jego znaczeniu. Okazało się, że najciekawsza część zaczęła się właśnie wtedy, gdy wszyscy widzowie mogli przedstawić własne opinie.\n\nNa początku wyświetlono krótką komedię o dwóch sąsiadach, którzy przypadkiem zamienili swoje klucze. Nie wszystkim podobało się zakończenie. Jedna uczestniczka uważała, że bohaterowie zbyt szybko rozwiązali swój problem. Inny widz zwrócił uwagę na to, jak zmieniała się ich rozmowa od pierwszej do ostatniej sceny. Prowadzący nie próbował rozstrzygnąć, która opinia jest poprawna. Poprosił tylko, żeby każda osoba wskazała fragment filmu, na którym opiera swoją interpretację.\n\nPodobała mi się również zasada, że nie trzeba mówić od razu po seansie. Przez pierwsze pięć minut można było zapisać swoje uwagi na kartce. Dzięki temu osoby, które potrzebowały chwili do namysłu, miały szansę włączyć się do rozmowy później.\n\nZa dwa tygodnie klub organizuje spotkanie poświęcone adaptacjom powieści. Uczestnicy mogą przeczytać książkę wcześniej, ale nie jest to warunek udziału. Najpierw obejrzymy film, a później porównamy wrażenia osób znających powieść i tych, które widziały tylko ekranizację.\n\nChciałbym, żebyś poszła tam ze mną. Wiem, że lubisz czytać, więc twoja perspektywa byłaby ciekawa. Nie musisz przygotowywać żadnej prezentacji. Wystarczy, że opowiesz o tym, co zwróciło twoją uwagę. Myślę, że taki wieczór może być ciekawszy niż kolejne oglądanie odcinka serialu w domu.\n\nPozdrawiam,\nTomek",
+  "questions": [
+    {
+      "id": "main-idea",
+      "skill": "main-idea",
+      "question": "Co najbardziej zainteresowało Tomka w klubie?",
+      "options": [
+        "Możliwość wymiany różnych interpretacji opartych na konkretnych scenach.",
+        "Możliwość samodzielnego wyboru zakończenia filmu.",
+        "Wykład prowadzącego wyjaśniający jedną poprawną interpretację."
+      ],
+      "answer": "Możliwość wymiany różnych interpretacji opartych na konkretnych scenach.",
+      "evidence": "Prowadzący nie próbował rozstrzygnąć, która opinia jest poprawna. Poprosił tylko, żeby każda osoba wskazała fragment filmu, na którym opiera swoją interpretację.",
+      "explanation": "Dyskusja pozwalała uzasadniać różne opinie."
+    },
+    {
+      "id": "detail",
+      "skill": "detail",
+      "question": "Ile czasu można było przeznaczyć na pierwsze notatki?",
+      "options": [
+        "Dziesięć minut.",
+        "Pięć minut.",
+        "Piętnaście minut."
+      ],
+      "answer": "Pięć minut.",
+      "evidence": "Przez pierwsze pięć minut można było zapisać swoje uwagi na kartce.",
+      "explanation": "Czas na notatki wynosił pięć minut."
+    },
+    {
+      "id": "cause",
+      "skill": "cause",
+      "question": "Dlaczego wprowadzono czas na notatki przed dyskusją?",
+      "options": [
+        "Aby prowadzący mógł ocenić uczestników.",
+        "Aby wszyscy zdążyli przeczytać powieść przed rozmową.",
+        "Aby osoby potrzebujące chwili do namysłu mogły później zabrać głos."
+      ],
+      "answer": "Aby osoby potrzebujące chwili do namysłu mogły później zabrać głos.",
+      "evidence": "Dzięki temu osoby, które potrzebowały chwili do namysłu, miały szansę włączyć się do rozmowy później.",
+      "explanation": "Reguła ułatwia udział mniej spontanicznym rozmówcom."
+    },
+    {
+      "id": "inference",
+      "skill": "inference",
+      "question": "Magda nie zdąży przeczytać książki, ale chce uczestniczyć w spotkaniu. Jak może przygotować się zgodnie z opisem?",
+      "options": [
+        "Obejrzeć film na spotkaniu i przedstawić własne wrażenia jako osoba nieznająca książki.",
+        "Zrezygnować, bo uczestnicy muszą znać powieść.",
+        "Przygotować szczegółową prezentację na podstawie cudzych recenzji."
+      ],
+      "answer": "Obejrzeć film na spotkaniu i przedstawić własne wrażenia jako osoba nieznająca książki.",
+      "evidence": "Uczestnicy mogą przeczytać książkę wcześniej, ale nie jest to warunek udziału. Najpierw obejrzymy film, a później porównamy wrażenia osób znających powieść i tych, które widziały tylko ekranizację.",
+      "explanation": "Porównanie obejmuje również widzów znających wyłącznie film."
+    },
+    {
+      "id": "vocabulary",
+      "skill": "vocabulary",
+      "question": "Co oznacza „ekranizacja”?",
+      "options": [
+        "Ostatnia scena komedii.",
+        "Film powstały na podstawie utworu literackiego.",
+        "Pisemna recenzja obejrzanego filmu."
+      ],
+      "answer": "Film powstały na podstawie utworu literackiego.",
+      "evidence": "Najpierw obejrzymy film, a później porównamy wrażenia osób znających powieść i tych, które widziały tylko ekranizację.",
+      "explanation": "Ekranizacja jest filmową wersją książki."
+    }
+  ],
+  "publicationStatus": "practice"
+}

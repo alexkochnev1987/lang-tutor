@@ -1,0 +1,76 @@
+{
+  "id": "pl-b1.reading.day-130",
+  "day": 130,
+  "level": "B1",
+  "genre": "e-mail",
+  "title": "Gdy autobus zmienia trasę",
+  "text": "Cześć, Michał!\n\nPiszę, bo w przyszłym tygodniu zmieni się moja droga do pracy. Przy ulicy, którą zwykle jedzie mój autobus, rozpoczną się prace remontowe. Na przystanku powieszono informację, że od poniedziałku autobusy będą jeździły przez sąsiednią dzielnicę. Nie zatrzymają się przy biurze, chociaż numer linii pozostanie ten sam.\n\nWczoraj sprawdziłem dwie możliwości dojazdu. Mogę wysiąść dwa przystanki wcześniej i przejść pieszo około piętnastu minut. Mogę też dojechać do stacji tramwajowej, przesiąść się i wysiąść bezpośrednio przy biurze. Druga droga jest wygodniejsza, kiedy pada deszcz, ale wymaga dodatkowego czasu na przesiadkę.\n\nW poniedziałek mamy zebranie o dziewiątej. Chciałbym dotrzeć trochę wcześniej, dlatego sprawdzę pierwszą trasę już w niedzielę. Nie będę wtedy jechał do biura na cały dzień, tylko przejdę od przystanku do wejścia. Zapiszę sobie, gdzie trzeba skręcić, bo na mapie kilka ulic wygląda bardzo podobnie.\n\nCzy moglibyśmy przenieść naszą poniedziałkową rozmowę z ósmej trzydzieści na dziesiątą? Wiem, że wcześniej ustaliliśmy inny termin, ale wolę nie obiecywać, że pierwszego dnia remontu dotrę dokładnie o tej porze. Jeśli dziesiąta ci nie odpowiada, możemy porozmawiać w piątek po południu, zanim zmieni się rozkład.\n\nPrzy okazji wpisałem do kalendarza datę zakończenia remontu podaną na ogłoszeniu. Przed powrotem do starej trasy sprawdzę jednak, czy autobus rzeczywiście wrócił na poprzednią ulicę. Nie chcę planować kolejnego tygodnia wyłącznie na podstawie przewidywanego terminu.\n\nPozdrawiam,\nRafał",
+  "questions": [
+    {
+      "id": "main-idea",
+      "skill": "main-idea",
+      "question": "Po co Rafał pisze do Michała?",
+      "options": [
+        "Prosi o wspólny zakup biletu na tramwaj.",
+        "Wyjaśnia zmianę dojazdu i prosi o przesunięcie rozmowy.",
+        "Chce odwołać poniedziałkowe zebranie całego zespołu."
+      ],
+      "answer": "Wyjaśnia zmianę dojazdu i prosi o przesunięcie rozmowy.",
+      "evidence": "Czy moglibyśmy przenieść naszą poniedziałkową rozmowę z ósmej trzydzieści na dziesiątą?",
+      "explanation": "Zmiana trasy powoduje niepewność co do porannego terminu."
+    },
+    {
+      "id": "detail",
+      "skill": "detail",
+      "question": "Co pozostanie bez zmian?",
+      "options": [
+        "Numer linii autobusowej.",
+        "Przystanek przy biurze.",
+        "Przebieg trasy."
+      ],
+      "answer": "Numer linii autobusowej.",
+      "evidence": "chociaż numer linii pozostanie ten sam.",
+      "explanation": "Zmiana dotyczy drogi, nie numeru autobusu."
+    },
+    {
+      "id": "cause",
+      "skill": "cause",
+      "question": "Dlaczego Rafał chce przejść pierwszą trasę w niedzielę?",
+      "options": [
+        "Żeby sprawdzić stan samochodu Michała.",
+        "Żeby pracować w biurze przez cały weekend.",
+        "Żeby poznać drogę przed ważnym poniedziałkowym zebraniem."
+      ],
+      "answer": "Żeby poznać drogę przed ważnym poniedziałkowym zebraniem.",
+      "evidence": "Chciałbym dotrzeć trochę wcześniej, dlatego sprawdzę pierwszą trasę już w niedzielę.",
+      "explanation": "Próba ogranicza ryzyko pomylenia drogi w poniedziałek."
+    },
+    {
+      "id": "inference",
+      "skill": "inference",
+      "question": "W poniedziałek pada, a Rafał ma wystarczająco dużo czasu na przesiadkę. Która trasa pozwoli mu ograniczyć drogę pieszą?",
+      "options": [
+        "Dojazd dawną trasą bez sprawdzania objazdu.",
+        "Dojazd autobusem do stacji i przesiadkę na tramwaj.",
+        "Wysiadanie wcześniej i dłuższy spacer niezależnie od pogody."
+      ],
+      "answer": "Dojazd autobusem do stacji i przesiadkę na tramwaj.",
+      "evidence": "Druga droga jest wygodniejsza, kiedy pada deszcz, ale wymaga dodatkowego czasu na przesiadkę.",
+      "explanation": "Przesiadka odpowiada obu nowym warunkom."
+    },
+    {
+      "id": "vocabulary",
+      "skill": "vocabulary",
+      "question": "Co znaczy „przewidywany termin”?",
+      "options": [
+        "Godzina zapisana na bilecie tramwajowym.",
+        "Data potwierdzona po zakończeniu prac.",
+        "Planowana data, która może jeszcze ulec zmianie."
+      ],
+      "answer": "Planowana data, która może jeszcze ulec zmianie.",
+      "evidence": "Nie chcę planować kolejnego tygodnia wyłącznie na podstawie przewidywanego terminu.",
+      "explanation": "Rafał chce sprawdzić rzeczywisty koniec remontu."
+    }
+  ],
+  "publicationStatus": "practice"
+}
