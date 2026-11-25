@@ -12,7 +12,7 @@
           "options": [
             {
               "id": "A",
-              "text": "Jak wybrać ciasto na wynos."
+              "text": "Jak zamówić napoje i przekąski bez rezerwacji."
             },
             {
               "id": "B",
@@ -20,7 +20,7 @@
             },
             {
               "id": "C",
-              "text": "Jak zamówić napoje i przekąski bez rezerwacji."
+              "text": "Jak wybrać ciasto na wynos."
             }
           ]
         },
@@ -52,11 +52,11 @@
             },
             {
               "id": "B",
-              "text": "Żeby goście najpierw wybrali ciasto."
+              "text": "Żeby sprawdzić liczbę nakryć."
             },
             {
               "id": "C",
-              "text": "Żeby sprawdzić liczbę nakryć."
+              "text": "Żeby goście najpierw wybrali ciasto."
             }
           ]
         },
@@ -66,15 +66,15 @@
           "options": [
             {
               "id": "A",
-              "text": "Zamówić ciasto, a stolik wybrać po przyjściu."
+              "text": "Zarezerwować stolik i zamówić ciasto."
             },
             {
               "id": "B",
-              "text": "Zarezerwować stolik, a całe ciasto zamówić dopiero w sobotę."
+              "text": "Zamówić ciasto, a stolik wybrać po przyjściu."
             },
             {
               "id": "C",
-              "text": "Zarezerwować stolik i zamówić ciasto."
+              "text": "Zarezerwować stolik, a całe ciasto zamówić dopiero w sobotę."
             }
           ]
         },
@@ -84,15 +84,15 @@
           "options": [
             {
               "id": "A",
-              "text": "Liczba przygotowanych porcji ciasta."
+              "text": "Liczba talerzy z kanapkami."
             },
             {
               "id": "B",
-              "text": "Liczba miejsc przygotowanych przy stole."
+              "text": "Liczba przygotowanych porcji ciasta."
             },
             {
               "id": "C",
-              "text": "Liczba talerzy z kanapkami."
+              "text": "Liczba miejsc przygotowanych przy stole."
             }
           ]
         }
@@ -114,11 +114,11 @@
             },
             {
               "id": "B",
-              "text": "Udana kolacja zależy od elastyczności i potrzeb gości."
+              "text": "Dobry posiłek wymaga wcześniejszego kupienia wszystkich składników."
             },
             {
               "id": "C",
-              "text": "Dobry posiłek wymaga wcześniejszego kupienia wszystkich składników."
+              "text": "Udana kolacja zależy od elastyczności i potrzeb gości."
             }
           ]
         },
@@ -128,7 +128,7 @@
           "options": [
             {
               "id": "A",
-              "text": "Ogórkami."
+              "text": "Gruszkami."
             },
             {
               "id": "B",
@@ -136,7 +136,7 @@
             },
             {
               "id": "C",
-              "text": "Gruszkami."
+              "text": "Ogórkami."
             }
           ]
         },
@@ -164,15 +164,15 @@
           "options": [
             {
               "id": "A",
-              "text": "Piotr przygotuje dwie nowe sałatki."
+              "text": "Olek zje wyłącznie pieczone ziemniaki."
             },
             {
               "id": "B",
-              "text": "Drugi gość doda ser do swojej porcji."
+              "text": "Piotr przygotuje dwie nowe sałatki."
             },
             {
               "id": "C",
-              "text": "Olek zje wyłącznie pieczone ziemniaki."
+              "text": "Drugi gość doda ser do swojej porcji."
             }
           ]
         },
@@ -182,11 +182,11 @@
           "options": [
             {
               "id": "A",
-              "text": "Robienie wszystkiego tak, jak wcześniej ustalono."
+              "text": "Podawanie jedzenia w osobnych miskach."
             },
             {
               "id": "B",
-              "text": "Podawanie jedzenia w osobnych miskach."
+              "text": "Robienie wszystkiego tak, jak wcześniej ustalono."
             },
             {
               "id": "C",
@@ -208,7 +208,7 @@
           "options": [
             {
               "id": "A",
-              "text": "Pokazać, jak częściej kupować świeże jedzenie."
+              "text": "Pomóc wykorzystać produkty przed następnymi zakupami."
             },
             {
               "id": "B",
@@ -216,7 +216,7 @@
             },
             {
               "id": "C",
-              "text": "Pomóc wykorzystać produkty przed następnymi zakupami."
+              "text": "Pokazać, jak częściej kupować świeże jedzenie."
             }
           ]
         },
@@ -226,11 +226,11 @@
           "options": [
             {
               "id": "A",
-              "text": "Świeże pieczywo."
+              "text": "Warzywa na sałatkę."
             },
             {
               "id": "B",
-              "text": "Warzywa na sałatkę."
+              "text": "Świeże pieczywo."
             },
             {
               "id": "C",
@@ -244,11 +244,11 @@
           "options": [
             {
               "id": "A",
-              "text": "Chce oddzielić warzywa od jogurtów."
+              "text": "Chce przygotować wszystkie porcje na piątek."
             },
             {
               "id": "B",
-              "text": "Chce przygotować wszystkie porcje na piątek."
+              "text": "Chce oddzielić warzywa od jogurtów."
             },
             {
               "id": "C",
@@ -258,19 +258,19 @@
         },
         {
           "id": "q4",
-          "question": "W czwartek w koszyku zostały pomidory, a na kolację zaplanowano sałatkę z ogórkiem. Co jest zgodne z poradnikiem?",
+          "question": "W środę Julia widzi w koszyku dwa pomidory, a do kolacji brakuje ogórka. W piątek planuje duże zakupy. Co najlepiej zrobić, stosując obie rady z tekstu?",
           "options": [
             {
               "id": "A",
-              "text": "Wykorzystać pomidory zamiast kupować ogórek."
+              "text": "Kupić ogórek razem z pieczywem, a pomidory zostawić do piątku."
             },
             {
               "id": "B",
-              "text": "Zrobić obie sałatki w dużych porcjach."
+              "text": "Kupić pieczywo i wykorzystać pomidory w kolacji."
             },
             {
               "id": "C",
-              "text": "Kupić ogórek i zostawić pomidory do piątku."
+              "text": "Zrobić duże zakupy w środę, a kolację przygotować według przepisu."
             }
           ]
         },
@@ -280,7 +280,7 @@
           "options": [
             {
               "id": "A",
-              "text": "Lista produktów potrzebnych w pracy."
+              "text": "Regularny sposób organizowania zakupów."
             },
             {
               "id": "B",
@@ -288,7 +288,7 @@
             },
             {
               "id": "C",
-              "text": "Regularny sposób organizowania zakupów."
+              "text": "Lista produktów potrzebnych w pracy."
             }
           ]
         }
@@ -306,15 +306,15 @@
           "options": [
             {
               "id": "A",
-              "text": "O pracy warsztatu i uzgadnianiu naprawy z klientem."
-            },
-            {
-              "id": "B",
               "text": "O organizowaniu pracy dwóch specjalistów."
             },
             {
-              "id": "C",
+              "id": "B",
               "text": "O wyborze nowego zegarka i lampy."
+            },
+            {
+              "id": "C",
+              "text": "O pracy warsztatu i uzgadnianiu naprawy z klientem."
             }
           ]
         },
@@ -324,15 +324,15 @@
           "options": [
             {
               "id": "A",
-              "text": "Zatrzymywał się kilka razy dziennie."
+              "text": "Nie można było wymienić baterii."
             },
             {
               "id": "B",
-              "text": "Miał uszkodzoną szybkę."
+              "text": "Zatrzymywał się kilka razy dziennie."
             },
             {
               "id": "C",
-              "text": "Nie można było wymienić baterii."
+              "text": "Miał uszkodzoną szybkę."
             }
           ]
         },
@@ -360,15 +360,15 @@
           "options": [
             {
               "id": "A",
-              "text": "Odebrać lampę i zostawić zegarek po raz pierwszy."
-            },
-            {
-              "id": "B",
               "text": "Odebrać oba naprawione przedmioty."
             },
             {
-              "id": "C",
+              "id": "B",
               "text": "Odebrać zegarek i zostawić lampę do sprawdzenia."
+            },
+            {
+              "id": "C",
+              "text": "Odebrać lampę i zostawić zegarek po raz pierwszy."
             }
           ]
         },
@@ -382,11 +382,11 @@
             },
             {
               "id": "B",
-              "text": "Zrobić to, co trzeba, w obu przypadkach."
+              "text": "Sprawdzić ceny w dwóch różnych punktach."
             },
             {
               "id": "C",
-              "text": "Sprawdzić ceny w dwóch różnych punktach."
+              "text": "Zrobić to, co trzeba, w obu przypadkach."
             }
           ]
         }
@@ -404,15 +404,15 @@
           "options": [
             {
               "id": "A",
-              "text": "Odbiera jedną paczkę i ustala, co zrobić z drugą."
+              "text": "Wyjaśnia problem z dostawą książki do domu."
             },
             {
               "id": "B",
-              "text": "Oddaje dwie przesyłki do nadania."
+              "text": "Odbiera jedną paczkę i ustala, co zrobić z drugą."
             },
             {
               "id": "C",
-              "text": "Wyjaśnia problem z dostawą książki do domu."
+              "text": "Oddaje dwie przesyłki do nadania."
             }
           ]
         },
@@ -440,7 +440,7 @@
           "options": [
             {
               "id": "A",
-              "text": "Pracownicy mają poranne szkolenie."
+              "text": "Kurier przyjedzie dopiero po południu."
             },
             {
               "id": "B",
@@ -448,7 +448,7 @@
             },
             {
               "id": "C",
-              "text": "Kurier przyjedzie dopiero po południu."
+              "text": "Pracownicy mają poranne szkolenie."
             }
           ]
         },
@@ -476,7 +476,7 @@
           "options": [
             {
               "id": "A",
-              "text": "Stan zewnętrzny opakowania."
+              "text": "Wiadomość z kodem odbioru."
             },
             {
               "id": "B",
@@ -484,7 +484,7 @@
             },
             {
               "id": "C",
-              "text": "Wiadomość z kodem odbioru."
+              "text": "Stan zewnętrzny opakowania."
             }
           ]
         }
@@ -502,11 +502,11 @@
           "options": [
             {
               "id": "A",
-              "text": "Nauczyć Martę wykonywać przelewy."
+              "text": "Znaleźć sposób oszczędzania pasujący do jego planów."
             },
             {
               "id": "B",
-              "text": "Znaleźć sposób oszczędzania pasujący do jego planów."
+              "text": "Nauczyć Martę wykonywać przelewy."
             },
             {
               "id": "C",
@@ -520,7 +520,7 @@
           "options": [
             {
               "id": "A",
-              "text": "Dwa."
+              "text": "Trzy."
             },
             {
               "id": "B",
@@ -528,7 +528,7 @@
             },
             {
               "id": "C",
-              "text": "Trzy."
+              "text": "Dwa."
             }
           ]
         },
@@ -538,11 +538,11 @@
           "options": [
             {
               "id": "A",
-              "text": "Chce porównać oferty bez pośpiechu."
+              "text": "Chce od razu podpisać umowę przez internet."
             },
             {
               "id": "B",
-              "text": "Chce od razu podpisać umowę przez internet."
+              "text": "Chce porównać oferty bez pośpiechu."
             },
             {
               "id": "C",
@@ -556,11 +556,11 @@
           "options": [
             {
               "id": "A",
-              "text": "Możliwość zmiany pracownika banku."
+              "text": "Możliwość zaciągnięcia większego kredytu."
             },
             {
               "id": "B",
-              "text": "Możliwość zaciągnięcia większego kredytu."
+              "text": "Możliwość zmiany pracownika banku."
             },
             {
               "id": "C",
@@ -600,7 +600,7 @@
           "options": [
             {
               "id": "A",
-              "text": "Jak wybrać usługę, zgłosić problem i ustalić wizytę."
+              "text": "Jak porównać wyłącznie ceny wizyt specjalistów."
             },
             {
               "id": "B",
@@ -608,7 +608,7 @@
             },
             {
               "id": "C",
-              "text": "Jak porównać wyłącznie ceny wizyt specjalistów."
+              "text": "Jak wybrać usługę, zgłosić problem i ustalić wizytę."
             }
           ]
         },
@@ -636,15 +636,15 @@
           "options": [
             {
               "id": "A",
-              "text": "Wszystkie naprawy są rozliczane dopiero po wizycie."
-            },
-            {
-              "id": "B",
               "text": "Zależy od pracy i potrzebnych części."
             },
             {
-              "id": "C",
+              "id": "B",
               "text": "Klient sam wybiera cenę w formularzu."
+            },
+            {
+              "id": "C",
+              "text": "Wszystkie naprawy są rozliczane dopiero po wizycie."
             }
           ]
         },
@@ -672,7 +672,7 @@
           "options": [
             {
               "id": "A",
-              "text": "Lista możliwych usług na przyszłość."
+              "text": "Formularz do ustalenia pierwszego terminu."
             },
             {
               "id": "B",
@@ -680,7 +680,7 @@
             },
             {
               "id": "C",
-              "text": "Formularz do ustalenia pierwszego terminu."
+              "text": "Lista możliwych usług na przyszłość."
             }
           ]
         }
@@ -712,19 +712,19 @@
         },
         {
           "id": "q2",
-          "question": "O jaki dokument zapytał pracownik firmy?",
+          "question": "Jaką informację o umowie chciał otrzymać pracownik?",
           "options": [
             {
               "id": "A",
-              "text": "O adres koleżanki."
+              "text": "Numer umowy."
             },
             {
               "id": "B",
-              "text": "O numer umowy."
+              "text": "Cenę abonamentu."
             },
             {
               "id": "C",
-              "text": "O plan spotkania."
+              "text": "Datę podpisania umowy."
             }
           ]
         },
@@ -752,15 +752,15 @@
           "options": [
             {
               "id": "A",
-              "text": "Zgłosiłaby od razu zmianę numeru umowy."
-            },
-            {
-              "id": "B",
               "text": "Uznałaby zgłoszenie za zakończone po otrzymaniu wiadomości."
             },
             {
-              "id": "C",
+              "id": "B",
               "text": "Nie uznałaby jeszcze problemu za rozwiązany."
+            },
+            {
+              "id": "C",
+              "text": "Zgłosiłaby od razu zmianę numeru umowy."
             }
           ]
         },
@@ -770,15 +770,15 @@
           "options": [
             {
               "id": "A",
-              "text": "Pozwolić jej korzystać z miejsca przy stole."
-            },
-            {
-              "id": "B",
               "text": "Przygotować posiłek na spotkanie."
             },
             {
-              "id": "C",
+              "id": "B",
               "text": "Przenieść stół do jej mieszkania."
+            },
+            {
+              "id": "C",
+              "text": "Pozwolić jej korzystać z miejsca przy stole."
             }
           ]
         }
@@ -800,11 +800,11 @@
             },
             {
               "id": "B",
-              "text": "Wybrać dowolny urząd i zapytać o wszystko na miejscu."
+              "text": "Zawsze rezerwować termin przez internet."
             },
             {
               "id": "C",
-              "text": "Zawsze rezerwować termin przez internet."
+              "text": "Wybrać dowolny urząd i zapytać o wszystko na miejscu."
             }
           ]
         },
@@ -814,15 +814,15 @@
           "options": [
             {
               "id": "A",
-              "text": "Godziny pracy punktu odbioru."
-            },
-            {
-              "id": "B",
               "text": "Numer nowej rezerwacji."
             },
             {
-              "id": "C",
+              "id": "B",
               "text": "Adres drugiego urzędu."
+            },
+            {
+              "id": "C",
+              "text": "Godziny pracy punktu odbioru."
             }
           ]
         },
@@ -832,15 +832,15 @@
           "options": [
             {
               "id": "A",
-              "text": "Żeby pracownik przesłał ponownie adres."
-            },
-            {
-              "id": "B",
               "text": "Żeby automatycznie otrzymać inny dokument."
             },
             {
-              "id": "C",
+              "id": "B",
               "text": "Żeby ktoś inny mógł wykorzystać ten termin."
+            },
+            {
+              "id": "C",
+              "text": "Żeby pracownik przesłał ponownie adres."
             }
           ]
         },
@@ -850,15 +850,15 @@
           "options": [
             {
               "id": "A",
-              "text": "Zarezerwować wtorek i przyjść niezależnie od wiadomości."
+              "text": "Poczekać na wiadomość, a potem wybrać godziny odbioru."
             },
             {
               "id": "B",
-              "text": "Przyjść we wtorek bez rezerwacji i zażądać dokumentu."
+              "text": "Zarezerwować wtorek i przyjść niezależnie od wiadomości."
             },
             {
               "id": "C",
-              "text": "Poczekać na wiadomość, a potem wybrać godziny odbioru."
+              "text": "Przyjść we wtorek bez rezerwacji i zażądać dokumentu."
             }
           ]
         },
@@ -868,15 +868,15 @@
           "options": [
             {
               "id": "A",
-              "text": "Termin wybrany bez sprawdzenia, czy jest odpowiedni."
+              "text": "Termin odwołany przez inną osobę."
             },
             {
               "id": "B",
-              "text": "Termin uzgodniony po rozmowie z pracownikiem."
+              "text": "Termin wybrany bez sprawdzenia, czy jest odpowiedni."
             },
             {
               "id": "C",
-              "text": "Termin odwołany przez inną osobę."
+              "text": "Termin uzgodniony po rozmowie z pracownikiem."
             }
           ]
         }
@@ -898,11 +898,11 @@
             },
             {
               "id": "B",
-              "text": "Porównuje ceny kawy i zakupów w dwóch dzielnicach."
+              "text": "Opisuje, jak poznaje nową okolicę, i proponuje wspólny spacer."
             },
             {
               "id": "C",
-              "text": "Opisuje, jak poznaje nową okolicę, i proponuje wspólny spacer."
+              "text": "Porównuje ceny kawy i zakupów w dwóch dzielnicach."
             }
           ]
         },
@@ -912,11 +912,11 @@
           "options": [
             {
               "id": "A",
-              "text": "Przy wejściu do biblioteki."
+              "text": "Obok fontanny na placu."
             },
             {
               "id": "B",
-              "text": "Obok fontanny na placu."
+              "text": "Przy wejściu do biblioteki."
             },
             {
               "id": "C",
@@ -948,11 +948,11 @@
           "options": [
             {
               "id": "A",
-              "text": "Przez park, ponieważ w sobotę nie pada."
+              "text": "Przez przejście za kościołem i dalej przez park."
             },
             {
               "id": "B",
-              "text": "Przez przejście za kościołem i dalej przez park."
+              "text": "Przez park, ponieważ w sobotę nie pada."
             },
             {
               "id": "C",
