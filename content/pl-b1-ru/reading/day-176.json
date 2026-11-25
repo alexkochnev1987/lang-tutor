@@ -1,0 +1,88 @@
+{
+  "id": "pl-b1.reading.day-176",
+  "day": 176,
+  "level": "B1",
+  "genre": "wiadomość",
+  "title": "Zwrot zakupu z internetu",
+  "text": "Cześć, Olu!\n\nW zeszłym tygodniu zamówiłam przez internet lampę do mieszkania. Kiedy paczka dotarła, zauważyłam, że lampa jest większa, niż sobie wyobrażałam. Wymiary były podane w opisie, ale nie porównałam ich wcześniej z miejscem na biurku. Produkt nie wygląda na uszkodzony, tylko nie odpowiada moim potrzebom.\n\nZaczęłam czytać informacje Urzędu Ochrony Konkurencji i Konsumentów o odstąpieniu od umowy zawartej na odległość. Przy typowym zakupie rzeczy przez konsumenta w sklepie internetowym termin na odstąpienie wynosi co do zasady czternaście dni od otrzymania rzeczy. Istnieją jednak wyjątki, dlatego nie zakładam, że identyczne prawo przysługuje przy każdym rodzaju umowy lub produktu.\n\nW moim przykładzie chcę najpierw sprawdzić, czy zakup podlega temu prawu i jak przekazać sprzedawcy oświadczenie. Nie będę traktowała samego odesłania paczki jako pewnego zastępstwa dla wyraźnego poinformowania sklepu o swojej decyzji. Zapiszę datę otrzymania zamówienia i zachowam potwierdzenie wysłanej wiadomości.\n\nSprawdzę również, jaki adres podano do zwrotów oraz jakie koszty mogą być z nim związane. To nie są te same informacje co cena produktu. Chcę wiedzieć, czy będę musiała przygotować dodatkową etykietę i w jaki sposób sprzedawca potwierdzi otrzymanie mojego oświadczenia.\n\nPamiętam, że ty ostatnio zgłaszałaś problem z urządzeniem, które nie działało prawidłowo. Moja sytuacja jest inna, ponieważ lampa nie ma zauważonej usterki. Nie chcę mieszać różnych procedur tylko dlatego, że w obu przypadkach kupujący może chcieć oddać rzecz.\n\nPrzesyłam ci tę wiadomość, bo przy następnym zakupie warto sprawdzić zarówno wymiary przedmiotu, jak i zasady dotyczące konkretnej umowy.\n\nPozdrawiam,\nKasia",
+  "questions": [
+    {
+      "id": "main-idea",
+      "skill": "main-idea",
+      "question": "Co Kasia chce wyjaśnić w swojej wiadomości?",
+      "options": [
+        "Jak przygotować się do odstąpienia od zakupu, rozróżniając go od zgłoszenia usterki.",
+        "Jak otrzymać zwrot pieniędzy bez sprawdzania rodzaju umowy.",
+        "Jak naprawić uszkodzoną lampę bez kontaktu ze sprzedawcą."
+      ],
+      "answer": "Jak przygotować się do odstąpienia od zakupu, rozróżniając go od zgłoszenia usterki.",
+      "evidence": "Moja sytuacja jest inna, ponieważ lampa nie ma zauważonej usterki.",
+      "explanation": "Kasia rozróżnia zmianę decyzji zakupowej od problemu z wadą."
+    },
+    {
+      "id": "detail",
+      "skill": "detail",
+      "question": "Jaki podstawowy termin opisano dla typowego zakupu internetowego rzeczy?",
+      "options": [
+        "Trzydzieści dni od złożenia zamówienia w każdym przypadku.",
+        "Siedem dni od wysłania wiadomości do sklepu.",
+        "Czternaście dni od otrzymania rzeczy."
+      ],
+      "answer": "Czternaście dni od otrzymania rzeczy.",
+      "evidence": "Przy typowym zakupie rzeczy przez konsumenta w sklepie internetowym termin na odstąpienie wynosi co do zasady czternaście dni od otrzymania rzeczy.",
+      "explanation": "Tekst podaje ogólne zasady, nie gwarancję dla wszystkich umów."
+    },
+    {
+      "id": "cause",
+      "skill": "cause",
+      "question": "Dlaczego Kasia chce zachować potwierdzenie wiadomości?",
+      "options": [
+        "Nie zna wymiarów biurka.",
+        "Chce mieć zapis przekazania decyzji sprzedawcy.",
+        "Chce udowodnić, że lampa ma uszkodzenie fabryczne."
+      ],
+      "answer": "Chce mieć zapis przekazania decyzji sprzedawcy.",
+      "evidence": "Zapiszę datę otrzymania zamówienia i zachowam potwierdzenie wysłanej wiadomości.",
+      "explanation": "Potwierdzenie dokumentuje komunikację."
+    },
+    {
+      "id": "inference",
+      "skill": "inference",
+      "question": "Ola chce oddać produkt wykonany specjalnie na zamówienie, ponieważ zakłada, że każdy zakup przez internet można zwrócić w tym samym terminie. Co wynika z wiadomości Kasi?",
+      "options": [
+        "Można założyć, że ogólna zasada obejmuje wszystkie produkty bez wyjątku.",
+        "Trzeba sprawdzić zasady konkretnej umowy i ewentualne wyjątki, zanim przyjmie się ogólny termin.",
+        "Wystarczy porównać cenę produktu z kosztami dostawy."
+      ],
+      "answer": "Trzeba sprawdzić zasady konkretnej umowy i ewentualne wyjątki, zanim przyjmie się ogólny termin.",
+      "evidence": "Istnieją jednak wyjątki, dlatego nie zakładam, że identyczne prawo przysługuje przy każdym rodzaju umowy lub produktu.",
+      "explanation": "Ogólna reguła nie przesądza prawa do odstąpienia w każdym przypadku."
+    },
+    {
+      "id": "vocabulary",
+      "skill": "vocabulary",
+      "question": "Co oznacza „oświadczenie” w tym kontekście?",
+      "options": [
+        "Komunikat, w którym kupujący wyraża swoją decyzję.",
+        "Potwierdzenie działania urządzenia.",
+        "Etykietę z wymiarami lampy."
+      ],
+      "answer": "Komunikat, w którym kupujący wyraża swoją decyzję.",
+      "evidence": "jak przekazać sprzedawcy oświadczenie.",
+      "explanation": "Oświadczenie służy do zakomunikowania decyzji."
+    }
+  ],
+  "source": {
+    "url": "https://prawakonsumenta.uokik.gov.pl/prawo-odstapienia-od-umowy/terminy-odstapienie/",
+    "publisher": "UOKiK",
+    "title": "Terminy odstąpienia od umowy",
+    "facts": [
+      "For a typical consumer distance contract for goods the withdrawal period is 14 days from receipt; statutory exceptions apply.",
+      "See UOKiK pages on withdrawal form and exclusions for individual conditions."
+    ],
+    "use": "facts-only",
+    "checked": "2026-11-25",
+    "adaptation": "Original Polish educational composition using official consumer facts; the purchase and people are fictional."
+  },
+  "publicationStatus": "practice"
+}

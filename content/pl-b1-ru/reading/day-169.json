@@ -1,0 +1,76 @@
+{
+  "id": "pl-b1.reading.day-169",
+  "day": 169,
+  "level": "B1",
+  "genre": "wiadomość",
+  "title": "Ogłoszenie i rozmowa o pracy",
+  "text": "Cześć, Marcinie!\n\nWczoraj odbyłem pierwszą rozmowę z firmą, która szuka osoby do koordynowania projektów. Ogłoszenie zawierało kilka interesujących informacji, ale nie było dla mnie jasne, co dokładnie oznaczało samodzielne prowadzenie zadań. W obecnej pracy zajmuję się głównie organizacją spotkań, a chciałbym częściej uczestniczyć w podejmowaniu decyzji dotyczących projektu.\n\nPrzed rozmową przygotowałem trzy pytania. Pierwsze dotyczyło typowego tygodnia, drugie współpracy z zespołem, a trzecie sposobu oceniania rezultatów. Osoba prowadząca rekrutację wyjaśniła, że koordynator organizuje pracę kilku osób, ale decyzje o większych wydatkach podejmuje kierownik. Nie jest to więc stanowisko z pełną samodzielnością, jak początkowo sobie wyobrażałem.\n\nDowiedziałem się również, że w pierwszym miesiącu nowy pracownik obserwuje prowadzenie jednego projektu, a następnie przejmuje mniejsze zadanie. Spodobało mi się to, ponieważ nie musiałbym od początku znać wszystkich procedur. Chciałem jednak wiedzieć, czy po tym okresie zakres odpowiedzialności będzie rzeczywiście większy.\n\nKolejna rozmowa odbędzie się z osobą, która pracuje na podobnym stanowisku. Zamierzam poprosić ją o przykład niedawnej decyzji podjętej samodzielnie oraz sytuacji, w której potrzebowała zgody kierownika. Nie chodzi o sprawdzanie, czy rekruter przekazał prawdziwe informacje, lecz o lepsze zrozumienie codziennej pracy.\n\nNie podjąłem jeszcze decyzji o zmianie firmy. Ogłoszenie zachęciło mnie do kontaktu, ale dopiero rozmowy pokazują, czy oferta odpowiada temu, czego szukam. Jeśli zakres obowiązków okaże się zbyt podobny do obecnego, będę nadal szukał stanowiska dającego więcej możliwości rozwoju.\n\nPozdrawiam,\nDarek",
+  "questions": [
+    {
+      "id": "main-idea",
+      "skill": "main-idea",
+      "question": "Co Darek chce przede wszystkim ustalić przed zmianą pracy?",
+      "options": [
+        "Rzeczywisty zakres samodzielności i możliwości rozwoju na stanowisku.",
+        "Wyłącznie termin rozpoczęcia pracy.",
+        "Czy może zrezygnować z rozmowy z przyszłym współpracownikiem."
+      ],
+      "answer": "Rzeczywisty zakres samodzielności i możliwości rozwoju na stanowisku.",
+      "evidence": "dopiero rozmowy pokazują, czy oferta odpowiada temu, czego szukam.",
+      "explanation": "Darek porównuje deklaracje ogłoszenia z rzeczywistymi obowiązkami."
+    },
+    {
+      "id": "detail",
+      "skill": "detail",
+      "question": "Kto podejmuje decyzje dotyczące większych wydatków?",
+      "options": [
+        "Osoba prowadząca rekrutację.",
+        "Kierownik.",
+        "Koordynator bez konsultacji."
+      ],
+      "answer": "Kierownik.",
+      "evidence": "decyzje o większych wydatkach podejmuje kierownik.",
+      "explanation": "Zakres decyzji koordynatora jest ograniczony."
+    },
+    {
+      "id": "cause",
+      "skill": "cause",
+      "question": "Dlaczego spodobał mu się pierwszy miesiąc pracy?",
+      "options": [
+        "Nie musiałby później odpowiadać za żaden projekt.",
+        "Otrzymałby od razu pełną kontrolę nad wydatkami.",
+        "Mógłby stopniowo poznać procedury przed przejęciem własnych zadań."
+      ],
+      "answer": "Mógłby stopniowo poznać procedury przed przejęciem własnych zadań.",
+      "evidence": "nie musiałbym od początku znać wszystkich procedur.",
+      "explanation": "Obserwacja poprzedza przejęcie mniejszego zadania."
+    },
+    {
+      "id": "inference",
+      "skill": "inference",
+      "question": "Pracownik na kolejnym spotkaniu opisuje głównie organizowanie spotkań, bez samodzielnych decyzji. Jak może to wpłynąć na wybór Darka?",
+      "options": [
+        "Może założyć, że zakres obowiązków na pewno zmieni się natychmiast po zatrudnieniu.",
+        "Może uznać, że stanowisko nie zapewnia oczekiwanego rozwoju.",
+        "Musi przyjąć ofertę, ponieważ odbył już pierwszą rozmowę."
+      ],
+      "answer": "Może uznać, że stanowisko nie zapewnia oczekiwanego rozwoju.",
+      "evidence": "Jeśli zakres obowiązków okaże się zbyt podobny do obecnego, będę nadal szukał stanowiska dającego więcej możliwości rozwoju.",
+      "explanation": "Nowa rola powinna oferować inny zakres odpowiedzialności."
+    },
+    {
+      "id": "vocabulary",
+      "skill": "vocabulary",
+      "question": "Co oznacza „przejmuje mniejsze zadanie”?",
+      "options": [
+        "Zaczyna odpowiadać za wykonanie określonego zadania.",
+        "Obserwuje pracę bez żadnych obowiązków.",
+        "Rezygnuje z udziału w większym projekcie."
+      ],
+      "answer": "Zaczyna odpowiadać za wykonanie określonego zadania.",
+      "evidence": "a następnie przejmuje mniejsze zadanie.",
+      "explanation": "Przejęcie oznacza objęcie odpowiedzialności."
+    }
+  ],
+  "publicationStatus": "practice"
+}

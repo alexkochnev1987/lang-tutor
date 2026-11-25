@@ -1,0 +1,76 @@
+{
+  "id": "pl-b1.reading.day-174",
+  "day": 174,
+  "level": "B1",
+  "genre": "opowiadanie",
+  "title": "Rozmowa o obowiązkach",
+  "text": "Kiedy Karol rozpoczął pracę w nowym zespole, otrzymał listę podstawowych obowiązków. W pierwszych tygodniach pomagał przy kilku dodatkowych zadaniach, ponieważ chciał dobrze poznać sposób działania firmy. Z czasem coraz więcej osób zaczęło zwracać się do niego z prośbami, które nie zawsze były związane z jego główną rolą.\n\nPewnego dnia Karol nie zdążył przygotować raportu, za który odpowiadał. Przez większość poranka zajmował się pilną prośbą innego działu. Gdy kierowniczka zapytała o raport, Karol wyjaśnił sytuację. Okazało się, że nie wiedziała o dodatkowym zadaniu i nie miała możliwości zmienić jego priorytetów.\n\nZamiast odmawiać później każdej prośbie, Karol przygotował zestawienie najczęstszych zadań. Zaznaczył te, które wykonuje regularnie, oraz te, które pojawiają się tylko w niektórych tygodniach. Na spotkaniu z kierowniczką zapytał, które z nich powinny mieć pierwszeństwo w sytuacji, gdy nie można wykonać wszystkiego na czas.\n\nUstalili, że część prostych próśb będzie nadal obsługiwał samodzielnie. Przy większych zadaniach z innego działu najpierw sprawdzi, czy ich wykonanie nie wpłynie na uzgodnione terminy. Jeśli pojawi się konflikt, kierowniczka pomoże ustalić kolejność. Nie oznaczało to konieczności pytania o zgodę przed każdą drobną czynnością.\n\nPo miesiącu Karol zauważył, że wciąż pomaga innym osobom, ale rzadziej odkłada własne zadania bez wiedzy zespołu. Kierowniczka również lepiej rozumiała, ile czasu zajmują dodatkowe obowiązki. Rozmowa o zakresie pracy pozwoliła wyjaśnić problem, którego wcześniej żadna z osób nie widziała w całości.",
+  "questions": [
+    {
+      "id": "main-idea",
+      "skill": "main-idea",
+      "question": "Co pomogło Karolowi rozwiązać problem?",
+      "options": [
+        "Przeniesienie odpowiedzialności za wszystkie raporty na inny dział.",
+        "Całkowite zaprzestanie pomocy innym pracownikom.",
+        "Ujawnienie dodatkowych obowiązków i uzgodnienie priorytetów z kierowniczką."
+      ],
+      "answer": "Ujawnienie dodatkowych obowiązków i uzgodnienie priorytetów z kierowniczką.",
+      "evidence": "Rozmowa o zakresie pracy pozwoliła wyjaśnić problem, którego wcześniej żadna z osób nie widziała w całości.",
+      "explanation": "Problem wynikał z nieuzgodnionych zobowiązań."
+    },
+    {
+      "id": "detail",
+      "skill": "detail",
+      "question": "Którego zadania Karol nie zdążył wykonać?",
+      "options": [
+        "Listy nowych pracowników.",
+        "Raportu, za który odpowiadał.",
+        "Planu szkolenia dla całej firmy."
+      ],
+      "answer": "Raportu, za który odpowiadał.",
+      "evidence": "Karol nie zdążył przygotować raportu, za który odpowiadał.",
+      "explanation": "Raport był jego podstawowym obowiązkiem."
+    },
+    {
+      "id": "cause",
+      "skill": "cause",
+      "question": "Dlaczego kierowniczka nie zmieniła wcześniej priorytetów Karola?",
+      "options": [
+        "Nie wiedziała o dodatkowej prośbie innego działu.",
+        "Karol otrzymał zgodę na zmianę wszystkich zadań.",
+        "Nie interesowała się terminem raportu."
+      ],
+      "answer": "Nie wiedziała o dodatkowej prośbie innego działu.",
+      "evidence": "nie wiedziała o dodatkowym zadaniu i nie miała możliwości zmienić jego priorytetów.",
+      "explanation": "Brak informacji uniemożliwił koordynację."
+    },
+    {
+      "id": "inference",
+      "skill": "inference",
+      "question": "Inny dział prosi Karola o kilkugodzinną pomoc w dniu ważnego raportu. Jak powinien postąpić według ustaleń?",
+      "options": [
+        "Automatycznie przyjąć nowe zadanie i nie informować o opóźnieniu.",
+        "Ocenić wpływ prośby na termin i uzgodnić priorytet z kierowniczką, jeśli powstaje konflikt.",
+        "Odmówić niezależnie od czasu i znaczenia prośby."
+      ],
+      "answer": "Ocenić wpływ prośby na termin i uzgodnić priorytet z kierowniczką, jeśli powstaje konflikt.",
+      "evidence": "Przy większych zadaniach z innego działu najpierw sprawdzi, czy ich wykonanie nie wpłynie na uzgodnione terminy.",
+      "explanation": "Większe prośby trzeba ocenić w kontekście obecnych zobowiązań."
+    },
+    {
+      "id": "vocabulary",
+      "skill": "vocabulary",
+      "question": "Co oznacza, że zadanie ma „pierwszeństwo”?",
+      "options": [
+        "Należy je wykonać wyłącznie samodzielnie.",
+        "Nie wymaga żadnej informacji o terminie.",
+        "Powinno być wykonane przed innym zadaniem, gdy czasu nie wystarcza na oba."
+      ],
+      "answer": "Powinno być wykonane przed innym zadaniem, gdy czasu nie wystarcza na oba.",
+      "evidence": "które z nich powinny mieć pierwszeństwo w sytuacji, gdy nie można wykonać wszystkiego na czas.",
+      "explanation": "Pierwszeństwo oznacza wyższy priorytet."
+    }
+  ],
+  "publicationStatus": "practice"
+}

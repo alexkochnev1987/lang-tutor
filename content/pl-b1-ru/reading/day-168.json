@@ -1,0 +1,76 @@
+{
+  "id": "pl-b1.reading.day-168",
+  "day": 168,
+  "level": "B1",
+  "genre": "poradnik",
+  "title": "Przygotowanie do egzaminu językowego",
+  "text": "Osoby przygotowujące się do egzaminu językowego często zaczynają od rozwiązywania jak największej liczby przykładowych zadań. Taka praktyka może być przydatna, ale sam wynik kolejnego testu nie zawsze wyjaśnia, nad czym trzeba jeszcze pracować. Warto najpierw sprawdzić aktualne informacje o formacie egzaminu, a potem ocenić własne umiejętności w jego poszczególnych częściach.\n\nW przykładowym planie Ewa przeznaczyła pierwszy tydzień na rozpoznanie trudności. Podczas czytania zauważyła, że dobrze rozumie ogólny temat tekstu, lecz czasami wybiera odpowiedź na podstawie jednego znajomego słowa. W zadaniach pisemnych potrafiła przekazać najważniejszą informację, ale zapominała o jednym z punktów polecenia.\n\nW następnym tygodniu nie rozwiązywała codziennie całego testu. Ćwiczyła przede wszystkim porównywanie odpowiedzi z konkretnymi fragmentami tekstu oraz sprawdzanie, czy jej wypowiedź obejmuje wszystkie wymagane elementy. Po każdym ćwiczeniu zapisywała przyczynę błędu, a nie tylko prawidłową odpowiedź.\n\nNa koniec tygodnia Ewa wykonała nowy zestaw zadań bez podpowiedzi i w ustalonym czasie. Dzięki temu mogła ocenić, czy wykorzystuje poznaną metodę również wtedy, gdy nie zna wcześniej treści. Nie powtarzała dokładnie tego samego testu, ponieważ mogłaby pamiętać klucze.\n\nPrzed właściwym egzaminem warto też uporządkować kwestie organizacyjne: sprawdzić miejsce, godzinę oraz informacje przekazane przez organizatora. Plan nauki nie powinien opierać się wyłącznie na zapamiętywaniu odpowiedzi. Jego celem jest rozwijanie umiejętności, które można zastosować w nowej sytuacji, nawet jeśli temat zadania różni się od wcześniej ćwiczonych.",
+  "questions": [
+    {
+      "id": "main-idea",
+      "skill": "main-idea",
+      "question": "Jaki sposób przygotowania proponuje poradnik?",
+      "options": [
+        "Poświęcić cały czas na naukę słownictwa bez sprawdzania poleceń.",
+        "Wykonywać wyłącznie ten sam test aż do zapamiętania odpowiedzi.",
+        "Rozpoznawać przyczyny trudności, ćwiczyć konkretne umiejętności i sprawdzać je w nowych zadaniach."
+      ],
+      "answer": "Rozpoznawać przyczyny trudności, ćwiczyć konkretne umiejętności i sprawdzać je w nowych zadaniach.",
+      "evidence": "Jego celem jest rozwijanie umiejętności, które można zastosować w nowej sytuacji",
+      "explanation": "Plan obejmuje diagnozę trudności, celową praktykę i sprawdzenie w nowym materiale."
+    },
+    {
+      "id": "detail",
+      "skill": "detail",
+      "question": "Jaki problem Ewa zauważyła w zadaniach pisemnych?",
+      "options": [
+        "Pomijała jeden z punktów polecenia.",
+        "Nie rozumiała żadnego tematu wypowiedzi.",
+        "Nie potrafiła znaleźć słownika."
+      ],
+      "answer": "Pomijała jeden z punktów polecenia.",
+      "evidence": "W zadaniach pisemnych potrafiła przekazać najważniejszą informację, ale zapominała o jednym z punktów polecenia.",
+      "explanation": "Problem dotyczył kompletności wypowiedzi."
+    },
+    {
+      "id": "cause",
+      "skill": "cause",
+      "question": "Dlaczego wybrała nowy zestaw zamiast powtarzać ten sam test?",
+      "options": [
+        "Nowy zestaw nie zawierał żadnych trudnych zadań.",
+        "Chciała sprawdzić umiejętność niezależnie od pamiętania odpowiedzi.",
+        "Nie miała dostępu do poprzednich wyników."
+      ],
+      "answer": "Chciała sprawdzić umiejętność niezależnie od pamiętania odpowiedzi.",
+      "evidence": "Nie powtarzała dokładnie tego samego testu, ponieważ mogłaby pamiętać klucze.",
+      "explanation": "Nowe zadania lepiej sprawdzają zastosowanie metody."
+    },
+    {
+      "id": "inference",
+      "skill": "inference",
+      "question": "W kolejnym teście Ewa znów pomija wymagany punkt wypowiedzi. Co najlepiej odpowiada jej planowi?",
+      "options": [
+        "Zapamiętać na pamięć całą odpowiedź z tego testu.",
+        "Ćwiczyć wyłącznie rozpoznawanie głównego tematu tekstów.",
+        "Przećwiczyć analizę polecenia i sprawdzić ją w kolejnej nowej wypowiedzi."
+      ],
+      "answer": "Przećwiczyć analizę polecenia i sprawdzić ją w kolejnej nowej wypowiedzi.",
+      "evidence": "Ćwiczyła przede wszystkim porównywanie odpowiedzi z konkretnymi fragmentami tekstu oraz sprawdzanie, czy jej wypowiedź obejmuje wszystkie wymagane elementy.",
+      "explanation": "Błąd wskazuje konkretną umiejętność, którą trzeba ćwiczyć."
+    },
+    {
+      "id": "vocabulary",
+      "skill": "vocabulary",
+      "question": "Co oznacza „klucz” w kontekście testu?",
+      "options": [
+        "Zestaw poprawnych odpowiedzi do zadań.",
+        "Temat nowej wypowiedzi pisemnej.",
+        "Dokument pozwalający wejść do sali."
+      ],
+      "answer": "Zestaw poprawnych odpowiedzi do zadań.",
+      "evidence": "mogłaby pamiętać klucze.",
+      "explanation": "Klucz pozwala sprawdzić odpowiedzi."
+    }
+  ],
+  "publicationStatus": "practice"
+}

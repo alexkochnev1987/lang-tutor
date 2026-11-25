@@ -1,0 +1,76 @@
+{
+  "id": "pl-b1.reading.day-177",
+  "day": 177,
+  "level": "B1",
+  "genre": "artykuł",
+  "title": "Porównanie kosztów całego zamówienia",
+  "text": "Dwie znajome osoby chciały kupić po jednym pojemniku do przechowywania dokumentów. Znalazły trzy sklepy oferujące podobne produkty. W pierwszym cena pojemnika wynosiła czterdzieści złotych, w drugim trzydzieści pięć, a w trzecim czterdzieści pięć. Początkowo najkorzystniejsza wydawała się druga oferta.\n\nDopiero po dodaniu produktów do koszyka zauważyły różnice w kosztach dostawy. Pierwszy sklep pobierał dziesięć złotych za całe zamówienie, niezależnie od tego, czy znajdował się w nim jeden pojemnik, czy dwa. Drugi pobierał dwadzieścia złotych. W trzecim sklepie możliwy był bezpłatny odbiór osobisty przy stacji, obok której jedna z osób codziennie przechodziła.\n\nZrobiły krótkie zestawienie dla dwóch pojemników kupowanych razem. W pierwszym przypadku całe zamówienie kosztowałoby dziewięćdziesiąt złotych. W drugim, mimo niższej ceny produktu, kwota byłaby dokładnie taka sama. W trzecim również zapłaciłyby dziewięćdziesiąt złotych, pod warunkiem że odbiorą rzeczy osobiście.\n\nZnajome nie musiały więc wybierać na podstawie samej ceny. Sprawdziły, kiedy produkty będą dostępne i ile czasu zajmie odbiór. Pierwszy sklep oferował dostawę w środę, drugi nie potwierdzał jeszcze dnia wysyłki, a w trzecim pojemniki można było odebrać już we wtorek. Ponieważ jedna z osób potrzebowała swojego pojemnika na środowe spotkanie, wybrały trzeci sklep.\n\nGdyby zamawiały produkty osobno, porównanie mogłoby wyglądać inaczej. Koszt dostawy stanowiłby wtedy większą część każdego zakupu. Przykład pokazuje, że warto porównywać tę samą liczbę produktów i uwzględniać wszystkie potrzebne koszty. Dopiero po ustaleniu całkowitej kwoty można rozsądnie porównać również wygodę i termin realizacji.",
+  "questions": [
+    {
+      "id": "main-idea",
+      "skill": "main-idea",
+      "question": "Co pokazuje przykład zakupów?",
+      "options": [
+        "Każdy odbiór osobisty jest droższy od dostawy.",
+        "Niższa cena pojedynczej rzeczy nie musi oznaczać niższego kosztu całego zamówienia.",
+        "Najlepiej porównywać tylko cenę jednego produktu."
+      ],
+      "answer": "Niższa cena pojedynczej rzeczy nie musi oznaczać niższego kosztu całego zamówienia.",
+      "evidence": "Przykład pokazuje, że warto porównywać tę samą liczbę produktów i uwzględniać wszystkie potrzebne koszty.",
+      "explanation": "Dostawa i liczba sztuk wpływają na ostateczny koszt."
+    },
+    {
+      "id": "detail",
+      "skill": "detail",
+      "question": "Ile kosztuje dostawa w drugim sklepie?",
+      "options": [
+        "Trzydzieści pięć złotych.",
+        "Dziesięć złotych.",
+        "Dwadzieścia złotych."
+      ],
+      "answer": "Dwadzieścia złotych.",
+      "evidence": "Drugi pobierał dwadzieścia złotych.",
+      "explanation": "To koszt dostawy, nie pojemnika."
+    },
+    {
+      "id": "cause",
+      "skill": "cause",
+      "question": "Dlaczego znajome ostatecznie wybrały trzeci sklep?",
+      "options": [
+        "Mogły odebrać pojemniki wcześniej przy dogodnej trasie.",
+        "Oferował najniższą cenę pojedynczego pojemnika.",
+        "Tylko w nim można było kupić dwa pojemniki razem."
+      ],
+      "answer": "Mogły odebrać pojemniki wcześniej przy dogodnej trasie.",
+      "evidence": "w trzecim pojemniki można było odebrać już we wtorek. Ponieważ jedna z osób potrzebowała swojego pojemnika na środowe spotkanie, wybrały trzeci sklep.",
+      "explanation": "Przy równym koszcie zdecydowały termin i wygoda."
+    },
+    {
+      "id": "inference",
+      "skill": "inference",
+      "question": "Gdyby kupowały tylko jeden pojemnik i potrzebowały dostawy, ile kosztowałby pierwszy sklep w porównaniu z drugim?",
+      "options": [
+        "Sześćdziesiąt złotych, czyli o dziesięć złotych więcej niż drugi.",
+        "Czterdzieści złotych, czyli tyle samo co drugi.",
+        "Pięćdziesiąt złotych, czyli o pięć złotych mniej niż drugi."
+      ],
+      "answer": "Pięćdziesiąt złotych, czyli o pięć złotych mniej niż drugi.",
+      "evidence": "W pierwszym cena pojemnika wynosiła czterdzieści złotych, w drugim trzydzieści pięć, a w trzecim czterdzieści pięć. Początkowo najkorzystniejsza wydawała się druga oferta.\n\nDopiero po dodaniu produktów do koszyka zauważyły różnice w kosztach dostawy. Pierwszy sklep pobierał dziesięć złotych za całe zamówienie, niezależnie od tego, czy znajdował się w nim jeden pojemnik, czy dwa. Drugi pobierał dwadzieścia złotych.",
+      "explanation": "Pierwszy: 40 + 10 = 50; drugi: 35 + 20 = 55."
+    },
+    {
+      "id": "vocabulary",
+      "skill": "vocabulary",
+      "question": "Co oznacza „całkowita kwota” w tym przykładzie?",
+      "options": [
+        "Łączny koszt produktów i wybranego sposobu dostawy lub odbioru.",
+        "Cena wyłącznie jednego pojemnika.",
+        "Wartość różnicy między cenami dwóch sklepów."
+      ],
+      "answer": "Łączny koszt produktów i wybranego sposobu dostawy lub odbioru.",
+      "evidence": "Dopiero po ustaleniu całkowitej kwoty",
+      "explanation": "Całkowita kwota obejmuje wszystkie porównywane koszty zamówienia."
+    }
+  ],
+  "publicationStatus": "practice"
+}
