@@ -1,0 +1,756 @@
+{
+  "version": 1,
+  "status": "draft",
+  "texts": [
+    {
+      "id": "pl-b1.reading.day-030",
+      "day": 30,
+      "level": "A2",
+      "genre": "opowiadanie",
+      "title": "Bilet na wcześniejszy pociąg",
+      "text": "Aneta planowała pojechać do Gdańska w piątek po pracy. Kupiła bilet na pociąg o osiemnastej, ponieważ zwykle kończy pracę o siedemnastej. W czwartek kierownik poinformował ją, że następnego dnia biuro będzie zamknięte wcześniej. Aneta postanowiła zmienić bilet, żeby spędzić więcej czasu nad morzem.\n\nNa stronie przewoźnika znalazła połączenie o czternastej. Zwykła zmiana biletu kosztowała niewiele, ale w tym pociągu zostały tylko miejsca w pierwszej klasie. Aneta porównała ceny i wybrała pociąg o piętnastej. Podróż trwała o dwadzieścia minut dłużej, lecz bilet był tańszy i nie musiała dopłacać za wyższą klasę.\n\nPrzed wyjściem z domu zapisała nowy bilet w telefonie. Stary bilet otrzymał status anulowanego, więc usunęła go z listy dokumentów na podróż. Po przyjeździe do Gdańska zostawiła walizkę w hotelu. Miała jeszcze czas na spacer przed kolacją, choć początkowo planowała tylko zameldować się i odpocząć.",
+      "questions": [
+        {
+          "id": "main-idea",
+          "skill": "main-idea",
+          "question": "Dlaczego Aneta zmienia plan podróży?",
+          "options": [
+            "Pojawiła się możliwość wcześniejszego wyjazdu.",
+            "Pierwotny pociąg został odwołany.",
+            "Hotel przesunął termin rezerwacji."
+          ],
+          "answer": "Pojawiła się możliwość wcześniejszego wyjazdu.",
+          "evidence": "następnego dnia biuro będzie zamknięte wcześniej.",
+          "explanation": "Wcześniejsze zakończenie pracy pozwala wyjechać przed osiemnastą."
+        },
+        {
+          "id": "detail",
+          "skill": "detail",
+          "question": "O której odjeżdża wybrany pociąg?",
+          "options": [
+            "O osiemnastej.",
+            "O piętnastej.",
+            "O czternastej."
+          ],
+          "answer": "O piętnastej.",
+          "evidence": "wybrała pociąg o piętnastej.",
+          "explanation": "Czternasta była inną rozważaną opcją."
+        },
+        {
+          "id": "cause",
+          "skill": "cause",
+          "question": "Dlaczego nie wybrała pociągu o czternastej?",
+          "options": [
+            "Podróż nim trwała dłużej.",
+            "Nie było żadnych wolnych miejsc.",
+            "Zostały w nim tylko miejsca w droższej klasie."
+          ],
+          "answer": "Zostały w nim tylko miejsca w droższej klasie.",
+          "evidence": "w tym pociągu zostały tylko miejsca w pierwszej klasie.",
+          "explanation": "Późniejsze połączenie pozwoliło uniknąć dopłaty."
+        },
+        {
+          "id": "inference",
+          "skill": "inference",
+          "question": "Co można powiedzieć o priorytetach Anety?",
+          "options": [
+            "Zależy jej na wcześniejszym przyjeździe, ale również na cenie.",
+            "Najważniejszy jest dla niej najkrótszy czas przejazdu bez względu na koszt.",
+            "Chce podróżować tylko pierwszą klasą."
+          ],
+          "answer": "Zależy jej na wcześniejszym przyjeździe, ale również na cenie.",
+          "evidence": "bilet był tańszy i nie musiała dopłacać za wyższą klasę.",
+          "explanation": "Akceptuje trochę dłuższą podróż, aby nie płacić więcej."
+        },
+        {
+          "id": "vocabulary",
+          "skill": "vocabulary",
+          "question": "Co oznacza „anulowanego” w odniesieniu do biletu?",
+          "options": [
+            "Takiego, który pozwala na zmianę klasy.",
+            "Takiego, który stracił ważność.",
+            "Takiego, który został wydrukowany."
+          ],
+          "answer": "Takiego, który stracił ważność.",
+          "evidence": "Stary bilet otrzymał status anulowanego",
+          "explanation": "Po zmianie nie można już korzystać z poprzedniego biletu."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-031",
+      "day": 31,
+      "level": "A2",
+      "genre": "e-mail",
+      "title": "Co zobaczymy w Poznaniu?",
+      "text": "Cześć, Mario! W przyszły weekend przyjedziesz do Poznania po raz pierwszy. Mam kilka pomysłów na nasze spotkanie. W sobotę rano odbiorę cię z dworca i pojedziemy tramwajem do mojego mieszkania. Zostawisz tam bagaż, a potem pójdziemy na Stary Rynek. W południe zobaczymy słynne koziołki.\n\nPo obiedzie odwiedzimy muzeum, jeśli uda mi się kupić bilety przez internet. W soboty jest tam dużo turystów, więc chcę zamówić wejście wcześniej. Jeśli nie będzie wolnych miejsc, wybierzemy spacer nad Wartą. Wieczorem spotkamy się z moimi znajomymi w restauracji niedaleko domu.\n\nW niedzielę wstaniemy trochę później i zjemy śniadanie w kawiarni. Twój pociąg odjeżdża o szesnastej, dlatego nie pojedziemy do miejsc położonych daleko od centrum. Możemy jeszcze odwiedzić targ i kupić coś na drogę. Napisz, czy taki plan ci odpowiada. Jeśli wolisz inne atrakcje, zmienimy kilka punktów. Najważniejsze, żebyśmy miały czas spokojnie porozmawiać.",
+      "questions": [
+        {
+          "id": "main-idea",
+          "skill": "main-idea",
+          "question": "Jaki jest cel wiadomości?",
+          "options": [
+            "Poinformowanie o przeprowadzce do Poznania.",
+            "Zaproponowanie wspólnego wyjazdu nad morze.",
+            "Przedstawienie planu weekendowej wizyty."
+          ],
+          "answer": "Przedstawienie planu weekendowej wizyty.",
+          "evidence": "Mam kilka pomysłów na nasze spotkanie.",
+          "explanation": "Autorka ustala program wizyty Marii."
+        },
+        {
+          "id": "detail",
+          "skill": "detail",
+          "question": "Gdzie Maria zostawi bagaż?",
+          "options": [
+            "W mieszkaniu znajomej.",
+            "Na dworcu.",
+            "W muzeum."
+          ],
+          "answer": "W mieszkaniu znajomej.",
+          "evidence": "pojedziemy tramwajem do mojego mieszkania. Zostawisz tam bagaż",
+          "explanation": "Nie będzie musiała zwiedzać z walizką."
+        },
+        {
+          "id": "cause",
+          "skill": "cause",
+          "question": "Dlaczego autorka chce kupić bilety do muzeum wcześniej?",
+          "options": [
+            "Bilety są sprzedawane wyłącznie na dworcu.",
+            "W sobotę jest wielu turystów.",
+            "Muzeum działa tylko rano."
+          ],
+          "answer": "W sobotę jest wielu turystów.",
+          "evidence": "W soboty jest tam dużo turystów",
+          "explanation": "Rezerwacja zwiększa szansę na wejście."
+        },
+        {
+          "id": "inference",
+          "skill": "inference",
+          "question": "Jaki plan pasuje do niedzielnych ograniczeń?",
+          "options": [
+            "Całodniowa wycieczka poza miasto.",
+            "Zwiedzanie dalekiego muzeum do siedemnastej.",
+            "Śniadanie i krótka wizyta na targu w centrum."
+          ],
+          "answer": "Śniadanie i krótka wizyta na targu w centrum.",
+          "evidence": "Twój pociąg odjeżdża o szesnastej",
+          "explanation": "Niedzielne atrakcje powinny pozwolić dotrzeć na dworzec przed odjazdem."
+        },
+        {
+          "id": "vocabulary",
+          "skill": "vocabulary",
+          "question": "Co oznacza „na drogę”?",
+          "options": [
+            "Do zabrania podczas podróży.",
+            "Do zostawienia na ulicy.",
+            "Do sprzedania na dworcu."
+          ],
+          "answer": "Do zabrania podczas podróży.",
+          "evidence": "kupić coś na drogę.",
+          "explanation": "Chodzi o coś przydatnego w czasie powrotu."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-032",
+      "day": 32,
+      "level": "A2",
+      "genre": "poradnik",
+      "title": "Walizka, której nie trzeba dźwigać",
+      "text": "Przygotowując się do krótkiej podróży, wiele osób zabiera zbyt dużo rzeczy. Najpierw warto sprawdzić pogodę w miejscu wyjazdu i zapisać, co naprawdę będzie potrzebne. Jeśli jedziemy na trzy dni, nie musimy pakować ubrań na cały tydzień. Dobrze wybrać takie rzeczy, które pasują do siebie i nadają się na kilka różnych okazji.\n\nPrzed spakowaniem kosmetyków sprawdźmy, co zapewnia hotel. Ręczniki i mydło często czekają już w pokoju. W małej torbie podręcznej powinny znaleźć się dokumenty, telefon, ładowarka, woda i potrzebne leki. Dzięki temu nie trzeba otwierać dużej walizki za każdym razem, gdy chcemy wyjąć jedną rzecz.\n\nPo przygotowaniu bagażu warto go zważyć. Niektóre linie lotnicze mają różne limity zależnie od rodzaju biletu. Sprawdzenie zasad przed wyjazdem pomaga uniknąć dodatkowych kosztów na lotnisku. Ostatni krok to zostawienie odrobiny wolnego miejsca. Być może podczas podróży kupimy prezent lub pamiątkę, którą będziemy chcieli przywieźć do domu.",
+      "questions": [
+        {
+          "id": "main-idea",
+          "skill": "main-idea",
+          "question": "Jaki jest główny cel tekstu?",
+          "options": [
+            "Lista sklepów na lotnisku.",
+            "Porady dotyczące rozsądnego pakowania bagażu.",
+            "Opis różnych linii lotniczych."
+          ],
+          "answer": "Porady dotyczące rozsądnego pakowania bagażu.",
+          "evidence": "wiele osób zabiera zbyt dużo rzeczy.",
+          "explanation": "Tekst pokazuje, jak ograniczyć bagaż i uniknąć problemów."
+        },
+        {
+          "id": "detail",
+          "skill": "detail",
+          "question": "Co według tekstu warto umieścić w małej torbie?",
+          "options": [
+            "Wszystkie ubrania na tydzień.",
+            "Ręczniki z hotelu.",
+            "Dokumenty i ładowarkę."
+          ],
+          "answer": "Dokumenty i ładowarkę.",
+          "evidence": "W małej torbie podręcznej powinny znaleźć się dokumenty, telefon, ładowarka, woda i potrzebne leki.",
+          "explanation": "Te przedmioty powinny być łatwo dostępne."
+        },
+        {
+          "id": "cause",
+          "skill": "cause",
+          "question": "Dlaczego trzeba sprawdzić zasady dotyczące bagażu?",
+          "options": [
+            "Żeby uniknąć dodatkowych kosztów.",
+            "Żeby wybrać kolor walizki.",
+            "Żeby zamówić ręczniki w hotelu."
+          ],
+          "answer": "Żeby uniknąć dodatkowych kosztów.",
+          "evidence": "pomaga uniknąć dodatkowych kosztów na lotnisku.",
+          "explanation": "Limity zależą od biletu."
+        },
+        {
+          "id": "inference",
+          "skill": "inference",
+          "question": "Która osoba najlepiej stosuje rady z tekstu?",
+          "options": [
+            "Osoba, która wkłada dokumenty na sam dół dużej walizki.",
+            "Osoba, która sprawdza pogodę, waży bagaż i zostawia trochę miejsca.",
+            "Osoba, która pakuje ubrania na tydzień przed trzydniowym wyjazdem."
+          ],
+          "answer": "Osoba, która sprawdza pogodę, waży bagaż i zostawia trochę miejsca.",
+          "evidence": "warto go zważyć.",
+          "explanation": "Odpowiedź łączy kilka zaleceń z różnych akapitów."
+        },
+        {
+          "id": "vocabulary",
+          "skill": "vocabulary",
+          "question": "Co oznacza „bagaż podręczny”?",
+          "options": [
+            "Walizkę zostawioną w hotelu.",
+            "Przesyłkę wysłaną pocztą.",
+            "Bagaż, który mamy przy sobie podczas podróży."
+          ],
+          "answer": "Bagaż, który mamy przy sobie podczas podróży.",
+          "evidence": "W małej torbie podręcznej",
+          "explanation": "Chodzi o rzeczy dostępne bez otwierania dużego bagażu."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-033",
+      "day": 33,
+      "level": "A2",
+      "genre": "wiadomość",
+      "title": "Wakacje w górach",
+      "text": "Za dwa tygodnie Monika i jej siostra będą spędzać urlop w górach. Wynajęły mały apartament w pobliżu szlaków turystycznych. Nie chcą codziennie korzystać z samochodu, dlatego przed wyjazdem sprawdzą rozkład lokalnych autobusów. Monika lubi długie spacery, ale jej siostra dopiero zaczyna chodzić po górach.\n\nPierwszego dnia będą odpoczywać po podróży i zwiedzą miasteczko. Następnego dnia wybiorą łatwy szlak, który kończy się przy schronisku. Jeśli obie będą się dobrze czuły, później zaplanują dłuższą trasę. Nie zamierzają wychodzić wysoko w góry podczas burzy ani przy bardzo silnym wietrze.\n\nWieczorami będą przygotowywać kolację w apartamencie. Monika weźmie kilka książek, a jej siostra zabierze aparat fotograficzny. Gospodarz wysłał im listę pobliskich sklepów i numer telefonu do informacji turystycznej. Obie cieszą się, że będą mogły zmieniać plan zależnie od pogody. Nie chodzi im o zdobycie jak największej liczby szczytów, lecz o przyjemny i spokojny odpoczynek.",
+      "questions": [
+        {
+          "id": "main-idea",
+          "skill": "main-idea",
+          "question": "Jaki jest najważniejszy cel wyjazdu?",
+          "options": [
+            "Spokojny odpoczynek dostosowany do możliwości obu sióstr.",
+            "Zdobycie jak największej liczby szczytów.",
+            "Codzienne zwiedzanie samochodem."
+          ],
+          "answer": "Spokojny odpoczynek dostosowany do możliwości obu sióstr.",
+          "evidence": "lecz o przyjemny i spokojny odpoczynek.",
+          "explanation": "Siostry wolą bezpieczny wypoczynek od ambitnego wyniku."
+        },
+        {
+          "id": "detail",
+          "skill": "detail",
+          "question": "Co zrobią pierwszego dnia?",
+          "options": [
+            "Wrócą samochodem do domu.",
+            "Odpoczną i zwiedzą miasteczko.",
+            "Pójdą na najdłuższy szlak."
+          ],
+          "answer": "Odpoczną i zwiedzą miasteczko.",
+          "evidence": "Pierwszego dnia będą odpoczywać po podróży i zwiedzą miasteczko.",
+          "explanation": "Dłuższe trasy planują później."
+        },
+        {
+          "id": "cause",
+          "skill": "cause",
+          "question": "Dlaczego zaczną od łatwego szlaku?",
+          "options": [
+            "Apartament jest zamknięty do południa.",
+            "Monika nie lubi spacerować.",
+            "Siostra Moniki ma mało doświadczenia w górach."
+          ],
+          "answer": "Siostra Moniki ma mało doświadczenia w górach.",
+          "evidence": "jej siostra dopiero zaczyna chodzić po górach.",
+          "explanation": "Plan uwzględnia umiejętności obu uczestniczek."
+        },
+        {
+          "id": "inference",
+          "skill": "inference",
+          "question": "Co prawdopodobnie zrobią, jeśli pogoda będzie niebezpieczna?",
+          "options": [
+            "Zmienią plan i zrezygnują z wysokich tras.",
+            "Pójdą na szczyt bez względu na pogodę.",
+            "Oddadzą klucze i natychmiast zakończą urlop."
+          ],
+          "answer": "Zmienią plan i zrezygnują z wysokich tras.",
+          "evidence": "Nie zamierzają wychodzić wysoko w góry podczas burzy",
+          "explanation": "Elastyczność planu pozwala uniknąć ryzykownych wyjść."
+        },
+        {
+          "id": "vocabulary",
+          "skill": "vocabulary",
+          "question": "Co oznacza „szlak” w tekście?",
+          "options": [
+            "Pokój w apartamencie.",
+            "Wyznaczoną trasę dla turystów.",
+            "Rozkład jazdy autobusu."
+          ],
+          "answer": "Wyznaczoną trasę dla turystów.",
+          "evidence": "wybiorą łatwy szlak, który kończy się przy schronisku.",
+          "explanation": "Szlak prowadzi turystów przez góry."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-034",
+      "day": 34,
+      "level": "A2",
+      "genre": "opowiadanie",
+      "title": "Zagubiona torba",
+      "text": "Po weekendowym wyjeździe Paweł wracał pociągiem do domu. Na półce nad siedzeniem położył małą czarną torbę z ubraniami i książką. Gdy pociąg zatrzymał się na jego stacji, Paweł rozmawiał przez telefon. Wziął plecak stojący przy nogach i szybko wysiadł. Dopiero przed dworcem zauważył, że nie ma torby.\n\nWrócił na peron, ale pociąg już odjechał. Pracownica informacji poradziła mu, żeby wypełnił formularz rzeczy znalezionych. Paweł podał numer pociągu, godzinę przejazdu, opis torby i swoje dane kontaktowe. Nie pamiętał numeru wagonu, więc sprawdził go na bilecie w telefonie.\n\nNastępnego dnia otrzymał wiadomość, że obsługa znalazła podobną torbę na stacji końcowej. Aby potwierdzić, że należy do niego, musiał opisać przedmioty znajdujące się w środku. Po dwóch dniach odebrał ją w biurze rzeczy znalezionych. Od tej pory przed wysiadaniem zawsze sprawdza półkę i miejsce pod siedzeniem.",
+      "questions": [
+        {
+          "id": "main-idea",
+          "skill": "main-idea",
+          "question": "O czym jest historia?",
+          "options": [
+            "O kupowaniu biletu na weekend.",
+            "O zmianie stacji docelowej.",
+            "O odzyskaniu torby pozostawionej w pociągu."
+          ],
+          "answer": "O odzyskaniu torby pozostawionej w pociągu.",
+          "evidence": "Dopiero przed dworcem zauważył, że nie ma torby.",
+          "explanation": "Paweł zgubił bagaż i starał się go odzyskać."
+        },
+        {
+          "id": "detail",
+          "skill": "detail",
+          "question": "Gdzie znalazł numer wagonu?",
+          "options": [
+            "Na bilecie w telefonie.",
+            "Na etykiecie torby.",
+            "W książce."
+          ],
+          "answer": "Na bilecie w telefonie.",
+          "evidence": "sprawdził go na bilecie w telefonie.",
+          "explanation": "Bilet zawierał potrzebne dane."
+        },
+        {
+          "id": "cause",
+          "skill": "cause",
+          "question": "Dlaczego musiał opisać zawartość torby?",
+          "options": [
+            "Żeby zmienić miejsce w pociągu.",
+            "Żeby potwierdzić, że torba jest jego.",
+            "Żeby zapłacić za dodatkowy bagaż."
+          ],
+          "answer": "Żeby potwierdzić, że torba jest jego.",
+          "evidence": "Aby potwierdzić, że należy do niego",
+          "explanation": "Opis odróżnia jego torbę od podobnych."
+        },
+        {
+          "id": "inference",
+          "skill": "inference",
+          "question": "Czego nauczył się z tego zdarzenia?",
+          "options": [
+            "Należy zawsze zostawiać plecak pod siedzeniem.",
+            "Telefonu nie wolno zabierać w podróż.",
+            "Przed opuszczeniem pociągu warto sprawdzić miejsca, gdzie były rzeczy."
+          ],
+          "answer": "Przed opuszczeniem pociągu warto sprawdzić miejsca, gdzie były rzeczy.",
+          "evidence": "Od tej pory przed wysiadaniem zawsze sprawdza półkę i miejsce pod siedzeniem.",
+          "explanation": "Paweł wprowadza prosty nawyk, który ma zapobiec podobnej sytuacji."
+        },
+        {
+          "id": "vocabulary",
+          "skill": "vocabulary",
+          "question": "Co oznacza „stacja końcowa”?",
+          "options": [
+            "Ostatni przystanek na trasie pociągu.",
+            "Pierwszy peron na dworcu.",
+            "Stacja, na której Paweł wsiadł."
+          ],
+          "answer": "Ostatni przystanek na trasie pociągu.",
+          "evidence": "na stacji końcowej.",
+          "explanation": "To miejsce, gdzie pociąg kończy kurs."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-035",
+      "day": 35,
+      "level": "A2",
+      "genre": "ogłoszenie",
+      "title": "Wolny weekend nad jeziorem",
+      "text": "Zapraszamy na weekendowy wyjazd nad jezioro dla osób, które chcą odpocząć od miasta. Wyruszamy w sobotę o ósmej rano spod domu kultury. Cena obejmuje przejazd autokarem, nocleg w dwuosobowym pokoju i śniadanie w niedzielę. Obiad oraz kolację uczestnicy organizują we własnym zakresie.\n\nNa miejscu można wypożyczyć rower, spacerować po lesie lub odpocząć na plaży. W sobotę po południu organizujemy krótką wycieczkę z przewodnikiem. Udział jest dobrowolny i nie wymaga dodatkowej opłaty. Osoby, które wolą spędzić czas samodzielnie, mogą pozostać w ośrodku.\n\nZgłoszenia przyjmujemy do środy. Jeśli ktoś zrezygnuje po tym terminie, zwrot pieniędzy będzie możliwy tylko wtedy, gdy znajdzie się inny uczestnik. Prosimy zabrać wygodne buty oraz ubranie na chłodny wieczór. W razie silnego deszczu proponujemy zajęcia w świetlicy zamiast wycieczki. Powrót planujemy w niedzielę około dziewiętnastej. Szczegóły oraz kontakt do organizatora otrzymają osoby zapisane.",
+      "questions": [
+        {
+          "id": "main-idea",
+          "skill": "main-idea",
+          "question": "Co oferuje ogłoszenie?",
+          "options": [
+            "Samodzielny wynajem autokaru.",
+            "Zorganizowany weekendowy wypoczynek z możliwością wyboru zajęć.",
+            "Obowiązkowy dwudniowy kurs rowerowy."
+          ],
+          "answer": "Zorganizowany weekendowy wypoczynek z możliwością wyboru zajęć.",
+          "evidence": "Zapraszamy na weekendowy wyjazd nad jezioro",
+          "explanation": "Organizator zapewnia transport i nocleg oraz dodatkowe atrakcje."
+        },
+        {
+          "id": "detail",
+          "skill": "detail",
+          "question": "Który posiłek jest w cenie?",
+          "options": [
+            "Sobotnia kolacja.",
+            "Niedzielny obiad.",
+            "Niedzielne śniadanie."
+          ],
+          "answer": "Niedzielne śniadanie.",
+          "evidence": "nocleg w dwuosobowym pokoju i śniadanie w niedzielę.",
+          "explanation": "Pozostałe posiłki uczestnicy organizują sami."
+        },
+        {
+          "id": "cause",
+          "skill": "cause",
+          "question": "Dlaczego późna rezygnacja może utrudnić zwrot pieniędzy?",
+          "options": [
+            "Potrzebna jest osoba, która zajmie wolne miejsce.",
+            "Organizator nie przyjmuje zgłoszeń w sobotę.",
+            "Wycieczka z przewodnikiem jest obowiązkowa."
+          ],
+          "answer": "Potrzebna jest osoba, która zajmie wolne miejsce.",
+          "evidence": "gdy znajdzie się inny uczestnik.",
+          "explanation": "Po środzie zwrot zależy od znalezienia zastępstwa."
+        },
+        {
+          "id": "inference",
+          "skill": "inference",
+          "question": "Czy osoba, która nie chce chodzić z grupą, może wybrać ten wyjazd?",
+          "options": [
+            "Tak, ale musi zapłacić dodatkowo za pozostanie w ośrodku.",
+            "Tak, udział w wycieczce jest dobrowolny.",
+            "Nie, każdy musi spacerować z przewodnikiem."
+          ],
+          "answer": "Tak, udział w wycieczce jest dobrowolny.",
+          "evidence": "Osoby, które wolą spędzić czas samodzielnie, mogą pozostać w ośrodku.",
+          "explanation": "Program pozwala na samodzielny wypoczynek."
+        },
+        {
+          "id": "vocabulary",
+          "skill": "vocabulary",
+          "question": "Co oznacza „we własnym zakresie”?",
+          "options": [
+            "Razem z przewodnikiem.",
+            "W ramach ceny wyjazdu.",
+            "Samodzielnie, bez zapewnienia przez organizatora."
+          ],
+          "answer": "Samodzielnie, bez zapewnienia przez organizatora.",
+          "evidence": "Obiad oraz kolację uczestnicy organizują we własnym zakresie.",
+          "explanation": "Uczestnicy sami wybierają i opłacają te posiłki."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-036",
+      "day": 36,
+      "level": "A2",
+      "genre": "artykuł",
+      "title": "Książki dla sąsiadów",
+      "text": "Na jednym z osiedli w Warszawie działa niewielka biblioteczka społeczna. Mieszkańcy zostawiają na drewnianym regale książki, których już nie czytają. Każdy może wziąć wybraną książkę do domu. Nie trzeba zakładać konta ani płacić za wypożyczenie. Pomysł pojawił się podczas zebrania mieszkańców, gdy kilka osób zastanawiało się, co zrobić z niepotrzebnymi książkami.\n\nNa początku regał stał na otwartym podwórku. Po kilku deszczowych dniach okazało się, że część książek jest wilgotna. Zarząd wspólnoty zgodził się przenieść biblioteczkę pod zadaszenie przy wejściu do świetlicy. Teraz mieszkańcy odwiedzają ją przy okazji spaceru lub powrotu z pracy.\n\nRaz w miesiącu wolontariusze porządkują półki. Odkładają zniszczone książki i sprawdzają, czy dzieci mają odpowiednią literaturę. Nie prowadzą listy wypożyczeń, ale proszą o zwracanie książek po przeczytaniu albo przyniesienie innych. Biblioteczka nie zastępuje dużej biblioteki miejskiej, lecz daje sąsiadom prosty sposób na dzielenie się książkami i poznawanie nowych ludzi.",
+      "questions": [
+        {
+          "id": "main-idea",
+          "skill": "main-idea",
+          "question": "Co jest głównym tematem artykułu?",
+          "options": [
+            "Sąsiedzka inicjatywa wymiany książek.",
+            "Przeniesienie biblioteki miejskiej.",
+            "Sprzedaż używanych podręczników."
+          ],
+          "answer": "Sąsiedzka inicjatywa wymiany książek.",
+          "evidence": "działa niewielka biblioteczka społeczna.",
+          "explanation": "Tekst opisuje działanie lokalnego regału z książkami."
+        },
+        {
+          "id": "detail",
+          "skill": "detail",
+          "question": "Gdzie obecnie stoi biblioteczka?",
+          "options": [
+            "W dużej bibliotece miejskiej.",
+            "Pod zadaszeniem przy świetlicy.",
+            "Na otwartym podwórku."
+          ],
+          "answer": "Pod zadaszeniem przy świetlicy.",
+          "evidence": "przenieść biblioteczkę pod zadaszenie przy wejściu do świetlicy.",
+          "explanation": "Pierwotna lokalizacja się zmieniła."
+        },
+        {
+          "id": "cause",
+          "skill": "cause",
+          "question": "Dlaczego zmieniono miejsce regału?",
+          "options": [
+            "Mieszkańcy musieli płacić za konto.",
+            "Świetlica była za mała.",
+            "Deszcz niszczył książki."
+          ],
+          "answer": "Deszcz niszczył książki.",
+          "evidence": "część książek jest wilgotna.",
+          "explanation": "Nowe miejsce chroni książki przed deszczem."
+        },
+        {
+          "id": "inference",
+          "skill": "inference",
+          "question": "Jakiego zachowania oczekuje się od osoby korzystającej z biblioteczki?",
+          "options": [
+            "Oddania przeczytanej książki lub przyniesienia innej.",
+            "Płacenia za każdą wypożyczoną książkę.",
+            "Zakładania konta w bibliotece miejskiej."
+          ],
+          "answer": "Oddania przeczytanej książki lub przyniesienia innej.",
+          "evidence": "proszą o zwracanie książek po przeczytaniu albo przyniesienie innych.",
+          "explanation": "Biblioteczka opiera się na dobrowolnej wymianie."
+        },
+        {
+          "id": "vocabulary",
+          "skill": "vocabulary",
+          "question": "Co znaczy „przy okazji”?",
+          "options": [
+            "Po zamknięciu świetlicy.",
+            "Podczas wykonywania innej czynności.",
+            "Wyłącznie w specjalnie wyznaczonym terminie."
+          ],
+          "answer": "Podczas wykonywania innej czynności.",
+          "evidence": "przy okazji spaceru lub powrotu z pracy.",
+          "explanation": "Odwiedziny można połączyć z codzienną drogą."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-037",
+      "day": 37,
+      "level": "A2",
+      "genre": "opowiadanie",
+      "title": "Pomoc w sąsiedztwie",
+      "text": "W małej miejscowości powstała grupa sąsiedzka, do której należą osoby w różnym wieku. Jej członkowie pomagają sobie w prostych codziennych sprawach. Młodsi często robią zakupy osobom starszym albo pomagają im korzystać z internetu. Starsi mieszkańcy dzielą się doświadczeniem, uczą gotować tradycyjne potrawy i opowiadają o historii okolicy.\n\nKiedy Marta dołączyła do grupy, obawiała się, że nie znajdzie czasu na regularne spotkania. Pracuje zmianowo i nie zawsze wie, kiedy będzie wolna. Okazało się jednak, że pomoc można zgłaszać tylko wtedy, gdy ma się czas. W specjalnej grupie na telefonie mieszkańcy publikują krótkie prośby. Każdy odpowiada na te, które pasują do jego możliwości.\n\nMarta niedawno pomogła sąsiadowi zarezerwować wizytę przez internet. Kilka dni później sąsiad pokazał jej, jak naprawić zepsute krzesło. Marta zrozumiała, że nie musi zawsze pomagać w ten sam sposób. Ważniejsze jest to, że każdy może coś zaoferować, nawet jeśli nie ma dużo wolnego czasu.",
+      "questions": [
+        {
+          "id": "main-idea",
+          "skill": "main-idea",
+          "question": "O czym jest tekst?",
+          "options": [
+            "O nauce obsługi komputera w szkole.",
+            "O zatrudnieniu w urzędzie.",
+            "O wzajemnej pomocy mieszkańców."
+          ],
+          "answer": "O wzajemnej pomocy mieszkańców.",
+          "evidence": "Jej członkowie pomagają sobie w prostych codziennych sprawach.",
+          "explanation": "Historia opisuje wymianę różnych form pomocy."
+        },
+        {
+          "id": "detail",
+          "skill": "detail",
+          "question": "W czym Marta pomogła sąsiadowi?",
+          "options": [
+            "W rezerwacji wizyty przez internet.",
+            "W naprawie krzesła.",
+            "W przygotowaniu tradycyjnego obiadu."
+          ],
+          "answer": "W rezerwacji wizyty przez internet.",
+          "evidence": "pomogła sąsiadowi zarezerwować wizytę przez internet.",
+          "explanation": "Naprawę krzesła pokazał jej sąsiad."
+        },
+        {
+          "id": "cause",
+          "skill": "cause",
+          "question": "Dlaczego Marta początkowo się obawiała?",
+          "options": [
+            "Nie znała historii miejscowości.",
+            "Nie miała stałego rozkładu pracy i wolnego czasu.",
+            "Nie korzystała z telefonu."
+          ],
+          "answer": "Nie miała stałego rozkładu pracy i wolnego czasu.",
+          "evidence": "Pracuje zmianowo i nie zawsze wie, kiedy będzie wolna.",
+          "explanation": "Obawiała się regularnych obowiązków."
+        },
+        {
+          "id": "inference",
+          "skill": "inference",
+          "question": "Czy osoba pracująca w nieregularnych godzinach może uczestniczyć w grupie?",
+          "options": [
+            "Nie, trzeba pomagać codziennie rano.",
+            "Tak, ale tylko za opłatą.",
+            "Tak, wybiera prośby odpowiednie do swojego czasu."
+          ],
+          "answer": "Tak, wybiera prośby odpowiednie do swojego czasu.",
+          "evidence": "pomoc można zgłaszać tylko wtedy, gdy ma się czas.",
+          "explanation": "Udział jest elastyczny."
+        },
+        {
+          "id": "vocabulary",
+          "skill": "vocabulary",
+          "question": "Co znaczy „dzielą się doświadczeniem”?",
+          "options": [
+            "Przekazują innym swoją wiedzę i umiejętności.",
+            "Dzielą między sobą pieniądze.",
+            "Pracują na dwie zmiany."
+          ],
+          "answer": "Przekazują innym swoją wiedzę i umiejętności.",
+          "evidence": "Starsi mieszkańcy dzielą się doświadczeniem",
+          "explanation": "Pokazują innym, czego sami nauczyli się przez lata."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-038",
+      "day": 38,
+      "level": "A2",
+      "genre": "ogłoszenie",
+      "title": "Dzień sprzątania parku",
+      "text": "W najbliższą sobotę organizujemy wspólne sprzątanie parku przy ulicy Lipowej. Chcemy przygotować teren do wiosennych spacerów. Przyjdź o godzinie dziesiątej pod główne wejście i zgłoś się do osoby w zielonej kamizelce. Otrzymasz rękawice, worki oraz krótką instrukcję dotyczącą segregacji odpadów.\n\nNie zbieraj samodzielnie ostrych przedmiotów ani nieznanych substancji. Jeśli zauważysz coś niebezpiecznego, powiedz o tym organizatorowi. Dzieci mogą brać udział w wydarzeniu tylko pod opieką osoby dorosłej. Włóż wygodne buty, które mogą się zabrudzić, oraz zabierz wodę do picia. Sprzątanie potrwa około dwóch godzin.\n\nPo zakończeniu zapraszamy na herbatę i ciasto w domu kultury. Nie trzeba zapisywać się wcześniej, jednak osoby, które chcą przyjść z większą grupą, prosimy o wiadomość. Dzięki temu przygotujemy wystarczającą liczbę rękawic. Jeśli pogoda będzie bardzo zła, informację o zmianie terminu opublikujemy w piątek wieczorem na stronie osiedla. Nawet godzina pomocy będzie dla nas cenna.",
+      "questions": [
+        {
+          "id": "main-idea",
+          "skill": "main-idea",
+          "question": "Jaki jest cel ogłoszenia?",
+          "options": [
+            "Sprzedaż rękawic ogrodowych.",
+            "Zachęcenie do wspólnego sprzątania parku.",
+            "Zaproszenie na wyłącznie rodzinny piknik."
+          ],
+          "answer": "Zachęcenie do wspólnego sprzątania parku.",
+          "evidence": "Chcemy przygotować teren do wiosennych spacerów.",
+          "explanation": "Organizatorzy zapraszają do dbania o park."
+        },
+        {
+          "id": "detail",
+          "skill": "detail",
+          "question": "Co uczestnik otrzyma na miejscu?",
+          "options": [
+            "Buty i wodę.",
+            "Zieloną kamizelkę i obiad.",
+            "Rękawice, worki i instrukcję."
+          ],
+          "answer": "Rękawice, worki i instrukcję.",
+          "evidence": "Otrzymasz rękawice, worki oraz krótką instrukcję dotyczącą segregacji odpadów.",
+          "explanation": "Buty i wodę trzeba przynieść samemu."
+        },
+        {
+          "id": "cause",
+          "skill": "cause",
+          "question": "Dlaczego większa grupa powinna wcześniej napisać?",
+          "options": [
+            "Aby organizator przygotował odpowiednią liczbę rękawic.",
+            "Aby otrzymała płatne bilety.",
+            "Aby mogła sprzątać bez opieki."
+          ],
+          "answer": "Aby organizator przygotował odpowiednią liczbę rękawic.",
+          "evidence": "Dzięki temu przygotujemy wystarczającą liczbę rękawic.",
+          "explanation": "Wcześniejsza informacja pomaga zaplanować wyposażenie."
+        },
+        {
+          "id": "inference",
+          "skill": "inference",
+          "question": "Która osoba może uczestniczyć zgodnie z zasadami?",
+          "options": [
+            "Osoba planująca samodzielnie zbierać ostre przedmioty.",
+            "Dziecko przychodzące z rodzicem.",
+            "Dziecko przychodzące samotnie."
+          ],
+          "answer": "Dziecko przychodzące z rodzicem.",
+          "evidence": "Dzieci mogą brać udział w wydarzeniu tylko pod opieką osoby dorosłej.",
+          "explanation": "Rodzic zapewnia wymaganą opiekę."
+        },
+        {
+          "id": "vocabulary",
+          "skill": "vocabulary",
+          "question": "Co oznacza „segregacja odpadów”?",
+          "options": [
+            "Kupowanie nowych worków.",
+            "Odkładanie wszystkich śmieci pod drzewem.",
+            "Rozdzielanie śmieci według rodzaju."
+          ],
+          "answer": "Rozdzielanie śmieci według rodzaju.",
+          "evidence": "instrukcję dotyczącą segregacji odpadów.",
+          "explanation": "Chodzi o odpowiednie sortowanie odpadów."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-039",
+      "day": 39,
+      "level": "A2",
+      "genre": "protokół",
+      "title": "Spotkanie w radzie osiedla",
+      "text": "W środę mieszkańcy spotkali się z przedstawicielami rady osiedla, żeby omówić problemy związane z placem zabaw. Niektóre urządzenia są już stare, a przy wejściu brakuje stojaków na rowery. Rodzice małych dzieci zwrócili uwagę na brak cienia latem. Inni mieszkańcy prosili o dodatkowe ławki dla osób starszych.\n\nRada ma ograniczony budżet, dlatego nie można wykonać wszystkich prac jednocześnie. Przewodnicząca zaproponowała, żeby w pierwszej kolejności naprawić urządzenia. Następnie mieszkańcy będą mogli głosować na pozostałe pomysły. Niech każdy, kto ma własną propozycję, opisze ją krótko i wyśle do rady przed końcem miesiąca.\n\nWyniki głosowania zostaną przedstawione podczas kolejnego spotkania. Rada nie obiecuje, że wszystkie zwycięskie pomysły uda się zrealizować jeszcze w tym roku. Chce jednak przygotować plan wydatków na podstawie rzeczywistych potrzeb. Mieszkańcy ustalili również, że informacje o postępie prac będą regularnie pojawiać się na tablicy ogłoszeń oraz na stronie internetowej osiedla.",
+      "questions": [
+        {
+          "id": "main-idea",
+          "skill": "main-idea",
+          "question": "O czym rozmawiano na spotkaniu?",
+          "options": [
+            "O poprawie placu zabaw i wyborze kolejnych prac.",
+            "O sprzedaży mieszkań.",
+            "O organizacji szkolnego konkursu."
+          ],
+          "answer": "O poprawie placu zabaw i wyborze kolejnych prac.",
+          "evidence": "żeby omówić problemy związane z placem zabaw.",
+          "explanation": "Tekst przedstawia potrzeby oraz sposób podejmowania decyzji."
+        },
+        {
+          "id": "detail",
+          "skill": "detail",
+          "question": "Co rodzice małych dzieci uznali za problem?",
+          "options": [
+            "Brak tablicy ogłoszeń.",
+            "Brak cienia latem.",
+            "Brak stojaków w całym mieście."
+          ],
+          "answer": "Brak cienia latem.",
+          "evidence": "Rodzice małych dzieci zwrócili uwagę na brak cienia latem.",
+          "explanation": "Rodzice wskazali konkretną potrzebę."
+        },
+        {
+          "id": "cause",
+          "skill": "cause",
+          "question": "Dlaczego prace będą wykonywane etapami?",
+          "options": [
+            "Mieszkańcy nie chcą żadnych zmian.",
+            "Plac zabaw został już zamknięty na zawsze.",
+            "Budżet rady jest ograniczony."
+          ],
+          "answer": "Budżet rady jest ograniczony.",
+          "evidence": "Rada ma ograniczony budżet",
+          "explanation": "Nie wszystkie inwestycje da się sfinansować naraz."
+        },
+        {
+          "id": "inference",
+          "skill": "inference",
+          "question": "Który projekt ma pierwszeństwo przed głosowaniem?",
+          "options": [
+            "Naprawa starych urządzeń.",
+            "Budowa wszystkich nowych ławek.",
+            "Montaż każdego zgłoszonego stojaka."
+          ],
+          "answer": "Naprawa starych urządzeń.",
+          "evidence": "w pierwszej kolejności naprawić urządzenia.",
+          "explanation": "Najpierw zaproponowano naprawy, a potem głosowanie nad resztą."
+        },
+        {
+          "id": "vocabulary",
+          "skill": "vocabulary",
+          "question": "Co oznacza „w pierwszej kolejności”?",
+          "options": [
+            "W kolejce do urzędu.",
+            "Najpierw, przed innymi zadaniami.",
+            "Dopiero po zakończeniu wszystkich prac."
+          ],
+          "answer": "Najpierw, przed innymi zadaniami.",
+          "evidence": "w pierwszej kolejności naprawić urządzenia.",
+          "explanation": "Wyrażenie wskazuje priorytet."
+        }
+      ]
+    }
+  ]
+}

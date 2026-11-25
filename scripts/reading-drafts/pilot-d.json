@@ -1,0 +1,756 @@
+{
+  "version": 1,
+  "status": "draft",
+  "texts": [
+    {
+      "id": "pl-b1.reading.day-040",
+      "day": 40,
+      "level": "A2",
+      "genre": "opowiadanie",
+      "title": "Spotkanie w klubie językowym",
+      "text": "Kiedy Igor przeprowadził się do Polski, rozumiał wiele słów, ale bał się rozmawiać z ludźmi. W sklepie zwykle odpowiadał bardzo krótko, a podczas spotkań ze znajomymi częściej słuchał, niż mówił. Pewnego dnia zobaczył informację o bezpłatnym klubie językowym, który spotyka się w bibliotece w każdy wtorek. Postanowił spróbować.\n\nNa pierwszym spotkaniu uczestnicy przedstawili się i podzielili na małe grupy. Rozmawiali o podróżach, pracy oraz codziennych zwyczajach. Prowadząca poprosiła, żeby nie poprawiać każdego błędu w trakcie rozmowy. Po zakończeniu zadania uczestnicy wspólnie zastanawiali się nad trudniejszymi wyrażeniami. Igor poczuł się swobodniej, ponieważ mógł dokończyć swoją wypowiedź.\n\nPo kilku tygodniach zaczął sam proponować tematy do rozmowy. Zauważył też, że łatwiej porozumiewa się z kolegami w pracy. Nadal popełnia błędy, ale nie rezygnuje z rozmowy, gdy nie zna jakiegoś słowa. Próbuje wyjaśnić je inaczej. Teraz chętnie zaprasza do klubu osoby, które dopiero uczą się polskiego.",
+      "questions": [
+        {
+          "id": "main-idea",
+          "skill": "main-idea",
+          "question": "Jaki jest główny temat tekstu?",
+          "options": [
+            "Nauka polskiego wyłącznie z książek.",
+            "Zmiana pracy po przeprowadzce.",
+            "Rozwijanie pewności w mówieniu dzięki klubowi językowemu."
+          ],
+          "answer": "Rozwijanie pewności w mówieniu dzięki klubowi językowemu.",
+          "evidence": "Po kilku tygodniach zaczął sam proponować tematy do rozmowy.",
+          "explanation": "Historia pokazuje zmianę zachowania Igora dzięki regularnej praktyce."
+        },
+        {
+          "id": "detail",
+          "skill": "detail",
+          "question": "Gdzie odbywają się spotkania?",
+          "options": [
+            "W bibliotece.",
+            "W sklepie.",
+            "W biurze Igora."
+          ],
+          "answer": "W bibliotece.",
+          "evidence": "spotyka się w bibliotece w każdy wtorek.",
+          "explanation": "Klub korzysta z pomieszczeń biblioteki."
+        },
+        {
+          "id": "cause",
+          "skill": "cause",
+          "question": "Dlaczego Igor poczuł się swobodniej?",
+          "options": [
+            "Prowadząca dawała gotowe odpowiedzi.",
+            "Mógł mówić bez ciągłego poprawiania.",
+            "Nie musiał rozmawiać z nikim."
+          ],
+          "answer": "Mógł mówić bez ciągłego poprawiania.",
+          "evidence": "ponieważ mógł dokończyć swoją wypowiedź.",
+          "explanation": "Zasady rozmowy pozwalały mu spokojnie mówić."
+        },
+        {
+          "id": "inference",
+          "skill": "inference",
+          "question": "Co prawdopodobnie zrobi Igor, gdy zapomni słowa w pracy?",
+          "options": [
+            "Natychmiast zakończy rozmowę.",
+            "Poprosi o przeniesienie do innego biura.",
+            "Opisze jego znaczenie innymi słowami."
+          ],
+          "answer": "Opisze jego znaczenie innymi słowami.",
+          "evidence": "Próbuje wyjaśnić je inaczej.",
+          "explanation": "Nauczył się radzić sobie z brakami słownictwa."
+        },
+        {
+          "id": "vocabulary",
+          "skill": "vocabulary",
+          "question": "Co oznacza „poczuł się swobodniej”?",
+          "options": [
+            "Był mniej zestresowany i czuł się pewniej.",
+            "Dostał więcej wolnych dni.",
+            "Przestał rozumieć rozmowę."
+          ],
+          "answer": "Był mniej zestresowany i czuł się pewniej.",
+          "evidence": "Igor poczuł się swobodniej",
+          "explanation": "W trakcie rozmowy Igor czuł mniej napięcia."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-041",
+      "day": 41,
+      "level": "A2",
+      "genre": "artykuł",
+      "title": "Wspólny ogród",
+      "text": "Na terenie dawnego parkingu powstał niewielki ogród społeczny. Mieszkańcy przez kilka miesięcy przygotowywali ziemię, przynosili narzędzia i szukali roślin, które dobrze rosną w mieście. Na początku każdy zajmował się własną grządką. Szybko jednak okazało się, że przy wspólnej pracy można lepiej wykorzystać dostępne miejsce oraz wodę.\n\nUstalono więc harmonogram podlewania. Osoby, które mają wolne rano, przychodzą przed pracą, a pozostali pomagają wieczorem lub w weekendy. W ogrodzie nie ma prywatnych zamkniętych części. Zebrane warzywa są dzielone między uczestników, a nadmiar trafia do kuchni społecznej. Dzieci mogą obserwować, jak rozwijają się rośliny, i pomagać w prostych pracach.\n\nOrganizatorzy zauważyli, że najważniejszym efektem nie jest ilość pomidorów czy sałaty. Ludzie, którzy wcześniej tylko mijali się na schodach, zaczęli spędzać razem czas. W przyszłym roku planują zorganizować kilka otwartych warsztatów, aby również osoby spoza osiedla mogły nauczyć się uprawiać rośliny w mieście.",
+      "questions": [
+        {
+          "id": "main-idea",
+          "skill": "main-idea",
+          "question": "Co podkreśla artykuł?",
+          "options": [
+            "Ogród jest dostępny tylko dla właścicieli mieszkań.",
+            "Ogród pomaga zarówno uprawiać rośliny, jak i budować relacje.",
+            "Ogród powstał głównie po to, aby sprzedawać warzywa."
+          ],
+          "answer": "Ogród pomaga zarówno uprawiać rośliny, jak i budować relacje.",
+          "evidence": "Ludzie, którzy wcześniej tylko mijali się na schodach, zaczęli spędzać razem czas.",
+          "explanation": "Korzyść społeczna jest ważniejsza niż sama ilość plonów."
+        },
+        {
+          "id": "detail",
+          "skill": "detail",
+          "question": "Gdzie trafiają nadmiarowe warzywa?",
+          "options": [
+            "Na parking.",
+            "Do prywatnego sklepu.",
+            "Do kuchni społecznej."
+          ],
+          "answer": "Do kuchni społecznej.",
+          "evidence": "nadmiar trafia do kuchni społecznej.",
+          "explanation": "Warzywa są najpierw dzielone między uczestników."
+        },
+        {
+          "id": "cause",
+          "skill": "cause",
+          "question": "Dlaczego mieszkańcy ustalili wspólny harmonogram?",
+          "options": [
+            "Chcą lepiej organizować pracę i korzystanie z wody.",
+            "Każdy musi uprawiać wyłącznie własną grządkę.",
+            "Ogród jest otwarty tylko rano."
+          ],
+          "answer": "Chcą lepiej organizować pracę i korzystanie z wody.",
+          "evidence": "przy wspólnej pracy można lepiej wykorzystać dostępne miejsce oraz wodę.",
+          "explanation": "Wspólny podział obowiązków usprawnia uprawę."
+        },
+        {
+          "id": "inference",
+          "skill": "inference",
+          "question": "Czy osoba, która nie mieszka na osiedlu, będzie mogła skorzystać z doświadczeń grupy?",
+          "options": [
+            "Tak, ale tylko po zakupie prywatnej grządki.",
+            "Tak, planowane są otwarte warsztaty.",
+            "Nie, warsztaty mają być wyłącznie dla dzieci mieszkańców."
+          ],
+          "answer": "Tak, planowane są otwarte warsztaty.",
+          "evidence": "aby również osoby spoza osiedla mogły nauczyć się uprawiać rośliny w mieście.",
+          "explanation": "Warsztaty mają objąć szerszą grupę osób."
+        },
+        {
+          "id": "vocabulary",
+          "skill": "vocabulary",
+          "question": "Co oznacza „nadmiar”?",
+          "options": [
+            "Całkowity brak czegoś.",
+            "Pierwszy dzień zbiorów.",
+            "Więcej czegoś, niż jest potrzebne."
+          ],
+          "answer": "Więcej czegoś, niż jest potrzebne.",
+          "evidence": "a nadmiar trafia do kuchni społecznej.",
+          "explanation": "Chodzi o część warzyw, która pozostaje po podziale."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-042",
+      "day": 42,
+      "level": "A2",
+      "genre": "artykuł",
+      "title": "Pomysły mieszkańców",
+      "text": "W tym roku urząd miasta zaprosił mieszkańców do zgłaszania małych projektów, które mogą poprawić życie w ich okolicy. Na realizację przeznaczono określoną kwotę pieniędzy. Każdy pomysł musi dotyczyć miejsca dostępnego dla wszystkich, a jego koszt nie może przekroczyć ustalonego limitu. Wśród propozycji znalazły się nowe ławki, stojaki na rowery i zajęcia dla dzieci.\n\nPracownicy urzędu najpierw sprawdzają, czy projekty można wykonać zgodnie z przepisami i w ramach dostępnego budżetu. Autorzy mogą poprawić swoje propozycje, jeśli brakuje w nich szczegółów. Potem mieszkańcy głosują przez internet lub osobiście w wybranych punktach. Każda osoba może wskazać kilka projektów, ale tylko raz bierze udział w głosowaniu.\n\nW zeszłym roku mieszkańcy wybrali między innymi remont boiska oraz dodatkowe drzewa przy szkole. Nie wszystkie projekty zostały jeszcze zakończone. Urząd publikuje informacje o przyczynach opóźnień. Organizatorzy mają nadzieję, że dzięki temu mieszkańcy będą lepiej rozumieć, jak planowane są wspólne wydatki.",
+      "questions": [
+        {
+          "id": "main-idea",
+          "skill": "main-idea",
+          "question": "Jaki jest główny temat artykułu?",
+          "options": [
+            "Udział mieszkańców w wyborze lokalnych inwestycji.",
+            "Prywatna sprzedaż terenów miejskich.",
+            "Organizowanie szkolnych zawodów."
+          ],
+          "answer": "Udział mieszkańców w wyborze lokalnych inwestycji.",
+          "evidence": "urząd miasta zaprosił mieszkańców do zgłaszania małych projektów",
+          "explanation": "Mieszkańcy proponują i wybierają przedsięwzięcia."
+        },
+        {
+          "id": "detail",
+          "skill": "detail",
+          "question": "Jak można zagłosować?",
+          "options": [
+            "Tylko podczas zebrania w szkole.",
+            "Przez internet lub osobiście.",
+            "Wyłącznie listem wysłanym pocztą."
+          ],
+          "answer": "Przez internet lub osobiście.",
+          "evidence": "mieszkańcy głosują przez internet lub osobiście w wybranych punktach.",
+          "explanation": "Dostępne są dwie drogi głosowania."
+        },
+        {
+          "id": "cause",
+          "skill": "cause",
+          "question": "Dlaczego urząd sprawdza projekty przed głosowaniem?",
+          "options": [
+            "Każdy projekt musi dotyczyć wyłącznie szkoły.",
+            "Urząd chce sam wybrać wszystkie zwycięskie pomysły.",
+            "Muszą być możliwe do wykonania i mieścić się w budżecie."
+          ],
+          "answer": "Muszą być możliwe do wykonania i mieścić się w budżecie.",
+          "evidence": "czy projekty można wykonać zgodnie z przepisami i w ramach dostępnego budżetu.",
+          "explanation": "Sprawdzenie odrzuca niewykonalne propozycje."
+        },
+        {
+          "id": "inference",
+          "skill": "inference",
+          "question": "Czy projekt zamkniętego ogrodu dla jednej rodziny spełni podane warunki?",
+          "options": [
+            "Nie, miejsce musi być dostępne dla wszystkich.",
+            "Tak, jeśli rodzina zagłosuje kilka razy.",
+            "Tak, jeśli ogród znajduje się przy szkole."
+          ],
+          "answer": "Nie, miejsce musi być dostępne dla wszystkich.",
+          "evidence": "Każdy pomysł musi dotyczyć miejsca dostępnego dla wszystkich",
+          "explanation": "Projekt prywatny nie spełnia podstawowego warunku."
+        },
+        {
+          "id": "vocabulary",
+          "skill": "vocabulary",
+          "question": "Co oznacza „w ramach dostępnego budżetu”?",
+          "options": [
+            "Wyłącznie z pieniędzy autorów projektu.",
+            "Nie przekraczając pieniędzy przeznaczonych na ten cel.",
+            "Bez żadnego ograniczenia kosztów."
+          ],
+          "answer": "Nie przekraczając pieniędzy przeznaczonych na ten cel.",
+          "evidence": "w ramach dostępnego budżetu.",
+          "explanation": "Koszt musi mieścić się w dostępnej kwocie."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-043",
+      "day": 43,
+      "level": "A2",
+      "genre": "dialog",
+      "title": "Wizyta, którą trzeba przełożyć",
+      "text": "Ewa ma umówioną wizytę kontrolną u dentysty w środę o jedenastej. We wtorek dowiaduje się jednak, że w tym samym czasie będzie musiała uczestniczyć w ważnym spotkaniu w pracy. Dzwoni więc do gabinetu, aby znaleźć inny termin.\n\n— Dzień dobry, chciałabym przełożyć jutrzejszą wizytę. Czy lekarz przyjmuje jeszcze w tym tygodniu? — pyta Ewa.\n\n— W czwartek mamy wolne miejsce o dziewiątej, a w piątek o piętnastej trzydzieści — odpowiada recepcjonistka.\n\n— W czwartek muszę być w biurze od ósmej. W piątek mogę wyjść wcześniej. Czy ten drugi termin jest nadal aktualny?\n\n— Tak, zapisuję panią na piątek. Poprzednią wizytę anuluję. Proszę przyjść dziesięć minut przed czasem, ponieważ trzeba zaktualizować dane w dokumentacji.\n\nEwa zapisuje nowy termin w kalendarzu. Prosi również o wiadomość z potwierdzeniem. Otrzymuje ją kilka minut później i może spokojnie zaplanować resztę tygodnia. Nie musi już wybierać między wizytą a obowiązkami zawodowymi.",
+      "questions": [
+        {
+          "id": "main-idea",
+          "skill": "main-idea",
+          "question": "Czego dotyczy rozmowa?",
+          "options": [
+            "Zapisywania na pierwszą wizytę u nowego lekarza.",
+            "Rezygnacji z leczenia.",
+            "Zmiany terminu wizyty u dentysty."
+          ],
+          "answer": "Zmiany terminu wizyty u dentysty.",
+          "evidence": "chciałabym przełożyć jutrzejszą wizytę.",
+          "explanation": "Ewa chce zmienić termin, nie rezygnować z wizyty."
+        },
+        {
+          "id": "detail",
+          "skill": "detail",
+          "question": "Na kiedy ostatecznie zapisano Ewę?",
+          "options": [
+            "Na piątek o piętnastej trzydzieści.",
+            "Na czwartek o dziewiątej.",
+            "Na środę o jedenastej."
+          ],
+          "answer": "Na piątek o piętnastej trzydzieści.",
+          "evidence": "Tak, zapisuję panią na piątek.",
+          "explanation": "Godzinę piątkowego terminu podano wcześniej w rozmowie."
+        },
+        {
+          "id": "cause",
+          "skill": "cause",
+          "question": "Dlaczego ma przyjść wcześniej?",
+          "options": [
+            "Chce porozmawiać z kierownikiem.",
+            "Trzeba zaktualizować dane w dokumentacji.",
+            "Lekarz kończy pracę o piętnastej."
+          ],
+          "answer": "Trzeba zaktualizować dane w dokumentacji.",
+          "evidence": "ponieważ trzeba zaktualizować dane w dokumentacji.",
+          "explanation": "Gabinet potrzebuje dodatkowych dziesięciu minut."
+        },
+        {
+          "id": "inference",
+          "skill": "inference",
+          "question": "O której Ewa powinna być w gabinecie?",
+          "options": [
+            "O piętnastej trzydzieści.",
+            "O piętnastej czterdzieści.",
+            "O piętnastej dwadzieścia."
+          ],
+          "answer": "O piętnastej dwadzieścia.",
+          "evidence": "Proszę przyjść dziesięć minut przed czasem",
+          "explanation": "Dziesięć minut przed 15:30 to 15:20."
+        },
+        {
+          "id": "vocabulary",
+          "skill": "vocabulary",
+          "question": "Co znaczy „przełożyć wizytę”?",
+          "options": [
+            "Zmienić jej termin.",
+            "Odbyć dwie wizyty tego samego dnia.",
+            "Zapomnieć o umówionej wizycie."
+          ],
+          "answer": "Zmienić jej termin.",
+          "evidence": "chciałabym przełożyć jutrzejszą wizytę.",
+          "explanation": "Ewa wybiera nowy dzień i godzinę."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-044",
+      "day": 44,
+      "level": "A2",
+      "genre": "opowiadanie",
+      "title": "Spacer po pracy",
+      "text": "Od kilku miesięcy Robert pracuje głównie przy komputerze. Zauważył, że po długim dniu często jest zmęczony i nie ma ochoty na dodatkowe zajęcia. Zamiast planować od razu intensywne treningi, postanowił zacząć od krótkich spacerów. Każdego dnia po pracy wychodzi na około dwadzieścia minut do parku niedaleko domu.\n\nNa początku nie zawsze pamiętał o swoim postanowieniu. Czasem siadał przed telewizorem i odkładał wyjście na później, a potem było już za ciemno. Dlatego zaczął przygotowywać wygodne buty przy drzwiach jeszcze przed rozpoczęciem pracy. Umawia się też dwa razy w tygodniu z sąsiadem, który lubi chodzić po okolicy.\n\nPo miesiącu Robert stwierdził, że spacer stał się naturalną częścią dnia. Kiedy pada deszcz, wybiera krótszą trasę lub odpoczywa w domu. Nie traktuje jednego opuszczonego dnia jak porażki. Chce przede wszystkim znaleźć sposób na regularny ruch, który pasuje do jego obowiązków i który może utrzymać przez dłuższy czas.",
+      "questions": [
+        {
+          "id": "main-idea",
+          "skill": "main-idea",
+          "question": "Jaki jest główny temat?",
+          "options": [
+            "Poszukiwanie nowego mieszkania przy parku.",
+            "Budowanie codziennego nawyku ruchu w realistyczny sposób.",
+            "Przygotowanie do zawodów sportowych."
+          ],
+          "answer": "Budowanie codziennego nawyku ruchu w realistyczny sposób.",
+          "evidence": "znaleźć sposób na regularny ruch, który pasuje do jego obowiązków",
+          "explanation": "Robert stopniowo tworzy nawyk dostosowany do życia."
+        },
+        {
+          "id": "detail",
+          "skill": "detail",
+          "question": "Jak często umawia się z sąsiadem?",
+          "options": [
+            "Codziennie rano.",
+            "Raz w miesiącu.",
+            "Dwa razy w tygodniu."
+          ],
+          "answer": "Dwa razy w tygodniu.",
+          "evidence": "Umawia się też dwa razy w tygodniu z sąsiadem",
+          "explanation": "Spotkania pomagają utrzymać regularność."
+        },
+        {
+          "id": "cause",
+          "skill": "cause",
+          "question": "Dlaczego przygotowuje buty przed pracą?",
+          "options": [
+            "Żeby łatwiej pamiętać o wyjściu po pracy.",
+            "Żeby naprawić buty w ciągu dnia.",
+            "Żeby oddać je sąsiadowi."
+          ],
+          "answer": "Żeby łatwiej pamiętać o wyjściu po pracy.",
+          "evidence": "zaczął przygotowywać wygodne buty przy drzwiach",
+          "explanation": "Wcześniej odkładał spacer, więc ułatwia sobie rozpoczęcie."
+        },
+        {
+          "id": "inference",
+          "skill": "inference",
+          "question": "Co prawdopodobnie zrobi, jeśli jednego dnia nie wyjdzie na spacer?",
+          "options": [
+            "Następnego dnia będzie musiał odbyć bardzo intensywny trening.",
+            "Wróci do nawyku, gdy będzie miał możliwość.",
+            "Zrezygnuje ze spacerów na zawsze."
+          ],
+          "answer": "Wróci do nawyku, gdy będzie miał możliwość.",
+          "evidence": "Nie traktuje jednego opuszczonego dnia jak porażki.",
+          "explanation": "Jego podejście jest elastyczne, nie oparte na perfekcji."
+        },
+        {
+          "id": "vocabulary",
+          "skill": "vocabulary",
+          "question": "Co znaczy „postanowienie”?",
+          "options": [
+            "Przypadkowe spotkanie.",
+            "Rozkład jazdy.",
+            "Decyzję, że będzie się coś robić."
+          ],
+          "answer": "Decyzję, że będzie się coś robić.",
+          "evidence": "nie zawsze pamiętał o swoim postanowieniu.",
+          "explanation": "Robert zdecydował się regularnie spacerować."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-045",
+      "day": 45,
+      "level": "A2",
+      "genre": "artykuł",
+      "title": "Badania w miejscu pracy",
+      "text": "Pracownicy pewnej firmy otrzymali możliwość udziału w bezpłatnych badaniach profilaktycznych. Lekarze i pielęgniarki przyjechali na dwa dni do siedziby firmy. Zorganizowano osobne pomieszczenie, aby każda osoba mogła spokojnie porozmawiać z personelem medycznym. Pracownicy mogli zgłosić się w godzinach pracy, ale udział nie był obowiązkowy.\n\nNajpierw osoby zainteresowane rezerwowały godzinę przez specjalny formularz. Niektórym trudno było znaleźć wolny termin, dlatego organizatorzy dodali kilka miejsc drugiego dnia. Wyniki badań przekazywano bezpośrednio uczestnikom. Kierownicy otrzymali jedynie ogólną informację o liczbie osób, które skorzystały z akcji, bez dostępu do indywidualnych danych.\n\nPo wydarzeniu część pracowników zaproponowała, aby podobne spotkania odbywały się regularnie. Inni chcieliby mieć możliwość uczestniczenia w krótkich warsztatach o odpoczynku i organizacji pracy. Firma zamierza zebrać opinie i dopiero wtedy przygotować plan kolejnej akcji. Lekarze podkreślili, że takie badania nie zastępują indywidualnych wizyt, jeśli ktoś potrzebuje dalszej diagnostyki.",
+      "questions": [
+        {
+          "id": "main-idea",
+          "skill": "main-idea",
+          "question": "O czym informuje artykuł?",
+          "options": [
+            "O dobrowolnej akcji badań profilaktycznych w firmie.",
+            "O obowiązkowym egzaminie pracowników.",
+            "O otwarciu nowej prywatnej przychodni."
+          ],
+          "answer": "O dobrowolnej akcji badań profilaktycznych w firmie.",
+          "evidence": "Pracownicy pewnej firmy otrzymali możliwość udziału w bezpłatnych badaniach profilaktycznych.",
+          "explanation": "Akcja odbywa się w miejscu pracy i jest dobrowolna."
+        },
+        {
+          "id": "detail",
+          "skill": "detail",
+          "question": "Kto otrzymywał indywidualne wyniki?",
+          "options": [
+            "Autorzy formularza.",
+            "Osoby uczestniczące w badaniach.",
+            "Wszyscy kierownicy."
+          ],
+          "answer": "Osoby uczestniczące w badaniach.",
+          "evidence": "Wyniki badań przekazywano bezpośrednio uczestnikom.",
+          "explanation": "Kierownicy dostawali tylko ogólną liczbę uczestników."
+        },
+        {
+          "id": "cause",
+          "skill": "cause",
+          "question": "Dlaczego dodano terminy drugiego dnia?",
+          "options": [
+            "Personel nie przyjechał pierwszego dnia.",
+            "Badania stały się obowiązkowe.",
+            "Nie wszystkim udało się wcześniej zarezerwować godzinę."
+          ],
+          "answer": "Nie wszystkim udało się wcześniej zarezerwować godzinę.",
+          "evidence": "Niektórym trudno było znaleźć wolny termin",
+          "explanation": "Organizatorzy zwiększyli dostępność."
+        },
+        {
+          "id": "inference",
+          "skill": "inference",
+          "question": "Czy pracownik musi uczestniczyć, aby spełnić zasady firmy?",
+          "options": [
+            "Nie, udział jest dobrowolny.",
+            "Tak, każdy pracownik musi się zgłosić.",
+            "Tak, ale jedynie jeśli jest kierownikiem."
+          ],
+          "answer": "Nie, udział jest dobrowolny.",
+          "evidence": "udział nie był obowiązkowy.",
+          "explanation": "Uczestnictwo jest wyborem pracownika."
+        },
+        {
+          "id": "vocabulary",
+          "skill": "vocabulary",
+          "question": "Co oznacza „indywidualne dane”?",
+          "options": [
+            "Godziny otwarcia firmy.",
+            "Informacje dotyczące konkretnej osoby.",
+            "Ogólną liczbę uczestników."
+          ],
+          "answer": "Informacje dotyczące konkretnej osoby.",
+          "evidence": "bez dostępu do indywidualnych danych.",
+          "explanation": "Wyniki danej osoby różnią się od zbiorczych informacji."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-046",
+      "day": 46,
+      "level": "A2",
+      "genre": "opowiadanie",
+      "title": "Nowa grupa na zajęciach",
+      "text": "W centrum rekreacji pojawiła się nowa grupa gimnastyczna dla dorosłych. Uczestnikami byli mieszkańcy w różnym wieku: młodzi pracownicy, emeryci oraz osoby, które wcześniej nie ćwiczyły regularnie. Na pierwsze spotkanie przyszli zarówno mężczyźni, jak i kobiety. Trener wyjaśnił, że celem grupy jest bezpieczny ruch, a nie rywalizacja między uczestnikami.\n\nPodczas zajęć każdy mógł wybrać łatwiejszą lub trudniejszą wersję ćwiczenia. Osoby potrzebujące odpoczynku robiły krótkie przerwy. Trener prosił, żeby uczestnicy informowali go o trudnościach i nie próbowali naśladować innych za wszelką cenę. Po spotkaniu kilka osób zostało, aby porozmawiać o godzinach kolejnych zajęć.\n\nOkazało się, że część uczestników pracuje do późnego popołudnia. Organizatorzy zaproponowali więc dwa terminy w tygodniu: rano i wieczorem. Nie trzeba uczestniczyć w obu. Najważniejsze jest znalezienie dogodnej pory. Po pierwszym miesiącu większość osób postanowiła kontynuować zajęcia. Chwalili przede wszystkim spokojną atmosferę oraz możliwość ćwiczenia we własnym tempie.",
+      "questions": [
+        {
+          "id": "main-idea",
+          "skill": "main-idea",
+          "question": "Co jest głównym tematem tekstu?",
+          "options": [
+            "Zawody dla zawodowych sportowców.",
+            "Otwarcie sklepu ze sprzętem.",
+            "Grupa ćwiczeń dostosowana do różnych możliwości uczestników."
+          ],
+          "answer": "Grupa ćwiczeń dostosowana do różnych możliwości uczestników.",
+          "evidence": "celem grupy jest bezpieczny ruch, a nie rywalizacja między uczestnikami.",
+          "explanation": "Zajęcia uwzględniają różne doświadczenie i tempo."
+        },
+        {
+          "id": "detail",
+          "skill": "detail",
+          "question": "Co można zrobić podczas ćwiczeń, gdy potrzeba odpocząć?",
+          "options": [
+            "Zrobić krótką przerwę.",
+            "Opuścić grupę na zawsze.",
+            "Zwiększyć tempo bez rozmowy z trenerem."
+          ],
+          "answer": "Zrobić krótką przerwę.",
+          "evidence": "Osoby potrzebujące odpoczynku robiły krótkie przerwy.",
+          "explanation": "Przerwy są dopuszczalne."
+        },
+        {
+          "id": "cause",
+          "skill": "cause",
+          "question": "Dlaczego zaproponowano termin wieczorny?",
+          "options": [
+            "Wszyscy uczestnicy chcą ćwiczyć dwa razy dziennie.",
+            "Niektórzy uczestnicy pracują do późnego popołudnia.",
+            "Rano trener nigdy nie przychodzi."
+          ],
+          "answer": "Niektórzy uczestnicy pracują do późnego popołudnia.",
+          "evidence": "część uczestników pracuje do późnego popołudnia.",
+          "explanation": "Wieczorna grupa ułatwia udział osobom pracującym."
+        },
+        {
+          "id": "inference",
+          "skill": "inference",
+          "question": "Czy początkująca osoba może ćwiczyć razem z bardziej doświadczoną?",
+          "options": [
+            "Nie, wszyscy muszą wykonywać najtrudniejszą wersję.",
+            "Tak, ale tylko po miesiącu treningu indywidualnego.",
+            "Tak, każdy wybiera odpowiednią wersję ćwiczenia."
+          ],
+          "answer": "Tak, każdy wybiera odpowiednią wersję ćwiczenia.",
+          "evidence": "każdy mógł wybrać łatwiejszą lub trudniejszą wersję ćwiczenia.",
+          "explanation": "Różne warianty pozwalają ćwiczyć w jednej grupie."
+        },
+        {
+          "id": "vocabulary",
+          "skill": "vocabulary",
+          "question": "Co znaczy „we własnym tempie”?",
+          "options": [
+            "Z szybkością i intensywnością odpowiednią dla siebie.",
+            "Zawsze szybciej niż inni.",
+            "Tylko rano."
+          ],
+          "answer": "Z szybkością i intensywnością odpowiednią dla siebie.",
+          "evidence": "możliwość ćwiczenia we własnym tempie.",
+          "explanation": "Uczestnicy nie muszą dopasowywać się do tempa innych."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-047",
+      "day": 47,
+      "level": "A2",
+      "genre": "dialog",
+      "title": "W aptece przed wyjazdem",
+      "text": "Przed kilkudniową wycieczką Anna odwiedziła aptekę, ponieważ chciała uzupełnić swoją podręczną apteczkę. Miała już potrzebne leki, ale zauważyła, że brakuje jej kilku podstawowych rzeczy. Pamiętała, że podczas poprzedniego wyjazdu otarła piętę i musiała szukać sklepu w obcym mieście.\n\n— Dzień dobry, szukam plastrów oraz małego opakowania środka do dezynfekcji — powiedziała.\n\n— Czy chce pani zwykłe plastry, czy takie przeznaczone do ochrony otarć? — zapytała farmaceutka.\n\n— Potrzebuję obu rodzajów, ale nie chcę kupować dużych opakowań. Jadę tylko na cztery dni.\n\nFarmaceutka pokazała jej dwa małe zestawy i wyjaśniła, czym się różnią. Anna wybrała produkty, których rzeczywiście potrzebowała. Zapytała również o warunki przechowywania jednego ze swoich leków. Farmaceutka poradziła sprawdzić informację w ulotce dołączonej do konkretnego opakowania.\n\nPo powrocie Anna przejrzała apteczkę i sprawdziła daty ważności. Spakowała ją do łatwo dostępnej części plecaka. Teraz nie musiała zabierać ze sobą wszystkich produktów z domowej szafki.",
+      "questions": [
+        {
+          "id": "main-idea",
+          "skill": "main-idea",
+          "question": "Jaki jest cel wizyty Anny w aptece?",
+          "options": [
+            "Rezygnacja z podróży z powodu choroby.",
+            "Uzupełnienie małej apteczki na wyjazd.",
+            "Zakup całej domowej apteki."
+          ],
+          "answer": "Uzupełnienie małej apteczki na wyjazd.",
+          "evidence": "chciała uzupełnić swoją podręczną apteczkę.",
+          "explanation": "Anna kupuje brakujące podstawowe rzeczy."
+        },
+        {
+          "id": "detail",
+          "skill": "detail",
+          "question": "Jak długo ma trwać wyjazd?",
+          "options": [
+            "Dwa tygodnie.",
+            "Jeden dzień.",
+            "Cztery dni."
+          ],
+          "answer": "Cztery dni.",
+          "evidence": "Jadę tylko na cztery dni.",
+          "explanation": "Anna podaje czas podróży."
+        },
+        {
+          "id": "cause",
+          "skill": "cause",
+          "question": "Dlaczego Anna nie chce dużych opakowań?",
+          "options": [
+            "Wyjazd jest krótki i potrzebuje tylko podstawowych rzeczy.",
+            "Nie może wejść do apteki z plecakiem.",
+            "Farmaceutka nie ma małych produktów."
+          ],
+          "answer": "Wyjazd jest krótki i potrzebuje tylko podstawowych rzeczy.",
+          "evidence": "nie chcę kupować dużych opakowań. Jadę tylko na cztery dni.",
+          "explanation": "Rozmiar zakupów dopasowuje do czasu wyjazdu."
+        },
+        {
+          "id": "inference",
+          "skill": "inference",
+          "question": "Co powinna sprawdzić, aby poznać warunki przechowywania konkretnego leku?",
+          "options": [
+            "Rozkład jazdy autobusu.",
+            "Ulotkę tego leku.",
+            "Datę zakupu wszystkich plastrów."
+          ],
+          "answer": "Ulotkę tego leku.",
+          "evidence": "informację w ulotce dołączonej do konkretnego opakowania.",
+          "explanation": "Ulotka dotyczy właśnie danego produktu."
+        },
+        {
+          "id": "vocabulary",
+          "skill": "vocabulary",
+          "question": "Co oznacza „uzupełnić” apteczkę?",
+          "options": [
+            "Wyrzucić wszystkie rzeczy.",
+            "Zamknąć apteczkę na klucz.",
+            "Dodać brakujące rzeczy."
+          ],
+          "answer": "Dodać brakujące rzeczy.",
+          "evidence": "chciała uzupełnić swoją podręczną apteczkę.",
+          "explanation": "Anna dodaje potrzebne elementy do tego, co już ma."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-048",
+      "day": 48,
+      "level": "A2",
+      "genre": "opowiadanie",
+      "title": "Zmiana codziennych zwyczajów",
+      "text": "Kasia zauważyła, że jej dni są bardzo podobne. Rano szybko wychodzi do pracy, w południe je to, co akurat znajdzie w sklepie, a wieczorem długo korzysta z telefonu. Chciała mieć więcej czasu na odpoczynek, ale nie wiedziała, od czego zacząć. W niedzielę postanowiła przygotować prosty plan na nadchodzący tydzień.\n\nNajpierw wybrała dwa wieczory, kiedy nie będzie umawiać dodatkowych spotkań. Przygotowała też listę prostych posiłków i kupiła potrzebne produkty. Nie zaplanowała każdej godziny, ponieważ niektóre obowiązki w pracy pojawiają się niespodziewanie. Telefon odkłada na półkę pół godziny przed snem, żeby ten czas przeznaczyć na spokojne zajęcia.\n\nPo tygodniu sprawdziła, co się udało. Nie zawsze realizowała plan, ale częściej miała gotowy posiłek i mniej czasu spędzała przy ekranie przed snem. Uznała, że nie potrzebuje kolejnych skomplikowanych zasad. Postanowiła przez następny tydzień zachować te same zwyczaje i dopiero później zdecydować, czy chce coś zmienić.",
+      "questions": [
+        {
+          "id": "main-idea",
+          "skill": "main-idea",
+          "question": "O czym jest tekst?",
+          "options": [
+            "O stopniowym wprowadzaniu nowych codziennych zwyczajów.",
+            "O przygotowaniu intensywnego planu treningowego.",
+            "O zmianie miejsca pracy."
+          ],
+          "answer": "O stopniowym wprowadzaniu nowych codziennych zwyczajów.",
+          "evidence": "przygotować prosty plan na nadchodzący tydzień.",
+          "explanation": "Kasia testuje drobne zmiany i sprawdza ich efekty."
+        },
+        {
+          "id": "detail",
+          "skill": "detail",
+          "question": "Kiedy odkłada telefon?",
+          "options": [
+            "Na cały dzień pracy.",
+            "Pół godziny przed snem.",
+            "Bezpośrednio po śniadaniu."
+          ],
+          "answer": "Pół godziny przed snem.",
+          "evidence": "Telefon odkłada na półkę pół godziny przed snem",
+          "explanation": "Ograniczenie dotyczy końca dnia."
+        },
+        {
+          "id": "cause",
+          "skill": "cause",
+          "question": "Dlaczego nie zaplanowała każdej godziny?",
+          "options": [
+            "Nie ma kalendarza.",
+            "Chce codziennie spotykać się z przyjaciółmi.",
+            "Niektóre obowiązki w pracy pojawiają się niespodziewanie."
+          ],
+          "answer": "Niektóre obowiązki w pracy pojawiają się niespodziewanie.",
+          "evidence": "ponieważ niektóre obowiązki w pracy pojawiają się niespodziewanie.",
+          "explanation": "Plan ma zostawiać miejsce na zmiany."
+        },
+        {
+          "id": "inference",
+          "skill": "inference",
+          "question": "Jak Kasia ocenia pierwszy tydzień?",
+          "options": [
+            "Widząc częściowe efekty, chce kontynuować bez dokładania zasad.",
+            "Uważa, że brak pełnego wykonania oznacza całkowitą porażkę.",
+            "Postanawia od razu zmienić wszystkie zwyczaje ponownie."
+          ],
+          "answer": "Widząc częściowe efekty, chce kontynuować bez dokładania zasad.",
+          "evidence": "Postanowiła przez następny tydzień zachować te same zwyczaje",
+          "explanation": "Daje sobie czas na utrwalenie tego, co już działa."
+        },
+        {
+          "id": "vocabulary",
+          "skill": "vocabulary",
+          "question": "Co oznacza „niespodziewanie”?",
+          "options": [
+            "Zawsze w niedzielę.",
+            "W sposób, którego wcześniej nie przewidziano.",
+            "Dokładnie według planu."
+          ],
+          "answer": "W sposób, którego wcześniej nie przewidziano.",
+          "evidence": "obowiązki w pracy pojawiają się niespodziewanie.",
+          "explanation": "Niektórych obowiązków nie można przewidzieć."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-049",
+      "day": 49,
+      "level": "A2",
+      "genre": "artykuł",
+      "title": "Pytania do specjalisty",
+      "text": "Dom kultury zorganizował otwarte spotkanie z fizjoterapeutą dla osób, które dużo czasu spędzają przy biurku. Celem wydarzenia było przekazanie ogólnych informacji o organizacji stanowiska pracy i znaczeniu regularnych przerw. Uczestnicy wcześniej przesłali pytania, dzięki czemu prowadzący mógł przygotować przykłady dotyczące najczęstszych problemów.\n\nW pierwszej części spotkania specjalista opowiedział o różnych pozycjach podczas pracy. Zwrócił uwagę, że nie istnieje jedna idealna pozycja odpowiednia dla wszystkich przez cały dzień. W drugiej części uczestnicy mogli wypróbować proste sposoby zmiany ustawienia krzesła i monitora. Prowadzący nie oceniał indywidualnych dolegliwości na podstawie krótkiej rozmowy.\n\nNa zakończenie rozdano kartki z podsumowaniem oraz informacją, gdzie można umówić konsultację, jeśli ktoś potrzebuje indywidualnej pomocy. Kilka osób zaproponowało kolejne spotkanie poświęcone odpoczynkowi po pracy. Organizatorzy zbierają teraz opinie uczestników i zastanawiają się nad terminem. Chcą, aby następne wydarzenie również było dostępne dla wszystkich zainteresowanych bez opłaty.",
+      "questions": [
+        {
+          "id": "main-idea",
+          "skill": "main-idea",
+          "question": "Jaki był cel spotkania?",
+          "options": [
+            "Indywidualne leczenie wszystkich uczestników.",
+            "Sprzedaż krzeseł i monitorów.",
+            "Ogólna edukacja o pracy przy biurku."
+          ],
+          "answer": "Ogólna edukacja o pracy przy biurku.",
+          "evidence": "Celem wydarzenia było przekazanie ogólnych informacji o organizacji stanowiska pracy i znaczeniu regularnych przerw.",
+          "explanation": "Spotkanie miało charakter edukacyjny."
+        },
+        {
+          "id": "detail",
+          "skill": "detail",
+          "question": "Co rozdano na zakończenie?",
+          "options": [
+            "Kartki z podsumowaniem i informacją o konsultacji.",
+            "Nowe monitory.",
+            "Indywidualne diagnozy medyczne."
+          ],
+          "answer": "Kartki z podsumowaniem i informacją o konsultacji.",
+          "evidence": "rozdano kartki z podsumowaniem oraz informacją, gdzie można umówić konsultację",
+          "explanation": "Materiały pozwalają wrócić do informacji po spotkaniu."
+        },
+        {
+          "id": "cause",
+          "skill": "cause",
+          "question": "Po co uczestnicy wcześniej przesłali pytania?",
+          "options": [
+            "Żeby wybrać model krzesła dla domu kultury.",
+            "Żeby prowadzący mógł przygotować odpowiednie przykłady.",
+            "Żeby zapłacić za konsultacje."
+          ],
+          "answer": "Żeby prowadzący mógł przygotować odpowiednie przykłady.",
+          "evidence": "dzięki czemu prowadzący mógł przygotować przykłady",
+          "explanation": "Pytania ułatwiły dostosowanie tematu spotkania."
+        },
+        {
+          "id": "inference",
+          "skill": "inference",
+          "question": "Czy osoba oczekująca indywidualnej oceny dolegliwości powinna poprzestać na spotkaniu?",
+          "options": [
+            "Tak, spotkanie zastępuje indywidualne badanie.",
+            "Tak, jeśli wcześniej przesłała pytanie.",
+            "Nie, może potrzebować osobnej konsultacji."
+          ],
+          "answer": "Nie, może potrzebować osobnej konsultacji.",
+          "evidence": "Prowadzący nie oceniał indywidualnych dolegliwości na podstawie krótkiej rozmowy.",
+          "explanation": "Ogólna edukacja i indywidualna pomoc mają różne cele."
+        },
+        {
+          "id": "vocabulary",
+          "skill": "vocabulary",
+          "question": "Co oznacza „podsumowanie”?",
+          "options": [
+            "Krótki zbiór najważniejszych informacji.",
+            "Nowy plan całego spotkania.",
+            "Lista kosztów uczestników."
+          ],
+          "answer": "Krótki zbiór najważniejszych informacji.",
+          "evidence": "kartki z podsumowaniem",
+          "explanation": "Podsumowanie przypomina główne treści wydarzenia."
+        }
+      ]
+    }
+  ]
+}
