@@ -7,6 +7,8 @@ const paths = {
   review: 'M20 9a8 8 0 1 0 0 6m0-10v4h-4M12 8v4l3 2',
   speaker: 'M4 9h4l4-4v14l-4-4H4Zm11 0a4 4 0 0 1 0 6m2-9a8 8 0 0 1 0 12',
   muted: 'M4 9h4l4-4v14l-4-4H4Zm11 1 5 5m0-5-5 5',
+  sync: 'M20 7v5h-5M4 17v-5h5M5 8a8 8 0 0 1 13-3l2 2M4 17l2 2a8 8 0 0 0 13-3',
+  cloudOff: 'M3 3l18 18M7 7a6 6 0 0 0-1 12h12M9 5a7 7 0 0 1 9 6h1a4 4 0 0 1 2 7',
   arrow: 'M5 12h14m-5-5 5 5-5 5',
   back: 'M19 12H5m7-7-7 7 7 7',
 } as const

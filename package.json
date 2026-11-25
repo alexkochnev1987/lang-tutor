@@ -22,7 +22,7 @@
     "db:restore": "node scripts/db-prod.mjs restore",
     "db:migrate:prod": "node scripts/db-prod.mjs migrate",
     "validate": "node scripts/validate-grammar.mjs && node scripts/validate-sentences.mjs && node scripts/validate-collocations.mjs && node scripts/build-curriculum.mjs && node scripts/build-vocabulary.mjs",
-    "test:exercise-ui": "pnpm --filter @polski/engine exec vitest run --root ../../apps/web --globals tests/exercise-layout.test.js tests/answer-input.test.js tests/reading-catalog.test.js",
+    "test:exercise-ui": "pnpm --filter @polski/engine exec vitest run --root ../../apps/web --globals tests/exercise-layout.test.js tests/answer-input.test.js tests/practice-keyboard.test.js tests/reading-catalog.test.js",
     "test": "node --test scripts/pack-reading.test.mjs && pnpm --filter @polski/engine test && pnpm test:exercise-ui"
   },
   "devDependencies": {
