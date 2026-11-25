@@ -1,0 +1,756 @@
+{
+  "version": 1,
+  "status": "draft",
+  "texts": [
+    {
+      "id": "pl-b1.reading.day-097",
+      "day": 97,
+      "level": "B1",
+      "genre": "opowiadanie",
+      "title": "Ochrona wody w domu",
+      "text": "Kiedy rodzina Wójcików otrzymała rachunek za wodę, zaczęła się zastanawiać, czy może zmienić kilka codziennych zwyczajów. Nie chcieli wprowadzać zakazów dotyczących każdej czynności. Ustalili, że przez tydzień będą obserwować, w jakich sytuacjach zużywają wodę niepotrzebnie, i dopiero potem wybiorą rozwiązania.\n\nTata zauważył, że podczas mycia naczyń często zostawiał odkręcony kran, nawet gdy szukał czystej gąbki lub odkładał talerze. Córka przypomniała sobie, że czasami włączała pralkę tylko po to, żeby wyprać jedną bluzę. Mama odkryła natomiast, że z kranu w łazience kapie woda, choć wszyscy starali się go dobrze zakręcać.\n\nPo tygodniu rodzina wybrała trzy zadania. Tata miał przygotowywać wszystko potrzebne do mycia naczyń, zanim odkręci wodę. Córka postanowiła planować pranie wcześniej, żeby nie brakowało jej czystych ubrań. Mama umówiła wizytę hydraulika, ponieważ problemu z kranem nie dało się rozwiązać przez zmianę przyzwyczajeń.\n\nMiesiąc później sprawdzili rachunek. Zużycie było niższe, ale trudno było ustalić dokładnie, które działanie przyniosło największy efekt, ponieważ wszystkie zmiany wprowadzono w podobnym czasie. Rodzina postanowiła więc kontynuować te zwyczaje, które nie utrudniały jej życia.\n\nWójcikowie odkryli też, że łatwiej pamiętać o nowych zasadach, gdy każdy ma własne zadanie. Nie chodziło im o to, aby codziennie kontrolować pozostałych domowników, lecz żeby wspólnie znaleźć rozwiązania, które da się stosować przez dłuższy czas.",
+      "questions": [
+        {
+          "id": "main-idea",
+          "skill": "main-idea",
+          "question": "Co jest głównym przesłaniem opowiadania?",
+          "options": [
+            "Najlepiej oceniać każdego domownika osobno na podstawie rachunku.",
+            "Trwałe zmiany są łatwiejsze, gdy wynikają z obserwacji i pasują do życia rodziny.",
+            "Oszczędzanie wody wymaga przede wszystkim kupna nowych urządzeń."
+          ],
+          "answer": "Trwałe zmiany są łatwiejsze, gdy wynikają z obserwacji i pasują do życia rodziny.",
+          "evidence": "Wójcikowie odkryli też, że łatwiej pamiętać o nowych zasadach, gdy każdy ma własne zadanie.",
+          "explanation": "Rodzina najpierw obserwowała sytuację, potem podzieliła zadania i utrzymała wygodne zwyczaje."
+        },
+        {
+          "id": "detail",
+          "skill": "detail",
+          "question": "Jaki problem z kranem zauważyła mama?",
+          "options": [
+            "Pralka nie działała prawidłowo.",
+            "Brakowało czystych ubrań.",
+            "Kran nie przestawał kapać."
+          ],
+          "answer": "Kran nie przestawał kapać.",
+          "evidence": "Mama odkryła natomiast, że z kranu w łazience kapie woda, choć wszyscy starali się go dobrze zakręcać.",
+          "explanation": "Problem dotyczył nieszczelnego kranu."
+        },
+        {
+          "id": "cause",
+          "skill": "cause",
+          "question": "Dlaczego nie udało się ustalić, która zmiana dała największy efekt?",
+          "options": [
+            "Kilka zmian wprowadzono niemal jednocześnie.",
+            "Hydraulik nie pojawił się w umówionym terminie.",
+            "Rodzina nie otrzymała rachunku za kolejny miesiąc."
+          ],
+          "answer": "Kilka zmian wprowadzono niemal jednocześnie.",
+          "evidence": "trudno było ustalić dokładnie, które działanie przyniosło największy efekt, ponieważ wszystkie zmiany wprowadzono w podobnym czasie.",
+          "explanation": "Nie można oddzielić wpływu poszczególnych działań na podstawie jednego rachunku."
+        },
+        {
+          "id": "inference",
+          "skill": "inference",
+          "question": "Gdyby kran nadal kapał po zmianie zwyczajów rodziny, co byłoby zgodne z jej podejściem?",
+          "options": [
+            "Sprawdzić stan kranu z fachowcem, niezależnie od codziennych zwyczajów.",
+            "Ustalić krótsze godziny korzystania z łazienki zamiast naprawy.",
+            "Zwiększyć liczbę prań, aby lepiej porównać rachunki."
+          ],
+          "answer": "Sprawdzić stan kranu z fachowcem, niezależnie od codziennych zwyczajów.",
+          "evidence": "Mama umówiła wizytę hydraulika, ponieważ problemu z kranem nie dało się rozwiązać przez zmianę przyzwyczajeń.",
+          "explanation": "Usterka wymaga osobnego działania technicznego."
+        },
+        {
+          "id": "vocabulary",
+          "skill": "vocabulary",
+          "question": "Co oznacza tutaj „przyzwyczajenia”?",
+          "options": [
+            "Narzędzia używane podczas napraw.",
+            "Obowiązki zapisane na rachunku.",
+            "Powtarzające się sposoby wykonywania codziennych czynności."
+          ],
+          "answer": "Powtarzające się sposoby wykonywania codziennych czynności.",
+          "evidence": "Mama umówiła wizytę hydraulika, ponieważ problemu z kranem nie dało się rozwiązać przez zmianę przyzwyczajeń.",
+          "explanation": "Przyzwyczajenia to nawyki, takie jak pozostawianie odkręconego kranu."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-098",
+      "day": 98,
+      "level": "B1",
+      "genre": "poradnik",
+      "title": "Ogród przyjazny owadom",
+      "text": "Mały ogród może być miejscem wypoczynku nie tylko dla ludzi. Jeśli chcemy obserwować owady, warto pomyśleć o tym, jak wygląda nasza przestrzeń w różnych miesiącach. Jedna piękna rabata, która kwitnie przez dwa tygodnie, daje mniej okazji do obserwacji niż kilka roślin kwitnących w różnych porach sezonu.\n\nNa początku nie trzeba zmieniać całego ogrodu. Można wybrać niewielki fragment, na którym łatwo będzie porównywać zachowanie owadów. Zwróć uwagę na światło, wiatr i odległość od miejsca, w którym zwykle siedzisz. Jeśli chcesz robić notatki, wygodniej będzie obserwować rośliny z tej samej ławki, zamiast za każdym razem podchodzić bardzo blisko.\n\nW przykładowym ogrodzie Ola postanowiła przygotować dwie małe rabaty. Jedną założyła przy płocie, drugą w pobliżu tarasu. Na obu posadziła te same rośliny. Przez kilka tygodni obserwowała je o podobnej porze, aby dowiedzieć się, gdzie częściej widuje owady. Zapisywała również pogodę, bo liczba odwiedzin różniła się między dniami słonecznymi i deszczowymi.\n\nKiedy na jednej rabacie zauważyła mniej owadów, nie zmieniła od razu wszystkich roślin. Najpierw chciała sprawdzić, czy różnica utrzyma się w kolejnych tygodniach. Poprosiła również znajomego ogrodnika o pomoc w wyborze roślin odpowiednich do warunków na działce.\n\nJeśli planujesz podobną zmianę, potraktuj pierwszy sezon jako okazję do nauki. Wybierz takie rozwiązania, które pasują do twojej przestrzeni i pozwalają ci cieszyć się ogrodem bez ciągłego poprawiania wszystkiego.",
+      "questions": [
+        {
+          "id": "main-idea",
+          "skill": "main-idea",
+          "question": "Do czego zachęca poradnik?",
+          "options": [
+            "Do zastąpienia całego ogrodu jedną dużą rabatą.",
+            "Do wybierania roślin wyłącznie na podstawie ich wyglądu.",
+            "Do stopniowego urządzania ogrodu z uwzględnieniem obserwacji owadów i warunków."
+          ],
+          "answer": "Do stopniowego urządzania ogrodu z uwzględnieniem obserwacji owadów i warunków.",
+          "evidence": "Jeśli planujesz podobną zmianę, potraktuj pierwszy sezon jako okazję do nauki.",
+          "explanation": "Tekst zachęca do małych prób, obserwacji i wyboru rozwiązań pasujących do ogrodu."
+        },
+        {
+          "id": "detail",
+          "skill": "detail",
+          "question": "Jaką dodatkową informację o warunkach obserwacji zapisywała Ola?",
+          "options": [
+            "Pogodę podczas obserwacji.",
+            "Godziny pracy znajomego ogrodnika.",
+            "Koszt nowych roślin."
+          ],
+          "answer": "Pogodę podczas obserwacji.",
+          "evidence": "Zapisywała również pogodę, bo liczba odwiedzin różniła się między dniami słonecznymi i deszczowymi.",
+          "explanation": "Pogoda była dodatkową informacją."
+        },
+        {
+          "id": "cause",
+          "skill": "cause",
+          "question": "Dlaczego Ola nie zmieniła od razu roślin na jednej rabacie?",
+          "options": [
+            "Nie miała już miejsca na nowe rośliny.",
+            "Chciała sprawdzić, czy zauważona różnica się powtórzy.",
+            "Chciała zakończyć obserwacje po pierwszym tygodniu."
+          ],
+          "answer": "Chciała sprawdzić, czy zauważona różnica się powtórzy.",
+          "evidence": "Najpierw chciała sprawdzić, czy różnica utrzyma się w kolejnych tygodniach.",
+          "explanation": "Jedna obserwacja nie wystarczała jej do decyzji."
+        },
+        {
+          "id": "inference",
+          "skill": "inference",
+          "question": "W pierwszym tygodniu Ola obserwowała rabatę przy płocie w słońcu, a drugą tylko w deszczu. Co pomoże jej lepiej porównać miejsca?",
+          "options": [
+            "Porównać wyłącznie kolory kwiatów na obu rabatach.",
+            "Zmienić wszystkie rośliny na mniej odwiedzanej rabacie.",
+            "Powtórzyć obserwacje obu rabat przy podobnej pogodzie i o podobnej porze."
+          ],
+          "answer": "Powtórzyć obserwacje obu rabat przy podobnej pogodzie i o podobnej porze.",
+          "evidence": "Przez kilka tygodni obserwowała je o podobnej porze, aby dowiedzieć się, gdzie częściej widuje owady. Zapisywała również pogodę, bo liczba odwiedzin różniła się między dniami słonecznymi i deszczowymi.",
+          "explanation": "Porównanie w podobnych warunkach ogranicza wpływ pory i pogody."
+        },
+        {
+          "id": "vocabulary",
+          "skill": "vocabulary",
+          "question": "Co oznacza w tekście „rabata”?",
+          "options": [
+            "Miejsce przygotowane do siedzenia w ogrodzie.",
+            "Fragment ziemi obsadzony roślinami.",
+            "Lista gatunków oglądanych podczas spaceru."
+          ],
+          "answer": "Fragment ziemi obsadzony roślinami.",
+          "evidence": "W przykładowym ogrodzie Ola postanowiła przygotować dwie małe rabaty. Jedną założyła przy płocie, drugą w pobliżu tarasu. Na obu posadziła te same rośliny.",
+          "explanation": "Rabaty są miejscami, na których rosną rośliny."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-100",
+      "day": 100,
+      "level": "B1",
+      "genre": "artykuł",
+      "title": "Przygotowania do Wigilii",
+      "text": "W rodzinie pani Marii przygotowania do Wigilii zaczynały się kiedyś już na początku grudnia. Zwykle to ona układała listę potraw, kupowała większość produktów i zapraszała gości. Pozostali przyjeżdżali w dniu święta. Maria lubiła tę tradycję, lecz z czasem zauważyła, że podczas kolacji częściej myśli o kolejnych zadaniach, niż rozmawia z bliskimi.\n\nW tym roku jej dwaj synowie zaproponowali inny sposób organizacji. Na początku miesiąca cała rodzina spotkała się przez internet. Każdy powiedział, co jest dla niego ważne podczas Wigilii. Dla Marii najważniejsza była wspólna kolacja przy jednym stole. Dla jednego z synów ważne było przygotowanie potrawy według przepisu babci, a drugi chciał mieć czas na spacer z dziećmi.\n\nUstalili, że nie będą zwiększać liczby potraw tylko dlatego, że przyjedzie więcej osób. Zamiast tego każdy przygotuje odpowiednią ilość jednej lub dwóch potraw. Dwoje najmłodszych dzieci zajmie się dekoracją stołu z pomocą dorosłych. Trzej dorośli goście przyjadą wcześniej, aby pomóc w ostatnich przygotowaniach.\n\nRodzina postanowiła zachować także zwyczaj składania życzeń, lecz zrezygnować z długiego rozdawania wielu prezentów. Każdy dorosły przygotuje tylko jeden drobny upominek dla wcześniej wylosowanej osoby.\n\nMaria początkowo obawiała się, że zmiana organizacji osłabi tradycję. Po rozmowie z rodziną zrozumiała jednak, że bliscy chcą zachować najważniejsze elementy spotkania. Zmieniają przede wszystkim podział pracy. Dzięki temu będzie mogła uczestniczyć w wieczorze tak samo jak inni, a nie tylko zajmować się jego przygotowaniem.",
+      "questions": [
+        {
+          "id": "main-idea",
+          "skill": "main-idea",
+          "question": "Co pokazuje przykład rodziny Marii?",
+          "options": [
+            "Zachowanie tradycji nie musi oznaczać zachowania dawnego podziału obowiązków.",
+            "Wspólne przygotowania są możliwe tylko wtedy, gdy wszyscy mieszkają blisko.",
+            "Rodzinne święta wymagają coraz większej liczby potraw."
+          ],
+          "answer": "Zachowanie tradycji nie musi oznaczać zachowania dawnego podziału obowiązków.",
+          "evidence": "Zmieniają przede wszystkim podział pracy. Dzięki temu będzie mogła uczestniczyć w wieczorze tak samo jak inni, a nie tylko zajmować się jego przygotowaniem.",
+          "explanation": "Rodzina zachowuje ważne zwyczaje, ale dzieli przygotowania."
+        },
+        {
+          "id": "detail",
+          "skill": "detail",
+          "question": "Kto pomoże w dekoracji stołu?",
+          "options": [
+            "Wyłącznie Maria i jej synowie.",
+            "Dwoje najmłodszych dzieci z pomocą dorosłych.",
+            "Trzej goście, którzy przyjadą wcześniej."
+          ],
+          "answer": "Dwoje najmłodszych dzieci z pomocą dorosłych.",
+          "evidence": "Dwoje najmłodszych dzieci zajmie się dekoracją stołu z pomocą dorosłych.",
+          "explanation": "Dzieci otrzymały własne zadanie."
+        },
+        {
+          "id": "cause",
+          "skill": "cause",
+          "question": "Dlaczego Maria chciała zmienić organizację święta?",
+          "options": [
+            "Synowie zamierzali zrezygnować z przepisu babci.",
+            "Nie chciała już spotykać się z rodziną przy stole.",
+            "Przygotowania ograniczały jej możliwość spokojnej rozmowy z bliskimi."
+          ],
+          "answer": "Przygotowania ograniczały jej możliwość spokojnej rozmowy z bliskimi.",
+          "evidence": "Maria lubiła tę tradycję, lecz z czasem zauważyła, że podczas kolacji częściej myśli o kolejnych zadaniach, niż rozmawia z bliskimi.",
+          "explanation": "Obowiązki utrudniały jej udział w spotkaniu."
+        },
+        {
+          "id": "inference",
+          "skill": "inference",
+          "question": "Do rodziny dołączy dwóch dorosłych gości, którzy chcą pomóc. Co pasuje do nowych ustaleń?",
+          "options": [
+            "Dodać kilka nowych potraw, które samodzielnie zrobi Maria.",
+            "Poprosić ich o większą porcję ustalonej potrawy i włączyć do przygotowań.",
+            "Zrezygnować z pomocy gości, żeby zachować dawny sposób organizacji."
+          ],
+          "answer": "Poprosić ich o większą porcję ustalonej potrawy i włączyć do przygotowań.",
+          "evidence": "Ustalili, że nie będą zwiększać liczby potraw tylko dlatego, że przyjedzie więcej osób. Zamiast tego każdy przygotuje odpowiednią ilość jednej lub dwóch potraw.",
+          "explanation": "Większa liczba osób oznacza dostosowanie ilości, nie rozbudowanie menu i obciążenie Marii."
+        },
+        {
+          "id": "vocabulary",
+          "skill": "vocabulary",
+          "question": "Co oznacza „upominek” w tym tekście?",
+          "options": [
+            "Niewielki prezent dla drugiej osoby.",
+            "Życzenia wypowiadane przy stole.",
+            "Potrawa podawana na zakończenie kolacji."
+          ],
+          "answer": "Niewielki prezent dla drugiej osoby.",
+          "evidence": "Każdy dorosły przygotuje tylko jeden drobny upominek dla wcześniej wylosowanej osoby.",
+          "explanation": "Chodzi o prezent, którego liczbę rodzina ogranicza."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-101",
+      "day": 101,
+      "level": "B1",
+      "genre": "dialog",
+      "title": "Rodzinny przepis na Wielkanoc",
+      "text": "— Babciu, chciałbym w tym roku sam przygotować twoją babkę na Wielkanoc — powiedział Filip. — Pamiętam, że robiłaś ją zawsze w tej samej formie, ale nigdy nie zapisałem przepisu.\n\n— Chętnie ci pomogę. Mam zeszyt z przepisami, tylko nie wszystkie ilości są w nim podane dokładnie. Część składników dodawałam według własnego doświadczenia — odpowiedziała babcia.\n\n— Właśnie dlatego wolę upiec ją razem z tobą przed świętami. Gdybym spróbował dopiero w niedzielę rano, nie miałbym czasu poprawić błędów.\n\nBabcia zgodziła się na próbę w sobotę. Filip przygotował składniki, a ona pokazała mu, jak rozpoznać właściwą konsystencję ciasta. Kiedy Filip sięgał po kolejną porcję mąki, zatrzymała go.\n\n— Najpierw zobacz, jak ciasto spływa z łyżki. Nie zawsze potrzeba tyle samo mąki. Ja zapisuję ilość, ale patrzę też na to, co dzieje się w misce.\n\n— Czyli sam przepis to nie wszystko?\n\n— Właśnie. Dobrze, że pytasz. Gdy uczyłam twoją mamę piec, też potrzebowała kilku prób.\n\nPo upieczeniu babki Filip zrobił zdjęcie przekroju i zapisał własne uwagi. Babcia zaproponowała, żeby w zeszycie zostawić oryginalny zapis, a obok dopisać nową wersję z dokładniejszymi wskazówkami. Filipowi spodobał się ten pomysł, ponieważ nie chciał zgubić rodzinnej historii przepisu.\n\nNa święta zaprosili również kuzynkę, która nigdy wcześniej nie piekła ciast. Filip obiecał jej pokazać zdjęcia z próby. Nie zamierzał już przekazywać przepisu jako samej listy składników. Chciał wyjaśnić, na co trzeba zwrócić uwagę podczas przygotowania.",
+      "questions": [
+        {
+          "id": "main-idea",
+          "skill": "main-idea",
+          "question": "Jaka jest główna myśl rozmowy?",
+          "options": [
+            "Rodzinne przepisy należy zawsze przepisywać bez żadnych zmian.",
+            "Najlepiej zastąpić stare przepisy nowoczesnymi sposobami pieczenia.",
+            "Przekazywanie rodzinnego przepisu obejmuje także doświadczenie i praktyczne wskazówki."
+          ],
+          "answer": "Przekazywanie rodzinnego przepisu obejmuje także doświadczenie i praktyczne wskazówki.",
+          "evidence": "Nie zamierzał już przekazywać przepisu jako samej listy składników. Chciał wyjaśnić, na co trzeba zwrócić uwagę podczas przygotowania.",
+          "explanation": "Filip zachowuje historię i uczy się oceniać ciasto w praktyce."
+        },
+        {
+          "id": "detail",
+          "skill": "detail",
+          "question": "Kiedy Filip i babcia umówili się na próbę?",
+          "options": [
+            "W piątek po południu.",
+            "W sobotę przed świętami.",
+            "W niedzielę rano."
+          ],
+          "answer": "W sobotę przed świętami.",
+          "evidence": "Babcia zgodziła się na próbę w sobotę.",
+          "explanation": "Próba miała odbyć się przed Wielkanocą."
+        },
+        {
+          "id": "cause",
+          "skill": "cause",
+          "question": "Dlaczego Filip nie chce piec babki po raz pierwszy w niedzielę rano?",
+          "options": [
+            "Nie miałby czasu na poprawienie błędów.",
+            "Babcia nie miałaby wtedy zeszytu z przepisami.",
+            "Kuzynka nie mogłaby zrobić zdjęcia ciasta."
+          ],
+          "answer": "Nie miałby czasu na poprawienie błędów.",
+          "evidence": "Gdybym spróbował dopiero w niedzielę rano, nie miałbym czasu poprawić błędów.",
+          "explanation": "Próba przed świętami daje czas na naukę."
+        },
+        {
+          "id": "inference",
+          "skill": "inference",
+          "question": "Kuzynka korzysta z zapisu ilości składników, ale ciasto wygląda inaczej niż na zdjęciu z próby. Co Filip powinien jej doradzić zgodnie z nauką babci?",
+          "options": [
+            "Usunąć stary przepis z zeszytu i zacząć od nowa.",
+            "Porównać konsystencję ze wskazówkami i dopiero wtedy zdecydować o mące.",
+            "Dodać całą zapisaną ilość mąki bez względu na wygląd."
+          ],
+          "answer": "Porównać konsystencję ze wskazówkami i dopiero wtedy zdecydować o mące.",
+          "evidence": "Najpierw zobacz, jak ciasto spływa z łyżki. Nie zawsze potrzeba tyle samo mąki. Ja zapisuję ilość, ale patrzę też na to, co dzieje się w misce.",
+          "explanation": "Ilości są pomocą, ale trzeba ocenić rzeczywistą konsystencję."
+        },
+        {
+          "id": "vocabulary",
+          "skill": "vocabulary",
+          "question": "Co oznacza „przekrój” babki?",
+          "options": [
+            "Kształt formy przed pieczeniem.",
+            "Lista użytych składników.",
+            "Wnętrze ciasta widoczne po jego przecięciu."
+          ],
+          "answer": "Wnętrze ciasta widoczne po jego przecięciu.",
+          "evidence": "Po upieczeniu babki Filip zrobił zdjęcie przekroju i zapisał własne uwagi.",
+          "explanation": "Przekrój pozwala obejrzeć wnętrze gotowego ciasta."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-102",
+      "day": 102,
+      "level": "B1",
+      "genre": "e-mail",
+      "title": "Odwiedziny na lokalnym jarmarku",
+      "text": "Cześć, Doroto!\n\nW sobotę wybraliśmy się z Olą na lokalny jarmark, który odbywał się na placu przed ratuszem. Było tam sporo stoisk z ręcznie wykonanymi ozdobami, jedzeniem i drobnymi prezentami. Początkowo chciałyśmy tylko kupić coś dla znajomych, którzy obchodzą rocznicę ślubu. Ostatecznie spędziłyśmy na placu prawie trzy godziny.\n\nNajbardziej zainteresowało nas stoisko, przy którym można było samodzielnie ozdobić małą drewnianą zawieszkę. Prowadząca nie sprzedawała gotowych zestawów do zabrania do domu, ponieważ chciała pokazywać uczestnikom technikę malowania na miejscu. Na jeden stolik przypadało tylko kilka krzeseł, więc zapisałyśmy się na godzinę później i w tym czasie obejrzałyśmy pozostałe stoiska.\n\nKupiłyśmy również herbatę od lokalnego producenta. Sprzedawca pozwolił nam powąchać różne mieszanki, ale nie przygotowywał napojów na miejscu. Obok działała kawiarnia, w której można było spróbować jednej z jego herbat. Właśnie tam odpoczęłyśmy przed powrotem na warsztaty.\n\nJarmark będzie trwał jeszcze w przyszłą sobotę. Jeśli masz ochotę pójść z nami, najlepiej spotkajmy się przed południem. Chcemy najpierw zapisać się na warsztaty, a potem bez pośpiechu zrobić zakupy. Pamiętaj, że o czternastej muszę wyjść, bo obiecałam pomóc siostrze w przygotowaniu przyjęcia urodzinowego.\n\nNapisz, czy wolisz przyjść wcześniej, czy spotkać się z nami już na placu. Nie musisz kupować żadnych prezentów. Myślę, że samo uczestnictwo w warsztatach może być ciekawym sposobem na spędzenie soboty.\n\nŚciskam,\nAda",
+      "questions": [
+        {
+          "id": "main-idea",
+          "skill": "main-idea",
+          "question": "Dlaczego Ada pisze do Doroty?",
+          "options": [
+            "Zaprasza Dorotę na przyjęcie urodzinowe siostry.",
+            "Opisuje udaną wizytę i proponuje wspólne wyjście w kolejną sobotę.",
+            "Prosi Dorotę o wybór prezentu na rocznicę ślubu."
+          ],
+          "answer": "Opisuje udaną wizytę i proponuje wspólne wyjście w kolejną sobotę.",
+          "evidence": "Jarmark będzie trwał jeszcze w przyszłą sobotę. Jeśli masz ochotę pójść z nami, najlepiej spotkajmy się przed południem.",
+          "explanation": "Ada opisuje poprzedni jarmark, aby zachęcić do następnej wizyty."
+        },
+        {
+          "id": "detail",
+          "skill": "detail",
+          "question": "Gdzie można było spróbować jednej z herbat producenta?",
+          "options": [
+            "W kawiarni obok.",
+            "Przy jego stoisku na placu.",
+            "Przy stoliku do malowania ozdób."
+          ],
+          "answer": "W kawiarni obok.",
+          "evidence": "Obok działała kawiarnia, w której można było spróbować jednej z jego herbat.",
+          "explanation": "Stoisko pozwalało wąchać mieszanki, kawiarnia je podawała."
+        },
+        {
+          "id": "cause",
+          "skill": "cause",
+          "question": "Dlaczego prowadząca nie sprzedawała zestawów do samodzielnego ozdabiania w domu?",
+          "options": [
+            "Chciała, aby klienci kupowali wyłącznie gotowe prezenty.",
+            "Nie miała wystarczającej liczby drewnianych ozdób.",
+            "Zależało jej na pokazaniu techniki podczas zajęć."
+          ],
+          "answer": "Zależało jej na pokazaniu techniki podczas zajęć.",
+          "evidence": "Prowadząca nie sprzedawała gotowych zestawów do zabrania do domu, ponieważ chciała pokazywać uczestnikom technikę malowania na miejscu.",
+          "explanation": "Celem było uczestnictwo w warsztatach."
+        },
+        {
+          "id": "inference",
+          "skill": "inference",
+          "question": "Dorota może przyjść na plac dopiero o trzynastej, a wolne miejsca na warsztatach są dopiero o piętnastej. Co najlepiej zrobić, jeśli zależy jej na spotkaniu z Adą i udziale w zajęciach?",
+          "options": [
+            "Spotkać się z Adą przed jej wyjściem i wybrać warsztaty osobno na później.",
+            "Zapisać całą grupę na warsztaty o piętnastej.",
+            "Poczekać ze spotkaniem do zakończenia przyjęcia na placu."
+          ],
+          "answer": "Spotkać się z Adą przed jej wyjściem i wybrać warsztaty osobno na później.",
+          "evidence": "Pamiętaj, że o czternastej muszę wyjść, bo obiecałam pomóc siostrze w przygotowaniu przyjęcia urodzinowego.",
+          "explanation": "Ada musi wyjść o czternastej; Dorota może spotkać się z nią wcześniej, a potem pójść sama na warsztaty."
+        },
+        {
+          "id": "vocabulary",
+          "skill": "vocabulary",
+          "question": "Co oznacza „bez pośpiechu”?",
+          "options": [
+            "Bez wybierania innych stoisk.",
+            "Spokojnie, nie spiesząc się.",
+            "Bez wcześniejszego zapisywania się."
+          ],
+          "answer": "Spokojnie, nie spiesząc się.",
+          "evidence": "Chcemy najpierw zapisać się na warsztaty, a potem bez pośpiechu zrobić zakupy.",
+          "explanation": "Zapisanie terminu pozwoli im spokojnie wykorzystać czas."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-103",
+      "day": 103,
+      "level": "B1",
+      "genre": "ogłoszenie",
+      "title": "Święta w dwóch rodzinach",
+      "text": "Dom Sąsiedzki zaprasza na wieczór opowieści o rodzinnych świętach. Chcemy porozmawiać o tym, jak łączymy różne zwyczaje, kiedy bliskie sobie osoby wychowały się w domach o innych tradycjach. Nie będzie to konkurs na najciekawszy sposób obchodzenia świąt. Zależy nam na wymianie doświadczeń.\n\nPodczas poprzedniego spotkania uczestnicy opowiadali, jak dzielili czas między dwie rodziny, przygotowywali wspólne posiłki i rozwiązywali problemy związane z podróżą. Jedna para mówiła o tym, że w pierwszych latach małżeństwa odwiedzali w Wigilię dwa domy. Później zmienili plan i zaczęli spotykać się z drugą rodziną następnego dnia. Dzięki temu spędzali więcej czasu przy stole, a mniej w samochodzie.\n\nW tym roku przygotujemy stoliki poświęcone trzem tematom: rodzinne potrawy, życzenia i prezenty oraz organizacja wizyt. Każdy uczestnik może wybrać temat dla siebie. Osoby, które wolą słuchać, nie muszą przygotowywać własnej historii. Wystarczy, że przyjdą i wezmą udział w rozmowie.\n\nJeśli chcesz pokazać przepis lub zdjęcie, przynieś kopię, którą inni będą mogli obejrzeć. Nie prosimy o przynoszenie jedzenia, ponieważ nie mamy warunków do przechowywania różnych potraw. Przygotujemy natomiast herbatę i miejsce do spokojnej rozmowy.\n\nPo spotkaniu zainteresowani uczestnicy będą mogli dopisać swoje pomysły do wspólnego zeszytu. Zapiszemy tylko historie osób, które wyrażą na to zgodę. Chcemy stworzyć zbiór inspiracji dla tych, którzy szukają własnego sposobu obchodzenia świąt, bez oceniania wyborów innych rodzin.",
+      "questions": [
+        {
+          "id": "main-idea",
+          "skill": "main-idea",
+          "question": "Po co organizowany jest wieczór opowieści?",
+          "options": [
+            "Aby poznać różne sposoby łączenia tradycji i organizowania świąt.",
+            "Aby wybrać najlepsze rodzinne zwyczaje w konkursie.",
+            "Aby ustalić jednakowy plan świąt dla wszystkich uczestników."
+          ],
+          "answer": "Aby poznać różne sposoby łączenia tradycji i organizowania świąt.",
+          "evidence": "Chcemy stworzyć zbiór inspiracji dla tych, którzy szukają własnego sposobu obchodzenia świąt, bez oceniania wyborów innych rodzin.",
+          "explanation": "Spotkanie służy wymianie doświadczeń, nie ocenie."
+        },
+        {
+          "id": "detail",
+          "skill": "detail",
+          "question": "Jaki napój zapewnią organizatorzy?",
+          "options": [
+            "Napoje przyniesione przez uczestników.",
+            "Kawę i soki.",
+            "Herbatę."
+          ],
+          "answer": "Herbatę.",
+          "evidence": "Przygotujemy natomiast herbatę i miejsce do spokojnej rozmowy.",
+          "explanation": "W ogłoszeniu wskazano herbatę."
+        },
+        {
+          "id": "cause",
+          "skill": "cause",
+          "question": "Dlaczego uczestnicy nie powinni przynosić potraw?",
+          "options": [
+            "Spotkanie dotyczy wyłącznie prezentów.",
+            "Organizatorzy nie mają odpowiednich warunków do ich przechowywania.",
+            "Wszystkie potrawy trzeba kupić wcześniej w kawiarni."
+          ],
+          "answer": "Organizatorzy nie mają odpowiednich warunków do ich przechowywania.",
+          "evidence": "Nie prosimy o przynoszenie jedzenia, ponieważ nie mamy warunków do przechowywania różnych potraw.",
+          "explanation": "Powodem jest brak warunków do przechowywania."
+        },
+        {
+          "id": "inference",
+          "skill": "inference",
+          "question": "Para chce posłuchać o organizacji wizyt, ale nie zgadza się na zapisanie swojej historii. Jak może uczestniczyć?",
+          "options": [
+            "Zrezygnować ze spotkania, bo uczestnicy muszą opowiedzieć o swoich świętach.",
+            "Przygotować historię do zeszytu, ponieważ jest to warunek rozmowy.",
+            "Wybrać stolik o organizacji wizyt i słuchać bez zgody na publikację własnej historii."
+          ],
+          "answer": "Wybrać stolik o organizacji wizyt i słuchać bez zgody na publikację własnej historii.",
+          "evidence": "Osoby, które wolą słuchać, nie muszą przygotowywać własnej historii. Wystarczy, że przyjdą i wezmą udział w rozmowie.\n\nJeśli chcesz pokazać przepis lub zdjęcie, przynieś kopię, którą inni będą mogli obejrzeć. Nie prosimy o przynoszenie jedzenia, ponieważ nie mamy warunków do przechowywania różnych potraw. Przygotujemy natomiast herbatę i miejsce do spokojnej rozmowy.\n\nPo spotkaniu zainteresowani uczestnicy będą mogli dopisać swoje pomysły do wspólnego zeszytu. Zapiszemy tylko historie osób, które wyrażą na to zgodę.",
+          "explanation": "Można słuchać, a tekst później osobno wymaga zgody na zapis historii."
+        },
+        {
+          "id": "vocabulary",
+          "skill": "vocabulary",
+          "question": "Co oznacza „zbiór inspiracji”?",
+          "options": [
+            "Zestaw pomysłów, które mogą pomóc znaleźć własne rozwiązania.",
+            "Lista obowiązkowych zasad dla wszystkich rodzin.",
+            "Rozkład jazdy potrzebny do planowania wizyt."
+          ],
+          "answer": "Zestaw pomysłów, które mogą pomóc znaleźć własne rozwiązania.",
+          "evidence": "Chcemy stworzyć zbiór inspiracji dla tych, którzy szukają własnego sposobu obchodzenia świąt",
+          "explanation": "Inspiracje to pomysły, z których można czerpać dobrowolnie."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-104",
+      "day": 104,
+      "level": "B1",
+      "genre": "opowiadanie",
+      "title": "Nowa tradycja sąsiedzka",
+      "text": "Na osiedlu, na którym mieszkał Bartek, ludzie często mijali się na klatce schodowej, ale rzadko mieli okazję dłużej porozmawiać. W grudniu Bartek zaproponował, żeby zorganizować wspólne spotkanie przy herbacie w sali należącej do wspólnoty. Nie chciał, żeby było ono związane tylko z jednym świętem. Zależało mu na tym, aby każdy sąsiad mógł przyjść niezależnie od swoich zwyczajów.\n\nPierwsze ogłoszenie powiesił przy windzie. W odpowiedzi otrzymał kilka wiadomości. Jedna osoba zapytała, czy musi coś przynieść. Inna obawiała się, że spotkanie potrwa do późnego wieczora. Bartek zrozumiał, że sama informacja o terminie nie wystarczy, aby zachęcić ludzi do udziału.\n\nPrzygotował więc drugą kartkę. Napisał, że spotkanie potrwa od siedemnastej do dziewiętnastej, ale można przyjść na krócej. Herbata i kubki będą na miejscu. Kto chce, może przynieść zdjęcie ulubionego miejsca z okolicy i opowiedzieć o nim. Nie będzie jednak obowiązkowej prezentacji.\n\nPrzyszło kilkanaście osób, wśród nich rodzina, która wprowadziła się do budynku dwa tygodnie wcześniej. Dzięki zdjęciom rozmowa szybko zeszła na park, pobliski sklep i bibliotekę. Nowi mieszkańcy otrzymali kilka przydatnych wskazówek, a starsi poznali miejsca, których dotąd nie odwiedzali.\n\nNa zakończenie ktoś zaproponował, żeby powtórzyć spotkanie wiosną. Bartek zgodził się, ale poprosił, żeby następny termin wybrali wspólnie. Nie chciał być jedyną osobą odpowiedzialną za organizację. Nowa tradycja miała należeć do wszystkich sąsiadów, którzy zechcą ją współtworzyć.",
+      "questions": [
+        {
+          "id": "main-idea",
+          "skill": "main-idea",
+          "question": "Co pozwoliło spotkaniu stać się początkiem nowej tradycji?",
+          "options": [
+            "Ustalenie jednego stałego organizatora na cały rok.",
+            "Obowiązek przygotowania prezentacji przez każdego mieszkańca.",
+            "Otwarte zasady udziału i możliwość wspólnego tworzenia kolejnych spotkań."
+          ],
+          "answer": "Otwarte zasady udziału i możliwość wspólnego tworzenia kolejnych spotkań.",
+          "evidence": "Nowa tradycja miała należeć do wszystkich sąsiadów, którzy zechcą ją współtworzyć.",
+          "explanation": "Bartek obniżył bariery udziału i zaprosił innych do organizacji."
+        },
+        {
+          "id": "detail",
+          "skill": "detail",
+          "question": "Jakie godziny podano na drugiej kartce?",
+          "options": [
+            "Od szesnastej do osiemnastej.",
+            "Od siedemnastej do dziewiętnastej.",
+            "Od dziewiętnastej do dwudziestej pierwszej."
+          ],
+          "answer": "Od siedemnastej do dziewiętnastej.",
+          "evidence": "Napisał, że spotkanie potrwa od siedemnastej do dziewiętnastej, ale można przyjść na krócej.",
+          "explanation": "Podano dokładne godziny."
+        },
+        {
+          "id": "cause",
+          "skill": "cause",
+          "question": "Dlaczego Bartek przygotował drugie ogłoszenie?",
+          "options": [
+            "Pytania sąsiadów pokazały, że brakowało ważnych informacji.",
+            "Wspólnota zmieniła miejsce spotkania.",
+            "Pierwsze dotyczyło innego budynku."
+          ],
+          "answer": "Pytania sąsiadów pokazały, że brakowało ważnych informacji.",
+          "evidence": "Jedna osoba zapytała, czy musi coś przynieść. Inna obawiała się, że spotkanie potrwa do późnego wieczora. Bartek zrozumiał, że sama informacja o terminie nie wystarczy, aby zachęcić ludzi do udziału.",
+          "explanation": "Nowa kartka odpowiadała na wątpliwości."
+        },
+        {
+          "id": "inference",
+          "skill": "inference",
+          "question": "Sąsiadka ma tylko pół godziny i nie ma zdjęcia, które chciałaby pokazać. Jak może uczestniczyć zgodnie z nowymi zasadami?",
+          "options": [
+            "Przyjść na część spotkania i rozmawiać bez przygotowanej prezentacji.",
+            "Przyjść dopiero po przygotowaniu zdjęcia i zostać do końca.",
+            "Poczekać na wiosnę, bo pierwsze spotkanie wymaga pełnego udziału."
+          ],
+          "answer": "Przyjść na część spotkania i rozmawiać bez przygotowanej prezentacji.",
+          "evidence": "Napisał, że spotkanie potrwa od siedemnastej do dziewiętnastej, ale można przyjść na krócej. Herbata i kubki będą na miejscu. Kto chce, może przynieść zdjęcie ulubionego miejsca z okolicy i opowiedzieć o nim. Nie będzie jednak obowiązkowej prezentacji.",
+          "explanation": "Krótka obecność i brak zdjęcia są zgodne z zaproszeniem."
+        },
+        {
+          "id": "vocabulary",
+          "skill": "vocabulary",
+          "question": "Co oznacza, że „rozmowa zeszła na park”?",
+          "options": [
+            "Rozmowa zakończyła się po wyjściu do parku.",
+            "Park stał się jednym z tematów rozmowy.",
+            "Uczestnicy przenieśli spotkanie do parku."
+          ],
+          "answer": "Park stał się jednym z tematów rozmowy.",
+          "evidence": "Dzięki zdjęciom rozmowa szybko zeszła na park, pobliski sklep i bibliotekę.",
+          "explanation": "Rozmowa zaczęła dotyczyć tych miejsc."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-105",
+      "day": 105,
+      "level": "B1",
+      "genre": "poradnik",
+      "title": "Wystawa o dawnych zwyczajach",
+      "text": "Wystawa poświęcona dawnym zwyczajom może zainteresować zarówno osoby, które pamiętają opisywane czasy, jak i tych, którzy poznają je po raz pierwszy. Aby przygotować taką wystawę w lokalnej bibliotece lub domu kultury, nie trzeba od razu zbierać wielu cennych przedmiotów. Najpierw warto zastanowić się, jaką historię chcemy opowiedzieć.\n\nW przykładowej wystawie o świętach mieszkańcy wybrali trzy tematy: przygotowanie domu, wspólne posiłki oraz składanie życzeń. Do każdego tematu przygotowali zdjęcia i krótkie opisy. Poprosili starszych sąsiadów, aby opowiedzieli, które zwyczaje były ważne w ich rodzinach. Nie wszyscy pamiętali te same szczegóły, więc organizatorzy zapisywali, kto opowiedział daną historię, zamiast przedstawiać jedną wersję jako obowiązującą wszystkich.\n\nNiektóre osoby przyniosły rodzinne przedmioty. Organizatorzy ustalili z właścicielami, czy można je pokazać na wystawie, a jeśli tak, to na jak długo. Gdy właściciel wolał zachować przedmiot w domu, wystarczało zdjęcie i opis jego znaczenia. Dzięki temu nikt nie musiał rozstawać się z cenną pamiątką.\n\nWarto też pomyśleć o osobach odwiedzających wystawę bez przewodnika. Podpis pod zdjęciem powinien wyjaśniać nie tylko, co przedstawia fotografia, ale również dlaczego była ważna dla danej rodziny. Można zostawić obok miejsce na dodatkowe wspomnienia zwiedzających.\n\nNa końcu wystawy organizatorzy przykładowego projektu zebrali uwagi i zaproponowali kolejne spotkanie. Okazało się, że najlepsze historie pojawiały się wtedy, gdy ktoś zadawał pytanie o zwyczaj, który wydawał się innym zupełnie zwyczajny.",
+      "questions": [
+        {
+          "id": "main-idea",
+          "skill": "main-idea",
+          "question": "Jaka zasada przygotowania wystawy jest najważniejsza w poradniku?",
+          "options": [
+            "Pokazać możliwie najwięcej kosztownych przedmiotów.",
+            "Przedstawić osobiste historie i kontekst zwyczajów z poszanowaniem właścicieli.",
+            "Ustalić jedną wersję każdej tradycji na podstawie wspomnień najstarszej osoby."
+          ],
+          "answer": "Przedstawić osobiste historie i kontekst zwyczajów z poszanowaniem właścicieli.",
+          "evidence": "Najpierw warto zastanowić się, jaką historię chcemy opowiedzieć.",
+          "explanation": "Tekst stawia opowieści i zgody właścicieli przed liczbą eksponatów."
+        },
+        {
+          "id": "detail",
+          "skill": "detail",
+          "question": "Ile tematów wybrano w przykładowej wystawie?",
+          "options": [
+            "Trzy.",
+            "Cztery.",
+            "Dwa."
+          ],
+          "answer": "Trzy.",
+          "evidence": "W przykładowej wystawie o świętach mieszkańcy wybrali trzy tematy: przygotowanie domu, wspólne posiłki oraz składanie życzeń.",
+          "explanation": "Wymieniono trzy tematy."
+        },
+        {
+          "id": "cause",
+          "skill": "cause",
+          "question": "Dlaczego organizatorzy zapisywali, kto opowiedział daną historię?",
+          "options": [
+            "Chcieli sprawdzić, kto przyniósł najwięcej zdjęć.",
+            "Potrzebowali listy osób do zaproszenia na święta.",
+            "Wspomnienia poszczególnych osób różniły się."
+          ],
+          "answer": "Wspomnienia poszczególnych osób różniły się.",
+          "evidence": "Nie wszyscy pamiętali te same szczegóły, więc organizatorzy zapisywali, kto opowiedział daną historię, zamiast przedstawiać jedną wersję jako obowiązującą wszystkich.",
+          "explanation": "Przypisanie historii osobie zachowuje różnorodność wspomnień."
+        },
+        {
+          "id": "inference",
+          "skill": "inference",
+          "question": "Właściciel starej ozdoby nie chce zostawić jej w bibliotece, ale chętnie opowiada o niej. Co można przygotować dla osób oglądających wystawę samodzielnie?",
+          "options": [
+            "Pominąć historię, ponieważ nie można pokazać oryginału.",
+            "Pokazać zdjęcie ozdoby i podpis wyjaśniający jej znaczenie w rodzinie.",
+            "Poprosić właściciela o pozostawienie ozdoby przynajmniej na jeden dzień bez podpisu."
+          ],
+          "answer": "Pokazać zdjęcie ozdoby i podpis wyjaśniający jej znaczenie w rodzinie.",
+          "evidence": "Gdy właściciel wolał zachować przedmiot w domu, wystarczało zdjęcie i opis jego znaczenia. Dzięki temu nikt nie musiał rozstawać się z cenną pamiątką.\n\nWarto też pomyśleć o osobach odwiedzających wystawę bez przewodnika. Podpis pod zdjęciem powinien wyjaśniać nie tylko, co przedstawia fotografia, ale również dlaczego była ważna dla danej rodziny.",
+          "explanation": "Zdjęcie i opis przekazują historię bez konieczności wypożyczenia przedmiotu."
+        },
+        {
+          "id": "vocabulary",
+          "skill": "vocabulary",
+          "question": "Co oznacza „pamiątka” w tym tekście?",
+          "options": [
+            "Formularz zgody na udział w wystawie.",
+            "Podpis wyjaśniający godziny otwarcia wystawy.",
+            "Przedmiot, który przypomina o ważnej osobie lub wydarzeniu."
+          ],
+          "answer": "Przedmiot, który przypomina o ważnej osobie lub wydarzeniu.",
+          "evidence": "Dzięki temu nikt nie musiał rozstawać się z cenną pamiątką.",
+          "explanation": "Rodzinne przedmioty mają wartość związaną ze wspomnieniami."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-106",
+      "day": 106,
+      "level": "B1",
+      "genre": "wiadomość",
+      "title": "Czy warto pożyczać zamiast kupować?",
+      "text": "Cześć, Tomku!\n\nPamiętasz, że w zeszłym miesiącu planowaliśmy kupić wiertarkę do naszego mieszkania? Ostatecznie z niej zrezygnowaliśmy, bo sąsiad zaproponował, że pożyczy nam swoją na weekend. Potrzebowaliśmy jej tylko do zamocowania dwóch półek, a później prawdopodobnie długo nie mielibyśmy okazji jej używać.\n\nTo doświadczenie dało nam pomysł na małą listę rzeczy, którymi moglibyśmy się dzielić wśród znajomych. Na razie wpisaliśmy na nią narzędzia, pompki rowerowe i kilka gier planszowych. Nie dodajemy przedmiotów, których właściciel potrzebuje codziennie albo które trudno bezpiecznie przewozić. Każdy sam decyduje, co chce udostępnić.\n\nWażne jest też ustalenie terminu zwrotu. W przypadku wiertarki umówiliśmy się z sąsiadem na niedzielę wieczorem, ponieważ w poniedziałek potrzebował jej u siebie. Kiedy praca zajęła nam więcej czasu, zadzwoniliśmy do niego wcześniej. Okazało się, że możemy oddać narzędzie w poniedziałek rano, ale nie chcieliśmy zakładać tego bez pytania.\n\nZastanawiamy się również nad tym, co zrobić, jeśli pożyczony przedmiot przestanie działać. Chcemy przed użyciem obejrzeć go razem z właścicielem, a w razie problemu od razu się z nim skontaktować. Nie chodzi o spisywanie długich umów między znajomymi, lecz o jasne zasady, które pozwolą uniknąć nieporozumień.\n\nNapisz, co o tym myślisz. Może nie wszystko warto pożyczać, ale przy rzeczach używanych raz na jakiś czas można w ten sposób oszczędzić pieniądze i miejsce w mieszkaniu.\n\nPozdrawiam,\nKamil",
+      "questions": [
+        {
+          "id": "main-idea",
+          "skill": "main-idea",
+          "question": "Jaki pomysł Kamil przedstawia Tomkowi?",
+          "options": [
+            "Dzielenie się rzadko używanymi przedmiotami na uzgodnionych zasadach.",
+            "Sprzedaż sprzętu sąsiadom przed remontem.",
+            "Wspólne kupowanie wszystkich narzędzi na własność."
+          ],
+          "answer": "Dzielenie się rzadko używanymi przedmiotami na uzgodnionych zasadach.",
+          "evidence": "Może nie wszystko warto pożyczać, ale przy rzeczach używanych raz na jakiś czas można w ten sposób oszczędzić pieniądze i miejsce w mieszkaniu.",
+          "explanation": "Kamil proponuje dobrowolne udostępnianie i jasne warunki zwrotu."
+        },
+        {
+          "id": "detail",
+          "skill": "detail",
+          "question": "Na kiedy pierwotnie umówiono zwrot wiertarki?",
+          "options": [
+            "Na poniedziałek rano.",
+            "Na sobotę wieczorem.",
+            "Na niedzielę wieczorem."
+          ],
+          "answer": "Na niedzielę wieczorem.",
+          "evidence": "W przypadku wiertarki umówiliśmy się z sąsiadem na niedzielę wieczorem, ponieważ w poniedziałek potrzebował jej u siebie.",
+          "explanation": "Pierwszy uzgodniony termin to niedziela."
+        },
+        {
+          "id": "cause",
+          "skill": "cause",
+          "question": "Dlaczego Kamil nie kupił wiertarki?",
+          "options": [
+            "Sąsiad chciał kupić od niego narzędzia.",
+            "Miał wykonać tylko niewielką pracę i mógł skorzystać z narzędzia sąsiada.",
+            "Nie wiedział, jak przymocować półki."
+          ],
+          "answer": "Miał wykonać tylko niewielką pracę i mógł skorzystać z narzędzia sąsiada.",
+          "evidence": "Potrzebowaliśmy jej tylko do zamocowania dwóch półek, a później prawdopodobnie długo nie mielibyśmy okazji jej używać.",
+          "explanation": "Zakup nie był potrzebny przy jednorazowym wykorzystaniu."
+        },
+        {
+          "id": "inference",
+          "skill": "inference",
+          "question": "Tomek chce skorzystać z pompki, której właściciel potrzebuje codziennie rano. Co najlepiej zrobić zgodnie z podejściem Kamila?",
+          "options": [
+            "Uzgodnić z właścicielem ewentualne krótkie pożyczenie poza wspólną listą.",
+            "Wpisać pompkę na listę bez pytania, skoro jest mała.",
+            "Zabrać pompkę na cały weekend, jeśli użyje jej tylko raz."
+          ],
+          "answer": "Uzgodnić z właścicielem ewentualne krótkie pożyczenie poza wspólną listą.",
+          "evidence": "Nie dodajemy przedmiotów, których właściciel potrzebuje codziennie albo które trudno bezpiecznie przewozić. Każdy sam decyduje, co chce udostępnić.",
+          "explanation": "Codziennie potrzebnego przedmiotu nie wpisuje się automatycznie; decyzja należy do właściciela."
+        },
+        {
+          "id": "vocabulary",
+          "skill": "vocabulary",
+          "question": "Co oznacza „udostępnić” przedmiot?",
+          "options": [
+            "Zastąpić go nowszym modelem.",
+            "Pozwolić innym z niego korzystać.",
+            "Naprawić go przed sprzedażą."
+          ],
+          "answer": "Pozwolić innym z niego korzystać.",
+          "evidence": "Każdy sam decyduje, co chce udostępnić.",
+          "explanation": "Chodzi o pozwolenie znajomym na korzystanie z własnej rzeczy."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-107",
+      "day": 107,
+      "level": "B1",
+      "genre": "artykuł",
+      "title": "Co bym zmienił w swojej okolicy",
+      "text": "W lokalnej gazecie pojawiło się pytanie: „Co zmieniłbyś w swojej okolicy, gdybyś mógł wybrać tylko jedną rzecz?”. Redakcja otrzymała wiele odpowiedzi. Część czytelników chciałaby więcej zieleni, inni proponowali nowe miejsca parkingowe lub lepszą organizację ruchu. Redaktorzy zdecydowali się przedstawić trzy pomysły dotyczące jednej ulicy, aby pokazać, jak różne mogą być potrzeby jej użytkowników.\n\nAneta, która chodzi codziennie do pracy pieszo, zwróciła uwagę na brak ławki w połowie długiego chodnika. Powiedziała, że jej tata czasami rezygnuje z pójścia do sklepu, ponieważ nie ma gdzie odpocząć. Gdyby pojawiła się ławka, mógłby samodzielnie pokonać tę drogę.\n\nMarek prowadzi mały sklep. Wolałby uporządkować miejsce, w którym dostawcy zatrzymują samochody. Obecnie zdarza się, że podczas rozładunku część chodnika jest zajęta. Marek zaproponował, aby dokładniej ustalić godziny dostaw i wyznaczyć dla nich odpowiednie miejsce.\n\nTrzeci pomysł zgłosiła Zosia, która regularnie jeździ rowerem. Chciałaby bezpiecznie zostawiać go przy bibliotece. Zauważyła, że niepotrzebnie szuka się dużych inwestycji, jeśli czasami wystarczy dobrze zaplanowany stojak.\n\nRedakcja nie przeprowadziła głosowania na najlepszą propozycję. Zamiast tego zaprosiła autorów pomysłów do wspólnej rozmowy. Okazało się, że wszyscy chcieliby, aby chodnik pozostał wygodny dla pieszych. Być może ławka i stojak mogłyby powstać w miejscach, które nie utrudniają dostaw. Pomysł jednej osoby nie musi więc oznaczać odrzucenia potrzeb pozostałych.",
+      "questions": [
+        {
+          "id": "main-idea",
+          "skill": "main-idea",
+          "question": "Co jest głównym celem artykułu?",
+          "options": [
+            "Przekonać czytelników, że tylko nowe miejsca parkingowe poprawią ulicę.",
+            "Pokazać, że różne potrzeby mieszkańców mogą prowadzić do wspólnych rozwiązań.",
+            "Przedstawić wyniki głosowania na największą inwestycję."
+          ],
+          "answer": "Pokazać, że różne potrzeby mieszkańców mogą prowadzić do wspólnych rozwiązań.",
+          "evidence": "Pomysł jednej osoby nie musi więc oznaczać odrzucenia potrzeb pozostałych.",
+          "explanation": "Artykuł przedstawia trzy perspektywy i możliwość ich pogodzenia."
+        },
+        {
+          "id": "detail",
+          "skill": "detail",
+          "question": "Przy jakim budynku Zosia chciałaby zostawiać rower?",
+          "options": [
+            "Przy redakcji gazety.",
+            "Przy sklepie Marka.",
+            "Przy bibliotece."
+          ],
+          "answer": "Przy bibliotece.",
+          "evidence": "Chciałaby bezpiecznie zostawiać go przy bibliotece.",
+          "explanation": "Zosia wskazuje bibliotekę."
+        },
+        {
+          "id": "cause",
+          "skill": "cause",
+          "question": "Dlaczego Aneta proponuje ławkę?",
+          "options": [
+            "Jej tata potrzebuje miejsca na odpoczynek w drodze.",
+            "Chce czekać na dostawy przed sklepem.",
+            "Chciałaby organizować spotkania rowerzystów."
+          ],
+          "answer": "Jej tata potrzebuje miejsca na odpoczynek w drodze.",
+          "evidence": "Powiedziała, że jej tata czasami rezygnuje z pójścia do sklepu, ponieważ nie ma gdzie odpocząć.",
+          "explanation": "Ławka pomogłaby mu przejść całą drogę."
+        },
+        {
+          "id": "inference",
+          "skill": "inference",
+          "question": "Gdyby nowy stojak rowerowy zajął miejsce potrzebne do rozładunku i zwęził chodnik, co byłoby zgodne z wynikiem rozmowy?",
+          "options": [
+            "Zrezygnować z wszystkich trzech pomysłów.",
+            "Zamontować stojak bez zmian, bo zgłosiła go jedna z uczestniczek.",
+            "Poszukać położenia stojaka, które nie blokuje chodnika ani dostaw."
+          ],
+          "answer": "Poszukać położenia stojaka, które nie blokuje chodnika ani dostaw.",
+          "evidence": "Okazało się, że wszyscy chcieliby, aby chodnik pozostał wygodny dla pieszych. Być może ławka i stojak mogłyby powstać w miejscach, które nie utrudniają dostaw.",
+          "explanation": "Wspólny cel to wygodne przejście i rozwiązania bez konfliktu z dostawami."
+        },
+        {
+          "id": "vocabulary",
+          "skill": "vocabulary",
+          "question": "Co oznacza tutaj „rozładunek”?",
+          "options": [
+            "Wyjmowanie dostarczanych towarów z samochodu.",
+            "Przyjmowanie zamówień od klientów.",
+            "Przenoszenie stojaków rowerowych na chodnik."
+          ],
+          "answer": "Wyjmowanie dostarczanych towarów z samochodu.",
+          "evidence": "Obecnie zdarza się, że podczas rozładunku część chodnika jest zajęta.",
+          "explanation": "Dostawcy wyjmują towar z samochodów."
+        }
+      ]
+    }
+  ]
+}
