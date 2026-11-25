@@ -1,0 +1,76 @@
+{
+  "id": "pl-b1.reading.day-108",
+  "day": 108,
+  "level": "B1",
+  "genre": "dialog",
+  "title": "Czas na naukę nowej umiejętności",
+  "text": "— Gdybym miała więcej wolnego czasu, nauczyłabym się szyć — powiedziała Monika, oglądając kurtkę, której zamek błyskawiczny znów się zepsuł.\n\n— A ile czasu naprawdę potrzebowałabyś na początek? — zapytał jej znajomy Adam. — Moja siostra prowadzi zajęcia dla początkujących. Nie wszyscy uczestnicy chcą od razu robić ubrania. Niektórzy przychodzą tylko po to, żeby nauczyć się prostych napraw.\n\n— Myślałam o kursie, ale w środy pracuję do późna. Nie mogłabym regularnie chodzić na zajęcia.\n\nAdam pokazał jej dwa opisy spotkań. Pierwsza grupa spotykała się co środę przez sześć tygodni i przygotowywała na koniec własną torbę. Druga miała pojedyncze sobotnie warsztaty poświęcone różnym tematom. Można było zapisać się tylko na wybrany temat, bez udziału w całym cyklu.\n\n— Chciałabym najpierw sprawdzić, czy w ogóle spodoba mi się ta praca — powiedziała Monika. — Mam maszynę po cioci, ale nie wiem, czy działa.\n\n— W takim razie zapytaj prowadzącą, czy możesz skorzystać z maszyny na miejscu. Nie kupowałbym nowych narzędzi przed pierwszym spotkaniem.\n\nMonika wysłała pytanie do organizatorki. Otrzymała odpowiedź, że w sobotę będzie można korzystać z wyposażenia pracowni, a własne materiały nie są potrzebne. Zapisała się na warsztat dotyczący napraw, ale nie zrezygnowała z pomysłu dłuższego kursu.\n\nPo rozmowie stwierdziła, że przez wiele miesięcy odkładała naukę, ponieważ wyobrażała sobie od razu duży projekt. Adamowi podobało się jej nowe podejście: pierwsze spotkanie miało być próbą, która pozwoli jej zdecydować, czy chce kontynuować naukę.",
+  "questions": [
+    {
+      "id": "main-idea",
+      "skill": "main-idea",
+      "question": "Co zmienia się w podejściu Moniki do nauki?",
+      "options": [
+        "Rezygnuje z nauki, dopóki nie będzie miała wolnych śród.",
+        "Zamiast planować od razu długi kurs, wybiera niewielką próbę przed dalszą decyzją.",
+        "Postanawia samodzielnie przygotować ubranie przed udziałem w warsztatach."
+      ],
+      "answer": "Zamiast planować od razu długi kurs, wybiera niewielką próbę przed dalszą decyzją.",
+      "evidence": "pierwsze spotkanie miało być próbą, która pozwoli jej zdecydować, czy chce kontynuować naukę.",
+      "explanation": "Monika zaczyna od jednego spotkania, żeby sprawdzić swoje zainteresowanie."
+    },
+    {
+      "id": "detail",
+      "skill": "detail",
+      "question": "Jaki przedmiot przygotowuje pierwsza grupa na koniec kursu?",
+      "options": [
+        "Kurtkę z nowym zamkiem.",
+        "Pokrowiec na maszynę.",
+        "Własną torbę."
+      ],
+      "answer": "Własną torbę.",
+      "evidence": "Pierwsza grupa spotykała się co środę przez sześć tygodni i przygotowywała na koniec własną torbę.",
+      "explanation": "Celem sześciotygodniowego kursu jest torba."
+    },
+    {
+      "id": "cause",
+      "skill": "cause",
+      "question": "Dlaczego Adam radzi nie kupować nowych narzędzi przed pierwszym spotkaniem?",
+      "options": [
+        "Monika może najpierw sprawdzić, czy chce się uczyć, korzystając z wyposażenia pracowni.",
+        "Monika ma już sprawną maszynę i wszystkie materiały.",
+        "Kurs obejmuje wyłącznie pracę bez narzędzi."
+      ],
+      "answer": "Monika może najpierw sprawdzić, czy chce się uczyć, korzystając z wyposażenia pracowni.",
+      "evidence": "W takim razie zapytaj prowadzącą, czy możesz skorzystać z maszyny na miejscu. Nie kupowałbym nowych narzędzi przed pierwszym spotkaniem.",
+      "explanation": "Własne wyposażenie nie jest potrzebne do pierwszej próby."
+    },
+    {
+      "id": "inference",
+      "skill": "inference",
+      "question": "Monika może w przyszłym miesiącu zmienić grafik i chodzić na zajęcia w środy, ale nadal nie wie, czy lubi szyć. Co byłoby zgodne z jej nowym podejściem?",
+      "options": [
+        "Najpierw wziąć udział w jednym warsztacie i na podstawie doświadczenia zdecydować o dłuższym kursie.",
+        "Od razu zapisać się na sześć spotkań, skoro zmieniła grafik.",
+        "Przygotować własną torbę przed pierwszą wizytą w pracowni."
+      ],
+      "answer": "Najpierw wziąć udział w jednym warsztacie i na podstawie doświadczenia zdecydować o dłuższym kursie.",
+      "evidence": "Zapisała się na warsztat dotyczący napraw, ale nie zrezygnowała z pomysłu dłuższego kursu.\n\nPo rozmowie stwierdziła, że przez wiele miesięcy odkładała naukę, ponieważ wyobrażała sobie od razu duży projekt. Adamowi podobało się jej nowe podejście: pierwsze spotkanie miało być próbą, która pozwoli jej zdecydować, czy chce kontynuować naukę.",
+      "explanation": "Dostępność śród usuwa przeszkodę czasową, lecz Monika nadal chce najpierw sprawdzić swoje zainteresowanie."
+    },
+    {
+      "id": "vocabulary",
+      "skill": "vocabulary",
+      "question": "Co oznacza tu „odkładała naukę”?",
+      "options": [
+        "Oddawała materiały po zakończeniu kursu.",
+        "Przerywała rozpoczęte zajęcia po kilku minutach.",
+        "Przesuwała rozpoczęcie nauki na później."
+      ],
+      "answer": "Przesuwała rozpoczęcie nauki na później.",
+      "evidence": "przez wiele miesięcy odkładała naukę, ponieważ wyobrażała sobie od razu duży projekt.",
+      "explanation": "Odkładanie oznacza tu niepodejmowanie działania przez dłuższy czas."
+    }
+  ],
+  "publicationStatus": "practice"
+}

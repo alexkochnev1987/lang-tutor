@@ -1,0 +1,76 @@
+{
+  "id": "pl-b1.reading.day-110",
+  "day": 110,
+  "level": "B1",
+  "genre": "ogłoszenie",
+  "title": "Dlaczego zmieniamy plany",
+  "text": "Informacja dla uczestników sobotniego spotkania „Poznaj swoją okolicę”\n\nPrzez ostatnie dwa tygodnie przygotowywaliśmy spacer po terenach nad rzeką. Wczoraj otrzymaliśmy od administratora terenu informację, że fragment ścieżki zostanie zamknięty na czas naprawy. Ponieważ bez tego przejścia nie można zakończyć zaplanowanej trasy w wyznaczonym czasie, proponujemy uczestnikom inny program.\n\nSpotkamy się o tej samej godzinie, czyli o dziesiątej, ale nie przy moście. Nowe miejsce zbiórki to wejście do biblioteki przy rynku. Tam podzielimy się na dwie grupy. Pierwsza obejrzy stare fotografie dzielnicy z pracownikiem biblioteki, a druga przejdzie krótką trasę po ulicach centrum z przewodniczką. Po godzinie grupy zamienią się miejscami. Dzięki temu wszyscy zainteresowani będą mogli wziąć udział w obu częściach programu.\n\nOsoby, które zapisały się na pierwotny spacer, nie muszą ponownie wypełniać formularza. Prosimy jednak o wiadomość do piątku do osiemnastej, jeśli nowy program im nie odpowiada. Zwolnione miejsca udostępnimy osobom, które wcześniej nie zmieściły się na liście. Nie pobieramy dodatkowej opłaty za zmianę programu.\n\nWiemy, że część uczestników czekała właśnie na spacer nad rzeką. Nie chcemy go całkowicie usuwać z naszego kalendarza. Kiedy ścieżka będzie ponownie dostępna, ogłosimy nowy termin. Zainteresowani otrzymają informację e-mailem, ale sami zdecydują, czy się zapiszą.\n\nDziękujemy za wyrozumiałość. Zmieniamy program, ponieważ chcemy zapewnić uczestnikom dobrze przygotowane spotkanie, zamiast w ostatniej chwili improwizować trasę, której nie mieliśmy okazji wcześniej sprawdzić.",
+  "questions": [
+    {
+      "id": "main-idea",
+      "skill": "main-idea",
+      "question": "Jaki jest cel ogłoszenia?",
+      "options": [
+        "Wyjaśnić zmianę sobotniego programu i podać uczestnikom nowe zasady udziału.",
+        "Zachęcić uczestników do samodzielnego przejścia zamkniętą ścieżką.",
+        "Odwołać wszystkie spotkania dotyczące okolicy do końca roku."
+      ],
+      "answer": "Wyjaśnić zmianę sobotniego programu i podać uczestnikom nowe zasady udziału.",
+      "evidence": "Ponieważ bez tego przejścia nie można zakończyć zaplanowanej trasy w wyznaczonym czasie, proponujemy uczestnikom inny program.",
+      "explanation": "Ogłoszenie opisuje powód zmiany, nowy program i sposób rezygnacji."
+    },
+    {
+      "id": "detail",
+      "skill": "detail",
+      "question": "Gdzie odbędzie się nowa zbiórka?",
+      "options": [
+        "Przy moście nad rzeką.",
+        "Przy wejściu do biblioteki.",
+        "Na końcu trasy w centrum."
+      ],
+      "answer": "Przy wejściu do biblioteki.",
+      "evidence": "Nowe miejsce zbiórki to wejście do biblioteki przy rynku.",
+      "explanation": "Zmieniło się miejsce, nie godzina."
+    },
+    {
+      "id": "cause",
+      "skill": "cause",
+      "question": "Dlaczego organizatorzy proszą o wiadomość w razie rezygnacji?",
+      "options": [
+        "Muszą przygotować nowe formularze dla wszystkich.",
+        "Chcą zebrać dodatkowe opłaty od uczestników.",
+        "Chcą przekazać wolne miejsca osobom spoza pierwotnej listy."
+      ],
+      "answer": "Chcą przekazać wolne miejsca osobom spoza pierwotnej listy.",
+      "evidence": "Zwolnione miejsca udostępnimy osobom, które wcześniej nie zmieściły się na liście.",
+      "explanation": "Rezygnacja umożliwia udział kolejnej osobie."
+    },
+    {
+      "id": "inference",
+      "skill": "inference",
+      "question": "Zapisany uczestnik chce w sobotę obejrzeć fotografie, ale nie interesuje go przyszły spacer nad rzeką. Co powinien zrobić?",
+      "options": [
+        "Złożyć nowy formularz na sobotę i automatycznie zapisać się na przyszły spacer.",
+        "Przyjść o dziesiątej do biblioteki, a zapis na przyszły spacer potraktować jako osobną decyzję.",
+        "Przyjść o dziesiątej pod most i tam poczekać na grupę fotograficzną."
+      ],
+      "answer": "Przyjść o dziesiątej do biblioteki, a zapis na przyszły spacer potraktować jako osobną decyzję.",
+      "evidence": "Spotkamy się o tej samej godzinie, czyli o dziesiątej, ale nie przy moście. Nowe miejsce zbiórki to wejście do biblioteki przy rynku. Tam podzielimy się na dwie grupy. Pierwsza obejrzy stare fotografie dzielnicy z pracownikiem biblioteki, a druga przejdzie krótką trasę po ulicach centrum z przewodniczką. Po godzinie grupy zamienią się miejscami. Dzięki temu wszyscy zainteresowani będą mogli wziąć udział w obu częściach programu.\n\nOsoby, które zapisały się na pierwotny spacer, nie muszą ponownie wypełniać formularza. Prosimy jednak o wiadomość do piątku do osiemnastej, jeśli nowy program im nie odpowiada. Zwolnione miejsca udostępnimy osobom, które wcześniej nie zmieściły się na liście. Nie pobieramy dodatkowej opłaty za zmianę programu.\n\nWiemy, że część uczestników czekała właśnie na spacer nad rzeką. Nie chcemy go całkowicie usuwać z naszego kalendarza. Kiedy ścieżka będzie ponownie dostępna, ogłosimy nowy termin. Zainteresowani otrzymają informację e-mailem, ale sami zdecydują, czy się zapiszą.",
+      "explanation": "Sobotni zapis pozostaje ważny, a udział w przyszłym spacerze wymaga osobnej decyzji."
+    },
+    {
+      "id": "vocabulary",
+      "skill": "vocabulary",
+      "question": "Co oznacza tutaj „improwizować trasę”?",
+      "options": [
+        "Ustalać przebieg spaceru na bieżąco, bez wcześniejszego przygotowania.",
+        "Przesunąć spotkanie na inną godzinę bez zmiany trasy.",
+        "Powtórzyć dokładnie wcześniej ustalony spacer."
+      ],
+      "answer": "Ustalać przebieg spaceru na bieżąco, bez wcześniejszego przygotowania.",
+      "evidence": "zamiast w ostatniej chwili improwizować trasę, której nie mieliśmy okazji wcześniej sprawdzić.",
+      "explanation": "Improwizacja oznaczałaby organizowanie trasy bez wcześniejszego sprawdzenia."
+    }
+  ],
+  "publicationStatus": "practice"
+}

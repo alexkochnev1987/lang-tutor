@@ -1,0 +1,76 @@
+{
+  "id": "pl-b1.reading.day-116",
+  "day": 116,
+  "level": "B1",
+  "genre": "e-mail",
+  "title": "Rozmowa międzypokoleniowa",
+  "text": "Cześć, Aniu!\n\nWczoraj odwiedziłam ciocię Halinę, z którą od dawna chciałam porozmawiać o historii naszej rodziny. Zabierałam się do tego od kilku miesięcy, ale za każdym razem, kiedy spotykałyśmy się w większym gronie krewnych, rozmowa szybko przechodziła na bieżące sprawy.\n\nTym razem przyszłam z kilkoma pytaniami. Chciałam wiedzieć, jak wyglądało jej pierwsze mieszkanie, dlaczego wybrała zawód nauczycielki i gdzie poznała wujka. Przygotowałam też telefon do nagrywania. Zanim go włączyłam, zapytałam ciocię, czy czuje się z tym dobrze. Zgodziła się na nagranie historii o pracy, ale wolała, żeby rozmowa o małżeństwie pozostała między nami.\n\nPoczątkowo trzymałam się kolejności pytań. Później zauważyłam, że najciekawsze wspomnienia pojawiały się przy tematach, których w ogóle nie zapisałam. Kiedy ciocia opowiadała o pierwszych uczniach, zapytałam ją o rzeczy, które pomagały jej radzić sobie z trudnymi dniami w pracy. Rozmawiałyśmy o tym dłużej niż o samym początku jej kariery.\n\nPo powrocie do domu zapisałam kilka nowych pytań. Nie zamierzam od razu przesyłać nagrania wszystkim krewnym. Obiecałam cioci, że najpierw wspólnie wybierzemy fragmenty, którymi chciałaby się podzielić. Myślę, że dzięki temu następnym razem będzie mogła swobodnie zdecydować, o czym opowiedzieć.\n\nJeśli masz ochotę, możemy odwiedzić ją razem za dwa tygodnie. Wiem, że interesujesz się dawnymi mieszkaniami i mogłabyś zapytać o szczegóły, których ja nie zauważyłam. Nie przygotowuj jednak bardzo długiej listy. Najwięcej dowiedziałam się wtedy, gdy przestałam myśleć o kolejnych pytaniach i zaczęłam naprawdę słuchać odpowiedzi.\n\nPozdrawiam,\nIza",
+  "questions": [
+    {
+      "id": "main-idea",
+      "skill": "main-idea",
+      "question": "Jakie podejście do rozmowy Iza uznała za wartościowe?",
+      "options": [
+        "Rozmowę z szacunkiem dla granic rozmówcy i otwartością na nieplanowane tematy.",
+        "Nagrywanie całej historii rodzinnej i natychmiastowe udostępnianie jej bliskim.",
+        "Zadawanie wszystkim krewnym identycznych pytań w tej samej kolejności."
+      ],
+      "answer": "Rozmowę z szacunkiem dla granic rozmówcy i otwartością na nieplanowane tematy.",
+      "evidence": "Najwięcej dowiedziałam się wtedy, gdy przestałam myśleć o kolejnych pytaniach i zaczęłam naprawdę słuchać odpowiedzi.",
+      "explanation": "Iza szanuje zgodę cioci i dostosowuje pytania do jej opowieści."
+    },
+    {
+      "id": "detail",
+      "skill": "detail",
+      "question": "Którą część rozmowy ciocia pozwoliła nagrać?",
+      "options": [
+        "Historię swojego małżeństwa.",
+        "Całą rozmowę o rodzinie.",
+        "Historię dotyczącą pracy."
+      ],
+      "answer": "Historię dotyczącą pracy.",
+      "evidence": "Zgodziła się na nagranie historii o pracy, ale wolała, żeby rozmowa o małżeństwie pozostała między nami.",
+      "explanation": "Zgoda obejmuje pracę, nie wszystkie prywatne tematy."
+    },
+    {
+      "id": "cause",
+      "skill": "cause",
+      "question": "Dlaczego Iza nie wyśle od razu nagrania krewnym?",
+      "options": [
+        "Nie udało jej się zapisać żadnej wypowiedzi.",
+        "Obiecała uzgodnić z ciocią fragmenty przeznaczone do udostępnienia.",
+        "Nagranie trzeba najpierw przetłumaczyć na inny język."
+      ],
+      "answer": "Obiecała uzgodnić z ciocią fragmenty przeznaczone do udostępnienia.",
+      "evidence": "Obiecałam cioci, że najpierw wspólnie wybierzemy fragmenty, którymi chciałaby się podzielić.",
+      "explanation": "Zgoda na nagranie nie oznacza automatycznej zgody na udostępnienie."
+    },
+    {
+      "id": "inference",
+      "skill": "inference",
+      "question": "Ania chciałaby usłyszeć historię małżeństwa cioci podczas następnego spotkania i przekazać ją kuzynowi. Co powinna zrobić zgodnie z podejściem Izy?",
+      "options": [
+        "Zapytać ciocię o zgodę na rozmowę i ewentualne udostępnienie, akceptując odmowę.",
+        "Poprosić Izę o przesłanie prywatnej części rozmowy bez pytania cioci.",
+        "Nagrać historię przy okazji rozmowy o mieszkaniu, aby nie pytać drugi raz."
+      ],
+      "answer": "Zapytać ciocię o zgodę na rozmowę i ewentualne udostępnienie, akceptując odmowę.",
+      "evidence": "Zgodziła się na nagranie historii o pracy, ale wolała, żeby rozmowa o małżeństwie pozostała między nami.\n\nPoczątkowo trzymałam się kolejności pytań. Później zauważyłam, że najciekawsze wspomnienia pojawiały się przy tematach, których w ogóle nie zapisałam. Kiedy ciocia opowiadała o pierwszych uczniach, zapytałam ją o rzeczy, które pomagały jej radzić sobie z trudnymi dniami w pracy. Rozmawiałyśmy o tym dłużej niż o samym początku jej kariery.\n\nPo powrocie do domu zapisałam kilka nowych pytań. Nie zamierzam od razu przesyłać nagrania wszystkim krewnym. Obiecałam cioci, że najpierw wspólnie wybierzemy fragmenty, którymi chciałaby się podzielić.",
+      "explanation": "Prywatność cioci jest ważniejsza od przekazania historii krewnym."
+    },
+    {
+      "id": "vocabulary",
+      "skill": "vocabulary",
+      "question": "Co oznacza „trzymałam się kolejności pytań”?",
+      "options": [
+        "Pomijałam wszystkie pytania dotyczące pracy.",
+        "Zadawałam pytania według wcześniej przygotowanego porządku.",
+        "Zmieniałam temat po każdej odpowiedzi niezależnie od planu."
+      ],
+      "answer": "Zadawałam pytania według wcześniej przygotowanego porządku.",
+      "evidence": "Początkowo trzymałam się kolejności pytań.",
+      "explanation": "Iza na początku realizowała ustalony plan rozmowy."
+    }
+  ],
+  "publicationStatus": "practice"
+}

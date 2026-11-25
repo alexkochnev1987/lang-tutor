@@ -1,0 +1,76 @@
+{
+  "id": "pl-b1.reading.day-117",
+  "day": 117,
+  "level": "B1",
+  "genre": "ogłoszenie",
+  "title": "Człowiek, od którego się uczę",
+  "text": "Biblioteka osiedlowa zaprasza na cykl krótkich spotkań pod hasłem „Człowiek, od którego się uczę”. Chcemy poznać historie o osobach, które pomogły nam zdobyć umiejętność, zmienić sposób myślenia lub odważyć się na nowe działanie. Bohaterem opowieści może być członek rodziny, sąsiad, znajomy z pracy albo ktoś, kogo spotkaliśmy tylko kilka razy.\n\nKażdy uczestnik, który chciałby wystąpić, przygotuje opowieść trwającą nie więcej niż pięć minut. Nie musi przedstawiać całego życia wybranej osoby. Lepiej opisać jedno zdarzenie i wyjaśnić, czego nauczył się dzięki niemu. Jeżeli bohater opowieści nie chce być rozpoznany, można użyć innego imienia i pominąć szczegóły, które pozwoliłyby go zidentyfikować.\n\nSpotkania będą odbywać się w ostatni czwartek miesiąca. W pierwszej części wieczoru posłuchamy trzech przygotowanych historii. W drugiej uczestnicy będą mogli zadawać pytania i opowiedzieć o podobnych doświadczeniach. Nie trzeba zgłaszać własnej historii, żeby przyjść jako słuchacz.\n\nOsoby zainteresowane wystąpieniem prosimy o przesłanie krótkiego opisu tematu najpóźniej tydzień przed spotkaniem. Organizatorzy skontaktują się z nimi, aby potwierdzić termin. Jeżeli zgłoszeń będzie więcej, część chętnych zaprosimy na kolejny wieczór. Nie oceniamy opowieści według tego, czy dotyczą znanej osoby. Ważniejsze jest to, czy pokazują konkretne doświadczenie i jego znaczenie.\n\nNa zakończenie każdego spotkania zapiszemy kilka anonimowych wniosków na wspólnej tablicy. Nie będziemy nagrywać wystąpień. Zależy nam na stworzeniu przestrzeni, w której można swobodnie dzielić się tym, czego nauczyliśmy się od innych ludzi.",
+  "questions": [
+    {
+      "id": "main-idea",
+      "skill": "main-idea",
+      "question": "Jaki jest główny cel cyklu spotkań?",
+      "options": [
+        "Tworzenie pełnych biografii znanych mieszkańców osiedla.",
+        "Wymiana konkretnych doświadczeń związanych z uczeniem się od innych ludzi.",
+        "Wybór najlepszego mówcy na podstawie liczby opowiedzianych historii."
+      ],
+      "answer": "Wymiana konkretnych doświadczeń związanych z uczeniem się od innych ludzi.",
+      "evidence": "Zależy nam na stworzeniu przestrzeni, w której można swobodnie dzielić się tym, czego nauczyliśmy się od innych ludzi.",
+      "explanation": "Cykl koncentruje się na znaczeniu doświadczeń, nie sławie bohaterów."
+    },
+    {
+      "id": "detail",
+      "skill": "detail",
+      "question": "Ile przygotowanych historii będzie w pierwszej części wieczoru?",
+      "options": [
+        "Pięć.",
+        "Dwie.",
+        "Trzy."
+      ],
+      "answer": "Trzy.",
+      "evidence": "W pierwszej części wieczoru posłuchamy trzech przygotowanych historii.",
+      "explanation": "Przewidziano trzy wystąpienia."
+    },
+    {
+      "id": "cause",
+      "skill": "cause",
+      "question": "Dlaczego można zmienić imię bohatera opowieści?",
+      "options": [
+        "Aby uszanować prośbę osoby, która nie chce zostać rozpoznana.",
+        "Aby opowieść mogła trwać dłużej niż pięć minut.",
+        "Aby uczestnicy nie musieli opisywać żadnego zdarzenia."
+      ],
+      "answer": "Aby uszanować prośbę osoby, która nie chce zostać rozpoznana.",
+      "evidence": "Jeżeli bohater opowieści nie chce być rozpoznany, można użyć innego imienia i pominąć szczegóły, które pozwoliłyby go zidentyfikować.",
+      "explanation": "Zmiana imienia pomaga chronić prywatność."
+    },
+    {
+      "id": "inference",
+      "skill": "inference",
+      "question": "Ktoś chciałby opowiedzieć o sąsiedzie, ale zgłasza się dwa dni przed najbliższym spotkaniem. Co może zrobić zgodnie z zasadami?",
+      "options": [
+        "Przygotować nagranie zamiast zgłoszenia, aby odtworzyć je na spotkaniu.",
+        "Oczekiwać, że organizatorzy automatycznie zastąpią jedną z trzech historii jego wystąpieniem.",
+        "Przyjść jako słuchacz, a temat zgłosić na kolejny termin z odpowiednim wyprzedzeniem."
+      ],
+      "answer": "Przyjść jako słuchacz, a temat zgłosić na kolejny termin z odpowiednim wyprzedzeniem.",
+      "evidence": "Nie trzeba zgłaszać własnej historii, żeby przyjść jako słuchacz.\n\nOsoby zainteresowane wystąpieniem prosimy o przesłanie krótkiego opisu tematu najpóźniej tydzień przed spotkaniem.",
+      "explanation": "Można uczestniczyć bez wystąpienia i zgłosić temat odpowiednio wcześnie na przyszłość."
+    },
+    {
+      "id": "vocabulary",
+      "skill": "vocabulary",
+      "question": "Co oznacza „anonimowe wnioski”?",
+      "options": [
+        "Podsumowania bez danych pozwalających rozpoznać ich autorów.",
+        "Wnioski, które nie mają związku z opowiedzianymi historiami.",
+        "Oceny wystąpień zapisane w prywatnych notatkach organizatorów."
+      ],
+      "answer": "Podsumowania bez danych pozwalających rozpoznać ich autorów.",
+      "evidence": "Na zakończenie każdego spotkania zapiszemy kilka anonimowych wniosków na wspólnej tablicy.",
+      "explanation": "Anonimowość pozwala dzielić się pomysłami bez przypisywania ich konkretnej osobie."
+    }
+  ],
+  "publicationStatus": "practice"
+}
