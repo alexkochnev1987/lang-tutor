@@ -287,6 +287,8 @@
     "mistakesHint": "Retry incorrect answers",
     "grammar": "Weak rules",
     "grammarHint": "Open grammar practice",
-    "retry": "Retry loading"
+    "retry": "Retry loading",
+    "lessonProgress": "Lesson exercises completed (excluding words): {answered}/{total}",
+    "continueLesson": "Continue lesson"
   }
 }

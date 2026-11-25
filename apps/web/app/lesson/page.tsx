@@ -24,6 +24,7 @@ import {
 } from "@/lib/engine/session";
 import {
   getCachedDailyWords,
+  getLoadedState,
   loadDailyWords,
   queueDailyWordAnswer,
   saveExerciseResult,
@@ -51,6 +52,7 @@ import { WordPracticeFooter } from "@/app/_components/WordPracticeFooter";
 import { WordPracticeScreen } from "@/app/_components/WordPracticeScreen";
 import { WordSaveIndicator } from "@/app/_components/WordSaveIndicator";
 import { useTranslations } from "next-intl";
+import { assignmentProgress, isAssignedStage, stageExerciseIds } from '@/lib/engine/lesson-assignments';
 
 
 type ReviewWrite = {
@@ -116,6 +118,16 @@ function toSlots(stages: Stage[]): Slot[] {
   });
 }
 
+function resumeIndex(slots: Slot[], day: number) {
+  const done = new Set((getLoadedState()?.exerciseResults ?? []).filter(row => row.dayNumber === day).map(row => row.exerciseId));
+  const index = slots.findIndex(slot => {
+    if (!isAssignedStage(slot.stage.id)) return true;
+    if (slot.kind !== "stage-start") return false;
+    const ids = stageExerciseIds(slot.stage);
+    return Boolean(slot.stage.missingContent) || ids.some(id => !done.has(id));
+  });
+  return index >= 0 ? index : Math.max(0, slots.length - 1);
+}
 export default function LessonPage() {
   const router = useRouter();
   const [brainstormId] = useState(() => crypto.randomUUID());
@@ -142,7 +154,7 @@ export default function LessonPage() {
   useEffect(() => {
     let alive = true;
     setPlanError(false);
-    buildTodayPlan().then((p) => {
+    buildTodayPlan(true).then((p) => {
       if (!alive) return;
       setPlan(p);
       const main = toSlots(p.stages);
@@ -151,6 +163,9 @@ export default function LessonPage() {
         setSpecial("diagnostic");
       } else {
         setSlots(main);
+        setI(resumeIndex(main, p.dayNumber));
+        const restored = assignmentProgress(p.stages, getLoadedState()?.exerciseResults ?? [], p.dayNumber);
+        setStats({ correct: restored.correct, total: restored.answered });
         setSpecial(main.length ? null : "empty");
       }
     }).catch(() => { if (alive) setPlanError(true); });
@@ -371,7 +386,7 @@ export default function LessonPage() {
         itemsCorrect: 0,
       });
     }
-    const nextPlan = await buildTodayPlan();
+    const nextPlan = await buildTodayPlan(true);
     const nextSlots = toSlots(nextPlan.stages);
     setPlan(nextPlan);
     setSlots(nextSlots);
