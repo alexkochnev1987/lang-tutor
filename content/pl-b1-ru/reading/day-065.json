@@ -1,0 +1,76 @@
+{
+  "id": "pl-b1.reading.day-065",
+  "day": 65,
+  "level": "A2",
+  "genre": "artykuł",
+  "title": "Porównanie dwóch ofert",
+  "text": "Karolina pracuje w domu i szuka nowego biurka. W pokoju ma tylko sto dziesięć centymetrów wolnego miejsca między oknem a szafą. W pierwszym sklepie znalazła biurko o szerokości stu centymetrów. Kosztuje trzysta dwadzieścia złotych, a dostawa jest bezpłatna. Model nie ma szuflad, ale można go złożyć samodzielnie przy pomocy prostych narzędzi.\n\nDrugi sklep proponuje biurko za dwieście osiemdziesiąt złotych. Dostawa kosztuje jednak siedemdziesiąt złotych. To biurko ma dwie szuflady i jest o dwadzieścia centymetrów szersze od pierwszego. Sprzedawca oferuje też montaż, za który trzeba zapłacić dodatkowo.\n\nKarolina porównuje nie tylko ceny na etykietach, lecz także całkowite koszty i wymiary mebli. Szuflady byłyby przydatne, ponieważ często szuka długopisów i notatek. Ma jednak mały regał, na którym może postawić pudełko z przyborami. Postanawia kupić pierwszy model. Przed zamówieniem jeszcze raz mierzy wolne miejsce, aby mieć pewność, że biurko nie będzie przeszkadzać przy otwieraniu szafy.",
+  "questions": [
+    {
+      "id": "main-idea",
+      "skill": "main-idea",
+      "question": "Co jest najważniejszym tematem tekstu?",
+      "options": [
+        "Wybór mebla na podstawie kilku kryteriów.",
+        "Przygotowanie pokoju do remontu.",
+        "Organizacja dokumentów na regale."
+      ],
+      "answer": "Wybór mebla na podstawie kilku kryteriów.",
+      "evidence": "Karolina porównuje nie tylko ceny na etykietach, lecz także całkowite koszty i wymiary mebli.",
+      "explanation": "Karolina uwzględnia cenę, dostawę i dostępne miejsce."
+    },
+    {
+      "id": "detail",
+      "skill": "detail",
+      "question": "Ile kosztuje dostawa drugiego biurka?",
+      "options": [
+        "Trzysta dwadzieścia złotych.",
+        "Siedemdziesiąt złotych.",
+        "Dwieście osiemdziesiąt złotych."
+      ],
+      "answer": "Siedemdziesiąt złotych.",
+      "evidence": "Dostawa kosztuje jednak siedemdziesiąt złotych.",
+      "explanation": "To koszt dostawy, nie cena mebla."
+    },
+    {
+      "id": "cause",
+      "skill": "cause",
+      "question": "Dlaczego brak szuflad nie jest dla Karoliny dużym problemem?",
+      "options": [
+        "Dostanie je razem z montażem.",
+        "Nie potrzebuje żadnych przyborów.",
+        "Może przechowywać przybory na regale."
+      ],
+      "answer": "Może przechowywać przybory na regale.",
+      "evidence": "Ma jednak mały regał, na którym może postawić pudełko z przyborami.",
+      "explanation": "Regał zastępuje miejsce w szufladach."
+    },
+    {
+      "id": "inference",
+      "skill": "inference",
+      "question": "Które biurko zmieści się w opisanym miejscu?",
+      "options": [
+        "Tylko pierwsze.",
+        "Tylko drugie.",
+        "Oba bez zmiany ustawienia szafy."
+      ],
+      "answer": "Tylko pierwsze.",
+      "evidence": "To biurko ma dwie szuflady i jest o dwadzieścia centymetrów szersze od pierwszego.",
+      "explanation": "Pierwsze ma 100 cm, drugie 120 cm, a wolnego miejsca jest 110 cm."
+    },
+    {
+      "id": "vocabulary",
+      "skill": "vocabulary",
+      "question": "Co oznaczają „całkowite koszty”?",
+      "options": [
+        "Tylko kwotę za montaż.",
+        "Wszystkie kwoty związane z zakupem.",
+        "Cenę widoczną przed dodaniem dostawy."
+      ],
+      "answer": "Wszystkie kwoty związane z zakupem.",
+      "evidence": "całkowite koszty i wymiary mebli",
+      "explanation": "Całkowity koszt obejmuje także dodatkowe opłaty."
+    }
+  ],
+  "publicationStatus": "practice"
+}

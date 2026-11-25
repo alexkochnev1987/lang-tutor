@@ -1,0 +1,76 @@
+{
+  "id": "pl-b1.reading.day-070",
+  "day": 70,
+  "level": "A2",
+  "genre": "poradnik",
+  "title": "Reklamacja kurtki",
+  "text": "Kiedy zauważysz wadę w nowej kurtce, warto spokojnie przygotować się do rozmowy ze sprzedawcą. Zosia kupiła kurtkę na jesień w małym sklepie. Po kilku dniach zauważyła, że zamek czasem się zacina, a jeden szew przy kieszeni zaczyna się otwierać.\n\nNajpierw zrobiła zdjęcia obu problemów. Zapisała też datę zakupu i odszukała potwierdzenie płatności kartą. Nie próbowała sama naprawiać zamka, ponieważ chciała pokazać sprzedawcy kurtkę w takim stanie, w jakim zauważyła usterkę.\n\nW sklepie opisała, kiedy pojawiły się problemy. Pracownik zaproponował, że przyjmie kurtkę do sprawdzenia i skontaktuje się z nią po otrzymaniu informacji od kierownika. Zosia poprosiła o pisemne potwierdzenie przyjęcia kurtki. Na kartce znalazła numer zgłoszenia, opis wad i dane kontaktowe sklepu.\n\nPrzed wyjściem zapytała, kiedy może spodziewać się wiadomości. Pracownik obiecał zadzwonić w przyszłym tygodniu. Zosia zapisała numer zgłoszenia w telefonie. Dzięki temu, jeśli będzie musiała ponownie skontaktować się ze sklepem, łatwo wyjaśni, o którą sprawę chodzi.",
+  "questions": [
+    {
+      "id": "main-idea",
+      "skill": "main-idea",
+      "question": "Co tekst pokazuje na przykładzie Zosi?",
+      "options": [
+        "Jak przygotować kurtkę do sezonu jesiennego.",
+        "Jak znaleźć sklep z tańszymi kurtkami.",
+        "Jak uporządkować informacje podczas zgłaszania wady."
+      ],
+      "answer": "Jak uporządkować informacje podczas zgłaszania wady.",
+      "evidence": "Na kartce znalazła numer zgłoszenia, opis wad i dane kontaktowe sklepu.",
+      "explanation": "Tekst opisuje przygotowanie i dokumentowanie reklamacji."
+    },
+    {
+      "id": "detail",
+      "skill": "detail",
+      "question": "Jakie problemy zauważyła Zosia?",
+      "options": [
+        "Zacinający się zamek i otwierający się szew.",
+        "Zbyt krótkie rękawy i brak kieszeni.",
+        "Zmianę koloru i uszkodzony kaptur."
+      ],
+      "answer": "Zacinający się zamek i otwierający się szew.",
+      "evidence": "zamek czasem się zacina, a jeden szew przy kieszeni zaczyna się otwierać",
+      "explanation": "To dwie opisane usterki."
+    },
+    {
+      "id": "cause",
+      "skill": "cause",
+      "question": "Dlaczego Zosia nie naprawiła zamka sama?",
+      "options": [
+        "Nie wiedziała, w którym sklepie kupiła kurtkę.",
+        "Chciała pokazać sprzedawcy pierwotny stan usterki.",
+        "Pracownik wcześniej odmówił przyjęcia kurtki."
+      ],
+      "answer": "Chciała pokazać sprzedawcy pierwotny stan usterki.",
+      "evidence": "chciała pokazać sprzedawcy kurtkę w takim stanie, w jakim zauważyła usterkę",
+      "explanation": "Nie chciała zmieniać stanu przed zgłoszeniem."
+    },
+    {
+      "id": "inference",
+      "skill": "inference",
+      "question": "Jeśli do końca przyszłego tygodnia nie będzie telefonu, co ułatwi Zosi dalszą rozmowę ze sklepem?",
+      "options": [
+        "Zdjęcie nowej kurtki z internetu.",
+        "Numer karty innego klienta.",
+        "Zapisany numer zgłoszenia."
+      ],
+      "answer": "Zapisany numer zgłoszenia.",
+      "evidence": "Zosia zapisała numer zgłoszenia w telefonie.",
+      "explanation": "Numer pozwala odszukać sprawę."
+    },
+    {
+      "id": "vocabulary",
+      "skill": "vocabulary",
+      "question": "Co oznacza „usterka”?",
+      "options": [
+        "Problem techniczny lub wada.",
+        "Potwierdzenie płatności.",
+        "Propozycja zakupu."
+      ],
+      "answer": "Problem techniczny lub wada.",
+      "evidence": "w jakim zauważyła usterkę",
+      "explanation": "Usterka to problem z działaniem lub stanem rzeczy."
+    }
+  ],
+  "publicationStatus": "practice"
+}

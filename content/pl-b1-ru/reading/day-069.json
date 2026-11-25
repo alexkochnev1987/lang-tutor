@@ -1,0 +1,76 @@
+{
+  "id": "pl-b1.reading.day-069",
+  "day": 69,
+  "level": "A2",
+  "genre": "opowiadanie",
+  "title": "Lista zakupów na tydzień",
+  "text": "W niedzielę wieczorem Robert i jego partnerka planują posiłki na kolejny tydzień. Do tej pory często kupowali coś w drodze do domu, a potem znajdowali w lodówce podobne produkty. Zdarzało się, że jogurt albo warzywa trzeba było wyrzucić.\n\nTym razem najpierw sprawdzają, co już mają. W szafce stoi paczka ryżu, a w zamrażarce jest trochę kurczaka. W lodówce zostały marchewki i otwarty jogurt naturalny. Postanawiają wykorzystać te produkty w poniedziałek i we wtorek. Na środę planują makaron z sosem pomidorowym, a na czwartek zupę.\n\nRobert zapisuje na liście tylko brakujące składniki. Dzieli ją na kilka części: warzywa, nabiał, pieczywo i pozostałe produkty. Dzięki temu łatwiej będzie mu robić zakupy bez wracania między półkami. Nie zapisuje jeszcze produktów na weekend, ponieważ w piątek przyjadą znajomi, którzy nie powiedzieli, co lubią jeść.\n\nW poniedziałek Robert bierze listę do sklepu. Widzi duże opakowanie jogurtu w promocji, ale go nie kupuje. Najpierw chce wykorzystać to, które ma w domu.",
+  "questions": [
+    {
+      "id": "main-idea",
+      "skill": "main-idea",
+      "question": "Co Robert i jego partnerka próbują zmienić?",
+      "options": [
+        "Miejsce, w którym jedzą obiady.",
+        "Sposób planowania posiłków i zakupów.",
+        "Godziny przyjazdu znajomych."
+      ],
+      "answer": "Sposób planowania posiłków i zakupów.",
+      "evidence": "Tym razem najpierw sprawdzają, co już mają.",
+      "explanation": "Planują zakupy na podstawie produktów już posiadanych."
+    },
+    {
+      "id": "detail",
+      "skill": "detail",
+      "question": "Co planują na środę?",
+      "options": [
+        "Zupę.",
+        "Kurczaka z ryżem.",
+        "Makaron z sosem pomidorowym."
+      ],
+      "answer": "Makaron z sosem pomidorowym.",
+      "evidence": "Na środę planują makaron z sosem pomidorowym",
+      "explanation": "To posiłek zaplanowany na środę."
+    },
+    {
+      "id": "cause",
+      "skill": "cause",
+      "question": "Dlaczego Robert dzieli listę na części?",
+      "options": [
+        "Chce sprawniej poruszać się po sklepie.",
+        "Chce kupić wszystkie produkty w różnych sklepach.",
+        "Chce obliczyć cenę posiłku dla gości."
+      ],
+      "answer": "Chce sprawniej poruszać się po sklepie.",
+      "evidence": "Dzięki temu łatwiej będzie mu robić zakupy bez wracania między półkami.",
+      "explanation": "Grupowanie produktów ułatwia zakupy."
+    },
+    {
+      "id": "inference",
+      "skill": "inference",
+      "question": "Co prawdopodobnie zrobią po ustaleniu menu ze znajomymi?",
+      "options": [
+        "Zrezygnują z zakupów na weekend.",
+        "Dopiszą brakujące produkty do listy.",
+        "Wyrzucą produkty przygotowane na poniedziałek."
+      ],
+      "answer": "Dopiszą brakujące produkty do listy.",
+      "evidence": "Nie zapisuje jeszcze produktów na weekend, ponieważ w piątek przyjadą znajomi, którzy nie powiedzieli, co lubią jeść.",
+      "explanation": "Po ustaleniu preferencji będą mogli zaplanować weekend."
+    },
+    {
+      "id": "vocabulary",
+      "skill": "vocabulary",
+      "question": "Co znaczy „brakujące składniki”?",
+      "options": [
+        "Produkty już przygotowane do jedzenia.",
+        "Produkty kupione w promocji.",
+        "Produkty potrzebne, których jeszcze nie mają."
+      ],
+      "answer": "Produkty potrzebne, których jeszcze nie mają.",
+      "evidence": "Robert zapisuje na liście tylko brakujące składniki.",
+      "explanation": "Na liście są rzeczy, których nie ma w domu."
+    }
+  ],
+  "publicationStatus": "practice"
+}

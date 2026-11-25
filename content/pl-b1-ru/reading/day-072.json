@@ -1,0 +1,76 @@
+{
+  "id": "pl-b1.reading.day-072",
+  "day": 72,
+  "level": "A2",
+  "genre": "artykuł",
+  "title": "Wspólne gotowanie",
+  "text": "W każdą drugą sobotę w klubie osiedlowym odbywa się spotkanie miłośników gotowania. Uczestnicy nie są zawodowymi kucharzami. Każdy przychodzi z własnym pomysłem na danie albo z chęcią nauczenia się czegoś nowego. Organizatorzy udostępniają garnki, patelnie i duży stół.\n\nTym razem grupa postanowiła przygotować kolację z kilku prostych potraw. Natalia przyniosła przepis na sałatkę, a Adam zaproponował pierogi. Przed rozpoczęciem pracy wszyscy zapisali, jakich składników potrzebują. Okazało się, że brakuje mąki i cebuli. Dwie osoby poszły do pobliskiego sklepu, a pozostali zaczęli przygotowywać warzywa.\n\nW grupie była również Marta, która nie jadła mięsa. Uczestnicy podzielili farsz na dwie części, zanim dodali mięso do jednej z nich. Dzięki temu Marta mogła spróbować pierogów razem z innymi.\n\nPo kolacji każdy opowiedział o jednym triku kuchennym, którego nauczył się podczas spotkania. Natalia po raz pierwszy zobaczyła, jak szybko wałkować ciasto. Organizatorzy poprosili też uczestników o zapisanie przepisów we wspólnym zeszycie, żeby następna grupa mogła z nich korzystać.",
+  "questions": [
+    {
+      "id": "main-idea",
+      "skill": "main-idea",
+      "question": "Jaki jest główny temat artykułu?",
+      "options": [
+        "Zakup wyposażenia do nowej restauracji.",
+        "Nauka gotowania i współpraca sąsiadów.",
+        "Przygotowanie do konkursu zawodowych kucharzy."
+      ],
+      "answer": "Nauka gotowania i współpraca sąsiadów.",
+      "evidence": "Każdy przychodzi z własnym pomysłem na danie albo z chęcią nauczenia się czegoś nowego.",
+      "explanation": "Spotkanie służy wspólnemu gotowaniu i wymianie doświadczeń."
+    },
+    {
+      "id": "detail",
+      "skill": "detail",
+      "question": "Czego brakowało na początku przygotowań?",
+      "options": [
+        "Garnków i patelni.",
+        "Warzyw i sera.",
+        "Mąki i cebuli."
+      ],
+      "answer": "Mąki i cebuli.",
+      "evidence": "Okazało się, że brakuje mąki i cebuli.",
+      "explanation": "Te składniki trzeba było dokupić."
+    },
+    {
+      "id": "cause",
+      "skill": "cause",
+      "question": "Dlaczego uczestnicy podzielili farsz?",
+      "options": [
+        "Chcieli przygotować również porcję bez mięsa.",
+        "Nie mieli wystarczająco dużego stołu.",
+        "Chcieli zabrać część farszu do sklepu."
+      ],
+      "answer": "Chcieli przygotować również porcję bez mięsa.",
+      "evidence": "W grupie była również Marta, która nie jadła mięsa.",
+      "explanation": "Podział umożliwił przygotowanie pierogów dla Marty."
+    },
+    {
+      "id": "inference",
+      "skill": "inference",
+      "question": "Osoba nieobecna na spotkaniu chce później odtworzyć jedno z dań. Gdzie powinna poszukać informacji?",
+      "options": [
+        "Na liście brakujących składników.",
+        "We wspólnym zeszycie z przepisami.",
+        "W wykazie sprzętu kuchennego."
+      ],
+      "answer": "We wspólnym zeszycie z przepisami.",
+      "evidence": "Organizatorzy poprosili też uczestników o zapisanie przepisów we wspólnym zeszycie",
+      "explanation": "Zeszyt ma służyć także następnym grupom."
+    },
+    {
+      "id": "vocabulary",
+      "skill": "vocabulary",
+      "question": "Co znaczy „udostępniają” w pierwszym akapicie?",
+      "options": [
+        "Sprzedają uczestnikom na własność.",
+        "Zabierają po zakończeniu pracy.",
+        "Pozwalają uczestnikom korzystać ze sprzętu."
+      ],
+      "answer": "Pozwalają uczestnikom korzystać ze sprzętu.",
+      "evidence": "Organizatorzy udostępniają garnki, patelnie i duży stół.",
+      "explanation": "Udostępnić oznacza umożliwić korzystanie."
+    }
+  ],
+  "publicationStatus": "practice"
+}

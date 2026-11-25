@@ -1,0 +1,76 @@
+{
+  "id": "pl-b1.reading.day-067",
+  "day": 67,
+  "level": "A2",
+  "genre": "e-mail",
+  "title": "Naprawa zamiast wymiany",
+  "text": "Cześć, Pawle!\n\nWczoraj przestała działać moja lampka stojąca na biurku. Najpierw pomyślałam, że kupię nową, bo wieczorami potrzebuję światła do czytania. Potem przypomniałam sobie o warsztacie, który poleciłeś mi w zeszłym miesiącu. Zaniosłam tam lampkę przed pracą.\n\nPani w warsztacie sprawdziła kabel i włącznik. Powiedziała, że nie trzeba wymieniać całej lampki, ponieważ uszkodzony jest tylko włącznik. Naprawa będzie kosztowała czterdzieści złotych. Podobna nowa lampka w sklepie kosztuje około stu pięćdziesięciu złotych. Na naprawę muszę poczekać dwa dni, bo potrzebna część jest w drodze.\n\nNa szczęście mam jeszcze małą lampę w salonie. Przeniosłam ją na biurko, więc mogę normalnie pracować do piątku. Zostawiłam numer telefonu w warsztacie. Kiedy naprawa będzie gotowa, pracownica wyśle mi wiadomość.\n\nCieszę się, że nie muszę wyrzucać lampki. Dostałam ją od babci, gdy zaczynałam studia. Pasuje do mojego pokoju i mam z nią dobre wspomnienia. Dziękuję za adres warsztatu!\n\nPozdrawiam,\nMagda",
+  "questions": [
+    {
+      "id": "main-idea",
+      "skill": "main-idea",
+      "question": "Dlaczego Magda pisze do Pawła?",
+      "options": [
+        "Chce sprzedać mu lampkę z salonu.",
+        "Pyta, gdzie kupić nowy mebel.",
+        "Opowiada, jak skorzystała z poleconego warsztatu."
+      ],
+      "answer": "Opowiada, jak skorzystała z poleconego warsztatu.",
+      "evidence": "Potem przypomniałam sobie o warsztacie, który poleciłeś mi w zeszłym miesiącu.",
+      "explanation": "Magda dzieli się doświadczeniem i dziękuje za polecenie."
+    },
+    {
+      "id": "detail",
+      "skill": "detail",
+      "question": "Co trzeba wymienić?",
+      "options": [
+        "Włącznik.",
+        "Kabel.",
+        "Całą lampkę."
+      ],
+      "answer": "Włącznik.",
+      "evidence": "uszkodzony jest tylko włącznik",
+      "explanation": "Naprawa dotyczy jednego elementu."
+    },
+    {
+      "id": "cause",
+      "skill": "cause",
+      "question": "Dlaczego naprawa nie będzie gotowa od razu?",
+      "options": [
+        "Warsztat jest nieczynny do piątku.",
+        "Trzeba poczekać na część.",
+        "Magda nie zostawiła numeru telefonu."
+      ],
+      "answer": "Trzeba poczekać na część.",
+      "evidence": "Na naprawę muszę poczekać dwa dni, bo potrzebna część jest w drodze.",
+      "explanation": "Potrzebny element jeszcze nie dotarł."
+    },
+    {
+      "id": "inference",
+      "skill": "inference",
+      "question": "Co pozwala Magdzie poczekać na naprawę bez kupowania nowej lampy?",
+      "options": [
+        "Wieczorem nie musi niczego czytać.",
+        "Babcia przywiezie jej nową lampkę.",
+        "Może używać innej lampy z mieszkania."
+      ],
+      "answer": "Może używać innej lampy z mieszkania.",
+      "evidence": "Przeniosłam ją na biurko, więc mogę normalnie pracować do piątku.",
+      "explanation": "Ma tymczasowe oświetlenie."
+    },
+    {
+      "id": "vocabulary",
+      "skill": "vocabulary",
+      "question": "Co oznacza „uszkodzony”?",
+      "options": [
+        "Zepsuty.",
+        "Zamówiony.",
+        "Odnowiony."
+      ],
+      "answer": "Zepsuty.",
+      "evidence": "uszkodzony jest tylko włącznik",
+      "explanation": "Uszkodzony element nie działa prawidłowo."
+    }
+  ],
+  "publicationStatus": "practice"
+}

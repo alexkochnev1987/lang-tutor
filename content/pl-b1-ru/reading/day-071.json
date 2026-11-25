@@ -1,0 +1,76 @@
+{
+  "id": "pl-b1.reading.day-071",
+  "day": 71,
+  "level": "A2",
+  "genre": "wiadomość",
+  "title": "Śniadanie w podróży",
+  "text": "Cześć, Aniu! Piszę, bo jutro mamy pociąg do Gdańska o szóstej czterdzieści. Sprawdziłam godziny otwarcia kawiarni na naszym dworcu. Pierwsza otwiera się dopiero o siódmej, więc nie zdążymy kupić tam śniadania przed odjazdem.\n\nWieczorem przygotuję dla nas kanapki. Mam ser, pomidory i ciemne pieczywo. Pamiętam, że nie lubisz pomidorów w kanapkach, dlatego twoje zrobię z ogórkiem. Spakuję też dwa jabłka i wodę. Jeśli chcesz kawę, możesz przynieść ją w termosie. W pociągu podobno jest wagon restauracyjny, ale nie wiem, od której godziny będzie czynny.\n\nNa dworcu spotkajmy się o szóstej dziesięć przy wejściu od strony przystanku autobusowego. Nie kupuj już niczego na śniadanie po drodze. Mamy wystarczająco dużo jedzenia, a obiad zjemy po przyjeździe.\n\nProszę, napisz mi jeszcze dziś, czy wszystko ci odpowiada. Jeśli masz ochotę na coś innego niż kanapki, mogę przygotować też mały pojemnik z owocami. W podróży wolę mieć jedzenie przy sobie, żeby nie szukać sklepu w ostatniej chwili.",
+  "questions": [
+    {
+      "id": "main-idea",
+      "skill": "main-idea",
+      "question": "Po co autorka wysyła wiadomość?",
+      "options": [
+        "Ustala przygotowanie jedzenia i spotkanie przed podróżą.",
+        "Proponuje zmianę celu podróży.",
+        "Pyta o menu restauracji w Gdańsku."
+      ],
+      "answer": "Ustala przygotowanie jedzenia i spotkanie przed podróżą.",
+      "evidence": "Wieczorem przygotuję dla nas kanapki.",
+      "explanation": "Autorka organizuje śniadanie i miejsce spotkania."
+    },
+    {
+      "id": "detail",
+      "skill": "detail",
+      "question": "Co będzie w kanapkach Ani zamiast pomidorów?",
+      "options": [
+        "Jabłko.",
+        "Ogórek.",
+        "Papryka."
+      ],
+      "answer": "Ogórek.",
+      "evidence": "twoje zrobię z ogórkiem",
+      "explanation": "Autorka pamięta o preferencji Ani."
+    },
+    {
+      "id": "cause",
+      "skill": "cause",
+      "question": "Dlaczego nie planują śniadania w kawiarni na dworcu?",
+      "options": [
+        "Kawiarnia nie sprzedaje kanapek.",
+        "Nie chcą spotykać się przed odjazdem.",
+        "Kawiarnia otwiera się po odjeździe pociągu."
+      ],
+      "answer": "Kawiarnia otwiera się po odjeździe pociągu.",
+      "evidence": "Pierwsza otwiera się dopiero o siódmej, więc nie zdążymy kupić tam śniadania przed odjazdem.",
+      "explanation": "Pociąg odjeżdża o 6:40."
+    },
+    {
+      "id": "inference",
+      "skill": "inference",
+      "question": "Ania chce mieć pewność, że wypije kawę przed przyjazdem. Co może zrobić zgodnie z wiadomością?",
+      "options": [
+        "Wziąć kawę w termosie.",
+        "Poczekać na otwarcie kawiarni na dworcu.",
+        "Kupić kawę po przyjeździe."
+      ],
+      "answer": "Wziąć kawę w termosie.",
+      "evidence": "Jeśli chcesz kawę, możesz przynieść ją w termosie.",
+      "explanation": "Termos pozwala zabrać gotową kawę."
+    },
+    {
+      "id": "vocabulary",
+      "skill": "vocabulary",
+      "question": "Co znaczy „w ostatniej chwili”?",
+      "options": [
+        "Wcześniej niż planowano.",
+        "Tuż przed wydarzeniem, gdy jest mało czasu.",
+        "Dopiero po zakończeniu podróży."
+      ],
+      "answer": "Tuż przed wydarzeniem, gdy jest mało czasu.",
+      "evidence": "żeby nie szukać sklepu w ostatniej chwili",
+      "explanation": "Chodzi o moment tuż przed wyjazdem."
+    }
+  ],
+  "publicationStatus": "practice"
+}
