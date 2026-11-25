@@ -1,10 +1,8 @@
 import { notFound } from 'next/navigation'
 import { ReadingPreview } from './ReadingPreview'
 
-// Preview is deliberately inaccessible in production. The generated files are also absent there.
+// Experimental practice is available independently of the approved daily lessons.
 export default function ReadingPage() {
-  const enabled = process.env.VERCEL_ENV !== 'production' &&
-    (process.env.VERCEL_ENV === 'preview' || (!process.env.VERCEL && process.env.READING_PREVIEW === '1'))
-  if (!enabled) notFound()
+  if ((process.env.NEXT_PUBLIC_COURSE_ID ?? 'pl-b1-ru') !== 'pl-b1-ru') notFound()
   return <ReadingPreview />
 }

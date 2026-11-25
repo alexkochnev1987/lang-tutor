@@ -4,7 +4,7 @@ import Link from 'next/link'
 import { useTranslations } from 'next-intl'
 import { Button, buttonStyles, Card, Row, Stack } from '@polski/ui'
 import { STAGE_TITLE, type Stage, type TodayPlan } from '@/lib/engine/plan'
-import type { CurriculumDay } from '@/lib/content/curriculum'
+import { COURSE_ID, type CurriculumDay } from '@/lib/content/curriculum'
 import { LoadingSlot, SkeletonBlock } from './LoadingSkeleton'
 import { WordRow } from './WordRow'
 import { AppIcon } from './AppIcon'
@@ -56,6 +56,18 @@ export function TodayCard() {
         <TodayLessonCard />
       )}
       <DailyWordCounts />
+      {COURSE_ID === 'pl-b1-ru' && (
+        <Card>
+          <Stack gap="sm">
+            <h2 className="font-semibold">{t('readingPreview.title')}</h2>
+            <p className="text-sm text-muted">{t('readingPreview.notice')}</p>
+            <Link href="/reading/" className={buttonStyles({ variant: 'outline', full: true })}>
+              {t('readingPreview.title')}
+              <AppIcon name="arrow" className="size-5 shrink-0" />
+            </Link>
+          </Stack>
+        </Card>
+      )}
       <WeeklyGoal />
 
       {grammar?.rule && (

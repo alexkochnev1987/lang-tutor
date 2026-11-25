@@ -11,7 +11,7 @@ import { cpSync, existsSync, mkdirSync, readdirSync, rmSync, statSync } from 'no
 import { fileURLToPath } from 'node:url'
 import { basename, dirname, join } from 'node:path'
 import { packSentenceCorpus } from './pack-sentence-corpus.mjs'
-import { packReadingContent, readingPreviewEnabled } from './pack-reading.mjs'
+import { packReadingContent } from './pack-reading.mjs'
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..')
 const src = join(root, 'content')
@@ -28,7 +28,7 @@ for (const course of readdirSync(src)) {
   rmSync(join(target, 'sentence-corpus.json'), { force: true })
   if (existsSync(corpus)) packSentenceCorpus(from, target)
   const reading = packReadingContent(from, target, {
-    preview: course === 'pl-b1-ru' && readingPreviewEnabled(),
+    preview: course === 'pl-b1-ru',
     draftDir: join(root, 'scripts/reading-drafts'),
   })
   console.log(`  reading: ${reading.live} live, ${reading.preview} experimental`)
