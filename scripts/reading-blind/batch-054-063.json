@@ -12,7 +12,7 @@
           "options": [
             {
               "id": "A",
-              "text": "Szkoła przedstawia terminy zajęć i prosi uczniów o wybór poziomu nauki."
+              "text": "Szkoła wyjaśnia, jak wybrać odpowiedni poziom zajęć i nauczyciela."
             },
             {
               "id": "B",
@@ -20,7 +20,7 @@
             },
             {
               "id": "C",
-              "text": "Szkoła wyjaśnia, jak przygotować się do pierwszej lekcji i gdzie kupić materiały."
+              "text": "Szkoła wyjaśnia, jak będzie wyglądać nauka na zajęciach w grudniu."
             }
           ]
         },
@@ -102,7 +102,7 @@
       "id": "pl-b1.reading.day-055",
       "targetLevel": "A2",
       "title": "Nauka w parze",
-      "passage": "Julia i Filip chodzą do tej samej klasy i w przyszłym roku będą zdawać maturę. Od początku tego semestru postanowili spotykać się po lekcjach dwa razy w tygodniu. Julia dobrze rozumie zadania z matematyki, ale robi dużo błędów w języku angielskim. Filip chętnie mówi po angielsku, lecz potrzebuje więcej czasu na rozwiązanie zadań matematycznych.\n\nNa początku każde z nich przynosiło pełny plecak książek. Otwierali podręczniki i razem czytali kolejne rozdziały. Po kilku spotkaniach zauważyli, że spędzają dużo czasu na tematy, które oboje już znają. Dlatego zmienili sposób pracy. Teraz przed spotkaniem każde przygotowuje dwa pytania do drugiej osoby. Julia wyjaśnia matematykę, a Filip pomaga jej ćwiczyć krótkie rozmowy po angielsku.\n\nW środę Filip nie mógł przyjść, więc wysłał Julii nagranie z trzema pytaniami. Julia odpowiedziała na nie wieczorem. W piątek przygotowała dla niego podobne zadania do samodzielnego rozwiązania. Nadal lubią pracować razem, ale ich plan działa także wtedy, gdy jedno z nich musi zostać w domu.",
+      "passage": "Julia i Filip chodzą do tej samej klasy i w przyszłym roku będą zdawać maturę. W tym semestrze postanowili spotykać się po lekcjach dwa razy w tygodniu. Julia dobrze rozumie zadania z matematyki, ale robi dużo błędów w języku angielskim. Filip chętnie mówi po angielsku, lecz potrzebuje więcej czasu na rozwiązanie zadań matematycznych.\n\nNa początku każde z nich przynosiło pełny plecak książek. Otwierali podręczniki i razem czytali kolejne rozdziały. Po kilku spotkaniach zauważyli, że spędzają dużo czasu na powtarzaniu tematów, które oboje już znają. Dlatego zmienili sposób pracy. Teraz przed spotkaniem każde przygotowuje dwa pytania do drugiej osoby. Julia wyjaśnia matematykę, a Filip pomaga jej ćwiczyć krótkie rozmowy po angielsku.\n\nW środę Filip nie mógł przyjść, więc wysłał Julii nagranie z trzema pytaniami. Julia odpowiedziała na nie wieczorem. W piątek przygotowała dla niego podobne zadania do samodzielnego rozwiązania. Nadal lubią pracować razem, ale ich plan działa także wtedy, gdy jedno z nich musi zostać w domu.",
       "questions": [
         {
           "id": "q1",
@@ -114,7 +114,7 @@
             },
             {
               "id": "B",
-              "text": "Jak uczniowie dzielą naukę na spotkania i pracę w domu."
+              "text": "Jak uczniowie ustalają stałe dni wspólnej nauki i pracy w domu."
             },
             {
               "id": "C",
@@ -128,7 +128,7 @@
           "options": [
             {
               "id": "A",
-              "text": "W formie zadań do rozwiązania."
+              "text": "W formie wiadomości tekstowej."
             },
             {
               "id": "B",
@@ -200,7 +200,7 @@
       "id": "pl-b1.reading.day-056",
       "targetLevel": "A2",
       "title": "Jak przygotować się do sprawdzianu",
-      "passage": "Jeśli masz kilka dni do sprawdzianu, nie zaczynaj od czytania całego podręcznika od pierwszej do ostatniej strony. Najpierw weź zeszyt i zapisz tematy, które będą na sprawdzianie. Przy każdym temacie postaw znak plus, jeśli dobrze go rozumiesz, lub znak zapytania, jeśli potrzebujesz pomocy.\n\nZacznij od tematów ze znakiem zapytania. Po przeczytaniu krótkiego fragmentu zamknij książkę i spróbuj powiedzieć, o czym był własnymi słowami. Jeżeli nie potrafisz odpowiedzieć na pytanie, wróć do odpowiedniej strony. Nie przepisuj jednak całej lekcji. Wystarczy krótka notatka z przykładem. W ten sposób możesz później szybko sprawdzić, co już pamiętasz.\n\nZostaw ostatni dzień na krótkie powtórzenie wszystkich tematów. Przygotuj kilka zadań bez gotowych odpowiedzi i wykonaj je w takim czasie, jaki zwykle masz na lekcji. Potem sprawdź błędy i wybierz najwyżej dwa najtrudniejsze tematy do ponownej nauki. Zaplanuj również czas na odpoczynek. Wieczorem lepiej zakończyć pracę nad materiałem o wybranej godzinie niż próbować jeszcze raz przeczytać wszystko.",
+      "passage": "Jeśli masz kilka dni do sprawdzianu, nie zaczynaj od czytania całego podręcznika od pierwszej do ostatniej strony. Najpierw weź zeszyt i zapisz tematy, które będą na sprawdzianie. Przy każdym temacie postaw znak plus, jeśli dobrze go rozumiesz, lub znak zapytania, jeśli potrzebujesz pomocy.\n\nZacznij od tematów ze znakiem zapytania. Po przeczytaniu krótkiego fragmentu zamknij książkę i spróbuj własnymi słowami powiedzieć, o czym był. Jeżeli nie potrafisz odpowiedzieć na pytanie, wróć do odpowiedniej strony. Nie przepisuj jednak całej lekcji. Wystarczy krótka notatka z przykładem. W ten sposób możesz później szybko sprawdzić, co już pamiętasz.\n\nZostaw ostatni dzień na krótkie powtórzenie wszystkich tematów. Przygotuj kilka zadań bez gotowych odpowiedzi i wykonaj je w takim czasie, jaki zwykle masz na lekcji. Potem sprawdź błędy i wybierz najwyżej dwa najtrudniejsze tematy do ponownej nauki. Zaplanuj również czas na odpoczynek. Wieczorem lepiej zakończyć pracę nad materiałem o wybranej godzinie niż próbować jeszcze raz przeczytać wszystko.",
       "questions": [
         {
           "id": "q1",
@@ -212,7 +212,7 @@
             },
             {
               "id": "B",
-              "text": "Robienie notatek z każdego tematu i ćwiczenie ich codziennie."
+              "text": "Robienie notatek z każdego tematu i powtarzanie ich codziennie."
             },
             {
               "id": "C",
@@ -284,11 +284,11 @@
             },
             {
               "id": "B",
-              "text": "Za pomocą ważnych zdań wybranych z podręcznika."
+              "text": "Krótko, ale bez podawania żadnych przykładów."
             },
             {
               "id": "C",
-              "text": "Za pomocą krótkich zdań, które podał nauczyciel."
+              "text": "Tak, jak nauczyciel zapisał to na lekcji."
             }
           ]
         }
@@ -368,7 +368,7 @@
             },
             {
               "id": "C",
-              "text": "Odłożyć rozmowę z klientem do środy i nie pytać nikogo."
+              "text": "Poprosić klienta, żeby zadzwonił w środę, gdy Daniel ma zaplanowaną rozmowę."
             }
           ]
         },
@@ -396,7 +396,7 @@
       "id": "pl-b1.reading.day-058",
       "targetLevel": "A2",
       "title": "Zmiana godzin pracy",
-      "passage": "W pewnej małej firmie pracownicy przez wiele lat zaczynali pracę o ósmej. Część z nich przyjeżdżała z małych miast i wsi w okolicy. Poranny pociąg przyjeżdżał za późno, a wcześniejszy pociąg oznaczał prawie godzinę czekania przed otwarciem biura. Pracownicy prosili więc szefa o zmianę godzin pracy.\n\nFirma przez miesiąc testowała nowy plan. Można było zaczynać między siódmą a dziewiątą, ale od dziesiątej do czternastej cały zespół musiał być w biurze. W tym czasie odbywały się spotkania z klientami. Nie zmieniła się liczba godzin pracy ani pensja. Osoby, które przychodziły później, także kończyły później.\n\nPo miesiącu szef zebrał opinie pracowników. Większość chciała zachować nowy plan. Niektórzy woleli jednak zaczynać o ósmej jak dawniej, ponieważ po pracy odbierali dzieci ze szkoły. Firma nie wprowadziła jednej nowej godziny dla wszystkich. Każdy mógł wybrać początek dnia między siódmą a dziewiątą, i nie musiał zaczynać o tej samej godzinie każdego dnia. Dzięki temu pracownicy mogli lepiej planować dojazdy i sprawy rodzinne.",
+      "passage": "W pewnej małej firmie pracownicy przez wiele lat zaczynali pracę o ósmej. Część z nich przyjeżdżała z małych miast i wsi w okolicy. Poranny pociąg przyjeżdżał za późno, a wcześniejszy pociąg oznaczał prawie godzinę czekania przed otwarciem biura. Pracownicy prosili więc szefa o zmianę godzin pracy.\n\nFirma przez miesiąc testowała nowy plan. Można było zaczynać między siódmą a dziewiątą, ale od dziesiątej do czternastej cały zespół musiał być w biurze. W tym czasie odbywały się spotkania z klientami. Nie zmieniła się liczba godzin pracy ani pensja. Osoby, które przychodziły później, także kończyły później.\n\nPo miesiącu szef zebrał opinie pracowników. Większość chciała zachować nowy plan. Niektórzy woleli jednak zaczynać o ósmej jak dawniej, ponieważ po pracy odbierali dzieci ze szkoły. Firma nie wprowadziła jednej nowej godziny dla wszystkich. Każdy mógł wybrać godzinę rozpoczęcia pracy między siódmą a dziewiątą i nie musiał zaczynać o tej samej godzinie każdego dnia. Dzięki temu pracownicy mogli lepiej planować dojazdy i sprawy rodzinne.",
       "questions": [
         {
           "id": "q1",
@@ -494,7 +494,7 @@
       "id": "pl-b1.reading.day-059",
       "targetLevel": "A2",
       "title": "Rozmowa o zadaniach",
-      "passage": "— Aniu, potrzebuję twojej pomocy przy projekcie dla nowego klienta — mówi Jacek. — W piątek mamy pokazać mu pierwszy plan. Czy masz dziś czas?\n\n— Do południa kończę raport z poprzedniego tygodnia. Później mogę pomóc przez dwie godziny. W środę mam więcej czasu, ale w czwartek nie będzie mnie w biurze.\n\n— To dobrze. Brakuje nam informacji o cenach. Dzisiaj wystarczy, że sprawdzisz dokumenty od klienta. Nie dzwoń jeszcze do niego. Najpierw musimy sprawdzić, czego jeszcze nie wiemy.\n\n— A kto przygotuje tabelę z kosztami? Nie mam w tym dużego doświadczenia.\n\n— Zrobię ją ja. W środę pokażę ci, jak pracujemy z takimi danymi. Chcę, żebyś w następnym miesiącu mogła przygotować podobny plan sama.\n\n— Dobrze, zapiszę dziś wszystkie pytania w jednym pliku. Jeśli nie znajdę odpowiedzi w dokumentach, zostawię wolne miejsce obok pytania.\n\n— Świetnie. Jutro rano przeczytam twoją listę. Dopiero wtedy wspólnie zdecydujemy, o które informacje trzeba jeszcze zapytać klienta. Przed piątkiem spotkamy się jeszcze z szefem.",
+      "passage": "— Aniu, potrzebuję twojej pomocy przy projekcie dla nowego klienta — mówi Jacek. — W piątek mamy pokazać mu pierwszy plan. Czy masz dziś czas?\n\n— Do południa kończę raport z poprzedniego tygodnia. Później mogę pomóc przez dwie godziny. W środę mam więcej czasu, ale w czwartek nie będzie mnie w biurze.\n\n— To dobrze. Brakuje nam informacji o cenach. Dzisiaj wystarczy, że sprawdzisz dokumenty od klienta. Nie dzwoń jeszcze do niego. Najpierw musimy sprawdzić, czego nie wiemy.\n\n— A kto przygotuje tabelę z kosztami? Nie mam w tym dużego doświadczenia.\n\n— Zrobię ją ja. W środę pokażę ci, jak pracujemy z takimi danymi. Chcę, żebyś w następnym miesiącu mogła przygotować podobny plan sama.\n\n— Dobrze, zapiszę dziś wszystkie pytania w jednym pliku. Jeśli nie znajdę odpowiedzi w dokumentach, zostawię wolne miejsce obok pytania.\n\n— Świetnie. Jutro rano przeczytam twoją listę. Dopiero wtedy wspólnie zdecydujemy, o które informacje trzeba jeszcze zapytać klienta. Przed piątkiem spotkamy się jeszcze z szefem.",
       "questions": [
         {
           "id": "q1",
@@ -650,15 +650,15 @@
         },
         {
           "id": "q4",
-          "question": "Marta nie pracowała w sprzedaży, ale wcześniej odpowiadała na wiadomości i zajmowała się zamówieniami. We wtorek pracuje do piętnastej, a w środę jest wolna po piętnastej. Co może zrobić?",
+          "question": "Marta nie pracowała w sprzedaży, ale wcześniej odpowiadała na wiadomości i zajmowała się zamówieniami. We wtorek pracuje do piętnastej, a w środę jest wolna po piętnastej. Co powinna zrobić zgodnie z wiadomością?",
           "options": [
             {
               "id": "A",
-              "text": "Wybrać wtorek i przygotować zadanie dotyczące mebli."
+              "text": "Wybrać wtorek i przygotować opis poprzedniej pracy."
             },
             {
               "id": "B",
-              "text": "Zrezygnować z rozmowy, ponieważ nie pracowała w sprzedaży."
+              "text": "Wybrać środę i przygotować zadanie dotyczące zamówień zamiast opisu poprzedniej pracy."
             },
             {
               "id": "C",
@@ -756,11 +756,11 @@
             },
             {
               "id": "B",
-              "text": "Przesłać sam pomysł w piątek po przeczytaniu raportu."
+              "text": "Wysłać notatkę do środy, a pomysł dopiero po otrzymaniu raportu."
             },
             {
               "id": "C",
-              "text": "Przygotować prezentację pomysłu dla klienta na czwartek."
+              "text": "Wysłać sam pomysł w środę, a notatkę przygotować po zebraniu."
             }
           ]
         },
@@ -840,7 +840,7 @@
             },
             {
               "id": "C",
-              "text": "Dojazdy do biura stały się dla Zosi bardziej czasochłonne."
+              "text": "Spotkania przez internet przeszkadzały Zosi głównie w pisaniu własnych raportów."
             }
           ]
         },
@@ -886,7 +886,7 @@
       "id": "pl-b1.reading.day-063",
       "targetLevel": "A2",
       "title": "Plan rozwoju zawodowego",
-      "passage": "Chcesz nauczyć się czegoś nowego w pracy, ale nie wiesz, od czego zacząć? Zamiast zapisywać się od razu na kilka kursów, wybierz jedną umiejętność, która przyda ci się w codziennej pracy. Może to być przygotowywanie prezentacji, rozmowa z klientem albo pisanie raportów. Porozmawiaj z szefem lub kolegą, żeby dowiedzieć się, czego dokładnie potrzebujesz.\n\nNastępnie zaplanuj mały cel na najbliższy miesiąc. Jeśli chcesz lepiej przygotowywać prezentacje, zrób jedną krótką prezentację na temat, który dobrze znasz. Pokaż ją koledze i poproś o dwie konkretne uwagi. Nie zmieniaj od razu wszystkich elementów. Wybierz jedną rzecz, nad którą będziesz pracować w następnym tygodniu.\n\nPod koniec miesiąca wróć do pierwszej wersji swojej pracy i porównaj ją z ostatnią. Zapisz, co potrafisz zrobić samodzielnie, a przy czym nadal potrzebujesz pomocy. Jeżeli nie widzisz poprawy, sprawdź, czy masz dość czasu i możliwości, żeby ćwiczyć. Być może warto zmienić sposób nauki, zamiast zaczynać naukę czegoś innego. Dopiero potem ustal kolejny cel.",
+      "passage": "Chcesz nauczyć się czegoś nowego w pracy, ale nie wiesz, od czego zacząć? Zamiast zapisywać się od razu na kilka kursów, wybierz jedną umiejętność, która przyda ci się w codziennej pracy. Może to być przygotowywanie prezentacji, rozmowa z klientem albo pisanie raportów. Porozmawiaj z szefem lub kolegą, żeby dowiedzieć się, czego dokładnie potrzebujesz.\n\nNastępnie zaplanuj mały cel na najbliższy miesiąc. Jeśli chcesz lepiej przygotowywać prezentacje, zrób jedną krótką prezentację na temat, który dobrze znasz. Pokaż ją koledze i poproś o dwie konkretne uwagi. Nie zmieniaj od razu wszystkich elementów. Wybierz jedną rzecz, nad którą będziesz pracować w następnym tygodniu.\n\nPod koniec miesiąca wróć do pierwszej wersji swojej pracy i porównaj ją z ostatnią. Zapisz, co potrafisz zrobić samodzielnie, a przy czym nadal potrzebujesz pomocy. Jeżeli nie widzisz poprawy, sprawdź, czy masz dość czasu i możliwości, żeby ćwiczyć. Być może warto zmienić sposób nauki zamiast zaczynać naukę czegoś innego. Dopiero potem ustal kolejny cel.",
       "questions": [
         {
           "id": "q1",
@@ -948,7 +948,7 @@
           "options": [
             {
               "id": "A",
-              "text": "Porzucić rozmowy z klientami i zacząć uczyć się prezentacji."
+              "text": "Ćwiczyć rozmowy dalej, głównie czytając teksty o obsłudze klienta."
             },
             {
               "id": "B",
@@ -956,7 +956,7 @@
             },
             {
               "id": "C",
-              "text": "Zapisać się na kilka kursów bez zmiany sposobu ćwiczeń."
+              "text": "Najpierw przygotować prezentację, a rozmowy z klientami ćwiczyć w kolejnym miesiącu."
             }
           ]
         },

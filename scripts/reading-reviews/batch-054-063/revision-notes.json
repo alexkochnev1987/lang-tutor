@@ -96,7 +96,14 @@
     }
   ],
   "validation": {
-    "method": "batch-local replication of reading-pipeline structural checks, not execution of full repository CLI",
+    "method": "Reimplemented validateText/loadDrafts rules in connector JS; original Node CLI not executed",
+    "totalDrafts": 67,
+    "checkedDays": [
+      54,
+      63
+    ],
+    "texts": 10,
+    "questions": 50,
     "counts": [
       {
         "day": 54,
@@ -116,11 +123,11 @@
       },
       {
         "day": 58,
-        "words": 156
+        "words": 157
       },
       {
         "day": 59,
-        "words": 151
+        "words": 150
       },
       {
         "day": 60,
@@ -141,5 +148,75 @@
     ],
     "errors": []
   },
-  "reviewLimit": "Editor is the same conversation as preliminary review. No independent second-round approval."
+  "reviewLimit": "Editor is the same conversation as preliminary review. No independent second-round approval.",
+  "followupCopyEdit": [
+    {
+      "day": 54,
+      "passageChanged": false,
+      "changedQuestions": [
+        "1"
+      ]
+    },
+    {
+      "day": 55,
+      "passageChanged": true,
+      "changedQuestions": [
+        "1",
+        "2"
+      ]
+    },
+    {
+      "day": 56,
+      "passageChanged": true,
+      "changedQuestions": [
+        "1",
+        "5"
+      ]
+    },
+    {
+      "day": 57,
+      "passageChanged": false,
+      "changedQuestions": [
+        "4"
+      ]
+    },
+    {
+      "day": 58,
+      "passageChanged": true,
+      "changedQuestions": []
+    },
+    {
+      "day": 59,
+      "passageChanged": true,
+      "changedQuestions": []
+    },
+    {
+      "day": 60,
+      "passageChanged": false,
+      "changedQuestions": [
+        "4"
+      ]
+    },
+    {
+      "day": 61,
+      "passageChanged": false,
+      "changedQuestions": [
+        "4"
+      ]
+    },
+    {
+      "day": 62,
+      "passageChanged": false,
+      "changedQuestions": [
+        "3"
+      ]
+    },
+    {
+      "day": 63,
+      "passageChanged": true,
+      "changedQuestions": [
+        "4"
+      ]
+    }
+  ]
 }
