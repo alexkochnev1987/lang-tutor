@@ -1,0 +1,76 @@
+{
+  "id": "pl-b1.reading.day-180",
+  "day": 180,
+  "level": "B1",
+  "genre": "ogłoszenie",
+  "title": "Opinie klientów i własne potrzeby",
+  "text": "Biblioteka zaprasza na spotkanie dotyczące porównywania produktów na podstawie opisów i opinii dostępnych w internecie. Chcemy pokazać, jak czytać informacje o zakupach, kiedy różni użytkownicy oceniają ten sam przedmiot w zupełnie inny sposób. Nie będziemy polecać konkretnych sklepów ani tworzyć listy najlepszych marek.\n\nW pierwszej części uczestnicy otrzymają przykładowe opisy dwóch fikcyjnych produktów. Do każdego dołączymy kilka opinii. Jedna będzie dotyczyła codziennego używania, druga pierwszego wrażenia po otwarciu opakowania, a trzecia problemu z dostawą. Spróbujemy ustalić, które informacje pomagają ocenić sam produkt, a które opisują zupełnie inne doświadczenie klienta.\n\nNastępnie każdy wybierze przykładową potrzebę. Osoba szukająca torby na krótkie spacery może zwracać uwagę na inne cechy niż ktoś, kto codziennie nosi w niej ciężkie przedmioty. Nawet szczegółowa opinia nie musi odpowiadać obu sytuacjom. Ważne jest więc, aby najpierw określić własne warunki korzystania z rzeczy.\n\nUczestnicy będą mogli również przynieść opis produktu, nad którego zakupem się zastanawiają. Prosimy jednak nie pokazywać dokumentów zawierających prywatne dane ani historii zamówień. Wystarczy publicznie dostępny opis lub zapisane pytania dotyczące oferty.\n\nSpotkanie potrwa dziewięćdziesiąt minut. Na zakończenie przygotujemy krótką listę pytań, które można sobie zadać przed podjęciem decyzji. Osoby, które nie mogą zostać do końca, otrzymają tę listę w wersji elektronicznej. Nie będziemy jednak indywidualnie oceniać wszystkich przyniesionych produktów.\n\nUdział jest bezpłatny, a zapis służy wyłącznie ustaleniu liczby miejsc. Nie trzeba niczego kupować przed spotkaniem ani po nim.",
+  "questions": [
+    {
+      "id": "main-idea",
+      "skill": "main-idea",
+      "question": "Jaki jest cel spotkania?",
+      "options": [
+        "Nauczyć porównywania opinii z własnymi potrzebami i odróżniania różnych rodzajów informacji.",
+        "Sprawdzić historię zakupów każdego uczestnika biblioteki.",
+        "Przygotować ranking marek, które wszyscy uczestnicy powinni kupować."
+      ],
+      "answer": "Nauczyć porównywania opinii z własnymi potrzebami i odróżniania różnych rodzajów informacji.",
+      "evidence": "Ważne jest więc, aby najpierw określić własne warunki korzystania z rzeczy.",
+      "explanation": "Spotkanie rozwija umiejętność oceny informacji, nie wybiera produktów za uczestników."
+    },
+    {
+      "id": "detail",
+      "skill": "detail",
+      "question": "Ile potrwa spotkanie?",
+      "options": [
+        "Sześćdziesiąt minut.",
+        "Dziewięćdziesiąt minut.",
+        "Sto dwadzieścia minut."
+      ],
+      "answer": "Dziewięćdziesiąt minut.",
+      "evidence": "Spotkanie potrwa dziewięćdziesiąt minut.",
+      "explanation": "W ogłoszeniu podano długość spotkania."
+    },
+    {
+      "id": "cause",
+      "skill": "cause",
+      "question": "Dlaczego uczestnicy mają porównać opinię o dostawie z opinią o codziennym używaniu?",
+      "options": [
+        "Każda dostawa ma bezpośredni wpływ na jakość produktu.",
+        "Jedna z nich musi być nieprawdziwa.",
+        "Te opinie opisują różne aspekty doświadczenia kupującego."
+      ],
+      "answer": "Te opinie opisują różne aspekty doświadczenia kupującego.",
+      "evidence": "Spróbujemy ustalić, które informacje pomagają ocenić sam produkt, a które opisują zupełnie inne doświadczenie klienta.",
+      "explanation": "Doświadczenie dostawy nie jest tym samym co funkcjonalność rzeczy."
+    },
+    {
+      "id": "inference",
+      "skill": "inference",
+      "question": "Osoba ma publiczny opis torby i potwierdzenie zamówienia z własnym adresem. Chce uczestniczyć w spotkaniu, ale nie może zostać do końca. Co jest zgodne z ogłoszeniem?",
+      "options": [
+        "Pokazać pełne potwierdzenie zamówienia, aby uzyskać obowiązkową ocenę torby.",
+        "Przynieść publiczny opis bez danych osobowych i skorzystać później z elektronicznej listy pytań.",
+        "Zrezygnować z udziału, ponieważ materiały są dostępne tylko pod koniec spotkania."
+      ],
+      "answer": "Przynieść publiczny opis bez danych osobowych i skorzystać później z elektronicznej listy pytań.",
+      "evidence": "Uczestnicy będą mogli również przynieść opis produktu, nad którego zakupem się zastanawiają. Prosimy jednak nie pokazywać dokumentów zawierających prywatne dane ani historii zamówień. Wystarczy publicznie dostępny opis lub zapisane pytania dotyczące oferty.\n\nSpotkanie potrwa dziewięćdziesiąt minut. Na zakończenie przygotujemy krótką listę pytań, które można sobie zadać przed podjęciem decyzji. Osoby, które nie mogą zostać do końca, otrzymają tę listę w wersji elektronicznej.",
+      "explanation": "Ogłoszenie dopuszcza publiczny opis i udostępnienie listy osobom wychodzącym wcześniej."
+    },
+    {
+      "id": "vocabulary",
+      "skill": "vocabulary",
+      "question": "Co oznacza „pierwsze wrażenie”?",
+      "options": [
+        "Informację o wszystkich kosztach zamówienia.",
+        "Ocenę po kilku miesiącach regularnego używania.",
+        "Początkową ocenę powstałą przy pierwszym kontakcie z rzeczą."
+      ],
+      "answer": "Początkową ocenę powstałą przy pierwszym kontakcie z rzeczą.",
+      "evidence": "druga pierwszego wrażenia po otwarciu opakowania",
+      "explanation": "Pierwsze wrażenie powstaje przed zdobyciem dłuższego doświadczenia."
+    }
+  ],
+  "publicationStatus": "practice"
+}

@@ -1,0 +1,76 @@
+{
+  "id": "pl-b1.reading.day-182",
+  "day": 182,
+  "level": "B1",
+  "genre": "poradnik",
+  "title": "Jak podejmować świadome decyzje",
+  "text": "Przed ważniejszym zakupem dobrze jest odpowiedzieć sobie na kilka pytań. Czy naprawdę potrzebujemy danej rzeczy? Jak będziemy z niej korzystać? Czy podana cena obejmuje wszystkie koszty, które musimy ponieść? Nie każda decyzja wymaga długiej analizy, ale im więcej pieniędzy lub czasu zależy od wyboru, tym bardziej warto uporządkować informacje.\n\nWyobraźmy sobie osobę, która chce kupić lampę do pracy przy biurku. Zamiast przeglądać wszystkie dostępne modele, zapisuje trzy warunki: odpowiedni rozmiar, możliwość ustawienia światła oraz cenę mieszczącą się w budżecie. Kolor lampy traktuje jako dodatkową zaletę, a nie warunek konieczny.\n\nPo porównaniu ofert zauważa, że jeden model jest tańszy, ale wymaga dokupienia elementu potrzebnego do działania. Drugi kosztuje nieco więcej, lecz zawiera wszystkie potrzebne części. Trzeci najbardziej jej się podoba, jednak ma wymiary większe niż wolna przestrzeń na biurku. Dzięki wcześniejszej liście można wyeliminować ofertę, która nie spełnia podstawowego warunku, i porównać całkowity koszt pozostałych dwóch.\n\nNiektórych informacji nie da się znaleźć w opisie. Wtedy warto zadać sprzedawcy konkretne pytanie, zamiast zakładać odpowiedź na podstawie zdjęcia. Jeśli decyzja nie jest pilna, można poczekać do wyjaśnienia istotnej wątpliwości. Warto też zapisać zasady dotyczące zakupu, dostawy i ewentualnego zwrotu, aby nie szukać ich dopiero wtedy, gdy pojawi się problem.\n\nPo zakupie nie trzeba stale sprawdzać, czy pojawiła się lepsza oferta. Przy kolejnej podobnej decyzji przydatniejsze może być zastanowienie się, czy rzecz rzeczywiście spełnia ustalone wcześniej potrzeby. Świadomy wybór nie oznacza znalezienia jedynej idealnej możliwości. Oznacza podjęcie decyzji na podstawie informacji wystarczających w danej sytuacji, bez przypisywania sobie wiedzy, której jeszcze nie mamy.",
+  "questions": [
+    {
+      "id": "main-idea",
+      "skill": "main-idea",
+      "question": "Jaki jest główny cel poradnika?",
+      "options": [
+        "Wybierać zawsze najtańszy model niezależnie od warunków.",
+        "Podejmować decyzje zakupowe według potrzeb, pełnych kosztów i sprawdzonych informacji.",
+        "Porównywać wszystkie istniejące oferty przed każdym drobnym zakupem."
+      ],
+      "answer": "Podejmować decyzje zakupowe według potrzeb, pełnych kosztów i sprawdzonych informacji.",
+      "evidence": "Oznacza podjęcie decyzji na podstawie informacji wystarczających w danej sytuacji, bez przypisywania sobie wiedzy, której jeszcze nie mamy.",
+      "explanation": "Poradnik zaleca proporcjonalne przygotowanie decyzji i rozróżnienie wymagań."
+    },
+    {
+      "id": "detail",
+      "skill": "detail",
+      "question": "Którą cechę lampy osoba traktuje jako dodatkową zaletę?",
+      "options": [
+        "Kolor.",
+        "Odpowiedni rozmiar.",
+        "Możliwość ustawienia światła."
+      ],
+      "answer": "Kolor.",
+      "evidence": "Kolor lampy traktuje jako dodatkową zaletę, a nie warunek konieczny.",
+      "explanation": "Kolor nie jest jednym z trzech podstawowych warunków."
+    },
+    {
+      "id": "cause",
+      "skill": "cause",
+      "question": "Dlaczego trzeba porównać pełny koszt dwóch pierwszych lamp?",
+      "options": [
+        "Droższy model nie zawiera żadnych potrzebnych części.",
+        "Oba modele przekraczają dostępne wymiary biurka.",
+        "Tańszy model wymaga dodatkowego elementu, więc sama cena nie wystarcza."
+      ],
+      "answer": "Tańszy model wymaga dodatkowego elementu, więc sama cena nie wystarcza.",
+      "evidence": "jeden model jest tańszy, ale wymaga dokupienia elementu potrzebnego do działania. Drugi kosztuje nieco więcej, lecz zawiera wszystkie potrzebne części.",
+      "explanation": "Dodatkowy koszt może zmienić wynik porównania."
+    },
+    {
+      "id": "inference",
+      "skill": "inference",
+      "question": "Sprzedawca nie podał rozmiaru lampy, a kupujący ma niewiele miejsca i nie musi kupować jej dzisiaj. Jak powinien postąpić zgodnie z poradnikiem?",
+      "options": [
+        "Wybrać lampę według zdjęcia, ponieważ kolor mu odpowiada.",
+        "Kupić lampę natychmiast i zignorować wcześniejszą listę wymagań.",
+        "Poprosić o dokładne wymiary i poczekać z decyzją, dopóki nie wyjaśni koniecznego warunku."
+      ],
+      "answer": "Poprosić o dokładne wymiary i poczekać z decyzją, dopóki nie wyjaśni koniecznego warunku.",
+      "evidence": "Wyobraźmy sobie osobę, która chce kupić lampę do pracy przy biurku. Zamiast przeglądać wszystkie dostępne modele, zapisuje trzy warunki: odpowiedni rozmiar, możliwość ustawienia światła oraz cenę mieszczącą się w budżecie. Kolor lampy traktuje jako dodatkową zaletę, a nie warunek konieczny.\n\nPo porównaniu ofert zauważa, że jeden model jest tańszy, ale wymaga dokupienia elementu potrzebnego do działania. Drugi kosztuje nieco więcej, lecz zawiera wszystkie potrzebne części. Trzeci najbardziej jej się podoba, jednak ma wymiary większe niż wolna przestrzeń na biurku. Dzięki wcześniejszej liście można wyeliminować ofertę, która nie spełnia podstawowego warunku, i porównać całkowity koszt pozostałych dwóch.\n\nNiektórych informacji nie da się znaleźć w opisie. Wtedy warto zadać sprzedawcy konkretne pytanie, zamiast zakładać odpowiedź na podstawie zdjęcia. Jeśli decyzja nie jest pilna, można poczekać do wyjaśnienia istotnej wątpliwości.",
+      "explanation": "Wymiary są koniecznym warunkiem, dlatego warto sprawdzić je przed zakupem."
+    },
+    {
+      "id": "vocabulary",
+      "skill": "vocabulary",
+      "question": "Co oznacza „warunek konieczny”?",
+      "options": [
+        "Informacja o produkcie, której nie da się sprawdzić.",
+        "Wymaganie, które musi zostać spełnione, aby możliwość była odpowiednia.",
+        "Cecha przyjemna, z której łatwo zrezygnować."
+      ],
+      "answer": "Wymaganie, które musi zostać spełnione, aby możliwość była odpowiednia.",
+      "evidence": "Kolor lampy traktuje jako dodatkową zaletę, a nie warunek konieczny.",
+      "explanation": "Tekst przeciwstawia wymaganie obowiązkowe dodatkowej zalecie."
+    }
+  ],
+  "publicationStatus": "practice"
+}

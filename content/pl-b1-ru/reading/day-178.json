@@ -1,0 +1,76 @@
+{
+  "id": "pl-b1.reading.day-178",
+  "day": 178,
+  "level": "B1",
+  "genre": "dialog",
+  "title": "Czy promocja naprawdę się opłaca?",
+  "text": "— Zobacz, w tym sklepie drugi komplet ręczników można kupić o połowę taniej — powiedziała Iwona, pokazując mężowi ekran telefonu. — Może zamówimy od razu dwa?\n\n— A ile kompletów potrzebujemy? — zapytał Łukasz. — Chcieliśmy przecież wymienić tylko ręczniki w łazience dla gości.\n\nIwona sprawdziła cenę. Jeden komplet kosztował osiemdziesiąt złotych. Przy zakupie dwóch zapłaciliby sto dwadzieścia. W innym sklepie podobny komplet był dostępny za sześćdziesiąt pięć złotych bez promocji. Oba sklepy oferowały bezpłatny odbiór osobisty, więc w tym przypadku koszty odbioru nie zmieniały porównania.\n\n— Jeżeli kiedyś kupimy drugi komplet po zwykłej cenie, wydamy razem więcej — zauważyła Iwona.\n\n— To prawda, jeśli drugi komplet rzeczywiście będzie nam potrzebny — odpowiedział Łukasz. — Ale mamy już ręczniki na zmianę. Nie jestem pewien, czy jest sens przeznaczać dodatkowe pieniądze na coś, co będzie leżało w szafie.\n\nZamiast od razu kupować produkty, sprawdzili ich rozmiary i materiał. Okazało się, że tańszy komplet pasował do szafki, natomiast w promocyjnej ofercie ręczniki były większe. Nie przeszkadzałoby im to przy codziennym używaniu, ale musieliby znaleźć dodatkowe miejsce do przechowywania.\n\nIwona zdecydowała się na zakup jednego kompletu za sześćdziesiąt pięć złotych. Zastrzegła jednak, że przy większej liczbie potrzebnych ręczników promocja mogłaby być korzystniejsza. Łukasz zgodził się z nią.\n\n— Czyli nie chodzi o to, żeby unikać wszystkich promocji — podsumowała Iwona. — Najpierw musimy wiedzieć, co rzeczywiście chcemy kupić. Dopiero wtedy możemy ocenić, czy obniżka odpowiada naszym potrzebom.",
+  "questions": [
+    {
+      "id": "main-idea",
+      "skill": "main-idea",
+      "question": "Co wynika z rozmowy Iwony i Łukasza?",
+      "options": [
+        "Rozmiar produktu nie ma znaczenia, jeśli można go odebrać bezpłatnie.",
+        "Korzyść z promocji zależy od rzeczywistej potrzeby zakupu i warunków porównania.",
+        "Każda promocja dwóch produktów jest mniej korzystna od pojedynczego zakupu."
+      ],
+      "answer": "Korzyść z promocji zależy od rzeczywistej potrzeby zakupu i warunków porównania.",
+      "evidence": "Najpierw musimy wiedzieć, co rzeczywiście chcemy kupić. Dopiero wtedy możemy ocenić, czy obniżka odpowiada naszym potrzebom.",
+      "explanation": "Para porównuje koszt, potrzebną liczbę rzeczy i miejsce do przechowywania."
+    },
+    {
+      "id": "detail",
+      "skill": "detail",
+      "question": "Ile kosztuje jeden komplet w sklepie bez promocji?",
+      "options": [
+        "Czterdzieści złotych.",
+        "Osiemdziesiąt złotych.",
+        "Sześćdziesiąt pięć złotych."
+      ],
+      "answer": "Sześćdziesiąt pięć złotych.",
+      "evidence": "W innym sklepie podobny komplet był dostępny za sześćdziesiąt pięć złotych bez promocji.",
+      "explanation": "Podana kwota dotyczy jednego kompletu."
+    },
+    {
+      "id": "cause",
+      "skill": "cause",
+      "question": "Dlaczego Łukasz wątpi w sens kupowania dwóch kompletów?",
+      "options": [
+        "W domu są już ręczniki na zmianę, więc drugi komplet może pozostać nieużywany.",
+        "Nie można kupić kompletu o odpowiednim materiale.",
+        "W promocyjnym sklepie trzeba zapłacić za odbiór."
+      ],
+      "answer": "W domu są już ręczniki na zmianę, więc drugi komplet może pozostać nieużywany.",
+      "evidence": "Ale mamy już ręczniki na zmianę. Nie jestem pewien, czy jest sens przeznaczać dodatkowe pieniądze na coś, co będzie leżało w szafie.",
+      "explanation": "Wątpliwość dotyczy rzeczywistego zapotrzebowania."
+    },
+    {
+      "id": "inference",
+      "skill": "inference",
+      "question": "Gdyby para potrzebowała dokładnie dwóch kompletów i miała miejsce na większe ręczniki, która oferta byłaby tańsza przy podanych cenach?",
+      "options": [
+        "Oferta bez promocji, ponieważ 65 zł jest mniej niż 80 zł.",
+        "Obie oferty kosztowałyby tyle samo ze względu na bezpłatny odbiór.",
+        "Promocja, ponieważ dwa komplety kosztują 120 zł, a dwa bez promocji 130 zł."
+      ],
+      "answer": "Promocja, ponieważ dwa komplety kosztują 120 zł, a dwa bez promocji 130 zł.",
+      "evidence": "Jeden komplet kosztował osiemdziesiąt złotych. Przy zakupie dwóch zapłaciliby sto dwadzieścia. W innym sklepie podobny komplet był dostępny za sześćdziesiąt pięć złotych bez promocji.",
+      "explanation": "Przy dwóch potrzebnych kompletach porównujemy 120 zł z 2 × 65 zł."
+    },
+    {
+      "id": "vocabulary",
+      "skill": "vocabulary",
+      "question": "Co oznacza „ręczniki na zmianę”?",
+      "options": [
+        "Dodatkowe ręczniki, których można użyć, gdy inne są w praniu lub niedostępne.",
+        "Ręczniki używane wyłącznie podczas przeprowadzki.",
+        "Ręczniki, które trzeba zwrócić do sklepu z powodu wady."
+      ],
+      "answer": "Dodatkowe ręczniki, których można użyć, gdy inne są w praniu lub niedostępne.",
+      "evidence": "Ale mamy już ręczniki na zmianę.",
+      "explanation": "Wyrażenie opisuje zapas pozwalający zastąpić aktualnie używane rzeczy."
+    }
+  ],
+  "publicationStatus": "practice"
+}

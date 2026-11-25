@@ -1,0 +1,381 @@
+{
+  "version": 1,
+  "status": "draft",
+  "texts": [
+    {
+      "id": "pl-b1.reading.day-178",
+      "day": 178,
+      "level": "B1",
+      "genre": "dialog",
+      "title": "Czy promocja naprawdę się opłaca?",
+      "text": "— Zobacz, w tym sklepie drugi komplet ręczników można kupić o połowę taniej — powiedziała Iwona, pokazując mężowi ekran telefonu. — Może zamówimy od razu dwa?\n\n— A ile kompletów potrzebujemy? — zapytał Łukasz. — Chcieliśmy przecież wymienić tylko ręczniki w łazience dla gości.\n\nIwona sprawdziła cenę. Jeden komplet kosztował osiemdziesiąt złotych. Przy zakupie dwóch zapłaciliby sto dwadzieścia. W innym sklepie podobny komplet był dostępny za sześćdziesiąt pięć złotych bez promocji. Oba sklepy oferowały bezpłatny odbiór osobisty, więc w tym przypadku koszty odbioru nie zmieniały porównania.\n\n— Jeżeli kiedyś kupimy drugi komplet po zwykłej cenie, wydamy razem więcej — zauważyła Iwona.\n\n— To prawda, jeśli drugi komplet rzeczywiście będzie nam potrzebny — odpowiedział Łukasz. — Ale mamy już ręczniki na zmianę. Nie jestem pewien, czy jest sens przeznaczać dodatkowe pieniądze na coś, co będzie leżało w szafie.\n\nZamiast od razu kupować produkty, sprawdzili ich rozmiary i materiał. Okazało się, że tańszy komplet pasował do szafki, natomiast w promocyjnej ofercie ręczniki były większe. Nie przeszkadzałoby im to przy codziennym używaniu, ale musieliby znaleźć dodatkowe miejsce do przechowywania.\n\nIwona zdecydowała się na zakup jednego kompletu za sześćdziesiąt pięć złotych. Zastrzegła jednak, że przy większej liczbie potrzebnych ręczników promocja mogłaby być korzystniejsza. Łukasz zgodził się z nią.\n\n— Czyli nie chodzi o to, żeby unikać wszystkich promocji — podsumowała Iwona. — Najpierw musimy wiedzieć, co rzeczywiście chcemy kupić. Dopiero wtedy możemy ocenić, czy obniżka odpowiada naszym potrzebom.",
+      "questions": [
+        {
+          "id": "main-idea",
+          "skill": "main-idea",
+          "question": "Co wynika z rozmowy Iwony i Łukasza?",
+          "options": [
+            "Rozmiar produktu nie ma znaczenia, jeśli można go odebrać bezpłatnie.",
+            "Korzyść z promocji zależy od rzeczywistej potrzeby zakupu i warunków porównania.",
+            "Każda promocja dwóch produktów jest mniej korzystna od pojedynczego zakupu."
+          ],
+          "answer": "Korzyść z promocji zależy od rzeczywistej potrzeby zakupu i warunków porównania.",
+          "evidence": "Najpierw musimy wiedzieć, co rzeczywiście chcemy kupić. Dopiero wtedy możemy ocenić, czy obniżka odpowiada naszym potrzebom.",
+          "explanation": "Para porównuje koszt, potrzebną liczbę rzeczy i miejsce do przechowywania."
+        },
+        {
+          "id": "detail",
+          "skill": "detail",
+          "question": "Ile kosztuje jeden komplet w sklepie bez promocji?",
+          "options": [
+            "Czterdzieści złotych.",
+            "Osiemdziesiąt złotych.",
+            "Sześćdziesiąt pięć złotych."
+          ],
+          "answer": "Sześćdziesiąt pięć złotych.",
+          "evidence": "W innym sklepie podobny komplet był dostępny za sześćdziesiąt pięć złotych bez promocji.",
+          "explanation": "Podana kwota dotyczy jednego kompletu."
+        },
+        {
+          "id": "cause",
+          "skill": "cause",
+          "question": "Dlaczego Łukasz wątpi w sens kupowania dwóch kompletów?",
+          "options": [
+            "W domu są już ręczniki na zmianę, więc drugi komplet może pozostać nieużywany.",
+            "Nie można kupić kompletu o odpowiednim materiale.",
+            "W promocyjnym sklepie trzeba zapłacić za odbiór."
+          ],
+          "answer": "W domu są już ręczniki na zmianę, więc drugi komplet może pozostać nieużywany.",
+          "evidence": "Ale mamy już ręczniki na zmianę. Nie jestem pewien, czy jest sens przeznaczać dodatkowe pieniądze na coś, co będzie leżało w szafie.",
+          "explanation": "Wątpliwość dotyczy rzeczywistego zapotrzebowania."
+        },
+        {
+          "id": "inference",
+          "skill": "inference",
+          "question": "Gdyby para potrzebowała dokładnie dwóch kompletów i miała miejsce na większe ręczniki, która oferta byłaby tańsza przy podanych cenach?",
+          "options": [
+            "Oferta bez promocji, ponieważ 65 zł jest mniej niż 80 zł.",
+            "Obie oferty kosztowałyby tyle samo ze względu na bezpłatny odbiór.",
+            "Promocja, ponieważ dwa komplety kosztują 120 zł, a dwa bez promocji 130 zł."
+          ],
+          "answer": "Promocja, ponieważ dwa komplety kosztują 120 zł, a dwa bez promocji 130 zł.",
+          "evidence": "Jeden komplet kosztował osiemdziesiąt złotych. Przy zakupie dwóch zapłaciliby sto dwadzieścia. W innym sklepie podobny komplet był dostępny za sześćdziesiąt pięć złotych bez promocji.",
+          "explanation": "Przy dwóch potrzebnych kompletach porównujemy 120 zł z 2 × 65 zł."
+        },
+        {
+          "id": "vocabulary",
+          "skill": "vocabulary",
+          "question": "Co oznacza „ręczniki na zmianę”?",
+          "options": [
+            "Dodatkowe ręczniki, których można użyć, gdy inne są w praniu lub niedostępne.",
+            "Ręczniki używane wyłącznie podczas przeprowadzki.",
+            "Ręczniki, które trzeba zwrócić do sklepu z powodu wady."
+          ],
+          "answer": "Dodatkowe ręczniki, których można użyć, gdy inne są w praniu lub niedostępne.",
+          "evidence": "Ale mamy już ręczniki na zmianę.",
+          "explanation": "Wyrażenie opisuje zapas pozwalający zastąpić aktualnie używane rzeczy."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-179",
+      "day": 179,
+      "level": "B1",
+      "genre": "e-mail",
+      "title": "Korzystanie z produktów używanych",
+      "text": "Cześć, Michale!\n\nPamiętasz, że szukałam małego biurka do mieszkania? Ostatecznie kupiłam używany mebel od osoby, która przeprowadzała się na drugi koniec miasta. Wcześniej oglądałam podobne biurko w sklepie, ale jego dostawa zajęłaby prawie dwa tygodnie. Zależało mi na tym, żeby w następnym tygodniu mieć już wygodne miejsce do pracy.\n\nW ogłoszeniu były trzy zdjęcia. Poprosiłam sprzedającą o dodatkową fotografię miejsca, w którym blat łączy się z nogami. Chciałam sprawdzić, czy widoczne ślady używania dotyczą głównie wyglądu, czy mogą wpływać na stabilność biurka. Nie oczekiwałam, że używany mebel będzie wyglądał tak samo jak nowy.\n\nUzgodniłyśmy, że obejrzę biurko przed zakupem. Na miejscu zobaczyłam niewielką rysę na blacie, która nie była dla mnie problemem. Sprawdziłam także wymiary i możliwość przewiezienia poszczególnych elementów. Okazało się, że po rozłożeniu mebel zmieści się w samochodzie znajomej. Dzięki temu nie musiałam zamawiać dodatkowego transportu.\n\nNie zdecydowałam się jednak na zakup używanego krzesła oferowanego przez tę samą osobę. Potrzebuję krzesła, na którym będę wygodnie siedzieć przez kilka godzin, a podczas krótkiej wizyty trudno było mi ocenić, czy ten model rzeczywiście mi odpowiada. Wolę porównać jeszcze inne możliwości.\n\nMyślę, że kupowanie rzeczy używanych może być bardzo przydatne, ale nie chcę traktować niższej ceny jako jedynego argumentu. W przypadku biurka znałam już wymiary, mogłam obejrzeć stan mebla i miałam sposób na transport. Przy krześle nie byłam jeszcze tak pewna swojej decyzji.\n\nJeżeli nadal szukasz regału, mogę przesłać ci kilka ogłoszeń. Najpierw jednak zmierz miejsce, w którym chcesz go ustawić.\n\nPozdrawiam,\nEla",
+      "questions": [
+        {
+          "id": "main-idea",
+          "skill": "main-idea",
+          "question": "Jakie podejście do kupowania używanych rzeczy ma Ela?",
+          "options": [
+            "Kupuje wszystkie rzeczy od tego samego sprzedawcy, aby oszczędzić czas.",
+            "Wybiera wyłącznie rzeczy bez widocznych śladów używania.",
+            "Ocenia każdy przedmiot według stanu, dopasowania do potrzeb i możliwości odbioru."
+          ],
+          "answer": "Ocenia każdy przedmiot według stanu, dopasowania do potrzeb i możliwości odbioru.",
+          "evidence": "W przypadku biurka znałam już wymiary, mogłam obejrzeć stan mebla i miałam sposób na transport.",
+          "explanation": "Ela podejmuje decyzję na podstawie konkretnego przedmiotu, nie samej ceny."
+        },
+        {
+          "id": "detail",
+          "skill": "detail",
+          "question": "O jakie dodatkowe zdjęcie poprosiła sprzedającą?",
+          "options": [
+            "Zdjęcie połączenia blatu z nogami biurka.",
+            "Zdjęcie krzesła z katalogu nowego sklepu.",
+            "Zdjęcie wszystkich rzeczy przygotowanych do przeprowadzki."
+          ],
+          "answer": "Zdjęcie połączenia blatu z nogami biurka.",
+          "evidence": "Poprosiłam sprzedającą o dodatkową fotografię miejsca, w którym blat łączy się z nogami.",
+          "explanation": "Chciała dokładniej ocenić element konstrukcji."
+        },
+        {
+          "id": "cause",
+          "skill": "cause",
+          "question": "Dlaczego Ela nie kupiła krzesła?",
+          "options": [
+            "Sprzedająca nie pozwoliła jej obejrzeć mebli.",
+            "Nie była pewna, czy będzie dla niej wygodne podczas dłuższej pracy.",
+            "Krzesło nie mieściło się w samochodzie po rozłożeniu."
+          ],
+          "answer": "Nie była pewna, czy będzie dla niej wygodne podczas dłuższej pracy.",
+          "evidence": "Potrzebuję krzesła, na którym będę wygodnie siedzieć przez kilka godzin, a podczas krótkiej wizyty trudno było mi ocenić, czy ten model rzeczywiście mi odpowiada.",
+          "explanation": "Wygoda krzesła była dla niej nadal niepewna."
+        },
+        {
+          "id": "inference",
+          "skill": "inference",
+          "question": "Michał znajduje tani regał, który jest nieco szerszy od miejsca przeznaczonego na niego, a odbiór wymaga zamówienia transportu. Co odpowiada podejściu Eli?",
+          "options": [
+            "Sprawdzić, czy regał rzeczywiście pasuje i jaki będzie koszt odbioru, zanim podejmie decyzję.",
+            "Założyć, że każdy używany mebel można łatwo rozłożyć i przewieźć samochodem.",
+            "Kupić go bez dodatkowych sprawdzeń, ponieważ cena jest niska."
+          ],
+          "answer": "Sprawdzić, czy regał rzeczywiście pasuje i jaki będzie koszt odbioru, zanim podejmie decyzję.",
+          "evidence": "Myślę, że kupowanie rzeczy używanych może być bardzo przydatne, ale nie chcę traktować niższej ceny jako jedynego argumentu. W przypadku biurka znałam już wymiary, mogłam obejrzeć stan mebla i miałam sposób na transport.",
+          "explanation": "Dopasowanie wymiarów i transport mogą zmienić ocenę atrakcyjności oferty."
+        },
+        {
+          "id": "vocabulary",
+          "skill": "vocabulary",
+          "question": "Co oznaczają „ślady używania”?",
+          "options": [
+            "Informacje o trasie przewozu przedmiotu do sklepu.",
+            "Zmiany wyglądu lub stanu powstałe podczas wcześniejszego korzystania z przedmiotu.",
+            "Instrukcje dotyczące składania nowego mebla."
+          ],
+          "answer": "Zmiany wyglądu lub stanu powstałe podczas wcześniejszego korzystania z przedmiotu.",
+          "evidence": "widoczne ślady używania dotyczą głównie wyglądu",
+          "explanation": "Ślady mogą obejmować np. rysy, ale ich wpływ na funkcjonalność trzeba ocenić."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-180",
+      "day": 180,
+      "level": "B1",
+      "genre": "ogłoszenie",
+      "title": "Opinie klientów i własne potrzeby",
+      "text": "Biblioteka zaprasza na spotkanie dotyczące porównywania produktów na podstawie opisów i opinii dostępnych w internecie. Chcemy pokazać, jak czytać informacje o zakupach, kiedy różni użytkownicy oceniają ten sam przedmiot w zupełnie inny sposób. Nie będziemy polecać konkretnych sklepów ani tworzyć listy najlepszych marek.\n\nW pierwszej części uczestnicy otrzymają przykładowe opisy dwóch fikcyjnych produktów. Do każdego dołączymy kilka opinii. Jedna będzie dotyczyła codziennego używania, druga pierwszego wrażenia po otwarciu opakowania, a trzecia problemu z dostawą. Spróbujemy ustalić, które informacje pomagają ocenić sam produkt, a które opisują zupełnie inne doświadczenie klienta.\n\nNastępnie każdy wybierze przykładową potrzebę. Osoba szukająca torby na krótkie spacery może zwracać uwagę na inne cechy niż ktoś, kto codziennie nosi w niej ciężkie przedmioty. Nawet szczegółowa opinia nie musi odpowiadać obu sytuacjom. Ważne jest więc, aby najpierw określić własne warunki korzystania z rzeczy.\n\nUczestnicy będą mogli również przynieść opis produktu, nad którego zakupem się zastanawiają. Prosimy jednak nie pokazywać dokumentów zawierających prywatne dane ani historii zamówień. Wystarczy publicznie dostępny opis lub zapisane pytania dotyczące oferty.\n\nSpotkanie potrwa dziewięćdziesiąt minut. Na zakończenie przygotujemy krótką listę pytań, które można sobie zadać przed podjęciem decyzji. Osoby, które nie mogą zostać do końca, otrzymają tę listę w wersji elektronicznej. Nie będziemy jednak indywidualnie oceniać wszystkich przyniesionych produktów.\n\nUdział jest bezpłatny, a zapis służy wyłącznie ustaleniu liczby miejsc. Nie trzeba niczego kupować przed spotkaniem ani po nim.",
+      "questions": [
+        {
+          "id": "main-idea",
+          "skill": "main-idea",
+          "question": "Jaki jest cel spotkania?",
+          "options": [
+            "Nauczyć porównywania opinii z własnymi potrzebami i odróżniania różnych rodzajów informacji.",
+            "Sprawdzić historię zakupów każdego uczestnika biblioteki.",
+            "Przygotować ranking marek, które wszyscy uczestnicy powinni kupować."
+          ],
+          "answer": "Nauczyć porównywania opinii z własnymi potrzebami i odróżniania różnych rodzajów informacji.",
+          "evidence": "Ważne jest więc, aby najpierw określić własne warunki korzystania z rzeczy.",
+          "explanation": "Spotkanie rozwija umiejętność oceny informacji, nie wybiera produktów za uczestników."
+        },
+        {
+          "id": "detail",
+          "skill": "detail",
+          "question": "Ile potrwa spotkanie?",
+          "options": [
+            "Sześćdziesiąt minut.",
+            "Dziewięćdziesiąt minut.",
+            "Sto dwadzieścia minut."
+          ],
+          "answer": "Dziewięćdziesiąt minut.",
+          "evidence": "Spotkanie potrwa dziewięćdziesiąt minut.",
+          "explanation": "W ogłoszeniu podano długość spotkania."
+        },
+        {
+          "id": "cause",
+          "skill": "cause",
+          "question": "Dlaczego uczestnicy mają porównać opinię o dostawie z opinią o codziennym używaniu?",
+          "options": [
+            "Każda dostawa ma bezpośredni wpływ na jakość produktu.",
+            "Jedna z nich musi być nieprawdziwa.",
+            "Te opinie opisują różne aspekty doświadczenia kupującego."
+          ],
+          "answer": "Te opinie opisują różne aspekty doświadczenia kupującego.",
+          "evidence": "Spróbujemy ustalić, które informacje pomagają ocenić sam produkt, a które opisują zupełnie inne doświadczenie klienta.",
+          "explanation": "Doświadczenie dostawy nie jest tym samym co funkcjonalność rzeczy."
+        },
+        {
+          "id": "inference",
+          "skill": "inference",
+          "question": "Osoba ma publiczny opis torby i potwierdzenie zamówienia z własnym adresem. Chce uczestniczyć w spotkaniu, ale nie może zostać do końca. Co jest zgodne z ogłoszeniem?",
+          "options": [
+            "Pokazać pełne potwierdzenie zamówienia, aby uzyskać obowiązkową ocenę torby.",
+            "Przynieść publiczny opis bez danych osobowych i skorzystać później z elektronicznej listy pytań.",
+            "Zrezygnować z udziału, ponieważ materiały są dostępne tylko pod koniec spotkania."
+          ],
+          "answer": "Przynieść publiczny opis bez danych osobowych i skorzystać później z elektronicznej listy pytań.",
+          "evidence": "Uczestnicy będą mogli również przynieść opis produktu, nad którego zakupem się zastanawiają. Prosimy jednak nie pokazywać dokumentów zawierających prywatne dane ani historii zamówień. Wystarczy publicznie dostępny opis lub zapisane pytania dotyczące oferty.\n\nSpotkanie potrwa dziewięćdziesiąt minut. Na zakończenie przygotujemy krótką listę pytań, które można sobie zadać przed podjęciem decyzji. Osoby, które nie mogą zostać do końca, otrzymają tę listę w wersji elektronicznej.",
+          "explanation": "Ogłoszenie dopuszcza publiczny opis i udostępnienie listy osobom wychodzącym wcześniej."
+        },
+        {
+          "id": "vocabulary",
+          "skill": "vocabulary",
+          "question": "Co oznacza „pierwsze wrażenie”?",
+          "options": [
+            "Informację o wszystkich kosztach zamówienia.",
+            "Ocenę po kilku miesiącach regularnego używania.",
+            "Początkową ocenę powstałą przy pierwszym kontakcie z rzeczą."
+          ],
+          "answer": "Początkową ocenę powstałą przy pierwszym kontakcie z rzeczą.",
+          "evidence": "druga pierwszego wrażenia po otwarciu opakowania",
+          "explanation": "Pierwsze wrażenie powstaje przed zdobyciem dłuższego doświadczenia."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-181",
+      "day": 181,
+      "level": "B1",
+      "genre": "opowiadanie",
+      "title": "Zakupy z mniejszą ilością odpadów",
+      "text": "Marek i Julia zauważyli, że po sobotnich zakupach w ich kuchni zostaje dużo opakowań. Nie chcieli jednak zmieniać wszystkich swoich zwyczajów jednocześnie. Postanowili przez miesiąc sprawdzać, które opakowania pojawiają się najczęściej i czy da się ich uniknąć bez marnowania jedzenia.\n\nW pierwszym tygodniu zrezygnowali z kupowania małych porcji produktu, który jedli prawie codziennie. Wybrali większe opakowanie i podzielili zawartość w domu. Było to dla nich wygodne, ponieważ zużyli wszystko przed kolejnymi zakupami. Przy innym produkcie postąpili podobnie, ale część jedzenia musieli później wyrzucić. Okazało się, że większa ilość nie zawsze odpowiada ich potrzebom.\n\nZaczęli też zabierać na zakupy własną torbę. Początkowo często o niej zapominali, dlatego zostawili jedną przy drzwiach, a drugą w plecaku, z którego Julia korzystała w drodze do pracy. Nie kupowali kolejnych toreb, ponieważ mieli ich już wystarczająco dużo.\n\nW pobliskim sklepie pojawiła się możliwość kupowania niektórych suchych produktów w ilości wybranej przez klienta. Marek zapytał pracownika, jakich pojemników można używać. Nie założył, że każdy przyniesiony z domu pojemnik będzie odpowiedni do każdego produktu. Następnym razem kupił w ten sposób tylko tyle, ile potrzebowali do dwóch posiłków.\n\nPod koniec miesiąca para porównała swoje obserwacje. Nie obliczała dokładnego wpływu każdego zakupu na środowisko. Zauważyła jednak, że rzadziej przynosi do domu niepotrzebne opakowania i lepiej dopasowuje ilość jedzenia do planu posiłków. Najbardziej przydatne okazały się te zmiany, które jednocześnie ograniczały odpady i nie utrudniały codziennych zakupów.",
+      "questions": [
+        {
+          "id": "main-idea",
+          "skill": "main-idea",
+          "question": "Jaki wniosek wyciągnęli Marek i Julia?",
+          "options": [
+            "Każde większe opakowanie zawsze oznacza mniej odpadów.",
+            "Najlepiej kupić wiele nowych toreb i pojemników przed zmianą nawyków.",
+            "Ograniczanie odpadów warto dopasować do ilości zużywanych produktów i codziennych zwyczajów."
+          ],
+          "answer": "Ograniczanie odpadów warto dopasować do ilości zużywanych produktów i codziennych zwyczajów.",
+          "evidence": "Najbardziej przydatne okazały się te zmiany, które jednocześnie ograniczały odpady i nie utrudniały codziennych zakupów.",
+          "explanation": "Ich doświadczenie pokazuje znaczenie ilości, ponownego użycia i wygody."
+        },
+        {
+          "id": "detail",
+          "skill": "detail",
+          "question": "Gdzie Julia miała jedną z własnych toreb?",
+          "options": [
+            "Przy stoisku z suchymi produktami.",
+            "W plecaku używanym w drodze do pracy.",
+            "W samochodzie pracownika sklepu."
+          ],
+          "answer": "W plecaku używanym w drodze do pracy.",
+          "evidence": "a drugą w plecaku, z którego Julia korzystała w drodze do pracy.",
+          "explanation": "Torba miała być łatwo dostępna podczas codziennych wyjść."
+        },
+        {
+          "id": "cause",
+          "skill": "cause",
+          "question": "Dlaczego większe opakowanie nie sprawdziło się przy drugim produkcie?",
+          "options": [
+            "Para nie zużyła całej zawartości i część jedzenia wyrzuciła.",
+            "Większe opakowanie zawierało wyłącznie suche produkty.",
+            "Nie było możliwości podzielenia żadnego produktu w domu."
+          ],
+          "answer": "Para nie zużyła całej zawartości i część jedzenia wyrzuciła.",
+          "evidence": "Przy innym produkcie postąpili podobnie, ale część jedzenia musieli później wyrzucić.",
+          "explanation": "Zmniejszenie liczby opakowań nie pomogło uniknąć marnowania żywności."
+        },
+        {
+          "id": "inference",
+          "skill": "inference",
+          "question": "Marek chce ograniczyć opakowania produktu, którego potrzebuje tylko w niewielkiej ilości raz na miesiąc. Co najlepiej odpowiada ich doświadczeniu?",
+          "options": [
+            "Wymienić wszystkie domowe pojemniki na nowe przed zakupem.",
+            "Sprawdzić możliwość zakupu potrzebnej ilości, zamiast automatycznie wybierać większe opakowanie.",
+            "Kupić największe dostępne opakowanie niezależnie od zużycia."
+          ],
+          "answer": "Sprawdzić możliwość zakupu potrzebnej ilości, zamiast automatycznie wybierać większe opakowanie.",
+          "evidence": "Przy innym produkcie postąpili podobnie, ale część jedzenia musieli później wyrzucić. Okazało się, że większa ilość nie zawsze odpowiada ich potrzebom.\n\nZaczęli też zabierać na zakupy własną torbę. Początkowo często o niej zapominali, dlatego zostawili jedną przy drzwiach, a drugą w plecaku, z którego Julia korzystała w drodze do pracy. Nie kupowali kolejnych toreb, ponieważ mieli ich już wystarczająco dużo.\n\nW pobliskim sklepie pojawiła się możliwość kupowania niektórych suchych produktów w ilości wybranej przez klienta. Marek zapytał pracownika, jakich pojemników można używać. Nie założył, że każdy przyniesiony z domu pojemnik będzie odpowiedni do każdego produktu. Następnym razem kupił w ten sposób tylko tyle, ile potrzebowali do dwóch posiłków.",
+          "explanation": "Przy rzadko używanym produkcie ilość powinna odpowiadać rzeczywistemu zużyciu."
+        },
+        {
+          "id": "vocabulary",
+          "skill": "vocabulary",
+          "question": "Co oznacza „zużyć zawartość”?",
+          "options": [
+            "Wykorzystać to, co znajduje się w opakowaniu.",
+            "Otworzyć opakowanie bez korzystania z produktu.",
+            "Przenieść opakowanie do innego sklepu."
+          ],
+          "answer": "Wykorzystać to, co znajduje się w opakowaniu.",
+          "evidence": "ponieważ zużyli wszystko przed kolejnymi zakupami.",
+          "explanation": "Zużycie oznacza wykorzystanie produktu."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-182",
+      "day": 182,
+      "level": "B1",
+      "genre": "poradnik",
+      "title": "Jak podejmować świadome decyzje",
+      "text": "Przed ważniejszym zakupem dobrze jest odpowiedzieć sobie na kilka pytań. Czy naprawdę potrzebujemy danej rzeczy? Jak będziemy z niej korzystać? Czy podana cena obejmuje wszystkie koszty, które musimy ponieść? Nie każda decyzja wymaga długiej analizy, ale im więcej pieniędzy lub czasu zależy od wyboru, tym bardziej warto uporządkować informacje.\n\nWyobraźmy sobie osobę, która chce kupić lampę do pracy przy biurku. Zamiast przeglądać wszystkie dostępne modele, zapisuje trzy warunki: odpowiedni rozmiar, możliwość ustawienia światła oraz cenę mieszczącą się w budżecie. Kolor lampy traktuje jako dodatkową zaletę, a nie warunek konieczny.\n\nPo porównaniu ofert zauważa, że jeden model jest tańszy, ale wymaga dokupienia elementu potrzebnego do działania. Drugi kosztuje nieco więcej, lecz zawiera wszystkie potrzebne części. Trzeci najbardziej jej się podoba, jednak ma wymiary większe niż wolna przestrzeń na biurku. Dzięki wcześniejszej liście można wyeliminować ofertę, która nie spełnia podstawowego warunku, i porównać całkowity koszt pozostałych dwóch.\n\nNiektórych informacji nie da się znaleźć w opisie. Wtedy warto zadać sprzedawcy konkretne pytanie, zamiast zakładać odpowiedź na podstawie zdjęcia. Jeśli decyzja nie jest pilna, można poczekać do wyjaśnienia istotnej wątpliwości. Warto też zapisać zasady dotyczące zakupu, dostawy i ewentualnego zwrotu, aby nie szukać ich dopiero wtedy, gdy pojawi się problem.\n\nPo zakupie nie trzeba stale sprawdzać, czy pojawiła się lepsza oferta. Przy kolejnej podobnej decyzji przydatniejsze może być zastanowienie się, czy rzecz rzeczywiście spełnia ustalone wcześniej potrzeby. Świadomy wybór nie oznacza znalezienia jedynej idealnej możliwości. Oznacza podjęcie decyzji na podstawie informacji wystarczających w danej sytuacji, bez przypisywania sobie wiedzy, której jeszcze nie mamy.",
+      "questions": [
+        {
+          "id": "main-idea",
+          "skill": "main-idea",
+          "question": "Jaki jest główny cel poradnika?",
+          "options": [
+            "Wybierać zawsze najtańszy model niezależnie od warunków.",
+            "Podejmować decyzje zakupowe według potrzeb, pełnych kosztów i sprawdzonych informacji.",
+            "Porównywać wszystkie istniejące oferty przed każdym drobnym zakupem."
+          ],
+          "answer": "Podejmować decyzje zakupowe według potrzeb, pełnych kosztów i sprawdzonych informacji.",
+          "evidence": "Oznacza podjęcie decyzji na podstawie informacji wystarczających w danej sytuacji, bez przypisywania sobie wiedzy, której jeszcze nie mamy.",
+          "explanation": "Poradnik zaleca proporcjonalne przygotowanie decyzji i rozróżnienie wymagań."
+        },
+        {
+          "id": "detail",
+          "skill": "detail",
+          "question": "Którą cechę lampy osoba traktuje jako dodatkową zaletę?",
+          "options": [
+            "Kolor.",
+            "Odpowiedni rozmiar.",
+            "Możliwość ustawienia światła."
+          ],
+          "answer": "Kolor.",
+          "evidence": "Kolor lampy traktuje jako dodatkową zaletę, a nie warunek konieczny.",
+          "explanation": "Kolor nie jest jednym z trzech podstawowych warunków."
+        },
+        {
+          "id": "cause",
+          "skill": "cause",
+          "question": "Dlaczego trzeba porównać pełny koszt dwóch pierwszych lamp?",
+          "options": [
+            "Droższy model nie zawiera żadnych potrzebnych części.",
+            "Oba modele przekraczają dostępne wymiary biurka.",
+            "Tańszy model wymaga dodatkowego elementu, więc sama cena nie wystarcza."
+          ],
+          "answer": "Tańszy model wymaga dodatkowego elementu, więc sama cena nie wystarcza.",
+          "evidence": "jeden model jest tańszy, ale wymaga dokupienia elementu potrzebnego do działania. Drugi kosztuje nieco więcej, lecz zawiera wszystkie potrzebne części.",
+          "explanation": "Dodatkowy koszt może zmienić wynik porównania."
+        },
+        {
+          "id": "inference",
+          "skill": "inference",
+          "question": "Sprzedawca nie podał rozmiaru lampy, a kupujący ma niewiele miejsca i nie musi kupować jej dzisiaj. Jak powinien postąpić zgodnie z poradnikiem?",
+          "options": [
+            "Wybrać lampę według zdjęcia, ponieważ kolor mu odpowiada.",
+            "Kupić lampę natychmiast i zignorować wcześniejszą listę wymagań.",
+            "Poprosić o dokładne wymiary i poczekać z decyzją, dopóki nie wyjaśni koniecznego warunku."
+          ],
+          "answer": "Poprosić o dokładne wymiary i poczekać z decyzją, dopóki nie wyjaśni koniecznego warunku.",
+          "evidence": "Wyobraźmy sobie osobę, która chce kupić lampę do pracy przy biurku. Zamiast przeglądać wszystkie dostępne modele, zapisuje trzy warunki: odpowiedni rozmiar, możliwość ustawienia światła oraz cenę mieszczącą się w budżecie. Kolor lampy traktuje jako dodatkową zaletę, a nie warunek konieczny.\n\nPo porównaniu ofert zauważa, że jeden model jest tańszy, ale wymaga dokupienia elementu potrzebnego do działania. Drugi kosztuje nieco więcej, lecz zawiera wszystkie potrzebne części. Trzeci najbardziej jej się podoba, jednak ma wymiary większe niż wolna przestrzeń na biurku. Dzięki wcześniejszej liście można wyeliminować ofertę, która nie spełnia podstawowego warunku, i porównać całkowity koszt pozostałych dwóch.\n\nNiektórych informacji nie da się znaleźć w opisie. Wtedy warto zadać sprzedawcy konkretne pytanie, zamiast zakładać odpowiedź na podstawie zdjęcia. Jeśli decyzja nie jest pilna, można poczekać do wyjaśnienia istotnej wątpliwości.",
+          "explanation": "Wymiary są koniecznym warunkiem, dlatego warto sprawdzić je przed zakupem."
+        },
+        {
+          "id": "vocabulary",
+          "skill": "vocabulary",
+          "question": "Co oznacza „warunek konieczny”?",
+          "options": [
+            "Informacja o produkcie, której nie da się sprawdzić.",
+            "Wymaganie, które musi zostać spełnione, aby możliwość była odpowiednia.",
+            "Cecha przyjemna, z której łatwo zrezygnować."
+          ],
+          "answer": "Wymaganie, które musi zostać spełnione, aby możliwość była odpowiednia.",
+          "evidence": "Kolor lampy traktuje jako dodatkową zaletę, a nie warunek konieczny.",
+          "explanation": "Tekst przeciwstawia wymaganie obowiązkowe dodatkowej zalecie."
+        }
+      ]
+    }
+  ]
+}
