@@ -41,7 +41,8 @@ export function ReadingPreview({ preview = false }: { preview?: boolean }) {
 
   useEffect(() => {
     let active = true
-    (preview ? loadReadingPreviewCatalog() : loadLiveReadingCatalog()).then(items => {
+    const loadCatalog = preview ? loadReadingPreviewCatalog : loadLiveReadingCatalog
+    loadCatalog().then(items => {
       if (!active) return
       setEntries(items)
       setError(false)
