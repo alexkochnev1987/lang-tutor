@@ -1,7 +1,7 @@
-import { and, eq, sql } from 'drizzle-orm'
+import { and, desc, eq, sql } from 'drizzle-orm'
 import { withUser } from '@/lib/api/handler'
 import { pg } from '@/lib/db/pg'
-import { lessonAssignments } from '@/lib/db/schema'
+import { exerciseAttempts, lessonAssignments } from '@/lib/db/schema'
 import { stageExerciseIds, type AssignmentMap } from '@/lib/engine/assignment-progress'
 
 export const runtime = 'nodejs'
@@ -25,7 +25,13 @@ export const GET = withUser(async ({ userId, req }) => {
   if (new URL(req.url).searchParams.get('summary') === '1') {
     const rows = await pg.select({ dayNumber: lessonAssignments.dayNumber, stages: lessonAssignments.stages })
       .from(lessonAssignments).where(and(eq(lessonAssignments.userId, userId), eq(lessonAssignments.courseId, COURSE_ID)))
-    return { summaries: rows.map(row => ({
+    // Only the latest archived record for each relevant ID is needed. A
+    // deleted/reset result remains recoverable, without fetching full history.
+    const archived = await pg.selectDistinctOn([exerciseAttempts.dayNumber, exerciseAttempts.exerciseId]).from(exerciseAttempts)
+      .where(and(eq(exerciseAttempts.userId, userId), eq(exerciseAttempts.courseId, COURSE_ID),
+        sql`${exerciseAttempts.exerciseId} ~ '^(review:)?(grammar-practice:)?ex[.](sgap|swrite|form|infl|collocation)[.]'`))
+      .orderBy(exerciseAttempts.dayNumber, exerciseAttempts.exerciseId, desc(exerciseAttempts.completedAt))
+    return { archive: archived.map(({userId: _user, ...row}) => ({...row, correct: Boolean(row.correct)})), summaries: rows.map(row => ({
       dayNumber: row.dayNumber,
       exerciseIds: Object.entries(row.stages as AssignmentMap).filter(([id]) => id !== 'reading')
         .flatMap(([,stage]) => stage ? stageExerciseIds(stage) : []),
