@@ -1,0 +1,984 @@
+{
+  "passages": [
+    {
+      "id": "pl-b1.reading.day-075",
+      "targetLevel": "A2",
+      "title": "Zamówienie w kawiarni",
+      "passage": "Kawiarnia Pod Zegarem przyjmuje zamówienia na małe spotkania rodzinne. W soboty między godziną dziesiątą a trzynastą można zarezerwować większy stolik na sześć lub osiem osób. Prosimy podać liczbę gości najpóźniej w czwartek wieczorem.\n\nNa miejscu zawsze można kupić kawę, herbatę i lody. Jeśli chcą Państwo zamówić całe ciasto, potrzebujemy informacji dwa dni wcześniej. Do wyboru są ciasto z jabłkami oraz sernik. W dniu spotkania można zamówić dodatkowe porcje z karty, ale nie możemy obiecać, że będzie jeszcze całe ciasto.\n\nDla grup przygotowujemy także talerze z kanapkami. Na jednym talerzu jest sześć kanapek z serem, pomidorami i ogórkami. Możemy zrobić osobny talerz bez sera, jeśli otrzymamy taką prośbę przy rezerwacji. Kelner przynosi napoje dopiero wtedy, gdy goście wybiorą je z karty, żeby kawa nie była zimna.\n\nJeśli zmieni się liczba uczestników, prosimy o telefon. Nie trzeba odwoływać całego spotkania tylko dlatego, że jedna osoba nie przyjdzie. Zmienimy liczbę nakryć na stole.",
+      "questions": [
+        {
+          "id": "q1",
+          "question": "Co przede wszystkim wyjaśnia ogłoszenie?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Jak wybrać ciasto na wynos."
+            },
+            {
+              "id": "B",
+              "text": "Jak zorganizować spotkanie grupy w kawiarni."
+            },
+            {
+              "id": "C",
+              "text": "Jak zamówić napoje i przekąski bez rezerwacji."
+            }
+          ]
+        },
+        {
+          "id": "q2",
+          "question": "Ile kanapek znajduje się na jednym talerzu?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Pięć."
+            },
+            {
+              "id": "B",
+              "text": "Osiem."
+            },
+            {
+              "id": "C",
+              "text": "Sześć."
+            }
+          ]
+        },
+        {
+          "id": "q3",
+          "question": "Dlaczego kelner czeka z przyniesieniem napojów?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Żeby kawa pozostała ciepła."
+            },
+            {
+              "id": "B",
+              "text": "Żeby goście najpierw wybrali ciasto."
+            },
+            {
+              "id": "C",
+              "text": "Żeby sprawdzić liczbę nakryć."
+            }
+          ]
+        },
+        {
+          "id": "q4",
+          "question": "Osiem osób chce spotkać się w sobotę o jedenastej i zjeść całe ciasto. Co najlepiej zrobić w czwartek?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Zamówić ciasto, a stolik wybrać po przyjściu."
+            },
+            {
+              "id": "B",
+              "text": "Zarezerwować stolik, a całe ciasto zamówić dopiero w sobotę."
+            },
+            {
+              "id": "C",
+              "text": "Zarezerwować stolik i zamówić ciasto."
+            }
+          ]
+        },
+        {
+          "id": "q5",
+          "question": "Co oznacza tutaj „liczba nakryć”?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Liczba przygotowanych porcji ciasta."
+            },
+            {
+              "id": "B",
+              "text": "Liczba miejsc przygotowanych przy stole."
+            },
+            {
+              "id": "C",
+              "text": "Liczba talerzy z kanapkami."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-076",
+      "targetLevel": "A2",
+      "title": "Kolacja dla gości",
+      "passage": "W piątek do Hani i Piotra przyjechali znajomi, których dawno nie widzieli. Gospodarze przygotowali zupę pomidorową, pieczone ziemniaki i sałatkę z ogórków. Hania planowała również podać ciasto z jabłkami, ale rano okazało się, że w sklepie nie ma jej ulubionych jabłek.\n\nKupiła więc gruszki i zrobiła mały deser z jogurtem. Piotr chciał dodać do niego dużo miodu, lecz Hania najpierw spróbowała owoców. Były już bardzo słodkie, więc wystarczyła jedna łyżeczka. Sos do sałatki był trochę za kwaśny. Piotr dodał do niego jogurt naturalny, a nie więcej soli.\n\nJeden z gości, Olek, napisał przed przyjazdem, że nie może jeść sera. Hania nie dodała sera do wspólnej sałatki. Postawiła go w osobnej misce na stole, żeby pozostali mogli wziąć tyle, ile chcieli.\n\nPo kolacji zostało trochę ziemniaków i deseru. Goście chętnie zabrali po małym pudełku do domu. Hania zauważyła, że udane spotkanie nie wymaga dokładnego trzymania się planu. Ważniejsze było to, żeby każdy znalazł coś dla siebie i nikt nie musiał długo czekać na posiłek.",
+      "questions": [
+        {
+          "id": "q1",
+          "question": "Co wynika z całej historii?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Goście wolą sami przygotować wspólną kolację."
+            },
+            {
+              "id": "B",
+              "text": "Udana kolacja zależy od elastyczności i potrzeb gości."
+            },
+            {
+              "id": "C",
+              "text": "Dobry posiłek wymaga wcześniejszego kupienia wszystkich składników."
+            }
+          ]
+        },
+        {
+          "id": "q2",
+          "question": "Czym Hania zastąpiła jabłka w deserze?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Ogórkami."
+            },
+            {
+              "id": "B",
+              "text": "Miodem."
+            },
+            {
+              "id": "C",
+              "text": "Gruszkami."
+            }
+          ]
+        },
+        {
+          "id": "q3",
+          "question": "Dlaczego do deseru wystarczyło niewiele miodu?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Jogurt był bardzo słodki."
+            },
+            {
+              "id": "B",
+              "text": "Owoce miały już słodki smak."
+            },
+            {
+              "id": "C",
+              "text": "Goście prosili o mniej miodu."
+            }
+          ]
+        },
+        {
+          "id": "q4",
+          "question": "Olek chce zjeść sałatkę, a inny gość lubi sałatkę z serem. Jak mogą zjeść tę samą potrawę?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Piotr przygotuje dwie nowe sałatki."
+            },
+            {
+              "id": "B",
+              "text": "Drugi gość doda ser do swojej porcji."
+            },
+            {
+              "id": "C",
+              "text": "Olek zje wyłącznie pieczone ziemniaki."
+            }
+          ]
+        },
+        {
+          "id": "q5",
+          "question": "Co oznacza „trzymanie się planu”?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Robienie wszystkiego tak, jak wcześniej ustalono."
+            },
+            {
+              "id": "B",
+              "text": "Podawanie jedzenia w osobnych miskach."
+            },
+            {
+              "id": "C",
+              "text": "Układanie nowej listy zakupów."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-077",
+      "targetLevel": "A2",
+      "title": "Mniej marnowania jedzenia",
+      "passage": "Przed zakupami warto zajrzeć do lodówki. Czasami kupujemy drugi jogurt albo kolejne pomidory, chociaż w domu mamy jeszcze te produkty. Zapisz najpierw rzeczy, które trzeba zjeść, a dopiero potem przygotuj listę zakupów.\n\nW mieszkaniu Julii jest mały koszyk z napisem „Zjedz najpierw”. Julia wkłada do niego produkty, które chce wykorzystać w najbliższych dniach. Dzięki temu widzi je od razu po otwarciu lodówki i nie musi przeszukiwać wszystkich półek. Na pozostałych półkach trzyma produkty przeznaczone na później. Zawsze sprawdza informacje na opakowaniach.\n\nNie każdy posiłek musi wyglądać tak, jak w przepisie. Jeśli planujesz sałatkę z ogórkiem, ale masz pomidory, możesz wybrać inne warzywo. Przed gotowaniem sprawdź, czy ilość jedzenia odpowiada liczbie osób. Lepiej przygotować dodatkową porcję, gdy ktoś naprawdę jest głodny, niż codziennie mieć pełny talerz resztek.\n\nJulia robi większe zakupy w piątek, a w środę kupuje tylko świeże pieczywo. Ten rytm pasuje do jej pracy. Inna osoba może potrzebować innego planu. Najważniejsze jest znalezienie sposobu, który pomaga pamiętać o jedzeniu już kupionym.",
+      "questions": [
+        {
+          "id": "q1",
+          "question": "Jaki jest główny cel poradnika?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Pokazać, jak częściej kupować świeże jedzenie."
+            },
+            {
+              "id": "B",
+              "text": "Wyjaśnić, jak przechowywać jedzenie na każdej półce."
+            },
+            {
+              "id": "C",
+              "text": "Pomóc wykorzystać produkty przed następnymi zakupami."
+            }
+          ]
+        },
+        {
+          "id": "q2",
+          "question": "Co Julia kupuje w środę?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Świeże pieczywo."
+            },
+            {
+              "id": "B",
+              "text": "Warzywa na sałatkę."
+            },
+            {
+              "id": "C",
+              "text": "Produkty na cały tydzień."
+            }
+          ]
+        },
+        {
+          "id": "q3",
+          "question": "Dlaczego Julia używa specjalnego koszyka?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Chce oddzielić warzywa od jogurtów."
+            },
+            {
+              "id": "B",
+              "text": "Chce przygotować wszystkie porcje na piątek."
+            },
+            {
+              "id": "C",
+              "text": "Chce od razu zauważyć jedzenie do szybkiego wykorzystania."
+            }
+          ]
+        },
+        {
+          "id": "q4",
+          "question": "W czwartek w koszyku zostały pomidory, a na kolację zaplanowano sałatkę z ogórkiem. Co jest zgodne z poradnikiem?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Wykorzystać pomidory zamiast kupować ogórek."
+            },
+            {
+              "id": "B",
+              "text": "Zrobić obie sałatki w dużych porcjach."
+            },
+            {
+              "id": "C",
+              "text": "Kupić ogórek i zostawić pomidory do piątku."
+            }
+          ]
+        },
+        {
+          "id": "q5",
+          "question": "Co oznacza tutaj słowo „rytm”?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Lista produktów potrzebnych w pracy."
+            },
+            {
+              "id": "B",
+              "text": "Ilość jedzenia na każdy posiłek."
+            },
+            {
+              "id": "C",
+              "text": "Regularny sposób organizowania zakupów."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-079",
+      "targetLevel": "A2",
+      "title": "Wizyta w punkcie napraw",
+      "passage": "W małym warsztacie na osiedlu można naprawić różne przedmioty codziennego użytku. Do punktu przychodzą osoby z zegarkami, lampami i drobnym sprzętem kuchennym. Przed rozpoczęciem pracy właściciel warsztatu sprawdza, co się zepsuło. Nie przyjmuje wszystkich rzeczy: większy sprzęt odsyła do innego punktu.\n\nW poniedziałek przyszła tam pani Irena. Jej zegarek zatrzymywał się kilka razy w ciągu dnia. Nie wiedziała, czy potrzebuje nowej baterii, czy też innej naprawy. Pracownik poprosił o trochę czasu na sprawdzenie zegarka. Wyjaśnił, że poda cenę przed naprawą, ponieważ różne części mają różne ceny.\n\nIrena miała jeszcze zepsutą lampę, ale nie przyniosła jej tego dnia. Najpierw pokazała pracownikowi zdjęcie lampy i opowiedziała o problemie. Usłyszała, że może ją przynieść w środę, kiedy w warsztacie będzie drugi specjalista.\n\nPo południu dostała wiadomość o zegarku: wystarczy wymienić baterię. Cena była dla niej odpowiednia, więc zgodziła się na usługę. Odbierze zegarek w środę. Dzięki wcześniejszej rozmowie może załatwić obie sprawy podczas jednej kolejnej wizyty.",
+      "questions": [
+        {
+          "id": "q1",
+          "question": "O czym głównie jest artykuł?",
+          "options": [
+            {
+              "id": "A",
+              "text": "O pracy warsztatu i uzgadnianiu naprawy z klientem."
+            },
+            {
+              "id": "B",
+              "text": "O organizowaniu pracy dwóch specjalistów."
+            },
+            {
+              "id": "C",
+              "text": "O wyborze nowego zegarka i lampy."
+            }
+          ]
+        },
+        {
+          "id": "q2",
+          "question": "Co było nie tak z zegarkiem Ireny?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Zatrzymywał się kilka razy dziennie."
+            },
+            {
+              "id": "B",
+              "text": "Miał uszkodzoną szybkę."
+            },
+            {
+              "id": "C",
+              "text": "Nie można było wymienić baterii."
+            }
+          ]
+        },
+        {
+          "id": "q3",
+          "question": "Dlaczego pracownik nie podał ceny od razu?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Koszt zależał od rodzaju potrzebnej części."
+            },
+            {
+              "id": "B",
+              "text": "Właściciel warsztatu był nieobecny."
+            },
+            {
+              "id": "C",
+              "text": "Irena nie przyniosła lampy."
+            }
+          ]
+        },
+        {
+          "id": "q4",
+          "question": "Co Irena może zrobić w środę bez dodatkowej wizyty?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Odebrać lampę i zostawić zegarek po raz pierwszy."
+            },
+            {
+              "id": "B",
+              "text": "Odebrać oba naprawione przedmioty."
+            },
+            {
+              "id": "C",
+              "text": "Odebrać zegarek i zostawić lampę do sprawdzenia."
+            }
+          ]
+        },
+        {
+          "id": "q5",
+          "question": "Co oznacza „załatwić obie sprawy”?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Zapłacić za obie zakończone naprawy."
+            },
+            {
+              "id": "B",
+              "text": "Zrobić to, co trzeba, w obu przypadkach."
+            },
+            {
+              "id": "C",
+              "text": "Sprawdzić ceny w dwóch różnych punktach."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-080",
+      "targetLevel": "A2",
+      "title": "Przesyłka do odbioru",
+      "passage": "— Dzień dobry. Dostałem wiadomość o przesyłce — mówi Kuba w punkcie odbioru. — Czy moja paczka jest już tutaj?\n\n— Proszę pokazać kod z wiadomości — odpowiada pracownica. Po chwili sprawdza dane w komputerze. — Tak, paczka czeka na półce. Ma pan jeszcze jedną przesyłkę?\n\n— Tak, zamówiłem też książkę, ale w wiadomości o książce jest napisane, że dostawa będzie jutro.\n\n— W takim razie dzisiaj wydam panu tylko pierwszą paczkę. Druga jest jeszcze w drodze.\n\nKuba ogląda pudełko. W jednym rogu jest trochę mokre. Pyta, czy może zrobić zdjęcie przed wyjściem z punktu. Pracownica pozwala mu to zrobić i zapisuje informację o stanie opakowania. Wyjaśnia, że nie wie, czy w środku wszystko jest w porządku.\n\n— W domu sprawdzę zawartość — mówi Kuba. — A jutro przyjdę po książkę, jeśli dostanę nową wiadomość.\n\nPracownica pokazuje mu jeszcze kartkę z godzinami pracy. Jutro punkt będzie otwarty od dwunastej, ponieważ rano pracownicy mają szkolenie. Kuba pracuje do czternastej w biurze obok, więc nie będzie musiał zmieniać swoich planów.",
+      "questions": [
+        {
+          "id": "q1",
+          "question": "Co Kuba robi w punkcie odbioru?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Odbiera jedną paczkę i ustala, co zrobić z drugą."
+            },
+            {
+              "id": "B",
+              "text": "Oddaje dwie przesyłki do nadania."
+            },
+            {
+              "id": "C",
+              "text": "Wyjaśnia problem z dostawą książki do domu."
+            }
+          ]
+        },
+        {
+          "id": "q2",
+          "question": "Co pracownica zapisuje podczas pierwszego odbioru?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Informację o stanie pudełka."
+            },
+            {
+              "id": "B",
+              "text": "Godzinę dostawy książki."
+            },
+            {
+              "id": "C",
+              "text": "Adres biura Kuby."
+            }
+          ]
+        },
+        {
+          "id": "q3",
+          "question": "Dlaczego jutro punkt otworzy się później?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Pracownicy mają poranne szkolenie."
+            },
+            {
+              "id": "B",
+              "text": "Pracownicy będą liczyć paczki na półkach."
+            },
+            {
+              "id": "C",
+              "text": "Kurier przyjedzie dopiero po południu."
+            }
+          ]
+        },
+        {
+          "id": "q4",
+          "question": "Kuba otrzyma jutro wiadomość o książce o jedenastej. Kiedy może ją odebrać bez wychodzenia z pracy wcześniej?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Po czternastej."
+            },
+            {
+              "id": "B",
+              "text": "O jedenastej przed otwarciem punktu."
+            },
+            {
+              "id": "C",
+              "text": "O dwunastej, podczas swojej pracy."
+            }
+          ]
+        },
+        {
+          "id": "q5",
+          "question": "Co oznacza „zawartość” w zdaniu Kuby?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Stan zewnętrzny opakowania."
+            },
+            {
+              "id": "B",
+              "text": "Rzeczy znajdujące się w pudełku."
+            },
+            {
+              "id": "C",
+              "text": "Wiadomość z kodem odbioru."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-081",
+      "targetLevel": "A2",
+      "title": "Rozmowa z pracownikiem banku",
+      "passage": "Cześć, Marto!\n\nWczoraj byłem w banku, bo chcę lepiej planować swoje oszczędności. Rozmawiałem z pracownikiem o dwóch różnych kontach. Jedno jest przeznaczone na codzienne wydatki, a drugie na pieniądze, których nie potrzebuję od razu. Poprosiłem o informacje na piśmie, żeby spokojnie porównać warunki w domu.\n\nPracownik zapytał, czy interesuje mnie również kredyt. Powiedziałem, że na razie o nim nie myślę. Zbieram pieniądze na kurs zawodowy, który zacznie się za pół roku. Nie znam jeszcze dokładnej ceny kursu, dlatego chcę mieć możliwość korzystania z części oszczędności.\n\nW domu przeczytałem oba opisy kont. W jednej ofercie można wykonać bez opłaty jeden przelew w miesiącu. W drugiej są inne warunki, których jeszcze nie rozumiem. Nie podpisałem żadnej umowy podczas wizyty.\n\nW przyszły wtorek mam ponownie spotkać się z tym samym pracownikiem. Przygotuję dwa pytania o przelewy i jedno o dostęp do pieniędzy. Jeśli masz czas w weekend, możemy razem przeczytać te informacje. Wiem, że ty też niedawno rozmawiałaś w banku o oszczędzaniu.\n\nPozdrawiam,\nDaniel",
+      "questions": [
+        {
+          "id": "q1",
+          "question": "Co Daniel chce osiągnąć dzięki rozmowie w banku?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Nauczyć Martę wykonywać przelewy."
+            },
+            {
+              "id": "B",
+              "text": "Znaleźć sposób oszczędzania pasujący do jego planów."
+            },
+            {
+              "id": "C",
+              "text": "Wybrać kredyt na kurs zawodowy."
+            }
+          ]
+        },
+        {
+          "id": "q2",
+          "question": "Ile pytań o przelewy chce przygotować Daniel?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Dwa."
+            },
+            {
+              "id": "B",
+              "text": "Jedno."
+            },
+            {
+              "id": "C",
+              "text": "Trzy."
+            }
+          ]
+        },
+        {
+          "id": "q3",
+          "question": "Dlaczego Daniel poprosił o pisemne informacje?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Chce porównać oferty bez pośpiechu."
+            },
+            {
+              "id": "B",
+              "text": "Chce od razu podpisać umowę przez internet."
+            },
+            {
+              "id": "C",
+              "text": "Marta potrzebuje dokumentów do kredytu."
+            }
+          ]
+        },
+        {
+          "id": "q4",
+          "question": "Kurs może wymagać wcześniejszej wpłaty. Która cecha konta jest więc dla Daniela szczególnie ważna?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Możliwość zmiany pracownika banku."
+            },
+            {
+              "id": "B",
+              "text": "Możliwość zaciągnięcia większego kredytu."
+            },
+            {
+              "id": "C",
+              "text": "Możliwość wypłaty potrzebnej części pieniędzy."
+            }
+          ]
+        },
+        {
+          "id": "q5",
+          "question": "Co oznacza w tym e-mailu „na razie”?",
+          "options": [
+            {
+              "id": "A",
+              "text": "W obecnej chwili, choć później może się to zmienić."
+            },
+            {
+              "id": "B",
+              "text": "Od bardzo dawna."
+            },
+            {
+              "id": "C",
+              "text": "Po zakończeniu kursu."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-082",
+      "targetLevel": "A2",
+      "title": "Wybór usługi przez internet",
+      "passage": "Firma Domowy Serwis przygotowała nowy formularz dla osób, które chcą zamówić pomoc przy drobnych naprawach w mieszkaniu. Na stronie można wybrać elektryka, hydraulika albo specjalistę od sprzętu domowego. Każdy rodzaj usługi ma osobny opis oraz listę przykładowych prac.\n\nW formularzu prosimy napisać, na czym polega problem. Można również dodać zdjęcie, ale nie jest to konieczne. Po wysłaniu zgłoszenia pracownik dzwoni do klienta i proponuje termin wizyty. Samo wybranie godziny w formularzu nie oznacza jeszcze, że wizyta jest umówiona. Czekamy na potwierdzenie obu stron.\n\nJeżeli klient nie wie, jakiego specjalisty potrzebuje, może wybrać pole „Nie wiem”. Wtedy pracownik pomoże mu zdecydować podczas rozmowy. Nie trzeba wysyłać kilku takich samych zgłoszeń do różnych specjalistów.\n\nPrzy opisie każdej usługi podajemy cenę samej wizyty. Koszt naprawy zależy od rodzaju pracy i potrzebnych części. Specjalista omawia go z klientem przed rozpoczęciem naprawy. Po zakończeniu wizyty klient może otrzymać krótkie podsumowanie wykonanych prac na adres e-mail.",
+      "questions": [
+        {
+          "id": "q1",
+          "question": "Co wyjaśnia ogłoszenie?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Jak wybrać usługę, zgłosić problem i ustalić wizytę."
+            },
+            {
+              "id": "B",
+              "text": "Jak kupić części do samodzielnej naprawy."
+            },
+            {
+              "id": "C",
+              "text": "Jak porównać wyłącznie ceny wizyt specjalistów."
+            }
+          ]
+        },
+        {
+          "id": "q2",
+          "question": "Co można dodać do formularza, ale nie jest to obowiązkowe?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Opis problemu."
+            },
+            {
+              "id": "B",
+              "text": "Zdjęcie problemu."
+            },
+            {
+              "id": "C",
+              "text": "Numer telefonu."
+            }
+          ]
+        },
+        {
+          "id": "q3",
+          "question": "Dlaczego cena naprawy nie jest podana dokładnie na stronie?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Wszystkie naprawy są rozliczane dopiero po wizycie."
+            },
+            {
+              "id": "B",
+              "text": "Zależy od pracy i potrzebnych części."
+            },
+            {
+              "id": "C",
+              "text": "Klient sam wybiera cenę w formularzu."
+            }
+          ]
+        },
+        {
+          "id": "q4",
+          "question": "Klient nie wie, czy awaria pralki wymaga elektryka czy innego fachowca. Chce wizyty w piątek o piętnastej. Co powinien zrobić?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Wybrać „Nie wiem”, opisać awarię i poczekać na potwierdzenie terminu."
+            },
+            {
+              "id": "B",
+              "text": "Wybrać dowolnego specjalistę i poczekać na niego w piątek bez rozmowy."
+            },
+            {
+              "id": "C",
+              "text": "Wysłać dwa osobne zgłoszenia i uznać godzinę za ustaloną."
+            }
+          ]
+        },
+        {
+          "id": "q5",
+          "question": "Co oznacza „podsumowanie wykonanych prac”?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Lista możliwych usług na przyszłość."
+            },
+            {
+              "id": "B",
+              "text": "Krótka informacja o tym, co specjalista zrobił."
+            },
+            {
+              "id": "C",
+              "text": "Formularz do ustalenia pierwszego terminu."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-083",
+      "targetLevel": "A2",
+      "title": "Zgłoszenie problemu z internetem",
+      "passage": "W środę rano Zuzanna nie mogła rozpocząć pracy przy komputerze, ponieważ w jej mieszkaniu nie działał internet. Sprawdziła, czy problem występuje również w telefonie po połączeniu z domową siecią. Telefon także nie miał dostępu do internetu. Zuzanna zapisała godzinę, o której zauważyła awarię.\n\nZadzwoniła do firmy, od której ma internet. Pracownik zapytał o numer umowy i o to, czy na urządzeniu świecą się lampki. Zuzanna podała informacje, które mogła sprawdzić. Nie wiedziała, czy problem dotyczy tylko jej mieszkania, czy całego budynku.\n\nPracownik przyjął zgłoszenie i podał jego numer. Obiecał wysłać wiadomość, kiedy będzie wiedział więcej. Zuzanna miała ważne spotkanie o jedenastej, więc nie chciała czekać bez planu. Napisała do koleżanki z pracy, która mieszka blisko. Koleżanka zgodziła się udostępnić jej miejsce przy stole na dwie godziny.\n\nPo spotkaniu Zuzanna dostała wiadomość, że internet znów działa. Wróciła do mieszkania i sprawdziła połączenie. Dopiero gdy komputer i telefon działały prawidłowo, uznała sprawę za zakończoną. Numer zgłoszenia zachowała do końca tygodnia.",
+      "questions": [
+        {
+          "id": "q1",
+          "question": "Co pokazuje historia Zuzanny?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Jak urządzić stanowisko pracy u koleżanki."
+            },
+            {
+              "id": "B",
+              "text": "Jak zgłosić awarię i zorganizować pracę w czasie problemu."
+            },
+            {
+              "id": "C",
+              "text": "Jak zmienić umowę z dostawcą internetu."
+            }
+          ]
+        },
+        {
+          "id": "q2",
+          "question": "O jaki dokument zapytał pracownik firmy?",
+          "options": [
+            {
+              "id": "A",
+              "text": "O adres koleżanki."
+            },
+            {
+              "id": "B",
+              "text": "O numer umowy."
+            },
+            {
+              "id": "C",
+              "text": "O plan spotkania."
+            }
+          ]
+        },
+        {
+          "id": "q3",
+          "question": "Dlaczego Zuzanna poszła do koleżanki?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Chciała zgłosić problem z internetem w drugim mieszkaniu."
+            },
+            {
+              "id": "B",
+              "text": "Pracownik firmy poprosił ją o opuszczenie mieszkania."
+            },
+            {
+              "id": "C",
+              "text": "Musiała uczestniczyć w spotkaniu służbowym mimo awarii."
+            }
+          ]
+        },
+        {
+          "id": "q4",
+          "question": "Gdyby po powrocie telefon działał w domowej sieci, ale komputer nadal nie miał internetu, jak zareagowałaby Zuzanna zgodnie ze swoim podejściem?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Zgłosiłaby od razu zmianę numeru umowy."
+            },
+            {
+              "id": "B",
+              "text": "Uznałaby zgłoszenie za zakończone po otrzymaniu wiadomości."
+            },
+            {
+              "id": "C",
+              "text": "Nie uznałaby jeszcze problemu za rozwiązany."
+            }
+          ]
+        },
+        {
+          "id": "q5",
+          "question": "Co znaczy „udostępnić jej miejsce przy stole”?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Pozwolić jej korzystać z miejsca przy stole."
+            },
+            {
+              "id": "B",
+              "text": "Przygotować posiłek na spotkanie."
+            },
+            {
+              "id": "C",
+              "text": "Przenieść stół do jej mieszkania."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-084",
+      "targetLevel": "A2",
+      "title": "Umówienie terminu w urzędzie",
+      "passage": "Przed wizytą w urzędzie dobrze jest sprawdzić, jak można umówić spotkanie. Nie wszystkie sprawy są przyjmowane w ten sam sposób. W niektórych przypadkach można wybrać termin przez internet, a w innych trzeba wcześniej porozmawiać z pracownikiem.\n\nNa stronie fikcyjnego urzędu w Zielonym Mieście są dwie listy: sprawy wymagające rezerwacji oraz sprawy, z którymi można przyjść bez niej. Magda chce odebrać dokument, ale nie jest pewna, na której liście znajduje się jej sprawa. Zamiast wybierać przypadkowy termin, dzwoni pod numer informacji.\n\nPracownik wyjaśnia jej, że odbiór tego dokumentu nie wymaga rezerwacji. Prosi jednak, żeby Magda przyszła po otrzymaniu wiadomości o jego przygotowaniu. Magda zapisuje godziny pracy punktu odbioru i pyta, co powinna ze sobą zabrać.\n\nJeżeli umawiasz inną wizytę przez internet, zachowaj potwierdzenie. Sprawdź, czy podano w nim datę, godzinę i adres odpowiedniego budynku. Jeśli wiesz, że nie przyjdziesz, odwołaj spotkanie w sposób opisany w potwierdzeniu. Dzięki temu z wolnego terminu może skorzystać inna osoba.",
+      "questions": [
+        {
+          "id": "q1",
+          "question": "Jaką radę daje tekst osobie planującej wizytę?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Najpierw sprawdzić sposób obsługi konkretnej sprawy i przygotować się do wizyty."
+            },
+            {
+              "id": "B",
+              "text": "Wybrać dowolny urząd i zapytać o wszystko na miejscu."
+            },
+            {
+              "id": "C",
+              "text": "Zawsze rezerwować termin przez internet."
+            }
+          ]
+        },
+        {
+          "id": "q2",
+          "question": "Co Magda zapisuje po rozmowie?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Godziny pracy punktu odbioru."
+            },
+            {
+              "id": "B",
+              "text": "Numer nowej rezerwacji."
+            },
+            {
+              "id": "C",
+              "text": "Adres drugiego urzędu."
+            }
+          ]
+        },
+        {
+          "id": "q3",
+          "question": "Dlaczego warto odwołać spotkanie, na które nie można przyjść?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Żeby pracownik przesłał ponownie adres."
+            },
+            {
+              "id": "B",
+              "text": "Żeby automatycznie otrzymać inny dokument."
+            },
+            {
+              "id": "C",
+              "text": "Żeby ktoś inny mógł wykorzystać ten termin."
+            }
+          ]
+        },
+        {
+          "id": "q4",
+          "question": "Magda ma wolny wtorek, ale nie dostała jeszcze wiadomości o dokumencie. Co jest zgodne z informacją pracownika?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Zarezerwować wtorek i przyjść niezależnie od wiadomości."
+            },
+            {
+              "id": "B",
+              "text": "Przyjść we wtorek bez rezerwacji i zażądać dokumentu."
+            },
+            {
+              "id": "C",
+              "text": "Poczekać na wiadomość, a potem wybrać godziny odbioru."
+            }
+          ]
+        },
+        {
+          "id": "q5",
+          "question": "Co oznacza „przypadkowy termin”?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Termin wybrany bez sprawdzenia, czy jest odpowiedni."
+            },
+            {
+              "id": "B",
+              "text": "Termin uzgodniony po rozmowie z pracownikiem."
+            },
+            {
+              "id": "C",
+              "text": "Termin odwołany przez inną osobę."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-085",
+      "targetLevel": "B1",
+      "title": "Spacer po nowej dzielnicy",
+      "passage": "Cześć, Kasiu!\n\nW zeszłym tygodniu przeprowadziłem się na drugą stronę miasta. Do tej pory znałem tę dzielnicę głównie z okna autobusu, więc w niedzielę postanowiłem przejść się bez konkretnego celu. Wziąłem ze sobą telefon, ale schowałem go do kieszeni, żeby nie patrzeć cały czas na mapę. Chciałem sam odkryć kilka miejsc.\n\nNajpierw trafiłem na niewielki plac, na którym w dni robocze działa targ. W niedzielę było tam spokojnie, a obok fontanny siedziało kilka osób z kawą. Z placu poszedłem w stronę starego kościoła. Za nim znalazłem przejście między kamienicami prowadzące do parku. Nie jest ono dobrze widoczne z głównej ulicy, dlatego prawdopodobnie wcześniej mijałem je wiele razy.\n\nW parku spotkałem sąsiadkę, którą poznałem podczas przeprowadzki. Zapytałem ją o bibliotekę i sklep spożywczy. Pokazała mi krótszą drogę do obu miejsc, ale ostrzegła, że po deszczu ścieżka przez park robi się bardzo błotnista. Zapisałem sobie również trasę prowadzącą chodnikiem wzdłuż ulicy. Jest nieco dłuższa, lecz nie trzeba wchodzić na miękką ziemię.\n\nW sobotę chciałbym pokazać ci okolicę. Jeśli będzie sucho, przejdziemy przez park. Jeśli pogoda się nie uda, spotkajmy się na placu i przejdźmy do biblioteki ulicą. Możemy potem wypić kawę. Na razie nie znam najlepszej kawiarni w dzielnicy, ale właśnie to jest przyjemne: wciąż mam coś nowego do odkrycia.\n\nDo zobaczenia,\nMichał",
+      "questions": [
+        {
+          "id": "q1",
+          "question": "Co Michał chce przekazać Kasi w całej wiadomości?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Wyjaśnia, dlaczego chce ponownie zmienić mieszkanie."
+            },
+            {
+              "id": "B",
+              "text": "Porównuje ceny kawy i zakupów w dwóch dzielnicach."
+            },
+            {
+              "id": "C",
+              "text": "Opisuje, jak poznaje nową okolicę, i proponuje wspólny spacer."
+            }
+          ]
+        },
+        {
+          "id": "q2",
+          "question": "Gdzie znajduje się mało widoczne przejście do parku?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Przy wejściu do biblioteki."
+            },
+            {
+              "id": "B",
+              "text": "Obok fontanny na placu."
+            },
+            {
+              "id": "C",
+              "text": "Za starym kościołem, między kamienicami."
+            }
+          ]
+        },
+        {
+          "id": "q3",
+          "question": "Dlaczego Michał zapisał także trasę chodnikiem?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Ścieżka w parku bywa błotnista po deszczu."
+            },
+            {
+              "id": "B",
+              "text": "Sąsiadka nie znała krótszej drogi."
+            },
+            {
+              "id": "C",
+              "text": "Ścieżka w parku jest zamykana w weekendy."
+            }
+          ]
+        },
+        {
+          "id": "q4",
+          "question": "W piątek padało, ale w sobotę świeci słońce. Kasia chce uniknąć błota. Która trasa będzie najpewniejsza?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Przez park, ponieważ w sobotę nie pada."
+            },
+            {
+              "id": "B",
+              "text": "Przez przejście za kościołem i dalej przez park."
+            },
+            {
+              "id": "C",
+              "text": "Z placu do biblioteki wzdłuż ulicy."
+            }
+          ]
+        },
+        {
+          "id": "q5",
+          "question": "Co Michał ma na myśli, pisząc „mijałem je”?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Przechodziłem lub przejeżdżałem obok niego."
+            },
+            {
+              "id": "B",
+              "text": "Wchodziłem do niego i wracałem tą samą drogą."
+            },
+            {
+              "id": "C",
+              "text": "Szukałem go na mapie przed każdym spacerem."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
