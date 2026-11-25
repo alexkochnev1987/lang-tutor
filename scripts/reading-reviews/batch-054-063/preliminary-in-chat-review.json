@@ -1,0 +1,606 @@
+{
+  "passages": [
+    {
+      "id": "pl-b1.reading.day-054",
+      "scores": {
+        "naturalness": 96,
+        "level": 88,
+        "questions": 83,
+        "ambiguity": 97,
+        "theme": 97,
+        "vocabulary": 90
+      },
+      "criticalIssues": [],
+      "notes": "A2+/B1 na granicy: formularz, zrezygnuje, gabinet dyrektora; kontekst pomaga. Q3 i Q5 mają zbyt łatwy do odrzucenia wariant.",
+      "items": [
+        {
+          "id": "q1",
+          "option": "B",
+          "evidence": "Do piątku należy oddać formularz w pokoju obok gabinetu dyrektora.",
+          "ambiguous": false,
+          "distractorScore": 82,
+          "skillMatches": true,
+          "notes": "C przesadza z zakupem materiałów, A miesza wybór przedmiotu i poziomu."
+        },
+        {
+          "id": "q2",
+          "option": "A",
+          "evidence": "Numer sali pojawi się na tablicy przy wejściu w ostatni poniedziałek listopada.",
+          "ambiguous": false,
+          "distractorScore": 80,
+          "skillMatches": true,
+          "notes": "C niezręczne: piątek jest dniem końca zapisów."
+        },
+        {
+          "id": "q3",
+          "option": "C",
+          "evidence": "Nie zapisujemy uczniów przez telefon, ponieważ nauczyciele potrzebują podpisanych formularzy.",
+          "ambiguous": false,
+          "distractorScore": 76,
+          "skillMatches": true,
+          "notes": "B możliwe organizacyjnie, A mniej prawdopodobne."
+        },
+        {
+          "id": "q4",
+          "option": "C",
+          "evidence": "Matematyka odbywa się w poniedziałki i środy od godziny piętnastej. Zajęcia z języka polskiego odbywają się we wtorki o tej samej porze.",
+          "ambiguous": false,
+          "distractorScore": 90,
+          "skillMatches": true,
+          "notes": "Trzeba połączyć terminy z obowiązkiem oddania formularza."
+        },
+        {
+          "id": "q5",
+          "option": "B",
+          "evidence": "Jeżeli w grupie nie ma już miejsca, nazwisko ucznia trafia na listę osób oczekujących. Nauczyciel skontaktuje się z uczniem, gdy ktoś zrezygnuje.",
+          "ambiguous": false,
+          "distractorScore": 68,
+          "skillMatches": true,
+          "notes": "C odwraca znaczenie oczekiwania; zastąpić bardziej realnym błędnym statusem ucznia."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-055",
+      "scores": {
+        "naturalness": 96,
+        "level": 86,
+        "questions": 80,
+        "ambiguity": 98,
+        "theme": 96,
+        "vocabulary": 88
+      },
+      "criticalIssues": [],
+      "notes": "A2+; matura, semestr, rozdział, samodzielne rozwiązanie. Q4 poprawne zastosowanie metody, lecz C powtarza odrzuconą strategię.",
+      "items": [
+        {
+          "id": "q1",
+          "option": "A",
+          "evidence": "Julia wyjaśnia matematykę, a Filip pomaga jej ćwiczyć krótkie rozmowy po angielsku.",
+          "ambiguous": false,
+          "distractorScore": 72,
+          "skillMatches": true,
+          "notes": "B zbyt kategoryczne (wszystkie); C wspólny cel może brzmieć wiarygodnie. Usunąć absolut."
+        },
+        {
+          "id": "q2",
+          "option": "C",
+          "evidence": "W środę Filip nie mógł przyjść, więc wysłał Julii nagranie z trzema pytaniami.",
+          "ambiguous": false,
+          "distractorScore": 85,
+          "skillMatches": true,
+          "notes": "A i B realistyczne formy przekazania materiału, choć A nie określa medium."
+        },
+        {
+          "id": "q3",
+          "option": "B",
+          "evidence": "Po kilku spotkaniach zauważyli, że spędzają dużo czasu nad materiałem, który oboje już znają.",
+          "ambiguous": false,
+          "distractorScore": 85,
+          "skillMatches": true,
+          "notes": "Oba błędne powody pasują do sytuacji nauki."
+        },
+        {
+          "id": "q4",
+          "option": "A",
+          "evidence": "Julia wyjaśnia matematykę, a Filip pomaga jej ćwiczyć krótkie rozmowy po angielsku.",
+          "ambiguous": false,
+          "distractorScore": 75,
+          "skillMatches": true,
+          "notes": "B samodzielna praca jest w tekście; C stara metoda."
+        },
+        {
+          "id": "q5",
+          "option": "A",
+          "evidence": "W piątek przygotowała dla niego podobne zadania do samodzielnego rozwiązania. Nadal lubią pracować razem, ale ich plan działa także wtedy, gdy jedno z nich musi zostać w domu.",
+          "ambiguous": false,
+          "distractorScore": 61,
+          "skillMatches": true,
+          "notes": "C wyłącznie z nauczycielem jest sztucznie skrajne, B proste przeciwieństwo."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-056",
+      "scores": {
+        "naturalness": 94,
+        "level": 84,
+        "questions": 78,
+        "ambiguity": 97,
+        "theme": 97,
+        "vocabulary": 85
+      },
+      "criticalIssues": [
+        "Punctuation: ostatnie zdanie zawiera zbędny przecinek przed porównawczym «niż» (równoległe bezokoliczniki)."
+      ],
+      "notes": "A2+/B1: zagadnienie, fragment, treść, ustalona godzina; uprościć pytania i część poradnika.",
+      "items": [
+        {
+          "id": "q1",
+          "option": "C",
+          "evidence": "Najpierw weź zeszyt i zapisz tematy, które będą na sprawdzianie. Przy każdym temacie postaw znak plus, jeśli dobrze go rozumiesz, lub znak zapytania, jeśli potrzebujesz pomocy.",
+          "ambiguous": false,
+          "distractorScore": 70,
+          "skillMatches": true,
+          "notes": "A i B wyraźnie skrajne: całych, wyłącznie. Zamiast tego dać realistyczne konkurencyjne plany."
+        },
+        {
+          "id": "q2",
+          "option": "B",
+          "evidence": "Potem sprawdź błędy i wybierz najwyżej dwa najtrudniejsze zagadnienia do ponownej nauki.",
+          "ambiguous": false,
+          "distractorScore": 80,
+          "skillMatches": true,
+          "notes": "Liczby i alternatywa oparta na liście są możliwe."
+        },
+        {
+          "id": "q3",
+          "option": "B",
+          "evidence": "Wystarczy krótka notatka z przykładem. W ten sposób możesz później szybko sprawdzić, co już pamiętasz.",
+          "ambiguous": false,
+          "distractorScore": 66,
+          "skillMatches": true,
+          "notes": "C jawnie przeczy krótkiej notatce, A zbyt sztucznie miesza późniejszy etap; użyć realistycznych celów notowania."
+        },
+        {
+          "id": "q4",
+          "option": "C",
+          "evidence": "Zacznij od tematów ze znakiem zapytania.",
+          "ambiguous": false,
+          "distractorScore": 80,
+          "skillMatches": true,
+          "notes": "Druga część odpowiedzi opiera się na ostatnim akapicie."
+        },
+        {
+          "id": "q5",
+          "option": "A",
+          "evidence": "Po przeczytaniu krótkiego fragmentu zamknij książkę i spróbuj wyjaśnić jego treść własnymi słowami.",
+          "ambiguous": false,
+          "distractorScore": 68,
+          "skillMatches": true,
+          "notes": "B i C oba są literalnym kopiowaniem, a A trudniejsze językowo niż wyrażenie; uprościć i rozróżnić błędne znaczenia."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-057",
+      "scores": {
+        "naturalness": 95,
+        "level": 87,
+        "questions": 77,
+        "ambiguity": 97,
+        "theme": 96,
+        "vocabulary": 88
+      },
+      "criticalIssues": [],
+      "notes": "Słownictwo biurowe oraz konstrukcje złożone podnoszą poziom do A2+. Q3 i Q5 zawierają sztuczne alternatywy.",
+      "items": [
+        {
+          "id": "q1",
+          "option": "B",
+          "evidence": "Miałem już zacząć pracę z klientem, ale szef powiedział, że przez pierwsze dwa dni nie będę rozmawiać z klientami sam.",
+          "ambiguous": false,
+          "distractorScore": 64,
+          "skillMatches": true,
+          "notes": "C sam organizuje całe biuro jest nieprawdopodobne, A zmiana zasad nie jest umotywowana; zastąpić celami wdrożenia."
+        },
+        {
+          "id": "q2",
+          "option": "C",
+          "evidence": "Po południu dostałem plan na jutro i adres strony z materiałami do nauki.",
+          "ambiguous": false,
+          "distractorScore": 86,
+          "skillMatches": true,
+          "notes": "B wykorzystuje szczegóły z wcześniejszej części; A również możliwe przy wdrożeniu."
+        },
+        {
+          "id": "q3",
+          "option": "A",
+          "evidence": "Sprawdziła je razem ze mną przed obiadem, żebym poznał sposób zapisu zamówień.",
+          "ambiguous": false,
+          "distractorScore": 64,
+          "skillMatches": true,
+          "notes": "B nowicjusz ocenia Martę jest nielogiczne; C lepsze, ale od razu sprzeczne z zakazem samodzielnych rozmów."
+        },
+        {
+          "id": "q4",
+          "option": "B",
+          "evidence": "Miałem już zacząć pracę z klientem, ale szef powiedział, że przez pierwsze dwa dni nie będę rozmawiać z klientami sam. Mam najpierw posłuchać rozmów Marty i nauczyć się, gdzie zapisujemy informacje o zamówieniach.",
+          "ambiguous": false,
+          "distractorScore": 81,
+          "skillMatches": true,
+          "notes": "C zbyt bierne, jednak A realistyczny błędny krok."
+        },
+        {
+          "id": "q5",
+          "option": "C",
+          "evidence": "Nikt nie oczekiwał, że od razu będę wszystko wiedział.",
+          "ambiguous": false,
+          "distractorScore": 62,
+          "skillMatches": true,
+          "notes": "A i B nie są bliskimi znaczeniami czasowymi w tym kontekście. Zastąpić A alternatywą typu po krótkim czasie."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-058",
+      "scores": {
+        "naturalness": 95,
+        "level": 79,
+        "questions": 82,
+        "ambiguity": 97,
+        "theme": 96,
+        "vocabulary": 85
+      },
+      "criticalIssues": [],
+      "notes": "B1- obciążenie: miejscowości położone, wynagrodzenie, odpowiednio, przedział, dojazdy. Uprościć bez utraty dwóch warunków planu.",
+      "items": [
+        {
+          "id": "q1",
+          "option": "A",
+          "evidence": "Można było zaczynać między siódmą a dziewiątą, ale od dziesiątej do czternastej cały zespół musiał być w biurze.",
+          "ambiguous": false,
+          "distractorScore": 83,
+          "skillMatches": true,
+          "notes": "Dobre alternatywy o elastyczności czasu."
+        },
+        {
+          "id": "q2",
+          "option": "A",
+          "evidence": "od dziesiątej do czternastej cały zespół musiał być w biurze. W tym czasie odbywały się spotkania z klientami.",
+          "ambiguous": false,
+          "distractorScore": 90,
+          "skillMatches": true,
+          "notes": "B myli przedziały, C realistyczne godziny."
+        },
+        {
+          "id": "q3",
+          "option": "C",
+          "evidence": "Niektórzy woleli jednak zaczynać tak jak dawniej, ponieważ po pracy odbierali dzieci ze szkoły.",
+          "ambiguous": false,
+          "distractorScore": 77,
+          "skillMatches": true,
+          "notes": "A sprzeczne z niezmienioną płacą, B możliwe przy dojazdach."
+        },
+        {
+          "id": "q4",
+          "option": "B",
+          "evidence": "Każdy mógł wybrać początek dnia w podanym przedziale, a jego wybór nie musiał być taki sam każdego dnia.",
+          "ambiguous": false,
+          "distractorScore": 82,
+          "skillMatches": true,
+          "notes": "B wymaga dodatkowo reguł z poprzedniego akapitu. A/C sensowne błędne interpretacje."
+        },
+        {
+          "id": "q5",
+          "option": "A",
+          "evidence": "Po miesiącu szef zebrał opinie pracowników. Większość chciała zachować nowy plan.",
+          "ambiguous": false,
+          "distractorScore": 69,
+          "skillMatches": true,
+          "notes": "C kierunek przekazywania opinii odwrócony, B rejestr godzin niezwiązany z opinią. Użyć bliższych alternatyw."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-059",
+      "scores": {
+        "naturalness": 97,
+        "level": 86,
+        "questions": 83,
+        "ambiguity": 98,
+        "theme": 97,
+        "vocabulary": 89
+      },
+      "criticalIssues": [],
+      "notes": "Dialog naturalny, ale słownictwo abstrakcyjne: ustalić, uzyskać, dane. Q4 zastosowanie prostej reguły do dwóch stanów, granica wnioskowania.",
+      "items": [
+        {
+          "id": "q1",
+          "option": "C",
+          "evidence": "Dopiero wtedy wspólnie zdecydujemy, które informacje trzeba jeszcze uzyskać od klienta.",
+          "ambiguous": false,
+          "distractorScore": 71,
+          "skillMatches": true,
+          "notes": "A i B są odległymi celami; lepiej alternatywy o podziale zadań i terminach."
+        },
+        {
+          "id": "q2",
+          "option": "B",
+          "evidence": "— A kto przygotuje tabelę z kosztami? Nie mam w tym dużego doświadczenia.\n\n— Zrobię ją ja.",
+          "ambiguous": false,
+          "distractorScore": 85,
+          "skillMatches": true,
+          "notes": "Trzeba śledzić mówiącego, A i C naturalni kandydaci."
+        },
+        {
+          "id": "q3",
+          "option": "C",
+          "evidence": "Nie dzwoń jeszcze do niego. Najpierw musimy ustalić, czego dokładnie nie wiemy.",
+          "ambiguous": false,
+          "distractorScore": 84,
+          "skillMatches": true,
+          "notes": "A i B wydarzenia z rozmowy w błędnej kolejności."
+        },
+        {
+          "id": "q4",
+          "option": "A",
+          "evidence": "Dobrze, zapiszę dziś wszystkie pytania w jednym pliku. Jeśli nie znajdę odpowiedzi w dokumentach, zostawię wolne miejsce obok pytania.",
+          "ambiguous": false,
+          "distractorScore": 84,
+          "skillMatches": true,
+          "notes": "Zastosowanie warunku do dwóch produktów."
+        },
+        {
+          "id": "q5",
+          "option": "B",
+          "evidence": "Brakuje nam informacji o cenach. Dzisiaj wystarczy, że sprawdzisz dokumenty od klienta.",
+          "ambiguous": false,
+          "distractorScore": 70,
+          "skillMatches": true,
+          "notes": "A ukrywanie informacji jest odległe; C dotyczy pliku, lecz nie braku danych."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-060",
+      "scores": {
+        "naturalness": 94,
+        "level": 82,
+        "questions": 78,
+        "ambiguity": 96,
+        "theme": 95,
+        "vocabulary": 86
+      },
+      "criticalIssues": [],
+      "notes": "Tytuł mówi o ogłoszeniu, a tekst to odpowiedź na zgłoszenie. Zwroty rekrutacyjne i długi q4 podnoszą trudność; «adres materiałów» nie dotyczy tego tekstu. Podpis «Pozdrawiam, Anna, dział rekrutacji» lepiej rozdzielić na osobne linie.",
+      "items": [
+        {
+          "id": "q1",
+          "option": "B",
+          "evidence": "Pierwsza rozmowa odbędzie się przez internet i potrwa około dwudziestu minut.",
+          "ambiguous": false,
+          "distractorScore": 78,
+          "skillMatches": true,
+          "notes": "A/C prawdopodobne etapy procesu, ale zła kolejność."
+        },
+        {
+          "id": "q2",
+          "option": "B",
+          "evidence": "Pierwsza rozmowa odbędzie się przez internet i potrwa około dwudziestu minut.",
+          "ambiguous": false,
+          "distractorScore": 90,
+          "skillMatches": true,
+          "notes": "Równoległe warianty czasu."
+        },
+        {
+          "id": "q3",
+          "option": "A",
+          "evidence": "Nie trzeba wysyłać dodatkowego życiorysu, ponieważ mamy już Pani dokumenty.",
+          "ambiguous": false,
+          "distractorScore": 69,
+          "skillMatches": true,
+          "notes": "B/C zbyt kategoryczne; alternatywne realne zasady rekrutacji."
+        },
+        {
+          "id": "q4",
+          "option": "C",
+          "evidence": "Możemy zaproponować wtorek o jedenastej lub środę o szesnastej.",
+          "ambiguous": false,
+          "distractorScore": 75,
+          "skillMatches": true,
+          "notes": "Wymaga również informacji o braku wymogu sprzedaży i opisie obowiązków. B słabe, ale realistyczny błąd."
+        },
+        {
+          "id": "q5",
+          "option": "C",
+          "evidence": "Do codziennych obowiązków należą rozmowy z klientami, sprawdzanie adresów dostaw oraz zapisywanie nowych zamówień w komputerze.",
+          "ambiguous": false,
+          "distractorScore": 65,
+          "skillMatches": true,
+          "notes": "A dostawa jest bliska tematowi, B oferty dla pracowników nie mają związku; C powtarza słowo zamówienia."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-061",
+      "scores": {
+        "naturalness": 96,
+        "level": 78,
+        "questions": 77,
+        "ambiguity": 97,
+        "theme": 97,
+        "vocabulary": 85
+      },
+      "criticalIssues": [],
+      "notes": "B1-: informacja zwrotna, delegacja, propozycja, spostrzeżenia, wyciągnięcie wniosków; uprościć szczególnie pytania i tytuł.",
+      "items": [
+        {
+          "id": "q1",
+          "option": "A",
+          "evidence": "Chcemy wspólnie porozmawiać o tym, jak pracowaliśmy przez ostatnie trzy miesiące, co nam się udało i jakie zmiany warto wprowadzić przy kolejnym zadaniu.",
+          "ambiguous": false,
+          "distractorScore": 73,
+          "skillMatches": true,
+          "notes": "B wykluczone wprost na początku; C ocena osób także wyraźnie wykluczona. Realistyczniejsze alternatywy celów zebrania."
+        },
+        {
+          "id": "q2",
+          "option": "C",
+          "evidence": "Krótki raport ze spotkania otrzyma cały zespół w piątek rano.",
+          "ambiguous": false,
+          "distractorScore": 89,
+          "skillMatches": true,
+          "notes": "Pozostałe terminy pochodzą z tekstu."
+        },
+        {
+          "id": "q3",
+          "option": "A",
+          "evidence": "Nie trzeba wpisywać nazwisk innych pracowników, ponieważ rozmowa ma dotyczyć sposobu pracy, a nie oceny konkretnych osób.",
+          "ambiguous": false,
+          "distractorScore": 66,
+          "skillMatches": true,
+          "notes": "C sprzeczne wprost z celem, B niezręczne («zachowanie nazwisk»). Użyć naturalnych powodów anonimowości."
+        },
+        {
+          "id": "q4",
+          "option": "A",
+          "evidence": "Osoby, które w czwartek będą w delegacji, mogą przesłać również propozycję zmiany razem z notatką.",
+          "ambiguous": false,
+          "distractorScore": 81,
+          "skillMatches": true,
+          "notes": "Termin wynika z wcześniejszego akapitu. C prezentacja klientowi nie pasuje do spotkania."
+        },
+        {
+          "id": "q5",
+          "option": "B",
+          "evidence": "Na początku zebrania omówimy wspólnie najczęstsze uwagi.",
+          "ambiguous": false,
+          "distractorScore": 72,
+          "skillMatches": true,
+          "notes": "A słabo związane z retrospektywą; C wiarygodne, lecz tekst wyklucza ocenianie osób. «Spostrzeżenia» trudne dla A2."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-062",
+      "scores": {
+        "naturalness": 95,
+        "level": 86,
+        "questions": 80,
+        "ambiguity": 97,
+        "theme": 97,
+        "vocabulary": 87
+      },
+      "criticalIssues": [],
+      "notes": "A2+; «w dni, w które» mniej naturalne niż «w dni, kiedy». Q3 «całkowita praca z domu» niezgrabne: «praca wyłącznie z domu».",
+      "items": [
+        {
+          "id": "q1",
+          "option": "C",
+          "evidence": "Nie uważa już, że jedno miejsce pracy jest najlepsze do wszystkich obowiązków.",
+          "ambiguous": false,
+          "distractorScore": 66,
+          "skillMatches": true,
+          "notes": "A nieuzasadniony warunek biurka, B zbyt kategoryczne codziennie/całego zespołu."
+        },
+        {
+          "id": "q2",
+          "option": "A",
+          "evidence": "Zosia porozmawiała z szefem i zaczęła przychodzić do biura we wtorki i czwartki.",
+          "ambiguous": false,
+          "distractorScore": 91,
+          "skillMatches": true,
+          "notes": "Równoległe warianty dni."
+        },
+        {
+          "id": "q3",
+          "option": "B",
+          "evidence": "Kiedy potrzebowała szybkiej odpowiedzi od kolegi, często musiała czekać na wiadomość, a krótkie rozmowy zamieniały się w długie spotkania przez internet.",
+          "ambiguous": false,
+          "distractorScore": 78,
+          "skillMatches": true,
+          "notes": "A prawdopodobna trudność zdalnej pracy, C nieco odległe."
+        },
+        {
+          "id": "q4",
+          "option": "C",
+          "evidence": "W tych dniach jej zespół planuje wspólne zadania oraz rozwiązuje problemy klientów. W pozostałe dni Zosia pracuje w domu i przygotowuje dokumenty.",
+          "ambiguous": false,
+          "distractorScore": 88,
+          "skillMatches": true,
+          "notes": "Wymaga połączenia dni tygodnia, typu zadań i miejsca."
+        },
+        {
+          "id": "q5",
+          "option": "B",
+          "evidence": "Teraz nie musi codziennie dojeżdżać do pracy, a ważne rozmowy może prowadzić bezpośrednio z kolegami.",
+          "ambiguous": false,
+          "distractorScore": 65,
+          "skillMatches": true,
+          "notes": "A sugeruje tajemnicę, C porę dnia; oba odległe. Dodać alternatywy dotyczące sposobu kontaktu."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-063",
+      "scores": {
+        "naturalness": 96,
+        "level": 82,
+        "questions": 78,
+        "ambiguity": 97,
+        "theme": 96,
+        "vocabulary": 87
+      },
+      "criticalIssues": [],
+      "notes": "B1- obciążenie abstrakcyjnymi zwrotami: umiejętność, obowiązki, wystarczająco dużo okazji, ocena postępów. Uprościć język wariantów.",
+      "items": [
+        {
+          "id": "q1",
+          "option": "B",
+          "evidence": "Pod koniec miesiąca wróć do pierwszej wersji swojej pracy i porównaj ją z ostatnią.",
+          "ambiguous": false,
+          "distractorScore": 71,
+          "skillMatches": true,
+          "notes": "A kilka kursów wprost odrzucone, C niepowracanie do tematów również. Dodać bardziej subtelne plany."
+        },
+        {
+          "id": "q2",
+          "option": "C",
+          "evidence": "Pokaż ją koledze i poproś o dwie konkretne uwagi.",
+          "ambiguous": false,
+          "distractorScore": 90,
+          "skillMatches": true,
+          "notes": "Równoległe warianty liczbowe."
+        },
+        {
+          "id": "q3",
+          "option": "A",
+          "evidence": "Pod koniec miesiąca wróć do pierwszej wersji swojej pracy i porównaj ją z ostatnią. Zapisz, co potrafisz zrobić samodzielnie, a przy czym nadal potrzebujesz pomocy.",
+          "ambiguous": false,
+          "distractorScore": 66,
+          "skillMatches": true,
+          "notes": "B pierwsza prezentacja już wykonana, C sztuczne powiązanie z liczbą kursów."
+        },
+        {
+          "id": "q4",
+          "option": "B",
+          "evidence": "Jeżeli nie widzisz poprawy, sprawdź, czy masz wystarczająco dużo okazji do ćwiczeń. Być może warto zmienić sposób nauki, zamiast wybierać zupełnie nowy temat.",
+          "ambiguous": false,
+          "distractorScore": 80,
+          "skillMatches": true,
+          "notes": "A/C realistyczne reakcje na brak postępu, choć jawnie odradzane."
+        },
+        {
+          "id": "q5",
+          "option": "A",
+          "evidence": "Zamiast zapisywać się od razu na kilka kursów, wybierz jedną umiejętność, która przyda ci się w codziennych obowiązkach.",
+          "ambiguous": false,
+          "distractorScore": 64,
+          "skillMatches": true,
+          "notes": "B i C dotyczą wymogu i dostępności, odległe od użyteczności; użyć bliższych znaczeń."
+        }
+      ]
+    }
+  ]
+}
