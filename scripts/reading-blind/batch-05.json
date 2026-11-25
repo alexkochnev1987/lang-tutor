@@ -1,0 +1,985 @@
+{
+  "instructions": "You are a Polish-as-a-foreign-language examiner reviewing an anonymous reading practice corpus. You have no answer keys or prior conversation. Use ONLY the passage and options. Do not look up the author or repository. Independently solve each item. For each question return its ID, chosen option ID (A/B/C, or null if no uniquely supported option), exact evidence quote from the passage, ambiguity flag, distractor plausibility score 0–100, and a concise issue description. Then evaluate each passage's naturalness, CEFR suitability for the provided target level, question quality, unambiguity, topic coherence and vocabulary variety, each on a 0–100 scale. Distinguish errors, stylistic preferences and level mismatches. Flag any grammatical error, unsupported answer, trivial distractor or false inference. Give suggested improvements without altering the provided data. Return JSON with one result per passage; no keys are supplied. Weights: naturalness 25%, CEFR 20%, question quality 20%, ambiguity 20%, coherence 10%, vocabulary 5%. Be strict; do not approve solely because a passage has no grammatical errors.",
+  "passages": [
+    {
+      "id": "pl-b1.reading.day-041",
+      "targetLevel": "A2",
+      "title": "Wspólny ogród",
+      "passage": "Na terenie dawnego parkingu powstał niewielki ogród społeczny. Mieszkańcy przez kilka miesięcy przygotowywali ziemię, przynosili narzędzia i szukali roślin, które dobrze rosną w mieście. Na początku każdy zajmował się własną grządką. Szybko jednak okazało się, że przy wspólnej pracy można lepiej wykorzystać dostępne miejsce oraz wodę.\n\nUstalono więc harmonogram podlewania. Osoby, które mają wolne rano, przychodzą przed pracą, a pozostali pomagają wieczorem lub w weekendy. W ogrodzie nie ma prywatnych zamkniętych części. Zebrane warzywa są dzielone między uczestników, a nadmiar trafia do kuchni społecznej. Dzieci mogą obserwować, jak rozwijają się rośliny, i pomagać w prostych pracach.\n\nOrganizatorzy zauważyli, że najważniejszym efektem nie jest ilość pomidorów czy sałaty. Ludzie, którzy wcześniej tylko mijali się na schodach, zaczęli spędzać razem czas. W przyszłym roku planują zorganizować kilka otwartych warsztatów, aby również osoby spoza osiedla mogły nauczyć się uprawiać rośliny w mieście.",
+      "questions": [
+        {
+          "id": "q1",
+          "question": "Co podkreśla artykuł?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Ogród jest dostępny tylko dla właścicieli mieszkań."
+            },
+            {
+              "id": "B",
+              "text": "Ogród pomaga zarówno uprawiać rośliny, jak i budować relacje."
+            },
+            {
+              "id": "C",
+              "text": "Ogród powstał głównie po to, aby sprzedawać warzywa."
+            }
+          ]
+        },
+        {
+          "id": "q2",
+          "question": "Gdzie trafiają nadmiarowe warzywa?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Na parking."
+            },
+            {
+              "id": "B",
+              "text": "Do prywatnego sklepu."
+            },
+            {
+              "id": "C",
+              "text": "Do kuchni społecznej."
+            }
+          ]
+        },
+        {
+          "id": "q3",
+          "question": "Dlaczego mieszkańcy ustalili wspólny harmonogram?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Chcą lepiej organizować pracę i korzystanie z wody."
+            },
+            {
+              "id": "B",
+              "text": "Każdy musi uprawiać wyłącznie własną grządkę."
+            },
+            {
+              "id": "C",
+              "text": "Ogród jest otwarty tylko rano."
+            }
+          ]
+        },
+        {
+          "id": "q4",
+          "question": "Czy osoba, która nie mieszka na osiedlu, będzie mogła skorzystać z doświadczeń grupy?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Tak, ale tylko po zakupie prywatnej grządki."
+            },
+            {
+              "id": "B",
+              "text": "Tak, planowane są otwarte warsztaty."
+            },
+            {
+              "id": "C",
+              "text": "Nie, warsztaty mają być wyłącznie dla dzieci mieszkańców."
+            }
+          ]
+        },
+        {
+          "id": "q5",
+          "question": "Co oznacza „nadmiar”?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Całkowity brak czegoś."
+            },
+            {
+              "id": "B",
+              "text": "Pierwszy dzień zbiorów."
+            },
+            {
+              "id": "C",
+              "text": "Więcej czegoś, niż jest potrzebne."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-042",
+      "targetLevel": "A2",
+      "title": "Pomysły mieszkańców",
+      "passage": "W tym roku urząd miasta zaprosił mieszkańców do zgłaszania małych projektów, które mogą poprawić życie w ich okolicy. Na realizację przeznaczono określoną kwotę pieniędzy. Każdy pomysł musi dotyczyć miejsca dostępnego dla wszystkich, a jego koszt nie może przekroczyć ustalonego limitu. Wśród propozycji znalazły się nowe ławki, stojaki na rowery i zajęcia dla dzieci.\n\nPracownicy urzędu najpierw sprawdzają, czy projekty można wykonać zgodnie z przepisami i w ramach dostępnego budżetu. Autorzy mogą poprawić swoje propozycje, jeśli brakuje w nich szczegółów. Potem mieszkańcy głosują przez internet lub osobiście w wybranych punktach. Każda osoba może wskazać kilka projektów, ale tylko raz bierze udział w głosowaniu.\n\nW zeszłym roku mieszkańcy wybrali między innymi remont boiska oraz dodatkowe drzewa przy szkole. Nie wszystkie projekty zostały jeszcze zakończone. Urząd publikuje informacje o przyczynach opóźnień. Organizatorzy mają nadzieję, że dzięki temu mieszkańcy będą lepiej rozumieć, jak planowane są wspólne wydatki.",
+      "questions": [
+        {
+          "id": "q1",
+          "question": "Jaki jest główny temat artykułu?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Udział mieszkańców w wyborze lokalnych inwestycji."
+            },
+            {
+              "id": "B",
+              "text": "Prywatna sprzedaż terenów miejskich."
+            },
+            {
+              "id": "C",
+              "text": "Organizowanie szkolnych zawodów."
+            }
+          ]
+        },
+        {
+          "id": "q2",
+          "question": "Jak można zagłosować?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Tylko podczas zebrania w szkole."
+            },
+            {
+              "id": "B",
+              "text": "Przez internet lub osobiście."
+            },
+            {
+              "id": "C",
+              "text": "Wyłącznie listem wysłanym pocztą."
+            }
+          ]
+        },
+        {
+          "id": "q3",
+          "question": "Dlaczego urząd sprawdza projekty przed głosowaniem?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Każdy projekt musi dotyczyć wyłącznie szkoły."
+            },
+            {
+              "id": "B",
+              "text": "Urząd chce sam wybrać wszystkie zwycięskie pomysły."
+            },
+            {
+              "id": "C",
+              "text": "Muszą być możliwe do wykonania i mieścić się w budżecie."
+            }
+          ]
+        },
+        {
+          "id": "q4",
+          "question": "Czy projekt zamkniętego ogrodu dla jednej rodziny spełni podane warunki?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Nie, miejsce musi być dostępne dla wszystkich."
+            },
+            {
+              "id": "B",
+              "text": "Tak, jeśli rodzina zagłosuje kilka razy."
+            },
+            {
+              "id": "C",
+              "text": "Tak, jeśli ogród znajduje się przy szkole."
+            }
+          ]
+        },
+        {
+          "id": "q5",
+          "question": "Co oznacza „w ramach dostępnego budżetu”?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Wyłącznie z pieniędzy autorów projektu."
+            },
+            {
+              "id": "B",
+              "text": "Nie przekraczając pieniędzy przeznaczonych na ten cel."
+            },
+            {
+              "id": "C",
+              "text": "Bez żadnego ograniczenia kosztów."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-043",
+      "targetLevel": "A2",
+      "title": "Wizyta, którą trzeba przełożyć",
+      "passage": "Ewa ma umówioną wizytę kontrolną u dentysty w środę o jedenastej. We wtorek dowiaduje się jednak, że w tym samym czasie będzie musiała uczestniczyć w ważnym spotkaniu w pracy. Dzwoni więc do gabinetu, aby znaleźć inny termin.\n\n— Dzień dobry, chciałabym przełożyć jutrzejszą wizytę. Czy lekarz przyjmuje jeszcze w tym tygodniu? — pyta Ewa.\n\n— W czwartek mamy wolne miejsce o dziewiątej, a w piątek o piętnastej trzydzieści — odpowiada recepcjonistka.\n\n— W czwartek muszę być w biurze od ósmej. W piątek mogę wyjść wcześniej. Czy ten drugi termin jest nadal aktualny?\n\n— Tak, zapisuję panią na piątek. Poprzednią wizytę anuluję. Proszę przyjść dziesięć minut przed czasem, ponieważ trzeba zaktualizować dane w dokumentacji.\n\nEwa zapisuje nowy termin w kalendarzu. Prosi również o wiadomość z potwierdzeniem. Otrzymuje ją kilka minut później i może spokojnie zaplanować resztę tygodnia. Nie musi już wybierać między wizytą a obowiązkami zawodowymi.",
+      "questions": [
+        {
+          "id": "q1",
+          "question": "Czego dotyczy rozmowa?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Zapisywania na pierwszą wizytę u nowego lekarza."
+            },
+            {
+              "id": "B",
+              "text": "Rezygnacji z leczenia."
+            },
+            {
+              "id": "C",
+              "text": "Zmiany terminu wizyty u dentysty."
+            }
+          ]
+        },
+        {
+          "id": "q2",
+          "question": "Na kiedy ostatecznie zapisano Ewę?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Na piątek o piętnastej trzydzieści."
+            },
+            {
+              "id": "B",
+              "text": "Na czwartek o dziewiątej."
+            },
+            {
+              "id": "C",
+              "text": "Na środę o jedenastej."
+            }
+          ]
+        },
+        {
+          "id": "q3",
+          "question": "Dlaczego ma przyjść wcześniej?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Chce porozmawiać z kierownikiem."
+            },
+            {
+              "id": "B",
+              "text": "Trzeba zaktualizować dane w dokumentacji."
+            },
+            {
+              "id": "C",
+              "text": "Lekarz kończy pracę o piętnastej."
+            }
+          ]
+        },
+        {
+          "id": "q4",
+          "question": "O której Ewa powinna być w gabinecie?",
+          "options": [
+            {
+              "id": "A",
+              "text": "O piętnastej trzydzieści."
+            },
+            {
+              "id": "B",
+              "text": "O piętnastej czterdzieści."
+            },
+            {
+              "id": "C",
+              "text": "O piętnastej dwadzieścia."
+            }
+          ]
+        },
+        {
+          "id": "q5",
+          "question": "Co znaczy „przełożyć wizytę”?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Zmienić jej termin."
+            },
+            {
+              "id": "B",
+              "text": "Odbyć dwie wizyty tego samego dnia."
+            },
+            {
+              "id": "C",
+              "text": "Zapomnieć o umówionej wizycie."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-044",
+      "targetLevel": "A2",
+      "title": "Spacer po pracy",
+      "passage": "Od kilku miesięcy Robert pracuje głównie przy komputerze. Zauważył, że po długim dniu często jest zmęczony i nie ma ochoty na dodatkowe zajęcia. Zamiast planować od razu intensywne treningi, postanowił zacząć od krótkich spacerów. Każdego dnia po pracy wychodzi na około dwadzieścia minut do parku niedaleko domu.\n\nNa początku nie zawsze pamiętał o swoim postanowieniu. Czasem siadał przed telewizorem i odkładał wyjście na później, a potem było już za ciemno. Dlatego zaczął przygotowywać wygodne buty przy drzwiach jeszcze przed rozpoczęciem pracy. Umawia się też dwa razy w tygodniu z sąsiadem, który lubi chodzić po okolicy.\n\nPo miesiącu Robert stwierdził, że spacer stał się naturalną częścią dnia. Kiedy pada deszcz, wybiera krótszą trasę lub odpoczywa w domu. Nie traktuje jednego opuszczonego dnia jak porażki. Chce przede wszystkim znaleźć sposób na regularny ruch, który pasuje do jego obowiązków i który może utrzymać przez dłuższy czas.",
+      "questions": [
+        {
+          "id": "q1",
+          "question": "Jaki jest główny temat?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Poszukiwanie nowego mieszkania przy parku."
+            },
+            {
+              "id": "B",
+              "text": "Budowanie codziennego nawyku ruchu w realistyczny sposób."
+            },
+            {
+              "id": "C",
+              "text": "Przygotowanie do zawodów sportowych."
+            }
+          ]
+        },
+        {
+          "id": "q2",
+          "question": "Jak często umawia się z sąsiadem?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Codziennie rano."
+            },
+            {
+              "id": "B",
+              "text": "Raz w miesiącu."
+            },
+            {
+              "id": "C",
+              "text": "Dwa razy w tygodniu."
+            }
+          ]
+        },
+        {
+          "id": "q3",
+          "question": "Dlaczego przygotowuje buty przed pracą?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Żeby łatwiej pamiętać o wyjściu po pracy."
+            },
+            {
+              "id": "B",
+              "text": "Żeby naprawić buty w ciągu dnia."
+            },
+            {
+              "id": "C",
+              "text": "Żeby szybciej przygotować się do pracy rano."
+            }
+          ]
+        },
+        {
+          "id": "q4",
+          "question": "Co prawdopodobnie zrobi, jeśli jednego dnia nie wyjdzie na spacer?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Następnego dnia będzie musiał odbyć bardzo intensywny trening."
+            },
+            {
+              "id": "B",
+              "text": "Wróci do nawyku, gdy będzie miał możliwość."
+            },
+            {
+              "id": "C",
+              "text": "Zrezygnuje ze spacerów na zawsze."
+            }
+          ]
+        },
+        {
+          "id": "q5",
+          "question": "Co znaczy „postanowienie”?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Przypadkowe spotkanie."
+            },
+            {
+              "id": "B",
+              "text": "Rozkład jazdy."
+            },
+            {
+              "id": "C",
+              "text": "Decyzję, że będzie się coś robić."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-045",
+      "targetLevel": "A2",
+      "title": "Badania w miejscu pracy",
+      "passage": "Pracownicy pewnej firmy otrzymali możliwość udziału w bezpłatnych badaniach profilaktycznych. Lekarze i pielęgniarki przyjechali na dwa dni do siedziby firmy. Zorganizowano osobne pomieszczenie, aby każda osoba mogła spokojnie porozmawiać z personelem medycznym. Pracownicy mogli zgłosić się w godzinach pracy, ale udział nie był obowiązkowy.\n\nNajpierw osoby zainteresowane rezerwowały godzinę przez specjalny formularz. Niektórym trudno było znaleźć wolny termin, dlatego organizatorzy dodali kilka miejsc drugiego dnia. Wyniki badań przekazywano bezpośrednio uczestnikom. Kierownicy otrzymali jedynie ogólną informację o liczbie osób, które skorzystały z akcji, bez dostępu do indywidualnych danych.\n\nPo wydarzeniu część pracowników zaproponowała, aby podobne spotkania odbywały się regularnie. Inni chcieliby mieć możliwość uczestniczenia w krótkich warsztatach o odpoczynku i organizacji pracy. Firma zamierza zebrać opinie i dopiero wtedy przygotować plan kolejnej akcji. Lekarze podkreślili, że takie badania nie zastępują indywidualnych wizyt, jeśli ktoś potrzebuje dalszej diagnostyki.",
+      "questions": [
+        {
+          "id": "q1",
+          "question": "O czym informuje artykuł?",
+          "options": [
+            {
+              "id": "A",
+              "text": "O dobrowolnej akcji badań profilaktycznych w firmie."
+            },
+            {
+              "id": "B",
+              "text": "O obowiązkowym egzaminie pracowników."
+            },
+            {
+              "id": "C",
+              "text": "O otwarciu nowej prywatnej przychodni."
+            }
+          ]
+        },
+        {
+          "id": "q2",
+          "question": "Kto otrzymywał indywidualne wyniki?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Autorzy formularza."
+            },
+            {
+              "id": "B",
+              "text": "Osoby uczestniczące w badaniach."
+            },
+            {
+              "id": "C",
+              "text": "Wszyscy kierownicy."
+            }
+          ]
+        },
+        {
+          "id": "q3",
+          "question": "Dlaczego dodano terminy drugiego dnia?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Personel nie przyjechał pierwszego dnia."
+            },
+            {
+              "id": "B",
+              "text": "Badania stały się obowiązkowe."
+            },
+            {
+              "id": "C",
+              "text": "Nie wszystkim udało się wcześniej zarezerwować godzinę."
+            }
+          ]
+        },
+        {
+          "id": "q4",
+          "question": "Czy pracownik musi uczestniczyć, aby spełnić zasady firmy?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Nie, udział jest dobrowolny."
+            },
+            {
+              "id": "B",
+              "text": "Tak, każdy pracownik musi się zgłosić."
+            },
+            {
+              "id": "C",
+              "text": "Tak, ale jedynie jeśli jest kierownikiem."
+            }
+          ]
+        },
+        {
+          "id": "q5",
+          "question": "Co oznacza „indywidualne dane”?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Godziny otwarcia firmy."
+            },
+            {
+              "id": "B",
+              "text": "Informacje dotyczące konkretnej osoby."
+            },
+            {
+              "id": "C",
+              "text": "Ogólną liczbę uczestników."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-046",
+      "targetLevel": "A2",
+      "title": "Nowa grupa na zajęciach",
+      "passage": "W centrum rekreacji pojawiła się nowa grupa gimnastyczna dla dorosłych. Uczestnikami byli mieszkańcy w różnym wieku: młodzi pracownicy, emeryci oraz osoby, które wcześniej nie ćwiczyły regularnie. Na pierwsze spotkanie przyszli zarówno mężczyźni, jak i kobiety. Trener wyjaśnił, że celem grupy jest bezpieczny ruch, a nie rywalizacja między uczestnikami.\n\nPodczas zajęć każdy mógł wybrać łatwiejszą lub trudniejszą wersję ćwiczenia. Osoby potrzebujące odpoczynku robiły krótkie przerwy. Trener prosił, żeby uczestnicy informowali go o trudnościach i nie próbowali naśladować innych za wszelką cenę. Po spotkaniu kilka osób zostało, aby porozmawiać o godzinach kolejnych zajęć.\n\nOkazało się, że część uczestników pracuje do późnego popołudnia. Organizatorzy zaproponowali więc dwa terminy w tygodniu: rano i wieczorem. Nie trzeba uczestniczyć w obu. Najważniejsze jest znalezienie dogodnej pory. Po pierwszym miesiącu większość osób postanowiła kontynuować zajęcia. Chwalili przede wszystkim spokojną atmosferę oraz możliwość ćwiczenia we własnym tempie.",
+      "questions": [
+        {
+          "id": "q1",
+          "question": "Co jest głównym tematem tekstu?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Zawody dla zawodowych sportowców."
+            },
+            {
+              "id": "B",
+              "text": "Otwarcie sklepu ze sprzętem."
+            },
+            {
+              "id": "C",
+              "text": "Grupa ćwiczeń dostosowana do różnych możliwości uczestników."
+            }
+          ]
+        },
+        {
+          "id": "q2",
+          "question": "Co można zrobić podczas ćwiczeń, gdy potrzeba odpocząć?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Zrobić krótką przerwę."
+            },
+            {
+              "id": "B",
+              "text": "Poczekać do zakończenia zajęć bez przerwy."
+            },
+            {
+              "id": "C",
+              "text": "Zwiększyć tempo bez rozmowy z trenerem."
+            }
+          ]
+        },
+        {
+          "id": "q3",
+          "question": "Dlaczego zaproponowano termin wieczorny?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Wszyscy uczestnicy chcą ćwiczyć dwa razy dziennie."
+            },
+            {
+              "id": "B",
+              "text": "Niektórzy uczestnicy pracują do późnego popołudnia."
+            },
+            {
+              "id": "C",
+              "text": "Rano trener nigdy nie przychodzi."
+            }
+          ]
+        },
+        {
+          "id": "q4",
+          "question": "Czy początkująca osoba może ćwiczyć razem z bardziej doświadczoną?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Nie, wszyscy muszą wykonywać najtrudniejszą wersję."
+            },
+            {
+              "id": "B",
+              "text": "Tak, ale tylko po miesiącu treningu indywidualnego."
+            },
+            {
+              "id": "C",
+              "text": "Tak, każdy wybiera odpowiednią wersję ćwiczenia."
+            }
+          ]
+        },
+        {
+          "id": "q5",
+          "question": "Co znaczy „we własnym tempie”?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Z szybkością i intensywnością odpowiednią dla siebie."
+            },
+            {
+              "id": "B",
+              "text": "Zawsze szybciej niż inni."
+            },
+            {
+              "id": "C",
+              "text": "Tylko rano."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-047",
+      "targetLevel": "A2",
+      "title": "W aptece przed wyjazdem",
+      "passage": "Przed kilkudniową wycieczką Anna odwiedziła aptekę, ponieważ chciała uzupełnić swoją podręczną apteczkę. Miała już potrzebne leki, ale zauważyła, że brakuje jej kilku podstawowych rzeczy. Pamiętała, że podczas poprzedniego wyjazdu otarła piętę i musiała szukać sklepu w obcym mieście.\n\n— Dzień dobry, szukam plastrów oraz małego opakowania środka do dezynfekcji — powiedziała.\n\n— Czy chce pani zwykłe plastry, czy takie przeznaczone do ochrony otarć? — zapytała farmaceutka.\n\n— Potrzebuję obu rodzajów, ale nie chcę kupować dużych opakowań. Jadę tylko na cztery dni.\n\nFarmaceutka pokazała jej dwa małe zestawy i wyjaśniła, czym się różnią. Anna wybrała produkty, których rzeczywiście potrzebowała. Zapytała również o warunki przechowywania jednego ze swoich leków. Farmaceutka poradziła sprawdzić informację w ulotce dołączonej do konkretnego opakowania.\n\nPo powrocie Anna przejrzała apteczkę i sprawdziła daty ważności. Spakowała ją do łatwo dostępnej części plecaka. Teraz nie musiała zabierać ze sobą wszystkich produktów z domowej szafki.",
+      "questions": [
+        {
+          "id": "q1",
+          "question": "Jaki jest cel wizyty Anny w aptece?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Rezygnacja z podróży z powodu choroby."
+            },
+            {
+              "id": "B",
+              "text": "Uzupełnienie małej apteczki na wyjazd."
+            },
+            {
+              "id": "C",
+              "text": "Zakup całej domowej apteki."
+            }
+          ]
+        },
+        {
+          "id": "q2",
+          "question": "Jak długo ma trwać wyjazd?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Dwa tygodnie."
+            },
+            {
+              "id": "B",
+              "text": "Jeden dzień."
+            },
+            {
+              "id": "C",
+              "text": "Cztery dni."
+            }
+          ]
+        },
+        {
+          "id": "q3",
+          "question": "Dlaczego Anna nie chce dużych opakowań?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Wyjazd jest krótki i potrzebuje tylko podstawowych rzeczy."
+            },
+            {
+              "id": "B",
+              "text": "Nie może wejść do apteki z plecakiem."
+            },
+            {
+              "id": "C",
+              "text": "Farmaceutka nie ma małych produktów."
+            }
+          ]
+        },
+        {
+          "id": "q4",
+          "question": "Co powinna sprawdzić, aby poznać warunki przechowywania konkretnego leku?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Rozkład jazdy autobusu."
+            },
+            {
+              "id": "B",
+              "text": "Ulotkę tego leku."
+            },
+            {
+              "id": "C",
+              "text": "Datę zakupu wszystkich plastrów."
+            }
+          ]
+        },
+        {
+          "id": "q5",
+          "question": "Co oznacza „uzupełnić” apteczkę?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Wyrzucić wszystkie rzeczy."
+            },
+            {
+              "id": "B",
+              "text": "Zamknąć apteczkę na klucz."
+            },
+            {
+              "id": "C",
+              "text": "Dodać brakujące rzeczy."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-048",
+      "targetLevel": "A2",
+      "title": "Zmiana codziennych zwyczajów",
+      "passage": "Kasia zauważyła, że jej dni są bardzo podobne. Rano szybko wychodzi do pracy, w południe je to, co akurat znajdzie w sklepie, a wieczorem długo korzysta z telefonu. Chciała mieć więcej czasu na odpoczynek, ale nie wiedziała, od czego zacząć. W niedzielę postanowiła przygotować prosty plan na nadchodzący tydzień.\n\nNajpierw wybrała dwa wieczory, kiedy nie będzie umawiać dodatkowych spotkań. Przygotowała też listę prostych posiłków i kupiła potrzebne produkty. Nie zaplanowała każdej godziny, ponieważ niektóre obowiązki w pracy pojawiają się niespodziewanie. Telefon odkłada na półkę pół godziny przed snem, żeby ten czas przeznaczyć na spokojne zajęcia.\n\nPo tygodniu sprawdziła, co się udało. Nie zawsze realizowała plan, ale częściej miała gotowy posiłek i mniej czasu spędzała przy ekranie przed snem. Uznała, że nie potrzebuje kolejnych skomplikowanych zasad. Postanowiła przez następny tydzień zachować te same zwyczaje i dopiero później zdecydować, czy chce coś zmienić.",
+      "questions": [
+        {
+          "id": "q1",
+          "question": "O czym jest tekst?",
+          "options": [
+            {
+              "id": "A",
+              "text": "O stopniowym wprowadzaniu nowych codziennych zwyczajów."
+            },
+            {
+              "id": "B",
+              "text": "O przygotowaniu intensywnego planu treningowego."
+            },
+            {
+              "id": "C",
+              "text": "O zmianie miejsca pracy."
+            }
+          ]
+        },
+        {
+          "id": "q2",
+          "question": "Kiedy odkłada telefon?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Na cały dzień pracy."
+            },
+            {
+              "id": "B",
+              "text": "Pół godziny przed snem."
+            },
+            {
+              "id": "C",
+              "text": "Bezpośrednio po śniadaniu."
+            }
+          ]
+        },
+        {
+          "id": "q3",
+          "question": "Dlaczego nie zaplanowała każdej godziny?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Nie ma kalendarza."
+            },
+            {
+              "id": "B",
+              "text": "Chce codziennie spotykać się z przyjaciółmi."
+            },
+            {
+              "id": "C",
+              "text": "Niektóre obowiązki w pracy pojawiają się niespodziewanie."
+            }
+          ]
+        },
+        {
+          "id": "q4",
+          "question": "Jak Kasia ocenia pierwszy tydzień?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Widząc częściowe efekty, chce kontynuować bez dokładania zasad."
+            },
+            {
+              "id": "B",
+              "text": "Uważa, że brak pełnego wykonania oznacza całkowitą porażkę."
+            },
+            {
+              "id": "C",
+              "text": "Postanawia od razu zmienić wszystkie zwyczaje ponownie."
+            }
+          ]
+        },
+        {
+          "id": "q5",
+          "question": "Co oznacza „niespodziewanie”?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Zawsze w niedzielę."
+            },
+            {
+              "id": "B",
+              "text": "W sposób, którego wcześniej nie przewidziano."
+            },
+            {
+              "id": "C",
+              "text": "Dokładnie według planu."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-049",
+      "targetLevel": "A2",
+      "title": "Pytania do specjalisty",
+      "passage": "Dom kultury zorganizował otwarte spotkanie z fizjoterapeutą dla osób, które dużo czasu spędzają przy biurku. Celem wydarzenia było przekazanie ogólnych informacji o organizacji stanowiska pracy i znaczeniu regularnych przerw. Uczestnicy wcześniej przesłali pytania, dzięki czemu prowadzący mógł przygotować przykłady dotyczące najczęstszych problemów.\n\nW pierwszej części spotkania specjalista opowiedział o różnych pozycjach podczas pracy. Zwrócił uwagę, że nie istnieje jedna idealna pozycja odpowiednia dla wszystkich przez cały dzień. W drugiej części uczestnicy mogli wypróbować proste sposoby zmiany ustawienia krzesła i monitora. Prowadzący nie oceniał indywidualnych dolegliwości na podstawie krótkiej rozmowy.\n\nNa zakończenie rozdano kartki z podsumowaniem oraz informacją, gdzie można umówić konsultację, jeśli ktoś potrzebuje indywidualnej pomocy. Kilka osób zaproponowało kolejne spotkanie poświęcone odpoczynkowi po pracy. Organizatorzy zbierają teraz opinie uczestników i zastanawiają się nad terminem. Chcą, aby następne wydarzenie również było dostępne dla wszystkich zainteresowanych bez opłaty.",
+      "questions": [
+        {
+          "id": "q1",
+          "question": "Jaki był cel spotkania?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Indywidualne leczenie wszystkich uczestników."
+            },
+            {
+              "id": "B",
+              "text": "Sprzedaż krzeseł i monitorów."
+            },
+            {
+              "id": "C",
+              "text": "Ogólna edukacja o pracy przy biurku."
+            }
+          ]
+        },
+        {
+          "id": "q2",
+          "question": "Co rozdano na zakończenie?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Kartki z podsumowaniem i informacją o konsultacji."
+            },
+            {
+              "id": "B",
+              "text": "Nowe monitory."
+            },
+            {
+              "id": "C",
+              "text": "Indywidualne diagnozy medyczne."
+            }
+          ]
+        },
+        {
+          "id": "q3",
+          "question": "Po co uczestnicy wcześniej przesłali pytania?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Żeby wybrać model krzesła dla domu kultury."
+            },
+            {
+              "id": "B",
+              "text": "Żeby prowadzący mógł przygotować odpowiednie przykłady."
+            },
+            {
+              "id": "C",
+              "text": "Żeby zapłacić za konsultacje."
+            }
+          ]
+        },
+        {
+          "id": "q4",
+          "question": "Czy osoba oczekująca indywidualnej oceny dolegliwości powinna poprzestać na spotkaniu?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Tak, spotkanie zastępuje indywidualne badanie."
+            },
+            {
+              "id": "B",
+              "text": "Tak, jeśli wcześniej przesłała pytanie."
+            },
+            {
+              "id": "C",
+              "text": "Nie, może potrzebować osobnej konsultacji."
+            }
+          ]
+        },
+        {
+          "id": "q5",
+          "question": "Co oznacza „podsumowanie”?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Krótki zbiór najważniejszych informacji."
+            },
+            {
+              "id": "B",
+              "text": "Nowy plan całego spotkania."
+            },
+            {
+              "id": "C",
+              "text": "Lista kosztów uczestników."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-050",
+      "targetLevel": "A2",
+      "title": "Kurs, który pasuje do mojego dnia",
+      "passage": "Dzień dobry, chciałabym zapisać się na kurs języka polskiego na poziomie A2. Pracuję do godziny szesnastej, dlatego interesują mnie zajęcia wieczorowe. Na stronie szkoły widzę dwie grupy: we wtorki i czwartki oraz w poniedziałki i środy. Druga grupa jest dla mnie wygodniejsza, ponieważ w czwartki chodzę na basen.\n\nMam już za sobą podstawowy kurs, ale nadal trudno mi rozumieć dłuższe teksty. Chciałabym też więcej mówić po polsku, szczególnie w pracy i w urzędzie. Czy na zajęciach uczniowie rozmawiają w parach? Czy nauczyciel sprawdza krótkie zadania pisemne? Nie zależy mi tylko na nauce reguł gramatycznych.\n\nMam jeszcze pytanie o materiały. Czy podręcznik jest wliczony w cenę kursu? Jeśli nie, proszę o informację, gdzie można go kupić. W przyszłym tygodniu mogę przyjść do szkoły na rozmowę i test poziomujący. Proszę o odpowiedź e-mailem, ponieważ w godzinach pracy rzadko odbieram telefon. Z poważaniem, Natalia Kowal.",
+      "questions": [
+        {
+          "id": "q1",
+          "question": "Po co Natalia pisze do szkoły?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Chce zrezygnować z rozpoczętego kursu."
+            },
+            {
+              "id": "B",
+              "text": "Chce wybrać kurs i poznać jego warunki."
+            },
+            {
+              "id": "C",
+              "text": "Chce zatrudnić się jako nauczycielka."
+            }
+          ]
+        },
+        {
+          "id": "q2",
+          "question": "Który harmonogram bardziej jej odpowiada?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Wtorki i czwartki."
+            },
+            {
+              "id": "B",
+              "text": "Soboty i niedziele."
+            },
+            {
+              "id": "C",
+              "text": "Poniedziałki i środy."
+            }
+          ]
+        },
+        {
+          "id": "q3",
+          "question": "Dlaczego grupa czwartkowa jest mniej wygodna?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Natalia w czwartki chodzi na basen."
+            },
+            {
+              "id": "B",
+              "text": "Natalia pracuje tylko w czwartki."
+            },
+            {
+              "id": "C",
+              "text": "Szkoła jest w czwartek zamknięta."
+            }
+          ]
+        },
+        {
+          "id": "q4",
+          "question": "Jaki kurs najprawdopodobniej spełni jej oczekiwania?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Kurs bez ćwiczeń językowych."
+            },
+            {
+              "id": "B",
+              "text": "Kurs z czytaniem, rozmową i zadaniami pisemnymi."
+            },
+            {
+              "id": "C",
+              "text": "Kurs wyłącznie z wykładami o gramatyce."
+            }
+          ]
+        },
+        {
+          "id": "q5",
+          "question": "Co oznacza „wliczony w cenę”?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Trzeba kupić droższy podręcznik."
+            },
+            {
+              "id": "B",
+              "text": "Nie wolno korzystać z podręcznika."
+            },
+            {
+              "id": "C",
+              "text": "Nie trzeba płacić dodatkowo."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

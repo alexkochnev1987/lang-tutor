@@ -1,0 +1,985 @@
+{
+  "instructions": "You are a Polish-as-a-foreign-language examiner reviewing an anonymous reading practice corpus. You have no answer keys or prior conversation. Use ONLY the passage and options. Do not look up the author or repository. Independently solve each item. For each question return its ID, chosen option ID (A/B/C, or null if no uniquely supported option), exact evidence quote from the passage, ambiguity flag, distractor plausibility score 0–100, and a concise issue description. Then evaluate each passage's naturalness, CEFR suitability for the provided target level, question quality, unambiguity, topic coherence and vocabulary variety, each on a 0–100 scale. Distinguish errors, stylistic preferences and level mismatches. Flag any grammatical error, unsupported answer, trivial distractor or false inference. Give suggested improvements without altering the provided data. Return JSON with one result per passage; no keys are supplied. Weights: naturalness 25%, CEFR 20%, question quality 20%, ambiguity 20%, coherence 10%, vocabulary 5%. Be strict; do not approve solely because a passage has no grammatical errors.",
+  "passages": [
+    {
+      "id": "pl-b1.reading.day-021",
+      "targetLevel": "A1",
+      "title": "Inny plan na niedzielę",
+      "passage": "W niedzielę rodzina Nowaków zwykle je obiad w restauracji. Dzisiaj pogoda jest piękna, więc wszyscy chcą spędzić więcej czasu na dworze. Tata przygotowuje kanapki, mama pakuje owoce, a dzieci biorą piłkę i koc. Rodzina jedzie autobusem do dużego parku.\n\nW parku jest dużo ludzi, ale znajdują spokojne miejsce pod drzewem. Dzieci grają w piłkę, a rodzice czytają gazetę. Po jedzeniu wszyscy idą na spacer nad jezioro. Nie zostawiają po sobie śmieci: wkładają je do torby i wyrzucają do kosza. Wieczorem wracają do domu zmęczeni, ale w dobrym humorze.",
+      "questions": [
+        {
+          "id": "q1",
+          "question": "Jaki jest główny temat?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Rodzinny dzień w parku."
+            },
+            {
+              "id": "B",
+              "text": "Wizyta w restauracji."
+            },
+            {
+              "id": "C",
+              "text": "Praca w ogrodzie."
+            }
+          ]
+        },
+        {
+          "id": "q2",
+          "question": "Co pakuje mama?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Gazetę."
+            },
+            {
+              "id": "B",
+              "text": "Owoce."
+            },
+            {
+              "id": "C",
+              "text": "Piłkę."
+            }
+          ]
+        },
+        {
+          "id": "q3",
+          "question": "Dlaczego zmieniają zwykły plan niedzieli?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Restauracja jest zamknięta."
+            },
+            {
+              "id": "B",
+              "text": "Dzieci muszą iść do szkoły."
+            },
+            {
+              "id": "C",
+              "text": "Jest piękna pogoda."
+            }
+          ]
+        },
+        {
+          "id": "q4",
+          "question": "Jak rodzina dba o park?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Zabiera śmieci ze swojego miejsca."
+            },
+            {
+              "id": "B",
+              "text": "Zostawia jedzenie pod drzewem."
+            },
+            {
+              "id": "C",
+              "text": "Wyrzuca torbę do jeziora."
+            }
+          ]
+        },
+        {
+          "id": "q5",
+          "question": "Co znaczy „na dworze”?",
+          "options": [
+            {
+              "id": "A",
+              "text": "W restauracji."
+            },
+            {
+              "id": "B",
+              "text": "Na zewnątrz."
+            },
+            {
+              "id": "C",
+              "text": "W mieszkaniu."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-022",
+      "targetLevel": "A1",
+      "title": "Gdzie dziś idziemy?",
+      "passage": "— Co robimy w sobotę? — pyta Ola.\n\n— Możemy iść na wystawę albo na koncert — odpowiada Marek.\n\n— Jaki koncert?\n\n— W parku gra mały zespół jazzowy. Wstęp jest wolny.\n\n— O której zaczyna grać?\n\n— O siedemnastej. A wystawa jest otwarta do piętnastej.\n\nOla chce zobaczyć zdjęcia na wystawie, ale rano pracuje. Kończy o czternastej i jedzie do domu pół godziny. Marek ma wolny cały dzień.\n\n— Może spotkamy się o szesnastej przy wejściu do parku? Najpierw kupimy coś do picia.\n\n— Dobry pomysł. Na wystawę pójdę w niedzielę.",
+      "questions": [
+        {
+          "id": "q1",
+          "question": "Czego dotyczy rozmowa?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Zakupu aparatu fotograficznego."
+            },
+            {
+              "id": "B",
+              "text": "Zmiany miejsca pracy."
+            },
+            {
+              "id": "C",
+              "text": "Planów spędzenia wolnego czasu."
+            }
+          ]
+        },
+        {
+          "id": "q2",
+          "question": "O której zaczyna się koncert?",
+          "options": [
+            {
+              "id": "A",
+              "text": "O siedemnastej."
+            },
+            {
+              "id": "B",
+              "text": "O piętnastej."
+            },
+            {
+              "id": "C",
+              "text": "O czternastej."
+            }
+          ]
+        },
+        {
+          "id": "q3",
+          "question": "Dlaczego Ola nie wybiera wystawy w sobotę?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Nie ma pieniędzy na koncert."
+            },
+            {
+              "id": "B",
+              "text": "Po pracy ma mało czasu przed zamknięciem wystawy."
+            },
+            {
+              "id": "C",
+              "text": "Nie lubi zdjęć."
+            }
+          ]
+        },
+        {
+          "id": "q4",
+          "question": "Czy Marek może pójść na wystawę przed koncertem?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Nie, pracuje do czternastej."
+            },
+            {
+              "id": "B",
+              "text": "Nie, wystawa jest otwarta tylko w niedzielę."
+            },
+            {
+              "id": "C",
+              "text": "Tak, ma wolny cały dzień."
+            }
+          ]
+        },
+        {
+          "id": "q5",
+          "question": "Co znaczy „wstęp jest wolny”?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Wejście jest bezpłatne."
+            },
+            {
+              "id": "B",
+              "text": "Wydarzenie jest odwołane."
+            },
+            {
+              "id": "C",
+              "text": "Trzeba kupić drogi bilet."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-023",
+      "targetLevel": "A1",
+      "title": "Zajęcia w klubie sportowym",
+      "passage": "Chcesz zacząć uprawiać sport, ale nie wiesz, które zajęcia wybrać? Nasz klub zaprasza na bezpłatny dzień otwarty w sobotę. O dziewiątej jest spokojna gimnastyka, o jedenastej zajęcia taneczne, a po południu trening siłowy dla początkujących. Każde zajęcia trwają czterdzieści pięć minut.\n\nNie musisz mieć własnego sprzętu. Klub daje maty i małe ciężarki. Przynieś wygodne ubranie, wodę i czyste buty sportowe. Na miejscu można porozmawiać z trenerem i zapytać o plan ćwiczeń. Liczba miejsc jest ograniczona, dlatego prosimy o wcześniejszy zapis przez internet. Po zajęciach można odpocząć w małej kawiarni.",
+      "questions": [
+        {
+          "id": "q1",
+          "question": "Jaki jest cel ogłoszenia?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Znaleźć pracownika kawiarni."
+            },
+            {
+              "id": "B",
+              "text": "Zaprosić na próbne zajęcia sportowe."
+            },
+            {
+              "id": "C",
+              "text": "Sprzedać sprzęt do domu."
+            }
+          ]
+        },
+        {
+          "id": "q2",
+          "question": "Ile trwają jedne zajęcia?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Trzydzieści minut."
+            },
+            {
+              "id": "B",
+              "text": "Dwie godziny."
+            },
+            {
+              "id": "C",
+              "text": "Czterdzieści pięć minut."
+            }
+          ]
+        },
+        {
+          "id": "q3",
+          "question": "Dlaczego trzeba zapisać się wcześniej?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Liczba miejsc jest ograniczona."
+            },
+            {
+              "id": "B",
+              "text": "Nie ma w klubie trenerów."
+            },
+            {
+              "id": "C",
+              "text": "Sprzęt trzeba kupić w internecie."
+            }
+          ]
+        },
+        {
+          "id": "q4",
+          "question": "Czy osoba bez maty może uczestniczyć?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Tylko jeśli nie ćwiczy."
+            },
+            {
+              "id": "B",
+              "text": "Tak, klub udostępnia maty."
+            },
+            {
+              "id": "C",
+              "text": "Nie, każdy musi kupić matę."
+            }
+          ]
+        },
+        {
+          "id": "q5",
+          "question": "Co oznacza „dla początkujących”?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Dla zawodowych sportowców."
+            },
+            {
+              "id": "B",
+              "text": "Dla pracowników klubu."
+            },
+            {
+              "id": "C",
+              "text": "Dla osób, które dopiero zaczynają."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-024",
+      "targetLevel": "A1",
+      "title": "Film czy spacer?",
+      "passage": "Cześć, Tomku! Dzisiaj po południu mam czas, więc możemy się spotkać. W kinie obok dworca jest nowa komedia. Film zaczyna się o szóstej, ale bilety kosztują dość dużo. Możemy też pójść na spacer nad Wisłą i kupić lody. Prognoza pogody jest dobra, choć wieczorem może być chłodno.\n\nJa wolę spacer, ponieważ przez cały tydzień siedzę przy komputerze. Jeśli jednak będzie padał deszcz, wybierzmy kino. Przyjdź do mnie o piątej albo spotkajmy się od razu przy dworcu. Napisz, która opcja jest dla ciebie wygodniejsza. Wezmę dodatkową bluzę.",
+      "questions": [
+        {
+          "id": "q1",
+          "question": "Po co autor pisze do Tomka?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Żeby ustalić wspólne plany."
+            },
+            {
+              "id": "B",
+              "text": "Żeby kupić komputer."
+            },
+            {
+              "id": "C",
+              "text": "Żeby zapytać o pracę."
+            }
+          ]
+        },
+        {
+          "id": "q2",
+          "question": "O której zaczyna się film?",
+          "options": [
+            {
+              "id": "A",
+              "text": "O siódmej."
+            },
+            {
+              "id": "B",
+              "text": "O szóstej."
+            },
+            {
+              "id": "C",
+              "text": "O piątej."
+            }
+          ]
+        },
+        {
+          "id": "q3",
+          "question": "Dlaczego autor woli spacer?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Nie lubi lodów."
+            },
+            {
+              "id": "B",
+              "text": "Dworzec jest zamknięty."
+            },
+            {
+              "id": "C",
+              "text": "Cały tydzień siedzi przy komputerze."
+            }
+          ]
+        },
+        {
+          "id": "q4",
+          "question": "Co najpewniej zrobią, jeśli pogoda się pogorszy i zacznie padać?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Pójdą do kina."
+            },
+            {
+              "id": "B",
+              "text": "Będą spacerować bez względu na pogodę."
+            },
+            {
+              "id": "C",
+              "text": "Pójdą kupić komputer."
+            }
+          ]
+        },
+        {
+          "id": "q5",
+          "question": "Co oznacza „prognoza pogody”?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Plan pracy dworca."
+            },
+            {
+              "id": "B",
+              "text": "Informacja o przewidywanej pogodzie."
+            },
+            {
+              "id": "C",
+              "text": "Opis filmu."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-025",
+      "targetLevel": "A1",
+      "title": "Moje stare hobby",
+      "passage": "Mój tata ma dużo starych zdjęć z wakacji. Jego ulubionym hobby jest fotografia. Kiedy jestem w domu rodziców, często oglądamy razem jego albumy. Na jednej fotografii jest nasz dawny dom, na innej moja siostra i jej pies. Tata pamięta wiele historii związanych z tymi zdjęciami.\n\nW tym miesiącu chcę kupić własny aparat. Moja koleżanka ma mały aparat cyfrowy i pokazuje mi, jak robić zdjęcia. W sobotę idziemy razem do parku. Chcę sfotografować drzewa i ludzi podczas spaceru. Nie chcę od razu kupować drogiego sprzętu, bo dopiero uczę się fotografii.",
+      "questions": [
+        {
+          "id": "q1",
+          "question": "O czym jest tekst?",
+          "options": [
+            {
+              "id": "A",
+              "text": "O budowie nowego domu."
+            },
+            {
+              "id": "B",
+              "text": "O zakupie psa."
+            },
+            {
+              "id": "C",
+              "text": "O zainteresowaniu fotografią w rodzinie."
+            }
+          ]
+        },
+        {
+          "id": "q2",
+          "question": "Do kogo należą stare albumy?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Do taty autora."
+            },
+            {
+              "id": "B",
+              "text": "Do koleżanki."
+            },
+            {
+              "id": "C",
+              "text": "Do siostry."
+            }
+          ]
+        },
+        {
+          "id": "q3",
+          "question": "Dlaczego autor nie chce drogiego aparatu?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Tata zakazuje zakupu."
+            },
+            {
+              "id": "B",
+              "text": "Dopiero uczy się fotografii."
+            },
+            {
+              "id": "C",
+              "text": "Nie lubi robić zdjęć."
+            }
+          ]
+        },
+        {
+          "id": "q4",
+          "question": "Kto może pomóc autorowi w nauce robienia zdjęć?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Tylko właściciel sklepu."
+            },
+            {
+              "id": "B",
+              "text": "Tylko siostra."
+            },
+            {
+              "id": "C",
+              "text": "Koleżanka i tata."
+            }
+          ]
+        },
+        {
+          "id": "q5",
+          "question": "Co znaczy „własny aparat”?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Aparat należący do danej osoby."
+            },
+            {
+              "id": "B",
+              "text": "Aparat wypożyczony na chwilę."
+            },
+            {
+              "id": "C",
+              "text": "Aparat w albumie."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-026",
+      "targetLevel": "A1",
+      "title": "Pierwszy koncert",
+      "passage": "Wczoraj wieczorem byłam na moim pierwszym koncercie jazzowym. Poszłam tam z kolegą, który bardzo lubi tę muzykę. Na początku nie znałam żadnego utworu, ale szybko zaczęłam słuchać z zainteresowaniem. Muzycy grali na trąbce, pianinie i perkusji. Sala była mała, więc dobrze widziałam scenę.\n\nPodczas przerwy kupiłam wodę i rozmawiałam z kolegą o muzyce. Po koncercie wróciłam do domu tramwajem. Byłam zmęczona, ale zadowolona. Dzisiaj rano znalazłam w internecie muzykę tego zespołu i słuchałam jej podczas śniadania. Chcę pójść na kolejny koncert, kiedy zespół znów przyjedzie do naszego miasta.",
+      "questions": [
+        {
+          "id": "q1",
+          "question": "O czym opowiada autorka?",
+          "options": [
+            {
+              "id": "A",
+              "text": "O pracy w teatrze."
+            },
+            {
+              "id": "B",
+              "text": "O swoim pierwszym koncercie jazzowym."
+            },
+            {
+              "id": "C",
+              "text": "O nauce gry na pianinie."
+            }
+          ]
+        },
+        {
+          "id": "q2",
+          "question": "Czym wróciła do domu?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Rowerem."
+            },
+            {
+              "id": "B",
+              "text": "Pociągiem."
+            },
+            {
+              "id": "C",
+              "text": "Tramwajem."
+            }
+          ]
+        },
+        {
+          "id": "q3",
+          "question": "Dlaczego dobrze widziała scenę?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Sala była mała."
+            },
+            {
+              "id": "B",
+              "text": "Grała na scenie."
+            },
+            {
+              "id": "C",
+              "text": "Miała bardzo duży ekran."
+            }
+          ]
+        },
+        {
+          "id": "q4",
+          "question": "Czy koncert zmienił jej stosunek do jazzu?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Nie, interesuje ją tylko teatr."
+            },
+            {
+              "id": "B",
+              "text": "Tak, chce dalej słuchać tej muzyki."
+            },
+            {
+              "id": "C",
+              "text": "Nie, już nigdy nie chce słuchać jazzu."
+            }
+          ]
+        },
+        {
+          "id": "q5",
+          "question": "Co oznacza „utwór”?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Bilet tramwajowy."
+            },
+            {
+              "id": "B",
+              "text": "Instrument muzyczny."
+            },
+            {
+              "id": "C",
+              "text": "Pojedyncza kompozycja muzyczna."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-027",
+      "targetLevel": "A1",
+      "title": "Niedziela w muzeum",
+      "passage": "W niedzielę poszliśmy z rodziną do muzeum. Nasz syn interesuje się techniką, dlatego wybraliśmy wystawę starych urządzeń. W pierwszej sali były telefony i radia, w drugiej można było zobaczyć pierwsze komputery. Syn czytał napisy i zadawał wiele pytań.\n\nNajbardziej podobał mu się stary aparat fotograficzny. Pracownik muzeum pokazał, jak kiedyś robiono zdjęcia. Potem odpoczęliśmy w kawiarni i zjedliśmy ciasto. Nie zobaczyliśmy całego muzeum, ponieważ córka była już zmęczona. Kupiliśmy więc mały przewodnik i postanowiliśmy wrócić za miesiąc. W domu syn opowiadał o wystawie babci.",
+      "questions": [
+        {
+          "id": "q1",
+          "question": "O czym jest tekst?",
+          "options": [
+            {
+              "id": "A",
+              "text": "O rodzinnej wizycie na wystawie techniki."
+            },
+            {
+              "id": "B",
+              "text": "O zakupie nowego komputera."
+            },
+            {
+              "id": "C",
+              "text": "O urodzinach babci."
+            }
+          ]
+        },
+        {
+          "id": "q2",
+          "question": "Co najbardziej podobało się synowi?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Ciasto w kawiarni."
+            },
+            {
+              "id": "B",
+              "text": "Stary aparat fotograficzny."
+            },
+            {
+              "id": "C",
+              "text": "Nowe radio."
+            }
+          ]
+        },
+        {
+          "id": "q3",
+          "question": "Dlaczego rodzina nie obejrzała całego muzeum?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Wystawa była już zamknięta."
+            },
+            {
+              "id": "B",
+              "text": "Syn nie lubił techniki."
+            },
+            {
+              "id": "C",
+              "text": "Córka była zmęczona."
+            }
+          ]
+        },
+        {
+          "id": "q4",
+          "question": "Co wskazuje, że wystawa była dla syna ciekawa?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Zadawał pytania i opowiadał o niej babci."
+            },
+            {
+              "id": "B",
+              "text": "Od razu chciał wyjść."
+            },
+            {
+              "id": "C",
+              "text": "Nie czytał żadnych napisów."
+            }
+          ]
+        },
+        {
+          "id": "q5",
+          "question": "Co oznacza „przewodnik” w tym tekście?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Stary telefon."
+            },
+            {
+              "id": "B",
+              "text": "Książeczka z informacjami o muzeum."
+            },
+            {
+              "id": "C",
+              "text": "Osoba prowadząca autobus."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-028",
+      "targetLevel": "A1",
+      "title": "Wspólny dzień na działce",
+      "passage": "W ostatnią sobotę odwiedziliśmy znajomych na działce. Przywieźliśmy owoce i chleb, a oni przygotowali sałatkę i zupę. Dzieci grały w piłkę, dorośli rozmawiali przy stole. Pogoda była ciepła, ale po obiedzie pojawiły się ciemne chmury.\n\nZebraliśmy rzeczy z ogrodu i przenieśliśmy się do małego domku. Tam graliśmy w karty i słuchaliśmy muzyki. Deszcz trwał tylko pół godziny. Kiedy znów wyszło słońce, poszliśmy na spacer po okolicy. Wieczorem pomagaliśmy gospodarzom sprzątać. Nie musieliśmy wiele planować, a wszyscy dobrze spędzili czas. Chcemy spotkać się w ten sposób jeszcze raz.",
+      "questions": [
+        {
+          "id": "q1",
+          "question": "Jaki jest temat historii?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Zakup działki."
+            },
+            {
+              "id": "B",
+              "text": "Budowa domku dla dzieci."
+            },
+            {
+              "id": "C",
+              "text": "Wspólne spędzenie wolnego dnia mimo zmiany pogody."
+            }
+          ]
+        },
+        {
+          "id": "q2",
+          "question": "Co goście przywieźli?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Owoce i chleb."
+            },
+            {
+              "id": "B",
+              "text": "Sałatkę i zupę."
+            },
+            {
+              "id": "C",
+              "text": "Piłkę i komputer."
+            }
+          ]
+        },
+        {
+          "id": "q3",
+          "question": "Dlaczego weszli do domku?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Nie mieli jedzenia."
+            },
+            {
+              "id": "B",
+              "text": "Zaczynał padać deszcz."
+            },
+            {
+              "id": "C",
+              "text": "Chcieli od razu wrócić do miasta."
+            }
+          ]
+        },
+        {
+          "id": "q4",
+          "question": "Czy zmiana pogody zepsuła całe spotkanie?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Tak, wszyscy natychmiast wrócili do domu."
+            },
+            {
+              "id": "B",
+              "text": "Tak, odwołali obiad i spotkanie."
+            },
+            {
+              "id": "C",
+              "text": "Nie, znaleźli zajęcia w domku i później wyszli na spacer."
+            }
+          ]
+        },
+        {
+          "id": "q5",
+          "question": "Co oznacza „gospodarzom”?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Osobom, które przyjmowały gości."
+            },
+            {
+              "id": "B",
+              "text": "Osobom podróżującym autobusem."
+            },
+            {
+              "id": "C",
+              "text": "Sprzedawcom w sklepie."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-029",
+      "targetLevel": "A2",
+      "title": "Podróż z planem i bez planu",
+      "passage": "Kiedy Karol przygotowuje się do wyjazdu, zwykle robi bardzo dokładny plan. Sprawdza połączenia kolejowe, szuka noclegu i zapisuje adresy ciekawych miejsc. Tym razem postanowił zrobić inaczej. Razem z przyjaciółką kupili bilety do Wrocławia, ale zaplanowali tylko pierwszy wieczór. Mieli zarezerwowany pokój w centrum, żeby nie tracić czasu na szukanie hotelu po przyjeździe.\n\nW sobotę rano wyszli bez mapy. Po drodze znaleźli małą piekarnię, porozmawiali ze sprzedawcą i dowiedzieli się o wystawie fotografii. Nie było jej w ich przewodniku. Spędzili tam prawie dwie godziny. Później chcieli odwiedzić ogród botaniczny, lecz zaczął padać deszcz. Zamiast tego poszli do muzeum. W muzeum było ciepło i spokojnie.\n\nKarol zauważył, że nie wszystko trzeba wcześniej planować. Rezerwacja noclegu była przydatna, ale wolny czas pozwolił im odkryć coś nowego. Na następny wyjazd zamierza znów przygotować podstawowy plan, a resztę zostawić otwartą.",
+      "questions": [
+        {
+          "id": "q1",
+          "question": "Co Karol zrozumiał podczas podróży?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Podróż bez przewodnika zawsze kończy się źle."
+            },
+            {
+              "id": "B",
+              "text": "Warto łączyć podstawowy plan ze swobodą."
+            },
+            {
+              "id": "C",
+              "text": "Każdy wyjazd trzeba planować co do minuty."
+            }
+          ]
+        },
+        {
+          "id": "q2",
+          "question": "Kto powiedział podróżnym o wystawie?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Pracownik hotelu."
+            },
+            {
+              "id": "B",
+              "text": "Kierowca autobusu."
+            },
+            {
+              "id": "C",
+              "text": "Sprzedawca w piekarni."
+            }
+          ]
+        },
+        {
+          "id": "q3",
+          "question": "Dlaczego nie poszli do ogrodu botanicznego?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Zaczął padać deszcz."
+            },
+            {
+              "id": "B",
+              "text": "Nie kupili biletów do Wrocławia."
+            },
+            {
+              "id": "C",
+              "text": "Ogród był zamknięty na stałe."
+            }
+          ]
+        },
+        {
+          "id": "q4",
+          "question": "Który sposób planowania odpowiada doświadczeniu Karola?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Ustalić dokładną godzinę każdej atrakcji."
+            },
+            {
+              "id": "B",
+              "text": "Zarezerwować nocleg, ale nie ustalać wszystkich atrakcji."
+            },
+            {
+              "id": "C",
+              "text": "Zrezygnować z rezerwacji i kupna biletów."
+            }
+          ]
+        },
+        {
+          "id": "q5",
+          "question": "Co w tekście oznacza „zostawić otwartą”?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Nie zamykać drzwi hotelu."
+            },
+            {
+              "id": "B",
+              "text": "Zostawić otwarty przewodnik."
+            },
+            {
+              "id": "C",
+              "text": "Nie decydować o wszystkim wcześniej."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-030",
+      "targetLevel": "A2",
+      "title": "Bilet na wcześniejszy pociąg",
+      "passage": "Aneta planowała pojechać do Gdańska w piątek po pracy. Kupiła bilet na pociąg o osiemnastej, ponieważ zwykle kończy pracę o siedemnastej. W czwartek kierownik poinformował ją, że następnego dnia biuro będzie zamknięte wcześniej. Aneta postanowiła zmienić bilet, żeby spędzić więcej czasu nad morzem.\n\nNa stronie przewoźnika znalazła połączenie o czternastej. Zwykła zmiana biletu kosztowała niewiele, ale w tym pociągu zostały tylko miejsca w pierwszej klasie. Aneta porównała ceny i wybrała pociąg o piętnastej. Podróż trwała o dwadzieścia minut dłużej, lecz bilet był tańszy i nie musiała dopłacać za wyższą klasę.\n\nPrzed wyjściem z domu zapisała nowy bilet w telefonie. Stary bilet otrzymał status anulowanego, więc usunęła go z listy dokumentów na podróż. Po przyjeździe do Gdańska zostawiła walizkę w hotelu. Miała jeszcze czas na spacer przed kolacją, choć początkowo planowała tylko zameldować się i odpocząć.",
+      "questions": [
+        {
+          "id": "q1",
+          "question": "Dlaczego Aneta zmienia plan podróży?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Pojawiła się możliwość wcześniejszego wyjazdu."
+            },
+            {
+              "id": "B",
+              "text": "Pierwotny pociąg został odwołany."
+            },
+            {
+              "id": "C",
+              "text": "Hotel przesunął termin rezerwacji."
+            }
+          ]
+        },
+        {
+          "id": "q2",
+          "question": "O której odjeżdża wybrany pociąg?",
+          "options": [
+            {
+              "id": "A",
+              "text": "O osiemnastej."
+            },
+            {
+              "id": "B",
+              "text": "O piętnastej."
+            },
+            {
+              "id": "C",
+              "text": "O czternastej."
+            }
+          ]
+        },
+        {
+          "id": "q3",
+          "question": "Dlaczego nie wybrała pociągu o czternastej?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Podróż nim trwała dłużej."
+            },
+            {
+              "id": "B",
+              "text": "Nie było żadnych wolnych miejsc."
+            },
+            {
+              "id": "C",
+              "text": "Zostały w nim tylko miejsca w droższej klasie."
+            }
+          ]
+        },
+        {
+          "id": "q4",
+          "question": "Co można powiedzieć o priorytetach Anety?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Zależy jej na wcześniejszym przyjeździe, ale również na cenie."
+            },
+            {
+              "id": "B",
+              "text": "Najważniejszy jest dla niej najkrótszy czas przejazdu bez względu na koszt."
+            },
+            {
+              "id": "C",
+              "text": "Chce podróżować tylko pierwszą klasą."
+            }
+          ]
+        },
+        {
+          "id": "q5",
+          "question": "Co oznacza „anulowanego” w odniesieniu do biletu?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Takiego, który pozwala na zmianę klasy."
+            },
+            {
+              "id": "B",
+              "text": "Takiego, który stracił ważność."
+            },
+            {
+              "id": "C",
+              "text": "Takiego, który został wydrukowany."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

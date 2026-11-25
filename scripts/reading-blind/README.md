@@ -1,0 +1,3 @@
+# Independent blind review
+
+Snapshot of 57 drafts at c88ac303fa34c5f06f5b31734c7e3f229c10737d. Six JSON batches contain only passages, CEFR target, questions and options. No answer keys, author explanations, evidence or previous discussion. Send each batch separately to an independent model, with no repository access or conversation history. Compare its option IDs with original keys only after completion. A missing/ambiguous answer, critical language error or weighted score below 90 prevents approval. Recheck after revisions. Do not treat this snapshot as reviewed content. The reviewer has not been run.

@@ -1,0 +1,691 @@
+{
+  "instructions": "You are a Polish-as-a-foreign-language examiner reviewing an anonymous reading practice corpus. You have no answer keys or prior conversation. Use ONLY the passage and options. Do not look up the author or repository. Independently solve each item. For each question return its ID, chosen option ID (A/B/C, or null if no uniquely supported option), exact evidence quote from the passage, ambiguity flag, distractor plausibility score 0–100, and a concise issue description. Then evaluate each passage's naturalness, CEFR suitability for the provided target level, question quality, unambiguity, topic coherence and vocabulary variety, each on a 0–100 scale. Distinguish errors, stylistic preferences and level mismatches. Flag any grammatical error, unsupported answer, trivial distractor or false inference. Give suggested improvements without altering the provided data. Return JSON with one result per passage; no keys are supplied. Weights: naturalness 25%, CEFR 20%, question quality 20%, ambiguity 20%, coherence 10%, vocabulary 5%. Be strict; do not approve solely because a passage has no grammatical errors.",
+  "passages": [
+    {
+      "id": "pl-b1.reading.day-051",
+      "targetLevel": "A2",
+      "title": "Nauka po zakończeniu lekcji",
+      "passage": "Nie wszystkie materiały do nauki trzeba kupować w księgarni. Ministerstwo Edukacji Narodowej udostępnia Zintegrowaną Platformę Edukacyjną. To serwis z bezpłatnymi materiałami, do których można wracać po lekcjach. Uczeń może znaleźć wyjaśnienie trudnego zagadnienia, a nauczyciel może wykorzystać materiał podczas zajęć. Dostęp do publicznych materiałów nie wymaga korzystania z płatnego podręcznika.\n\nMarek przygotowuje się do sprawdzianu z historii. W szkole nie zdążył dokładnie zapisać informacji o jednym wydarzeniu. W domu otwiera materiał na platformie, czyta go i robi krótką notatkę we własnym zeszycie. Następnego dnia chce porównać swoje notatki z notatkami kolegi.\n\nNa platformie można również tworzyć własne materiały, ale do korzystania z edytora i funkcji użytkownika trzeba się zalogować. Marek nie planuje jeszcze niczego publikować. Na razie wystarczą mu ogólnodostępne treści. Ta sytuacja pokazuje, że nie każdy sposób korzystania z serwisu wymaga konta. Warto najpierw ustalić, czego potrzebujemy, a dopiero potem wybierać odpowiednie narzędzie.",
+      "questions": [
+        {
+          "id": "q1",
+          "question": "Co jest głównym tematem tekstu?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Korzystanie z cyfrowych materiałów edukacyjnych."
+            },
+            {
+              "id": "B",
+              "text": "Wybór nowej szkoły przez Marka."
+            },
+            {
+              "id": "C",
+              "text": "Organizacja sprawdzianów w klasie."
+            }
+          ]
+        },
+        {
+          "id": "q2",
+          "question": "Czego dotyczy sprawdzian Marka?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Języka polskiego."
+            },
+            {
+              "id": "B",
+              "text": "Historii."
+            },
+            {
+              "id": "C",
+              "text": "Informatyki."
+            }
+          ]
+        },
+        {
+          "id": "q3",
+          "question": "Dlaczego Marek wraca do materiału w domu?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Nie zna jeszcze daty sprawdzianu."
+            },
+            {
+              "id": "B",
+              "text": "Nauczyciel poprosił go o przygotowanie nowego materiału."
+            },
+            {
+              "id": "C",
+              "text": "Nie zdążył wszystkiego zapisać podczas lekcji."
+            }
+          ]
+        },
+        {
+          "id": "q4",
+          "question": "Który użytkownik będzie potrzebował logowania zgodnie z tekstem?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Nauczyciel, który chce skorzystać z edytora materiałów."
+            },
+            {
+              "id": "B",
+              "text": "Uczeń, który jedynie czyta publiczny materiał."
+            },
+            {
+              "id": "C",
+              "text": "Rodzic, który przegląda ogólnodostępne treści."
+            }
+          ]
+        },
+        {
+          "id": "q5",
+          "question": "Co oznacza „ogólnodostępne”?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Dostępne dopiero po zakupie podręcznika."
+            },
+            {
+              "id": "B",
+              "text": "Dostępne dla wszystkich zainteresowanych."
+            },
+            {
+              "id": "C",
+              "text": "Dostępne wyłącznie dla pracowników szkoły."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-052",
+      "targetLevel": "A2",
+      "title": "Książki wybierane wspólnie",
+      "passage": "Biblioteka szkolna może być ważną częścią życia szkoły. Program wspierający rozwój czytelnictwa pomaga niektórym szkołom kupować nowe książki. Przy wyborze tytułów szkoła korzystająca z odpowiedniego wsparcia powinna rozmawiać z przedstawicielami rodziców oraz uczniów. Dzięki temu lista zakupów nie jest wyłącznie decyzją jednej osoby.\n\nWyobraźmy sobie klasę, której uczniowie chcą mieć więcej książek o przyrodzie. Bibliotekarka zbiera propozycje, nauczyciel rozmawia z klasą, a uczniowie uzasadniają swoje wybory. Nie wszystkie tytuły można kupić naraz. Szkoła musi zdecydować, które książki najlepiej odpowiadają potrzebom czytelników.\n\nSzkoły korzystające z programu przygotowują również projekty edukacyjne z użyciem książek z biblioteki. Mogą na przykład zaplanować spotkanie poświęcone wybranemu tematowi. Dla uczniów ważna jest także możliwość wypożyczania książek podczas przerw w nauce. Nowa książka na półce nie zawsze oznacza, że ktoś ją przeczyta. Dlatego warto łączyć zakupy z zajęciami, które zachęcają młodych ludzi do sięgania po literaturę.",
+      "questions": [
+        {
+          "id": "q1",
+          "question": "Jaka myśl łączy wszystkie akapity?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Biblioteka powinna kupować wyłącznie książki o przyrodzie."
+            },
+            {
+              "id": "B",
+              "text": "Najważniejsze jest ograniczenie dostępu do nowych książek."
+            },
+            {
+              "id": "C",
+              "text": "Wybór książek i działania edukacyjne powinny wspierać czytelnictwo."
+            }
+          ]
+        },
+        {
+          "id": "q2",
+          "question": "Kogo szkoła powinna uwzględnić przy wyborze tytułów?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Przedstawicieli uczniów i rodziców."
+            },
+            {
+              "id": "B",
+              "text": "Wyłącznie pracowników księgarni."
+            },
+            {
+              "id": "C",
+              "text": "Tylko autorów książek."
+            }
+          ]
+        },
+        {
+          "id": "q3",
+          "question": "Dlaczego lista zakupów może być krótsza od listy propozycji?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Szkoła zamierza zrezygnować z biblioteki."
+            },
+            {
+              "id": "B",
+              "text": "Nie wszystkie tytuły można kupić jednocześnie."
+            },
+            {
+              "id": "C",
+              "text": "Uczniowie nie mogą przedstawiać propozycji."
+            }
+          ]
+        },
+        {
+          "id": "q4",
+          "question": "Który projekt najlepiej realizuje opisane podejście?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Szkoła kupuje książki, ale przechowuje je poza zasięgiem uczniów."
+            },
+            {
+              "id": "B",
+              "text": "Biblioteka wybiera tytuły bez rozmowy z czytelnikami i nie organizuje zajęć."
+            },
+            {
+              "id": "C",
+              "text": "Klasa czyta książki z biblioteki i przygotowuje dyskusję na ich temat."
+            }
+          ]
+        },
+        {
+          "id": "q5",
+          "question": "Co znaczy „sięgać po literaturę”?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Wybierać książki do czytania."
+            },
+            {
+              "id": "B",
+              "text": "Przenosić półki biblioteczne."
+            },
+            {
+              "id": "C",
+              "text": "Zapisywać numery książek w katalogu."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-053",
+      "targetLevel": "A2",
+      "title": "Materiały do nauki polskiego",
+      "passage": "Osoby dorosłe, które uczą się polskiego, nie muszą zaczynać od tego samego podręcznika. Na stronie Urzędu do Spraw Cudzoziemców można znaleźć materiały na różnych poziomach. Jedne są przeznaczone dla początkujących, inne obejmują A2 z elementami B1, a jeszcze inne pomagają osobom na poziomie B1 rozwijać się dalej.\n\nDaria od kilku miesięcy mieszka w Polsce. Potrafi zrobić zakupy i krótko opowiedzieć o sobie, ale ma trudności z dłuższymi wiadomościami. Nie chce od razu czytać najtrudniejszego podręcznika. Najpierw otwiera materiał na poziomie A2. Czyta jeden rozdział, zaznacza niezrozumiałe wyrażenia i próbuje odpowiedzieć na pytania bez pomocy tłumacza.\n\nPo kilku dniach zauważa, że część tematów jest dla niej prosta, a inne wymagają powtórzenia. Postanawia korzystać z materiałów w wybranej kolejności, zgodnie ze swoimi potrzebami. Jeśli dobrze rozumie tekst, przechodzi dalej. Kiedy nie rozumie najważniejszych informacji, wraca do łatwiejszych ćwiczeń. Daria nie oczekuje, że samo przeczytanie podręcznika da jej certyfikat. Materiały traktuje jako pomoc w regularnej nauce.",
+      "questions": [
+        {
+          "id": "q1",
+          "question": "Jaki jest główny cel tekstu?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Porównanie cen kursów językowych."
+            },
+            {
+              "id": "B",
+              "text": "Pokazanie, jak dobrać materiały do poziomu i potrzeb ucznia."
+            },
+            {
+              "id": "C",
+              "text": "Opis procedury wydawania certyfikatów."
+            }
+          ]
+        },
+        {
+          "id": "q2",
+          "question": "Co Daria potrafi już zrobić?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Swobodnie czytać wszystkie długie wiadomości."
+            },
+            {
+              "id": "B",
+              "text": "Samodzielnie prowadzić kurs na poziomie B1."
+            },
+            {
+              "id": "C",
+              "text": "Zrobić zakupy i krótko opowiedzieć o sobie."
+            }
+          ]
+        },
+        {
+          "id": "q3",
+          "question": "Dlaczego wybiera na początku materiał A2?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Chce uniknąć zbyt trudnych zadań."
+            },
+            {
+              "id": "B",
+              "text": "Nie ma dostępu do innych poziomów."
+            },
+            {
+              "id": "C",
+              "text": "Ma już certyfikat B1."
+            }
+          ]
+        },
+        {
+          "id": "q4",
+          "question": "Co zrobi, jeśli w nowym rozdziale nie zrozumie głównej informacji?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Przestanie czytać teksty i zajmie się tylko mówieniem."
+            },
+            {
+              "id": "B",
+              "text": "Wróci do łatwiejszych ćwiczeń."
+            },
+            {
+              "id": "C",
+              "text": "Natychmiast wybierze materiał B2."
+            }
+          ]
+        },
+        {
+          "id": "q5",
+          "question": "Co oznacza „z elementami B1”?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Przeznaczony wyłącznie dla osób z certyfikatem B1."
+            },
+            {
+              "id": "B",
+              "text": "Niezawierający żadnych tematów z poziomu B1."
+            },
+            {
+              "id": "C",
+              "text": "Zawierający część materiału charakterystycznego dla B1."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-064",
+      "targetLevel": "A2",
+      "title": "Butelka, za którą wracają pieniądze",
+      "passage": "W Polsce od października 2025 roku działa system kaucyjny dla określonych opakowań po napojach. Kupując napój w opakowaniu objętym tym systemem, klient płaci także kaucję. Później może oddać puste opakowanie w punkcie zbiórki i odzyskać tę kwotę. Nie trzeba w tym celu przechowywać paragonu z zakupu. Ważne jest odpowiednie oznaczenie opakowania.\n\nWyobraźmy sobie, że Emilia kupuje dwie butelki wody. Jedna ma znak systemu kaucyjnego, a druga go nie ma. Przed wyrzuceniem butelek sprawdza oznaczenia. Pierwszą odkłada do torby, którą zabierze do punktu zbiórki. Drugą segreguje zgodnie z zasadami dotyczącymi odpadów. Nie zakłada, że każda butelka pozwoli odzyskać pieniądze.\n\nDla Emilii nowy sposób robienia zakupów oznacza dodatkową czynność, ale może ją połączyć z następną wizytą w sklepie. Nie musi wracać do domu po paragon. Z czasem zwracanie oznaczonych opakowań może stać się zwykłym nawykiem. Celem systemu jest między innymi zwiększenie ilości opakowań zbieranych oddzielnie, aby łatwiej było wykorzystać ich materiały ponownie.",
+      "questions": [
+        {
+          "id": "q1",
+          "question": "Jaki jest główny temat?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Porównanie cen wody w różnych sklepach."
+            },
+            {
+              "id": "B",
+              "text": "Zmiana zasad przechowywania paragonów za wszystkie zakupy."
+            },
+            {
+              "id": "C",
+              "text": "Działanie systemu zwrotu kaucji za opakowania."
+            }
+          ]
+        },
+        {
+          "id": "q2",
+          "question": "Co jest ważne przy rozpoznawaniu opakowania objętego systemem?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Odpowiednie oznaczenie."
+            },
+            {
+              "id": "B",
+              "text": "Miejsce produkcji napoju."
+            },
+            {
+              "id": "C",
+              "text": "Wielkość całych zakupów."
+            }
+          ]
+        },
+        {
+          "id": "q3",
+          "question": "Dlaczego Emilia sprawdza obie butelki osobno?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Wysokość kaucji zależy od jej paragonu."
+            },
+            {
+              "id": "B",
+              "text": "Nie każda jest objęta systemem kaucyjnym."
+            },
+            {
+              "id": "C",
+              "text": "Każdą trzeba zwrócić w sklepie, w którym ją kupiono."
+            }
+          ]
+        },
+        {
+          "id": "q4",
+          "question": "Czy brak paragonu uniemożliwia Emilii odzyskanie kaucji za pierwszą butelkę?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Tak, bez paragonu zwrot jest niemożliwy."
+            },
+            {
+              "id": "B",
+              "text": "Tak, chyba że pokaże potwierdzenie płatności kartą."
+            },
+            {
+              "id": "C",
+              "text": "Nie, jeśli zwróci opakowanie objęte systemem w odpowiednim punkcie."
+            }
+          ]
+        },
+        {
+          "id": "q5",
+          "question": "Co oznacza „odzyskać tę kwotę”?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Otrzymać z powrotem zapłacone pieniądze."
+            },
+            {
+              "id": "B",
+              "text": "Zapłacić jeszcze raz za napój."
+            },
+            {
+              "id": "C",
+              "text": "Otrzymać rabat na dowolny inny produkt."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-078",
+      "targetLevel": "A2",
+      "title": "Sprawa w urzędzie i w banku",
+      "passage": "Numer PESEL należy do ważnych danych osobowych. W Polsce działa usługa, która pozwala uprawnionym osobom zastrzec ten numer. Jest to jeden ze sposobów ograniczenia ryzyka wykorzystania danych przez inną osobę. Instytucje finansowe sprawdzają status numeru między innymi przy zawieraniu umów o kredyt.\n\nTomasz korzysta z tej możliwości, ponieważ chce chronić swoje dane. Zwykle nie potrzebuje zmieniać statusu numeru. Pewnego dnia planuje jednak zawrzeć w banku umowę o pożyczkę. Przed podpisaniem dokumentów pyta pracownika banku, jakie warunki musi spełnić. Dowiaduje się, że powinien sprawdzić status zastrzeżenia i w razie potrzeby skorzystać z usługi cofnięcia zastrzeżenia.\n\nTomasz czyta informacje w oficjalnym serwisie, ponieważ chce uniknąć nieporozumień. Widzi, że zastrzeżenie i jego cofnięcie to dwie różne operacje. Po załatwieniu sprawy chce ponownie zabezpieczyć swoje dane. Nie przekazuje nikomu hasła do konta ani nie prosi obcej osoby o zmianę statusu w swoim imieniu. W razie wątpliwości korzysta z oficjalnej informacji o usłudze.",
+      "questions": [
+        {
+          "id": "q1",
+          "question": "Czego dotyczy tekst?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Ochrony danych i zmiany statusu zastrzeżenia PESEL."
+            },
+            {
+              "id": "B",
+              "text": "Porównania kosztów różnych kredytów."
+            },
+            {
+              "id": "C",
+              "text": "Procedury nadawania nowego numeru PESEL."
+            }
+          ]
+        },
+        {
+          "id": "q2",
+          "question": "Jaką umowę planuje zawrzeć Tomasz?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Umowę o pracę."
+            },
+            {
+              "id": "B",
+              "text": "Umowę o pożyczkę."
+            },
+            {
+              "id": "C",
+              "text": "Umowę o wynajem mieszkania."
+            }
+          ]
+        },
+        {
+          "id": "q3",
+          "question": "Dlaczego Tomasz pyta pracownika banku o wymagania?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Chce otrzymać nowy numer PESEL."
+            },
+            {
+              "id": "B",
+              "text": "Nie pamięta nazwy swojego banku."
+            },
+            {
+              "id": "C",
+              "text": "Chce ustalić warunki podpisania umowy."
+            }
+          ]
+        },
+        {
+          "id": "q4",
+          "question": "Które postępowanie najlepiej odpowiada zachowaniu Tomasza?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Samodzielnie sprawdzić usługę na oficjalnej stronie."
+            },
+            {
+              "id": "B",
+              "text": "Podać hasło osobie oferującej pomoc w internecie."
+            },
+            {
+              "id": "C",
+              "text": "Poprosić przypadkowego klienta banku o zalogowanie się na jego konto."
+            }
+          ]
+        },
+        {
+          "id": "q5",
+          "question": "Co oznacza „cofnięcie zastrzeżenia”?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Zgłoszenie zagubienia dokumentu."
+            },
+            {
+              "id": "B",
+              "text": "Usunięcie aktywnego zastrzeżenia."
+            },
+            {
+              "id": "C",
+              "text": "Zmianę samego numeru PESEL."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-092",
+      "targetLevel": "B1",
+      "title": "Nie każdy odpad trafia do jednego z pięciu koszy",
+      "passage": "W Polsce podstawowy system segregacji odpadów opiera się na pięciu grupach. Oddzielnie zbiera się papier, szkło, metale i tworzywa sztuczne, odpady biologiczne oraz pozostałe odpady. Taki podział ma ułatwić późniejsze przetwarzanie materiałów. Nie oznacza jednak, że każdy przedmiot, który przestaje być potrzebny w domu, można po prostu wrzucić do jednego z tych pojemników.\n\nDobrym przykładem są ubrania. W zwykłym systemie nie ma szóstego pojemnika przeznaczonego wyłącznie na tekstylia. Osoba, która porządkuje szafę, powinna sprawdzić miejscowe zasady zbierania takich odpadów. Podobnie warto zwracać uwagę na opakowania po napojach. Część z nich należy do systemu kaucyjnego, który działa obok zwykłej segregacji. Zwrócenie oznaczonej butelki w punkcie zbiórki ma inny cel niż wyrzucenie jej do pojemnika na odpady.\n\nWyobraźmy sobie mieszkańca, który chce zmniejszyć ilość śmieci. Zamiast ustawiać w kuchni coraz więcej koszy, przygotowuje jedno dodatkowe miejsce na rzeczy wymagające osobnego postępowania. Przed oddaniem danej rzeczy sprawdza informacje w oficjalnych źródłach. Jeśli ubranie nadaje się jeszcze do używania, rozważa przekazanie go komuś innemu.\n\nSegregacja to ważna czynność, ale nie jest jedynym sposobem dbania o środowisko. Równie ważne może być ograniczenie zakupów rzeczy, których nie potrzebujemy, naprawianie przedmiotów oraz dłuższe korzystanie z tego, co już posiadamy. Dzięki temu część rzeczy w ogóle nie staje się odpadami.",
+      "questions": [
+        {
+          "id": "q1",
+          "question": "Jaką główną myśl przedstawia autor?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Najlepiej zrezygnować ze zwykłej segregacji na rzecz systemu kaucyjnego."
+            },
+            {
+              "id": "B",
+              "text": "Podstawową segregację warto uzupełniać odpowiednim postępowaniem z innymi rzeczami i ograniczaniem odpadów."
+            },
+            {
+              "id": "C",
+              "text": "Każda nowa kategoria odpadów wymaga ustawienia osobnego kosza w kuchni."
+            }
+          ]
+        },
+        {
+          "id": "q2",
+          "question": "Czego nie obejmuje osobny pojemnik w podstawowym systemie?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Papieru."
+            },
+            {
+              "id": "B",
+              "text": "Szkła."
+            },
+            {
+              "id": "C",
+              "text": "Tekstyliów."
+            }
+          ]
+        },
+        {
+          "id": "q3",
+          "question": "Dlaczego mieszkaniec sprawdza informacje przed oddaniem niektórych rzeczy?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Nie wszystkie przedmioty podlegają tym samym zasadom."
+            },
+            {
+              "id": "B",
+              "text": "Chce porównać ceny nowych pojemników."
+            },
+            {
+              "id": "C",
+              "text": "Nie wie, które przedmioty kupił w sklepie."
+            }
+          ]
+        },
+        {
+          "id": "q4",
+          "question": "Która czynność najlepiej ilustruje zapobieganie powstawaniu odpadów?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Kupienie nowej torby i pozostawienie starej bez użycia."
+            },
+            {
+              "id": "B",
+              "text": "Naprawienie torby i dalsze korzystanie z niej."
+            },
+            {
+              "id": "C",
+              "text": "Posegregowanie uszkodzonej torby po jej wyrzuceniu."
+            }
+          ]
+        },
+        {
+          "id": "q5",
+          "question": "Co w tym kontekście znaczy „wymagające osobnego postępowania”?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Takie, które zawsze można wrzucić do dowolnego kosza."
+            },
+            {
+              "id": "B",
+              "text": "Takie, które koniecznie należy wyrzucić natychmiast."
+            },
+            {
+              "id": "C",
+              "text": "Takie, wobec których trzeba zastosować inne zasady."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-099",
+      "targetLevel": "B1",
+      "title": "Wspólne czytanie jako tradycja",
+      "passage": "Narodowe Czytanie to wydarzenie, które co roku zachęca do wspólnego poznawania polskiej literatury. Mogą do niego dołączać osoby prywatne, szkoły, biblioteki oraz inne instytucje kulturalne w kraju i poza jego granicami. W kolejnych edycjach wybierane są różne utwory. W 2025 roku uczestnicy czytali poezję Jana Kochanowskiego, a w 2026 roku wybrano „Dziady” Adama Mickiewicza. Nie chodzi więc o powtarzanie co roku tej samej książki.\n\nWyobraźmy sobie bibliotekę, do której przychodzi grupa osób uczących się polskiego. Nie wszyscy rozumieją dawne słownictwo i nie wszyscy znają historię literatury. Bibliotekarka proponuje, żeby przed wspólnym czytaniem krótko przedstawić autora oraz temat wybranych fragmentów. Chętni czytają tekst na głos, a pozostali słuchają. Po każdym fragmencie grupa rozmawia o jego znaczeniu. Nie trzeba znać wszystkich słów, aby uczestniczyć w rozmowie, chociaż trudniejsze wyrażenia warto później sprawdzić.\n\nJedna z uczestniczek przyznaje, że wcześniej omijała klasyczne utwory, ponieważ wydawały się jej zbyt trudne. Wspólne spotkanie nie sprawiło, że nagle wszystko zrozumiała, ale pomogło jej dostrzec związek między tekstem a doświadczeniami innych czytelników. Postanowiła wrócić do wybranego fragmentu w domu.\n\nTakie wydarzenie może być okazją nie tylko do lektury, lecz także do rozmowy o kulturze. Dla osoby uczącej się języka ważny jest również kontakt z różnymi sposobami interpretacji tekstu. Dlatego przygotowanie krótkiego wprowadzenia i możliwość zadawania pytań mają w opisanej sytuacji szczególne znaczenie.",
+      "questions": [
+        {
+          "id": "q1",
+          "question": "Jaka jest główna myśl tekstu?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Wspólne czytanie może przybliżać literaturę także osobom uczącym się języka."
+            },
+            {
+              "id": "B",
+              "text": "Narodowe Czytanie jest przeznaczone głównie dla specjalistów od literatury."
+            },
+            {
+              "id": "C",
+              "text": "Udział w wydarzeniu wymaga pełnego zrozumienia dawnych utworów."
+            }
+          ]
+        },
+        {
+          "id": "q2",
+          "question": "Który utwór wybrano w 2026 roku?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Dowolną książkę wybraną przez każdą osobę."
+            },
+            {
+              "id": "B",
+              "text": "Dziady Adama Mickiewicza."
+            },
+            {
+              "id": "C",
+              "text": "Poezję Jana Kochanowskiego."
+            }
+          ]
+        },
+        {
+          "id": "q3",
+          "question": "Dlaczego bibliotekarka proponuje krótkie wprowadzenie?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Wszyscy uczestnicy chcą zdać egzamin z historii literatury."
+            },
+            {
+              "id": "B",
+              "text": "Czytelnicy mają wybrać dzieło na następną oficjalną edycję."
+            },
+            {
+              "id": "C",
+              "text": "Uczestnicy mają różną znajomość dawnego języka i literatury."
+            }
+          ]
+        },
+        {
+          "id": "q4",
+          "question": "Które stwierdzenie najlepiej opisuje zmianę u uczestniczki?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Nadal ma trudności, lecz zyskała motywację do samodzielnej lektury."
+            },
+            {
+              "id": "B",
+              "text": "Po jednym spotkaniu rozumie już całe dzieło bez pomocy."
+            },
+            {
+              "id": "C",
+              "text": "Uznała, że lepiej już nigdy nie czytać starszej literatury."
+            }
+          ]
+        },
+        {
+          "id": "q5",
+          "question": "Co oznacza „omijała klasyczne utwory”?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Wybierała z nich tylko jeden rozdział podczas spotkania."
+            },
+            {
+              "id": "B",
+              "text": "Unikała czytania takich dzieł."
+            },
+            {
+              "id": "C",
+              "text": "Czytała je zawsze przed innymi książkami."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
