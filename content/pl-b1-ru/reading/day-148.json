@@ -1,0 +1,87 @@
+{
+  "id": "pl-b1.reading.day-148",
+  "day": 148,
+  "level": "B1",
+  "genre": "wiadomość",
+  "title": "Jak działa budżet obywatelski",
+  "text": "Budżet obywatelski jest sposobem, w którym mieszkańcy mogą przedstawiać pomysły dotyczące swojej miejscowości. Przygotowanie propozycji wymaga jednak czegoś więcej niż wybrania ciekawego miejsca lub opisania potrzeby. Zasady oceny projektów gminnych uwzględniają między innymi zgodność z prawem, możliwość wykonania projektu, wymagania formalne oraz sposób odwołania się od wyniku oceny. Wymagania formalne mogą dotyczyć na przykład informacji, które trzeba podać w opisie propozycji.\n\nWyobraźmy sobie grupę mieszkańców, która chciałaby stworzyć niewielkie miejsce do odpoczynku przy osiedlowej bibliotece. Początkowo proponują ustawienie kilku ławek na placu obok budynku. Jedna z osób zauważa jednak, że nie wiedzą, kto zarządza tym terenem. Zanim przygotują szczegółowy opis, postanawiają sprawdzić, jakie informacje dotyczące miejsca są potrzebne.\n\nW fikcyjnym przykładzie druga grupa ma pomysł na organizowanie bezpłatnych spotkań dla nowych mieszkańców. Jej członkowie nie potrzebują nowych ławek, lecz miejsca do prowadzenia zajęć. Obie grupy muszą zastanowić się nie tylko nad korzyściami, ale również nad warunkami realizacji swoich pomysłów. Mogą korzystać z informacji podanych w zasadach przygotowanych przez daną gminę.\n\nKiedy mieszkańcy otrzymują uwagi do projektu, powinni odróżnić potrzebę uzupełnienia informacji od problemu, którego nie da się rozwiązać w zaproponowanej formie. W naszym przykładzie pierwsza grupa może rozważyć inne miejsce, jeśli pierwotny plac nie będzie odpowiedni.\n\nWażne jest również sprawdzenie opisanej przez gminę procedury odwołania, jeśli pojawi się negatywny wynik oceny. Nie każdy pomysł musi od razu przyjąć swoją ostateczną formę. Przykładowe sytuacje pokazują, że dobra propozycja powinna łączyć potrzeby mieszkańców z konkretną możliwością wykonania zadania.",
+  "questions": [
+    {
+      "id": "main-idea",
+      "skill": "main-idea",
+      "question": "Co wiadomość wyjaśnia przede wszystkim?",
+      "options": [
+        "Który z dwóch opisanych projektów powinien wygrać głosowanie.",
+        "Jak przygotować dowolny projekt bez sprawdzania zasad danej gminy.",
+        "Dlaczego propozycja mieszkańców powinna odpowiadać potrzebom i spełniać warunki realizacji."
+      ],
+      "answer": "Dlaczego propozycja mieszkańców powinna odpowiadać potrzebom i spełniać warunki realizacji.",
+      "evidence": "Przykładowe sytuacje pokazują, że dobra propozycja powinna łączyć potrzeby mieszkańców z konkretną możliwością wykonania zadania.",
+      "explanation": "Tekst opisuje wymagania i dwie wyobrażone propozycje, bez oceniania ich wyniku."
+    },
+    {
+      "id": "detail",
+      "skill": "detail",
+      "question": "Czego dotyczy pierwszy fikcyjny pomysł?",
+      "options": [
+        "Miejsca odpoczynku z ławkami przy bibliotece.",
+        "Bezpłatnych lekcji w nowej szkole.",
+        "Budowy parkingu pod urzędem."
+      ],
+      "answer": "Miejsca odpoczynku z ławkami przy bibliotece.",
+      "evidence": "Początkowo proponują ustawienie kilku ławek na placu obok budynku.",
+      "explanation": "Pierwsza grupa chce urządzić przestrzeń wypoczynku."
+    },
+    {
+      "id": "cause",
+      "skill": "cause",
+      "question": "Dlaczego grupa chce sprawdzić informacje o terenie?",
+      "options": [
+        "Nie zna jeszcze nazwy biblioteki.",
+        "Nie wie, kto nim zarządza, a to może mieć znaczenie dla wykonania pomysłu.",
+        "Chce zmienić wszystkie wymagania formalne gminy."
+      ],
+      "answer": "Nie wie, kto nim zarządza, a to może mieć znaczenie dla wykonania pomysłu.",
+      "evidence": "Jedna z osób zauważa jednak, że nie wiedzą, kto zarządza tym terenem.",
+      "explanation": "Brak informacji o zarządzaniu placem wymaga wyjaśnienia."
+    },
+    {
+      "id": "inference",
+      "skill": "inference",
+      "question": "Jeśli mieszkańcy dowiedzą się, że ustawienie ławek na wybranym placu nie jest możliwe, ale cel projektu pozostaje ważny, co mogą zrobić zgodnie z opisem?",
+      "options": [
+        "Złożyć ten sam opis bez odniesienia do uwagi.",
+        "Sprawdzić inne miejsce i warunki jego wykorzystania, zachowując cel projektu.",
+        "Zastąpić sprawdzenie warunków samą informacją o popularności pomysłu."
+      ],
+      "answer": "Sprawdzić inne miejsce i warunki jego wykorzystania, zachowując cel projektu.",
+      "evidence": "W naszym przykładzie pierwsza grupa może rozważyć inne miejsce, jeśli pierwotny plac nie będzie odpowiedni.",
+      "explanation": "Zmiana sposobu realizacji pozwala zachować potrzebę, której dotyczy projekt."
+    },
+    {
+      "id": "vocabulary",
+      "skill": "vocabulary",
+      "question": "Co oznacza „wymagania formalne”?",
+      "options": [
+        "Warunki dotyczące sposobu przygotowania i złożenia propozycji.",
+        "Wyłącznie estetyczny wygląd planowanych przedmiotów.",
+        "Liczbę osób, które osobiście popierają każdy pomysł."
+      ],
+      "answer": "Warunki dotyczące sposobu przygotowania i złożenia propozycji.",
+      "evidence": "Wymagania formalne mogą dotyczyć na przykład informacji, które trzeba podać w opisie propozycji.",
+      "explanation": "Wymagania formalne dotyczą zgodności propozycji z ustalonymi regułami przygotowania."
+    }
+  ],
+  "source": {
+    "url": "https://eli.gov.pl/api/acts/DU/2024/1465/text.html",
+    "publisher": "ELI / Dziennik Ustaw",
+    "title": "Ustawa o samorządzie gminnym – budżet obywatelski",
+    "facts": [
+      "Municipal project rules address legal conformity, technical feasibility, formal requirements and appeals."
+    ],
+    "use": "facts-only",
+    "checked": "2026-11-25",
+    "adaptation": "Original Polish educational composition based on registered source facts; examples are fictional."
+  },
+  "publicationStatus": "practice"
+}

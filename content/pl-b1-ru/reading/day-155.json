@@ -1,0 +1,76 @@
+{
+  "id": "pl-b1.reading.day-155",
+  "day": 155,
+  "level": "B1",
+  "genre": "wiadomość",
+  "title": "Dokumenty przed wizytą u lekarza",
+  "text": "Cześć, Marto!\n\nJutro mam wizytę w przychodni, do której idę po raz pierwszy. Chciałabym przygotować się trochę lepiej niż ostatnio, kiedy podczas rozmowy z lekarzem przypomniałam sobie kilka ważnych spraw dopiero po wyjściu z gabinetu. Tym razem zapisałam pytania, które chcę zadać, i przygotowałam dokumenty związane z poprzednimi wizytami.\n\nDostałam wiadomość z przychodni z adresem budynku i numerem gabinetu. W wiadomości poproszono, żeby przynieść dokument tożsamości oraz posiadane wyniki badań związanych z powodem wizyty. Nie znam zasad działania innych placówek, więc w razie wątpliwości będę pytać bezpośrednio w tej przychodni.\n\nPrzygotowałam też krótką listę leków, które obecnie przyjmuję. Nie chcę samodzielnie oceniać, czy każdy z nich ma związek z moim pytaniem. Wolę przekazać lekarzowi informacje i zapytać, co jest istotne podczas rozmowy.\n\nOstatnio miałam problem ze znalezieniem właściwego dokumentu na telefonie. Wiele plików nosiło podobne nazwy. Dlatego dziś zapisałam potrzebne wyniki w osobnym folderze, a przy każdym dodałam datę. Jeśli lekarz będzie chciał zobaczyć wcześniejszy wynik, łatwiej znajdę go podczas wizyty.\n\nJutro wyjdę z domu trochę wcześniej, ponieważ przychodnia mieści się w dużym budynku, do którego prowadzi kilka wejść. Po rozmowie chciałabym zapisać najważniejsze ustalenia, szczególnie jeśli pojawi się potrzeba kolejnej wizyty. Jeżeli czegoś nie zrozumiem, poproszę o wyjaśnienie, zamiast zgadywać później.\n\nNie przygotowuję się do samodzielnego stawiania diagnozy. Chcę jedynie, żeby w czasie wizyty łatwiej było przekazać informacje, które już mam, i uzyskać odpowiedzi na moje pytania.\n\nPozdrawiam,\nZosia",
+  "questions": [
+    {
+      "id": "main-idea",
+      "skill": "main-idea",
+      "question": "Po co Zosia przygotowuje listy i dokumenty?",
+      "options": [
+        "Żeby ułatwić przekazanie informacji i rozmowę podczas wizyty.",
+        "Żeby samodzielnie ustalić diagnozę przed spotkaniem.",
+        "Żeby porównać wymagania wszystkich przychodni w mieście."
+      ],
+      "answer": "Żeby ułatwić przekazanie informacji i rozmowę podczas wizyty.",
+      "evidence": "Chcę jedynie, żeby w czasie wizyty łatwiej było przekazać informacje, które już mam, i uzyskać odpowiedzi na moje pytania.",
+      "explanation": "Przygotowanie ma usprawnić komunikację z lekarzem."
+    },
+    {
+      "id": "detail",
+      "skill": "detail",
+      "question": "O jaki dokument poproszono w wiadomości z przychodni?",
+      "options": [
+        "Potwierdzenie rezerwacji noclegu.",
+        "Zaświadczenie z miejsca pracy.",
+        "Dokument tożsamości."
+      ],
+      "answer": "Dokument tożsamości.",
+      "evidence": "W wiadomości poproszono, żeby przynieść dokument tożsamości oraz posiadane wyniki badań związanych z powodem wizyty.",
+      "explanation": "Wymieniono dokument i posiadane wyniki."
+    },
+    {
+      "id": "cause",
+      "skill": "cause",
+      "question": "Dlaczego Zosia uporządkowała pliki według dat?",
+      "options": [
+        "Musiała przesłać wszystkie pliki Marcie przed wizytą.",
+        "Wcześniej podobne nazwy utrudniały znalezienie właściwego wyniku.",
+        "Chciała zmienić datę wykonania badań."
+      ],
+      "answer": "Wcześniej podobne nazwy utrudniały znalezienie właściwego wyniku.",
+      "evidence": "Wiele plików nosiło podobne nazwy. Dlatego dziś zapisałam potrzebne wyniki w osobnym folderze, a przy każdym dodałam datę.",
+      "explanation": "Daty ułatwią odszukanie odpowiedniego dokumentu."
+    },
+    {
+      "id": "inference",
+      "skill": "inference",
+      "question": "Jeśli Zosia nie rozumie jednego ustalenia dotyczącego kolejnej wizyty, a w wiadomości nie ma odpowiedzi, co pasuje do jej podejścia?",
+      "options": [
+        "Zastąpić rozmowę z lekarzem porównaniem plików na telefonie.",
+        "Poprosić o wyjaśnienie w przychodni i zapisać ustalenie.",
+        "Wybrać samodzielnie termin na podstawie własnej interpretacji wyniku."
+      ],
+      "answer": "Poprosić o wyjaśnienie w przychodni i zapisać ustalenie.",
+      "evidence": "Jeżeli czegoś nie zrozumiem, poproszę o wyjaśnienie, zamiast zgadywać później.",
+      "explanation": "Zosia chce wyjaśniać niejasności u właściwego źródła."
+    },
+    {
+      "id": "vocabulary",
+      "skill": "vocabulary",
+      "question": "Co oznacza „stawianie diagnozy”?",
+      "options": [
+        "Ustalanie godziny przyjścia do przychodni.",
+        "Porządkowanie plików według dat.",
+        "Ustalanie, na czym polega problem zdrowotny."
+      ],
+      "answer": "Ustalanie, na czym polega problem zdrowotny.",
+      "evidence": "Nie przygotowuję się do samodzielnego stawiania diagnozy.",
+      "explanation": "Diagnoza dotyczy rozpoznania problemu zdrowotnego, a nie organizacji dokumentów."
+    }
+  ],
+  "publicationStatus": "practice"
+}

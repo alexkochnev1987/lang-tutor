@@ -1,0 +1,76 @@
+{
+  "id": "pl-b1.reading.day-153",
+  "day": 153,
+  "level": "B1",
+  "genre": "opowiadanie",
+  "title": "Spotkanie z nowymi sąsiadami",
+  "text": "Rodzina Kacpra wprowadziła się do bloku na początku listopada. Przez pierwsze dni Kacper zajmował się przede wszystkim rozpakowywaniem pudełek i szukaniem miejsca dla nowych mebli. Z sąsiadami wymieniał krótkie powitania na klatce schodowej, ale nie miał okazji dłużej porozmawiać.\n\nW sobotę rano ktoś zapukał do drzwi. Była to pani Teresa z mieszkania naprzeciwko. Przyniosła kartkę z informacją o niedzielnym spotkaniu mieszkańców przy kawie. Kacper chciał odmówić, ponieważ wciąż miał wiele rzeczy do zrobienia. Teresa powiedziała jednak, że można przyjść tylko na kilka minut, a spotkanie nie wymaga żadnych przygotowań.\n\nKacper pojawił się w sali wspólnoty razem z córką. Początkowo słuchał rozmów o okolicy. Dowiedział się, gdzie znajduje się punkt naprawy rowerów i kiedy w pobliżu odbywa się targ. Kiedy wspomniał o dużej liczbie pudełek po przeprowadzce, jeden z sąsiadów zaproponował, że pokaże mu miejsce przeznaczone na kartonowe opakowania.\n\nInna mieszkanka, Marta, szukała osoby, która mogłaby wyjaśnić jej kilka podstawowych funkcji programu do zdjęć. Kacper znał ten program z pracy. Zaproponował krótkie spotkanie w przyszłym tygodniu. Zaskoczyło go, że chociaż dopiero przyjechał i sam potrzebował wielu informacji, mógł również komuś pomóc.\n\nPo powrocie do domu nie czuł już, że wszystkie sprawy związane z nowym miejscem musi rozwiązać samodzielnie. Nadal nie znał dobrze wszystkich mieszkańców, ale miał kilka osób, z którymi mógł porozmawiać. Postanowił, że na kolejne spotkanie przyjdzie bez czekania, aż skończy urządzać mieszkanie. Zrozumiał, że poznawanie sąsiadów może być częścią przeprowadzki, a nie zadaniem na później.",
+  "questions": [
+    {
+      "id": "main-idea",
+      "skill": "main-idea",
+      "question": "Jaką zmianę przeżywa Kacper?",
+      "options": [
+        "Rezygnuje z urządzania mieszkania, aby prowadzić wszystkie spotkania wspólnoty.",
+        "Z osoby zajętej własną przeprowadzką staje się uczestnikiem wzajemnej pomocy sąsiedzkiej.",
+        "Przestaje potrzebować jakichkolwiek informacji o nowej okolicy."
+      ],
+      "answer": "Z osoby zajętej własną przeprowadzką staje się uczestnikiem wzajemnej pomocy sąsiedzkiej.",
+      "evidence": "Zaskoczyło go, że chociaż dopiero przyjechał i sam potrzebował wielu informacji, mógł również komuś pomóc.",
+      "explanation": "Spotkanie pozwoliło mu zarówno otrzymać, jak i zaoferować pomoc."
+    },
+    {
+      "id": "detail",
+      "skill": "detail",
+      "question": "Czego Marta chciała się nauczyć?",
+      "options": [
+        "Podstawowych funkcji programu do zdjęć.",
+        "Składania nowych mebli.",
+        "Naprawiania rowerów."
+      ],
+      "answer": "Podstawowych funkcji programu do zdjęć.",
+      "evidence": "Inna mieszkanka, Marta, szukała osoby, która mogłaby wyjaśnić jej kilka podstawowych funkcji programu do zdjęć.",
+      "explanation": "Kacper znał ten program z pracy."
+    },
+    {
+      "id": "cause",
+      "skill": "cause",
+      "question": "Dlaczego Kacper początkowo chciał odmówić Teresie?",
+      "options": [
+        "Nie chciał rozmawiać o okolicy przy kawie.",
+        "Spotkanie miało odbywać się w innym mieście.",
+        "Miał jeszcze wiele obowiązków związanych z przeprowadzką."
+      ],
+      "answer": "Miał jeszcze wiele obowiązków związanych z przeprowadzką.",
+      "evidence": "Kacper chciał odmówić, ponieważ wciąż miał wiele rzeczy do zrobienia.",
+      "explanation": "Urządzanie mieszkania zajmowało jego czas."
+    },
+    {
+      "id": "inference",
+      "skill": "inference",
+      "question": "Nowa sąsiadka ma tylko kwadrans i nie zna jeszcze okolicy, ale potrafi naprawiać rowery. Co wynika z doświadczenia Kacpra?",
+      "options": [
+        "Musi przygotować formalne zajęcia z naprawy rowerów przed pierwszym spotkaniem.",
+        "Powinna najpierw poznać wszystkie usługi w okolicy, a potem spotkać się z sąsiadami.",
+        "Może przyjść na krótko, zapytać o okolicę i zaproponować pomoc innym."
+      ],
+      "answer": "Może przyjść na krótko, zapytać o okolicę i zaproponować pomoc innym.",
+      "evidence": "Teresa powiedziała jednak, że można przyjść tylko na kilka minut, a spotkanie nie wymaga żadnych przygotowań.\n\nKacper pojawił się w sali wspólnoty razem z córką. Początkowo słuchał rozmów o okolicy. Dowiedział się, gdzie znajduje się punkt naprawy rowerów i kiedy w pobliżu odbywa się targ. Kiedy wspomniał o dużej liczbie pudełek po przeprowadzce, jeden z sąsiadów zaproponował, że pokaże mu miejsce przeznaczone na kartonowe opakowania.\n\nInna mieszkanka, Marta, szukała osoby, która mogłaby wyjaśnić jej kilka podstawowych funkcji programu do zdjęć. Kacper znał ten program z pracy. Zaproponował krótkie spotkanie w przyszłym tygodniu. Zaskoczyło go, że chociaż dopiero przyjechał i sam potrzebował wielu informacji, mógł również komuś pomóc.",
+      "explanation": "Krótki udział nie wyklucza wymiany informacji ani zaoferowania własnej umiejętności."
+    },
+    {
+      "id": "vocabulary",
+      "skill": "vocabulary",
+      "question": "Co oznacza „wymieniał krótkie powitania”?",
+      "options": [
+        "Mówił sąsiadom dzień dobry, ale zwykle nie rozmawiał z nimi długo.",
+        "Zostawiał sąsiadom pisemne listy z prośbami.",
+        "Przedstawiał wszystkim szczegółową historię swojej przeprowadzki."
+      ],
+      "answer": "Mówił sąsiadom dzień dobry, ale zwykle nie rozmawiał z nimi długo.",
+      "evidence": "Z sąsiadami wymieniał krótkie powitania na klatce schodowej, ale nie miał okazji dłużej porozmawiać.",
+      "explanation": "Chodzi o krótką uprzejmą interakcję przy mijaniu się."
+    }
+  ],
+  "publicationStatus": "practice"
+}
