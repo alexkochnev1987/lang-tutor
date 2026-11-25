@@ -195,10 +195,10 @@ if (command === 'validate') {
     await writeJson(reviewPath(t), report)
     console.log(t.id + ' ' + (report.approved ? 'APPROVED' : 'REJECTED') + ' ' + report.score)
   }
-} else if (command === 'export') {
+} else if (command === 'export' || command === 'export-files') {
   requireDays()
   const output = option('--out', '')
-  if (!output) fail('Provide a new output file with --out; export never overwrites existing files')
+  if (command === 'export' && !output) fail('Provide a new output file with --out; export never overwrites existing files')
   const accepted = []
   for (const day of range) {
     const t = drafts.get(day)
@@ -206,10 +206,22 @@ if (command === 'validate') {
     if (report.approved !== true || report.fingerprint !== hash(t) || report.id !== t.id || !(report.score >= 90)) fail('No passing review for current revision: ' + t.id)
     accepted.push(t)
   }
-  const path = resolve(output)
-  if (path === join(ROOT, 'content/pl-b1-ru/reading.json')) fail('Do not overwrite live reading pack')
-  await writeJson(path, { version: 2, texts: accepted })
-  console.log('Exported ' + accepted.length + ' reviewed texts to ' + path)
+  if (command === 'export-files') {
+    // Only the same fingerprint-checked approved records may enter the live daily directory.
+    const folder = join(ROOT, 'content/pl-b1-ru/reading')
+    const files = accepted.map(t => ({ path: join(folder, 'day-' + String(t.day).padStart(3, '0') + '.json'), text: t }))
+    for (const file of files) {
+      try { await readFile(file.path); fail('Refusing to overwrite ' + file.path) }
+      catch (err) { if (err.code !== 'ENOENT') throw err }
+    }
+    for (const file of files) await writeJson(file.path, file.text)
+    console.log('Exported ' + accepted.length + ' approved daily texts to ' + folder)
+  } else {
+    const path = resolve(output)
+    if (path === join(ROOT, 'content/pl-b1-ru/reading.json')) fail('Do not overwrite live reading pack')
+    await writeJson(path, { version: 2, texts: accepted })
+    console.log('Exported ' + accepted.length + ' reviewed texts to ' + path)
+  }
 } else {
-  fail('Use validate, author, review or export')
+  fail('Use validate, author, review, export or export-files')
 }

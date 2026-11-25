@@ -6,7 +6,7 @@ import {
   loadGrammarRules,
   loadGrammarSentences,
   loadMorphology,
-  loadReadingTexts,
+  loadReadingTextForDay,
   loadVocabulary,
   type CurriculumDay,
   type CollocationItem,
@@ -123,7 +123,7 @@ const exerciseIdsOf = (steps: Step[]): Set<string> =>
   new Set(steps.flatMap((s) => (s.kind === "exercise" ? [s.ex.id] : [])));
 
 export async function buildTodayPlan(): Promise<TodayPlan> {
-  const [curriculum, vocabulary, morphology, rules, sentences, collocations, readingTexts, state, dailyQueue] =
+  const [curriculum, vocabulary, morphology, rules, sentences, collocations, state, dailyQueue] =
     await Promise.all([
       loadCurriculum(),
       loadVocabulary(),
@@ -131,7 +131,6 @@ export async function buildTodayPlan(): Promise<TodayPlan> {
       loadGrammarRules(),
       loadGrammarSentences(),
       loadCollocations(),
-      loadReadingTexts(),
       loadState(),
       loadDailyWords(),
     ]);
@@ -186,7 +185,7 @@ export async function buildTodayPlan(): Promise<TodayPlan> {
 
   const examSteps =
     day.examFocus === "reading"
-      ? buildReadingSteps(readingTexts, day.day, exerciseIdsOf(drillSteps))
+      ? buildReadingSteps(await loadReadingTextForDay(day.day), day.day, exerciseIdsOf(drillSteps))
       : MODULES_WITH_GENERATOR.has(day.examFocus)
         ? buildExamSteps(
             [
@@ -286,12 +285,11 @@ function missingExamContent(moduleId: string): string {
 }
 
 function buildReadingSteps(
-  texts: import("@/lib/content/curriculum").ReadingText[],
+  text: import("@/lib/content/curriculum").ReadingText | null,
   dayNumber: number,
   alreadyDrilled: Set<string>,
 ): Step[] {
-  if (!texts.length) return [];
-  const text = texts[(dayNumber - 1) % texts.length]!;
+  if (!text) return [];
   const used = new Set(alreadyDrilled);
   return exercisesForReading(text, dayNumber)
     .filter((ex) => !used.has(ex.id))

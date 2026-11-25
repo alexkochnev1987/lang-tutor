@@ -56,3 +56,17 @@ The exporter refuses missing, rejected or stale reports and never overwrites the
 ## Source-grounded authoring
 
 `scripts/reading-sources.json` records checked source links and factual summaries. `scripts/reading-topic-plan.json` assigns a unique topic to each remaining curriculum day. Source-backed drafts carry per-item provenance. The author uses verified facts when assigned; other passages must use clearly fictional examples, not invented real-world claims. Official examination samples are format references only. Do not copy third-party teaching texts without confirming reuse rights for the specific item. The registry is a snapshot of reviewed facts, not a live feed or a complete license audit. Update facts before publication if rules or services change.
+
+## Per-day delivery and experimental reading
+
+`pnpm dev` with `READING_PREVIEW=1` or a Vercel Preview deployment exposes `/reading/` for testing all current drafts. The reader loads a lightweight index and only the selected passage JSON. It uses the existing exercise engine with one attempt per question, a reading-first flow, a reopenable passage and a local session result. No experimental answers are saved to the user's course progress. Production builds do not generate experimental files or expose this page.
+
+The ordinary lesson reads `reading/index.json` only when its focus is reading, then requests the exact approved day file or one of the six pre-existing legacy passages if the day has no approved text. Existing progress IDs for the legacy pack stay unchanged. The old aggregate remains available for older PWA clients but is not used by the updated lesson.
+
+After genuine independent acceptance, publish daily files with:
+
+```sh
+node scripts/reading-pipeline.mjs export-files --from 54 --to 63
+```
+
+The command shares the existing fingerprint-based approval gate and refuses to overwrite a daily file. It writes source records under `content/pl-b1-ru/reading/`; `sync-content.mjs` generates the lightweight index and runtime JSON from these records at build time. Preview and live assets are disjoint. The per-day source files, not a production database, remain versioned in Git. Do not publish draft scores or mark editorial self-checks as independent approvals.
