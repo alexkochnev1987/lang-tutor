@@ -1,0 +1,76 @@
+{
+  "id": "pl-b1.reading.day-132",
+  "day": 132,
+  "level": "B1",
+  "genre": "opowiadanie",
+  "title": "Wspólne korzystanie z rzeczy",
+  "text": "W pracowni, w której spotykała się grupa osób zainteresowanych rysowaniem, znajdowała się jedna duża szafka z materiałami. Na początku każdy przynosił własne ołówki i papier. Z czasem uczestnicy zaczęli zostawiać niektóre rzeczy na miejscu, żeby nie nosić ich za każdym razem do domu.\n\nKiedy do grupy dołączyła Sandra, zobaczyła w szafce kilka pudełek z farbami. Uznała, że wszystkie są dostępne dla uczestników. Podczas spotkania użyła farby należącej do osoby, która tego dnia nie przyszła. Dowiedziała się o pomyłce dopiero tydzień później, gdy właścicielka szukała swojego pudełka.\n\nProwadzący spotkanie zaproponował, żeby uporządkować szafkę. Nie chciał zakazywać dzielenia się materiałami, ponieważ dzięki temu początkujące osoby mogły spróbować różnych technik bez kupowania wszystkiego od razu. Zamiast tego przygotował trzy półki. Na pierwszej znajdowały się rzeczy dostępne dla wszystkich. Na drugiej można było zostawiać materiały przeznaczone do wspólnego projektu. Trzecia półka służyła do przechowywania podpisanych rzeczy prywatnych.\n\nUczestnicy ustalili również, że przed wyjściem sprawdzają, czy na wspólnej półce nie brakuje najczęściej używanych materiałów. Jeśli ktoś zużyje ostatnią kartkę dużego papieru, zapisuje informację na tablicy. Następna osoba może wtedy przygotować się do spotkania, zamiast odkryć brak dopiero podczas pracy.\n\nSandra przeprosiła właścicielkę farb i zaproponowała, że kupi nową farbę w tym samym kolorze. Później sama zostawiła na wspólnej półce kilka ołówków. Zrozumiała, że wspólne korzystanie z przedmiotów jest wygodne, ale tylko wtedy, gdy wszyscy wiedzą, które rzeczy można wziąć i jak zadbać o następnych użytkowników.",
+  "questions": [
+    {
+      "id": "main-idea",
+      "skill": "main-idea",
+      "question": "Co grupa zmieniła po nieporozumieniu?",
+      "options": [
+        "Postanowiła, że materiały może przynosić tylko prowadzący.",
+        "Wprowadziła jasne zasady dostępu i uzupełniania wspólnych materiałów.",
+        "Zrezygnowała z przechowywania wszystkich rzeczy na miejscu."
+      ],
+      "answer": "Wprowadziła jasne zasady dostępu i uzupełniania wspólnych materiałów.",
+      "evidence": "wspólne korzystanie z przedmiotów jest wygodne, ale tylko wtedy, gdy wszyscy wiedzą, które rzeczy można wziąć i jak zadbać o następnych użytkowników.",
+      "explanation": "Zmiana dotyczyła oznaczeń i odpowiedzialności."
+    },
+    {
+      "id": "detail",
+      "skill": "detail",
+      "question": "Co znajduje się na trzeciej półce?",
+      "options": [
+        "Materiały do wspólnego projektu.",
+        "Rzeczy przeznaczone dla wszystkich.",
+        "Podpisane przedmioty prywatne."
+      ],
+      "answer": "Podpisane przedmioty prywatne.",
+      "evidence": "Trzecia półka służyła do przechowywania podpisanych rzeczy prywatnych.",
+      "explanation": "Każda półka ma inne przeznaczenie."
+    },
+    {
+      "id": "cause",
+      "skill": "cause",
+      "question": "Dlaczego prowadzący nie chciał zakazać dzielenia się materiałami?",
+      "options": [
+        "Początkujący mogli wypróbować techniki bez kupowania całego wyposażenia.",
+        "Uczestnicy nie mieli czasu przychodzić na spotkania.",
+        "Nie było miejsca na rzeczy podpisane imieniem."
+      ],
+      "answer": "Początkujący mogli wypróbować techniki bez kupowania całego wyposażenia.",
+      "evidence": "Nie chciał zakazywać dzielenia się materiałami, ponieważ dzięki temu początkujące osoby mogły spróbować różnych technik bez kupowania wszystkiego od razu.",
+      "explanation": "Wspólne materiały ułatwiają rozpoczęcie hobby."
+    },
+    {
+      "id": "inference",
+      "skill": "inference",
+      "question": "Uczestnik chce użyć niepodpisanego pudełka z drugiej półki do prywatnego rysunku. Co powinien zrobić?",
+      "options": [
+        "Wziąć pudełko, ponieważ brak podpisu oznacza dostępność dla wszystkich.",
+        "Przenieść je na trzecią półkę bez rozmowy z grupą.",
+        "Sprawdzić, czy materiały ze wspólnego projektu mogą być użyte w innym celu."
+      ],
+      "answer": "Sprawdzić, czy materiały ze wspólnego projektu mogą być użyte w innym celu.",
+      "evidence": "Na pierwszej znajdowały się rzeczy dostępne dla wszystkich. Na drugiej można było zostawiać materiały przeznaczone do wspólnego projektu.",
+      "explanation": "Niepodpisany przedmiot na półce projektowej nie jest automatycznie przeznaczony do prywatnego użytku."
+    },
+    {
+      "id": "vocabulary",
+      "skill": "vocabulary",
+      "question": "Co oznacza tu „zadbać o następnych użytkowników”?",
+      "options": [
+        "Zostawić materiały w stanie umożliwiającym pracę kolejnym osobom.",
+        "Samodzielnie wykonać rysunki za kolejne osoby.",
+        "Wybrać dla kolejnych osób wyłącznie prywatne materiały."
+      ],
+      "answer": "Zostawić materiały w stanie umożliwiającym pracę kolejnym osobom.",
+      "evidence": "Uczestnicy ustalili również, że przed wyjściem sprawdzają, czy na wspólnej półce nie brakuje najczęściej używanych materiałów. Jeśli ktoś zużyje ostatnią kartkę dużego papieru, zapisuje informację na tablicy. Następna osoba może wtedy przygotować się do spotkania, zamiast odkryć brak dopiero podczas pracy.\n\nSandra przeprosiła właścicielkę farb i zaproponowała, że kupi nową farbę w tym samym kolorze. Później sama zostawiła na wspólnej półce kilka ołówków. Zrozumiała, że wspólne korzystanie z przedmiotów jest wygodne, ale tylko wtedy, gdy wszyscy wiedzą, które rzeczy można wziąć i jak zadbać o następnych użytkowników.",
+      "explanation": "Sprawdzanie zapasów i zgłaszanie braków pomaga kolejnym osobom skorzystać z materiałów."
+    }
+  ],
+  "publicationStatus": "practice"
+}

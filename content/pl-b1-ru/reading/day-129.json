@@ -1,0 +1,76 @@
+{
+  "id": "pl-b1.reading.day-129",
+  "day": 129,
+  "level": "B1",
+  "genre": "dialog",
+  "title": "Równowaga między pracą a domem",
+  "text": "— Ostatnio nawet podczas kolacji myślę o wiadomościach z pracy — powiedziała Aneta do brata. — Wczoraj spojrzałam na zegarek i było prawie północ, a ja wciąż sprawdzałam pocztę.\n\n— Czy wszystkie te sprawy wymagały odpowiedzi tego samego dnia? — zapytał Paweł.\n\n— Nie. Niektóre mogły poczekać. Problem w tym, że nie wiedziałam, czy nie pojawi się coś pilnego. Pracuję z zespołem, który zaczyna dzień o innej porze niż ja.\n\nPaweł opowiedział jej o rozwiązaniu stosowanym w jego zespole. Przed zakończeniem pracy zapisują, które zadania zostały wykonane i od kogo oczekują informacji. Jeżeli pojawia się sprawa, która rzeczywiście nie może czekać do następnego dnia, ustalają wcześniej osobny sposób kontaktu.\n\n— Gdybyśmy zrobili coś podobnego, łatwiej byłoby mi zamknąć komputer — stwierdziła Aneta. — Ale nie chcę, żeby koledzy mieli wrażenie, że przestałam się interesować projektem.\n\n— W takim razie porozmawiajcie o oczekiwaniach, zamiast wprowadzać zmianę bez wyjaśnienia.\n\nNastępnego dnia Aneta zaproponowała zespołowi krótkie podsumowania po południu. Uzgodnili także, w jakich sytuacjach można dzwonić po zakończeniu zwykłych godzin pracy. Po tygodniu zauważyła, że nadal czasem sprawdza wiadomości wieczorem, ale już nie robi tego z przyzwyczajenia.\n\nZaczęła również rezerwować kwadrans przed kolacją na zapisanie planu następnego dnia. Nie zawsze kończyła wtedy wszystkie zadania. Miała jednak jasność, które z nich zostały świadomie przesunięte na rano.\n\n— To nie jest idealny podział czasu — powiedziała bratu podczas kolejnego spotkania. — Ale teraz łatwiej rozróżniam, kiedy moja obecność jest naprawdę potrzebna, a kiedy po prostu trudno mi przestać pracować.",
+  "questions": [
+    {
+      "id": "main-idea",
+      "skill": "main-idea",
+      "question": "Co pomogło Anecie ograniczyć pracę wieczorem?",
+      "options": [
+        "Uzgodnienie oczekiwań zespołu i sposobu kontaktu w pilnych sytuacjach.",
+        "Całkowite wyłączenie kontaktu z zespołem po południu.",
+        "Przeniesienie wszystkich obowiązków na brata."
+      ],
+      "answer": "Uzgodnienie oczekiwań zespołu i sposobu kontaktu w pilnych sytuacjach.",
+      "evidence": "Uzgodnili także, w jakich sytuacjach można dzwonić po zakończeniu zwykłych godzin pracy.",
+      "explanation": "Aneta zyskała jasność, kiedy jej reakcja jest potrzebna."
+    },
+    {
+      "id": "detail",
+      "skill": "detail",
+      "question": "Ile czasu przed kolacją przeznacza na plan następnego dnia?",
+      "options": [
+        "Godzinę.",
+        "Kwadrans.",
+        "Pół godziny."
+      ],
+      "answer": "Kwadrans.",
+      "evidence": "Zaczęła również rezerwować kwadrans przed kolacją na zapisanie planu następnego dnia.",
+      "explanation": "Kwadrans to piętnaście minut."
+    },
+    {
+      "id": "cause",
+      "skill": "cause",
+      "question": "Dlaczego Aneta wcześniej sprawdzała pocztę wieczorem?",
+      "options": [
+        "Zawsze musiała wysłać raport o północy.",
+        "Nie miała dostępu do poczty w ciągu dnia.",
+        "Nie wiedziała, czy nie pojawi się sprawa wymagająca pilnej reakcji."
+      ],
+      "answer": "Nie wiedziała, czy nie pojawi się sprawa wymagająca pilnej reakcji.",
+      "evidence": "Problem w tym, że nie wiedziałam, czy nie pojawi się coś pilnego.",
+      "explanation": "Niepewność dotycząca pilnych spraw utrudniała jej zakończenie pracy."
+    },
+    {
+      "id": "inference",
+      "skill": "inference",
+      "question": "Wieczorem pojawia się pytanie o zadanie zaplanowane na jutro, a uzgodniony pilny kontakt nie został użyty. Co najlepiej pasuje do nowych zasad?",
+      "options": [
+        "Poprosić zespół, by zrezygnował z dalszej pracy.",
+        "Natychmiast otworzyć komputer przy każdej wiadomości.",
+        "Wrócić do pytania następnego dnia, jeśli nie spełnia warunków pilności."
+      ],
+      "answer": "Wrócić do pytania następnego dnia, jeśli nie spełnia warunków pilności.",
+      "evidence": "Paweł opowiedział jej o rozwiązaniu stosowanym w jego zespole. Przed zakończeniem pracy zapisują, które zadania zostały wykonane i od kogo oczekują informacji. Jeżeli pojawia się sprawa, która rzeczywiście nie może czekać do następnego dnia, ustalają wcześniej osobny sposób kontaktu.\n\n— Gdybyśmy zrobili coś podobnego, łatwiej byłoby mi zamknąć komputer — stwierdziła Aneta. — Ale nie chcę, żeby koledzy mieli wrażenie, że przestałam się interesować projektem.\n\n— W takim razie porozmawiajcie o oczekiwaniach, zamiast wprowadzać zmianę bez wyjaśnienia.\n\nNastępnego dnia Aneta zaproponowała zespołowi krótkie podsumowania po południu. Uzgodnili także, w jakich sytuacjach można dzwonić po zakończeniu zwykłych godzin pracy. Po tygodniu zauważyła, że nadal czasem sprawdza wiadomości wieczorem, ale już nie robi tego z przyzwyczajenia.",
+      "explanation": "Zespół rozróżnia sprawy pilne od tych, które mogą poczekać."
+    },
+    {
+      "id": "vocabulary",
+      "skill": "vocabulary",
+      "question": "Co znaczy „z przyzwyczajenia”?",
+      "options": [
+        "Automatycznie, dlatego że robi się coś od dawna.",
+        "Z powodu nowej formalnej decyzji.",
+        "Wyłącznie pod wpływem polecenia kolegi."
+      ],
+      "answer": "Automatycznie, dlatego że robi się coś od dawna.",
+      "evidence": "Po tygodniu zauważyła, że nadal czasem sprawdza wiadomości wieczorem, ale już nie robi tego z przyzwyczajenia.",
+      "explanation": "Chodzi o utrwalony nawyk, a nie aktualną potrzebę."
+    }
+  ],
+  "publicationStatus": "practice"
+}

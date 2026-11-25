@@ -1,0 +1,76 @@
+{
+  "id": "pl-b1.reading.day-128",
+  "day": 128,
+  "level": "B1",
+  "genre": "artykuł",
+  "title": "Plan tygodnia w rodzinie",
+  "text": "W czerwcu rodzina Lisów zaczęła korzystać ze wspólnego kalendarza. Nie dlatego, że wcześniej zapominali o wszystkich ważnych spotkaniach, ale dlatego, że każdy zapisywał terminy w innym miejscu. Rodzice mieli kalendarze służbowe, a dzieci przynosiły kartki ze szkoły. Często dopiero wieczorem okazywało się, że następnego dnia dwie osoby potrzebują samochodu o tej samej porze.\n\nNa początku do wspólnego kalendarza wpisywali niemal wszystko. Szybko okazało się jednak, że długie listy utrudniają znalezienie najważniejszych informacji. Dlatego przyjęli zasadę, że zapisują przede wszystkim wydarzenia, które wpływają na plany pozostałych domowników. Prywatna rozmowa telefoniczna nie musiała być widoczna dla całej rodziny, ale wyjazd na kilka godzin już tak.\n\nW lipcu przetestowali również krótkie spotkania w niedzielę wieczorem. Sprawdzali wtedy, kto odbierze dzieci z zajęć, kiedy trzeba zrobić większe zakupy i czy ktoś będzie potrzebował pomocy. Nie planowali każdej wolnej godziny. Jeśli w ciągu tygodnia pojawiała się nowa sprawa, dopisywali ją do kalendarza i informowali osobę, której plan się zmieniał.\n\nW sierpniu najstarsza córka wyjechała na obóz. Rodzice zauważyli, że w tym okresie wystarczało im mniej szczegółowe planowanie. We wrześniu, wraz z początkiem zajęć szkolnych, wrócili do niedzielnych rozmów.\n\nLisowie uznali, że wspólny kalendarz jest pomocny, ale sam nie rozwiązuje wszystkich problemów. Nadal trzeba rozmawiać, kiedy dwa ważne zadania wypadają w tym samym czasie. Największą zaletą narzędzia okazało się to, że takie rozmowy mogą odbyć się wcześniej, a nie dopiero w dniu konfliktu.",
+  "questions": [
+    {
+      "id": "main-idea",
+      "skill": "main-idea",
+      "question": "Co przede wszystkim dał rodzinie wspólny kalendarz?",
+      "options": [
+        "Zastąpienie rozmów rodzinnych automatycznymi decyzjami.",
+        "Dokładne zaplanowanie każdej wolnej godziny.",
+        "Możliwość wcześniejszego zauważania konfliktów w planach."
+      ],
+      "answer": "Możliwość wcześniejszego zauważania konfliktów w planach.",
+      "evidence": "Największą zaletą narzędzia okazało się to, że takie rozmowy mogą odbyć się wcześniej, a nie dopiero w dniu konfliktu.",
+      "explanation": "Kalendarz ułatwia rozmowy przed pojawieniem się problemu."
+    },
+    {
+      "id": "detail",
+      "skill": "detail",
+      "question": "W którym miesiącu córka wyjechała na obóz?",
+      "options": [
+        "W lipcu.",
+        "W sierpniu.",
+        "We wrześniu."
+      ],
+      "answer": "W sierpniu.",
+      "evidence": "W sierpniu najstarsza córka wyjechała na obóz.",
+      "explanation": "Podano sierpień."
+    },
+    {
+      "id": "cause",
+      "skill": "cause",
+      "question": "Dlaczego rodzina ograniczyła liczbę wpisów?",
+      "options": [
+        "Zbyt długie listy utrudniały znalezienie ważnych informacji.",
+        "Rodzice nie chcieli zapisywać terminów szkolnych.",
+        "Dzieci nie mogły korzystać z kalendarza."
+      ],
+      "answer": "Zbyt długie listy utrudniały znalezienie ważnych informacji.",
+      "evidence": "długie listy utrudniają znalezienie najważniejszych informacji.",
+      "explanation": "Nie wszystkie prywatne wydarzenia są ważne dla pozostałych osób."
+    },
+    {
+      "id": "inference",
+      "skill": "inference",
+      "question": "Ojciec ma jutro krótką rozmowę przez telefon i trzygodzinny wyjazd samochodem, którego może potrzebować matka. Co powinien zrobić zgodnie z zasadą rodziny?",
+      "options": [
+        "Wpisać wyjazd do wspólnego kalendarza i uzgodnić użycie samochodu.",
+        "Wpisać tylko rozmowę telefoniczną, bo potrwa krócej.",
+        "Nie wpisywać żadnego wydarzenia, ponieważ oba dotyczą jego pracy."
+      ],
+      "answer": "Wpisać wyjazd do wspólnego kalendarza i uzgodnić użycie samochodu.",
+      "evidence": "Prywatna rozmowa telefoniczna nie musiała być widoczna dla całej rodziny, ale wyjazd na kilka godzin już tak.",
+      "explanation": "Wyjazd wpływa na możliwość korzystania z samochodu przez inną osobę."
+    },
+    {
+      "id": "vocabulary",
+      "skill": "vocabulary",
+      "question": "Co znaczy „wypadają w tym samym czasie”?",
+      "options": [
+        "Trwają zawsze tyle samo.",
+        "Są zaplanowane na nakładające się godziny.",
+        "Zostały odwołane w ostatniej chwili."
+      ],
+      "answer": "Są zaplanowane na nakładające się godziny.",
+      "evidence": "kiedy dwa ważne zadania wypadają w tym samym czasie.",
+      "explanation": "Wydarzenia kolidują ze sobą czasowo."
+    }
+  ],
+  "publicationStatus": "practice"
+}

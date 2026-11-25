@@ -1,0 +1,76 @@
+{
+  "id": "pl-b1.reading.day-136",
+  "day": 136,
+  "level": "B1",
+  "genre": "dialog",
+  "title": "Dwie opinie o wystawie",
+  "text": "— I jak ci się podobała wystawa? — zapytała Marta, kiedy wyszły z galerii.\n\n— Najbardziej podobały mi się obrazy z pierwszej sali — odpowiedziała jej przyjaciółka Iga. — Mogłam rozpoznać miejsca i osoby. W drugiej sali nie byłam pewna, na co właściwie patrzę.\n\n— A mnie właśnie druga część zainteresowała bardziej. Przy jednym obrazie długo zastanawiałam się, dlaczego artysta użył prawie wyłącznie dwóch kolorów.\n\n— Czy przeczytałaś tekst obok niego?\n\n— Dopiero później. Najpierw chciałam zobaczyć, co sama zauważę. W opisie była informacja o tym, że artysta namalował kilka wersji tego samego miejsca o różnych porach dnia. Po przeczytaniu opisu wróciłam do obrazu i zobaczyłam szczegóły, których wcześniej nie dostrzegałam.\n\nIga przyznała, że zwykle zaczyna zwiedzanie od podpisów. Lubi wiedzieć, kto stworzył dzieło i w jakich okolicznościach. Tym razem przeczytała opis drugiej sali bardzo szybko, ponieważ obawiała się, że bez znajomości sztuki nie zrozumie obrazów.\n\nMarta zaproponowała, żeby podczas następnej wizyty spróbowały obu sposobów. W jednej sali najpierw przeczytają opisy, a w drugiej zaczną od samodzielnego oglądania. Potem porównają, co zapamiętały i czy kolejność miała znaczenie.\n\n— Nie oczekuję, że nagle polubisz wszystkie obrazy z drugiej sali — dodała Marta. — Ciekawi mnie tylko, czy przy innym sposobie oglądania dostrzeżemy coś nowego.\n\nIga uznała, że to dobry pomysł. W drodze do domu obie rozmawiały jeszcze o jednej fotografii z wystawy. Każda zapamiętała inny szczegół, ale właśnie dzięki temu mogły opowiedzieć sobie o czymś, czego druga osoba wcześniej nie zauważyła.",
+  "questions": [
+    {
+      "id": "main-idea",
+      "skill": "main-idea",
+      "question": "Co pokazuje rozmowa po wystawie?",
+      "options": [
+        "Osoby o różnych gustach powinny zwiedzać wyłącznie osobno.",
+        "Jedna metoda zwiedzania pozwala każdemu poprawnie ocenić wszystkie dzieła.",
+        "Różne sposoby oglądania mogą prowadzić do ciekawych, uzupełniających się obserwacji."
+      ],
+      "answer": "Różne sposoby oglądania mogą prowadzić do ciekawych, uzupełniających się obserwacji.",
+      "evidence": "Każda zapamiętała inny szczegół, ale właśnie dzięki temu mogły opowiedzieć sobie o czymś, czego druga osoba wcześniej nie zauważyła.",
+      "explanation": "Różnica gustu i sposobu oglądania wzbogaca rozmowę."
+    },
+    {
+      "id": "detail",
+      "skill": "detail",
+      "question": "Która część wystawy bardziej zainteresowała Martę?",
+      "options": [
+        "Druga sala.",
+        "Pierwsza sala.",
+        "Wyłącznie fotografie przy wejściu."
+      ],
+      "answer": "Druga sala.",
+      "evidence": "A mnie właśnie druga część zainteresowała bardziej.",
+      "explanation": "Marta wskazała drugą część."
+    },
+    {
+      "id": "cause",
+      "skill": "cause",
+      "question": "Dlaczego Iga szybko przeczytała opis drugiej sali?",
+      "options": [
+        "Galeria zamykała się przed końcem zwiedzania.",
+        "Obawiała się, że bez wiedzy o sztuce nie zrozumie obrazów.",
+        "Marta poprosiła ją o przygotowanie recenzji."
+      ],
+      "answer": "Obawiała się, że bez wiedzy o sztuce nie zrozumie obrazów.",
+      "evidence": "Tym razem przeczytała opis drugiej sali bardzo szybko, ponieważ obawiała się, że bez znajomości sztuki nie zrozumie obrazów.",
+      "explanation": "Iga czuła niepewność wobec nieznanych dzieł."
+    },
+    {
+      "id": "inference",
+      "skill": "inference",
+      "question": "Na następnej wystawie Iga chce sprawdzić metodę Marty, ale nadal zależy jej na poznaniu autora. Co może zrobić?",
+      "options": [
+        "Najpierw samodzielnie obejrzeć dzieło, potem przeczytać opis i wrócić do obserwacji.",
+        "Przeczytać wszystkie opisy przed wejściem i nie wracać do obrazów.",
+        "Zrezygnować z czytania informacji o autorze podczas całej wizyty."
+      ],
+      "answer": "Najpierw samodzielnie obejrzeć dzieło, potem przeczytać opis i wrócić do obserwacji.",
+      "evidence": "Po przeczytaniu opisu wróciłam do obrazu i zobaczyłam szczegóły, których wcześniej nie dostrzegałam.",
+      "explanation": "Metoda łączy własne spojrzenie z późniejszym poznaniem kontekstu."
+    },
+    {
+      "id": "vocabulary",
+      "skill": "vocabulary",
+      "question": "Co znaczy „dostrzegać szczegóły”?",
+      "options": [
+        "Oglądać dzieło z coraz większej odległości.",
+        "Zapamiętywać wyłącznie nazwiska artystów.",
+        "Zauważać drobne elementy, które wcześniej umykały uwadze."
+      ],
+      "answer": "Zauważać drobne elementy, które wcześniej umykały uwadze.",
+      "evidence": "zobaczyłam szczegóły, których wcześniej nie dostrzegałam.",
+      "explanation": "Dostrzeganie oznacza zauważenie elementów obrazu."
+    }
+  ],
+  "publicationStatus": "practice"
+}

@@ -1,0 +1,76 @@
+{
+  "id": "pl-b1.reading.day-133",
+  "day": 133,
+  "level": "B1",
+  "genre": "poradnik",
+  "title": "Czas wolny bez sztywnego planu",
+  "text": "Kiedy mamy wreszcie wolny weekend, czasami próbujemy wykorzystać każdą godzinę. Zapisujemy listę miejsc do odwiedzenia, osób do spotkania i spraw, które odkładaliśmy przez cały tydzień. Taki plan może być przydatny, jeśli chcemy zdążyć na konkretne wydarzenie, ale nie zawsze pozostawia miejsce na zwykły odpoczynek.\n\nZamiast planować całe dwa dni od rana do wieczora, wybierz jedną lub dwie rzeczy, na których naprawdę ci zależy. Sprawdź, czy wymagają rezerwacji albo odbywają się o określonej godzinie. Pozostałe pomysły możesz potraktować jako listę możliwości, a nie obowiązków do wykonania.\n\nNa przykład Ula chciała w sobotę odwiedzić wystawę, spotkać się z przyjaciółką i pójść na długi spacer. Wystawa kończyła się tego dnia, więc zdecydowała się obejrzeć ją rano. Z przyjaciółką umówiła się na późne popołudnie, ale nie wybrały jeszcze miejsca. Spacer zostawiła jako możliwość na przerwę między spotkaniami. Gdy zaczęło padać, Ula spędziła tę przerwę w czytelni, zamiast próbować zrealizować wszystko mimo pogody.\n\nJeśli spędzasz wolny czas z innymi, warto ustalić, które elementy planu są dla nich ważne. Nie każdy musi mieć ochotę na ten sam rodzaj aktywności. Można spotkać się na jednym wydarzeniu, a potem spędzić część dnia osobno.\n\nPo weekendzie nie oceniaj go tylko na podstawie liczby odwiedzonych miejsc. Zastanów się, czy udało ci się zrobić to, co było istotne, i czy miałeś czas odpocząć. Elastyczny plan nie oznacza, że rezygnujesz z ciekawych pomysłów. Pozwala natomiast zmienić kolejność lub wybrać inną możliwość, gdy zmieniają się okoliczności.",
+  "questions": [
+    {
+      "id": "main-idea",
+      "skill": "main-idea",
+      "question": "Jaka jest główna rada tekstu?",
+      "options": [
+        "Rezygnować ze wszystkich wydarzeń wymagających określonej godziny.",
+        "Planować każdą godzinę, by odwiedzić jak najwięcej miejsc.",
+        "Ustalać najważniejsze punkty, a resztę czasu pozostawiać elastyczną."
+      ],
+      "answer": "Ustalać najważniejsze punkty, a resztę czasu pozostawiać elastyczną.",
+      "evidence": "Pozostałe pomysły możesz potraktować jako listę możliwości, a nie obowiązków do wykonania.",
+      "explanation": "Priorytety chronią ważne wydarzenia, a resztę można dopasować."
+    },
+    {
+      "id": "detail",
+      "skill": "detail",
+      "question": "Co Ula zrobiła podczas deszczu?",
+      "options": [
+        "Spędziła przerwę w czytelni.",
+        "Wróciła na wystawę po jej zamknięciu.",
+        "Poszła na długi spacer."
+      ],
+      "answer": "Spędziła przerwę w czytelni.",
+      "evidence": "Gdy zaczęło padać, Ula spędziła tę przerwę w czytelni",
+      "explanation": "Zmieniła opcjonalną część planu."
+    },
+    {
+      "id": "cause",
+      "skill": "cause",
+      "question": "Dlaczego Ula wybrała wystawę rano?",
+      "options": [
+        "Przyjaciółka musiała być w czytelni rano.",
+        "Tego dnia kończyła się możliwość jej odwiedzenia.",
+        "Spacer był możliwy wyłącznie wieczorem."
+      ],
+      "answer": "Tego dnia kończyła się możliwość jej odwiedzenia.",
+      "evidence": "Wystawa kończyła się tego dnia, więc zdecydowała się obejrzeć ją rano.",
+      "explanation": "Wystawa była ograniczona czasowo."
+    },
+    {
+      "id": "inference",
+      "skill": "inference",
+      "question": "W sobotę masz bilet na koncert o osiemnastej, a znajomy chce spontanicznie pojechać za miasto i nie zna godziny powrotu. Co pasuje do poradnika?",
+      "options": [
+        "Odwołać koncert tylko dlatego, że pojawił się nowy pomysł.",
+        "Ustalić powrót przed koncertem lub zaproponować krótszą aktywność, zachowując ważny punkt planu.",
+        "Jechać bez ustaleń i potraktować koncert jak dowolną możliwość."
+      ],
+      "answer": "Ustalić powrót przed koncertem lub zaproponować krótszą aktywność, zachowując ważny punkt planu.",
+      "evidence": "Sprawdź, czy wymagają rezerwacji albo odbywają się o określonej godzinie.",
+      "explanation": "Ważne wydarzenie o stałej godzinie pozostaje priorytetem, pozostałe można zmieniać."
+    },
+    {
+      "id": "vocabulary",
+      "skill": "vocabulary",
+      "question": "Co oznacza „elastyczny plan”?",
+      "options": [
+        "Plan zawierający wyłącznie spotkania wymagające biletów.",
+        "Plan, który trzeba wykonać bez żadnych zmian.",
+        "Plan, który można dostosować do zmieniających się warunków."
+      ],
+      "answer": "Plan, który można dostosować do zmieniających się warunków.",
+      "evidence": "Pozwala natomiast zmienić kolejność lub wybrać inną możliwość, gdy zmieniają się okoliczności.",
+      "explanation": "Elastyczność umożliwia zmianę planu."
+    }
+  ],
+  "publicationStatus": "practice"
+}

@@ -1,0 +1,76 @@
+{
+  "id": "pl-b1.reading.day-135",
+  "day": 135,
+  "level": "B1",
+  "genre": "artykuł",
+  "title": "Kurs fotografii dla dorosłych",
+  "text": "Na pierwsze zajęcia kursu fotografii w miejskiej pracowni przyszło dwanaście osób. Większość miała przy sobie telefony, tylko troje uczestników przyniosło aparaty fotograficzne. Kilka osób obawiało się, że bez drogiego sprzętu nie będą mogły wykonywać tych samych ćwiczeń co pozostali.\n\nProwadząca zaczęła jednak od prostego zadania. Poprosiła, żeby każdy sfotografował ten sam kubek ustawiony przy oknie. Uczestnicy mogli zmieniać miejsce, z którego robili zdjęcie, ale nie wolno im było przesuwać przedmiotu. Potem wspólnie obejrzeli fotografie. Okazało się, że ten sam kubek może wyglądać zupełnie inaczej w zależności od światła, tła i odległości.\n\nNa drugim spotkaniu uczestnicy mieli wybrać jedną scenę z codziennego życia. Niektórzy fotografowali ulicę, inni przygotowania do obiadu albo instrument leżący na stole. Prowadząca prosiła, żeby przed wykonaniem zdjęcia zastanowić się, co odbiorca powinien zauważyć jako pierwsze. Nie chodziło o uzyskanie jednego idealnego efektu, lecz o świadomy wybór.\n\nW kolejnych tygodniach grupa miała również poznawać podstawowe ustawienia aparatów i telefonów. Osoby zainteresowane bardziej zaawansowanym sprzętem mogły skorzystać z dwóch aparatów dostępnych w pracowni. Nie trzeba było od razu kupować własnego.\n\nKurs zakończy się niewielką wystawą. Każdy uczestnik wybierze trzy fotografie i krótko opisze, czego nauczył się podczas ich przygotowania. Prowadząca podkreśla, że nie będzie wybierała jednego najlepszego zdjęcia. Dla niej ważniejsze jest to, żeby uczestnicy potrafili wyjaśnić własne decyzje i dostrzec możliwości, których wcześniej nie zauważali podczas robienia zdjęć.",
+  "questions": [
+    {
+      "id": "main-idea",
+      "skill": "main-idea",
+      "question": "Na czym skupia się opisany kurs?",
+      "options": [
+        "Na zakupie profesjonalnego wyposażenia przed rozpoczęciem ćwiczeń.",
+        "Na świadomych decyzjach fotograficznych niezależnie od rodzaju sprzętu.",
+        "Na przygotowaniu jednego najlepszego zdjęcia do konkursu."
+      ],
+      "answer": "Na świadomych decyzjach fotograficznych niezależnie od rodzaju sprzętu.",
+      "evidence": "Kurs zakończy się niewielką wystawą. Każdy uczestnik wybierze trzy fotografie i krótko opisze, czego nauczył się podczas ich przygotowania. Prowadząca podkreśla, że nie będzie wybierała jednego najlepszego zdjęcia. Dla niej ważniejsze jest to, żeby uczestnicy potrafili wyjaśnić własne decyzje i dostrzec możliwości, których wcześniej nie zauważali podczas robienia zdjęć.",
+      "explanation": "Kurs łączy praktykę, obserwację i wyjaśnianie wyborów."
+    },
+    {
+      "id": "detail",
+      "skill": "detail",
+      "question": "Ile zdjęć ma wybrać każdy uczestnik na wystawę?",
+      "options": [
+        "Dwanaście.",
+        "Dwa.",
+        "Trzy."
+      ],
+      "answer": "Trzy.",
+      "evidence": "Każdy uczestnik wybierze trzy fotografie",
+      "explanation": "Podano trzy prace."
+    },
+    {
+      "id": "cause",
+      "skill": "cause",
+      "question": "Jakiemu porównaniu służyło pozostawienie kubka w jednym miejscu?",
+      "options": [
+        "Żeby porównać wpływ miejsca fotografowania przy zachowaniu tego samego przedmiotu i jego położenia.",
+        "Żeby wszyscy używali identycznych ustawień aparatu.",
+        "Żeby nie było potrzeby oglądania zdjęć po ćwiczeniu."
+      ],
+      "answer": "Żeby porównać wpływ miejsca fotografowania przy zachowaniu tego samego przedmiotu i jego położenia.",
+      "evidence": "Uczestnicy mogli zmieniać miejsce, z którego robili zdjęcie, ale nie wolno im było przesuwać przedmiotu. Potem wspólnie obejrzeli fotografie. Okazało się, że ten sam kubek może wyglądać zupełnie inaczej w zależności od światła, tła i odległości.",
+      "explanation": "Stałe położenie przedmiotu ułatwiało dostrzeżenie różnic wynikających z wyboru ujęcia."
+    },
+    {
+      "id": "inference",
+      "skill": "inference",
+      "question": "Uczestniczka chce sprawdzić, czy interesują ją ustawienia aparatu, ale obecnie robi zdjęcia telefonem. Co może zrobić?",
+      "options": [
+        "Zrezygnować z wystawy, ponieważ nie ma własnego aparatu.",
+        "Korzystać z telefonu na zajęciach i wypróbować aparat z pracowni przed zakupem.",
+        "Kupić aparat, aby móc wziąć udział w pierwszym ćwiczeniu."
+      ],
+      "answer": "Korzystać z telefonu na zajęciach i wypróbować aparat z pracowni przed zakupem.",
+      "evidence": "Osoby zainteresowane bardziej zaawansowanym sprzętem mogły skorzystać z dwóch aparatów dostępnych w pracowni. Nie trzeba było od razu kupować własnego.",
+      "explanation": "Sprzęt można wypróbować bez rezygnowania z dotychczasowego narzędzia."
+    },
+    {
+      "id": "vocabulary",
+      "skill": "vocabulary",
+      "question": "Co oznacza „świadomy wybór” w kontekście zdjęcia?",
+      "options": [
+        "Automatyczne użycie pierwszego ustawienia urządzenia.",
+        "Wybór zdjęcia wyłącznie przez odbiorców wystawy.",
+        "Decyzja o sposobie pokazania sceny podjęta z określonym zamiarem."
+      ],
+      "answer": "Decyzja o sposobie pokazania sceny podjęta z określonym zamiarem.",
+      "evidence": "Prowadząca prosiła, żeby przed wykonaniem zdjęcia zastanowić się, co odbiorca powinien zauważyć jako pierwsze.",
+      "explanation": "Fotograf zastanawia się nad zamierzonym efektem."
+    }
+  ],
+  "publicationStatus": "practice"
+}

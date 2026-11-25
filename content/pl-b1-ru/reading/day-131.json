@@ -1,0 +1,76 @@
+{
+  "id": "pl-b1.reading.day-131",
+  "day": 131,
+  "level": "B1",
+  "genre": "ogłoszenie",
+  "title": "Zakupy bez pośpiechu",
+  "text": "Sklep Osiedlowy zaprasza klientów na nowe poranne godziny spokojnych zakupów. W każdą środę między dziewiątą a jedenastą nie będziemy włączać muzyki, a pracownicy postarają się ograniczyć głośne komunikaty. Propozycja powstała po rozmowach z osobami, dla których zwykła atmosfera sklepu bywa zbyt męcząca. Z zakupów w tym czasie może skorzystać każdy.\n\nNie zmieniamy wtedy cen ani zasad sprzedaży. Wszystkie dostępne produkty będzie można kupić tak samo jak w pozostałych godzinach. Przy jednym z wejść przygotujemy mały stolik z papierową listą najważniejszych działów. Klient może zabrać listę i zaznaczyć miejsca, które chce odwiedzić. Pracownicy pomogą także znaleźć konkretny produkt, jeśli ktoś o to poprosi.\n\nDostawy towaru planujemy na wcześniejszą godzinę, żeby podczas spokojnych zakupów ograniczyć przejazdy dużych wózków między półkami. Nie oznacza to jednak, że każdy produkt będzie dostępny od początku dnia. Jeśli czegoś zabraknie, pracownik może sprawdzić, czy kolejna dostawa jest planowana jeszcze w tym tygodniu.\n\nPo zakończeniu porannych godzin sklep będzie działał w zwykły sposób. Klienci, którzy nie mogą przyjść w środę rano, mogą przesłać nam uwagi dotyczące innych pór dnia. Na razie testujemy rozwiązanie przez cztery tygodnie. Potem sprawdzimy, czy zmiana odpowiada potrzebom klientów i czy możemy wprowadzić podobne godziny także w innym dniu.\n\nZależy nam na tym, żeby zakupy nie wymagały niepotrzebnego pośpiechu. Nie obiecujemy całkowitej ciszy, ponieważ sklep nadal obsługuje klientów. Chcemy jednak ograniczyć te źródła hałasu, które możemy kontrolować.",
+  "questions": [
+    {
+      "id": "main-idea",
+      "skill": "main-idea",
+      "question": "Jaki jest cel nowych godzin?",
+      "options": [
+        "Ułatwienie zakupów osobom, którym przeszkadza hałas i pośpiech.",
+        "Zorganizowanie specjalnej wyprzedaży w środę rano.",
+        "Ograniczenie zakupów do klientów z wcześniejszą rezerwacją."
+      ],
+      "answer": "Ułatwienie zakupów osobom, którym przeszkadza hałas i pośpiech.",
+      "evidence": "Chcemy jednak ograniczyć te źródła hałasu, które możemy kontrolować.",
+      "explanation": "Zmienia się atmosfera, nie zasady sprzedaży."
+    },
+    {
+      "id": "detail",
+      "skill": "detail",
+      "question": "Jak długo potrwa pierwsza próba?",
+      "options": [
+        "Jeden dzień.",
+        "Dwa tygodnie.",
+        "Cztery tygodnie."
+      ],
+      "answer": "Cztery tygodnie.",
+      "evidence": "Na razie testujemy rozwiązanie przez cztery tygodnie.",
+      "explanation": "Okres próbny wynosi cztery tygodnie."
+    },
+    {
+      "id": "cause",
+      "skill": "cause",
+      "question": "Dlaczego dostawy zaplanowano wcześniej?",
+      "options": [
+        "Żeby wyprzedać wszystkie produkty przed otwarciem.",
+        "Żeby ograniczyć ruch dużych wózków podczas spokojnych zakupów.",
+        "Żeby klienci nie musieli korzystać z papierowych list."
+      ],
+      "answer": "Żeby ograniczyć ruch dużych wózków podczas spokojnych zakupów.",
+      "evidence": "Dostawy towaru planujemy na wcześniejszą godzinę, żeby podczas spokojnych zakupów ograniczyć przejazdy dużych wózków między półkami.",
+      "explanation": "Wózki mogą zakłócać spokojne poruszanie się po sklepie."
+    },
+    {
+      "id": "inference",
+      "skill": "inference",
+      "question": "Klient może przyjść tylko w czwartek po południu i chciałby podobnych warunków. Co może zrobić zgodnie z ogłoszeniem?",
+      "options": [
+        "Przesłać sklepowi uwagi o potrzebnych godzinach, choć zmiana nie jest jeszcze zagwarantowana.",
+        "Przyjść w czwartek, oczekując tych samych warunków bez wcześniejszej informacji.",
+        "Zarezerwować automatycznie ciche zakupy w czwartek."
+      ],
+      "answer": "Przesłać sklepowi uwagi o potrzebnych godzinach, choć zmiana nie jest jeszcze zagwarantowana.",
+      "evidence": "Klienci, którzy nie mogą przyjść w środę rano, mogą przesłać nam uwagi dotyczące innych pór dnia. Na razie testujemy rozwiązanie przez cztery tygodnie. Potem sprawdzimy, czy zmiana odpowiada potrzebom klientów i czy możemy wprowadzić podobne godziny także w innym dniu.",
+      "explanation": "Sklep zbiera opinie przed decyzją o rozszerzeniu programu."
+    },
+    {
+      "id": "vocabulary",
+      "skill": "vocabulary",
+      "question": "Co oznacza w ogłoszeniu, że sklep „testuje rozwiązanie”?",
+      "options": [
+        "Wprowadza zmianę na stałe bez zbierania uwag.",
+        "Sprawdza przez określony czas, czy zmiana się sprawdza.",
+        "Sprawdza działanie sprzętu przed dostawą towaru."
+      ],
+      "answer": "Sprawdza przez określony czas, czy zmiana się sprawdza.",
+      "evidence": "Na razie testujemy rozwiązanie przez cztery tygodnie. Potem sprawdzimy, czy zmiana odpowiada potrzebom klientów i czy możemy wprowadzić podobne godziny także w innym dniu.",
+      "explanation": "Cztery tygodnie służą ocenie, nie oznaczają jeszcze stałej zmiany."
+    }
+  ],
+  "publicationStatus": "practice"
+}
