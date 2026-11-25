@@ -427,15 +427,15 @@
         {
           "id": "inference",
           "skill": "inference",
-          "question": "W czwartek szef proponuje, żeby Ania nauczyła się przygotowywać tabelę jeszcze przed prezentacją. Jaką zmianę planu powinna zaproponować Ania?",
+          "question": "Ania znajduje w dokumentach cenę jednego produktu, ale nie zna ceny drugiego. Jak powinna przygotować listę dla Jacka?",
           "options": [
-            "Przenieść naukę na środę, po przejrzeniu pytań.",
-            "Wtorek rano, przed ukończeniem listy Ani.",
-            "Czwartek, podczas nieobecności Ani."
+            "Przy pierwszym pytaniu wpisać cenę, przy drugim zostawić puste miejsce.",
+            "Przy obu pytaniach zostawić puste miejsca, żeby Jacek sam sprawdził ceny.",
+            "Wpisać tylko znalezioną cenę i usunąć pytanie bez odpowiedzi."
           ],
-          "answer": "Przenieść naukę na środę, po przejrzeniu pytań.",
-          "evidence": "W środę mam więcej czasu, ale w czwartek nie będzie mnie w biurze.\n\n— To dobrze. Brakuje nam informacji o cenach. Dzisiaj wystarczy, że sprawdzisz dokumenty od klienta. Nie dzwoń jeszcze do niego. Najpierw musimy ustalić, czego dokładnie nie wiemy.\n\n— A kto przygotuje tabelę z kosztami? Nie mam w tym dużego doświadczenia.\n\n— Zrobię ją ja. W środę pokażę ci, jak pracujemy z takimi danymi.",
-          "explanation": "W czwartek Ani nie ma w biurze; w środę ma więcej czasu, a Jacek wcześniej przegląda listę pytań."
+          "answer": "Przy pierwszym pytaniu wpisać cenę, przy drugim zostawić puste miejsce.",
+          "evidence": "— Dobrze, zapiszę dziś wszystkie pytania w jednym pliku. Jeśli nie znajdę odpowiedzi w dokumentach, zostawię wolne miejsce obok pytania.",
+          "explanation": "Ania zapisuje wszystkie pytania. Przy znanej cenie może podać odpowiedź, a przy brakującej zostawia wolne miejsce."
         },
         {
           "id": "vocabulary",
@@ -577,7 +577,7 @@
         {
           "id": "inference",
           "skill": "inference",
-          "question": "Łukasz w czwartek będzie poza biurem i ma pomysł na lepsze planowanie spotkań. Jak może wziąć udział w przygotowaniu zmian?",
+          "question": "Łukasz w czwartek będzie w delegacji i ma pomysł na lepsze planowanie spotkań. Jak może wziąć udział w przygotowaniu zmian?",
           "options": [
             "Przesłać notatkę z pomysłem najpóźniej w środę do piętnastej.",
             "Przesłać sam pomysł w piątek po przeczytaniu raportu.",

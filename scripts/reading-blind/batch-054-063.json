@@ -552,19 +552,19 @@
         },
         {
           "id": "q4",
-          "question": "W czwartek szef proponuje, żeby Ania nauczyła się przygotowywać tabelę jeszcze przed prezentacją. Jaką zmianę planu powinna zaproponować Ania?",
+          "question": "Ania znajduje w dokumentach cenę jednego produktu, ale nie zna ceny drugiego. Jak powinna przygotować listę dla Jacka?",
           "options": [
             {
               "id": "A",
-              "text": "Przenieść naukę na środę, po przejrzeniu pytań."
+              "text": "Przy pierwszym pytaniu wpisać cenę, przy drugim zostawić puste miejsce."
             },
             {
               "id": "B",
-              "text": "Wtorek rano, przed ukończeniem listy Ani."
+              "text": "Przy obu pytaniach zostawić puste miejsca, żeby Jacek sam sprawdził ceny."
             },
             {
               "id": "C",
-              "text": "Czwartek, podczas nieobecności Ani."
+              "text": "Wpisać tylko znalezioną cenę i usunąć pytanie bez odpowiedzi."
             }
           ]
         },
@@ -748,7 +748,7 @@
         },
         {
           "id": "q4",
-          "question": "Łukasz w czwartek będzie poza biurem i ma pomysł na lepsze planowanie spotkań. Jak może wziąć udział w przygotowaniu zmian?",
+          "question": "Łukasz w czwartek będzie w delegacji i ma pomysł na lepsze planowanie spotkań. Jak może wziąć udział w przygotowaniu zmian?",
           "options": [
             {
               "id": "A",
