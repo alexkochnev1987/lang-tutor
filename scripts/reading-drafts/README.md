@@ -2,7 +2,7 @@
 
 ## Scope
 
-The course contains 182 study days. The initial draft covers days 1–50 (50 original passages, 250 questions). Seven additional source-based drafts cover days 51, 52, 53, 64, 78, 92 and 99 (57 passages / 285 questions total). All 132 remaining-day topics are in scripts/reading-topic-plan.json; 125 passages still need authoring. See the [blind review reports](../reading-reviews/README.md) for the current acceptance status. Day 1 is diagnostic in the current curriculum; a reading passage for that day is available but does not imply replacing the diagnostic. Drafts live under scripts/reading-drafts, outside the runtime content pack. Nothing here changes the existing lesson or production deployment.
+The course contains 182 study days. The initial draft covers days 1–50 (50 original passages, 250 questions). Seven additional source-based drafts cover days 51, 52, 53, 64, 78, 92 and 99 (57 passages / 285 questions). The experimental batch for days 54–63 adds ten passages, bringing the draft corpus to 67 passages / 335 questions; 115 days still need authoring. See the [blind review reports](../reading-reviews/README.md) for the current acceptance status. Day 1 is diagnostic in the current curriculum; a reading passage for that day is available but does not imply replacing the diagnostic. Drafts live under scripts/reading-drafts. The separate experimental practice catalog exposes them without changing the ordinary lesson or its progress.
 
 Target length bands are teaching design choices, not certified CEFR ratings:
 - Days 1–28: A1, 80–120 words.
@@ -59,7 +59,7 @@ The exporter refuses missing, rejected or stale reports and never overwrites the
 
 ## Per-day delivery and experimental reading
 
-`pnpm dev` with `READING_PREVIEW=1` or a Vercel Preview deployment exposes `/reading/` for testing all current drafts. The reader loads a lightweight index and only the selected passage JSON. It uses the existing exercise engine with one attempt per question, a reading-first flow, a reopenable passage and a local session result. No experimental answers are saved to the user's course progress. Production builds do not generate experimental files or expose this page.
+`pnpm dev` and Vercel deployments expose `/reading/` for the Polish course, linked from the home page, for optional experimental practice with all current drafts. The reader loads a lightweight index and only the selected passage JSON. It uses the existing exercise engine with one attempt per question, a reading-first flow, a reopenable passage and a local session result. No experimental answers are saved to the user's course progress. Production also exposes this separate, clearly labeled experimental catalog. No draft is automatically promoted to the approved daily pack.
 
 The ordinary lesson reads `reading/index.json` only when its focus is reading, then requests the exact approved day file or one of the six pre-existing legacy passages if the day has no approved text. Existing progress IDs for the legacy pack stay unchanged. The old aggregate remains available for older PWA clients but is not used by the updated lesson.
 

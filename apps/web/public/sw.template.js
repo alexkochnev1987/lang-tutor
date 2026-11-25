@@ -23,6 +23,7 @@ const CONTENT_CACHE = `content-${VERSION}`
 const PRECACHE = [
   '/',
   '/lesson/',
+  '/reading/',
   '/program/',
   '/progress/',
   '/grammar/',

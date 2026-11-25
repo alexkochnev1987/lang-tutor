@@ -9,11 +9,6 @@ const distinct = values => new Set(values).size === values.length
 const dayName = day => 'day-' + String(day).padStart(3, '0') + '.json'
 const assert = (ok, message) => { if (!ok) throw new Error('reading: ' + message) }
 
-export function readingPreviewEnabled(env = process.env) {
-  return env.VERCEL_ENV !== 'production' &&
-    (env.VERCEL_ENV === 'preview' || (!env.VERCEL && env.READING_PREVIEW === '1'))
-}
-
 function validate(text, status) {
   assert(text && [text.id, text.title, text.text].every(nonempty), 'missing text fields')
   assert(Array.isArray(text.questions) && text.questions.length > 0, text.id + ': missing questions')
@@ -90,7 +85,7 @@ export function packReadingContent(source, target, { preview = false, draftDir }
   const legacy = existsSync(legacyPath) ? read(legacyPath).texts : []
   const live = makeReadingPack({ legacy, daily: readApproved(source) })
   const experimental = preview && draftDir ? makeReadingPack({ daily: readPreview(draftDir), status: 'preview' }) : null
-  // Generated output only. Always remove stale experimental assets on a production build.
+  // Generated output only. Remove stale assets before regenerating each independent catalog.
   const liveDir = join(target, 'reading')
   const previewDir = join(target, 'reading-preview')
   rmSync(liveDir, { recursive: true, force: true })

@@ -3,7 +3,7 @@ import assert from 'node:assert/strict'
 import { mkdtempSync, mkdirSync, writeFileSync, readFileSync, existsSync, readdirSync, rmSync } from 'node:fs'
 import { tmpdir } from 'node:os'
 import { join } from 'node:path'
-import { makeReadingPack, packReadingContent, readingPreviewEnabled } from './pack-reading.mjs'
+import { makeReadingPack, packReadingContent } from './pack-reading.mjs'
 
 const text = day => ({
   id: 'pl-b1.reading.day-' + day, day, level: 'A2', title: 'Example ' + day,
@@ -33,15 +33,7 @@ test('rejects invalid keys and evidence', () => {
   assert.throws(() => makeReadingPack({ daily: [t] }), /evidence/)
 })
 
-test('preview is opt-in locally, enabled on Vercel preview, never production', () => {
-  assert.equal(readingPreviewEnabled({}), false)
-  assert.equal(readingPreviewEnabled({ READING_PREVIEW: '1' }), true)
-  assert.equal(readingPreviewEnabled({ VERCEL: '1', VERCEL_ENV: 'preview' }), true)
-  assert.equal(readingPreviewEnabled({ VERCEL: '1', VERCEL_ENV: 'production', READING_PREVIEW: '1' }), false)
-  assert.equal(readingPreviewEnabled({ VERCEL: '1', READING_PREVIEW: '1' }), false)
-})
-
-test('preview files are separate and removed on subsequent live build', () => {
+test('experimental files stay separate and can be removed when disabled', () => {
   const root = mkdtempSync(join(tmpdir(), 'reading-pack-'))
   try {
     const source = join(root, 'source'), target = join(root, 'public'), draftDir = join(root, 'drafts')
