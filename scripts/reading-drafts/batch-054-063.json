@@ -1,0 +1,756 @@
+{
+  "version": 1,
+  "status": "draft",
+  "texts": [
+    {
+      "id": "pl-b1.reading.day-054",
+      "day": 54,
+      "level": "A2",
+      "genre": "ogłoszenie",
+      "title": "Zapis na zajęcia dodatkowe",
+      "text": "Uczniowie naszej szkoły mogą od grudnia chodzić na dodatkowe zajęcia z matematyki lub języka polskiego. Zajęcia są bezpłatne, ale w każdej grupie jest tylko osiem miejsc. Matematyka odbywa się w poniedziałki i środy od godziny piętnastej. Na język polski można przychodzić we wtorki o tej samej porze. Jedna lekcja trwa godzinę.\n\nDo piątku należy oddać formularz w pokoju obok gabinetu dyrektora. W formularzu trzeba podać imię, nazwisko, klasę i wybrany przedmiot. Nie zapisujemy uczniów przez telefon, ponieważ nauczyciele potrzebują podpisanych formularzy. Długopisy są dostępne na miejscu. Podczas długiej przerwy można również porozmawiać z nauczycielem o poziomie zajęć.\n\nJeżeli w grupie nie ma już miejsca, nazwisko ucznia trafia na listę osób oczekujących. Nauczyciel skontaktuje się z uczniem, gdy ktoś zrezygnuje. Osoby, które otrzymały miejsce, przynoszą na pierwszą lekcję tylko zeszyt i ołówek. Numer sali pojawi się na tablicy przy wejściu w ostatni poniedziałek listopada. Nie trzeba wcześniej kupować żadnego podręcznika.",
+      "questions": [
+        {
+          "id": "main-idea",
+          "skill": "main-idea",
+          "question": "Jaki jest główny cel ogłoszenia?",
+          "options": [
+            "Przedstawić plan nauki dla całej szkoły.",
+            "Wyjaśnić zasady udziału w dodatkowych lekcjach.",
+            "Poinformować o zmianach godzin zwykłych lekcji."
+          ],
+          "answer": "Wyjaśnić zasady udziału w dodatkowych lekcjach.",
+          "evidence": "Uczniowie naszej szkoły mogą od grudnia chodzić na dodatkowe zajęcia z matematyki lub języka polskiego. Zajęcia są bezpłatne, ale w każdej grupie jest tylko osiem miejsc.",
+          "explanation": "Cały tekst opisuje ofertę, sposób zapisu i postępowanie w przypadku braku miejsc."
+        },
+        {
+          "id": "detail",
+          "skill": "detail",
+          "question": "Kiedy będzie można sprawdzić numer sali?",
+          "options": [
+            "W ostatni poniedziałek listopada.",
+            "W pierwszy poniedziałek grudnia.",
+            "W piątek przed zakończeniem zapisów."
+          ],
+          "answer": "W ostatni poniedziałek listopada.",
+          "evidence": "Numer sali pojawi się na tablicy przy wejściu w ostatni poniedziałek listopada.",
+          "explanation": "Podano dokładny dzień publikacji numeru sali."
+        },
+        {
+          "id": "cause",
+          "skill": "cause",
+          "question": "Dlaczego szkoła nie przyjmuje zgłoszeń telefonicznych?",
+          "options": [
+            "Potrzebuje wcześniejszej rozmowy o poziomie.",
+            "Potrzebuje potwierdzenia wolnego miejsca.",
+            "Potrzebuje dokumentów z podpisem."
+          ],
+          "answer": "Potrzebuje dokumentów z podpisem.",
+          "evidence": "Nie zapisujemy uczniów przez telefon, ponieważ nauczyciele potrzebują podpisanych formularzy.",
+          "explanation": "Rozmowa telefoniczna nie zastępuje podpisanego formularza."
+        },
+        {
+          "id": "inference",
+          "skill": "inference",
+          "question": "Klara może zostać w szkole po lekcjach tylko we wtorki i czwartki. Chce dołączyć do jednej grupy. Co powinna zrobić?",
+          "options": [
+            "Wybrać matematykę i oddać formularz do piątku.",
+            "Wybrać polski i zgłosić się po raz pierwszy w grudniu.",
+            "Wybrać polski i oddać formularz do piątku."
+          ],
+          "answer": "Wybrać polski i oddać formularz do piątku.",
+          "evidence": "Matematyka odbywa się w poniedziałki i środy od godziny piętnastej. Na język polski można przychodzić we wtorki o tej samej porze. Jedna lekcja trwa godzinę.\n\nDo piątku należy oddać formularz w pokoju obok gabinetu dyrektora.",
+          "explanation": "Wtorek pasuje do jej planu, a zgłoszenie trzeba oddać przed końcem zapisów."
+        },
+        {
+          "id": "vocabulary",
+          "skill": "vocabulary",
+          "question": "Co oznacza w tekście „lista osób oczekujących”?",
+          "options": [
+            "Lista uczniów przyjętych, którzy czekają na pierwszą lekcję.",
+            "Lista uczniów bez miejsca, którzy mogą je jeszcze dostać.",
+            "Lista uczniów, którzy już zrezygnowali z zajęć."
+          ],
+          "answer": "Lista uczniów bez miejsca, którzy mogą je jeszcze dostać.",
+          "evidence": "Jeżeli w grupie nie ma już miejsca, nazwisko ucznia trafia na listę osób oczekujących. Nauczyciel skontaktuje się z uczniem, gdy ktoś zrezygnuje.",
+          "explanation": "Uczeń czeka na zwolnienie miejsca w grupie."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-055",
+      "day": 55,
+      "level": "A2",
+      "genre": "opowiadanie",
+      "title": "Nauka w parze",
+      "text": "Julia i Filip chodzą do tej samej klasy i w przyszłym roku będą zdawać maturę. W tym semestrze postanowili spotykać się po lekcjach dwa razy w tygodniu. Julia dobrze rozumie zadania z matematyki, ale robi dużo błędów w języku angielskim. Filip chętnie mówi po angielsku, lecz potrzebuje więcej czasu na rozwiązanie zadań matematycznych.\n\nNa początku każde z nich przynosiło pełny plecak książek. Otwierali podręczniki i razem czytali kolejne rozdziały. Po kilku spotkaniach zauważyli, że spędzają dużo czasu nad materiałem, który oboje już znają. Dlatego zmienili sposób pracy. Teraz przed spotkaniem każde przygotowuje dwa pytania do drugiej osoby. Julia wyjaśnia matematykę, a Filip pomaga jej ćwiczyć krótkie rozmowy po angielsku.\n\nW środę Filip nie mógł przyjść, więc wysłał Julii nagranie z trzema pytaniami. Julia odpowiedziała na nie wieczorem. W piątek przygotowała dla niego podobne zadania do samodzielnego rozwiązania. Nadal lubią pracować razem, ale ich plan działa także wtedy, gdy jedno z nich musi zostać w domu.",
+      "questions": [
+        {
+          "id": "main-idea",
+          "skill": "main-idea",
+          "question": "Co pokazuje historia Julii i Filipa?",
+          "options": [
+            "Jak wspólna nauka może odpowiadać na różne potrzeby uczniów.",
+            "Jak samodzielna nauka może zastąpić wszystkie spotkania uczniów.",
+            "Jak wspólny cel pozwala uczniom uczyć się tych samych przedmiotów."
+          ],
+          "answer": "Jak wspólna nauka może odpowiadać na różne potrzeby uczniów.",
+          "evidence": "Julia dobrze rozumie zadania z matematyki, ale robi dużo błędów w języku angielskim. Filip chętnie mówi po angielsku, lecz potrzebuje więcej czasu na rozwiązanie zadań matematycznych.",
+          "explanation": "Uczniowie mają różne mocne strony i dostosowują współpracę do swoich trudności."
+        },
+        {
+          "id": "detail",
+          "skill": "detail",
+          "question": "W jakiej formie Filip przesłał Julii pytania w środę?",
+          "options": [
+            "W formie zadań do rozwiązania.",
+            "W formie zdjęcia z podręcznika.",
+            "W formie nagrania."
+          ],
+          "answer": "W formie nagrania.",
+          "evidence": "W środę Filip nie mógł przyjść, więc wysłał Julii nagranie z trzema pytaniami.",
+          "explanation": "Filip wysłał nagranie, a Julia odpowiedziała wieczorem."
+        },
+        {
+          "id": "cause",
+          "skill": "cause",
+          "question": "Dlaczego przestali wspólnie czytać całe rozdziały?",
+          "options": [
+            "Zbyt często brakowało im odpowiednich książek.",
+            "Za dużo czasu poświęcali znanym już tematom.",
+            "Zbyt rzadko kończyli rozdział przed następną lekcją."
+          ],
+          "answer": "Za dużo czasu poświęcali znanym już tematom.",
+          "evidence": "Po kilku spotkaniach zauważyli, że spędzają dużo czasu nad materiałem, który oboje już znają.",
+          "explanation": "Zmiana miała pozwolić im pracować nad tym, co jest trudne."
+        },
+        {
+          "id": "inference",
+          "skill": "inference",
+          "question": "Przed kolejnym spotkaniem Julia nie radzi sobie z rozmową o wakacjach po angielsku, a Filip nie rozumie zadania z matematyki. Jak najlepiej wykorzystają swój czas?",
+          "options": [
+            "Julia wyjaśni zadanie, a Filip przećwiczy z nią rozmowę.",
+            "Julia przygotuje rozmowę, a Filip sam rozwiąże swoje zadanie.",
+            "Oboje przeczytają te same rozdziały, zanim zadadzą sobie pytania."
+          ],
+          "answer": "Julia wyjaśni zadanie, a Filip przećwiczy z nią rozmowę.",
+          "evidence": "Julia dobrze rozumie zadania z matematyki, ale robi dużo błędów w języku angielskim. Filip chętnie mówi po angielsku, lecz potrzebuje więcej czasu na rozwiązanie zadań matematycznych.\n\nNa początku każde z nich przynosiło pełny plecak książek. Otwierali podręczniki i razem czytali kolejne rozdziały. Po kilku spotkaniach zauważyli, że spędzają dużo czasu nad materiałem, który oboje już znają. Dlatego zmienili sposób pracy. Teraz przed spotkaniem każde przygotowuje dwa pytania do drugiej osoby. Julia wyjaśnia matematykę, a Filip pomaga jej ćwiczyć krótkie rozmowy po angielsku.",
+          "explanation": "Każde pomaga w przedmiocie, który zna lepiej, i otrzymuje pomoc w swoim trudnym temacie."
+        },
+        {
+          "id": "vocabulary",
+          "skill": "vocabulary",
+          "question": "Co znaczy „do samodzielnego rozwiązania”?",
+          "options": [
+            "Do wykonania bez bezpośredniej pomocy drugiej osoby.",
+            "Do wykonania wspólnie podczas kolejnego spotkania.",
+            "Do wykonania wyłącznie z nauczycielem na lekcji."
+          ],
+          "answer": "Do wykonania bez bezpośredniej pomocy drugiej osoby.",
+          "evidence": "W piątek przygotowała dla niego podobne zadania do samodzielnego rozwiązania. Nadal lubią pracować razem, ale ich plan działa także wtedy, gdy jedno z nich musi zostać w domu.",
+          "explanation": "Filip może pracować nad tymi zadaniami bez obecności Julii."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-056",
+      "day": 56,
+      "level": "A2",
+      "genre": "poradnik",
+      "title": "Jak przygotować się do sprawdzianu",
+      "text": "Jeśli masz kilka dni do sprawdzianu, nie zaczynaj od czytania całego podręcznika od pierwszej do ostatniej strony. Najpierw weź zeszyt i zapisz tematy, które będą na sprawdzianie. Przy każdym temacie postaw znak plus, jeśli dobrze go rozumiesz, lub znak zapytania, jeśli potrzebujesz pomocy.\n\nZacznij od tematów ze znakiem zapytania. Po przeczytaniu krótkiego fragmentu zamknij książkę i spróbuj wyjaśnić jego treść własnymi słowami. Jeżeli nie potrafisz odpowiedzieć na pytanie, wróć do odpowiedniej strony. Nie przepisuj jednak całej lekcji. Wystarczy krótka notatka z przykładem. W ten sposób możesz później szybko sprawdzić, co już pamiętasz.\n\nZostaw ostatni dzień na krótkie powtórzenie wszystkich tematów. Przygotuj kilka zadań bez gotowych odpowiedzi i wykonaj je w takim czasie, jaki zwykle masz na lekcji. Potem sprawdź błędy i wybierz najwyżej dwa najtrudniejsze zagadnienia do ponownej nauki. Zaplanuj również czas na odpoczynek. Wieczorem lepiej zakończyć pracę nad materiałem o ustalonej godzinie, niż próbować jeszcze raz przeczytać wszystko.",
+      "questions": [
+        {
+          "id": "main-idea",
+          "skill": "main-idea",
+          "question": "Jaką metodę nauki proponuje autor?",
+          "options": [
+            "Czytanie wszystkich tematów w kolejności i zapamiętywanie całych lekcji.",
+            "Przygotowanie wyłącznie krótkich notatek na dzień przed sprawdzianem.",
+            "Planowanie powtórki na podstawie własnych trudności i sprawdzanie wiedzy."
+          ],
+          "answer": "Planowanie powtórki na podstawie własnych trudności i sprawdzanie wiedzy.",
+          "evidence": "Zacznij od tematów ze znakiem zapytania. Po przeczytaniu krótkiego fragmentu zamknij książkę i spróbuj wyjaśnić jego treść własnymi słowami.",
+          "explanation": "Poradnik łączy wybór trudnych tematów, aktywne przypominanie i końcowe sprawdzanie."
+        },
+        {
+          "id": "detail",
+          "skill": "detail",
+          "question": "Ile trudnych zagadnień należy wybrać do ponownej nauki po próbnych zadaniach?",
+          "options": [
+            "Dokładnie trzy.",
+            "Nie więcej niż dwa.",
+            "Tyle, ile było tematów na liście."
+          ],
+          "answer": "Nie więcej niż dwa.",
+          "evidence": "Potem sprawdź błędy i wybierz najwyżej dwa najtrudniejsze zagadnienia do ponownej nauki.",
+          "explanation": "Autor ogranicza liczbę tematów na ostatnią powtórkę."
+        },
+        {
+          "id": "cause",
+          "skill": "cause",
+          "question": "Po co autor zaleca robienie krótkich notatek z przykładem?",
+          "options": [
+            "Żeby zastąpić wykonywanie zadań bez odpowiedzi.",
+            "Żeby później łatwo sprawdzić zapamiętany materiał.",
+            "Żeby zachować pełną treść każdego rozdziału."
+          ],
+          "answer": "Żeby później łatwo sprawdzić zapamiętany materiał.",
+          "evidence": "Wystarczy krótka notatka z przykładem. W ten sposób możesz później szybko sprawdzić, co już pamiętasz.",
+          "explanation": "Notatka ma ułatwić późniejszą kontrolę wiedzy."
+        },
+        {
+          "id": "inference",
+          "skill": "inference",
+          "question": "Ola ma trzy dni do sprawdzianu. Dwa tematy rozumie dobrze, a dwóch nie umie wyjaśnić bez książki. Który plan pasuje do poradnika?",
+          "options": [
+            "Najpierw powtórzyć dwa łatwe tematy, a trudne zostawić na ostatni wieczór.",
+            "Codziennie czytać wszystkie cztery tematy, a ostatniego dnia przepisać notatki.",
+            "Najpierw przećwiczyć dwa trudne tematy, a ostatniego dnia rozwiązać zadania ze wszystkich."
+          ],
+          "answer": "Najpierw przećwiczyć dwa trudne tematy, a ostatniego dnia rozwiązać zadania ze wszystkich.",
+          "evidence": "Zacznij od tematów ze znakiem zapytania. Po przeczytaniu krótkiego fragmentu zamknij książkę i spróbuj wyjaśnić jego treść własnymi słowami. Jeżeli nie potrafisz odpowiedzieć na pytanie, wróć do odpowiedniej strony. Nie przepisuj jednak całej lekcji. Wystarczy krótka notatka z przykładem. W ten sposób możesz później szybko sprawdzić, co już pamiętasz.\n\nZostaw ostatni dzień na krótkie powtórzenie wszystkich tematów. Przygotuj kilka zadań bez gotowych odpowiedzi i wykonaj je w takim czasie, jaki zwykle masz na lekcji.",
+          "explanation": "Plan uwzględnia zarówno pierwszeństwo trudnych tematów, jak i końcową powtórkę całości."
+        },
+        {
+          "id": "vocabulary",
+          "skill": "vocabulary",
+          "question": "Co oznacza „własnymi słowami”?",
+          "options": [
+            "Za pomocą własnego sposobu wyrażania myśli.",
+            "Za pomocą dokładnych zdań z podręcznika.",
+            "Za pomocą słów zapisanych przez nauczyciela."
+          ],
+          "answer": "Za pomocą własnego sposobu wyrażania myśli.",
+          "evidence": "Po przeczytaniu krótkiego fragmentu zamknij książkę i spróbuj wyjaśnić jego treść własnymi słowami.",
+          "explanation": "Chodzi o samodzielne sformułowanie wyjaśnienia, a nie odczytanie gotowego tekstu."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-057",
+      "day": 57,
+      "level": "A2",
+      "genre": "wiadomość",
+      "title": "Pierwszy dzień w nowym zespole",
+      "text": "Cześć, Doroto! Dzisiaj był mój pierwszy dzień w nowej pracy. W biurze nie znałem nikogo oprócz szefa, z którym rozmawiałem przed podpisaniem umowy. Rano jeden z pracowników pokazał mi moje miejsce i wyjaśnił, gdzie mogę znaleźć potrzebne dokumenty. Potem poznaliśmy się z resztą zespołu przy kawie.\n\nMiałem już zacząć pracę z klientem, ale szef powiedział, że przez pierwsze dwa dni nie będę rozmawiać z klientami sam. Mam najpierw posłuchać rozmów Marty i nauczyć się, gdzie zapisujemy informacje o zamówieniach. Marta dała mi też jedno małe zadanie na komputerze. Sprawdziła je razem ze mną przed obiadem, żebym poznał sposób zapisu zamówień.\n\nNajbardziej zaskoczyła mnie atmosfera. Nikt nie oczekiwał, że od razu będę wszystko wiedział. Kiedy czegoś nie rozumiałem, mogłem o to zapytać. Po południu dostałem plan na jutro i adres strony z materiałami do nauki. W środę mam już poprowadzić krótką rozmowę z klientem, a Marta będzie wtedy obok mnie. Chcę przygotować się do niej wieczorem. Pa, Daniel.",
+      "questions": [
+        {
+          "id": "main-idea",
+          "skill": "main-idea",
+          "question": "O czym przede wszystkim Daniel opowiada Dorocie?",
+          "options": [
+            "O tym, jak nowy zespół zmienia zasady obsługi klientów.",
+            "O tym, jak poznaje nową pracę i stopniowo otrzymuje obowiązki.",
+            "O tym, jak Daniel sam organizuje pracę całego biura."
+          ],
+          "answer": "O tym, jak poznaje nową pracę i stopniowo otrzymuje obowiązki.",
+          "evidence": "Nikt nie oczekiwał, że od razu będę wszystko wiedział. Kiedy czegoś nie rozumiałem, mogłem o to zapytać.",
+          "explanation": "Wiadomość opisuje poznanie współpracowników, naukę i pierwsze obowiązki."
+        },
+        {
+          "id": "detail",
+          "skill": "detail",
+          "question": "Co Daniel otrzymał po południu?",
+          "options": [
+            "Nową umowę i listę klientów.",
+            "Dokumenty o zamówieniach i zadanie na dziś.",
+            "Plan na kolejny dzień i adres materiałów."
+          ],
+          "answer": "Plan na kolejny dzień i adres materiałów.",
+          "evidence": "Po południu dostałem plan na jutro i adres strony z materiałami do nauki.",
+          "explanation": "Są to dwie rzeczy wymienione w ostatnim akapicie."
+        },
+        {
+          "id": "cause",
+          "skill": "cause",
+          "question": "Dlaczego Marta sprawdza zadanie razem z Danielem?",
+          "options": [
+            "Daniel ma nauczyć się zapisywać zamówienia.",
+            "Daniel ma ocenić przygotowanie Marty do pracy.",
+            "Daniel musi skończyć zadanie przed rozmową z klientem tego dnia."
+          ],
+          "answer": "Daniel ma nauczyć się zapisywać zamówienia.",
+          "evidence": "Marta dała mi też jedno małe zadanie na komputerze. Sprawdziła je razem ze mną przed obiadem, żebym poznał sposób zapisu zamówień.",
+          "explanation": "Marta sprawdziła zadanie, aby Daniel nauczył się zapisywać zamówienia."
+        },
+        {
+          "id": "inference",
+          "skill": "inference",
+          "question": "Klient dzwoni do Daniela następnego dnia rano. Daniel nie wie, gdzie zapisać nowe zamówienie. Jak powinien postąpić zgodnie z planem?",
+          "options": [
+            "Przeprowadzić rozmowę sam i później pokazać Marcie zapis.",
+            "Poprosić Martę o pomoc przy rozmowie i zapisie informacji.",
+            "Odłożyć rozmowę z klientem do środy i nie pytać nikogo."
+          ],
+          "answer": "Poprosić Martę o pomoc przy rozmowie i zapisie informacji.",
+          "evidence": "Miałem już zacząć pracę z klientem, ale szef powiedział, że przez pierwsze dwa dni nie będę rozmawiać z klientami sam. Mam najpierw posłuchać rozmów Marty i nauczyć się, gdzie zapisujemy informacje o zamówieniach.",
+          "explanation": "Następnego dnia nadal obowiązuje plan nauki z pomocą Marty."
+        },
+        {
+          "id": "vocabulary",
+          "skill": "vocabulary",
+          "question": "Co znaczy tutaj „od razu”?",
+          "options": [
+            "Przy każdej kolejnej próbie.",
+            "Po zakończeniu okresu nauki.",
+            "Natychmiast, bez czasu na przygotowanie."
+          ],
+          "answer": "Natychmiast, bez czasu na przygotowanie.",
+          "evidence": "Nikt nie oczekiwał, że od razu będę wszystko wiedział.",
+          "explanation": "Współpracownicy nie oczekiwali pełnej wiedzy już pierwszego dnia."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-058",
+      "day": 58,
+      "level": "A2",
+      "genre": "artykuł",
+      "title": "Zmiana godzin pracy",
+      "text": "W pewnej małej firmie pracownicy przez wiele lat zaczynali pracę o ósmej. Część z nich przyjeżdżała z miejscowości położonych poza miastem. Poranny pociąg przyjeżdżał za późno, a wcześniejszy kurs oznaczał prawie godzinę czekania przed otwarciem biura. Pracownicy prosili więc szefa o zmianę godzin pracy.\n\nFirma przez miesiąc testowała nowy plan. Można było zaczynać między siódmą a dziewiątą, ale od dziesiątej do czternastej cały zespół musiał być w biurze. W tym czasie odbywały się spotkania z klientami. Nie zmieniła się liczba godzin pracy ani wynagrodzenie. Osoby, które przychodziły później, kończyły odpowiednio później.\n\nPo miesiącu szef zebrał opinie pracowników. Większość chciała zachować nowy plan. Niektórzy woleli jednak zaczynać tak jak dawniej, ponieważ po pracy odbierali dzieci ze szkoły. Firma nie wprowadziła jednej nowej godziny dla wszystkich. Każdy mógł wybrać początek dnia w podanym przedziale, a jego wybór nie musiał być taki sam każdego dnia. Dzięki temu pracownicy mogli lepiej planować dojazdy i sprawy rodzinne.",
+      "questions": [
+        {
+          "id": "main-idea",
+          "skill": "main-idea",
+          "question": "Co jest najważniejszą cechą nowego planu pracy?",
+          "options": [
+            "Możliwość wyboru godziny rozpoczęcia przy zachowaniu wspólnego czasu pracy.",
+            "Możliwość skrócenia dnia pracy bez zmiany wynagrodzenia.",
+            "Możliwość wyboru godzin spotkań bez obecności całego zespołu."
+          ],
+          "answer": "Możliwość wyboru godziny rozpoczęcia przy zachowaniu wspólnego czasu pracy.",
+          "evidence": "Można było zaczynać między siódmą a dziewiątą, ale od dziesiątej do czternastej cały zespół musiał być w biurze. W tym czasie odbywały się spotkania z klientami. Nie zmieniła się liczba godzin pracy ani wynagrodzenie.",
+          "explanation": "Elastyczny początek nie zmienia wspólnych obowiązków ani długości pracy."
+        },
+        {
+          "id": "detail",
+          "skill": "detail",
+          "question": "W jakich godzinach odbywały się spotkania z klientami?",
+          "options": [
+            "Między dziesiątą a czternastą.",
+            "Między siódmą a dziewiątą.",
+            "Między ósmą a dwunastą."
+          ],
+          "answer": "Między dziesiątą a czternastą.",
+          "evidence": "od dziesiątej do czternastej cały zespół musiał być w biurze. W tym czasie odbywały się spotkania z klientami.",
+          "explanation": "Spotkania zaplanowano w okresie wspólnej obecności."
+        },
+        {
+          "id": "cause",
+          "skill": "cause",
+          "question": "Dlaczego część pracowników chciała nadal zaczynać o ósmej?",
+          "options": [
+            "Po zmianie zarabiali mniej niż wcześniej.",
+            "Przed ósmą nie mogli dojechać do biura.",
+            "Po pracy mieli obowiązki związane z dziećmi."
+          ],
+          "answer": "Po pracy mieli obowiązki związane z dziećmi.",
+          "evidence": "Niektórzy woleli jednak zaczynać tak jak dawniej, ponieważ po pracy odbierali dzieci ze szkoły.",
+          "explanation": "Wcześniejszy początek pozwalał im zachować dotychczasowy rytm rodzinny."
+        },
+        {
+          "id": "inference",
+          "skill": "inference",
+          "question": "Anna chce w poniedziałek przyjść o dziewiątej, a we wtorek o siódmej. Co wynika z opisanego planu?",
+          "options": [
+            "Może tak zrobić, jeśli we wtorek zakończy pracę o tej samej godzinie co w poniedziałek.",
+            "Może tak zrobić, jeśli przepracuje zwykłą liczbę godzin i będzie na wspólnych spotkaniach.",
+            "Musi wybrać jedną z tych godzin na cały tydzień, aby zachować wynagrodzenie."
+          ],
+          "answer": "Może tak zrobić, jeśli przepracuje zwykłą liczbę godzin i będzie na wspólnych spotkaniach.",
+          "evidence": "Można było zaczynać między siódmą a dziewiątą, ale od dziesiątej do czternastej cały zespół musiał być w biurze. W tym czasie odbywały się spotkania z klientami. Nie zmieniła się liczba godzin pracy ani wynagrodzenie. Osoby, które przychodziły później, kończyły odpowiednio później.\n\nPo miesiącu szef zebrał opinie pracowników. Większość chciała zachować nowy plan. Niektórzy woleli jednak zaczynać tak jak dawniej, ponieważ po pracy odbierali dzieci ze szkoły. Firma nie wprowadziła jednej nowej godziny dla wszystkich. Każdy mógł wybrać początek dnia w podanym przedziale, a jego wybór nie musiał być taki sam każdego dnia.",
+          "explanation": "Obie godziny mieszczą się w przedziale; plan pozwala zmieniać je codziennie, ale zachowuje długość pracy i wspólny czas."
+        },
+        {
+          "id": "vocabulary",
+          "skill": "vocabulary",
+          "question": "Co oznacza w artykule „zebrał opinie”?",
+          "options": [
+            "Dowiedział się, co pracownicy myślą o planie.",
+            "Zapisał godziny przyjścia pracowników do biura.",
+            "Przedstawił pracownikom swoją ocenę ich pracy."
+          ],
+          "answer": "Dowiedział się, co pracownicy myślą o planie.",
+          "evidence": "Po miesiącu szef zebrał opinie pracowników. Większość chciała zachować nowy plan.",
+          "explanation": "Szef poznał zdanie osób, które korzystały z nowego planu."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-059",
+      "day": 59,
+      "level": "A2",
+      "genre": "dialog",
+      "title": "Rozmowa o zadaniach",
+      "text": "— Aniu, potrzebuję twojej pomocy przy projekcie dla nowego klienta — mówi Jacek. — W piątek mamy pokazać mu pierwszy plan. Czy masz dziś czas?\n\n— Do południa kończę raport z poprzedniego tygodnia. Później mogę pomóc przez dwie godziny. W środę mam więcej czasu, ale w czwartek nie będzie mnie w biurze.\n\n— To dobrze. Brakuje nam informacji o cenach. Dzisiaj wystarczy, że sprawdzisz dokumenty od klienta. Nie dzwoń jeszcze do niego. Najpierw musimy ustalić, czego dokładnie nie wiemy.\n\n— A kto przygotuje tabelę z kosztami? Nie mam w tym dużego doświadczenia.\n\n— Zrobię ją ja. W środę pokażę ci, jak pracujemy z takimi danymi. Chcę, żebyś w następnym miesiącu mogła przygotować podobny plan sama.\n\n— Dobrze, zapiszę dziś wszystkie pytania w jednym pliku. Jeśli nie znajdę odpowiedzi w dokumentach, zostawię wolne miejsce obok pytania.\n\n— Świetnie. Jutro rano przeczytam twoją listę. Dopiero wtedy wspólnie zdecydujemy, które informacje trzeba jeszcze uzyskać od klienta. Przed piątkiem spotkamy się jeszcze z szefem.",
+      "questions": [
+        {
+          "id": "main-idea",
+          "skill": "main-idea",
+          "question": "Co jest celem rozmowy?",
+          "options": [
+            "Przeniesienie prezentacji projektu na następny miesiąc.",
+            "Omówienie błędów po zakończeniu projektu dla klienta.",
+            "Ustalenie podziału pracy i kolejności działań przy projekcie."
+          ],
+          "answer": "Ustalenie podziału pracy i kolejności działań przy projekcie.",
+          "evidence": "Dzisiaj wystarczy, że sprawdzisz dokumenty od klienta. Nie dzwoń jeszcze do niego. Najpierw musimy ustalić, czego dokładnie nie wiemy.",
+          "explanation": "Rozmówcy dzielą obowiązki, planują zdobycie informacji i przygotowują prezentację."
+        },
+        {
+          "id": "detail",
+          "skill": "detail",
+          "question": "Kto przygotuje tabelę z kosztami?",
+          "options": [
+            "Ania.",
+            "Jacek.",
+            "Szef."
+          ],
+          "answer": "Jacek.",
+          "evidence": "— A kto przygotuje tabelę z kosztami? Nie mam w tym dużego doświadczenia.\n\n— Zrobię ją ja.",
+          "explanation": "Jacek przejmuje zadanie wymagające doświadczenia."
+        },
+        {
+          "id": "cause",
+          "skill": "cause",
+          "question": "Dlaczego Jacek prosi Anię, żeby jeszcze nie dzwoniła do klienta?",
+          "options": [
+            "Najpierw chcą pokazać klientowi gotowy plan.",
+            "Najpierw chcą zakończyć szkolenie z kosztów.",
+            "Najpierw chcą ustalić, jakich danych brakuje."
+          ],
+          "answer": "Najpierw chcą ustalić, jakich danych brakuje.",
+          "evidence": "Nie dzwoń jeszcze do niego. Najpierw musimy ustalić, czego dokładnie nie wiemy.",
+          "explanation": "Kontakt ma nastąpić dopiero po zebraniu konkretnych pytań."
+        },
+        {
+          "id": "inference",
+          "skill": "inference",
+          "question": "W czwartek szef proponuje, żeby Ania nauczyła się przygotowywać tabelę jeszcze przed prezentacją. Jaką zmianę planu powinna zaproponować Ania?",
+          "options": [
+            "Przenieść naukę na środę, po przejrzeniu pytań.",
+            "Wtorek rano, przed ukończeniem listy Ani.",
+            "Czwartek, podczas nieobecności Ani."
+          ],
+          "answer": "Przenieść naukę na środę, po przejrzeniu pytań.",
+          "evidence": "W środę mam więcej czasu, ale w czwartek nie będzie mnie w biurze.\n\n— To dobrze. Brakuje nam informacji o cenach. Dzisiaj wystarczy, że sprawdzisz dokumenty od klienta. Nie dzwoń jeszcze do niego. Najpierw musimy ustalić, czego dokładnie nie wiemy.\n\n— A kto przygotuje tabelę z kosztami? Nie mam w tym dużego doświadczenia.\n\n— Zrobię ją ja. W środę pokażę ci, jak pracujemy z takimi danymi.",
+          "explanation": "W czwartek Ani nie ma w biurze; w środę ma więcej czasu, a Jacek wcześniej przegląda listę pytań."
+        },
+        {
+          "id": "vocabulary",
+          "skill": "vocabulary",
+          "question": "Co oznacza „brakuje nam informacji”?",
+          "options": [
+            "Mamy dane, których nie chcemy pokazać klientowi.",
+            "Mamy za mało danych, żeby wykonać zadanie.",
+            "Mamy dane, które trzeba zapisać w innym pliku."
+          ],
+          "answer": "Mamy za mało danych, żeby wykonać zadanie.",
+          "evidence": "Brakuje nam informacji o cenach. Dzisiaj wystarczy, że sprawdzisz dokumenty od klienta.",
+          "explanation": "Część potrzebnych danych nie jest jeszcze dostępna."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-060",
+      "day": 60,
+      "level": "A2",
+      "genre": "e-mail",
+      "title": "Ogłoszenie o pracy",
+      "text": "Temat: Informacja o rekrutacji do biura\n\nDzień dobry, Pani Marto!\n\nDziękujemy za zainteresowanie naszym ogłoszeniem o pracy. Szukamy osoby do obsługi zamówień w małej firmie, która sprzedaje meble. Do codziennych obowiązków należą rozmowy z klientami, sprawdzanie adresów dostaw oraz zapisywanie nowych zamówień w komputerze. Nie wymagamy doświadczenia w sprzedaży, ale potrzebujemy osoby, która dobrze organizuje swoją pracę i potrafi jasno pisać wiadomości.\n\nPierwsza rozmowa odbędzie się przez internet i potrwa około dwudziestu minut. Prosimy przygotować krótki opis swoich poprzednich obowiązków. Nie trzeba wysyłać dodatkowego życiorysu, ponieważ mamy już Pani dokumenty. Po rozmowie zaprosimy wybrane osoby do biura. Tam otrzymają krótkie zadanie dotyczące zamówień, aby poznać sposób naszej pracy.\n\nPraca jest na pełny etat od poniedziałku do piątku. W pierwszym miesiącu nowa osoba pracuje razem z bardziej doświadczonym kolegą. O szczegółach wynagrodzenia porozmawiamy podczas pierwszej rozmowy. Możemy zaproponować wtorek o jedenastej lub środę o szesnastej. Prosimy o odpowiedź do poniedziałku.\n\nPozdrawiam, Anna, dział rekrutacji",
+      "questions": [
+        {
+          "id": "main-idea",
+          "skill": "main-idea",
+          "question": "Po co Anna wysyła tę wiadomość?",
+          "options": [
+            "Żeby potwierdzić przyjęcie Marty do pracy w biurze.",
+            "Żeby przedstawić warunki pracy i następne kroki rekrutacji.",
+            "Żeby poprosić Martę o wykonanie zadania przed rozmową."
+          ],
+          "answer": "Żeby przedstawić warunki pracy i następne kroki rekrutacji.",
+          "evidence": "Dziękujemy za zainteresowanie naszym ogłoszeniem o pracy. Szukamy osoby do obsługi zamówień w małej firmie, która sprzedaje meble.",
+          "explanation": "E-mail opisuje stanowisko, wymagania i etapy rozmów, a nie potwierdza zatrudnienia."
+        },
+        {
+          "id": "detail",
+          "skill": "detail",
+          "question": "Ile ma trwać pierwsza rozmowa?",
+          "options": [
+            "Około czterdziestu minut.",
+            "Około dwudziestu minut.",
+            "Około jednej godziny."
+          ],
+          "answer": "Około dwudziestu minut.",
+          "evidence": "Pierwsza rozmowa odbędzie się przez internet i potrwa około dwudziestu minut.",
+          "explanation": "Czas rozmowy podano bezpośrednio."
+        },
+        {
+          "id": "cause",
+          "skill": "cause",
+          "question": "Dlaczego Marta nie musi ponownie wysyłać życiorysu?",
+          "options": [
+            "Firma otrzymała już jej dokumenty.",
+            "Firma ocenia wyłącznie zadanie w biurze.",
+            "Firma nie interesuje się wcześniejszą pracą."
+          ],
+          "answer": "Firma otrzymała już jej dokumenty.",
+          "evidence": "Nie trzeba wysyłać dodatkowego życiorysu, ponieważ mamy już Pani dokumenty.",
+          "explanation": "Życiorys znajduje się już wśród dokumentów kandydatki."
+        },
+        {
+          "id": "inference",
+          "skill": "inference",
+          "question": "Marta nigdy nie pracowała w sprzedaży, ale przez rok odpowiadała na wiadomości i organizowała zamówienia w innej pracy. We wtorek pracuje do piętnastej, a w środę jest wolna po piętnastej. Co może zrobić?",
+          "options": [
+            "Wybrać wtorek i przygotować zadanie dotyczące mebli.",
+            "Zrezygnować z rozmowy, ponieważ nie pracowała w sprzedaży.",
+            "Wybrać środę i opowiedzieć o swoich dotychczasowych obowiązkach."
+          ],
+          "answer": "Wybrać środę i opowiedzieć o swoich dotychczasowych obowiązkach.",
+          "evidence": "Nie wymagamy doświadczenia w sprzedaży, ale potrzebujemy osoby, która dobrze organizuje swoją pracę i potrafi jasno pisać wiadomości.\n\nPierwsza rozmowa odbędzie się przez internet i potrwa około dwudziestu minut. Prosimy przygotować krótki opis swoich poprzednich obowiązków. Nie trzeba wysyłać dodatkowego życiorysu, ponieważ mamy już Pani dokumenty. Po rozmowie zaprosimy wybrane osoby do biura. Tam otrzymają krótkie zadanie dotyczące zamówień, aby poznać sposób naszej pracy.\n\nPraca jest na pełny etat od poniedziałku do piątku. W pierwszym miesiącu nowa osoba pracuje razem z bardziej doświadczonym kolegą. O szczegółach wynagrodzenia porozmawiamy podczas pierwszej rozmowy. Możemy zaproponować wtorek o jedenastej lub środę o szesnastej.",
+          "explanation": "Brak pracy w sprzedaży nie wyklucza Marty, a jedynie środowy termin pasuje do jej planu."
+        },
+        {
+          "id": "vocabulary",
+          "skill": "vocabulary",
+          "question": "Co oznacza „obsługa zamówień”?",
+          "options": [
+            "Dostarczanie gotowych mebli do mieszkań.",
+            "Przygotowywanie ofert dla nowych pracowników.",
+            "Zajmowanie się zamówieniami od klientów."
+          ],
+          "answer": "Zajmowanie się zamówieniami od klientów.",
+          "evidence": "Do codziennych obowiązków należą rozmowy z klientami, sprawdzanie adresów dostaw oraz zapisywanie nowych zamówień w komputerze.",
+          "explanation": "Praca obejmuje kontakt z klientami i przygotowanie danych o zakupach."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-061",
+      "day": 61,
+      "level": "A2",
+      "genre": "ogłoszenie",
+      "title": "Informacja zwrotna po projekcie",
+      "text": "Do wszystkich osób z zespołu projektu „Nowe biuro”!\n\nW przyszły czwartek od godziny dziesiątej do dwunastej odbędzie się zebranie po zakończeniu projektu. Nie będziemy przedstawiać klientowi nowej prezentacji. Chcemy wspólnie porozmawiać o tym, jak pracowaliśmy przez ostatnie trzy miesiące, co nam się udało i jakie zmiany warto wprowadzić przy kolejnym zadaniu.\n\nPrzed spotkaniem prosimy każdego pracownika o przygotowanie jednej krótkiej notatki. Powinna zawierać przykład dobrej współpracy oraz przykład sytuacji, którą można było lepiej zorganizować. Nie trzeba wpisywać nazwisk innych pracowników, ponieważ rozmowa ma dotyczyć sposobu pracy, a nie oceny konkretnych osób. Notatkę prosimy wysłać do środy do godziny piętnastej.\n\nNa początku zebrania omówimy wspólnie najczęstsze uwagi. Następnie w małych grupach wybierzemy po jednym pomyśle na poprawę pracy. Na koniec ustalimy dwie zmiany do wypróbowania w następnym projekcie. Osoby, które w czwartek będą w delegacji, mogą przesłać również propozycję zmiany razem z notatką. Krótki raport ze spotkania otrzyma cały zespół w piątek rano.",
+      "questions": [
+        {
+          "id": "main-idea",
+          "skill": "main-idea",
+          "question": "Czemu ma służyć zebranie zespołu?",
+          "options": [
+            "Wyciągnięciu wniosków z zakończonej pracy i zaplanowaniu ulepszeń.",
+            "Przygotowaniu końcowej prezentacji dla klienta i rozliczeniu projektu.",
+            "Wybraniu najlepszych pracowników do kolejnego projektu."
+          ],
+          "answer": "Wyciągnięciu wniosków z zakończonej pracy i zaplanowaniu ulepszeń.",
+          "evidence": "Chcemy wspólnie porozmawiać o tym, jak pracowaliśmy przez ostatnie trzy miesiące, co nam się udało i jakie zmiany warto wprowadzić przy kolejnym zadaniu.",
+          "explanation": "Spotkanie dotyczy wspólnego uczenia się i przyszłego sposobu pracy."
+        },
+        {
+          "id": "detail",
+          "skill": "detail",
+          "question": "Kiedy cały zespół otrzyma raport?",
+          "options": [
+            "W czwartek po południu.",
+            "W środę przed piętnastą.",
+            "W piątek rano."
+          ],
+          "answer": "W piątek rano.",
+          "evidence": "Krótki raport ze spotkania otrzyma cały zespół w piątek rano.",
+          "explanation": "Termin wysłania raportu różni się od terminu notatek i zebrania."
+        },
+        {
+          "id": "cause",
+          "skill": "cause",
+          "question": "Dlaczego w notatkach nie trzeba podawać nazwisk?",
+          "options": [
+            "Ważny jest sposób organizacji pracy, a nie ocena osób.",
+            "Ważne jest zachowanie nazwisk tylko do raportu.",
+            "Ważne jest wybranie autorów najlepszych pomysłów podczas zebrania."
+          ],
+          "answer": "Ważny jest sposób organizacji pracy, a nie ocena osób.",
+          "evidence": "Nie trzeba wpisywać nazwisk innych pracowników, ponieważ rozmowa ma dotyczyć sposobu pracy, a nie oceny konkretnych osób.",
+          "explanation": "Organizatorzy chcą analizować proces, a nie szukać winnych."
+        },
+        {
+          "id": "inference",
+          "skill": "inference",
+          "question": "Łukasz w czwartek będzie poza biurem i ma pomysł na lepsze planowanie spotkań. Jak może wziąć udział w przygotowaniu zmian?",
+          "options": [
+            "Przesłać notatkę z pomysłem najpóźniej w środę do piętnastej.",
+            "Przesłać sam pomysł w piątek po przeczytaniu raportu.",
+            "Przygotować prezentację pomysłu dla klienta na czwartek."
+          ],
+          "answer": "Przesłać notatkę z pomysłem najpóźniej w środę do piętnastej.",
+          "evidence": "Notatkę prosimy wysłać do środy do godziny piętnastej.\n\nNa początku zebrania omówimy wspólnie najczęstsze uwagi. Następnie w małych grupach wybierzemy po jednym pomyśle na poprawę pracy. Na koniec ustalimy dwie zmiany do wypróbowania w następnym projekcie. Osoby, które w czwartek będą w delegacji, mogą przesłać również propozycję zmiany razem z notatką.",
+          "explanation": "Nieobecni mogą zgłosić pomysł wraz z notatką, zachowując termin jej wysłania."
+        },
+        {
+          "id": "vocabulary",
+          "skill": "vocabulary",
+          "question": "Co oznacza „uwagi” w tym ogłoszeniu?",
+          "options": [
+            "Polecenia wykonania nowych zadań dla klienta.",
+            "Spostrzeżenia i opinie o przebiegu pracy.",
+            "Oceny przyznawane poszczególnym pracownikom."
+          ],
+          "answer": "Spostrzeżenia i opinie o przebiegu pracy.",
+          "evidence": "Na początku zebrania omówimy wspólnie najczęstsze uwagi.",
+          "explanation": "Uwagi pochodzą z notatek o współpracy i organizacji projektu."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-062",
+      "day": 62,
+      "level": "A2",
+      "genre": "opowiadanie",
+      "title": "Praca z domu a biuro",
+      "text": "Gdy w firmie Zosi pojawiła się możliwość pracy z domu, wybrała wszystkie dni poza biurem. Dzięki temu nie traciła czasu na dojazdy i mogła rano spokojnie zjeść śniadanie. Pracowała przy biurku w swoim pokoju. Przez pierwsze tygodnie bardzo podobał jej się ten sposób organizacji dnia.\n\nZ czasem zauważyła jednak pewien problem. Kiedy potrzebowała szybkiej odpowiedzi od kolegi, często musiała czekać na wiadomość, a krótkie rozmowy zamieniały się w długie spotkania przez internet. W dni, w które przygotowywała własny raport, nie przeszkadzało jej to. Trudniej było wtedy, gdy kilka osób miało wspólnie ustalić plan pracy.\n\nZosia porozmawiała z szefem i zaczęła przychodzić do biura we wtorki i czwartki. W tych dniach jej zespół planuje wspólne zadania oraz rozwiązuje problemy klientów. W pozostałe dni Zosia pracuje w domu i przygotowuje dokumenty. Teraz nie musi codziennie dojeżdżać do pracy, a ważne rozmowy może prowadzić bezpośrednio z kolegami. Nie uważa już, że jedno miejsce pracy jest najlepsze do wszystkich obowiązków.",
+      "questions": [
+        {
+          "id": "main-idea",
+          "skill": "main-idea",
+          "question": "Do jakiego wniosku dochodzi Zosia?",
+          "options": [
+            "Praca w domu jest lepsza tylko dla osób bez własnego biurka.",
+            "Wspólne zadania wymagają codziennej obecności całego zespołu.",
+            "Różne rodzaje zadań lepiej wykonywać w różnych miejscach."
+          ],
+          "answer": "Różne rodzaje zadań lepiej wykonywać w różnych miejscach.",
+          "evidence": "W tych dniach jej zespół planuje wspólne zadania oraz rozwiązuje problemy klientów. W pozostałe dni Zosia pracuje w domu i przygotowuje dokumenty.",
+          "explanation": "Zosia dostosowuje miejsce pracy do tego, czy potrzebuje współpracy, czy skupienia na własnym zadaniu."
+        },
+        {
+          "id": "detail",
+          "skill": "detail",
+          "question": "W które dni Zosia chodzi teraz do biura?",
+          "options": [
+            "We wtorki i czwartki.",
+            "W poniedziałki i środy.",
+            "W środy i piątki."
+          ],
+          "answer": "We wtorki i czwartki.",
+          "evidence": "Zosia porozmawiała z szefem i zaczęła przychodzić do biura we wtorki i czwartki.",
+          "explanation": "Tekst podaje dwa stałe dni pracy w biurze."
+        },
+        {
+          "id": "cause",
+          "skill": "cause",
+          "question": "Dlaczego całkowita praca z domu stała się mniej wygodna?",
+          "options": [
+            "Przygotowanie własnych raportów wymagało dokumentów z biura.",
+            "Szybkie ustalenia z kolegami często trwały zbyt długo.",
+            "Dojazdy do biura stały się dla Zosi bardziej czasochłonne."
+          ],
+          "answer": "Szybkie ustalenia z kolegami często trwały zbyt długo.",
+          "evidence": "Kiedy potrzebowała szybkiej odpowiedzi od kolegi, często musiała czekać na wiadomość, a krótkie rozmowy zamieniały się w długie spotkania przez internet.",
+          "explanation": "Trudność dotyczyła komunikacji przy wspólnych zadaniach."
+        },
+        {
+          "id": "inference",
+          "skill": "inference",
+          "question": "Zespół ma ustalić plan dla klienta, a Zosia musi też napisać długi raport bez pomocy innych. Który plan najlepiej odpowiada jej nowym zwyczajom?",
+          "options": [
+            "Ustalić plan w środę przez internet, a raport napisać w czwartek w biurze.",
+            "Ustalić plan i przygotować raport w poniedziałek w domu.",
+            "Ustalić plan we wtorek w biurze, a raport przygotować w środę w domu."
+          ],
+          "answer": "Ustalić plan we wtorek w biurze, a raport przygotować w środę w domu.",
+          "evidence": "Zosia porozmawiała z szefem i zaczęła przychodzić do biura we wtorki i czwartki. W tych dniach jej zespół planuje wspólne zadania oraz rozwiązuje problemy klientów. W pozostałe dni Zosia pracuje w domu i przygotowuje dokumenty.",
+          "explanation": "Wtorek jest dniem współpracy, a środa pozwala pracować nad własnym dokumentem w domu."
+        },
+        {
+          "id": "vocabulary",
+          "skill": "vocabulary",
+          "question": "Co znaczy „bezpośrednio z kolegami” w ostatnim akapicie?",
+          "options": [
+            "Rozmawiając z nimi bez wiedzy przełożonego.",
+            "Rozmawiając z nimi na miejscu, a nie przez wiadomości.",
+            "Rozmawiając z nimi dopiero po zakończeniu pracy."
+          ],
+          "answer": "Rozmawiając z nimi na miejscu, a nie przez wiadomości.",
+          "evidence": "Teraz nie musi codziennie dojeżdżać do pracy, a ważne rozmowy może prowadzić bezpośrednio z kolegami.",
+          "explanation": "W biurze Zosia ma osobisty kontakt z zespołem."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-063",
+      "day": 63,
+      "level": "A2",
+      "genre": "poradnik",
+      "title": "Plan rozwoju zawodowego",
+      "text": "Chcesz nauczyć się czegoś nowego w pracy, ale nie wiesz, od czego zacząć? Zamiast zapisywać się od razu na kilka kursów, wybierz jedną umiejętność, która przyda ci się w codziennych obowiązkach. Może to być przygotowywanie prezentacji, rozmowa z klientem albo pisanie raportów. Porozmawiaj z szefem lub kolegą, aby ustalić, czego dokładnie potrzebujesz.\n\nNastępnie zaplanuj mały cel na najbliższy miesiąc. Jeśli chcesz lepiej przygotowywać prezentacje, zrób jedną krótką prezentację na temat, który dobrze znasz. Pokaż ją koledze i poproś o dwie konkretne uwagi. Nie zmieniaj od razu wszystkich elementów. Wybierz jedną rzecz, nad którą będziesz pracować w następnym tygodniu.\n\nPod koniec miesiąca wróć do pierwszej wersji swojej pracy i porównaj ją z ostatnią. Zapisz, co potrafisz zrobić samodzielnie, a przy czym nadal potrzebujesz pomocy. Jeżeli nie widzisz poprawy, sprawdź, czy masz wystarczająco dużo okazji do ćwiczeń. Być może warto zmienić sposób nauki, zamiast wybierać zupełnie nowy temat. Dopiero potem ustal kolejny cel.",
+      "questions": [
+        {
+          "id": "main-idea",
+          "skill": "main-idea",
+          "question": "Jaki sposób rozwoju zawodowego proponuje poradnik?",
+          "options": [
+            "Jednoczesną naukę kilku umiejętności na różnych kursach.",
+            "Stopniowe ćwiczenie wybranej umiejętności z oceną postępów.",
+            "Wybieranie nowych tematów bez powracania do poprzednich."
+          ],
+          "answer": "Stopniowe ćwiczenie wybranej umiejętności z oceną postępów.",
+          "evidence": "Następnie zaplanuj mały cel na najbliższy miesiąc. Jeśli chcesz lepiej przygotowywać prezentacje, zrób jedną krótką prezentację na temat, który dobrze znasz.",
+          "explanation": "Cały poradnik opiera się na małym celu, praktyce, informacji zwrotnej i porównaniu wyników."
+        },
+        {
+          "id": "detail",
+          "skill": "detail",
+          "question": "O ile konkretnych uwag należy poprosić kolegę po pierwszej prezentacji?",
+          "options": [
+            "O jedną.",
+            "O trzy.",
+            "O dwie."
+          ],
+          "answer": "O dwie.",
+          "evidence": "Pokaż ją koledze i poproś o dwie konkretne uwagi.",
+          "explanation": "Liczba uwag jest podana wprost."
+        },
+        {
+          "id": "cause",
+          "skill": "cause",
+          "question": "Po co pod koniec miesiąca porównywać pierwszą i ostatnią wersję pracy?",
+          "options": [
+            "Żeby sprawdzić rozwój umiejętności i pozostałe trudności.",
+            "Żeby wybrać temat pierwszej prezentacji.",
+            "Żeby ustalić, ile kursów należy rozpocząć w kolejnym miesiącu."
+          ],
+          "answer": "Żeby sprawdzić rozwój umiejętności i pozostałe trudności.",
+          "evidence": "Pod koniec miesiąca wróć do pierwszej wersji swojej pracy i porównaj ją z ostatnią. Zapisz, co potrafisz zrobić samodzielnie, a przy czym nadal potrzebujesz pomocy.",
+          "explanation": "Porównanie pozwala ocenić własny postęp."
+        },
+        {
+          "id": "inference",
+          "skill": "inference",
+          "question": "Tomek chciał poprawić rozmowy z klientami, ale przez miesiąc głównie czytał o nich i rozmawiał tylko z jednym klientem. Nie widzi poprawy. Co najlepiej odpowiada poradnikowi?",
+          "options": [
+            "Porzucić rozmowy z klientami i zacząć uczyć się prezentacji.",
+            "Zorganizować więcej prób rozmowy i ponownie ocenić tę umiejętność.",
+            "Zapisać się na kilka kursów bez zmiany sposobu ćwiczeń."
+          ],
+          "answer": "Zorganizować więcej prób rozmowy i ponownie ocenić tę umiejętność.",
+          "evidence": "Jeżeli nie widzisz poprawy, sprawdź, czy masz wystarczająco dużo okazji do ćwiczeń. Być może warto zmienić sposób nauki, zamiast wybierać zupełnie nowy temat.",
+          "explanation": "Brak praktyki wskazuje na potrzebę zmiany sposobu nauki, a nie automatyczną zmianę celu."
+        },
+        {
+          "id": "vocabulary",
+          "skill": "vocabulary",
+          "question": "Co znaczy „przyda ci się”?",
+          "options": [
+            "Będzie użyteczne w twojej pracy.",
+            "Będzie wymagane na każdym kursie.",
+            "Będzie dostępne w następnym miesiącu."
+          ],
+          "answer": "Będzie użyteczne w twojej pracy.",
+          "evidence": "wybierz jedną umiejętność, która przyda ci się w codziennych obowiązkach.",
+          "explanation": "Chodzi o umiejętność, która pomoże wykonywać codzienne zadania."
+        }
+      ]
+    }
+  ]
+}
