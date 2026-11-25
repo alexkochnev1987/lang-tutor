@@ -67,3 +67,16 @@ export function assignmentReviewRows(summaries: readonly AssignmentSummary[], re
     return { dayNumber, ids, missing, mistakes }
   }).filter(row => row.ids.length > 0)
 }
+
+/** Skip unavailable items and keep looking until a usable batch is filled. */
+export async function collectReviewBatch<T>(ids: readonly string[], resolve: (id: string) => Promise<T | null>, limit = 10) {
+  const items: T[] = []
+  const unavailable: string[] = []
+  for (const id of new Set(ids)) {
+    if (items.length >= limit) break
+    const item = await resolve(id)
+    if (item) items.push(item)
+    else unavailable.push(id)
+  }
+  return { items, unavailable }
+}

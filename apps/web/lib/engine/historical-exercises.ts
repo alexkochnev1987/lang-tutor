@@ -4,7 +4,9 @@ import { labelTag, RULE_TO_TAGS, resolveTag } from '@/lib/lang-pl/tags'
 import { collocationDrills, sentenceDrillVariants, sentenceWriteDrills } from './exercises'
 import { sourceExerciseId, type ReviewArchiveRow } from './assignment-progress'
 
-/** Rebuild stable IDs only; never silently substitute a different question. */
+/** Reconstruct from the current corpus and verify the saved expected answer.
+ * Old index-based IDs cannot prove that the original prompt is unchanged.
+ */
 export async function restoreHistoricalExercise(id: string, row: ReviewArchiveRow): Promise<Exercise | null> {
   const source = sourceExerciseId(id)
   const gap = /^ex\.sgap\.(pl\.gram\..+)\.(\d+)\.(choice|typed)$/.exec(source)

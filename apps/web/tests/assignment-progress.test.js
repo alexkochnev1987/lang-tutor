@@ -1,4 +1,4 @@
-import { assignmentProgress, assignmentReviewRows } from '../lib/engine/assignment-progress'
+import { assignmentProgress, assignmentReviewRows, collectReviewBatch } from '../lib/engine/assignment-progress'
 const ex = id => ({ kind:'exercise', ex:{ id } })
 const stage = { id:'grammar', steps:[ex('a'),ex('b')] }
 const result = (exerciseId, correct, time=1, dayNumber=5) => ({ exerciseId, correct, completedAt:new Date(time), dayNumber })
@@ -27,4 +27,14 @@ it('recovers archived mistakes, excludes word errors, and does not invent missin
   expect(rows).toHaveLength(1)
   expect(rows[0].missing).toEqual([])
   expect(rows[0].mistakes).toEqual([archived.exerciseId])
+})
+
+
+it('fills a review batch past unavailable historical questions without exceeding the limit', async () => {
+  const ids = ['bad1','bad2','a','a','b','c','d']
+  const batch = await collectReviewBatch(ids, async id => id.startsWith('bad') ? null : id, 2)
+  expect(batch).toEqual({items:['a','b'],unavailable:['bad1','bad2']})
+})
+it('returns an empty batch for fully unavailable items', async () => {
+  expect(await collectReviewBatch(['bad'], async () => null)).toEqual({items:[],unavailable:['bad']})
 })
