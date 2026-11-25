@@ -140,6 +140,11 @@ export default function LessonPage() {
   const [slots, setSlots] = useState<Slot[]>([]);
   const [i, setI] = useState(0);
   const [canAdvance, setCanAdvance] = useState(false);
+  const [pendingAnswers, setPendingAnswers] = useState(0);
+  const [answerFailures, setAnswerFailures] = useState<Record<string, () => void>>({});
+  const pendingAnswerIds = useRef(new Set<string>());
+  const failedAnswerIds = useRef(new Set<string>());
+  const wordStats = useRef({ correct: 0, total: 0 });
   const [stats, setStats] = useState({ correct: 0, total: 0 });
   const [phase, setPhase] = useState<"main" | "done">("main");
   const [special, setSpecial] = useState<"diagnostic" | "empty" | null>(null);
@@ -288,6 +293,7 @@ export default function LessonPage() {
         result: exerciseResult,
       };
       queuedWordExercises.current.add(ex.id);
+      wordStats.current = { correct: wordStats.current.correct + Number(r.correct), total: wordStats.current.total + 1 };
       setStats((previous) => ({
         correct: previous.correct + Number(r.correct), total: previous.total + 1,
       }));
@@ -301,12 +307,30 @@ export default function LessonPage() {
       });
       return;
     }
-    setStats((previous) => ({ correct: previous.correct + Number(r.correct), total: previous.total + 1 }));
-    await saveExerciseResult(exerciseResult);
-    for (const ruleId of ex.grammarRuleIds) {
-      await recordRuleAttempt(ruleId, r.correct, ex.difficulty);
+    async function persist() {
+      if (pendingAnswerIds.current.has(ex.id)) return;
+      pendingAnswerIds.current.add(ex.id);
+      setPendingAnswers(pendingAnswerIds.current.size);
+      try {
+        const saved = await saveExerciseResult(exerciseResult);
+        if (!saved) throw new Error("exercise_save_failed");
+        failedAnswerIds.current.delete(ex.id);
+        setAnswerFailures(previous => {
+          const next = { ...previous }; delete next[ex.id]; return next;
+        });
+        for (const ruleId of ex.grammarRuleIds) {
+          await recordRuleAttempt(ruleId, r.correct, ex.difficulty).catch(error => console.error("[rule-mastery]", error));
+        }
+        if (complete) setCanAdvance(true);
+      } catch {
+        failedAnswerIds.current.add(ex.id);
+        setAnswerFailures(previous => ({ ...previous, [ex.id]: () => void persist() }));
+      } finally {
+        pendingAnswerIds.current.delete(ex.id);
+        setPendingAnswers(pendingAnswerIds.current.size);
+      }
     }
-    if (complete) setCanAdvance(true);
+    await persist();
   }
 
   function skipWord() {
@@ -315,7 +339,7 @@ export default function LessonPage() {
   }
 
   function next() {
-    if (lessonSave.status === "saving" || queueStatus === "checking") return;
+    if (lessonSave.status === "saving" || queueStatus === "checking" || pendingAnswerIds.current.size || failedAnswerIds.current.size) return;
     if (slot?.stage.id === "words") {
       void advanceWordBlock();
       return;
@@ -393,13 +417,18 @@ export default function LessonPage() {
     setI(0);
     setCanAdvance(false);
     setStats({ correct: 0, total: 0 });
+    wordStats.current = { correct: 0, total: 0 };
     setSpecial(nextSlots.length ? null : "empty");
     setPhase("main");
     startedAt.current = Date.now();
   }
 
   async function finish() {
+    if (pendingAnswerIds.current.size || failedAnswerIds.current.size) return;
     if (plan) {
+      const assigned = assignmentProgress(plan.stages, getLoadedState()?.exerciseResults ?? [], plan.dayNumber);
+      const finalStats = { correct: assigned.correct + wordStats.current.correct, total: assigned.answered + wordStats.current.total };
+      setStats(finalStats);
       const saved = await lessonSave.save({
         dayNumber: plan.dayNumber,
         kind: "day",
@@ -407,8 +436,8 @@ export default function LessonPage() {
         completedAt: new Date(),
         plannedBudgetMs: plan.estimatedSec * 1000,
         actualMs: Date.now() - startedAt.current,
-        itemsReviewed: stats.total,
-        itemsCorrect: stats.correct,
+        itemsReviewed: finalStats.total,
+        itemsCorrect: finalStats.correct,
       });
       if (!saved) return;
     }
@@ -507,6 +536,7 @@ export default function LessonPage() {
       checking={false}
       loadError={false}
       onConsume={(_wordId, correct = 0, total = 0) => {
+        wordStats.current = { correct: wordStats.current.correct + correct, total: wordStats.current.total + total };
         setStats((previous) => ({
           correct: previous.correct + correct,
           total: previous.total + total,
@@ -519,6 +549,7 @@ export default function LessonPage() {
 
   const screenNotices = <>
         {reviewFeedback}
+        {Object.entries(answerFailures).map(([id,retry]) => <div key={id} role="alert" className="my-2 flex items-center justify-between gap-2 text-sm text-danger-ink"><span>Не удалось сохранить ответ.</span><Button variant="outline" size="sm" disabled={pendingAnswers > 0} onClick={retry}>Повторить</Button></div>)}
         {unavailableWord && <p role="status" className="text-sm text-muted">{t("unavailable")}</p>}
         {queueStatus === "error" && <p role="alert" className="text-sm text-danger-ink">{t("error")}</p>}
         {lessonSave.status === "saving" && !restoredResult && !wordStudyExercise && (
@@ -588,9 +619,11 @@ export default function LessonPage() {
               onAnswered={(ex, r, ms, attempts, answer) =>
                 void onAnswered(ex, r, ms, false, attempts, answer)
               }
-              onComplete={() => void next()}
+              onComplete={() => setCanAdvance(true)}
+              canReset={pendingAnswers === 0 && Object.keys(answerFailures).length === 0}
               onReset={() => setCanAdvance(false)}
             />
+            {canAdvance && <Button full size="lg" disabled={pendingAnswers > 0 || Object.keys(answerFailures).length > 0} onClick={next}>Dalej</Button>}
           </Stack>
         )}
 
@@ -650,7 +683,8 @@ export default function LessonPage() {
                 onAnswered={(ex, r, ms, attempts, answer) =>
                   void onAnswered(ex, r, ms, false, attempts, answer)
                 }
-                onComplete={() => void next()}
+                onComplete={() => setCanAdvance(true)}
+                canReset={pendingAnswers === 0 && Object.keys(answerFailures).length === 0}
                 onReset={() => setCanAdvance(false)}
               />
             ) : readingTextOf(slot.step.ex) ? (
@@ -727,7 +761,7 @@ export default function LessonPage() {
               {slot.step.rule && <RuleSheet rule={slot.step.rule} />}
             </Row>
             {!wordStudyExercise && (canAdvance || Boolean(restoredResult) || lessonSave.status === "saving") && (
-              <Button size="lg" full busy={lessonSave.status === "saving"} busyLabel="Сохраняем итог…" onClick={next}>
+              <Button size="lg" full disabled={pendingAnswers > 0 || Object.keys(answerFailures).length > 0} busy={lessonSave.status === "saving"} busyLabel="Сохраняем итог…" onClick={next}>
                 {i + 1 < slots.length ? "Dalej" : "Zakończ"}
               </Button>
             )}

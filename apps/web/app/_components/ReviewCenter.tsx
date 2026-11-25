@@ -7,7 +7,7 @@ import { Card, Row, Stack } from '@polski/ui'
 import { loadLiveReadingCatalog } from '@/lib/content/curriculum'
 import type { ReadingCatalogEntry } from '@/lib/content/reading-catalog'
 import { readingBacklog } from '@/lib/content/reading-progress'
-import { useAppState } from '@/lib/data/store'
+import { loadState, useAppState } from '@/lib/data/store'
 import { assignmentReviewRows, type AssignmentSummary } from '@/lib/engine/assignment-progress'
 
 export function ReviewCenter() {
@@ -21,12 +21,13 @@ export function ReviewCenter() {
     let alive = true
     setError(false)
     loadLiveReadingCatalog().then(rows => { if (alive) setEntries(rows) }).catch(() => { if (alive) setError(true) })
-    fetch('/api/lesson-assignments/?summary=1', { cache:'no-store' }).then(async response => {
+    setSummaries(null)
+    loadState().then(() => fetch('/api/lesson-assignments/?summary=1', { cache:'no-store' })).then(async response => {
       if (!response.ok) throw new Error('assignment_summary_failed')
       return response.json() as Promise<{ summaries: AssignmentSummary[] }>
     }).then(result => { if (alive) setSummaries(result.summaries) }).catch(() => { if (alive) setError(true) })
     return () => { alive = false }
-  }, [retry])
+  }, [retry, state?.user.id])
   const completed = new Set((state?.sessions ?? []).filter(s => s.kind === 'day' && s.completedAt).map(s => s.dayNumber))
   const counts = state && entries && entries.every(e => e.questionIds?.length) ? readingBacklog(entries, state.exerciseResults, completed) : null
   const weak = state?.mastery.filter(r => r.mastery < 0.6 && r.attempts > 0).length
@@ -37,7 +38,7 @@ export function ReviewCenter() {
     { key: 'missed', href: '/reading/?filter=missed', count: counts?.missed },
     { key: 'unfinished', href: '/reading/?filter=unfinished', count: counts?.unfinished },
     { key: 'mistakes', href: '/reading/?filter=mistakes', count: counts?.mistakes },
-    { key: 'grammar', href: '/grammar/', count: weak },
+    { key: 'grammar', href: '/grammar/?review=weak', count: weak },
   ] as const
   return <Card><Stack gap="sm">
     <h2 className="text-lg font-semibold">{t('title')}</h2>

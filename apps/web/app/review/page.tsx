@@ -32,12 +32,13 @@ export default function ReviewPage() {
   useEffect(() => {
     let active = true
     setError(false)
-    Promise.all([loadState(), fetch('/api/lesson-assignments/?summary=1', { cache:'no-store' }).then(async response => {
+    setSummaries(null)
+    loadState().then(() => fetch('/api/lesson-assignments/?summary=1', { cache:'no-store' })).then(async response => {
       if (!response.ok) throw new Error('assignment_summary_failed')
       return response.json() as Promise<{ summaries: AssignmentSummary[] }>
-    })]).then(([,result]) => { if (active) setSummaries(result.summaries) }).catch(() => { if (active) setError(true) })
+    }).then(result => { if (active) setSummaries(result.summaries) }).catch(() => { if (active) setError(true) })
     return () => { active = false }
-  }, [reload])
+  }, [reload, state?.user.id])
   const completed = new Set((state?.sessions ?? []).filter(s => s.kind === 'day' && s.completedAt).map(s => s.dayNumber))
   const rows = assignmentReviewRows(summaries ?? [], state?.exerciseResults ?? [], completed)
   const visible = rows.filter(row => filter === 'all' || row[filter].length > 0)

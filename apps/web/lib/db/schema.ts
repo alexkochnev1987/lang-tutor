@@ -326,7 +326,7 @@ export const lessonAssignments = pgTable("lesson_assignments", {
   dayNumber: integer("day_number").notNull(),
   stages: jsonb("stages").notNull(),
   createdAt: timestamp("created_at", { withTimezone: true }).notNull().defaultNow(),
-}, (t) => [primaryKey({ columns: [t.userId, t.courseId, t.dayNumber] })]);
+}, (t) => [primaryKey({ name: 'lesson_assignments_pk', columns: [t.userId, t.courseId, t.dayNumber] })]);
 
 /** Append-only archive maintained by a trigger on exercise_results. */
 export const exerciseAttempts = pgTable("exercise_attempts", {
@@ -340,4 +340,4 @@ export const exerciseAttempts = pgTable("exercise_attempts", {
   expected: text("expected").notNull(),
   errorKind: text("error_kind"),
   completedAt: timestamp("completed_at", { withTimezone: true }).notNull(),
-}, (t) => [primaryKey({ columns: [t.userId, t.courseId, t.dayNumber, t.exerciseId, t.completedAt] })]);
+}, (t) => [primaryKey({ name: 'exercise_attempts_pk', columns: [t.userId, t.courseId, t.dayNumber, t.exerciseId, t.completedAt] })]);

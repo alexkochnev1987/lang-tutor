@@ -9,7 +9,8 @@ import { RuleSheet } from './RuleSheet'
 import { RuleView } from './RuleView'
 import { loadCorpusIndex, loadGrammarRules, loadGrammarSentences, loadMorphology, type CorpusIndex } from '@/lib/content/curriculum'
 import { isRuleLanguage, localizeRule, PACK_ORIGINAL_LANGUAGE } from '@/lib/content/rules'
-import { useSettings } from '@/lib/data/store'
+import { useSettings, useAppState } from '@/lib/data/store'
+import { recordRuleAttempt } from '@/lib/engine/session'
 import { sentenceWriteDrills } from '@/lib/engine/exercises'
 import { buildLinkedSentences, buildSentenceCorpus, singleGapExercises } from '@/lib/engine/sentence-corpus'
 import { annotatedGapExercise, sampleAnnotated, supportsAnnotatedChoice } from '@/lib/engine/annotated-corpus'
@@ -45,7 +46,8 @@ type Session = {
   correct: number
 }
 
-export function GrammarPractice() {
+export function GrammarPractice({ weakOnly = false }: { weakOnly?: boolean }) {
+  const state = useAppState()
   const { ruleLanguage } = useSettings()
   const [data, setData] = useState<PracticeData | null>(null)
   const [rules, setRules] = useState<Awaited<ReturnType<typeof loadGrammarRules>> | null>(null)
@@ -81,12 +83,13 @@ export function GrammarPractice() {
   const availableRules = useMemo(
     () => rules && format && format !== 'collocation'
       ? [...rules.values()].filter((rule) =>
+        (!weakOnly || Boolean(state?.mastery.some(m => m.grammarRuleId === rule.id && m.attempts > 0 && m.mastery < 0.6))) && (
         ((format === 'typed' || (format === 'choice' && supportsAnnotatedChoice(rule.id))) &&
           Boolean(corpusIndex?.rules[rule.id]?.length)) ||
-        Boolean(data && practiceExercises(data, rule.id, format, 0).length),
+        Boolean(data && practiceExercises(data, rule.id, format, 0).length)),
       )
       : [],
-    [rules, data, format, corpusIndex],
+    [rules, data, format, corpusIndex, weakOnly, state?.mastery],
   )
 
   const linkedSentences = useMemo(
@@ -148,11 +151,14 @@ export function GrammarPractice() {
             <ExerciseView
               key={exercise.id}
               exercise={exercise}
-              onAnswered={(result) => setSession((current) => current && !current.answered ? {
+              onAnswered={(result) => {
+                if (weakOnly && !session.answered) void recordRuleAttempt(ruleId, result.correct, exercise.difficulty).catch(error => console.error('[weak-rule]', error))
+                setSession((current) => current && !current.answered ? {
                 ...current,
                 answered: true,
                 correct: current.correct + Number(result.correct),
-              } : current)}
+              } : current)
+              }}
             />
             <Row gap="sm" justify="center" wrap>
               <RuleSheet rule={rule} />

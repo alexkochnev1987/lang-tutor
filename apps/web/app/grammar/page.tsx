@@ -1,7 +1,7 @@
 'use client'
 
 import { TabBody } from '@/app/_components/TabBody'
-import { useRef, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import Link from 'next/link'
 import { useTranslations } from 'next-intl'
 import { Button, Card, Row, Segmented, Stack } from '@polski/ui'
@@ -30,6 +30,12 @@ const MODES = [
 export default function GrammarPage() {
   const [mode, setMode] = useState<(typeof MODES)[number]['value']>('today')
   const [openedPractice, setOpenedPractice] = useState(false)
+  const [weakOnly, setWeakOnly] = useState(false)
+  useEffect(() => {
+    if (new URLSearchParams(window.location.search).get('review') === 'weak') {
+      setWeakOnly(true); setMode('practice'); setOpenedPractice(true)
+    }
+  }, [])
 
   function changeMode(nextMode: typeof mode) {
     setMode(nextMode)
@@ -43,7 +49,8 @@ export default function GrammarPage() {
       </div>
       {openedPractice && (
         <div hidden={mode !== 'practice'}>
-          <GrammarPractice />
+          {weakOnly && <div className="mb-3 flex items-center justify-between gap-2"><strong className="text-sm">Слабые правила</strong><Button size="sm" variant="outline" onClick={() => setWeakOnly(false)}>Все правила</Button></div>}
+          <GrammarPractice weakOnly={weakOnly} />
         </div>
       )}
     </Shell>

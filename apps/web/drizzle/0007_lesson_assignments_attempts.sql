@@ -1,14 +1,14 @@
 CREATE TABLE "lesson_assignments" (
-  "user_id" text NOT NULL REFERENCES "users"("id") ON DELETE CASCADE,
+  "user_id" text NOT NULL CONSTRAINT "lesson_assignments_user_id_users_id_fk" REFERENCES "users"("id") ON DELETE CASCADE,
   "course_id" text NOT NULL,
   "day_number" integer NOT NULL,
   "stages" jsonb NOT NULL,
   "created_at" timestamptz NOT NULL DEFAULT now(),
-  PRIMARY KEY ("user_id", "course_id", "day_number")
+  CONSTRAINT "lesson_assignments_pk" PRIMARY KEY ("user_id", "course_id", "day_number")
 );
 --> statement-breakpoint
 CREATE TABLE "exercise_attempts" (
-  "user_id" text NOT NULL REFERENCES "users"("id") ON DELETE CASCADE,
+  "user_id" text NOT NULL CONSTRAINT "exercise_attempts_user_id_users_id_fk" REFERENCES "users"("id") ON DELETE CASCADE,
   "course_id" text NOT NULL,
   "day_number" integer NOT NULL,
   "exercise_id" text NOT NULL,
@@ -18,7 +18,7 @@ CREATE TABLE "exercise_attempts" (
   "expected" text NOT NULL,
   "error_kind" text,
   "completed_at" timestamptz NOT NULL,
-  PRIMARY KEY ("user_id", "course_id", "day_number", "exercise_id", "completed_at")
+  CONSTRAINT "exercise_attempts_pk" PRIMARY KEY ("user_id", "course_id", "day_number", "exercise_id", "completed_at")
 );
 --> statement-breakpoint
 CREATE FUNCTION archive_exercise_attempt() RETURNS trigger LANGUAGE plpgsql AS $$
