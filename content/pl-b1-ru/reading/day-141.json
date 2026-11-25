@@ -1,0 +1,87 @@
+{
+  "id": "pl-b1.reading.day-141",
+  "day": 141,
+  "level": "B1",
+  "genre": "wiadomość",
+  "title": "Dokumenty przed podróżą do Europy",
+  "text": "Przed krótką podróżą do innego kraju warto przygotować dokumenty potrzebne nie tylko podczas przejazdu, lecz także w sytuacji, gdy na miejscu trzeba skorzystać z pomocy medycznej. Osoby uprawnione do korzystania z Europejskiej Karty Ubezpieczenia Zdrowotnego, nazywanej EKUZ, mogą używać jej podczas tymczasowego pobytu w krajach Unii Europejskiej, krajach EFTA oraz w Wielkiej Brytanii w celu uzyskania niezbędnego leczenia.\n\nKartę należy mieć razem z dokumentem tożsamości. Przed wyjazdem dobrze jest sprawdzić zakres pomocy dostępnej w kraju docelowym. Sama nazwa dokumentu nie odpowiada bowiem na wszystkie pytania o to, jakie świadczenia będą dostępne podczas podróży.\n\nWyobraźmy sobie dwoje znajomych, którzy planują kilkudniową wycieczkę do stolicy innego kraju europejskiego. Alicja przygotowała kartę EKUZ i dokument tożsamości, a Kuba zapisał tylko numer swojego dokumentu w telefonie. Postanowili wspólnie sprawdzić, jakie informacje będą im potrzebne w razie konieczności skorzystania z leczenia. Nie chcą dopiero na miejscu szukać odpowiedzi na pytanie o zakres świadczeń.\n\nAlicja przygotowała również prostą listę rzeczy do sprawdzenia. Obok dokumentów zapisała adres noclegu, informacje o planowanym transporcie i numer osoby, z którą można się skontaktować w razie zmiany planów. Lista nie ma zastąpić dokumentów. Ma jedynie pomóc pamiętać o ważnych sprawach przed wyjazdem.\n\nW tym wyobrażonym przykładzie znajomi nie zakładają, że ich przygotowania wyjaśniają każdą możliwą sytuację. Chcą przede wszystkim rozróżnić to, co już wiedzą o karcie, od informacji, które muszą jeszcze sprawdzić dla konkretnego kraju. Dzięki temu mogą przygotować się do podróży bez przypisywania dokumentowi szerszego znaczenia, niż rzeczywiście ma.",
+  "questions": [
+    {
+      "id": "main-idea",
+      "skill": "main-idea",
+      "question": "Co jest głównym celem wiadomości?",
+      "options": [
+        "Wyjaśnić zasady kupowania biletów kolejowych w każdym kraju Europy.",
+        "Zwrócić uwagę na przygotowanie dokumentów i sprawdzenie zakresu pomocy medycznej przed podróżą.",
+        "Przedstawić gotową listę wszystkich świadczeń medycznych dostępnych za granicą."
+      ],
+      "answer": "Zwrócić uwagę na przygotowanie dokumentów i sprawdzenie zakresu pomocy medycznej przed podróżą.",
+      "evidence": "Chcą przede wszystkim rozróżnić to, co już wiedzą o karcie, od informacji, które muszą jeszcze sprawdzić dla konkretnego kraju.",
+      "explanation": "Tekst mówi o przygotowaniu i sprawdzaniu warunków w kraju docelowym."
+    },
+    {
+      "id": "detail",
+      "skill": "detail",
+      "question": "Z jakim dokumentem należy mieć kartę EKUZ?",
+      "options": [
+        "Z biletem powrotnym.",
+        "Z potwierdzeniem rezerwacji noclegu.",
+        "Z dokumentem tożsamości."
+      ],
+      "answer": "Z dokumentem tożsamości.",
+      "evidence": "Kartę należy mieć razem z dokumentem tożsamości.",
+      "explanation": "Tekst wskazuje dokument tożsamości."
+    },
+    {
+      "id": "cause",
+      "skill": "cause",
+      "question": "Dlaczego znajomi sprawdzają zakres świadczeń przed wyjazdem?",
+      "options": [
+        "Chcą wiedzieć, jakie informacje będą potrzebne, zamiast szukać ich dopiero w razie potrzeby leczenia.",
+        "Chcą zastąpić kartę zapisanym adresem noclegu.",
+        "Zamierzają ustalić wspólną cenę transportu."
+      ],
+      "answer": "Chcą wiedzieć, jakie informacje będą potrzebne, zamiast szukać ich dopiero w razie potrzeby leczenia.",
+      "evidence": "Nie chcą dopiero na miejscu szukać odpowiedzi na pytanie o zakres świadczeń.",
+      "explanation": "Sprawdzenie dotyczy kraju docelowego."
+    },
+    {
+      "id": "inference",
+      "skill": "inference",
+      "question": "Kuba ma EKUZ i dokument tożsamości. Alicja sprawdziła zakres świadczeń w kraju, do którego jedzie. Kuba wybiera się do innego kraju. Co powinien zrobić?",
+      "options": [
+        "Zastąpić sprawdzenie warunków listą atrakcji w stolicy.",
+        "Sprawdzić zakres pomocy dla własnego kraju docelowego i zabrać oba dokumenty.",
+        "Zostawić dokument tożsamości w domu, bo karta wystarcza do wszystkich celów."
+      ],
+      "answer": "Sprawdzić zakres pomocy dla własnego kraju docelowego i zabrać oba dokumenty.",
+      "evidence": "Kartę należy mieć razem z dokumentem tożsamości. Przed wyjazdem dobrze jest sprawdzić zakres pomocy dostępnej w kraju docelowym.",
+      "explanation": "Zakres pomocy należy sprawdzić dla konkretnego kraju; dokumenty Alicji ani jej ustalenia nie zastępują tego sprawdzenia."
+    },
+    {
+      "id": "vocabulary",
+      "skill": "vocabulary",
+      "question": "Co oznacza „tymczasowy pobyt”?",
+      "options": [
+        "Pobyt w miejscu zamieszkania bez wyjazdu.",
+        "Przejazd wyłącznie taksówką przez stolicę.",
+        "Pobyt przez ograniczony czas, bez zamiaru stałego zamieszkania."
+      ],
+      "answer": "Pobyt przez ograniczony czas, bez zamiaru stałego zamieszkania.",
+      "evidence": "podczas tymczasowego pobytu w krajach Unii Europejskiej, krajach EFTA oraz w Wielkiej Brytanii",
+      "explanation": "Tymczasowy pobyt jest ograniczony w czasie."
+    }
+  ],
+  "source": {
+    "url": "https://pacjent.gov.pl/planujesz-wyjazd-w-europie-sprawdz-zasady-ubezpieczenia",
+    "publisher": "Pacjent.gov.pl",
+    "title": "Planujesz wyjazd w Europie – sprawdź zasady ubezpieczenia",
+    "facts": [
+      "EHIC covers medically necessary treatment during temporary stays in EU/EFTA and UK; used with ID; check the scope in destination country."
+    ],
+    "use": "facts-only",
+    "checked": "2026-11-25",
+    "adaptation": "Original Polish educational composition based on registered source facts; illustrative people/scenarios are fictional."
+  },
+  "publicationStatus": "practice"
+}

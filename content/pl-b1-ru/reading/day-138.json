@@ -1,0 +1,76 @@
+{
+  "id": "pl-b1.reading.day-138",
+  "day": 138,
+  "level": "B1",
+  "genre": "ogłoszenie",
+  "title": "Koncert w małym mieście",
+  "text": "Stowarzyszenie Muzyczne zaprasza na letni koncert na dziedzińcu miejskiego domu kultury. Wystąpią trzy zespoły z okolicy: grupa grająca na gitarach, chór oraz młodzi muzycy przygotowujący własne utwory. Chcemy, żeby publiczność mogła posłuchać różnych stylów muzyki i poznać osoby, które tworzą ją na co dzień w naszym mieście.\n\nKoncert rozpocznie się o siedemnastej. Między występami przewidziano krótkie przerwy, podczas których będzie można porozmawiać z wykonawcami. Organizatorzy przygotują ławki i część miejsc siedzących. Osoby, które potrzebują krzesła przez cały koncert, mogą zgłosić taką potrzebę przy zapisie. Pozostali mogą przynieść własny lekki składany stołek.\n\nWstęp na dziedziniec jest bezpłatny, ale liczba osób jest ograniczona. W tym roku nie wydajemy papierowych zaproszeń. Wystarczy wypełnić formularz na stronie stowarzyszenia i zachować wiadomość z potwierdzeniem. Jeżeli ktoś zrezygnuje, prosimy o informację, ponieważ z wolnego miejsca będzie mogła skorzystać inna osoba.\n\nW przypadku deszczu koncert przeniesiemy do sali wewnątrz budynku. Sala jest mniejsza od dziedzińca, dlatego przy zapisie można wybrać pierwszą albo drugą część programu w razie zmiany miejsca. Jeżeli pogoda będzie dobra, wszyscy zapisani będą mogli zostać na całym koncercie. Ostateczną informację wyślemy uczestnikom w dniu wydarzenia przed południem.\n\nNie trzeba znać wykonawców ani ich muzyki, aby przyjść. Po koncercie będzie można dowiedzieć się, gdzie zespoły ćwiczą i czy przyjmują nowych członków. Być może ktoś, kto dotąd tylko słuchał muzyki, znajdzie dzięki temu okazję, by samemu zacząć grać.",
+  "questions": [
+    {
+      "id": "main-idea",
+      "skill": "main-idea",
+      "question": "Jaki cel ma koncert oprócz słuchania muzyki?",
+      "options": [
+        "Sprzedaż instrumentów wszystkim osobom z publiczności.",
+        "Poznanie miejscowych muzyków i możliwości uczestniczenia w ich działalności.",
+        "Wybór najlepszego zespołu w ogólnopolskim konkursie."
+      ],
+      "answer": "Poznanie miejscowych muzyków i możliwości uczestniczenia w ich działalności.",
+      "evidence": "Po koncercie będzie można dowiedzieć się, gdzie zespoły ćwiczą i czy przyjmują nowych członków.",
+      "explanation": "Program łączy występy z możliwością poznania lokalnych wykonawców."
+    },
+    {
+      "id": "detail",
+      "skill": "detail",
+      "question": "O której zacznie się koncert?",
+      "options": [
+        "O siedemnastej.",
+        "Przed południem.",
+        "O dziewiętnastej."
+      ],
+      "answer": "O siedemnastej.",
+      "evidence": "Koncert rozpocznie się o siedemnastej.",
+      "explanation": "Podano konkretną godzinę."
+    },
+    {
+      "id": "cause",
+      "skill": "cause",
+      "question": "Dlaczego w razie rezygnacji należy powiadomić organizatorów?",
+      "options": [
+        "Aby zmienić program występów zespołów.",
+        "Aby otrzymać papierowe zaproszenie na kolejne wydarzenie.",
+        "Aby zwolnione miejsce mogła wykorzystać inna osoba."
+      ],
+      "answer": "Aby zwolnione miejsce mogła wykorzystać inna osoba.",
+      "evidence": "Jeżeli ktoś zrezygnuje, prosimy o informację, ponieważ z wolnego miejsca będzie mogła skorzystać inna osoba.",
+      "explanation": "Liczba miejsc jest ograniczona."
+    },
+    {
+      "id": "inference",
+      "skill": "inference",
+      "question": "Osoba potrzebuje krzesła i najbardziej chce usłyszeć wykonawców z drugiej części. Co powinna zrobić przy zapisie?",
+      "options": [
+        "Zarezerwować tylko miejsce na dziedzińcu, nie podając potrzeb.",
+        "Wybrać pierwszą część i oczekiwać gwarancji udziału w drugiej podczas deszczu.",
+        "Zgłosić potrzebę krzesła i wybrać drugą część na wypadek przeniesienia koncertu do sali."
+      ],
+      "answer": "Zgłosić potrzebę krzesła i wybrać drugą część na wypadek przeniesienia koncertu do sali.",
+      "evidence": "Osoby, które potrzebują krzesła przez cały koncert, mogą zgłosić taką potrzebę przy zapisie. Pozostali mogą przynieść własny lekki składany stołek.\n\nWstęp na dziedziniec jest bezpłatny, ale liczba osób jest ograniczona. W tym roku nie wydajemy papierowych zaproszeń. Wystarczy wypełnić formularz na stronie stowarzyszenia i zachować wiadomość z potwierdzeniem. Jeżeli ktoś zrezygnuje, prosimy o informację, ponieważ z wolnego miejsca będzie mogła skorzystać inna osoba.\n\nW przypadku deszczu koncert przeniesiemy do sali wewnątrz budynku. Sala jest mniejsza od dziedzińca, dlatego przy zapisie można wybrać pierwszą albo drugą część programu w razie zmiany miejsca.",
+      "explanation": "Krzesło można zgłosić, a wybór części ogranicza ryzyko przegapienia preferowanego występu."
+    },
+    {
+      "id": "vocabulary",
+      "skill": "vocabulary",
+      "question": "Co oznacza „przyjmują nowych członków”?",
+      "options": [
+        "Wybierają słuchaczy do pierwszego rzędu.",
+        "Są otwarci na osoby, które chcą dołączyć do zespołu.",
+        "Sprzedają publiczności nowe bilety."
+      ],
+      "answer": "Są otwarci na osoby, które chcą dołączyć do zespołu.",
+      "evidence": "Po koncercie będzie można dowiedzieć się, gdzie zespoły ćwiczą i czy przyjmują nowych członków.",
+      "explanation": "Chodzi o dołączenie do grupy muzycznej."
+    }
+  ],
+  "publicationStatus": "practice"
+}

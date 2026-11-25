@@ -1,0 +1,76 @@
+{
+  "id": "pl-b1.reading.day-143",
+  "day": 143,
+  "level": "B1",
+  "genre": "dialog",
+  "title": "Spóźniony pociąg i zmiana planów",
+  "text": "— Przepraszam, czy ten pociąg naprawdę przyjedzie dopiero za czterdzieści minut? — zapytała Marta pracownika informacji na dworcu.\n\n— Taki jest obecny komunikat, ale czas może się jeszcze zmienić. Dokąd pani jedzie?\n\n— Do portu. Mam później prom, który odpływa o czternastej. Zgodnie z pierwotnym rozkładem miałam dotrzeć na stację przy porcie o dwunastej trzydzieści.\n\nPracownik sprawdził inne połączenia. Powiedział, że za dwadzieścia minut odjeżdża pociąg do pobliskiego miasta. Stamtąd kursuje autobus do portu. Według rozkładu Marta dotarłaby na miejsce około trzynastej dziesięć, ale musiałaby kupić osobny bilet na autobus.\n\n— Nie chciałabym kupować kolejnego biletu, jeśli mój pociąg za chwilę przyjedzie — odpowiedziała Marta.\n\n— Rozumiem. Proszę też sprawdzić informację od przewoźnika promowego. Nie wiem, o której zamykają wejście na pokład.\n\nMarta odnalazła wiadomość dotyczącą rezerwacji. W jej przypadku należało zgłosić się do wejścia najpóźniej trzydzieści minut przed odpłynięciem. Od stacji kolejowej do portu trzeba było jeszcze przejść około dziesięciu minut. Uznała więc, że pierwotne połączenie zostawia coraz mniejszy zapas czasu.\n\nKupiła bilet na autobus i wybrała drugą trasę. Po przyjeździe do portu okazało się, że autobus miał niewielkie opóźnienie, lecz Marta zdążyła zgłosić się do wejścia. Podziękowała później pracownikowi informacji w wiadomości przesłanej przez formularz kontaktowy.\n\nNie była zadowolona z dodatkowego kosztu, ale zrozumiała, że sama godzina odpłynięcia promu nie była jedynym ważnym terminem. Musiała wziąć pod uwagę czas dojścia i wcześniejsze zakończenie przyjmowania pasażerów.",
+  "questions": [
+    {
+      "id": "main-idea",
+      "skill": "main-idea",
+      "question": "Co przede wszystkim wpłynęło na zmianę trasy Marty?",
+      "options": [
+        "Potrzeba uwzględnienia nie tylko odpłynięcia promu, lecz także czasu dotarcia do wejścia.",
+        "Chęć odwiedzenia pobliskiego miasta przed podróżą promem.",
+        "Możliwość uniknięcia wszystkich kosztów dodatkowego transportu."
+      ],
+      "answer": "Potrzeba uwzględnienia nie tylko odpłynięcia promu, lecz także czasu dotarcia do wejścia.",
+      "evidence": "Musiała wziąć pod uwagę czas dojścia i wcześniejsze zakończenie przyjmowania pasażerów.",
+      "explanation": "Plan wynikał z całego łańcucha terminów."
+    },
+    {
+      "id": "detail",
+      "skill": "detail",
+      "question": "Ile minut przed odpłynięciem promu Marta musiała zgłosić się do wejścia?",
+      "options": [
+        "Dziesięć minut.",
+        "Trzydzieści minut.",
+        "Czterdzieści minut."
+      ],
+      "answer": "Trzydzieści minut.",
+      "evidence": "W jej przypadku należało zgłosić się do wejścia najpóźniej trzydzieści minut przed odpłynięciem.",
+      "explanation": "W potwierdzeniu rezerwacji wskazano trzydzieści minut."
+    },
+    {
+      "id": "cause",
+      "skill": "cause",
+      "question": "Dlaczego pracownik polecił sprawdzić wiadomość przewoźnika promowego?",
+      "options": [
+        "Chciał anulować rezerwację promu.",
+        "Nie wiedział, do którego miasta jedzie autobus.",
+        "Nie znał godziny zamknięcia wejścia na pokład."
+      ],
+      "answer": "Nie znał godziny zamknięcia wejścia na pokład.",
+      "evidence": "Nie wiem, o której zamykają wejście na pokład.",
+      "explanation": "Warunki wejścia były ważne dla decyzji."
+    },
+    {
+      "id": "inference",
+      "skill": "inference",
+      "question": "Jeśli pierwszy pociąg dotrze na stację przy porcie o trzynastej dwadzieścia pięć, a droga piesza zajmie dziesięć minut, co wynika z warunków rezerwacji?",
+      "options": [
+        "Marta mogłaby spokojnie czekać na drugi autobus do portu.",
+        "Marta miałaby jeszcze pół godziny zapasu przed zgłoszeniem.",
+        "Marta dotarłaby pięć minut po wymaganej godzinie zgłoszenia."
+      ],
+      "answer": "Marta dotarłaby pięć minut po wymaganej godzinie zgłoszenia.",
+      "evidence": "Mam później prom, który odpływa o czternastej. Zgodnie z pierwotnym rozkładem miałam dotrzeć na stację przy porcie o dwunastej trzydzieści.\n\nPracownik sprawdził inne połączenia. Powiedział, że za dwadzieścia minut odjeżdża pociąg do pobliskiego miasta. Stamtąd kursuje autobus do portu. Według rozkładu Marta dotarłaby na miejsce około trzynastej dziesięć, ale musiałaby kupić osobny bilet na autobus.\n\n— Nie chciałabym kupować kolejnego biletu, jeśli mój pociąg za chwilę przyjedzie — odpowiedziała Marta.\n\n— Rozumiem. Proszę też sprawdzić informację od przewoźnika promowego. Nie wiem, o której zamykają wejście na pokład.\n\nMarta odnalazła wiadomość dotyczącą rezerwacji. W jej przypadku należało zgłosić się do wejścia najpóźniej trzydzieści minut przed odpłynięciem. Od stacji kolejowej do portu trzeba było jeszcze przejść około dziesięciu minut.",
+      "explanation": "Przyjście o 13:35 byłoby po terminie 13:30."
+    },
+    {
+      "id": "vocabulary",
+      "skill": "vocabulary",
+      "question": "Co oznacza „zapas czasu”?",
+      "options": [
+        "Dodatkowy czas pozwalający uwzględnić nieprzewidziane opóźnienia.",
+        "Czas potrzebny wyłącznie na kupienie biletu.",
+        "Planowaną godzinę odpłynięcia promu."
+      ],
+      "answer": "Dodatkowy czas pozwalający uwzględnić nieprzewidziane opóźnienia.",
+      "evidence": "Uznała więc, że pierwotne połączenie zostawia coraz mniejszy zapas czasu.",
+      "explanation": "Zapas to margines między planowanym dotarciem a wymaganym terminem."
+    }
+  ],
+  "publicationStatus": "practice"
+}

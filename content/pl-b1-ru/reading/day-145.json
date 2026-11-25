@@ -1,0 +1,76 @@
+{
+  "id": "pl-b1.reading.day-145",
+  "day": 145,
+  "level": "B1",
+  "genre": "ogłoszenie",
+  "title": "Wakacje poza sezonem",
+  "text": "Pensjonat Brzoza zaprasza na pobyty w październiku i listopadzie. Po zakończeniu letniego sezonu w okolicy jest mniej turystów, a część miejsc oferuje inne godziny otwarcia. Chcemy przedstawić gościom warunki pobytu, aby mogli wybrać termin odpowiedni do swoich oczekiwań.\n\nŚniadania są dostępne codziennie w godzinach od ósmej do dziesiątej. W piątki i soboty przygotowujemy również kolację dla osób, które zgłoszą się do południa. W pozostałe dni zachęcamy do korzystania z niewielkiej wspólnej kuchni albo odwiedzenia restauracji w miasteczku. Przy recepcji znajduje się lista miejsc, które według przekazanych nam informacji działają jesienią. Przed wyjściem warto jeszcze sprawdzić ich aktualne godziny.\n\nOsoby zainteresowane spacerami mogą otrzymać mapę okolicy. W każdą sobotę organizujemy krótką wycieczkę z przewodnikiem, jeżeli zbierze się co najmniej sześć osób. W przypadku mniejszej grupy pracownik recepcji zaproponuje trasę do samodzielnego przejścia. Długość spaceru można dopasować do pogody.\n\nPoza sezonem nie organizujemy wypożyczalni rowerów na miejscu. Jeśli ktoś chciałby korzystać z roweru, prosimy o kontakt przed przyjazdem. Możemy wskazać firmę w pobliskim mieście, która przygotowuje rowery po wcześniejszym uzgodnieniu.\n\nNie wszystkie letnie atrakcje są dostępne przez cały rok. Nasza oferta jest skierowana przede wszystkim do osób, które chcą odpocząć, spacerować i poznawać okolicę w spokojniejszym tempie. Jeśli planują Państwo konkretne wydarzenie lub zależy Państwu na określonej usłudze, zachęcamy do zadawania pytań przed rezerwacją. Dzięki temu łatwiej uniknąć sytuacji, w której przyjeżdżają Państwo z oczekiwaniami dotyczącymi letniego programu.",
+  "questions": [
+    {
+      "id": "main-idea",
+      "skill": "main-idea",
+      "question": "Jaki cel ma ogłoszenie?",
+      "options": [
+        "Zapewnić, że wszystkie letnie usługi są dostępne w identycznym zakresie.",
+        "Zachęcić wyłącznie do pobytów połączonych z wypożyczeniem roweru.",
+        "Wyjaśnić, czym różni się jesienny pobyt od letniego i czego mogą oczekiwać goście."
+      ],
+      "answer": "Wyjaśnić, czym różni się jesienny pobyt od letniego i czego mogą oczekiwać goście.",
+      "evidence": "Nie wszystkie letnie atrakcje są dostępne przez cały rok.",
+      "explanation": "Ogłoszenie podaje konkretne ograniczenia poza sezonem."
+    },
+    {
+      "id": "detail",
+      "skill": "detail",
+      "question": "Kiedy pensjonat przygotowuje kolacje?",
+      "options": [
+        "W piątki i soboty po wcześniejszym zgłoszeniu.",
+        "Wyłącznie w niedziele wieczorem.",
+        "Codziennie po godzinie dziesiątej."
+      ],
+      "answer": "W piątki i soboty po wcześniejszym zgłoszeniu.",
+      "evidence": "W piątki i soboty przygotowujemy również kolację dla osób, które zgłoszą się do południa.",
+      "explanation": "Kolacje są dostępne w wybrane dni."
+    },
+    {
+      "id": "cause",
+      "skill": "cause",
+      "question": "Dlaczego warto sprawdzić godziny restauracji przed wyjściem?",
+      "options": [
+        "Pensjonat pozwala odwiedzać tylko jedną restaurację.",
+        "Jesienią część miejsc działa w innych godzinach, a lista może wymagać aktualizacji.",
+        "Wszystkie restauracje przyjmują wyłącznie z rezerwacją dokonaną w recepcji."
+      ],
+      "answer": "Jesienią część miejsc działa w innych godzinach, a lista może wymagać aktualizacji.",
+      "evidence": "Przy recepcji znajduje się lista miejsc, które według przekazanych nam informacji działają jesienią. Przed wyjściem warto jeszcze sprawdzić ich aktualne godziny.",
+      "explanation": "Lista opiera się na przekazanych informacjach, które warto sprawdzić przed wyjściem."
+    },
+    {
+      "id": "inference",
+      "skill": "inference",
+      "question": "W sobotę cztery osoby chcą spacerować z przewodnikiem, a jedna z nich potrzebuje roweru na niedzielę. Co wynika z ogłoszenia?",
+      "options": [
+        "Muszą zrezygnować ze spaceru, ponieważ poza sezonem nie ma map.",
+        "Mają zagwarantowanego przewodnika, a rower wypożyczą na miejscu.",
+        "Nie mogą zakładać, że spacer z przewodnikiem się odbędzie; o rower trzeba zapytać wcześniej."
+      ],
+      "answer": "Nie mogą zakładać, że spacer z przewodnikiem się odbędzie; o rower trzeba zapytać wcześniej.",
+      "evidence": "W każdą sobotę organizujemy krótką wycieczkę z przewodnikiem, jeżeli zbierze się co najmniej sześć osób. W przypadku mniejszej grupy pracownik recepcji zaproponuje trasę do samodzielnego przejścia. Długość spaceru można dopasować do pogody.\n\nPoza sezonem nie organizujemy wypożyczalni rowerów na miejscu. Jeśli ktoś chciałby korzystać z roweru, prosimy o kontakt przed przyjazdem. Możemy wskazać firmę w pobliskim mieście, która przygotowuje rowery po wcześniejszym uzgodnieniu.",
+      "explanation": "Przewodnik wymaga sześciu uczestników, a rowery nie są dostępne w pensjonacie."
+    },
+    {
+      "id": "vocabulary",
+      "skill": "vocabulary",
+      "question": "Co oznacza „poza sezonem”?",
+      "options": [
+        "W okresie mniejszego ruchu turystycznego niż w głównych miesiącach wypoczynku.",
+        "Wyłącznie poza terenem pensjonatu.",
+        "Podczas pobytu trwającego mniej niż jeden dzień."
+      ],
+      "answer": "W okresie mniejszego ruchu turystycznego niż w głównych miesiącach wypoczynku.",
+      "evidence": "Po zakończeniu letniego sezonu w okolicy jest mniej turystów",
+      "explanation": "Poza sezonem oznacza czas po głównym okresie turystycznym."
+    }
+  ],
+  "publicationStatus": "practice"
+}

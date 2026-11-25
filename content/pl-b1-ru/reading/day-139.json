@@ -1,0 +1,76 @@
+{
+  "id": "pl-b1.reading.day-139",
+  "day": 139,
+  "level": "B1",
+  "genre": "opowiadanie",
+  "title": "Biblioteka jako miejsce spotkań",
+  "text": "Po przeprowadzce do niewielkiego miasta Daria zaczęła regularnie odwiedzać bibliotekę. Przychodziła tam głównie po książki, ponieważ nie znała jeszcze wielu osób w okolicy. Zazwyczaj wybierała kilka powieści, oddawała poprzednie i wracała do domu. Nie zwracała uwagi na ogłoszenia umieszczone przy wejściu.\n\nPewnego dnia bibliotekarka zapytała, czy Daria chciałaby wziąć udział w spotkaniu osób, które czytają krótkie opowiadania. Daria obawiała się, że wszyscy uczestnicy dobrze się znają i że nie będzie wiedziała, co powiedzieć. Bibliotekarka wyjaśniła, że można przyjść tylko posłuchać i nie trzeba wcześniej przeczytać konkretnej książki.\n\nNa pierwszym spotkaniu prowadzący rozdał wszystkim po jednym krótkim tekście. Po kilku minutach czytania uczestnicy rozmawiali o decyzji głównego bohatera. Daria początkowo milczała, ale kiedy jedna z osób przedstawiła opinię podobną do jej własnej, zadała dodatkowe pytanie. Rozmowa potoczyła się zupełnie inaczej, niż się spodziewała.\n\nPo spotkaniu poznała kobietę, która mieszkała w sąsiednim budynku i również niedawno przeprowadziła się do miasta. Umówiły się, że następnym razem przyjdą razem. Daria dowiedziała się także o niewielkiej grupie osób, które w bibliotece pomagają innym korzystać z komputera. Ponieważ w pracy często przygotowywała proste instrukcje, zaproponowała pomoc przy jednym ze spotkań.\n\nPo kilku tygodniach nadal wypożyczała książki, lecz jej wizyty wyglądały inaczej. Czasami przychodziła bez zamiaru zabrania czegokolwiek do domu. Biblioteka stała się dla niej miejscem, w którym mogła nie tylko spędzać czas z własnymi zainteresowaniami, lecz także spotykać ludzi i robić coś razem z nimi.",
+  "questions": [
+    {
+      "id": "main-idea",
+      "skill": "main-idea",
+      "question": "Jak zmieniło się znaczenie biblioteki dla Darii?",
+      "options": [
+        "Zaczęła służyć wyłącznie do przygotowywania instrukcji komputerowych.",
+        "Przestała być miejscem, w którym Daria interesowała się czytaniem.",
+        "Z miejsca wypożyczania książek stała się także przestrzenią kontaktów i wspólnych działań."
+      ],
+      "answer": "Z miejsca wypożyczania książek stała się także przestrzenią kontaktów i wspólnych działań.",
+      "evidence": "Biblioteka stała się dla niej miejscem, w którym mogła nie tylko spędzać czas z własnymi zainteresowaniami, lecz także spotykać ludzi i robić coś razem z nimi.",
+      "explanation": "Daria rozszerzyła sposób korzystania z biblioteki."
+    },
+    {
+      "id": "detail",
+      "skill": "detail",
+      "question": "Co uczestnicy otrzymali na pierwszym spotkaniu?",
+      "options": [
+        "Instrukcję obsługi komputera.",
+        "Krótki tekst do przeczytania.",
+        "Listę książek do kupienia."
+      ],
+      "answer": "Krótki tekst do przeczytania.",
+      "evidence": "Na pierwszym spotkaniu prowadzący rozdał wszystkim po jednym krótkim tekście.",
+      "explanation": "Materiał do rozmowy był dostępny na miejscu."
+    },
+    {
+      "id": "cause",
+      "skill": "cause",
+      "question": "Dlaczego Daria początkowo obawiała się spotkania?",
+      "options": [
+        "Nie znała uczestników i nie wiedziała, czy będzie umiała zabrać głos.",
+        "Nie miała już żadnej książki do oddania.",
+        "Bibliotekarka wymagała przygotowania prezentacji."
+      ],
+      "answer": "Nie znała uczestników i nie wiedziała, czy będzie umiała zabrać głos.",
+      "evidence": "Daria obawiała się, że wszyscy uczestnicy dobrze się znają i że nie będzie wiedziała, co powiedzieć.",
+      "explanation": "Obawa dotyczyła kontaktu z grupą, nie samego tekstu."
+    },
+    {
+      "id": "inference",
+      "skill": "inference",
+      "question": "Nowy uczestnik nie czytał wcześniej opowiadań i obawia się dyskusji. Co może zrobić według zasad spotkania?",
+      "options": [
+        "Poczekać, aż przeczyta powieści znane całej grupie.",
+        "Przyjść, przeczytać tekst na miejscu i początkowo tylko słuchać.",
+        "Przygotować referat o wszystkich książkach prowadzącego."
+      ],
+      "answer": "Przyjść, przeczytać tekst na miejscu i początkowo tylko słuchać.",
+      "evidence": "Bibliotekarka wyjaśniła, że można przyjść tylko posłuchać i nie trzeba wcześniej przeczytać konkretnej książki.",
+      "explanation": "Brak przygotowania i gotowości do mówienia nie wykluczają udziału."
+    },
+    {
+      "id": "vocabulary",
+      "skill": "vocabulary",
+      "question": "Co oznacza „rozmowa potoczyła się inaczej”?",
+      "options": [
+        "Rozmowa rozwinęła się w inny sposób, niż Daria przewidywała.",
+        "Rozmówcy przenieśli spotkanie do innego budynku.",
+        "Prowadzący przerwał rozmowę przed rozpoczęciem."
+      ],
+      "answer": "Rozmowa rozwinęła się w inny sposób, niż Daria przewidywała.",
+      "evidence": "Rozmowa potoczyła się zupełnie inaczej, niż się spodziewała.",
+      "explanation": "Czasownik opisuje przebieg rozmowy."
+    }
+  ],
+  "publicationStatus": "practice"
+}
