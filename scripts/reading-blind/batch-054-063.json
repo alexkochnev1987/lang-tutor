@@ -4,23 +4,23 @@
       "id": "pl-b1.reading.day-054",
       "targetLevel": "A2",
       "title": "Zapis na zajęcia dodatkowe",
-      "passage": "Uczniowie naszej szkoły mogą od grudnia chodzić na dodatkowe zajęcia z matematyki lub języka polskiego. Zajęcia są bezpłatne, ale w każdej grupie jest tylko osiem miejsc. Matematyka odbywa się w poniedziałki i środy od godziny piętnastej. Na język polski można przychodzić we wtorki o tej samej porze. Jedna lekcja trwa godzinę.\n\nDo piątku należy oddać formularz w pokoju obok gabinetu dyrektora. W formularzu trzeba podać imię, nazwisko, klasę i wybrany przedmiot. Nie zapisujemy uczniów przez telefon, ponieważ nauczyciele potrzebują podpisanych formularzy. Długopisy są dostępne na miejscu. Podczas długiej przerwy można również porozmawiać z nauczycielem o poziomie zajęć.\n\nJeżeli w grupie nie ma już miejsca, nazwisko ucznia trafia na listę osób oczekujących. Nauczyciel skontaktuje się z uczniem, gdy ktoś zrezygnuje. Osoby, które otrzymały miejsce, przynoszą na pierwszą lekcję tylko zeszyt i ołówek. Numer sali pojawi się na tablicy przy wejściu w ostatni poniedziałek listopada. Nie trzeba wcześniej kupować żadnego podręcznika.",
+      "passage": "Uczniowie naszej szkoły mogą od grudnia chodzić na dodatkowe zajęcia z matematyki lub języka polskiego. Zajęcia są bezpłatne, ale w każdej grupie jest tylko osiem miejsc. Matematyka odbywa się w poniedziałki i środy od godziny piętnastej. Zajęcia z języka polskiego odbywają się we wtorki o tej samej porze. Jedna lekcja trwa godzinę.\n\nDo piątku należy oddać formularz w pokoju obok gabinetu dyrektora. W formularzu trzeba podać imię, nazwisko, klasę i wybrany przedmiot. Nie zapisujemy uczniów przez telefon, ponieważ nauczyciele potrzebują podpisanych formularzy. Długopisy są dostępne na miejscu. Podczas długiej przerwy można również porozmawiać z nauczycielem o poziomie zajęć.\n\nJeżeli w grupie nie ma już miejsca, nazwisko ucznia trafia na listę osób oczekujących. Nauczyciel skontaktuje się z uczniem, gdy ktoś zrezygnuje. Osoby, które otrzymały miejsce, przynoszą na pierwszą lekcję tylko zeszyt i ołówek. Numer sali pojawi się na tablicy przy wejściu w ostatni poniedziałek listopada. Nie trzeba wcześniej kupować żadnego podręcznika.",
       "questions": [
         {
           "id": "q1",
-          "question": "Jaki jest główny cel ogłoszenia?",
+          "question": "Które zdanie najlepiej oddaje cel ogłoszenia?",
           "options": [
             {
               "id": "A",
-              "text": "Przedstawić plan nauki dla całej szkoły."
+              "text": "Szkoła przedstawia terminy zajęć i prosi uczniów o wybór poziomu nauki."
             },
             {
               "id": "B",
-              "text": "Wyjaśnić zasady udziału w dodatkowych lekcjach."
+              "text": "Szkoła wyjaśnia, jak zapisać się na zajęcia i co zrobić, gdy zabraknie miejsc."
             },
             {
               "id": "C",
-              "text": "Poinformować o zmianach godzin zwykłych lekcji."
+              "text": "Szkoła wyjaśnia, jak przygotować się do pierwszej lekcji i gdzie kupić materiały."
             }
           ]
         },
@@ -298,7 +298,7 @@
       "id": "pl-b1.reading.day-057",
       "targetLevel": "A2",
       "title": "Pierwszy dzień w nowym zespole",
-      "passage": "Cześć, Doroto! Dzisiaj był mój pierwszy dzień w nowej pracy. W biurze nie znałem nikogo oprócz szefa, z którym rozmawiałem przed podpisaniem umowy. Rano jeden z pracowników pokazał mi moje miejsce i wyjaśnił, gdzie mogę znaleźć potrzebne dokumenty. Potem poznaliśmy się z resztą zespołu przy kawie.\n\nMiałem już zacząć pracę z klientem, ale szef powiedział, że przez pierwsze dwa dni nie będę rozmawiać z klientami sam. Mam najpierw posłuchać rozmów Marty i nauczyć się, gdzie zapisujemy informacje o zamówieniach. Marta dała mi też jedno małe zadanie na komputerze. Sprawdziła je razem ze mną przed obiadem, żebym poznał sposób zapisu zamówień.\n\nNajbardziej zaskoczyła mnie atmosfera. Nikt nie oczekiwał, że od razu będę wszystko wiedział. Kiedy czegoś nie rozumiałem, mogłem o to zapytać. Po południu dostałem plan na jutro i adres strony z materiałami do nauki. W środę mam już poprowadzić krótką rozmowę z klientem, a Marta będzie wtedy obok mnie. Chcę przygotować się do niej wieczorem. Pa, Daniel.",
+      "passage": "Cześć, Doroto! Dzisiaj był mój pierwszy dzień w nowej pracy. W biurze nie znałem nikogo oprócz szefa, z którym rozmawiałem przed podpisaniem umowy. Rano jeden z pracowników pokazał mi moje miejsce i wyjaśnił, gdzie mogę znaleźć potrzebne dokumenty. Potem przy kawie poznałem resztę zespołu.\n\nMiałem już zacząć pracę z klientem, ale szef powiedział, że przez pierwsze dwa dni nie będę rozmawiać z klientami sam. Mam najpierw posłuchać rozmów Marty i nauczyć się, gdzie zapisujemy informacje o zamówieniach. Marta dała mi też jedno małe zadanie na komputerze. Sprawdziła je razem ze mną przed obiadem, żebym poznał sposób zapisu zamówień.\n\nNajbardziej zaskoczyła mnie atmosfera. Nikt nie oczekiwał, że od razu będę wszystko wiedział. Kiedy czegoś nie rozumiałem, mogłem o to zapytać. Po południu dostałem plan na jutro i adres strony z materiałami do nauki. W środę mam już poprowadzić krótką rozmowę z klientem, a Marta będzie wtedy obok mnie. Chcę przygotować się do niej wieczorem. Pa, Daniel.",
       "questions": [
         {
           "id": "q1",
@@ -462,7 +462,7 @@
             },
             {
               "id": "B",
-              "text": "Może tak zrobić, jeśli przepracuje zwykłą liczbę godzin i będzie na wspólnych spotkaniach."
+              "text": "Może tak zrobić, jeśli zachowa liczbę godzin pracy i będzie w biurze od dziesiątej do czternastej."
             },
             {
               "id": "C",
@@ -788,7 +788,7 @@
       "id": "pl-b1.reading.day-062",
       "targetLevel": "A2",
       "title": "Praca z domu a biuro",
-      "passage": "Gdy w firmie Zosi pojawiła się możliwość pracy z domu, wybrała wszystkie dni poza biurem. Dzięki temu nie traciła czasu na dojazdy i mogła rano spokojnie zjeść śniadanie. Pracowała przy biurku w swoim pokoju. Przez pierwsze tygodnie bardzo podobał jej się ten sposób organizacji dnia.\n\nZ czasem zauważyła jednak pewien problem. Kiedy potrzebowała szybkiej odpowiedzi od kolegi, często musiała czekać na wiadomość, a krótkie rozmowy zamieniały się w długie spotkania przez internet. W dni, w które przygotowywała własny raport, nie przeszkadzało jej to. Trudniej było wtedy, gdy kilka osób miało wspólnie ustalić plan pracy.\n\nZosia porozmawiała z szefem i zaczęła przychodzić do biura we wtorki i czwartki. W tych dniach jej zespół planuje wspólne zadania oraz rozwiązuje problemy klientów. W pozostałe dni Zosia pracuje w domu i przygotowuje dokumenty. Teraz nie musi codziennie dojeżdżać do pracy, a ważne rozmowy może prowadzić bezpośrednio z kolegami. Nie uważa już, że jedno miejsce pracy jest najlepsze do wszystkich obowiązków.",
+      "passage": "Gdy w firmie Zosi pojawiła się możliwość pracy z domu, zdecydowała się pracować w domu przez cały tydzień. Dzięki temu nie traciła czasu na dojazdy i mogła rano spokojnie zjeść śniadanie. Pracowała przy biurku w swoim pokoju. Przez pierwsze tygodnie bardzo podobał jej się ten sposób organizacji dnia.\n\nZ czasem zauważyła jednak pewien problem. Kiedy potrzebowała szybkiej odpowiedzi od kolegi, często musiała czekać na wiadomość, a krótkie rozmowy zamieniały się w długie spotkania przez internet. W dni, w które przygotowywała własny raport, nie przeszkadzało jej to. Trudniej było wtedy, gdy kilka osób miało wspólnie ustalić plan pracy.\n\nZosia porozmawiała z szefem i zaczęła przychodzić do biura we wtorki i czwartki. W tych dniach jej zespół planuje wspólne zadania oraz rozwiązuje problemy klientów. W pozostałe dni Zosia pracuje w domu i przygotowuje dokumenty. Teraz nie musi codziennie dojeżdżać do pracy, a ważne rozmowy może prowadzić bezpośrednio z kolegami. Nie uważa już, że jedno miejsce pracy jest najlepsze do wszystkich obowiązków.",
       "questions": [
         {
           "id": "q1",
