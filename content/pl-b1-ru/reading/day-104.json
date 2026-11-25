@@ -1,0 +1,76 @@
+{
+  "id": "pl-b1.reading.day-104",
+  "day": 104,
+  "level": "B1",
+  "genre": "opowiadanie",
+  "title": "Nowa tradycja sąsiedzka",
+  "text": "Na osiedlu, na którym mieszkał Bartek, ludzie często mijali się na klatce schodowej, ale rzadko mieli okazję dłużej porozmawiać. W grudniu Bartek zaproponował, żeby zorganizować wspólne spotkanie przy herbacie w sali należącej do wspólnoty. Nie chciał, żeby było ono związane tylko z jednym świętem. Zależało mu na tym, aby każdy sąsiad mógł przyjść niezależnie od swoich zwyczajów.\n\nPierwsze ogłoszenie powiesił przy windzie. W odpowiedzi otrzymał kilka wiadomości. Jedna osoba zapytała, czy musi coś przynieść. Inna obawiała się, że spotkanie potrwa do późnego wieczora. Bartek zrozumiał, że sama informacja o terminie nie wystarczy, aby zachęcić ludzi do udziału.\n\nPrzygotował więc drugą kartkę. Napisał, że spotkanie potrwa od siedemnastej do dziewiętnastej, ale można przyjść na krócej. Herbata i kubki będą na miejscu. Kto chce, może przynieść zdjęcie ulubionego miejsca z okolicy i opowiedzieć o nim. Nie będzie jednak obowiązkowej prezentacji.\n\nPrzyszło kilkanaście osób, wśród nich rodzina, która wprowadziła się do budynku dwa tygodnie wcześniej. Dzięki zdjęciom rozmowa szybko zeszła na park, pobliski sklep i bibliotekę. Nowi mieszkańcy otrzymali kilka przydatnych wskazówek, a starsi poznali miejsca, których dotąd nie odwiedzali.\n\nNa zakończenie ktoś zaproponował, żeby powtórzyć spotkanie wiosną. Bartek zgodził się, ale poprosił, żeby następny termin wybrali wspólnie. Nie chciał być jedyną osobą odpowiedzialną za organizację. Nowa tradycja miała należeć do wszystkich sąsiadów, którzy zechcą ją współtworzyć.",
+  "questions": [
+    {
+      "id": "main-idea",
+      "skill": "main-idea",
+      "question": "Co pozwoliło spotkaniu stać się początkiem nowej tradycji?",
+      "options": [
+        "Ustalenie jednego stałego organizatora na cały rok.",
+        "Obowiązek przygotowania prezentacji przez każdego mieszkańca.",
+        "Otwarte zasady udziału i możliwość wspólnego tworzenia kolejnych spotkań."
+      ],
+      "answer": "Otwarte zasady udziału i możliwość wspólnego tworzenia kolejnych spotkań.",
+      "evidence": "Nowa tradycja miała należeć do wszystkich sąsiadów, którzy zechcą ją współtworzyć.",
+      "explanation": "Bartek obniżył bariery udziału i zaprosił innych do organizacji."
+    },
+    {
+      "id": "detail",
+      "skill": "detail",
+      "question": "Jakie godziny podano na drugiej kartce?",
+      "options": [
+        "Od szesnastej do osiemnastej.",
+        "Od siedemnastej do dziewiętnastej.",
+        "Od dziewiętnastej do dwudziestej pierwszej."
+      ],
+      "answer": "Od siedemnastej do dziewiętnastej.",
+      "evidence": "Napisał, że spotkanie potrwa od siedemnastej do dziewiętnastej, ale można przyjść na krócej.",
+      "explanation": "Podano dokładne godziny."
+    },
+    {
+      "id": "cause",
+      "skill": "cause",
+      "question": "Dlaczego Bartek przygotował drugie ogłoszenie?",
+      "options": [
+        "Pytania sąsiadów pokazały, że brakowało ważnych informacji.",
+        "Wspólnota zmieniła miejsce spotkania.",
+        "Pierwsze dotyczyło innego budynku."
+      ],
+      "answer": "Pytania sąsiadów pokazały, że brakowało ważnych informacji.",
+      "evidence": "Jedna osoba zapytała, czy musi coś przynieść. Inna obawiała się, że spotkanie potrwa do późnego wieczora. Bartek zrozumiał, że sama informacja o terminie nie wystarczy, aby zachęcić ludzi do udziału.",
+      "explanation": "Nowa kartka odpowiadała na wątpliwości."
+    },
+    {
+      "id": "inference",
+      "skill": "inference",
+      "question": "Sąsiadka ma tylko pół godziny i nie ma zdjęcia, które chciałaby pokazać. Jak może uczestniczyć zgodnie z nowymi zasadami?",
+      "options": [
+        "Przyjść na część spotkania i rozmawiać bez przygotowanej prezentacji.",
+        "Przyjść dopiero po przygotowaniu zdjęcia i zostać do końca.",
+        "Poczekać na wiosnę, bo pierwsze spotkanie wymaga pełnego udziału."
+      ],
+      "answer": "Przyjść na część spotkania i rozmawiać bez przygotowanej prezentacji.",
+      "evidence": "Napisał, że spotkanie potrwa od siedemnastej do dziewiętnastej, ale można przyjść na krócej. Herbata i kubki będą na miejscu. Kto chce, może przynieść zdjęcie ulubionego miejsca z okolicy i opowiedzieć o nim. Nie będzie jednak obowiązkowej prezentacji.",
+      "explanation": "Krótka obecność i brak zdjęcia są zgodne z zaproszeniem."
+    },
+    {
+      "id": "vocabulary",
+      "skill": "vocabulary",
+      "question": "Co oznacza, że „rozmowa zeszła na park”?",
+      "options": [
+        "Rozmowa zakończyła się po wyjściu do parku.",
+        "Park stał się jednym z tematów rozmowy.",
+        "Uczestnicy przenieśli spotkanie do parku."
+      ],
+      "answer": "Park stał się jednym z tematów rozmowy.",
+      "evidence": "Dzięki zdjęciom rozmowa szybko zeszła na park, pobliski sklep i bibliotekę.",
+      "explanation": "Rozmowa zaczęła dotyczyć tych miejsc."
+    }
+  ],
+  "publicationStatus": "practice"
+}

@@ -1,0 +1,76 @@
+{
+  "id": "pl-b1.reading.day-100",
+  "day": 100,
+  "level": "B1",
+  "genre": "artykuł",
+  "title": "Przygotowania do Wigilii",
+  "text": "W rodzinie pani Marii przygotowania do Wigilii zaczynały się kiedyś już na początku grudnia. Zwykle to ona układała listę potraw, kupowała większość produktów i zapraszała gości. Pozostali przyjeżdżali w dniu święta. Maria lubiła tę tradycję, lecz z czasem zauważyła, że podczas kolacji częściej myśli o kolejnych zadaniach, niż rozmawia z bliskimi.\n\nW tym roku jej dwaj synowie zaproponowali inny sposób organizacji. Na początku miesiąca cała rodzina spotkała się przez internet. Każdy powiedział, co jest dla niego ważne podczas Wigilii. Dla Marii najważniejsza była wspólna kolacja przy jednym stole. Dla jednego z synów ważne było przygotowanie potrawy według przepisu babci, a drugi chciał mieć czas na spacer z dziećmi.\n\nUstalili, że nie będą zwiększać liczby potraw tylko dlatego, że przyjedzie więcej osób. Zamiast tego każdy przygotuje odpowiednią ilość jednej lub dwóch potraw. Dwoje najmłodszych dzieci zajmie się dekoracją stołu z pomocą dorosłych. Trzej dorośli goście przyjadą wcześniej, aby pomóc w ostatnich przygotowaniach.\n\nRodzina postanowiła zachować także zwyczaj składania życzeń, lecz zrezygnować z długiego rozdawania wielu prezentów. Każdy dorosły przygotuje tylko jeden drobny upominek dla wcześniej wylosowanej osoby.\n\nMaria początkowo obawiała się, że zmiana organizacji osłabi tradycję. Po rozmowie z rodziną zrozumiała jednak, że bliscy chcą zachować najważniejsze elementy spotkania. Zmieniają przede wszystkim podział pracy. Dzięki temu będzie mogła uczestniczyć w wieczorze tak samo jak inni, a nie tylko zajmować się jego przygotowaniem.",
+  "questions": [
+    {
+      "id": "main-idea",
+      "skill": "main-idea",
+      "question": "Co pokazuje przykład rodziny Marii?",
+      "options": [
+        "Zachowanie tradycji nie musi oznaczać zachowania dawnego podziału obowiązków.",
+        "Wspólne przygotowania są możliwe tylko wtedy, gdy wszyscy mieszkają blisko.",
+        "Rodzinne święta wymagają coraz większej liczby potraw."
+      ],
+      "answer": "Zachowanie tradycji nie musi oznaczać zachowania dawnego podziału obowiązków.",
+      "evidence": "Zmieniają przede wszystkim podział pracy. Dzięki temu będzie mogła uczestniczyć w wieczorze tak samo jak inni, a nie tylko zajmować się jego przygotowaniem.",
+      "explanation": "Rodzina zachowuje ważne zwyczaje, ale dzieli przygotowania."
+    },
+    {
+      "id": "detail",
+      "skill": "detail",
+      "question": "Kto pomoże w dekoracji stołu?",
+      "options": [
+        "Wyłącznie Maria i jej synowie.",
+        "Dwoje najmłodszych dzieci z pomocą dorosłych.",
+        "Trzej goście, którzy przyjadą wcześniej."
+      ],
+      "answer": "Dwoje najmłodszych dzieci z pomocą dorosłych.",
+      "evidence": "Dwoje najmłodszych dzieci zajmie się dekoracją stołu z pomocą dorosłych.",
+      "explanation": "Dzieci otrzymały własne zadanie."
+    },
+    {
+      "id": "cause",
+      "skill": "cause",
+      "question": "Co sprawiło, że dawny sposób przygotowania święta stał się dla Marii mniej wygodny?",
+      "options": [
+        "Synowie zamierzali zrezygnować z przepisu babci.",
+        "Nie chciała już spotykać się z rodziną przy stole.",
+        "Przygotowania ograniczały jej możliwość spokojnej rozmowy z bliskimi."
+      ],
+      "answer": "Przygotowania ograniczały jej możliwość spokojnej rozmowy z bliskimi.",
+      "evidence": "Maria lubiła tę tradycję, lecz z czasem zauważyła, że podczas kolacji częściej myśli o kolejnych zadaniach, niż rozmawia z bliskimi.",
+      "explanation": "Obowiązki utrudniały jej udział w spotkaniu."
+    },
+    {
+      "id": "inference",
+      "skill": "inference",
+      "question": "Do rodziny dołączy dwóch dorosłych gości, którzy chcą pomóc. Co pasuje do nowych ustaleń?",
+      "options": [
+        "Dodać kilka nowych potraw, które samodzielnie zrobi Maria.",
+        "Poprosić ich o większą porcję ustalonej potrawy i włączyć do przygotowań.",
+        "Zrezygnować z pomocy gości, żeby zachować dawny sposób organizacji."
+      ],
+      "answer": "Poprosić ich o większą porcję ustalonej potrawy i włączyć do przygotowań.",
+      "evidence": "Ustalili, że nie będą zwiększać liczby potraw tylko dlatego, że przyjedzie więcej osób. Zamiast tego każdy przygotuje odpowiednią ilość jednej lub dwóch potraw.",
+      "explanation": "Większa liczba osób oznacza dostosowanie ilości, nie rozbudowanie menu i obciążenie Marii."
+    },
+    {
+      "id": "vocabulary",
+      "skill": "vocabulary",
+      "question": "Co oznacza „upominek” w tym tekście?",
+      "options": [
+        "Niewielki prezent dla drugiej osoby.",
+        "Życzenia wypowiadane przy stole.",
+        "Potrawa podawana na zakończenie kolacji."
+      ],
+      "answer": "Niewielki prezent dla drugiej osoby.",
+      "evidence": "Każdy dorosły przygotuje tylko jeden drobny upominek dla wcześniej wylosowanej osoby.",
+      "explanation": "Chodzi o prezent, którego liczbę rodzina ogranicza."
+    }
+  ],
+  "publicationStatus": "practice"
+}

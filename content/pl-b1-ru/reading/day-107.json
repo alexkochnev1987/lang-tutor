@@ -1,0 +1,76 @@
+{
+  "id": "pl-b1.reading.day-107",
+  "day": 107,
+  "level": "B1",
+  "genre": "artykuł",
+  "title": "Co bym zmienił w swojej okolicy",
+  "text": "W lokalnej gazecie pojawiło się pytanie: „Co zmieniłbyś w swojej okolicy, gdybyś mógł wybrać tylko jedną rzecz?”. Redakcja otrzymała wiele odpowiedzi. Część czytelników chciałaby więcej zieleni, inni proponowali nowe miejsca parkingowe lub lepszą organizację ruchu. Redaktorzy zdecydowali się przedstawić trzy pomysły dotyczące jednej ulicy, aby pokazać, jak różne mogą być potrzeby jej użytkowników.\n\nAneta, która chodzi codziennie do pracy pieszo, zwróciła uwagę na brak ławki w połowie długiego chodnika. Powiedziała, że jej tata czasami rezygnuje z pójścia do sklepu, ponieważ nie ma gdzie odpocząć. Gdyby pojawiła się ławka, mógłby samodzielnie pokonać tę drogę.\n\nMarek prowadzi mały sklep. Wolałby uporządkować miejsce, w którym dostawcy zatrzymują samochody. Obecnie zdarza się, że podczas rozładunku część chodnika jest zajęta. Marek zaproponował, aby dokładniej ustalić godziny dostaw i wyznaczyć dla nich odpowiednie miejsce.\n\nTrzeci pomysł zgłosiła Zosia, która regularnie jeździ rowerem. Chciałaby bezpiecznie zostawiać go przy bibliotece. Zauważyła, że niepotrzebnie szuka się dużych inwestycji, jeśli czasami wystarczy dobrze zaplanowany stojak.\n\nRedakcja nie przeprowadziła głosowania na najlepszą propozycję. Zamiast tego zaprosiła autorów pomysłów do wspólnej rozmowy. Okazało się, że wszyscy chcieliby, aby chodnik pozostał wygodny dla pieszych. Być może ławka i stojak mogłyby powstać w miejscach, które nie utrudniają dostaw. Pomysł jednej osoby nie musi więc oznaczać odrzucenia potrzeb pozostałych.",
+  "questions": [
+    {
+      "id": "main-idea",
+      "skill": "main-idea",
+      "question": "Co jest głównym celem artykułu?",
+      "options": [
+        "Przekonać czytelników, że tylko nowe miejsca parkingowe poprawią ulicę.",
+        "Pokazać, że różne potrzeby mieszkańców mogą prowadzić do wspólnych rozwiązań.",
+        "Przedstawić wyniki głosowania na największą inwestycję."
+      ],
+      "answer": "Pokazać, że różne potrzeby mieszkańców mogą prowadzić do wspólnych rozwiązań.",
+      "evidence": "Pomysł jednej osoby nie musi więc oznaczać odrzucenia potrzeb pozostałych.",
+      "explanation": "Artykuł przedstawia trzy perspektywy i możliwość ich pogodzenia."
+    },
+    {
+      "id": "detail",
+      "skill": "detail",
+      "question": "Przy jakim budynku Zosia chciałaby zostawiać rower?",
+      "options": [
+        "Przy redakcji gazety.",
+        "Przy sklepie Marka.",
+        "Przy bibliotece."
+      ],
+      "answer": "Przy bibliotece.",
+      "evidence": "Chciałaby bezpiecznie zostawiać go przy bibliotece.",
+      "explanation": "Zosia wskazuje bibliotekę."
+    },
+    {
+      "id": "cause",
+      "skill": "cause",
+      "question": "Dlaczego Aneta proponuje ławkę?",
+      "options": [
+        "Jej tata potrzebuje miejsca na odpoczynek w drodze.",
+        "Chce czekać na dostawy przed sklepem.",
+        "Chciałaby organizować spotkania rowerzystów."
+      ],
+      "answer": "Jej tata potrzebuje miejsca na odpoczynek w drodze.",
+      "evidence": "Powiedziała, że jej tata czasami rezygnuje z pójścia do sklepu, ponieważ nie ma gdzie odpocząć.",
+      "explanation": "Ławka pomogłaby mu przejść całą drogę."
+    },
+    {
+      "id": "inference",
+      "skill": "inference",
+      "question": "Gdyby nowy stojak rowerowy zajął miejsce potrzebne do rozładunku i zwęził chodnik, co byłoby zgodne z wynikiem rozmowy?",
+      "options": [
+        "Zrezygnować ze wszystkich trzech pomysłów.",
+        "Zamontować stojak bez zmian, bo zgłosiła go jedna z uczestniczek.",
+        "Poszukać położenia stojaka, które nie blokuje chodnika ani dostaw."
+      ],
+      "answer": "Poszukać położenia stojaka, które nie blokuje chodnika ani dostaw.",
+      "evidence": "Okazało się, że wszyscy chcieliby, aby chodnik pozostał wygodny dla pieszych. Być może ławka i stojak mogłyby powstać w miejscach, które nie utrudniają dostaw.",
+      "explanation": "Wspólny cel to wygodne przejście i rozwiązania bez konfliktu z dostawami."
+    },
+    {
+      "id": "vocabulary",
+      "skill": "vocabulary",
+      "question": "Co oznacza tutaj „rozładunek”?",
+      "options": [
+        "Wyjmowanie dostarczanych towarów z samochodu.",
+        "Przyjmowanie zamówień od klientów.",
+        "Przenoszenie stojaków rowerowych na chodnik."
+      ],
+      "answer": "Wyjmowanie dostarczanych towarów z samochodu.",
+      "evidence": "Obecnie zdarza się, że podczas rozładunku część chodnika jest zajęta.",
+      "explanation": "Dostawcy wyjmują towar z samochodów."
+    }
+  ],
+  "publicationStatus": "practice"
+}

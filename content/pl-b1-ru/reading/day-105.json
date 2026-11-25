@@ -1,0 +1,76 @@
+{
+  "id": "pl-b1.reading.day-105",
+  "day": 105,
+  "level": "B1",
+  "genre": "poradnik",
+  "title": "Wystawa o dawnych zwyczajach",
+  "text": "Wystawa poświęcona dawnym zwyczajom może zainteresować zarówno osoby, które pamiętają opisywane czasy, jak i tych, którzy poznają je po raz pierwszy. Aby przygotować taką wystawę w lokalnej bibliotece lub domu kultury, nie trzeba od razu zbierać wielu cennych przedmiotów. Najpierw warto zastanowić się, jaką historię chcemy opowiedzieć.\n\nW przykładowej wystawie o świętach mieszkańcy wybrali trzy tematy: przygotowanie domu, wspólne posiłki oraz składanie życzeń. Do każdego tematu przygotowali zdjęcia i krótkie opisy. Poprosili starszych sąsiadów, aby opowiedzieli, które zwyczaje były ważne w ich rodzinach. Nie wszyscy pamiętali te same szczegóły, więc organizatorzy zapisywali, kto opowiedział daną historię, zamiast przedstawiać jedną wersję jako obowiązującą wszystkich.\n\nNiektóre osoby przyniosły rodzinne przedmioty. Organizatorzy ustalili z właścicielami, czy można je pokazać na wystawie, a jeśli tak, to na jak długo. Gdy właściciel wolał zachować przedmiot w domu, wystarczało zdjęcie i opis jego znaczenia. Dzięki temu nikt nie musiał rozstawać się z cenną pamiątką.\n\nWarto też pomyśleć o osobach odwiedzających wystawę bez przewodnika. Podpis pod zdjęciem powinien wyjaśniać nie tylko, co przedstawia fotografia, ale również dlaczego była ważna dla danej rodziny. Można zostawić obok miejsce na dodatkowe wspomnienia zwiedzających.\n\nNa końcu wystawy organizatorzy przykładowego projektu zebrali uwagi i zaproponowali kolejne spotkanie. Okazało się, że najlepsze historie pojawiały się wtedy, gdy ktoś zadawał pytanie o zwyczaj, który wydawał się innym zupełnie zwyczajny.",
+  "questions": [
+    {
+      "id": "main-idea",
+      "skill": "main-idea",
+      "question": "Jaka zasada przygotowania wystawy jest najważniejsza w poradniku?",
+      "options": [
+        "Pokazać możliwie najwięcej kosztownych przedmiotów.",
+        "Przedstawić osobiste historie i kontekst zwyczajów z poszanowaniem właścicieli.",
+        "Ustalić jedną wersję każdej tradycji na podstawie wspomnień najstarszej osoby."
+      ],
+      "answer": "Przedstawić osobiste historie i kontekst zwyczajów z poszanowaniem właścicieli.",
+      "evidence": "Najpierw warto zastanowić się, jaką historię chcemy opowiedzieć.",
+      "explanation": "Tekst stawia opowieści i zgody właścicieli przed liczbą eksponatów."
+    },
+    {
+      "id": "detail",
+      "skill": "detail",
+      "question": "Ile tematów wybrano w przykładowej wystawie?",
+      "options": [
+        "Trzy.",
+        "Cztery.",
+        "Dwa."
+      ],
+      "answer": "Trzy.",
+      "evidence": "W przykładowej wystawie o świętach mieszkańcy wybrali trzy tematy: przygotowanie domu, wspólne posiłki oraz składanie życzeń.",
+      "explanation": "Wymieniono trzy tematy."
+    },
+    {
+      "id": "cause",
+      "skill": "cause",
+      "question": "Dlaczego organizatorzy zapisywali, kto opowiedział daną historię?",
+      "options": [
+        "Chcieli sprawdzić, kto przyniósł najwięcej zdjęć.",
+        "Potrzebowali listy osób do zaproszenia na święta.",
+        "Wspomnienia poszczególnych osób różniły się."
+      ],
+      "answer": "Wspomnienia poszczególnych osób różniły się.",
+      "evidence": "Nie wszyscy pamiętali te same szczegóły, więc organizatorzy zapisywali, kto opowiedział daną historię, zamiast przedstawiać jedną wersję jako obowiązującą wszystkich.",
+      "explanation": "Przypisanie historii osobie zachowuje różnorodność wspomnień."
+    },
+    {
+      "id": "inference",
+      "skill": "inference",
+      "question": "Właściciel starej ozdoby nie chce zostawić jej w bibliotece, ale chętnie opowiada o niej. Co można przygotować dla osób oglądających wystawę samodzielnie?",
+      "options": [
+        "Pominąć historię, ponieważ nie można pokazać oryginału.",
+        "Pokazać zdjęcie ozdoby i podpis wyjaśniający jej znaczenie w rodzinie.",
+        "Poprosić właściciela o pozostawienie ozdoby przynajmniej na jeden dzień bez podpisu."
+      ],
+      "answer": "Pokazać zdjęcie ozdoby i podpis wyjaśniający jej znaczenie w rodzinie.",
+      "evidence": "Gdy właściciel wolał zachować przedmiot w domu, wystarczało zdjęcie i opis jego znaczenia. Dzięki temu nikt nie musiał rozstawać się z cenną pamiątką.\n\nWarto też pomyśleć o osobach odwiedzających wystawę bez przewodnika. Podpis pod zdjęciem powinien wyjaśniać nie tylko, co przedstawia fotografia, ale również dlaczego była ważna dla danej rodziny.",
+      "explanation": "Zdjęcie i opis przekazują historię bez konieczności wypożyczenia przedmiotu."
+    },
+    {
+      "id": "vocabulary",
+      "skill": "vocabulary",
+      "question": "Co oznacza „pamiątka” w tym tekście?",
+      "options": [
+        "Formularz zgody na udział w wystawie.",
+        "Podpis wyjaśniający godziny otwarcia wystawy.",
+        "Przedmiot, który przypomina o ważnej osobie lub wydarzeniu."
+      ],
+      "answer": "Przedmiot, który przypomina o ważnej osobie lub wydarzeniu.",
+      "evidence": "Dzięki temu nikt nie musiał rozstawać się z cenną pamiątką.",
+      "explanation": "Rodzinne przedmioty mają wartość związaną ze wspomnieniami."
+    }
+  ],
+  "publicationStatus": "practice"
+}

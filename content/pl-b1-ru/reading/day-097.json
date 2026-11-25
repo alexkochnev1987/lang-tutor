@@ -1,0 +1,76 @@
+{
+  "id": "pl-b1.reading.day-097",
+  "day": 97,
+  "level": "B1",
+  "genre": "opowiadanie",
+  "title": "Ochrona wody w domu",
+  "text": "Kiedy rodzina Wójcików otrzymała rachunek za wodę, zaczęła się zastanawiać, czy może zmienić kilka codziennych zwyczajów. Nie chcieli wprowadzać zakazów dotyczących każdej czynności. Ustalili, że przez tydzień będą obserwować, w jakich sytuacjach zużywają wodę niepotrzebnie, i dopiero potem wybiorą rozwiązania.\n\nTata zauważył, że podczas mycia naczyń często zostawiał odkręcony kran, nawet gdy szukał czystej gąbki lub odkładał talerze. Córka przypomniała sobie, że czasami włączała pralkę tylko po to, żeby wyprać jedną bluzę. Mama odkryła natomiast, że z kranu w łazience kapie woda, choć wszyscy starali się go dobrze zakręcać.\n\nPo tygodniu rodzina wybrała trzy zadania. Tata miał przygotowywać wszystko potrzebne do mycia naczyń, zanim odkręci wodę. Córka postanowiła planować pranie wcześniej, żeby nie brakowało jej czystych ubrań. Mama umówiła wizytę hydraulika, ponieważ problemu z kranem nie dało się rozwiązać przez zmianę przyzwyczajeń.\n\nMiesiąc później sprawdzili rachunek. Zużycie było niższe, ale trudno było ustalić dokładnie, które działanie przyniosło największy efekt, ponieważ wszystkie zmiany wprowadzono w podobnym czasie. Rodzina postanowiła więc kontynuować te zwyczaje, które nie utrudniały jej życia.\n\nWójcikowie odkryli też, że łatwiej pamiętać o nowych zasadach, gdy każdy ma własne zadanie. Nie chodziło im o to, aby codziennie kontrolować pozostałych domowników, lecz żeby wspólnie znaleźć rozwiązania, które da się stosować przez dłuższy czas.",
+  "questions": [
+    {
+      "id": "main-idea",
+      "skill": "main-idea",
+      "question": "Co jest głównym przesłaniem opowiadania?",
+      "options": [
+        "Najlepiej oceniać każdego domownika osobno na podstawie rachunku.",
+        "Trwałe zmiany są łatwiejsze, gdy wynikają z obserwacji i pasują do życia rodziny.",
+        "Oszczędzanie wody wymaga przede wszystkim kupna nowych urządzeń."
+      ],
+      "answer": "Trwałe zmiany są łatwiejsze, gdy wynikają z obserwacji i pasują do życia rodziny.",
+      "evidence": "Wójcikowie odkryli też, że łatwiej pamiętać o nowych zasadach, gdy każdy ma własne zadanie.",
+      "explanation": "Rodzina najpierw obserwowała sytuację, potem podzieliła zadania i utrzymała wygodne zwyczaje."
+    },
+    {
+      "id": "detail",
+      "skill": "detail",
+      "question": "Jaki problem z kranem zauważyła mama?",
+      "options": [
+        "Pralka nie działała prawidłowo.",
+        "Brakowało czystych ubrań.",
+        "Kran nie przestawał kapać."
+      ],
+      "answer": "Kran nie przestawał kapać.",
+      "evidence": "Mama odkryła natomiast, że z kranu w łazience kapie woda, choć wszyscy starali się go dobrze zakręcać.",
+      "explanation": "Problem dotyczył nieszczelnego kranu."
+    },
+    {
+      "id": "cause",
+      "skill": "cause",
+      "question": "Dlaczego nie udało się ustalić, która zmiana dała największy efekt?",
+      "options": [
+        "Kilka zmian wprowadzono niemal jednocześnie.",
+        "Hydraulik nie pojawił się w umówionym terminie.",
+        "Rodzina nie otrzymała rachunku za kolejny miesiąc."
+      ],
+      "answer": "Kilka zmian wprowadzono niemal jednocześnie.",
+      "evidence": "trudno było ustalić dokładnie, które działanie przyniosło największy efekt, ponieważ wszystkie zmiany wprowadzono w podobnym czasie.",
+      "explanation": "Nie można oddzielić wpływu poszczególnych działań na podstawie jednego rachunku."
+    },
+    {
+      "id": "inference",
+      "skill": "inference",
+      "question": "Po naprawie kranu rodzina zauważa, że córka nadal często potrzebuje jednej czystej bluzy na następny dzień. Co najlepiej zrobić zgodnie z ich podejściem?",
+      "options": [
+        "Ustalić plan prania uwzględniający potrzebne ubrania, a stan kranu sprawdzać niezależnie.",
+        "Zrezygnować z prania bluz i ponownie zamówić wizytę hydraulika.",
+        "Wprowadzić jednakowe ograniczenia korzystania z wody dla wszystkich domowników."
+      ],
+      "answer": "Ustalić plan prania uwzględniający potrzebne ubrania, a stan kranu sprawdzać niezależnie.",
+      "evidence": "Córka postanowiła planować pranie wcześniej, żeby nie brakowało jej czystych ubrań. Mama umówiła wizytę hydraulika, ponieważ problemu z kranem nie dało się rozwiązać przez zmianę przyzwyczajeń.",
+      "explanation": "Rodzina odróżnia zmianę planowania prania od rozwiązania usterki technicznej."
+    },
+    {
+      "id": "vocabulary",
+      "skill": "vocabulary",
+      "question": "Co oznacza tutaj „przyzwyczajenia”?",
+      "options": [
+        "Narzędzia używane podczas napraw.",
+        "Obowiązki zapisane na rachunku.",
+        "Powtarzające się sposoby wykonywania codziennych czynności."
+      ],
+      "answer": "Powtarzające się sposoby wykonywania codziennych czynności.",
+      "evidence": "Mama umówiła wizytę hydraulika, ponieważ problemu z kranem nie dało się rozwiązać przez zmianę przyzwyczajeń.",
+      "explanation": "Przyzwyczajenia to nawyki, takie jak pozostawianie odkręconego kranu."
+    }
+  ],
+  "publicationStatus": "practice"
+}
