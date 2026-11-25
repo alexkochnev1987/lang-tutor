@@ -1,0 +1,75 @@
+{
+  "id": "pl-b1.reading.day-049",
+  "day": 49,
+  "level": "A2",
+  "genre": "artykuł",
+  "title": "Pytania do specjalisty",
+  "text": "Dom kultury zaprosił na spotkanie osoby, które dużo pracują przy biurku. Gościem był fizjoterapeuta. Miał opowiedzieć o tym, jak urządzić miejsce do pracy i dlaczego ważne są przerwy. Przed spotkaniem uczestnicy przysłali mu pytania. Dzięki nim przygotował przykłady związane ze sprawami, o które pytało wiele osób.\n\nNajpierw gość mówił o tym, jak ludzie siedzą przy pracy. Wyjaśnił, że jedna pozycja nie będzie wygodna dla wszystkich przez cały dzień. Potem uczestnicy próbowali inaczej ustawić krzesło i monitor. Spotkanie było dla całej grupy. Fizjoterapeuta nie badał poszczególnych osób.\n\nNa koniec uczestnicy dostali kartki z podsumowaniem. Były tam najważniejsze informacje ze spotkania i wiadomość, gdzie można umówić się na osobną rozmowę ze specjalistą. Kilka osób chciałoby też porozmawiać o odpoczynku po pracy. Organizatorzy pytają teraz uczestników o zdanie. Zastanawiają się nad datą kolejnego bezpłatnego spotkania.",
+  "questions": [
+    {
+      "id": "main-idea",
+      "skill": "main-idea",
+      "question": "Po co dom kultury zaprosił fizjoterapeutę?",
+      "options": [
+        "Żeby zbadał osoby, które przesłały pytania o swoje zdrowie.",
+        "Żeby poprowadził spotkanie o odpoczynku po zakończeniu pracy.",
+        "Żeby opowiedział o miejscu pracy przy biurku i przerwach."
+      ],
+      "answer": "Żeby opowiedział o miejscu pracy przy biurku i przerwach.",
+      "evidence": "Miał opowiedzieć o tym, jak urządzić miejsce do pracy i dlaczego ważne są przerwy.",
+      "explanation": "Pierwsze spotkanie dotyczyło pracy przy biurku; odpoczynek po pracy to propozycja na przyszłość."
+    },
+    {
+      "id": "detail",
+      "skill": "detail",
+      "question": "Co uczestnicy robili po pierwszej części spotkania?",
+      "options": [
+        "Próbowali zmienić ustawienie krzesła i monitora.",
+        "Ustalali daty osobnych rozmów z fizjoterapeutą.",
+        "Przesyłali fizjoterapeucie pierwsze pytania."
+      ],
+      "answer": "Próbowali zmienić ustawienie krzesła i monitora.",
+      "evidence": "Potem uczestnicy próbowali inaczej ustawić krzesło i monitor.",
+      "explanation": "Po rozmowie o siedzeniu uczestnicy sami zmieniali ustawienie sprzętu."
+    },
+    {
+      "id": "cause",
+      "skill": "cause",
+      "question": "Dlaczego pytania przesłane przed spotkaniem pomogły fizjoterapeucie?",
+      "options": [
+        "Mógł wybrać przykłady dotyczące częstych problemów.",
+        "Mógł ustalić, kto potrzebuje osobnego badania.",
+        "Mógł podzielić uczestników na grupy do ćwiczeń."
+      ],
+      "answer": "Mógł wybrać przykłady dotyczące częstych problemów.",
+      "evidence": "Dzięki nim przygotował przykłady związane ze sprawami, o które pytało wiele osób.",
+      "explanation": "Pytania pokazały, jakie tematy interesują uczestników."
+    },
+    {
+      "id": "inference",
+      "skill": "inference",
+      "question": "Piotr chce omówić ze specjalistą tylko swój problem. Co najlepiej odpowiada jego celowi?",
+      "options": [
+        "Skorzystanie z informacji na kartce i umówienie osobnej rozmowy.",
+        "Napisanie organizatorom opinii o ustawianiu krzesła.",
+        "Udział w następnym spotkaniu grupowym o odpoczynku."
+      ],
+      "answer": "Skorzystanie z informacji na kartce i umówienie osobnej rozmowy.",
+      "evidence": "gdzie można umówić się na osobną rozmowę ze specjalistą.",
+      "explanation": "Osobna rozmowa daje Piotrowi okazję do omówienia własnej sytuacji."
+    },
+    {
+      "id": "vocabulary",
+      "skill": "vocabulary",
+      "question": "Co oznacza tu „podsumowanie”?",
+      "options": [
+        "Plan tematów na następne spotkanie.",
+        "Zbiór pytań przesłanych przed spotkaniem.",
+        "Krótki opis najważniejszych treści spotkania."
+      ],
+      "answer": "Krótki opis najważniejszych treści spotkania.",
+      "evidence": "Były tam najważniejsze informacje ze spotkania",
+      "explanation": "Podsumowanie przypomina główne treści po wydarzeniu."
+    }
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "id": "pl-b1.reading.day-043",
+  "day": 43,
+  "level": "A2",
+  "genre": "dialog",
+  "title": "Wizyta, którą trzeba przełożyć",
+  "text": "Ewa ma umówioną wizytę kontrolną u dentysty w środę o jedenastej. We wtorek dowiaduje się jednak, że w tym samym czasie będzie musiała uczestniczyć w ważnym spotkaniu w pracy. Dzwoni więc do gabinetu, aby znaleźć inny termin.\n\n— Dzień dobry, chciałabym przełożyć jutrzejszą wizytę. Czy lekarz przyjmuje jeszcze w tym tygodniu? — pyta Ewa.\n\n— W czwartek mamy wolne miejsce o dziewiątej, a w piątek o piętnastej trzydzieści — odpowiada recepcjonistka.\n\n— W czwartek muszę być w biurze od ósmej. W piątek mogę wyjść wcześniej. Czy ten drugi termin jest nadal aktualny?\n\n— Tak, zapisuję panią na piątek. Poprzednią wizytę anuluję. Proszę przyjść dziesięć minut przed czasem, ponieważ trzeba zaktualizować dane w dokumentacji.\n\nEwa zapisuje nowy termin w kalendarzu. Prosi również o wiadomość z potwierdzeniem. Otrzymuje ją kilka minut później i może spokojnie zaplanować resztę tygodnia. Nie musi już wybierać między wizytą a obowiązkami zawodowymi.",
+  "questions": [
+    {
+      "id": "main-idea",
+      "skill": "main-idea",
+      "question": "Po co Ewa dzwoni do gabinetu?",
+      "options": [
+        "Chce zmienić termin umówionej wizyty.",
+        "Chce zapytać, ile potrwa wizyta kontrolna.",
+        "Chce potwierdzić godzinę środowej wizyty."
+      ],
+      "answer": "Chce zmienić termin umówionej wizyty.",
+      "evidence": "chciałabym przełożyć jutrzejszą wizytę.",
+      "explanation": "Ewa ma już termin, ale potrzebuje innego."
+    },
+    {
+      "id": "detail",
+      "skill": "detail",
+      "question": "Na kiedy ostatecznie zapisano Ewę?",
+      "options": [
+        "Na piątek o piętnastej trzydzieści.",
+        "Na czwartek o dziewiątej.",
+        "Na środę o jedenastej."
+      ],
+      "answer": "Na piątek o piętnastej trzydzieści.",
+      "evidence": "a w piątek o piętnastej trzydzieści",
+      "explanation": "Ewa wybiera drugi z podanych terminów, czyli piątek."
+    },
+    {
+      "id": "cause",
+      "skill": "cause",
+      "question": "Dlaczego Ewa ma przyjść wcześniej?",
+      "options": [
+        "Lekarz chce zacząć badanie dziesięć minut wcześniej.",
+        "Gabinet musi sprawdzić i poprawić jej dane.",
+        "Recepcjonistka chce na miejscu potwierdzić wolny termin."
+      ],
+      "answer": "Gabinet musi sprawdzić i poprawić jej dane.",
+      "evidence": "ponieważ trzeba zaktualizować dane w dokumentacji.",
+      "explanation": "Dodatkowy czas jest potrzebny na formalności."
+    },
+    {
+      "id": "inference",
+      "skill": "inference",
+      "question": "O której Ewa powinna być w gabinecie?",
+      "options": [
+        "O piętnastej dwadzieścia.",
+        "O piętnastej czterdzieści.",
+        "O piętnastej trzydzieści."
+      ],
+      "answer": "O piętnastej dwadzieścia.",
+      "evidence": "Proszę przyjść dziesięć minut przed czasem",
+      "explanation": "Dziesięć minut przed 15.30 to 15.20."
+    },
+    {
+      "id": "vocabulary",
+      "skill": "vocabulary",
+      "question": "Co tutaj znaczy „przełożyć wizytę”?",
+      "options": [
+        "Odwołać wizytę bez ustalania nowej daty.",
+        "Potwierdzić wcześniej umówioną wizytę.",
+        "Umówić tę wizytę na inny termin."
+      ],
+      "answer": "Umówić tę wizytę na inny termin.",
+      "evidence": "Dzwoni więc do gabinetu, aby znaleźć inny termin.",
+      "explanation": "Ewa nadal chce iść do dentysty, tylko innego dnia."
+    }
+  ]
+}
