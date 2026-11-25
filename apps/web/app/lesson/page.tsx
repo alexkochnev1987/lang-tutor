@@ -78,6 +78,7 @@ const STAGE_LEAD: Record<StageId, string> = {
   words: "Powtarzamy poznane słowa. Gramatyka będzie osobnym blokiem.",
   grammar: "Najpierw reguła, potem ćwiczenia. Regułę otworzysz przyciskiem.",
   collocations: "Łączymy znane słowa. Każde słowo ćwiczy własną regułę.",
+  reading: "Przeczytaj tekst i odpowiedz na pytania.",
   exam: "Zadanie w formacie egzaminacyjnym: reguły są wymieszane jak na prawdziwym arkuszu.",
 };
 
@@ -86,6 +87,7 @@ const STAGE_TITLE_PL: Record<StageId, string> = {
   words: "Słowa",
   grammar: "Gramatyka",
   collocations: "Połączenia słów",
+  reading: "Czytanie",
   exam: "Zadanie egzaminacyjne",
 };
 

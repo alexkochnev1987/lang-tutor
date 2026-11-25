@@ -11,7 +11,7 @@
  */
 import { CLOSED_CLASS_PARADIGMS } from '@/lib/lang-pl/closed-class'
 import { loadState } from '@/lib/data/store'
-import { readingFilename, selectReadingEntry, type ReadingCatalog, type ReadingCatalogEntry } from './reading-catalog'
+import { readingFilename, selectReadingEntry, selectDailyReadingEntries, type ReadingCatalog, type ReadingCatalogEntry } from './reading-catalog'
 
 export const COURSE_ID = process.env.NEXT_PUBLIC_COURSE_ID ?? 'pl-b1-ru'
 
@@ -300,3 +300,25 @@ export const loadCorpusIndex = () => loadPack<CorpusIndex>('sentence-corpus/inde
 
 export const loadCorpusChunk = (version: string, chunk: number) =>
   loadPack<AnnotatedSentence[]>(`sentence-corpus/${version}-${chunk}.json`)
+
+export async function loadLiveReadingCatalog(): Promise<ReadingCatalogEntry[]> {
+  return (await loadReadingCatalog('reading')).filter(entry => entry.status === 'approved' || entry.status === 'legacy')
+}
+
+export async function loadLiveReadingText(entry: ReadingCatalogEntry): Promise<ReadingText> {
+  if (entry.status !== 'approved' && entry.status !== 'legacy') throw new Error('invalid_reading_status')
+  return loadReadingEntry('reading', entry)
+}
+
+export async function loadDailyReadingTexts(day: number, count: number, results: { dayNumber: number; exerciseId: string }[]): Promise<ReadingText[]> {
+  if (count <= 0) return []
+  const entries = await loadLiveReadingCatalog()
+  const seen = new Set<string>()
+  const today = new Set<string>()
+  for (const entry of entries) {
+    const prefix = 'ex.reading.' + entry.id + '.'
+    if (results.some(row => row.exerciseId.startsWith(prefix))) seen.add(entry.id)
+    if (results.some(row => row.dayNumber === day && row.exerciseId.startsWith(prefix))) today.add(entry.id)
+  }
+  return Promise.all(selectDailyReadingEntries(entries, day, count, seen, today).map(loadLiveReadingText))
+}

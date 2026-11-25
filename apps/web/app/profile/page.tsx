@@ -16,7 +16,7 @@ import { voicesForLanguage } from '@/lib/speech/tts'
 import { speechTagForLanguage } from '@/lib/speech/recognition'
 
 type StudySettings = Pick<Settings, 'targetLanguage' | 'dailyBudgetMinutes' | 'ttsVoiceURI' | 'ttsRate'>
-type LessonPreferences = Pick<Settings, 'newWordsPerDay' | 'grammarExercisesPerDay' | 'grammarLessonFormats'>
+type LessonPreferences = Pick<Settings, 'newWordsPerDay' | 'grammarExercisesPerDay' | 'grammarLessonFormats' | 'readingTextsPerDay'>
 
 export default function ProfilePage() {
   const t = useTranslations()
@@ -89,6 +89,7 @@ export default function ProfilePage() {
           <h2 className="text-lg font-semibold tracking-tight">{t('profile.lessonSettings')}</h2>
           <SettingsFieldSkeleton label={t('profile.newWordsPerDay')} narrow />
           <p className="text-xs text-muted">{t('profile.newWordsHint')}</p>
+          <SettingsFieldSkeleton label={t('profile.readingTextsPerDay')} narrow />
           <SettingsFieldSkeleton label={t('profile.grammarExercisesPerDay')} narrow />
           <p className="text-sm font-medium">{t('profile.grammarLessonFormats')}</p>
           {['lessonChoice','lessonTyped','lessonWrite'].map(key => <div key={key} className="flex min-h-10 items-center gap-3"><SkeletonBlock className="size-5" /><SkeletonBlock className="h-5 w-32" /></div>)}
@@ -270,6 +271,12 @@ function LessonSettings({ settings }: { settings: LessonPreferences }) {
               </label>
             ))}
             <p className="text-xs text-muted">{t('grammarLessonHint')}</p>
+            <label className="flex flex-col gap-1 text-sm font-medium">
+              {t('readingTextsPerDay')}
+              <input type="number" min={0} max={3} required value={values.readingTextsPerDay}
+                onChange={(event) => change({ readingTextsPerDay: event.target.valueAsNumber })}
+                className="min-h-11 w-24 rounded-card border border-line bg-card px-2" />
+            </label>
             <Button type="submit" disabled={!draft} busy={status === 'saving'} busyLabel={t('saving')}>
               {t('saveLessonSettings')}
             </Button>
