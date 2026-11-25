@@ -1,0 +1,76 @@
+{
+  "id": "pl-b1.reading.day-068",
+  "day": 68,
+  "level": "A2",
+  "genre": "ogłoszenie",
+  "title": "Godziny otwarcia sklepów",
+  "text": "Informacja dla klientów centrum handlowego Pod Lipą\n\nW najbliższy czwartek w części budynku będą prowadzone prace przy instalacji elektrycznej. Z tego powodu trzy sklepy na parterze zmienią godziny otwarcia. Pozostałe punkty będą działały według zwykłego planu.\n\nPiekarnia otworzy się o szóstej rano jak zawsze, ale zakończy sprzedaż o dwunastej. Apteka będzie czynna od dziewiątej do jedenastej, a po przerwie ponownie od piętnastej do dziewiętnastej. Sklep papierniczy rozpocznie pracę dopiero o szesnastej. W piątek wszystkie trzy sklepy wrócą do swoich normalnych godzin.\n\nKlienci, którzy zamówili wcześniej tort w piekarni i mieli odebrać go w czwartek po południu, mogą odebrać zamówienie w kawiarni na pierwszym piętrze. Kawiarnia pracuje do osiemnastej. Należy pokazać numer zamówienia, aby pracownik mógł znaleźć właściwe pudełko.\n\nPrzejście do centrum od strony parkingu będzie zamknięte przez cały czwartek. Prosimy korzystać z głównego wejścia od ulicy Lipowej. Przepraszamy za utrudnienia i dziękujemy za wyrozumiałość.",
+  "questions": [
+    {
+      "id": "main-idea",
+      "skill": "main-idea",
+      "question": "Jaki jest główny cel ogłoszenia?",
+      "options": [
+        "Poinformowanie o czasowych zmianach w centrum.",
+        "Zaproszenie klientów na otwarcie piekarni.",
+        "Przedstawienie nowej oferty kawiarni."
+      ],
+      "answer": "Poinformowanie o czasowych zmianach w centrum.",
+      "evidence": "Z tego powodu trzy sklepy na parterze zmienią godziny otwarcia.",
+      "explanation": "Ogłoszenie uprzedza o zmianach i wyjaśnia, jak korzystać z centrum."
+    },
+    {
+      "id": "detail",
+      "skill": "detail",
+      "question": "O której w czwartek sklep papierniczy zacznie pracę?",
+      "options": [
+        "O szesnastej.",
+        "O osiemnastej.",
+        "O piętnastej."
+      ],
+      "answer": "O szesnastej.",
+      "evidence": "Sklep papierniczy rozpocznie pracę dopiero o szesnastej.",
+      "explanation": "Podano dokładną godzinę otwarcia."
+    },
+    {
+      "id": "cause",
+      "skill": "cause",
+      "question": "Dlaczego trzeba pokazać numer zamówienia w kawiarni?",
+      "options": [
+        "Aby zapłacić za miejsce przy stoliku.",
+        "Aby uzyskać dostęp do parkingu.",
+        "Aby pracownik znalazł właściwy tort."
+      ],
+      "answer": "Aby pracownik znalazł właściwy tort.",
+      "evidence": "Należy pokazać numer zamówienia, aby pracownik mógł znaleźć właściwe pudełko.",
+      "explanation": "Numer pozwala rozpoznać zamówienie."
+    },
+    {
+      "id": "inference",
+      "skill": "inference",
+      "question": "Klient chce odwiedzić aptekę i piekarnię podczas jednego wyjścia w czwartek. Która godzina mu odpowiada?",
+      "options": [
+        "Trzynasta.",
+        "Siedemnasta.",
+        "Dziesiąta."
+      ],
+      "answer": "Dziesiąta.",
+      "evidence": "Apteka będzie czynna od dziewiątej do jedenastej, a po przerwie ponownie od piętnastej do dziewiętnastej.",
+      "explanation": "O dziesiątej oba punkty są otwarte."
+    },
+    {
+      "id": "vocabulary",
+      "skill": "vocabulary",
+      "question": "Co oznacza „według zwykłego planu”?",
+      "options": [
+        "Dopiero po wcześniejszym zamówieniu.",
+        "Tylko w godzinach prac elektrycznych.",
+        "Tak jak w pozostałe normalne dni."
+      ],
+      "answer": "Tak jak w pozostałe normalne dni.",
+      "evidence": "Pozostałe punkty będą działały według zwykłego planu.",
+      "explanation": "Ich godziny pracy nie zmieniają się."
+    }
+  ],
+  "publicationStatus": "practice"
+}

@@ -1,0 +1,76 @@
+{
+  "id": "pl-b1.reading.day-048",
+  "day": 48,
+  "level": "A2",
+  "genre": "opowiadanie",
+  "title": "Zmiana codziennych zwyczajów",
+  "text": "Kasia chciała mieć po pracy więcej czasu na odpoczynek. W ciągu dnia często kupowała na obiad to, co akurat znalazła w sklepie. Wieczorem za długo korzystała z telefonu. W niedzielę usiadła i zrobiła prosty plan na następny tydzień.\n\nWybrała dwa wieczory, na które nie umówiła żadnych dodatkowych spotkań. Zapisała też kilka pomysłów na proste posiłki i kupiła produkty. Nie chciała planować każdej godziny. W pracy czasem niespodziewanie dostawała nowe zadanie i musiała zmienić plany na resztę dnia. Pół godziny przed snem odkładała telefon na półkę. Miała wtedy chwilę na spokojne zajęcia.\n\nPo pierwszym tygodniu Kasia zauważyła, że częściej ma gotowy posiłek i krócej korzysta z telefonu przed snem. Nie każdego dnia wszystko się udało, ale chciała spróbować jeszcze przez tydzień. Na razie nie zamierzała wprowadzać nowych zasad. Dopiero po kolejnym tygodniu chciała zdecydować, co dalej.",
+  "questions": [
+    {
+      "id": "main-idea",
+      "skill": "main-idea",
+      "question": "O czym jest tekst?",
+      "options": [
+        "O tym, jak Kasia organizuje spotkania dla kolegów z pracy.",
+        "O małych zmianach w codziennym życiu Kasi.",
+        "O tym, jak Kasia wybiera sklep z gotowymi obiadami."
+      ],
+      "answer": "O małych zmianach w codziennym życiu Kasi.",
+      "evidence": "Po pierwszym tygodniu Kasia zauważyła, że częściej ma gotowy posiłek i krócej korzysta z telefonu przed snem.",
+      "explanation": "Tekst opisuje kilka zmian i ich pierwsze efekty."
+    },
+    {
+      "id": "detail",
+      "skill": "detail",
+      "question": "Kiedy Kasia odkładała telefon?",
+      "options": [
+        "Zaraz po zakończeniu pracy.",
+        "Pół godziny przed snem.",
+        "Przed przygotowaniem obiadu."
+      ],
+      "answer": "Pół godziny przed snem.",
+      "evidence": "Pół godziny przed snem odkładała telefon na półkę.",
+      "explanation": "Telefon trafiał na półkę pod koniec wieczoru."
+    },
+    {
+      "id": "cause",
+      "skill": "cause",
+      "question": "Dlaczego Kasia nie planowała każdej godziny?",
+      "options": [
+        "Nie wiedziała jeszcze, jakie produkty kupi na obiad.",
+        "Każdego wieczoru chciała spotykać się z kimś innym.",
+        "Nowe zadania w pracy mogły zmienić jej plany."
+      ],
+      "answer": "Nowe zadania w pracy mogły zmienić jej plany.",
+      "evidence": "W pracy czasem niespodziewanie dostawała nowe zadanie i musiała zmienić plany na resztę dnia.",
+      "explanation": "Kasia zostawiała czas na sprawy, o których wcześniej nie wiedziała."
+    },
+    {
+      "id": "inference",
+      "skill": "inference",
+      "question": "Koleżanka proponuje Kasi nowe zasady już na drugi tydzień. Co Kasia najpewniej odpowie?",
+      "options": [
+        "„Wolę teraz zrobić sobie tydzień przerwy od planowania”.",
+        "„Chcę jeszcze sprawdzić, jak działają obecne zasady”.",
+        "„Zacznę od nowych zasad, a potem wrócę do starych”."
+      ],
+      "answer": "„Chcę jeszcze sprawdzić, jak działają obecne zasady”.",
+      "evidence": "Dopiero po kolejnym tygodniu chciała zdecydować, co dalej.",
+      "explanation": "Kasia chce dać swojemu planowi więcej czasu przed zmianami."
+    },
+    {
+      "id": "vocabulary",
+      "skill": "vocabulary",
+      "question": "Co oznacza tu „niespodziewanie”?",
+      "options": [
+        "Tak, że Kasia wcześniej o tym nie wiedziała.",
+        "Tak często, że Kasia mogła to zaplanować.",
+        "Tak późno, że Kasia kończyła już pracę."
+      ],
+      "answer": "Tak, że Kasia wcześniej o tym nie wiedziała.",
+      "evidence": "W pracy czasem niespodziewanie dostawała nowe zadanie i musiała zmienić plany na resztę dnia.",
+      "explanation": "Nowe zadanie było dla Kasi zaskoczeniem."
+    }
+  ],
+  "publicationStatus": "practice"
+}

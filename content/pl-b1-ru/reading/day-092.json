@@ -1,0 +1,87 @@
+{
+  "id": "pl-b1.reading.day-092",
+  "day": 92,
+  "level": "B1",
+  "genre": "artykuł",
+  "title": "Co zrobić z rzeczami z szafy?",
+  "text": "Kiedy Ewa porządkuje mieszkanie, zwykle zaczyna od segregacji odpadów. W Polsce podstawowy podział obejmuje pięć grup. Osobno zbiera się papier, szkło, metale i tworzywa sztuczne, odpady biologiczne oraz pozostałe odpady. Ewa zna te grupy, ale dziś podczas sprzątania znajduje rzeczy, z którymi musi postąpić inaczej.\n\nNa dnie szafy leży torba z urwanym uchem, a obok niej kurtka, która jest na Ewę za mała. Materiał torby jest mocny. Ewa odkłada ją na krzesło obok pudełka z igłami i nićmi. Kurtkę przymierzy jutro jej siostra. Jeśli będzie na nią dobra, chętnie zabierze ją na jesienny wyjazd. W ten sposób ubranie może dalej komuś służyć.\n\nZostają jeszcze mocno zniszczone ubrania. W podstawowym systemie nie ma osobnego, szóstego pojemnika na tekstylia. Ewa sprawdza więc na stronie swojej gminy, gdzie oddać takie rzeczy. Do tego czasu zostawi je w osobnym miejscu. Przy drzwiach stoi też oznaczona butelka po napoju. Ewa zabierze ją do punktu zbiórki w ramach systemu kaucyjnego, który działa obok zwykłej segregacji.\n\nPo sprzątaniu Ewa skreśla nową torbę z listy zakupów. Rozumie, że o ilości śmieci decyduje również to, co zrobi z przedmiotem, zanim uzna go za odpad. Czasem wystarczy chwila pracy albo rozmowa z kimś, komu dana rzecz nadal może się przydać. W kuchni nadal ma tyle samo koszy co wcześniej.",
+  "source": {
+    "url": "https://www.gov.pl/web/klimat/segregacjaodpadow",
+    "publisher": "Ministerstwo Klimatu i Środowiska",
+    "title": "Segregacja odpadów",
+    "facts": [
+      "Five basic bins form the sorting system; textile waste is not a sixth ordinary bin; separate deposit scheme for eligible beverage packaging."
+    ],
+    "use": "facts-only",
+    "checked": "2026-11-25",
+    "adaptation": "Original Polish educational composition based on source facts; illustrative people/scenarios are fictional."
+  },
+  "questions": [
+    {
+      "id": "main-idea",
+      "skill": "main-idea",
+      "question": "Co łączy decyzje Ewy podczas porządków?",
+      "options": [
+        "Ewa urządza kuchnię tak, by każda znaleziona rzecz miała osobny kosz.",
+        "Ewa szuka jednego miejsca, do którego odda wszystkie rzeczy z mieszkania.",
+        "Ewa dobiera sposób postępowania do rzeczy i sprawdza, co może jeszcze służyć ludziom."
+      ],
+      "answer": "Ewa dobiera sposób postępowania do rzeczy i sprawdza, co może jeszcze służyć ludziom.",
+      "evidence": "Czasem wystarczy chwila pracy albo rozmowa z kimś, komu dana rzecz nadal może się przydać.",
+      "explanation": "Ewa rozważa naprawę i przekazanie rzeczy, a dla odpadów szuka odpowiedniej drogi zbiórki."
+    },
+    {
+      "id": "detail",
+      "skill": "detail",
+      "question": "Co Ewa sprawdza na stronie gminy?",
+      "options": [
+        "Gdzie można naprawić torbę.",
+        "Gdzie oddać zniszczone ubrania.",
+        "Gdzie zwrócić oznaczoną butelkę."
+      ],
+      "answer": "Gdzie oddać zniszczone ubrania.",
+      "evidence": "Ewa sprawdza więc na stronie swojej gminy, gdzie oddać takie rzeczy.",
+      "explanation": "W poprzednich zdaniach mowa o zniszczonych ubraniach i tekstyliach."
+    },
+    {
+      "id": "cause",
+      "skill": "cause",
+      "question": "Dlaczego kurtka czeka na siostrę Ewy?",
+      "options": [
+        "Siostra ma ją zanieść do punktu zbiórki tekstyliów.",
+        "Siostra ma pokazać Ewie, jak naprawić kurtkę przed wyjazdem.",
+        "Kurtka może pasować na siostrę i przydać się jej w podróży."
+      ],
+      "answer": "Kurtka może pasować na siostrę i przydać się jej w podróży.",
+      "evidence": "Jeśli będzie na nią dobra, chętnie zabierze ją na jesienny wyjazd.",
+      "explanation": "Kurtka jest za mała dla Ewy, ale siostra może jej nadal używać."
+    },
+    {
+      "id": "inference",
+      "skill": "inference",
+      "question": "Dlaczego Ewa mogła skreślić nową torbę z listy?",
+      "options": [
+        "Siostra zostawi jej swoją torbę w zamian za kurtkę.",
+        "Ewa spodziewa się, że po przyszyciu ucha stara torba znów się przyda.",
+        "Punkt zbiórki przyjmie starą torbę razem z butelką."
+      ],
+      "answer": "Ewa spodziewa się, że po przyszyciu ucha stara torba znów się przyda.",
+      "evidence": "Materiał torby jest mocny. Ewa odkłada ją na krzesło obok pudełka z igłami i nićmi.",
+      "explanation": "Stan materiału i wybór miejsca wskazują na zamiar naprawy. To wyjaśnia rezygnację z zakupu."
+    },
+    {
+      "id": "vocabulary",
+      "skill": "vocabulary",
+      "question": "Co znaczy tutaj „skreśla nową torbę z listy zakupów”?",
+      "options": [
+        "Dopisuje torbę do rzeczy, które siostra ma przymierzyć.",
+        "Odkłada starą torbę do rzeczy przeznaczonych do oddania.",
+        "Rezygnuje z planowanego kupna nowej torby."
+      ],
+      "answer": "Rezygnuje z planowanego kupna nowej torby.",
+      "evidence": "Po sprzątaniu Ewa skreśla nową torbę z listy zakupów.",
+      "explanation": "Skreślenie rzeczy z takiej listy oznacza, że Ewa już nie planuje jej kupić."
+    }
+  ],
+  "publicationStatus": "practice"
+}

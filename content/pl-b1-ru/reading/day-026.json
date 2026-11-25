@@ -1,0 +1,76 @@
+{
+  "id": "pl-b1.reading.day-026",
+  "day": 26,
+  "level": "A1",
+  "genre": "opowiadanie",
+  "title": "Pierwszy koncert",
+  "text": "Wczoraj wieczorem byłam na swoim pierwszym koncercie jazzowym. Poszłam tam z kolegą, który bardzo lubi tę muzykę. Na początku nie znałam żadnego utworu, ale szybko zaczęłam słuchać z zainteresowaniem. Muzycy grali na trąbce, pianinie i perkusji. Sala była mała, więc dobrze widziałam scenę.\n\nPodczas przerwy kupiłam wodę i rozmawiałam z kolegą o muzyce. Po koncercie wróciłam do domu tramwajem. Byłam zmęczona, ale zadowolona. Dzisiaj rano znalazłam w internecie muzykę tego zespołu i słuchałam jej podczas śniadania. Chcę pójść na kolejny koncert, kiedy zespół znów przyjedzie do naszego miasta.",
+  "questions": [
+    {
+      "id": "main-idea",
+      "skill": "main-idea",
+      "question": "O czym opowiada autorka?",
+      "options": [
+        "O pierwszej lekcji gry na pianinie.",
+        "O pierwszej wizycie na koncercie jazzowym.",
+        "O pierwszej próbie swojego zespołu."
+      ],
+      "answer": "O pierwszej wizycie na koncercie jazzowym.",
+      "evidence": "Wczoraj wieczorem byłam na swoim pierwszym koncercie jazzowym.",
+      "explanation": "Autorka opisuje występ, którego słuchała, i swoje wrażenia."
+    },
+    {
+      "id": "detail",
+      "skill": "detail",
+      "question": "Czym autorka wróciła do domu?",
+      "options": [
+        "Rowerem.",
+        "Tramwajem.",
+        "Pociągiem."
+      ],
+      "answer": "Tramwajem.",
+      "evidence": "Po koncercie wróciłam do domu tramwajem.",
+      "explanation": "Po występie jechała tramwajem."
+    },
+    {
+      "id": "cause",
+      "skill": "cause",
+      "question": "Dlaczego dobrze widziała scenę?",
+      "options": [
+        "Sala była mała.",
+        "Stała blisko muzyków.",
+        "Siedziała w pierwszym rzędzie."
+      ],
+      "answer": "Sala była mała.",
+      "evidence": "Sala była mała, więc dobrze widziałam scenę.",
+      "explanation": "Autorka wyjaśnia to wielkością sali."
+    },
+    {
+      "id": "inference",
+      "skill": "inference",
+      "question": "Co można powiedzieć o autorce po koncercie?",
+      "options": [
+        "Ma ochotę lepiej poznać ten zespół.",
+        "Woli nagrania od muzyki na żywo.",
+        "Chce sama uczyć się gry na trąbce."
+      ],
+      "answer": "Ma ochotę lepiej poznać ten zespół.",
+      "evidence": "Dzisiaj rano znalazłam w internecie muzykę tego zespołu i słuchałam jej podczas śniadania.",
+      "explanation": "Szuka nagrań i chce wrócić na koncert, co wskazuje na zainteresowanie zespołem."
+    },
+    {
+      "id": "vocabulary",
+      "skill": "vocabulary",
+      "question": "Co to jest „utwór” na koncercie?",
+      "options": [
+        "Jeden kawałek muzyki, który gra zespół.",
+        "Instrument, na którym gra muzyk.",
+        "Przerwa między dwiema piosenkami."
+      ],
+      "answer": "Jeden kawałek muzyki, który gra zespół.",
+      "evidence": "Na początku nie znałam żadnego utworu, ale szybko zaczęłam słuchać z zainteresowaniem.",
+      "explanation": "Utwór to jedna kompozycja, na przykład piosenka."
+    }
+  ],
+  "publicationStatus": "practice"
+}

@@ -119,11 +119,12 @@ export function ReadingPreview({ preview = false }: { preview?: boolean }) {
                 <Stack gap="xs" align="start">
                   <span className="text-sm">{entry.day ? t('day', { day: entry.day, level: entry.level ?? '' }) : t('legacy')}</span>
                   <span lang="pl" className="text-left">{entry.title}</span>
+                  {entry.status === 'practice' && <span className="text-xs text-muted">{t('practiceReviewPending')}</span>}
                 </Stack>
               </Button>)}
             </>}
           </>}
-          {phase === 'reading' && session && <Card><Passage text={session.text} /></Card>}
+          {phase === 'reading' && session && <Card><Stack gap="sm">{session.entry.status === 'practice' && <p className="text-xs text-muted">{t('practiceReviewPending')}</p>}<Passage text={session.text} /></Stack></Card>}
           {phase === 'questions' && session && exercise && <>
             <Row align="center">
               <p className="flex-1 text-sm text-muted">{lesson('progress', { done: index + 1, total })}</p>

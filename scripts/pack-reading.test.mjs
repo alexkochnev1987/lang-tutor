@@ -70,3 +70,12 @@ test('real draft corpus is structurally valid and builds one file per day', () =
   assert.equal(preview.files.size, daily.length)
   assert.equal(preview.files.get('day-054.json').questions.length, 5)
 })
+
+
+test('marks explicitly released practice passages without promoting them to approved', () => {
+  // Reuse a real valid draft, leaving the review status explicit.
+  const draft = JSON.parse(readFileSync(new URL('./reading-drafts/pilot-a.json', import.meta.url), 'utf8')).texts[0]
+  const released = { ...draft, publicationStatus: 'practice' }
+  assert.equal(makeReadingPack({ daily: [released] }).index.entries[0].status, 'practice')
+  assert.equal(makeReadingPack({ daily: [released], status: 'preview' }).index.entries[0].status, 'preview')
+})

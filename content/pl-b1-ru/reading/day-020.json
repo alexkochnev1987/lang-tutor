@@ -1,0 +1,76 @@
+{
+  "id": "pl-b1.reading.day-020",
+  "day": 20,
+  "level": "A1",
+  "genre": "opowiadanie",
+  "title": "Wieczór bez telefonu",
+  "text": "Kuba i Iza często patrzą na telefony nawet podczas kolacji. Dzisiaj chcą spędzić wieczór inaczej. Po pracy odkładają telefony na półkę w przedpokoju. Kuba gotuje makaron, a Iza przygotowuje sałatkę. Jedzą razem i rozmawiają o swoich planach na weekend.\n\nPo kolacji grają w grę planszową. Iza wygrywa pierwszą partię, Kuba drugą. Potem idą na krótki spacer z psem. W domu nie włączają telewizora, tylko czytają książki. Przed snem sprawdzają wiadomości na telefonach. Są zadowoleni, bo mają więcej czasu na rozmowę i odpoczynek. Chcą powtórzyć taki wieczór w następnym tygodniu.",
+  "questions": [
+    {
+      "id": "main-idea",
+      "skill": "main-idea",
+      "question": "O czym opowiada tekst?",
+      "options": [
+        "O tym, jak Kuba i Iza wybierają nową grę.",
+        "O wspólnym wieczorze z telefonami na półce.",
+        "O tym, jak Kuba i Iza spędzają weekend u znajomych."
+      ],
+      "answer": "O wspólnym wieczorze z telefonami na półce.",
+      "evidence": "Dzisiaj chcą spędzić wieczór inaczej. Po pracy odkładają telefony na półkę w przedpokoju.",
+      "explanation": "Podczas kolacji, gry i spaceru para spędza razem czas bez telefonu."
+    },
+    {
+      "id": "detail",
+      "skill": "detail",
+      "question": "Kto przygotowuje sałatkę?",
+      "options": [
+        "Kuba i Iza razem.",
+        "Iza.",
+        "Kuba."
+      ],
+      "answer": "Iza.",
+      "evidence": "Kuba gotuje makaron, a Iza przygotowuje sałatkę.",
+      "explanation": "Iza robi sałatkę, a Kuba przygotowuje makaron."
+    },
+    {
+      "id": "cause",
+      "skill": "cause",
+      "question": "Dlaczego Kuba i Iza są zadowoleni z wieczoru?",
+      "options": [
+        "Udało im się wcześniej pójść spać.",
+        "Udało im się przygotować kolację na cały weekend.",
+        "Mają więcej czasu na rozmowę i odpoczynek."
+      ],
+      "answer": "Mają więcej czasu na rozmowę i odpoczynek.",
+      "evidence": "Są zadowoleni, bo mają więcej czasu na rozmowę i odpoczynek.",
+      "explanation": "Cieszą się z czasu, który mogą spędzić razem."
+    },
+    {
+      "id": "inference",
+      "skill": "inference",
+      "question": "Kolega pisze do Kuby podczas kolacji. Kiedy Kuba najpewniej przeczyta wiadomość?",
+      "options": [
+        "Wieczorem przed snem.",
+        "Następnego dnia po pracy.",
+        "W trakcie jedzenia."
+      ],
+      "answer": "Wieczorem przed snem.",
+      "evidence": "Przed snem sprawdzają wiadomości na telefonach.",
+      "explanation": "Podczas wieczoru telefon leży na półce, a Kuba zagląda do wiadomości przed snem."
+    },
+    {
+      "id": "vocabulary",
+      "skill": "vocabulary",
+      "question": "Co oznacza „odkładają telefony na półkę”?",
+      "options": [
+        "Biorą telefony z półki, żeby ich użyć.",
+        "Podłączają telefony do prądu na półce.",
+        "Kładą telefony na półce i na razie ich nie używają."
+      ],
+      "answer": "Kładą telefony na półce i na razie ich nie używają.",
+      "evidence": "Po pracy odkładają telefony na półkę w przedpokoju.",
+      "explanation": "Para zostawia telefony w przedpokoju na czas wspólnego wieczoru."
+    }
+  ],
+  "publicationStatus": "practice"
+}

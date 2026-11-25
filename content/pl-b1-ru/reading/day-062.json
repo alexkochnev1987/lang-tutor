@@ -1,0 +1,76 @@
+{
+  "id": "pl-b1.reading.day-062",
+  "day": 62,
+  "level": "A2",
+  "genre": "opowiadanie",
+  "title": "Praca z domu a biuro",
+  "text": "Gdy w firmie Zosi pojawiła się możliwość pracy z domu, zdecydowała się pracować w domu przez cały tydzień. Dzięki temu nie traciła czasu na dojazdy i mogła rano spokojnie zjeść śniadanie. Pracowała przy biurku w swoim pokoju. Przez pierwsze tygodnie bardzo podobał jej się ten sposób organizacji dnia.\n\nZ czasem zauważyła jednak pewien problem. Kiedy potrzebowała szybkiej odpowiedzi od kolegi, często musiała czekać na wiadomość, a krótkie rozmowy zamieniały się w długie spotkania przez internet. W dni, kiedy przygotowywała własny raport, nie przeszkadzało jej to. Trudniej było wtedy, gdy kilka osób miało wspólnie ustalić plan pracy.\n\nZosia porozmawiała z szefem i zaczęła przychodzić do biura we wtorki i czwartki. W tych dniach jej zespół planuje wspólne zadania oraz rozwiązuje problemy klientów. W inne dni Zosia pracuje w domu i przygotowuje dokumenty. Teraz nie musi codziennie dojeżdżać do pracy, a ważne rozmowy może prowadzić bezpośrednio z kolegami, siedząc z nimi w jednym pokoju. Nie uważa już, że jedno miejsce pracy jest najlepsze do wszystkich zadań.",
+  "questions": [
+    {
+      "id": "main-idea",
+      "skill": "main-idea",
+      "question": "Do jakiego wniosku dochodzi Zosia?",
+      "options": [
+        "Najlepiej planować wspólne zadania w domu, a dokumenty przygotowywać w biurze.",
+        "Najlepiej wybierać miejsce pracy według czasu dojazdu do biura.",
+        "Różne rodzaje zadań lepiej wykonywać w różnych miejscach."
+      ],
+      "answer": "Różne rodzaje zadań lepiej wykonywać w różnych miejscach.",
+      "evidence": "W tych dniach jej zespół planuje wspólne zadania oraz rozwiązuje problemy klientów. W inne dni Zosia pracuje w domu i przygotowuje dokumenty.",
+      "explanation": "Zosia dostosowuje miejsce pracy do tego, czy potrzebuje współpracy, czy skupienia na własnym zadaniu."
+    },
+    {
+      "id": "detail",
+      "skill": "detail",
+      "question": "W które dni Zosia chodzi teraz do biura?",
+      "options": [
+        "We wtorki i czwartki.",
+        "W poniedziałki i środy.",
+        "W środy i piątki."
+      ],
+      "answer": "We wtorki i czwartki.",
+      "evidence": "Zosia porozmawiała z szefem i zaczęła przychodzić do biura we wtorki i czwartki.",
+      "explanation": "Tekst podaje dwa stałe dni pracy w biurze."
+    },
+    {
+      "id": "cause",
+      "skill": "cause",
+      "question": "Dlaczego praca wyłącznie z domu stała się mniej wygodna?",
+      "options": [
+        "Przygotowanie własnych raportów wymagało dokumentów z biura.",
+        "Szybkie ustalenia z kolegami często trwały zbyt długo.",
+        "Spotkania przez internet przeszkadzały Zosi głównie w pisaniu własnych raportów."
+      ],
+      "answer": "Szybkie ustalenia z kolegami często trwały zbyt długo.",
+      "evidence": "Kiedy potrzebowała szybkiej odpowiedzi od kolegi, często musiała czekać na wiadomość, a krótkie rozmowy zamieniały się w długie spotkania przez internet.",
+      "explanation": "Trudność dotyczyła komunikacji przy wspólnych zadaniach."
+    },
+    {
+      "id": "inference",
+      "skill": "inference",
+      "question": "Zespół ma ustalić plan dla klienta, a Zosia musi też napisać długi raport bez pomocy innych. Który plan najlepiej odpowiada jej nowym zwyczajom?",
+      "options": [
+        "Ustalić plan w środę przez internet, a raport napisać w czwartek w biurze.",
+        "Ustalić plan i przygotować raport w poniedziałek w domu.",
+        "Ustalić plan we wtorek w biurze, a raport przygotować w środę w domu."
+      ],
+      "answer": "Ustalić plan we wtorek w biurze, a raport przygotować w środę w domu.",
+      "evidence": "Zosia porozmawiała z szefem i zaczęła przychodzić do biura we wtorki i czwartki. W tych dniach jej zespół planuje wspólne zadania oraz rozwiązuje problemy klientów. W inne dni Zosia pracuje w domu i przygotowuje dokumenty.",
+      "explanation": "Wtorek jest dniem współpracy, a środa pozwala pracować nad własnym dokumentem w domu."
+    },
+    {
+      "id": "vocabulary",
+      "skill": "vocabulary",
+      "question": "Co znaczy „bezpośrednio z kolegami” w ostatnim akapicie?",
+      "options": [
+        "Przekazując swoje pytania kolegom przez kierownika zespołu.",
+        "Rozmawiając z kolegami twarzą w twarz w biurze.",
+        "Rozmawiając z kolegami przez internet zamiast pisać wiadomości."
+      ],
+      "answer": "Rozmawiając z kolegami twarzą w twarz w biurze.",
+      "evidence": "Teraz nie musi codziennie dojeżdżać do pracy, a ważne rozmowy może prowadzić bezpośrednio z kolegami, siedząc z nimi w jednym pokoju.",
+      "explanation": "W kontekście Zosi chodzi o osobistą rozmowę w biurze, a nie o kontakt przez internet."
+    }
+  ],
+  "publicationStatus": "practice"
+}

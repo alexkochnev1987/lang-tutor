@@ -1,4 +1,4 @@
-export type ReadingStatus = 'legacy' | 'approved' | 'preview'
+export type ReadingStatus = 'legacy' | 'approved' | 'practice' | 'preview'
 
 export interface ReadingCatalogEntry {
   id: string
@@ -17,7 +17,7 @@ export interface ReadingCatalog {
 /** Never substitute a draft or a passage assigned to a different curriculum day. */
 export function selectReadingEntry(entries: ReadingCatalogEntry[], day: number): ReadingCatalogEntry | undefined {
   if (!Number.isSafeInteger(day) || day < 1) return undefined
-  const daily = entries.find(entry => entry.status === 'approved' && entry.day === day)
+  const daily = entries.find(entry => (entry.status === 'approved' || entry.status === 'practice') && entry.day === day)
   if (daily) return daily
   const legacy = entries.filter(entry => entry.status === 'legacy')
   return legacy[(day - 1) % legacy.length]
@@ -37,7 +37,7 @@ export function selectDailyReadingEntries(entries: ReadingCatalogEntry[], day: n
   if (!Number.isSafeInteger(day) || day < 1 || !Number.isInteger(count) || count <= 0) return []
   const legacy = entries.filter(entry => entry.status === 'legacy')
   const offset = legacy.length ? (day - 1) % legacy.length : 0
-  const approved = entries.filter(entry => entry.status === 'approved' && entry.day !== undefined && entry.day <= day).sort((a, b) => b.day! - a.day!)
+  const approved = entries.filter(entry => (entry.status === 'approved' || entry.status === 'practice') && entry.day !== undefined && entry.day <= day).sort((a, b) => b.day! - a.day!)
   const pool = [...approved, ...legacy.slice(offset), ...legacy.slice(0, offset)]
   const exact = approved.find(entry => entry.day === day)
   const rank = (entry: ReadingCatalogEntry) => today.has(entry.id) ? 0 : entry.id === exact?.id ? 1 : !seen.has(entry.id) ? 2 : 3

@@ -1,0 +1,76 @@
+{
+  "id": "pl-b1.reading.day-009",
+  "day": 9,
+  "level": "A1",
+  "genre": "wiadomość",
+  "title": "Przerwa w dostawie wody",
+  "text": "Drodzy sąsiedzi, w czwartek rano w naszym budynku będzie pracował hydraulik. Od dziewiątej do jedenastej nie będzie zimnej wody. Ciepłej wody też może przez ten czas nie być. Prosimy wcześniej przygotować wodę do picia i gotowania.\n\nHydraulik będzie pracował w piwnicy, więc nie trzeba zostawiać kluczy do mieszkań. Po jedenastej woda powinna już być. Jeśli nadal nie będzie wody, prosimy zadzwonić do biura. Numer telefonu jest na tablicy przy drzwiach do budynku. Przepraszamy za kłopot i dziękujemy za cierpliwość. Wiosną znów sprawdzimy rury w piwnicy.",
+  "questions": [
+    {
+      "id": "main-idea",
+      "skill": "main-idea",
+      "question": "Po co sąsiedzi dostają tę wiadomość?",
+      "options": [
+        "Żeby wiedzieli, kiedy zabraknie wody.",
+        "Żeby wybrali nową datę naprawy.",
+        "Żeby umówili wizytę hydraulika w mieszkaniu."
+      ],
+      "answer": "Żeby wiedzieli, kiedy zabraknie wody.",
+      "evidence": "Od dziewiątej do jedenastej nie będzie zimnej wody.",
+      "explanation": "Wiadomość podaje czas przerwy i wyjaśnia, jak się przygotować."
+    },
+    {
+      "id": "detail",
+      "skill": "detail",
+      "question": "Kiedy nie będzie zimnej wody?",
+      "options": [
+        "W piątek od dziewiątej do jedenastej.",
+        "W czwartek od dziewiątej do jedenastej.",
+        "W czwartek po siedemnastej."
+      ],
+      "answer": "W czwartek od dziewiątej do jedenastej.",
+      "evidence": "w czwartek rano w naszym budynku będzie pracował hydraulik. Od dziewiątej do jedenastej nie będzie zimnej wody.",
+      "explanation": "Zapowiedziano dwugodzinną przerwę w czwartek rano."
+    },
+    {
+      "id": "cause",
+      "skill": "cause",
+      "question": "Dlaczego nie trzeba zostawiać kluczy do mieszkań?",
+      "options": [
+        "Wszyscy sąsiedzi będą w domu.",
+        "Hydraulik będzie pracował w piwnicy.",
+        "Hydraulik ma klucze od mieszkań."
+      ],
+      "answer": "Hydraulik będzie pracował w piwnicy.",
+      "evidence": "Hydraulik będzie pracował w piwnicy, więc nie trzeba zostawiać kluczy do mieszkań.",
+      "explanation": "Hydraulik potrzebuje dostępu do piwnicy."
+    },
+    {
+      "id": "inference",
+      "skill": "inference",
+      "question": "Ola chce ugotować zupę w czwartek o dziesiątej. Kiedy najlepiej nalać wodę do garnka?",
+      "options": [
+        "Przed dziewiątą tego dnia.",
+        "O wpół do jedenastej, przed końcem naprawy.",
+        "O dziesiątej, kiedy zacznie gotować."
+      ],
+      "answer": "Przed dziewiątą tego dnia.",
+      "evidence": "Od dziewiątej do jedenastej nie będzie zimnej wody.",
+      "explanation": "Ola potrzebuje wody w czasie przerwy, więc powinna nalać ją wcześniej."
+    },
+    {
+      "id": "vocabulary",
+      "skill": "vocabulary",
+      "question": "Co oznacza „kłopot” w ostatniej części wiadomości?",
+      "options": [
+        "Problem dla mieszkańców.",
+        "Zmianę daty spotkania.",
+        "Prośbę o pomoc."
+      ],
+      "answer": "Problem dla mieszkańców.",
+      "evidence": "Przepraszamy za kłopot i dziękujemy za cierpliwość.",
+      "explanation": "Autorzy przepraszają, bo brak wody utrudni mieszkańcom zwykłe czynności."
+    }
+  ],
+  "publicationStatus": "practice"
+}

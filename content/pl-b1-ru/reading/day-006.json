@@ -1,0 +1,76 @@
+{
+  "id": "pl-b1.reading.day-006",
+  "day": 6,
+  "level": "A1",
+  "genre": "opowiadanie",
+  "title": "Sąsiadka z drugiego piętra",
+  "text": "Pani Zofia mieszka sama na drugim piętrze. Ma psa o imieniu Burek. Codziennie rano wychodzi z nim na spacer. W domu Zofia lubi robić ciasto i słuchać radia. Jej nowy sąsiad, Tomek, pracuje w biurze. Czasem spotykają się na schodach i rozmawiają.\n\nDzisiaj Tomek widzi, że Zofia niesie ciężką torbę z zakupami. Pomaga jej, bo w budynku nie ma windy. Zofia zaprasza go na herbatę i kawałek ciasta. Tomek ma dziś dużo pracy, ale obiecuje przyjść w sobotę. Zofia już cieszy się na sobotę. Lubi poznawać ludzi z sąsiedztwa.",
+  "questions": [
+    {
+      "id": "main-idea",
+      "skill": "main-idea",
+      "question": "O czym przede wszystkim jest tekst?",
+      "options": [
+        "O sobotnich zakupach do biura.",
+        "O porannych spacerach Tomka z psem.",
+        "O tym, jak nowi sąsiedzi się poznają."
+      ],
+      "answer": "O tym, jak nowi sąsiedzi się poznają.",
+      "evidence": "Czasem spotykają się na schodach i rozmawiają.",
+      "explanation": "Rozmowy, pomoc z zakupami i zaproszenie pokazują, jak rozwija się ich znajomość."
+    },
+    {
+      "id": "detail",
+      "skill": "detail",
+      "question": "Gdzie mieszka Zofia?",
+      "options": [
+        "Na parterze.",
+        "Na czwartym piętrze.",
+        "Na drugim piętrze."
+      ],
+      "answer": "Na drugim piętrze.",
+      "evidence": "Pani Zofia mieszka sama na drugim piętrze.",
+      "explanation": "Drugie piętro to miejsce zamieszkania Zofii."
+    },
+    {
+      "id": "cause",
+      "skill": "cause",
+      "question": "Dlaczego Tomek pomaga Zofii z torbą?",
+      "options": [
+        "Tomek też ma coś w tej torbie.",
+        "Torba jest ciężka, a w domu nie ma windy.",
+        "Zofia szuka drogi z domu do sklepu."
+      ],
+      "answer": "Torba jest ciężka, a w domu nie ma windy.",
+      "evidence": "Zofia niesie ciężką torbę z zakupami. Pomaga jej, bo w budynku nie ma windy.",
+      "explanation": "Zofia musi wnieść ciężką torbę po schodach."
+    },
+    {
+      "id": "inference",
+      "skill": "inference",
+      "question": "Co Zofia chce pokazać, kiedy zaprasza Tomka na ciasto?",
+      "options": [
+        "Że znów potrzebuje pomocy przy zakupach.",
+        "Że chciałaby iść z nim na spacer z psem.",
+        "Że jest mu wdzięczna za pomoc."
+      ],
+      "answer": "Że jest mu wdzięczna za pomoc.",
+      "evidence": "Pomaga jej, bo w budynku nie ma windy. Zofia zaprasza go na herbatę i kawałek ciasta.",
+      "explanation": "Zofia proponuje poczęstunek zaraz po tym, jak sąsiad jej pomaga."
+    },
+    {
+      "id": "vocabulary",
+      "skill": "vocabulary",
+      "question": "Kim są tutaj ludzie „z sąsiedztwa”?",
+      "options": [
+        "Osobami, które razem pracują.",
+        "Osobami, które często przychodzą w gości.",
+        "Osobami, które mieszkają blisko."
+      ],
+      "answer": "Osobami, które mieszkają blisko.",
+      "evidence": "Lubi poznawać ludzi z sąsiedztwa.",
+      "explanation": "Tomek jest jedną z osób, które mieszkają niedaleko Zofii."
+    }
+  ],
+  "publicationStatus": "practice"
+}

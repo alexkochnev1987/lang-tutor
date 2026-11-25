@@ -1,0 +1,76 @@
+{
+  "id": "pl-b1.reading.day-045",
+  "day": 45,
+  "level": "A2",
+  "genre": "artykuł",
+  "title": "Badania w miejscu pracy",
+  "text": "Przez dwa dni w pewnej firmie można było bezpłatnie skorzystać z badań. Na miejsce przyjechali lekarze i pielęgniarki. Spotykali się z pracownikami w osobnym pokoju. Nie trzeba było przychodzić do firmy po pracy. Każdy sam decydował, czy chce wziąć udział w badaniach.\n\nŻeby zarezerwować godzinę, trzeba było wypełnić formularz. Kilka osób miało trudności ze znalezieniem wolnej godziny. Dlatego organizatorzy dodali terminy na drugi dzień. Każdy uczestnik dostał swoje wyniki od personelu medycznego. Kierownicy dowiedzieli się tylko, ile osób przyszło na badania.\n\nPo tych dwóch dniach pracownicy podzielili się pomysłami. Jedni chcieli, żeby badania w firmie odbywały się częściej. Inni zaproponowali krótkie zajęcia o tym, jak odpoczywać i organizować pracę. Firma chce najpierw poznać opinie pracowników, a potem zaplanować kolejne spotkanie. Lekarze przypomnieli, że jeśli ktoś potrzebuje dalszych badań, spotkanie w firmie nie zastąpi osobnej wizyty.",
+  "questions": [
+    {
+      "id": "main-idea",
+      "skill": "main-idea",
+      "question": "Co opisuje tekst?",
+      "options": [
+        "Jak firma wybrała datę następnego spotkania z lekarzami.",
+        "Jak firma zorganizowała badania dla chętnych pracowników.",
+        "Jak firma prowadziła zajęcia o odpoczynku w pracy."
+      ],
+      "answer": "Jak firma zorganizowała badania dla chętnych pracowników.",
+      "evidence": "Przez dwa dni w pewnej firmie można było bezpłatnie skorzystać z badań.",
+      "explanation": "Głównym tematem są badania, ich organizacja i opinie pracowników."
+    },
+    {
+      "id": "detail",
+      "skill": "detail",
+      "question": "Jaką informację dostali kierownicy?",
+      "options": [
+        "Kto zarezerwował ostatni wolny termin.",
+        "Kto potrzebuje jeszcze jednej wizyty.",
+        "Ile osób skorzystało z badań."
+      ],
+      "answer": "Ile osób skorzystało z badań.",
+      "evidence": "Kierownicy dowiedzieli się tylko, ile osób przyszło na badania.",
+      "explanation": "Kierownicy poznali liczbę uczestników."
+    },
+    {
+      "id": "cause",
+      "skill": "cause",
+      "question": "Dlaczego dodano terminy na drugi dzień?",
+      "options": [
+        "Pierwszy dzień był przeznaczony dla kierowników.",
+        "Pracownicy chcieli przyjść dopiero po pracy.",
+        "Trudno było znaleźć wolną godzinę."
+      ],
+      "answer": "Trudno było znaleźć wolną godzinę.",
+      "evidence": "Kilka osób miało trudności ze znalezieniem wolnej godziny. Dlatego organizatorzy dodali terminy na drugi dzień.",
+      "explanation": "Nowe terminy ułatwiały zapis osobom, które miały z tym trudność."
+    },
+    {
+      "id": "inference",
+      "skill": "inference",
+      "question": "Kierownik chce się dowiedzieć, jaki wynik dostała pani Anna. Co może zrobić, jeśli Anna chce mu o tym opowiedzieć?",
+      "options": [
+        "Sprawdzić wynik w formularzu do rezerwacji.",
+        "Odczytać wynik z informacji dla kierowników.",
+        "Porozmawiać z Anną o jej wyniku."
+      ],
+      "answer": "Porozmawiać z Anną o jej wyniku.",
+      "evidence": "Każdy uczestnik dostał swoje wyniki od personelu medycznego. Kierownicy dowiedzieli się tylko, ile osób przyszło na badania.",
+      "explanation": "Anna zna własny wynik, a w informacji dla kierowników jest tylko liczba osób."
+    },
+    {
+      "id": "vocabulary",
+      "skill": "vocabulary",
+      "question": "Co tu znaczy „zarezerwować godzinę”?",
+      "options": [
+        "Sprawdzić, ile trwało badanie.",
+        "Zapisać się na wybraną porę badania.",
+        "Zapisać, o której zakończono badanie."
+      ],
+      "answer": "Zapisać się na wybraną porę badania.",
+      "evidence": "Żeby zarezerwować godzinę, trzeba było wypełnić formularz.",
+      "explanation": "Pracownik wcześniej ustalał, o której przyjdzie."
+    }
+  ],
+  "publicationStatus": "practice"
+}

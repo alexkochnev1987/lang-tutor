@@ -1,0 +1,76 @@
+{
+  "id": "pl-b1.reading.day-030",
+  "day": 30,
+  "level": "A2",
+  "genre": "opowiadanie",
+  "title": "Bilet na wcześniejszy pociąg",
+  "text": "Aneta planowała pojechać do Gdańska w piątek po pracy. Kupiła bilet na pociąg o osiemnastej, ponieważ zwykle kończy pracę o siedemnastej. W czwartek kierownik poinformował ją, że następnego dnia biuro zostanie wcześniej zamknięte. Aneta postanowiła zmienić bilet, żeby spędzić więcej czasu nad morzem.\n\nNa stronie przewoźnika znalazła połączenie o czternastej. Zwykła zmiana biletu kosztowała niewiele, ale w tym pociągu zostały tylko miejsca w pierwszej klasie. Aneta porównała ceny i wybrała pociąg o piętnastej. Podróż trwała o dwadzieścia minut dłużej, lecz bilet był tańszy i nie musiała dopłacać za wyższą klasę.\n\nPrzed wyjściem z domu zapisała nowy bilet w telefonie. Przy starym bilecie pojawił się napis „anulowany”, więc usunęła go z listy dokumentów na podróż. Po przyjeździe do Gdańska zostawiła walizkę w hotelu. Miała jeszcze czas na spacer przed kolacją, choć początkowo planowała tylko zameldować się i odpocząć.",
+  "questions": [
+    {
+      "id": "main-idea",
+      "skill": "main-idea",
+      "question": "O czym przede wszystkim opowiada tekst?",
+      "options": [
+        "O kupowaniu pierwszego biletu przez telefon.",
+        "O zmianie biletu i wyborze dogodnego pociągu.",
+        "O planowaniu pobytu w nowym hotelu."
+      ],
+      "answer": "O zmianie biletu i wyborze dogodnego pociągu.",
+      "evidence": "Aneta postanowiła zmienić bilet, żeby spędzić więcej czasu nad morzem.",
+      "explanation": "Aneta porównuje wcześniejsze połączenia i wybiera takie, które jej odpowiada."
+    },
+    {
+      "id": "detail",
+      "skill": "detail",
+      "question": "O której odjeżdża wybrany pociąg?",
+      "options": [
+        "O osiemnastej.",
+        "O czternastej.",
+        "O piętnastej."
+      ],
+      "answer": "O piętnastej.",
+      "evidence": "Aneta porównała ceny i wybrała pociąg o piętnastej.",
+      "explanation": "O osiemnastej miał odjechać pierwotny pociąg, a połączenie o czternastej było droższe."
+    },
+    {
+      "id": "cause",
+      "skill": "cause",
+      "question": "Dlaczego Aneta nie wybrała pociągu o czternastej?",
+      "options": [
+        "Jechał dłużej niż pociąg o piętnastej.",
+        "Wolne miejsca były tylko w droższej klasie.",
+        "Nie było już żadnych miejsc."
+      ],
+      "answer": "Wolne miejsca były tylko w droższej klasie.",
+      "evidence": "w tym pociągu zostały tylko miejsca w pierwszej klasie.",
+      "explanation": "Aneta chciała uniknąć dopłaty za wyższą klasę."
+    },
+    {
+      "id": "inference",
+      "skill": "inference",
+      "question": "Co jest dla Anety ważne przy wyborze pociągu?",
+      "options": [
+        "Krótki przejazd i miejsce w pierwszej klasie.",
+        "Wcześniejszy przyjazd i cena biletu.",
+        "Późniejszy wyjazd i czas na odpoczynek w domu."
+      ],
+      "answer": "Wcześniejszy przyjazd i cena biletu.",
+      "evidence": "Podróż trwała o dwadzieścia minut dłużej, lecz bilet był tańszy i nie musiała dopłacać za wyższą klasę.",
+      "explanation": "Wybrała wcześniejszy od pierwotnego pociąg, ale zgodziła się na nieco dłuższą podróż, żeby zapłacić mniej."
+    },
+    {
+      "id": "vocabulary",
+      "skill": "vocabulary",
+      "question": "Co oznaczał napis „anulowany” przy starym bilecie?",
+      "options": [
+        "Bilet trzeba było pokazać razem z nowym.",
+        "Bilet trzeba było jeszcze wydrukować.",
+        "Biletu nie można było już użyć do przejazdu."
+      ],
+      "answer": "Biletu nie można było już użyć do przejazdu.",
+      "evidence": "Przy starym bilecie pojawił się napis „anulowany”, więc usunęła go z listy dokumentów na podróż.",
+      "explanation": "Po zmianie ważny był nowy bilet, a stary nie uprawniał już do przejazdu."
+    }
+  ],
+  "publicationStatus": "practice"
+}

@@ -1,0 +1,76 @@
+{
+  "id": "pl-b1.reading.day-013",
+  "day": 13,
+  "level": "A1",
+  "genre": "opowiadanie",
+  "title": "Przeprowadzka Oli",
+  "text": "Ola zmienia mieszkanie. Jej stare mieszkanie jest daleko od pracy, a nowe znajduje się przy stacji metra. W sobotę przyjeżdża brat Oli i pomaga jej przenosić rzeczy. Książki są w małych kartonach, ubrania w dużych torbach. Na każdym kartonie jest napis, na przykład „kuchnia” albo „łazienka”.\n\nOla chce najpierw przygotować kuchnię, żeby można było zrobić herbatę i coś zjeść. Potem ustawia łóżko i biurko. Nie kupuje dziś nowych mebli, bo chce zobaczyć, ile miejsca ma w pokojach. Wieczorem jest zmęczona, ale zadowolona. Teraz droga do pracy zajmie jej mniej czasu.",
+  "questions": [
+    {
+      "id": "main-idea",
+      "skill": "main-idea",
+      "question": "O czym opowiada tekst?",
+      "options": [
+        "O wyborze mebli do starego mieszkania.",
+        "O sobotniej wizycie Oli u brata.",
+        "O przeprowadzce Oli do nowego mieszkania."
+      ],
+      "answer": "O przeprowadzce Oli do nowego mieszkania.",
+      "evidence": "Ola zmienia mieszkanie.",
+      "explanation": "Tekst pokazuje, jak Ola pakuje i ustawia rzeczy w nowym domu."
+    },
+    {
+      "id": "detail",
+      "skill": "detail",
+      "question": "Kto pomaga Oli przenosić rzeczy?",
+      "options": [
+        "Jej brat.",
+        "Jej szef.",
+        "Jej sąsiadka."
+      ],
+      "answer": "Jej brat.",
+      "evidence": "przyjeżdża brat Oli i pomaga jej przenosić rzeczy.",
+      "explanation": "W sobotę pomaga jej brat."
+    },
+    {
+      "id": "cause",
+      "skill": "cause",
+      "question": "Dlaczego Ola zaczyna od kuchni?",
+      "options": [
+        "Chce zrobić herbatę i coś zjeść.",
+        "Chce tam rozpakować wszystkie książki.",
+        "Chce od razu ustawić tam nowe meble."
+      ],
+      "answer": "Chce zrobić herbatę i coś zjeść.",
+      "evidence": "Ola chce najpierw przygotować kuchnię, żeby można było zrobić herbatę i coś zjeść.",
+      "explanation": "Najpierw chce mieć miejsce, gdzie przygotuje jedzenie i picie."
+    },
+    {
+      "id": "inference",
+      "skill": "inference",
+      "question": "Ola nadal ma zaczynać pracę o tej samej porze. Co będzie mogła robić po przeprowadzce?",
+      "options": [
+        "Wracać po pracy pieszo razem z bratem.",
+        "Wychodzić z domu trochę później.",
+        "Chodzić do pracy pieszo w kilka minut."
+      ],
+      "answer": "Wychodzić z domu trochę później.",
+      "evidence": "Teraz droga do pracy zajmie jej mniej czasu.",
+      "explanation": "Skoro droga będzie krótsza, Ola może wyjść później i nadal zdążyć do pracy."
+    },
+    {
+      "id": "vocabulary",
+      "skill": "vocabulary",
+      "question": "Co oznacza tutaj „przenosić rzeczy”?",
+      "options": [
+        "Otwierać torby i układać rzeczy na półkach.",
+        "Brać rzeczy i zanosić je w inne miejsce.",
+        "Wybierać rzeczy, które chce się komuś oddać."
+      ],
+      "answer": "Brać rzeczy i zanosić je w inne miejsce.",
+      "evidence": "pomaga jej przenosić rzeczy.",
+      "explanation": "Przy przeprowadzce brat pomaga Oli nosić rzeczy z jednego miejsca do drugiego."
+    }
+  ],
+  "publicationStatus": "practice"
+}

@@ -1,0 +1,76 @@
+{
+  "id": "pl-b1.reading.day-073",
+  "day": 73,
+  "level": "A2",
+  "genre": "dialog",
+  "title": "Przepis z rodzinnego zeszytu",
+  "text": "— Babciu, chcę upiec twoje ciasto z jabłkami — mówi Ewa podczas niedzielnej wizyty. — Czy masz jeszcze przepis?\n\n— Oczywiście. Jest w niebieskim zeszycie na półce w kuchni.\n\nEwa otwiera zeszyt i zaczyna czytać. Przy jednej z linijek widzi plamę, przez którą nie może odczytać ilości cukru. Pyta babcię, ile trzeba go dodać.\n\n— Dawniej dodawałam pełną szklankę — odpowiada babcia. — Teraz często daję mniej, kiedy jabłka są bardzo słodkie. Najpierw spróbuj owoców.\n\nEwa zapisuje składniki w telefonie. Babcia pokazuje jej jeszcze, jak przygotować formę, żeby ciasto nie przykleiło się do dna. Przypomina też, że nie warto otwierać piekarnika zaraz po rozpoczęciu pieczenia.\n\n— Mogę sfotografować cały przepis? — pyta Ewa.\n\n— Jasne, ale zapisz też nasze uwagi, bo sam zeszyt nie zawiera wszystkich szczegółów.\n\nPo powrocie do domu Ewa przesyła zdjęcie siostrze i dodaje krótką notatkę z rozmowy. Obie chcą upiec ciasto w następną sobotę, kiedy rodzice przyjadą do nich na kawę.",
+  "questions": [
+    {
+      "id": "main-idea",
+      "skill": "main-idea",
+      "question": "Co Ewa robi podczas wizyty u babci?",
+      "options": [
+        "Porządkuje wszystkie książki w kuchni.",
+        "Uczy się przygotowywać rodzinne ciasto.",
+        "Szuka prezentu dla siostry."
+      ],
+      "answer": "Uczy się przygotowywać rodzinne ciasto.",
+      "evidence": "Babciu, chcę upiec twoje ciasto z jabłkami",
+      "explanation": "Ewa poznaje przepis i dodatkowe wskazówki."
+    },
+    {
+      "id": "detail",
+      "skill": "detail",
+      "question": "Czego nie może odczytać w zeszycie?",
+      "options": [
+        "Ilości jabłek.",
+        "Temperatury pieczenia.",
+        "Ilości cukru."
+      ],
+      "answer": "Ilości cukru.",
+      "evidence": "nie może odczytać ilości cukru",
+      "explanation": "Plama zasłania tę informację."
+    },
+    {
+      "id": "cause",
+      "skill": "cause",
+      "question": "Dlaczego babcia radzi najpierw spróbować jabłek?",
+      "options": [
+        "Ilość cukru można dostosować do ich słodkości.",
+        "Chce sprawdzić, czy Ewa zna nazwę odmiany.",
+        "Jabłka trzeba wybrać na dekorację stołu."
+      ],
+      "answer": "Ilość cukru można dostosować do ich słodkości.",
+      "evidence": "Teraz często daję mniej, kiedy jabłka są bardzo słodkie.",
+      "explanation": "Babcia uzależnia ilość cukru od smaku owoców."
+    },
+    {
+      "id": "inference",
+      "skill": "inference",
+      "question": "Co pomoże siostrze Ewy uniknąć błędu, którego nie opisano w zeszycie?",
+      "options": [
+        "Samo zdjęcie okładki zeszytu.",
+        "Lista gości na sobotę.",
+        "Notatka z dodatkowymi wskazówkami babci."
+      ],
+      "answer": "Notatka z dodatkowymi wskazówkami babci.",
+      "evidence": "Po powrocie do domu Ewa przesyła zdjęcie siostrze i dodaje krótką notatkę z rozmowy.",
+      "explanation": "Notatka uzupełnia brakujące szczegóły."
+    },
+    {
+      "id": "vocabulary",
+      "skill": "vocabulary",
+      "question": "Co oznaczają „uwagi” w tym dialogu?",
+      "options": [
+        "Oceny wyglądu ciasta po upieczeniu.",
+        "Nazwy produktów dostępnych w sklepie.",
+        "Dodatkowe wskazówki dotyczące przygotowania."
+      ],
+      "answer": "Dodatkowe wskazówki dotyczące przygotowania.",
+      "evidence": "zapisz też nasze uwagi, bo sam zeszyt nie zawiera wszystkich szczegółów",
+      "explanation": "Uwagi to informacje pomocne przy pieczeniu."
+    }
+  ],
+  "publicationStatus": "practice"
+}

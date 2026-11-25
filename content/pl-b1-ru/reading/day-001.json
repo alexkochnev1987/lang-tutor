@@ -1,0 +1,76 @@
+{
+  "id": "pl-b1.reading.day-001",
+  "day": 1,
+  "level": "A1",
+  "genre": "opowiadanie",
+  "title": "Rodzina Leny",
+  "text": "Mam na imię Lena. Mieszkam w Łodzi z mężem i córką. Nasze mieszkanie jest małe, ale jasne. Pracuję w sklepie od poniedziałku do piątku. Mój mąż jest kierowcą i często wraca późno. Nasza córka Ola ma osiem lat i lubi rysować.\n\nW sobotę zwykle jemy razem śniadanie. Potem idziemy do parku albo odwiedzamy moją mamę. Mama mieszka blisko nas. W niedzielę mamy mało planów, bo chcemy mieć czas dla siebie. Najbardziej lubię te spokojne poranki, kiedy nikt się nie spieszy.",
+  "questions": [
+    {
+      "id": "main-idea",
+      "skill": "main-idea",
+      "question": "O czym Lena opowiada w obu częściach tekstu?",
+      "options": [
+        "O różnych miejscach pracy w Łodzi.",
+        "O weekendzie Oli u babci.",
+        "O swojej rodzinie i jej zwyczajach."
+      ],
+      "answer": "O swojej rodzinie i jej zwyczajach.",
+      "evidence": "Mieszkam w Łodzi z mężem i córką.",
+      "explanation": "Lena przedstawia rodzinę, a potem opisuje ich wspólne weekendy."
+    },
+    {
+      "id": "detail",
+      "skill": "detail",
+      "question": "Gdzie pracuje Lena?",
+      "options": [
+        "W parku.",
+        "W sklepie.",
+        "W szkole."
+      ],
+      "answer": "W sklepie.",
+      "evidence": "Pracuję w sklepie",
+      "explanation": "Lena sama mówi, gdzie pracuje."
+    },
+    {
+      "id": "cause",
+      "skill": "cause",
+      "question": "Dlaczego rodzina ma mało planów w niedzielę?",
+      "options": [
+        "Chce mieć czas dla siebie.",
+        "Chce pójść wcześnie do sklepu.",
+        "Chce zdążyć do babci na śniadanie."
+      ],
+      "answer": "Chce mieć czas dla siebie.",
+      "evidence": "bo chcemy mieć czas dla siebie.",
+      "explanation": "Lena podaje powód, dla którego zostawiają sobie wolną niedzielę."
+    },
+    {
+      "id": "inference",
+      "skill": "inference",
+      "question": "Który plan na niedzielne śniadanie najbardziej spodobałby się Lenie?",
+      "options": [
+        "Zjeść wcześnie i od razu pobiec do parku.",
+        "Szybko zjeść przed wyjściem do sklepu.",
+        "Długo siedzieć razem przy stole."
+      ],
+      "answer": "Długo siedzieć razem przy stole.",
+      "evidence": "Najbardziej lubię te spokojne poranki, kiedy nikt się nie spieszy.",
+      "explanation": "Długie śniadanie pozwala rodzinie spokojnie spędzić razem czas."
+    },
+    {
+      "id": "vocabulary",
+      "skill": "vocabulary",
+      "question": "Co oznacza tutaj „nikt się nie spieszy”?",
+      "options": [
+        "Każdy może robić wszystko spokojnie.",
+        "Każdy stara się przyjść wcześniej.",
+        "Każdy musi skończyć przed czasem."
+      ],
+      "answer": "Każdy może robić wszystko spokojnie.",
+      "evidence": "te spokojne poranki, kiedy nikt się nie spieszy.",
+      "explanation": "Lena mówi o porankach, kiedy nie trzeba robić nic szybko."
+    }
+  ],
+  "publicationStatus": "practice"
+}

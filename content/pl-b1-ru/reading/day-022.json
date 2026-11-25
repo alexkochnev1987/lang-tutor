@@ -1,0 +1,76 @@
+{
+  "id": "pl-b1.reading.day-022",
+  "day": 22,
+  "level": "A1",
+  "genre": "dialog",
+  "title": "Gdzie dziś idziemy?",
+  "text": "— Co robimy w sobotę? — pyta Ola.\n\n— Możemy iść na wystawę albo na koncert — odpowiada Marek.\n\n— Jaki koncert?\n\n— W parku gra mały zespół jazzowy. Wstęp jest wolny.\n\n— O której zaczyna grać?\n\n— O siedemnastej. A wystawa jest otwarta od dziesiątej do piętnastej.\n\nOla chce zobaczyć zdjęcia na wystawie, ale w sobotę pracuje od ósmej. Kończy o czternastej i jedzie do domu pół godziny. Marek ma wolny cały dzień.\n\n— Może spotkamy się o szesnastej przy wejściu do parku? Najpierw kupimy coś do picia.\n\n— Dobry pomysł. Będę czekać przy wejściu. Na wystawę pójdę w niedzielę.",
+  "questions": [
+    {
+      "id": "main-idea",
+      "skill": "main-idea",
+      "question": "Co ustalają Ola i Marek?",
+      "options": [
+        "Jak dojadą razem do pracy.",
+        "Co zobaczą razem na wystawie zdjęć.",
+        "Jak spędzą razem sobotę."
+      ],
+      "answer": "Jak spędzą razem sobotę.",
+      "evidence": "Możemy iść na wystawę albo na koncert",
+      "explanation": "Rozważają dwa pomysły i ustalają spotkanie przy parku."
+    },
+    {
+      "id": "detail",
+      "skill": "detail",
+      "question": "O której zaczyna się koncert?",
+      "options": [
+        "O piętnastej.",
+        "O czternastej.",
+        "O siedemnastej."
+      ],
+      "answer": "O siedemnastej.",
+      "evidence": "O siedemnastej. A wystawa jest otwarta od dziesiątej do piętnastej.",
+      "explanation": "O siedemnastej zaczyna grać zespół."
+    },
+    {
+      "id": "cause",
+      "skill": "cause",
+      "question": "Dlaczego Ola odkłada wystawę na niedzielę?",
+      "options": [
+        "Koncert zaczyna się przed zamknięciem wystawy.",
+        "W sobotę wystawa kończy się przed jej pracą.",
+        "Po pracy ma mało czasu na wystawę."
+      ],
+      "answer": "Po pracy ma mało czasu na wystawę.",
+      "evidence": "Kończy o czternastej i jedzie do domu pół godziny.",
+      "explanation": "Wystawa jest otwarta do piętnastej, a Ola wraca do domu dopiero około wpół do trzeciej."
+    },
+    {
+      "id": "inference",
+      "skill": "inference",
+      "question": "Kto w sobotę o jedenastej może już zwiedzać wystawę?",
+      "options": [
+        "Ola i Marek.",
+        "Tylko Ola.",
+        "Tylko Marek."
+      ],
+      "answer": "Tylko Marek.",
+      "evidence": "Ola chce zobaczyć zdjęcia na wystawie, ale w sobotę pracuje od ósmej. Kończy o czternastej i jedzie do domu pół godziny. Marek ma wolny cały dzień.",
+      "explanation": "O jedenastej wystawa jest już otwarta. Ola wtedy pracuje, a Marek ma wolne."
+    },
+    {
+      "id": "vocabulary",
+      "skill": "vocabulary",
+      "question": "Co oznacza zdanie „Wstęp jest wolny”?",
+      "options": [
+        "Można wejść bez opłaty.",
+        "Za wejście płaci się po koncercie.",
+        "Bilet kosztuje mniej w sobotę."
+      ],
+      "answer": "Można wejść bez opłaty.",
+      "evidence": "Wstęp jest wolny.",
+      "explanation": "Za wejście na koncert nic się nie płaci."
+    }
+  ],
+  "publicationStatus": "practice"
+}

@@ -1,0 +1,76 @@
+{
+  "id": "pl-b1.reading.day-015",
+  "day": 15,
+  "level": "A1",
+  "genre": "wiadomość",
+  "title": "Mój wolny dzień",
+  "text": "Cześć, Moniko! Dzisiaj mam wolny dzień. Rano jem śniadanie z siostrą. Potem idziemy na rynek. Kupujemy chleb, ser i świeże warzywa. Moja siostra jest kucharką i umie przygotować bardzo dobry obiad. Ja zwykle robię proste kanapki.\n\nPo południu spotykam się z koleżanką w kawiarni. Ona jest nauczycielką i kończy pracę o trzeciej. Chcemy razem pójść do kina, ale najpierw pijemy kawę. Nie jadę samochodem, tylko autobusem, bo kino jest w centrum. Wieczorem wracam do domu i przygotowuję rzeczy na jutro.",
+  "questions": [
+    {
+      "id": "main-idea",
+      "skill": "main-idea",
+      "question": "O czym jest ta wiadomość?",
+      "options": [
+        "O tym, jak wygląda dzień pracy w szkole.",
+        "O tym, jak przygotować obiad dla koleżanki.",
+        "O tym, jak mija wolny dzień."
+      ],
+      "answer": "O tym, jak mija wolny dzień.",
+      "evidence": "mam wolny dzień.",
+      "explanation": "Nadawca opisuje zajęcia od śniadania aż do wieczora."
+    },
+    {
+      "id": "detail",
+      "skill": "detail",
+      "question": "Kim jest siostra osoby, która pisze do Moniki?",
+      "options": [
+        "Kierowcą.",
+        "Nauczycielką.",
+        "Kucharką."
+      ],
+      "answer": "Kucharką.",
+      "evidence": "Moja siostra jest kucharką",
+      "explanation": "W szkole pracuje koleżanka, a siostra gotuje zawodowo."
+    },
+    {
+      "id": "cause",
+      "skill": "cause",
+      "question": "Dlaczego na drogę do kina wybrano autobus?",
+      "options": [
+        "Rynek jest daleko od domu.",
+        "Kawiarnia jest przy przystanku.",
+        "Kino jest w centrum miasta."
+      ],
+      "answer": "Kino jest w centrum miasta.",
+      "evidence": "Nie jadę samochodem, tylko autobusem, bo kino jest w centrum.",
+      "explanation": "W wiadomości podano położenie kina jako powód wyboru autobusu."
+    },
+    {
+      "id": "inference",
+      "skill": "inference",
+      "question": "Koleżanka chce pójść na kawę zaraz po pracy. Którą godzinę może wybrać?",
+      "options": [
+        "15.15.",
+        "14.45.",
+        "14.15."
+      ],
+      "answer": "15.15.",
+      "evidence": "kończy pracę o trzeciej.",
+      "explanation": "Spotkanie jest po południu. Kwadrans po trzeciej koleżanka już nie pracuje."
+    },
+    {
+      "id": "vocabulary",
+      "skill": "vocabulary",
+      "question": "Co oznacza tutaj „wolny dzień”?",
+      "options": [
+        "Dzień, w którym kończy się pracę wcześniej.",
+        "Dzień, w którym nie trzeba iść do pracy.",
+        "Dzień, w którym pracuje się w domu."
+      ],
+      "answer": "Dzień, w którym nie trzeba iść do pracy.",
+      "evidence": "Dzisiaj mam wolny dzień.",
+      "explanation": "Tego dnia są zakupy i spotkanie z koleżanką, a do pracy nie trzeba iść."
+    }
+  ],
+  "publicationStatus": "practice"
+}

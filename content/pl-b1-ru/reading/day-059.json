@@ -1,0 +1,76 @@
+{
+  "id": "pl-b1.reading.day-059",
+  "day": 59,
+  "level": "A2",
+  "genre": "dialog",
+  "title": "Rozmowa o zadaniach",
+  "text": "— Aniu, potrzebuję twojej pomocy przy projekcie dla nowego klienta — mówi Jacek. — W piątek mamy pokazać mu pierwszy plan. Czy masz dziś czas?\n\n— Do południa kończę raport z poprzedniego tygodnia. Później mogę pomóc przez dwie godziny. W środę mam więcej czasu, ale w czwartek nie będzie mnie w biurze.\n\n— To dobrze. Brakuje nam informacji o cenach. Dzisiaj wystarczy, że sprawdzisz dokumenty od klienta. Nie dzwoń jeszcze do niego. Najpierw musimy sprawdzić, czego nie wiemy.\n\n— A kto przygotuje tabelę z kosztami? Nie mam w tym dużego doświadczenia.\n\n— Zrobię ją ja. W środę pokażę ci, jak pracujemy z takimi danymi. Chcę, żebyś w następnym miesiącu mogła przygotować podobny plan sama.\n\n— Dobrze, zapiszę dziś wszystkie pytania w jednym pliku. Jeśli nie znajdę odpowiedzi w dokumentach, zostawię wolne miejsce obok pytania.\n\n— Świetnie. Jutro rano przeczytam twoją listę. Dopiero wtedy wspólnie zdecydujemy, o które informacje trzeba jeszcze zapytać klienta. Przed piątkiem spotkamy się jeszcze z szefem.",
+  "questions": [
+    {
+      "id": "main-idea",
+      "skill": "main-idea",
+      "question": "Co jest celem rozmowy?",
+      "options": [
+        "Ustalenie, jak Ania ma sama przygotować cały plan dla klienta.",
+        "Ustalenie programu i godziny spotkania z klientem.",
+        "Ustalenie, kto co zrobi i w jakiej kolejności."
+      ],
+      "answer": "Ustalenie, kto co zrobi i w jakiej kolejności.",
+      "evidence": "Dzisiaj wystarczy, że sprawdzisz dokumenty od klienta. Nie dzwoń jeszcze do niego. Najpierw musimy sprawdzić, czego nie wiemy.",
+      "explanation": "Rozmówcy dzielą obowiązki, planują zdobycie informacji i przygotowują prezentację."
+    },
+    {
+      "id": "detail",
+      "skill": "detail",
+      "question": "Kto przygotuje tabelę z kosztami?",
+      "options": [
+        "Ania.",
+        "Jacek.",
+        "Szef."
+      ],
+      "answer": "Jacek.",
+      "evidence": "— A kto przygotuje tabelę z kosztami? Nie mam w tym dużego doświadczenia.\n\n— Zrobię ją ja.",
+      "explanation": "Jacek przejmuje zadanie wymagające doświadczenia."
+    },
+    {
+      "id": "cause",
+      "skill": "cause",
+      "question": "Dlaczego Jacek prosi Anię, żeby jeszcze nie dzwoniła do klienta?",
+      "options": [
+        "Najpierw chcą pokazać klientowi gotowy plan.",
+        "Najpierw chcą zakończyć szkolenie z kosztów.",
+        "Najpierw chcą ustalić, jakich danych brakuje."
+      ],
+      "answer": "Najpierw chcą ustalić, jakich danych brakuje.",
+      "evidence": "Nie dzwoń jeszcze do niego. Najpierw musimy sprawdzić, czego nie wiemy.",
+      "explanation": "Kontakt ma nastąpić dopiero po zebraniu konkretnych pytań."
+    },
+    {
+      "id": "inference",
+      "skill": "inference",
+      "question": "Ania znajduje w dokumentach cenę jednego produktu, ale nie zna ceny drugiego. Jak powinna przygotować listę dla Jacka?",
+      "options": [
+        "Przy pierwszym pytaniu wpisać cenę, przy drugim zostawić puste miejsce.",
+        "Przy obu pytaniach zostawić puste miejsca, żeby Jacek sam sprawdził ceny.",
+        "Wpisać tylko znalezioną cenę i usunąć pytanie bez odpowiedzi."
+      ],
+      "answer": "Przy pierwszym pytaniu wpisać cenę, przy drugim zostawić puste miejsce.",
+      "evidence": "— Dobrze, zapiszę dziś wszystkie pytania w jednym pliku. Jeśli nie znajdę odpowiedzi w dokumentach, zostawię wolne miejsce obok pytania.",
+      "explanation": "Ania zapisuje wszystkie pytania. Przy znanej cenie może podać odpowiedź, a przy brakującej zostawia wolne miejsce."
+    },
+    {
+      "id": "vocabulary",
+      "skill": "vocabulary",
+      "question": "Co oznacza „brakuje nam informacji”?",
+      "options": [
+        "Mamy dane, ale musimy jeszcze sprawdzić, czy są poprawne.",
+        "Mamy za mało danych, żeby wykonać zadanie.",
+        "Mamy potrzebne dane, ale są w kilku różnych dokumentach."
+      ],
+      "answer": "Mamy za mało danych, żeby wykonać zadanie.",
+      "evidence": "Brakuje nam informacji o cenach. Dzisiaj wystarczy, że sprawdzisz dokumenty od klienta.",
+      "explanation": "Część potrzebnych danych nie jest jeszcze dostępna."
+    }
+  ],
+  "publicationStatus": "practice"
+}

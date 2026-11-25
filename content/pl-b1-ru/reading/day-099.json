@@ -1,0 +1,87 @@
+{
+  "id": "pl-b1.reading.day-099",
+  "day": 99,
+  "level": "B1",
+  "genre": "artykuł",
+  "title": "Pierwsze spotkanie z klasyką",
+  "text": "Co roku podczas Narodowego Czytania ludzie spotykają się, żeby razem czytać utwory polskich autorów. W wydarzeniu biorą udział między innymi szkoły i biblioteki, a także osoby prywatne. Spotkania odbywają się zarówno w Polsce, jak i za granicą. Wybór tekstu zmienia się w kolejnych latach. W 2025 roku uczestnicy czytali poezję Jana Kochanowskiego, a w 2026 roku wybrano „Dziady” Adama Mickiewicza.\n\nW jednej z bibliotek na wspólne czytanie przyszły osoby uczące się polskiego. Ania pierwszy raz wzięła udział w takim spotkaniu. Wcześniej omijała klasyczne utwory, bo dawny język wydawał jej się za trudny. Gdy miała do wyboru kilka książek, zwykle brała do domu współczesną powieść.\n\nBibliotekarka najpierw opowiedziała kilka zdań o autorze i wyjaśniła, czego dotyczy wybrany fragment. Wiedziała, że część grupy dopiero poznaje polską literaturę. Potem zaprosiła chętnych do głośnego czytania. Ania wolała posłuchać. W czasie rozmowy jeden z uczestników powiedział, z jaką sytuacją kojarzy mu się fragment. Inna osoba zwróciła uwagę na słowa, których Ania wcześniej nawet nie zauważyła.\n\nPo spotkaniu Ania nadal miała w zeszycie kilka wyrażeń do sprawdzenia. Tym razem jednak zaznaczyła też stronę, do której chciała wrócić w domu. Obok zapisała pytanie o to, dlaczego dwoje czytelników tak różnie zrozumiało ostatnie zdanie. Zamierzała jeszcze raz przeczytać je sama, zanim porozmawia o nim z koleżanką.",
+  "source": {
+    "url": "https://www.gov.pl/web/kultura/narodowe-czytanie-2026---czytamy-dziady-adama-mickiewicza",
+    "publisher": "Ministerstwo Kultury i Dziedzictwa Narodowego",
+    "title": "Narodowe Czytanie 2026 – czytamy Dziady Adama Mickiewicza",
+    "facts": [
+      "Annual public reading event involving willing participants and educational/cultural institutions; promotes Polish literature; 2026 selected Dziady, 2025 selected Kochanowski's poetry."
+    ],
+    "use": "facts-only",
+    "checked": "2026-11-25",
+    "adaptation": "Original Polish educational composition based on source facts; illustrative people/scenarios are fictional."
+  },
+  "questions": [
+    {
+      "id": "main-idea",
+      "skill": "main-idea",
+      "question": "Co przykład Ani pokazuje o wspólnym czytaniu?",
+      "options": [
+        "Rozmowa o utworze może zainteresować klasyką osobę, której trudno czytać ją samodzielnie.",
+        "Najwięcej wynoszą ze spotkania te osoby, które przygotowały wcześniej własny fragment do czytania.",
+        "Najważniejszą częścią spotkania jest wybranie tekstu na następną edycję."
+      ],
+      "answer": "Rozmowa o utworze może zainteresować klasyką osobę, której trudno czytać ją samodzielnie.",
+      "evidence": "Obok zapisała pytanie o to, dlaczego dwoje czytelników tak różnie zrozumiało ostatnie zdanie.",
+      "explanation": "Uwagi grupy zainteresowały Anię i zachęciły ją do ponownej lektury."
+    },
+    {
+      "id": "detail",
+      "skill": "detail",
+      "question": "Co bibliotekarka zrobiła przed głośnym czytaniem?",
+      "options": [
+        "Porównała dwie interpretacje ostatniego zdania.",
+        "Poprosiła grupę o przykłady sytuacji z własnego życia.",
+        "Przedstawiła autora i temat fragmentu."
+      ],
+      "answer": "Przedstawiła autora i temat fragmentu.",
+      "evidence": "Bibliotekarka najpierw opowiedziała kilka zdań o autorze i wyjaśniła, czego dotyczy wybrany fragment.",
+      "explanation": "Dopiero po tym wprowadzeniu chętni zaczęli czytać."
+    },
+    {
+      "id": "cause",
+      "skill": "cause",
+      "question": "Dlaczego Ania wcześniej wybierała współczesne powieści zamiast klasyki?",
+      "options": [
+        "Spodziewała się trudności z językiem starszych dzieł.",
+        "Chciała przygotować przykłady do rozmowy w bibliotece.",
+        "Zależało jej na znalezieniu innego zakończenia poznanego utworu."
+      ],
+      "answer": "Spodziewała się trudności z językiem starszych dzieł.",
+      "evidence": "Wcześniej omijała klasyczne utwory, bo dawny język wydawał jej się za trudny.",
+      "explanation": "O jej wyborze decydowała obawa przed trudnym językiem."
+    },
+    {
+      "id": "inference",
+      "skill": "inference",
+      "question": "Co najpewniej zainteresuje Anię, gdy znów otworzy zaznaczoną stronę?",
+      "options": [
+        "Którą część utworu bibliotekarka przydzieliła jej do głośnego czytania.",
+        "Jaką współczesną powieść warto zaproponować na kolejne spotkanie.",
+        "Które słowa mogły podsunąć czytelnikom różne wyjaśnienia tego samego zdania."
+      ],
+      "answer": "Które słowa mogły podsunąć czytelnikom różne wyjaśnienia tego samego zdania.",
+      "evidence": "Obok zapisała pytanie o to, dlaczego dwoje czytelników tak różnie zrozumiało ostatnie zdanie.",
+      "explanation": "Ania chce ponownie przeczytać zakończenie fragmentu i zastanowić się nad różnicą między interpretacjami."
+    },
+    {
+      "id": "vocabulary",
+      "skill": "vocabulary",
+      "question": "Co znaczy, że Ania „omijała klasyczne utwory”?",
+      "options": [
+        "Odkładała przeczytane klasyczne książki na osobną półkę.",
+        "Wybierając lekturę, zazwyczaj rezygnowała z takich książek.",
+        "Czytając takie książki, opuszczała trudniejsze fragmenty."
+      ],
+      "answer": "Wybierając lekturę, zazwyczaj rezygnowała z takich książek.",
+      "evidence": "Gdy miała do wyboru kilka książek, zwykle brała do domu współczesną powieść.",
+      "explanation": "Chodzi o wybór książki jeszcze przed rozpoczęciem czytania."
+    }
+  ],
+  "publicationStatus": "practice"
+}

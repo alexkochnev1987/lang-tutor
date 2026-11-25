@@ -1,0 +1,76 @@
+{
+  "id": "pl-b1.reading.day-027",
+  "day": 27,
+  "level": "A1",
+  "genre": "opowiadanie",
+  "title": "Niedziela w muzeum",
+  "text": "W niedzielę poszliśmy z rodziną do muzeum. Nasz syn interesuje się techniką, dlatego wybraliśmy wystawę starych urządzeń. W pierwszej sali były telefony i radia, w drugiej można było zobaczyć pierwsze komputery. Syn czytał napisy i zadawał wiele pytań.\n\nNajbardziej podobał mu się stary aparat fotograficzny. Pracownik muzeum pokazał, jak kiedyś ludzie robili zdjęcia. Potem odpoczęliśmy w kawiarni i zjedliśmy ciasto. Nie zobaczyliśmy całego muzeum, ponieważ córka była już zmęczona. Kupiliśmy więc mały przewodnik i postanowiliśmy wrócić za miesiąc. W domu syn opowiadał o wystawie babci.",
+  "questions": [
+    {
+      "id": "main-idea",
+      "skill": "main-idea",
+      "question": "O czym opowiada rodzic?",
+      "options": [
+        "O rodzinnym spotkaniu z babcią w kawiarni.",
+        "O nauce fotografii w rodzinnym domu.",
+        "O rodzinnej wizycie na wystawie starych urządzeń."
+      ],
+      "answer": "O rodzinnej wizycie na wystawie starych urządzeń.",
+      "evidence": "Nasz syn interesuje się techniką, dlatego wybraliśmy wystawę starych urządzeń.",
+      "explanation": "Rodzina ogląda urządzenia w muzeum, a syn poznaje między innymi dawny aparat."
+    },
+    {
+      "id": "detail",
+      "skill": "detail",
+      "question": "Co najbardziej podobało się synowi?",
+      "options": [
+        "Stare radio.",
+        "Stary telefon.",
+        "Stary aparat fotograficzny."
+      ],
+      "answer": "Stary aparat fotograficzny.",
+      "evidence": "Najbardziej podobał mu się stary aparat fotograficzny.",
+      "explanation": "W tekście rodzic wyróżnia aparat."
+    },
+    {
+      "id": "cause",
+      "skill": "cause",
+      "question": "Dlaczego rodzina skończyła zwiedzanie wcześniej?",
+      "options": [
+        "Syn chciał zdążyć do babci.",
+        "Córka potrzebowała odpoczynku.",
+        "Muzeum już zamykano."
+      ],
+      "answer": "Córka potrzebowała odpoczynku.",
+      "evidence": "Nie zobaczyliśmy całego muzeum, ponieważ córka była już zmęczona.",
+      "explanation": "Rodzina przerwała zwiedzanie z powodu zmęczenia córki."
+    },
+    {
+      "id": "inference",
+      "skill": "inference",
+      "question": "Jak syn najpewniej przyjmie zaproszenie na podobną wystawę?",
+      "options": [
+        "Wybierze ją tylko wtedy, gdy będzie tam ciasto.",
+        "Poprosi o wystawę nowych urządzeń zamiast starych.",
+        "Chętnie pójdzie zobaczyć inne dawne urządzenia."
+      ],
+      "answer": "Chętnie pójdzie zobaczyć inne dawne urządzenia.",
+      "evidence": "Syn czytał napisy i zadawał wiele pytań.",
+      "explanation": "Interesuje się techniką, pytał o urządzenia i opowiadał o nich babci, więc podobna wystawa powinna mu się spodobać."
+    },
+    {
+      "id": "vocabulary",
+      "skill": "vocabulary",
+      "question": "Co oznacza słowo „przewodnik” w zdaniu o zakupie?",
+      "options": [
+        "Osoba, która oprowadza gości.",
+        "Bilet na następną wystawę.",
+        "Książeczka z informacjami o muzeum."
+      ],
+      "answer": "Książeczka z informacjami o muzeum.",
+      "evidence": "Kupiliśmy więc mały przewodnik",
+      "explanation": "Tutaj przewodnik to publikacja, która pomaga poznać muzeum."
+    }
+  ],
+  "publicationStatus": "practice"
+}

@@ -1,0 +1,76 @@
+{
+  "id": "pl-b1.reading.day-003",
+  "day": 3,
+  "level": "A1",
+  "genre": "wiadomość",
+  "title": "Dzień w domu",
+  "text": "Cześć, Kasiu! Pytasz, jak wygląda mój dzień. Rano wstaję o siódmej, jem śniadanie i zaczynam pracę o ósmej. Pracuję w domu. Mam biurko przy oknie i małą lampę. W czasie przerwy słucham muzyki albo patrzę przez okno.\n\nO dwunastej rozmawiam z mamą przez telefon. Potem gotuję obiad. Po pracy często spotykam się z koleżanką. Ona mieszka na tej samej ulicy. Razem spacerujemy, a kiedy pada deszcz, zostajemy u niej w domu i gramy w karty. Wieczorem czytam książkę. Nie oglądam telewizji, bo wolę czytać. Pozdrawiam\nAnia",
+  "questions": [
+    {
+      "id": "main-idea",
+      "skill": "main-idea",
+      "question": "Po co Ania pisze do Kasi?",
+      "options": [
+        "Żeby umówić się na wspólny spacer.",
+        "Żeby opisać swój dzień.",
+        "Żeby ustalić godzinę rozmowy telefonicznej."
+      ],
+      "answer": "Żeby opisać swój dzień.",
+      "evidence": "Pytasz, jak wygląda mój dzień.",
+      "explanation": "List jest odpowiedzią na pytanie o zwykły dzień Ani."
+    },
+    {
+      "id": "detail",
+      "skill": "detail",
+      "question": "O której Ania zaczyna pracę?",
+      "options": [
+        "O ósmej.",
+        "O siódmej.",
+        "O dwunastej."
+      ],
+      "answer": "O ósmej.",
+      "evidence": "zaczynam pracę o ósmej.",
+      "explanation": "O siódmej Ania wstaje, a godzinę później zaczyna pracę."
+    },
+    {
+      "id": "cause",
+      "skill": "cause",
+      "question": "Dlaczego wieczorem nie ogląda telewizji?",
+      "options": [
+        "Dopiero wieczorem kończy pracę.",
+        "Woli wtedy grać w karty z mamą.",
+        "Woli czytać książki."
+      ],
+      "answer": "Woli czytać książki.",
+      "evidence": "Nie oglądam telewizji, bo wolę czytać.",
+      "explanation": "Ania wybiera czytanie, bo lubi je bardziej."
+    },
+    {
+      "id": "inference",
+      "skill": "inference",
+      "question": "Ania idzie po pracy do koleżanki. Co najlepiej wziąć, jeśli pada deszcz?",
+      "options": [
+        "Książkę do wspólnego czytania.",
+        "Karty do gry.",
+        "Buty na długi spacer."
+      ],
+      "answer": "Karty do gry.",
+      "evidence": "kiedy pada deszcz, zostajemy u niej w domu i gramy w karty.",
+      "explanation": "Karty przydadzą się do zabawy, którą koleżanki wybierają w deszczowe dni."
+    },
+    {
+      "id": "vocabulary",
+      "skill": "vocabulary",
+      "question": "Co oznacza „przerwa” w pracy?",
+      "options": [
+        "Czas po skończeniu całej pracy.",
+        "Czas tuż przed rozpoczęciem pracy.",
+        "Krótki czas, kiedy się nie pracuje."
+      ],
+      "answer": "Krótki czas, kiedy się nie pracuje.",
+      "evidence": "W czasie przerwy słucham muzyki albo patrzę przez okno.",
+      "explanation": "Ania na chwilę przestaje pracować i może zająć się czymś innym."
+    }
+  ],
+  "publicationStatus": "practice"
+}

@@ -1,0 +1,76 @@
+{
+  "id": "pl-b1.reading.day-034",
+  "day": 34,
+  "level": "A2",
+  "genre": "opowiadanie",
+  "title": "Zagubiona torba",
+  "text": "Po weekendowym wyjeździe Paweł wracał pociągiem do domu. Na półce nad siedzeniem położył małą czarną torbę z ubraniami i książką. Gdy pociąg zatrzymał się na jego stacji, Paweł rozmawiał przez telefon. Wziął plecak stojący przy nogach i szybko wysiadł. Dopiero przed dworcem zauważył, że nie ma torby.\n\nWrócił na peron, ale pociąg już odjechał. Pracownica informacji poradziła mu, żeby wypełnił formularz zgłoszenia zagubionej rzeczy. Paweł podał numer pociągu, godzinę przejazdu, opis torby i swoje dane kontaktowe. Nie pamiętał numeru wagonu, więc sprawdził go na bilecie w telefonie.\n\nNastępnego dnia otrzymał wiadomość, że obsługa znalazła podobną torbę na stacji końcowej. Aby potwierdzić, że należy do niego, musiał opisać przedmioty znajdujące się w środku. Po dwóch dniach odebrał ją w biurze rzeczy znalezionych. Od tej pory przed wysiadaniem zawsze sprawdza półkę i miejsce pod siedzeniem.",
+  "questions": [
+    {
+      "id": "main-idea",
+      "skill": "main-idea",
+      "question": "Który tytuł najlepiej podsumowuje historię?",
+      "options": [
+        "Jak Paweł odzyskał swój bagaż",
+        "Jak Paweł szukał właściwego wagonu",
+        "Jak Paweł zgłosił zgubiony bilet"
+      ],
+      "answer": "Jak Paweł odzyskał swój bagaż",
+      "evidence": "Po dwóch dniach odebrał ją w biurze rzeczy znalezionych.",
+      "explanation": "Paweł zostawił torbę w pociągu, zgłosił stratę i odzyskał torbę."
+    },
+    {
+      "id": "detail",
+      "skill": "detail",
+      "question": "Skąd Paweł wziął numer wagonu?",
+      "options": [
+        "Z formularza na peronie.",
+        "Z wiadomości od obsługi.",
+        "Z biletu w telefonie."
+      ],
+      "answer": "Z biletu w telefonie.",
+      "evidence": "sprawdził go na bilecie w telefonie",
+      "explanation": "Numer wagonu odczytał z biletu podczas zgłaszania straty."
+    },
+    {
+      "id": "cause",
+      "skill": "cause",
+      "question": "Po co obsługa zapytała Pawła, co było w torbie?",
+      "options": [
+        "Żeby sprawdzić, czy zgłosił się właściciel.",
+        "Żeby ustalić, w którym wagonie szukać.",
+        "Żeby wybrać biuro, do którego wysłać torbę."
+      ],
+      "answer": "Żeby sprawdzić, czy zgłosił się właściciel.",
+      "evidence": "Aby potwierdzić, że należy do niego",
+      "explanation": "Torba była już znaleziona. Jej zawartość miała pomóc rozpoznać właściciela."
+    },
+    {
+      "id": "inference",
+      "skill": "inference",
+      "question": "W biurze są dwie podobne czarne torby. Która informacja Pawła najbardziej pomoże je odróżnić?",
+      "options": [
+        "Godzina, o której zadzwonił telefon.",
+        "Kolor plecaka, z którym wysiadł.",
+        "Tytuł książki, którą spakował."
+      ],
+      "answer": "Tytuł książki, którą spakował.",
+      "evidence": "małą czarną torbę z ubraniami i książką",
+      "explanation": "Pracownik może porównać książki w torbach z opisem Pawła."
+    },
+    {
+      "id": "vocabulary",
+      "skill": "vocabulary",
+      "question": "Gdzie znaleziono torbę, skoro była „na stacji końcowej”?",
+      "options": [
+        "Tam, gdzie pociąg kończył trasę.",
+        "Tam, gdzie Paweł zaczął podróż.",
+        "Tam, gdzie Paweł zakończył podróż."
+      ],
+      "answer": "Tam, gdzie pociąg kończył trasę.",
+      "evidence": "Wrócił na peron, ale pociąg już odjechał.",
+      "explanation": "To pociąg dojechał do końca swojej trasy. Paweł wysiadł wcześniej."
+    }
+  ],
+  "publicationStatus": "practice"
+}

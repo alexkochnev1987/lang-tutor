@@ -1,0 +1,76 @@
+{
+  "id": "pl-b1.reading.day-019",
+  "day": 19,
+  "level": "A1",
+  "genre": "opis",
+  "title": "Trzy sprawy w mieście",
+  "text": "W poniedziałek rano Basia ma trzy sprawy do załatwienia. Najpierw idzie na pocztę, żeby wysłać paczkę. Poczta otwiera się o ósmej. Potem ma wizytę u dentysty o dziesiątej. Gabinet jest na drugim piętrze, nad apteką. Trzecia sprawa to zakupy na obiad.\n\nBasia nie chce nosić ciężkiej torby przez całe miasto, dlatego zostawia zakupy na koniec. Po wizycie u dentysty idzie do sklepu obok domu. Kupuje warzywa i ryż. O dwunastej jest już w mieszkaniu. Ma jeszcze czas na odpoczynek przed pracą. Dzisiaj zaczyna pracę o drugiej po południu.",
+  "questions": [
+    {
+      "id": "main-idea",
+      "skill": "main-idea",
+      "question": "Co opisuje tekst?",
+      "options": [
+        "Zakupy Basi po dniu pracy.",
+        "Pracę Basi w gabinecie dentystycznym.",
+        "Kilka spraw Basi przed pracą."
+      ],
+      "answer": "Kilka spraw Basi przed pracą.",
+      "evidence": "W poniedziałek rano Basia ma trzy sprawy do załatwienia.",
+      "explanation": "Przed pracą Basia wysyła paczkę, idzie do dentysty i robi zakupy."
+    },
+    {
+      "id": "detail",
+      "skill": "detail",
+      "question": "Na którym piętrze jest gabinet?",
+      "options": [
+        "Na drugim.",
+        "Na pierwszym.",
+        "Na trzecim."
+      ],
+      "answer": "Na drugim.",
+      "evidence": "Gabinet jest na drugim piętrze, nad apteką.",
+      "explanation": "Wizyta odbywa się na drugim piętrze."
+    },
+    {
+      "id": "cause",
+      "skill": "cause",
+      "question": "Dlaczego Basia robi zakupy na końcu?",
+      "options": [
+        "Bo chce krótko nosić torbę z zakupami.",
+        "Bo chce najpierw zjeść obiad w domu.",
+        "Bo jej sklep otwiera się dopiero w południe."
+      ],
+      "answer": "Bo chce krótko nosić torbę z zakupami.",
+      "evidence": "Basia nie chce nosić ciężkiej torby przez całe miasto",
+      "explanation": "Robi zakupy koło domu, więc niesie ciężką torbę tylko przez chwilę."
+    },
+    {
+      "id": "inference",
+      "skill": "inference",
+      "question": "Ile czasu mija od dwunastej, kiedy Basia jest już w domu, do początku jej pracy?",
+      "options": [
+        "Godzina.",
+        "Dwie godziny.",
+        "Trzy godziny."
+      ],
+      "answer": "Dwie godziny.",
+      "evidence": "O dwunastej jest już w mieszkaniu. Ma jeszcze czas na odpoczynek przed pracą. Dzisiaj zaczyna pracę o drugiej po południu.",
+      "explanation": "Od dwunastej do drugiej po południu mijają dwie godziny."
+    },
+    {
+      "id": "vocabulary",
+      "skill": "vocabulary",
+      "question": "Co oznacza „załatwić sprawę”, gdy Basia idzie na pocztę?",
+      "options": [
+        "Zapisać sobie, że trzeba wysłać paczkę.",
+        "Odłożyć wysłanie paczki na inny dzień.",
+        "Wysłać paczkę tak, jak planowała."
+      ],
+      "answer": "Wysłać paczkę tak, jak planowała.",
+      "evidence": "Najpierw idzie na pocztę, żeby wysłać paczkę.",
+      "explanation": "Załatwienie sprawy oznacza wykonanie potrzebnego zadania."
+    }
+  ],
+  "publicationStatus": "practice"
+}

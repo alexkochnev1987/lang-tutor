@@ -1,0 +1,87 @@
+{
+  "id": "pl-b1.reading.day-064",
+  "day": 64,
+  "level": "A2",
+  "genre": "artykuł",
+  "title": "Co Emilia zrobi z butelkami?",
+  "text": "Emilia wraca ze sklepu z dwiema butelkami wody. Obie są podobne, ale tylko na jednej widzi znak systemu kaucyjnego. W Polsce taki system działa od października 2025 roku. Gdy Emilia kupuje wodę w oznaczonej butelce, płaci za wodę i dodatkowo za opakowanie. Ta dodatkowa suma to kaucja. Emilia odzyska ją, jeśli odda pustą butelkę do punktu zbiórki. Paragon nie jest jej do tego potrzebny.\n\nWieczorem obie butelki są już puste. Emilia ogląda je jeszcze raz. Butelkę ze znakiem wkłada do torby na zakupy. Drugą odkłada osobno, żeby wyrzucić ją zgodnie z zasadami segregacji. Jej brat dziwi się, że zabiera do sklepu tylko jedną butelkę. Emilia pokazuje mu znak na opakowaniu.\n\nW sobotę Emilia znów wybiera się po zakupy. Po drodze do sklepu minie punkt zbiórki. Torbę z butelką stawia przy drzwiach, obok listy zakupów. Dzięki temu załatwi dwie sprawy podczas jednego wyjścia.",
+  "source": {
+    "url": "https://www.gov.pl/web/klimat/system-kaucyjny",
+    "publisher": "Ministerstwo Klimatu i Środowiska",
+    "title": "System kaucyjny",
+    "facts": [
+      "Deposit scheme operates since October 2025; marked beverage packaging can be returned for a deposit refund without a receipt."
+    ],
+    "use": "facts-only",
+    "checked": "2026-11-25",
+    "adaptation": "Original Polish educational composition based on source facts; illustrative people/scenarios are fictional."
+  },
+  "questions": [
+    {
+      "id": "main-idea",
+      "skill": "main-idea",
+      "question": "Co wyjaśnia historia Emilii?",
+      "options": [
+        "Jak ułożyć listę zakupów przed oddaniem opakowań.",
+        "Jak wybrać tańszą wodę na podstawie znaku na opakowaniu.",
+        "Jak rozpoznać butelkę z kaucją i odzyskać pieniądze."
+      ],
+      "answer": "Jak rozpoznać butelkę z kaucją i odzyskać pieniądze.",
+      "evidence": "Emilia odzyska ją, jeśli odda pustą butelkę do punktu zbiórki.",
+      "explanation": "Znak pomaga wybrać butelkę, za którą po zwrocie Emilia otrzyma kaucję."
+    },
+    {
+      "id": "detail",
+      "skill": "detail",
+      "question": "Gdzie Emilia wkłada pustą butelkę ze znakiem?",
+      "options": [
+        "Do koszyka w punkcie zbiórki.",
+        "Do torby na zakupy.",
+        "Do miejsca na odpady w domu."
+      ],
+      "answer": "Do torby na zakupy.",
+      "evidence": "Butelkę ze znakiem wkłada do torby na zakupy.",
+      "explanation": "Wieczorem butelka czeka w torbie na następne wyjście."
+    },
+    {
+      "id": "cause",
+      "skill": "cause",
+      "question": "Dlaczego Emilia ogląda puste butelki?",
+      "options": [
+        "Chce ustalić, z której butelki pił jej brat.",
+        "Chce sprawdzić, którą wodę ma dopisać do listy zakupów.",
+        "Chce zdecydować, którą butelkę zabrać do punktu zbiórki."
+      ],
+      "answer": "Chce zdecydować, którą butelkę zabrać do punktu zbiórki.",
+      "evidence": "Butelkę ze znakiem wkłada do torby na zakupy. Drugą odkłada osobno",
+      "explanation": "Obie butelki są podobne, ale tylko oznaczoną Emilia odda za kaucję."
+    },
+    {
+      "id": "inference",
+      "skill": "inference",
+      "question": "Brat chce pomóc Emilii w sobotę. Która propozycja pozwoli oddać butelkę przed zakupami, bez wracania do domu?",
+      "options": [
+        "„Poniosę torbę i zatrzymamy się przy punkcie w drodze do sklepu”.",
+        "„Zostawimy torbę w domu i wrócimy po nią po zakupach”.",
+        "„Najpierw zrobimy zakupy, a potem pójdziemy po butelkę”."
+      ],
+      "answer": "„Poniosę torbę i zatrzymamy się przy punkcie w drodze do sklepu”.",
+      "evidence": "Po drodze do sklepu minie punkt zbiórki. Torbę z butelką stawia przy drzwiach, obok listy zakupów.",
+      "explanation": "Jeśli wezmą torbę od razu, mogą oddać butelkę przed zrobieniem zakupów."
+    },
+    {
+      "id": "vocabulary",
+      "skill": "vocabulary",
+      "question": "Co znaczy „odzyska” w zdaniu o kaucji?",
+      "options": [
+        "Pozna cenę samej wody po odliczeniu opakowania.",
+        "Dostanie z powrotem kwotę zapłaconą za opakowanie.",
+        "Zapłaci za następną butelkę tyle samo co wcześniej."
+      ],
+      "answer": "Dostanie z powrotem kwotę zapłaconą za opakowanie.",
+      "evidence": "Ta dodatkowa suma to kaucja. Emilia odzyska ją, jeśli odda pustą butelkę do punktu zbiórki.",
+      "explanation": "Chodzi o zwrot sumy, którą Emilia wcześniej zapłaciła."
+    }
+  ],
+  "publicationStatus": "practice"
+}

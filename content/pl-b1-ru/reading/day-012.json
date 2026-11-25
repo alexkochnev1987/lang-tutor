@@ -1,0 +1,76 @@
+{
+  "id": "pl-b1.reading.day-012",
+  "day": 12,
+  "level": "A1",
+  "genre": "opis",
+  "title": "Mój ulubiony pokój",
+  "text": "Moje mieszkanie jest na trzecim piętrze. Najbardziej lubię salon. To jasny pokój z dwoma oknami. Przy ścianie stoi wygodna sofa, a obok niej mały stolik. Na stoliku jest lampa. Po drugiej stronie pokoju stoi regał z książkami, a obok niego kilka zielonych roślin.\n\nRano w salonie jest dużo światła. Wtedy piję tam kawę i czytam wiadomości. Wieczorem nie włączam dużej lampy, tylko małą lampę przy sofie. Lubię łagodne światło. Kiedy przychodzą znajomi, siadamy razem przy stole w kuchni, ponieważ w salonie jest za mało miejsca dla większej grupy.",
+  "questions": [
+    {
+      "id": "main-idea",
+      "skill": "main-idea",
+      "question": "O czym jest cały tekst?",
+      "options": [
+        "Swoje nowe meble i miejsca, gdzie je kupuje.",
+        "Swój ulubiony pokój i to, co w nim robi.",
+        "Swoją kuchnię i posiłki dla gości."
+      ],
+      "answer": "Swój ulubiony pokój i to, co w nim robi.",
+      "evidence": "Najbardziej lubię salon.",
+      "explanation": "Dalej poznajemy wygląd salonu i sposób, w jaki ta osoba spędza w nim czas."
+    },
+    {
+      "id": "detail",
+      "skill": "detail",
+      "question": "Co stoi tuż obok sofy?",
+      "options": [
+        "Duży stół z kuchni.",
+        "Regał z książkami.",
+        "Mały stolik."
+      ],
+      "answer": "Mały stolik.",
+      "evidence": "Przy ścianie stoi wygodna sofa, a obok niej mały stolik.",
+      "explanation": "Stolik stoi przy sofie, a regał jest po drugiej stronie pokoju."
+    },
+    {
+      "id": "cause",
+      "skill": "cause",
+      "question": "Dlaczego znajomi siadają w kuchni?",
+      "options": [
+        "W salonie jest za mało miejsca dla całej grupy.",
+        "W salonie wieczorem jest za ciemno.",
+        "W kuchni jest więcej krzeseł przy oknie."
+      ],
+      "answer": "W salonie jest za mało miejsca dla całej grupy.",
+      "evidence": "w salonie jest za mało miejsca dla większej grupy.",
+      "explanation": "O wyborze kuchni decyduje miejsce dla gości."
+    },
+    {
+      "id": "inference",
+      "skill": "inference",
+      "question": "Jutro przyjdzie pięcioro znajomych na kawę. Gdzie najlepiej postawić filiżanki?",
+      "options": [
+        "Na stoliku przy sofie.",
+        "Na stole w kuchni.",
+        "Na regale przy książkach."
+      ],
+      "answer": "Na stole w kuchni.",
+      "evidence": "Kiedy przychodzą znajomi, siadamy razem przy stole w kuchni",
+      "explanation": "Pięć osób to większa grupa, więc najlepiej przygotować miejsce na kawę w kuchni."
+    },
+    {
+      "id": "vocabulary",
+      "skill": "vocabulary",
+      "question": "Gdzie stoi regał, jeśli jest „po drugiej stronie pokoju”?",
+      "options": [
+        "Za drzwiami, w pokoju obok salonu.",
+        "Tuż obok sofy, przy tej samej ścianie.",
+        "W salonie, naprzeciwko miejsca z sofą."
+      ],
+      "answer": "W salonie, naprzeciwko miejsca z sofą.",
+      "evidence": "Po drugiej stronie pokoju stoi regał z książkami",
+      "explanation": "Chodzi o drugi koniec tego samego pokoju."
+    }
+  ],
+  "publicationStatus": "practice"
+}

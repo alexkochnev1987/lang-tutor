@@ -1,0 +1,76 @@
+{
+  "id": "pl-b1.reading.day-023",
+  "day": 23,
+  "level": "A1",
+  "genre": "ogłoszenie",
+  "title": "Zajęcia w klubie sportowym",
+  "text": "Chcesz zacząć uprawiać sport, ale nie wiesz, które zajęcia wybrać? Nasz klub zaprasza na bezpłatny dzień otwarty w sobotę. O dziewiątej jest gimnastyka, o jedenastej taniec, a po południu ćwiczenia z małymi ciężarkami dla początkujących. Każde zajęcia trwają czterdzieści pięć minut.\n\nNie musisz mieć własnego sprzętu. Maty i ciężarki są na sali. Przynieś wygodne ubranie, wodę i czyste buty sportowe. Na miejscu można porozmawiać z trenerem i zapytać o plan ćwiczeń. Sala jest mała, dlatego prosimy o wcześniejsze zapisy przez internet. Po zajęciach można odpocząć w małej kawiarni.",
+  "questions": [
+    {
+      "id": "main-idea",
+      "skill": "main-idea",
+      "question": "Po co klub napisał to ogłoszenie?",
+      "options": [
+        "Żeby zaprosić ludzi na dzień próbnych ćwiczeń.",
+        "Żeby zaprosić ludzi na zakupy w klubie.",
+        "Żeby zaprosić ludzi na spotkanie w kawiarni."
+      ],
+      "answer": "Żeby zaprosić ludzi na dzień próbnych ćwiczeń.",
+      "evidence": "Nasz klub zaprasza na bezpłatny dzień otwarty w sobotę.",
+      "explanation": "Klub proponuje kilka zajęć, których można spróbować w sobotę."
+    },
+    {
+      "id": "detail",
+      "skill": "detail",
+      "question": "Ile trwają jedne zajęcia?",
+      "options": [
+        "Trzydzieści minut.",
+        "Czterdzieści pięć minut.",
+        "Godzinę."
+      ],
+      "answer": "Czterdzieści pięć minut.",
+      "evidence": "Każde zajęcia trwają czterdzieści pięć minut.",
+      "explanation": "Wszystkie zajęcia mają tę samą długość."
+    },
+    {
+      "id": "cause",
+      "skill": "cause",
+      "question": "Dlaczego klub prosi o wcześniejsze zapisy?",
+      "options": [
+        "Trener chce wcześniej wybrać muzykę.",
+        "Sala jest mała.",
+        "Trzeba wcześniej zamówić matę."
+      ],
+      "answer": "Sala jest mała.",
+      "evidence": "Sala jest mała, dlatego prosimy o wcześniejsze zapisy przez internet.",
+      "explanation": "Nie wszyscy zmieszczą się w małej sali."
+    },
+    {
+      "id": "inference",
+      "skill": "inference",
+      "question": "Ewa w sobotę pracuje do dwunastej. Na które zajęcia zdąży po pracy?",
+      "options": [
+        "Na taniec.",
+        "Na ćwiczenia z ciężarkami.",
+        "Na gimnastykę."
+      ],
+      "answer": "Na ćwiczenia z ciężarkami.",
+      "evidence": "O dziewiątej jest gimnastyka, o jedenastej taniec, a po południu ćwiczenia z małymi ciężarkami dla początkujących.",
+      "explanation": "Dwa pierwsze zajęcia skończą się przed dwunastą. Ćwiczenia z ciężarkami są później."
+    },
+    {
+      "id": "vocabulary",
+      "skill": "vocabulary",
+      "question": "Dla kogo są ćwiczenia „dla początkujących”?",
+      "options": [
+        "Dla osób, które dopiero zaczynają ćwiczyć.",
+        "Dla osób, które uczą innych ćwiczyć.",
+        "Dla osób, które ćwiczą już od lat."
+      ],
+      "answer": "Dla osób, które dopiero zaczynają ćwiczyć.",
+      "evidence": "ćwiczenia z małymi ciężarkami dla początkujących",
+      "explanation": "Początkujący ma mało doświadczenia i uczy się podstaw."
+    }
+  ],
+  "publicationStatus": "practice"
+}
