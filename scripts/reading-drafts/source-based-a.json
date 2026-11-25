@@ -1,0 +1,608 @@
+{
+  "version": 1,
+  "status": "draft",
+  "texts": [
+    {
+      "id": "pl-b1.reading.day-051",
+      "day": 51,
+      "level": "A2",
+      "genre": "artykuł",
+      "title": "Nauka po zakończeniu lekcji",
+      "text": "Nie wszystkie materiały do nauki trzeba kupować w księgarni. Ministerstwo Edukacji Narodowej udostępnia Zintegrowaną Platformę Edukacyjną. To serwis z bezpłatnymi materiałami, do których można wracać po lekcjach. Uczeń może znaleźć wyjaśnienie trudnego zagadnienia, a nauczyciel może wykorzystać materiał podczas zajęć. Dostęp do publicznych materiałów nie wymaga korzystania z płatnego podręcznika.\n\nMarek przygotowuje się do sprawdzianu z historii. W szkole nie zdążył dokładnie zapisać informacji o jednym wydarzeniu. W domu otwiera materiał na platformie, czyta go i robi krótką notatkę we własnym zeszycie. Następnego dnia chce porównać swoje notatki z notatkami kolegi.\n\nNa platformie można również tworzyć własne materiały, ale do korzystania z edytora i funkcji użytkownika trzeba się zalogować. Marek nie planuje jeszcze niczego publikować. Na razie wystarczą mu ogólnodostępne treści. Ta sytuacja pokazuje, że nie każdy sposób korzystania z serwisu wymaga konta. Warto najpierw ustalić, czego potrzebujemy, a dopiero potem wybierać odpowiednie narzędzie.",
+      "source": {
+        "url": "https://www.gov.pl/web/edukacja/zintegrowana-platforma-edukacyjna-20-juz-dostepna",
+        "publisher": "Ministerstwo Edukacji Narodowej",
+        "title": "Zintegrowana Platforma Edukacyjna 2.0 już dostępna",
+        "facts": [
+          "Publicly accessible, free educational resources; sign-in required for the material editor and user features."
+        ],
+        "use": "facts-only",
+        "checked": "2026-11-25",
+        "adaptation": "Original Polish educational composition based on source facts; illustrative people/scenarios are fictional."
+      },
+      "questions": [
+        {
+          "id": "main-idea",
+          "skill": "main-idea",
+          "question": "Co jest głównym tematem tekstu?",
+          "options": [
+            "Korzystanie z cyfrowych materiałów edukacyjnych.",
+            "Wybór nowej szkoły przez Marka.",
+            "Organizacja sprawdzianów w klasie."
+          ],
+          "answer": "Korzystanie z cyfrowych materiałów edukacyjnych.",
+          "evidence": "To serwis z bezpłatnymi materiałami, do których można wracać po lekcjach.",
+          "explanation": "Tekst przedstawia możliwości platformy na przykładzie ucznia."
+        },
+        {
+          "id": "detail",
+          "skill": "detail",
+          "question": "Czego dotyczy sprawdzian Marka?",
+          "options": [
+            "Języka polskiego.",
+            "Historii.",
+            "Informatyki."
+          ],
+          "answer": "Historii.",
+          "evidence": "Marek przygotowuje się do sprawdzianu z historii.",
+          "explanation": "Marek powtarza informacje o wydarzeniu historycznym."
+        },
+        {
+          "id": "cause",
+          "skill": "cause",
+          "question": "Dlaczego Marek wraca do materiału w domu?",
+          "options": [
+            "Nie zna jeszcze daty sprawdzianu.",
+            "Nauczyciel poprosił go o przygotowanie nowego materiału.",
+            "Nie zdążył wszystkiego zapisać podczas lekcji."
+          ],
+          "answer": "Nie zdążył wszystkiego zapisać podczas lekcji.",
+          "evidence": "W szkole nie zdążył dokładnie zapisać informacji o jednym wydarzeniu.",
+          "explanation": "Korzysta z dodatkowego wyjaśnienia."
+        },
+        {
+          "id": "inference",
+          "skill": "inference",
+          "question": "Który użytkownik będzie potrzebował logowania zgodnie z tekstem?",
+          "options": [
+            "Nauczyciel, który chce skorzystać z edytora materiałów.",
+            "Uczeń, który jedynie czyta publiczny materiał.",
+            "Rodzic, który przegląda ogólnodostępne treści."
+          ],
+          "answer": "Nauczyciel, który chce skorzystać z edytora materiałów.",
+          "evidence": "do korzystania z edytora i funkcji użytkownika trzeba się zalogować.",
+          "explanation": "Samo czytanie publicznych treści różni się od tworzenia materiału."
+        },
+        {
+          "id": "vocabulary",
+          "skill": "vocabulary",
+          "question": "Co oznacza „ogólnodostępne”?",
+          "options": [
+            "Dostępne dopiero po zakupie podręcznika.",
+            "Dostępne dla wszystkich zainteresowanych.",
+            "Dostępne wyłącznie dla pracowników szkoły."
+          ],
+          "answer": "Dostępne dla wszystkich zainteresowanych.",
+          "evidence": "Na razie wystarczą mu ogólnodostępne treści.",
+          "explanation": "Treści nie są ograniczone do zamkniętej grupy."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-052",
+      "day": 52,
+      "level": "A2",
+      "genre": "artykuł",
+      "title": "Książki wybierane wspólnie",
+      "text": "Biblioteka szkolna może być ważną częścią życia szkoły. Program wspierający rozwój czytelnictwa pomaga niektórym szkołom kupować nowe książki. Przy wyborze tytułów szkoła korzystająca z odpowiedniego wsparcia powinna rozmawiać z przedstawicielami rodziców oraz uczniów. Dzięki temu lista zakupów nie jest wyłącznie decyzją jednej osoby.\n\nWyobraźmy sobie klasę, której uczniowie chcą mieć więcej książek o przyrodzie. Bibliotekarka zbiera propozycje, nauczyciel rozmawia z klasą, a uczniowie uzasadniają swoje wybory. Nie wszystkie tytuły można kupić naraz. Szkoła musi zdecydować, które książki najlepiej odpowiadają potrzebom czytelników.\n\nSzkoły korzystające z programu przygotowują również projekty edukacyjne z użyciem książek z biblioteki. Mogą na przykład zaplanować spotkanie poświęcone wybranemu tematowi. Dla uczniów ważna jest także możliwość wypożyczania książek podczas przerw w nauce. Nowa książka na półce nie zawsze oznacza, że ktoś ją przeczyta. Dlatego warto łączyć zakupy z zajęciami, które zachęcają młodych ludzi do sięgania po literaturę.",
+      "source": {
+        "url": "https://www.gov.pl/web/edukacja/pytania-i-odpowiedzi-npc",
+        "publisher": "Ministerstwo Edukacji Narodowej",
+        "title": "Pytania i odpowiedzi – Narodowy Program Rozwoju Czytelnictwa",
+        "facts": [
+          "Participating schools organize educational projects using their collections and consult pupils and parents on book purchases; school libraries organize access for holiday reading."
+        ],
+        "use": "facts-only",
+        "checked": "2026-11-25",
+        "adaptation": "Original Polish educational composition based on source facts; illustrative people/scenarios are fictional."
+      },
+      "questions": [
+        {
+          "id": "main-idea",
+          "skill": "main-idea",
+          "question": "Jaka myśl łączy wszystkie akapity?",
+          "options": [
+            "Biblioteka powinna kupować wyłącznie książki o przyrodzie.",
+            "Najważniejsze jest ograniczenie dostępu do nowych książek.",
+            "Wybór książek i działania edukacyjne powinny wspierać czytelnictwo."
+          ],
+          "answer": "Wybór książek i działania edukacyjne powinny wspierać czytelnictwo.",
+          "evidence": "warto łączyć zakupy z zajęciami",
+          "explanation": "Tekst wyjaśnia, jak zakupy i aktywność uczniów mogą się uzupełniać."
+        },
+        {
+          "id": "detail",
+          "skill": "detail",
+          "question": "Kogo szkoła powinna uwzględnić przy wyborze tytułów?",
+          "options": [
+            "Przedstawicieli uczniów i rodziców.",
+            "Wyłącznie pracowników księgarni.",
+            "Tylko autorów książek."
+          ],
+          "answer": "Przedstawicieli uczniów i rodziców.",
+          "evidence": "powinna rozmawiać z przedstawicielami rodziców oraz uczniów.",
+          "explanation": "Program przewiduje konsultacje."
+        },
+        {
+          "id": "cause",
+          "skill": "cause",
+          "question": "Dlaczego lista zakupów może być krótsza od listy propozycji?",
+          "options": [
+            "Szkoła zamierza zrezygnować z biblioteki.",
+            "Nie wszystkie tytuły można kupić jednocześnie.",
+            "Uczniowie nie mogą przedstawiać propozycji."
+          ],
+          "answer": "Nie wszystkie tytuły można kupić jednocześnie.",
+          "evidence": "Nie wszystkie tytuły można kupić naraz.",
+          "explanation": "Trzeba wybrać książki najlepiej odpowiadające potrzebom."
+        },
+        {
+          "id": "inference",
+          "skill": "inference",
+          "question": "Który projekt najlepiej realizuje opisane podejście?",
+          "options": [
+            "Szkoła kupuje książki, ale przechowuje je poza zasięgiem uczniów.",
+            "Biblioteka wybiera tytuły bez rozmowy z czytelnikami i nie organizuje zajęć.",
+            "Klasa czyta książki z biblioteki i przygotowuje dyskusję na ich temat."
+          ],
+          "answer": "Klasa czyta książki z biblioteki i przygotowuje dyskusję na ich temat.",
+          "evidence": "przygotowują również projekty edukacyjne z użyciem książek z biblioteki.",
+          "explanation": "Projekt łączy dostęp do zbiorów z aktywnością edukacyjną."
+        },
+        {
+          "id": "vocabulary",
+          "skill": "vocabulary",
+          "question": "Co znaczy „sięgać po literaturę”?",
+          "options": [
+            "Wybierać książki do czytania.",
+            "Przenosić półki biblioteczne.",
+            "Zapisywać numery książek w katalogu."
+          ],
+          "answer": "Wybierać książki do czytania.",
+          "evidence": "zachęcają młodych ludzi do sięgania po literaturę.",
+          "explanation": "Chodzi o podejmowanie lektury."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-053",
+      "day": 53,
+      "level": "A2",
+      "genre": "poradnik",
+      "title": "Materiały do nauki polskiego",
+      "text": "Osoby dorosłe, które uczą się polskiego, nie muszą zaczynać od tego samego podręcznika. Na stronie Urzędu do Spraw Cudzoziemców można znaleźć materiały na różnych poziomach. Jedne są przeznaczone dla początkujących, inne obejmują A2 z elementami B1, a jeszcze inne pomagają osobom na poziomie B1 rozwijać się dalej.\n\nDaria od kilku miesięcy mieszka w Polsce. Potrafi zrobić zakupy i krótko opowiedzieć o sobie, ale ma trudności z dłuższymi wiadomościami. Nie chce od razu czytać najtrudniejszego podręcznika. Najpierw otwiera materiał na poziomie A2. Czyta jeden rozdział, zaznacza niezrozumiałe wyrażenia i próbuje odpowiedzieć na pytania bez pomocy tłumacza.\n\nPo kilku dniach zauważa, że część tematów jest dla niej prosta, a inne wymagają powtórzenia. Postanawia korzystać z materiałów w wybranej kolejności, zgodnie ze swoimi potrzebami. Jeśli dobrze rozumie tekst, przechodzi dalej. Kiedy nie rozumie najważniejszych informacji, wraca do łatwiejszych ćwiczeń. Daria nie oczekuje, że samo przeczytanie podręcznika da jej certyfikat. Materiały traktuje jako pomoc w regularnej nauce.",
+      "source": {
+        "url": "https://www.gov.pl/web/udsc/materialy-dydaktyczne-do-nauki-jezyka-polskiego3",
+        "publisher": "Urząd do Spraw Cudzoziemców",
+        "title": "Materiały dydaktyczne do nauki języka polskiego",
+        "facts": [
+          "Adult learning material is available for A1, A2 with B1 elements and B1 with B2 elements."
+        ],
+        "use": "facts-only",
+        "checked": "2026-11-25",
+        "adaptation": "Original Polish educational composition based on source facts; illustrative people/scenarios are fictional."
+      },
+      "questions": [
+        {
+          "id": "main-idea",
+          "skill": "main-idea",
+          "question": "Jaki jest główny cel tekstu?",
+          "options": [
+            "Porównanie cen kursów językowych.",
+            "Pokazanie, jak dobrać materiały do poziomu i potrzeb ucznia.",
+            "Opis procedury wydawania certyfikatów."
+          ],
+          "answer": "Pokazanie, jak dobrać materiały do poziomu i potrzeb ucznia.",
+          "evidence": "można znaleźć materiały na różnych poziomach.",
+          "explanation": "Daria pokazuje, jak korzystać z zasobów stopniowo."
+        },
+        {
+          "id": "detail",
+          "skill": "detail",
+          "question": "Co Daria potrafi już zrobić?",
+          "options": [
+            "Swobodnie czytać wszystkie długie wiadomości.",
+            "Samodzielnie prowadzić kurs na poziomie B1.",
+            "Zrobić zakupy i krótko opowiedzieć o sobie."
+          ],
+          "answer": "Zrobić zakupy i krótko opowiedzieć o sobie.",
+          "evidence": "Potrafi zrobić zakupy i krótko opowiedzieć o sobie",
+          "explanation": "Są to jej obecne umiejętności."
+        },
+        {
+          "id": "cause",
+          "skill": "cause",
+          "question": "Dlaczego wybiera na początku materiał A2?",
+          "options": [
+            "Chce uniknąć zbyt trudnych zadań.",
+            "Nie ma dostępu do innych poziomów.",
+            "Ma już certyfikat B1."
+          ],
+          "answer": "Chce uniknąć zbyt trudnych zadań.",
+          "evidence": "Nie chce od razu czytać najtrudniejszego podręcznika.",
+          "explanation": "Dobiera poziom do aktualnych możliwości."
+        },
+        {
+          "id": "inference",
+          "skill": "inference",
+          "question": "Co zrobi, jeśli w nowym rozdziale nie zrozumie głównej informacji?",
+          "options": [
+            "Przestanie czytać teksty i zajmie się tylko mówieniem.",
+            "Wróci do łatwiejszych ćwiczeń.",
+            "Natychmiast wybierze materiał B2."
+          ],
+          "answer": "Wróci do łatwiejszych ćwiczeń.",
+          "evidence": "Kiedy nie rozumie najważniejszych informacji, wraca do łatwiejszych ćwiczeń.",
+          "explanation": "Strategia zakłada powtórzenie materiału w razie trudności."
+        },
+        {
+          "id": "vocabulary",
+          "skill": "vocabulary",
+          "question": "Co oznacza „z elementami B1”?",
+          "options": [
+            "Przeznaczony wyłącznie dla osób z certyfikatem B1.",
+            "Niezawierający żadnych tematów z poziomu B1.",
+            "Zawierający część materiału charakterystycznego dla B1."
+          ],
+          "answer": "Zawierający część materiału charakterystycznego dla B1.",
+          "evidence": "A2 z elementami B1",
+          "explanation": "Oznacza połączenie podstawowego poziomu z wybranymi trudniejszymi treściami."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-064",
+      "day": 64,
+      "level": "A2",
+      "genre": "artykuł",
+      "title": "Butelka, za którą wracają pieniądze",
+      "text": "W Polsce od października 2025 roku działa system kaucyjny dla określonych opakowań po napojach. Kupując napój w opakowaniu objętym tym systemem, klient płaci także kaucję. Później może oddać puste opakowanie w punkcie zbiórki i odzyskać tę kwotę. Nie trzeba w tym celu przechowywać paragonu z zakupu. Ważne jest odpowiednie oznaczenie opakowania.\n\nWyobraźmy sobie, że Emilia kupuje dwie butelki wody. Jedna ma znak systemu kaucyjnego, a druga go nie ma. Przed wyrzuceniem butelek sprawdza oznaczenia. Pierwszą odkłada do torby, którą zabierze do punktu zbiórki. Drugą segreguje zgodnie z zasadami dotyczącymi odpadów. Nie zakłada, że każda butelka pozwoli odzyskać pieniądze.\n\nDla Emilii nowy sposób robienia zakupów oznacza dodatkową czynność, ale może ją połączyć z następną wizytą w sklepie. Nie musi wracać do domu po paragon. Z czasem zwracanie oznaczonych opakowań może stać się zwykłym nawykiem. Celem systemu jest między innymi zwiększenie ilości opakowań zbieranych oddzielnie, aby łatwiej było wykorzystać ich materiały ponownie.",
+      "source": {
+        "url": "https://www.gov.pl/web/klimat/system-kaucyjny",
+        "publisher": "Ministerstwo Klimatu i Środowiska",
+        "title": "System kaucyjny",
+        "facts": [
+          "Deposit scheme operates since October 2025; marked beverage packaging can be returned for a deposit refund without a receipt."
+        ],
+        "use": "facts-only",
+        "checked": "2026-11-25",
+        "adaptation": "Original Polish educational composition based on source facts; illustrative people/scenarios are fictional."
+      },
+      "questions": [
+        {
+          "id": "main-idea",
+          "skill": "main-idea",
+          "question": "Jaki jest główny temat?",
+          "options": [
+            "Porównanie cen wody w różnych sklepach.",
+            "Zmiana zasad przechowywania paragonów za wszystkie zakupy.",
+            "Działanie systemu zwrotu kaucji za opakowania."
+          ],
+          "answer": "Działanie systemu zwrotu kaucji za opakowania.",
+          "evidence": "Później może oddać puste opakowanie w punkcie zbiórki i odzyskać tę kwotę.",
+          "explanation": "Tekst tłumaczy mechanizm systemu na przykładzie Emilii."
+        },
+        {
+          "id": "detail",
+          "skill": "detail",
+          "question": "Co jest ważne przy rozpoznawaniu opakowania objętego systemem?",
+          "options": [
+            "Odpowiednie oznaczenie.",
+            "Miejsce produkcji napoju.",
+            "Wielkość całych zakupów."
+          ],
+          "answer": "Odpowiednie oznaczenie.",
+          "evidence": "Ważne jest odpowiednie oznaczenie opakowania.",
+          "explanation": "Znak odróżnia opakowania objęte systemem."
+        },
+        {
+          "id": "cause",
+          "skill": "cause",
+          "question": "Dlaczego Emilia sprawdza obie butelki osobno?",
+          "options": [
+            "Wysokość kaucji zależy od jej paragonu.",
+            "Nie każda jest objęta systemem kaucyjnym.",
+            "Każdą trzeba zwrócić w sklepie, w którym ją kupiono."
+          ],
+          "answer": "Nie każda jest objęta systemem kaucyjnym.",
+          "evidence": "Nie zakłada, że każda butelka pozwoli odzyskać pieniądze.",
+          "explanation": "Jedna z dwóch butelek nie ma odpowiedniego znaku."
+        },
+        {
+          "id": "inference",
+          "skill": "inference",
+          "question": "Czy brak paragonu uniemożliwia Emilii odzyskanie kaucji za pierwszą butelkę?",
+          "options": [
+            "Tak, bez paragonu zwrot jest niemożliwy.",
+            "Tak, chyba że pokaże potwierdzenie płatności kartą.",
+            "Nie, jeśli zwróci opakowanie objęte systemem w odpowiednim punkcie."
+          ],
+          "answer": "Nie, jeśli zwróci opakowanie objęte systemem w odpowiednim punkcie.",
+          "evidence": "Nie trzeba w tym celu przechowywać paragonu z zakupu.",
+          "explanation": "Tekst wyraźnie odróżnia oznaczenie opakowania od dowodu zakupu."
+        },
+        {
+          "id": "vocabulary",
+          "skill": "vocabulary",
+          "question": "Co oznacza „odzyskać tę kwotę”?",
+          "options": [
+            "Otrzymać z powrotem zapłacone pieniądze.",
+            "Zapłacić jeszcze raz za napój.",
+            "Otrzymać rabat na dowolny inny produkt."
+          ],
+          "answer": "Otrzymać z powrotem zapłacone pieniądze.",
+          "evidence": "odzyskać tę kwotę.",
+          "explanation": "Kaucja wraca do klienta po oddaniu opakowania."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-078",
+      "day": 78,
+      "level": "A2",
+      "genre": "opowiadanie",
+      "title": "Sprawa w urzędzie i w banku",
+      "text": "Numer PESEL należy do ważnych danych osobowych. W Polsce działa usługa, która pozwala uprawnionym osobom zastrzec ten numer. Jest to jeden ze sposobów ograniczenia ryzyka wykorzystania danych przez inną osobę. Instytucje finansowe sprawdzają status numeru między innymi przy zawieraniu umów o kredyt.\n\nTomasz korzysta z tej możliwości, ponieważ chce chronić swoje dane. Zwykle nie potrzebuje zmieniać statusu numeru. Pewnego dnia planuje jednak zawrzeć w banku umowę o pożyczkę. Przed podpisaniem dokumentów pyta pracownika banku, jakie warunki musi spełnić. Dowiaduje się, że powinien sprawdzić status zastrzeżenia i w razie potrzeby skorzystać z usługi cofnięcia zastrzeżenia.\n\nTomasz czyta informacje w oficjalnym serwisie, ponieważ chce uniknąć nieporozumień. Widzi, że zastrzeżenie i jego cofnięcie to dwie różne operacje. Po załatwieniu sprawy chce ponownie zabezpieczyć swoje dane. Nie przekazuje nikomu hasła do konta ani nie prosi obcej osoby o zmianę statusu w swoim imieniu. W razie wątpliwości korzysta z oficjalnej informacji o usłudze.",
+      "source": {
+        "url": "https://www.gov.pl/web/gov/zastrzez-swoj-numer-pesel-lub-cofnij-zastrzezenie",
+        "publisher": "Gov.pl",
+        "title": "Zastrzeż swój numer PESEL lub cofnij zastrzeżenie",
+        "facts": [
+          "Financial institutions must check restriction status for loans; eligible users can restrict or revoke restriction through available public services."
+        ],
+        "use": "facts-only",
+        "checked": "2026-11-25",
+        "adaptation": "Original Polish educational composition based on source facts; illustrative people/scenarios are fictional."
+      },
+      "questions": [
+        {
+          "id": "main-idea",
+          "skill": "main-idea",
+          "question": "Czego dotyczy tekst?",
+          "options": [
+            "Ochrony danych i zmiany statusu zastrzeżenia PESEL.",
+            "Porównania kosztów różnych kredytów.",
+            "Procedury nadawania nowego numeru PESEL."
+          ],
+          "answer": "Ochrony danych i zmiany statusu zastrzeżenia PESEL.",
+          "evidence": "Jest to jeden ze sposobów ograniczenia ryzyka wykorzystania danych przez inną osobę.",
+          "explanation": "Opisano usługę i sytuację, w której status może mieć znaczenie."
+        },
+        {
+          "id": "detail",
+          "skill": "detail",
+          "question": "Jaką umowę planuje zawrzeć Tomasz?",
+          "options": [
+            "Umowę o pracę.",
+            "Umowę o pożyczkę.",
+            "Umowę o wynajem mieszkania."
+          ],
+          "answer": "Umowę o pożyczkę.",
+          "evidence": "planuje jednak zawrzeć w banku umowę o pożyczkę.",
+          "explanation": "Sprawa dotyczy banku."
+        },
+        {
+          "id": "cause",
+          "skill": "cause",
+          "question": "Dlaczego Tomasz pyta pracownika banku o wymagania?",
+          "options": [
+            "Chce otrzymać nowy numer PESEL.",
+            "Nie pamięta nazwy swojego banku.",
+            "Chce ustalić warunki podpisania umowy."
+          ],
+          "answer": "Chce ustalić warunki podpisania umowy.",
+          "evidence": "pyta pracownika banku, jakie warunki musi spełnić.",
+          "explanation": "Ustala, czy konieczna jest zmiana statusu przed zawarciem umowy."
+        },
+        {
+          "id": "inference",
+          "skill": "inference",
+          "question": "Które postępowanie najlepiej odpowiada zachowaniu Tomasza?",
+          "options": [
+            "Samodzielnie sprawdzić usługę na oficjalnej stronie.",
+            "Podać hasło osobie oferującej pomoc w internecie.",
+            "Poprosić przypadkowego klienta banku o zalogowanie się na jego konto."
+          ],
+          "answer": "Samodzielnie sprawdzić usługę na oficjalnej stronie.",
+          "evidence": "Nie przekazuje nikomu hasła do konta",
+          "explanation": "Tomasz korzysta z oficjalnych informacji i nie oddaje dostępu do konta."
+        },
+        {
+          "id": "vocabulary",
+          "skill": "vocabulary",
+          "question": "Co oznacza „cofnięcie zastrzeżenia”?",
+          "options": [
+            "Zgłoszenie zagubienia dokumentu.",
+            "Usunięcie aktywnego zastrzeżenia.",
+            "Zmianę samego numeru PESEL."
+          ],
+          "answer": "Usunięcie aktywnego zastrzeżenia.",
+          "evidence": "zastrzeżenie i jego cofnięcie to dwie różne operacje.",
+          "explanation": "Cofnięcie zmienia status, a nie numer."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-092",
+      "day": 92,
+      "level": "B1",
+      "genre": "artykuł",
+      "title": "Nie każdy odpad trafia do jednego z pięciu koszy",
+      "text": "W Polsce podstawowy system segregacji odpadów opiera się na pięciu grupach. Oddzielnie zbiera się papier, szkło, metale i tworzywa sztuczne, odpady biologiczne oraz pozostałe odpady. Taki podział ma ułatwić późniejsze przetwarzanie materiałów. Nie oznacza jednak, że każdy przedmiot, który przestaje być potrzebny w domu, można po prostu wrzucić do jednego z tych pojemników.\n\nDobrym przykładem są ubrania. W zwykłym systemie nie ma szóstego pojemnika przeznaczonego wyłącznie na tekstylia. Osoba, która porządkuje szafę, powinna sprawdzić miejscowe zasady zbierania takich odpadów. Podobnie warto zwracać uwagę na opakowania po napojach. Część z nich należy do systemu kaucyjnego, który działa obok zwykłej segregacji. Zwrócenie oznaczonej butelki w punkcie zbiórki ma inny cel niż wyrzucenie jej do pojemnika na odpady.\n\nWyobraźmy sobie mieszkańca, który chce zmniejszyć ilość śmieci. Zamiast ustawiać w kuchni coraz więcej koszy, przygotowuje jedno dodatkowe miejsce na rzeczy wymagające osobnego postępowania. Przed oddaniem danej rzeczy sprawdza informacje w oficjalnych źródłach. Jeśli ubranie nadaje się jeszcze do używania, rozważa przekazanie go komuś innemu.\n\nSegregacja to ważna czynność, ale nie jest jedynym sposobem dbania o środowisko. Równie ważne może być ograniczenie zakupów rzeczy, których nie potrzebujemy, naprawianie przedmiotów oraz dłuższe korzystanie z tego, co już posiadamy. Dzięki temu część rzeczy w ogóle nie staje się odpadami.",
+      "source": {
+        "url": "https://www.gov.pl/web/klimat/segregacjaodpadow",
+        "publisher": "Ministerstwo Klimatu i Środowiska",
+        "title": "Segregacja odpadów",
+        "facts": [
+          "Five basic bins form the sorting system; textile waste is not a sixth ordinary bin; separate deposit scheme for eligible beverage packaging."
+        ],
+        "use": "facts-only",
+        "checked": "2026-11-25",
+        "adaptation": "Original Polish educational composition based on source facts; illustrative people/scenarios are fictional."
+      },
+      "questions": [
+        {
+          "id": "main-idea",
+          "skill": "main-idea",
+          "question": "Jaką główną myśl przedstawia autor?",
+          "options": [
+            "Najlepiej zrezygnować ze zwykłej segregacji na rzecz systemu kaucyjnego.",
+            "Podstawową segregację warto uzupełniać odpowiednim postępowaniem z innymi rzeczami i ograniczaniem odpadów.",
+            "Każda nowa kategoria odpadów wymaga ustawienia osobnego kosza w kuchni."
+          ],
+          "answer": "Podstawową segregację warto uzupełniać odpowiednim postępowaniem z innymi rzeczami i ograniczaniem odpadów.",
+          "evidence": "Segregacja to ważna czynność, ale nie jest jedynym sposobem dbania o środowisko.",
+          "explanation": "Autor opisuje kilka uzupełniających się sposobów działania."
+        },
+        {
+          "id": "detail",
+          "skill": "detail",
+          "question": "Czego nie obejmuje osobny pojemnik w podstawowym systemie?",
+          "options": [
+            "Papieru.",
+            "Szkła.",
+            "Tekstyliów."
+          ],
+          "answer": "Tekstyliów.",
+          "evidence": "W zwykłym systemie nie ma szóstego pojemnika przeznaczonego wyłącznie na tekstylia.",
+          "explanation": "Tekst wyraźnie wskazuje brak takiej podstawowej kategorii."
+        },
+        {
+          "id": "cause",
+          "skill": "cause",
+          "question": "Dlaczego mieszkaniec sprawdza informacje przed oddaniem niektórych rzeczy?",
+          "options": [
+            "Nie wszystkie przedmioty podlegają tym samym zasadom.",
+            "Chce porównać ceny nowych pojemników.",
+            "Nie wie, które przedmioty kupił w sklepie."
+          ],
+          "answer": "Nie wszystkie przedmioty podlegają tym samym zasadom.",
+          "evidence": "przygotowuje jedno dodatkowe miejsce na rzeczy wymagające osobnego postępowania.",
+          "explanation": "Różne przedmioty wymagają różnych sposobów przekazania."
+        },
+        {
+          "id": "inference",
+          "skill": "inference",
+          "question": "Która czynność najlepiej ilustruje zapobieganie powstawaniu odpadów?",
+          "options": [
+            "Kupienie nowej torby i pozostawienie starej bez użycia.",
+            "Naprawienie torby i dalsze korzystanie z niej.",
+            "Posegregowanie uszkodzonej torby po jej wyrzuceniu."
+          ],
+          "answer": "Naprawienie torby i dalsze korzystanie z niej.",
+          "evidence": "naprawianie przedmiotów oraz dłuższe korzystanie z tego, co już posiadamy.",
+          "explanation": "Naprawa przedłuża używanie rzeczy i może zapobiec wyrzuceniu."
+        },
+        {
+          "id": "vocabulary",
+          "skill": "vocabulary",
+          "question": "Co w tym kontekście znaczy „wymagające osobnego postępowania”?",
+          "options": [
+            "Takie, które zawsze można wrzucić do dowolnego kosza.",
+            "Takie, które koniecznie należy wyrzucić natychmiast.",
+            "Takie, wobec których trzeba zastosować inne zasady."
+          ],
+          "answer": "Takie, wobec których trzeba zastosować inne zasady.",
+          "evidence": "rzeczy wymagające osobnego postępowania.",
+          "explanation": "Chodzi o przedmioty, których nie obsługuje zwykła procedura."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-099",
+      "day": 99,
+      "level": "B1",
+      "genre": "artykuł",
+      "title": "Wspólne czytanie jako tradycja",
+      "text": "Narodowe Czytanie to wydarzenie, które co roku zachęca do wspólnego poznawania polskiej literatury. Mogą do niego dołączać osoby prywatne, szkoły, biblioteki oraz inne instytucje kulturalne w kraju i poza jego granicami. W kolejnych edycjach wybierane są różne utwory. W 2025 roku uczestnicy czytali poezję Jana Kochanowskiego, a w 2026 roku wybrano „Dziady” Adama Mickiewicza. Nie chodzi więc o powtarzanie co roku tej samej książki.\n\nWyobraźmy sobie bibliotekę, do której przychodzi grupa osób uczących się polskiego. Nie wszyscy rozumieją dawne słownictwo i nie wszyscy znają historię literatury. Bibliotekarka proponuje, żeby przed wspólnym czytaniem krótko przedstawić autora oraz temat wybranych fragmentów. Chętni czytają tekst na głos, a pozostali słuchają. Po każdym fragmencie grupa rozmawia o jego znaczeniu. Nie trzeba znać wszystkich słów, aby uczestniczyć w rozmowie, chociaż trudniejsze wyrażenia warto później sprawdzić.\n\nJedna z uczestniczek przyznaje, że wcześniej omijała klasyczne utwory, ponieważ wydawały się jej zbyt trudne. Wspólne spotkanie nie sprawiło, że nagle wszystko zrozumiała, ale pomogło jej dostrzec związek między tekstem a doświadczeniami innych czytelników. Postanowiła wrócić do wybranego fragmentu w domu.\n\nTakie wydarzenie może być okazją nie tylko do lektury, lecz także do rozmowy o kulturze. Dla osoby uczącej się języka ważny jest również kontakt z różnymi sposobami interpretacji tekstu. Dlatego przygotowanie krótkiego wprowadzenia i możliwość zadawania pytań mają w opisanej sytuacji szczególne znaczenie.",
+      "source": {
+        "url": "https://www.gov.pl/web/kultura/narodowe-czytanie-2026---czytamy-dziady-adama-mickiewicza",
+        "publisher": "Ministerstwo Kultury i Dziedzictwa Narodowego",
+        "title": "Narodowe Czytanie 2026 – czytamy Dziady Adama Mickiewicza",
+        "facts": [
+          "Annual public reading event involving willing participants and educational/cultural institutions; promotes Polish literature; 2026 selected Dziady, 2025 selected Kochanowski's poetry."
+        ],
+        "use": "facts-only",
+        "checked": "2026-11-25",
+        "adaptation": "Original Polish educational composition based on source facts; illustrative people/scenarios are fictional."
+      },
+      "questions": [
+        {
+          "id": "main-idea",
+          "skill": "main-idea",
+          "question": "Jaka jest główna myśl tekstu?",
+          "options": [
+            "Wspólne czytanie może przybliżać literaturę także osobom uczącym się języka.",
+            "Narodowe Czytanie jest przeznaczone głównie dla specjalistów od literatury.",
+            "Udział w wydarzeniu wymaga pełnego zrozumienia dawnych utworów."
+          ],
+          "answer": "Wspólne czytanie może przybliżać literaturę także osobom uczącym się języka.",
+          "evidence": "Takie wydarzenie może być okazją nie tylko do lektury, lecz także do rozmowy o kulturze.",
+          "explanation": "Przykład biblioteki pokazuje edukacyjne i społeczne znaczenie wydarzenia."
+        },
+        {
+          "id": "detail",
+          "skill": "detail",
+          "question": "Który utwór wybrano w 2026 roku?",
+          "options": [
+            "Dowolną książkę wybraną przez każdą osobę.",
+            "Dziady Adama Mickiewicza.",
+            "Poezję Jana Kochanowskiego."
+          ],
+          "answer": "Dziady Adama Mickiewicza.",
+          "evidence": "w 2026 roku wybrano „Dziady” Adama Mickiewicza.",
+          "explanation": "Poezja Kochanowskiego była wyborem poprzedniej edycji."
+        },
+        {
+          "id": "cause",
+          "skill": "cause",
+          "question": "Dlaczego bibliotekarka proponuje krótkie wprowadzenie?",
+          "options": [
+            "Wszyscy uczestnicy chcą zdać egzamin z historii literatury.",
+            "Czytelnicy mają wybrać dzieło na następną oficjalną edycję.",
+            "Uczestnicy mają różną znajomość dawnego języka i literatury."
+          ],
+          "answer": "Uczestnicy mają różną znajomość dawnego języka i literatury.",
+          "evidence": "Nie wszyscy rozumieją dawne słownictwo i nie wszyscy znają historię literatury.",
+          "explanation": "Wprowadzenie pomaga zrozumieć kontekst wybranego fragmentu."
+        },
+        {
+          "id": "inference",
+          "skill": "inference",
+          "question": "Które stwierdzenie najlepiej opisuje zmianę u uczestniczki?",
+          "options": [
+            "Nadal ma trudności, lecz zyskała motywację do samodzielnej lektury.",
+            "Po jednym spotkaniu rozumie już całe dzieło bez pomocy.",
+            "Uznała, że lepiej już nigdy nie czytać starszej literatury."
+          ],
+          "answer": "Nadal ma trudności, lecz zyskała motywację do samodzielnej lektury.",
+          "evidence": "Postanowiła wrócić do wybranego fragmentu w domu.",
+          "explanation": "Spotkanie zwiększyło jej chęć czytania, nie usunęło wszystkich trudności."
+        },
+        {
+          "id": "vocabulary",
+          "skill": "vocabulary",
+          "question": "Co oznacza „omijała klasyczne utwory”?",
+          "options": [
+            "Wybierała z nich tylko jeden rozdział podczas spotkania.",
+            "Unikała czytania takich dzieł.",
+            "Czytała je zawsze przed innymi książkami."
+          ],
+          "answer": "Unikała czytania takich dzieł.",
+          "evidence": "wcześniej omijała klasyczne utwory",
+          "explanation": "Wydawały się zbyt trudne, dlatego ich nie wybierała."
+        }
+      ]
+    }
+  ]
+}

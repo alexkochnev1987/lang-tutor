@@ -1,0 +1,111 @@
+{
+  "version": 1,
+  "checked": "2026-11-25",
+  "policy": "Source facts only. Do not reproduce publisher wording or imply fictional examples are real. Per-item license review required for literal or adapted creative source material.",
+  "formatReferences": [
+    {
+      "url": "https://certyfikatpolski.pl/o-egzaminie/struktura-egzaminu/",
+      "use": "format-only: global and selective comprehension of texts"
+    },
+    {
+      "url": "https://certyfikatpolski.pl/o-egzaminie/zbiory-zadan/",
+      "use": "format-only; no reproduction"
+    },
+    {
+      "url": "https://www.gov.pl/web/udsc-en/materialy-dydaktyczne-do-nauki-jezyka-polskiego---dla-doroslych",
+      "use": "reference only; A1 textbook has separately identified copyright holder"
+    }
+  ],
+  "sources": {
+    "zpe": {
+      "url": "https://www.gov.pl/web/edukacja/zintegrowana-platforma-edukacyjna-20-juz-dostepna",
+      "publisher": "Ministerstwo Edukacji Narodowej",
+      "title": "Zintegrowana Platforma Edukacyjna 2.0 już dostępna",
+      "facts": [
+        "Publicly accessible, free educational resources; sign-in required for the material editor and user features."
+      ],
+      "use": "facts-only"
+    },
+    "school": {
+      "url": "https://www.gov.pl/web/edukacja/pytania-i-odpowiedzi-npc",
+      "publisher": "Ministerstwo Edukacji Narodowej",
+      "title": "Pytania i odpowiedzi – Narodowy Program Rozwoju Czytelnictwa",
+      "facts": [
+        "Participating schools organize educational projects using their collections and consult pupils and parents on book purchases; school libraries organize access for holiday reading."
+      ],
+      "use": "facts-only"
+    },
+    "courses": {
+      "url": "https://www.gov.pl/web/udsc/materialy-dydaktyczne-do-nauki-jezyka-polskiego3",
+      "publisher": "Urząd do Spraw Cudzoziemców",
+      "title": "Materiały dydaktyczne do nauki języka polskiego",
+      "facts": [
+        "Adult learning material is available for A1, A2 with B1 elements and B1 with B2 elements."
+      ],
+      "use": "facts-only"
+    },
+    "deposit": {
+      "url": "https://www.gov.pl/web/klimat/system-kaucyjny",
+      "publisher": "Ministerstwo Klimatu i Środowiska",
+      "title": "System kaucyjny",
+      "facts": [
+        "Deposit scheme operates since October 2025; marked beverage packaging can be returned for a deposit refund without a receipt."
+      ],
+      "use": "facts-only"
+    },
+    "pesel": {
+      "url": "https://www.gov.pl/web/gov/zastrzez-swoj-numer-pesel-lub-cofnij-zastrzezenie",
+      "publisher": "Gov.pl",
+      "title": "Zastrzeż swój numer PESEL lub cofnij zastrzeżenie",
+      "facts": [
+        "Financial institutions must check restriction status for loans; eligible users can restrict or revoke restriction through available public services."
+      ],
+      "use": "facts-only"
+    },
+    "waste": {
+      "url": "https://www.gov.pl/web/klimat/segregacjaodpadow",
+      "publisher": "Ministerstwo Klimatu i Środowiska",
+      "title": "Segregacja odpadów",
+      "facts": [
+        "Five basic bins form the sorting system; textile waste is not a sixth ordinary bin; separate deposit scheme for eligible beverage packaging."
+      ],
+      "use": "facts-only"
+    },
+    "reading": {
+      "url": "https://www.gov.pl/web/kultura/narodowe-czytanie-2026---czytamy-dziady-adama-mickiewicza",
+      "publisher": "Ministerstwo Kultury i Dziedzictwa Narodowego",
+      "title": "Narodowe Czytanie 2026 – czytamy Dziady Adama Mickiewicza",
+      "facts": [
+        "Annual public reading event involving willing participants and educational/cultural institutions; promotes Polish literature; 2026 selected Dziady, 2025 selected Kochanowski's poetry."
+      ],
+      "use": "facts-only"
+    },
+    "ekuz": {
+      "url": "https://pacjent.gov.pl/planujesz-wyjazd-w-europie-sprawdz-zasady-ubezpieczenia",
+      "publisher": "Pacjent.gov.pl",
+      "title": "Planujesz wyjazd w Europie – sprawdź zasady ubezpieczenia",
+      "facts": [
+        "EHIC covers medically necessary treatment during temporary stays in EU/EFTA and UK; used with ID; check the scope in destination country."
+      ],
+      "use": "facts-only"
+    },
+    "consumer": {
+      "url": "https://prawakonsumenta.uokik.gov.pl/prawo-odstapienia-od-umowy/terminy-odstapienie/",
+      "publisher": "UOKiK",
+      "title": "Terminy odstąpienia od umowy",
+      "facts": [
+        "For typical online purchase contracts the withdrawal period is 14 days; exceptions exist."
+      ],
+      "use": "facts-only"
+    },
+    "budget": {
+      "url": "https://eli.gov.pl/api/acts/DU/2024/1465/text.html",
+      "publisher": "ELI / Dziennik Ustaw",
+      "title": "Ustawa o samorządzie gminnym – budżet obywatelski",
+      "facts": [
+        "Municipal project rules address legal conformity, technical feasibility, formal requirements and appeals."
+      ],
+      "use": "facts-only"
+    }
+  }
+}
