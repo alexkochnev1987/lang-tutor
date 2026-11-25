@@ -1,0 +1,76 @@
+{
+  "id": "pl-b1.reading.day-123",
+  "day": 123,
+  "level": "B1",
+  "genre": "e-mail",
+  "title": "Jak dzielić obowiązki domowe",
+  "text": "Cześć, Martyno!\n\nPytałaś ostatnio, jak udało nam się z Michałem uporządkować domowe obowiązki. Nie mamy idealnego systemu, ale zmieniliśmy jedną ważną rzecz. Wcześniej ustalaliśmy wszystko dopiero wtedy, gdy ktoś był niezadowolony. Jeśli w zlewie zostawały naczynia, każde z nas przypominało sobie sytuacje, w których to ono ostatnio sprzątało kuchnię.\n\nW końcu zapisaliśmy wszystkie zadania wykonywane w ciągu tygodnia. Na początku lista zawierała tylko sprzątanie, gotowanie i zakupy. Później zauważyliśmy, że ktoś musi także sprawdzić, czego brakuje w domu, zaplanować posiłki i pamiętać o terminie odbioru zamówienia. Te czynności również zajmują czas, chociaż nie zawsze widać ich wynik.\n\nNie podzieliliśmy zadań dokładnie po połowie według liczby punktów. Michał lubi gotować, więc przejął planowanie większości kolacji. Ja zwykle wracam wcześniej do domu, dlatego częściej robię zakupy. Naczynia myje osoba, która danego dnia nie przygotowuje posiłku. Jeśli jedno z nas ma wyjątkowo trudny tydzień, rozmawiamy o zmianie podziału.\n\nW niedzielę po śniadaniu poświęcamy kilka minut na sprawdzenie planu. Nie zapisujemy, kto umył ostatnią szklankę albo odłożył widelec do szuflady. Chodzi raczej o to, żeby żadne z nas nie musiało ciągle przypominać drugiej osobie o jej zadaniach.\n\nNajbardziej zaskoczyło mnie to, że rozmów o sprzątaniu jest teraz mniej, choć poświęcamy na planowanie trochę więcej czasu. Dzięki temu możemy łatwiej odpocząć, kiedy skończymy swoje obowiązki. Może przyda się wam podobna lista, ale warto ją dopasować do waszego grafiku i zwyczajów.\n\nPozdrawiam,\nPaulina",
+  "questions": [
+    {
+      "id": "main-idea",
+      "skill": "main-idea",
+      "question": "Co Paulina uważa za najważniejszą zmianę?",
+      "options": [
+        "Dokładne liczenie każdej umytej szklanki.",
+        "Jasny, elastyczny podział obowiązków obejmujący także planowanie.",
+        "Podział wszystkich zadań według identycznej liczby punktów."
+      ],
+      "answer": "Jasny, elastyczny podział obowiązków obejmujący także planowanie.",
+      "evidence": "Nie podzieliliśmy zadań dokładnie po połowie według liczby punktów. Michał lubi gotować, więc przejął planowanie większości kolacji. Ja zwykle wracam wcześniej do domu, dlatego częściej robię zakupy. Naczynia myje osoba, która danego dnia nie przygotowuje posiłku. Jeśli jedno z nas ma wyjątkowo trudny tydzień, rozmawiamy o zmianie podziału.\n\nW niedzielę po śniadaniu poświęcamy kilka minut na sprawdzenie planu. Nie zapisujemy, kto umył ostatnią szklankę albo odłożył widelec do szuflady. Chodzi raczej o to, żeby żadne z nas nie musiało ciągle przypominać drugiej osobie o jej zadaniach.",
+      "explanation": "Lista obejmuje też niewidoczną pracę organizacyjną, a podział zależy od sytuacji."
+    },
+    {
+      "id": "detail",
+      "skill": "detail",
+      "question": "Kiedy zwykle sprawdzają plan?",
+      "options": [
+        "W niedzielę po śniadaniu.",
+        "Każdego dnia po zakupach.",
+        "W piątek przed kolacją."
+      ],
+      "answer": "W niedzielę po śniadaniu.",
+      "evidence": "W niedzielę po śniadaniu poświęcamy kilka minut na sprawdzenie planu.",
+      "explanation": "Plan sprawdzają po niedzielnym śniadaniu."
+    },
+    {
+      "id": "cause",
+      "skill": "cause",
+      "question": "Dlaczego Paulina częściej robi zakupy?",
+      "options": [
+        "Michał nie potrafi planować posiłków.",
+        "Nie lubi myć naczyń.",
+        "Zwykle wcześniej wraca do domu."
+      ],
+      "answer": "Zwykle wcześniej wraca do domu.",
+      "evidence": "Ja zwykle wracam wcześniej do domu, dlatego częściej robię zakupy.",
+      "explanation": "Jej godziny powrotu sprzyjają zakupom."
+    },
+    {
+      "id": "inference",
+      "skill": "inference",
+      "question": "Michał w kolejnym tygodniu pracuje do późna, a Paulina może gotować. Co odpowiada ich systemowi?",
+      "options": [
+        "Policzyć wszystkie czynności od początku miesiąca przed rozmową.",
+        "Pozostawić wszystkie obowiązki bez zmian, nawet jeśli nie da się ich wykonać.",
+        "Uzgodnić tymczasową zmianę zadań i wrócić do zwykłego podziału później."
+      ],
+      "answer": "Uzgodnić tymczasową zmianę zadań i wrócić do zwykłego podziału później.",
+      "evidence": "Jeśli jedno z nas ma wyjątkowo trudny tydzień, rozmawiamy o zmianie podziału.",
+      "explanation": "Trudny tydzień jest wprost wymienionym powodem do uzgodnienia zmiany."
+    },
+    {
+      "id": "vocabulary",
+      "skill": "vocabulary",
+      "question": "Co znaczy „przejął planowanie” kolacji?",
+      "options": [
+        "Wziął na siebie odpowiedzialność za ich organizację.",
+        "Zaczął jeść wszystkie posiłki poza domem.",
+        "Zrezygnował z przygotowywania kolacji."
+      ],
+      "answer": "Wziął na siebie odpowiedzialność za ich organizację.",
+      "evidence": "Michał lubi gotować, więc przejął planowanie większości kolacji.",
+      "explanation": "Przejęcie zadania oznacza odpowiedzialność za jego wykonanie."
+    }
+  ],
+  "publicationStatus": "practice"
+}

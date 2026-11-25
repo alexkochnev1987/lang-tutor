@@ -1,0 +1,76 @@
+{
+  "id": "pl-b1.reading.day-121",
+  "day": 121,
+  "level": "B1",
+  "genre": "artykuł",
+  "title": "Małe mieszkanie z dużymi możliwościami",
+  "text": "Po przeprowadzce do niewielkiego mieszkania Ania i Maciek szybko zauważyli, że największym problemem nie jest brak miejsca na wszystkie rzeczy, lecz brak miejsca na różne codzienne czynności. W jednym pokoju chcieli odpoczywać, pracować i przyjmować gości. Początkowo ustawili pod ścianą kanapę, duży fotel oraz biurko z wysoką nadstawką, która zasłaniała prawie połowę okna.\n\nPonieważ wynajmowali mieszkanie, nie chcieli wprowadzać zmian wymagających remontu. Właściciel zgodził się jedynie na zamocowanie kilku lekkich półek w miejscach, które wcześniej uzgodnili. Para postanowiła sprawdzić, co można osiągnąć przez zmianę ustawienia mebli.\n\nPrzez tydzień obserwowali, kiedy rzeczywiście korzystają z poszczególnych miejsc. Okazało się, że fotel służył głównie do odkładania ubrań, a Maciek pracował przy biurku tylko dwa dni w tygodniu. Ania za to codziennie potrzebowała miejsca na ćwiczenia. Gdyby usunęli fotel, mogliby bez przesuwania ciężkich mebli rozłożyć matę na podłodze.\n\nSprzedali więc fotel znajomym, a przy kanapie ustawili mały stolik, który łatwo przenieść. Biurko przesunęli spod okna pod boczną ścianę, dzięki czemu więcej światła wpadało do pokoju. Nie kupili od razu nowych szaf. Najpierw wykorzystali pudełka, które już mieli, do uporządkowania półek.\n\nPo miesiącu uznali, że pokój wciąż jest mały, ale można z niego korzystać na więcej sposobów. Nie musieli kupować specjalnych mebli zaprojektowanych do każdego zadania. Ważniejsze było ustalenie, które czynności wykonują najczęściej, a które mogą odbywać się w tym samym miejscu o różnych porach dnia.",
+  "questions": [
+    {
+      "id": "main-idea",
+      "skill": "main-idea",
+      "question": "Jaki jest główny wniosek z historii Ani i Maćka?",
+      "options": [
+        "Każde małe mieszkanie wymaga dużego remontu przed przeprowadzką.",
+        "Najlepiej przeznaczyć osobny mebel do każdej czynności.",
+        "Małą przestrzeń można lepiej wykorzystać, dopasowując ją do rzeczywistych czynności."
+      ],
+      "answer": "Małą przestrzeń można lepiej wykorzystać, dopasowując ją do rzeczywistych czynności.",
+      "evidence": "Ważniejsze było ustalenie, które czynności wykonują najczęściej, a które mogą odbywać się w tym samym miejscu o różnych porach dnia.",
+      "explanation": "Zmiany wynikają z obserwacji użycia, a nie z samej wielkości pokoju."
+    },
+    {
+      "id": "detail",
+      "skill": "detail",
+      "question": "Co para zrobiła z fotelem?",
+      "options": [
+        "Sprzedała go znajomym.",
+        "Oddała go właścicielowi mieszkania.",
+        "Przeniosła go pod okno."
+      ],
+      "answer": "Sprzedała go znajomym.",
+      "evidence": "Sprzedali więc fotel znajomym",
+      "explanation": "Fotel został sprzedany znajomym."
+    },
+    {
+      "id": "cause",
+      "skill": "cause",
+      "question": "Dlaczego para ograniczyła zmiany wymagające remontu?",
+      "options": [
+        "Nie mieli żadnych mebli do ustawienia.",
+        "Wynajmowali mieszkanie i chcieli ograniczyć zmiany budowlane.",
+        "Właściciel nakazał im kupić nową kanapę."
+      ],
+      "answer": "Wynajmowali mieszkanie i chcieli ograniczyć zmiany budowlane.",
+      "evidence": "Ponieważ wynajmowali mieszkanie, nie chcieli wprowadzać zmian wymagających remontu.",
+      "explanation": "Mieszkanie było wynajmowane, więc woleli zmienić ustawienie i uzgodnić niewielkie mocowania."
+    },
+    {
+      "id": "inference",
+      "skill": "inference",
+      "question": "Maciek zaczyna pracować z domu codziennie, a Ania nadal ćwiczy. Co powinni sprawdzić zgodnie ze swoim podejściem?",
+      "options": [
+        "Czy właściciel zgodzi się na wymianę wszystkich szaf.",
+        "Czy ustawienie pozwala obu osobom korzystać z potrzebnych miejsc, zanim kupią kolejne meble.",
+        "Czy mogą usunąć biurko bez sprawdzania nowego grafiku."
+      ],
+      "answer": "Czy ustawienie pozwala obu osobom korzystać z potrzebnych miejsc, zanim kupią kolejne meble.",
+      "evidence": "Przez tydzień obserwowali, kiedy rzeczywiście korzystają z poszczególnych miejsc.",
+      "explanation": "Nowe potrzeby trzeba porównać z obecnym ustawieniem, tak jak wcześniej."
+    },
+    {
+      "id": "vocabulary",
+      "skill": "vocabulary",
+      "question": "Co oznacza „rozłożyć matę”?",
+      "options": [
+        "Schować matę do pudełka.",
+        "Przenieść fotel na miejsce ćwiczeń.",
+        "Przygotować matę do użycia, kładąc ją na podłodze."
+      ],
+      "answer": "Przygotować matę do użycia, kładąc ją na podłodze.",
+      "evidence": "rozłożyć matę na podłodze.",
+      "explanation": "Rozłożenie maty przygotowuje wolne miejsce do ćwiczeń."
+    }
+  ],
+  "publicationStatus": "practice"
+}

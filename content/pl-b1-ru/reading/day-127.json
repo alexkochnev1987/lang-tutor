@@ -1,0 +1,76 @@
+{
+  "id": "pl-b1.reading.day-127",
+  "day": 127,
+  "level": "B1",
+  "genre": "wiadomość",
+  "title": "Dzień pracy z przerwami",
+  "text": "Cześć, Piotrze!\n\nOd początku marca próbuję inaczej organizować dzień pracy w domu. W styczniu i lutym często zaczynałem rano przy komputerze, a potem odkrywałem, że minęło kilka godzin i nadal siedzę w tym samym miejscu. Kiedy kończyłem ostatnie spotkanie, byłem zmęczony, choć nie zawsze potrafiłem powiedzieć, które zadania rzeczywiście wykonałem.\n\nNajpierw próbowałem robić przerwy o stałych godzinach. Nie było to jednak wygodne, ponieważ niektóre spotkania z zespołem trwały dłużej, niż planowaliśmy. Zamiast przerywać rozmowę w połowie, zacząłem traktować zakończenie zadania jako okazję do krótkiej przerwy. Po wysłaniu ważnej wiadomości albo skończeniu fragmentu projektu wstaję od biurka, otwieram okno lub idę do kuchni po wodę.\n\nPrzy zadaniach, które zajmują kilka godzin, nadal ustawiam przypomnienie. Nie czekam na ich całkowite zakończenie, bo wtedy łatwo zapomnieć o odpoczynku. Przed przerwą zapisuję jedno zdanie o tym, co zrobię po powrocie. Dzięki temu nie tracę później czasu na przypominanie sobie ostatniego etapu pracy.\n\nZmieniłem także porę sprawdzania wiadomości. Zamiast otwierać pocztę przy każdym powiadomieniu, zaglądam do niej między zadaniami. Jeżeli czekam na ważną odpowiedź potrzebną do dalszej pracy, robię wyjątek.\n\nW zeszłym tygodniu porównałem dwa dni, w których miałem podobną liczbę spotkań. W dniu z krótkimi przerwami łatwiej było mi zakończyć pracę o ustalonej godzinie. Nie oznacza to, że zawsze wykonuję więcej zadań. Mam jednak wrażenie, że lepiej pamiętam, co zrobiłem i od czego powinienem zacząć następnego dnia. Może spróbujesz czegoś podobnego w kwietniu?\n\nPozdrawiam,\nWojtek",
+  "questions": [
+    {
+      "id": "main-idea",
+      "skill": "main-idea",
+      "question": "Co Wojtek zmienił w organizacji pracy?",
+      "options": [
+        "Zrezygnował z przerw, żeby kończyć wcześniej.",
+        "Przeniósł wszystkie spotkania zespołu na poranek.",
+        "Dopasował przerwy i sprawdzanie wiadomości do rodzaju wykonywanych zadań."
+      ],
+      "answer": "Dopasował przerwy i sprawdzanie wiadomości do rodzaju wykonywanych zadań.",
+      "evidence": "Mam jednak wrażenie, że lepiej pamiętam, co zrobiłem i od czego powinienem zacząć następnego dnia.",
+      "explanation": "Wojtek stosuje różne przerwy przy krótkich i długich zadaniach oraz wyjątek dla pilnych wiadomości."
+    },
+    {
+      "id": "detail",
+      "skill": "detail",
+      "question": "Od kiedy próbuje inaczej organizować dzień?",
+      "options": [
+        "Od końca kwietnia.",
+        "Od początku marca.",
+        "Od początku stycznia."
+      ],
+      "answer": "Od początku marca.",
+      "evidence": "Od początku marca próbuję inaczej organizować dzień pracy w domu.",
+      "explanation": "Nowy sposób stosuje od marca."
+    },
+    {
+      "id": "cause",
+      "skill": "cause",
+      "question": "Dlaczego przed przerwą zapisuje kolejne działanie?",
+      "options": [
+        "Żeby po powrocie szybciej przypomnieć sobie, na czym skończył.",
+        "Żeby wysłać zespołowi raport z każdej przerwy.",
+        "Żeby nie musieć kończyć rozpoczętego zadania."
+      ],
+      "answer": "Żeby po powrocie szybciej przypomnieć sobie, na czym skończył.",
+      "evidence": "Dzięki temu nie tracę później czasu na przypominanie sobie ostatniego etapu pracy.",
+      "explanation": "Notatka wskazuje kolejny krok po powrocie."
+    },
+    {
+      "id": "inference",
+      "skill": "inference",
+      "question": "Wojtek pracuje nad zadaniem, które potrwa całe przedpołudnie, i czeka na odpowiedź potrzebną do jego dalszej części. Co pasuje do jego zasad?",
+      "options": [
+        "Sprawdzać wszystkie powiadomienia bez względu na ich znaczenie.",
+        "Ustawić przypomnienie o przerwie i sprawdzić oczekiwaną wiadomość w razie potrzeby.",
+        "Czekać z każdą przerwą i wiadomością do końca całego zadania."
+      ],
+      "answer": "Ustawić przypomnienie o przerwie i sprawdzić oczekiwaną wiadomość w razie potrzeby.",
+      "evidence": "Przy zadaniach, które zajmują kilka godzin, nadal ustawiam przypomnienie. Nie czekam na ich całkowite zakończenie, bo wtedy łatwo zapomnieć o odpoczynku. Przed przerwą zapisuję jedno zdanie o tym, co zrobię po powrocie. Dzięki temu nie tracę później czasu na przypominanie sobie ostatniego etapu pracy.\n\nZmieniłem także porę sprawdzania wiadomości. Zamiast otwierać pocztę przy każdym powiadomieniu, zaglądam do niej między zadaniami. Jeżeli czekam na ważną odpowiedź potrzebną do dalszej pracy, robię wyjątek.",
+      "explanation": "Długie zadanie wymaga przypomnienia, a ważna odpowiedź stanowi wyjątek od zwykłych zasad poczty."
+    },
+    {
+      "id": "vocabulary",
+      "skill": "vocabulary",
+      "question": "Co znaczy „robię wyjątek”?",
+      "options": [
+        "W szczególnej sytuacji postępuję inaczej niż zwykle.",
+        "Stosuję tę samą zasadę bez żadnych zmian.",
+        "Przenoszę wszystkie zadania na inny dzień."
+      ],
+      "answer": "W szczególnej sytuacji postępuję inaczej niż zwykle.",
+      "evidence": "Jeżeli czekam na ważną odpowiedź potrzebną do dalszej pracy, robię wyjątek.",
+      "explanation": "Wyjątek to odstąpienie od reguły w określonej sytuacji."
+    }
+  ],
+  "publicationStatus": "practice"
+}

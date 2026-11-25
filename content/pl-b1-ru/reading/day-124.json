@@ -1,0 +1,76 @@
+{
+  "id": "pl-b1.reading.day-124",
+  "day": 124,
+  "level": "B1",
+  "genre": "ogłoszenie",
+  "title": "Naprawa czy zakup nowych mebli",
+  "text": "Pracownia Rzeczy na Dłużej zaprasza na sobotnie konsultacje dotyczące domowych mebli. Spotkanie jest przeznaczone dla osób, które zastanawiają się, czy warto naprawić stary stolik, krzesło albo szafkę, czy może lepiej poszukać czegoś nowego. Nie będziemy przekonywać wszystkich do jednego rozwiązania. Chcemy pomóc ocenić stan przedmiotu i koszty różnych możliwości.\n\nNa konsultacje można przynieść zdjęcia mebla. Prosimy pokazać zarówno cały przedmiot, jak i miejsce, które wymaga naprawy. Przy niewielkich rzeczach, takich jak szuflada lub drewniane krzesło, można także przynieść sam przedmiot. Nie mamy jednak miejsca na duże szafy i kanapy.\n\nW pierwszej części spotkania prowadzący wyjaśni, jakie informacje są potrzebne do przygotowania wyceny. Często sam wygląd mebla nie wystarcza, żeby ocenić jego stan. Niekiedy drobna rysa wygląda nieładnie, ale nie utrudnia korzystania z przedmiotu. Z kolei uszkodzone połączenie elementów może wymagać dokładniejszego sprawdzenia.\n\nW drugiej części będzie można porozmawiać indywidualnie z osobą prowadzącą pracownię. Na jedną rozmowę przeznaczymy piętnaście minut. Nie będziemy wykonywać napraw podczas konsultacji. Jeżeli ktoś zdecyduje się na usługę, osobno uzgodni termin, zakres prac i cenę.\n\nOsoby, które rozważają zakup nowego mebla, mogą przynieść opis podobnego produktu ze sklepu. Warto porównać nie tylko cenę, lecz również wymiary i sposób korzystania z przedmiotu. Jeśli naprawa nie ma sensu w danej sytuacji, prowadzący powie o tym otwarcie.\n\nZapisy przyjmujemy do piątku. Liczba rozmów indywidualnych jest ograniczona, ale w części wspólnej mogą uczestniczyć również osoby, które nie zdążyły się zapisać.",
+  "questions": [
+    {
+      "id": "main-idea",
+      "skill": "main-idea",
+      "question": "Jaki jest cel konsultacji?",
+      "options": [
+        "Wykonać na miejscu wszystkie zgłoszone naprawy.",
+        "Zachęcić wszystkich do naprawiania każdego mebla bez względu na koszt.",
+        "Pomóc zdecydować między naprawą a zakupem na podstawie stanu i potrzeb użytkownika."
+      ],
+      "answer": "Pomóc zdecydować między naprawą a zakupem na podstawie stanu i potrzeb użytkownika.",
+      "evidence": "Chcemy pomóc ocenić stan przedmiotu i koszty różnych możliwości.",
+      "explanation": "Konsultacja ma pomóc porównać opcje, nie wymuszać naprawy."
+    },
+    {
+      "id": "detail",
+      "skill": "detail",
+      "question": "Ile potrwa jedna rozmowa indywidualna?",
+      "options": [
+        "Piętnaście minut.",
+        "Pół godziny.",
+        "Czterdzieści pięć minut."
+      ],
+      "answer": "Piętnaście minut.",
+      "evidence": "Na jedną rozmowę przeznaczymy piętnaście minut.",
+      "explanation": "Każda rozmowa ma limit piętnastu minut."
+    },
+    {
+      "id": "cause",
+      "skill": "cause",
+      "question": "Dlaczego organizatorzy proszą o zdjęcia uszkodzeń?",
+      "options": [
+        "Prowadzący będzie sprzedawać meble na podstawie zdjęć.",
+        "Sam ogólny wygląd mebla może nie wystarczyć do oceny jego stanu.",
+        "Zdjęcia mają służyć do przygotowania wystawy."
+      ],
+      "answer": "Sam ogólny wygląd mebla może nie wystarczyć do oceny jego stanu.",
+      "evidence": "Często sam wygląd mebla nie wystarcza, żeby ocenić jego stan.",
+      "explanation": "Zdjęcie szczegółu pomaga zobaczyć problem, nie tylko wygląd całości."
+    },
+    {
+      "id": "inference",
+      "skill": "inference",
+      "question": "Uczestniczka ma dużą szafę i nie zdążyła zapisać się na rozmowę. Co może zrobić?",
+      "options": [
+        "Przynieść zdjęcia, uczestniczyć w części wspólnej i zapytać o możliwość późniejszej konsultacji.",
+        "Przywieźć szafę do pracowni i czekać na natychmiastową naprawę.",
+        "Zrezygnować z udziału, ponieważ bez rezerwacji nie ma dostępu do żadnej części."
+      ],
+      "answer": "Przynieść zdjęcia, uczestniczyć w części wspólnej i zapytać o możliwość późniejszej konsultacji.",
+      "evidence": "Na konsultacje można przynieść zdjęcia mebla. Prosimy pokazać zarówno cały przedmiot, jak i miejsce, które wymaga naprawy. Przy niewielkich rzeczach, takich jak szuflada lub drewniane krzesło, można także przynieść sam przedmiot. Nie mamy jednak miejsca na duże szafy i kanapy.\n\nW pierwszej części spotkania prowadzący wyjaśni, jakie informacje są potrzebne do przygotowania wyceny. Często sam wygląd mebla nie wystarcza, żeby ocenić jego stan. Niekiedy drobna rysa wygląda nieładnie, ale nie utrudnia korzystania z przedmiotu. Z kolei uszkodzone połączenie elementów może wymagać dokładniejszego sprawdzenia.\n\nW drugiej części będzie można porozmawiać indywidualnie z osobą prowadzącą pracownię. Na jedną rozmowę przeznaczymy piętnaście minut. Nie będziemy wykonywać napraw podczas konsultacji. Jeżeli ktoś zdecyduje się na usługę, osobno uzgodni termin, zakres prac i cenę.\n\nOsoby, które rozważają zakup nowego mebla, mogą przynieść opis podobnego produktu ze sklepu. Warto porównać nie tylko cenę, lecz również wymiary i sposób korzystania z przedmiotu. Jeśli naprawa nie ma sensu w danej sytuacji, prowadzący powie o tym otwarcie.\n\nZapisy przyjmujemy do piątku. Liczba rozmów indywidualnych jest ograniczona, ale w części wspólnej mogą uczestniczyć również osoby, które nie zdążyły się zapisać.",
+      "explanation": "Duże przedmioty nie mieszczą się w pracowni, a część wspólna nie wymaga zapisu."
+    },
+    {
+      "id": "vocabulary",
+      "skill": "vocabulary",
+      "question": "Co znaczy „zakres prac” w ogłoszeniu?",
+      "options": [
+        "Liczba osób zatrudnionych w pracowni.",
+        "Lista czynności, które mają zostać wykonane.",
+        "Godziny otwarcia wszystkich sklepów z meblami."
+      ],
+      "answer": "Lista czynności, które mają zostać wykonane.",
+      "evidence": "osobno uzgodni termin, zakres prac i cenę.",
+      "explanation": "Zakres określa, co dokładnie obejmuje naprawa."
+    }
+  ],
+  "publicationStatus": "practice"
+}

@@ -1,0 +1,76 @@
+{
+  "id": "pl-b1.reading.day-126",
+  "day": 126,
+  "level": "B1",
+  "genre": "poradnik",
+  "title": "Wybór dzielnicy do życia",
+  "text": "Osoby szukające mieszkania często zaczynają od porównania cen i powierzchni lokali. Warto jednak poświęcić trochę czasu również na samą dzielnicę. To, co na mapie wygląda na niewielką odległość, w codziennym życiu może oznaczać dłuższą drogę, kilka przesiadek albo przechodzenie przez ruchliwe skrzyżowania.\n\nPrzed oglądaniem mieszkań zapisz miejsca, które odwiedzasz regularnie. Dla jednej osoby najważniejszy będzie dojazd do pracy, dla innej szkoła dziecka lub możliwość zrobienia zakupów bez samochodu. Nie wszystkie zalety okolicy będą miały dla ciebie taką samą wartość. Duży park może być mniej ważny, jeśli nie masz czasu z niego korzystać.\n\nW przykładowej sytuacji Marta porównywała dwie dzielnice. Pierwsza znajdowała się bliżej centrum, ale wymagała dwóch przesiadek w drodze do biura. W drugiej mieszkania były nieco mniejsze, za to autobus do jej pracy odjeżdżał bezpośrednio spod pobliskiego przystanku. Marta sprawdziła obie trasy w godzinach, w których zwykle dojeżdżała. Okazało się, że druga możliwość lepiej odpowiadała jej codziennemu planowi.\n\nJeśli masz okazję, odwiedź wybraną okolicę więcej niż raz. W dzień roboczy możesz zobaczyć, jak wygląda ruch rano, a wieczorem sprawdzić, czy miejsca, z których chcesz korzystać, są jeszcze otwarte. Zwróć uwagę na warunki, które mogą być ważne również po pierwszych tygodniach mieszkania.\n\nNa koniec porównaj nie tylko zalety obu lokali, ale również typowe obowiązki, które będziesz wykonywać w ich otoczeniu. Dobre miejsce do życia nie zawsze jest tym, które najbardziej podobało ci się podczas jednego oglądania.",
+  "questions": [
+    {
+      "id": "main-idea",
+      "skill": "main-idea",
+      "question": "Jaka jest główna rada poradnika?",
+      "options": [
+        "Porównywać dzielnice na podstawie realnego codziennego życia, nie tylko wyglądu mieszkania.",
+        "Oceniać okolicę wyłącznie podczas oglądania mieszkania.",
+        "Zawsze wybierać lokal najbliżej centrum miasta."
+      ],
+      "answer": "Porównywać dzielnice na podstawie realnego codziennego życia, nie tylko wyglądu mieszkania.",
+      "evidence": "Na koniec porównaj nie tylko zalety obu lokali, ale również typowe obowiązki, które będziesz wykonywać w ich otoczeniu.",
+      "explanation": "Artykuł porównuje dojazd, zakupy i funkcjonowanie dzielnicy w różnych porach."
+    },
+    {
+      "id": "detail",
+      "skill": "detail",
+      "question": "Ile przesiadek wymagał dojazd z pierwszej dzielnicy Marty?",
+      "options": [
+        "Jednej.",
+        "Dwóch.",
+        "Trzech."
+      ],
+      "answer": "Dwóch.",
+      "evidence": "Pierwsza znajdowała się bliżej centrum, ale wymagała dwóch przesiadek w drodze do biura.",
+      "explanation": "Pierwsza trasa wymagała dwóch przesiadek."
+    },
+    {
+      "id": "cause",
+      "skill": "cause",
+      "question": "Dlaczego warto odwiedzić dzielnicę o różnych porach?",
+      "options": [
+        "Żeby za każdym razem zobaczyć inne mieszkanie.",
+        "Żeby właściciel zaproponował niższą cenę.",
+        "Żeby poznać warunki, które zmieniają się w ciągu dnia."
+      ],
+      "answer": "Żeby poznać warunki, które zmieniają się w ciągu dnia.",
+      "evidence": "W dzień roboczy możesz zobaczyć, jak wygląda ruch rano, a wieczorem sprawdzić, czy miejsca, z których chcesz korzystać, są jeszcze otwarte.",
+      "explanation": "Rano można sprawdzić ruch, wieczorem dostępność usług."
+    },
+    {
+      "id": "inference",
+      "skill": "inference",
+      "question": "Osoba pracuje do późna i robi zakupy po pracy. Jedno mieszkanie jest większe, ale nie zna godzin pobliskiego sklepu. Co powinna sprawdzić przed wyborem?",
+      "options": [
+        "Czy po powrocie z pracy może zrobić potrzebne zakupy i jak wygląda jej dojazd.",
+        "Wyłącznie powierzchnię większego mieszkania.",
+        "Godziny otwarcia sklepu w weekend, niezależnie od swoich godzin pracy."
+      ],
+      "answer": "Czy po powrocie z pracy może zrobić potrzebne zakupy i jak wygląda jej dojazd.",
+      "evidence": "wieczorem sprawdzić, czy miejsca, z których chcesz korzystać, są jeszcze otwarte.",
+      "explanation": "Dostępność sklepu po pracy oraz dojazd odpowiadają rzeczywistemu planowi dnia."
+    },
+    {
+      "id": "vocabulary",
+      "skill": "vocabulary",
+      "question": "Co oznacza autobus „bezpośrednio” do pracy?",
+      "options": [
+        "Połączenie dostępne tylko z centrum.",
+        "Autobus jadący zawsze w godzinach nocnych.",
+        "Połączenie, które nie wymaga przesiadki."
+      ],
+      "answer": "Połączenie, które nie wymaga przesiadki.",
+      "evidence": "autobus do jej pracy odjeżdżał bezpośrednio spod pobliskiego przystanku.",
+      "explanation": "Połączenie bezpośrednie nie wymaga zmiany pojazdu."
+    }
+  ],
+  "publicationStatus": "practice"
+}

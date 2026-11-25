@@ -1,0 +1,76 @@
+{
+  "id": "pl-b1.reading.day-118",
+  "day": 118,
+  "level": "B1",
+  "genre": "opowiadanie",
+  "title": "Wspólna decyzja w rodzinie",
+  "text": "Kiedy w domu rodziny Królów pojawiła się propozycja przeprowadzki, każdy zareagował inaczej. Ojciec dostał możliwość pracy bliżej centrum, ale obecne mieszkanie znajdowało się na drugim końcu miasta. Dojazdy zajmowały mu prawie dwie godziny dziennie. Matka pracowała częściowo z domu, więc odległość nie miała dla niej tak dużego znaczenia. Ich córka Lena natomiast nie chciała zmieniać szkoły w połowie roku.\n\nPoczątkowo rodzice rozmawiali o nowych mieszkaniach tylko między sobą. Lena słyszała fragmenty rozmów i obawiała się, że wszystko zostało już ustalone. Pewnego wieczoru zapytała wprost, kiedy będą się pakować. Ojciec zrozumiał wtedy, że córka inaczej odebrała ich plany.\n\nW niedzielę usiedli przy stole z mapą miasta. Zaznaczyli szkołę Leny, nowe biuro ojca oraz miejsca, do których matka jeździła w ciągu tygodnia. Okazało się, że nie muszą wybierać wyłącznie między obecnym mieszkaniem a mieszkaniem tuż przy biurze. Znaleźli dzielnicę, z której ojciec mógłby szybciej dojeżdżać do pracy, a Lena nadal korzystałaby z tego samego autobusu do szkoły.\n\nNie podjęli decyzji od razu. Przez dwa tygodnie sprawdzali różne połączenia i oglądali mieszkania w tej okolicy. Ustalili też, że jeżeli nie znajdą odpowiedniego miejsca przed końcem roku szkolnego, odłożą przeprowadzkę na wakacje.\n\nLena nadal miała wątpliwości, ale przestała czuć, że decyzja dotyczy jej tylko dlatego, że będzie musiała się do niej dostosować. Rodzice nie mogli spełnić wszystkich oczekiwań, lecz dzięki rozmowie lepiej rozumieli, jakie warunki muszą brać pod uwagę.",
+  "questions": [
+    {
+      "id": "main-idea",
+      "skill": "main-idea",
+      "question": "Co przede wszystkim zmieniło sposób podejmowania decyzji w rodzinie?",
+      "options": [
+        "Natychmiastowa rezygnacja z przeprowadzki.",
+        "Wybór mieszkania wyłącznie według odległości od biura.",
+        "Uwzględnienie potrzeb wszystkich domowników i poszukiwanie dodatkowej możliwości."
+      ],
+      "answer": "Uwzględnienie potrzeb wszystkich domowników i poszukiwanie dodatkowej możliwości.",
+      "evidence": "Rodzice nie mogli spełnić wszystkich oczekiwań, lecz dzięki rozmowie lepiej rozumieli, jakie warunki muszą brać pod uwagę.",
+      "explanation": "Wspólna mapa ujawniła trzecią możliwość, która uwzględnia szkołę i dojazd ojca."
+    },
+    {
+      "id": "detail",
+      "skill": "detail",
+      "question": "Ile czasu dziennie zajmowały ojcu dojazdy?",
+      "options": [
+        "Około pół godziny.",
+        "Prawie dwie godziny.",
+        "Ponad trzy godziny."
+      ],
+      "answer": "Prawie dwie godziny.",
+      "evidence": "Dojazdy zajmowały mu prawie dwie godziny dziennie.",
+      "explanation": "W tekście podano prawie dwie godziny dziennie."
+    },
+    {
+      "id": "cause",
+      "skill": "cause",
+      "question": "Dlaczego Lena zapytała o pakowanie?",
+      "options": [
+        "Sądziła, że rodzice już zdecydowali o przeprowadzce.",
+        "Znalazła mieszkanie w centrum.",
+        "Chciała zacząć naukę w innej szkole."
+      ],
+      "answer": "Sądziła, że rodzice już zdecydowali o przeprowadzce.",
+      "evidence": "Lena słyszała fragmenty rozmów i obawiała się, że wszystko zostało już ustalone.",
+      "explanation": "Lena usłyszała fragmenty rozmów i uznała, że decyzja już zapadła."
+    },
+    {
+      "id": "inference",
+      "skill": "inference",
+      "question": "Rodzina znalazła mieszkanie blisko biura, ale Lena musiałaby zmienić szkołę natychmiast. Co najlepiej odpowiada ich ustaleniom?",
+      "options": [
+        "Podpisać umowę, bo dojazd ojca jest najważniejszy.",
+        "Zrezygnować z nowej pracy bez rozmowy o innych mieszkaniach.",
+        "Poszukać innego miejsca lub rozważyć przeprowadzkę po zakończeniu roku szkolnego."
+      ],
+      "answer": "Poszukać innego miejsca lub rozważyć przeprowadzkę po zakończeniu roku szkolnego.",
+      "evidence": "Zaznaczyli szkołę Leny, nowe biuro ojca oraz miejsca, do których matka jeździła w ciągu tygodnia. Okazało się, że nie muszą wybierać wyłącznie między obecnym mieszkaniem a mieszkaniem tuż przy biurze. Znaleźli dzielnicę, z której ojciec mógłby szybciej dojeżdżać do pracy, a Lena nadal korzystałaby z tego samego autobusu do szkoły.\n\nNie podjęli decyzji od razu. Przez dwa tygodnie sprawdzali różne połączenia i oglądali mieszkania w tej okolicy. Ustalili też, że jeżeli nie znajdą odpowiedniego miejsca przed końcem roku szkolnego, odłożą przeprowadzkę na wakacje.",
+      "explanation": "Rodzina ustaliła, że szkoła jest ważnym warunkiem, a termin może się przesunąć."
+    },
+    {
+      "id": "vocabulary",
+      "skill": "vocabulary",
+      "question": "Co oznacza „odłożą przeprowadzkę”?",
+      "options": [
+        "Zmienią adres bez przenoszenia rzeczy.",
+        "Przesuną ją na późniejszy termin.",
+        "Wykonają ją w dwóch etapach jednego dnia."
+      ],
+      "answer": "Przesuną ją na późniejszy termin.",
+      "evidence": "odłożą przeprowadzkę na wakacje.",
+      "explanation": "Odłożenie oznacza zmianę terminu na wakacje."
+    }
+  ],
+  "publicationStatus": "practice"
+}

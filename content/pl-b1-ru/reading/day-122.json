@@ -1,0 +1,76 @@
+{
+  "id": "pl-b1.reading.day-122",
+  "day": 122,
+  "level": "B1",
+  "genre": "dialog",
+  "title": "Umowa najmu bez niespodzianek",
+  "text": "— Mieszkanie bardzo mi się podoba, ale chciałbym jeszcze spokojnie przeczytać projekt umowy — powiedział Norbert podczas oglądania lokalu.\n\n— Oczywiście — odpowiedziała właścicielka, pani Joanna. — Przygotowałam też listę wyposażenia. W kuchni zostają piekarnik, lodówka i podstawowe naczynia. W salonie wymieniłam ostatnio lampę.\n\nNorbert zauważył jednak, że w łazience kran nie zamykał się całkowicie. Zapytał, czy można go naprawić przed przeprowadzką. Właścicielka odpowiedziała, że zamówiła już wizytę fachowca na przyszły wtorek.\n\n— Chciałbym, żebyśmy przy przekazaniu kluczy sprawdzili również stan wyposażenia — zaproponował Norbert. — W poprzednim mieszkaniu nie zapisaliśmy kilku drobnych uszkodzeń. Później trudno było ustalić, kiedy powstały.\n\n— To dobry pomysł. Możemy zrobić wspólną listę i zdjęcia. Nie chodzi o to, żeby opisywać każdą rysę na talerzu, ale ważniejsze rzeczy warto zanotować.\n\nNorbert zapytał także o opłaty. W projekcie umowy widniała miesięczna kwota najmu, a obok informacja o dodatkowych kosztach. Pani Joanna wyjaśniła, że dokładna wysokość niektórych opłat zależy od zużycia. Norbert poprosił o przykładowe rozliczenie z poprzedniego miesiąca, żeby wiedzieć, jak planować budżet.\n\nUzgodnili, że spotkają się w środę, dzień po planowanej naprawie kranu. Jeśli wszystko będzie w porządku, podpiszą umowę i przygotują listę stanu mieszkania. Norbert nie chciał zatrzymywać lokalu przez wiele tygodni, ale zależało mu na wyjaśnieniu wątpliwości przed podpisaniem dokumentów.\n\nPo spotkaniu zapisał trzy pytania, które chciał jeszcze zadać. Dzięki temu nie musiał polegać wyłącznie na pamięci podczas kolejnej rozmowy.",
+  "questions": [
+    {
+      "id": "main-idea",
+      "skill": "main-idea",
+      "question": "Jakie podejście do najmu pokazuje Norbert?",
+      "options": [
+        "Sprawdza stan lokalu i warunki finansowe, zanim podejmie decyzję.",
+        "Chce podpisać dokumenty przed ustaleniem jakichkolwiek szczegółów.",
+        "Wybiera mieszkanie wyłącznie na podstawie wyposażenia kuchni."
+      ],
+      "answer": "Sprawdza stan lokalu i warunki finansowe, zanim podejmie decyzję.",
+      "evidence": "zależało mu na wyjaśnieniu wątpliwości przed podpisaniem dokumentów.",
+      "explanation": "Norbert zbiera informacje techniczne i finansowe przed podpisaniem."
+    },
+    {
+      "id": "detail",
+      "skill": "detail",
+      "question": "Na kiedy zaplanowano wizytę fachowca?",
+      "options": [
+        "Na środę.",
+        "Na piątek.",
+        "Na wtorek."
+      ],
+      "answer": "Na wtorek.",
+      "evidence": "zamówiła już wizytę fachowca na przyszły wtorek.",
+      "explanation": "Fachowiec ma przyjść we wtorek, przed środowym spotkaniem."
+    },
+    {
+      "id": "cause",
+      "skill": "cause",
+      "question": "Dlaczego Norbert proponuje zapisać stan wyposażenia?",
+      "options": [
+        "Nie wie, które urządzenia powinny zostać w kuchni.",
+        "Wcześniej trudno było ustalić, kiedy powstały uszkodzenia.",
+        "Chce samodzielnie wymienić wszystkie naczynia."
+      ],
+      "answer": "Wcześniej trudno było ustalić, kiedy powstały uszkodzenia.",
+      "evidence": "W poprzednim mieszkaniu nie zapisaliśmy kilku drobnych uszkodzeń. Później trudno było ustalić, kiedy powstały.",
+      "explanation": "Lista i zdjęcia pomagają ustalić wcześniejszy stan mieszkania."
+    },
+    {
+      "id": "inference",
+      "skill": "inference",
+      "question": "W środę kran nadal przecieka, a rozliczenie opłat nie zostało pokazane. Co odpowiada podejściu Norberta?",
+      "options": [
+        "Podpisać umowę i nie wracać już do tych spraw.",
+        "Wyjaśnić obie kwestie z właścicielką przed podpisaniem umowy.",
+        "Odmówić oglądania wyposażenia, skoro kran nie działa."
+      ],
+      "answer": "Wyjaśnić obie kwestie z właścicielką przed podpisaniem umowy.",
+      "evidence": "Norbert zapytał także o opłaty. W projekcie umowy widniała miesięczna kwota najmu, a obok informacja o dodatkowych kosztach. Pani Joanna wyjaśniła, że dokładna wysokość niektórych opłat zależy od zużycia. Norbert poprosił o przykładowe rozliczenie z poprzedniego miesiąca, żeby wiedzieć, jak planować budżet.\n\nUzgodnili, że spotkają się w środę, dzień po planowanej naprawie kranu. Jeśli wszystko będzie w porządku, podpiszą umowę i przygotują listę stanu mieszkania.",
+      "explanation": "Obie wątpliwości pozostają otwarte; podpisanie było warunkowe."
+    },
+    {
+      "id": "vocabulary",
+      "skill": "vocabulary",
+      "question": "Co oznacza „przykładowe rozliczenie”?",
+      "options": [
+        "Dokument pokazujący, jak obliczono koszty w konkretnym okresie.",
+        "Lista mieszkań dostępnych w podobnej cenie.",
+        "Wykaz planowanych napraw wszystkich urządzeń."
+      ],
+      "answer": "Dokument pokazujący, jak obliczono koszty w konkretnym okresie.",
+      "evidence": "Norbert poprosił o przykładowe rozliczenie z poprzedniego miesiąca, żeby wiedzieć, jak planować budżet.",
+      "explanation": "Rozliczenie pokazuje koszty konkretnego miesiąca."
+    }
+  ],
+  "publicationStatus": "practice"
+}
