@@ -8,23 +8,32 @@ import { loadLiveReadingCatalog } from '@/lib/content/curriculum'
 import type { ReadingCatalogEntry } from '@/lib/content/reading-catalog'
 import { readingBacklog } from '@/lib/content/reading-progress'
 import { useAppState } from '@/lib/data/store'
+import { assignmentReviewRows, type AssignmentSummary } from '@/lib/engine/assignment-progress'
 
 export function ReviewCenter() {
   const t = useTranslations('reviewCenter')
   const state = useAppState()
   const [entries, setEntries] = useState<ReadingCatalogEntry[] | null>(null)
+  const [summaries, setSummaries] = useState<AssignmentSummary[] | null>(null)
   const [error, setError] = useState(false)
   const [retry, setRetry] = useState(0)
   useEffect(() => {
     let alive = true
     setError(false)
     loadLiveReadingCatalog().then(rows => { if (alive) setEntries(rows) }).catch(() => { if (alive) setError(true) })
+    fetch('/api/lesson-assignments/?summary=1', { cache:'no-store' }).then(async response => {
+      if (!response.ok) throw new Error('assignment_summary_failed')
+      return response.json() as Promise<{ summaries: AssignmentSummary[] }>
+    }).then(result => { if (alive) setSummaries(result.summaries) }).catch(() => { if (alive) setError(true) })
     return () => { alive = false }
   }, [retry])
   const completed = new Set((state?.sessions ?? []).filter(s => s.kind === 'day' && s.completedAt).map(s => s.dayNumber))
   const counts = state && entries && entries.every(e => e.questionIds?.length) ? readingBacklog(entries, state.exerciseResults, completed) : null
   const weak = state?.mastery.filter(r => r.mastery < 0.6 && r.attempts > 0).length
+  const assignments = state && summaries ? assignmentReviewRows(summaries, state.exerciseResults, completed) : null
   const rows = [
+    { key: 'assignmentMissing', href: '/review/?filter=missing', count: assignments?.reduce((n,row) => n + row.missing.length,0) },
+    { key: 'assignmentMistakes', href: '/review/?filter=mistakes', count: assignments?.reduce((n,row) => n + row.mistakes.length,0) },
     { key: 'missed', href: '/reading/?filter=missed', count: counts?.missed },
     { key: 'unfinished', href: '/reading/?filter=unfinished', count: counts?.unfinished },
     { key: 'mistakes', href: '/reading/?filter=mistakes', count: counts?.mistakes },
@@ -36,6 +45,7 @@ export function ReviewCenter() {
       <Row align="center" justify="between"><Stack gap="none"><strong className="text-sm">{t(row.key)}</strong><span className="text-xs text-muted">{t(row.key + 'Hint')}</span></Stack>
         <span className="shrink-0 text-sm font-semibold tabular-nums">{row.count ?? '—'} →</span></Row>
     </Link>)}
+    <Link href="/review/" className="text-sm font-medium text-accent-ink">{t('history')} →</Link>
     {error && <button className="text-sm text-muted underline" onClick={() => setRetry(n => n + 1)}>{t('retry')}</button>}
   </Stack></Card>
 }

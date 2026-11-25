@@ -2,7 +2,7 @@ import { and, eq, sql } from 'drizzle-orm'
 import { withUser } from '@/lib/api/handler'
 import { pg } from '@/lib/db/pg'
 import { lessonAssignments } from '@/lib/db/schema'
-import type { AssignmentMap } from '@/lib/engine/lesson-assignments'
+import { stageExerciseIds, type AssignmentMap } from '@/lib/engine/assignment-progress'
 
 export const runtime = 'nodejs'
 export const dynamic = 'force-dynamic'
@@ -21,7 +21,18 @@ async function get(userId: string, day: number) {
   const [row] = await pg.select({ stages: lessonAssignments.stages }).from(lessonAssignments).where(key(userId, day)).limit(1)
   return { stages: row?.stages ?? {} }
 }
-export const GET = withUser(async ({ userId, req }) => get(userId, dayFrom(req)))
+export const GET = withUser(async ({ userId, req }) => {
+  if (new URL(req.url).searchParams.get('summary') === '1') {
+    const rows = await pg.select({ dayNumber: lessonAssignments.dayNumber, stages: lessonAssignments.stages })
+      .from(lessonAssignments).where(and(eq(lessonAssignments.userId, userId), eq(lessonAssignments.courseId, COURSE_ID)))
+    return { summaries: rows.map(row => ({
+      dayNumber: row.dayNumber,
+      exerciseIds: Object.entries(row.stages as AssignmentMap).filter(([id]) => id !== 'reading')
+        .flatMap(([,stage]) => stage ? stageExerciseIds(stage) : []),
+    })) }
+  }
+  return get(userId, dayFrom(req))
+})
 export const POST = withUser(async ({ userId, req }) => {
   const day = dayFrom(req)
   const raw = await req.text()

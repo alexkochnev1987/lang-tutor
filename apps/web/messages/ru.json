@@ -289,6 +289,27 @@
     "grammarHint": "Открыть тренажёр грамматики",
     "retry": "Повторить загрузку",
     "lessonProgress": "Выполнено упражнений урока (без слов): {answered}/{total}",
-    "continueLesson": "Продолжить урок"
+    "continueLesson": "Продолжить урок",
+    "assignmentMissing": "Пропущенные упражнения",
+    "assignmentMissingHint": "Из сохранённых уроков",
+    "assignmentMistakes": "Ошибки в упражнениях",
+    "assignmentMistakesHint": "Грамматика, сочетания и экзамен",
+    "history": "Повторить упражнения уроков",
+    "assignmentFilter": {
+      "all": "Все",
+      "missing": "Пропущенные",
+      "mistakes": "Ошибки"
+    },
+    "assignmentNotice": "Доступны упражнения сохранённых уроков. Чтение и слова повторяются отдельно.",
+    "assignmentDay": "День {day}",
+    "assignmentCounts": "Пропущено: {missing} · Ошибок: {mistakes} · Всего: {total}",
+    "repeatAssigned": "Пройти снова",
+    "startReview": "Начать закрепление",
+    "noAssignments": "Нет доступных заданий в этой категории.",
+    "back": "Назад",
+    "loadError": "Не удалось загрузить задания.",
+    "saveError": "Не удалось сохранить ответ.",
+    "next": "Дальше",
+    "result": "Результат"
   }
 }

@@ -289,6 +289,27 @@
     "grammarHint": "Відкрити тренажер граматики",
     "retry": "Повторити завантаження",
     "lessonProgress": "Виконано вправ уроку (без слів): {answered}/{total}",
-    "continueLesson": "Продовжити урок"
+    "continueLesson": "Продовжити урок",
+    "assignmentMissing": "Пропущені вправи",
+    "assignmentMissingHint": "Зі збережених уроків",
+    "assignmentMistakes": "Помилки у вправах",
+    "assignmentMistakesHint": "Граматика, сполучення та іспит",
+    "history": "Повторити вправи уроків",
+    "assignmentFilter": {
+      "all": "Усі",
+      "missing": "Пропущені",
+      "mistakes": "Помилки"
+    },
+    "assignmentNotice": "Тут доступні вправи збережених уроків. Читання і слова повторюються окремо.",
+    "assignmentDay": "День {day}",
+    "assignmentCounts": "Пропущено: {missing} · Помилок: {mistakes} · Усього: {total}",
+    "repeatAssigned": "Пройти знову",
+    "startReview": "Почати закріплення",
+    "noAssignments": "Немає доступних завдань у цій категорії.",
+    "back": "Назад",
+    "loadError": "Не вдалося завантажити вправи.",
+    "saveError": "Не вдалося зберегти відповідь.",
+    "next": "Далі",
+    "result": "Результат"
   }
 }

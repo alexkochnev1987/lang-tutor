@@ -289,6 +289,27 @@
     "grammarHint": "Open grammar practice",
     "retry": "Retry loading",
     "lessonProgress": "Lesson exercises completed (excluding words): {answered}/{total}",
-    "continueLesson": "Continue lesson"
+    "continueLesson": "Continue lesson",
+    "assignmentMissing": "Missed exercises",
+    "assignmentMissingHint": "From saved lessons",
+    "assignmentMistakes": "Exercise mistakes",
+    "assignmentMistakesHint": "Grammar, combinations and exam",
+    "history": "Review past lesson exercises",
+    "assignmentFilter": {
+      "all": "All",
+      "missing": "Missed",
+      "mistakes": "Mistakes"
+    },
+    "assignmentNotice": "Saved lesson exercises are available here. Reading and words are reviewed separately.",
+    "assignmentDay": "Day {day}",
+    "assignmentCounts": "Missed: {missing} · Mistakes: {mistakes} · Total: {total}",
+    "repeatAssigned": "Practice again",
+    "startReview": "Start review",
+    "noAssignments": "No exercises available in this category.",
+    "back": "Back",
+    "loadError": "Could not load exercises.",
+    "saveError": "Could not save the answer.",
+    "next": "Next",
+    "result": "Result"
   }
 }

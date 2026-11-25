@@ -1,21 +1,9 @@
-import type { Stage, StageId, TodayPlan } from './plan'
-import type { ExerciseResultRow } from '@/lib/data/types'
+import type { Stage, TodayPlan } from './plan'
 import { loadLiveReadingCatalog, loadLiveReadingText } from '@/lib/content/curriculum'
 
-export const ASSIGNED_STAGE_IDS = ['grammar','collocations','reading','exam'] as const
-export type AssignedStageId = typeof ASSIGNED_STAGE_IDS[number]
-export type AssignmentMap = Partial<Record<AssignedStageId, Stage>>
-export function isAssignedStage(id: StageId): id is AssignedStageId {
-  return (ASSIGNED_STAGE_IDS as readonly string[]).includes(id)
-}
-export function stageExerciseIds(stage: Stage): string[] {
-  return stage.steps.flatMap(step => step.kind === 'exercise' ? [step.ex.id] : step.kind === 'exercise-batch' ? step.exercises.map(ex => ex.id) : [])
-}
-export function assignmentProgress(stages: Stage[], results: readonly ExerciseResultRow[], day: number) {
-  const ids = new Set(stages.filter(stage => isAssignedStage(stage.id)).flatMap(stageExerciseIds))
-  const rows = new Map(results.filter(row => row.dayNumber === day && ids.has(row.exerciseId)).map(row => [row.exerciseId, row]))
-  return { total: ids.size, answered: rows.size, correct: [...rows.values()].filter(row => row.correct).length }
-}
+import { ASSIGNED_STAGE_IDS, isAssignedStage, stageExerciseIds, type AssignmentMap } from './assignment-progress'
+export { assignmentProgress, isAssignedStage, stageExerciseIds } from './assignment-progress'
+export type { AssignmentMap } from './assignment-progress'
 
 function assignmentMap(plan: TodayPlan): AssignmentMap {
   const out: AssignmentMap = {}
