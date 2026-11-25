@@ -1,0 +1,767 @@
+{
+  "version": 1,
+  "status": "draft",
+  "texts": [
+    {
+      "id": "pl-b1.reading.day-168",
+      "day": 168,
+      "level": "B1",
+      "genre": "poradnik",
+      "title": "Przygotowanie do egzaminu językowego",
+      "text": "Przygotowania do egzaminu językowego warto rozpocząć od poznania formy zadań. Nie każdy egzamin sprawdza umiejętności w identyczny sposób, dlatego najpierw znajdź aktualne informacje organizatora i przykładowe materiały przeznaczone dla wybranego poziomu. Nie traktuj wyniku jednego próbnego zestawu jako gwarancji wyniku prawdziwego egzaminu.\n\nKiedy rozwiązujesz przykładowe zadania, zapisz nie tylko poprawne i błędne odpowiedzi, lecz również powód trudności. Być może nie rozumiesz polecenia, znasz potrzebne słowo, ale nie potrafisz użyć go w zdaniu, albo nie wystarcza ci czasu na spokojne przeczytanie tekstu. Każdy z tych problemów wymaga trochę innego rodzaju ćwiczenia.\n\nW przykładowej sytuacji Igor regularnie rozwiązywał testy gramatyczne i osiągał w nich coraz lepsze wyniki. Podczas próbnej rozmowy miał jednak trudność z wyjaśnieniem własnej opinii. Zamiast zwiększać liczbę zadań gramatycznych, postanowił częściej opowiadać o prostych sytuacjach i odpowiadać na dodatkowe pytania. Nadal powtarzał reguły, ale przeznaczał więcej czasu na umiejętność, której brak zauważył podczas próby.\n\nW kolejnych tygodniach przygotuj również kilka pełnych prób z odpowiednim ograniczeniem czasu, jeśli takie ćwiczenie odpowiada zasadom wybranego egzaminu. Po każdej próbie zostaw czas na omówienie błędów. Samo rozwiązywanie następnego zestawu nie wyjaśni, dlaczego poprzednia odpowiedź była niewłaściwa.\n\nPrzed dniem egzaminu sprawdź godzinę, adres oraz wymagane dokumenty bezpośrednio u organizatora. Dobrze jest oddzielić przygotowanie językowe od spraw organizacyjnych. Dzięki temu podczas nauki możesz skupić się na konkretnych umiejętnościach, a w dniu egzaminu nie tracić czasu na szukanie podstawowych informacji.",
+      "questions": [
+        {
+          "id": "main-idea",
+          "skill": "main-idea",
+          "question": "Co przede wszystkim zaleca poradnik?",
+          "options": [
+            "Traktować jeden dobry wynik próbny jako potwierdzenie przyszłego sukcesu.",
+            "Poznać formę egzaminu, rozpoznać własne trudności i odpowiednio dobrać ćwiczenia.",
+            "Rozwiązywać jak najwięcej testów jednego rodzaju bez analizowania wyników."
+          ],
+          "answer": "Poznać formę egzaminu, rozpoznać własne trudności i odpowiednio dobrać ćwiczenia.",
+          "evidence": "Każdy z tych problemów wymaga trochę innego rodzaju ćwiczenia.",
+          "explanation": "Tekst łączy poznanie wymagań, praktykę i analizę indywidualnych trudności."
+        },
+        {
+          "id": "detail",
+          "skill": "detail",
+          "question": "W jakim rodzaju ćwiczeń Igor osiągał coraz lepsze wyniki?",
+          "options": [
+            "W próbnych rozmowach.",
+            "W zadaniach dotyczących organizacji egzaminu.",
+            "W testach gramatycznych."
+          ],
+          "answer": "W testach gramatycznych.",
+          "evidence": "Igor regularnie rozwiązywał testy gramatyczne i osiągał w nich coraz lepsze wyniki.",
+          "explanation": "Poprawa dotyczyła gramatyki."
+        },
+        {
+          "id": "cause",
+          "skill": "cause",
+          "question": "Dlaczego po próbnej rozmowie zmienił plan nauki?",
+          "options": [
+            "Zauważył, że ma trudność z wyrażaniem i wyjaśnianiem swojej opinii.",
+            "Organizator zmienił adres egzaminu.",
+            "Nie mógł już korzystać z materiałów gramatycznych."
+          ],
+          "answer": "Zauważył, że ma trudność z wyrażaniem i wyjaśnianiem swojej opinii.",
+          "evidence": "Podczas próbnej rozmowy miał jednak trudność z wyjaśnieniem własnej opinii.",
+          "explanation": "Próba ujawniła inną potrzebę niż wyniki testów gramatycznych."
+        },
+        {
+          "id": "inference",
+          "skill": "inference",
+          "question": "Osoba dobrze rozumie tekst bez limitu czasu, ale często nie kończy próbnego zestawu. Co pasuje do zaleceń?",
+          "options": [
+            "Uczyć się wyłącznie nowych słów, niezależnie od przyczyny trudności.",
+            "Zrezygnować z analizowania wyników, ponieważ rozumie tekst bez limitu.",
+            "Sprawdzić, które etapy zajmują zbyt dużo czasu, i ćwiczyć również w warunkach odpowiadających egzaminowi."
+          ],
+          "answer": "Sprawdzić, które etapy zajmują zbyt dużo czasu, i ćwiczyć również w warunkach odpowiadających egzaminowi.",
+          "evidence": "Być może nie rozumiesz polecenia, znasz potrzebne słowo, ale nie potrafisz użyć go w zdaniu, albo nie wystarcza ci czasu na spokojne przeczytanie tekstu. Każdy z tych problemów wymaga trochę innego rodzaju ćwiczenia.\n\nW przykładowej sytuacji Igor regularnie rozwiązywał testy gramatyczne i osiągał w nich coraz lepsze wyniki. Podczas próbnej rozmowy miał jednak trudność z wyjaśnieniem własnej opinii. Zamiast zwiększać liczbę zadań gramatycznych, postanowił częściej opowiadać o prostych sytuacjach i odpowiadać na dodatkowe pytania. Nadal powtarzał reguły, ale przeznaczał więcej czasu na umiejętność, której brak zauważył podczas próby.\n\nW kolejnych tygodniach przygotuj również kilka pełnych prób z odpowiednim ograniczeniem czasu, jeśli takie ćwiczenie odpowiada zasadom wybranego egzaminu.",
+          "explanation": "Problem czasowy wymaga innego ćwiczenia niż brak znajomości słownictwa."
+        },
+        {
+          "id": "vocabulary",
+          "skill": "vocabulary",
+          "question": "Co oznacza „próbny zestaw”?",
+          "options": [
+            "Wykaz dokumentów potrzebnych w dniu egzaminu.",
+            "Zbiór przykładowych zadań służących przećwiczeniu formy egzaminu.",
+            "Ostateczny wynik wydany przez organizatora."
+          ],
+          "answer": "Zbiór przykładowych zadań służących przećwiczeniu formy egzaminu.",
+          "evidence": "Nie traktuj wyniku jednego próbnego zestawu jako gwarancji wyniku prawdziwego egzaminu.",
+          "explanation": "Próba pozwala ćwiczyć, ale nie jest właściwym egzaminem."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-169",
+      "day": 169,
+      "level": "B1",
+      "genre": "wiadomość",
+      "title": "Ogłoszenie i rozmowa o pracy",
+      "text": "Cześć, Magdo!\n\nWczoraj rozmawiałem z przedstawicielką firmy, która szuka osoby do obsługi zamówień. Znalazłem ogłoszenie kilka dni temu. Podano w nim zakres obowiązków, miejsce pracy oraz informację o możliwości otrzymania premii. Nie było jednak jasne, jak często trzeba pracować z biura i w jaki sposób ustala się dodatkowe wynagrodzenie.\n\nPrzed rozmową przygotowałem kilka pytań. Nie chciałem od razu porównywać tej oferty z inną wyłącznie na podstawie podanej kwoty. Zapytałem, jak wygląda zwykły tydzień pracy, kto pomaga nowej osobie w pierwszym miesiącu i jakie zadania wykonuje samodzielnie. Przedstawicielka wyjaśniła, że początkowo wszystkie zamówienia sprawdza doświadczony pracownik, a później nowa osoba przejmuje część klientów.\n\nDowiedziałem się również, że przez pierwsze dwa miesiące trzeba regularnie przychodzić do biura. Po tym okresie można uzgodnić część pracy z domu. Premia zależy od ustalonych wcześniej celów, ale szczegółowe zasady mają zostać przedstawione w kolejnej rozmowie. Poprosiłem także o wyjaśnienie informacji dotyczącej ubezpieczenia, ponieważ samo ogłoszenie nie zawierało szczegółów.\n\nNa koniec zapytałem, kiedy mógłbym przeczytać projekt umowy. Nie chciałem podpisywać dokumentu, zanim poznam warunki, których jeszcze nie omówiliśmy. Przedstawicielka obiecała przekazać mi dalsze informacje przed podjęciem decyzji.\n\nNa razie oferta nadal mnie interesuje, choć nie wiem, czy ostatecznie ją wybiorę. Zrozumiałem jednak, że rozmowa o pracy nie służy wyłącznie temu, żeby firma dowiedziała się czegoś o kandydacie. Kandydat również potrzebuje informacji, dzięki którym będzie mógł ocenić, czy zakres zadań i warunki współpracy rzeczywiście mu odpowiadają.\n\nPozdrawiam,\nKrzysiek",
+      "questions": [
+        {
+          "id": "main-idea",
+          "skill": "main-idea",
+          "question": "Jaki wniosek Krzysiek wyciągnął z rozmowy?",
+          "options": [
+            "Rozmowa powinna dotyczyć wyłącznie umiejętności kandydata.",
+            "Najważniejsze jest szybkie podpisanie dokumentu przed innymi kandydatami.",
+            "Kandydat powinien również sprawdzać, czy rzeczywiste obowiązki i warunki pracy mu odpowiadają."
+          ],
+          "answer": "Kandydat powinien również sprawdzać, czy rzeczywiste obowiązki i warunki pracy mu odpowiadają.",
+          "evidence": "Kandydat również potrzebuje informacji, dzięki którym będzie mógł ocenić, czy zakres zadań i warunki współpracy rzeczywiście mu odpowiadają.",
+          "explanation": "Rozmowa pomaga obu stronom ocenić dopasowanie."
+        },
+        {
+          "id": "detail",
+          "skill": "detail",
+          "question": "Jak długo trzeba początkowo regularnie przychodzić do biura?",
+          "options": [
+            "Przez pierwsze dwa miesiące.",
+            "Przez cały okres pracy.",
+            "Przez pierwszy tydzień."
+          ],
+          "answer": "Przez pierwsze dwa miesiące.",
+          "evidence": "przez pierwsze dwa miesiące trzeba regularnie przychodzić do biura.",
+          "explanation": "Dopiero potem można uzgodnić pracę z domu."
+        },
+        {
+          "id": "cause",
+          "skill": "cause",
+          "question": "Dlaczego Krzysiek poprosił o projekt umowy?",
+          "options": [
+            "Firma odmówiła przedstawienia zakresu obowiązków.",
+            "Chce poznać nieomówione warunki przed podpisaniem.",
+            "Zamierza od razu zrezygnować z oferty."
+          ],
+          "answer": "Chce poznać nieomówione warunki przed podpisaniem.",
+          "evidence": "Nie chciałem podpisywać dokumentu, zanim poznam warunki, których jeszcze nie omówiliśmy.",
+          "explanation": "Dokument i dalsze informacje są potrzebne przed decyzją."
+        },
+        {
+          "id": "inference",
+          "skill": "inference",
+          "question": "Inna oferta pozwala od początku pracować z domu, ale nie podaje, jak obliczana jest premia. Co odpowiada podejściu Krzyśka?",
+          "options": [
+            "Porównać organizację pracy i dopytać o zasady wynagrodzenia przed wyborem.",
+            "Odrzucić każdą ofertę z premią bez zadawania pytań.",
+            "Wybrać ją automatycznie ze względu na pracę z domu."
+          ],
+          "answer": "Porównać organizację pracy i dopytać o zasady wynagrodzenia przed wyborem.",
+          "evidence": "Nie chciałem od razu porównywać tej oferty z inną wyłącznie na podstawie podanej kwoty.",
+          "explanation": "Ważne są zarówno warunki organizacyjne, jak i sposób ustalania wynagrodzenia."
+        },
+        {
+          "id": "vocabulary",
+          "skill": "vocabulary",
+          "question": "Co oznacza „przejmuje część klientów”?",
+          "options": [
+            "Kupuje firmę, w której wcześniej pracował.",
+            "Przestaje przyjmować nowe zamówienia.",
+            "Zaczyna samodzielnie odpowiadać za obsługę niektórych klientów."
+          ],
+          "answer": "Zaczyna samodzielnie odpowiadać za obsługę niektórych klientów.",
+          "evidence": "a później nowa osoba przejmuje część klientów.",
+          "explanation": "Przejęcie oznacza objęcie odpowiedzialności za określoną grupę."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-170",
+      "day": 170,
+      "level": "B1",
+      "genre": "artykuł",
+      "title": "Dwa modele organizacji pracy",
+      "text": "W niewielkiej firmie zajmującej się przygotowaniem materiałów edukacyjnych postanowiono porównać dwa sposoby organizacji tygodnia. Pierwszy zespół pracował przede wszystkim wspólnie w biurze. Drugi wykonywał część zadań z domu, a spotykał się w budynku firmy dwa razy w tygodniu. Oba zespoły realizowały podobne projekty, ale miały trochę inne zadania.\n\nW pierwszym zespole ważną rolę odgrywało wspólne omawianie pomysłów. Pracownicy mogli szybko pokazać sobie projekt na komputerze i zapytać o szczegóły. Nie zawsze potrafili jednak znaleźć dłuższy okres spokojnej pracy. Częste pytania i krótkie spotkania utrudniały skupienie się na bardziej wymagających fragmentach materiału.\n\nDrugi zespół częściej przygotowywał dokumenty samodzielnie. Praca w domu ułatwiała części osób koncentrację, ale niektóre decyzje podejmowano wolniej, ponieważ trzeba było poczekać na odpowiedź współpracownika. Zespół zaczął więc zapisywać pytania w jednym dokumencie i wyznaczył dwie krótkie pory na wspólne rozwiązywanie spraw wymagających rozmowy.\n\nPo dwóch miesiącach kierowniczka nie uznała jednego modelu za najlepszy dla całej firmy. Poprosiła oba zespoły o wskazanie momentów, w których rzeczywiście potrzebują obecności innych osób. Pierwszy zespół wprowadził kilka godzin pracy bez planowanych spotkań, a drugi przeznaczył jeden dzień w biurze na zadania wymagające szybkiej wymiany pomysłów.\n\nPracownicy zauważyli, że samo miejsce wykonywania obowiązków nie rozwiązuje wszystkich trudności. Istotne było również ustalenie sposobu przekazywania informacji i odpowiedzialności za decyzje. Firma postanowiła nadal korzystać z różnych modeli, ale regularnie sprawdzać, czy przyjęte zasady pomagają zespołom wykonywać konkretne zadania, zamiast porównywać jedynie liczbę dni spędzonych przy biurku w budynku firmy.",
+      "questions": [
+        {
+          "id": "main-idea",
+          "skill": "main-idea",
+          "question": "Jaki wniosek przedstawia artykuł?",
+          "options": [
+            "Sposób organizacji pracy powinien odpowiadać rodzajowi zadań i potrzebom komunikacji.",
+            "Praca z domu jest odpowiednia tylko dla osób wykonujących identyczne zadania.",
+            "Praca w biurze zawsze wymaga większej liczby spotkań."
+          ],
+          "answer": "Sposób organizacji pracy powinien odpowiadać rodzajowi zadań i potrzebom komunikacji.",
+          "evidence": "Istotne było również ustalenie sposobu przekazywania informacji i odpowiedzialności za decyzje.",
+          "explanation": "Oba modele mogą wymagać zmian dopasowanych do rzeczywistej pracy."
+        },
+        {
+          "id": "detail",
+          "skill": "detail",
+          "question": "Jak często drugi zespół spotykał się w budynku firmy?",
+          "options": [
+            "Codziennie.",
+            "Dwa razy w tygodniu.",
+            "Raz w miesiącu."
+          ],
+          "answer": "Dwa razy w tygodniu.",
+          "evidence": "spotykał się w budynku firmy dwa razy w tygodniu.",
+          "explanation": "Podano dwa spotkania tygodniowo."
+        },
+        {
+          "id": "cause",
+          "skill": "cause",
+          "question": "Dlaczego pierwszy zespół wprowadził czas bez spotkań?",
+          "options": [
+            "Kierowniczka chciała zlikwidować wszystkie wspólne rozmowy.",
+            "Pracownicy nie mieli dostępu do komputerów.",
+            "Częste przerwy utrudniały skupienie podczas wymagających zadań."
+          ],
+          "answer": "Częste przerwy utrudniały skupienie podczas wymagających zadań.",
+          "evidence": "Częste pytania i krótkie spotkania utrudniały skupienie się na bardziej wymagających fragmentach materiału.",
+          "explanation": "Czas bez spotkań służy pracy wymagającej koncentracji."
+        },
+        {
+          "id": "inference",
+          "skill": "inference",
+          "question": "Nowy projekt wymaga zarówno kilku godzin samodzielnego przygotowania, jak i szybkich wspólnych decyzji. Co odpowiada rozwiązaniom firmy?",
+          "options": [
+            "Przenieść wszystkie zadania do domu i zrezygnować z rozmów.",
+            "Zaplanować osobne okresy skupienia i spotkania przeznaczone na decyzje.",
+            "Przeznaczyć cały dzień w biurze na spotkania niezależnie od zadań."
+          ],
+          "answer": "Zaplanować osobne okresy skupienia i spotkania przeznaczone na decyzje.",
+          "evidence": "Pierwszy zespół wprowadził kilka godzin pracy bez planowanych spotkań, a drugi przeznaczył jeden dzień w biurze na zadania wymagające szybkiej wymiany pomysłów.",
+          "explanation": "Oba rodzaje pracy można świadomie uwzględnić w harmonogramie."
+        },
+        {
+          "id": "vocabulary",
+          "skill": "vocabulary",
+          "question": "Co oznacza „szybka wymiana pomysłów”?",
+          "options": [
+            "Możliwość sprawnego omawiania propozycji między członkami zespołu.",
+            "Natychmiastowa rezygnacja z wcześniejszych projektów.",
+            "Przenoszenie komputerów między różnymi budynkami."
+          ],
+          "answer": "Możliwość sprawnego omawiania propozycji między członkami zespołu.",
+          "evidence": "zadania wymagające szybkiej wymiany pomysłów.",
+          "explanation": "Chodzi o wspólną rozmowę i reagowanie na propozycje innych."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-171",
+      "day": 171,
+      "level": "B1",
+      "genre": "dialog",
+      "title": "Zmiana zawodu w dorosłym wieku",
+      "text": "— Myślę o zmianie zawodu, ale nie wiem, od czego zacząć — powiedziała Beata podczas rozmowy ze znajomym. — Od wielu lat zajmuję się organizacją dostaw. Ostatnio coraz bardziej interesuje mnie przygotowywanie materiałów graficznych.\n\n— Czy próbowałaś już wykonywać takie zadania poza pracą? — zapytał Robert.\n\n— Zrobiłam kilka plakatów dla znajomych. Podobało mi się to, ale nie wiem, jak wygląda zwykły dzień osoby pracującej w tej dziedzinie. Nie chciałabym zrezygnować z obecnego zawodu tylko dlatego, że dobrze bawiłam się przy jednym projekcie.\n\nRobert zaproponował, żeby Beata porozmawiała z jego siostrą, która pracowała w niewielkim studiu graficznym. Podczas spotkania mogłaby zapytać nie tylko o ciekawe zadania, ale również o terminy, poprawki w projektach oraz kontakt z klientami.\n\n— A co z moim doświadczeniem? — zapytała Beata. — Mam wrażenie, że w nowej pracy musiałabym zaczynać zupełnie od początku.\n\n— Umiejętności organizowania zadań i rozmowy z ludźmi mogą być przydatne także gdzie indziej. Sprawdź jednak, czego jeszcze musiałabyś się nauczyć.\n\nPo spotkaniu z siostrą Roberta Beata przygotowała listę umiejętności. Zdecydowała, że przez dwa miesiące będzie wykonywać niewielkie projekty po pracy i poprosi o informacje zwrotne. Nie zamierzała jeszcze zmieniać zatrudnienia. Chciała najpierw zobaczyć, czy interesuje ją również ta część pracy, która wymaga wprowadzania poprawek i realizowania cudzych pomysłów.\n\nPrzy kolejnej rozmowie z Robertem powiedziała, że czuje się spokojniejsza. Wciąż nie znała ostatecznej decyzji, ale zamiast zastanawiać się wyłącznie nad ryzykiem zmiany, miała konkretne działania, które pozwolą jej lepiej poznać nową możliwość.",
+      "questions": [
+        {
+          "id": "main-idea",
+          "skill": "main-idea",
+          "question": "Jakie podejście do zmiany zawodu wybiera Beata?",
+          "options": [
+            "Natychmiastową rezygnację z pracy na podstawie jednego udanego projektu.",
+            "Odrzucenie całego dotychczasowego doświadczenia bez oceny jego przydatności.",
+            "Stopniowe poznawanie rzeczywistych obowiązków i sprawdzanie własnych umiejętności przed decyzją."
+          ],
+          "answer": "Stopniowe poznawanie rzeczywistych obowiązków i sprawdzanie własnych umiejętności przed decyzją.",
+          "evidence": "miała konkretne działania, które pozwolą jej lepiej poznać nową możliwość.",
+          "explanation": "Beata zamiast nagłej decyzji wybiera rozmowy i praktyczne próby."
+        },
+        {
+          "id": "detail",
+          "skill": "detail",
+          "question": "Czym Beata zajmuje się w obecnej pracy?",
+          "options": [
+            "Przygotowaniem kursów dla dorosłych.",
+            "Organizacją dostaw.",
+            "Prowadzeniem studia graficznego."
+          ],
+          "answer": "Organizacją dostaw.",
+          "evidence": "Od wielu lat zajmuję się organizacją dostaw.",
+          "explanation": "Jej dotychczasowy zawód dotyczy dostaw."
+        },
+        {
+          "id": "cause",
+          "skill": "cause",
+          "question": "Dlaczego chce poznawać także obowiązki związane z poprawkami?",
+          "options": [
+            "Chce sprawdzić, czy odpowiada jej rzeczywista codzienna praca, a nie tylko atrakcyjne zadania.",
+            "Nie zamierza tworzyć żadnych własnych projektów.",
+            "Robert poprosił ją o zmianę zawodu w ciągu tygodnia."
+          ],
+          "answer": "Chce sprawdzić, czy odpowiada jej rzeczywista codzienna praca, a nie tylko atrakcyjne zadania.",
+          "evidence": "Chciała najpierw zobaczyć, czy interesuje ją również ta część pracy, która wymaga wprowadzania poprawek i realizowania cudzych pomysłów.",
+          "explanation": "Praca zawodowa obejmuje więcej niż tworzenie własnych pomysłów."
+        },
+        {
+          "id": "inference",
+          "skill": "inference",
+          "question": "Po kilku próbnych projektach Beata lubi projektowanie, lecz często ma trudność z ustalaniem wymagań klienta. Co najlepiej pasuje do jej podejścia?",
+          "options": [
+            "Zmienić zatrudnienie natychmiast, ponieważ lubi jedną część zawodu.",
+            "Uznać wszystkie dotychczasowe umiejętności za nieprzydatne.",
+            "Dodać do listy nauki rozmowę o wymaganiach i szukać dalszych okazji do praktyki."
+          ],
+          "answer": "Dodać do listy nauki rozmowę o wymaganiach i szukać dalszych okazji do praktyki.",
+          "evidence": "Sprawdź jednak, czego jeszcze musiałabyś się nauczyć.",
+          "explanation": "Próby mają ujawniać konkretne umiejętności do rozwinięcia."
+        },
+        {
+          "id": "vocabulary",
+          "skill": "vocabulary",
+          "question": "Co oznacza „informacje zwrotne” o projektach?",
+          "options": [
+            "Uwagi, które pomagają ocenić wykonaną pracę i ją poprawić.",
+            "Dokumenty potwierdzające zakończenie obecnego zatrudnienia.",
+            "Listę nazwisk wszystkich klientów studia."
+          ],
+          "answer": "Uwagi, które pomagają ocenić wykonaną pracę i ją poprawić.",
+          "evidence": "poprosi o informacje zwrotne.",
+          "explanation": "Chodzi o reakcje i wskazówki dotyczące przygotowanych projektów."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-172",
+      "day": 172,
+      "level": "B1",
+      "genre": "e-mail",
+      "title": "Wspólne planowanie projektu",
+      "text": "Cześć wszystkim,\n\npo wczorajszym spotkaniu przygotowałam krótkie podsumowanie planu naszej wystawy. Mamy jeszcze trzy tygodnie do otwarcia, ale część zadań trzeba zakończyć wcześniej, ponieważ od nich zależy praca pozostałych osób. Chciałabym, żebyśmy ustalili wspólne terminy, a nie tylko datę końcową całego projektu.\n\nMarta przygotowuje opisy zdjęć. Potrzebujemy ich do następnej środy, ponieważ Paweł zaczyna wtedy projektowanie tablic. Jeśli opisów będzie za dużo, nie trzeba od razu skracać wszystkich. Najpierw wybierzemy fotografie, które rzeczywiście znajdą się na wystawie. Tomek ma do piątku sprawdzić wymiary sali i dostępne miejsca do umieszczenia tablic. Dzięki temu Paweł będzie wiedział, ile materiału można przygotować.\n\nWspólny dokument zawiera również zadania, których wykonanie nie zależy od innych osób. Do tej grupy należy między innymi przygotowanie krótkiego zaproszenia na otwarcie. Możemy pracować nad nim równolegle z opisami zdjęć, jeśli wcześniej potwierdzimy godzinę wydarzenia.\n\nProponuję w poniedziałek krótką rozmowę, podczas której sprawdzimy tylko sprawy wymagające decyzji całego zespołu. Nie chciałabym, żeby każdy ponownie opowiadał od początku o wszystkich swoich zadaniach. Informacje o postępie zapisujmy w dokumencie, a na spotkaniu skupmy się na problemach, których nie da się rozwiązać samodzielnie.\n\nJeśli ktoś przewiduje opóźnienie, proszę o wiadomość możliwie wcześnie. Wtedy będziemy mogli zmienić kolejność innych działań. Zależy mi na tym, żeby każdy wiedział nie tylko, co ma zrobić, ale również kto potrzebuje wyniku jego pracy.\n\nPo otwarciu wystawy chcę także zaplanować krótkie spotkanie podsumowujące. Przyda się nam podczas kolejnego wspólnego projektu.\n\nPozdrawiam,\nAgnieszka",
+      "questions": [
+        {
+          "id": "main-idea",
+          "skill": "main-idea",
+          "question": "Jaki jest główny cel wiadomości?",
+          "options": [
+            "Ustalić plan uwzględniający kolejność zadań, ich zależności i wspólne decyzje.",
+            "Poprosić każdego o codzienne długie sprawozdanie ze wszystkich czynności.",
+            "Przenieść datę otwarcia wystawy bez konsultacji z zespołem."
+          ],
+          "answer": "Ustalić plan uwzględniający kolejność zadań, ich zależności i wspólne decyzje.",
+          "evidence": "Zależy mi na tym, żeby każdy wiedział nie tylko, co ma zrobić, ale również kto potrzebuje wyniku jego pracy.",
+          "explanation": "Wiadomość dotyczy współpracy i terminów wynikających z zależności."
+        },
+        {
+          "id": "detail",
+          "skill": "detail",
+          "question": "Do kiedy Tomek ma sprawdzić wymiary sali?",
+          "options": [
+            "Do następnej środy.",
+            "Do dnia otwarcia.",
+            "Do piątku."
+          ],
+          "answer": "Do piątku.",
+          "evidence": "Tomek ma do piątku sprawdzić wymiary sali",
+          "explanation": "Termin poprzedza przygotowanie projektu tablic."
+        },
+        {
+          "id": "cause",
+          "skill": "cause",
+          "question": "Dlaczego opisy zdjęć są potrzebne do środy?",
+          "options": [
+            "Marta ma wtedy zmienić wymiary sali.",
+            "Paweł rozpoczyna wtedy projektowanie tablic.",
+            "Tego dnia odbywa się otwarcie wystawy."
+          ],
+          "answer": "Paweł rozpoczyna wtedy projektowanie tablic.",
+          "evidence": "Potrzebujemy ich do następnej środy, ponieważ Paweł zaczyna wtedy projektowanie tablic.",
+          "explanation": "Opisy są potrzebne do kolejnego etapu."
+        },
+        {
+          "id": "inference",
+          "skill": "inference",
+          "question": "Marta wie, że nie zdąży przygotować opisów do środy, ale godzina otwarcia jest już potwierdzona. Co można zrobić zgodnie z planem?",
+          "options": [
+            "Wcześnie poinformować Pawła o opóźnieniu i równolegle pracować nad zaproszeniem.",
+            "Czekać do środy bez kontaktu z Pawłem i wstrzymać wszystkie pozostałe zadania.",
+            "Przygotować tablice bez informacji o zdjęciach, a zaproszenie odłożyć do otwarcia."
+          ],
+          "answer": "Wcześnie poinformować Pawła o opóźnieniu i równolegle pracować nad zaproszeniem.",
+          "evidence": "Wspólny dokument zawiera również zadania, których wykonanie nie zależy od innych osób. Do tej grupy należy między innymi przygotowanie krótkiego zaproszenia na otwarcie. Możemy pracować nad nim równolegle z opisami zdjęć, jeśli wcześniej potwierdzimy godzinę wydarzenia.\n\nProponuję w poniedziałek krótką rozmowę, podczas której sprawdzimy tylko sprawy wymagające decyzji całego zespołu. Nie chciałabym, żeby każdy ponownie opowiadał od początku o wszystkich swoich zadaniach. Informacje o postępie zapisujmy w dokumencie, a na spotkaniu skupmy się na problemach, których nie da się rozwiązać samodzielnie.\n\nJeśli ktoś przewiduje opóźnienie, proszę o wiadomość możliwie wcześnie. Wtedy będziemy mogli zmienić kolejność innych działań.",
+          "explanation": "Opóźnienie trzeba zgłosić, a niezależne zadanie można kontynuować."
+        },
+        {
+          "id": "vocabulary",
+          "skill": "vocabulary",
+          "question": "Co oznacza „pracować równolegle”?",
+          "options": [
+            "Przenosić wszystkie zadania na ten sam dzień końcowy.",
+            "Wykonywać różne zadania w tym samym okresie, zamiast czekać na zakończenie jednego z nich.",
+            "Powtarzać pracę już ukończoną przez inną osobę."
+          ],
+          "answer": "Wykonywać różne zadania w tym samym okresie, zamiast czekać na zakończenie jednego z nich.",
+          "evidence": "Możemy pracować nad nim równolegle z opisami zdjęć",
+          "explanation": "Zaproszenie może powstawać w tym samym czasie co opisy."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-173",
+      "day": 173,
+      "level": "B1",
+      "genre": "ogłoszenie",
+      "title": "Rozwiązywanie konfliktów w zespole",
+      "text": "Centrum Rozwoju zaprasza na warsztat dotyczący rozmów w sytuacjach nieporozumień w pracy. Zajęcia są przeznaczone dla osób, które chcą lepiej omawiać różnice zdań w zespole. Nie będziemy oceniać, kto ma rację w konkretnym konflikcie uczestnika. Skupimy się na sposobach prowadzenia rozmowy i ustalania następnych kroków.\n\nW pierwszej części przeanalizujemy krótkie fikcyjne sytuacje. Jedna będzie dotyczyła podziału obowiązków, a druga zmiany terminu wspólnego zadania. Uczestnicy spróbują oddzielić opis tego, co się wydarzyło, od oceny zachowania drugiej osoby. Zastanowimy się także, jakie informacje mogły nie zostać przekazane odpowiednio wcześnie.\n\nW drugiej części będzie można przećwiczyć rozmowę w parach. Każda para otrzyma opis sytuacji i dwa różne punkty widzenia. Zadaniem uczestników będzie ustalenie, czego potrzebuje każda ze stron, oraz przygotowanie propozycji dalszego postępowania. Nie trzeba przedstawiać własnych konfliktów przed grupą, jeśli ktoś woli pracować na przykładach.\n\nPo przerwie omówimy sposoby podsumowania uzgodnień. Chcemy pokazać różnicę między ogólną deklaracją poprawy współpracy a konkretnym ustaleniem, kto i kiedy wykona określone działanie. Każdy uczestnik przygotuje również jedno pytanie, które może wykorzystać podczas przyszłej rozmowy w swoim zespole.\n\nWarsztat odbędzie się w sobotę od dziesiątej do trzynastej. Można zapisać się indywidualnie albo razem ze współpracownikiem. Prosimy jednak pamiętać, że nie jest to spotkanie służące rozstrzyganiu aktualnego sporu między konkretnymi osobami. Zajęcia mają pomóc uczestnikom ćwiczyć umiejętności, które mogą wykorzystać później. Na zakończenie zbierzemy anonimowe uwagi o przebiegu warsztatu i udostępnimy krótkie podsumowanie ćwiczeń.",
+      "questions": [
+        {
+          "id": "main-idea",
+          "skill": "main-idea",
+          "question": "Jaki jest główny cel warsztatu?",
+          "options": [
+            "Rozstrzygnięcie rzeczywistych sporów wszystkich uczestników podczas zajęć.",
+            "Ćwiczenie sposobów rozmawiania o różnicach zdań i ustalania dalszych działań.",
+            "Wybór jednej osoby odpowiedzialnej za każdy konflikt w zespole."
+          ],
+          "answer": "Ćwiczenie sposobów rozmawiania o różnicach zdań i ustalania dalszych działań.",
+          "evidence": "Zajęcia mają pomóc uczestnikom ćwiczyć umiejętności, które mogą wykorzystać później.",
+          "explanation": "Warsztat służy nauce, nie wydawaniu decyzji w konkretnych sporach."
+        },
+        {
+          "id": "detail",
+          "skill": "detail",
+          "question": "W jakich godzinach odbędzie się warsztat?",
+          "options": [
+            "Od dziesiątej do trzynastej.",
+            "Od dziewiątej do dwunastej.",
+            "Od jedenastej do czternastej."
+          ],
+          "answer": "Od dziesiątej do trzynastej.",
+          "evidence": "Warsztat odbędzie się w sobotę od dziesiątej do trzynastej.",
+          "explanation": "Ogłoszenie podaje godziny 10–13."
+        },
+        {
+          "id": "cause",
+          "skill": "cause",
+          "question": "Dlaczego podczas ćwiczeń omawia się dwa punkty widzenia?",
+          "options": [
+            "Żeby wybrać osobę, która szybciej opisze sytuację.",
+            "Żeby uczestnicy nie musieli przygotowywać żadnych propozycji.",
+            "Żeby rozpoznać potrzeby obu stron i szukać dalszego rozwiązania."
+          ],
+          "answer": "Żeby rozpoznać potrzeby obu stron i szukać dalszego rozwiązania.",
+          "evidence": "Zadaniem uczestników będzie ustalenie, czego potrzebuje każda ze stron, oraz przygotowanie propozycji dalszego postępowania.",
+          "explanation": "Poznanie obu perspektyw pomaga przygotować wspólne działanie."
+        },
+        {
+          "id": "inference",
+          "skill": "inference",
+          "question": "Dwie osoby chcą uczestniczyć razem, ale nie chcą ujawniać szczegółów swojego sporu. Co mogą zrobić?",
+          "options": [
+            "Oczekiwać, że prowadzący wyda decyzję dotyczącą ich rzeczywistego sporu.",
+            "Zapisać się razem i ćwiczyć rozmowę na przygotowanych fikcyjnych przykładach.",
+            "Przygotować opis własnego konfliktu, bo każdy musi przedstawić go grupie."
+          ],
+          "answer": "Zapisać się razem i ćwiczyć rozmowę na przygotowanych fikcyjnych przykładach.",
+          "evidence": "Nie trzeba przedstawiać własnych konfliktów przed grupą, jeśli ktoś woli pracować na przykładach.",
+          "explanation": "Własne sytuacje nie są warunkiem udziału."
+        },
+        {
+          "id": "vocabulary",
+          "skill": "vocabulary",
+          "question": "Co oznacza „ogólna deklaracja poprawy współpracy”?",
+          "options": [
+            "Dokładny zapis osoby odpowiedzialnej i terminu wykonania zadania.",
+            "Anonimowy opis jednego z ćwiczeń.",
+            "Zapowiedź, że współpraca będzie lepsza, bez określenia konkretnych działań."
+          ],
+          "answer": "Zapowiedź, że współpraca będzie lepsza, bez określenia konkretnych działań.",
+          "evidence": "Chcemy pokazać różnicę między ogólną deklaracją poprawy współpracy a konkretnym ustaleniem, kto i kiedy wykona określone działanie.",
+          "explanation": "Deklaracja jest mniej szczegółowa od konkretnego zobowiązania."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-174",
+      "day": 174,
+      "level": "B1",
+      "genre": "opowiadanie",
+      "title": "Rozmowa o obowiązkach",
+      "text": "Kiedy Julia rozpoczęła pracę w małej firmie, otrzymała listę swoich podstawowych obowiązków. Miała przygotowywać zamówienia i kontaktować się z klientami, którzy potrzebowali dodatkowych informacji. Po kilku tygodniach coraz częściej proszono ją również o pomoc przy przygotowywaniu raportów. Początkowo traktowała to jako okazję do poznania nowych zadań.\n\nZ czasem zauważyła jednak, że raporty zajmują znaczną część jej popołudnia. Kiedy musiała wybrać między ukończeniem raportu a odpowiedzią klientowi, nie zawsze wiedziała, które zadanie ma pierwszeństwo. Każda z osób, które ją prosiły o pomoc, uważała swoją sprawę za ważną.\n\nJulia przygotowała się do rozmowy z kierowniczką. Przez kilka dni zapisywała rodzaje zadań i sytuacje, w których terminy się nakładały. Nie chciała zaczynać od stwierdzenia, że ma za dużo pracy. Zależało jej na wyjaśnieniu, których obowiązków powinna pilnować przede wszystkim.\n\nPodczas rozmowy kierowniczka dowiedziała się, że kilka raportów zamawiano od Julii bez wcześniejszego uzgodnienia z nią. Ustaliły więc, że zadania dotyczące klientów nadal mają pierwszeństwo, a raporty będą planowane na początku tygodnia. Jeśli pojawi się dodatkowa pilna prośba, Julia może skontaktować się z kierowniczką w celu ustalenia kolejności.\n\nPo dwóch tygodniach sprawdziły, czy nowe zasady się sprawdzają. Julia nadal pomagała przy raportach, ale rzadziej musiała samodzielnie wybierać między dwoma ważnymi terminami. Rozmowa nie zakończyła się odebraniem jej wszystkich dodatkowych obowiązków. Pozwoliła natomiast ustalić zakres odpowiedzialności oraz sposób podejmowania decyzji wtedy, gdy pojawiają się sprzeczne oczekiwania różnych osób.",
+      "questions": [
+        {
+          "id": "main-idea",
+          "skill": "main-idea",
+          "question": "Co Julia osiągnęła dzięki rozmowie?",
+          "options": [
+            "Przekazała wszystkie sprawy klientów innym pracownikom.",
+            "Zrezygnowała ze wszystkich obowiązków dotyczących raportów.",
+            "Ustaliła priorytety oraz sposób rozwiązywania konfliktów między zadaniami."
+          ],
+          "answer": "Ustaliła priorytety oraz sposób rozwiązywania konfliktów między zadaniami.",
+          "evidence": "Pozwoliła natomiast ustalić zakres odpowiedzialności oraz sposób podejmowania decyzji wtedy, gdy pojawiają się sprzeczne oczekiwania różnych osób.",
+          "explanation": "Rozmowa wyjaśniła kolejność zadań, nie usunęła wszystkich obowiązków."
+        },
+        {
+          "id": "detail",
+          "skill": "detail",
+          "question": "Jakie dodatkowe zadania zaczęła otrzymywać Julia?",
+          "options": [
+            "Przygotowywanie raportów.",
+            "Zatrudnianie pracowników.",
+            "Organizowanie spotkań dla klientów."
+          ],
+          "answer": "Przygotowywanie raportów.",
+          "evidence": "coraz częściej proszono ją również o pomoc przy przygotowywaniu raportów.",
+          "explanation": "Raporty dołączyły do wcześniejszych obowiązków."
+        },
+        {
+          "id": "cause",
+          "skill": "cause",
+          "question": "Dlaczego Julia przed rozmową zapisywała zadania?",
+          "options": [
+            "Chciała zrezygnować z kontaktu z klientami bez podawania powodu.",
+            "Chciała przedstawić konkretne sytuacje, w których terminy się nakładały.",
+            "Kierowniczka wymagała dziennego raportu o każdej rozmowie."
+          ],
+          "answer": "Chciała przedstawić konkretne sytuacje, w których terminy się nakładały.",
+          "evidence": "Przez kilka dni zapisywała rodzaje zadań i sytuacje, w których terminy się nakładały.",
+          "explanation": "Przykłady pomogły wyjaśnić problem z priorytetami."
+        },
+        {
+          "id": "inference",
+          "skill": "inference",
+          "question": "W środę pojawia się dodatkowa pilna prośba o raport, a Julia musi odpowiedzieć klientowi. Co wynika z nowych ustaleń?",
+          "options": [
+            "Automatycznie przełożyć wszystkie sprawy klientów na kolejny tydzień.",
+            "Odmówić przygotowania każdego raportu niezależnie od sytuacji.",
+            "Skonsultować kolejność z kierowniczką, pamiętając o ustalonym priorytecie spraw klientów."
+          ],
+          "answer": "Skonsultować kolejność z kierowniczką, pamiętając o ustalonym priorytecie spraw klientów.",
+          "evidence": "Jeśli pojawi się dodatkowa pilna prośba, Julia może skontaktować się z kierowniczką w celu ustalenia kolejności.",
+          "explanation": "Szczególny konflikt terminów można uzgodnić zamiast rozstrzygać samodzielnie."
+        },
+        {
+          "id": "vocabulary",
+          "skill": "vocabulary",
+          "question": "Co znaczy „ma pierwszeństwo”?",
+          "options": [
+            "Powinno zostać wykonane wcześniej niż inne konkurujące zadania.",
+            "Nie wymaga żadnego określonego terminu.",
+            "Musi zostać przekazane nowemu pracownikowi."
+          ],
+          "answer": "Powinno zostać wykonane wcześniej niż inne konkurujące zadania.",
+          "evidence": "zadania dotyczące klientów nadal mają pierwszeństwo",
+          "explanation": "Pierwszeństwo określa kolejność realizacji."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-175",
+      "day": 175,
+      "level": "B1",
+      "genre": "poradnik",
+      "title": "Wybór miejsca pracy",
+      "text": "Przy porównywaniu ofert pracy łatwo skupić się przede wszystkim na wynagrodzeniu i nazwie stanowiska. Są to ważne informacje, ale warto sprawdzić także to, jak będzie wyglądał zwykły tydzień. Dwa miejsca mogą oferować podobne obowiązki, a jednocześnie różnić się sposobem podejmowania decyzji, dostępnością pomocy i czasem potrzebnym na dojazd.\n\nNa początek zapisz, które warunki są dla ciebie konieczne, a które stanowią jedynie dodatkową zaletę. Jeśli potrzebujesz regularnie odbierać dziecko po południu, godziny pracy mogą mieć większe znaczenie niż wyposażenie biura. Jeżeli chcesz zdobyć doświadczenie w nowej dziedzinie, warto zapytać o sposób wprowadzania nowych pracowników do zespołu.\n\nW przykładowej sytuacji Radek otrzymał dwie oferty o podobnym wynagrodzeniu. Pierwsza dotyczyła pracy bardzo blisko domu, ale zakres obowiązków był jeszcze dość ogólny. Druga wymagała dłuższego dojazdu, za to podczas rozmowy przedstawiono konkretne zadania i osobę, która miała pomagać przez pierwsze tygodnie. Radek poprosił pierwszą firmę o dodatkowe informacje, zamiast od razu wybierać lub odrzucać ofertę.\n\nPo otrzymaniu odpowiedzi porównał obie możliwości ponownie. Nie każdy szczegół można poznać przed rozpoczęciem współpracy, ale część wątpliwości udało się wyjaśnić. Radek zauważył również, że niektóre zalety drugiej firmy miały dla niego większe znaczenie, niż początkowo sądził.\n\nPrzed ostateczną decyzją wróć do najważniejszych kryteriów i sprawdź, czy masz wystarczające informacje. Nie musisz wybierać miejsca, które otrzyma najwięcej punktów na dowolnej liście. Dobrze, jeśli potrafisz wyjaśnić, dlaczego konkretne warunki odpowiadają twoim potrzebom i które kompromisy jesteś gotów zaakceptować.",
+      "questions": [
+        {
+          "id": "main-idea",
+          "skill": "main-idea",
+          "question": "Co jest najważniejszą radą poradnika?",
+          "options": [
+            "Porównywać oferty według własnych potrzeb i rzeczywistych warunków pracy.",
+            "Wybierać stanowisko o najlepszej nazwie bez sprawdzania obowiązków.",
+            "Podejmować decyzję wyłącznie na podstawie odległości od domu."
+          ],
+          "answer": "Porównywać oferty według własnych potrzeb i rzeczywistych warunków pracy.",
+          "evidence": "Dobrze, jeśli potrafisz wyjaśnić, dlaczego konkretne warunki odpowiadają twoim potrzebom",
+          "explanation": "Poradnik zaleca świadome porównanie kryteriów, a nie jednego parametru."
+        },
+        {
+          "id": "detail",
+          "skill": "detail",
+          "question": "Czym wyróżniała się pierwsza oferta Radka?",
+          "options": [
+            "Wymagała dłuższego dojazdu.",
+            "Praca była bardzo blisko domu.",
+            "Opisano dokładnie osobę odpowiedzialną za wdrożenie."
+          ],
+          "answer": "Praca była bardzo blisko domu.",
+          "evidence": "Pierwsza dotyczyła pracy bardzo blisko domu",
+          "explanation": "Bliskość była jej wyraźną zaletą."
+        },
+        {
+          "id": "cause",
+          "skill": "cause",
+          "question": "Dlaczego Radek poprosił pierwszą firmę o dodatkowe informacje?",
+          "options": [
+            "Firma podała niższe wynagrodzenie niż druga.",
+            "Chciał zmienić lokalizację biura przed zatrudnieniem.",
+            "Zakres obowiązków był jeszcze zbyt ogólny do pełnego porównania."
+          ],
+          "answer": "Zakres obowiązków był jeszcze zbyt ogólny do pełnego porównania.",
+          "evidence": "ale zakres obowiązków był jeszcze dość ogólny.",
+          "explanation": "Brak szczegółów nie pozwalał ocenić oferty."
+        },
+        {
+          "id": "inference",
+          "skill": "inference",
+          "question": "Osoba szuka pierwszej pracy w nowej dziedzinie i rozważa bliższe biuro bez jasnych informacji o wdrożeniu. Co może zrobić zgodnie z poradnikiem?",
+          "options": [
+            "Dopytać o pomoc na początku pracy i porównać ją z własnymi potrzebami oraz dojazdem.",
+            "Założyć, że każda firma zapewnia ten sam rodzaj wdrożenia.",
+            "Wybrać bliższe biuro bez względu na dostęp do pomocy."
+          ],
+          "answer": "Dopytać o pomoc na początku pracy i porównać ją z własnymi potrzebami oraz dojazdem.",
+          "evidence": "Na początek zapisz, które warunki są dla ciebie konieczne, a które stanowią jedynie dodatkową zaletę. Jeśli potrzebujesz regularnie odbierać dziecko po południu, godziny pracy mogą mieć większe znaczenie niż wyposażenie biura. Jeżeli chcesz zdobyć doświadczenie w nowej dziedzinie, warto zapytać o sposób wprowadzania nowych pracowników do zespołu.\n\nW przykładowej sytuacji Radek otrzymał dwie oferty o podobnym wynagrodzeniu. Pierwsza dotyczyła pracy bardzo blisko domu, ale zakres obowiązków był jeszcze dość ogólny. Druga wymagała dłuższego dojazdu, za to podczas rozmowy przedstawiono konkretne zadania i osobę, która miała pomagać przez pierwsze tygodnie. Radek poprosił pierwszą firmę o dodatkowe informacje, zamiast od razu wybierać lub odrzucać ofertę.",
+          "explanation": "Dostępność wsparcia może być ważnym kryterium przy zmianie dziedziny."
+        },
+        {
+          "id": "vocabulary",
+          "skill": "vocabulary",
+          "question": "Co oznaczają „kompromisy” przy wyborze pracy?",
+          "options": [
+            "Informacje, których pracodawca nie może przekazać kandydatowi.",
+            "Warunki mniej korzystne, które można zaakceptować ze względu na inne ważne zalety.",
+            "Obowiązki, które zawsze wykonuje wyłącznie kierownik."
+          ],
+          "answer": "Warunki mniej korzystne, które można zaakceptować ze względu na inne ważne zalety.",
+          "evidence": "które kompromisy jesteś gotów zaakceptować.",
+          "explanation": "Kompromis polega na pogodzeniu różnych potrzeb i ograniczeń."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-176",
+      "day": 176,
+      "level": "B1",
+      "genre": "wiadomość",
+      "title": "Zwrot zakupu z internetu",
+      "text": "Przy zakupach przez internet warto odróżniać możliwość odstąpienia od umowy od innych spraw związanych z zamówieniem. W typowych umowach dotyczących zakupów internetowych konsument ma czternaście dni na odstąpienie od umowy, jednak istnieją wyjątki. Zanim podejmie się decyzję, należy sprawdzić, jakie zasady dotyczą konkretnego rodzaju zakupu.\n\nWyobraźmy sobie, że Magda zamówiła kurtkę i buty w dwóch różnych sklepach internetowych. Po otrzymaniu przesyłek stwierdziła, że kurtka nie odpowiada jej oczekiwaniom. Buty natomiast chce zatrzymać. Postanowiła najpierw odnaleźć potwierdzenie zamówienia kurtki i sprawdzić, gdzie sprzedawca podaje informacje o odstąpieniu od umowy.\n\nW swoim notatniku zapisała nazwę sklepu, numer zamówienia i pytania, na które nie znała jeszcze odpowiedzi. Nie zamierzała zakładać, że procedura w obu sklepach wygląda identycznie. Chciała ustalić, w jaki sposób przekazać informację dotyczącą konkretnego zamówienia i jakie dalsze działania będą potrzebne.\n\nMagda przeczytała również ogólną informację o terminie czternastu dni. Zauważyła, że bez sprawdzenia warunków swojego zakupu nie powinna wyciągać wniosku, że każda sytuacja podlega dokładnie tej samej zasadzie. W razie wątpliwości chciała poszukać informacji dotyczących praw konsumenta, zamiast opierać się wyłącznie na doświadczeniu znajomej, która zwracała inny produkt.\n\nTen fikcyjny przykład pokazuje, jak ważne jest zebranie informacji o konkretnym zamówieniu. Wiadomość nie opisuje wszystkich wyjątków ani szczegółów procedury. Jej celem jest zwrócenie uwagi na ogólną zasadę oraz konieczność sprawdzenia warunków w rzeczywistej sytuacji, zanim kupujący uzna, że wie już wszystko o możliwości odstąpienia od umowy.",
+      "questions": [
+        {
+          "id": "main-idea",
+          "skill": "main-idea",
+          "question": "Jaki jest główny cel wiadomości?",
+          "options": [
+            "Zachęcić do zatrzymania wszystkich zamówionych produktów.",
+            "Wyjaśnić ogólną zasadę odstąpienia od umowy i potrzebę sprawdzenia warunków konkretnego zakupu.",
+            "Przedstawić identyczną procedurę zwrotu dla każdego produktu i sklepu."
+          ],
+          "answer": "Wyjaśnić ogólną zasadę odstąpienia od umowy i potrzebę sprawdzenia warunków konkretnego zakupu.",
+          "evidence": "Jej celem jest zwrócenie uwagi na ogólną zasadę oraz konieczność sprawdzenia warunków w rzeczywistej sytuacji",
+          "explanation": "Tekst podaje ogólny termin, ale wyraźnie zaznacza istnienie wyjątków."
+        },
+        {
+          "id": "detail",
+          "skill": "detail",
+          "question": "Który przedmiot Magda chce zatrzymać?",
+          "options": [
+            "Kurtkę.",
+            "Oba przedmioty.",
+            "Buty."
+          ],
+          "answer": "Buty.",
+          "evidence": "Buty natomiast chce zatrzymać.",
+          "explanation": "Tylko kurtka nie spełniła jej oczekiwań."
+        },
+        {
+          "id": "cause",
+          "skill": "cause",
+          "question": "Dlaczego Magda nie chce polegać wyłącznie na doświadczeniu znajomej?",
+          "options": [
+            "Znajoma zwracała inny produkt, a zasady mogą zależeć od rodzaju zakupu.",
+            "Oba sklepy przesłały identyczne potwierdzenia zamówienia.",
+            "Znajoma nigdy nie kupowała przez internet."
+          ],
+          "answer": "Znajoma zwracała inny produkt, a zasady mogą zależeć od rodzaju zakupu.",
+          "evidence": "W razie wątpliwości chciała poszukać informacji dotyczących praw konsumenta, zamiast opierać się wyłącznie na doświadczeniu znajomej, która zwracała inny produkt.",
+          "explanation": "Inny przypadek nie wystarcza do ustalenia warunków własnego zakupu."
+        },
+        {
+          "id": "inference",
+          "skill": "inference",
+          "question": "Magda znajduje ogólną informację o czternastu dniach, lecz nie wie, czy jej zakup należy do wyjątków. Co wynika z wiadomości?",
+          "options": [
+            "Sprawdzić zasady dotyczące konkretnej umowy, zanim uzna ogólny termin za wystarczającą odpowiedź.",
+            "Założyć, że informacja o wyjątkach nie dotyczy żadnego zakupu przez internet.",
+            "Przyjąć procedurę drugiego sklepu bez sprawdzania zamówienia kurtki."
+          ],
+          "answer": "Sprawdzić zasady dotyczące konkretnej umowy, zanim uzna ogólny termin za wystarczającą odpowiedź.",
+          "evidence": "W typowych umowach dotyczących zakupów internetowych konsument ma czternaście dni na odstąpienie od umowy, jednak istnieją wyjątki.",
+          "explanation": "Ogólna reguła nie rozstrzyga, czy konkretny zakup jest objęty wyjątkiem."
+        },
+        {
+          "id": "vocabulary",
+          "skill": "vocabulary",
+          "question": "Co oznacza tutaj „odstąpienie od umowy”?",
+          "options": [
+            "Zgłoszenie zmiany adresu dostawy bez rezygnowania z zakupu.",
+            "Zamówienie dodatkowego produktu w tym samym sklepie.",
+            "Rezygnację z zawartej umowy na zasadach, które dotyczą danego przypadku."
+          ],
+          "answer": "Rezygnację z zawartej umowy na zasadach, które dotyczą danego przypadku.",
+          "evidence": "Przy zakupach przez internet warto odróżniać możliwość odstąpienia od umowy od innych spraw związanych z zamówieniem.",
+          "explanation": "Odstąpienie dotyczy rezygnacji z umowy, a nie dowolnej zmiany zamówienia."
+        }
+      ],
+      "source": {
+        "url": "https://prawakonsumenta.uokik.gov.pl/prawo-odstapienia-od-umowy/terminy-odstapienie/",
+        "publisher": "UOKiK",
+        "title": "Terminy odstąpienia od umowy",
+        "facts": [
+          "For typical online purchase contracts the withdrawal period is 14 days; exceptions exist."
+        ],
+        "use": "facts-only",
+        "checked": "2026-11-25",
+        "adaptation": "Original Polish educational composition based on registered source facts; example is fictional."
+      }
+    },
+    {
+      "id": "pl-b1.reading.day-177",
+      "day": 177,
+      "level": "B1",
+      "genre": "artykuł",
+      "title": "Porównanie kosztów całego zamówienia",
+      "text": "W dwóch sklepach internetowych Antek znalazł podobne zestawy ubrań na jesień. Potrzebował czapki i rękawiczek. W pierwszym sklepie czapka kosztowała trzydzieści złotych, a rękawiczki czterdzieści. W drugim czapka była o pięć złotych droższa, ale rękawiczki kosztowały tylko trzydzieści pięć złotych. Początkowo wydawało się, że oba zamówienia będą miały identyczną cenę.\n\nRóżnica pojawiła się dopiero po sprawdzeniu kosztów dostawy. Pierwszy sklep pobierał piętnaście złotych za przesyłkę. Drugi oferował bezpłatną dostawę zamówień od siedemdziesięciu złotych. Antek zauważył, że w jego przypadku oba produkty razem osiągają tę kwotę. Nie musiał dodawać trzeciej rzeczy, aby skorzystać z darmowej przesyłki.\n\nZastanawiał się również nad szalikiem, który w pierwszym sklepie był dostępny w obniżonej cenie. Nie potrzebował go jednak, ponieważ miał już podobny w domu. Porównał więc najpierw koszt dwóch rzeczy, które rzeczywiście chciał kupić, a dopiero potem rozważył pozostałe produkty. Nie zamierzał traktować każdej przeceny jako okazji wymagającej natychmiastowej decyzji.\n\nW drugim sklepie dostępne były dwa sposoby dostawy. Przesyłka bezpłatna miała dotrzeć w ciągu kilku dni, a szybsza kosztowała dodatkowo dziesięć złotych. Antek nie potrzebował ubrań przed konkretną datą, więc wybrał zwykłą dostawę.\n\nHistoria pokazuje, że porównanie cen produktów to dopiero początek oceny zamówienia. Na ostateczny koszt mogą wpływać warunki dostawy, liczba potrzebnych rzeczy i dodatkowe usługi. Warto także sprawdzić, czy szybsza realizacja ma dla kupującego rzeczywistą wartość, zamiast wybierać ją automatycznie.",
+      "questions": [
+        {
+          "id": "main-idea",
+          "skill": "main-idea",
+          "question": "Jaki jest główny wniosek artykułu?",
+          "options": [
+            "Najniższa cena pojedynczego produktu zawsze oznacza najtańsze zamówienie.",
+            "Należy dodawać przecenione produkty przy każdej okazji do zakupu.",
+            "Warto porównać całkowity koszt rzeczywiście potrzebnego zamówienia wraz z dostawą."
+          ],
+          "answer": "Warto porównać całkowity koszt rzeczywiście potrzebnego zamówienia wraz z dostawą.",
+          "evidence": "Na ostateczny koszt mogą wpływać warunki dostawy, liczba potrzebnych rzeczy i dodatkowe usługi.",
+          "explanation": "Całkowity koszt zależy od kilku elementów."
+        },
+        {
+          "id": "detail",
+          "skill": "detail",
+          "question": "Ile kosztowała dostawa w pierwszym sklepie?",
+          "options": [
+            "Zero złotych.",
+            "Piętnaście złotych.",
+            "Dziesięć złotych."
+          ],
+          "answer": "Piętnaście złotych.",
+          "evidence": "Pierwszy sklep pobierał piętnaście złotych za przesyłkę.",
+          "explanation": "Podano opłatę za pierwszą przesyłkę."
+        },
+        {
+          "id": "cause",
+          "skill": "cause",
+          "question": "Dlaczego Antek nie wybrał szybszej dostawy?",
+          "options": [
+            "Nie potrzebował produktów przed określoną datą.",
+            "Szybsza dostawa była dostępna tylko przy zakupie szalika.",
+            "Drugi sklep nie miał rękawiczek."
+          ],
+          "answer": "Nie potrzebował produktów przed określoną datą.",
+          "evidence": "Antek nie potrzebował ubrań przed konkretną datą, więc wybrał zwykłą dostawę.",
+          "explanation": "Dodatkowa opłata nie dawała mu potrzebnej korzyści."
+        },
+        {
+          "id": "inference",
+          "skill": "inference",
+          "question": "Gdyby Antek potrzebował tylko rękawiczek, czy na podstawie tekstu można dokładnie porównać koszt obu zamówień z dostawą?",
+          "options": [
+            "Tak, pierwsze zamówienie kosztowałoby dokładnie tyle samo co drugie.",
+            "Nie, ponieważ nie podano ceny zwykłej dostawy w drugim sklepie poniżej siedemdziesięciu złotych.",
+            "Tak, drugi sklep nadal zapewnia bezpłatną dostawę niezależnie od ceny zamówienia."
+          ],
+          "answer": "Nie, ponieważ nie podano ceny zwykłej dostawy w drugim sklepie poniżej siedemdziesięciu złotych.",
+          "evidence": "W pierwszym sklepie czapka kosztowała trzydzieści złotych, a rękawiczki czterdzieści. W drugim czapka była o pięć złotych droższa, ale rękawiczki kosztowały tylko trzydzieści pięć złotych. Początkowo wydawało się, że oba zamówienia będą miały identyczną cenę.\n\nRóżnica pojawiła się dopiero po sprawdzeniu kosztów dostawy. Pierwszy sklep pobierał piętnaście złotych za przesyłkę. Drugi oferował bezpłatną dostawę zamówień od siedemdziesięciu złotych. Antek zauważył, że w jego przypadku oba produkty razem osiągają tę kwotę. Nie musiał dodawać trzeciej rzeczy",
+          "explanation": "Same rękawiczki kosztują w drugim sklepie mniej niż próg darmowej dostawy; brak stawki uniemożliwia pełne porównanie."
+        },
+        {
+          "id": "vocabulary",
+          "skill": "vocabulary",
+          "question": "Co oznacza „osiągają tę kwotę”?",
+          "options": [
+            "Ich cena spadła poniżej wymaganego minimum.",
+            "Każdy produkt osobno kosztuje wskazaną kwotę.",
+            "Ich łączna cena jest równa wskazanej kwocie."
+          ],
+          "answer": "Ich łączna cena jest równa wskazanej kwocie.",
+          "evidence": "Antek zauważył, że w jego przypadku oba produkty razem osiągają tę kwotę.",
+          "explanation": "Łączna cena czapki i rękawiczek w drugim sklepie to 35 + 35 = 70 zł."
+        }
+      ]
+    }
+  ]
+}
