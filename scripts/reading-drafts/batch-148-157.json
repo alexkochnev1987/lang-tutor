@@ -1,0 +1,767 @@
+{
+  "version": 1,
+  "status": "draft",
+  "texts": [
+    {
+      "id": "pl-b1.reading.day-148",
+      "day": 148,
+      "level": "B1",
+      "genre": "wiadomość",
+      "title": "Jak działa budżet obywatelski",
+      "text": "Budżet obywatelski jest sposobem, w którym mieszkańcy mogą przedstawiać pomysły dotyczące swojej miejscowości. Przygotowanie propozycji wymaga jednak czegoś więcej niż wybrania ciekawego miejsca lub opisania potrzeby. Zasady oceny projektów gminnych uwzględniają między innymi zgodność z prawem, możliwość wykonania projektu, wymagania formalne oraz sposób odwołania się od wyniku oceny.\n\nWyobraźmy sobie grupę mieszkańców, która chciałaby stworzyć niewielkie miejsce do odpoczynku przy osiedlowej bibliotece. Początkowo proponują ustawienie kilku ławek na placu obok budynku. Jedna z osób zauważa jednak, że nie wiedzą, kto zarządza tym terenem. Zanim przygotują szczegółowy opis, postanawiają sprawdzić, jakie informacje dotyczące miejsca są potrzebne.\n\nW fikcyjnym przykładzie druga grupa ma pomysł na organizowanie bezpłatnych spotkań dla nowych mieszkańców. Jej członkowie nie potrzebują nowych ławek, lecz miejsca do prowadzenia zajęć. Obie grupy muszą zastanowić się nie tylko nad korzyściami, ale również nad warunkami realizacji swoich pomysłów. Mogą korzystać z informacji podanych w zasadach przygotowanych przez daną gminę.\n\nKiedy mieszkańcy otrzymują uwagi do projektu, powinni odróżnić potrzebę uzupełnienia informacji od problemu, którego nie da się rozwiązać w zaproponowanej formie. W naszym przykładzie pierwsza grupa może rozważyć inne miejsce, jeśli pierwotny plac nie będzie odpowiedni.\n\nWażne jest również sprawdzenie opisanej przez gminę procedury odwołania, jeśli pojawi się negatywny wynik oceny. Nie każdy pomysł musi od razu przyjąć swoją ostateczną formę. Przykładowe sytuacje pokazują, że dobra propozycja powinna łączyć potrzeby mieszkańców z konkretną możliwością wykonania zadania.",
+      "questions": [
+        {
+          "id": "main-idea",
+          "skill": "main-idea",
+          "question": "Co wiadomość wyjaśnia przede wszystkim?",
+          "options": [
+            "Który z dwóch opisanych projektów powinien wygrać głosowanie.",
+            "Jak przygotować dowolny projekt bez sprawdzania zasad danej gminy.",
+            "Dlaczego propozycja mieszkańców powinna odpowiadać potrzebom i spełniać warunki realizacji."
+          ],
+          "answer": "Dlaczego propozycja mieszkańców powinna odpowiadać potrzebom i spełniać warunki realizacji.",
+          "evidence": "Przykładowe sytuacje pokazują, że dobra propozycja powinna łączyć potrzeby mieszkańców z konkretną możliwością wykonania zadania.",
+          "explanation": "Tekst opisuje wymagania i dwie wyobrażone propozycje, bez oceniania ich wyniku."
+        },
+        {
+          "id": "detail",
+          "skill": "detail",
+          "question": "Czego dotyczy pierwszy fikcyjny pomysł?",
+          "options": [
+            "Miejsca odpoczynku z ławkami przy bibliotece.",
+            "Bezpłatnych lekcji w nowej szkole.",
+            "Budowy parkingu pod urzędem."
+          ],
+          "answer": "Miejsca odpoczynku z ławkami przy bibliotece.",
+          "evidence": "Początkowo proponują ustawienie kilku ławek na placu obok budynku.",
+          "explanation": "Pierwsza grupa chce urządzić przestrzeń wypoczynku."
+        },
+        {
+          "id": "cause",
+          "skill": "cause",
+          "question": "Dlaczego grupa chce sprawdzić informacje o terenie?",
+          "options": [
+            "Nie zna jeszcze nazwy biblioteki.",
+            "Nie wie, kto nim zarządza, a to może mieć znaczenie dla wykonania pomysłu.",
+            "Chce zmienić wszystkie wymagania formalne gminy."
+          ],
+          "answer": "Nie wie, kto nim zarządza, a to może mieć znaczenie dla wykonania pomysłu.",
+          "evidence": "Jedna z osób zauważa jednak, że nie wiedzą, kto zarządza tym terenem.",
+          "explanation": "Brak informacji o zarządzaniu placem wymaga wyjaśnienia."
+        },
+        {
+          "id": "inference",
+          "skill": "inference",
+          "question": "Jeśli mieszkańcy dowiedzą się, że ustawienie ławek na wybranym placu nie jest możliwe, ale cel projektu pozostaje ważny, co mogą zrobić zgodnie z opisem?",
+          "options": [
+            "Złożyć ten sam opis bez odniesienia do uwagi.",
+            "Sprawdzić inne miejsce i warunki jego wykorzystania, zachowując cel projektu.",
+            "Zastąpić sprawdzenie warunków samą informacją o popularności pomysłu."
+          ],
+          "answer": "Sprawdzić inne miejsce i warunki jego wykorzystania, zachowując cel projektu.",
+          "evidence": "W naszym przykładzie pierwsza grupa może rozważyć inne miejsce, jeśli pierwotny plac nie będzie odpowiedni.",
+          "explanation": "Zmiana sposobu realizacji pozwala zachować potrzebę, której dotyczy projekt."
+        },
+        {
+          "id": "vocabulary",
+          "skill": "vocabulary",
+          "question": "Co oznacza „wymagania formalne”?",
+          "options": [
+            "Warunki dotyczące sposobu przygotowania i złożenia propozycji.",
+            "Wyłącznie estetyczny wygląd planowanych przedmiotów.",
+            "Liczbę osób, które osobiście popierają każdy pomysł."
+          ],
+          "answer": "Warunki dotyczące sposobu przygotowania i złożenia propozycji.",
+          "evidence": "Zasady oceny projektów gminnych uwzględniają między innymi zgodność z prawem, możliwość wykonania projektu, wymagania formalne oraz sposób odwołania się od wyniku oceny.",
+          "explanation": "Wymagania formalne dotyczą zgodności propozycji z ustalonymi regułami przygotowania."
+        }
+      ],
+      "source": {
+        "url": "https://eli.gov.pl/api/acts/DU/2024/1465/text.html",
+        "publisher": "ELI / Dziennik Ustaw",
+        "title": "Ustawa o samorządzie gminnym – budżet obywatelski",
+        "facts": [
+          "Municipal project rules address legal conformity, technical feasibility, formal requirements and appeals."
+        ],
+        "use": "facts-only",
+        "checked": "2026-11-25",
+        "adaptation": "Original Polish educational composition based on registered source facts; examples are fictional."
+      }
+    },
+    {
+      "id": "pl-b1.reading.day-149",
+      "day": 149,
+      "level": "B1",
+      "genre": "artykuł",
+      "title": "Wolontariat z elastycznym grafikiem",
+      "text": "W niewielkim stowarzyszeniu działającym na rzecz mieszkańców przez długi czas wolontariusze spotykali się w każdy wtorek po południu. Pomagali przygotowywać materiały na zajęcia, odbierali książki od osób, które chciały je przekazać, i porządkowali salę po spotkaniach. Taki układ dobrze odpowiadał kilku stałym uczestnikom, ale utrudniał udział osobom pracującym w różnych godzinach.\n\nKoordynatorka zaczęła rozmawiać z ludźmi, którzy chcieli pomagać, choć nie mogli przychodzić w każdy wtorek. Dowiedziała się, że część z nich ma wolne soboty, a inni mogą wykonywać krótkie zadania w domu. Zamiast organizować wszystkie prace podczas jednego spotkania, podzieliła je według rodzaju i terminu.\n\nPakowanie książek nadal odbywało się we wtorki, ponieważ wtedy stowarzyszenie odbierało przesyłki. Przygotowanie prostych opisów materiałów można było wykonać w dowolnym momencie przed końcem tygodnia. Raz w miesiącu w sobotę organizowano natomiast dłuższe spotkanie, podczas którego nowi wolontariusze poznawali zasady pracy.\n\nKamil, który pracował zmianowo, wybrał przygotowywanie opisów. Początkowo chciał przyjmować wszystkie dostępne zadania, lecz koordynatorka poprosiła go, żeby zgłaszał tylko tyle pracy, ile rzeczywiście może wykonać w terminie. Dla stowarzyszenia ważniejsza była przewidywalna pomoc niż duża liczba obietnic.\n\nPo kilku miesiącach grupa liczyła więcej osób, choć nie wszyscy spotykali się jednocześnie. Żeby zachować kontakt, wolontariusze raz na jakiś czas uczestniczyli we wspólnej rozmowie o tym, komu służą przygotowywane materiały. Elastyczny grafik pozwolił im łączyć pomoc z własnymi obowiązkami, ale wymagał również jasnego podziału odpowiedzialności.",
+      "questions": [
+        {
+          "id": "main-idea",
+          "skill": "main-idea",
+          "question": "Co zmieniło się w organizacji wolontariatu?",
+          "options": [
+            "Wszystkie zadania przeniesiono z wtorku na sobotę.",
+            "Zadania podzielono według warunków wykonania, umożliwiając różnym osobom udział.",
+            "Zrezygnowano z ustalania terminów pracy wolontariuszy."
+          ],
+          "answer": "Zadania podzielono według warunków wykonania, umożliwiając różnym osobom udział.",
+          "evidence": "Zamiast organizować wszystkie prace podczas jednego spotkania, podzieliła je według rodzaju i terminu.",
+          "explanation": "Elastyczność nie usuwa terminów, ale dopasowuje je do zadań."
+        },
+        {
+          "id": "detail",
+          "skill": "detail",
+          "question": "Które zadanie nadal wykonuje się we wtorki?",
+          "options": [
+            "Szkolenie nowych wolontariuszy.",
+            "Przygotowanie opisów materiałów.",
+            "Pakowanie książek."
+          ],
+          "answer": "Pakowanie książek.",
+          "evidence": "Pakowanie książek nadal odbywało się we wtorki",
+          "explanation": "Odbiór przesyłek wyznacza termin tej pracy."
+        },
+        {
+          "id": "cause",
+          "skill": "cause",
+          "question": "Dlaczego koordynatorka ograniczyła liczbę zadań przyjmowanych przez Kamila?",
+          "options": [
+            "Chciała mieć pewność, że zobowiązania będzie można spełnić w terminie.",
+            "Kamil nie chciał korzystać z materiałów w domu.",
+            "We wtorki nie było miejsca na kolejne osoby."
+          ],
+          "answer": "Chciała mieć pewność, że zobowiązania będzie można spełnić w terminie.",
+          "evidence": "Dla stowarzyszenia ważniejsza była przewidywalna pomoc niż duża liczba obietnic.",
+          "explanation": "Realna deklaracja pozwala zaplanować pracę."
+        },
+        {
+          "id": "inference",
+          "skill": "inference",
+          "question": "Osoba może pracować w domu w czwartek, a raz w miesiącu przyjść w sobotę. Który udział najbardziej odpowiada opisanym zasadom?",
+          "options": [
+            "Przygotowanie opisów przed końcem tygodnia i udział w sobotnim spotkaniu wprowadzającym.",
+            "Samodzielne organizowanie wtorkowych zajęć bez ustalania terminu.",
+            "Pakowanie książek w domu po zakończeniu wtorkowego odbioru."
+          ],
+          "answer": "Przygotowanie opisów przed końcem tygodnia i udział w sobotnim spotkaniu wprowadzającym.",
+          "evidence": "Przygotowanie prostych opisów materiałów można było wykonać w dowolnym momencie przed końcem tygodnia. Raz w miesiącu w sobotę organizowano natomiast dłuższe spotkanie, podczas którego nowi wolontariusze poznawali zasady pracy.",
+          "explanation": "Oba dostępne terminy odpowiadają dwóm zadaniom."
+        },
+        {
+          "id": "vocabulary",
+          "skill": "vocabulary",
+          "question": "Co oznacza „przewidywalna pomoc”?",
+          "options": [
+            "Pomoc wykonywana zawsze przez tę samą liczbę osób.",
+            "Pomoc niewymagająca żadnych informacji o terminie.",
+            "Pomoc, na której można polegać w ustalonym zakresie i czasie."
+          ],
+          "answer": "Pomoc, na której można polegać w ustalonym zakresie i czasie.",
+          "evidence": "Dla stowarzyszenia ważniejsza była przewidywalna pomoc niż duża liczba obietnic.",
+          "explanation": "Przewidywalność oznacza możliwość zaplanowania wykonania zadania."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-150",
+      "day": 150,
+      "level": "B1",
+      "genre": "dialog",
+      "title": "Wspólna przestrzeń dla mieszkańców",
+      "text": "— Co zrobimy z pustym pokojem obok sali spotkań? — zapytała Irena podczas zebrania mieszkańców. — Od kilku miesięcy stoi tam tylko stary stół.\n\n— Może przygotujemy miejsce do spokojnej pracy — zaproponował Wojtek. — Nie wszyscy mają w domu warunki do nauki albo pracy przy komputerze.\n\n— A ja chciałabym organizować tam krótkie spotkania dla rodziców z dziećmi — odpowiedziała Zofia. — Przydałoby się miejsce, do którego można przychodzić bez wcześniejszego wynajmowania całej sali.\n\nPrzez chwilę mieszkańcy próbowali przekonać się nawzajem, który pomysł jest lepszy. Później Irena poprosiła, żeby opisali konkretne godziny, w których potrzebowaliby pokoju. Okazało się, że Wojtek chciał korzystać z niego głównie w dni robocze przed południem. Zofia planowała spotkania w dwa popołudnia tygodnia.\n\n— Możemy więc podzielić czas, ale musimy ustalić, co będzie potrzebne w obu sytuacjach — zauważyła Irena. — Nie kupujmy od razu dużych mebli, których później nie będzie można łatwo przestawić.\n\nUstalili, że na początku wystarczą składane stoliki, krzesła i zamykana szafka na materiały. Przy wejściu pojawi się prosty grafik. Osoba kończąca spotkanie ma zostawić pokój w stanie, w którym następna grupa będzie mogła od razu zacząć pracę.\n\nMieszkańcy zgodzili się wypróbować ten podział przez miesiąc. Jeśli pojawią się problemy z hałasem albo dostępem do kluczy, omówią je podczas kolejnego zebrania. Nie wykluczają też nowych pomysłów na wykorzystanie pokoju.\n\nWojtek wychodził ze spotkania zadowolony. Początkowo myślał, że musi wygrać dyskusję, żeby powstało miejsce do pracy. Ostatecznie zobaczył, że różne potrzeby nie muszą się wykluczać, jeśli odpowiednio zaplanuje się korzystanie ze wspólnej przestrzeni.",
+      "questions": [
+        {
+          "id": "main-idea",
+          "skill": "main-idea",
+          "question": "Co mieszkańcy ustalili po rozmowie?",
+          "options": [
+            "Jeden pokój może służyć różnym grupom dzięki podziałowi czasu i elastycznemu wyposażeniu.",
+            "Każda grupa musi wynająć osobne pomieszczenie.",
+            "Pokój będzie dostępny wyłącznie dla osób pracujących rano."
+          ],
+          "answer": "Jeden pokój może służyć różnym grupom dzięki podziałowi czasu i elastycznemu wyposażeniu.",
+          "evidence": "różne potrzeby nie muszą się wykluczać, jeśli odpowiednio zaplanuje się korzystanie ze wspólnej przestrzeni.",
+          "explanation": "Uzgodniono podział zamiast wyboru tylko jednego celu."
+        },
+        {
+          "id": "detail",
+          "skill": "detail",
+          "question": "Kiedy Wojtek chce korzystać z pokoju?",
+          "options": [
+            "W dwa popołudnia tygodnia.",
+            "W dni robocze przed południem.",
+            "Wyłącznie w niedzielne wieczory."
+          ],
+          "answer": "W dni robocze przed południem.",
+          "evidence": "Wojtek chciał korzystać z niego głównie w dni robocze przed południem.",
+          "explanation": "To odróżnia jego potrzeby od planów Zofii."
+        },
+        {
+          "id": "cause",
+          "skill": "cause",
+          "question": "Dlaczego Irena odradzała zakup dużych mebli?",
+          "options": [
+            "Stary stół należy już do innego budynku.",
+            "Mieszkańcy nie zamierzają korzystać ze stołów.",
+            "Pokój ma zmieniać funkcję, więc wyposażenie powinno być łatwe do przestawienia."
+          ],
+          "answer": "Pokój ma zmieniać funkcję, więc wyposażenie powinno być łatwe do przestawienia.",
+          "evidence": "Nie kupujmy od razu dużych mebli, których później nie będzie można łatwo przestawić.",
+          "explanation": "Elastyczne wyposażenie ułatwi zmianę układu."
+        },
+        {
+          "id": "inference",
+          "skill": "inference",
+          "question": "Grupa rodziców kończy spotkanie przed przyjściem osób chcących pracować. Co jest zgodne z ustaleniami?",
+          "options": [
+            "Zostawić ustawienie i materiały do następnego spotkania rodziców.",
+            "Przesunąć kolejną rezerwację bez kontaktu z jej uczestnikami.",
+            "Uprzątnąć materiały do szafki i przygotować pokój do kolejnego wykorzystania."
+          ],
+          "answer": "Uprzątnąć materiały do szafki i przygotować pokój do kolejnego wykorzystania.",
+          "evidence": "Osoba kończąca spotkanie ma zostawić pokój w stanie, w którym następna grupa będzie mogła od razu zacząć pracę.",
+          "explanation": "Wspólne wyposażenie trzeba przekazać w stanie użytecznym dla następnych osób."
+        },
+        {
+          "id": "vocabulary",
+          "skill": "vocabulary",
+          "question": "Co oznacza tutaj „grafik”?",
+          "options": [
+            "Lista wszystkich osób mieszkających w budynku.",
+            "Rozpisany harmonogram korzystania z pokoju.",
+            "Rysunek pokazujący kolor nowych ścian."
+          ],
+          "answer": "Rozpisany harmonogram korzystania z pokoju.",
+          "evidence": "Przy wejściu pojawi się prosty grafik.",
+          "explanation": "Grafik określa terminy dostępu do wspólnej przestrzeni."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-151",
+      "day": 151,
+      "level": "B1",
+      "genre": "e-mail",
+      "title": "Kiedy warto weryfikować wiadomości",
+      "text": "Cześć, Krzyśku!\n\nDziękuję za wiadomość o rzekomym zamknięciu naszego osiedlowego targu. Też się zdziwiłam, kiedy zobaczyłam przesłane zdjęcie ogłoszenia. Zanim jednak poinformujemy pozostałych sąsiadów, chciałabym sprawdzić, skąd ono pochodzi. Na fotografii nie widać daty ani nazwy miejsca, którego dotyczy informacja.\n\nW zeszłym miesiącu mieliśmy podobną sytuację z wiadomością o zmianie godzin otwarcia biblioteki. Ktoś przesłał stary komunikat, a kilka osób uznało go za aktualny. Dopiero po sprawdzeniu strony biblioteki okazało się, że zmiana obowiązywała tylko podczas zeszłorocznego remontu. Nie było w tym niczego niezwykłego: nikt nie chciał celowo wprowadzać innych w błąd, ale wiadomość krążyła bez swojego pierwotnego kontekstu.\n\nW przypadku targu znalazłam dwa różne wpisy. Jeden mówi o zamknięciu części placu na czas prac, drugi o całkowitym zakończeniu sprzedaży. Żaden nie podaje, kiedy otrzymano tę informację od zarządcy. Chcę więc jutro zapytać pracownika punktu informacji, czy istnieje aktualny komunikat dotyczący całego targu.\n\nJeśli dowiemy się tylko o czasowym zamknięciu kilku stanowisk, warto przesłać sąsiadom właśnie taką informację, bez dodawania wniosków o przyszłości wszystkich sprzedawców. Jeśli nie uzyskamy odpowiedzi, możemy napisać, że sprawa nie została jeszcze potwierdzona.\n\nNie chodzi mi o to, żeby każdą zwykłą wiadomość sprawdzać przez godzinę. Warto jednak poświęcić kilka minut, kiedy informacja może wpłynąć na plany wielu osób. Łatwiej uzupełnić wiadomość później, niż tłumaczyć się z niepotrzebnie rozpowszechnionego błędu.\n\nPozdrawiam,\nOliwia",
+      "questions": [
+        {
+          "id": "main-idea",
+          "skill": "main-idea",
+          "question": "Co Oliwia chce osiągnąć przez swój e-mail?",
+          "options": [
+            "Przekonać sąsiadów, że targ na pewno zostanie zamknięty.",
+            "Wyjaśnić, kto celowo rozpowszechniał błędne wiadomości o bibliotece.",
+            "Zachęcić do sprawdzenia źródła i zakresu wiadomości przed przekazaniem jej dalej."
+          ],
+          "answer": "Zachęcić do sprawdzenia źródła i zakresu wiadomości przed przekazaniem jej dalej.",
+          "evidence": "Zanim jednak poinformujemy pozostałych sąsiadów, chciałabym sprawdzić, skąd ono pochodzi.",
+          "explanation": "Oliwia odróżnia wiadomość niepotwierdzoną od ustalonego faktu."
+        },
+        {
+          "id": "detail",
+          "skill": "detail",
+          "question": "Czego nie było widać na zdjęciu ogłoszenia?",
+          "options": [
+            "Adresu biblioteki i godzin remontu.",
+            "Daty i nazwy miejsca.",
+            "Nazw wszystkich sprzedawców i cen."
+          ],
+          "answer": "Daty i nazwy miejsca.",
+          "evidence": "Na fotografii nie widać daty ani nazwy miejsca, którego dotyczy informacja.",
+          "explanation": "Brak tych danych utrudnia ocenę aktualności i zakresu."
+        },
+        {
+          "id": "cause",
+          "skill": "cause",
+          "question": "Dlaczego informacja o bibliotece okazała się myląca?",
+          "options": [
+            "Dotyczyła wcześniejszego okresu remontu, a potraktowano ją jako aktualną.",
+            "Biblioteka nie opublikowała wcześniej żadnych godzin pracy.",
+            "Ktoś celowo zmienił nazwę biblioteki na zdjęciu."
+          ],
+          "answer": "Dotyczyła wcześniejszego okresu remontu, a potraktowano ją jako aktualną.",
+          "evidence": "zmiana obowiązywała tylko podczas zeszłorocznego remontu.",
+          "explanation": "Stary komunikat utracił właściwy kontekst czasowy."
+        },
+        {
+          "id": "inference",
+          "skill": "inference",
+          "question": "Pracownik potwierdzi zamknięcie trzech stanowisk na tydzień, ale nic nie powie o całym targu. Co powinno znaleźć się w wiadomości do sąsiadów?",
+          "options": [
+            "Zapewnienie, że wszystkie stanowiska pozostaną otwarte bez zmian.",
+            "Potwierdzona informacja o trzech stanowiskach i zaznaczenie, że los całego targu nie jest ustalony.",
+            "Informacja o całkowitym zamknięciu, ponieważ kilka stanowisk nie będzie działać."
+          ],
+          "answer": "Potwierdzona informacja o trzech stanowiskach i zaznaczenie, że los całego targu nie jest ustalony.",
+          "evidence": "Jeśli dowiemy się tylko o czasowym zamknięciu kilku stanowisk, warto przesłać sąsiadom właśnie taką informację, bez dodawania wniosków o przyszłości wszystkich sprzedawców.",
+          "explanation": "Nie należy rozszerzać potwierdzonego faktu na niepotwierdzony zakres."
+        },
+        {
+          "id": "vocabulary",
+          "skill": "vocabulary",
+          "question": "Co znaczy „pierwotny kontekst” wiadomości?",
+          "options": [
+            "Lista osób, które ostatnio przesłały wiadomość dalej.",
+            "Sposób zapisania tekstu na najnowszym zdjęciu.",
+            "Okoliczności, w których wiadomość została początkowo opublikowana."
+          ],
+          "answer": "Okoliczności, w których wiadomość została początkowo opublikowana.",
+          "evidence": "wiadomość krążyła bez swojego pierwotnego kontekstu.",
+          "explanation": "W przykładzie brakowało właściwego czasu i okoliczności komunikatu."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-152",
+      "day": 152,
+      "level": "B1",
+      "genre": "ogłoszenie",
+      "title": "Dyskusja o nowej inwestycji",
+      "text": "Rada osiedla zaprasza mieszkańców na otwarte spotkanie poświęcone planowanemu zagospodarowaniu placu przy ulicy Polnej. W tej chwili na placu znajdują się ławki, kilka drzew i niewielki punkt sprzedaży jedzenia. Pojawiły się dwa wstępne pomysły dotyczące przyszłości tego miejsca. Pierwszy zakłada urządzenie większej przestrzeni do spotkań, drugi pozostawienie spokojniejszej strefy wypoczynku i poprawę dojścia do istniejących usług.\n\nPodczas spotkania pokażemy oba rysunki i przedstawimy pytania, na które nie ma jeszcze odpowiedzi. Chcemy między innymi ustalić, w jakich godzinach mieszkańcy korzystają z placu, czy potrzebują więcej miejsc do siedzenia oraz jakie problemy sprawia obecna droga od przystanku.\n\nNie będziemy tego wieczoru głosować nad ostateczną wersją projektu. Oba rysunki mają pomóc rozpocząć rozmowę. Osoby zainteresowane szczegółami mogą obejrzeć je wcześniej w sali rady osiedla od poniedziałku do środy. Na miejscu będzie można zostawić pisemne uwagi.\n\nW czwartek podczas spotkania każda osoba otrzyma krótki czas na wypowiedź. Prosimy, żeby oprócz ogólnej opinii podać konkretny przykład: kiedy i w jaki sposób korzysta się z placu. Dzięki temu projektanci będą mogli lepiej zrozumieć codzienne potrzeby różnych grup mieszkańców.\n\nPo spotkaniu przygotujemy podsumowanie najczęściej zgłaszanych uwag i listę kwestii wymagających dalszego sprawdzenia. Podsumowanie udostępnimy również osobom, które nie będą mogły przyjść. Chcemy, aby dyskusja pomogła ulepszyć propozycje, a nie sprowadziła się wyłącznie do wyboru między dwoma gotowymi rysunkami.",
+      "questions": [
+        {
+          "id": "main-idea",
+          "skill": "main-idea",
+          "question": "Co jest głównym celem spotkania?",
+          "options": [
+            "Zebranie konkretnych potrzeb i uwag przed dopracowaniem planu placu.",
+            "Ustalenie cen jedzenia sprzedawanego na placu.",
+            "Ostateczne wybranie jednego z projektów przez głosowanie."
+          ],
+          "answer": "Zebranie konkretnych potrzeb i uwag przed dopracowaniem planu placu.",
+          "evidence": "Chcemy, aby dyskusja pomogła ulepszyć propozycje, a nie sprowadziła się wyłącznie do wyboru między dwoma gotowymi rysunkami.",
+          "explanation": "Rysunki są punktem wyjścia do konsultacji."
+        },
+        {
+          "id": "detail",
+          "skill": "detail",
+          "question": "Kiedy można wcześniej obejrzeć rysunki?",
+          "options": [
+            "Wyłącznie w czwartek po spotkaniu.",
+            "W sobotę i niedzielę.",
+            "Od poniedziałku do środy."
+          ],
+          "answer": "Od poniedziałku do środy.",
+          "evidence": "mogą obejrzeć je wcześniej w sali rady osiedla od poniedziałku do środy.",
+          "explanation": "Udostępniono je przed czwartkową dyskusją."
+        },
+        {
+          "id": "cause",
+          "skill": "cause",
+          "question": "Dlaczego organizatorzy proszą o konkretne przykłady korzystania z placu?",
+          "options": [
+            "Pozwolą wybrać osoby, które będą sprzedawały jedzenie.",
+            "Pomogą projektantom zrozumieć codzienne potrzeby mieszkańców.",
+            "Mają zastąpić wszystkie pisemne uwagi mieszkańców."
+          ],
+          "answer": "Pomogą projektantom zrozumieć codzienne potrzeby mieszkańców.",
+          "evidence": "Dzięki temu projektanci będą mogli lepiej zrozumieć codzienne potrzeby różnych grup mieszkańców.",
+          "explanation": "Przykłady dostarczają więcej informacji niż sama ocena pomysłu."
+        },
+        {
+          "id": "inference",
+          "skill": "inference",
+          "question": "Mieszkaniec nie może przyjść w czwartek, ale chce zgłosić problem z dojściem od przystanku i poznać dalsze ustalenia. Co może zrobić?",
+          "options": [
+            "Obejrzeć rysunki wcześniej, zostawić pisemną uwagę i później przeczytać podsumowanie.",
+            "Czekać na ostateczne głosowanie, bo wcześniej nie można zgłaszać uwag.",
+            "Poprosić o automatyczne przyjęcie jednego projektu na podstawie jego opinii."
+          ],
+          "answer": "Obejrzeć rysunki wcześniej, zostawić pisemną uwagę i później przeczytać podsumowanie.",
+          "evidence": "Osoby zainteresowane szczegółami mogą obejrzeć je wcześniej w sali rady osiedla od poniedziałku do środy. Na miejscu będzie można zostawić pisemne uwagi.\n\nW czwartek podczas spotkania każda osoba otrzyma krótki czas na wypowiedź. Prosimy, żeby oprócz ogólnej opinii podać konkretny przykład: kiedy i w jaki sposób korzysta się z placu. Dzięki temu projektanci będą mogli lepiej zrozumieć codzienne potrzeby różnych grup mieszkańców.\n\nPo spotkaniu przygotujemy podsumowanie najczęściej zgłaszanych uwag i listę kwestii wymagających dalszego sprawdzenia. Podsumowanie udostępnimy również osobom, które nie będą mogły przyjść.",
+          "explanation": "Wcześniejsze uwagi i udostępnione po spotkaniu podsumowanie pozwalają uczestniczyć bez obecności w czwartek."
+        },
+        {
+          "id": "vocabulary",
+          "skill": "vocabulary",
+          "question": "Co oznacza „wstępny pomysł”?",
+          "options": [
+            "Ostateczną decyzję, której nie można omawiać.",
+            "Propozycję, która może jeszcze zostać rozwinięta lub zmieniona.",
+            "Projekt, którego wykonanie zostało już zakończone."
+          ],
+          "answer": "Propozycję, która może jeszcze zostać rozwinięta lub zmieniona.",
+          "evidence": "Pojawiły się dwa wstępne pomysły dotyczące przyszłości tego miejsca.",
+          "explanation": "Dalsza dyskusja ma pomóc w dopracowaniu propozycji."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-153",
+      "day": 153,
+      "level": "B1",
+      "genre": "opowiadanie",
+      "title": "Spotkanie z nowymi sąsiadami",
+      "text": "Rodzina Kacpra wprowadziła się do bloku na początku listopada. Przez pierwsze dni Kacper zajmował się przede wszystkim rozpakowywaniem pudełek i szukaniem miejsca dla nowych mebli. Z sąsiadami wymieniał krótkie powitania na klatce schodowej, ale nie miał okazji dłużej porozmawiać.\n\nW sobotę rano ktoś zapukał do drzwi. Była to pani Teresa z mieszkania naprzeciwko. Przyniosła kartkę z informacją o niedzielnym spotkaniu mieszkańców przy kawie. Kacper chciał odmówić, ponieważ wciąż miał wiele rzeczy do zrobienia. Teresa powiedziała jednak, że można przyjść tylko na kilka minut, a spotkanie nie wymaga żadnych przygotowań.\n\nKacper pojawił się w sali wspólnoty razem z córką. Początkowo słuchał rozmów o okolicy. Dowiedział się, gdzie znajduje się punkt naprawy rowerów i kiedy w pobliżu odbywa się targ. Kiedy wspomniał o dużej liczbie pudełek po przeprowadzce, jeden z sąsiadów zaproponował, że pokaże mu miejsce przeznaczone na kartonowe opakowania.\n\nInna mieszkanka, Marta, szukała osoby, która mogłaby wyjaśnić jej kilka podstawowych funkcji programu do zdjęć. Kacper znał ten program z pracy. Zaproponował krótkie spotkanie w przyszłym tygodniu. Zaskoczyło go, że chociaż dopiero przyjechał i sam potrzebował wielu informacji, mógł również komuś pomóc.\n\nPo powrocie do domu nie czuł już, że wszystkie sprawy związane z nowym miejscem musi rozwiązać samodzielnie. Nadal nie znał dobrze wszystkich mieszkańców, ale miał kilka osób, z którymi mógł porozmawiać. Postanowił, że na kolejne spotkanie przyjdzie bez czekania, aż skończy urządzać mieszkanie. Zrozumiał, że poznawanie sąsiadów może być częścią przeprowadzki, a nie zadaniem na później.",
+      "questions": [
+        {
+          "id": "main-idea",
+          "skill": "main-idea",
+          "question": "Jaką zmianę przeżywa Kacper?",
+          "options": [
+            "Rezygnuje z urządzania mieszkania, aby prowadzić wszystkie spotkania wspólnoty.",
+            "Z osoby zajętej własną przeprowadzką staje się uczestnikiem wzajemnej pomocy sąsiedzkiej.",
+            "Przestaje potrzebować jakichkolwiek informacji o nowej okolicy."
+          ],
+          "answer": "Z osoby zajętej własną przeprowadzką staje się uczestnikiem wzajemnej pomocy sąsiedzkiej.",
+          "evidence": "Zaskoczyło go, że chociaż dopiero przyjechał i sam potrzebował wielu informacji, mógł również komuś pomóc.",
+          "explanation": "Spotkanie pozwoliło mu zarówno otrzymać, jak i zaoferować pomoc."
+        },
+        {
+          "id": "detail",
+          "skill": "detail",
+          "question": "Czego Marta chciała się nauczyć?",
+          "options": [
+            "Podstawowych funkcji programu do zdjęć.",
+            "Składania nowych mebli.",
+            "Naprawiania rowerów."
+          ],
+          "answer": "Podstawowych funkcji programu do zdjęć.",
+          "evidence": "Marta, szukała osoby, która mogłaby wyjaśnić jej kilka podstawowych funkcji programu do zdjęć.",
+          "explanation": "Kacper znał ten program z pracy."
+        },
+        {
+          "id": "cause",
+          "skill": "cause",
+          "question": "Dlaczego Kacper początkowo chciał odmówić Teresie?",
+          "options": [
+            "Nie chciał rozmawiać o okolicy przy kawie.",
+            "Spotkanie miało odbywać się w innym mieście.",
+            "Miał jeszcze wiele obowiązków związanych z przeprowadzką."
+          ],
+          "answer": "Miał jeszcze wiele obowiązków związanych z przeprowadzką.",
+          "evidence": "Kacper chciał odmówić, ponieważ wciąż miał wiele rzeczy do zrobienia.",
+          "explanation": "Urządzanie mieszkania zajmowało jego czas."
+        },
+        {
+          "id": "inference",
+          "skill": "inference",
+          "question": "Nowa sąsiadka ma tylko kwadrans i nie zna jeszcze okolicy, ale potrafi naprawiać rowery. Co wynika z doświadczenia Kacpra?",
+          "options": [
+            "Musi przygotować formalne zajęcia z naprawy rowerów przed pierwszym spotkaniem.",
+            "Powinna najpierw poznać wszystkie usługi w okolicy, a potem spotkać się z sąsiadami.",
+            "Może przyjść na krótko, zapytać o okolicę i zaproponować pomoc innym."
+          ],
+          "answer": "Może przyjść na krótko, zapytać o okolicę i zaproponować pomoc innym.",
+          "evidence": "Teresa powiedziała jednak, że można przyjść tylko na kilka minut, a spotkanie nie wymaga żadnych przygotowań.\n\nKacper pojawił się w sali wspólnoty razem z córką. Początkowo słuchał rozmów o okolicy. Dowiedział się, gdzie znajduje się punkt naprawy rowerów i kiedy w pobliżu odbywa się targ. Kiedy wspomniał o dużej liczbie pudełek po przeprowadzce, jeden z sąsiadów zaproponował, że pokaże mu miejsce przeznaczone na kartonowe opakowania.\n\nInna mieszkanka, Marta, szukała osoby, która mogłaby wyjaśnić jej kilka podstawowych funkcji programu do zdjęć. Kacper znał ten program z pracy. Zaproponował krótkie spotkanie w przyszłym tygodniu. Zaskoczyło go, że chociaż dopiero przyjechał i sam potrzebował wielu informacji, mógł również komuś pomóc.",
+          "explanation": "Krótki udział nie wyklucza wymiany informacji ani zaoferowania własnej umiejętności."
+        },
+        {
+          "id": "vocabulary",
+          "skill": "vocabulary",
+          "question": "Co oznacza „wymieniał krótkie powitania”?",
+          "options": [
+            "Mówił sąsiadom dzień dobry, ale zwykle nie rozmawiał z nimi długo.",
+            "Zostawiał sąsiadom pisemne listy z prośbami.",
+            "Przedstawiał wszystkim szczegółową historię swojej przeprowadzki."
+          ],
+          "answer": "Mówił sąsiadom dzień dobry, ale zwykle nie rozmawiał z nimi długo.",
+          "evidence": "Z sąsiadami wymieniał krótkie powitania na klatce schodowej, ale nie miał okazji dłużej porozmawiać.",
+          "explanation": "Chodzi o krótką uprzejmą interakcję przy mijaniu się."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-154",
+      "day": 154,
+      "level": "B1",
+      "genre": "poradnik",
+      "title": "Pomoc po przeprowadzce",
+      "text": "Przeprowadzka do nowego mieszkania często oznacza kilka tygodni dodatkowych obowiązków. Trzeba znaleźć miejsce dla rzeczy, załatwić sprawy związane z usługami i poznać najbliższą okolicę. Kiedy ktoś bliski proponuje pomoc, nie zawsze łatwo od razu powiedzieć, czego najbardziej potrzebujemy. Warto jednak podzielić zadania na mniejsze części.\n\nJeżeli pomagasz osobie po przeprowadzce, zapytaj ją, co będzie przydatne właśnie teraz. Nie zakładaj, że musi potrzebować pomocy przy noszeniu mebli. Być może ma już wszystko na miejscu, ale chciałaby dowiedzieć się, gdzie można kupić podstawowe wyposażenie lub jak dotrzeć do pracy. Konkretna propozycja może być łatwiejsza do przyjęcia niż ogólne pytanie o pomoc.\n\nW przykładowej sytuacji Natalia chciała pomóc bratu, który właśnie zmienił mieszkanie. Zaproponowała, że przyjedzie w sobotę na cały dzień. Brat miał jednak tego dnia umówionego fachowca i nie wiedział, o której będzie wolny. Uzgodnili więc, że Natalia przygotuje dla niego listę sklepów i pożyczy kilka potrzebnych narzędzi. Spotkają się dopiero w niedzielę po południu, kiedy będą mogli spokojnie rozpakować książki.\n\nWarto także ustalić, które rzeczy można zrobić samodzielnie, a przy których potrzebna jest obecność właściciela. Przenoszenie lub wyrzucanie jego przedmiotów bez uzgodnienia może później utrudnić znalezienie potrzebnych rzeczy.\n\nPo wykonaniu zadania nie trzeba automatycznie podejmować kolejnego. Można zapytać, czy osoba potrzebuje jeszcze pomocy, czy woli teraz działać sama. Dobra pomoc nie polega na przejęciu całej organizacji życia drugiego człowieka. Powinna odpowiadać jego aktualnej sytuacji i pozostawiać mu możliwość podejmowania własnych decyzji.",
+      "questions": [
+        {
+          "id": "main-idea",
+          "skill": "main-idea",
+          "question": "Jaka jest główna rada poradnika?",
+          "options": [
+            "Odwiedzić ją zawsze w dniu przyjazdu, niezależnie od jej planu.",
+            "Przejąć wszystkie obowiązki osoby, która zmieniła mieszkanie.",
+            "Dopasować konkretną pomoc do bieżących potrzeb, czasu i decyzji osoby po przeprowadzce."
+          ],
+          "answer": "Dopasować konkretną pomoc do bieżących potrzeb, czasu i decyzji osoby po przeprowadzce.",
+          "evidence": "Powinna odpowiadać jego aktualnej sytuacji i pozostawiać mu możliwość podejmowania własnych decyzji.",
+          "explanation": "Tekst zaleca uzgodnioną pomoc zamiast przejmowania kontroli."
+        },
+        {
+          "id": "detail",
+          "skill": "detail",
+          "question": "Kiedy Natalia i brat mają rozpakować książki?",
+          "options": [
+            "W sobotę rano przed wizytą fachowca.",
+            "W niedzielę po południu.",
+            "W poniedziałek wieczorem."
+          ],
+          "answer": "W niedzielę po południu.",
+          "evidence": "Spotkają się dopiero w niedzielę po południu, kiedy będą mogli spokojnie rozpakować książki.",
+          "explanation": "Niedziela pasuje do dostępności brata."
+        },
+        {
+          "id": "cause",
+          "skill": "cause",
+          "question": "Dlaczego brat nie ustalił z Natalią całodziennej pomocy w sobotę?",
+          "options": [
+            "Miał wizytę fachowca i nie znał swojej dostępności.",
+            "Chciał tego dnia samodzielnie wyrzucić wszystkie książki.",
+            "Nie potrzebował żadnych narzędzi."
+          ],
+          "answer": "Miał wizytę fachowca i nie znał swojej dostępności.",
+          "evidence": "Brat miał jednak tego dnia umówionego fachowca i nie wiedział, o której będzie wolny.",
+          "explanation": "Niepewność dotycząca godziny utrudniała wspólną pracę."
+        },
+        {
+          "id": "inference",
+          "skill": "inference",
+          "question": "Znajomy prosi o pomoc w znalezieniu sklepu, ale nie chce, by ktoś rozpakowywał jego prywatne rzeczy. Co pasuje do poradnika?",
+          "options": [
+            "Przekazać potrzebne adresy i pozostawić rozpakowywanie zgodnie z jego życzeniem.",
+            "Rozpakować rzeczy podczas jego nieobecności, żeby szybciej skończyć.",
+            "Przyjechać bez uzgodnienia i wybrać za niego wszystkie zakupy."
+          ],
+          "answer": "Przekazać potrzebne adresy i pozostawić rozpakowywanie zgodnie z jego życzeniem.",
+          "evidence": "Jeżeli pomagasz osobie po przeprowadzce, zapytaj ją, co będzie przydatne właśnie teraz. Nie zakładaj, że musi potrzebować pomocy przy noszeniu mebli. Być może ma już wszystko na miejscu, ale chciałaby dowiedzieć się, gdzie można kupić podstawowe wyposażenie lub jak dotrzeć do pracy. Konkretna propozycja może być łatwiejsza do przyjęcia niż ogólne pytanie o pomoc.\n\nW przykładowej sytuacji Natalia chciała pomóc bratu, który właśnie zmienił mieszkanie. Zaproponowała, że przyjedzie w sobotę na cały dzień. Brat miał jednak tego dnia umówionego fachowca i nie wiedział, o której będzie wolny. Uzgodnili więc, że Natalia przygotuje dla niego listę sklepów i pożyczy kilka potrzebnych narzędzi. Spotkają się dopiero w niedzielę po południu, kiedy będą mogli spokojnie rozpakować książki.\n\nWarto także ustalić, które rzeczy można zrobić samodzielnie, a przy których potrzebna jest obecność właściciela. Przenoszenie lub wyrzucanie jego przedmiotów bez uzgodnienia może później utrudnić znalezienie potrzebnych rzeczy.",
+          "explanation": "Pomoc ma odpowiadać wskazanej potrzebie, a prywatne rzeczy wymagają uzgodnienia."
+        },
+        {
+          "id": "vocabulary",
+          "skill": "vocabulary",
+          "question": "Co oznacza „przejęcie całej organizacji życia”?",
+          "options": [
+            "Ustalenie godziny wspólnego spotkania.",
+            "Podejmowanie za drugą osobę większości decyzji dotyczących jej codziennych spraw.",
+            "Wykonanie jednego wcześniej uzgodnionego zadania."
+          ],
+          "answer": "Podejmowanie za drugą osobę większości decyzji dotyczących jej codziennych spraw.",
+          "evidence": "Dobra pomoc nie polega na przejęciu całej organizacji życia drugiego człowieka.",
+          "explanation": "Tekst odróżnia wsparcie od decydowania za inną osobę."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-155",
+      "day": 155,
+      "level": "B1",
+      "genre": "wiadomość",
+      "title": "Dokumenty przed wizytą u lekarza",
+      "text": "Cześć, Marto!\n\nJutro mam wizytę w przychodni, do której idę po raz pierwszy. Chciałabym przygotować się trochę lepiej niż ostatnio, kiedy podczas rozmowy z lekarzem przypomniałam sobie kilka ważnych spraw dopiero po wyjściu z gabinetu. Tym razem zapisałam pytania, które chcę zadać, i przygotowałam dokumenty związane z poprzednimi wizytami.\n\nDostałam wiadomość z przychodni z adresem budynku i numerem gabinetu. W wiadomości poproszono, żeby przynieść dokument tożsamości oraz posiadane wyniki badań związanych z powodem wizyty. Nie znam zasad działania innych placówek, więc w razie wątpliwości będę pytać bezpośrednio w tej przychodni.\n\nPrzygotowałam też krótką listę leków, które obecnie przyjmuję. Nie chcę samodzielnie oceniać, czy każdy z nich ma związek z moim pytaniem. Wolę przekazać lekarzowi informacje i zapytać, co jest istotne podczas rozmowy.\n\nOstatnio miałam problem ze znalezieniem właściwego dokumentu na telefonie. Wiele plików nosiło podobne nazwy. Dlatego dziś zapisałam potrzebne wyniki w osobnym folderze, a przy każdym dodałam datę. Jeśli lekarz będzie chciał zobaczyć wcześniejszy wynik, łatwiej znajdę go podczas wizyty.\n\nJutro wyjdę z domu trochę wcześniej, ponieważ przychodnia mieści się w dużym budynku, do którego prowadzi kilka wejść. Po rozmowie chciałabym zapisać najważniejsze ustalenia, szczególnie jeśli pojawi się potrzeba kolejnej wizyty. Jeżeli czegoś nie zrozumiem, poproszę o wyjaśnienie, zamiast zgadywać później.\n\nNie przygotowuję się do samodzielnego stawiania diagnozy. Chcę jedynie, żeby w czasie wizyty łatwiej było przekazać informacje, które już mam, i uzyskać odpowiedzi na moje pytania.\n\nPozdrawiam,\nZosia",
+      "questions": [
+        {
+          "id": "main-idea",
+          "skill": "main-idea",
+          "question": "Po co Zosia przygotowuje listy i dokumenty?",
+          "options": [
+            "Żeby ułatwić przekazanie informacji i rozmowę podczas wizyty.",
+            "Żeby samodzielnie ustalić diagnozę przed spotkaniem.",
+            "Żeby porównać wymagania wszystkich przychodni w mieście."
+          ],
+          "answer": "Żeby ułatwić przekazanie informacji i rozmowę podczas wizyty.",
+          "evidence": "Chcę jedynie, żeby w czasie wizyty łatwiej było przekazać informacje, które już mam, i uzyskać odpowiedzi na moje pytania.",
+          "explanation": "Przygotowanie ma usprawnić komunikację z lekarzem."
+        },
+        {
+          "id": "detail",
+          "skill": "detail",
+          "question": "O jaki dokument poproszono w wiadomości z przychodni?",
+          "options": [
+            "Potwierdzenie rezerwacji noclegu.",
+            "Zaświadczenie z miejsca pracy.",
+            "Dokument tożsamości."
+          ],
+          "answer": "Dokument tożsamości.",
+          "evidence": "W wiadomości poproszono, żeby przynieść dokument tożsamości oraz posiadane wyniki badań związanych z powodem wizyty.",
+          "explanation": "Wymieniono dokument i posiadane wyniki."
+        },
+        {
+          "id": "cause",
+          "skill": "cause",
+          "question": "Dlaczego Zosia uporządkowała pliki według dat?",
+          "options": [
+            "Musiała przesłać wszystkie pliki Marcie przed wizytą.",
+            "Wcześniej podobne nazwy utrudniały znalezienie właściwego wyniku.",
+            "Chciała zmienić datę wykonania badań."
+          ],
+          "answer": "Wcześniej podobne nazwy utrudniały znalezienie właściwego wyniku.",
+          "evidence": "Wiele plików nosiło podobne nazwy. Dlatego dziś zapisałam potrzebne wyniki w osobnym folderze, a przy każdym dodałam datę.",
+          "explanation": "Daty ułatwią odszukanie odpowiedniego dokumentu."
+        },
+        {
+          "id": "inference",
+          "skill": "inference",
+          "question": "Jeśli Zosia nie rozumie jednego ustalenia dotyczącego kolejnej wizyty, a w wiadomości nie ma odpowiedzi, co pasuje do jej podejścia?",
+          "options": [
+            "Zastąpić rozmowę z lekarzem porównaniem plików na telefonie.",
+            "Poprosić o wyjaśnienie w przychodni i zapisać ustalenie.",
+            "Wybrać samodzielnie termin na podstawie własnej interpretacji wyniku."
+          ],
+          "answer": "Poprosić o wyjaśnienie w przychodni i zapisać ustalenie.",
+          "evidence": "Jeżeli czegoś nie zrozumiem, poproszę o wyjaśnienie, zamiast zgadywać później.",
+          "explanation": "Zosia chce wyjaśniać niejasności u właściwego źródła."
+        },
+        {
+          "id": "vocabulary",
+          "skill": "vocabulary",
+          "question": "Co oznacza „stawianie diagnozy”?",
+          "options": [
+            "Ustalanie godziny przyjścia do przychodni.",
+            "Porządkowanie plików według dat.",
+            "Ustalanie, na czym polega problem zdrowotny."
+          ],
+          "answer": "Ustalanie, na czym polega problem zdrowotny.",
+          "evidence": "Nie przygotowuję się do samodzielnego stawiania diagnozy.",
+          "explanation": "Diagnoza dotyczy rozpoznania problemu zdrowotnego, a nie organizacji dokumentów."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-156",
+      "day": 156,
+      "level": "B1",
+      "genre": "artykuł",
+      "title": "Rozmowa o czasie odpoczynku",
+      "text": "W ramach zajęć poświęconych organizacji codziennego życia grupa dorosłych uczestników rozmawiała o tym, co dla nich oznacza odpoczynek. Prowadząca nie przygotowała jednego planu dnia dla wszystkich. Poprosiła uczestników, żeby opisali sytuacje, w których rzeczywiście czują, że mają czas dla siebie.\n\nMarek powiedział, że najlepiej odpoczywa podczas krótkiego spaceru po pracy. W domu często zaczyna od porządkowania mieszkania, a potem nie znajduje już chwili na własne zajęcia. Agnieszka przeciwnie: po pracy woli wrócić od razu do domu, ponieważ cały dzień spędza w ruchu. Jej ulubionym sposobem odpoczynku jest czytanie książki w spokojnym miejscu.\n\nW trakcie rozmowy pojawiło się pytanie, czy każdą wolną chwilę trzeba zaplanować. Jedna z uczestniczek zauważyła, że wcześniej wpisywała do kalendarza nawet czas przeznaczony na relaks. Kiedy nie udawało się wykonać zaplanowanego zadania, czuła się tak, jakby poniosła kolejną porażkę. Teraz zostawia w tygodniu kilka wolnych okresów, ale nie ustala z góry, co dokładnie będzie wtedy robić.\n\nProwadząca poprosiła grupę o rozróżnienie obowiązków od dobrowolnych aktywności. Jeśli ktoś wybiera ćwiczenia, ponieważ je lubi, mogą być dla niego przyjemnym elementem dnia. Dla innej osoby ta sama czynność może w danym momencie oznaczać kolejny wysiłek.\n\nUczestnicy nie próbowali ustalać, który sposób odpoczynku jest najlepszy dla wszystkich. Postanowili przez najbliższy tydzień zauważać, jakie sytuacje odpowiadają ich własnym potrzebom, i omówić obserwacje podczas kolejnych zajęć. Celem rozmowy było lepsze rozumienie codziennych zwyczajów, a nie udzielanie indywidualnych porad zdrowotnych.",
+      "questions": [
+        {
+          "id": "main-idea",
+          "skill": "main-idea",
+          "question": "Co jest głównym tematem artykułu?",
+          "options": [
+            "Porównanie wyników leczenia dwóch osób.",
+            "Różne potrzeby związane z odpoczynkiem i świadome organizowanie własnego czasu.",
+            "Obowiązkowy plan ćwiczeń dla każdego uczestnika zajęć."
+          ],
+          "answer": "Różne potrzeby związane z odpoczynkiem i świadome organizowanie własnego czasu.",
+          "evidence": "Celem rozmowy było lepsze rozumienie codziennych zwyczajów, a nie udzielanie indywidualnych porad zdrowotnych.",
+          "explanation": "Grupa rozpoznaje indywidualne preferencje, nie tworzy uniwersalnego programu."
+        },
+        {
+          "id": "detail",
+          "skill": "detail",
+          "question": "Jaki sposób odpoczynku preferuje Agnieszka?",
+          "options": [
+            "Długi spacer po pracy.",
+            "Porządkowanie mieszkania wieczorem.",
+            "Czytanie w spokojnym miejscu."
+          ],
+          "answer": "Czytanie w spokojnym miejscu.",
+          "evidence": "Jej ulubionym sposobem odpoczynku jest czytanie książki w spokojnym miejscu.",
+          "explanation": "Agnieszka wybiera odpoczynek w domu."
+        },
+        {
+          "id": "cause",
+          "skill": "cause",
+          "question": "Dlaczego jedna uczestniczka zrezygnowała z dokładnego planowania każdej chwili relaksu?",
+          "options": [
+            "Niewykonanie planu stawało się dla niej kolejnym powodem niezadowolenia.",
+            "Prowadząca zabroniła wszystkim planowania.",
+            "Nie miała już dostępu do kalendarza."
+          ],
+          "answer": "Niewykonanie planu stawało się dla niej kolejnym powodem niezadowolenia.",
+          "evidence": "Kiedy nie udawało się wykonać zaplanowanego zadania, czuła się tak, jakby poniosła kolejną porażkę.",
+          "explanation": "Zbyt szczegółowy plan zamieniał odpoczynek w obowiązek."
+        },
+        {
+          "id": "inference",
+          "skill": "inference",
+          "question": "Uczestnik pracuje cały dzień na stojąco i nie lubi długich spacerów, choć Marek je poleca. Co wynika z zasad rozmowy?",
+          "options": [
+            "Powinien przyjąć dokładnie plan Marka jako najlepszy dla całej grupy.",
+            "Powinien uznać każdą aktywność w domu za niewłaściwą.",
+            "Może wybrać inną aktywność i ocenić, czy odpowiada jego potrzebom."
+          ],
+          "answer": "Może wybrać inną aktywność i ocenić, czy odpowiada jego potrzebom.",
+          "evidence": "Dla innej osoby ta sama czynność może w danym momencie oznaczać kolejny wysiłek.",
+          "explanation": "Preferencje i sytuacja osoby zmieniają znaczenie danej aktywności."
+        },
+        {
+          "id": "vocabulary",
+          "skill": "vocabulary",
+          "question": "Co oznaczają „dobrowolne aktywności”?",
+          "options": [
+            "Czynności wybierane z własnej woli, a nie narzucone jako obowiązek.",
+            "Czynności, które zawsze muszą odbywać się poza domem.",
+            "Zadania wykonywane zgodnie z poleceniem pracodawcy."
+          ],
+          "answer": "Czynności wybierane z własnej woli, a nie narzucone jako obowiązek.",
+          "evidence": "Prowadząca poprosiła grupę o rozróżnienie obowiązków od dobrowolnych aktywności.",
+          "explanation": "Dobrowolność oznacza możliwość samodzielnego wyboru."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-157",
+      "day": 157,
+      "level": "B1",
+      "genre": "dialog",
+      "title": "Odczytywanie informacji o badaniu",
+      "text": "— Dzień dobry, odebrałem dokument z wynikiem badania, ale nie rozumiem wszystkich oznaczeń — powiedział Paweł przy recepcji przychodni. — Czy może mi pani powiedzieć, co mam z nim zrobić?\n\n— Mogę pomóc panu znaleźć informacje organizacyjne — odpowiedziała pracownica. — Interpretację wyniku najlepiej omówić z lekarzem, który zna powód badania.\n\nPaweł pokazał dokument. Na pierwszej stronie znajdowały się jego dane, data badania i nazwa placówki. Dalej umieszczono tabelę z wynikami oraz krótką informację, gdzie można sprawdzić opis zastosowanych oznaczeń. Pracownica wskazała tę część dokumentu.\n\n— W tej tabeli widzę kilka różnych symboli — powiedział Paweł. — Czy to oznacza, że jeden wynik jest dobry, a drugi zły?\n\n— Samego znaczenia wyniku w pana sytuacji nie będę oceniać. Może pan przygotować pytania na wizytę. Jeśli potrzebuje pan kopii dokumentu, w recepcji możemy ją wydrukować.\n\nPaweł miał już umówioną rozmowę z lekarzem na następny tydzień. Chciał jednak wiedzieć, czy powinien przynieść również wynik wcześniejszego badania. Pracownica zaproponowała, żeby zapytał o to podczas kontaktu z gabinetem, ponieważ nie znała zakresu planowanej rozmowy.\n\nW domu Paweł przeczytał objaśnienia symboli. Zauważył, że zrozumienie nazwy kolumny nie daje jeszcze odpowiedzi na pytanie o jego zdrowie. Zapisał więc trzy kwestie, które chciał omówić. W osobnym miejscu zanotował pytanie o wcześniejszy dokument.\n\nNie zamierzał przesyłać wyników znajomym z prośbą o ocenę. Chciał wykorzystać dostępne informacje do lepszego przygotowania rozmowy, a wątpliwości dotyczące znaczenia badania pozostawić do omówienia z osobą znającą jego sytuację.",
+      "questions": [
+        {
+          "id": "main-idea",
+          "skill": "main-idea",
+          "question": "Jaki problem jest głównym tematem dialogu?",
+          "options": [
+            "Wybór nowego badania na podstawie porady znajomych.",
+            "Rozróżnienie informacji organizacyjnych w dokumencie od indywidualnej interpretacji wyniku.",
+            "Porównanie cen wydruków w różnych przychodniach."
+          ],
+          "answer": "Rozróżnienie informacji organizacyjnych w dokumencie od indywidualnej interpretacji wyniku.",
+          "evidence": "Interpretację wyniku najlepiej omówić z lekarzem, który zna powód badania.",
+          "explanation": "Pracownica pomaga odczytać strukturę dokumentu, nie ocenia zdrowia Pawła."
+        },
+        {
+          "id": "detail",
+          "skill": "detail",
+          "question": "Co pracownica może przygotować w recepcji?",
+          "options": [
+            "Wydruk kopii dokumentu.",
+            "Plan dalszego leczenia.",
+            "Nową interpretację wszystkich wyników."
+          ],
+          "answer": "Wydruk kopii dokumentu.",
+          "evidence": "Jeśli potrzebuje pan kopii dokumentu, w recepcji możemy ją wydrukować.",
+          "explanation": "Recepcja może pomóc w uzyskaniu kopii."
+        },
+        {
+          "id": "cause",
+          "skill": "cause",
+          "question": "Dlaczego pracownica nie odpowiada na pytanie o znaczenie wyniku?",
+          "options": [
+            "Tabela nie zawiera żadnych informacji o badaniu.",
+            "Dokument został wydany bez danych Pawła.",
+            "Indywidualna ocena wymaga rozmowy z lekarzem znającym powód badania."
+          ],
+          "answer": "Indywidualna ocena wymaga rozmowy z lekarzem znającym powód badania.",
+          "evidence": "Samego znaczenia wyniku w pana sytuacji nie będę oceniać.",
+          "explanation": "Znaczenie kliniczne zależy od sytuacji pacjenta."
+        },
+        {
+          "id": "inference",
+          "skill": "inference",
+          "question": "Paweł potrafi już wyjaśnić skrót w nagłówku tabeli, ale nadal nie wie, co konkretny wynik oznacza dla niego. Co odpowiada jego planowi?",
+          "options": [
+            "Zapisać pytanie i omówić je podczas umówionej rozmowy z lekarzem.",
+            "Poprosić znajomych o wybranie dalszych działań na podstawie tabeli.",
+            "Uznać zrozumienie skrótu za wystarczającą diagnozę."
+          ],
+          "answer": "Zapisać pytanie i omówić je podczas umówionej rozmowy z lekarzem.",
+          "evidence": "Paweł miał już umówioną rozmowę z lekarzem na następny tydzień. Chciał jednak wiedzieć, czy powinien przynieść również wynik wcześniejszego badania. Pracownica zaproponowała, żeby zapytał o to podczas kontaktu z gabinetem, ponieważ nie znała zakresu planowanej rozmowy.\n\nW domu Paweł przeczytał objaśnienia symboli. Zauważył, że zrozumienie nazwy kolumny nie daje jeszcze odpowiedzi na pytanie o jego zdrowie. Zapisał więc trzy kwestie, które chciał omówić. W osobnym miejscu zanotował pytanie o wcześniejszy dokument.",
+          "explanation": "Rozumienie formy dokumentu nie zastępuje indywidualnej interpretacji."
+        },
+        {
+          "id": "vocabulary",
+          "skill": "vocabulary",
+          "question": "Co oznacza „objaśnienie symboli”?",
+          "options": [
+            "Potwierdzenie terminu wizyty kontrolnej.",
+            "Informację o tym, co oznaczają znaki użyte w dokumencie.",
+            "Ocenę stanu zdrowia na podstawie rozmowy ze znajomymi."
+          ],
+          "answer": "Informację o tym, co oznaczają znaki użyte w dokumencie.",
+          "evidence": "W domu Paweł przeczytał objaśnienia symboli.",
+          "explanation": "Objaśnienia pomagają zrozumieć sposób zapisu danych."
+        }
+      ]
+    }
+  ]
+}
