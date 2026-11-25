@@ -1,0 +1,76 @@
+{
+  "id": "pl-b1.reading.day-101",
+  "day": 101,
+  "level": "B1",
+  "genre": "dialog",
+  "title": "Rodzinny przepis na Wielkanoc",
+  "text": "— Babciu, chciałbym w tym roku sam przygotować twoją babkę na Wielkanoc — powiedział Filip. — Pamiętam, że robiłaś ją zawsze w tej samej formie, ale nigdy nie zapisałem przepisu.\n\n— Chętnie ci pomogę. Mam zeszyt z przepisami, tylko nie wszystkie ilości są w nim podane dokładnie. Część składników dodawałam według własnego doświadczenia — odpowiedziała babcia.\n\n— Właśnie dlatego wolę upiec ją razem z tobą przed świętami. Gdybym spróbował dopiero w niedzielę rano, nie miałbym czasu poprawić błędów.\n\nBabcia zgodziła się na próbę w sobotę. Filip przygotował składniki, a ona pokazała mu, jak rozpoznać właściwą konsystencję ciasta. Kiedy Filip sięgał po kolejną porcję mąki, zatrzymała go.\n\n— Najpierw zobacz, jak ciasto spływa z łyżki. Nie zawsze potrzeba tyle samo mąki. Ja zapisuję ilość, ale patrzę też na to, co dzieje się w misce.\n\n— Czyli sam przepis to nie wszystko?\n\n— Właśnie. Dobrze, że pytasz. Gdy uczyłam twoją mamę piec, też potrzebowała kilku prób.\n\nPo upieczeniu babki Filip zrobił zdjęcie przekroju i zapisał własne uwagi. Babcia zaproponowała, żeby w zeszycie zostawić oryginalny zapis, a obok dopisać nową wersję z dokładniejszymi wskazówkami. Filipowi spodobał się ten pomysł, ponieważ nie chciał zgubić rodzinnej historii przepisu.\n\nNa święta zaprosili również kuzynkę, która nigdy wcześniej nie piekła ciast. Filip obiecał jej pokazać zdjęcia z próby. Nie zamierzał już przekazywać przepisu jako samej listy składników. Chciał wyjaśnić, na co trzeba zwrócić uwagę podczas przygotowania.",
+  "questions": [
+    {
+      "id": "main-idea",
+      "skill": "main-idea",
+      "question": "Jaka jest główna myśl rozmowy?",
+      "options": [
+        "Rodzinne przepisy należy zawsze przepisywać bez żadnych zmian.",
+        "Najlepiej zastąpić stare przepisy nowoczesnymi sposobami pieczenia.",
+        "Przekazywanie rodzinnego przepisu obejmuje także doświadczenie i praktyczne wskazówki."
+      ],
+      "answer": "Przekazywanie rodzinnego przepisu obejmuje także doświadczenie i praktyczne wskazówki.",
+      "evidence": "Nie zamierzał już przekazywać przepisu jako samej listy składników. Chciał wyjaśnić, na co trzeba zwrócić uwagę podczas przygotowania.",
+      "explanation": "Filip zachowuje historię i uczy się oceniać ciasto w praktyce."
+    },
+    {
+      "id": "detail",
+      "skill": "detail",
+      "question": "Kiedy Filip i babcia umówili się na próbę?",
+      "options": [
+        "W piątek po południu.",
+        "W sobotę przed świętami.",
+        "W niedzielę rano."
+      ],
+      "answer": "W sobotę przed świętami.",
+      "evidence": "Babcia zgodziła się na próbę w sobotę.",
+      "explanation": "Próba miała odbyć się przed Wielkanocą."
+    },
+    {
+      "id": "cause",
+      "skill": "cause",
+      "question": "Dlaczego Filip nie chce piec babki po raz pierwszy w niedzielę rano?",
+      "options": [
+        "Nie miałby czasu na poprawienie błędów.",
+        "Babcia nie miałaby wtedy zeszytu z przepisami.",
+        "Kuzynka nie mogłaby zrobić zdjęcia ciasta."
+      ],
+      "answer": "Nie miałby czasu na poprawienie błędów.",
+      "evidence": "Gdybym spróbował dopiero w niedzielę rano, nie miałbym czasu poprawić błędów.",
+      "explanation": "Próba przed świętami daje czas na naukę."
+    },
+    {
+      "id": "inference",
+      "skill": "inference",
+      "question": "Kuzynka korzysta z zapisu ilości składników, ale ciasto wygląda inaczej niż na zdjęciu z próby. Co Filip powinien jej doradzić zgodnie z nauką babci?",
+      "options": [
+        "Usunąć stary przepis z zeszytu i zacząć od nowa.",
+        "Porównać konsystencję ze wskazówkami i dopiero wtedy zdecydować o mące.",
+        "Dodać całą zapisaną ilość mąki bez względu na wygląd."
+      ],
+      "answer": "Porównać konsystencję ze wskazówkami i dopiero wtedy zdecydować o mące.",
+      "evidence": "Najpierw zobacz, jak ciasto spływa z łyżki. Nie zawsze potrzeba tyle samo mąki. Ja zapisuję ilość, ale patrzę też na to, co dzieje się w misce.",
+      "explanation": "Ilości są pomocą, ale trzeba ocenić rzeczywistą konsystencję."
+    },
+    {
+      "id": "vocabulary",
+      "skill": "vocabulary",
+      "question": "Co oznacza „przekrój” babki?",
+      "options": [
+        "Kształt formy przed pieczeniem.",
+        "Lista użytych składników.",
+        "Wnętrze ciasta widoczne po jego przecięciu."
+      ],
+      "answer": "Wnętrze ciasta widoczne po jego przecięciu.",
+      "evidence": "Po upieczeniu babki Filip zrobił zdjęcie przekroju i zapisał własne uwagi.",
+      "explanation": "Przekrój pozwala obejrzeć wnętrze gotowego ciasta."
+    }
+  ],
+  "publicationStatus": "practice"
+}

@@ -1,0 +1,76 @@
+{
+  "id": "pl-b1.reading.day-102",
+  "day": 102,
+  "level": "B1",
+  "genre": "e-mail",
+  "title": "Odwiedziny na lokalnym jarmarku",
+  "text": "Cześć, Doroto!\n\nW sobotę wybrałyśmy się z Olą na lokalny jarmark, który odbywał się na placu przed ratuszem. Było tam sporo stoisk z ręcznie wykonanymi ozdobami, jedzeniem i drobnymi prezentami. Początkowo chciałyśmy tylko kupić coś dla znajomych, którzy obchodzą rocznicę ślubu. Ostatecznie spędziłyśmy na placu prawie trzy godziny.\n\nNajbardziej zainteresowało nas stoisko, przy którym można było samodzielnie ozdobić małą drewnianą zawieszkę. Prowadząca nie sprzedawała gotowych zestawów do zabrania do domu, ponieważ chciała pokazywać uczestnikom technikę malowania na miejscu. Na jeden stolik przypadało tylko kilka krzeseł, więc zapisałyśmy się na godzinę później i w tym czasie obejrzałyśmy pozostałe stoiska.\n\nKupiłyśmy również herbatę od lokalnego producenta. Sprzedawca pozwolił nam powąchać różne mieszanki, ale nie przygotowywał napojów na miejscu. Obok działała kawiarnia, w której można było spróbować jednej z jego herbat. Właśnie tam odpoczęłyśmy przed powrotem na warsztaty.\n\nJarmark będzie trwał jeszcze w przyszłą sobotę. Jeśli masz ochotę pójść z nami, najlepiej spotkajmy się przed południem. Chcemy najpierw zapisać się na warsztaty, a potem bez pośpiechu zrobić zakupy. Pamiętaj, że o czternastej muszę wyjść, bo obiecałam pomóc siostrze w przygotowaniu przyjęcia urodzinowego.\n\nNapisz, czy wolisz przyjść wcześniej, czy spotkać się z nami już na placu. Nie musisz kupować żadnych prezentów. Myślę, że samo uczestnictwo w warsztatach może być ciekawym sposobem na spędzenie soboty.\n\nŚciskam,\nAda",
+  "questions": [
+    {
+      "id": "main-idea",
+      "skill": "main-idea",
+      "question": "Dlaczego Ada pisze do Doroty?",
+      "options": [
+        "Zaprasza Dorotę na przyjęcie urodzinowe siostry.",
+        "Opisuje udaną wizytę i proponuje wspólne wyjście w kolejną sobotę.",
+        "Prosi Dorotę o wybór prezentu na rocznicę ślubu."
+      ],
+      "answer": "Opisuje udaną wizytę i proponuje wspólne wyjście w kolejną sobotę.",
+      "evidence": "Jarmark będzie trwał jeszcze w przyszłą sobotę. Jeśli masz ochotę pójść z nami, najlepiej spotkajmy się przed południem.",
+      "explanation": "Ada opisuje poprzedni jarmark, aby zachęcić do następnej wizyty."
+    },
+    {
+      "id": "detail",
+      "skill": "detail",
+      "question": "Gdzie można było spróbować jednej z herbat producenta?",
+      "options": [
+        "W kawiarni obok.",
+        "Przy jego stoisku na placu.",
+        "Przy stoliku do malowania ozdób."
+      ],
+      "answer": "W kawiarni obok.",
+      "evidence": "Obok działała kawiarnia, w której można było spróbować jednej z jego herbat.",
+      "explanation": "Stoisko pozwalało wąchać mieszanki, kawiarnia je podawała."
+    },
+    {
+      "id": "cause",
+      "skill": "cause",
+      "question": "Dlaczego prowadząca nie sprzedawała zestawów do samodzielnego ozdabiania w domu?",
+      "options": [
+        "Chciała, aby klienci kupowali wyłącznie gotowe prezenty.",
+        "Nie miała wystarczającej liczby drewnianych ozdób.",
+        "Zależało jej na pokazaniu techniki podczas zajęć."
+      ],
+      "answer": "Zależało jej na pokazaniu techniki podczas zajęć.",
+      "evidence": "Prowadząca nie sprzedawała gotowych zestawów do zabrania do domu, ponieważ chciała pokazywać uczestnikom technikę malowania na miejscu.",
+      "explanation": "Celem było uczestnictwo w warsztatach."
+    },
+    {
+      "id": "inference",
+      "skill": "inference",
+      "question": "Dorota może przyjść na plac dopiero o trzynastej, a wolne miejsca na warsztatach są dopiero o piętnastej. Co najlepiej zrobić, jeśli zależy jej na spotkaniu z Adą i udziale w zajęciach?",
+      "options": [
+        "Spotkać się z Adą przed jej wyjściem i wybrać warsztaty osobno na później.",
+        "Zapisać całą grupę na warsztaty o piętnastej.",
+        "Poczekać ze spotkaniem do zakończenia przyjęcia na placu."
+      ],
+      "answer": "Spotkać się z Adą przed jej wyjściem i wybrać warsztaty osobno na później.",
+      "evidence": "Pamiętaj, że o czternastej muszę wyjść, bo obiecałam pomóc siostrze w przygotowaniu przyjęcia urodzinowego.",
+      "explanation": "Ada musi wyjść o czternastej; Dorota może spotkać się z nią wcześniej, a potem pójść sama na warsztaty."
+    },
+    {
+      "id": "vocabulary",
+      "skill": "vocabulary",
+      "question": "Co oznacza „bez pośpiechu”?",
+      "options": [
+        "Bez wybierania innych stoisk.",
+        "Spokojnie, nie spiesząc się.",
+        "Bez wcześniejszego zapisywania się."
+      ],
+      "answer": "Spokojnie, nie spiesząc się.",
+      "evidence": "Chcemy najpierw zapisać się na warsztaty, a potem bez pośpiechu zrobić zakupy.",
+      "explanation": "Zapisanie terminu pozwoli im spokojnie wykorzystać czas."
+    }
+  ],
+  "publicationStatus": "practice"
+}

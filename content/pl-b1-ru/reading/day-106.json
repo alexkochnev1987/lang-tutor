@@ -1,0 +1,76 @@
+{
+  "id": "pl-b1.reading.day-106",
+  "day": 106,
+  "level": "B1",
+  "genre": "wiadomość",
+  "title": "Czy warto pożyczać zamiast kupować?",
+  "text": "Cześć, Tomku!\n\nPamiętasz, że w zeszłym miesiącu planowaliśmy kupić wiertarkę do naszego mieszkania? Ostatecznie zrezygnowaliśmy z zakupu, bo sąsiad zaproponował, że pożyczy nam swoją na weekend. Potrzebowaliśmy jej tylko do zamocowania dwóch półek, a później prawdopodobnie długo nie mielibyśmy okazji jej używać.\n\nTo doświadczenie dało nam pomysł na małą listę rzeczy, którymi moglibyśmy się dzielić wśród znajomych. Na razie wpisaliśmy na nią narzędzia, pompki rowerowe i kilka gier planszowych. Nie dodajemy przedmiotów, których właściciel potrzebuje codziennie albo które trudno bezpiecznie przewozić. Każdy sam decyduje, co chce udostępnić.\n\nWażne jest też ustalenie terminu zwrotu. W przypadku wiertarki umówiliśmy się z sąsiadem na niedzielę wieczorem, ponieważ w poniedziałek potrzebował jej u siebie. Kiedy praca zajęła nam więcej czasu, zadzwoniliśmy do niego wcześniej. Okazało się, że możemy oddać narzędzie w poniedziałek rano, ale nie chcieliśmy zakładać tego bez pytania.\n\nZastanawiamy się również nad tym, co zrobić, jeśli pożyczony przedmiot przestanie działać. Chcemy przed użyciem obejrzeć go razem z właścicielem, a w razie problemu od razu się z nim skontaktować. Nie chodzi o spisywanie długich umów między znajomymi, lecz o jasne zasady, które pozwolą uniknąć nieporozumień.\n\nNapisz, co o tym myślisz. Może nie wszystko warto pożyczać, ale przy rzeczach używanych raz na jakiś czas można w ten sposób oszczędzić pieniądze i miejsce w mieszkaniu.\n\nPozdrawiam,\nKamil",
+  "questions": [
+    {
+      "id": "main-idea",
+      "skill": "main-idea",
+      "question": "Jaki pomysł Kamil przedstawia Tomkowi?",
+      "options": [
+        "Dzielenie się rzadko używanymi przedmiotami na uzgodnionych zasadach.",
+        "Sprzedaż sprzętu sąsiadom przed remontem.",
+        "Wspólne kupowanie wszystkich narzędzi na własność."
+      ],
+      "answer": "Dzielenie się rzadko używanymi przedmiotami na uzgodnionych zasadach.",
+      "evidence": "Może nie wszystko warto pożyczać, ale przy rzeczach używanych raz na jakiś czas można w ten sposób oszczędzić pieniądze i miejsce w mieszkaniu.",
+      "explanation": "Kamil proponuje dobrowolne udostępnianie i jasne warunki zwrotu."
+    },
+    {
+      "id": "detail",
+      "skill": "detail",
+      "question": "Na kiedy pierwotnie umówiono zwrot wiertarki?",
+      "options": [
+        "Na poniedziałek rano.",
+        "Na sobotę wieczorem.",
+        "Na niedzielę wieczorem."
+      ],
+      "answer": "Na niedzielę wieczorem.",
+      "evidence": "W przypadku wiertarki umówiliśmy się z sąsiadem na niedzielę wieczorem, ponieważ w poniedziałek potrzebował jej u siebie.",
+      "explanation": "Pierwszy uzgodniony termin to niedziela."
+    },
+    {
+      "id": "cause",
+      "skill": "cause",
+      "question": "Dlaczego Kamil nie kupił wiertarki?",
+      "options": [
+        "Sąsiad chciał kupić od niego narzędzia.",
+        "Miał wykonać tylko niewielką pracę i mógł skorzystać z narzędzia sąsiada.",
+        "Nie wiedział, jak przymocować półki."
+      ],
+      "answer": "Miał wykonać tylko niewielką pracę i mógł skorzystać z narzędzia sąsiada.",
+      "evidence": "Potrzebowaliśmy jej tylko do zamocowania dwóch półek, a później prawdopodobnie długo nie mielibyśmy okazji jej używać.",
+      "explanation": "Zakup nie był potrzebny przy jednorazowym wykorzystaniu."
+    },
+    {
+      "id": "inference",
+      "skill": "inference",
+      "question": "Tomek chce skorzystać z pompki, której właściciel potrzebuje codziennie rano. Co najlepiej zrobić zgodnie z podejściem Kamila?",
+      "options": [
+        "Uzgodnić z właścicielem ewentualne krótkie pożyczenie poza wspólną listą.",
+        "Wpisać pompkę na listę bez pytania, skoro jest mała.",
+        "Zabrać pompkę na cały weekend, jeśli użyje jej tylko raz."
+      ],
+      "answer": "Uzgodnić z właścicielem ewentualne krótkie pożyczenie poza wspólną listą.",
+      "evidence": "Nie dodajemy przedmiotów, których właściciel potrzebuje codziennie albo które trudno bezpiecznie przewozić. Każdy sam decyduje, co chce udostępnić.",
+      "explanation": "Codziennie potrzebnego przedmiotu nie wpisuje się automatycznie; decyzja należy do właściciela."
+    },
+    {
+      "id": "vocabulary",
+      "skill": "vocabulary",
+      "question": "Co oznacza „udostępnić” przedmiot?",
+      "options": [
+        "Zastąpić go nowszym modelem.",
+        "Pozwolić innym z niego korzystać.",
+        "Naprawić go przed sprzedażą."
+      ],
+      "answer": "Pozwolić innym z niego korzystać.",
+      "evidence": "Każdy sam decyduje, co chce udostępnić.",
+      "explanation": "Chodzi o pozwolenie znajomym na korzystanie z własnej rzeczy."
+    }
+  ],
+  "publicationStatus": "practice"
+}

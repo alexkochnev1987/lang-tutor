@@ -1,0 +1,76 @@
+{
+  "id": "pl-b1.reading.day-098",
+  "day": 98,
+  "level": "B1",
+  "genre": "poradnik",
+  "title": "Ogród przyjazny owadom",
+  "text": "Mały ogród może być miejscem wypoczynku nie tylko dla ludzi. Jeśli chcemy obserwować owady, warto pomyśleć o tym, jak wygląda nasza przestrzeń w różnych miesiącach. Jedna piękna rabata, która kwitnie przez dwa tygodnie, daje mniej okazji do obserwacji niż kilka roślin kwitnących w różnych porach sezonu.\n\nNa początku nie trzeba zmieniać całego ogrodu. Można wybrać niewielki fragment, na którym łatwo będzie porównywać zachowanie owadów. Zwróć uwagę na światło, wiatr i odległość od miejsca, w którym zwykle siedzisz. Jeśli chcesz robić notatki, wygodniej będzie obserwować rośliny z tej samej ławki, zamiast za każdym razem podchodzić bardzo blisko.\n\nW przykładowym ogrodzie Ola postanowiła przygotować dwie małe rabaty. Jedną założyła przy płocie, drugą w pobliżu tarasu. Na obu posadziła te same rośliny. Przez kilka tygodni obserwowała je o podobnej porze, aby dowiedzieć się, gdzie częściej widuje owady. Zapisywała również pogodę, bo liczba odwiedzin różniła się między dniami słonecznymi i deszczowymi.\n\nKiedy na jednej rabacie zauważyła mniej owadów, nie zmieniła od razu wszystkich roślin. Najpierw chciała sprawdzić, czy różnica utrzyma się w kolejnych tygodniach. Poprosiła również znajomego ogrodnika o pomoc w wyborze roślin odpowiednich do warunków na działce.\n\nJeśli planujesz podobną zmianę, potraktuj pierwszy sezon jako okazję do nauki. Wybierz takie rozwiązania, które pasują do twojej przestrzeni i pozwalają ci cieszyć się ogrodem bez ciągłego poprawiania wszystkiego.",
+  "questions": [
+    {
+      "id": "main-idea",
+      "skill": "main-idea",
+      "question": "Do czego zachęca poradnik?",
+      "options": [
+        "Do zastąpienia całego ogrodu jedną dużą rabatą.",
+        "Do wybierania roślin wyłącznie na podstawie ich wyglądu.",
+        "Do stopniowego urządzania ogrodu z uwzględnieniem obserwacji owadów i warunków."
+      ],
+      "answer": "Do stopniowego urządzania ogrodu z uwzględnieniem obserwacji owadów i warunków.",
+      "evidence": "Jeśli planujesz podobną zmianę, potraktuj pierwszy sezon jako okazję do nauki.",
+      "explanation": "Tekst zachęca do małych prób, obserwacji i wyboru rozwiązań pasujących do ogrodu."
+    },
+    {
+      "id": "detail",
+      "skill": "detail",
+      "question": "Jaką dodatkową informację o warunkach obserwacji zapisywała Ola?",
+      "options": [
+        "Pogodę podczas obserwacji.",
+        "Godziny pracy znajomego ogrodnika.",
+        "Koszt nowych roślin."
+      ],
+      "answer": "Pogodę podczas obserwacji.",
+      "evidence": "Zapisywała również pogodę, bo liczba odwiedzin różniła się między dniami słonecznymi i deszczowymi.",
+      "explanation": "Pogoda była dodatkową informacją."
+    },
+    {
+      "id": "cause",
+      "skill": "cause",
+      "question": "Dlaczego Ola nie zmieniła od razu roślin na jednej rabacie?",
+      "options": [
+        "Nie miała już miejsca na nowe rośliny.",
+        "Chciała sprawdzić, czy zauważona różnica się powtórzy.",
+        "Chciała zakończyć obserwacje po pierwszym tygodniu."
+      ],
+      "answer": "Chciała sprawdzić, czy zauważona różnica się powtórzy.",
+      "evidence": "Najpierw chciała sprawdzić, czy różnica utrzyma się w kolejnych tygodniach.",
+      "explanation": "Jedna obserwacja nie wystarczała jej do decyzji."
+    },
+    {
+      "id": "inference",
+      "skill": "inference",
+      "question": "W pierwszym tygodniu Ola obserwowała rabatę przy płocie w słońcu, a drugą tylko w deszczu. Co pomoże jej lepiej porównać miejsca?",
+      "options": [
+        "Porównać wyłącznie kolory kwiatów na obu rabatach.",
+        "Zmienić wszystkie rośliny na mniej odwiedzanej rabacie.",
+        "Powtórzyć obserwacje obu rabat przy podobnej pogodzie i o podobnej porze."
+      ],
+      "answer": "Powtórzyć obserwacje obu rabat przy podobnej pogodzie i o podobnej porze.",
+      "evidence": "Przez kilka tygodni obserwowała je o podobnej porze, aby dowiedzieć się, gdzie częściej widuje owady. Zapisywała również pogodę, bo liczba odwiedzin różniła się między dniami słonecznymi i deszczowymi.",
+      "explanation": "Podobna pora i pogoda pozwalają lepiej oddzielić wpływ położenia rabaty od warunków obserwacji."
+    },
+    {
+      "id": "vocabulary",
+      "skill": "vocabulary",
+      "question": "Co oznacza w tekście „rabata”?",
+      "options": [
+        "Miejsce przygotowane do siedzenia w ogrodzie.",
+        "Fragment ziemi obsadzony roślinami.",
+        "Lista gatunków oglądanych podczas spaceru."
+      ],
+      "answer": "Fragment ziemi obsadzony roślinami.",
+      "evidence": "W przykładowym ogrodzie Ola postanowiła przygotować dwie małe rabaty. Jedną założyła przy płocie, drugą w pobliżu tarasu. Na obu posadziła te same rośliny.",
+      "explanation": "Rabaty są miejscami, na których rosną rośliny."
+    }
+  ],
+  "publicationStatus": "practice"
+}

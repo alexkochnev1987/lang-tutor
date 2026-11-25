@@ -1,0 +1,76 @@
+{
+  "id": "pl-b1.reading.day-103",
+  "day": 103,
+  "level": "B1",
+  "genre": "ogłoszenie",
+  "title": "Święta w dwóch rodzinach",
+  "text": "Dom Sąsiedzki zaprasza na wieczór opowieści o rodzinnych świętach. Chcemy porozmawiać o tym, jak łączymy różne zwyczaje, kiedy bliskie sobie osoby wychowały się w domach o innych tradycjach. Nie będzie to konkurs na najciekawszy sposób obchodzenia świąt. Zależy nam na wymianie doświadczeń.\n\nPodczas poprzedniego spotkania uczestnicy opowiadali, jak dzielili czas między dwie rodziny, przygotowywali wspólne posiłki i rozwiązywali problemy związane z podróżą. Jedna para mówiła o tym, że w pierwszych latach małżeństwa odwiedzali w Wigilię dwa domy. Później zmienili plan i zaczęli spotykać się z drugą rodziną następnego dnia. Dzięki temu spędzali więcej czasu przy stole, a mniej w samochodzie.\n\nW tym roku przygotujemy stoliki poświęcone trzem tematom: rodzinne potrawy, życzenia i prezenty oraz organizacja wizyt. Każdy uczestnik może wybrać temat dla siebie. Osoby, które wolą słuchać, nie muszą przygotowywać własnej historii. Wystarczy, że przyjdą i wezmą udział w rozmowie.\n\nJeśli chcesz pokazać przepis lub zdjęcie, przynieś kopię, którą inni będą mogli obejrzeć. Nie prosimy o przynoszenie jedzenia, ponieważ nie mamy warunków do przechowywania różnych potraw. Przygotujemy natomiast herbatę i miejsce do spokojnej rozmowy.\n\nPo spotkaniu zainteresowani uczestnicy będą mogli dopisać swoje pomysły do wspólnego zeszytu. Zapiszemy tylko historie osób, które wyrażą na to zgodę. Chcemy stworzyć zbiór inspiracji dla tych, którzy szukają własnego sposobu obchodzenia świąt, bez oceniania wyborów innych rodzin.",
+  "questions": [
+    {
+      "id": "main-idea",
+      "skill": "main-idea",
+      "question": "Po co organizowany jest wieczór opowieści?",
+      "options": [
+        "Aby poznać różne sposoby łączenia tradycji i organizowania świąt.",
+        "Aby wybrać najlepsze rodzinne zwyczaje w konkursie.",
+        "Aby ustalić jednakowy plan świąt dla wszystkich uczestników."
+      ],
+      "answer": "Aby poznać różne sposoby łączenia tradycji i organizowania świąt.",
+      "evidence": "Chcemy stworzyć zbiór inspiracji dla tych, którzy szukają własnego sposobu obchodzenia świąt, bez oceniania wyborów innych rodzin.",
+      "explanation": "Spotkanie służy wymianie doświadczeń, nie ocenie."
+    },
+    {
+      "id": "detail",
+      "skill": "detail",
+      "question": "Jaki napój zapewnią organizatorzy?",
+      "options": [
+        "Napoje przyniesione przez uczestników.",
+        "Kawę i soki.",
+        "Herbatę."
+      ],
+      "answer": "Herbatę.",
+      "evidence": "Przygotujemy natomiast herbatę i miejsce do spokojnej rozmowy.",
+      "explanation": "W ogłoszeniu wskazano herbatę."
+    },
+    {
+      "id": "cause",
+      "skill": "cause",
+      "question": "Dlaczego uczestnicy nie powinni przynosić potraw?",
+      "options": [
+        "Spotkanie dotyczy wyłącznie prezentów.",
+        "Organizatorzy nie mają odpowiednich warunków do ich przechowywania.",
+        "Wszystkie potrawy trzeba kupić wcześniej w kawiarni."
+      ],
+      "answer": "Organizatorzy nie mają odpowiednich warunków do ich przechowywania.",
+      "evidence": "Nie prosimy o przynoszenie jedzenia, ponieważ nie mamy warunków do przechowywania różnych potraw.",
+      "explanation": "Powodem jest brak warunków do przechowywania."
+    },
+    {
+      "id": "inference",
+      "skill": "inference",
+      "question": "Para chce posłuchać o organizacji wizyt, ale nie zgadza się na zapisanie swojej historii. Jak może uczestniczyć?",
+      "options": [
+        "Zrezygnować ze spotkania, bo uczestnicy muszą opowiedzieć o swoich świętach.",
+        "Przygotować historię do zeszytu, ponieważ jest to warunek rozmowy.",
+        "Wybrać stolik o organizacji wizyt i słuchać bez zgody na publikację własnej historii."
+      ],
+      "answer": "Wybrać stolik o organizacji wizyt i słuchać bez zgody na publikację własnej historii.",
+      "evidence": "Osoby, które wolą słuchać, nie muszą przygotowywać własnej historii. Wystarczy, że przyjdą i wezmą udział w rozmowie.\n\nJeśli chcesz pokazać przepis lub zdjęcie, przynieś kopię, którą inni będą mogli obejrzeć. Nie prosimy o przynoszenie jedzenia, ponieważ nie mamy warunków do przechowywania różnych potraw. Przygotujemy natomiast herbatę i miejsce do spokojnej rozmowy.\n\nPo spotkaniu zainteresowani uczestnicy będą mogli dopisać swoje pomysły do wspólnego zeszytu. Zapiszemy tylko historie osób, które wyrażą na to zgodę.",
+      "explanation": "Można wybrać temat, słuchać bez przygotowania historii, a zapisanie historii wymaga zgody."
+    },
+    {
+      "id": "vocabulary",
+      "skill": "vocabulary",
+      "question": "Co oznacza „zbiór inspiracji”?",
+      "options": [
+        "Zestaw pomysłów, które mogą pomóc znaleźć własne rozwiązania.",
+        "Lista obowiązkowych zasad dla wszystkich rodzin.",
+        "Rozkład jazdy potrzebny do planowania wizyt."
+      ],
+      "answer": "Zestaw pomysłów, które mogą pomóc znaleźć własne rozwiązania.",
+      "evidence": "Chcemy stworzyć zbiór inspiracji dla tych, którzy szukają własnego sposobu obchodzenia świąt",
+      "explanation": "Inspiracje to pomysły, z których można czerpać dobrowolnie."
+    }
+  ],
+  "publicationStatus": "practice"
+}
