@@ -19,18 +19,51 @@ export function assignmentProgress(stages: Stage[], results: readonly ExerciseRe
 export type AssignmentSummary = { dayNumber: number; exerciseIds: string[] }
 export const ASSIGNMENT_REVIEW_PREFIX = 'review:'
 
-export function assignmentReviewRows(summaries: readonly AssignmentSummary[], results: readonly ExerciseResultRow[], completedDays: ReadonlySet<number>) {
-  const latest = new Map<string, ExerciseResultRow>()
+export const GRAMMAR_PRACTICE_PREFIX = 'grammar-practice:'
+export function sourceExerciseId(id: string) {
+  return id.startsWith(GRAMMAR_PRACTICE_PREFIX) ? id.slice(GRAMMAR_PRACTICE_PREFIX.length) : id
+}
+export function isHistoricalGrammarId(id: string) {
+  return /^ex\.(sgap|swrite|form|infl|collocation)\./.test(sourceExerciseId(id))
+}
+export function needsReview(row: Pick<ExerciseResultRow, 'correct' | 'attempts'>) {
+  return !row.correct || row.attempts > 1
+}
+export type ReviewArchiveRow = Omit<ExerciseResultRow,'completedAt'> & { completedAt: Date | string }
+export type AssignmentReviewData = { summaries: AssignmentSummary[]; archive?: ReviewArchiveRow[] }
+export function latestReviewResults(results: readonly ReviewArchiveRow[]) {
+  const latest = new Map<string, ReviewArchiveRow>()
   for (const row of results) {
     const id = row.exerciseId.startsWith(ASSIGNMENT_REVIEW_PREFIX) ? row.exerciseId.slice(ASSIGNMENT_REVIEW_PREFIX.length) : row.exerciseId
     const key = row.dayNumber + ':' + id
     const prev = latest.get(key)
-    if (!prev || +row.completedAt >= +prev.completedAt) latest.set(key, row)
+    if (!prev || new Date(row.completedAt).getTime() >= new Date(prev.completedAt).getTime()) latest.set(key, row)
   }
-  return summaries.filter(s => completedDays.has(s.dayNumber)).sort((a,b) => b.dayNumber - a.dayNumber).map(summary => {
-    const ids = [...new Set(summary.exerciseIds)].filter(id => !id.startsWith('ex.reading.'))
-    const missing = ids.filter(id => !latest.has(summary.dayNumber + ':' + id))
-    const mistakes = ids.filter(id => latest.get(summary.dayNumber + ':' + id)?.correct === false)
-    return { dayNumber: summary.dayNumber, ids, missing, mistakes }
+  return latest
+}
+
+export function assignmentReviewRows(summaries: readonly AssignmentSummary[], results: readonly ExerciseResultRow[], completedDays: ReadonlySet<number>, archive: readonly ReviewArchiveRow[] = []) {
+  const latest = latestReviewResults([...archive, ...results])
+  const byDay = new Map<number, Set<string>>()
+  for (const summary of summaries) {
+    if (!completedDays.has(summary.dayNumber)) continue
+    byDay.set(summary.dayNumber, new Set(summary.exerciseIds.filter(id => !id.startsWith('ex.reading.'))))
+  }
+  // Include saved historical errors even if the lesson was never snapshotted.
+  // Do not invent missing assignments for historical days.
+  for (const [key,row] of latest) {
+    const id = key.slice(key.indexOf(':') + 1)
+    if (!isHistoricalGrammarId(id) || !needsReview(row)) continue
+    const ids = byDay.get(row.dayNumber) ?? new Set<string>()
+    ids.add(id); byDay.set(row.dayNumber, ids)
+  }
+  return [...byDay].sort(([a],[b]) => b-a).map(([dayNumber, set]) => {
+    const ids = [...set]
+    const missing = ids.filter(id => !latest.has(dayNumber + ':' + id))
+    const mistakes = ids.filter(id => {
+      const row = latest.get(dayNumber + ':' + id)
+      return row ? needsReview(row) : false
+    })
+    return { dayNumber, ids, missing, mistakes }
   }).filter(row => row.ids.length > 0)
 }

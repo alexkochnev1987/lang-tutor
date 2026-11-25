@@ -310,6 +310,13 @@
     "loadError": "Could not load exercises.",
     "saveError": "Could not save the answer.",
     "next": "Next",
-    "result": "Result"
+    "result": "Result",
+    "compactMissing": "Unfinished",
+    "compactMissingHint": "Missed exercises and passages",
+    "compactMistakes": "Review mistakes",
+    "compactMistakesHint": "Practise difficult exercises",
+    "recommended": "Recommended practice",
+    "recommendedHint": "Up to 10 exercises at a time",
+    "unavailableHistory": "Could not reconstruct {count} old exercises. Their results are preserved."
   }
 }

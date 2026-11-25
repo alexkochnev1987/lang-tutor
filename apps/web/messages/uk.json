@@ -310,6 +310,13 @@
     "loadError": "Не вдалося завантажити вправи.",
     "saveError": "Не вдалося зберегти відповідь.",
     "next": "Далі",
-    "result": "Результат"
+    "result": "Результат",
+    "compactMissing": "Не завершено",
+    "compactMissingHint": "Пропущені вправи й тексти",
+    "compactMistakes": "Робота над помилками",
+    "compactMistakesHint": "Закріпити складні вправи",
+    "recommended": "Рекомендоване тренування",
+    "recommendedHint": "До 10 вправ за раз",
+    "unavailableHistory": "Не вдалося відновити {count} старих вправ. Їхні результати збережено."
   }
 }
