@@ -1,0 +1,76 @@
+{
+  "id": "pl-b1.reading.day-151",
+  "day": 151,
+  "level": "B1",
+  "genre": "e-mail",
+  "title": "Kiedy warto weryfikować wiadomości",
+  "text": "Cześć, Krzyśku!\n\nDziękuję za wiadomość o rzekomym zamknięciu naszego osiedlowego targu. Też się zdziwiłam, kiedy zobaczyłam przesłane zdjęcie ogłoszenia. Zanim jednak poinformujemy pozostałych sąsiadów, chciałabym sprawdzić, skąd ono pochodzi. Na fotografii nie widać daty ani nazwy miejsca, którego dotyczy informacja.\n\nW zeszłym miesiącu mieliśmy podobną sytuację z wiadomością o zmianie godzin otwarcia biblioteki. Ktoś przesłał stary komunikat, a kilka osób uznało go za aktualny. Dopiero po sprawdzeniu strony biblioteki okazało się, że zmiana obowiązywała tylko podczas zeszłorocznego remontu. Nie było w tym niczego niezwykłego: nikt nie chciał celowo wprowadzać innych w błąd, ale wiadomość krążyła bez swojego pierwotnego kontekstu.\n\nW przypadku targu znalazłam dwa różne wpisy. Jeden mówi o zamknięciu części placu na czas prac, drugi o całkowitym zakończeniu sprzedaży. Żaden nie podaje, kiedy otrzymano tę informację od zarządcy. Chcę więc jutro zapytać pracownika punktu informacji, czy istnieje aktualny komunikat dotyczący całego targu.\n\nJeśli dowiemy się tylko o czasowym zamknięciu kilku stanowisk, warto przesłać sąsiadom właśnie taką informację, bez dodawania wniosków o przyszłości wszystkich sprzedawców. Jeśli nie uzyskamy odpowiedzi, możemy napisać, że sprawa nie została jeszcze potwierdzona.\n\nNie chodzi mi o to, żeby każdą zwykłą wiadomość sprawdzać przez godzinę. Warto jednak poświęcić kilka minut, kiedy informacja może wpłynąć na plany wielu osób. Łatwiej uzupełnić wiadomość później, niż tłumaczyć się z niepotrzebnie rozpowszechnionego błędu.\n\nPozdrawiam,\nOliwia",
+  "questions": [
+    {
+      "id": "main-idea",
+      "skill": "main-idea",
+      "question": "Co Oliwia chce osiągnąć przez swój e-mail?",
+      "options": [
+        "Przekonać sąsiadów, że targ na pewno zostanie zamknięty.",
+        "Wyjaśnić, kto celowo rozpowszechniał błędne wiadomości o bibliotece.",
+        "Zachęcić do sprawdzenia źródła i zakresu wiadomości przed przekazaniem jej dalej."
+      ],
+      "answer": "Zachęcić do sprawdzenia źródła i zakresu wiadomości przed przekazaniem jej dalej.",
+      "evidence": "Zanim jednak poinformujemy pozostałych sąsiadów, chciałabym sprawdzić, skąd ono pochodzi.",
+      "explanation": "Oliwia odróżnia wiadomość niepotwierdzoną od ustalonego faktu."
+    },
+    {
+      "id": "detail",
+      "skill": "detail",
+      "question": "Czego nie było widać na zdjęciu ogłoszenia?",
+      "options": [
+        "Adresu biblioteki i godzin remontu.",
+        "Daty i nazwy miejsca.",
+        "Nazw wszystkich sprzedawców i cen."
+      ],
+      "answer": "Daty i nazwy miejsca.",
+      "evidence": "Na fotografii nie widać daty ani nazwy miejsca, którego dotyczy informacja.",
+      "explanation": "Brak tych danych utrudnia ocenę aktualności i zakresu."
+    },
+    {
+      "id": "cause",
+      "skill": "cause",
+      "question": "Dlaczego informacja o bibliotece okazała się myląca?",
+      "options": [
+        "Dotyczyła wcześniejszego okresu remontu, a potraktowano ją jako aktualną.",
+        "Biblioteka nie opublikowała wcześniej żadnych godzin pracy.",
+        "Ktoś celowo zmienił nazwę biblioteki na zdjęciu."
+      ],
+      "answer": "Dotyczyła wcześniejszego okresu remontu, a potraktowano ją jako aktualną.",
+      "evidence": "zmiana obowiązywała tylko podczas zeszłorocznego remontu.",
+      "explanation": "Stary komunikat utracił właściwy kontekst czasowy."
+    },
+    {
+      "id": "inference",
+      "skill": "inference",
+      "question": "Pracownik potwierdza zamknięcie trzech stanowisk na tydzień, ale nic nie mówi o przyszłości całego targu. Co powinno znaleźć się w wiadomości do sąsiadów?",
+      "options": [
+        "Zapewnienie, że wszystkie stanowiska pozostaną otwarte bez zmian.",
+        "Potwierdzona informacja o trzech stanowiskach i zaznaczenie, że los całego targu nie jest ustalony.",
+        "Informacja o całkowitym zamknięciu, ponieważ kilka stanowisk nie będzie działać."
+      ],
+      "answer": "Potwierdzona informacja o trzech stanowiskach i zaznaczenie, że los całego targu nie jest ustalony.",
+      "evidence": "Jeśli dowiemy się tylko o czasowym zamknięciu kilku stanowisk, warto przesłać sąsiadom właśnie taką informację, bez dodawania wniosków o przyszłości wszystkich sprzedawców.",
+      "explanation": "Nie należy rozszerzać potwierdzonego faktu na niepotwierdzony zakres."
+    },
+    {
+      "id": "vocabulary",
+      "skill": "vocabulary",
+      "question": "Co znaczy „pierwotny kontekst” wiadomości?",
+      "options": [
+        "Lista osób, które ostatnio przesłały wiadomość dalej.",
+        "Sposób zapisania tekstu na najnowszym zdjęciu.",
+        "Okoliczności, w których wiadomość została początkowo opublikowana."
+      ],
+      "answer": "Okoliczności, w których wiadomość została początkowo opublikowana.",
+      "evidence": "wiadomość krążyła bez swojego pierwotnego kontekstu.",
+      "explanation": "W przykładzie brakowało właściwego czasu i okoliczności komunikatu."
+    }
+  ],
+  "publicationStatus": "practice"
+}

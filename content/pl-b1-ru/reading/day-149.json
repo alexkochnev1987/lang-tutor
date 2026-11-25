@@ -1,0 +1,76 @@
+{
+  "id": "pl-b1.reading.day-149",
+  "day": 149,
+  "level": "B1",
+  "genre": "artykuł",
+  "title": "Wolontariat z elastycznym grafikiem",
+  "text": "W niewielkim stowarzyszeniu działającym na rzecz mieszkańców przez długi czas wolontariusze spotykali się w każdy wtorek po południu. Pomagali przygotowywać materiały na zajęcia, odbierali książki od osób, które chciały je przekazać, i porządkowali salę po spotkaniach. Taki układ dobrze odpowiadał kilku stałym uczestnikom, ale utrudniał udział osobom pracującym w różnych godzinach.\n\nKoordynatorka zaczęła rozmawiać z ludźmi, którzy chcieli pomagać, choć nie mogli przychodzić w każdy wtorek. Dowiedziała się, że część z nich ma wolne soboty, a inni mogą wykonywać krótkie zadania w domu. Zamiast organizować wszystkie prace podczas jednego spotkania, podzieliła je według rodzaju i terminu.\n\nPakowanie książek nadal odbywało się we wtorki, ponieważ wtedy stowarzyszenie odbierało przesyłki. Przygotowanie prostych opisów materiałów można było wykonać w dowolnym momencie przed końcem tygodnia. Raz w miesiącu w sobotę organizowano natomiast dłuższe spotkanie, podczas którego nowi wolontariusze poznawali zasady pracy.\n\nKamil, który pracował zmianowo, wybrał przygotowywanie opisów. Początkowo chciał przyjmować wszystkie dostępne zadania, lecz koordynatorka poprosiła go, żeby podejmował się tylko tylu zadań, ile rzeczywiście może wykonać w terminie. Dla stowarzyszenia ważniejsza była przewidywalna pomoc niż duża liczba obietnic.\n\nPo kilku miesiącach grupa liczyła więcej osób, choć nie wszyscy spotykali się jednocześnie. Żeby zachować kontakt, wolontariusze raz na jakiś czas uczestniczyli we wspólnej rozmowie o tym, komu służą przygotowywane materiały. Elastyczny grafik pozwolił im łączyć pomoc z własnymi obowiązkami, ale wymagał również jasnego podziału odpowiedzialności.",
+  "questions": [
+    {
+      "id": "main-idea",
+      "skill": "main-idea",
+      "question": "Co zmieniło się w organizacji wolontariatu?",
+      "options": [
+        "Wszystkie zadania przeniesiono z wtorku na sobotę.",
+        "Zadania podzielono według warunków wykonania, umożliwiając różnym osobom udział.",
+        "Zrezygnowano z ustalania terminów pracy wolontariuszy."
+      ],
+      "answer": "Zadania podzielono według warunków wykonania, umożliwiając różnym osobom udział.",
+      "evidence": "Zamiast organizować wszystkie prace podczas jednego spotkania, podzieliła je według rodzaju i terminu.",
+      "explanation": "Elastyczność nie usuwa terminów, ale dopasowuje je do zadań."
+    },
+    {
+      "id": "detail",
+      "skill": "detail",
+      "question": "Które zadanie nadal wykonuje się we wtorki?",
+      "options": [
+        "Szkolenie nowych wolontariuszy.",
+        "Przygotowanie opisów materiałów.",
+        "Pakowanie książek."
+      ],
+      "answer": "Pakowanie książek.",
+      "evidence": "Pakowanie książek nadal odbywało się we wtorki",
+      "explanation": "Odbiór przesyłek wyznacza termin tej pracy."
+    },
+    {
+      "id": "cause",
+      "skill": "cause",
+      "question": "Dlaczego koordynatorka ograniczyła liczbę zadań przyjmowanych przez Kamila?",
+      "options": [
+        "Chciała mieć pewność, że zobowiązania będzie można spełnić w terminie.",
+        "Kamil nie chciał korzystać z materiałów w domu.",
+        "We wtorki nie było miejsca na kolejne osoby."
+      ],
+      "answer": "Chciała mieć pewność, że zobowiązania będzie można spełnić w terminie.",
+      "evidence": "Dla stowarzyszenia ważniejsza była przewidywalna pomoc niż duża liczba obietnic.",
+      "explanation": "Realna deklaracja pozwala zaplanować pracę."
+    },
+    {
+      "id": "inference",
+      "skill": "inference",
+      "question": "Osoba może pracować w domu w czwartek, a raz w miesiącu przyjść w sobotę. Który udział najbardziej odpowiada opisanym zasadom?",
+      "options": [
+        "Przygotowanie opisów przed końcem tygodnia i udział w sobotnim spotkaniu wprowadzającym.",
+        "Samodzielne organizowanie wtorkowych zajęć bez ustalania terminu.",
+        "Pakowanie książek w domu po zakończeniu wtorkowego odbioru."
+      ],
+      "answer": "Przygotowanie opisów przed końcem tygodnia i udział w sobotnim spotkaniu wprowadzającym.",
+      "evidence": "Przygotowanie prostych opisów materiałów można było wykonać w dowolnym momencie przed końcem tygodnia. Raz w miesiącu w sobotę organizowano natomiast dłuższe spotkanie, podczas którego nowi wolontariusze poznawali zasady pracy.",
+      "explanation": "Oba dostępne terminy odpowiadają dwóm zadaniom."
+    },
+    {
+      "id": "vocabulary",
+      "skill": "vocabulary",
+      "question": "Co oznacza „przewidywalna pomoc”?",
+      "options": [
+        "Pomoc wykonywana zawsze przez tę samą liczbę osób.",
+        "Pomoc niewymagająca żadnych informacji o terminie.",
+        "Pomoc, na której można polegać w ustalonym zakresie i czasie."
+      ],
+      "answer": "Pomoc, na której można polegać w ustalonym zakresie i czasie.",
+      "evidence": "Dla stowarzyszenia ważniejsza była przewidywalna pomoc niż duża liczba obietnic.",
+      "explanation": "Przewidywalność oznacza możliwość zaplanowania wykonania zadania."
+    }
+  ],
+  "publicationStatus": "practice"
+}

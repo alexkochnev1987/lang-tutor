@@ -1,0 +1,76 @@
+{
+  "id": "pl-b1.reading.day-154",
+  "day": 154,
+  "level": "B1",
+  "genre": "poradnik",
+  "title": "Pomoc po przeprowadzce",
+  "text": "Przeprowadzka do nowego mieszkania często oznacza kilka tygodni dodatkowych obowiązków. Trzeba znaleźć miejsce dla rzeczy, załatwić sprawy związane z usługami i poznać najbliższą okolicę. Kiedy ktoś bliski proponuje pomoc, nie zawsze łatwo od razu powiedzieć, czego najbardziej potrzebujemy. Warto jednak podzielić zadania na mniejsze części.\n\nJeżeli pomagasz osobie po przeprowadzce, zapytaj ją, co będzie przydatne właśnie teraz. Nie zakładaj, że musi potrzebować pomocy przy noszeniu mebli. Być może ma już wszystko na miejscu, ale chciałaby dowiedzieć się, gdzie można kupić podstawowe wyposażenie lub jak dotrzeć do pracy. Konkretna propozycja może być łatwiejsza do przyjęcia niż ogólne pytanie o pomoc.\n\nW przykładowej sytuacji Natalia chciała pomóc bratu, który właśnie zmienił mieszkanie. Zaproponowała, że przyjedzie w sobotę na cały dzień. Brat miał jednak tego dnia umówionego fachowca i nie wiedział, o której będzie wolny. Uzgodnili więc, że Natalia przygotuje dla niego listę sklepów i pożyczy kilka potrzebnych narzędzi. Spotkają się dopiero w niedzielę po południu, kiedy będą mogli spokojnie rozpakować książki.\n\nWarto także ustalić, które rzeczy można zrobić samodzielnie, a przy których potrzebna jest obecność właściciela. Przenoszenie lub wyrzucanie jego przedmiotów bez uzgodnienia może później utrudnić znalezienie potrzebnych rzeczy.\n\nPo wykonaniu zadania nie trzeba automatycznie podejmować kolejnego. Można zapytać, czy osoba potrzebuje jeszcze pomocy, czy woli teraz działać sama. Dobra pomoc nie polega na przejęciu całej organizacji życia drugiego człowieka. Powinna odpowiadać jego aktualnej sytuacji i pozostawiać mu możliwość podejmowania własnych decyzji.",
+  "questions": [
+    {
+      "id": "main-idea",
+      "skill": "main-idea",
+      "question": "Jaka jest główna rada poradnika?",
+      "options": [
+        "Odwiedzić ją zawsze w dniu przyjazdu, niezależnie od jej planu.",
+        "Przejąć wszystkie obowiązki osoby, która zmieniła mieszkanie.",
+        "Dopasować konkretną pomoc do bieżących potrzeb, czasu i decyzji osoby po przeprowadzce."
+      ],
+      "answer": "Dopasować konkretną pomoc do bieżących potrzeb, czasu i decyzji osoby po przeprowadzce.",
+      "evidence": "Powinna odpowiadać jego aktualnej sytuacji i pozostawiać mu możliwość podejmowania własnych decyzji.",
+      "explanation": "Tekst zaleca uzgodnioną pomoc zamiast przejmowania kontroli."
+    },
+    {
+      "id": "detail",
+      "skill": "detail",
+      "question": "Kiedy Natalia i brat mają rozpakować książki?",
+      "options": [
+        "W sobotę rano przed wizytą fachowca.",
+        "W niedzielę po południu.",
+        "W poniedziałek wieczorem."
+      ],
+      "answer": "W niedzielę po południu.",
+      "evidence": "Spotkają się dopiero w niedzielę po południu, kiedy będą mogli spokojnie rozpakować książki.",
+      "explanation": "Niedziela pasuje do dostępności brata."
+    },
+    {
+      "id": "cause",
+      "skill": "cause",
+      "question": "Dlaczego brat nie ustalił z Natalią całodziennej pomocy w sobotę?",
+      "options": [
+        "Miał wizytę fachowca i nie znał swojej dostępności.",
+        "Chciał tego dnia samodzielnie wyrzucić wszystkie książki.",
+        "Nie potrzebował żadnych narzędzi."
+      ],
+      "answer": "Miał wizytę fachowca i nie znał swojej dostępności.",
+      "evidence": "Brat miał jednak tego dnia umówionego fachowca i nie wiedział, o której będzie wolny.",
+      "explanation": "Niepewność dotycząca godziny utrudniała wspólną pracę."
+    },
+    {
+      "id": "inference",
+      "skill": "inference",
+      "question": "Znajomy prosi o pomoc w znalezieniu sklepu, ale nie chce, by ktoś rozpakowywał jego prywatne rzeczy. Co pasuje do poradnika?",
+      "options": [
+        "Przekazać potrzebne adresy i pozostawić rozpakowywanie zgodnie z jego życzeniem.",
+        "Rozpakować rzeczy podczas jego nieobecności, żeby szybciej skończyć.",
+        "Przyjechać bez uzgodnienia i wybrać za niego wszystkie zakupy."
+      ],
+      "answer": "Przekazać potrzebne adresy i pozostawić rozpakowywanie zgodnie z jego życzeniem.",
+      "evidence": "Jeżeli pomagasz osobie po przeprowadzce, zapytaj ją, co będzie przydatne właśnie teraz. Nie zakładaj, że musi potrzebować pomocy przy noszeniu mebli. Być może ma już wszystko na miejscu, ale chciałaby dowiedzieć się, gdzie można kupić podstawowe wyposażenie lub jak dotrzeć do pracy. Konkretna propozycja może być łatwiejsza do przyjęcia niż ogólne pytanie o pomoc.\n\nW przykładowej sytuacji Natalia chciała pomóc bratu, który właśnie zmienił mieszkanie. Zaproponowała, że przyjedzie w sobotę na cały dzień. Brat miał jednak tego dnia umówionego fachowca i nie wiedział, o której będzie wolny. Uzgodnili więc, że Natalia przygotuje dla niego listę sklepów i pożyczy kilka potrzebnych narzędzi. Spotkają się dopiero w niedzielę po południu, kiedy będą mogli spokojnie rozpakować książki.\n\nWarto także ustalić, które rzeczy można zrobić samodzielnie, a przy których potrzebna jest obecność właściciela. Przenoszenie lub wyrzucanie jego przedmiotów bez uzgodnienia może później utrudnić znalezienie potrzebnych rzeczy.",
+      "explanation": "Pomoc ma odpowiadać wskazanej potrzebie, a prywatne rzeczy wymagają uzgodnienia."
+    },
+    {
+      "id": "vocabulary",
+      "skill": "vocabulary",
+      "question": "Co oznacza „przejęcie całej organizacji życia”?",
+      "options": [
+        "Ustalenie godziny wspólnego spotkania.",
+        "Podejmowanie za drugą osobę większości decyzji dotyczących jej codziennych spraw.",
+        "Wykonanie jednego wcześniej uzgodnionego zadania."
+      ],
+      "answer": "Podejmowanie za drugą osobę większości decyzji dotyczących jej codziennych spraw.",
+      "evidence": "Dobra pomoc nie polega na przejęciu całej organizacji życia drugiego człowieka.",
+      "explanation": "Tekst odróżnia wsparcie od decydowania za inną osobę."
+    }
+  ],
+  "publicationStatus": "practice"
+}

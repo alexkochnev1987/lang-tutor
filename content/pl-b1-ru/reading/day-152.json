@@ -1,0 +1,76 @@
+{
+  "id": "pl-b1.reading.day-152",
+  "day": 152,
+  "level": "B1",
+  "genre": "ogłoszenie",
+  "title": "Dyskusja o nowej inwestycji",
+  "text": "Rada osiedla zaprasza mieszkańców na otwarte spotkanie poświęcone planowanemu zagospodarowaniu placu przy ulicy Polnej. W tej chwili na placu znajdują się ławki, kilka drzew i niewielki punkt sprzedaży jedzenia. Pojawiły się dwa wstępne pomysły dotyczące przyszłości tego miejsca. Pierwszy zakłada urządzenie większej przestrzeni do spotkań, drugi pozostawienie spokojniejszej strefy wypoczynku i poprawę dojścia do istniejących usług.\n\nPodczas spotkania pokażemy oba rysunki i przedstawimy pytania, na które nie ma jeszcze odpowiedzi. Chcemy między innymi ustalić, w jakich godzinach mieszkańcy korzystają z placu, czy potrzebują więcej miejsc do siedzenia oraz jakie problemy sprawia obecna droga od przystanku.\n\nNie będziemy tego wieczoru głosować nad ostateczną wersją projektu. Oba rysunki mają pomóc rozpocząć rozmowę. Osoby zainteresowane szczegółami mogą obejrzeć je wcześniej w sali rady osiedla od poniedziałku do środy. Na miejscu będzie można zostawić pisemne uwagi.\n\nW czwartek podczas spotkania każda osoba otrzyma krótki czas na wypowiedź. Prosimy, żeby oprócz ogólnej opinii podać konkretny przykład: kiedy i w jaki sposób korzysta się z placu. Dzięki temu projektanci będą mogli lepiej zrozumieć codzienne potrzeby różnych grup mieszkańców.\n\nPo spotkaniu przygotujemy podsumowanie najczęściej zgłaszanych uwag i listę kwestii wymagających dalszego sprawdzenia. Podsumowanie udostępnimy również osobom, które nie będą mogły przyjść. Chcemy, aby dyskusja pomogła ulepszyć propozycje, a nie sprowadziła się wyłącznie do wyboru między dwoma gotowymi rysunkami.",
+  "questions": [
+    {
+      "id": "main-idea",
+      "skill": "main-idea",
+      "question": "Co jest głównym celem spotkania?",
+      "options": [
+        "Zebranie konkretnych potrzeb i uwag przed dopracowaniem planu placu.",
+        "Ustalenie cen jedzenia sprzedawanego na placu.",
+        "Ostateczne wybranie jednego z projektów przez głosowanie."
+      ],
+      "answer": "Zebranie konkretnych potrzeb i uwag przed dopracowaniem planu placu.",
+      "evidence": "Chcemy, aby dyskusja pomogła ulepszyć propozycje, a nie sprowadziła się wyłącznie do wyboru między dwoma gotowymi rysunkami.",
+      "explanation": "Rysunki są punktem wyjścia do konsultacji."
+    },
+    {
+      "id": "detail",
+      "skill": "detail",
+      "question": "Kiedy można wcześniej obejrzeć rysunki?",
+      "options": [
+        "Wyłącznie w czwartek po spotkaniu.",
+        "W sobotę i niedzielę.",
+        "Od poniedziałku do środy."
+      ],
+      "answer": "Od poniedziałku do środy.",
+      "evidence": "mogą obejrzeć je wcześniej w sali rady osiedla od poniedziałku do środy.",
+      "explanation": "Udostępniono je przed czwartkową dyskusją."
+    },
+    {
+      "id": "cause",
+      "skill": "cause",
+      "question": "Dlaczego organizatorzy proszą o konkretne przykłady korzystania z placu?",
+      "options": [
+        "Pozwolą wybrać osoby, które będą sprzedawały jedzenie.",
+        "Pomogą projektantom zrozumieć codzienne potrzeby mieszkańców.",
+        "Mają zastąpić wszystkie pisemne uwagi mieszkańców."
+      ],
+      "answer": "Pomogą projektantom zrozumieć codzienne potrzeby mieszkańców.",
+      "evidence": "Dzięki temu projektanci będą mogli lepiej zrozumieć codzienne potrzeby różnych grup mieszkańców.",
+      "explanation": "Przykłady dostarczają więcej informacji niż sama ocena pomysłu."
+    },
+    {
+      "id": "inference",
+      "skill": "inference",
+      "question": "Mieszkaniec nie może przyjść w czwartek, ale chce zgłosić problem z dojściem od przystanku i poznać dalsze ustalenia. Co może zrobić?",
+      "options": [
+        "Obejrzeć rysunki wcześniej, zostawić pisemną uwagę i później przeczytać podsumowanie.",
+        "Czekać na ostateczne głosowanie, bo wcześniej nie można zgłaszać uwag.",
+        "Poprosić o automatyczne przyjęcie jednego projektu na podstawie jego opinii."
+      ],
+      "answer": "Obejrzeć rysunki wcześniej, zostawić pisemną uwagę i później przeczytać podsumowanie.",
+      "evidence": "Osoby zainteresowane szczegółami mogą obejrzeć je wcześniej w sali rady osiedla od poniedziałku do środy. Na miejscu będzie można zostawić pisemne uwagi.\n\nW czwartek podczas spotkania każda osoba otrzyma krótki czas na wypowiedź. Prosimy, żeby oprócz ogólnej opinii podać konkretny przykład: kiedy i w jaki sposób korzysta się z placu. Dzięki temu projektanci będą mogli lepiej zrozumieć codzienne potrzeby różnych grup mieszkańców.\n\nPo spotkaniu przygotujemy podsumowanie najczęściej zgłaszanych uwag i listę kwestii wymagających dalszego sprawdzenia. Podsumowanie udostępnimy również osobom, które nie będą mogły przyjść.",
+      "explanation": "Wcześniejsze uwagi i udostępnione po spotkaniu podsumowanie pozwalają uczestniczyć bez obecności w czwartek."
+    },
+    {
+      "id": "vocabulary",
+      "skill": "vocabulary",
+      "question": "Co oznacza „wstępny pomysł”?",
+      "options": [
+        "Ostateczną decyzję, której nie można omawiać.",
+        "Propozycję, która może jeszcze zostać rozwinięta lub zmieniona.",
+        "Projekt, którego wykonanie zostało już zakończone."
+      ],
+      "answer": "Propozycję, która może jeszcze zostać rozwinięta lub zmieniona.",
+      "evidence": "Pojawiły się dwa wstępne pomysły dotyczące przyszłości tego miejsca.",
+      "explanation": "Dalsza dyskusja ma pomóc w dopracowaniu propozycji."
+    }
+  ],
+  "publicationStatus": "practice"
+}

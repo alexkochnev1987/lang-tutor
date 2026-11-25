@@ -1,0 +1,76 @@
+{
+  "id": "pl-b1.reading.day-156",
+  "day": 156,
+  "level": "B1",
+  "genre": "artykuł",
+  "title": "Rozmowa o czasie odpoczynku",
+  "text": "W ramach zajęć poświęconych organizacji codziennego życia grupa dorosłych uczestników rozmawiała o tym, co dla nich oznacza odpoczynek. Prowadząca nie przygotowała jednego planu dnia dla wszystkich. Poprosiła uczestników, żeby opisali sytuacje, w których rzeczywiście czują, że mają czas dla siebie.\n\nMarek powiedział, że najlepiej odpoczywa podczas krótkiego spaceru po pracy. W domu często zaczyna od porządkowania mieszkania, a potem nie znajduje już chwili na własne zajęcia. Agnieszka przeciwnie: po pracy woli wrócić od razu do domu, ponieważ cały dzień spędza w ruchu. Jej ulubionym sposobem odpoczynku jest czytanie książki w spokojnym miejscu.\n\nW trakcie rozmowy pojawiło się pytanie, czy każdą wolną chwilę trzeba zaplanować. Jedna z uczestniczek zauważyła, że wcześniej wpisywała do kalendarza nawet czas przeznaczony na relaks. Kiedy nie udawało się wykonać zaplanowanego zadania, czuła się tak, jakby poniosła kolejną porażkę. Teraz zostawia w tygodniu kilka wolnych okresów, ale nie ustala z góry, co dokładnie będzie wtedy robić.\n\nProwadząca poprosiła grupę o rozróżnienie obowiązków od dobrowolnych aktywności. Jeśli ktoś wybiera ćwiczenia, ponieważ je lubi, mogą być dla niego przyjemnym elementem dnia. Dla innej osoby ta sama czynność może w danym momencie oznaczać kolejny wysiłek.\n\nUczestnicy nie próbowali ustalać, który sposób odpoczynku jest najlepszy dla wszystkich. Postanowili przez najbliższy tydzień zauważać, jakie sytuacje odpowiadają ich własnym potrzebom, i omówić obserwacje podczas kolejnych zajęć. Celem rozmowy było lepsze rozumienie codziennych zwyczajów, a nie udzielanie indywidualnych porad zdrowotnych.",
+  "questions": [
+    {
+      "id": "main-idea",
+      "skill": "main-idea",
+      "question": "Co jest głównym tematem artykułu?",
+      "options": [
+        "Porównanie wyników leczenia dwóch osób.",
+        "Różne potrzeby związane z odpoczynkiem i świadome organizowanie własnego czasu.",
+        "Obowiązkowy plan ćwiczeń dla każdego uczestnika zajęć."
+      ],
+      "answer": "Różne potrzeby związane z odpoczynkiem i świadome organizowanie własnego czasu.",
+      "evidence": "Celem rozmowy było lepsze rozumienie codziennych zwyczajów, a nie udzielanie indywidualnych porad zdrowotnych.",
+      "explanation": "Grupa rozpoznaje indywidualne preferencje, nie tworzy uniwersalnego programu."
+    },
+    {
+      "id": "detail",
+      "skill": "detail",
+      "question": "Jaki sposób odpoczynku preferuje Agnieszka?",
+      "options": [
+        "Długi spacer po pracy.",
+        "Porządkowanie mieszkania wieczorem.",
+        "Czytanie w spokojnym miejscu."
+      ],
+      "answer": "Czytanie w spokojnym miejscu.",
+      "evidence": "Jej ulubionym sposobem odpoczynku jest czytanie książki w spokojnym miejscu.",
+      "explanation": "Agnieszka wybiera odpoczynek w domu."
+    },
+    {
+      "id": "cause",
+      "skill": "cause",
+      "question": "Dlaczego jedna uczestniczka zrezygnowała z dokładnego planowania każdej chwili relaksu?",
+      "options": [
+        "Niewykonanie planu stawało się dla niej kolejnym powodem niezadowolenia.",
+        "Prowadząca zabroniła wszystkim planowania.",
+        "Nie miała już dostępu do kalendarza."
+      ],
+      "answer": "Niewykonanie planu stawało się dla niej kolejnym powodem niezadowolenia.",
+      "evidence": "Kiedy nie udawało się wykonać zaplanowanego zadania, czuła się tak, jakby poniosła kolejną porażkę.",
+      "explanation": "Zbyt szczegółowy plan zamieniał odpoczynek w obowiązek."
+    },
+    {
+      "id": "inference",
+      "skill": "inference",
+      "question": "Uczestnik pracuje cały dzień na stojąco i nie lubi długich spacerów. Marek mówi, że jemu spacery pomagają odpocząć. Co wynika z zasad rozmowy?",
+      "options": [
+        "Powinien przyjąć dokładnie plan Marka jako najlepszy dla całej grupy.",
+        "Powinien uznać każdą aktywność w domu za niewłaściwą.",
+        "Może wybrać inną aktywność i ocenić, czy odpowiada jego potrzebom."
+      ],
+      "answer": "Może wybrać inną aktywność i ocenić, czy odpowiada jego potrzebom.",
+      "evidence": "Dla innej osoby ta sama czynność może w danym momencie oznaczać kolejny wysiłek.",
+      "explanation": "Preferencje i sytuacja osoby zmieniają znaczenie danej aktywności."
+    },
+    {
+      "id": "vocabulary",
+      "skill": "vocabulary",
+      "question": "Co oznaczają „dobrowolne aktywności”?",
+      "options": [
+        "Czynności wybierane z własnej woli, a nie narzucone jako obowiązek.",
+        "Czynności, które zawsze muszą odbywać się poza domem.",
+        "Zadania wykonywane zgodnie z poleceniem pracodawcy."
+      ],
+      "answer": "Czynności wybierane z własnej woli, a nie narzucone jako obowiązek.",
+      "evidence": "Prowadząca poprosiła grupę o rozróżnienie obowiązków od dobrowolnych aktywności.",
+      "explanation": "Dobrowolność oznacza możliwość samodzielnego wyboru."
+    }
+  ],
+  "publicationStatus": "practice"
+}

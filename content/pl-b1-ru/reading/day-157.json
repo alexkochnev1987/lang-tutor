@@ -1,0 +1,76 @@
+{
+  "id": "pl-b1.reading.day-157",
+  "day": 157,
+  "level": "B1",
+  "genre": "dialog",
+  "title": "Odczytywanie informacji o badaniu",
+  "text": "— Dzień dobry, odebrałem dokument z wynikiem badania, ale nie rozumiem wszystkich oznaczeń — powiedział Paweł przy recepcji przychodni. — Czy może mi pani powiedzieć, co mam z nim zrobić?\n\n— Mogę pomóc panu znaleźć informacje organizacyjne — odpowiedziała pracownica. — Interpretację wyniku najlepiej omówić z lekarzem, który zna powód badania.\n\nPaweł pokazał dokument. Na pierwszej stronie znajdowały się jego dane, data badania i nazwa placówki. Dalej umieszczono tabelę z wynikami oraz krótką informację, gdzie można sprawdzić opis zastosowanych oznaczeń. Pracownica wskazała tę część dokumentu.\n\n— W tej tabeli widzę kilka różnych symboli — powiedział Paweł. — Czy to oznacza, że jeden wynik jest dobry, a drugi zły?\n\n— Samego znaczenia wyniku w pana sytuacji nie będę oceniać. Może pan przygotować pytania na wizytę. Jeśli potrzebuje pan kopii dokumentu, w recepcji możemy ją wydrukować.\n\nPaweł miał już umówioną rozmowę z lekarzem na następny tydzień. Chciał jednak wiedzieć, czy powinien przynieść również wynik wcześniejszego badania. Pracownica zaproponowała, żeby zapytał o to podczas kontaktu z gabinetem, ponieważ nie znała zakresu planowanej rozmowy.\n\nW domu Paweł przeczytał objaśnienia symboli. Zauważył, że zrozumienie nazwy kolumny nie daje jeszcze odpowiedzi na pytanie o jego zdrowie. Zapisał więc trzy kwestie, które chciał omówić. W osobnym miejscu zanotował pytanie o wcześniejszy dokument.\n\nNie zamierzał przesyłać wyników znajomym z prośbą o ocenę. Chciał wykorzystać dostępne informacje do lepszego przygotowania rozmowy, a wątpliwości dotyczące znaczenia badania pozostawić do omówienia z osobą znającą jego sytuację.",
+  "questions": [
+    {
+      "id": "main-idea",
+      "skill": "main-idea",
+      "question": "Jaki problem jest głównym tematem dialogu?",
+      "options": [
+        "Wybór nowego badania na podstawie porady znajomych.",
+        "Rozróżnienie informacji organizacyjnych w dokumencie od indywidualnej interpretacji wyniku.",
+        "Porównanie cen wydruków w różnych przychodniach."
+      ],
+      "answer": "Rozróżnienie informacji organizacyjnych w dokumencie od indywidualnej interpretacji wyniku.",
+      "evidence": "Interpretację wyniku najlepiej omówić z lekarzem, który zna powód badania.",
+      "explanation": "Pracownica pomaga odczytać strukturę dokumentu, nie ocenia zdrowia Pawła."
+    },
+    {
+      "id": "detail",
+      "skill": "detail",
+      "question": "Co pracownica może przygotować w recepcji?",
+      "options": [
+        "Wydruk kopii dokumentu.",
+        "Plan dalszego leczenia.",
+        "Nową interpretację wszystkich wyników."
+      ],
+      "answer": "Wydruk kopii dokumentu.",
+      "evidence": "Jeśli potrzebuje pan kopii dokumentu, w recepcji możemy ją wydrukować.",
+      "explanation": "Recepcja może pomóc w uzyskaniu kopii."
+    },
+    {
+      "id": "cause",
+      "skill": "cause",
+      "question": "Dlaczego pracownica odsyła pytanie o indywidualne znaczenie wyniku do lekarza?",
+      "options": [
+        "Tabela nie zawiera żadnych informacji o badaniu.",
+        "Dokument został wydany bez danych Pawła.",
+        "Indywidualna ocena wymaga rozmowy z lekarzem znającym powód badania."
+      ],
+      "answer": "Indywidualna ocena wymaga rozmowy z lekarzem znającym powód badania.",
+      "evidence": "Interpretację wyniku najlepiej omówić z lekarzem, który zna powód badania.",
+      "explanation": "Znaczenie kliniczne zależy od sytuacji pacjenta."
+    },
+    {
+      "id": "inference",
+      "skill": "inference",
+      "question": "Paweł potrafi już wyjaśnić skrót w nagłówku tabeli, ale nadal nie wie, co konkretny wynik oznacza dla niego. Co odpowiada jego planowi?",
+      "options": [
+        "Zapisać pytanie i omówić je podczas umówionej rozmowy z lekarzem.",
+        "Poprosić znajomych o wybranie dalszych działań na podstawie tabeli.",
+        "Uznać zrozumienie skrótu za wystarczającą diagnozę."
+      ],
+      "answer": "Zapisać pytanie i omówić je podczas umówionej rozmowy z lekarzem.",
+      "evidence": "Paweł miał już umówioną rozmowę z lekarzem na następny tydzień. Chciał jednak wiedzieć, czy powinien przynieść również wynik wcześniejszego badania. Pracownica zaproponowała, żeby zapytał o to podczas kontaktu z gabinetem, ponieważ nie znała zakresu planowanej rozmowy.\n\nW domu Paweł przeczytał objaśnienia symboli. Zauważył, że zrozumienie nazwy kolumny nie daje jeszcze odpowiedzi na pytanie o jego zdrowie. Zapisał więc trzy kwestie, które chciał omówić. W osobnym miejscu zanotował pytanie o wcześniejszy dokument.",
+      "explanation": "Rozumienie formy dokumentu nie zastępuje indywidualnej interpretacji."
+    },
+    {
+      "id": "vocabulary",
+      "skill": "vocabulary",
+      "question": "Co oznacza „objaśnienie symboli”?",
+      "options": [
+        "Potwierdzenie terminu wizyty kontrolnej.",
+        "Informację o tym, co oznaczają znaki użyte w dokumencie.",
+        "Ocenę stanu zdrowia na podstawie rozmowy ze znajomymi."
+      ],
+      "answer": "Informację o tym, co oznaczają znaki użyte w dokumencie.",
+      "evidence": "W domu Paweł przeczytał objaśnienia symboli.",
+      "explanation": "Objaśnienia pomagają zrozumieć sposób zapisu danych."
+    }
+  ],
+  "publicationStatus": "practice"
+}
