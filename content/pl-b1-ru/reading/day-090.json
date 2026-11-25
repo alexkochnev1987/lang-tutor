@@ -1,0 +1,76 @@
+{
+  "id": "pl-b1.reading.day-090",
+  "day": 90,
+  "level": "B1",
+  "genre": "opowiadanie",
+  "title": "Miejsce spotkań w centrum",
+  "text": "W środku miasta, między przystankiem tramwajowym a dużym skrzyżowaniem, znajdował się mały plac z kilkoma ławkami. Mieszkańcy często umawiali się tam ze znajomymi, ponieważ łatwo było do niego dotrzeć z różnych części miasta. Latem jednak plac był prawie cały dzień nasłoneczniony, a hałas samochodów utrudniał rozmowę.\n\nKiedy grupa sąsiadów postanowiła organizować regularne spotkania przy kawie, początkowo wybrała właśnie ten plac. Pierwsze spotkanie wyjątkowo odbyło się w chłodny wieczór i wszystkim się podobało. Na kolejnym, w upalny dzień, część osób szybko wróciła do domu. Ewa zauważyła, że problemem nie była sama lokalizacja, ale brak cienia i wygodnego miejsca do dłuższej rozmowy.\n\nZaczęła szukać innych możliwości. Niedaleko znajdował się ogród przy miejskiej bibliotece. Można było tam usiąść pod drzewami, ale ogród otwierano dopiero o dwunastej. Z kolei kawiarnia przy rynku była otwarta wcześniej i miała stoliki w środku, lecz nie każdy chciał co tydzień wydawać pieniądze na napoje.\n\nGrupa zdecydowała się zmienić porę spotkań z jedenastej na trzynastą. Przy dobrej pogodzie będą korzystać z ogrodu biblioteki, a w chłodniejsze dni spotkają się w jej ogólnodostępnym holu, gdzie można rozmawiać cicho. Plac pozostanie punktem, w którym łatwo się odnaleźć przed wspólnym wyjściem do biblioteki.\n\nPo miesiącu Ewa zauważyła, że na spotkania zaczęły przychodzić również osoby, które wcześniej rezygnowały z powodu upału. Nie trzeba było szukać jednego idealnego miejsca. Wystarczyło rozdzielić miejsce zbiórki od miejsca, w którym grupa spędzała więcej czasu.",
+  "questions": [
+    {
+      "id": "main-idea",
+      "skill": "main-idea",
+      "question": "Jaka jest główna myśl opowiadania?",
+      "options": [
+        "Zmiana grupy uczestników jest ważniejsza od zmiany miejsca.",
+        "Dobre miejsce zbiórki nie zawsze jest dobrym miejscem na dłuższe spotkanie.",
+        "Spotkania sąsiedzkie powinny odbywać się wyłącznie w kawiarni."
+      ],
+      "answer": "Dobre miejsce zbiórki nie zawsze jest dobrym miejscem na dłuższe spotkanie.",
+      "evidence": "Wystarczyło rozdzielić miejsce zbiórki od miejsca, w którym grupa spędzała więcej czasu.",
+      "explanation": "Plac służy zbiórce, a biblioteka daje odpowiednie warunki do dłuższej rozmowy."
+    },
+    {
+      "id": "detail",
+      "skill": "detail",
+      "question": "Od której godziny dostępny jest ogród biblioteki?",
+      "options": [
+        "Od dwunastej.",
+        "Od jedenastej.",
+        "Od trzynastej."
+      ],
+      "answer": "Od dwunastej.",
+      "evidence": "Można było tam usiąść pod drzewami, ale ogród otwierano dopiero o dwunastej.",
+      "explanation": "Ogród otwiera się godzinę przed nową porą spotkań."
+    },
+    {
+      "id": "cause",
+      "skill": "cause",
+      "question": "Dlaczego część osób opuściła drugie spotkanie na placu?",
+      "options": [
+        "Nie mogły zostać z powodu godzin otwarcia biblioteki.",
+        "Nie mogły znaleźć przystanku tramwajowego.",
+        "Upał i brak cienia utrudniały dłuższy pobyt."
+      ],
+      "answer": "Upał i brak cienia utrudniały dłuższy pobyt.",
+      "evidence": "Na kolejnym, w upalny dzień, część osób szybko wróciła do domu. Ewa zauważyła, że problemem nie była sama lokalizacja, ale brak cienia i wygodnego miejsca do dłuższej rozmowy.",
+      "explanation": "Warunki na placu były nieodpowiednie podczas upału."
+    },
+    {
+      "id": "inference",
+      "skill": "inference",
+      "question": "W sobotę jest zimno, nowy uczestnik nie zna drogi do biblioteki i nie chce wydawać pieniędzy. Jak może skorzystać z ustaleń grupy?",
+      "options": [
+        "Spotkać grupę na placu i przejść z nią do holu biblioteki.",
+        "Pójść do kawiarni przed jedenastą i tam czekać na grupę.",
+        "Spotkać grupę bezpośrednio w ogrodzie mimo chłodu."
+      ],
+      "answer": "Spotkać grupę na placu i przejść z nią do holu biblioteki.",
+      "evidence": "Przy dobrej pogodzie będą korzystać z ogrodu biblioteki, a w chłodniejsze dni spotkają się w jej ogólnodostępnym holu, gdzie można rozmawiać cicho. Plac pozostanie punktem, w którym łatwo się odnaleźć przed wspólnym wyjściem do biblioteki.",
+      "explanation": "Plac rozwiązuje problem znalezienia grupy, hol pozwala uniknąć chłodu i nie wymaga zakupu napoju."
+    },
+    {
+      "id": "vocabulary",
+      "skill": "vocabulary",
+      "question": "Co oznacza określenie „ogólnodostępny hol”?",
+      "options": [
+        "Sala otwierana wyłącznie po wcześniejszej rezerwacji.",
+        "Przestrzeń, z której mogą korzystać różni odwiedzający.",
+        "Pomieszczenie przeznaczone tylko dla pracowników."
+      ],
+      "answer": "Przestrzeń, z której mogą korzystać różni odwiedzający.",
+      "evidence": "w chłodniejsze dni spotkają się w jej ogólnodostępnym holu, gdzie można rozmawiać cicho.",
+      "explanation": "Hol jest dostępny dla odwiedzających bibliotekę."
+    }
+  ],
+  "publicationStatus": "practice"
+}

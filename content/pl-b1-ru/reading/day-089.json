@@ -1,0 +1,76 @@
+{
+  "id": "pl-b1.reading.day-089",
+  "day": 89,
+  "level": "B1",
+  "genre": "ogłoszenie",
+  "title": "Mapa miasta dla gości",
+  "text": "Dom Sąsiedzki zaprasza wszystkich mieszkańców, zarówno nowych, jak i tych mieszkających tu od lat, na spotkanie, podczas którego przygotujemy wspólną mapę dzielnicy. Nie będzie to kolejna mapa ze wszystkimi ulicami i numerami budynków. Chcemy zaznaczyć na niej miejsca, które naprawdę ułatwiają życie osobom mieszkającym w okolicy: punkty usługowe, spokojne miejsca do odpoczynku oraz bezpieczne przejścia przez ruchliwe ulice.\n\nSpotkanie odbędzie się w sobotę w sali po drugiej stronie ulicy, naprzeciwko biblioteki. Na początku każdy uczestnik wybierze dla siebie jedną z trzech grup. Pierwsza zajmie się usługami, druga terenami zielonymi, a trzecia drogami pieszymi. Każda grupa otrzyma dużą mapę i kolorowe kartki. Nie trzeba przynosić własnych materiałów. Wystarczy zastanowić się wcześniej, jakie miejsca warto polecić sąsiadom.\n\nOsoby, które niedawno przeprowadziły się do dzielnicy, są szczególnie mile widziane. Zależy nam na ich pytaniach, ponieważ długoletni mieszkańcy często zapominają, które informacje nie są oczywiste dla kogoś nowego. Jeśli ktoś nie zna jeszcze żadnego miejsca, może dołączyć do grupy i opowiedzieć, czego szuka w swojej okolicy.\n\nO godzinie trzynastej grupy połączą swoje propozycje. Nie wszystkie punkty trafią od razu na mapę. Na przykład nowy skrót przez podwórko trzeba będzie sprawdzić, żeby upewnić się, że można z niego korzystać. Organizatorzy przygotują pierwszą wersję mapy w następnym tygodniu. Każdy uczestnik otrzyma jej plik, a po miesiącu spotkamy się ponownie, żeby omówić uwagi. Mapa ma służyć mieszkańcom, dlatego chcemy ją poprawiać wraz ze zmianami w dzielnicy.",
+  "questions": [
+    {
+      "id": "main-idea",
+      "skill": "main-idea",
+      "question": "Jaki jest główny cel spotkania?",
+      "options": [
+        "Stworzenie dokładnego planu wszystkich budynków dzielnicy.",
+        "Zorganizowanie spaceru wyłącznie dla nowych mieszkańców.",
+        "Przygotowanie praktycznej mapy na podstawie potrzeb mieszkańców."
+      ],
+      "answer": "Przygotowanie praktycznej mapy na podstawie potrzeb mieszkańców.",
+      "evidence": "Mapa ma służyć mieszkańcom, dlatego chcemy ją poprawiać wraz ze zmianami w dzielnicy.",
+      "explanation": "Uczestnicy wspólnie wybierają praktyczne miejsca i później aktualizują mapę."
+    },
+    {
+      "id": "detail",
+      "skill": "detail",
+      "question": "Gdzie odbędzie się spotkanie?",
+      "options": [
+        "W bibliotece przy głównej ulicy.",
+        "W sali po drugiej stronie ulicy, naprzeciw biblioteki.",
+        "W sali obok punktu usługowego."
+      ],
+      "answer": "W sali po drugiej stronie ulicy, naprzeciw biblioteki.",
+      "evidence": "Spotkanie odbędzie się w sobotę w sali po drugiej stronie ulicy, naprzeciwko biblioteki.",
+      "explanation": "Naprzeciwko oznacza po przeciwnej stronie."
+    },
+    {
+      "id": "cause",
+      "skill": "cause",
+      "question": "Dlaczego organizatorom zależy na udziale nowych mieszkańców?",
+      "options": [
+        "Mogą zauważyć braki informacji, których stali mieszkańcy nie dostrzegają.",
+        "Mają przygotować wszystkie materiały do pracy grupowej.",
+        "Znają więcej skrótów niż długoletni mieszkańcy."
+      ],
+      "answer": "Mogą zauważyć braki informacji, których stali mieszkańcy nie dostrzegają.",
+      "evidence": "Zależy nam na ich pytaniach, ponieważ długoletni mieszkańcy często zapominają, które informacje nie są oczywiste dla kogoś nowego.",
+      "explanation": "Pytania nowych osób pomagają dostrzec potrzebne informacje."
+    },
+    {
+      "id": "inference",
+      "skill": "inference",
+      "question": "Nowy mieszkaniec zna tylko skrót przez prywatne podwórko, ale nie wie, czy wolno tam przechodzić. Jak może postąpić zgodnie z zasadami spotkania?",
+      "options": [
+        "Zostać w domu, ponieważ nie zna innych miejsc.",
+        "Dołączyć do grupy dróg pieszych i zgłosić skrót do sprawdzenia.",
+        "Zaznaczyć skrót jako pewne przejście i od razu opublikować mapę."
+      ],
+      "answer": "Dołączyć do grupy dróg pieszych i zgłosić skrót do sprawdzenia.",
+      "evidence": "Nie wszystkie punkty trafią od razu na mapę. Na przykład nowy skrót przez podwórko trzeba będzie sprawdzić, żeby upewnić się, że można z niego korzystać.",
+      "explanation": "Niepewna propozycja jest dopuszczalna, ale wymaga sprawdzenia przed publikacją."
+    },
+    {
+      "id": "vocabulary",
+      "skill": "vocabulary",
+      "question": "Co znaczy, że informacja „nie jest oczywista”?",
+      "options": [
+        "Nie została napisana na kolorowej kartce.",
+        "Nie dotyczy żadnego miejsca na mapie.",
+        "Nie każdy może ją łatwo znać lub zrozumieć bez wyjaśnienia."
+      ],
+      "answer": "Nie każdy może ją łatwo znać lub zrozumieć bez wyjaśnienia.",
+      "evidence": "długoletni mieszkańcy często zapominają, które informacje nie są oczywiste dla kogoś nowego.",
+      "explanation": "To, co stali mieszkańcy znają z doświadczenia, może wymagać wyjaśnienia nowej osobie."
+    }
+  ],
+  "publicationStatus": "practice"
+}

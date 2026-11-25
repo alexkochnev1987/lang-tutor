@@ -1,0 +1,76 @@
+{
+  "id": "pl-b1.reading.day-087",
+  "day": 87,
+  "level": "B1",
+  "genre": "dialog",
+  "title": "Droga do domu kultury",
+  "text": "— Przepraszam, czy może mi pan pomóc? Szukam domu kultury. Mam za kwadrans zajęcia i chyba wysiadłam na złym przystanku — powiedziała kobieta stojąca przy skrzyżowaniu.\n\n— Wysiadła pani dobrze, tylko wejście jest po drugiej stronie budynku — odpowiedział mężczyzna. — Widzi pani ten parking za sklepem? Można przejść przez niego prosto do domu kultury, ale od poniedziałku trwa tam remont chodnika. Nie wiem, czy przejście jest dziś otwarte.\n\n— Mam ze sobą dużą torbę z materiałami do malowania. Wolałabym nie chodzić po terenie remontu. Czy jest inna droga?\n\n— Proszę iść wzdłuż ulicy do drugiego skrzyżowania, a następnie skręcić w lewo. Za małym parkiem zobaczy pani bramę. To wejście od strony osiedla. Droga zajmuje mniej więcej dziesięć minut. Zwykle jest nieco dłuższa niż przejście przez parking, ale dziś może się okazać szybsza.\n\n— Dziękuję! Czy przy bramie jest miejsce, gdzie można zostawić rower? W przyszłym tygodniu chcę przyjechać na zajęcia rowerem.\n\n— Tak, stojaki są po prawej stronie bramy. Tylko proszę pamiętać, że w środy po południu odbywa się tam kiermasz książek. Wtedy stojaki przy bramie bywają zajęte. Kolejne stojaki znajdzie pani przy głównym wejściu.\n\nKobieta podziękowała mężczyźnie i wybrała drogę przez osiedle. W domu kultury była kilka minut przed rozpoczęciem zajęć. Po lekcji wyszła głównym wejściem, żeby sprawdzić, jak wygląda przejście przez parking. Okazało się, że zostało zamknięte do końca tygodnia. Dobrze, że nie próbowała tamtędy skracać drogi.",
+  "questions": [
+    {
+      "id": "main-idea",
+      "skill": "main-idea",
+      "question": "Czego przede wszystkim dotyczy rozmowa?",
+      "options": [
+        "Zmiany godziny zajęć z malowania.",
+        "Organizacji kiermaszu książek na osiedlu.",
+        "Wyboru drogi do domu kultury z uwzględnieniem utrudnień."
+      ],
+      "answer": "Wyboru drogi do domu kultury z uwzględnieniem utrudnień.",
+      "evidence": "Droga zajmuje mniej więcej dziesięć minut. Zwykle jest nieco dłuższa niż przejście przez parking, ale dziś może się okazać szybsza.",
+      "explanation": "Rozmowa pomaga dotrzeć na zajęcia i zaplanować kolejną wizytę."
+    },
+    {
+      "id": "detail",
+      "skill": "detail",
+      "question": "Gdzie są drugie stojaki rowerowe?",
+      "options": [
+        "Przy głównym wejściu do domu kultury.",
+        "Za parkiem przy skrzyżowaniu.",
+        "Przy sklepie obok parkingu."
+      ],
+      "answer": "Przy głównym wejściu do domu kultury.",
+      "evidence": "Kolejne stojaki znajdzie pani przy głównym wejściu.",
+      "explanation": "Mężczyzna wskazuje alternatywę dla stojaków przy bramie."
+    },
+    {
+      "id": "cause",
+      "skill": "cause",
+      "question": "Dlaczego kobieta woli ominąć parking?",
+      "options": [
+        "Nie wie, gdzie znajduje się sklep.",
+        "Nie chce iść z dużą torbą przez teren remontu.",
+        "Ma spotkanie z kimś w parku."
+      ],
+      "answer": "Nie chce iść z dużą torbą przez teren remontu.",
+      "evidence": "Mam ze sobą dużą torbę z materiałami do malowania. Wolałabym nie chodzić po terenie remontu.",
+      "explanation": "Torba i remont wpływają na jej wybór trasy."
+    },
+    {
+      "id": "inference",
+      "skill": "inference",
+      "question": "Kobieta przyjedzie rowerem w następną środę, dziesięć minut przed zajęciami. Kiermasz właśnie trwa, a przy bramie nie ma wolnych stojaków. Jak najlepiej postąpić?",
+      "options": [
+        "Zostawić rower przy przystanku i wrócić po niego po kiermaszu.",
+        "Czekać przy bramie do końca kiermaszu.",
+        "Zostawić rower na stojakach przy głównym wejściu."
+      ],
+      "answer": "Zostawić rower na stojakach przy głównym wejściu.",
+      "evidence": "Tylko proszę pamiętać, że w środy po południu odbywa się tam kiermasz książek. Wtedy stojaki przy bramie bywają zajęte. Kolejne stojaki znajdzie pani przy głównym wejściu.",
+      "explanation": "W środę brama może być zajęta, ale przy drugim wejściu są dodatkowe stojaki."
+    },
+    {
+      "id": "vocabulary",
+      "skill": "vocabulary",
+      "question": "Co oznacza tutaj „skracać drogę”?",
+      "options": [
+        "Iść w stronę najbliższego przystanku.",
+        "Wybrać krótszą trasę do tego samego celu.",
+        "Wybrać trasę omijającą skrzyżowanie niezależnie od długości."
+      ],
+      "answer": "Wybrać krótszą trasę do tego samego celu.",
+      "evidence": "Okazało się, że zostało zamknięte do końca tygodnia. Dobrze, że nie próbowała tamtędy skracać drogi.",
+      "explanation": "Parking był zwykle krótszym przejściem do domu kultury."
+    }
+  ],
+  "publicationStatus": "practice"
+}

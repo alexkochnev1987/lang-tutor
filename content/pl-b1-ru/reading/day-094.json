@@ -1,0 +1,76 @@
+{
+  "id": "pl-b1.reading.day-094",
+  "day": 94,
+  "level": "B1",
+  "genre": "dialog",
+  "title": "Obserwacja ptaków w parku",
+  "text": "— Dzień dobry, czy to pan prowadzi dzisiejszy spacer z obserwacją ptaków? — zapytała pani Teresa, która przyszła do parku z wnukiem.\n\n— Tak, proszę państwa, zbieramy się przy bramie. Za kilka minut wyruszymy nad staw — odpowiedział przewodnik. — Czy mają państwo lornetkę?\n\n— Mamy jedną na dwie osoby. Mój wnuk bardzo chciał zobaczyć ptaki z bliska, ale nie wiem, czy rozpoznamy ich nazwy.\n\n— Nie muszą państwo znać nazw. Na początku będziemy słuchać głosów i przyglądać się temu, jak ptaki się poruszają. Rozdam też kartki ze zdjęciami kilku gatunków. Najważniejsze, żeby nie podchodzić do ptaków tylko po to, by zrobić lepsze zdjęcie.\n\n— A co z pogodą? Niebo jest już całe w chmurach.\n\n— Przy niewielkim deszczu możemy zostać w parku i schować się pod wiatą. Jeśli zacznie się burza, przeniesiemy zajęcia do sali edukacyjnej przy wejściu. Mam tam nagrania głosów ptaków. Wtedy nie będziemy ich obserwować na żywo, ale nauczymy się je odróżniać.\n\nPrzy stawie wnuk Teresy zobaczył ptaka z długą szyją. Chciał natychmiast podejść do brzegu. Przewodnik zaproponował mu użycie lornetki i poprosił, żeby poczekał spokojnie na ławce. Chłopiec po kilku minutach zauważył, jak ptak szukał jedzenia w wodzie. Zamiast jednego szybkiego zdjęcia miał okazję obserwować go przez dłuższy czas.\n\nPo spacerze Teresa powiedziała, że następnym razem przyniesie notatnik. Chce zapisywać nie tylko wygląd ptaków, lecz również ich zachowanie. Przewodnik ucieszył się z tego pomysłu.",
+  "questions": [
+    {
+      "id": "main-idea",
+      "skill": "main-idea",
+      "question": "Czego przede wszystkim uczestnicy uczą się podczas spaceru?",
+      "options": [
+        "Robienia zdjęć ptaków z jak najmniejszej odległości.",
+        "Rozpoznawania i spokojnego obserwowania ptaków bez przeszkadzania im.",
+        "Przygotowywania własnych nagrań głosów w sali."
+      ],
+      "answer": "Rozpoznawania i spokojnego obserwowania ptaków bez przeszkadzania im.",
+      "evidence": "Na początku będziemy słuchać głosów i przyglądać się temu, jak ptaki się poruszają.",
+      "explanation": "Spacer łączy naukę rozpoznawania z obserwacją zachowania."
+    },
+    {
+      "id": "detail",
+      "skill": "detail",
+      "question": "Co przewodnik ma przygotowane w sali edukacyjnej?",
+      "options": [
+        "Nagrania głosów ptaków.",
+        "Notatniki ze zdjęciami ptaków.",
+        "Zapasowe lornetki dla wszystkich uczestników."
+      ],
+      "answer": "Nagrania głosów ptaków.",
+      "evidence": "Mam tam nagrania głosów ptaków.",
+      "explanation": "Nagrania umożliwiają naukę w razie burzy."
+    },
+    {
+      "id": "cause",
+      "skill": "cause",
+      "question": "Dlaczego przewodnik prosi chłopca, żeby pozostał na ławce?",
+      "options": [
+        "Chce, żeby chłopiec poczekał na swoją kolej do lornetki.",
+        "Nie chce, żeby chłopiec przegapił zajęcia w sali.",
+        "Chce umożliwić obserwację bez zbliżania się do ptaka."
+      ],
+      "answer": "Chce umożliwić obserwację bez zbliżania się do ptaka.",
+      "evidence": "Przewodnik zaproponował mu użycie lornetki i poprosił, żeby poczekał spokojnie na ławce.",
+      "explanation": "Lornetka pozwala obserwować z odległości."
+    },
+    {
+      "id": "inference",
+      "skill": "inference",
+      "question": "Nad stawem zaczyna się burza, a uczestnicy chcą kontynuować naukę rozpoznawania ptaków. Co jest zgodne z planem przewodnika?",
+      "options": [
+        "Zostać przy bramie i porównywać głosy ptaków na żywo.",
+        "Przejść do sali i ćwiczyć rozpoznawanie głosów z nagrań.",
+        "Pozostać pod wiatą i obserwować staw przez lornetkę."
+      ],
+      "answer": "Przejść do sali i ćwiczyć rozpoznawanie głosów z nagrań.",
+      "evidence": "Jeśli zacznie się burza, przeniesiemy zajęcia do sali edukacyjnej przy wejściu. Mam tam nagrania głosów ptaków.",
+      "explanation": "Przy burzy zmienia się miejsce i sposób nauki."
+    },
+    {
+      "id": "vocabulary",
+      "skill": "vocabulary",
+      "question": "Co oznacza wyrażenie „odróżniać głosy”?",
+      "options": [
+        "Nagrywać każdy głos osobno.",
+        "Powtarzać wszystkie głosy tak samo.",
+        "Rozpoznawać różnice między głosami."
+      ],
+      "answer": "Rozpoznawać różnice między głosami.",
+      "evidence": "Wtedy nie będziemy ich obserwować na żywo, ale nauczymy się je odróżniać.",
+      "explanation": "Nagrania mają pomóc zauważyć różnice między gatunkami."
+    }
+  ],
+  "publicationStatus": "practice"
+}

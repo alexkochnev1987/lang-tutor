@@ -1,0 +1,76 @@
+{
+  "id": "pl-b1.reading.day-091",
+  "day": 91,
+  "level": "B1",
+  "genre": "poradnik",
+  "title": "Dostępność budynków publicznych",
+  "text": "Kiedy wybieramy się do muzeum, biblioteki lub domu kultury, zwykle sprawdzamy adres i godziny otwarcia. Jednak dla niektórych osób te dwie informacje nie wystarczą. Ktoś może mieć trudności z chodzeniem po schodach, ktoś inny potrzebuje spokojnego miejsca bez dużego hałasu. Warto ustalić, jakie warunki panują w budynku, zanim podejmiemy decyzję o wizycie.\n\nPrzygotowując spotkanie dla grupy, nie zakładaj, że jedno rozwiązanie będzie odpowiednie dla wszystkich. Zapytaj uczestników, czego potrzebują, ale nie wymagaj od nich wyjaśniania prywatnych spraw. Można po prostu zapytać, czy wygodniejsze będzie wejście bez schodów, możliwość odpoczynku lub krótsza droga od przystanku.\n\nW wyobrażonym domu kultury sala wystawowa znajduje się na piętrze, a do budynku prowadzą dwa wejścia. Główne ma kilka stopni. Boczne jest na poziomie chodnika i prowadzi do windy, ale w godzinach wieczornych otwiera je pracownik po wcześniejszym zgłoszeniu. Na stronie podano numer telefonu do recepcji. Jeżeli grupa planuje wieczorną wizytę i ktoś potrzebuje windy, warto wcześniej ustalić z recepcją sposób wejścia.\n\nPamiętaj również o drodze powrotnej. Informacja, że w pobliżu jest przystanek, nie mówi jeszcze, czy dojście do niego jest wygodne. Jeśli to możliwe, sprawdź trasę, którą grupa rzeczywiście będzie szła. Po spotkaniu możesz zapytać uczestników, co ułatwiło im wizytę, a co należałoby zmienić. Takie uwagi przydadzą się przy planowaniu następnego wyjścia.",
+  "questions": [
+    {
+      "id": "main-idea",
+      "skill": "main-idea",
+      "question": "Jaki jest główny cel poradnika?",
+      "options": [
+        "Pomóc przygotować wizytę z uwzględnieniem różnych potrzeb uczestników.",
+        "Wyjaśnić zasady rezerwacji sal w domach kultury.",
+        "Pokazać, jak wybrać najkrótszą trasę między budynkami."
+      ],
+      "answer": "Pomóc przygotować wizytę z uwzględnieniem różnych potrzeb uczestników.",
+      "evidence": "Przygotowując spotkanie dla grupy, nie zakładaj, że jedno rozwiązanie będzie odpowiednie dla wszystkich.",
+      "explanation": "Tekst obejmuje potrzeby uczestników, wejście, drogę i uwagi po wizycie."
+    },
+    {
+      "id": "detail",
+      "skill": "detail",
+      "question": "Gdzie znajduje się sala wystawowa w opisanym domu kultury?",
+      "options": [
+        "Przy głównym wejściu na parterze.",
+        "Na poziomie chodnika.",
+        "Na piętrze."
+      ],
+      "answer": "Na piętrze.",
+      "evidence": "W wyobrażonym domu kultury sala wystawowa znajduje się na piętrze, a do budynku prowadzą dwa wejścia.",
+      "explanation": "Sala jest na piętrze."
+    },
+    {
+      "id": "cause",
+      "skill": "cause",
+      "question": "Dlaczego warto zapytać uczestników o potrzeby przed wyjściem?",
+      "options": [
+        "Żeby ustalić, kto będzie rozmawiał z recepcją.",
+        "Żeby nie przyjąć rozwiązania niewygodnego dla części grupy.",
+        "Żeby wybrać jedną trasę bez konsultowania jej z grupą."
+      ],
+      "answer": "Żeby nie przyjąć rozwiązania niewygodnego dla części grupy.",
+      "evidence": "Przygotowując spotkanie dla grupy, nie zakładaj, że jedno rozwiązanie będzie odpowiednie dla wszystkich. Zapytaj uczestników, czego potrzebują, ale nie wymagaj od nich wyjaśniania prywatnych spraw.",
+      "explanation": "Różne osoby mogą potrzebować różnych warunków."
+    },
+    {
+      "id": "inference",
+      "skill": "inference",
+      "question": "Grupa chce obejrzeć wystawę wieczorem, a jedna osoba nie może wchodzić po schodach. Jak najlepiej przygotować wizytę?",
+      "options": [
+        "Przyjść do bocznego wejścia bez zgłoszenia i liczyć na otwarte drzwi.",
+        "Wybrać główne wejście, ponieważ wystawa jest na piętrze.",
+        "Uzgodnić z recepcją otwarcie bocznego wejścia i skorzystać z windy."
+      ],
+      "answer": "Uzgodnić z recepcją otwarcie bocznego wejścia i skorzystać z windy.",
+      "evidence": "Główne ma kilka stopni. Boczne jest na poziomie chodnika i prowadzi do windy, ale w godzinach wieczornych otwiera je pracownik po wcześniejszym zgłoszeniu.",
+      "explanation": "Boczne wejście spełnia potrzeby uczestnika, ale wieczorem trzeba zgłosić wizytę."
+    },
+    {
+      "id": "vocabulary",
+      "skill": "vocabulary",
+      "question": "Co oznacza „ustalić sposób wejścia” w tym kontekście?",
+      "options": [
+        "Uzgodnić, którędy i na jakich warunkach można wejść do budynku.",
+        "Sprawdzić, ile osób zmieści się w sali.",
+        "Wybrać godziny otwarcia całej wystawy."
+      ],
+      "answer": "Uzgodnić, którędy i na jakich warunkach można wejść do budynku.",
+      "evidence": "Jeżeli grupa planuje wieczorną wizytę i ktoś potrzebuje windy, warto wcześniej ustalić z recepcją sposób wejścia.",
+      "explanation": "Chodzi o uzgodnienie dostępu do odpowiedniego wejścia."
+    }
+  ],
+  "publicationStatus": "practice"
+}
