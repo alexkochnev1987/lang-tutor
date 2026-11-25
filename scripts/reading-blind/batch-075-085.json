@@ -4,7 +4,7 @@
       "id": "pl-b1.reading.day-075",
       "targetLevel": "A2",
       "title": "Zamówienie w kawiarni",
-      "passage": "Kawiarnia Pod Zegarem przyjmuje zamówienia na małe spotkania rodzinne. W soboty między godziną dziesiątą a trzynastą można zarezerwować większy stolik na sześć lub osiem osób. Prosimy podać liczbę gości najpóźniej w czwartek wieczorem.\n\nNa miejscu zawsze można kupić kawę, herbatę i lody. Jeśli chcą Państwo zamówić całe ciasto, potrzebujemy informacji dwa dni wcześniej. Do wyboru są ciasto z jabłkami oraz sernik. W dniu spotkania można zamówić dodatkowe porcje z karty, ale nie możemy obiecać, że będzie jeszcze całe ciasto.\n\nDla grup przygotowujemy także talerze z kanapkami. Na jednym talerzu jest sześć kanapek z serem, pomidorami i ogórkami. Możemy zrobić osobny talerz bez sera, jeśli otrzymamy taką prośbę przy rezerwacji. Kelner przynosi napoje dopiero wtedy, gdy goście wybiorą je z karty, żeby kawa nie była zimna.\n\nJeśli zmieni się liczba uczestników, prosimy o telefon. Nie trzeba odwoływać całego spotkania tylko dlatego, że jedna osoba nie przyjdzie. Zmienimy liczbę nakryć na stole.",
+      "passage": "Kawiarnia Pod Zegarem przyjmuje zamówienia na małe spotkania rodzinne. W soboty między godziną dziesiątą a trzynastą można zarezerwować większy stolik na sześć lub osiem osób. Prosimy podać liczbę gości najpóźniej w czwartek wieczorem.\n\nNa miejscu zawsze można kupić kawę, herbatę i lody. Jeśli chcą Państwo zamówić całe ciasto, trzeba złożyć zamówienie najpóźniej dwa dni przed spotkaniem. Do wyboru są ciasto z jabłkami oraz sernik. W dniu spotkania można zamówić dodatkowe porcje z karty, ale nie możemy obiecać, że będzie jeszcze całe ciasto.\n\nDla grup przygotowujemy także talerze z kanapkami. Na jednym talerzu jest sześć kanapek z serem, pomidorami i ogórkami. Możemy zrobić osobny talerz bez sera, jeśli otrzymamy taką prośbę przy rezerwacji. Kelner nie stawia kawy na stole przed przyjściem gości, bo mogłaby wystygnąć. Każdy wybiera napój z karty po przyjściu.\n\nJeśli zmieni się liczba uczestników, prosimy o telefon. Nie trzeba odwoływać całego spotkania tylko dlatego, że jedna osoba nie przyjdzie. Zmienimy liczbę nakryć na stole.",
       "questions": [
         {
           "id": "q1",
@@ -44,7 +44,7 @@
         },
         {
           "id": "q3",
-          "question": "Dlaczego kelner czeka z przyniesieniem napojów?",
+          "question": "Dlaczego kelner nie stawia kawy na stole wcześniej?",
           "options": [
             {
               "id": "A",
@@ -160,19 +160,19 @@
         },
         {
           "id": "q4",
-          "question": "Olek chce zjeść sałatkę, a inny gość lubi sałatkę z serem. Jak mogą zjeść tę samą potrawę?",
+          "question": "Na kolejnej kolacji jeden gość nie może jeść sera, a inny chce bardzo słodki deser. Które przygotowanie pasuje do sposobu Hani?",
           "options": [
             {
               "id": "A",
-              "text": "Olek zje wyłącznie pieczone ziemniaki."
+              "text": "Dodać ser i miód od razu do wspólnych potraw."
             },
             {
               "id": "B",
-              "text": "Piotr przygotuje dwie nowe sałatki."
+              "text": "Zrobić wyłącznie potrawy bez sera i z dużą ilością miodu."
             },
             {
               "id": "C",
-              "text": "Drugi gość doda ser do swojej porcji."
+              "text": "Przygotować potrawy bez tych dodatków i podać ser oraz miód osobno."
             }
           ]
         },
@@ -200,7 +200,7 @@
       "id": "pl-b1.reading.day-077",
       "targetLevel": "A2",
       "title": "Mniej marnowania jedzenia",
-      "passage": "Przed zakupami warto zajrzeć do lodówki. Czasami kupujemy drugi jogurt albo kolejne pomidory, chociaż w domu mamy jeszcze te produkty. Zapisz najpierw rzeczy, które trzeba zjeść, a dopiero potem przygotuj listę zakupów.\n\nW mieszkaniu Julii jest mały koszyk z napisem „Zjedz najpierw”. Julia wkłada do niego produkty, które chce wykorzystać w najbliższych dniach. Dzięki temu widzi je od razu po otwarciu lodówki i nie musi przeszukiwać wszystkich półek. Na pozostałych półkach trzyma produkty przeznaczone na później. Zawsze sprawdza informacje na opakowaniach.\n\nNie każdy posiłek musi wyglądać tak, jak w przepisie. Jeśli planujesz sałatkę z ogórkiem, ale masz pomidory, możesz wybrać inne warzywo. Przed gotowaniem sprawdź, czy ilość jedzenia odpowiada liczbie osób. Lepiej przygotować dodatkową porcję, gdy ktoś naprawdę jest głodny, niż codziennie mieć pełny talerz resztek.\n\nJulia robi większe zakupy w piątek, a w środę kupuje tylko świeże pieczywo. Ten rytm pasuje do jej pracy. Inna osoba może potrzebować innego planu. Najważniejsze jest znalezienie sposobu, który pomaga pamiętać o jedzeniu już kupionym.",
+      "passage": "Przed zakupami warto zajrzeć do lodówki. Czasami kupujemy drugi jogurt albo kolejne pomidory, chociaż w domu mamy jeszcze te produkty. Zapisz najpierw rzeczy, które trzeba zjeść, a dopiero potem przygotuj listę zakupów.\n\nW lodówce Julii jest mały koszyk z napisem „Zjedz najpierw”. Julia wkłada do niego produkty, które chce wykorzystać w najbliższych dniach. Dzięki temu widzi je od razu po otwarciu lodówki i nie musi przeszukiwać wszystkich półek. Na pozostałych półkach trzyma produkty przeznaczone na później. Zawsze sprawdza informacje na opakowaniach.\n\nNie każdy posiłek musi wyglądać tak, jak w przepisie. Jeśli planujesz sałatkę z ogórkiem, ale masz pomidory, możesz wybrać inne warzywo. Przed gotowaniem sprawdź, czy ilość jedzenia odpowiada liczbie osób. Lepiej przygotować dodatkową porcję, gdy ktoś naprawdę jest głodny, niż codziennie mieć pełny talerz resztek.\n\nJulia robi większe zakupy w piątek, a w środę kupuje tylko świeże pieczywo. Ten rytm pasuje do jej pracy. Inna osoba może potrzebować innego planu. Najważniejsze jest znalezienie sposobu, który pomaga pamiętać o jedzeniu już kupionym.",
       "questions": [
         {
           "id": "q1",
@@ -396,7 +396,7 @@
       "id": "pl-b1.reading.day-080",
       "targetLevel": "A2",
       "title": "Przesyłka do odbioru",
-      "passage": "— Dzień dobry. Dostałem wiadomość o przesyłce — mówi Kuba w punkcie odbioru. — Czy moja paczka jest już tutaj?\n\n— Proszę pokazać kod z wiadomości — odpowiada pracownica. Po chwili sprawdza dane w komputerze. — Tak, paczka czeka na półce. Ma pan jeszcze jedną przesyłkę?\n\n— Tak, zamówiłem też książkę, ale w wiadomości o książce jest napisane, że dostawa będzie jutro.\n\n— W takim razie dzisiaj wydam panu tylko pierwszą paczkę. Druga jest jeszcze w drodze.\n\nKuba ogląda pudełko. W jednym rogu jest trochę mokre. Pyta, czy może zrobić zdjęcie przed wyjściem z punktu. Pracownica pozwala mu to zrobić i zapisuje informację o stanie opakowania. Wyjaśnia, że nie wie, czy w środku wszystko jest w porządku.\n\n— W domu sprawdzę zawartość — mówi Kuba. — A jutro przyjdę po książkę, jeśli dostanę nową wiadomość.\n\nPracownica pokazuje mu jeszcze kartkę z godzinami pracy. Jutro punkt będzie otwarty od dwunastej, ponieważ rano pracownicy mają szkolenie. Kuba pracuje do czternastej w biurze obok, więc nie będzie musiał zmieniać swoich planów.",
+      "passage": "— Dzień dobry. Dostałem wiadomość o przesyłce — mówi Kuba w punkcie odbioru. — Czy moja paczka jest już tutaj?\n\n— Proszę pokazać kod z wiadomości — odpowiada pracownica. Po chwili sprawdza dane w komputerze. — Tak, paczka czeka na półce. Ma pan jeszcze jedną przesyłkę?\n\n— Tak, zamówiłem też książkę, ale w wiadomości o książce jest napisane, że dostawa będzie jutro.\n\n— W takim razie dzisiaj wydam panu tylko pierwszą paczkę. Druga jest jeszcze w drodze.\n\nKuba ogląda pudełko. W jednym rogu jest trochę mokre. Pyta, czy może zrobić zdjęcie przed wyjściem z punktu. Pracownica pozwala mu to zrobić i zapisuje informację o stanie opakowania. Wyjaśnia, że nie wie, czy w środku wszystko jest w porządku.\n\n— W domu sprawdzę zawartość — mówi Kuba. — A jutro przyjdę po książkę, jeśli dostanę nową wiadomość.\n\nPracownica pokazuje mu jeszcze kartkę z godzinami pracy. Jutro punkt będzie otwarty od dwunastej do osiemnastej, ponieważ rano pracownicy mają szkolenie. Kuba pracuje do czternastej w biurze obok, więc nie będzie musiał zmieniać swoich planów.",
       "questions": [
         {
           "id": "q1",
@@ -454,19 +454,19 @@
         },
         {
           "id": "q4",
-          "question": "Kuba otrzyma jutro wiadomość o książce o jedenastej. Kiedy może ją odebrać bez wychodzenia z pracy wcześniej?",
+          "question": "Kuba jutro dostaje wiadomość o książce o jedenastej, a o piętnastej ma prywatne spotkanie. W którym przedziale może odebrać książkę po pracy, ale przed spotkaniem?",
           "options": [
             {
               "id": "A",
-              "text": "Po czternastej."
+              "text": "Między czternastą a piętnastą."
             },
             {
               "id": "B",
-              "text": "O jedenastej przed otwarciem punktu."
+              "text": "Między jedenastą a dwunastą."
             },
             {
               "id": "C",
-              "text": "O dwunastej, podczas swojej pracy."
+              "text": "Między trzynastą a czternastą, przed końcem pracy."
             }
           ]
         },
@@ -552,19 +552,19 @@
         },
         {
           "id": "q4",
-          "question": "Kurs może wymagać wcześniejszej wpłaty. Która cecha konta jest więc dla Daniela szczególnie ważna?",
+          "question": "Daniel rozważa konto z bezpłatnymi przelewami, lecz z ograniczonym dostępem do oszczędności przez osiem miesięcy. Dlaczego powinien dokładnie sprawdzić tę ofertę?",
           "options": [
             {
               "id": "A",
-              "text": "Możliwość zaciągnięcia większego kredytu."
+              "text": "Planuje w tym czasie zaciągnąć kredyt na codzienne wydatki."
             },
             {
               "id": "B",
-              "text": "Możliwość zmiany pracownika banku."
+              "text": "Chce wykonywać kilka przelewów dziennie."
             },
             {
               "id": "C",
-              "text": "Możliwość wypłaty potrzebnej części pieniędzy."
+              "text": "Kurs zaczyna się wcześniej, niż odzyska swobodny dostęp do pieniędzy."
             }
           ]
         },
@@ -690,7 +690,7 @@
       "id": "pl-b1.reading.day-083",
       "targetLevel": "A2",
       "title": "Zgłoszenie problemu z internetem",
-      "passage": "W środę rano Zuzanna nie mogła rozpocząć pracy przy komputerze, ponieważ w jej mieszkaniu nie działał internet. Sprawdziła, czy problem występuje również w telefonie po połączeniu z domową siecią. Telefon także nie miał dostępu do internetu. Zuzanna zapisała godzinę, o której zauważyła awarię.\n\nZadzwoniła do firmy, od której ma internet. Pracownik zapytał o numer umowy i o to, czy na urządzeniu świecą się lampki. Zuzanna podała informacje, które mogła sprawdzić. Nie wiedziała, czy problem dotyczy tylko jej mieszkania, czy całego budynku.\n\nPracownik przyjął zgłoszenie i podał jego numer. Obiecał wysłać wiadomość, kiedy będzie wiedział więcej. Zuzanna miała ważne spotkanie o jedenastej, więc nie chciała czekać bez planu. Napisała do koleżanki z pracy, która mieszka blisko. Koleżanka zgodziła się udostępnić jej miejsce przy stole na dwie godziny.\n\nPo spotkaniu Zuzanna dostała wiadomość, że internet znów działa. Wróciła do mieszkania i sprawdziła połączenie. Dopiero gdy komputer i telefon działały prawidłowo, uznała sprawę za zakończoną. Numer zgłoszenia zachowała do końca tygodnia.",
+      "passage": "W środę rano Zuzanna nie mogła rozpocząć pracy przy komputerze, ponieważ w jej mieszkaniu nie działał internet. Sprawdziła, czy problem występuje również w telefonie po połączeniu z domową siecią. Telefon także nie miał dostępu do internetu. Zuzanna zapisała godzinę, o której zauważyła awarię.\n\nZadzwoniła do firmy, od której ma internet. Pracownik zapytał o numer umowy i o to, czy na urządzeniu świecą się lampki. Zuzanna podała informacje, które mogła sprawdzić. Nie wiedziała, czy problem dotyczy tylko jej mieszkania, czy całego budynku.\n\nPracownik przyjął zgłoszenie i podał jego numer. Obiecał wysłać wiadomość, kiedy będzie wiedział więcej. Poprosił też, aby w razie dalszych problemów podać numer zgłoszenia. Zuzanna miała ważne spotkanie o jedenastej, więc nie chciała czekać bez planu. Napisała do koleżanki z pracy, która mieszka blisko. Koleżanka zgodziła się udostępnić jej miejsce przy stole na dwie godziny.\n\nPo spotkaniu Zuzanna dostała wiadomość, że internet znów działa. Wróciła do mieszkania i sprawdziła połączenie. Dopiero gdy komputer i telefon działały prawidłowo, uznała sprawę za zakończoną. Numer zgłoszenia zachowała do końca tygodnia.",
       "questions": [
         {
           "id": "q1",
@@ -748,19 +748,19 @@
         },
         {
           "id": "q4",
-          "question": "Gdyby po powrocie telefon działał w domowej sieci, ale komputer nadal nie miał internetu, jak zareagowałaby Zuzanna zgodnie ze swoim podejściem?",
+          "question": "Po wiadomości od firmy Zuzanna wraca do domu. Telefon działa, ale komputer nadal nie ma internetu. Co powinna zrobić zgodnie z opisanym sposobem działania?",
           "options": [
             {
               "id": "A",
-              "text": "Uznałaby zgłoszenie za zakończone po otrzymaniu wiadomości."
+              "text": "Zakończyć sprawę, bo telefon już działa."
             },
             {
               "id": "B",
-              "text": "Nie uznałaby jeszcze problemu za rozwiązany."
+              "text": "Zadzwonić ponownie i podać numer zgłoszenia."
             },
             {
               "id": "C",
-              "text": "Zgłosiłaby od razu zmianę numeru umowy."
+              "text": "Zgłosić nową umowę bez podawania numeru sprawy."
             }
           ]
         },
@@ -886,7 +886,7 @@
       "id": "pl-b1.reading.day-085",
       "targetLevel": "B1",
       "title": "Spacer po nowej dzielnicy",
-      "passage": "Cześć, Kasiu!\n\nW zeszłym tygodniu przeprowadziłem się na drugą stronę miasta. Do tej pory znałem tę dzielnicę głównie z okna autobusu, więc w niedzielę postanowiłem przejść się bez konkretnego celu. Wziąłem ze sobą telefon, ale schowałem go do kieszeni, żeby nie patrzeć cały czas na mapę. Chciałem sam odkryć kilka miejsc.\n\nNajpierw trafiłem na niewielki plac, na którym w dni robocze działa targ. W niedzielę było tam spokojnie, a obok fontanny siedziało kilka osób z kawą. Z placu poszedłem w stronę starego kościoła. Za nim znalazłem przejście między kamienicami prowadzące do parku. Nie jest ono dobrze widoczne z głównej ulicy, dlatego prawdopodobnie wcześniej mijałem je wiele razy.\n\nW parku spotkałem sąsiadkę, którą poznałem podczas przeprowadzki. Zapytałem ją o bibliotekę i sklep spożywczy. Pokazała mi krótszą drogę do obu miejsc, ale ostrzegła, że po deszczu ścieżka przez park robi się bardzo błotnista. Zapisałem sobie również trasę prowadzącą chodnikiem wzdłuż ulicy. Jest nieco dłuższa, lecz nie trzeba wchodzić na miękką ziemię.\n\nW sobotę chciałbym pokazać ci okolicę. Jeśli będzie sucho, przejdziemy przez park. Jeśli pogoda się nie uda, spotkajmy się na placu i przejdźmy do biblioteki ulicą. Możemy potem wypić kawę. Na razie nie znam najlepszej kawiarni w dzielnicy, ale właśnie to jest przyjemne: wciąż mam coś nowego do odkrycia.\n\nDo zobaczenia,\nMichał",
+      "passage": "Cześć, Kasiu!\n\nW zeszłym tygodniu przeprowadziłem się na drugą stronę miasta. Do tej pory znałem tę dzielnicę głównie z okna autobusu, więc w niedzielę postanowiłem przejść się bez konkretnego celu. Wziąłem ze sobą telefon, ale schowałem go do kieszeni, żeby nie patrzeć cały czas na mapę. Chciałem sam odkryć kilka miejsc.\n\nNajpierw trafiłem na niewielki plac, na którym w dni robocze działa targ. W niedzielę było tam spokojnie, a obok fontanny siedziało kilka osób z kawą. Z placu poszedłem w stronę starego kościoła. Za nim znalazłem przejście między kamienicami prowadzące do parku. Nie jest ono dobrze widoczne z głównej ulicy, dlatego prawdopodobnie wcześniej mijałem je wiele razy.\n\nW parku spotkałem sąsiadkę, którą poznałem podczas przeprowadzki. Zapytałem ją o bibliotekę i sklep spożywczy. Pokazała mi krótszą drogę do obu miejsc, ale ostrzegła, że po deszczu ścieżka przez park robi się bardzo błotnista. Zapisałem sobie również trasę prowadzącą chodnikiem wzdłuż ulicy. Jest nieco dłuższa, lecz nie trzeba wchodzić na miękką ziemię.\n\nW sobotę chciałbym pokazać ci okolicę. Jeśli będzie sucho, przejdziemy przez park. Jeśli pogoda nie dopisze, spotkajmy się na placu i przejdźmy do biblioteki ulicą. Możemy potem wypić kawę. Na razie nie znam najlepszej kawiarni w dzielnicy, ale właśnie to jest przyjemne: wciąż mam coś nowego do odkrycia.\n\nDo zobaczenia,\nMichał",
       "questions": [
         {
           "id": "q1",
@@ -926,19 +926,19 @@
         },
         {
           "id": "q3",
-          "question": "Dlaczego Michał zapisał także trasę chodnikiem?",
+          "question": "Dlaczego Michał schował telefon do kieszeni podczas niedzielnego spaceru?",
           "options": [
             {
               "id": "A",
-              "text": "Ścieżka w parku bywa błotnista po deszczu."
+              "text": "Chciał samodzielnie poznawać okolicę, bez ciągłego korzystania z mapy."
             },
             {
               "id": "B",
-              "text": "Sąsiadka nie znała krótszej drogi."
+              "text": "Chciał rozmawiać z sąsiadką bez patrzenia na ekran."
             },
             {
               "id": "C",
-              "text": "Ścieżka w parku jest zamykana w weekendy."
+              "text": "Chciał oszczędzić baterię na drogę do biblioteki."
             }
           ]
         },

@@ -1,0 +1,76 @@
+{
+  "id": "pl-b1.reading.day-084",
+  "day": 84,
+  "level": "A2",
+  "genre": "poradnik",
+  "title": "Umówienie terminu w urzędzie",
+  "text": "Przed wizytą w urzędzie dobrze jest sprawdzić, jak można umówić spotkanie. Nie wszystkie sprawy są przyjmowane w ten sam sposób. W niektórych przypadkach można wybrać termin przez internet, a w innych trzeba wcześniej porozmawiać z pracownikiem.\n\nNa stronie fikcyjnego urzędu w Zielonym Mieście są dwie listy: sprawy wymagające rezerwacji oraz sprawy, z którymi można przyjść bez niej. Magda chce odebrać dokument, ale nie jest pewna, na której liście znajduje się jej sprawa. Zamiast wybierać przypadkowy termin, dzwoni pod numer informacji.\n\nPracownik wyjaśnia jej, że odbiór tego dokumentu nie wymaga rezerwacji. Prosi jednak, żeby Magda przyszła po otrzymaniu wiadomości o jego przygotowaniu. Magda zapisuje godziny pracy punktu odbioru i pyta, co powinna ze sobą zabrać.\n\nJeżeli umawiasz inną wizytę przez internet, zachowaj potwierdzenie. Sprawdź, czy podano w nim datę, godzinę i adres odpowiedniego budynku. Jeśli wiesz, że nie przyjdziesz, odwołaj spotkanie w sposób opisany w potwierdzeniu. Dzięki temu z wolnego terminu może skorzystać inna osoba.",
+  "questions": [
+    {
+      "id": "main-idea",
+      "skill": "main-idea",
+      "question": "Jaką radę daje tekst osobie planującej wizytę?",
+      "options": [
+        "Najpierw sprawdzić sposób obsługi konkretnej sprawy i przygotować się do wizyty.",
+        "Zawsze rezerwować termin przez internet.",
+        "Wybrać dowolny urząd i zapytać o wszystko na miejscu."
+      ],
+      "answer": "Najpierw sprawdzić sposób obsługi konkretnej sprawy i przygotować się do wizyty.",
+      "evidence": "Przed wizytą w urzędzie dobrze jest sprawdzić, jak można umówić spotkanie. Nie wszystkie sprawy są przyjmowane w ten sam sposób.",
+      "explanation": "Tekst pokazuje sprawdzanie rodzaju sprawy, warunków wizyty i potwierdzenia."
+    },
+    {
+      "id": "detail",
+      "skill": "detail",
+      "question": "Co Magda zapisuje po rozmowie?",
+      "options": [
+        "Numer nowej rezerwacji.",
+        "Adres drugiego urzędu.",
+        "Godziny pracy punktu odbioru."
+      ],
+      "answer": "Godziny pracy punktu odbioru.",
+      "evidence": "Magda zapisuje godziny pracy punktu odbioru",
+      "explanation": "Magda chce wiedzieć, kiedy może odebrać dokument."
+    },
+    {
+      "id": "cause",
+      "skill": "cause",
+      "question": "Dlaczego warto odwołać spotkanie, na które nie można przyjść?",
+      "options": [
+        "Żeby automatycznie otrzymać inny dokument.",
+        "Żeby ktoś inny mógł wykorzystać ten termin.",
+        "Żeby pracownik przesłał ponownie adres."
+      ],
+      "answer": "Żeby ktoś inny mógł wykorzystać ten termin.",
+      "evidence": "Dzięki temu z wolnego terminu może skorzystać inna osoba.",
+      "explanation": "Odwołanie zwalnia miejsce dla innego klienta."
+    },
+    {
+      "id": "inference",
+      "skill": "inference",
+      "question": "Magda ma wolny wtorek, ale nie dostała jeszcze wiadomości o dokumencie. Co jest zgodne z informacją pracownika?",
+      "options": [
+        "Poczekać na wiadomość, a potem wybrać godziny odbioru.",
+        "Zarezerwować wtorek i przyjść niezależnie od wiadomości.",
+        "Przyjść we wtorek bez rezerwacji i zażądać dokumentu."
+      ],
+      "answer": "Poczekać na wiadomość, a potem wybrać godziny odbioru.",
+      "evidence": "Pracownik wyjaśnia jej, że odbiór tego dokumentu nie wymaga rezerwacji. Prosi jednak, żeby Magda przyszła po otrzymaniu wiadomości o jego przygotowaniu.",
+      "explanation": "Brak rezerwacji nie oznacza, że dokument jest już gotowy."
+    },
+    {
+      "id": "vocabulary",
+      "skill": "vocabulary",
+      "question": "Co oznacza „przypadkowy termin”?",
+      "options": [
+        "Termin odwołany przez inną osobę.",
+        "Termin wybrany bez sprawdzenia, czy jest odpowiedni.",
+        "Termin uzgodniony po rozmowie z pracownikiem."
+      ],
+      "answer": "Termin wybrany bez sprawdzenia, czy jest odpowiedni.",
+      "evidence": "Zamiast wybierać przypadkowy termin, dzwoni pod numer informacji.",
+      "explanation": "Magda nie chce rezerwować wizyty bez informacji o swojej sprawie."
+    }
+  ],
+  "publicationStatus": "practice"
+}

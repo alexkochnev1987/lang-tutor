@@ -1,0 +1,76 @@
+{
+  "id": "pl-b1.reading.day-077",
+  "day": 77,
+  "level": "A2",
+  "genre": "poradnik",
+  "title": "Mniej marnowania jedzenia",
+  "text": "Przed zakupami warto zajrzeć do lodówki. Czasami kupujemy drugi jogurt albo kolejne pomidory, chociaż w domu mamy jeszcze te produkty. Zapisz najpierw rzeczy, które trzeba zjeść, a dopiero potem przygotuj listę zakupów.\n\nW lodówce Julii jest mały koszyk z napisem „Zjedz najpierw”. Julia wkłada do niego produkty, które chce wykorzystać w najbliższych dniach. Dzięki temu widzi je od razu po otwarciu lodówki i nie musi przeszukiwać wszystkich półek. Na pozostałych półkach trzyma produkty przeznaczone na później. Zawsze sprawdza informacje na opakowaniach.\n\nNie każdy posiłek musi wyglądać tak, jak w przepisie. Jeśli planujesz sałatkę z ogórkiem, ale masz pomidory, możesz wybrać inne warzywo. Przed gotowaniem sprawdź, czy ilość jedzenia odpowiada liczbie osób. Lepiej przygotować dodatkową porcję, gdy ktoś naprawdę jest głodny, niż codziennie mieć pełny talerz resztek.\n\nJulia robi większe zakupy w piątek, a w środę kupuje tylko świeże pieczywo. Ten rytm pasuje do jej pracy. Inna osoba może potrzebować innego planu. Najważniejsze jest znalezienie sposobu, który pomaga pamiętać o jedzeniu już kupionym.",
+  "questions": [
+    {
+      "id": "main-idea",
+      "skill": "main-idea",
+      "question": "Jaki jest główny cel poradnika?",
+      "options": [
+        "Pomóc wykorzystać produkty przed następnymi zakupami.",
+        "Wyjaśnić, jak przechowywać jedzenie na każdej półce.",
+        "Pokazać, jak częściej kupować świeże jedzenie."
+      ],
+      "answer": "Pomóc wykorzystać produkty przed następnymi zakupami.",
+      "evidence": "Najważniejsze jest znalezienie sposobu, który pomaga pamiętać o jedzeniu już kupionym.",
+      "explanation": "Poradnik łączy planowanie zakupów i posiłków z wykorzystywaniem zapasów."
+    },
+    {
+      "id": "detail",
+      "skill": "detail",
+      "question": "Co Julia kupuje w środę?",
+      "options": [
+        "Warzywa na sałatkę.",
+        "Świeże pieczywo.",
+        "Produkty na cały tydzień."
+      ],
+      "answer": "Świeże pieczywo.",
+      "evidence": "Julia robi większe zakupy w piątek, a w środę kupuje tylko świeże pieczywo.",
+      "explanation": "Środowe zakupy są małe."
+    },
+    {
+      "id": "cause",
+      "skill": "cause",
+      "question": "Dlaczego Julia używa specjalnego koszyka?",
+      "options": [
+        "Chce przygotować wszystkie porcje na piątek.",
+        "Chce oddzielić warzywa od jogurtów.",
+        "Chce od razu zauważyć jedzenie do szybkiego wykorzystania."
+      ],
+      "answer": "Chce od razu zauważyć jedzenie do szybkiego wykorzystania.",
+      "evidence": "Dzięki temu widzi je od razu po otwarciu lodówki i nie musi przeszukiwać wszystkich półek.",
+      "explanation": "Koszyk przypomina o produktach, które chce zjeść w najbliższych dniach."
+    },
+    {
+      "id": "inference",
+      "skill": "inference",
+      "question": "W środę Julia widzi w koszyku dwa pomidory, a do kolacji brakuje ogórka. W piątek planuje duże zakupy. Co najlepiej zrobić, stosując obie rady z tekstu?",
+      "options": [
+        "Kupić ogórek razem z pieczywem, a pomidory zostawić do piątku.",
+        "Kupić pieczywo i wykorzystać pomidory w kolacji.",
+        "Zrobić duże zakupy w środę, a kolację przygotować według przepisu."
+      ],
+      "answer": "Kupić pieczywo i wykorzystać pomidory w kolacji.",
+      "evidence": "Nie każdy posiłek musi wyglądać tak, jak w przepisie. Jeśli planujesz sałatkę z ogórkiem, ale masz pomidory, możesz wybrać inne warzywo. Przed gotowaniem sprawdź, czy ilość jedzenia odpowiada liczbie osób. Lepiej przygotować dodatkową porcję, gdy ktoś naprawdę jest głodny, niż codziennie mieć pełny talerz resztek.\n\nJulia robi większe zakupy w piątek, a w środę kupuje tylko świeże pieczywo.",
+      "explanation": "Zmiana składnika pozwala wykorzystać pomidory, a zakup pieczywa nie zmienia środowego planu."
+    },
+    {
+      "id": "vocabulary",
+      "skill": "vocabulary",
+      "question": "Co oznacza tutaj słowo „rytm”?",
+      "options": [
+        "Regularny sposób organizowania zakupów.",
+        "Ilość jedzenia na każdy posiłek.",
+        "Lista produktów potrzebnych w pracy."
+      ],
+      "answer": "Regularny sposób organizowania zakupów.",
+      "evidence": "Julia robi większe zakupy w piątek, a w środę kupuje tylko świeże pieczywo. Ten rytm pasuje do jej pracy.",
+      "explanation": "Rytm oznacza powtarzający się plan zakupów."
+    }
+  ],
+  "publicationStatus": "practice"
+}

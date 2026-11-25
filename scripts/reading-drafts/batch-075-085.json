@@ -8,7 +8,7 @@
       "level": "A2",
       "genre": "ogłoszenie",
       "title": "Zamówienie w kawiarni",
-      "text": "Kawiarnia Pod Zegarem przyjmuje zamówienia na małe spotkania rodzinne. W soboty między godziną dziesiątą a trzynastą można zarezerwować większy stolik na sześć lub osiem osób. Prosimy podać liczbę gości najpóźniej w czwartek wieczorem.\n\nNa miejscu zawsze można kupić kawę, herbatę i lody. Jeśli chcą Państwo zamówić całe ciasto, potrzebujemy informacji dwa dni wcześniej. Do wyboru są ciasto z jabłkami oraz sernik. W dniu spotkania można zamówić dodatkowe porcje z karty, ale nie możemy obiecać, że będzie jeszcze całe ciasto.\n\nDla grup przygotowujemy także talerze z kanapkami. Na jednym talerzu jest sześć kanapek z serem, pomidorami i ogórkami. Możemy zrobić osobny talerz bez sera, jeśli otrzymamy taką prośbę przy rezerwacji. Kelner przynosi napoje dopiero wtedy, gdy goście wybiorą je z karty, żeby kawa nie była zimna.\n\nJeśli zmieni się liczba uczestników, prosimy o telefon. Nie trzeba odwoływać całego spotkania tylko dlatego, że jedna osoba nie przyjdzie. Zmienimy liczbę nakryć na stole.",
+      "text": "Kawiarnia Pod Zegarem przyjmuje zamówienia na małe spotkania rodzinne. W soboty między godziną dziesiątą a trzynastą można zarezerwować większy stolik na sześć lub osiem osób. Prosimy podać liczbę gości najpóźniej w czwartek wieczorem.\n\nNa miejscu zawsze można kupić kawę, herbatę i lody. Jeśli chcą Państwo zamówić całe ciasto, trzeba złożyć zamówienie najpóźniej dwa dni przed spotkaniem. Do wyboru są ciasto z jabłkami oraz sernik. W dniu spotkania można zamówić dodatkowe porcje z karty, ale nie możemy obiecać, że będzie jeszcze całe ciasto.\n\nDla grup przygotowujemy także talerze z kanapkami. Na jednym talerzu jest sześć kanapek z serem, pomidorami i ogórkami. Możemy zrobić osobny talerz bez sera, jeśli otrzymamy taką prośbę przy rezerwacji. Kelner nie stawia kawy na stole przed przyjściem gości, bo mogłaby wystygnąć. Każdy wybiera napój z karty po przyjściu.\n\nJeśli zmieni się liczba uczestników, prosimy o telefon. Nie trzeba odwoływać całego spotkania tylko dlatego, że jedna osoba nie przyjdzie. Zmienimy liczbę nakryć na stole.",
       "questions": [
         {
           "id": "main-idea",
@@ -39,15 +39,15 @@
         {
           "id": "cause",
           "skill": "cause",
-          "question": "Dlaczego kelner czeka z przyniesieniem napojów?",
+          "question": "Dlaczego kelner nie stawia kawy na stole wcześniej?",
           "options": [
             "Żeby kawa pozostała ciepła.",
             "Żeby sprawdzić liczbę nakryć.",
             "Żeby goście najpierw wybrali ciasto."
           ],
           "answer": "Żeby kawa pozostała ciepła.",
-          "evidence": "Kelner przynosi napoje dopiero wtedy, gdy goście wybiorą je z karty, żeby kawa nie była zimna.",
-          "explanation": "Napoje są podawane po wyborze gości, aby kawa nie ostygła."
+          "evidence": "Kelner nie stawia kawy na stole przed przyjściem gości, bo mogłaby wystygnąć.",
+          "explanation": "Kawa przygotowana przed przyjściem gości mogłaby ostygnąć."
         },
         {
           "id": "inference",
@@ -59,7 +59,7 @@
             "Zarezerwować stolik, a całe ciasto zamówić dopiero w sobotę."
           ],
           "answer": "Zarezerwować stolik i zamówić ciasto.",
-          "evidence": "Prosimy podać liczbę gości najpóźniej w czwartek wieczorem.\n\nNa miejscu zawsze można kupić kawę, herbatę i lody. Jeśli chcą Państwo zamówić całe ciasto, potrzebujemy informacji dwa dni wcześniej.",
+          "evidence": "Prosimy podać liczbę gości najpóźniej w czwartek wieczorem.\n\nNa miejscu zawsze można kupić kawę, herbatę i lody. Jeśli chcą Państwo zamówić całe ciasto, trzeba złożyć zamówienie najpóźniej dwa dni przed spotkaniem.",
           "explanation": "Czwartek spełnia oba terminy dla sobotniego spotkania."
         },
         {
@@ -127,15 +127,15 @@
         {
           "id": "inference",
           "skill": "inference",
-          "question": "Olek chce zjeść sałatkę, a inny gość lubi sałatkę z serem. Jak mogą zjeść tę samą potrawę?",
+          "question": "Na kolejnej kolacji jeden gość nie może jeść sera, a inny chce bardzo słodki deser. Które przygotowanie pasuje do sposobu Hani?",
           "options": [
-            "Olek zje wyłącznie pieczone ziemniaki.",
-            "Piotr przygotuje dwie nowe sałatki.",
-            "Drugi gość doda ser do swojej porcji."
+            "Dodać ser i miód od razu do wspólnych potraw.",
+            "Zrobić wyłącznie potrawy bez sera i z dużą ilością miodu.",
+            "Przygotować potrawy bez tych dodatków i podać ser oraz miód osobno."
           ],
-          "answer": "Drugi gość doda ser do swojej porcji.",
-          "evidence": "Hania nie dodała sera do wspólnej sałatki. Postawiła go w osobnej misce na stole, żeby pozostali mogli wziąć tyle, ile chcieli.",
-          "explanation": "Wspólna sałatka jest bez sera, a dodatek można wybrać osobno."
+          "answer": "Przygotować potrawy bez tych dodatków i podać ser oraz miód osobno.",
+          "evidence": "Piotr chciał dodać do niego dużo miodu, lecz Hania najpierw spróbowała owoców. Były już bardzo słodkie, więc wystarczyła jedna łyżeczka. Sos do sałatki był trochę za kwaśny. Piotr dodał do niego jogurt naturalny, a nie więcej soli.\n\nJeden z gości, Olek, napisał przed przyjazdem, że nie może jeść sera. Hania nie dodała sera do wspólnej sałatki. Postawiła go w osobnej misce na stole, żeby pozostali mogli wziąć tyle, ile chcieli.",
+          "explanation": "Hania dostosowuje ilość dodatków do potrzeb gości; oddzielne dodatki pozwalają każdemu wybrać."
         },
         {
           "id": "vocabulary",
@@ -158,7 +158,7 @@
       "level": "A2",
       "genre": "poradnik",
       "title": "Mniej marnowania jedzenia",
-      "text": "Przed zakupami warto zajrzeć do lodówki. Czasami kupujemy drugi jogurt albo kolejne pomidory, chociaż w domu mamy jeszcze te produkty. Zapisz najpierw rzeczy, które trzeba zjeść, a dopiero potem przygotuj listę zakupów.\n\nW mieszkaniu Julii jest mały koszyk z napisem „Zjedz najpierw”. Julia wkłada do niego produkty, które chce wykorzystać w najbliższych dniach. Dzięki temu widzi je od razu po otwarciu lodówki i nie musi przeszukiwać wszystkich półek. Na pozostałych półkach trzyma produkty przeznaczone na później. Zawsze sprawdza informacje na opakowaniach.\n\nNie każdy posiłek musi wyglądać tak, jak w przepisie. Jeśli planujesz sałatkę z ogórkiem, ale masz pomidory, możesz wybrać inne warzywo. Przed gotowaniem sprawdź, czy ilość jedzenia odpowiada liczbie osób. Lepiej przygotować dodatkową porcję, gdy ktoś naprawdę jest głodny, niż codziennie mieć pełny talerz resztek.\n\nJulia robi większe zakupy w piątek, a w środę kupuje tylko świeże pieczywo. Ten rytm pasuje do jej pracy. Inna osoba może potrzebować innego planu. Najważniejsze jest znalezienie sposobu, który pomaga pamiętać o jedzeniu już kupionym.",
+      "text": "Przed zakupami warto zajrzeć do lodówki. Czasami kupujemy drugi jogurt albo kolejne pomidory, chociaż w domu mamy jeszcze te produkty. Zapisz najpierw rzeczy, które trzeba zjeść, a dopiero potem przygotuj listę zakupów.\n\nW lodówce Julii jest mały koszyk z napisem „Zjedz najpierw”. Julia wkłada do niego produkty, które chce wykorzystać w najbliższych dniach. Dzięki temu widzi je od razu po otwarciu lodówki i nie musi przeszukiwać wszystkich półek. Na pozostałych półkach trzyma produkty przeznaczone na później. Zawsze sprawdza informacje na opakowaniach.\n\nNie każdy posiłek musi wyglądać tak, jak w przepisie. Jeśli planujesz sałatkę z ogórkiem, ale masz pomidory, możesz wybrać inne warzywo. Przed gotowaniem sprawdź, czy ilość jedzenia odpowiada liczbie osób. Lepiej przygotować dodatkową porcję, gdy ktoś naprawdę jest głodny, niż codziennie mieć pełny talerz resztek.\n\nJulia robi większe zakupy w piątek, a w środę kupuje tylko świeże pieczywo. Ten rytm pasuje do jej pracy. Inna osoba może potrzebować innego planu. Najważniejsze jest znalezienie sposobu, który pomaga pamiętać o jedzeniu już kupionym.",
       "questions": [
         {
           "id": "main-idea",
@@ -308,7 +308,7 @@
       "level": "A2",
       "genre": "dialog",
       "title": "Przesyłka do odbioru",
-      "text": "— Dzień dobry. Dostałem wiadomość o przesyłce — mówi Kuba w punkcie odbioru. — Czy moja paczka jest już tutaj?\n\n— Proszę pokazać kod z wiadomości — odpowiada pracownica. Po chwili sprawdza dane w komputerze. — Tak, paczka czeka na półce. Ma pan jeszcze jedną przesyłkę?\n\n— Tak, zamówiłem też książkę, ale w wiadomości o książce jest napisane, że dostawa będzie jutro.\n\n— W takim razie dzisiaj wydam panu tylko pierwszą paczkę. Druga jest jeszcze w drodze.\n\nKuba ogląda pudełko. W jednym rogu jest trochę mokre. Pyta, czy może zrobić zdjęcie przed wyjściem z punktu. Pracownica pozwala mu to zrobić i zapisuje informację o stanie opakowania. Wyjaśnia, że nie wie, czy w środku wszystko jest w porządku.\n\n— W domu sprawdzę zawartość — mówi Kuba. — A jutro przyjdę po książkę, jeśli dostanę nową wiadomość.\n\nPracownica pokazuje mu jeszcze kartkę z godzinami pracy. Jutro punkt będzie otwarty od dwunastej, ponieważ rano pracownicy mają szkolenie. Kuba pracuje do czternastej w biurze obok, więc nie będzie musiał zmieniać swoich planów.",
+      "text": "— Dzień dobry. Dostałem wiadomość o przesyłce — mówi Kuba w punkcie odbioru. — Czy moja paczka jest już tutaj?\n\n— Proszę pokazać kod z wiadomości — odpowiada pracownica. Po chwili sprawdza dane w komputerze. — Tak, paczka czeka na półce. Ma pan jeszcze jedną przesyłkę?\n\n— Tak, zamówiłem też książkę, ale w wiadomości o książce jest napisane, że dostawa będzie jutro.\n\n— W takim razie dzisiaj wydam panu tylko pierwszą paczkę. Druga jest jeszcze w drodze.\n\nKuba ogląda pudełko. W jednym rogu jest trochę mokre. Pyta, czy może zrobić zdjęcie przed wyjściem z punktu. Pracownica pozwala mu to zrobić i zapisuje informację o stanie opakowania. Wyjaśnia, że nie wie, czy w środku wszystko jest w porządku.\n\n— W domu sprawdzę zawartość — mówi Kuba. — A jutro przyjdę po książkę, jeśli dostanę nową wiadomość.\n\nPracownica pokazuje mu jeszcze kartkę z godzinami pracy. Jutro punkt będzie otwarty od dwunastej do osiemnastej, ponieważ rano pracownicy mają szkolenie. Kuba pracuje do czternastej w biurze obok, więc nie będzie musiał zmieniać swoich planów.",
       "questions": [
         {
           "id": "main-idea",
@@ -346,21 +346,21 @@
             "Pracownicy mają poranne szkolenie."
           ],
           "answer": "Pracownicy mają poranne szkolenie.",
-          "evidence": "Jutro punkt będzie otwarty od dwunastej, ponieważ rano pracownicy mają szkolenie.",
+          "evidence": "Jutro punkt będzie otwarty od dwunastej do osiemnastej, ponieważ rano pracownicy mają szkolenie.",
           "explanation": "Szkolenie jest powodem zmiany godzin pracy."
         },
         {
           "id": "inference",
           "skill": "inference",
-          "question": "Kuba otrzyma jutro wiadomość o książce o jedenastej. Kiedy może ją odebrać bez wychodzenia z pracy wcześniej?",
+          "question": "Kuba jutro dostaje wiadomość o książce o jedenastej, a o piętnastej ma prywatne spotkanie. W którym przedziale może odebrać książkę po pracy, ale przed spotkaniem?",
           "options": [
-            "Po czternastej.",
-            "O jedenastej przed otwarciem punktu.",
-            "O dwunastej, podczas swojej pracy."
+            "Między czternastą a piętnastą.",
+            "Między jedenastą a dwunastą.",
+            "Między trzynastą a czternastą, przed końcem pracy."
           ],
-          "answer": "Po czternastej.",
-          "evidence": "Jutro punkt będzie otwarty od dwunastej, ponieważ rano pracownicy mają szkolenie. Kuba pracuje do czternastej w biurze obok, więc nie będzie musiał zmieniać swoich planów.",
-          "explanation": "Po pracy punkt będzie już otwarty."
+          "answer": "Między czternastą a piętnastą.",
+          "evidence": "Jutro punkt będzie otwarty od dwunastej do osiemnastej, ponieważ rano pracownicy mają szkolenie. Kuba pracuje do czternastej w biurze obok, więc nie będzie musiał zmieniać swoich planów.",
+          "explanation": "Po czternastej Kuba kończy pracę, punkt jest czynny, a spotkanie zaczyna się o piętnastej."
         },
         {
           "id": "vocabulary",
@@ -427,15 +427,15 @@
         {
           "id": "inference",
           "skill": "inference",
-          "question": "Kurs może wymagać wcześniejszej wpłaty. Która cecha konta jest więc dla Daniela szczególnie ważna?",
+          "question": "Daniel rozważa konto z bezpłatnymi przelewami, lecz z ograniczonym dostępem do oszczędności przez osiem miesięcy. Dlaczego powinien dokładnie sprawdzić tę ofertę?",
           "options": [
-            "Możliwość zaciągnięcia większego kredytu.",
-            "Możliwość zmiany pracownika banku.",
-            "Możliwość wypłaty potrzebnej części pieniędzy."
+            "Planuje w tym czasie zaciągnąć kredyt na codzienne wydatki.",
+            "Chce wykonywać kilka przelewów dziennie.",
+            "Kurs zaczyna się wcześniej, niż odzyska swobodny dostęp do pieniędzy."
           ],
-          "answer": "Możliwość wypłaty potrzebnej części pieniędzy.",
-          "evidence": "Nie znam jeszcze dokładnej ceny kursu, dlatego chcę mieć możliwość korzystania z części oszczędności.",
-          "explanation": "Musi móc skorzystać z oszczędności, gdy pojawi się koszt kursu."
+          "answer": "Kurs zaczyna się wcześniej, niż odzyska swobodny dostęp do pieniędzy.",
+          "evidence": "Zbieram pieniądze na kurs zawodowy, który zacznie się za pół roku. Nie znam jeszcze dokładnej ceny kursu, dlatego chcę mieć możliwość korzystania z części oszczędności.",
+          "explanation": "Sześć miesięcy to mniej niż osiem; Daniel może potrzebować pieniędzy przed końcem ograniczenia."
         },
         {
           "id": "vocabulary",
@@ -533,7 +533,7 @@
       "level": "A2",
       "genre": "opowiadanie",
       "title": "Zgłoszenie problemu z internetem",
-      "text": "W środę rano Zuzanna nie mogła rozpocząć pracy przy komputerze, ponieważ w jej mieszkaniu nie działał internet. Sprawdziła, czy problem występuje również w telefonie po połączeniu z domową siecią. Telefon także nie miał dostępu do internetu. Zuzanna zapisała godzinę, o której zauważyła awarię.\n\nZadzwoniła do firmy, od której ma internet. Pracownik zapytał o numer umowy i o to, czy na urządzeniu świecą się lampki. Zuzanna podała informacje, które mogła sprawdzić. Nie wiedziała, czy problem dotyczy tylko jej mieszkania, czy całego budynku.\n\nPracownik przyjął zgłoszenie i podał jego numer. Obiecał wysłać wiadomość, kiedy będzie wiedział więcej. Zuzanna miała ważne spotkanie o jedenastej, więc nie chciała czekać bez planu. Napisała do koleżanki z pracy, która mieszka blisko. Koleżanka zgodziła się udostępnić jej miejsce przy stole na dwie godziny.\n\nPo spotkaniu Zuzanna dostała wiadomość, że internet znów działa. Wróciła do mieszkania i sprawdziła połączenie. Dopiero gdy komputer i telefon działały prawidłowo, uznała sprawę za zakończoną. Numer zgłoszenia zachowała do końca tygodnia.",
+      "text": "W środę rano Zuzanna nie mogła rozpocząć pracy przy komputerze, ponieważ w jej mieszkaniu nie działał internet. Sprawdziła, czy problem występuje również w telefonie po połączeniu z domową siecią. Telefon także nie miał dostępu do internetu. Zuzanna zapisała godzinę, o której zauważyła awarię.\n\nZadzwoniła do firmy, od której ma internet. Pracownik zapytał o numer umowy i o to, czy na urządzeniu świecą się lampki. Zuzanna podała informacje, które mogła sprawdzić. Nie wiedziała, czy problem dotyczy tylko jej mieszkania, czy całego budynku.\n\nPracownik przyjął zgłoszenie i podał jego numer. Obiecał wysłać wiadomość, kiedy będzie wiedział więcej. Poprosił też, aby w razie dalszych problemów podać numer zgłoszenia. Zuzanna miała ważne spotkanie o jedenastej, więc nie chciała czekać bez planu. Napisała do koleżanki z pracy, która mieszka blisko. Koleżanka zgodziła się udostępnić jej miejsce przy stole na dwie godziny.\n\nPo spotkaniu Zuzanna dostała wiadomość, że internet znów działa. Wróciła do mieszkania i sprawdziła połączenie. Dopiero gdy komputer i telefon działały prawidłowo, uznała sprawę za zakończoną. Numer zgłoszenia zachowała do końca tygodnia.",
       "questions": [
         {
           "id": "main-idea",
@@ -577,15 +577,15 @@
         {
           "id": "inference",
           "skill": "inference",
-          "question": "Gdyby po powrocie telefon działał w domowej sieci, ale komputer nadal nie miał internetu, jak zareagowałaby Zuzanna zgodnie ze swoim podejściem?",
+          "question": "Po wiadomości od firmy Zuzanna wraca do domu. Telefon działa, ale komputer nadal nie ma internetu. Co powinna zrobić zgodnie z opisanym sposobem działania?",
           "options": [
-            "Uznałaby zgłoszenie za zakończone po otrzymaniu wiadomości.",
-            "Nie uznałaby jeszcze problemu za rozwiązany.",
-            "Zgłosiłaby od razu zmianę numeru umowy."
+            "Zakończyć sprawę, bo telefon już działa.",
+            "Zadzwonić ponownie i podać numer zgłoszenia.",
+            "Zgłosić nową umowę bez podawania numeru sprawy."
           ],
-          "answer": "Nie uznałaby jeszcze problemu za rozwiązany.",
-          "evidence": "Dopiero gdy komputer i telefon działały prawidłowo, uznała sprawę za zakończoną.",
-          "explanation": "Sprawdzenie obu urządzeń było jej warunkiem zakończenia sprawy."
+          "answer": "Zadzwonić ponownie i podać numer zgłoszenia.",
+          "evidence": "Pracownik przyjął zgłoszenie i podał jego numer. Obiecał wysłać wiadomość, kiedy będzie wiedział więcej. Poprosił też, aby w razie dalszych problemów podać numer zgłoszenia. Zuzanna miała ważne spotkanie o jedenastej, więc nie chciała czekać bez planu. Napisała do koleżanki z pracy, która mieszka blisko. Koleżanka zgodziła się udostępnić jej miejsce przy stole na dwie godziny.\n\nPo spotkaniu Zuzanna dostała wiadomość, że internet znów działa. Wróciła do mieszkania i sprawdziła połączenie. Dopiero gdy komputer i telefon działały prawidłowo, uznała sprawę za zakończoną.",
+          "explanation": "Dopóki jedno urządzenie nie działa, sprawa nie jest zamknięta; numer umożliwia nawiązanie do zgłoszenia."
         },
         {
           "id": "vocabulary",
@@ -683,7 +683,7 @@
       "level": "B1",
       "genre": "wiadomość",
       "title": "Spacer po nowej dzielnicy",
-      "text": "Cześć, Kasiu!\n\nW zeszłym tygodniu przeprowadziłem się na drugą stronę miasta. Do tej pory znałem tę dzielnicę głównie z okna autobusu, więc w niedzielę postanowiłem przejść się bez konkretnego celu. Wziąłem ze sobą telefon, ale schowałem go do kieszeni, żeby nie patrzeć cały czas na mapę. Chciałem sam odkryć kilka miejsc.\n\nNajpierw trafiłem na niewielki plac, na którym w dni robocze działa targ. W niedzielę było tam spokojnie, a obok fontanny siedziało kilka osób z kawą. Z placu poszedłem w stronę starego kościoła. Za nim znalazłem przejście między kamienicami prowadzące do parku. Nie jest ono dobrze widoczne z głównej ulicy, dlatego prawdopodobnie wcześniej mijałem je wiele razy.\n\nW parku spotkałem sąsiadkę, którą poznałem podczas przeprowadzki. Zapytałem ją o bibliotekę i sklep spożywczy. Pokazała mi krótszą drogę do obu miejsc, ale ostrzegła, że po deszczu ścieżka przez park robi się bardzo błotnista. Zapisałem sobie również trasę prowadzącą chodnikiem wzdłuż ulicy. Jest nieco dłuższa, lecz nie trzeba wchodzić na miękką ziemię.\n\nW sobotę chciałbym pokazać ci okolicę. Jeśli będzie sucho, przejdziemy przez park. Jeśli pogoda się nie uda, spotkajmy się na placu i przejdźmy do biblioteki ulicą. Możemy potem wypić kawę. Na razie nie znam najlepszej kawiarni w dzielnicy, ale właśnie to jest przyjemne: wciąż mam coś nowego do odkrycia.\n\nDo zobaczenia,\nMichał",
+      "text": "Cześć, Kasiu!\n\nW zeszłym tygodniu przeprowadziłem się na drugą stronę miasta. Do tej pory znałem tę dzielnicę głównie z okna autobusu, więc w niedzielę postanowiłem przejść się bez konkretnego celu. Wziąłem ze sobą telefon, ale schowałem go do kieszeni, żeby nie patrzeć cały czas na mapę. Chciałem sam odkryć kilka miejsc.\n\nNajpierw trafiłem na niewielki plac, na którym w dni robocze działa targ. W niedzielę było tam spokojnie, a obok fontanny siedziało kilka osób z kawą. Z placu poszedłem w stronę starego kościoła. Za nim znalazłem przejście między kamienicami prowadzące do parku. Nie jest ono dobrze widoczne z głównej ulicy, dlatego prawdopodobnie wcześniej mijałem je wiele razy.\n\nW parku spotkałem sąsiadkę, którą poznałem podczas przeprowadzki. Zapytałem ją o bibliotekę i sklep spożywczy. Pokazała mi krótszą drogę do obu miejsc, ale ostrzegła, że po deszczu ścieżka przez park robi się bardzo błotnista. Zapisałem sobie również trasę prowadzącą chodnikiem wzdłuż ulicy. Jest nieco dłuższa, lecz nie trzeba wchodzić na miękką ziemię.\n\nW sobotę chciałbym pokazać ci okolicę. Jeśli będzie sucho, przejdziemy przez park. Jeśli pogoda nie dopisze, spotkajmy się na placu i przejdźmy do biblioteki ulicą. Możemy potem wypić kawę. Na razie nie znam najlepszej kawiarni w dzielnicy, ale właśnie to jest przyjemne: wciąż mam coś nowego do odkrycia.\n\nDo zobaczenia,\nMichał",
       "questions": [
         {
           "id": "main-idea",
@@ -695,7 +695,7 @@
             "Porównuje ceny kawy i zakupów w dwóch dzielnicach."
           ],
           "answer": "Opisuje, jak poznaje nową okolicę, i proponuje wspólny spacer.",
-          "evidence": "W sobotę chciałbym pokazać ci okolicę. Jeśli będzie sucho, przejdziemy przez park. Jeśli pogoda się nie uda, spotkajmy się na placu i przejdźmy do biblioteki ulicą. Możemy potem wypić kawę.",
+          "evidence": "W sobotę chciałbym pokazać ci okolicę. Jeśli będzie sucho, przejdziemy przez park. Jeśli pogoda nie dopisze, spotkajmy się na placu i przejdźmy do biblioteki ulicą. Możemy potem wypić kawę.",
           "explanation": "Wcześniejsze akapity opisują odkrywanie miejsc i przygotowanie dwóch tras spaceru."
         },
         {
@@ -714,15 +714,15 @@
         {
           "id": "cause",
           "skill": "cause",
-          "question": "Dlaczego Michał zapisał także trasę chodnikiem?",
+          "question": "Dlaczego Michał schował telefon do kieszeni podczas niedzielnego spaceru?",
           "options": [
-            "Ścieżka w parku bywa błotnista po deszczu.",
-            "Sąsiadka nie znała krótszej drogi.",
-            "Ścieżka w parku jest zamykana w weekendy."
+            "Chciał samodzielnie poznawać okolicę, bez ciągłego korzystania z mapy.",
+            "Chciał rozmawiać z sąsiadką bez patrzenia na ekran.",
+            "Chciał oszczędzić baterię na drogę do biblioteki."
           ],
-          "answer": "Ścieżka w parku bywa błotnista po deszczu.",
-          "evidence": "Pokazała mi krótszą drogę do obu miejsc, ale ostrzegła, że po deszczu ścieżka przez park robi się bardzo błotnista. Zapisałem sobie również trasę prowadzącą chodnikiem wzdłuż ulicy.",
-          "explanation": "Chodnik jest alternatywą, gdy ścieżka jest mokra."
+          "answer": "Chciał samodzielnie poznawać okolicę, bez ciągłego korzystania z mapy.",
+          "evidence": "Wziąłem ze sobą telefon, ale schowałem go do kieszeni, żeby nie patrzeć cały czas na mapę. Chciałem sam odkryć kilka miejsc.",
+          "explanation": "Telefon miał przy sobie, ale zależało mu na samodzielnym odkrywaniu dzielnicy."
         },
         {
           "id": "inference",

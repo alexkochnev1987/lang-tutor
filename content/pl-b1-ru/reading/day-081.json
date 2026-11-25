@@ -1,0 +1,76 @@
+{
+  "id": "pl-b1.reading.day-081",
+  "day": 81,
+  "level": "A2",
+  "genre": "e-mail",
+  "title": "Rozmowa z pracownikiem banku",
+  "text": "Cześć, Marto!\n\nWczoraj byłem w banku, bo chcę lepiej planować swoje oszczędności. Rozmawiałem z pracownikiem o dwóch różnych kontach. Jedno jest przeznaczone na codzienne wydatki, a drugie na pieniądze, których nie potrzebuję od razu. Poprosiłem o informacje na piśmie, żeby spokojnie porównać warunki w domu.\n\nPracownik zapytał, czy interesuje mnie również kredyt. Powiedziałem, że na razie o nim nie myślę. Zbieram pieniądze na kurs zawodowy, który zacznie się za pół roku. Nie znam jeszcze dokładnej ceny kursu, dlatego chcę mieć możliwość korzystania z części oszczędności.\n\nW domu przeczytałem oba opisy kont. W jednej ofercie można wykonać bez opłaty jeden przelew w miesiącu. W drugiej są inne warunki, których jeszcze nie rozumiem. Nie podpisałem żadnej umowy podczas wizyty.\n\nW przyszły wtorek mam ponownie spotkać się z tym samym pracownikiem. Przygotuję dwa pytania o przelewy i jedno o dostęp do pieniędzy. Jeśli masz czas w weekend, możemy razem przeczytać te informacje. Wiem, że ty też niedawno rozmawiałaś w banku o oszczędzaniu.\n\nPozdrawiam,\nDaniel",
+  "questions": [
+    {
+      "id": "main-idea",
+      "skill": "main-idea",
+      "question": "Co Daniel chce osiągnąć dzięki rozmowie w banku?",
+      "options": [
+        "Znaleźć sposób oszczędzania pasujący do jego planów.",
+        "Nauczyć Martę wykonywać przelewy.",
+        "Wybrać kredyt na kurs zawodowy."
+      ],
+      "answer": "Znaleźć sposób oszczędzania pasujący do jego planów.",
+      "evidence": "Zbieram pieniądze na kurs zawodowy, który zacznie się za pół roku. Nie znam jeszcze dokładnej ceny kursu, dlatego chcę mieć możliwość korzystania z części oszczędności.",
+      "explanation": "Porównuje konta z myślą o przyszłych wydatkach."
+    },
+    {
+      "id": "detail",
+      "skill": "detail",
+      "question": "Ile pytań o przelewy chce przygotować Daniel?",
+      "options": [
+        "Trzy.",
+        "Jedno.",
+        "Dwa."
+      ],
+      "answer": "Dwa.",
+      "evidence": "Przygotuję dwa pytania o przelewy i jedno o dostęp do pieniędzy.",
+      "explanation": "Dwa pytania dotyczą przelewów."
+    },
+    {
+      "id": "cause",
+      "skill": "cause",
+      "question": "Dlaczego Daniel poprosił o pisemne informacje?",
+      "options": [
+        "Chce od razu podpisać umowę przez internet.",
+        "Chce porównać oferty bez pośpiechu.",
+        "Marta potrzebuje dokumentów do kredytu."
+      ],
+      "answer": "Chce porównać oferty bez pośpiechu.",
+      "evidence": "Poprosiłem o informacje na piśmie, żeby spokojnie porównać warunki w domu.",
+      "explanation": "Pisemne opisy pozwalają wrócić do warunków po wizycie."
+    },
+    {
+      "id": "inference",
+      "skill": "inference",
+      "question": "Daniel rozważa konto z bezpłatnymi przelewami, lecz z ograniczonym dostępem do oszczędności przez osiem miesięcy. Dlaczego powinien dokładnie sprawdzić tę ofertę?",
+      "options": [
+        "Planuje w tym czasie zaciągnąć kredyt na codzienne wydatki.",
+        "Chce wykonywać kilka przelewów dziennie.",
+        "Kurs zaczyna się wcześniej, niż odzyska swobodny dostęp do pieniędzy."
+      ],
+      "answer": "Kurs zaczyna się wcześniej, niż odzyska swobodny dostęp do pieniędzy.",
+      "evidence": "Zbieram pieniądze na kurs zawodowy, który zacznie się za pół roku. Nie znam jeszcze dokładnej ceny kursu, dlatego chcę mieć możliwość korzystania z części oszczędności.",
+      "explanation": "Sześć miesięcy to mniej niż osiem; Daniel może potrzebować pieniędzy przed końcem ograniczenia."
+    },
+    {
+      "id": "vocabulary",
+      "skill": "vocabulary",
+      "question": "Co oznacza w tym e-mailu „na razie”?",
+      "options": [
+        "W obecnej chwili, choć później może się to zmienić.",
+        "Od bardzo dawna.",
+        "Po zakończeniu kursu."
+      ],
+      "answer": "W obecnej chwili, choć później może się to zmienić.",
+      "evidence": "Powiedziałem, że na razie o nim nie myślę.",
+      "explanation": "Daniel obecnie nie planuje kredytu, ale nie wyklucza go na zawsze."
+    }
+  ],
+  "publicationStatus": "practice"
+}

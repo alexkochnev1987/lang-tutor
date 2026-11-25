@@ -1,0 +1,76 @@
+{
+  "id": "pl-b1.reading.day-076",
+  "day": 76,
+  "level": "A2",
+  "genre": "opowiadanie",
+  "title": "Kolacja dla gości",
+  "text": "W piątek do Hani i Piotra przyjechali znajomi, których dawno nie widzieli. Gospodarze przygotowali zupę pomidorową, pieczone ziemniaki i sałatkę z ogórków. Hania planowała również podać ciasto z jabłkami, ale rano okazało się, że w sklepie nie ma jej ulubionych jabłek.\n\nKupiła więc gruszki i zrobiła mały deser z jogurtem. Piotr chciał dodać do niego dużo miodu, lecz Hania najpierw spróbowała owoców. Były już bardzo słodkie, więc wystarczyła jedna łyżeczka. Sos do sałatki był trochę za kwaśny. Piotr dodał do niego jogurt naturalny, a nie więcej soli.\n\nJeden z gości, Olek, napisał przed przyjazdem, że nie może jeść sera. Hania nie dodała sera do wspólnej sałatki. Postawiła go w osobnej misce na stole, żeby pozostali mogli wziąć tyle, ile chcieli.\n\nPo kolacji zostało trochę ziemniaków i deseru. Goście chętnie zabrali po małym pudełku do domu. Hania zauważyła, że udane spotkanie nie wymaga dokładnego trzymania się planu. Ważniejsze było to, żeby każdy znalazł coś dla siebie i nikt nie musiał długo czekać na posiłek.",
+  "questions": [
+    {
+      "id": "main-idea",
+      "skill": "main-idea",
+      "question": "Co wynika z całej historii?",
+      "options": [
+        "Goście wolą sami przygotować wspólną kolację.",
+        "Dobry posiłek wymaga wcześniejszego kupienia wszystkich składników.",
+        "Udana kolacja zależy od elastyczności i potrzeb gości."
+      ],
+      "answer": "Udana kolacja zależy od elastyczności i potrzeb gości.",
+      "evidence": "Hania zauważyła, że udane spotkanie nie wymaga dokładnego trzymania się planu. Ważniejsze było to, żeby każdy znalazł coś dla siebie i nikt nie musiał długo czekać na posiłek.",
+      "explanation": "Gospodarze zmieniali potrawy i sposób podania zależnie od sytuacji."
+    },
+    {
+      "id": "detail",
+      "skill": "detail",
+      "question": "Czym Hania zastąpiła jabłka w deserze?",
+      "options": [
+        "Gruszkami.",
+        "Miodem.",
+        "Ogórkami."
+      ],
+      "answer": "Gruszkami.",
+      "evidence": "Kupiła więc gruszki i zrobiła mały deser z jogurtem.",
+      "explanation": "Zamiast ciasta z jabłkami powstał deser z gruszkami."
+    },
+    {
+      "id": "cause",
+      "skill": "cause",
+      "question": "Dlaczego do deseru wystarczyło niewiele miodu?",
+      "options": [
+        "Jogurt był bardzo słodki.",
+        "Owoce miały już słodki smak.",
+        "Goście prosili o mniej miodu."
+      ],
+      "answer": "Owoce miały już słodki smak.",
+      "evidence": "Były już bardzo słodkie, więc wystarczyła jedna łyżeczka.",
+      "explanation": "Słodkie owoce nie potrzebowały dużej ilości miodu."
+    },
+    {
+      "id": "inference",
+      "skill": "inference",
+      "question": "Na kolejnej kolacji jeden gość nie może jeść sera, a inny chce bardzo słodki deser. Które przygotowanie pasuje do sposobu Hani?",
+      "options": [
+        "Dodać ser i miód od razu do wspólnych potraw.",
+        "Zrobić wyłącznie potrawy bez sera i z dużą ilością miodu.",
+        "Przygotować potrawy bez tych dodatków i podać ser oraz miód osobno."
+      ],
+      "answer": "Przygotować potrawy bez tych dodatków i podać ser oraz miód osobno.",
+      "evidence": "Piotr chciał dodać do niego dużo miodu, lecz Hania najpierw spróbowała owoców. Były już bardzo słodkie, więc wystarczyła jedna łyżeczka. Sos do sałatki był trochę za kwaśny. Piotr dodał do niego jogurt naturalny, a nie więcej soli.\n\nJeden z gości, Olek, napisał przed przyjazdem, że nie może jeść sera. Hania nie dodała sera do wspólnej sałatki. Postawiła go w osobnej misce na stole, żeby pozostali mogli wziąć tyle, ile chcieli.",
+      "explanation": "Hania dostosowuje ilość dodatków do potrzeb gości; oddzielne dodatki pozwalają każdemu wybrać."
+    },
+    {
+      "id": "vocabulary",
+      "skill": "vocabulary",
+      "question": "Co oznacza „trzymanie się planu”?",
+      "options": [
+        "Podawanie jedzenia w osobnych miskach.",
+        "Robienie wszystkiego tak, jak wcześniej ustalono.",
+        "Układanie nowej listy zakupów."
+      ],
+      "answer": "Robienie wszystkiego tak, jak wcześniej ustalono.",
+      "evidence": "Hania zauważyła, że udane spotkanie nie wymaga dokładnego trzymania się planu.",
+      "explanation": "Hania zmieniła wcześniejsze plany, gdy nie znalazła jabłek."
+    }
+  ],
+  "publicationStatus": "practice"
+}

@@ -1,0 +1,76 @@
+{
+  "id": "pl-b1.reading.day-075",
+  "day": 75,
+  "level": "A2",
+  "genre": "ogłoszenie",
+  "title": "Zamówienie w kawiarni",
+  "text": "Kawiarnia Pod Zegarem przyjmuje zamówienia na małe spotkania rodzinne. W soboty między godziną dziesiątą a trzynastą można zarezerwować większy stolik na sześć lub osiem osób. Prosimy podać liczbę gości najpóźniej w czwartek wieczorem.\n\nNa miejscu zawsze można kupić kawę, herbatę i lody. Jeśli chcą Państwo zamówić całe ciasto, trzeba złożyć zamówienie najpóźniej dwa dni przed spotkaniem. Do wyboru są ciasto z jabłkami oraz sernik. W dniu spotkania można zamówić dodatkowe porcje z karty, ale nie możemy obiecać, że będzie jeszcze całe ciasto.\n\nDla grup przygotowujemy także talerze z kanapkami. Na jednym talerzu jest sześć kanapek z serem, pomidorami i ogórkami. Możemy zrobić osobny talerz bez sera, jeśli otrzymamy taką prośbę przy rezerwacji. Kelner nie stawia kawy na stole przed przyjściem gości, bo mogłaby wystygnąć. Każdy wybiera napój z karty po przyjściu.\n\nJeśli zmieni się liczba uczestników, prosimy o telefon. Nie trzeba odwoływać całego spotkania tylko dlatego, że jedna osoba nie przyjdzie. Zmienimy liczbę nakryć na stole.",
+  "questions": [
+    {
+      "id": "main-idea",
+      "skill": "main-idea",
+      "question": "Co przede wszystkim wyjaśnia ogłoszenie?",
+      "options": [
+        "Jak zamówić napoje i przekąski bez rezerwacji.",
+        "Jak zorganizować spotkanie grupy w kawiarni.",
+        "Jak wybrać ciasto na wynos."
+      ],
+      "answer": "Jak zorganizować spotkanie grupy w kawiarni.",
+      "evidence": "Kawiarnia Pod Zegarem przyjmuje zamówienia na małe spotkania rodzinne.",
+      "explanation": "Tekst obejmuje rezerwację, jedzenie, napoje i zmianę liczby gości."
+    },
+    {
+      "id": "detail",
+      "skill": "detail",
+      "question": "Ile kanapek znajduje się na jednym talerzu?",
+      "options": [
+        "Pięć.",
+        "Osiem.",
+        "Sześć."
+      ],
+      "answer": "Sześć.",
+      "evidence": "Na jednym talerzu jest sześć kanapek z serem, pomidorami i ogórkami.",
+      "explanation": "Podano liczbę kanapek na talerzu."
+    },
+    {
+      "id": "cause",
+      "skill": "cause",
+      "question": "Dlaczego kelner nie stawia kawy na stole wcześniej?",
+      "options": [
+        "Żeby kawa pozostała ciepła.",
+        "Żeby sprawdzić liczbę nakryć.",
+        "Żeby goście najpierw wybrali ciasto."
+      ],
+      "answer": "Żeby kawa pozostała ciepła.",
+      "evidence": "Kelner nie stawia kawy na stole przed przyjściem gości, bo mogłaby wystygnąć.",
+      "explanation": "Kawa przygotowana przed przyjściem gości mogłaby ostygnąć."
+    },
+    {
+      "id": "inference",
+      "skill": "inference",
+      "question": "Osiem osób chce spotkać się w sobotę o jedenastej i zjeść całe ciasto. Co najlepiej zrobić w czwartek?",
+      "options": [
+        "Zarezerwować stolik i zamówić ciasto.",
+        "Zamówić ciasto, a stolik wybrać po przyjściu.",
+        "Zarezerwować stolik, a całe ciasto zamówić dopiero w sobotę."
+      ],
+      "answer": "Zarezerwować stolik i zamówić ciasto.",
+      "evidence": "Prosimy podać liczbę gości najpóźniej w czwartek wieczorem.\n\nNa miejscu zawsze można kupić kawę, herbatę i lody. Jeśli chcą Państwo zamówić całe ciasto, trzeba złożyć zamówienie najpóźniej dwa dni przed spotkaniem.",
+      "explanation": "Czwartek spełnia oba terminy dla sobotniego spotkania."
+    },
+    {
+      "id": "vocabulary",
+      "skill": "vocabulary",
+      "question": "Co oznacza tutaj „liczba nakryć”?",
+      "options": [
+        "Liczba talerzy z kanapkami.",
+        "Liczba przygotowanych porcji ciasta.",
+        "Liczba miejsc przygotowanych przy stole."
+      ],
+      "answer": "Liczba miejsc przygotowanych przy stole.",
+      "evidence": "Nie trzeba odwoływać całego spotkania tylko dlatego, że jedna osoba nie przyjdzie. Zmienimy liczbę nakryć na stole.",
+      "explanation": "Nakrycie to zestaw potrzebny jednej osobie przy stole."
+    }
+  ],
+  "publicationStatus": "practice"
+}
