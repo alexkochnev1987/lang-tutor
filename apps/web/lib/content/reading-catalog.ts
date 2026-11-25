@@ -5,6 +5,7 @@ export interface ReadingCatalogEntry {
   title: string
   file: string
   status: ReadingStatus
+  questionIds?: string[] // Optional for older cached indexes
   day?: number
   level?: 'A1' | 'A2' | 'B1'
 }

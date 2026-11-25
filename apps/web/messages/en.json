@@ -250,7 +250,7 @@
   "readingPreview": {
     "practiceReviewPending": "Practice passage · independent review pending",
     "practice": "Reading practice",
-    "practiceNotice": "Read passages and answer questions. Standalone practice does not change lesson progress.",
+    "practiceNotice": "Practice answers are saved separately from lesson results.",
     "legacy": "Additional passage",
     "title": "Reading",
     "experimental": "Experimental mode",
@@ -266,6 +266,27 @@
     "result": "Reading result",
     "correct": "Correct: {count}",
     "wrong": "Wrong: {count}",
-    "chooseAnother": "Choose another text"
+    "chooseAnother": "Choose another text",
+    "filter": {
+      "all": "All",
+      "new": "New",
+      "missed": "Missed",
+      "unfinished": "Unfinished",
+      "mistakes": "Mistakes",
+      "done": "Completed"
+    },
+    "saveError": "Could not save the answer."
+  },
+  "reviewCenter": {
+    "title": "Review",
+    "missed": "Missed passages",
+    "missedHint": "From completed curriculum days",
+    "unfinished": "Unfinished reading",
+    "unfinishedHint": "Continue remaining questions",
+    "mistakes": "Reading mistakes",
+    "mistakesHint": "Retry incorrect answers",
+    "grammar": "Weak rules",
+    "grammarHint": "Open grammar practice",
+    "retry": "Retry loading"
   }
 }

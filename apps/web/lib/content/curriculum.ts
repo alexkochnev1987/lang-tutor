@@ -1,3 +1,4 @@
+import { readingProgress, readingResultIndex } from './reading-progress'
 /**
  * Загрузка языкового пакета.
  *
@@ -310,14 +311,16 @@ export async function loadLiveReadingText(entry: ReadingCatalogEntry): Promise<R
   return loadReadingEntry('reading', entry)
 }
 
-export async function loadDailyReadingTexts(day: number, count: number, results: { dayNumber: number; exerciseId: string }[]): Promise<ReadingText[]> {
+export async function loadDailyReadingTexts(day: number, count: number, results: import('./reading-progress').ReadingResult[]): Promise<ReadingText[]> {
   if (count <= 0) return []
   const entries = await loadLiveReadingCatalog()
   const seen = new Set<string>()
   const today = new Set<string>()
+  const latest = readingResultIndex(results)
   for (const entry of entries) {
     const prefix = 'ex.reading.' + entry.id + '.'
-    if (results.some(row => row.exerciseId.startsWith(prefix))) seen.add(entry.id)
+    const progress = readingProgress(entry, latest)
+    if (progress.total > 0 && progress.answered === progress.total) seen.add(entry.id)
     if (results.some(row => row.dayNumber === day && row.exerciseId.startsWith(prefix))) today.add(entry.id)
   }
   return Promise.all(selectDailyReadingEntries(entries, day, count, seen, today).map(loadLiveReadingText))

@@ -18,6 +18,7 @@ test('catalog contains only metadata; runtime files strip internal data and keep
   assert.deepEqual(pack.index.entries.map(x => x.file), ['day-054.json', 'day-055.json'])
   assert.equal(pack.index.entries[0].status, 'preview')
   assert.equal(pack.index.entries[0].text, undefined)
+  assert.deepEqual(pack.index.entries[0].questionIds, ['main-idea','detail','cause','inference','vocabulary'])
   assert.equal(pack.files.get('day-054.json').questions.length, 5)
   assert.equal(pack.files.get('day-054.json').questions[0].evidence, undefined)
   assert.equal(pack.files.get('day-054.json').authorModel, undefined)

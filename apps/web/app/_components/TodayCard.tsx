@@ -12,6 +12,7 @@ import { GrammarLink } from './GrammarLink'
 import { DailyWordCounts } from './DailyWordCounts'
 import { WeeklyGoal } from './WeeklyGoal'
 import { useTodayPlan } from './useTodayPlan'
+import { ReviewCenter } from './ReviewCenter'
 
 const KIND_LABEL: Record<CurriculumDay['kind'], string> = {
   diagnostic: 'Диагностика',
@@ -55,6 +56,7 @@ export function TodayCard() {
       ) : plan ? <TodayLessonCard plan={plan} /> : (
         <TodayLessonCard />
       )}
+      <ReviewCenter />
       <DailyWordCounts />
       <WeeklyGoal />
       <Card><Stack gap="sm">

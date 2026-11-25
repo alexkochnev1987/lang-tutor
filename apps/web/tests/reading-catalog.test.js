@@ -42,3 +42,20 @@ it('includes released practice passages but not preview-only passages', () => {
   expect(selectDailyReadingEntries([legacy, practice, preview], 54, 1, new Set(), new Set())).toEqual([practice])
   expect(selectReadingEntry([legacy, practice, preview], 54)).toEqual(practice)
 })
+
+
+import { readingProgress, readingResultIndex, readingBacklog } from '../lib/content/reading-progress'
+const passage = { ...daily, questionIds: ['a','b'] }
+const answer = (exerciseId, correct, time=1) => ({ exerciseId, dayNumber: 54, correct, completedAt: new Date(time) })
+it('separates unfinished passages from completed mistakes and uses latest practice answer', () => {
+  const first = answer('ex.reading.day54.a', false)
+  expect(readingProgress(passage, readingResultIndex([first])).status).toBe('unfinished')
+  const second = answer('ex.reading.day54.b', true)
+  expect(readingProgress(passage, readingResultIndex([first, second])).status).toBe('mistakes')
+  const fixed = answer('practice:ex.reading.day54.a', true, 2)
+  expect(readingProgress(passage, readingResultIndex([fixed, first, second])).status).toBe('done')
+})
+it('counts only missed curriculum texts from completed days', () => {
+  expect(readingBacklog([passage, {...preview, questionIds:['a']}], [], new Set([54,55]))).toEqual({missed:1, unfinished:0, mistakes:0})
+  expect(readingBacklog([passage], [], new Set()).missed).toBe(0)
+})
