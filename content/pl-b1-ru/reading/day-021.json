@@ -1,0 +1,76 @@
+{
+  "id": "pl-b1.reading.day-021",
+  "day": 21,
+  "level": "A1",
+  "genre": "opowiadanie",
+  "title": "Inny plan na niedzielę",
+  "text": "W niedzielę rodzina Nowaków zwykle je obiad w restauracji. Dzisiaj pogoda jest piękna, więc wszyscy chcą spędzić więcej czasu na dworze. Tata przygotowuje kanapki, mama pakuje owoce, a dzieci biorą piłkę i koc. Rodzina jedzie autobusem do dużego parku.\n\nW parku jest dużo ludzi, ale znajdują spokojne miejsce pod drzewem. Dzieci grają w piłkę, a rodzice czytają gazetę. Po jedzeniu wszyscy idą na spacer nad jezioro. Nie zostawiają po sobie śmieci: wkładają je do torby i wyrzucają do kosza. Wieczorem wracają do domu zmęczeni, ale w dobrym humorze.",
+  "questions": [
+    {
+      "id": "main-idea",
+      "skill": "main-idea",
+      "question": "O czym opowiada tekst?",
+      "options": [
+        "O rodzinnym obiedzie w restauracji.",
+        "O pikniku rodziny Nowaków.",
+        "O meczu dzieci w szkole."
+      ],
+      "answer": "O pikniku rodziny Nowaków.",
+      "evidence": "Rodzina jedzie autobusem do dużego parku.",
+      "explanation": "Nowakowie biorą jedzenie, jedzą w parku i spędzają tam dzień."
+    },
+    {
+      "id": "detail",
+      "skill": "detail",
+      "question": "Co mama wkłada do torby przed wyjazdem?",
+      "options": [
+        "Piłkę.",
+        "Gazetę.",
+        "Owoce."
+      ],
+      "answer": "Owoce.",
+      "evidence": "mama pakuje owoce",
+      "explanation": "Tata robi kanapki, a mama pakuje owoce."
+    },
+    {
+      "id": "cause",
+      "skill": "cause",
+      "question": "Dlaczego Nowakowie wybierają dziś park?",
+      "options": [
+        "Chcą zjeść obiad nad jeziorem.",
+        "Chcą zagrać w piłkę z inną rodziną.",
+        "Chcą wykorzystać ładną pogodę."
+      ],
+      "answer": "Chcą wykorzystać ładną pogodę.",
+      "evidence": "Dzisiaj pogoda jest piękna, więc wszyscy chcą spędzić więcej czasu na dworze.",
+      "explanation": "Ładna pogoda zachęca ich do wyjścia."
+    },
+    {
+      "id": "inference",
+      "skill": "inference",
+      "question": "Co zobaczy ktoś, kto po pikniku usiądzie pod tym samym drzewem?",
+      "options": [
+        "Puste pudełko po kanapkach.",
+        "Torbę pełną śmieci.",
+        "Czyste miejsce."
+      ],
+      "answer": "Czyste miejsce.",
+      "evidence": "Nie zostawiają po sobie śmieci: wkładają je do torby i wyrzucają do kosza.",
+      "explanation": "Rodzina sprząta po pikniku, więc pod drzewem będzie czysto."
+    },
+    {
+      "id": "vocabulary",
+      "skill": "vocabulary",
+      "question": "Kto jest „na dworze”?",
+      "options": [
+        "Mama w kuchni.",
+        "Dzieci pod drzewem.",
+        "Tata w autobusie."
+      ],
+      "answer": "Dzieci pod drzewem.",
+      "evidence": "Dzisiaj pogoda jest piękna, więc wszyscy chcą spędzić więcej czasu na dworze.",
+      "explanation": "Na dworze znaczy na zewnątrz. Dzieci pod drzewem są na zewnątrz."
+    }
+  ],
+  "publicationStatus": "practice"
+}

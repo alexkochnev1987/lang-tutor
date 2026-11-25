@@ -1,0 +1,76 @@
+{
+  "id": "pl-b1.reading.day-047",
+  "day": 47,
+  "level": "A2",
+  "genre": "dialog",
+  "title": "W aptece przed wyjazdem",
+  "text": "Anna szykowała się na krótką wycieczkę. Miała już swoje leki, ale chciała uzupełnić małą apteczkę. Podczas poprzedniego wyjazdu otarła piętę. Pamiętała, ile czasu zajęło jej wtedy szukanie sklepu w obcym mieście.\n\nW aptece poprosiła o plastry i małe opakowanie środka do dezynfekcji. Farmaceutka spytała, czy Anna chce kupić zwykłe plastry, czy plastry na otarcia. Anna potrzebowała obu rodzajów. Nie chciała jednak dużych opakowań, bo wyjeżdżała tylko na cztery dni. Farmaceutka pokazała jej dwa małe zestawy i wyjaśniła różnicę między nimi. Anna wybrała potrzebne rzeczy.\n\nPrzy okazji zapytała, jak przechowywać jeden z leków, które miała w domu. Farmaceutka poradziła jej sprawdzić tę informację w ulotce z opakowania tego leku. Po powrocie z apteki Anna sprawdziła daty ważności. Potem włożyła apteczkę do plecaka tak, żeby łatwo było ją wyjąć. Reszta rzeczy z domowej szafki została w domu.",
+  "questions": [
+    {
+      "id": "main-idea",
+      "skill": "main-idea",
+      "question": "Po co Anna przyszła do apteki?",
+      "options": [
+        "Chciała znaleźć zestaw, który zastąpi jej domową apteczkę.",
+        "Chciała wymienić swoje leki na mniejsze opakowania.",
+        "Chciała dokupić kilka rzeczy do apteczki na wycieczkę."
+      ],
+      "answer": "Chciała dokupić kilka rzeczy do apteczki na wycieczkę.",
+      "evidence": "Miała już swoje leki, ale chciała uzupełnić małą apteczkę.",
+      "explanation": "Anna szukała tylko rzeczy brakujących przed wyjazdem."
+    },
+    {
+      "id": "detail",
+      "skill": "detail",
+      "question": "Kiedy Anna sprawdziła daty ważności?",
+      "options": [
+        "Przed wyjściem do apteki.",
+        "Podczas oglądania zestawów w aptece.",
+        "Po powrocie z apteki."
+      ],
+      "answer": "Po powrocie z apteki.",
+      "evidence": "Po powrocie z apteki Anna sprawdziła daty ważności.",
+      "explanation": "Anna sprawdziła daty już w domu."
+    },
+    {
+      "id": "cause",
+      "skill": "cause",
+      "question": "Dlaczego Anna wybrała małe opakowania?",
+      "options": [
+        "Chciała zwolnić miejsce w domowej szafce.",
+        "W domu miała już oba rodzaje plastrów.",
+        "Wycieczka miała trwać tylko kilka dni."
+      ],
+      "answer": "Wycieczka miała trwać tylko kilka dni.",
+      "evidence": "Nie chciała jednak dużych opakowań, bo wyjeżdżała tylko na cztery dni.",
+      "explanation": "Krótki wyjazd nie wymagał dużych opakowań."
+    },
+    {
+      "id": "inference",
+      "skill": "inference",
+      "question": "Które miejsce w plecaku Anna najchętniej wybierze na apteczkę?",
+      "options": [
+        "Środek torby z ubraniami włożonej do plecaka.",
+        "Dno plecaka pod zapasowymi ubraniami.",
+        "Kieszeń, do której można szybko sięgnąć."
+      ],
+      "answer": "Kieszeń, do której można szybko sięgnąć.",
+      "evidence": "Potem włożyła apteczkę do plecaka tak, żeby łatwo było ją wyjąć.",
+      "explanation": "Łatwo dostępna kieszeń najlepiej odpowiada sposobowi pakowania Anny."
+    },
+    {
+      "id": "vocabulary",
+      "skill": "vocabulary",
+      "question": "Co tutaj znaczy „uzupełnić” apteczkę?",
+      "options": [
+        "Dodać to, czego w niej brakuje.",
+        "Zamienić jej zawartość na nowy zestaw.",
+        "Sprawdzić, co już w niej jest."
+      ],
+      "answer": "Dodać to, czego w niej brakuje.",
+      "evidence": "Miała już swoje leki, ale chciała uzupełnić małą apteczkę.",
+      "explanation": "Leki już miała, a dokupiła inne potrzebne rzeczy."
+    }
+  ],
+  "publicationStatus": "practice"
+}

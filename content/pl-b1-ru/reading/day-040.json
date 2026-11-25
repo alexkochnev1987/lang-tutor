@@ -1,0 +1,76 @@
+{
+  "id": "pl-b1.reading.day-040",
+  "day": 40,
+  "level": "A2",
+  "genre": "opowiadanie",
+  "title": "Spotkanie w klubie językowym",
+  "text": "Kiedy Igor przeprowadził się do Polski, rozumiał wiele słów, ale bał się rozmawiać z ludźmi. W sklepie zwykle odpowiadał bardzo krótko, a podczas spotkań ze znajomymi częściej słuchał, niż mówił. Pewnego dnia zobaczył informację o bezpłatnym klubie językowym, który spotyka się w bibliotece w każdy wtorek. Postanowił spróbować.\n\nNa pierwszym spotkaniu uczestnicy przedstawili się i podzielili na małe grupy. Rozmawiali o podróżach, pracy oraz codziennych zwyczajach. Prowadząca poprosiła, żeby nie poprawiać każdego błędu w trakcie rozmowy. Po zakończeniu zadania uczestnicy wspólnie zastanawiali się nad trudniejszymi wyrażeniami. Igor poczuł się swobodniej, ponieważ mógł dokończyć swoją wypowiedź.\n\nPo kilku tygodniach zaczął sam proponować tematy do rozmowy. Zauważył też, że łatwiej porozumiewa się z kolegami w pracy. Nadal popełnia błędy, ale nie rezygnuje z rozmowy, gdy nie zna jakiegoś słowa. Próbuje wtedy powiedzieć to samo innymi słowami. Teraz chętnie zaprasza do klubu osoby, które dopiero uczą się polskiego.",
+  "questions": [
+    {
+      "id": "main-idea",
+      "skill": "main-idea",
+      "question": "Co przede wszystkim zmieniły spotkania w życiu Igora?",
+      "options": [
+        "Igor zaczął uczyć polskiego kolegów w pracy.",
+        "Igor nabrał odwagi do rozmów po polsku.",
+        "Igor znalazł w bibliotece nową pracę."
+      ],
+      "answer": "Igor nabrał odwagi do rozmów po polsku.",
+      "evidence": "łatwiej porozumiewa się z kolegami w pracy",
+      "explanation": "Na początku bał się mówić, a z czasem sam proponował tematy i pewniej rozmawiał."
+    },
+    {
+      "id": "detail",
+      "skill": "detail",
+      "question": "Gdzie odbywają się spotkania?",
+      "options": [
+        "W sklepie.",
+        "W biurze Igora.",
+        "W bibliotece."
+      ],
+      "answer": "W bibliotece.",
+      "evidence": "spotyka się w bibliotece w każdy wtorek",
+      "explanation": "Biblioteka jest miejscem spotkań klubu."
+    },
+    {
+      "id": "cause",
+      "skill": "cause",
+      "question": "Co pomogło Igorowi poczuć się swobodniej podczas rozmowy?",
+      "options": [
+        "Mógł przed spotkaniem przygotować wszystkie odpowiedzi.",
+        "Miał czas dokończyć myśl, zanim omówiono błędy.",
+        "Mógł oddać głos prowadzącej, gdy brakowało mu słowa."
+      ],
+      "answer": "Miał czas dokończyć myśl, zanim omówiono błędy.",
+      "evidence": "Igor poczuł się swobodniej, ponieważ mógł dokończyć swoją wypowiedź.",
+      "explanation": "Grupa omawiała trudne wyrażenia dopiero po zadaniu."
+    },
+    {
+      "id": "inference",
+      "skill": "inference",
+      "question": "Koleżanka Igora zna sporo słów, ale boi się odezwać. Dlaczego klub mógłby jej odpowiadać?",
+      "options": [
+        "Będzie mogła uczyć się głównie przez słuchanie wykładów prowadzącej.",
+        "Będzie mogła od razu usłyszeć poprawną wersję każdego swojego zdania.",
+        "Będzie mogła spokojnie poćwiczyć rozmowę w małej grupie."
+      ],
+      "answer": "Będzie mogła spokojnie poćwiczyć rozmowę w małej grupie.",
+      "evidence": "Prowadząca poprosiła, żeby nie poprawiać każdego błędu w trakcie rozmowy.",
+      "explanation": "Podobnie jak Igor koleżanka potrzebuje okazji do mówienia bez ciągłych przerw na poprawki."
+    },
+    {
+      "id": "vocabulary",
+      "skill": "vocabulary",
+      "question": "Jak czuł się Igor, gdy „poczuł się swobodniej”?",
+      "options": [
+        "Mniej się spieszył, bo spotkanie trwało dłużej.",
+        "Mniej się denerwował, kiedy mówił.",
+        "Mniej się męczył, bo zadania były krótsze."
+      ],
+      "answer": "Mniej się denerwował, kiedy mówił.",
+      "evidence": "ponieważ mógł dokończyć swoją wypowiedź",
+      "explanation": "Swoboda dotyczy tu jego samopoczucia w rozmowie."
+    }
+  ],
+  "publicationStatus": "practice"
+}

@@ -1,0 +1,756 @@
+{
+  "version": 1,
+  "status": "draft",
+  "texts": [
+    {
+      "id": "pl-b1.reading.day-065",
+      "day": 65,
+      "level": "A2",
+      "genre": "artykuł",
+      "title": "Porównanie dwóch ofert",
+      "text": "Karolina pracuje w domu i szuka nowego biurka. W pokoju ma tylko sto dziesięć centymetrów wolnego miejsca między oknem a szafą. W pierwszym sklepie znalazła biurko o szerokości stu centymetrów. Kosztuje trzysta dwadzieścia złotych, a dostawa jest bezpłatna. Model nie ma szuflad, ale można go złożyć samodzielnie przy pomocy prostych narzędzi.\n\nDrugi sklep proponuje biurko za dwieście osiemdziesiąt złotych. Dostawa kosztuje jednak siedemdziesiąt złotych. To biurko ma dwie szuflady i jest o dwadzieścia centymetrów szersze od pierwszego. Sprzedawca oferuje też montaż, za który trzeba zapłacić dodatkowo.\n\nKarolina porównuje nie tylko ceny na etykietach, lecz także całkowite koszty i wymiary mebli. Szuflady byłyby przydatne, ponieważ często szuka długopisów i notatek. Ma jednak mały regał, na którym może postawić pudełko z przyborami. Postanawia kupić pierwszy model. Przed zamówieniem jeszcze raz mierzy wolne miejsce, aby mieć pewność, że biurko nie będzie przeszkadzać przy otwieraniu szafy.",
+      "questions": [
+        {
+          "id": "main-idea",
+          "skill": "main-idea",
+          "question": "Co jest najważniejszym tematem tekstu?",
+          "options": [
+            "Wybór mebla na podstawie kilku kryteriów.",
+            "Przygotowanie pokoju do remontu.",
+            "Organizacja dokumentów na regale."
+          ],
+          "answer": "Wybór mebla na podstawie kilku kryteriów.",
+          "evidence": "Karolina porównuje nie tylko ceny na etykietach, lecz także całkowite koszty i wymiary mebli.",
+          "explanation": "Karolina uwzględnia cenę, dostawę i dostępne miejsce."
+        },
+        {
+          "id": "detail",
+          "skill": "detail",
+          "question": "Ile kosztuje dostawa drugiego biurka?",
+          "options": [
+            "Dwieście osiemdziesiąt złotych.",
+            "Siedemdziesiąt złotych.",
+            "Trzysta dwadzieścia złotych."
+          ],
+          "answer": "Siedemdziesiąt złotych.",
+          "evidence": "Dostawa kosztuje jednak siedemdziesiąt złotych.",
+          "explanation": "To koszt dostawy, nie cena mebla."
+        },
+        {
+          "id": "cause",
+          "skill": "cause",
+          "question": "Dlaczego brak szuflad nie jest dla Karoliny dużym problemem?",
+          "options": [
+            "Nie potrzebuje żadnych przyborów.",
+            "Może przechowywać przybory na regale.",
+            "Dostanie je razem z montażem."
+          ],
+          "answer": "Może przechowywać przybory na regale.",
+          "evidence": "Ma jednak mały regał, na którym może postawić pudełko z przyborami.",
+          "explanation": "Regał zastępuje miejsce w szufladach."
+        },
+        {
+          "id": "inference",
+          "skill": "inference",
+          "question": "Które biurko zmieści się w opisanym miejscu?",
+          "options": [
+            "Tylko pierwsze.",
+            "Tylko drugie.",
+            "Oba bez zmiany ustawienia szafy."
+          ],
+          "answer": "Tylko pierwsze.",
+          "evidence": "To biurko ma dwie szuflady i jest o dwadzieścia centymetrów szersze od pierwszego.",
+          "explanation": "Pierwsze ma 100 cm, drugie 120 cm, a wolnego miejsca jest 110 cm."
+        },
+        {
+          "id": "vocabulary",
+          "skill": "vocabulary",
+          "question": "Co oznaczają „całkowite koszty”?",
+          "options": [
+            "Tylko kwotę za montaż.",
+            "Wszystkie kwoty związane z zakupem.",
+            "Cenę widoczną przed dodaniem dostawy."
+          ],
+          "answer": "Wszystkie kwoty związane z zakupem.",
+          "evidence": "całkowite koszty i wymiary mebli",
+          "explanation": "Całkowity koszt obejmuje także dodatkowe opłaty."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-066",
+      "day": 66,
+      "level": "A2",
+      "genre": "dialog",
+      "title": "Zakup przez internet",
+      "text": "— Chcę zamówić buty przez internet — mówi Lena do brata. — W sklepie przy naszej ulicy nie ma mojego rozmiaru.\n\n— Sprawdziłaś tabelę rozmiarów? — pyta Michał. — Ostatnio kupiłem buty w tym samym rozmiarze co zwykle, ale były za krótkie.\n\nLena mierzy stopę i porównuje wynik z tabelą producenta. Według niej potrzebuje większego rozmiaru. Wybiera dostawę do automatu paczkowego obok pracy. Sklep podaje, że paczka dotrze między środą a piątkiem.\n\n— A jeśli buty nie będą pasować? — pyta.\n\n— Zobacz zasady zwrotu przed zapłatą — odpowiada brat. Lena czyta informację o tym konkretnym sklepie. Może odesłać nieużywane buty, ale sama zapłaci za przesyłkę zwrotną. Zapisuje sobie tę informację.\n\nPotrzebuje butów na sobotni spacer. Postanawia nie wyrzucać pudełka i przymierzyć je w domu zaraz po odebraniu paczki. Jeżeli dostawa się opóźni, pójdzie w starych butach. Nie chce kupować drugiej pary tylko dlatego, że pierwsza jeszcze nie dotarła.",
+      "questions": [
+        {
+          "id": "main-idea",
+          "skill": "main-idea",
+          "question": "O czym przede wszystkim rozmawia rodzeństwo?",
+          "options": [
+            "O wyborze trasy sobotniego spaceru.",
+            "O szukaniu pracy w sklepie obuwniczym.",
+            "O tym, jak bez pośpiechu kupić buty online."
+          ],
+          "answer": "O tym, jak bez pośpiechu kupić buty online.",
+          "evidence": "Lena mierzy stopę i porównuje wynik z tabelą producenta.",
+          "explanation": "Rozmowa dotyczy rozmiaru, dostawy i zwrotu zamówienia."
+        },
+        {
+          "id": "detail",
+          "skill": "detail",
+          "question": "Gdzie Lena chce odebrać paczkę?",
+          "options": [
+            "W sklepie przy swojej ulicy.",
+            "W automacie obok pracy.",
+            "W domu brata."
+          ],
+          "answer": "W automacie obok pracy.",
+          "evidence": "Wybiera dostawę do automatu paczkowego obok pracy.",
+          "explanation": "Lena wybrała automat paczkowy."
+        },
+        {
+          "id": "cause",
+          "skill": "cause",
+          "question": "Dlaczego Lena sprawdza zasady zwrotu?",
+          "options": [
+            "Chce wiedzieć, co zrobić, jeśli buty nie będą pasować.",
+            "Chce zmienić miejsce dostawy.",
+            "Chce od razu zamówić drugą parę."
+          ],
+          "answer": "Chce wiedzieć, co zrobić, jeśli buty nie będą pasować.",
+          "evidence": "A jeśli buty nie będą pasować?",
+          "explanation": "Pyta o możliwość zwrotu, gdy rozmiar okaże się niewłaściwy."
+        },
+        {
+          "id": "inference",
+          "skill": "inference",
+          "question": "Paczka dotrze dopiero w poniedziałek. Co Lena najprawdopodobniej zrobi w sobotę?",
+          "options": [
+            "Pójdzie na spacer w starych butach.",
+            "Kupi buty w innym sklepie.",
+            "Poprosi brata o odebranie nowej pary."
+          ],
+          "answer": "Pójdzie na spacer w starych butach.",
+          "evidence": "Jeżeli dostawa się opóźni, pójdzie w starych butach.",
+          "explanation": "Ma gotowy plan na wypadek opóźnienia."
+        },
+        {
+          "id": "vocabulary",
+          "skill": "vocabulary",
+          "question": "Co znaczy „przesyłka zwrotna”?",
+          "options": [
+            "Paczka wysłana do innego automatu.",
+            "Nowa paczka z większym rozmiarem.",
+            "Paczka odsyłana do sprzedawcy."
+          ],
+          "answer": "Paczka odsyłana do sprzedawcy.",
+          "evidence": "Może odesłać nieużywane buty, ale sama zapłaci za przesyłkę zwrotną.",
+          "explanation": "Zwrot oznacza odesłanie towaru do sklepu."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-067",
+      "day": 67,
+      "level": "A2",
+      "genre": "e-mail",
+      "title": "Naprawa zamiast wymiany",
+      "text": "Cześć, Pawle!\n\nWczoraj przestała działać moja lampka stojąca na biurku. Najpierw pomyślałam, że kupię nową, bo wieczorami potrzebuję światła do czytania. Potem przypomniałam sobie o warsztacie, który poleciłeś mi w zeszłym miesiącu. Zaniosłam tam lampkę przed pracą.\n\nPani w warsztacie sprawdziła kabel i włącznik. Powiedziała, że nie trzeba wymieniać całej lampki, ponieważ uszkodzony jest tylko włącznik. Naprawa będzie kosztowała czterdzieści złotych. Podobna nowa lampka w sklepie kosztuje około stu pięćdziesięciu złotych. Na naprawę muszę poczekać dwa dni, bo potrzebna część jest w drodze.\n\nNa szczęście mam jeszcze małą lampę w salonie. Przeniosłam ją na biurko, więc mogę normalnie pracować do piątku. Zostawiłam numer telefonu w warsztacie. Kiedy naprawa będzie gotowa, pracownica wyśle mi wiadomość.\n\nCieszę się, że nie muszę wyrzucać lampki. Dostałam ją od babci, gdy zaczynałam studia. Pasuje do mojego pokoju i mam z nią dobre wspomnienia. Dziękuję za adres warsztatu!\n\nPozdrawiam,\nMagda",
+      "questions": [
+        {
+          "id": "main-idea",
+          "skill": "main-idea",
+          "question": "Dlaczego Magda pisze do Pawła?",
+          "options": [
+            "Pyta, gdzie kupić nowy mebel.",
+            "Chce sprzedać mu lampkę z salonu.",
+            "Opowiada, jak skorzystała z poleconego warsztatu."
+          ],
+          "answer": "Opowiada, jak skorzystała z poleconego warsztatu.",
+          "evidence": "Potem przypomniałam sobie o warsztacie, który poleciłeś mi w zeszłym miesiącu.",
+          "explanation": "Magda dzieli się doświadczeniem i dziękuje za polecenie."
+        },
+        {
+          "id": "detail",
+          "skill": "detail",
+          "question": "Co trzeba wymienić?",
+          "options": [
+            "Włącznik.",
+            "Całą lampkę.",
+            "Kabel."
+          ],
+          "answer": "Włącznik.",
+          "evidence": "uszkodzony jest tylko włącznik",
+          "explanation": "Naprawa dotyczy jednego elementu."
+        },
+        {
+          "id": "cause",
+          "skill": "cause",
+          "question": "Dlaczego naprawa nie będzie gotowa od razu?",
+          "options": [
+            "Magda nie zostawiła numeru telefonu.",
+            "Trzeba poczekać na część.",
+            "Warsztat jest nieczynny do piątku."
+          ],
+          "answer": "Trzeba poczekać na część.",
+          "evidence": "Na naprawę muszę poczekać dwa dni, bo potrzebna część jest w drodze.",
+          "explanation": "Potrzebny element jeszcze nie dotarł."
+        },
+        {
+          "id": "inference",
+          "skill": "inference",
+          "question": "Co pozwala Magdzie poczekać na naprawę bez kupowania nowej lampy?",
+          "options": [
+            "Wieczorem nie musi niczego czytać.",
+            "Może używać innej lampy z mieszkania.",
+            "Babcia przywiezie jej nową lampkę."
+          ],
+          "answer": "Może używać innej lampy z mieszkania.",
+          "evidence": "Przeniosłam ją na biurko, więc mogę normalnie pracować do piątku.",
+          "explanation": "Ma tymczasowe oświetlenie."
+        },
+        {
+          "id": "vocabulary",
+          "skill": "vocabulary",
+          "question": "Co oznacza „uszkodzony”?",
+          "options": [
+            "Zamówiony.",
+            "Odnowiony.",
+            "Zepsuty."
+          ],
+          "answer": "Zepsuty.",
+          "evidence": "uszkodzony jest tylko włącznik",
+          "explanation": "Uszkodzony element nie działa prawidłowo."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-068",
+      "day": 68,
+      "level": "A2",
+      "genre": "ogłoszenie",
+      "title": "Godziny otwarcia sklepów",
+      "text": "Informacja dla klientów centrum handlowego Pod Lipą\n\nW najbliższy czwartek w części budynku będą prowadzone prace przy instalacji elektrycznej. Z tego powodu trzy sklepy na parterze zmienią godziny otwarcia. Pozostałe punkty będą działały według zwykłego planu.\n\nPiekarnia otworzy się o szóstej rano jak zawsze, ale zakończy sprzedaż o dwunastej. Apteka będzie czynna od dziewiątej do jedenastej, a po przerwie ponownie od piętnastej do dziewiętnastej. Sklep papierniczy rozpocznie pracę dopiero o szesnastej. W piątek wszystkie trzy sklepy wrócą do swoich normalnych godzin.\n\nKlienci, którzy zamówili wcześniej tort w piekarni i mieli odebrać go w czwartek po południu, mogą odebrać zamówienie w kawiarni na pierwszym piętrze. Kawiarnia pracuje do osiemnastej. Należy pokazać numer zamówienia, aby pracownik mógł znaleźć właściwe pudełko.\n\nPrzejście do centrum od strony parkingu będzie zamknięte przez cały czwartek. Prosimy korzystać z głównego wejścia od ulicy Lipowej. Przepraszamy za utrudnienia i dziękujemy za wyrozumiałość.",
+      "questions": [
+        {
+          "id": "main-idea",
+          "skill": "main-idea",
+          "question": "Jaki jest główny cel ogłoszenia?",
+          "options": [
+            "Poinformowanie o czasowych zmianach w centrum.",
+            "Zaproszenie klientów na otwarcie piekarni.",
+            "Przedstawienie nowej oferty kawiarni."
+          ],
+          "answer": "Poinformowanie o czasowych zmianach w centrum.",
+          "evidence": "Z tego powodu trzy sklepy na parterze zmienią godziny otwarcia.",
+          "explanation": "Ogłoszenie uprzedza o zmianach i wyjaśnia, jak korzystać z centrum."
+        },
+        {
+          "id": "detail",
+          "skill": "detail",
+          "question": "O której w czwartek sklep papierniczy zacznie pracę?",
+          "options": [
+            "O szesnastej.",
+            "O osiemnastej.",
+            "O piętnastej."
+          ],
+          "answer": "O szesnastej.",
+          "evidence": "Sklep papierniczy rozpocznie pracę dopiero o szesnastej.",
+          "explanation": "Podano dokładną godzinę otwarcia."
+        },
+        {
+          "id": "cause",
+          "skill": "cause",
+          "question": "Dlaczego trzeba pokazać numer zamówienia w kawiarni?",
+          "options": [
+            "Aby zapłacić za miejsce przy stoliku.",
+            "Aby uzyskać dostęp do parkingu.",
+            "Aby pracownik znalazł właściwy tort."
+          ],
+          "answer": "Aby pracownik znalazł właściwy tort.",
+          "evidence": "Należy pokazać numer zamówienia, aby pracownik mógł znaleźć właściwe pudełko.",
+          "explanation": "Numer pozwala rozpoznać zamówienie."
+        },
+        {
+          "id": "inference",
+          "skill": "inference",
+          "question": "Klient chce odwiedzić aptekę i piekarnię podczas jednego wyjścia w czwartek. Która godzina mu odpowiada?",
+          "options": [
+            "Trzynasta.",
+            "Siedemnasta.",
+            "Dziesiąta."
+          ],
+          "answer": "Dziesiąta.",
+          "evidence": "Apteka będzie czynna od dziewiątej do jedenastej, a po przerwie ponownie od piętnastej do dziewiętnastej.",
+          "explanation": "O dziesiątej oba punkty są otwarte."
+        },
+        {
+          "id": "vocabulary",
+          "skill": "vocabulary",
+          "question": "Co oznacza „według zwykłego planu”?",
+          "options": [
+            "Dopiero po wcześniejszym zamówieniu.",
+            "Tylko w godzinach prac elektrycznych.",
+            "Tak jak w pozostałe normalne dni."
+          ],
+          "answer": "Tak jak w pozostałe normalne dni.",
+          "evidence": "Pozostałe punkty będą działały według zwykłego planu.",
+          "explanation": "Ich godziny pracy nie zmieniają się."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-069",
+      "day": 69,
+      "level": "A2",
+      "genre": "opowiadanie",
+      "title": "Lista zakupów na tydzień",
+      "text": "W niedzielę wieczorem Robert i jego partnerka planują posiłki na kolejny tydzień. Do tej pory często kupowali coś w drodze do domu, a potem znajdowali w lodówce podobne produkty. Zdarzało się, że jogurt albo warzywa trzeba było wyrzucić.\n\nTym razem najpierw sprawdzają, co już mają. W szafce stoi paczka ryżu, a w zamrażarce jest trochę kurczaka. W lodówce zostały marchewki i otwarty jogurt naturalny. Postanawiają wykorzystać te produkty w poniedziałek i we wtorek. Na środę planują makaron z sosem pomidorowym, a na czwartek zupę.\n\nRobert zapisuje na liście tylko brakujące składniki. Dzieli ją na kilka części: warzywa, nabiał, pieczywo i pozostałe produkty. Dzięki temu łatwiej będzie mu robić zakupy bez wracania między półkami. Nie zapisuje jeszcze produktów na weekend, ponieważ w piątek przyjadą znajomi, którzy nie powiedzieli, co lubią jeść.\n\nW poniedziałek Robert bierze listę do sklepu. Widzi duże opakowanie jogurtu w promocji, ale go nie kupuje. Najpierw chce wykorzystać to, które ma w domu.",
+      "questions": [
+        {
+          "id": "main-idea",
+          "skill": "main-idea",
+          "question": "Co Robert i jego partnerka próbują zmienić?",
+          "options": [
+            "Godziny przyjazdu znajomych.",
+            "Sposób planowania posiłków i zakupów.",
+            "Miejsce, w którym jedzą obiady."
+          ],
+          "answer": "Sposób planowania posiłków i zakupów.",
+          "evidence": "Tym razem najpierw sprawdzają, co już mają.",
+          "explanation": "Planują zakupy na podstawie produktów już posiadanych."
+        },
+        {
+          "id": "detail",
+          "skill": "detail",
+          "question": "Co planują na środę?",
+          "options": [
+            "Kurczaka z ryżem.",
+            "Makaron z sosem pomidorowym.",
+            "Zupę."
+          ],
+          "answer": "Makaron z sosem pomidorowym.",
+          "evidence": "Na środę planują makaron z sosem pomidorowym",
+          "explanation": "To posiłek zaplanowany na środę."
+        },
+        {
+          "id": "cause",
+          "skill": "cause",
+          "question": "Dlaczego Robert dzieli listę na części?",
+          "options": [
+            "Chce sprawniej poruszać się po sklepie.",
+            "Chce obliczyć cenę posiłku dla gości.",
+            "Chce kupić wszystkie produkty w różnych sklepach."
+          ],
+          "answer": "Chce sprawniej poruszać się po sklepie.",
+          "evidence": "Dzięki temu łatwiej będzie mu robić zakupy bez wracania między półkami.",
+          "explanation": "Grupowanie produktów ułatwia zakupy."
+        },
+        {
+          "id": "inference",
+          "skill": "inference",
+          "question": "Co prawdopodobnie zrobią po ustaleniu menu ze znajomymi?",
+          "options": [
+            "Dopiszą brakujące produkty do listy.",
+            "Zrezygnują z zakupów na weekend.",
+            "Wyrzucą produkty przygotowane na poniedziałek."
+          ],
+          "answer": "Dopiszą brakujące produkty do listy.",
+          "evidence": "Nie zapisuje jeszcze produktów na weekend, ponieważ w piątek przyjadą znajomi, którzy nie powiedzieli, co lubią jeść.",
+          "explanation": "Po ustaleniu preferencji będą mogli zaplanować weekend."
+        },
+        {
+          "id": "vocabulary",
+          "skill": "vocabulary",
+          "question": "Co znaczy „brakujące składniki”?",
+          "options": [
+            "Produkty potrzebne, których jeszcze nie mają.",
+            "Produkty już przygotowane do jedzenia.",
+            "Produkty kupione w promocji."
+          ],
+          "answer": "Produkty potrzebne, których jeszcze nie mają.",
+          "evidence": "Robert zapisuje na liście tylko brakujące składniki.",
+          "explanation": "Na liście są rzeczy, których nie ma w domu."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-070",
+      "day": 70,
+      "level": "A2",
+      "genre": "poradnik",
+      "title": "Reklamacja kurtki",
+      "text": "Kiedy zauważysz wadę w nowej kurtce, warto spokojnie przygotować się do rozmowy ze sprzedawcą. Zosia kupiła kurtkę na jesień w małym sklepie. Po kilku dniach zauważyła, że zamek czasem się zacina, a jeden szew przy kieszeni zaczyna się otwierać.\n\nNajpierw zrobiła zdjęcia obu problemów. Zapisała też datę zakupu i odszukała potwierdzenie płatności kartą. Nie próbowała sama naprawiać zamka, ponieważ chciała pokazać sprzedawcy kurtkę w takim stanie, w jakim zauważyła usterkę.\n\nW sklepie opisała, kiedy pojawiły się problemy. Pracownik zaproponował, że przyjmie kurtkę do sprawdzenia i skontaktuje się z nią po otrzymaniu informacji od kierownika. Zosia poprosiła o pisemne potwierdzenie przyjęcia kurtki. Na kartce znalazła numer zgłoszenia, opis wad i dane kontaktowe sklepu.\n\nPrzed wyjściem zapytała, kiedy może spodziewać się wiadomości. Pracownik obiecał zadzwonić w przyszłym tygodniu. Zosia zapisała numer zgłoszenia w telefonie. Dzięki temu, jeśli będzie musiała ponownie skontaktować się ze sklepem, łatwo wyjaśni, o którą sprawę chodzi.",
+      "questions": [
+        {
+          "id": "main-idea",
+          "skill": "main-idea",
+          "question": "Co tekst pokazuje na przykładzie Zosi?",
+          "options": [
+            "Jak uporządkować informacje podczas zgłaszania wady.",
+            "Jak przygotować kurtkę do sezonu jesiennego.",
+            "Jak znaleźć sklep z tańszymi kurtkami."
+          ],
+          "answer": "Jak uporządkować informacje podczas zgłaszania wady.",
+          "evidence": "Na kartce znalazła numer zgłoszenia, opis wad i dane kontaktowe sklepu.",
+          "explanation": "Tekst opisuje przygotowanie i dokumentowanie reklamacji."
+        },
+        {
+          "id": "detail",
+          "skill": "detail",
+          "question": "Jakie problemy zauważyła Zosia?",
+          "options": [
+            "Zmianę koloru i uszkodzony kaptur.",
+            "Zacinający się zamek i otwierający się szew.",
+            "Zbyt krótkie rękawy i brak kieszeni."
+          ],
+          "answer": "Zacinający się zamek i otwierający się szew.",
+          "evidence": "zamek czasem się zacina, a jeden szew przy kieszeni zaczyna się otwierać",
+          "explanation": "To dwie opisane usterki."
+        },
+        {
+          "id": "cause",
+          "skill": "cause",
+          "question": "Dlaczego Zosia nie naprawiła zamka sama?",
+          "options": [
+            "Chciała pokazać sprzedawcy pierwotny stan usterki.",
+            "Nie wiedziała, w którym sklepie kupiła kurtkę.",
+            "Pracownik wcześniej odmówił przyjęcia kurtki."
+          ],
+          "answer": "Chciała pokazać sprzedawcy pierwotny stan usterki.",
+          "evidence": "chciała pokazać sprzedawcy kurtkę w takim stanie, w jakim zauważyła usterkę",
+          "explanation": "Nie chciała zmieniać stanu przed zgłoszeniem."
+        },
+        {
+          "id": "inference",
+          "skill": "inference",
+          "question": "Jeśli do końca przyszłego tygodnia nie będzie telefonu, co ułatwi Zosi dalszą rozmowę ze sklepem?",
+          "options": [
+            "Numer karty innego klienta.",
+            "Zapisany numer zgłoszenia.",
+            "Zdjęcie nowej kurtki z internetu."
+          ],
+          "answer": "Zapisany numer zgłoszenia.",
+          "evidence": "Zosia zapisała numer zgłoszenia w telefonie.",
+          "explanation": "Numer pozwala odszukać sprawę."
+        },
+        {
+          "id": "vocabulary",
+          "skill": "vocabulary",
+          "question": "Co oznacza „usterka”?",
+          "options": [
+            "Potwierdzenie płatności.",
+            "Problem techniczny lub wada.",
+            "Propozycja zakupu."
+          ],
+          "answer": "Problem techniczny lub wada.",
+          "evidence": "w jakim zauważyła usterkę",
+          "explanation": "Usterka to problem z działaniem lub stanem rzeczy."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-071",
+      "day": 71,
+      "level": "A2",
+      "genre": "wiadomość",
+      "title": "Śniadanie w podróży",
+      "text": "Cześć, Aniu! Piszę, bo jutro mamy pociąg do Gdańska o szóstej czterdzieści. Sprawdziłam godziny otwarcia kawiarni na naszym dworcu. Pierwsza otwiera się dopiero o siódmej, więc nie zdążymy kupić tam śniadania przed odjazdem.\n\nWieczorem przygotuję dla nas kanapki. Mam ser, pomidory i ciemne pieczywo. Pamiętam, że nie lubisz pomidorów w kanapkach, dlatego twoje zrobię z ogórkiem. Spakuję też dwa jabłka i wodę. Jeśli chcesz kawę, możesz przynieść ją w termosie. W pociągu podobno jest wagon restauracyjny, ale nie wiem, od której godziny będzie czynny.\n\nNa dworcu spotkajmy się o szóstej dziesięć przy wejściu od strony przystanku autobusowego. Nie kupuj już niczego na śniadanie po drodze. Mamy wystarczająco dużo jedzenia, a obiad zjemy po przyjeździe.\n\nProszę, napisz mi jeszcze dziś, czy wszystko ci odpowiada. Jeśli masz ochotę na coś innego niż kanapki, mogę przygotować też mały pojemnik z owocami. W podróży wolę mieć jedzenie przy sobie, żeby nie szukać sklepu w ostatniej chwili.",
+      "questions": [
+        {
+          "id": "main-idea",
+          "skill": "main-idea",
+          "question": "Po co autorka wysyła wiadomość?",
+          "options": [
+            "Proponuje zmianę celu podróży.",
+            "Pyta o menu restauracji w Gdańsku.",
+            "Ustala przygotowanie jedzenia i spotkanie przed podróżą."
+          ],
+          "answer": "Ustala przygotowanie jedzenia i spotkanie przed podróżą.",
+          "evidence": "Wieczorem przygotuję dla nas kanapki.",
+          "explanation": "Autorka organizuje śniadanie i miejsce spotkania."
+        },
+        {
+          "id": "detail",
+          "skill": "detail",
+          "question": "Co będzie w kanapkach Ani zamiast pomidorów?",
+          "options": [
+            "Ogórek.",
+            "Jabłko.",
+            "Papryka."
+          ],
+          "answer": "Ogórek.",
+          "evidence": "twoje zrobię z ogórkiem",
+          "explanation": "Autorka pamięta o preferencji Ani."
+        },
+        {
+          "id": "cause",
+          "skill": "cause",
+          "question": "Dlaczego nie planują śniadania w kawiarni na dworcu?",
+          "options": [
+            "Nie chcą spotykać się przed odjazdem.",
+            "Kawiarnia nie sprzedaje kanapek.",
+            "Kawiarnia otwiera się po odjeździe pociągu."
+          ],
+          "answer": "Kawiarnia otwiera się po odjeździe pociągu.",
+          "evidence": "Pierwsza otwiera się dopiero o siódmej, więc nie zdążymy kupić tam śniadania przed odjazdem.",
+          "explanation": "Pociąg odjeżdża o 6:40."
+        },
+        {
+          "id": "inference",
+          "skill": "inference",
+          "question": "Ania chce mieć pewność, że wypije kawę przed przyjazdem. Co może zrobić zgodnie z wiadomością?",
+          "options": [
+            "Wziąć kawę w termosie.",
+            "Poczekać na otwarcie kawiarni na dworcu.",
+            "Kupić kawę po przyjeździe."
+          ],
+          "answer": "Wziąć kawę w termosie.",
+          "evidence": "Jeśli chcesz kawę, możesz przynieść ją w termosie.",
+          "explanation": "Termos pozwala zabrać gotową kawę."
+        },
+        {
+          "id": "vocabulary",
+          "skill": "vocabulary",
+          "question": "Co znaczy „w ostatniej chwili”?",
+          "options": [
+            "Dopiero po zakończeniu podróży.",
+            "Tuż przed wydarzeniem, gdy jest mało czasu.",
+            "Wcześniej niż planowano."
+          ],
+          "answer": "Tuż przed wydarzeniem, gdy jest mało czasu.",
+          "evidence": "żeby nie szukać sklepu w ostatniej chwili",
+          "explanation": "Chodzi o moment tuż przed wyjazdem."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-072",
+      "day": 72,
+      "level": "A2",
+      "genre": "artykuł",
+      "title": "Wspólne gotowanie",
+      "text": "W każdą drugą sobotę w klubie osiedlowym odbywa się spotkanie miłośników gotowania. Uczestnicy nie są zawodowymi kucharzami. Każdy przychodzi z własnym pomysłem na danie albo z chęcią nauczenia się czegoś nowego. Organizatorzy udostępniają garnki, patelnie i duży stół.\n\nTym razem grupa postanowiła przygotować kolację z kilku prostych potraw. Natalia przyniosła przepis na sałatkę, a Adam zaproponował pierogi. Przed rozpoczęciem pracy wszyscy zapisali, jakich składników potrzebują. Okazało się, że brakuje mąki i cebuli. Dwie osoby poszły do pobliskiego sklepu, a pozostali zaczęli przygotowywać warzywa.\n\nW grupie była również Marta, która nie jadła mięsa. Uczestnicy podzielili farsz na dwie części, zanim dodali mięso do jednej z nich. Dzięki temu Marta mogła spróbować pierogów razem z innymi.\n\nPo kolacji każdy opowiedział o jednym triku kuchennym, którego nauczył się podczas spotkania. Natalia po raz pierwszy zobaczyła, jak szybko wałkować ciasto. Organizatorzy poprosili też uczestników o zapisanie przepisów we wspólnym zeszycie, żeby następna grupa mogła z nich korzystać.",
+      "questions": [
+        {
+          "id": "main-idea",
+          "skill": "main-idea",
+          "question": "Jaki jest główny temat artykułu?",
+          "options": [
+            "Zakup wyposażenia do nowej restauracji.",
+            "Nauka gotowania i współpraca sąsiadów.",
+            "Przygotowanie do konkursu zawodowych kucharzy."
+          ],
+          "answer": "Nauka gotowania i współpraca sąsiadów.",
+          "evidence": "Każdy przychodzi z własnym pomysłem na danie albo z chęcią nauczenia się czegoś nowego.",
+          "explanation": "Spotkanie służy wspólnemu gotowaniu i wymianie doświadczeń."
+        },
+        {
+          "id": "detail",
+          "skill": "detail",
+          "question": "Czego brakowało na początku przygotowań?",
+          "options": [
+            "Mąki i cebuli.",
+            "Warzyw i sera.",
+            "Garnków i patelni."
+          ],
+          "answer": "Mąki i cebuli.",
+          "evidence": "Okazało się, że brakuje mąki i cebuli.",
+          "explanation": "Te składniki trzeba było dokupić."
+        },
+        {
+          "id": "cause",
+          "skill": "cause",
+          "question": "Dlaczego uczestnicy podzielili farsz?",
+          "options": [
+            "Nie mieli wystarczająco dużego stołu.",
+            "Chcieli zabrać część farszu do sklepu.",
+            "Chcieli przygotować również porcję bez mięsa."
+          ],
+          "answer": "Chcieli przygotować również porcję bez mięsa.",
+          "evidence": "W grupie była również Marta, która nie jadła mięsa.",
+          "explanation": "Podział umożliwił przygotowanie pierogów dla Marty."
+        },
+        {
+          "id": "inference",
+          "skill": "inference",
+          "question": "Osoba nieobecna na spotkaniu chce później odtworzyć jedno z dań. Gdzie powinna poszukać informacji?",
+          "options": [
+            "Na liście brakujących składników.",
+            "We wspólnym zeszycie z przepisami.",
+            "W wykazie sprzętu kuchennego."
+          ],
+          "answer": "We wspólnym zeszycie z przepisami.",
+          "evidence": "Organizatorzy poprosili też uczestników o zapisanie przepisów we wspólnym zeszycie",
+          "explanation": "Zeszyt ma służyć także następnym grupom."
+        },
+        {
+          "id": "vocabulary",
+          "skill": "vocabulary",
+          "question": "Co znaczy „udostępniają” w pierwszym akapicie?",
+          "options": [
+            "Sprzedają uczestnikom na własność.",
+            "Pozwalają uczestnikom korzystać ze sprzętu.",
+            "Zabierają po zakończeniu pracy."
+          ],
+          "answer": "Pozwalają uczestnikom korzystać ze sprzętu.",
+          "evidence": "Organizatorzy udostępniają garnki, patelnie i duży stół.",
+          "explanation": "Udostępnić oznacza umożliwić korzystanie."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-073",
+      "day": 73,
+      "level": "A2",
+      "genre": "dialog",
+      "title": "Przepis z rodzinnego zeszytu",
+      "text": "— Babciu, chcę upiec twoje ciasto z jabłkami — mówi Ewa podczas niedzielnej wizyty. — Czy masz jeszcze przepis?\n\n— Oczywiście. Jest w niebieskim zeszycie na półce w kuchni.\n\nEwa otwiera zeszyt i zaczyna czytać. Przy jednej z linijek widzi plamę, przez którą nie może odczytać ilości cukru. Pyta babcię, ile trzeba go dodać.\n\n— Dawniej dodawałam pełną szklankę — odpowiada babcia. — Teraz często daję mniej, kiedy jabłka są bardzo słodkie. Najpierw spróbuj owoców.\n\nEwa zapisuje składniki w telefonie. Babcia pokazuje jej jeszcze, jak przygotować formę, żeby ciasto nie przykleiło się do dna. Przypomina też, że nie warto otwierać piekarnika zaraz po rozpoczęciu pieczenia.\n\n— Mogę sfotografować cały przepis? — pyta Ewa.\n\n— Jasne, ale zapisz też nasze uwagi, bo sam zeszyt nie zawiera wszystkich szczegółów.\n\nPo powrocie do domu Ewa przesyła zdjęcie siostrze i dodaje krótką notatkę z rozmowy. Obie chcą upiec ciasto w następną sobotę, kiedy rodzice przyjadą do nich na kawę.",
+      "questions": [
+        {
+          "id": "main-idea",
+          "skill": "main-idea",
+          "question": "Co Ewa robi podczas wizyty u babci?",
+          "options": [
+            "Porządkuje wszystkie książki w kuchni.",
+            "Uczy się przygotowywać rodzinne ciasto.",
+            "Szuka prezentu dla siostry."
+          ],
+          "answer": "Uczy się przygotowywać rodzinne ciasto.",
+          "evidence": "Babciu, chcę upiec twoje ciasto z jabłkami",
+          "explanation": "Ewa poznaje przepis i dodatkowe wskazówki."
+        },
+        {
+          "id": "detail",
+          "skill": "detail",
+          "question": "Czego nie może odczytać w zeszycie?",
+          "options": [
+            "Ilości jabłek.",
+            "Temperatury pieczenia.",
+            "Ilości cukru."
+          ],
+          "answer": "Ilości cukru.",
+          "evidence": "nie może odczytać ilości cukru",
+          "explanation": "Plama zasłania tę informację."
+        },
+        {
+          "id": "cause",
+          "skill": "cause",
+          "question": "Dlaczego babcia radzi najpierw spróbować jabłek?",
+          "options": [
+            "Ilość cukru można dostosować do ich słodkości.",
+            "Chce sprawdzić, czy Ewa zna nazwę odmiany.",
+            "Jabłka trzeba wybrać na dekorację stołu."
+          ],
+          "answer": "Ilość cukru można dostosować do ich słodkości.",
+          "evidence": "Teraz często daję mniej, kiedy jabłka są bardzo słodkie.",
+          "explanation": "Babcia uzależnia ilość cukru od smaku owoców."
+        },
+        {
+          "id": "inference",
+          "skill": "inference",
+          "question": "Co pomoże siostrze Ewy uniknąć błędu, którego nie opisano w zeszycie?",
+          "options": [
+            "Samo zdjęcie okładki zeszytu.",
+            "Lista gości na sobotę.",
+            "Notatka z dodatkowymi wskazówkami babci."
+          ],
+          "answer": "Notatka z dodatkowymi wskazówkami babci.",
+          "evidence": "Po powrocie do domu Ewa przesyła zdjęcie siostrze i dodaje krótką notatkę z rozmowy.",
+          "explanation": "Notatka uzupełnia brakujące szczegóły."
+        },
+        {
+          "id": "vocabulary",
+          "skill": "vocabulary",
+          "question": "Co oznaczają „uwagi” w tym dialogu?",
+          "options": [
+            "Oceny wyglądu ciasta po upieczeniu.",
+            "Nazwy produktów dostępnych w sklepie.",
+            "Dodatkowe wskazówki dotyczące przygotowania."
+          ],
+          "answer": "Dodatkowe wskazówki dotyczące przygotowania.",
+          "evidence": "zapisz też nasze uwagi, bo sam zeszyt nie zawiera wszystkich szczegółów",
+          "explanation": "Uwagi to informacje pomocne przy pieczeniu."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-074",
+      "day": 74,
+      "level": "A2",
+      "genre": "e-mail",
+      "title": "Posiłki na kilka dni",
+      "text": "Cześć, Tomku!\n\nW tym tygodniu mam dużo pracy i trzy wieczorne spotkania, dlatego w niedzielę postanowiłam przygotować obiady na kilka dni. Ugotowałam duży garnek zupy warzywnej i porcję kaszy. Upiekłam też warzywa oraz przygotowałam sos, który można podać zarówno z kaszą, jak i z makaronem.\n\nPodzieliłam jedzenie na pięć pojemników. Dwa zostawiłam w lodówce na poniedziałek i wtorek, a pozostałe zamroziłam. Na każdym pojemniku napisałam nazwę dania i datę przygotowania. W środę po pracy wyjmę jeden z zamrażarki i przygotuję do następnego obiadu.\n\nNie chcę jednak przez cały tydzień jeść dokładnie tego samego. Do kaszy mogę dodać świeży ogórek, a do makaronu trochę sera. Dzięki takim małym zmianom posiłki będą się różnić, mimo że przygotowałam podstawowe składniki jednego dnia.\n\nJeśli w czwartek wpadniesz do mnie po pracy, nie musimy zamawiać jedzenia. Mam dodatkową porcję zupy dla ciebie. Daj tylko znać wcześniej, czy przyjdziesz, żebym mogła przygotować odpowiednią ilość.\n\nPozdrawiam,\nJoanna",
+      "questions": [
+        {
+          "id": "main-idea",
+          "skill": "main-idea",
+          "question": "Dlaczego Joanna opisuje swoje przygotowania?",
+          "options": [
+            "Chce sprzedać niepotrzebne pojemniki.",
+            "Chce zaprosić Tomka do wspólnego robienia zakupów.",
+            "Chce pokazać, jak organizuje posiłki w pracowitym tygodniu."
+          ],
+          "answer": "Chce pokazać, jak organizuje posiłki w pracowitym tygodniu.",
+          "evidence": "w niedzielę postanowiłam przygotować obiady na kilka dni",
+          "explanation": "Planowanie posiłków pomaga jej podczas intensywnego tygodnia."
+        },
+        {
+          "id": "detail",
+          "skill": "detail",
+          "question": "Ile pojemników Joanna zamroziła?",
+          "options": [
+            "Dwa.",
+            "Trzy.",
+            "Pięć."
+          ],
+          "answer": "Trzy.",
+          "evidence": "Dwa zostawiłam w lodówce na poniedziałek i wtorek, a pozostałe zamroziłam.",
+          "explanation": "Z pięciu pojemników dwa są w lodówce, więc trzy zamroziła."
+        },
+        {
+          "id": "cause",
+          "skill": "cause",
+          "question": "Dlaczego Joanna zapisuje nazwy dań i daty na pojemnikach?",
+          "options": [
+            "Chce obliczyć czas pieczenia warzyw.",
+            "Chce przekazać Tomkowi listę zakupów.",
+            "Chce wiedzieć, co znajduje się w pojemnikach i kiedy to przygotowała."
+          ],
+          "answer": "Chce wiedzieć, co znajduje się w pojemnikach i kiedy to przygotowała.",
+          "evidence": "Na każdym pojemniku napisałam nazwę dania i datę przygotowania.",
+          "explanation": "Oznaczenia pomagają rozpoznać jedzenie."
+        },
+        {
+          "id": "inference",
+          "skill": "inference",
+          "question": "Tomek potwierdzi wizytę w czwartek. Co Joanna może dla niego przygotować bez zamawiania jedzenia?",
+          "options": [
+            "Pięć różnych sosów.",
+            "Osobny garnek świeżo ugotowanej kaszy.",
+            "Dodatkową porcję zupy."
+          ],
+          "answer": "Dodatkową porcję zupy.",
+          "evidence": "Mam dodatkową porcję zupy dla ciebie.",
+          "explanation": "Dla Tomka jest już dodatkowa porcja."
+        },
+        {
+          "id": "vocabulary",
+          "skill": "vocabulary",
+          "question": "Co oznacza „porcja”?",
+          "options": [
+            "Ilość jedzenia przeznaczona do jednego posiłku.",
+            "Rodzaj opakowania do zamrażania.",
+            "Data przygotowania dania."
+          ],
+          "answer": "Ilość jedzenia przeznaczona do jednego posiłku.",
+          "evidence": "Mam dodatkową porcję zupy dla ciebie.",
+          "explanation": "Porcja to odpowiednia ilość jedzenia dla jednej osoby lub jednego posiłku."
+        }
+      ]
+    }
+  ]
+}

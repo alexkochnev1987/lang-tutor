@@ -1,0 +1,76 @@
+{
+  "id": "pl-b1.reading.day-056",
+  "day": 56,
+  "level": "A2",
+  "genre": "poradnik",
+  "title": "Jak przygotować się do sprawdzianu",
+  "text": "Jeśli masz kilka dni do sprawdzianu, nie zaczynaj od czytania całego podręcznika od pierwszej do ostatniej strony. Najpierw weź zeszyt i zapisz tematy, które będą na sprawdzianie. Przy każdym temacie postaw znak plus, jeśli dobrze go rozumiesz, lub znak zapytania, jeśli potrzebujesz pomocy.\n\nZacznij od tematów ze znakiem zapytania. Po przeczytaniu krótkiego fragmentu zamknij książkę i spróbuj własnymi słowami powiedzieć, o czym był. Jeżeli nie potrafisz odpowiedzieć na pytanie, wróć do odpowiedniej strony. Nie przepisuj jednak całej lekcji. Wystarczy krótka notatka z przykładem. W ten sposób możesz później szybko sprawdzić, co już pamiętasz.\n\nZostaw ostatni dzień na krótkie powtórzenie wszystkich tematów. Przygotuj kilka zadań bez gotowych odpowiedzi i wykonaj je w takim czasie, jaki zwykle masz na lekcji. Potem sprawdź błędy i wybierz najwyżej dwa najtrudniejsze tematy do ponownej nauki. Zaplanuj również czas na odpoczynek. Wieczorem lepiej zakończyć pracę nad materiałem o wybranej godzinie niż próbować jeszcze raz przeczytać wszystko.",
+  "questions": [
+    {
+      "id": "main-idea",
+      "skill": "main-idea",
+      "question": "Jaką metodę nauki proponuje autor?",
+      "options": [
+        "Powtarzanie tematów po kolei i sprawdzanie wiedzy na końcu.",
+        "Robienie notatek z każdego tematu i powtarzanie ich codziennie.",
+        "Planowanie nauki według własnych trudności i sprawdzanie wiedzy."
+      ],
+      "answer": "Planowanie nauki według własnych trudności i sprawdzanie wiedzy.",
+      "evidence": "Zacznij od tematów ze znakiem zapytania. Po przeczytaniu krótkiego fragmentu zamknij książkę i spróbuj własnymi słowami powiedzieć, o czym był.",
+      "explanation": "Poradnik łączy wybór trudnych tematów, aktywne przypominanie i końcowe sprawdzanie."
+    },
+    {
+      "id": "detail",
+      "skill": "detail",
+      "question": "Ile trudnych tematów trzeba wybrać do ponownej nauki po próbnych zadaniach?",
+      "options": [
+        "Dokładnie trzy.",
+        "Nie więcej niż dwa.",
+        "Tyle, ile było tematów na liście."
+      ],
+      "answer": "Nie więcej niż dwa.",
+      "evidence": "Potem sprawdź błędy i wybierz najwyżej dwa najtrudniejsze tematy do ponownej nauki.",
+      "explanation": "Autor ogranicza liczbę tematów na ostatnią powtórkę."
+    },
+    {
+      "id": "cause",
+      "skill": "cause",
+      "question": "Po co autor zaleca robienie krótkich notatek z przykładem?",
+      "options": [
+        "Żeby łatwiej znaleźć ważne miejsca w książce podczas nauki.",
+        "Żeby później łatwo sprawdzić, co się pamięta.",
+        "Żeby pokazać nauczycielowi, co już się zrobiło."
+      ],
+      "answer": "Żeby później łatwo sprawdzić, co się pamięta.",
+      "evidence": "Wystarczy krótka notatka z przykładem. W ten sposób możesz później szybko sprawdzić, co już pamiętasz.",
+      "explanation": "Notatka ma ułatwić późniejszą kontrolę wiedzy."
+    },
+    {
+      "id": "inference",
+      "skill": "inference",
+      "question": "Ola ma trzy dni do sprawdzianu. Dwa tematy rozumie dobrze, a dwóch nie umie wyjaśnić bez książki. Który plan pasuje do poradnika?",
+      "options": [
+        "Najpierw powtórzyć dwa łatwe tematy, a trudne zostawić na ostatni wieczór.",
+        "Codziennie czytać wszystkie cztery tematy, a ostatniego dnia przepisać notatki.",
+        "Najpierw przećwiczyć dwa trudne tematy, a ostatniego dnia rozwiązać zadania ze wszystkich."
+      ],
+      "answer": "Najpierw przećwiczyć dwa trudne tematy, a ostatniego dnia rozwiązać zadania ze wszystkich.",
+      "evidence": "Zacznij od tematów ze znakiem zapytania. Po przeczytaniu krótkiego fragmentu zamknij książkę i spróbuj własnymi słowami powiedzieć, o czym był. Jeżeli nie potrafisz odpowiedzieć na pytanie, wróć do odpowiedniej strony. Nie przepisuj jednak całej lekcji. Wystarczy krótka notatka z przykładem. W ten sposób możesz później szybko sprawdzić, co już pamiętasz.\n\nZostaw ostatni dzień na krótkie powtórzenie wszystkich tematów. Przygotuj kilka zadań bez gotowych odpowiedzi i wykonaj je w takim czasie, jaki zwykle masz na lekcji.",
+      "explanation": "Plan uwzględnia zarówno pierwszeństwo trudnych tematów, jak i końcową powtórkę całości."
+    },
+    {
+      "id": "vocabulary",
+      "skill": "vocabulary",
+      "question": "Co oznacza „własnymi słowami”?",
+      "options": [
+        "Tak, jak samemu rozumie się tekst, bez kopiowania zdań.",
+        "Krótko, ale bez podawania żadnych przykładów.",
+        "Tak, jak nauczyciel zapisał to na lekcji."
+      ],
+      "answer": "Tak, jak samemu rozumie się tekst, bez kopiowania zdań.",
+      "evidence": "Po przeczytaniu krótkiego fragmentu zamknij książkę i spróbuj własnymi słowami powiedzieć, o czym był.",
+      "explanation": "Trzeba powiedzieć, jak samemu rozumie się tekst, a nie kopiować gotowych zdań."
+    }
+  ],
+  "publicationStatus": "practice"
+}

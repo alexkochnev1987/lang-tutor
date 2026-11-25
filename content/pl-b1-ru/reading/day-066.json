@@ -1,0 +1,76 @@
+{
+  "id": "pl-b1.reading.day-066",
+  "day": 66,
+  "level": "A2",
+  "genre": "dialog",
+  "title": "Zakup przez internet",
+  "text": "— Chcę zamówić buty przez internet — mówi Lena do brata. — W sklepie przy naszej ulicy nie ma mojego rozmiaru.\n\n— Sprawdziłaś tabelę rozmiarów? — pyta Michał. — Ostatnio kupiłem buty w tym samym rozmiarze co zwykle, ale były za krótkie.\n\nLena mierzy stopę i porównuje wynik z tabelą producenta. Według niej potrzebuje większego rozmiaru. Wybiera dostawę do automatu paczkowego obok pracy. Sklep podaje, że paczka dotrze między środą a piątkiem.\n\n— A jeśli buty nie będą pasować? — pyta.\n\n— Zobacz zasady zwrotu przed zapłatą — odpowiada brat. Lena czyta informację o tym konkretnym sklepie. Może odesłać nieużywane buty, ale sama zapłaci za przesyłkę zwrotną. Zapisuje sobie tę informację.\n\nPotrzebuje butów na sobotni spacer. Postanawia nie wyrzucać pudełka i przymierzyć je w domu zaraz po odebraniu paczki. Jeżeli dostawa się opóźni, pójdzie w starych butach. Nie chce kupować drugiej pary tylko dlatego, że pierwsza jeszcze nie dotarła.",
+  "questions": [
+    {
+      "id": "main-idea",
+      "skill": "main-idea",
+      "question": "O czym przede wszystkim rozmawia rodzeństwo?",
+      "options": [
+        "O wyborze trasy sobotniego spaceru.",
+        "O szukaniu pracy w sklepie obuwniczym.",
+        "O tym, jak bez pośpiechu kupić buty online."
+      ],
+      "answer": "O tym, jak bez pośpiechu kupić buty online.",
+      "evidence": "Lena mierzy stopę i porównuje wynik z tabelą producenta.",
+      "explanation": "Rozmowa dotyczy rozmiaru, dostawy i zwrotu zamówienia."
+    },
+    {
+      "id": "detail",
+      "skill": "detail",
+      "question": "Gdzie Lena chce odebrać paczkę?",
+      "options": [
+        "W sklepie przy swojej ulicy.",
+        "W automacie obok pracy.",
+        "W domu brata."
+      ],
+      "answer": "W automacie obok pracy.",
+      "evidence": "Wybiera dostawę do automatu paczkowego obok pracy.",
+      "explanation": "Lena wybrała automat paczkowy."
+    },
+    {
+      "id": "cause",
+      "skill": "cause",
+      "question": "Dlaczego Lena sprawdza zasady zwrotu?",
+      "options": [
+        "Chce wiedzieć, co zrobić, jeśli buty nie będą pasować.",
+        "Chce zmienić miejsce dostawy.",
+        "Chce od razu zamówić drugą parę."
+      ],
+      "answer": "Chce wiedzieć, co zrobić, jeśli buty nie będą pasować.",
+      "evidence": "A jeśli buty nie będą pasować?",
+      "explanation": "Pyta o możliwość zwrotu, gdy rozmiar okaże się niewłaściwy."
+    },
+    {
+      "id": "inference",
+      "skill": "inference",
+      "question": "Paczka dotrze dopiero w poniedziałek. Co Lena najprawdopodobniej zrobi w sobotę?",
+      "options": [
+        "Pójdzie na spacer w starych butach.",
+        "Kupi buty w innym sklepie.",
+        "Poprosi brata o odebranie nowej pary."
+      ],
+      "answer": "Pójdzie na spacer w starych butach.",
+      "evidence": "Jeżeli dostawa się opóźni, pójdzie w starych butach.",
+      "explanation": "Ma gotowy plan na wypadek opóźnienia."
+    },
+    {
+      "id": "vocabulary",
+      "skill": "vocabulary",
+      "question": "Co znaczy „przesyłka zwrotna”?",
+      "options": [
+        "Paczka wysłana do innego automatu.",
+        "Nowa paczka z większym rozmiarem.",
+        "Paczka odsyłana do sprzedawcy."
+      ],
+      "answer": "Paczka odsyłana do sprzedawcy.",
+      "evidence": "Może odesłać nieużywane buty, ale sama zapłaci za przesyłkę zwrotną.",
+      "explanation": "Zwrot oznacza odesłanie towaru do sklepu."
+    }
+  ],
+  "publicationStatus": "practice"
+}

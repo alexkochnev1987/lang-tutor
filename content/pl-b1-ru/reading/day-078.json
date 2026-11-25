@@ -1,0 +1,87 @@
+{
+  "id": "pl-b1.reading.day-078",
+  "day": 78,
+  "level": "A2",
+  "genre": "opowiadanie",
+  "title": "Tomasz przed wizytą w banku",
+  "text": "Tomasz chce chronić swoje dane osobowe. Jedną z ważnych informacji jest jego numer PESEL. Tomasz zastrzegł ten numer. Co to dla niego znaczy? Kiedy ktoś chce podpisać umowę kredytową, bank sprawdza, czy numer jest zastrzeżony. Dzięki temu innej osobie trudniej jest wykorzystać dane Tomasza.\n\nTeraz sam Tomasz chce pożyczyć pieniądze z banku. Zanim podpisze umowę, rozmawia z pracownicą banku. Pyta, co ma zrobić z zastrzeżonym numerem. Pracownica radzi mu sprawdzić, czy przed podpisaniem umowy musi cofnąć zastrzeżenie. Tomasz zapisuje nazwę usługi, żeby później spokojnie przeczytać o niej w domu.\n\nWieczorem otwiera oficjalną stronę z informacjami o tej usłudze. Dowiaduje się, że może cofnąć zastrzeżenie, a później znów zastrzec numer. Po podpisaniu umowy chce dalej chronić swoje dane tak jak wcześniej. W kalendarzu zostawia więc miejsce na jeszcze jedną sprawę po wizycie w banku. Sam zajmie się swoim kontem.",
+  "source": {
+    "url": "https://www.gov.pl/web/gov/zastrzez-swoj-numer-pesel-lub-cofnij-zastrzezenie",
+    "publisher": "Gov.pl",
+    "title": "Zastrzeż swój numer PESEL lub cofnij zastrzeżenie",
+    "facts": [
+      "Financial institutions must check restriction status for loans; eligible users can restrict or revoke restriction through available public services."
+    ],
+    "use": "facts-only",
+    "checked": "2026-11-25",
+    "adaptation": "Original Polish educational composition based on source facts; illustrative people/scenarios are fictional."
+  },
+  "questions": [
+    {
+      "id": "main-idea",
+      "skill": "main-idea",
+      "question": "O czym jest ta historia?",
+      "options": [
+        "O tym, jak Tomasz ustala z bankiem wysokość pożyczki.",
+        "O tym, jak pracownica banku zakłada Tomaszowi konto przez internet.",
+        "O tym, jak Tomasz dba o swój PESEL, kiedy planuje wziąć pożyczkę."
+      ],
+      "answer": "O tym, jak Tomasz dba o swój PESEL, kiedy planuje wziąć pożyczkę.",
+      "evidence": "Pyta, co ma zrobić z zastrzeżonym numerem.",
+      "explanation": "Planowana umowa skłania Tomasza do sprawdzenia, jak postąpić z zastrzeżeniem."
+    },
+    {
+      "id": "detail",
+      "skill": "detail",
+      "question": "Co Tomasz zapisuje podczas rozmowy w banku?",
+      "options": [
+        "Termin podpisania umowy.",
+        "Kwotę planowanej pożyczki.",
+        "Nazwę usługi."
+      ],
+      "answer": "Nazwę usługi.",
+      "evidence": "Tomasz zapisuje nazwę usługi",
+      "explanation": "Nazwa pomoże mu później znaleźć informacje w domu."
+    },
+    {
+      "id": "cause",
+      "skill": "cause",
+      "question": "Dlaczego Tomasz pyta pracownicę o swój zastrzeżony numer?",
+      "options": [
+        "Chce zmienić numer, zanim założy konto.",
+        "Chce dowiedzieć się, kto wcześniej sprawdzał jego dane.",
+        "Chce przygotować się do podpisania własnej umowy."
+      ],
+      "answer": "Chce przygotować się do podpisania własnej umowy.",
+      "evidence": "Teraz sam Tomasz chce pożyczyć pieniądze z banku. Zanim podpisze umowę, rozmawia z pracownicą banku.",
+      "explanation": "Chodzi o czynności potrzebne przy planowanej pożyczce."
+    },
+    {
+      "id": "inference",
+      "skill": "inference",
+      "question": "Przed podpisaniem umowy Tomasz cofnął zastrzeżenie. Co najpewniej wpisze do kalendarza na później?",
+      "options": [
+        "„Jeszcze raz zastrzec swój PESEL”.",
+        "„Sprawdzić nazwę usługi przed pierwszą rozmową”.",
+        "„Otworzyć nowe konto, żeby dostać inny numer”."
+      ],
+      "answer": "„Jeszcze raz zastrzec swój PESEL”.",
+      "evidence": "Po podpisaniu umowy chce dalej chronić swoje dane tak jak wcześniej.",
+      "explanation": "Skoro wcześniej chronił dane przez zastrzeżenie PESEL, po zawarciu umowy może to zrobić ponownie."
+    },
+    {
+      "id": "vocabulary",
+      "skill": "vocabulary",
+      "question": "Co znaczy „cofnąć zastrzeżenie”?",
+      "options": [
+        "Przełożyć sprawdzenie numeru na później.",
+        "Usunąć obecne zastrzeżenie numeru.",
+        "Ponownie włączyć ochronę numeru."
+      ],
+      "answer": "Usunąć obecne zastrzeżenie numeru.",
+      "evidence": "może cofnąć zastrzeżenie, a później znów zastrzec numer.",
+      "explanation": "Najpierw zastrzeżenie przestaje działać, później Tomasz może włączyć je ponownie."
+    }
+  ],
+  "publicationStatus": "practice"
+}

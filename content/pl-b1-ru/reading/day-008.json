@@ -1,0 +1,76 @@
+{
+  "id": "pl-b1.reading.day-008",
+  "day": 8,
+  "level": "A1",
+  "genre": "ogłoszenie",
+  "title": "Mieszkanie z ogrodem",
+  "text": "Do wynajęcia jest mieszkanie na parterze małego domu. Są w nim dwa pokoje, kuchnia i łazienka. Jeden pokój jest duży i jasny, drugi jest mały. Przy domu jest ogród. Można tam pić kawę, czytać książki albo odpoczywać po pracy.\n\nWłaściciel mieszka na pierwszym piętrze. Lubi zwierzęta, więc pies lub kot nie stanowi problemu. W pobliżu jest sklep i przystanek autobusowy. Nie ma garażu, ale rower można zostawić w zamkniętej szopie. Mieszkanie jest wolne od pierwszego grudnia. Mieszkanie można obejrzeć w środę lub piątek po godzinie siedemnastej.",
+  "questions": [
+    {
+      "id": "main-idea",
+      "skill": "main-idea",
+      "question": "Co można zrobić dzięki temu ogłoszeniu?",
+      "options": [
+        "Wynająć sam ogród przy domu.",
+        "Znaleźć mieszkanie do wynajęcia.",
+        "Znaleźć dom do kupienia."
+      ],
+      "answer": "Znaleźć mieszkanie do wynajęcia.",
+      "evidence": "Do wynajęcia jest mieszkanie na parterze małego domu.",
+      "explanation": "Ogłoszenie opisuje mieszkanie i zaprasza osoby, które chcą je obejrzeć."
+    },
+    {
+      "id": "detail",
+      "skill": "detail",
+      "question": "Ile pokoi ma mieszkanie?",
+      "options": [
+        "Trzy.",
+        "Jeden.",
+        "Dwa."
+      ],
+      "answer": "Dwa.",
+      "evidence": "Są w nim dwa pokoje",
+      "explanation": "Oprócz dwóch pokoi są kuchnia i łazienka."
+    },
+    {
+      "id": "cause",
+      "skill": "cause",
+      "question": "Dlaczego można tu mieszkać z psem?",
+      "options": [
+        "Pies może mieszkać tylko w szopie.",
+        "Właściciel ma dla psa osobny pokój.",
+        "Właściciel lubi zwierzęta."
+      ],
+      "answer": "Właściciel lubi zwierzęta.",
+      "evidence": "Lubi zwierzęta, więc pies lub kot nie stanowi problemu.",
+      "explanation": "Właściciel zgadza się na zwierzęta w mieszkaniu."
+    },
+    {
+      "id": "inference",
+      "skill": "inference",
+      "question": "Kto ma wolny czas, kiedy można obejrzeć mieszkanie?",
+      "options": [
+        "Ewa, która ma wolny piątkowy wieczór.",
+        "Jan, który ma czas tylko w sobotę po południu.",
+        "Ania, która ma czas tylko w środę rano."
+      ],
+      "answer": "Ewa, która ma wolny piątkowy wieczór.",
+      "evidence": "Mieszkanie można obejrzeć w środę lub piątek po godzinie siedemnastej.",
+      "explanation": "Piątkowy wieczór Ewy pasuje do podanego terminu."
+    },
+    {
+      "id": "vocabulary",
+      "skill": "vocabulary",
+      "question": "Co oznacza „mieszkanie jest wolne od pierwszego grudnia”?",
+      "options": [
+        "Od tego dnia nie trzeba za nie płacić.",
+        "Od tego dnia można je wynająć.",
+        "Tego dnia można je kupić."
+      ],
+      "answer": "Od tego dnia można je wynająć.",
+      "evidence": "Mieszkanie jest wolne od pierwszego grudnia.",
+      "explanation": "„Wolne” określa tu datę, od której mieszkanie jest dostępne dla najemcy."
+    }
+  ],
+  "publicationStatus": "practice"
+}

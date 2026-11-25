@@ -1,0 +1,76 @@
+{
+  "id": "pl-b1.reading.day-031",
+  "day": 31,
+  "level": "A2",
+  "genre": "e-mail",
+  "title": "Co zobaczymy w Poznaniu?",
+  "text": "Cześć, Mario! W przyszły weekend przyjedziesz do Poznania po raz pierwszy. Mam kilka pomysłów na nasze spotkanie. W sobotę rano odbiorę cię z dworca i pojedziemy tramwajem do mojego mieszkania. Zostawisz tam bagaż, a potem pójdziemy na Stary Rynek. W południe zobaczymy słynne koziołki.\n\nPo obiedzie odwiedzimy muzeum, jeśli uda mi się kupić bilety przez internet. W soboty jest tam dużo turystów, więc chcę kupić bilety wcześniej. Jeśli nie będzie wolnych miejsc, wybierzemy spacer nad Wartą. Wieczorem spotkamy się z moimi znajomymi w restauracji niedaleko domu.\n\nW niedzielę wstaniemy trochę później i zjemy śniadanie w kawiarni. Twój pociąg odjeżdża o szesnastej, dlatego nie pojedziemy do miejsc położonych daleko od centrum. Możemy jeszcze odwiedzić targ i kupić coś na drogę. Napisz, czy taki plan ci odpowiada. Jeśli wolisz inne atrakcje, zmienimy kilka punktów. Najważniejsze, żebyśmy miały czas spokojnie porozmawiać.",
+  "questions": [
+    {
+      "id": "main-idea",
+      "skill": "main-idea",
+      "question": "Po co autorka pisze do Marii?",
+      "options": [
+        "Chce opowiedzieć, jak minął jej ostatni weekend.",
+        "Chce zapytać o połączenia kolejowe z Poznania.",
+        "Chce wspólnie ustalić, jak spędzą weekend."
+      ],
+      "answer": "Chce wspólnie ustalić, jak spędzą weekend.",
+      "evidence": "Napisz, czy taki plan ci odpowiada.",
+      "explanation": "Autorka przedstawia pomysły i pyta Marię o zdanie."
+    },
+    {
+      "id": "detail",
+      "skill": "detail",
+      "question": "Gdzie Maria zostawi bagaż?",
+      "options": [
+        "Na dworcu.",
+        "W muzeum.",
+        "W mieszkaniu znajomej."
+      ],
+      "answer": "W mieszkaniu znajomej.",
+      "evidence": "pojedziemy tramwajem do mojego mieszkania. Zostawisz tam bagaż",
+      "explanation": "Słowo „tam” odnosi się do mieszkania."
+    },
+    {
+      "id": "cause",
+      "skill": "cause",
+      "question": "Dlaczego autorka chce wcześniej kupić bilety do muzeum?",
+      "options": [
+        "W sobotę kasa zamyka się przed obiadem.",
+        "Przy kasie bilety kosztują więcej.",
+        "W sobotę może zabraknąć miejsc."
+      ],
+      "answer": "W sobotę może zabraknąć miejsc.",
+      "evidence": "W soboty jest tam dużo turystów",
+      "explanation": "Autorka spodziewa się wielu osób, więc chce mieć pewność, że obie wejdą."
+    },
+    {
+      "id": "inference",
+      "skill": "inference",
+      "question": "Na kiedy najlepiej zaplanować spotkanie z koleżanką Marii przy targu, dziesięć minut od dworca?",
+      "options": [
+        "Na niedzielę o czternastej.",
+        "Na niedzielę godzinę po odjeździe pociągu.",
+        "Na sobotę w południe podczas pokazu koziołków."
+      ],
+      "answer": "Na niedzielę o czternastej.",
+      "evidence": "Twój pociąg odjeżdża o szesnastej",
+      "explanation": "W niedzielę Maria ma jeszcze czas przed pociągiem, a w sobotę w południe obie mają już plan."
+    },
+    {
+      "id": "vocabulary",
+      "skill": "vocabulary",
+      "question": "Maria kupi coś „na drogę”. Kiedy ma jej się to przydać?",
+      "options": [
+        "Podczas podróży do domu.",
+        "Podczas spaceru ze znajomymi w sobotę.",
+        "Podczas niedzielnego śniadania w kawiarni."
+      ],
+      "answer": "Podczas podróży do domu.",
+      "evidence": "Możemy jeszcze odwiedzić targ i kupić coś na drogę.",
+      "explanation": "Po targu Maria jedzie do domu, więc kupuje coś, co weźmie do pociągu."
+    }
+  ],
+  "publicationStatus": "practice"
+}

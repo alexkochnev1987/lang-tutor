@@ -1,0 +1,76 @@
+{
+  "id": "pl-b1.reading.day-025",
+  "day": 25,
+  "level": "A1",
+  "genre": "opowiadanie",
+  "title": "Mój pierwszy aparat",
+  "text": "Mój tata ma dużo starych zdjęć z wakacji. Jego ulubionym hobby jest fotografia. Kiedy jestem w domu rodziców, często oglądamy razem jego albumy. Na jednej fotografii jest nasz dawny dom, na innej moja siostra i jej pies. Tata pamięta wiele historii związanych z tymi zdjęciami.\n\nW tym miesiącu chcę kupić własny aparat. Moja koleżanka ma mały aparat cyfrowy i pokazuje mi, jak robić zdjęcia. W sobotę idziemy razem do parku. Chcę sfotografować drzewa i ludzi podczas spaceru. Nie chcę od razu kupować drogiego sprzętu, bo dopiero uczę się fotografii.",
+  "questions": [
+    {
+      "id": "main-idea",
+      "skill": "main-idea",
+      "question": "O czym opowiada autor?",
+      "options": [
+        "O tym, jak poznaje fotografię i chce robić własne zdjęcia.",
+        "O tym, jak tata poznał jego koleżankę.",
+        "O tym, jak rodzina mieszkała w dawnym domu."
+      ],
+      "answer": "O tym, jak poznaje fotografię i chce robić własne zdjęcia.",
+      "evidence": "W tym miesiącu chcę kupić własny aparat.",
+      "explanation": "Autor ogląda zdjęcia taty, uczy się od koleżanki i planuje pierwsze własne zdjęcia."
+    },
+    {
+      "id": "detail",
+      "skill": "detail",
+      "question": "Do kogo należą albumy?",
+      "options": [
+        "Do jego siostry.",
+        "Do taty autora.",
+        "Do jego koleżanki."
+      ],
+      "answer": "Do taty autora.",
+      "evidence": "często oglądamy razem jego albumy",
+      "explanation": "Autor ogląda z tatą albumy taty."
+    },
+    {
+      "id": "cause",
+      "skill": "cause",
+      "question": "Dlaczego autor na razie nie chce drogiego aparatu?",
+      "options": [
+        "Chce najpierw sprzedać stare zdjęcia.",
+        "Czeka, aż tata da mu swój aparat.",
+        "Dopiero uczy się robić zdjęcia."
+      ],
+      "answer": "Dopiero uczy się robić zdjęcia.",
+      "evidence": "Nie chcę od razu kupować drogiego sprzętu, bo dopiero uczę się fotografii.",
+      "explanation": "Autor jest na początku nauki, więc nie chce dużo wydawać."
+    },
+    {
+      "id": "inference",
+      "skill": "inference",
+      "question": "Kogo najlepiej zapytać o historię zdjęcia dawnego domu?",
+      "options": [
+        "Tatę autora.",
+        "Siostrę autora.",
+        "Koleżankę autora."
+      ],
+      "answer": "Tatę autora.",
+      "evidence": "Tata pamięta wiele historii związanych z tymi zdjęciami.",
+      "explanation": "Zdjęcie jest w albumie taty, a tata zna historie rodzinnych fotografii."
+    },
+    {
+      "id": "vocabulary",
+      "skill": "vocabulary",
+      "question": "Co znaczy „własny aparat” w planach autora?",
+      "options": [
+        "Aparat, który koleżanka pożyczy mu na spacer.",
+        "Aparat, który kupi dla siebie.",
+        "Aparat, który tata da mu do ręki na chwilę."
+      ],
+      "answer": "Aparat, który kupi dla siebie.",
+      "evidence": "W tym miesiącu chcę kupić własny aparat.",
+      "explanation": "Własny aparat należy do autora. Pożyczony trzeba oddać."
+    }
+  ],
+  "publicationStatus": "practice"
+}

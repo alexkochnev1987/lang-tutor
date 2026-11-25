@@ -1,0 +1,76 @@
+{
+  "id": "pl-b1.reading.day-041",
+  "day": 41,
+  "level": "A2",
+  "genre": "artykuł",
+  "title": "Wspólny ogród",
+  "text": "Na miejscu starego parkingu mieszkańcy założyli ogród. Przez kilka miesięcy przygotowywali ziemię i przynosili narzędzia z domu. Na początku każdy miał swój kawałek ziemi, czyli własną grządkę. Po jakimś czasie sąsiedzi zauważyli, że kiedy pracują razem, mają więcej miejsca na rośliny i lepiej wykorzystują wodę.\n\nTeraz mieszkańcy umawiają się, kto i kiedy podleje ogród. Jedni wolą przyjść rano przed pracą, inni mają czas wieczorem albo w weekend. Dzieci też pomagają, kiedy praca jest dla nich łatwa. Gdy warzywa są już gotowe do zebrania, uczestnicy dzielą je między siebie. Jeśli zostaje nadmiar warzyw, zanoszą go do kuchni społecznej.\n\nDla sąsiadów ważne jest też coś innego. Dawniej mijali się na schodach, a dziś dzięki ogrodowi spędzają razem czas. W przyszłym roku chcą zaprosić na warsztaty także ludzi z innych osiedli. Pokażą im, jak uprawiać warzywa w mieście.",
+  "questions": [
+    {
+      "id": "main-idea",
+      "skill": "main-idea",
+      "question": "Co zmienił wspólny ogród?",
+      "options": [
+        "Mieszkańcy prowadzą kuchnię i uczą dzieci gotować.",
+        "Mieszkańcy urządzają warsztaty zamiast pracować w ogrodzie.",
+        "Mieszkańcy razem uprawiają warzywa i lepiej się znają."
+      ],
+      "answer": "Mieszkańcy razem uprawiają warzywa i lepiej się znają.",
+      "evidence": "Dawniej mijali się na schodach, a dziś dzięki ogrodowi spędzają razem czas.",
+      "explanation": "Wspólna praca przy roślinach pozwala sąsiadom lepiej się poznać."
+    },
+    {
+      "id": "detail",
+      "skill": "detail",
+      "question": "Komu mieszkańcy oddają warzywa, które zostają po podziale?",
+      "options": [
+        "Kuchni społecznej.",
+        "Osobom z innych osiedli.",
+        "Dzieciom, które pomagały w ogrodzie."
+      ],
+      "answer": "Kuchni społecznej.",
+      "evidence": "Jeśli zostaje nadmiar warzyw, zanoszą go do kuchni społecznej.",
+      "explanation": "Warzywa pozostałe po podziale trafiają do kuchni."
+    },
+    {
+      "id": "cause",
+      "skill": "cause",
+      "question": "Dlaczego jedni podlewają ogród rano, a inni wieczorem?",
+      "options": [
+        "Każda grządka ma swoją porę podlewania.",
+        "Dzieci potrzebują pomocy przy wieczornym podlewaniu.",
+        "Mają wolny czas o różnych porach."
+      ],
+      "answer": "Mają wolny czas o różnych porach.",
+      "evidence": "Jedni wolą przyjść rano przed pracą, inni mają czas wieczorem albo w weekend.",
+      "explanation": "Sąsiedzi wybierają porę, która im odpowiada."
+    },
+    {
+      "id": "inference",
+      "skill": "inference",
+      "question": "Tomek mieszka daleko i chce zacząć uprawiać warzywa na swoim osiedlu. Co najbardziej mu pomoże?",
+      "options": [
+        "Udział w planowanych warsztatach.",
+        "Zapisanie się na podział tegorocznych zbiorów.",
+        "Odebranie warzyw z kuchni społecznej."
+      ],
+      "answer": "Udział w planowanych warsztatach.",
+      "evidence": "Pokażą im, jak uprawiać warzywa w mieście.",
+      "explanation": "Na warsztatach Tomek może zdobyć wiedzę potrzebną we własnym ogrodzie."
+    },
+    {
+      "id": "vocabulary",
+      "skill": "vocabulary",
+      "question": "Co w tym tekście oznacza „nadmiar warzyw”?",
+      "options": [
+        "Warzywa, które należą do jednego uczestnika.",
+        "Warzywa, które są już gotowe do zebrania.",
+        "Warzywa, których uczestnicy już nie potrzebują."
+      ],
+      "answer": "Warzywa, których uczestnicy już nie potrzebują.",
+      "evidence": "Jeśli zostaje nadmiar warzyw, zanoszą go do kuchni społecznej.",
+      "explanation": "Chodzi o część zbiorów, która zostaje po podziale."
+    }
+  ],
+  "publicationStatus": "practice"
+}

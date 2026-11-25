@@ -1,0 +1,76 @@
+{
+  "id": "pl-b1.reading.day-010",
+  "day": 10,
+  "level": "A1",
+  "genre": "dialog",
+  "title": "Pokój dla studenta",
+  "text": "— Dzień dobry, czy pokój jest jeszcze wolny?\n\n— Tak. Pokój ma duże okno, biurko i szafę. Kuchnia i łazienka są wspólne.\n\n— Często wracam późno z zajęć. Czy mogę wtedy coś ugotować?\n\n— Oczywiście. Tylko po dziesiątej wieczorem prosimy o ciszę.\n\n— Rozumiem. Jestem studentem i potrzebuję internetu do nauki. Czy w pokoju działa internet?\n\n— Tak, internet jest w cenie. Woda i prąd są rozliczane osobno.\n\n— A czy blisko jest przystanek autobusu do centrum?\n\n— Przystanek jest obok domu. Autobus jedzie około piętnastu minut.\n\n— Bardzo dobrze. Czy mogę zobaczyć pokój jutro?\n\n— Tak, proszę przyjść po południu.",
+  "questions": [
+    {
+      "id": "main-idea",
+      "skill": "main-idea",
+      "question": "O czym jest ta rozmowa?",
+      "options": [
+        "O tym, jak dojechać z uczelni na zajęcia.",
+        "O tym, jak znaleźć drugą osobę do pokoju.",
+        "O tym, co trzeba wiedzieć przed wynajęciem pokoju."
+      ],
+      "answer": "O tym, co trzeba wiedzieć przed wynajęciem pokoju.",
+      "evidence": "Dzień dobry, czy pokój jest jeszcze wolny?",
+      "explanation": "Student pyta między innymi o wyposażenie, opłaty, zasady i możliwość obejrzenia pokoju."
+    },
+    {
+      "id": "detail",
+      "skill": "detail",
+      "question": "Co jest w cenie pokoju?",
+      "options": [
+        "Prąd.",
+        "Woda.",
+        "Internet."
+      ],
+      "answer": "Internet.",
+      "evidence": "internet jest w cenie.",
+      "explanation": "Za wodę i prąd płaci się osobno."
+    },
+    {
+      "id": "cause",
+      "skill": "cause",
+      "question": "Dlaczego student pyta o gotowanie wieczorem?",
+      "options": [
+        "Często późno wraca z zajęć.",
+        "Kuchnia jest rano zamknięta.",
+        "Chce przygotowywać posiłki dla innych osób."
+      ],
+      "answer": "Często późno wraca z zajęć.",
+      "evidence": "Często wracam późno z zajęć. Czy mogę wtedy coś ugotować?",
+      "explanation": "Chce wiedzieć, czy po późnym powrocie będzie mógł zrobić sobie posiłek."
+    },
+    {
+      "id": "inference",
+      "skill": "inference",
+      "question": "Student wraca o jedenastej wieczorem. Który plan pasuje do zasad domu?",
+      "options": [
+        "Zaprosić kolegów na głośną rozmowę w kuchni.",
+        "Włączyć głośną muzykę w swoim pokoju.",
+        "Po cichu przygotować kolację w kuchni."
+      ],
+      "answer": "Po cichu przygotować kolację w kuchni.",
+      "evidence": "Oczywiście. Tylko po dziesiątej wieczorem prosimy o ciszę.",
+      "explanation": "Wolno gotować wieczorem, ale o tej godzinie trzeba już zachować ciszę."
+    },
+    {
+      "id": "vocabulary",
+      "skill": "vocabulary",
+      "question": "Co znaczy, że woda i prąd są „rozliczane osobno”?",
+      "options": [
+        "Płaci za nie szkoła studenta.",
+        "Płaci się za nie tylko w cenie pokoju.",
+        "Trzeba za nie zapłacić oprócz ceny pokoju."
+      ],
+      "answer": "Trzeba za nie zapłacić oprócz ceny pokoju.",
+      "evidence": "internet jest w cenie. Woda i prąd są rozliczane osobno.",
+      "explanation": "Internet należy do ceny pokoju, a opłaty za wodę i prąd są dodatkowe."
+    }
+  ],
+  "publicationStatus": "practice"
+}

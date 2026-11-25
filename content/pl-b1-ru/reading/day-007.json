@@ -1,0 +1,76 @@
+{
+  "id": "pl-b1.reading.day-007",
+  "day": 7,
+  "level": "A1",
+  "genre": "ogłoszenie",
+  "title": "Zaproszenie na piknik",
+  "text": "Zapraszamy wszystkich mieszkańców naszej ulicy na rodzinny piknik w niedzielę. Spotykamy się o jedenastej w małym parku obok szkoły. Na miejscu są stoły, ławki i miejsce do zabawy dla dzieci. Każda rodzina przynosi coś do jedzenia lub picia. Nie trzeba kupować biletu.\n\nO dwunastej organizujemy wspólne gry. Później jest czas na rozmowy i odpoczynek. Prosimy przynieść koc, bo jest mało ławek. Jeśli w niedzielę będzie padać, spotkamy się w sali szkolnej o tej samej godzinie. W niedzielę rano przy wejściu do szkoły powiesimy kartkę. Napiszemy na niej, gdzie się spotykamy.",
+  "questions": [
+    {
+      "id": "main-idea",
+      "skill": "main-idea",
+      "question": "Po co mieszkańcy dostają to ogłoszenie?",
+      "options": [
+        "Żeby pomóc wybrać park na piknik.",
+        "Żeby dowiedzieć się o wspólnym pikniku.",
+        "Żeby zapisać dzieci na gry w szkole."
+      ],
+      "answer": "Żeby dowiedzieć się o wspólnym pikniku.",
+      "evidence": "Zapraszamy wszystkich mieszkańców naszej ulicy na rodzinny piknik w niedzielę.",
+      "explanation": "Organizatorzy zapraszają mieszkańców i podają szczegóły spotkania."
+    },
+    {
+      "id": "detail",
+      "skill": "detail",
+      "question": "O której zaczyna się spotkanie?",
+      "options": [
+        "O dziewiątej.",
+        "O dwunastej.",
+        "O jedenastej."
+      ],
+      "answer": "O jedenastej.",
+      "evidence": "Spotykamy się o jedenastej",
+      "explanation": "Gry zaczynają się o dwunastej, już po rozpoczęciu pikniku."
+    },
+    {
+      "id": "cause",
+      "skill": "cause",
+      "question": "Dlaczego warto przynieść koc?",
+      "options": [
+        "Na kocach będą leżeć rzeczy do gier.",
+        "Nie wszyscy będą mogli usiąść na ławkach.",
+        "Na jedzenie nie będzie żadnego stołu."
+      ],
+      "answer": "Nie wszyscy będą mogli usiąść na ławkach.",
+      "evidence": "Prosimy przynieść koc, bo jest mało ławek.",
+      "explanation": "Gdy zabraknie miejsc siedzących, można usiąść na kocu."
+    },
+    {
+      "id": "inference",
+      "skill": "inference",
+      "question": "Rodzina wychodzi z domu o dziesiątej. Nie wie, czy piknik będzie w parku. Dokąd powinna najpierw pójść?",
+      "options": [
+        "Pod drzwi szkoły, żeby sprawdzić wiadomość.",
+        "Do parku, żeby znaleźć organizatora gier.",
+        "Do sali szkolnej, żeby poszukać innych rodzin."
+      ],
+      "answer": "Pod drzwi szkoły, żeby sprawdzić wiadomość.",
+      "evidence": "przy wejściu do szkoły powiesimy kartkę. Napiszemy na niej, gdzie się spotykamy.",
+      "explanation": "Rodzina może najpierw sprawdzić kartkę i dopiero potem iść tam, gdzie będzie piknik."
+    },
+    {
+      "id": "vocabulary",
+      "skill": "vocabulary",
+      "question": "Co oznacza tutaj „na miejscu”?",
+      "options": [
+        "Tam, gdzie ma być piknik.",
+        "W domu każdej rodziny.",
+        "Po drodze z domu do parku."
+      ],
+      "answer": "Tam, gdzie ma być piknik.",
+      "evidence": "Spotykamy się o jedenastej w małym parku obok szkoły. Na miejscu są stoły, ławki i miejsce do zabawy dla dzieci.",
+      "explanation": "Stoły i ławki są w parku, czyli w miejscu pikniku."
+    }
+  ],
+  "publicationStatus": "practice"
+}

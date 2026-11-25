@@ -248,6 +248,7 @@
     "grammar": "Preparing today’s grammar exercises…"
   },
   "readingPreview": {
+    "practiceReviewPending": "Practice passage · independent review pending",
     "practice": "Reading practice",
     "practiceNotice": "Read passages and answer questions. Standalone practice does not change lesson progress.",
     "legacy": "Additional passage",

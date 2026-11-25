@@ -1,0 +1,76 @@
+{
+  "id": "pl-b1.reading.day-036",
+  "day": 36,
+  "level": "A2",
+  "genre": "artykuł",
+  "title": "Książki dla sąsiadów",
+  "text": "Na jednym z osiedli w Warszawie działa niewielka biblioteczka społeczna. Mieszkańcy zostawiają na drewnianym regale książki, których już nie czytają. Każdy może wziąć wybraną książkę do domu. Nie trzeba zakładać konta ani płacić za wypożyczenie. Pomysł pojawił się podczas zebrania mieszkańców, gdy kilka osób zastanawiało się, co zrobić z niepotrzebnymi książkami.\n\nNa początku regał stał na otwartym podwórku. Po kilku deszczowych dniach okazało się, że część książek jest wilgotna. Mieszkańcy dostali zgodę na przeniesienie biblioteczki pod dach przy wejściu do świetlicy. Teraz mieszkańcy odwiedzają ją przy okazji spaceru lub powrotu z pracy.\n\nRaz w miesiącu wolontariusze porządkują półki. Odkładają zniszczone książki i sprawdzają, czy na półkach są też książki dla dzieci. Nie prowadzą listy wypożyczeń, ale proszą o zwracanie książek po przeczytaniu albo przyniesienie innych. Biblioteczka nie zastępuje dużej biblioteki miejskiej, lecz daje sąsiadom prosty sposób na dzielenie się książkami i poznawanie nowych ludzi.",
+  "questions": [
+    {
+      "id": "main-idea",
+      "skill": "main-idea",
+      "question": "Czego głównie dotyczy artykuł?",
+      "options": [
+        "Tego, jak powstały zajęcia czytelnicze w świetlicy.",
+        "Tego, jak sąsiedzi dzielą się książkami.",
+        "Tego, jak biblioteka miejska wybiera nowe książki."
+      ],
+      "answer": "Tego, jak sąsiedzi dzielą się książkami.",
+      "evidence": "daje sąsiadom prosty sposób na dzielenie się książkami",
+      "explanation": "Artykuł przedstawia pomysł mieszkańców i działanie biblioteczki."
+    },
+    {
+      "id": "detail",
+      "skill": "detail",
+      "question": "Gdzie obecnie stoi biblioteczka?",
+      "options": [
+        "Pod dachem przy wejściu do świetlicy.",
+        "W dużej bibliotece miejskiej.",
+        "Na otwartym podwórku."
+      ],
+      "answer": "Pod dachem przy wejściu do świetlicy.",
+      "evidence": "pod dach przy wejściu do świetlicy",
+      "explanation": "Na podwórku regał stał wcześniej."
+    },
+    {
+      "id": "cause",
+      "skill": "cause",
+      "question": "Dlaczego regał przeniesiono?",
+      "options": [
+        "W świetlicy zabrakło miejsca na książki.",
+        "Książki mokły na deszczu.",
+        "Mieszkańcy nie mogli znaleźć regału na podwórku."
+      ],
+      "answer": "Książki mokły na deszczu.",
+      "evidence": "Po kilku deszczowych dniach okazało się, że część książek jest wilgotna.",
+      "explanation": "Dach chroni książki przed kolejnym deszczem."
+    },
+    {
+      "id": "inference",
+      "skill": "inference",
+      "question": "Ewa nadal czyta książkę z regału. Ma jednak w domu inną, której już nie potrzebuje. Jak może już dziś podziękować sąsiadom?",
+      "options": [
+        "Wpisać tytuł czytanej książki na listę wypożyczeń.",
+        "Zapłacić za kolejny tydzień czytania.",
+        "Zostawić na regale własną książkę."
+      ],
+      "answer": "Zostawić na regale własną książkę.",
+      "evidence": "proszą o zwracanie książek po przeczytaniu albo przyniesienie innych",
+      "explanation": "Ewa może się podzielić inną książką, zanim skończy czytać pierwszą."
+    },
+    {
+      "id": "vocabulary",
+      "skill": "vocabulary",
+      "question": "Kasia odwiedza regał „przy okazji” spaceru. Co to znaczy?",
+      "options": [
+        "Zagląda tam, kiedy już jest na spacerze.",
+        "Odwiedza regał dopiero po powrocie do domu.",
+        "Wybiera się tam specjalnie po książkę."
+      ],
+      "answer": "Zagląda tam, kiedy już jest na spacerze.",
+      "evidence": "przy okazji spaceru lub powrotu z pracy",
+      "explanation": "Odwiedziny przy regale są częścią innej czynności."
+    }
+  ],
+  "publicationStatus": "practice"
+}

@@ -1,0 +1,76 @@
+{
+  "id": "pl-b1.reading.day-002",
+  "day": 2,
+  "level": "A1",
+  "genre": "dialog",
+  "title": "Nowy kolega",
+  "text": "— Cześć, jestem Adam. Jestem nowy w tej grupie. A ty?\n\n— Mam na imię Ewa. Jestem tutaj od września. Nasza nauczycielka jest bardzo miła.\n\n— Czy zajęcia są trudne?\n\n— Na początku trochę, ale teraz jest łatwiej. Uczymy się w małych grupach. A skąd jesteś?\n\n— Jestem z Czech, ale od roku mieszkam w Polsce. W domu mówię po czesku. Chcę mówić po polsku z sąsiadami.\n\n— Świetnie! Ja też uczę się polskiego. Po zajęciach jestem zwykle w kawiarni obok szkoły. Możemy tam rozmawiać.\n\n— Dziękuję! Dzisiaj mam czas. Spotkajmy się o czwartej.",
+  "questions": [
+    {
+      "id": "main-idea",
+      "skill": "main-idea",
+      "question": "O czym rozmawiają Adam i Ewa?",
+      "options": [
+        "O wyborze nowej szkoły w Polsce.",
+        "Poznają się na kursie i planują spotkanie.",
+        "Planują pierwszą lekcję dla sąsiadów."
+      ],
+      "answer": "Poznają się na kursie i planują spotkanie.",
+      "evidence": "Jestem nowy w tej grupie. A ty?",
+      "explanation": "Przedstawiają się sobie, rozmawiają o nauce i umawiają się po zajęciach."
+    },
+    {
+      "id": "detail",
+      "skill": "detail",
+      "question": "Skąd jest Adam?",
+      "options": [
+        "Z Polski.",
+        "Z Niemiec.",
+        "Z Czech."
+      ],
+      "answer": "Z Czech.",
+      "evidence": "Jestem z Czech",
+      "explanation": "Adam pochodzi z Czech, a teraz mieszka w Polsce."
+    },
+    {
+      "id": "cause",
+      "skill": "cause",
+      "question": "Po co Adam uczy się polskiego?",
+      "options": [
+        "Chce uczyć innych w szkole.",
+        "Chce rozmawiać z sąsiadami.",
+        "Chce mówić po polsku w domu z rodziną."
+      ],
+      "answer": "Chce rozmawiać z sąsiadami.",
+      "evidence": "Chcę mówić po polsku z sąsiadami.",
+      "explanation": "Adam wymienia osoby, z którymi chce rozmawiać po polsku."
+    },
+    {
+      "id": "inference",
+      "skill": "inference",
+      "question": "Gdzie Ewa powinna czekać na Adama o czwartej?",
+      "options": [
+        "Przy stoliku w kawiarni.",
+        "W sali, w której mają zajęcia.",
+        "Przed domem jego sąsiadów."
+      ],
+      "answer": "Przy stoliku w kawiarni.",
+      "evidence": "Po zajęciach jestem zwykle w kawiarni obok szkoły. Możemy tam rozmawiać.",
+      "explanation": "Ewa proponuje kawiarnię, a Adam zgadza się i podaje godzinę."
+    },
+    {
+      "id": "vocabulary",
+      "skill": "vocabulary",
+      "question": "Kiedy zajęcia były dla Ewy trochę trudne? Co oznacza „na początku”?",
+      "options": [
+        "Po ostatniej lekcji kursu.",
+        "Na każdej lekcji przed przerwą.",
+        "Kiedy zaczęła chodzić na kurs."
+      ],
+      "answer": "Kiedy zaczęła chodzić na kurs.",
+      "evidence": "Na początku trochę, ale teraz jest łatwiej.",
+      "explanation": "Ewa porównuje pierwsze lekcje z tym, jak uczy jej się teraz."
+    }
+  ],
+  "publicationStatus": "practice"
+}

@@ -1,0 +1,87 @@
+{
+  "id": "pl-b1.reading.day-053",
+  "day": 53,
+  "level": "A2",
+  "genre": "poradnik",
+  "title": "Daria wybiera ćwiczenia",
+  "text": "Daria mieszka w Polsce od kilku miesięcy. W sklepie potrafi poprosić o potrzebne produkty. Umie też krótko opowiedzieć o sobie. Kiedy jednak dostaje od koleżanki długą wiadomość po polsku, nieraz musi ją przeczytać kilka razy. Dlatego chce więcej czytać w domu.\n\nNa stronie Urzędu do Spraw Cudzoziemców znajduje materiały do nauki polskiego. Są tam książki dla początkujących, materiały A2 z elementami B1 oraz materiały dla osób, które znają już polski na poziomie B1. Daria na początek wybiera książkę A2. Nie chce zaczynać od bardzo trudnych tekstów.\n\nW poniedziałek Daria czyta rozdział o zakupach. Rozumie tekst i dobrze odpowiada na pytania. We wtorek próbuje przeczytać wiadomość o spotkaniu. Zna kilka słów, ale nie wie, o co prosi autor. W zeszycie robi dwie listy. Na pierwszej zapisuje tematy, które już zna, a na drugiej te, do których chce wrócić. Na następny wieczór wybiera ćwiczenia z drugiej listy.",
+  "source": {
+    "url": "https://www.gov.pl/web/udsc/materialy-dydaktyczne-do-nauki-jezyka-polskiego3",
+    "publisher": "Urząd do Spraw Cudzoziemców",
+    "title": "Materiały dydaktyczne do nauki języka polskiego",
+    "facts": [
+      "Adult learning material is available for A1, A2 with B1 elements and B1 with B2 elements."
+    ],
+    "use": "facts-only",
+    "checked": "2026-11-25",
+    "adaptation": "Original Polish educational composition based on source facts; illustrative people/scenarios are fictional."
+  },
+  "questions": [
+    {
+      "id": "main-idea",
+      "skill": "main-idea",
+      "question": "Co pokazuje przykład Darii?",
+      "options": [
+        "Jak używać wiadomości od koleżanki podczas zakupów.",
+        "Jak wybierać materiały i planować naukę według własnych potrzeb.",
+        "Jak przygotować własny podręcznik dla osób początkujących."
+      ],
+      "answer": "Jak wybierać materiały i planować naukę według własnych potrzeb.",
+      "evidence": "Na następny wieczór wybiera ćwiczenia z drugiej listy.",
+      "explanation": "Daria dobiera poziom książki i wraca do tematów, które są trudne."
+    },
+    {
+      "id": "detail",
+      "skill": "detail",
+      "question": "Co Daria czyta w poniedziałek?",
+      "options": [
+        "Listę ćwiczeń od koleżanki.",
+        "Rozdział o zakupach.",
+        "Wiadomość o spotkaniu."
+      ],
+      "answer": "Rozdział o zakupach.",
+      "evidence": "W poniedziałek Daria czyta rozdział o zakupach.",
+      "explanation": "Wiadomość o spotkaniu czyta następnego dnia."
+    },
+    {
+      "id": "cause",
+      "skill": "cause",
+      "question": "Dlaczego Daria chce więcej czytać w domu?",
+      "options": [
+        "Chce przygotować koleżance pytania do podręcznika.",
+        "Zrozumienie dłuższych wiadomości sprawia jej trudność.",
+        "Potrzebuje listy polskich nazw produktów do sklepu."
+      ],
+      "answer": "Zrozumienie dłuższych wiadomości sprawia jej trudność.",
+      "evidence": "nieraz musi ją przeczytać kilka razy. Dlatego chce więcej czytać w domu.",
+      "explanation": "Dłuższe wiadomości wymagają od Darii dodatkowej pracy."
+    },
+    {
+      "id": "inference",
+      "skill": "inference",
+      "question": "Które nowe ćwiczenie Daria najpewniej wybierze na następny wieczór?",
+      "options": [
+        "Ułożyć listę produktów przed zakupami.",
+        "Przeczytać zaproszenie i ustalić, co trzeba przynieść.",
+        "Krótko przedstawić się nowej osobie."
+      ],
+      "answer": "Przeczytać zaproszenie i ustalić, co trzeba przynieść.",
+      "evidence": "Zna kilka słów, ale nie wie, o co prosi autor.",
+      "explanation": "W zaproszeniu trzeba rozpoznać prośbę autora. Właśnie to okazało się dla niej trudne."
+    },
+    {
+      "id": "vocabulary",
+      "skill": "vocabulary",
+      "question": "Co znaczy „A2 z elementami B1”?",
+      "options": [
+        "Materiał na poziomie A2 służy do powtarzania całego poziomu B1.",
+        "Po każdym rozdziale A2 trzeba rozpocząć nową książkę B1.",
+        "Większość materiału jest na poziomie A2, a część na B1."
+      ],
+      "answer": "Większość materiału jest na poziomie A2, a część na B1.",
+      "evidence": "materiały A2 z elementami B1 oraz materiały dla osób, które znają już polski na poziomie B1.",
+      "explanation": "Elementy to części. Niektóre treści należą do poziomu B1."
+    }
+  ],
+  "publicationStatus": "practice"
+}

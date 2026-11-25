@@ -1,0 +1,76 @@
+{
+  "id": "pl-b1.reading.day-061",
+  "day": 61,
+  "level": "A2",
+  "genre": "ogłoszenie",
+  "title": "Spotkanie zespołu po projekcie",
+  "text": "Do wszystkich osób z zespołu projektu „Nowe biuro”!\n\nW przyszły czwartek od godziny dziesiątej do dwunastej będzie zebranie po zakończeniu projektu. Nie będziemy przedstawiać klientowi nowej prezentacji. Chcemy wspólnie porozmawiać o tym, jak pracowaliśmy przez ostatnie trzy miesiące, co nam się udało i co możemy zmienić przy następnym zadaniu.\n\nPrzed spotkaniem prosimy każdego pracownika o przygotowanie jednej krótkiej notatki. Trzeba w niej opisać jeden przykład dobrej współpracy i jedną sytuację, w której mogliśmy lepiej pracować. Nie trzeba wpisywać nazwisk innych pracowników, ponieważ rozmowa ma dotyczyć sposobu pracy, a nie oceniania poszczególnych osób. Notatkę prosimy wysłać do środy do godziny piętnastej.\n\nNa początku zebrania porozmawiamy o uwagach, które pojawiły się najczęściej. Następnie w małych grupach wybierzemy po jednym pomyśle na poprawę pracy. Na koniec ustalimy dwie zmiany do wypróbowania w następnym projekcie. Osoby, które w czwartek będą służbowo poza biurem, mogą wysłać również pomysł na zmianę razem z notatką. Krótki raport ze spotkania otrzyma cały zespół w piątek rano.",
+  "questions": [
+    {
+      "id": "main-idea",
+      "skill": "main-idea",
+      "question": "Po co zespół organizuje to zebranie?",
+      "options": [
+        "Żeby omówić, co się udało, i poprawić pracę przy kolejnym projekcie.",
+        "Żeby sprawdzić, czy klient jest zadowolony z wyniku projektu.",
+        "Żeby podzielić nowe zadania między pracowników."
+      ],
+      "answer": "Żeby omówić, co się udało, i poprawić pracę przy kolejnym projekcie.",
+      "evidence": "Chcemy wspólnie porozmawiać o tym, jak pracowaliśmy przez ostatnie trzy miesiące, co nam się udało i co możemy zmienić przy następnym zadaniu.",
+      "explanation": "Spotkanie dotyczy wspólnego uczenia się i przyszłego sposobu pracy."
+    },
+    {
+      "id": "detail",
+      "skill": "detail",
+      "question": "Kiedy cały zespół otrzyma raport?",
+      "options": [
+        "W czwartek po południu.",
+        "W środę przed piętnastą.",
+        "W piątek rano."
+      ],
+      "answer": "W piątek rano.",
+      "evidence": "Krótki raport ze spotkania otrzyma cały zespół w piątek rano.",
+      "explanation": "Termin wysłania raportu różni się od terminu notatek i zebrania."
+    },
+    {
+      "id": "cause",
+      "skill": "cause",
+      "question": "Dlaczego w notatkach nie trzeba podawać nazwisk?",
+      "options": [
+        "Ważne jest, jak zespół pracował, a nie jak pracował każdy z osobna.",
+        "Nazwiska będą potrzebne dopiero w raporcie po spotkaniu.",
+        "Zespół chce najpierw zebrać pomysły, a później ocenić osoby odpowiedzialne za błędy."
+      ],
+      "answer": "Ważne jest, jak zespół pracował, a nie jak pracował każdy z osobna.",
+      "evidence": "Nie trzeba wpisywać nazwisk innych pracowników, ponieważ rozmowa ma dotyczyć sposobu pracy, a nie oceniania poszczególnych osób.",
+      "explanation": "Organizatorzy chcą analizować proces, a nie szukać winnych."
+    },
+    {
+      "id": "inference",
+      "skill": "inference",
+      "question": "Łukasz w czwartek będzie poza biurem z powodu pracy i ma pomysł na lepsze planowanie spotkań. Jak może pomóc zespołowi przygotować zmiany?",
+      "options": [
+        "Przesłać notatkę z pomysłem najpóźniej w środę do piętnastej.",
+        "Wysłać notatkę do środy, a pomysł dopiero po otrzymaniu raportu.",
+        "Wysłać sam pomysł w środę, a notatkę przygotować po zebraniu."
+      ],
+      "answer": "Przesłać notatkę z pomysłem najpóźniej w środę do piętnastej.",
+      "evidence": "Notatkę prosimy wysłać do środy do godziny piętnastej.\n\nNa początku zebrania porozmawiamy o uwagach, które pojawiły się najczęściej. Następnie w małych grupach wybierzemy po jednym pomyśle na poprawę pracy. Na koniec ustalimy dwie zmiany do wypróbowania w następnym projekcie. Osoby, które w czwartek będą służbowo poza biurem, mogą wysłać również pomysł na zmianę razem z notatką.",
+      "explanation": "Łukasz będzie służbowo poza biurem, więc może wysłać pomysł razem z notatką do środy do piętnastej."
+    },
+    {
+      "id": "vocabulary",
+      "skill": "vocabulary",
+      "question": "Co oznacza „uwagi” w tym ogłoszeniu?",
+      "options": [
+        "Pytania o szczegóły nowego projektu.",
+        "Opinie o tym, jak pracował zespół.",
+        "Zadania do wykonania po spotkaniu."
+      ],
+      "answer": "Opinie o tym, jak pracował zespół.",
+      "evidence": "Na początku zebrania porozmawiamy o uwagach, które pojawiły się najczęściej.",
+      "explanation": "Uwagi pochodzą z notatek o współpracy i organizacji projektu."
+    }
+  ],
+  "publicationStatus": "practice"
+}

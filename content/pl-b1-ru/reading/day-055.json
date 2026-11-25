@@ -1,0 +1,76 @@
+{
+  "id": "pl-b1.reading.day-055",
+  "day": 55,
+  "level": "A2",
+  "genre": "opowiadanie",
+  "title": "Nauka w parze",
+  "text": "Julia i Filip chodzą do tej samej klasy i w przyszłym roku będą zdawać maturę. W tym semestrze postanowili spotykać się po lekcjach dwa razy w tygodniu. Julia dobrze rozumie zadania z matematyki, ale robi dużo błędów w języku angielskim. Filip chętnie mówi po angielsku, lecz potrzebuje więcej czasu na rozwiązanie zadań matematycznych.\n\nNa początku każde z nich przynosiło pełny plecak książek. Otwierali podręczniki i razem czytali kolejne rozdziały. Po kilku spotkaniach zauważyli, że spędzają dużo czasu na powtarzaniu tematów, które oboje już znają. Dlatego zmienili sposób pracy. Teraz przed spotkaniem każde przygotowuje dwa pytania do drugiej osoby. Julia wyjaśnia matematykę, a Filip pomaga jej ćwiczyć krótkie rozmowy po angielsku.\n\nW środę Filip nie mógł przyjść, więc wysłał Julii nagranie z trzema pytaniami. Julia odpowiedziała na nie wieczorem. W piątek przygotowała dla niego podobne zadania do samodzielnego rozwiązania. Nadal lubią pracować razem, ale ich plan działa także wtedy, gdy jedno z nich musi zostać w domu.",
+  "questions": [
+    {
+      "id": "main-idea",
+      "skill": "main-idea",
+      "question": "Co pokazuje historia Julii i Filipa?",
+      "options": [
+        "Jak wspólna nauka może odpowiadać na różne potrzeby uczniów.",
+        "Jak uczniowie ustalają stałe dni wspólnej nauki i pracy w domu.",
+        "Jak uczniowie przygotowują wspólną listę tematów do matury."
+      ],
+      "answer": "Jak wspólna nauka może odpowiadać na różne potrzeby uczniów.",
+      "evidence": "Julia dobrze rozumie zadania z matematyki, ale robi dużo błędów w języku angielskim. Filip chętnie mówi po angielsku, lecz potrzebuje więcej czasu na rozwiązanie zadań matematycznych.",
+      "explanation": "Uczniowie mają różne mocne strony i dostosowują współpracę do swoich trudności."
+    },
+    {
+      "id": "detail",
+      "skill": "detail",
+      "question": "W jakiej formie Filip przesłał Julii pytania w środę?",
+      "options": [
+        "W formie wiadomości tekstowej.",
+        "W formie zdjęcia z podręcznika.",
+        "W formie nagrania."
+      ],
+      "answer": "W formie nagrania.",
+      "evidence": "W środę Filip nie mógł przyjść, więc wysłał Julii nagranie z trzema pytaniami.",
+      "explanation": "Filip wysłał nagranie, a Julia odpowiedziała wieczorem."
+    },
+    {
+      "id": "cause",
+      "skill": "cause",
+      "question": "Dlaczego przestali wspólnie czytać całe rozdziały?",
+      "options": [
+        "Zbyt często brakowało im odpowiednich książek.",
+        "Za dużo czasu poświęcali znanym już tematom.",
+        "Zbyt rzadko kończyli rozdział przed następną lekcją."
+      ],
+      "answer": "Za dużo czasu poświęcali znanym już tematom.",
+      "evidence": "Po kilku spotkaniach zauważyli, że spędzają dużo czasu na powtarzaniu tematów, które oboje już znają.",
+      "explanation": "Zmiana miała pozwolić im pracować nad tym, co jest trudne."
+    },
+    {
+      "id": "inference",
+      "skill": "inference",
+      "question": "Przed kolejnym spotkaniem Julia nie radzi sobie z rozmową o wakacjach po angielsku, a Filip nie rozumie zadania z matematyki. Jak najlepiej wykorzystają swój czas?",
+      "options": [
+        "Julia wyjaśni zadanie, a Filip przećwiczy z nią rozmowę.",
+        "Julia przygotuje rozmowę, a Filip sam rozwiąże swoje zadanie.",
+        "Oboje przeczytają te same rozdziały, zanim zadadzą sobie pytania."
+      ],
+      "answer": "Julia wyjaśni zadanie, a Filip przećwiczy z nią rozmowę.",
+      "evidence": "Julia dobrze rozumie zadania z matematyki, ale robi dużo błędów w języku angielskim. Filip chętnie mówi po angielsku, lecz potrzebuje więcej czasu na rozwiązanie zadań matematycznych.\n\nNa początku każde z nich przynosiło pełny plecak książek. Otwierali podręczniki i razem czytali kolejne rozdziały. Po kilku spotkaniach zauważyli, że spędzają dużo czasu na powtarzaniu tematów, które oboje już znają. Dlatego zmienili sposób pracy. Teraz przed spotkaniem każde przygotowuje dwa pytania do drugiej osoby. Julia wyjaśnia matematykę, a Filip pomaga jej ćwiczyć krótkie rozmowy po angielsku.",
+      "explanation": "Każde pomaga w przedmiocie, który zna lepiej, i otrzymuje pomoc w swoim trudnym temacie."
+    },
+    {
+      "id": "vocabulary",
+      "skill": "vocabulary",
+      "question": "Co znaczy „do samodzielnego rozwiązania”?",
+      "options": [
+        "Do wykonania bez bezpośredniej pomocy drugiej osoby.",
+        "Do wykonania bez podręcznika, ale z pomocą kolegi.",
+        "Do wykonania razem, bez pomocy nauczyciela."
+      ],
+      "answer": "Do wykonania bez bezpośredniej pomocy drugiej osoby.",
+      "evidence": "W piątek przygotowała dla niego podobne zadania do samodzielnego rozwiązania. Nadal lubią pracować razem, ale ich plan działa także wtedy, gdy jedno z nich musi zostać w domu.",
+      "explanation": "Filip może pracować nad tymi zadaniami bez obecności Julii."
+    }
+  ],
+  "publicationStatus": "practice"
+}

@@ -1,0 +1,76 @@
+{
+  "id": "pl-b1.reading.day-038",
+  "day": 38,
+  "level": "A2",
+  "genre": "ogłoszenie",
+  "title": "Dzień sprzątania parku",
+  "text": "W najbliższą sobotę organizujemy wspólne sprzątanie parku przy ulicy Lipowej. Chcemy przygotować teren do wiosennych spacerów. Przyjdź o godzinie dziesiątej pod główne wejście i zgłoś się do osoby w zielonej kamizelce. Otrzymasz rękawice, worki oraz krótką instrukcję, jak segregować odpady.\n\nNie zbieraj samodzielnie ostrych przedmiotów ani nieznanych substancji. Jeśli zauważysz coś niebezpiecznego, powiedz o tym organizatorowi. Dzieci mogą brać udział w wydarzeniu tylko pod opieką osoby dorosłej. Włóż wygodne buty, które mogą się zabrudzić, oraz zabierz wodę do picia. Sprzątanie potrwa około dwóch godzin.\n\nPo zakończeniu zapraszamy na herbatę i ciasto w domu kultury. Nie trzeba zapisywać się wcześniej, jednak osoby, które chcą przyjść z większą grupą, prosimy o wiadomość. Dzięki temu przygotujemy wystarczającą liczbę rękawic. Jeśli pogoda będzie bardzo zła, informację o zmianie terminu opublikujemy w piątek wieczorem na stronie osiedla. Nawet godzina pomocy będzie dla nas cenna.",
+  "questions": [
+    {
+      "id": "main-idea",
+      "skill": "main-idea",
+      "question": "W jakim celu napisano ogłoszenie?",
+      "options": [
+        "Żeby zaprosić mieszkańców na spacer po gotowym już parku.",
+        "Żeby zaprosić mieszkańców do sprzątania parku.",
+        "Żeby zaprosić mieszkańców na kurs w domu kultury."
+      ],
+      "answer": "Żeby zaprosić mieszkańców do sprzątania parku.",
+      "evidence": "organizujemy wspólne sprzątanie parku",
+      "explanation": "Herbata w domu kultury to dodatek po zakończeniu pracy."
+    },
+    {
+      "id": "detail",
+      "skill": "detail",
+      "question": "Co uczestnik otrzyma na miejscu?",
+      "options": [
+        "Buty i wodę.",
+        "Rękawice, worki i instrukcję.",
+        "Zieloną kamizelkę i obiad."
+      ],
+      "answer": "Rękawice, worki i instrukcję.",
+      "evidence": "Otrzymasz rękawice, worki oraz krótką instrukcję",
+      "explanation": "Buty i wodę trzeba przynieść samemu."
+    },
+    {
+      "id": "cause",
+      "skill": "cause",
+      "question": "Po co organizator prosi większe grupy o wiadomość?",
+      "options": [
+        "Chce przydzielić każdej grupie opiekuna dla dzieci.",
+        "Chce mieć dość rękawic dla uczestników.",
+        "Chce wyznaczyć każdej grupie osobną godzinę rozpoczęcia."
+      ],
+      "answer": "Chce mieć dość rękawic dla uczestników.",
+      "evidence": "Dzięki temu przygotujemy wystarczającą liczbę rękawic.",
+      "explanation": "Liczba zgłoszonych osób pomoże przygotować sprzęt."
+    },
+    {
+      "id": "inference",
+      "skill": "inference",
+      "question": "Tata może przyjść z córką o dziesiątej, ale o jedenastej oboje muszą wyjść. Co pasuje do ogłoszenia?",
+      "options": [
+        "Tata musi zostać dwie godziny, żeby córka mogła przyjść.",
+        "Mogą wspólnie pomóc przez pierwszą godzinę.",
+        "Mogą przyjść tylko na poczęstunek po sprzątaniu."
+      ],
+      "answer": "Mogą wspólnie pomóc przez pierwszą godzinę.",
+      "evidence": "Nawet godzina pomocy będzie dla nas cenna.",
+      "explanation": "Córka będzie pod opieką dorosłego, a organizator przyjmuje także krótszą pomoc."
+    },
+    {
+      "id": "vocabulary",
+      "skill": "vocabulary",
+      "question": "Co robi osoba, która „segreguje odpady”?",
+      "options": [
+        "Przenosi pełne worki do jednego miejsca.",
+        "Liczy, ile worków śmieci zebrano.",
+        "Rozdziela śmieci według rodzaju."
+      ],
+      "answer": "Rozdziela śmieci według rodzaju.",
+      "evidence": "instrukcję, jak segregować odpady",
+      "explanation": "Segregowanie polega na rozdzielaniu różnych rodzajów śmieci."
+    }
+  ],
+  "publicationStatus": "practice"
+}

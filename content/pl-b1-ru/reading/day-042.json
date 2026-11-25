@@ -1,0 +1,76 @@
+{
+  "id": "pl-b1.reading.day-042",
+  "day": 42,
+  "level": "A2",
+  "genre": "artykuł",
+  "title": "Pomysły mieszkańców",
+  "text": "Co można zmienić w naszej okolicy? W tym roku urząd miasta pyta o to mieszkańców. Każdy może przedstawić swój pomysł. Jedni chcą postawić ławki, inni proponują stojaki na rowery albo zajęcia dla dzieci. Miejsce, którego dotyczy projekt, musi być otwarte dla wszystkich. Miasto podaje też kwotę, którą może wydać. Projekt nie może kosztować więcej.\n\nNajpierw pracownicy urzędu sprawdzają cenę i to, czy przepisy pozwalają wykonać projekt. Czasem autor musi jeszcze coś dokładniej opisać. Potem mieszkańcy głosują. Mogą to zrobić w internecie albo w jednym z kilku punktów w mieście. Każdy głosuje raz, ale może zaznaczyć kilka pomysłów.\n\nW zeszłym roku mieszkańcy wybrali remont boiska i nowe drzewa przy szkole. Nie wszystkie prace są już gotowe. Jeśli prace trwają dłużej, niż planowano, urząd wyjaśnia mieszkańcom, dlaczego tak się dzieje. Dzięki temu łatwiej zrozumieć, na co miasto wydaje wspólne pieniądze.",
+  "questions": [
+    {
+      "id": "main-idea",
+      "skill": "main-idea",
+      "question": "O czym jest cały tekst?",
+      "options": [
+        "O tym, jak urząd szuka firmy do remontu boiska.",
+        "O tym, jak szkoła urządza zajęcia dla dzieci w parku.",
+        "O tym, jak mieszkańcy zgłaszają i wybierają pomysły dla miasta."
+      ],
+      "answer": "O tym, jak mieszkańcy zgłaszają i wybierają pomysły dla miasta.",
+      "evidence": "Każdy głosuje raz, ale może zaznaczyć kilka pomysłów.",
+      "explanation": "Tekst opisuje drogę od pomysłu mieszkańca do głosowania i wykonania prac."
+    },
+    {
+      "id": "detail",
+      "skill": "detail",
+      "question": "Jak mieszkaniec może oddać głos?",
+      "options": [
+        "W internecie albo w wybranym punkcie w mieście.",
+        "W wybranym punkcie albo listem do szkoły.",
+        "W internecie albo podczas rozmowy telefonicznej."
+      ],
+      "answer": "W internecie albo w wybranym punkcie w mieście.",
+      "evidence": "Mogą to zrobić w internecie albo w jednym z kilku punktów w mieście.",
+      "explanation": "Podano dwie możliwości głosowania."
+    },
+    {
+      "id": "cause",
+      "skill": "cause",
+      "question": "Dlaczego urząd sprawdza cenę projektu?",
+      "options": [
+        "Od ceny zależy liczba głosów mieszkańca.",
+        "Miasto może wydać tylko określoną sumę.",
+        "Autor musi dostać zwrot pieniędzy za swój pomysł."
+      ],
+      "answer": "Miasto może wydać tylko określoną sumę.",
+      "evidence": "Miasto podaje też kwotę, którą może wydać. Projekt nie może kosztować więcej.",
+      "explanation": "Cena musi się mieścić w kwocie podanej przez miasto."
+    },
+    {
+      "id": "inference",
+      "skill": "inference",
+      "question": "Ktoś proponuje ławkę na tanim, ale zamkniętym podwórku jednej rodziny. Co trzeba zmienić?",
+      "options": [
+        "Dodać do projektu stojak na rowery.",
+        "Wybrać miejsce dostępne dla innych ludzi.",
+        "Zaproponować jeszcze niższą cenę ławki."
+      ],
+      "answer": "Wybrać miejsce dostępne dla innych ludzi.",
+      "evidence": "Miejsce, którego dotyczy projekt, musi być otwarte dla wszystkich.",
+      "explanation": "Niska cena nie wystarczy, jeśli na podwórko może wejść tylko rodzina."
+    },
+    {
+      "id": "vocabulary",
+      "skill": "vocabulary",
+      "question": "Co znaczy w tekście „oddać głos”, czyli „zagłosować”?",
+      "options": [
+        "Opisać własny pomysł przed sprawdzeniem ceny.",
+        "Wskazać pomysł, który się popiera.",
+        "Wyjaśnić, dlaczego prace jeszcze trwają."
+      ],
+      "answer": "Wskazać pomysł, który się popiera.",
+      "evidence": "Każdy głosuje raz, ale może zaznaczyć kilka pomysłów.",
+      "explanation": "Podczas głosowania mieszkaniec wskazuje projekty, które wybiera."
+    }
+  ],
+  "publicationStatus": "practice"
+}

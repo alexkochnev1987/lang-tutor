@@ -1,0 +1,76 @@
+{
+  "id": "pl-b1.reading.day-074",
+  "day": 74,
+  "level": "A2",
+  "genre": "e-mail",
+  "title": "Posiłki na kilka dni",
+  "text": "Cześć, Tomku!\n\nW tym tygodniu mam dużo pracy i trzy wieczorne spotkania, dlatego w niedzielę postanowiłam przygotować obiady na kilka dni. Ugotowałam duży garnek zupy warzywnej i porcję kaszy. Upiekłam też warzywa oraz przygotowałam sos, który można podać zarówno z kaszą, jak i z makaronem.\n\nPodzieliłam jedzenie na pięć pojemników. Dwa zostawiłam w lodówce na poniedziałek i wtorek, a pozostałe zamroziłam. Na każdym pojemniku napisałam nazwę dania i datę przygotowania. W środę po pracy wyjmę jeden z zamrażarki i przygotuję do następnego obiadu.\n\nNie chcę jednak przez cały tydzień jeść dokładnie tego samego. Do kaszy mogę dodać świeży ogórek, a do makaronu trochę sera. Dzięki takim małym zmianom posiłki będą się różnić, mimo że przygotowałam podstawowe składniki jednego dnia.\n\nJeśli w czwartek wpadniesz do mnie po pracy, nie musimy zamawiać jedzenia. Mam dodatkową porcję zupy dla ciebie. Daj tylko znać wcześniej, czy przyjdziesz, żebym mogła przygotować odpowiednią ilość.\n\nPozdrawiam,\nJoanna",
+  "questions": [
+    {
+      "id": "main-idea",
+      "skill": "main-idea",
+      "question": "Dlaczego Joanna opisuje swoje przygotowania?",
+      "options": [
+        "Chce sprzedać niepotrzebne pojemniki.",
+        "Chce zaprosić Tomka do wspólnego robienia zakupów.",
+        "Chce pokazać, jak organizuje posiłki w pracowitym tygodniu."
+      ],
+      "answer": "Chce pokazać, jak organizuje posiłki w pracowitym tygodniu.",
+      "evidence": "w niedzielę postanowiłam przygotować obiady na kilka dni",
+      "explanation": "Planowanie posiłków pomaga jej podczas intensywnego tygodnia."
+    },
+    {
+      "id": "detail",
+      "skill": "detail",
+      "question": "Ile pojemników Joanna zamroziła?",
+      "options": [
+        "Dwa.",
+        "Trzy.",
+        "Pięć."
+      ],
+      "answer": "Trzy.",
+      "evidence": "Dwa zostawiłam w lodówce na poniedziałek i wtorek, a pozostałe zamroziłam.",
+      "explanation": "Z pięciu pojemników dwa są w lodówce, więc trzy zamroziła."
+    },
+    {
+      "id": "cause",
+      "skill": "cause",
+      "question": "Dlaczego Joanna zapisuje nazwy dań i daty na pojemnikach?",
+      "options": [
+        "Chce obliczyć czas pieczenia warzyw.",
+        "Chce przekazać Tomkowi listę zakupów.",
+        "Chce wiedzieć, co znajduje się w pojemnikach i kiedy to przygotowała."
+      ],
+      "answer": "Chce wiedzieć, co znajduje się w pojemnikach i kiedy to przygotowała.",
+      "evidence": "Na każdym pojemniku napisałam nazwę dania i datę przygotowania.",
+      "explanation": "Oznaczenia pomagają rozpoznać jedzenie."
+    },
+    {
+      "id": "inference",
+      "skill": "inference",
+      "question": "Tomek potwierdzi wizytę w czwartek. Co Joanna może dla niego przygotować bez zamawiania jedzenia?",
+      "options": [
+        "Pięć różnych sosów.",
+        "Osobny garnek świeżo ugotowanej kaszy.",
+        "Dodatkową porcję zupy."
+      ],
+      "answer": "Dodatkową porcję zupy.",
+      "evidence": "Mam dodatkową porcję zupy dla ciebie.",
+      "explanation": "Dla Tomka jest już dodatkowa porcja."
+    },
+    {
+      "id": "vocabulary",
+      "skill": "vocabulary",
+      "question": "Co oznacza „porcja”?",
+      "options": [
+        "Ilość jedzenia przeznaczona do jednego posiłku.",
+        "Rodzaj opakowania do zamrażania.",
+        "Data przygotowania dania."
+      ],
+      "answer": "Ilość jedzenia przeznaczona do jednego posiłku.",
+      "evidence": "Mam dodatkową porcję zupy dla ciebie.",
+      "explanation": "Porcja to odpowiednia ilość jedzenia dla jednej osoby lub jednego posiłku."
+    }
+  ],
+  "publicationStatus": "practice"
+}

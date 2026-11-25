@@ -1,0 +1,76 @@
+{
+  "id": "pl-b1.reading.day-004",
+  "day": 4,
+  "level": "A1",
+  "genre": "dialog",
+  "title": "Michał w recepcji",
+  "text": "W recepcji szkoły językowej jest nowy uczeń. Ma na imię Michał, a pani w recepcji zapisuje jego dane.\n\n— Proszę podać imię i nazwisko.\n\n— Michał Żak.\n\n— Czy nazwisko zaczyna się na Z?\n\n— Na Ż, z kropką. A moje imię ma literę ł.\n\n— Dziękuję. Czy ma pan numer telefonu?\n\n— Tak, ale w pracy nie odbieram telefonu. Mogę wtedy czytać wiadomości na komputerze.\n\nRecepcjonistka sprawdza dane jeszcze raz. Michał widzi na ekranie swoje nazwisko. Wszystkie litery są już poprawne. Teraz może dostać kartę ucznia. Na karcie są jego imię, nazwisko i numer grupy. Nie ma na niej adresu domowego.",
+  "questions": [
+    {
+      "id": "main-idea",
+      "skill": "main-idea",
+      "question": "Co robi Michał w recepcji?",
+      "options": [
+        "Prosi o zmianę swojego nazwiska.",
+        "Podaje dane potrzebne do karty ucznia.",
+        "Wybiera nową grupę w szkole."
+      ],
+      "answer": "Podaje dane potrzebne do karty ucznia.",
+      "evidence": "Recepcjonistka sprawdza dane jeszcze raz.",
+      "explanation": "Michał podaje dane, a po ich sprawdzeniu może dostać kartę."
+    },
+    {
+      "id": "detail",
+      "skill": "detail",
+      "question": "Na jaką literę zaczyna się nazwisko Michała?",
+      "options": [
+        "Z.",
+        "Ż.",
+        "Ł."
+      ],
+      "answer": "Ż.",
+      "evidence": "Na Ż, z kropką.",
+      "explanation": "Michał wyjaśnia różnicę między Z a Ż."
+    },
+    {
+      "id": "cause",
+      "skill": "cause",
+      "question": "Dlaczego pani w recepcji jeszcze raz sprawdza nazwisko?",
+      "options": [
+        "Chce dobrze zapisać pierwszą literę.",
+        "Na karcie ma być tylko imię Michała.",
+        "Michał chce dostać nowy adres e-mail."
+      ],
+      "answer": "Chce dobrze zapisać pierwszą literę.",
+      "evidence": "Czy nazwisko zaczyna się na Z?",
+      "explanation": "Pani pyta o Z, a Michał wyjaśnia, że jego nazwisko zaczyna się na Ż."
+    },
+    {
+      "id": "inference",
+      "skill": "inference",
+      "question": "Michał jest w pracy. Jak szkoła może szybko podać mu nową godzinę lekcji?",
+      "options": [
+        "Zadzwonić do niego teraz.",
+        "Wysłać wiadomość na jego adres e-mail.",
+        "Poczekać z informacją do następnej lekcji."
+      ],
+      "answer": "Wysłać wiadomość na jego adres e-mail.",
+      "evidence": "w pracy nie odbieram telefonu. Mogę wtedy czytać wiadomości na komputerze.",
+      "explanation": "Wiadomość przeczyta na komputerze, nawet jeśli nie może odebrać telefonu."
+    },
+    {
+      "id": "vocabulary",
+      "skill": "vocabulary",
+      "question": "Co oznacza, że litery są „poprawne”?",
+      "options": [
+        "Nazwisko zapisano drugi raz.",
+        "Nazwisko zapisano bez błędu.",
+        "Nazwisko zapisano dużymi literami."
+      ],
+      "answer": "Nazwisko zapisano bez błędu.",
+      "evidence": "Wszystkie litery są już poprawne.",
+      "explanation": "Litery na ekranie są takie, jakie powinny być w nazwisku Michała."
+    }
+  ],
+  "publicationStatus": "practice"
+}

@@ -1,0 +1,76 @@
+{
+  "id": "pl-b1.reading.day-029",
+  "day": 29,
+  "level": "A2",
+  "genre": "opowiadanie",
+  "title": "Podróż z planem i bez planu",
+  "text": "Kiedy Karol przygotowuje się do wyjazdu, zwykle robi bardzo dokładny plan. Sprawdza połączenia kolejowe, szuka noclegu i zapisuje adresy ciekawych miejsc. Tym razem postanowił zrobić inaczej. Razem z przyjaciółką kupili bilety do Wrocławia, ale zaplanowali tylko pierwszy wieczór. Mieli zarezerwowany pokój w centrum, żeby nie tracić czasu na szukanie hotelu po przyjeździe.\n\nW sobotę rano wyszli bez mapy. Po drodze znaleźli małą piekarnię, porozmawiali ze sprzedawcą i dowiedzieli się o wystawie fotografii. Nie było jej w ich przewodniku. Spędzili tam prawie dwie godziny. Później chcieli odwiedzić ogród botaniczny, lecz zaczął padać deszcz. Zamiast tego poszli do muzeum. W muzeum było ciepło i spokojnie.\n\nKarol zauważył, że nie wszystko trzeba wcześniej planować. Rezerwacja noclegu była przydatna, ale wolny czas pozwolił im odkryć coś nowego. Na następny wyjazd zamierza znów przygotować podstawowy plan, a o reszcie zdecydować na miejscu.",
+  "questions": [
+    {
+      "id": "main-idea",
+      "skill": "main-idea",
+      "question": "Jaka myśl najlepiej podsumowuje podróż Karola?",
+      "options": [
+        "Najlepiej najpierw zwiedzać, a noclegu szukać wieczorem.",
+        "Warto zaplanować część wyjazdu i mieć czas na nowe pomysły.",
+        "Przewodnik wystarcza do poznania miasta."
+      ],
+      "answer": "Warto zaplanować część wyjazdu i mieć czas na nowe pomysły.",
+      "evidence": "Rezerwacja noclegu była przydatna, ale wolny czas pozwolił im odkryć coś nowego.",
+      "explanation": "Karol docenił zarówno gotową rezerwację, jak i swobodę wyboru atrakcji."
+    },
+    {
+      "id": "detail",
+      "skill": "detail",
+      "question": "Od kogo podróżni dowiedzieli się o wystawie?",
+      "options": [
+        "Od kierowcy autobusu.",
+        "Od pracownika hotelu.",
+        "Od sprzedawcy w piekarni."
+      ],
+      "answer": "Od sprzedawcy w piekarni.",
+      "evidence": "porozmawiali ze sprzedawcą i dowiedzieli się o wystawie fotografii.",
+      "explanation": "O wystawie usłyszeli podczas wizyty w piekarni."
+    },
+    {
+      "id": "cause",
+      "skill": "cause",
+      "question": "Dlaczego poszli do muzeum zamiast do ogrodu?",
+      "options": [
+        "Na zwiedzanie ogrodu trzeba było mieć rezerwację.",
+        "Zaczęło padać.",
+        "Wystawa fotografii trwała za długo."
+      ],
+      "answer": "Zaczęło padać.",
+      "evidence": "Później chcieli odwiedzić ogród botaniczny, lecz zaczął padać deszcz.",
+      "explanation": "Deszcz skłonił ich do wybrania muzeum."
+    },
+    {
+      "id": "inference",
+      "skill": "inference",
+      "question": "Co najłatwiej byłoby im przegapić, gdyby wybierali miejsca tylko z przewodnika?",
+      "options": [
+        "Dworzec, na który przyjechali.",
+        "Wystawę poleconą w piekarni.",
+        "Ich hotel w centrum."
+      ],
+      "answer": "Wystawę poleconą w piekarni.",
+      "evidence": "dowiedzieli się o wystawie fotografii. Nie było jej w ich przewodniku.",
+      "explanation": "Tylko w przypadku wystawy wiadomo, że przewodnik jej nie wymieniał."
+    },
+    {
+      "id": "vocabulary",
+      "skill": "vocabulary",
+      "question": "Co oznacza, że Karol chce o reszcie planu „zdecydować na miejscu”?",
+      "options": [
+        "Chce wybrać część zajęć dopiero podczas podróży.",
+        "Chce przed wyjazdem poprosić hotel o plan wycieczki.",
+        "Chce zmienić datę wyjazdu po kupieniu biletów."
+      ],
+      "answer": "Chce wybrać część zajęć dopiero podczas podróży.",
+      "evidence": "a o reszcie zdecydować na miejscu.",
+      "explanation": "Nie ustali wcześniej wszystkich atrakcji. Wybierze je już podczas wyjazdu."
+    }
+  ],
+  "publicationStatus": "practice"
+}

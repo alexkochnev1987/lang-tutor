@@ -1,0 +1,76 @@
+{
+  "id": "pl-b1.reading.day-005",
+  "day": 5,
+  "level": "A1",
+  "genre": "opowiadanie",
+  "title": "Prezent dla babci",
+  "text": "Marta i jej brat Piotr szukają prezentu dla babci. Babcia lubi ogród, książki i herbatę. W małym sklepie na rogu jest duży wybór prezentów. Na półce stoi niebieski kubek, obok leży zielona książka, a przy kasie jest żółte pudełko z herbatą.\n\nPiotr chce kupić kubek, ale Marta wie, że babcia ma już wiele kubków. Książka też nie jest dobrym pomysłem, bo babcia już ją ma. Wybierają więc herbatę. Ma zapach malin. Sprzedawca daje im małą papierową torbę. W domu Marta robi jeszcze kartkę z życzeniami, a Piotr rysuje na niej kwiat.",
+  "questions": [
+    {
+      "id": "main-idea",
+      "skill": "main-idea",
+      "question": "O czym jest ta historia?",
+      "options": [
+        "O tym, jak babcia robi zakupy do domu.",
+        "O tym, jak rodzeństwo wybiera prezent dla babci.",
+        "O tym, jak Marta i Piotr robią własną herbatę."
+      ],
+      "answer": "O tym, jak rodzeństwo wybiera prezent dla babci.",
+      "evidence": "Marta i jej brat Piotr szukają prezentu dla babci.",
+      "explanation": "Kolejne wydarzenia pokazują wybór prezentu i przygotowanie kartki."
+    },
+    {
+      "id": "detail",
+      "skill": "detail",
+      "question": "Jakiego koloru jest kubek?",
+      "options": [
+        "Zielonego.",
+        "Żółtego.",
+        "Niebieskiego."
+      ],
+      "answer": "Niebieskiego.",
+      "evidence": "Na półce stoi niebieski kubek",
+      "explanation": "Zielona jest książka, a żółte jest pudełko z herbatą."
+    },
+    {
+      "id": "cause",
+      "skill": "cause",
+      "question": "Dlaczego Marta nie chce kupić kubka?",
+      "options": [
+        "Babcia nie lubi niebieskiego koloru.",
+        "Kubek jest za ciężki.",
+        "Babcia ma już wiele kubków."
+      ],
+      "answer": "Babcia ma już wiele kubków.",
+      "evidence": "babcia ma już wiele kubków.",
+      "explanation": "Marta uważa, że kolejny kubek jest babci niepotrzebny."
+    },
+    {
+      "id": "inference",
+      "skill": "inference",
+      "question": "Co pomaga Marcie wybrać prezent?",
+      "options": [
+        "To, że zna cenę każdego prezentu.",
+        "To, że pamięta, co babcia już ma.",
+        "To, że babcia podała jej listę zakupów."
+      ],
+      "answer": "To, że pamięta, co babcia już ma.",
+      "evidence": "Marta wie, że babcia ma już wiele kubków. Książka też nie jest dobrym pomysłem, bo babcia już ją ma.",
+      "explanation": "Marta rezygnuje z obu rzeczy, gdy przypomina sobie, co jest u babci."
+    },
+    {
+      "id": "vocabulary",
+      "skill": "vocabulary",
+      "question": "Gdzie jest sklep „na rogu”?",
+      "options": [
+        "Za domem, obok ogrodu.",
+        "W połowie ulicy, między dwoma domami.",
+        "Tam, gdzie jedna ulica spotyka się z drugą."
+      ],
+      "answer": "Tam, gdzie jedna ulica spotyka się z drugą.",
+      "evidence": "W małym sklepie na rogu jest duży wybór prezentów.",
+      "explanation": "„Na rogu” wskazuje miejsce przy skrzyżowaniu ulic."
+    }
+  ],
+  "publicationStatus": "practice"
+}

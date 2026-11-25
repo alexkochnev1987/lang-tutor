@@ -1,0 +1,76 @@
+{
+  "id": "pl-b1.reading.day-060",
+  "day": 60,
+  "level": "A2",
+  "genre": "e-mail",
+  "title": "Wiadomość o rozmowie w sprawie pracy",
+  "text": "Temat: Rozmowa w sprawie pracy w biurze\n\nDzień dobry, Pani Marto!\n\nDziękujemy za zainteresowanie naszym ogłoszeniem o pracy. Szukamy osoby do obsługi zamówień w małej firmie, która sprzedaje meble. Codzienna praca to rozmowy z klientami, sprawdzanie adresów dostaw oraz zapisywanie nowych zamówień w komputerze. Nie trzeba mieć doświadczenia w sprzedaży, ale potrzebujemy osoby, która dobrze organizuje swoją pracę i potrafi jasno pisać wiadomości.\n\nPierwsza rozmowa będzie przez internet i potrwa około dwudziestu minut. Prosimy przygotować krótki opis swoich poprzednich obowiązków. Nie trzeba wysyłać dodatkowego życiorysu, ponieważ mamy już Pani dokumenty. Po rozmowie zaprosimy wybrane osoby do biura. Tam otrzymają krótkie zadanie dotyczące zamówień, aby poznać sposób naszej pracy.\n\nPraca jest na pełny etat od poniedziałku do piątku. W pierwszym miesiącu nowa osoba pracuje razem z bardziej doświadczonym kolegą. O pensji porozmawiamy podczas pierwszej rozmowy. Możemy zaproponować wtorek o jedenastej lub środę o szesnastej. Prosimy o odpowiedź do poniedziałku.\n\nPozdrawiam\nAnna, dział rekrutacji",
+  "questions": [
+    {
+      "id": "main-idea",
+      "skill": "main-idea",
+      "question": "Po co Anna wysyła tę wiadomość?",
+      "options": [
+        "Żeby potwierdzić przyjęcie Marty do pracy w biurze.",
+        "Żeby przedstawić warunki pracy i następne kroki rekrutacji.",
+        "Żeby poprosić Martę o wykonanie zadania przed rozmową."
+      ],
+      "answer": "Żeby przedstawić warunki pracy i następne kroki rekrutacji.",
+      "evidence": "Dziękujemy za zainteresowanie naszym ogłoszeniem o pracy. Szukamy osoby do obsługi zamówień w małej firmie, która sprzedaje meble.",
+      "explanation": "E-mail opisuje stanowisko, wymagania i etapy rozmów, a nie potwierdza zatrudnienia."
+    },
+    {
+      "id": "detail",
+      "skill": "detail",
+      "question": "Ile ma trwać pierwsza rozmowa?",
+      "options": [
+        "Około czterdziestu minut.",
+        "Około dwudziestu minut.",
+        "Około jednej godziny."
+      ],
+      "answer": "Około dwudziestu minut.",
+      "evidence": "Pierwsza rozmowa będzie przez internet i potrwa około dwudziestu minut.",
+      "explanation": "Czas rozmowy podano bezpośrednio."
+    },
+    {
+      "id": "cause",
+      "skill": "cause",
+      "question": "Dlaczego Marta nie musi ponownie wysyłać życiorysu?",
+      "options": [
+        "Firma otrzymała już jej dokumenty.",
+        "Firma zbiera życiorysy dopiero podczas spotkań w biurze.",
+        "Firma przyjmuje życiorysy tylko w dniu pierwszej rozmowy."
+      ],
+      "answer": "Firma otrzymała już jej dokumenty.",
+      "evidence": "Nie trzeba wysyłać dodatkowego życiorysu, ponieważ mamy już Pani dokumenty.",
+      "explanation": "Życiorys znajduje się już wśród dokumentów kandydatki."
+    },
+    {
+      "id": "inference",
+      "skill": "inference",
+      "question": "Marta nie pracowała w sprzedaży, ale wcześniej odpowiadała na wiadomości i zajmowała się zamówieniami. We wtorek pracuje do piętnastej, a w środę jest wolna po piętnastej. Co powinna zrobić zgodnie z wiadomością?",
+      "options": [
+        "Wybrać wtorek i przygotować opis poprzedniej pracy.",
+        "Wybrać środę i przygotować zadanie dotyczące zamówień zamiast opisu poprzedniej pracy.",
+        "Wybrać środę i opowiedzieć o swoich dotychczasowych obowiązkach."
+      ],
+      "answer": "Wybrać środę i opowiedzieć o swoich dotychczasowych obowiązkach.",
+      "evidence": "Nie trzeba mieć doświadczenia w sprzedaży, ale potrzebujemy osoby, która dobrze organizuje swoją pracę i potrafi jasno pisać wiadomości.\n\nPierwsza rozmowa będzie przez internet i potrwa około dwudziestu minut. Prosimy przygotować krótki opis swoich poprzednich obowiązków. Nie trzeba wysyłać dodatkowego życiorysu, ponieważ mamy już Pani dokumenty. Po rozmowie zaprosimy wybrane osoby do biura. Tam otrzymają krótkie zadanie dotyczące zamówień, aby poznać sposób naszej pracy.\n\nPraca jest na pełny etat od poniedziałku do piątku. W pierwszym miesiącu nowa osoba pracuje razem z bardziej doświadczonym kolegą. O pensji porozmawiamy podczas pierwszej rozmowy. Możemy zaproponować wtorek o jedenastej lub środę o szesnastej.",
+      "explanation": "Brak pracy w sprzedaży nie wyklucza Marty, a jedynie środowy termin pasuje do jej planu."
+    },
+    {
+      "id": "vocabulary",
+      "skill": "vocabulary",
+      "question": "Co oznacza „obsługa zamówień”?",
+      "options": [
+        "Doradzanie klientom, jakie meble kupić.",
+        "Pakowanie mebli i planowanie ich transportu.",
+        "Przyjmowanie zamówień i sprawdzanie danych klientów."
+      ],
+      "answer": "Przyjmowanie zamówień i sprawdzanie danych klientów.",
+      "evidence": "Codzienna praca to rozmowy z klientami, sprawdzanie adresów dostaw oraz zapisywanie nowych zamówień w komputerze.",
+      "explanation": "Praca obejmuje kontakt z klientami i przygotowanie danych o zakupach."
+    }
+  ],
+  "publicationStatus": "practice"
+}
