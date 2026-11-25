@@ -1,0 +1,756 @@
+{
+  "version": 1,
+  "status": "draft",
+  "texts": [
+    {
+      "id": "pl-b1.reading.day-118",
+      "day": 118,
+      "level": "B1",
+      "genre": "opowiadanie",
+      "title": "Wspólna decyzja w rodzinie",
+      "text": "Kiedy w domu rodziny Królów pojawiła się propozycja przeprowadzki, każdy zareagował inaczej. Ojciec dostał możliwość pracy bliżej centrum, ale obecne mieszkanie znajdowało się na drugim końcu miasta. Dojazdy zajmowały mu prawie dwie godziny dziennie. Matka pracowała częściowo z domu, więc odległość nie miała dla niej tak dużego znaczenia. Ich córka Lena natomiast nie chciała zmieniać szkoły w połowie roku.\n\nPoczątkowo rodzice rozmawiali o nowych mieszkaniach tylko między sobą. Lena słyszała fragmenty rozmów i obawiała się, że wszystko zostało już ustalone. Pewnego wieczoru zapytała wprost, kiedy będą się pakować. Ojciec zrozumiał wtedy, że córka inaczej odebrała ich plany.\n\nW niedzielę usiedli przy stole z mapą miasta. Zaznaczyli szkołę Leny, nowe biuro ojca oraz miejsca, do których matka jeździła w ciągu tygodnia. Okazało się, że nie muszą wybierać wyłącznie między obecnym mieszkaniem a mieszkaniem tuż przy biurze. Znaleźli dzielnicę, z której ojciec mógłby szybciej dojeżdżać do pracy, a Lena nadal korzystałaby z tego samego autobusu do szkoły.\n\nNie podjęli decyzji od razu. Przez dwa tygodnie sprawdzali różne połączenia i oglądali mieszkania w tej okolicy. Ustalili też, że jeżeli nie znajdą odpowiedniego miejsca przed końcem roku szkolnego, odłożą przeprowadzkę na wakacje.\n\nLena nadal miała wątpliwości, ale przestała czuć, że decyzja dotyczy jej tylko dlatego, że będzie musiała się do niej dostosować. Rodzice nie mogli spełnić wszystkich oczekiwań, lecz dzięki rozmowie lepiej rozumieli, jakie warunki muszą brać pod uwagę.",
+      "questions": [
+        {
+          "id": "main-idea",
+          "skill": "main-idea",
+          "question": "Co przede wszystkim zmieniło sposób podejmowania decyzji w rodzinie?",
+          "options": [
+            "Natychmiastowa rezygnacja z przeprowadzki.",
+            "Wybór mieszkania wyłącznie według odległości od biura.",
+            "Uwzględnienie potrzeb wszystkich domowników i poszukiwanie dodatkowej możliwości."
+          ],
+          "answer": "Uwzględnienie potrzeb wszystkich domowników i poszukiwanie dodatkowej możliwości.",
+          "evidence": "Rodzice nie mogli spełnić wszystkich oczekiwań, lecz dzięki rozmowie lepiej rozumieli, jakie warunki muszą brać pod uwagę.",
+          "explanation": "Wspólna mapa ujawniła trzecią możliwość, która uwzględnia szkołę i dojazd ojca."
+        },
+        {
+          "id": "detail",
+          "skill": "detail",
+          "question": "Ile czasu dziennie zajmowały ojcu dojazdy?",
+          "options": [
+            "Około pół godziny.",
+            "Prawie dwie godziny.",
+            "Ponad trzy godziny."
+          ],
+          "answer": "Prawie dwie godziny.",
+          "evidence": "Dojazdy zajmowały mu prawie dwie godziny dziennie.",
+          "explanation": "W tekście podano prawie dwie godziny dziennie."
+        },
+        {
+          "id": "cause",
+          "skill": "cause",
+          "question": "Dlaczego Lena zapytała o pakowanie?",
+          "options": [
+            "Sądziła, że rodzice już zdecydowali o przeprowadzce.",
+            "Znalazła mieszkanie w centrum.",
+            "Chciała zacząć naukę w innej szkole."
+          ],
+          "answer": "Sądziła, że rodzice już zdecydowali o przeprowadzce.",
+          "evidence": "Lena słyszała fragmenty rozmów i obawiała się, że wszystko zostało już ustalone.",
+          "explanation": "Lena usłyszała fragmenty rozmów i uznała, że decyzja już zapadła."
+        },
+        {
+          "id": "inference",
+          "skill": "inference",
+          "question": "Rodzina znalazła mieszkanie blisko biura, ale Lena musiałaby zmienić szkołę natychmiast. Co najlepiej odpowiada ich ustaleniom?",
+          "options": [
+            "Podpisać umowę, bo dojazd ojca jest najważniejszy.",
+            "Zrezygnować z nowej pracy bez rozmowy o innych mieszkaniach.",
+            "Poszukać innego miejsca lub rozważyć przeprowadzkę po zakończeniu roku szkolnego."
+          ],
+          "answer": "Poszukać innego miejsca lub rozważyć przeprowadzkę po zakończeniu roku szkolnego.",
+          "evidence": "Zaznaczyli szkołę Leny, nowe biuro ojca oraz miejsca, do których matka jeździła w ciągu tygodnia. Okazało się, że nie muszą wybierać wyłącznie między obecnym mieszkaniem a mieszkaniem tuż przy biurze. Znaleźli dzielnicę, z której ojciec mógłby szybciej dojeżdżać do pracy, a Lena nadal korzystałaby z tego samego autobusu do szkoły.\n\nNie podjęli decyzji od razu. Przez dwa tygodnie sprawdzali różne połączenia i oglądali mieszkania w tej okolicy. Ustalili też, że jeżeli nie znajdą odpowiedniego miejsca przed końcem roku szkolnego, odłożą przeprowadzkę na wakacje.",
+          "explanation": "Rodzina ustaliła, że szkoła jest ważnym warunkiem, a termin może się przesunąć."
+        },
+        {
+          "id": "vocabulary",
+          "skill": "vocabulary",
+          "question": "Co oznacza „odłożą przeprowadzkę”?",
+          "options": [
+            "Zmienią adres bez przenoszenia rzeczy.",
+            "Przesuną ją na późniejszy termin.",
+            "Wykonają ją w dwóch etapach jednego dnia."
+          ],
+          "answer": "Przesuną ją na późniejszy termin.",
+          "evidence": "odłożą przeprowadzkę na wakacje.",
+          "explanation": "Odłożenie oznacza zmianę terminu na wakacje."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-119",
+      "day": 119,
+      "level": "B1",
+      "genre": "poradnik",
+      "title": "Sposoby na nieporozumienia",
+      "text": "Nieporozumienie nie zawsze oznacza, że rozmówcy mają zupełnie różne cele. Czasami używają tych samych słów, ale nadają im inne znaczenie. Ktoś mówi, że przyjdzie „wcześnie”, mając na myśli godzinę ósmą, podczas gdy druga osoba spodziewa się go dopiero przed dziesiątą. Obie strony mogą później uważać, że to właśnie ich oczekiwania były oczywiste.\n\nZanim odpowiesz na wiadomość, która cię zdenerwowała, spróbuj oddzielić to, co rzeczywiście zostało napisane, od tego, co sam dopowiadasz. Jeśli znajomy nie odpisał na zaproszenie, nie wiesz jeszcze, czy nie chce się spotkać, czy po prostu nie miał czasu przeczytać wiadomości. Krótkie pytanie może wyjaśnić więcej niż długa odpowiedź oparta na przypuszczeniu.\n\nW przykładowej sytuacji Basia i Kuba mieli przygotować wspólną prezentację. Basia napisała, że zajmie się pierwszą częścią. Kuba uznał, że oznacza to również przygotowanie ilustracji. Basia zamierzała natomiast napisać tylko tekst. Kiedy odkryli różnicę, zamiast rozstrzygać, kto zawinił, wypisali wszystkie pozostałe zadania i podzielili je między siebie. Na końcu każde powtórzyło własne ustalenia.\n\nJeśli rozmowa dotyczy ważnej sprawy, przydatne może być krótkie podsumowanie na piśmie. Nie musi ono przypominać oficjalnej umowy. Wystarczy zanotować, kto co zrobi i do kiedy. W ten sposób można zauważyć różnicę w rozumieniu planu, zanim pojawi się problem.\n\nWarto też pamiętać, że wyjaśnienie nieporozumienia nie wymaga zawsze znalezienia osoby winnej. Celem jest przede wszystkim ustalenie, jak postępować dalej, aby podobna sytuacja się nie powtórzyła.",
+      "questions": [
+        {
+          "id": "main-idea",
+          "skill": "main-idea",
+          "question": "Jaki cel ma poradnik?",
+          "options": [
+            "Pomóc rozpoznawać różnice w rozumieniu ustaleń i wyjaśniać je przed konfliktem.",
+            "Nauczyć rozpoznawać, kto zawsze ponosi winę za spór.",
+            "Zachęcić do zastąpienia wszystkich rozmów oficjalnymi umowami."
+          ],
+          "answer": "Pomóc rozpoznawać różnice w rozumieniu ustaleń i wyjaśniać je przed konfliktem.",
+          "evidence": "Celem jest przede wszystkim ustalenie, jak postępować dalej, aby podobna sytuacja się nie powtórzyła.",
+          "explanation": "Przykłady pokazują, że warto sprawdzać rozumienie słów i dzielić zadania jasno."
+        },
+        {
+          "id": "detail",
+          "skill": "detail",
+          "question": "Co Basia zamierzała przygotować?",
+          "options": [
+            "Końcową część prezentacji.",
+            "Tekst pierwszej części prezentacji.",
+            "Wyłącznie ilustracje."
+          ],
+          "answer": "Tekst pierwszej części prezentacji.",
+          "evidence": "Basia zamierzała natomiast napisać tylko tekst.",
+          "explanation": "Basia rozumiała pierwszą część jako sam tekst."
+        },
+        {
+          "id": "cause",
+          "skill": "cause",
+          "question": "Dlaczego warto zapisywać ustalenia?",
+          "options": [
+            "Żeby nie musieć rozmawiać ze znajomymi.",
+            "Żeby móc ocenić pracę na podstawie długości wiadomości.",
+            "Żeby wcześniej zauważyć różne rozumienie planu."
+          ],
+          "answer": "Żeby wcześniej zauważyć różne rozumienie planu.",
+          "evidence": "W ten sposób można zauważyć różnicę w rozumieniu planu, zanim pojawi się problem.",
+          "explanation": "Podsumowanie ujawnia różne interpretacje jeszcze przed wykonaniem pracy."
+        },
+        {
+          "id": "inference",
+          "skill": "inference",
+          "question": "Znajomy obiecuje przynieść materiały „jutro rano”, a ty potrzebujesz ich przed ósmą. Co najlepiej zrobić?",
+          "options": [
+            "Przygotować pretensje na wypadek jego spóźnienia.",
+            "Dopytać o konkretną godzinę i potwierdzić ustalenie.",
+            "Uznać, że na pewno przyjdzie przed ósmą."
+          ],
+          "answer": "Dopytać o konkretną godzinę i potwierdzić ustalenie.",
+          "evidence": "Ktoś mówi, że przyjdzie „wcześnie”, mając na myśli godzinę ósmą, podczas gdy druga osoba spodziewa się go dopiero przed dziesiątą. Obie strony mogą później uważać, że to właśnie ich oczekiwania były oczywiste.\n\nZanim odpowiesz na wiadomość, która cię zdenerwowała, spróbuj oddzielić to, co rzeczywiście zostało napisane, od tego, co sam dopowiadasz. Jeśli znajomy nie odpisał na zaproszenie, nie wiesz jeszcze, czy nie chce się spotkać, czy po prostu nie miał czasu przeczytać wiadomości. Krótkie pytanie może wyjaśnić więcej niż długa odpowiedź oparta na przypuszczeniu.\n\nW przykładowej sytuacji Basia i Kuba mieli przygotować wspólną prezentację. Basia napisała, że zajmie się pierwszą częścią. Kuba uznał, że oznacza to również przygotowanie ilustracji. Basia zamierzała natomiast napisać tylko tekst. Kiedy odkryli różnicę, zamiast rozstrzygać, kto zawinił, wypisali wszystkie pozostałe zadania i podzielili je między siebie. Na końcu każde powtórzyło własne ustalenia.\n\nJeśli rozmowa dotyczy ważnej sprawy, przydatne może być krótkie podsumowanie na piśmie. Nie musi ono przypominać oficjalnej umowy. Wystarczy zanotować, kto co zrobi i do kiedy. W ten sposób można zauważyć różnicę w rozumieniu planu, zanim pojawi się problem.",
+          "explanation": "Określenie „rano” jest zbyt ogólne przy wymaganej godzinie ósmej."
+        },
+        {
+          "id": "vocabulary",
+          "skill": "vocabulary",
+          "question": "Co znaczy „przypuszczenie”?",
+          "options": [
+            "Wniosek, którego jeszcze nie potwierdziliśmy.",
+            "Informacja zapisana we wspólnej umowie.",
+            "Zadanie wykonane zgodnie z planem."
+          ],
+          "answer": "Wniosek, którego jeszcze nie potwierdziliśmy.",
+          "evidence": "Krótkie pytanie może wyjaśnić więcej niż długa odpowiedź oparta na przypuszczeniu.",
+          "explanation": "Przypuszczenie to interpretacja, która nie została sprawdzona."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-120",
+      "day": 120,
+      "level": "B1",
+      "genre": "wiadomość",
+      "title": "Zebranie wspólnoty mieszkaniowej",
+      "text": "Cześć, Jolu!\n\nWczoraj odbyło się zebranie naszej wspólnoty mieszkaniowej. Wiem, że nie mogłaś przyjść, więc opiszę ci najważniejsze ustalenia. Nie zapadły jeszcze wszystkie decyzje, ale mieszkańcy zgodzili się, że trzeba uporządkować wspólne części budynku.\n\nNa początku rozmawialiśmy o piwnicy. W przejściu stoją rzeczy, których właścicieli trudno ustalić. Nie chcemy ich od razu wyrzucać, ponieważ niektóre mogą być nadal komuś potrzebne. Ustaliliśmy, że administracja powiesi ogłoszenie z prośbą o oznaczenie własnych przedmiotów do końca miesiąca. Dopiero później wrócimy do sprawy rzeczy pozostawionych bez oznaczeń.\n\nDrugim tematem było sprzątanie garażu. Firma zaproponowała dwa terminy: poniedziałek rano lub piątek po południu. Gdyśmy porównali grafiki mieszkańców, okazało się, że żaden termin nie odpowiada wszystkim. Dlatego poprosiliśmy o podział garażu na dwie części i sprzątanie ich w różne dni. Czekamy jeszcze na odpowiedź firmy.\n\nNa końcu pojawił się pomysł ustawienia regału przy wejściu na strych. Mieszkańcy mogliby zostawiać na nim książki, które chcą oddać. Nie ustaliliśmy jednak, kto będzie dbał o porządek. Zanim kupimy regał, chcemy znaleźć dwie osoby gotowe zajmować się nim przez pierwsze trzy miesiące.\n\nJeśli chciałabyś pomóc przy tym ostatnim pomyśle, napisz do mnie. Możesz też przesłać administracji uwagi o sprzątaniu garażu. Następne krótkie zebranie odbędzie się za dwa tygodnie. Wtedy powinniśmy już znać odpowiedź firmy i będziemy mogli podjąć dalsze decyzje.\n\nPozdrawiam,\nRenata",
+      "questions": [
+        {
+          "id": "main-idea",
+          "skill": "main-idea",
+          "question": "Co Renata przekazuje Joli?",
+          "options": [
+            "Prośbę o samodzielne usunięcie wszystkich rzeczy z budynku.",
+            "Podsumowanie ustaleń dotyczących części wspólnych oraz spraw wymagających dalszej decyzji.",
+            "Ostateczny harmonogram wszystkich prac remontowych."
+          ],
+          "answer": "Podsumowanie ustaleń dotyczących części wspólnych oraz spraw wymagających dalszej decyzji.",
+          "evidence": "Nie zapadły jeszcze wszystkie decyzje, ale mieszkańcy zgodzili się, że trzeba uporządkować wspólne części budynku.",
+          "explanation": "Renata podaje trzy tematy, w tym sprawy nadal otwarte."
+        },
+        {
+          "id": "detail",
+          "skill": "detail",
+          "question": "Do kiedy należy oznaczyć własne przedmioty w piwnicy?",
+          "options": [
+            "Do następnego poniedziałku.",
+            "Do końca następnego zebrania.",
+            "Do końca miesiąca."
+          ],
+          "answer": "Do końca miesiąca.",
+          "evidence": "administracja powiesi ogłoszenie z prośbą o oznaczenie własnych przedmiotów do końca miesiąca.",
+          "explanation": "Ogłoszenie ma wyznaczać koniec miesiąca."
+        },
+        {
+          "id": "cause",
+          "skill": "cause",
+          "question": "Dlaczego poproszono o sprzątanie garażu w dwa różne dni?",
+          "options": [
+            "Żaden z zaproponowanych terminów nie pasował wszystkim mieszkańcom.",
+            "Garaż ma dwa osobne adresy.",
+            "Firma odmówiła sprzątania całego garażu."
+          ],
+          "answer": "Żaden z zaproponowanych terminów nie pasował wszystkim mieszkańcom.",
+          "evidence": "okazało się, że żaden termin nie odpowiada wszystkim.",
+          "explanation": "Podział na dwie części pomaga uwzględnić różne grafiki."
+        },
+        {
+          "id": "inference",
+          "skill": "inference",
+          "question": "Jola chce, aby regał powstał szybko, ale nie może zajmować się nim sama przez trzy miesiące. Co może zrobić?",
+          "options": [
+            "Zaproponować współpracę z drugim mieszkańcem, zanim regał zostanie kupiony.",
+            "Kupić regał bez uzgadniania opieki nad nim.",
+            "Ustawić książki w przejściu do piwnicy przed zebraniem."
+          ],
+          "answer": "Zaproponować współpracę z drugim mieszkańcem, zanim regał zostanie kupiony.",
+          "evidence": "Zanim kupimy regał, chcemy znaleźć dwie osoby gotowe zajmować się nim przez pierwsze trzy miesiące.",
+          "explanation": "Regał wymaga dwóch osób, więc Jola może współdzielić opiekę."
+        },
+        {
+          "id": "vocabulary",
+          "skill": "vocabulary",
+          "question": "Co oznaczają „rzeczy pozostawione bez oznaczeń”?",
+          "options": [
+            "Rzeczy zapisane na liście firmy sprzątającej.",
+            "Przedmioty przygotowane do natychmiastowego remontu.",
+            "Przedmioty, przy których nie wskazano właściciela."
+          ],
+          "answer": "Przedmioty, przy których nie wskazano właściciela.",
+          "evidence": "W przejściu stoją rzeczy, których właścicieli trudno ustalić.",
+          "explanation": "Brak oznaczenia utrudnia ustalenie, do kogo należy rzecz."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-121",
+      "day": 121,
+      "level": "B1",
+      "genre": "artykuł",
+      "title": "Małe mieszkanie z dużymi możliwościami",
+      "text": "Po przeprowadzce do niewielkiego mieszkania Ania i Maciek szybko zauważyli, że największym problemem nie jest brak miejsca na wszystkie rzeczy, lecz brak miejsca na różne codzienne czynności. W jednym pokoju chcieli odpoczywać, pracować i przyjmować gości. Początkowo ustawili pod ścianą kanapę, duży fotel oraz biurko z wysoką nadstawką, która zasłaniała prawie połowę okna.\n\nPonieważ wynajmowali mieszkanie, nie chcieli wprowadzać zmian wymagających remontu. Właściciel zgodził się jedynie na zamocowanie kilku lekkich półek w miejscach, które wcześniej uzgodnili. Para postanowiła sprawdzić, co można osiągnąć przez zmianę ustawienia mebli.\n\nPrzez tydzień obserwowali, kiedy rzeczywiście korzystają z poszczególnych miejsc. Okazało się, że fotel służył głównie do odkładania ubrań, a Maciek pracował przy biurku tylko dwa dni w tygodniu. Ania za to codziennie potrzebowała miejsca na ćwiczenia. Gdyby usunęli fotel, mogliby bez przesuwania ciężkich mebli rozłożyć matę na podłodze.\n\nSprzedali więc fotel znajomym, a przy kanapie ustawili mały stolik, który łatwo przenieść. Biurko przesunęli spod okna pod boczną ścianę, dzięki czemu więcej światła wpadało do pokoju. Nie kupili od razu nowych szaf. Najpierw wykorzystali pudełka, które już mieli, do uporządkowania półek.\n\nPo miesiącu uznali, że pokój wciąż jest mały, ale można z niego korzystać na więcej sposobów. Nie musieli kupować specjalnych mebli zaprojektowanych do każdego zadania. Ważniejsze było ustalenie, które czynności wykonują najczęściej, a które mogą odbywać się w tym samym miejscu o różnych porach dnia.",
+      "questions": [
+        {
+          "id": "main-idea",
+          "skill": "main-idea",
+          "question": "Jaki jest główny wniosek z historii Ani i Maćka?",
+          "options": [
+            "Każde małe mieszkanie wymaga dużego remontu przed przeprowadzką.",
+            "Najlepiej przeznaczyć osobny mebel do każdej czynności.",
+            "Małą przestrzeń można lepiej wykorzystać, dopasowując ją do rzeczywistych czynności."
+          ],
+          "answer": "Małą przestrzeń można lepiej wykorzystać, dopasowując ją do rzeczywistych czynności.",
+          "evidence": "Ważniejsze było ustalenie, które czynności wykonują najczęściej, a które mogą odbywać się w tym samym miejscu o różnych porach dnia.",
+          "explanation": "Zmiany wynikają z obserwacji użycia, a nie z samej wielkości pokoju."
+        },
+        {
+          "id": "detail",
+          "skill": "detail",
+          "question": "Co para zrobiła z fotelem?",
+          "options": [
+            "Sprzedała go znajomym.",
+            "Oddała go właścicielowi mieszkania.",
+            "Przeniosła go pod okno."
+          ],
+          "answer": "Sprzedała go znajomym.",
+          "evidence": "Sprzedali więc fotel znajomym",
+          "explanation": "Fotel został sprzedany znajomym."
+        },
+        {
+          "id": "cause",
+          "skill": "cause",
+          "question": "Dlaczego para ograniczyła zmiany wymagające remontu?",
+          "options": [
+            "Nie mieli żadnych mebli do ustawienia.",
+            "Wynajmowali mieszkanie i chcieli ograniczyć zmiany budowlane.",
+            "Właściciel nakazał im kupić nową kanapę."
+          ],
+          "answer": "Wynajmowali mieszkanie i chcieli ograniczyć zmiany budowlane.",
+          "evidence": "Ponieważ wynajmowali mieszkanie, nie chcieli wprowadzać zmian wymagających remontu.",
+          "explanation": "Mieszkanie było wynajmowane, więc woleli zmienić ustawienie i uzgodnić niewielkie mocowania."
+        },
+        {
+          "id": "inference",
+          "skill": "inference",
+          "question": "Maciek zaczyna pracować z domu codziennie, a Ania nadal ćwiczy. Co powinni sprawdzić zgodnie ze swoim podejściem?",
+          "options": [
+            "Czy właściciel zgodzi się na wymianę wszystkich szaf.",
+            "Czy ustawienie pozwala obu osobom korzystać z potrzebnych miejsc, zanim kupią kolejne meble.",
+            "Czy mogą usunąć biurko bez sprawdzania nowego grafiku."
+          ],
+          "answer": "Czy ustawienie pozwala obu osobom korzystać z potrzebnych miejsc, zanim kupią kolejne meble.",
+          "evidence": "Przez tydzień obserwowali, kiedy rzeczywiście korzystają z poszczególnych miejsc.",
+          "explanation": "Nowe potrzeby trzeba porównać z obecnym ustawieniem, tak jak wcześniej."
+        },
+        {
+          "id": "vocabulary",
+          "skill": "vocabulary",
+          "question": "Co oznacza „rozłożyć matę”?",
+          "options": [
+            "Schować matę do pudełka.",
+            "Przenieść fotel na miejsce ćwiczeń.",
+            "Przygotować matę do użycia, kładąc ją na podłodze."
+          ],
+          "answer": "Przygotować matę do użycia, kładąc ją na podłodze.",
+          "evidence": "rozłożyć matę na podłodze.",
+          "explanation": "Rozłożenie maty przygotowuje wolne miejsce do ćwiczeń."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-122",
+      "day": 122,
+      "level": "B1",
+      "genre": "dialog",
+      "title": "Umowa najmu bez niespodzianek",
+      "text": "— Mieszkanie bardzo mi się podoba, ale chciałbym jeszcze spokojnie przeczytać projekt umowy — powiedział Norbert podczas oglądania lokalu.\n\n— Oczywiście — odpowiedziała właścicielka, pani Joanna. — Przygotowałam też listę wyposażenia. W kuchni zostają piekarnik, lodówka i podstawowe naczynia. W salonie wymieniłam ostatnio lampę.\n\nNorbert zauważył jednak, że w łazience kran nie zamykał się całkowicie. Zapytał, czy można go naprawić przed przeprowadzką. Właścicielka odpowiedziała, że zamówiła już wizytę fachowca na przyszły wtorek.\n\n— Chciałbym, żebyśmy przy przekazaniu kluczy sprawdzili również stan wyposażenia — zaproponował Norbert. — W poprzednim mieszkaniu nie zapisaliśmy kilku drobnych uszkodzeń. Później trudno było ustalić, kiedy powstały.\n\n— To dobry pomysł. Możemy zrobić wspólną listę i zdjęcia. Nie chodzi o to, żeby opisywać każdą rysę na talerzu, ale ważniejsze rzeczy warto zanotować.\n\nNorbert zapytał także o opłaty. W projekcie umowy widniała miesięczna kwota najmu, a obok informacja o dodatkowych kosztach. Pani Joanna wyjaśniła, że dokładna wysokość niektórych opłat zależy od zużycia. Norbert poprosił o przykładowe rozliczenie z poprzedniego miesiąca, żeby wiedzieć, jak planować budżet.\n\nUzgodnili, że spotkają się w środę, dzień po planowanej naprawie kranu. Jeśli wszystko będzie w porządku, podpiszą umowę i przygotują listę stanu mieszkania. Norbert nie chciał zatrzymywać lokalu przez wiele tygodni, ale zależało mu na wyjaśnieniu wątpliwości przed podpisaniem dokumentów.\n\nPo spotkaniu zapisał trzy pytania, które chciał jeszcze zadać. Dzięki temu nie musiał polegać wyłącznie na pamięci podczas kolejnej rozmowy.",
+      "questions": [
+        {
+          "id": "main-idea",
+          "skill": "main-idea",
+          "question": "Jakie podejście do najmu pokazuje Norbert?",
+          "options": [
+            "Sprawdza stan lokalu i warunki finansowe, zanim podejmie decyzję.",
+            "Chce podpisać dokumenty przed ustaleniem jakichkolwiek szczegółów.",
+            "Wybiera mieszkanie wyłącznie na podstawie wyposażenia kuchni."
+          ],
+          "answer": "Sprawdza stan lokalu i warunki finansowe, zanim podejmie decyzję.",
+          "evidence": "zależało mu na wyjaśnieniu wątpliwości przed podpisaniem dokumentów.",
+          "explanation": "Norbert zbiera informacje techniczne i finansowe przed podpisaniem."
+        },
+        {
+          "id": "detail",
+          "skill": "detail",
+          "question": "Na kiedy zaplanowano wizytę fachowca?",
+          "options": [
+            "Na środę.",
+            "Na piątek.",
+            "Na wtorek."
+          ],
+          "answer": "Na wtorek.",
+          "evidence": "zamówiła już wizytę fachowca na przyszły wtorek.",
+          "explanation": "Fachowiec ma przyjść we wtorek, przed środowym spotkaniem."
+        },
+        {
+          "id": "cause",
+          "skill": "cause",
+          "question": "Dlaczego Norbert proponuje zapisać stan wyposażenia?",
+          "options": [
+            "Nie wie, które urządzenia powinny zostać w kuchni.",
+            "Wcześniej trudno było ustalić, kiedy powstały uszkodzenia.",
+            "Chce samodzielnie wymienić wszystkie naczynia."
+          ],
+          "answer": "Wcześniej trudno było ustalić, kiedy powstały uszkodzenia.",
+          "evidence": "W poprzednim mieszkaniu nie zapisaliśmy kilku drobnych uszkodzeń. Później trudno było ustalić, kiedy powstały.",
+          "explanation": "Lista i zdjęcia pomagają ustalić wcześniejszy stan mieszkania."
+        },
+        {
+          "id": "inference",
+          "skill": "inference",
+          "question": "W środę kran nadal przecieka, a rozliczenie opłat nie zostało pokazane. Co odpowiada podejściu Norberta?",
+          "options": [
+            "Podpisać umowę i nie wracać już do tych spraw.",
+            "Wyjaśnić obie kwestie z właścicielką przed podpisaniem umowy.",
+            "Odmówić oglądania wyposażenia, skoro kran nie działa."
+          ],
+          "answer": "Wyjaśnić obie kwestie z właścicielką przed podpisaniem umowy.",
+          "evidence": "Norbert zapytał także o opłaty. W projekcie umowy widniała miesięczna kwota najmu, a obok informacja o dodatkowych kosztach. Pani Joanna wyjaśniła, że dokładna wysokość niektórych opłat zależy od zużycia. Norbert poprosił o przykładowe rozliczenie z poprzedniego miesiąca, żeby wiedzieć, jak planować budżet.\n\nUzgodnili, że spotkają się w środę, dzień po planowanej naprawie kranu. Jeśli wszystko będzie w porządku, podpiszą umowę i przygotują listę stanu mieszkania.",
+          "explanation": "Obie wątpliwości pozostają otwarte; podpisanie było warunkowe."
+        },
+        {
+          "id": "vocabulary",
+          "skill": "vocabulary",
+          "question": "Co oznacza „przykładowe rozliczenie”?",
+          "options": [
+            "Dokument pokazujący, jak obliczono koszty w konkretnym okresie.",
+            "Lista mieszkań dostępnych w podobnej cenie.",
+            "Wykaz planowanych napraw wszystkich urządzeń."
+          ],
+          "answer": "Dokument pokazujący, jak obliczono koszty w konkretnym okresie.",
+          "evidence": "Norbert poprosił o przykładowe rozliczenie z poprzedniego miesiąca, żeby wiedzieć, jak planować budżet.",
+          "explanation": "Rozliczenie pokazuje koszty konkretnego miesiąca."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-123",
+      "day": 123,
+      "level": "B1",
+      "genre": "e-mail",
+      "title": "Jak dzielić obowiązki domowe",
+      "text": "Cześć, Martyno!\n\nPytałaś ostatnio, jak udało nam się z Michałem uporządkować domowe obowiązki. Nie mamy idealnego systemu, ale zmieniliśmy jedną ważną rzecz. Wcześniej ustalaliśmy wszystko dopiero wtedy, gdy ktoś był niezadowolony. Jeśli w zlewie zostawały naczynia, każde z nas przypominało sobie sytuacje, w których to ono ostatnio sprzątało kuchnię.\n\nW końcu zapisaliśmy wszystkie zadania wykonywane w ciągu tygodnia. Na początku lista zawierała tylko sprzątanie, gotowanie i zakupy. Później zauważyliśmy, że ktoś musi także sprawdzić, czego brakuje w domu, zaplanować posiłki i pamiętać o terminie odbioru zamówienia. Te czynności również zajmują czas, chociaż nie zawsze widać ich wynik.\n\nNie podzieliliśmy zadań dokładnie po połowie według liczby punktów. Michał lubi gotować, więc przejął planowanie większości kolacji. Ja zwykle wracam wcześniej do domu, dlatego częściej robię zakupy. Naczynia myje osoba, która danego dnia nie przygotowuje posiłku. Jeśli jedno z nas ma wyjątkowo trudny tydzień, rozmawiamy o zmianie podziału.\n\nW niedzielę po śniadaniu poświęcamy kilka minut na sprawdzenie planu. Nie zapisujemy, kto umył ostatnią szklankę albo odłożył widelec do szuflady. Chodzi raczej o to, żeby żadne z nas nie musiało ciągle przypominać drugiej osobie o jej zadaniach.\n\nNajbardziej zaskoczyło mnie to, że rozmów o sprzątaniu jest teraz mniej, choć poświęcamy na planowanie trochę więcej czasu. Dzięki temu możemy łatwiej odpocząć, kiedy skończymy swoje obowiązki. Może przyda się wam podobna lista, ale warto ją dopasować do waszego grafiku i zwyczajów.\n\nPozdrawiam,\nPaulina",
+      "questions": [
+        {
+          "id": "main-idea",
+          "skill": "main-idea",
+          "question": "Co Paulina uważa za najważniejszą zmianę?",
+          "options": [
+            "Dokładne liczenie każdej umytej szklanki.",
+            "Jasny, elastyczny podział obowiązków obejmujący także planowanie.",
+            "Podział wszystkich zadań według identycznej liczby punktów."
+          ],
+          "answer": "Jasny, elastyczny podział obowiązków obejmujący także planowanie.",
+          "evidence": "Nie podzieliliśmy zadań dokładnie po połowie według liczby punktów. Michał lubi gotować, więc przejął planowanie większości kolacji. Ja zwykle wracam wcześniej do domu, dlatego częściej robię zakupy. Naczynia myje osoba, która danego dnia nie przygotowuje posiłku. Jeśli jedno z nas ma wyjątkowo trudny tydzień, rozmawiamy o zmianie podziału.\n\nW niedzielę po śniadaniu poświęcamy kilka minut na sprawdzenie planu. Nie zapisujemy, kto umył ostatnią szklankę albo odłożył widelec do szuflady. Chodzi raczej o to, żeby żadne z nas nie musiało ciągle przypominać drugiej osobie o jej zadaniach.",
+          "explanation": "Lista obejmuje też niewidoczną pracę organizacyjną, a podział zależy od sytuacji."
+        },
+        {
+          "id": "detail",
+          "skill": "detail",
+          "question": "Kiedy zwykle sprawdzają plan?",
+          "options": [
+            "W niedzielę po śniadaniu.",
+            "Każdego dnia po zakupach.",
+            "W piątek przed kolacją."
+          ],
+          "answer": "W niedzielę po śniadaniu.",
+          "evidence": "W niedzielę po śniadaniu poświęcamy kilka minut na sprawdzenie planu.",
+          "explanation": "Plan sprawdzają po niedzielnym śniadaniu."
+        },
+        {
+          "id": "cause",
+          "skill": "cause",
+          "question": "Dlaczego Paulina częściej robi zakupy?",
+          "options": [
+            "Michał nie potrafi planować posiłków.",
+            "Nie lubi myć naczyń.",
+            "Zwykle wcześniej wraca do domu."
+          ],
+          "answer": "Zwykle wcześniej wraca do domu.",
+          "evidence": "Ja zwykle wracam wcześniej do domu, dlatego częściej robię zakupy.",
+          "explanation": "Jej godziny powrotu sprzyjają zakupom."
+        },
+        {
+          "id": "inference",
+          "skill": "inference",
+          "question": "Michał w kolejnym tygodniu pracuje do późna, a Paulina może gotować. Co odpowiada ich systemowi?",
+          "options": [
+            "Policzyć wszystkie czynności od początku miesiąca przed rozmową.",
+            "Pozostawić wszystkie obowiązki bez zmian, nawet jeśli nie da się ich wykonać.",
+            "Uzgodnić tymczasową zmianę zadań i wrócić do zwykłego podziału później."
+          ],
+          "answer": "Uzgodnić tymczasową zmianę zadań i wrócić do zwykłego podziału później.",
+          "evidence": "Jeśli jedno z nas ma wyjątkowo trudny tydzień, rozmawiamy o zmianie podziału.",
+          "explanation": "Trudny tydzień jest wprost wymienionym powodem do uzgodnienia zmiany."
+        },
+        {
+          "id": "vocabulary",
+          "skill": "vocabulary",
+          "question": "Co znaczy „przejął planowanie” kolacji?",
+          "options": [
+            "Wziął na siebie odpowiedzialność za ich organizację.",
+            "Zaczął jeść wszystkie posiłki poza domem.",
+            "Zrezygnował z przygotowywania kolacji."
+          ],
+          "answer": "Wziął na siebie odpowiedzialność za ich organizację.",
+          "evidence": "Michał lubi gotować, więc przejął planowanie większości kolacji.",
+          "explanation": "Przejęcie zadania oznacza odpowiedzialność za jego wykonanie."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-124",
+      "day": 124,
+      "level": "B1",
+      "genre": "ogłoszenie",
+      "title": "Naprawa czy zakup nowych mebli",
+      "text": "Pracownia Rzeczy na Dłużej zaprasza na sobotnie konsultacje dotyczące domowych mebli. Spotkanie jest przeznaczone dla osób, które zastanawiają się, czy warto naprawić stary stolik, krzesło albo szafkę, czy może lepiej poszukać czegoś nowego. Nie będziemy przekonywać wszystkich do jednego rozwiązania. Chcemy pomóc ocenić stan przedmiotu i koszty różnych możliwości.\n\nNa konsultacje można przynieść zdjęcia mebla. Prosimy pokazać zarówno cały przedmiot, jak i miejsce, które wymaga naprawy. Przy niewielkich rzeczach, takich jak szuflada lub drewniane krzesło, można także przynieść sam przedmiot. Nie mamy jednak miejsca na duże szafy i kanapy.\n\nW pierwszej części spotkania prowadzący wyjaśni, jakie informacje są potrzebne do przygotowania wyceny. Często sam wygląd mebla nie wystarcza, żeby ocenić jego stan. Niekiedy drobna rysa wygląda nieładnie, ale nie utrudnia korzystania z przedmiotu. Z kolei uszkodzone połączenie elementów może wymagać dokładniejszego sprawdzenia.\n\nW drugiej części będzie można porozmawiać indywidualnie z osobą prowadzącą pracownię. Na jedną rozmowę przeznaczymy piętnaście minut. Nie będziemy wykonywać napraw podczas konsultacji. Jeżeli ktoś zdecyduje się na usługę, osobno uzgodni termin, zakres prac i cenę.\n\nOsoby, które rozważają zakup nowego mebla, mogą przynieść opis podobnego produktu ze sklepu. Warto porównać nie tylko cenę, lecz również wymiary i sposób korzystania z przedmiotu. Jeśli naprawa nie ma sensu w danej sytuacji, prowadzący powie o tym otwarcie.\n\nZapisy przyjmujemy do piątku. Liczba rozmów indywidualnych jest ograniczona, ale w części wspólnej mogą uczestniczyć również osoby, które nie zdążyły się zapisać.",
+      "questions": [
+        {
+          "id": "main-idea",
+          "skill": "main-idea",
+          "question": "Jaki jest cel konsultacji?",
+          "options": [
+            "Wykonać na miejscu wszystkie zgłoszone naprawy.",
+            "Zachęcić wszystkich do naprawiania każdego mebla bez względu na koszt.",
+            "Pomóc zdecydować między naprawą a zakupem na podstawie stanu i potrzeb użytkownika."
+          ],
+          "answer": "Pomóc zdecydować między naprawą a zakupem na podstawie stanu i potrzeb użytkownika.",
+          "evidence": "Chcemy pomóc ocenić stan przedmiotu i koszty różnych możliwości.",
+          "explanation": "Konsultacja ma pomóc porównać opcje, nie wymuszać naprawy."
+        },
+        {
+          "id": "detail",
+          "skill": "detail",
+          "question": "Ile potrwa jedna rozmowa indywidualna?",
+          "options": [
+            "Piętnaście minut.",
+            "Pół godziny.",
+            "Czterdzieści pięć minut."
+          ],
+          "answer": "Piętnaście minut.",
+          "evidence": "Na jedną rozmowę przeznaczymy piętnaście minut.",
+          "explanation": "Każda rozmowa ma limit piętnastu minut."
+        },
+        {
+          "id": "cause",
+          "skill": "cause",
+          "question": "Dlaczego organizatorzy proszą o zdjęcia uszkodzeń?",
+          "options": [
+            "Prowadzący będzie sprzedawać meble na podstawie zdjęć.",
+            "Sam ogólny wygląd mebla może nie wystarczyć do oceny jego stanu.",
+            "Zdjęcia mają służyć do przygotowania wystawy."
+          ],
+          "answer": "Sam ogólny wygląd mebla może nie wystarczyć do oceny jego stanu.",
+          "evidence": "Często sam wygląd mebla nie wystarcza, żeby ocenić jego stan.",
+          "explanation": "Zdjęcie szczegółu pomaga zobaczyć problem, nie tylko wygląd całości."
+        },
+        {
+          "id": "inference",
+          "skill": "inference",
+          "question": "Uczestniczka ma dużą szafę i nie zdążyła zapisać się na rozmowę. Co może zrobić?",
+          "options": [
+            "Przynieść zdjęcia, uczestniczyć w części wspólnej i zapytać o możliwość późniejszej konsultacji.",
+            "Przywieźć szafę do pracowni i czekać na natychmiastową naprawę.",
+            "Zrezygnować z udziału, ponieważ bez rezerwacji nie ma dostępu do żadnej części."
+          ],
+          "answer": "Przynieść zdjęcia, uczestniczyć w części wspólnej i zapytać o możliwość późniejszej konsultacji.",
+          "evidence": "Na konsultacje można przynieść zdjęcia mebla. Prosimy pokazać zarówno cały przedmiot, jak i miejsce, które wymaga naprawy. Przy niewielkich rzeczach, takich jak szuflada lub drewniane krzesło, można także przynieść sam przedmiot. Nie mamy jednak miejsca na duże szafy i kanapy.\n\nW pierwszej części spotkania prowadzący wyjaśni, jakie informacje są potrzebne do przygotowania wyceny. Często sam wygląd mebla nie wystarcza, żeby ocenić jego stan. Niekiedy drobna rysa wygląda nieładnie, ale nie utrudnia korzystania z przedmiotu. Z kolei uszkodzone połączenie elementów może wymagać dokładniejszego sprawdzenia.\n\nW drugiej części będzie można porozmawiać indywidualnie z osobą prowadzącą pracownię. Na jedną rozmowę przeznaczymy piętnaście minut. Nie będziemy wykonywać napraw podczas konsultacji. Jeżeli ktoś zdecyduje się na usługę, osobno uzgodni termin, zakres prac i cenę.\n\nOsoby, które rozważają zakup nowego mebla, mogą przynieść opis podobnego produktu ze sklepu. Warto porównać nie tylko cenę, lecz również wymiary i sposób korzystania z przedmiotu. Jeśli naprawa nie ma sensu w danej sytuacji, prowadzący powie o tym otwarcie.\n\nZapisy przyjmujemy do piątku. Liczba rozmów indywidualnych jest ograniczona, ale w części wspólnej mogą uczestniczyć również osoby, które nie zdążyły się zapisać.",
+          "explanation": "Duże przedmioty nie mieszczą się w pracowni, a część wspólna nie wymaga zapisu."
+        },
+        {
+          "id": "vocabulary",
+          "skill": "vocabulary",
+          "question": "Co znaczy „zakres prac” w ogłoszeniu?",
+          "options": [
+            "Liczba osób zatrudnionych w pracowni.",
+            "Lista czynności, które mają zostać wykonane.",
+            "Godziny otwarcia wszystkich sklepów z meblami."
+          ],
+          "answer": "Lista czynności, które mają zostać wykonane.",
+          "evidence": "osobno uzgodni termin, zakres prac i cenę.",
+          "explanation": "Zakres określa, co dokładnie obejmuje naprawa."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-125",
+      "day": 125,
+      "level": "B1",
+      "genre": "opowiadanie",
+      "title": "Sąsiedzi i wspólna przestrzeń",
+      "text": "Przed wejściem do budynku, w którym mieszkała pani Agata, znajdował się niewielki zadaszony korytarz. Przez lata mieszkańcy traktowali go głównie jako miejsce, przez które przechodzą z zakupami. Z czasem zaczęły się tam pojawiać rowery, dziecięce hulajnogi i pudełka po przesyłkach.\n\nAgata zauważyła, że coraz trudniej przejść z dużą torbą. Jej sąsiad Damian uważał natomiast, że powinno być tam miejsce na rower, ponieważ w jego mieszkaniu nie było odpowiedniej przestrzeni. Początkowo oboje rozmawiali o problemie z innymi mieszkańcami, ale nie ze sobą. Każde miało wrażenie, że druga strona nie rozumie sytuacji.\n\nPewnego wieczoru spotkali się przy wejściu, kiedy Damian próbował przesunąć rower, żeby Agata mogła przejść. Zamiast ponownie się denerwować, zapytali się nawzajem, czego potrzebują. Okazało się, że Damian mógłby zostawiać rower w piwnicy, gdyby miał wygodny dostęp do klucza. Agacie zależało przede wszystkim na wolnym przejściu, a nie na usunięciu każdego przedmiotu z korytarza.\n\nNa zebraniu mieszkańców zaproponowali wspólne rozwiązanie. Administracja miała sprawdzić możliwość przygotowania miejsca na rowery w piwnicy. Do tego czasu mieszkańcy wyznaczyli niewielką przestrzeń, która nie blokowała przejścia. Pudełka po przesyłkach każdy zabierał od razu do własnego mieszkania.\n\nPo kilku tygodniach w korytarzu nadal czasem pojawiały się rzeczy, które należało przestawić. Jednak sąsiedzi częściej rozmawiali bezpośrednio ze sobą, zanim problem stał się powodem kolejnego sporu. Agata uznała, że wspólna przestrzeń wymaga nie tylko porządku, lecz także uzgodnienia, jak różne osoby będą z niej korzystać.",
+      "questions": [
+        {
+          "id": "main-idea",
+          "skill": "main-idea",
+          "question": "Co pozwoliło sąsiadom znaleźć rozwiązanie?",
+          "options": [
+            "Usunięcie wszystkich rzeczy bez pytania mieszkańców.",
+            "Bezpośrednia rozmowa o potrzebach i wspólne ustalenie sposobu korzystania z korytarza.",
+            "Przekazanie całej przestrzeni właścicielom rowerów."
+          ],
+          "answer": "Bezpośrednia rozmowa o potrzebach i wspólne ustalenie sposobu korzystania z korytarza.",
+          "evidence": "wspólna przestrzeń wymaga nie tylko porządku, lecz także uzgodnienia, jak różne osoby będą z niej korzystać.",
+          "explanation": "Agata i Damian poznali wzajemne potrzeby zamiast przypisywać sobie złe intencje."
+        },
+        {
+          "id": "detail",
+          "skill": "detail",
+          "question": "Czego Damian potrzebował, aby korzystać z piwnicy?",
+          "options": [
+            "Osobnego wejścia do budynku.",
+            "Nowego roweru.",
+            "Wygodnego dostępu do klucza."
+          ],
+          "answer": "Wygodnego dostępu do klucza.",
+          "evidence": "Damian mógłby zostawiać rower w piwnicy, gdyby miał wygodny dostęp do klucza.",
+          "explanation": "Klucz był warunkiem wygodnego używania piwnicy."
+        },
+        {
+          "id": "cause",
+          "skill": "cause",
+          "question": "Dlaczego Agata była niezadowolona?",
+          "options": [
+            "Przejście stawało się niewygodne przez pozostawione przedmioty.",
+            "Damian nie chciał odbierać przesyłek.",
+            "Administracja zamknęła wejście do budynku."
+          ],
+          "answer": "Przejście stawało się niewygodne przez pozostawione przedmioty.",
+          "evidence": "Agata zauważyła, że coraz trudniej przejść z dużą torbą.",
+          "explanation": "Przedmioty utrudniały przejście z torbą."
+        },
+        {
+          "id": "inference",
+          "skill": "inference",
+          "question": "Nowy sąsiad chce zostawiać hulajnogę w korytarzu, ale zajęłaby część przejścia. Jak powinien postąpić zgodnie z ustaleniami?",
+          "options": [
+            "Poprosić Agatę o zmianę wejścia do budynku.",
+            "Zostawić ją tam, ponieważ wcześniej stały tam rowery.",
+            "Poszukać z mieszkańcami miejsca, które pozostawia przejście wolne."
+          ],
+          "answer": "Poszukać z mieszkańcami miejsca, które pozostawia przejście wolne.",
+          "evidence": "Do tego czasu mieszkańcy wyznaczyli niewielką przestrzeń, która nie blokowała przejścia.",
+          "explanation": "Wolne przejście jest wspólnym warunkiem niezależnie od rodzaju przedmiotu."
+        },
+        {
+          "id": "vocabulary",
+          "skill": "vocabulary",
+          "question": "Co znaczy tutaj „wyznaczyli przestrzeń”?",
+          "options": [
+            "Zbudowali nowy korytarz w piwnicy.",
+            "Ustalili, jaka część korytarza jest przeznaczona na określony cel.",
+            "Zmierzyli powierzchnię wszystkich mieszkań."
+          ],
+          "answer": "Ustalili, jaka część korytarza jest przeznaczona na określony cel.",
+          "evidence": "mieszkańcy wyznaczyli niewielką przestrzeń, która nie blokowała przejścia.",
+          "explanation": "Wyznaczenie przestrzeni określa jej granice i przeznaczenie."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-126",
+      "day": 126,
+      "level": "B1",
+      "genre": "poradnik",
+      "title": "Wybór dzielnicy do życia",
+      "text": "Osoby szukające mieszkania często zaczynają od porównania cen i powierzchni lokali. Warto jednak poświęcić trochę czasu również na samą dzielnicę. To, co na mapie wygląda na niewielką odległość, w codziennym życiu może oznaczać dłuższą drogę, kilka przesiadek albo przechodzenie przez ruchliwe skrzyżowania.\n\nPrzed oglądaniem mieszkań zapisz miejsca, które odwiedzasz regularnie. Dla jednej osoby najważniejszy będzie dojazd do pracy, dla innej szkoła dziecka lub możliwość zrobienia zakupów bez samochodu. Nie wszystkie zalety okolicy będą miały dla ciebie taką samą wartość. Duży park może być mniej ważny, jeśli nie masz czasu z niego korzystać.\n\nW przykładowej sytuacji Marta porównywała dwie dzielnice. Pierwsza znajdowała się bliżej centrum, ale wymagała dwóch przesiadek w drodze do biura. W drugiej mieszkania były nieco mniejsze, za to autobus do jej pracy odjeżdżał bezpośrednio spod pobliskiego przystanku. Marta sprawdziła obie trasy w godzinach, w których zwykle dojeżdżała. Okazało się, że druga możliwość lepiej odpowiadała jej codziennemu planowi.\n\nJeśli masz okazję, odwiedź wybraną okolicę więcej niż raz. W dzień roboczy możesz zobaczyć, jak wygląda ruch rano, a wieczorem sprawdzić, czy miejsca, z których chcesz korzystać, są jeszcze otwarte. Zwróć uwagę na warunki, które mogą być ważne również po pierwszych tygodniach mieszkania.\n\nNa koniec porównaj nie tylko zalety obu lokali, ale również typowe obowiązki, które będziesz wykonywać w ich otoczeniu. Dobre miejsce do życia nie zawsze jest tym, które najbardziej podobało ci się podczas jednego oglądania.",
+      "questions": [
+        {
+          "id": "main-idea",
+          "skill": "main-idea",
+          "question": "Jaka jest główna rada poradnika?",
+          "options": [
+            "Porównywać dzielnice na podstawie realnego codziennego życia, nie tylko wyglądu mieszkania.",
+            "Oceniać okolicę wyłącznie podczas oglądania mieszkania.",
+            "Zawsze wybierać lokal najbliżej centrum miasta."
+          ],
+          "answer": "Porównywać dzielnice na podstawie realnego codziennego życia, nie tylko wyglądu mieszkania.",
+          "evidence": "Na koniec porównaj nie tylko zalety obu lokali, ale również typowe obowiązki, które będziesz wykonywać w ich otoczeniu.",
+          "explanation": "Artykuł porównuje dojazd, zakupy i funkcjonowanie dzielnicy w różnych porach."
+        },
+        {
+          "id": "detail",
+          "skill": "detail",
+          "question": "Ile przesiadek wymagał dojazd z pierwszej dzielnicy Marty?",
+          "options": [
+            "Jednej.",
+            "Dwóch.",
+            "Trzech."
+          ],
+          "answer": "Dwóch.",
+          "evidence": "Pierwsza znajdowała się bliżej centrum, ale wymagała dwóch przesiadek w drodze do biura.",
+          "explanation": "Pierwsza trasa wymagała dwóch przesiadek."
+        },
+        {
+          "id": "cause",
+          "skill": "cause",
+          "question": "Dlaczego warto odwiedzić dzielnicę o różnych porach?",
+          "options": [
+            "Żeby za każdym razem zobaczyć inne mieszkanie.",
+            "Żeby właściciel zaproponował niższą cenę.",
+            "Żeby poznać warunki, które zmieniają się w ciągu dnia."
+          ],
+          "answer": "Żeby poznać warunki, które zmieniają się w ciągu dnia.",
+          "evidence": "W dzień roboczy możesz zobaczyć, jak wygląda ruch rano, a wieczorem sprawdzić, czy miejsca, z których chcesz korzystać, są jeszcze otwarte.",
+          "explanation": "Rano można sprawdzić ruch, wieczorem dostępność usług."
+        },
+        {
+          "id": "inference",
+          "skill": "inference",
+          "question": "Osoba pracuje do późna i robi zakupy po pracy. Jedno mieszkanie jest większe, ale nie zna godzin pobliskiego sklepu. Co powinna sprawdzić przed wyborem?",
+          "options": [
+            "Czy po powrocie z pracy może zrobić potrzebne zakupy i jak wygląda jej dojazd.",
+            "Wyłącznie powierzchnię większego mieszkania.",
+            "Godziny otwarcia sklepu w weekend, niezależnie od swoich godzin pracy."
+          ],
+          "answer": "Czy po powrocie z pracy może zrobić potrzebne zakupy i jak wygląda jej dojazd.",
+          "evidence": "wieczorem sprawdzić, czy miejsca, z których chcesz korzystać, są jeszcze otwarte.",
+          "explanation": "Dostępność sklepu po pracy oraz dojazd odpowiadają rzeczywistemu planowi dnia."
+        },
+        {
+          "id": "vocabulary",
+          "skill": "vocabulary",
+          "question": "Co oznacza autobus „bezpośrednio” do pracy?",
+          "options": [
+            "Połączenie dostępne tylko z centrum.",
+            "Autobus jadący zawsze w godzinach nocnych.",
+            "Połączenie, które nie wymaga przesiadki."
+          ],
+          "answer": "Połączenie, które nie wymaga przesiadki.",
+          "evidence": "autobus do jej pracy odjeżdżał bezpośrednio spod pobliskiego przystanku.",
+          "explanation": "Połączenie bezpośrednie nie wymaga zmiany pojazdu."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-127",
+      "day": 127,
+      "level": "B1",
+      "genre": "wiadomość",
+      "title": "Dzień pracy z przerwami",
+      "text": "Cześć, Piotrze!\n\nOd początku marca próbuję inaczej organizować dzień pracy w domu. W styczniu i lutym często zaczynałem rano przy komputerze, a potem odkrywałem, że minęło kilka godzin i nadal siedzę w tym samym miejscu. Kiedy kończyłem ostatnie spotkanie, byłem zmęczony, choć nie zawsze potrafiłem powiedzieć, które zadania rzeczywiście wykonałem.\n\nNajpierw próbowałem robić przerwy o stałych godzinach. Nie było to jednak wygodne, ponieważ niektóre spotkania z zespołem trwały dłużej, niż planowaliśmy. Zamiast przerywać rozmowę w połowie, zacząłem traktować zakończenie zadania jako okazję do krótkiej przerwy. Po wysłaniu ważnej wiadomości albo skończeniu fragmentu projektu wstaję od biurka, otwieram okno lub idę do kuchni po wodę.\n\nPrzy zadaniach, które zajmują kilka godzin, nadal ustawiam przypomnienie. Nie czekam na ich całkowite zakończenie, bo wtedy łatwo zapomnieć o odpoczynku. Przed przerwą zapisuję jedno zdanie o tym, co zrobię po powrocie. Dzięki temu nie tracę później czasu na przypominanie sobie ostatniego etapu pracy.\n\nZmieniłem także porę sprawdzania wiadomości. Zamiast otwierać pocztę przy każdym powiadomieniu, zaglądam do niej między zadaniami. Jeżeli czekam na ważną odpowiedź potrzebną do dalszej pracy, robię wyjątek.\n\nW zeszłym tygodniu porównałem dwa dni, w których miałem podobną liczbę spotkań. W dniu z krótkimi przerwami łatwiej było mi zakończyć pracę o ustalonej godzinie. Nie oznacza to, że zawsze wykonuję więcej zadań. Mam jednak wrażenie, że lepiej pamiętam, co zrobiłem i od czego powinienem zacząć następnego dnia. Może spróbujesz czegoś podobnego w kwietniu?\n\nPozdrawiam,\nWojtek",
+      "questions": [
+        {
+          "id": "main-idea",
+          "skill": "main-idea",
+          "question": "Co Wojtek zmienił w organizacji pracy?",
+          "options": [
+            "Zrezygnował z przerw, żeby kończyć wcześniej.",
+            "Przeniósł wszystkie spotkania zespołu na poranek.",
+            "Dopasował przerwy i sprawdzanie wiadomości do rodzaju wykonywanych zadań."
+          ],
+          "answer": "Dopasował przerwy i sprawdzanie wiadomości do rodzaju wykonywanych zadań.",
+          "evidence": "Mam jednak wrażenie, że lepiej pamiętam, co zrobiłem i od czego powinienem zacząć następnego dnia.",
+          "explanation": "Wojtek stosuje różne przerwy przy krótkich i długich zadaniach oraz wyjątek dla pilnych wiadomości."
+        },
+        {
+          "id": "detail",
+          "skill": "detail",
+          "question": "Od kiedy próbuje inaczej organizować dzień?",
+          "options": [
+            "Od końca kwietnia.",
+            "Od początku marca.",
+            "Od początku stycznia."
+          ],
+          "answer": "Od początku marca.",
+          "evidence": "Od początku marca próbuję inaczej organizować dzień pracy w domu.",
+          "explanation": "Nowy sposób stosuje od marca."
+        },
+        {
+          "id": "cause",
+          "skill": "cause",
+          "question": "Dlaczego przed przerwą zapisuje kolejne działanie?",
+          "options": [
+            "Żeby po powrocie szybciej przypomnieć sobie, na czym skończył.",
+            "Żeby wysłać zespołowi raport z każdej przerwy.",
+            "Żeby nie musieć kończyć rozpoczętego zadania."
+          ],
+          "answer": "Żeby po powrocie szybciej przypomnieć sobie, na czym skończył.",
+          "evidence": "Dzięki temu nie tracę później czasu na przypominanie sobie ostatniego etapu pracy.",
+          "explanation": "Notatka wskazuje kolejny krok po powrocie."
+        },
+        {
+          "id": "inference",
+          "skill": "inference",
+          "question": "Wojtek pracuje nad zadaniem, które potrwa całe przedpołudnie, i czeka na odpowiedź potrzebną do jego dalszej części. Co pasuje do jego zasad?",
+          "options": [
+            "Sprawdzać wszystkie powiadomienia bez względu na ich znaczenie.",
+            "Ustawić przypomnienie o przerwie i sprawdzić oczekiwaną wiadomość w razie potrzeby.",
+            "Czekać z każdą przerwą i wiadomością do końca całego zadania."
+          ],
+          "answer": "Ustawić przypomnienie o przerwie i sprawdzić oczekiwaną wiadomość w razie potrzeby.",
+          "evidence": "Przy zadaniach, które zajmują kilka godzin, nadal ustawiam przypomnienie. Nie czekam na ich całkowite zakończenie, bo wtedy łatwo zapomnieć o odpoczynku. Przed przerwą zapisuję jedno zdanie o tym, co zrobię po powrocie. Dzięki temu nie tracę później czasu na przypominanie sobie ostatniego etapu pracy.\n\nZmieniłem także porę sprawdzania wiadomości. Zamiast otwierać pocztę przy każdym powiadomieniu, zaglądam do niej między zadaniami. Jeżeli czekam na ważną odpowiedź potrzebną do dalszej pracy, robię wyjątek.",
+          "explanation": "Długie zadanie wymaga przypomnienia, a ważna odpowiedź stanowi wyjątek od zwykłych zasad poczty."
+        },
+        {
+          "id": "vocabulary",
+          "skill": "vocabulary",
+          "question": "Co znaczy „robię wyjątek”?",
+          "options": [
+            "W szczególnej sytuacji postępuję inaczej niż zwykle.",
+            "Stosuję tę samą zasadę bez żadnych zmian.",
+            "Przenoszę wszystkie zadania na inny dzień."
+          ],
+          "answer": "W szczególnej sytuacji postępuję inaczej niż zwykle.",
+          "evidence": "Jeżeli czekam na ważną odpowiedź potrzebną do dalszej pracy, robię wyjątek.",
+          "explanation": "Wyjątek to odstąpienie od reguły w określonej sytuacji."
+        }
+      ]
+    }
+  ]
+}

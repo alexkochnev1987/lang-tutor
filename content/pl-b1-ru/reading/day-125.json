@@ -1,0 +1,76 @@
+{
+  "id": "pl-b1.reading.day-125",
+  "day": 125,
+  "level": "B1",
+  "genre": "opowiadanie",
+  "title": "Sąsiedzi i wspólna przestrzeń",
+  "text": "Przed wejściem do budynku, w którym mieszkała pani Agata, znajdował się niewielki zadaszony korytarz. Przez lata mieszkańcy traktowali go głównie jako miejsce, przez które przechodzą z zakupami. Z czasem zaczęły się tam pojawiać rowery, dziecięce hulajnogi i pudełka po przesyłkach.\n\nAgata zauważyła, że coraz trudniej przejść z dużą torbą. Jej sąsiad Damian uważał natomiast, że powinno być tam miejsce na rower, ponieważ w jego mieszkaniu nie było odpowiedniej przestrzeni. Początkowo oboje rozmawiali o problemie z innymi mieszkańcami, ale nie ze sobą. Każde miało wrażenie, że druga strona nie rozumie sytuacji.\n\nPewnego wieczoru spotkali się przy wejściu, kiedy Damian próbował przesunąć rower, żeby Agata mogła przejść. Zamiast ponownie się denerwować, zapytali się nawzajem, czego potrzebują. Okazało się, że Damian mógłby zostawiać rower w piwnicy, gdyby miał wygodny dostęp do klucza. Agacie zależało przede wszystkim na wolnym przejściu, a nie na usunięciu każdego przedmiotu z korytarza.\n\nNa zebraniu mieszkańców zaproponowali wspólne rozwiązanie. Administracja miała sprawdzić możliwość przygotowania miejsca na rowery w piwnicy. Do tego czasu mieszkańcy wyznaczyli niewielką przestrzeń, która nie blokowała przejścia. Pudełka po przesyłkach każdy zabierał od razu do własnego mieszkania.\n\nPo kilku tygodniach w korytarzu nadal czasem pojawiały się rzeczy, które należało przestawić. Jednak sąsiedzi częściej rozmawiali bezpośrednio ze sobą, zanim problem stał się powodem kolejnego sporu. Agata uznała, że wspólna przestrzeń wymaga nie tylko porządku, lecz także uzgodnienia, jak różne osoby będą z niej korzystać.",
+  "questions": [
+    {
+      "id": "main-idea",
+      "skill": "main-idea",
+      "question": "Co pozwoliło sąsiadom znaleźć rozwiązanie?",
+      "options": [
+        "Usunięcie wszystkich rzeczy bez pytania mieszkańców.",
+        "Bezpośrednia rozmowa o potrzebach i wspólne ustalenie sposobu korzystania z korytarza.",
+        "Przekazanie całej przestrzeni właścicielom rowerów."
+      ],
+      "answer": "Bezpośrednia rozmowa o potrzebach i wspólne ustalenie sposobu korzystania z korytarza.",
+      "evidence": "wspólna przestrzeń wymaga nie tylko porządku, lecz także uzgodnienia, jak różne osoby będą z niej korzystać.",
+      "explanation": "Agata i Damian poznali wzajemne potrzeby zamiast przypisywać sobie złe intencje."
+    },
+    {
+      "id": "detail",
+      "skill": "detail",
+      "question": "Czego Damian potrzebował, aby korzystać z piwnicy?",
+      "options": [
+        "Osobnego wejścia do budynku.",
+        "Nowego roweru.",
+        "Wygodnego dostępu do klucza."
+      ],
+      "answer": "Wygodnego dostępu do klucza.",
+      "evidence": "Damian mógłby zostawiać rower w piwnicy, gdyby miał wygodny dostęp do klucza.",
+      "explanation": "Klucz był warunkiem wygodnego używania piwnicy."
+    },
+    {
+      "id": "cause",
+      "skill": "cause",
+      "question": "Dlaczego Agata była niezadowolona?",
+      "options": [
+        "Przejście stawało się niewygodne przez pozostawione przedmioty.",
+        "Damian nie chciał odbierać przesyłek.",
+        "Administracja zamknęła wejście do budynku."
+      ],
+      "answer": "Przejście stawało się niewygodne przez pozostawione przedmioty.",
+      "evidence": "Agata zauważyła, że coraz trudniej przejść z dużą torbą.",
+      "explanation": "Przedmioty utrudniały przejście z torbą."
+    },
+    {
+      "id": "inference",
+      "skill": "inference",
+      "question": "Nowy sąsiad chce zostawiać hulajnogę w korytarzu, ale zajęłaby część przejścia. Jak powinien postąpić zgodnie z ustaleniami?",
+      "options": [
+        "Poprosić Agatę o zmianę wejścia do budynku.",
+        "Zostawić ją tam, ponieważ wcześniej stały tam rowery.",
+        "Poszukać z mieszkańcami miejsca, które pozostawia przejście wolne."
+      ],
+      "answer": "Poszukać z mieszkańcami miejsca, które pozostawia przejście wolne.",
+      "evidence": "Do tego czasu mieszkańcy wyznaczyli niewielką przestrzeń, która nie blokowała przejścia.",
+      "explanation": "Wolne przejście jest wspólnym warunkiem niezależnie od rodzaju przedmiotu."
+    },
+    {
+      "id": "vocabulary",
+      "skill": "vocabulary",
+      "question": "Co znaczy tutaj „wyznaczyli przestrzeń”?",
+      "options": [
+        "Zbudowali nowy korytarz w piwnicy.",
+        "Ustalili, jaka część korytarza jest przeznaczona na określony cel.",
+        "Zmierzyli powierzchnię wszystkich mieszkań."
+      ],
+      "answer": "Ustalili, jaka część korytarza jest przeznaczona na określony cel.",
+      "evidence": "mieszkańcy wyznaczyli niewielką przestrzeń, która nie blokowała przejścia.",
+      "explanation": "Wyznaczenie przestrzeni określa jej granice i przeznaczenie."
+    }
+  ],
+  "publicationStatus": "practice"
+}

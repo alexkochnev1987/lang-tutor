@@ -1,0 +1,76 @@
+{
+  "id": "pl-b1.reading.day-120",
+  "day": 120,
+  "level": "B1",
+  "genre": "wiadomość",
+  "title": "Zebranie wspólnoty mieszkaniowej",
+  "text": "Cześć, Jolu!\n\nWczoraj odbyło się zebranie naszej wspólnoty mieszkaniowej. Wiem, że nie mogłaś przyjść, więc opiszę ci najważniejsze ustalenia. Nie zapadły jeszcze wszystkie decyzje, ale mieszkańcy zgodzili się, że trzeba uporządkować wspólne części budynku.\n\nNa początku rozmawialiśmy o piwnicy. W przejściu stoją rzeczy, których właścicieli trudno ustalić. Nie chcemy ich od razu wyrzucać, ponieważ niektóre mogą być nadal komuś potrzebne. Ustaliliśmy, że administracja powiesi ogłoszenie z prośbą o oznaczenie własnych przedmiotów do końca miesiąca. Dopiero później wrócimy do sprawy rzeczy pozostawionych bez oznaczeń.\n\nDrugim tematem było sprzątanie garażu. Firma zaproponowała dwa terminy: poniedziałek rano lub piątek po południu. Gdyśmy porównali grafiki mieszkańców, okazało się, że żaden termin nie odpowiada wszystkim. Dlatego poprosiliśmy o podział garażu na dwie części i sprzątanie ich w różne dni. Czekamy jeszcze na odpowiedź firmy.\n\nNa końcu pojawił się pomysł ustawienia regału przy wejściu na strych. Mieszkańcy mogliby zostawiać na nim książki, które chcą oddać. Nie ustaliliśmy jednak, kto będzie dbał o porządek. Zanim kupimy regał, chcemy znaleźć dwie osoby gotowe zajmować się nim przez pierwsze trzy miesiące.\n\nJeśli chciałabyś pomóc przy tym ostatnim pomyśle, napisz do mnie. Możesz też przesłać administracji uwagi o sprzątaniu garażu. Następne krótkie zebranie odbędzie się za dwa tygodnie. Wtedy powinniśmy już znać odpowiedź firmy i będziemy mogli podjąć dalsze decyzje.\n\nPozdrawiam,\nRenata",
+  "questions": [
+    {
+      "id": "main-idea",
+      "skill": "main-idea",
+      "question": "Co Renata przekazuje Joli?",
+      "options": [
+        "Prośbę o samodzielne usunięcie wszystkich rzeczy z budynku.",
+        "Podsumowanie ustaleń dotyczących części wspólnych oraz spraw wymagających dalszej decyzji.",
+        "Ostateczny harmonogram wszystkich prac remontowych."
+      ],
+      "answer": "Podsumowanie ustaleń dotyczących części wspólnych oraz spraw wymagających dalszej decyzji.",
+      "evidence": "Nie zapadły jeszcze wszystkie decyzje, ale mieszkańcy zgodzili się, że trzeba uporządkować wspólne części budynku.",
+      "explanation": "Renata podaje trzy tematy, w tym sprawy nadal otwarte."
+    },
+    {
+      "id": "detail",
+      "skill": "detail",
+      "question": "Do kiedy należy oznaczyć własne przedmioty w piwnicy?",
+      "options": [
+        "Do następnego poniedziałku.",
+        "Do końca następnego zebrania.",
+        "Do końca miesiąca."
+      ],
+      "answer": "Do końca miesiąca.",
+      "evidence": "administracja powiesi ogłoszenie z prośbą o oznaczenie własnych przedmiotów do końca miesiąca.",
+      "explanation": "Ogłoszenie ma wyznaczać koniec miesiąca."
+    },
+    {
+      "id": "cause",
+      "skill": "cause",
+      "question": "Dlaczego poproszono o sprzątanie garażu w dwa różne dni?",
+      "options": [
+        "Żaden z zaproponowanych terminów nie pasował wszystkim mieszkańcom.",
+        "Garaż ma dwa osobne adresy.",
+        "Firma odmówiła sprzątania całego garażu."
+      ],
+      "answer": "Żaden z zaproponowanych terminów nie pasował wszystkim mieszkańcom.",
+      "evidence": "okazało się, że żaden termin nie odpowiada wszystkim.",
+      "explanation": "Podział na dwie części pomaga uwzględnić różne grafiki."
+    },
+    {
+      "id": "inference",
+      "skill": "inference",
+      "question": "Jola chce, aby regał powstał szybko, ale nie może zajmować się nim sama przez trzy miesiące. Co może zrobić?",
+      "options": [
+        "Zaproponować współpracę z drugim mieszkańcem, zanim regał zostanie kupiony.",
+        "Kupić regał bez uzgadniania opieki nad nim.",
+        "Ustawić książki w przejściu do piwnicy przed zebraniem."
+      ],
+      "answer": "Zaproponować współpracę z drugim mieszkańcem, zanim regał zostanie kupiony.",
+      "evidence": "Zanim kupimy regał, chcemy znaleźć dwie osoby gotowe zajmować się nim przez pierwsze trzy miesiące.",
+      "explanation": "Regał wymaga dwóch osób, więc Jola może współdzielić opiekę."
+    },
+    {
+      "id": "vocabulary",
+      "skill": "vocabulary",
+      "question": "Co oznaczają „rzeczy pozostawione bez oznaczeń”?",
+      "options": [
+        "Rzeczy zapisane na liście firmy sprzątającej.",
+        "Przedmioty przygotowane do natychmiastowego remontu.",
+        "Przedmioty, przy których nie wskazano właściciela."
+      ],
+      "answer": "Przedmioty, przy których nie wskazano właściciela.",
+      "evidence": "W przejściu stoją rzeczy, których właścicieli trudno ustalić.",
+      "explanation": "Brak oznaczenia utrudnia ustalenie, do kogo należy rzecz."
+    }
+  ],
+  "publicationStatus": "practice"
+}

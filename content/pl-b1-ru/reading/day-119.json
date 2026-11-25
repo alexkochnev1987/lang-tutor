@@ -1,0 +1,76 @@
+{
+  "id": "pl-b1.reading.day-119",
+  "day": 119,
+  "level": "B1",
+  "genre": "poradnik",
+  "title": "Sposoby na nieporozumienia",
+  "text": "Nieporozumienie nie zawsze oznacza, że rozmówcy mają zupełnie różne cele. Czasami używają tych samych słów, ale nadają im inne znaczenie. Ktoś mówi, że przyjdzie „wcześnie”, mając na myśli godzinę ósmą, podczas gdy druga osoba spodziewa się go dopiero przed dziesiątą. Obie strony mogą później uważać, że to właśnie ich oczekiwania były oczywiste.\n\nZanim odpowiesz na wiadomość, która cię zdenerwowała, spróbuj oddzielić to, co rzeczywiście zostało napisane, od tego, co sam dopowiadasz. Jeśli znajomy nie odpisał na zaproszenie, nie wiesz jeszcze, czy nie chce się spotkać, czy po prostu nie miał czasu przeczytać wiadomości. Krótkie pytanie może wyjaśnić więcej niż długa odpowiedź oparta na przypuszczeniu.\n\nW przykładowej sytuacji Basia i Kuba mieli przygotować wspólną prezentację. Basia napisała, że zajmie się pierwszą częścią. Kuba uznał, że oznacza to również przygotowanie ilustracji. Basia zamierzała natomiast napisać tylko tekst. Kiedy odkryli różnicę, zamiast rozstrzygać, kto zawinił, wypisali wszystkie pozostałe zadania i podzielili je między siebie. Na końcu każde powtórzyło własne ustalenia.\n\nJeśli rozmowa dotyczy ważnej sprawy, przydatne może być krótkie podsumowanie na piśmie. Nie musi ono przypominać oficjalnej umowy. Wystarczy zanotować, kto co zrobi i do kiedy. W ten sposób można zauważyć różnicę w rozumieniu planu, zanim pojawi się problem.\n\nWarto też pamiętać, że wyjaśnienie nieporozumienia nie wymaga zawsze znalezienia osoby winnej. Celem jest przede wszystkim ustalenie, jak postępować dalej, aby podobna sytuacja się nie powtórzyła.",
+  "questions": [
+    {
+      "id": "main-idea",
+      "skill": "main-idea",
+      "question": "Jaki cel ma poradnik?",
+      "options": [
+        "Pomóc rozpoznawać różnice w rozumieniu ustaleń i wyjaśniać je przed konfliktem.",
+        "Nauczyć rozpoznawać, kto zawsze ponosi winę za spór.",
+        "Zachęcić do zastąpienia wszystkich rozmów oficjalnymi umowami."
+      ],
+      "answer": "Pomóc rozpoznawać różnice w rozumieniu ustaleń i wyjaśniać je przed konfliktem.",
+      "evidence": "Celem jest przede wszystkim ustalenie, jak postępować dalej, aby podobna sytuacja się nie powtórzyła.",
+      "explanation": "Przykłady pokazują, że warto sprawdzać rozumienie słów i dzielić zadania jasno."
+    },
+    {
+      "id": "detail",
+      "skill": "detail",
+      "question": "Co Basia zamierzała przygotować?",
+      "options": [
+        "Końcową część prezentacji.",
+        "Tekst pierwszej części prezentacji.",
+        "Wyłącznie ilustracje."
+      ],
+      "answer": "Tekst pierwszej części prezentacji.",
+      "evidence": "Basia zamierzała natomiast napisać tylko tekst.",
+      "explanation": "Basia rozumiała pierwszą część jako sam tekst."
+    },
+    {
+      "id": "cause",
+      "skill": "cause",
+      "question": "Dlaczego warto zapisywać ustalenia?",
+      "options": [
+        "Żeby nie musieć rozmawiać ze znajomymi.",
+        "Żeby móc ocenić pracę na podstawie długości wiadomości.",
+        "Żeby wcześniej zauważyć różne rozumienie planu."
+      ],
+      "answer": "Żeby wcześniej zauważyć różne rozumienie planu.",
+      "evidence": "W ten sposób można zauważyć różnicę w rozumieniu planu, zanim pojawi się problem.",
+      "explanation": "Podsumowanie ujawnia różne interpretacje jeszcze przed wykonaniem pracy."
+    },
+    {
+      "id": "inference",
+      "skill": "inference",
+      "question": "Znajomy obiecuje przynieść materiały „jutro rano”, a ty potrzebujesz ich przed ósmą. Co najlepiej zrobić?",
+      "options": [
+        "Przygotować pretensje na wypadek jego spóźnienia.",
+        "Dopytać o konkretną godzinę i potwierdzić ustalenie.",
+        "Uznać, że na pewno przyjdzie przed ósmą."
+      ],
+      "answer": "Dopytać o konkretną godzinę i potwierdzić ustalenie.",
+      "evidence": "Ktoś mówi, że przyjdzie „wcześnie”, mając na myśli godzinę ósmą, podczas gdy druga osoba spodziewa się go dopiero przed dziesiątą. Obie strony mogą później uważać, że to właśnie ich oczekiwania były oczywiste.\n\nZanim odpowiesz na wiadomość, która cię zdenerwowała, spróbuj oddzielić to, co rzeczywiście zostało napisane, od tego, co sam dopowiadasz. Jeśli znajomy nie odpisał na zaproszenie, nie wiesz jeszcze, czy nie chce się spotkać, czy po prostu nie miał czasu przeczytać wiadomości. Krótkie pytanie może wyjaśnić więcej niż długa odpowiedź oparta na przypuszczeniu.\n\nW przykładowej sytuacji Basia i Kuba mieli przygotować wspólną prezentację. Basia napisała, że zajmie się pierwszą częścią. Kuba uznał, że oznacza to również przygotowanie ilustracji. Basia zamierzała natomiast napisać tylko tekst. Kiedy odkryli różnicę, zamiast rozstrzygać, kto zawinił, wypisali wszystkie pozostałe zadania i podzielili je między siebie. Na końcu każde powtórzyło własne ustalenia.\n\nJeśli rozmowa dotyczy ważnej sprawy, przydatne może być krótkie podsumowanie na piśmie. Nie musi ono przypominać oficjalnej umowy. Wystarczy zanotować, kto co zrobi i do kiedy. W ten sposób można zauważyć różnicę w rozumieniu planu, zanim pojawi się problem.",
+      "explanation": "Określenie „rano” jest zbyt ogólne przy wymaganej godzinie ósmej."
+    },
+    {
+      "id": "vocabulary",
+      "skill": "vocabulary",
+      "question": "Co znaczy „przypuszczenie”?",
+      "options": [
+        "Wniosek, którego jeszcze nie potwierdziliśmy.",
+        "Informacja zapisana we wspólnej umowie.",
+        "Zadanie wykonane zgodnie z planem."
+      ],
+      "answer": "Wniosek, którego jeszcze nie potwierdziliśmy.",
+      "evidence": "Krótkie pytanie może wyjaśnić więcej niż długa odpowiedź oparta na przypuszczeniu.",
+      "explanation": "Przypuszczenie to interpretacja, która nie została sprawdzona."
+    }
+  ],
+  "publicationStatus": "practice"
+}
