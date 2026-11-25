@@ -233,7 +233,7 @@
       "level": "A2",
       "genre": "wiadomość",
       "title": "Pierwszy dzień w nowym zespole",
-      "text": "Cześć, Doroto! Dzisiaj był mój pierwszy dzień w nowej pracy. W biurze nie znałem nikogo oprócz szefa, z którym rozmawiałem przed podpisaniem umowy. Rano jeden z pracowników pokazał mi moje miejsce i wyjaśnił, gdzie mogę znaleźć potrzebne dokumenty. Potem przy kawie poznałem innych pracowników.\n\nMiałem już zacząć pracę z klientem, ale szef powiedział, że przez pierwsze dwa dni nie będę rozmawiać z klientami sam. Mam najpierw posłuchać rozmów Marty i nauczyć się, gdzie zapisujemy informacje o zamówieniach. Marta dała mi też jedno małe zadanie na komputerze. Sprawdziła je razem ze mną przed obiadem, żebym nauczył się zapisywać zamówienia.\n\nNajbardziej zaskoczyła mnie atmosfera. Nikt nie myślał, że od razu będę wszystko wiedział. Kiedy czegoś nie rozumiałem, mogłem o to zapytać. Po południu dostałem plan na jutro i adres strony z materiałami do nauki. W środę mam już poprowadzić krótką rozmowę z klientem, a Marta będzie wtedy obok mnie. Chcę przygotować się do niej wieczorem. Pa, Daniel.",
+      "text": "Cześć, Doroto! Dzisiaj był mój pierwszy dzień w nowej pracy. W biurze nie znałem nikogo oprócz szefa, z którym rozmawiałem przed podpisaniem umowy. Rano jeden z pracowników pokazał mi moje miejsce i wyjaśnił, gdzie mogę znaleźć potrzebne dokumenty. Potem przy kawie poznałem innych pracowników.\n\nMiałem już zacząć pracę z klientem, ale szef powiedział, że przez pierwsze dwa dni nie będę rozmawiać z klientami sam. Jeśli zadzwoni klient, Marta poprowadzi rozmowę, a ja będę zapisywać informacje o zamówieniu. Mam pytać Martę, gdy nie wiem, gdzie coś zapisać. Marta dała mi też jedno małe zadanie na komputerze. Sprawdziła je razem ze mną przed obiadem, żebym nauczył się zapisywać zamówienia.\n\nNajbardziej zaskoczyła mnie atmosfera. Nikt nie myślał, że od razu będę wszystko wiedział. Kiedy czegoś nie rozumiałem, mogłem o to zapytać. Po południu dostałem plan na jutro i adres strony z materiałami do nauki. W środę mam już poprowadzić krótką rozmowę z klientem, a Marta będzie wtedy obok mnie. Chcę przygotować się do niej wieczorem. Pa, Daniel.",
       "questions": [
         {
           "id": "main-idea",
@@ -266,11 +266,11 @@
           "skill": "cause",
           "question": "Dlaczego Marta sprawdziła zadanie razem z Danielem?",
           "options": [
-            "Daniel ma nauczyć się zapisywać zamówienia.",
+            "Marta chce nauczyć Daniela, jak zapisywać zamówienia.",
             "Marta chce sprawdzić, czy Daniel umie znaleźć dokumenty.",
-            "Marta chce pokazać Danielowi, jak przygotować się do rozmowy z klientem."
+            "Marta chce nauczyć Daniela, jak zaczynać rozmowę z klientem."
           ],
-          "answer": "Daniel ma nauczyć się zapisywać zamówienia.",
+          "answer": "Marta chce nauczyć Daniela, jak zapisywać zamówienia.",
           "evidence": "Marta dała mi też jedno małe zadanie na komputerze. Sprawdziła je razem ze mną przed obiadem, żebym nauczył się zapisywać zamówienia.",
           "explanation": "Marta sprawdziła zadanie, aby Daniel nauczył się zapisywać zamówienia."
         },
@@ -279,13 +279,13 @@
           "skill": "inference",
           "question": "Klient dzwoni do Daniela następnego dnia rano. Daniel nie wie, gdzie zapisać nowe zamówienie. Jak powinien postąpić zgodnie z planem?",
           "options": [
-            "Przeprowadzić rozmowę sam i później pokazać Marcie zapis.",
-            "Poprosić Martę o pomoc przy rozmowie i zapisie informacji.",
-            "Poprosić klienta, żeby zadzwonił w środę, gdy Daniel ma zaplanowaną rozmowę."
+            "Samemu porozmawiać z klientem, a potem poprosić Martę o pomoc w zapisie.",
+            "Poprosić Martę, by poprowadziła rozmowę, i zapytać ją, gdzie zapisać zamówienie.",
+            "Poprosić klienta o telefon w środę, a Marcie przekazać tylko jego numer."
           ],
-          "answer": "Poprosić Martę o pomoc przy rozmowie i zapisie informacji.",
-          "evidence": "Miałem już zacząć pracę z klientem, ale szef powiedział, że przez pierwsze dwa dni nie będę rozmawiać z klientami sam. Mam najpierw posłuchać rozmów Marty i nauczyć się, gdzie zapisujemy informacje o zamówieniach.",
-          "explanation": "Następnego dnia nadal obowiązuje plan nauki z pomocą Marty."
+          "answer": "Poprosić Martę, by poprowadziła rozmowę, i zapytać ją, gdzie zapisać zamówienie.",
+          "evidence": "Miałem już zacząć pracę z klientem, ale szef powiedział, że przez pierwsze dwa dni nie będę rozmawiać z klientami sam. Jeśli zadzwoni klient, Marta poprowadzi rozmowę, a ja będę zapisywać informacje o zamówieniu. Mam pytać Martę, gdy nie wiem, gdzie coś zapisać.",
+          "explanation": "Przez pierwsze dwa dni Marta prowadzi rozmowy z klientami, a Daniel zapisuje informacje i pyta ją, gdy czegoś nie wie."
         },
         {
           "id": "vocabulary",
@@ -608,7 +608,7 @@
       "level": "A2",
       "genre": "opowiadanie",
       "title": "Praca z domu a biuro",
-      "text": "Gdy w firmie Zosi pojawiła się możliwość pracy z domu, zdecydowała się pracować w domu przez cały tydzień. Dzięki temu nie traciła czasu na dojazdy i mogła rano spokojnie zjeść śniadanie. Pracowała przy biurku w swoim pokoju. Przez pierwsze tygodnie bardzo podobał jej się ten sposób organizacji dnia.\n\nZ czasem zauważyła jednak pewien problem. Kiedy potrzebowała szybkiej odpowiedzi od kolegi, często musiała czekać na wiadomość, a krótkie rozmowy zamieniały się w długie spotkania przez internet. W dni, kiedy przygotowywała własny raport, nie przeszkadzało jej to. Trudniej było wtedy, gdy kilka osób miało wspólnie ustalić plan pracy.\n\nZosia porozmawiała z szefem i zaczęła przychodzić do biura we wtorki i czwartki. W tych dniach jej zespół planuje wspólne zadania oraz rozwiązuje problemy klientów. W inne dni Zosia pracuje w domu i przygotowuje dokumenty. Teraz nie musi codziennie dojeżdżać do pracy, a ważne rozmowy może prowadzić bezpośrednio z kolegami. Nie uważa już, że jedno miejsce pracy jest najlepsze do wszystkich zadań.",
+      "text": "Gdy w firmie Zosi pojawiła się możliwość pracy z domu, zdecydowała się pracować w domu przez cały tydzień. Dzięki temu nie traciła czasu na dojazdy i mogła rano spokojnie zjeść śniadanie. Pracowała przy biurku w swoim pokoju. Przez pierwsze tygodnie bardzo podobał jej się ten sposób organizacji dnia.\n\nZ czasem zauważyła jednak pewien problem. Kiedy potrzebowała szybkiej odpowiedzi od kolegi, często musiała czekać na wiadomość, a krótkie rozmowy zamieniały się w długie spotkania przez internet. W dni, kiedy przygotowywała własny raport, nie przeszkadzało jej to. Trudniej było wtedy, gdy kilka osób miało wspólnie ustalić plan pracy.\n\nZosia porozmawiała z szefem i zaczęła przychodzić do biura we wtorki i czwartki. W tych dniach jej zespół planuje wspólne zadania oraz rozwiązuje problemy klientów. W inne dni Zosia pracuje w domu i przygotowuje dokumenty. Teraz nie musi codziennie dojeżdżać do pracy, a ważne rozmowy może prowadzić bezpośrednio z kolegami, siedząc z nimi w jednym pokoju. Nie uważa już, że jedno miejsce pracy jest najlepsze do wszystkich zadań.",
       "questions": [
         {
           "id": "main-idea",
@@ -667,13 +667,13 @@
           "skill": "vocabulary",
           "question": "Co znaczy „bezpośrednio z kolegami” w ostatnim akapicie?",
           "options": [
-            "Przekazując pytania kolegom przez szefa.",
-            "Rozmawiając z nimi na miejscu, a nie przez wiadomości.",
-            "Rozmawiając z nimi przez internet zamiast pisać wiadomości."
+            "Przekazując swoje pytania kolegom przez kierownika zespołu.",
+            "Rozmawiając z kolegami twarzą w twarz w biurze.",
+            "Rozmawiając z kolegami przez internet zamiast pisać wiadomości."
           ],
-          "answer": "Rozmawiając z nimi na miejscu, a nie przez wiadomości.",
-          "evidence": "Teraz nie musi codziennie dojeżdżać do pracy, a ważne rozmowy może prowadzić bezpośrednio z kolegami.",
-          "explanation": "W biurze Zosia ma osobisty kontakt z zespołem."
+          "answer": "Rozmawiając z kolegami twarzą w twarz w biurze.",
+          "evidence": "Teraz nie musi codziennie dojeżdżać do pracy, a ważne rozmowy może prowadzić bezpośrednio z kolegami, siedząc z nimi w jednym pokoju.",
+          "explanation": "W kontekście Zosi chodzi o osobistą rozmowę w biurze, a nie o kontakt przez internet."
         }
       ]
     },
@@ -740,13 +740,13 @@
         {
           "id": "vocabulary",
           "skill": "vocabulary",
-          "question": "Co znaczy „przyda ci się”?",
+          "question": "Co znaczy „przyda ci się” w pierwszym akapicie?",
           "options": [
-            "Będzie użyteczne w twojej pracy.",
-            "Będzie dla ciebie obowiązkowe w pracy.",
-            "Będzie ci łatwo się tego nauczyć."
+            "Będzie pomocne w twojej pracy.",
+            "Będzie konieczne, żeby dostać nową pracę.",
+            "Będzie należało do zadań, które musisz wykonywać codziennie."
           ],
-          "answer": "Będzie użyteczne w twojej pracy.",
+          "answer": "Będzie pomocne w twojej pracy.",
           "evidence": "wybierz jedną umiejętność, która przyda ci się w codziennej pracy.",
           "explanation": "Chodzi o umiejętność, która pomoże wykonywać codzienne zadania."
         }
