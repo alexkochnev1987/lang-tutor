@@ -28,9 +28,9 @@
           "skill": "detail",
           "question": "Ile kosztuje dostawa drugiego biurka?",
           "options": [
-            "Trzysta dwadzieścia złotych.",
+            "Dwieście osiemdziesiąt złotych.",
             "Siedemdziesiąt złotych.",
-            "Dwieście osiemdziesiąt złotych."
+            "Trzysta dwadzieścia złotych."
           ],
           "answer": "Siedemdziesiąt złotych.",
           "evidence": "Dostawa kosztuje jednak siedemdziesiąt złotych.",
@@ -41,9 +41,9 @@
           "skill": "cause",
           "question": "Dlaczego brak szuflad nie jest dla Karoliny dużym problemem?",
           "options": [
-            "Dostanie je razem z montażem.",
             "Nie potrzebuje żadnych przyborów.",
-            "Może przechowywać przybory na regale."
+            "Może przechowywać przybory na regale.",
+            "Dostanie je razem z montażem."
           ],
           "answer": "Może przechowywać przybory na regale.",
           "evidence": "Ma jednak mały regał, na którym może postawić pudełko z przyborami.",
@@ -91,8 +91,8 @@
           "question": "O czym przede wszystkim rozmawia rodzeństwo?",
           "options": [
             "O wyborze trasy sobotniego spaceru.",
-            "O tym, jak bez pośpiechu kupić buty online.",
-            "O szukaniu pracy w sklepie obuwniczym."
+            "O szukaniu pracy w sklepie obuwniczym.",
+            "O tym, jak bez pośpiechu kupić buty online."
           ],
           "answer": "O tym, jak bez pośpiechu kupić buty online.",
           "evidence": "Lena mierzy stopę i porównuje wynik z tabelą producenta.",
@@ -104,8 +104,8 @@
           "question": "Gdzie Lena chce odebrać paczkę?",
           "options": [
             "W sklepie przy swojej ulicy.",
-            "W domu brata.",
-            "W automacie obok pracy."
+            "W automacie obok pracy.",
+            "W domu brata."
           ],
           "answer": "W automacie obok pracy.",
           "evidence": "Wybiera dostawę do automatu paczkowego obok pracy.",
@@ -117,8 +117,8 @@
           "question": "Dlaczego Lena sprawdza zasady zwrotu?",
           "options": [
             "Chce wiedzieć, co zrobić, jeśli buty nie będą pasować.",
-            "Chce od razu zamówić drugą parę.",
-            "Chce zmienić miejsce dostawy."
+            "Chce zmienić miejsce dostawy.",
+            "Chce od razu zamówić drugą parę."
           ],
           "answer": "Chce wiedzieć, co zrobić, jeśli buty nie będą pasować.",
           "evidence": "A jeśli buty nie będą pasować?",
@@ -129,8 +129,8 @@
           "skill": "inference",
           "question": "Paczka dotrze dopiero w poniedziałek. Co Lena najprawdopodobniej zrobi w sobotę?",
           "options": [
-            "Kupi buty w innym sklepie.",
             "Pójdzie na spacer w starych butach.",
+            "Kupi buty w innym sklepie.",
             "Poprosi brata o odebranie nowej pary."
           ],
           "answer": "Pójdzie na spacer w starych butach.",
@@ -165,8 +165,8 @@
           "skill": "main-idea",
           "question": "Dlaczego Magda pisze do Pawła?",
           "options": [
-            "Chce sprzedać mu lampkę z salonu.",
             "Pyta, gdzie kupić nowy mebel.",
+            "Chce sprzedać mu lampkę z salonu.",
             "Opowiada, jak skorzystała z poleconego warsztatu."
           ],
           "answer": "Opowiada, jak skorzystała z poleconego warsztatu.",
@@ -179,8 +179,8 @@
           "question": "Co trzeba wymienić?",
           "options": [
             "Włącznik.",
-            "Kabel.",
-            "Całą lampkę."
+            "Całą lampkę.",
+            "Kabel."
           ],
           "answer": "Włącznik.",
           "evidence": "uszkodzony jest tylko włącznik",
@@ -191,9 +191,9 @@
           "skill": "cause",
           "question": "Dlaczego naprawa nie będzie gotowa od razu?",
           "options": [
-            "Warsztat jest nieczynny do piątku.",
+            "Magda nie zostawiła numeru telefonu.",
             "Trzeba poczekać na część.",
-            "Magda nie zostawiła numeru telefonu."
+            "Warsztat jest nieczynny do piątku."
           ],
           "answer": "Trzeba poczekać na część.",
           "evidence": "Na naprawę muszę poczekać dwa dni, bo potrzebna część jest w drodze.",
@@ -205,8 +205,8 @@
           "question": "Co pozwala Magdzie poczekać na naprawę bez kupowania nowej lampy?",
           "options": [
             "Wieczorem nie musi niczego czytać.",
-            "Babcia przywiezie jej nową lampkę.",
-            "Może używać innej lampy z mieszkania."
+            "Może używać innej lampy z mieszkania.",
+            "Babcia przywiezie jej nową lampkę."
           ],
           "answer": "Może używać innej lampy z mieszkania.",
           "evidence": "Przeniosłam ją na biurko, więc mogę normalnie pracować do piątku.",
@@ -217,9 +217,9 @@
           "skill": "vocabulary",
           "question": "Co oznacza „uszkodzony”?",
           "options": [
-            "Zepsuty.",
             "Zamówiony.",
-            "Odnowiony."
+            "Odnowiony.",
+            "Zepsuty."
           ],
           "answer": "Zepsuty.",
           "evidence": "uszkodzony jest tylko włącznik",
@@ -253,9 +253,9 @@
           "skill": "detail",
           "question": "O której w czwartek sklep papierniczy zacznie pracę?",
           "options": [
-            "O piętnastej.",
             "O szesnastej.",
-            "O osiemnastej."
+            "O osiemnastej.",
+            "O piętnastej."
           ],
           "answer": "O szesnastej.",
           "evidence": "Sklep papierniczy rozpocznie pracę dopiero o szesnastej.",
@@ -266,8 +266,8 @@
           "skill": "cause",
           "question": "Dlaczego trzeba pokazać numer zamówienia w kawiarni?",
           "options": [
-            "Aby uzyskać dostęp do parkingu.",
             "Aby zapłacić za miejsce przy stoliku.",
+            "Aby uzyskać dostęp do parkingu.",
             "Aby pracownik znalazł właściwy tort."
           ],
           "answer": "Aby pracownik znalazł właściwy tort.",
@@ -279,9 +279,9 @@
           "skill": "inference",
           "question": "Klient chce odwiedzić aptekę i piekarnię podczas jednego wyjścia w czwartek. Która godzina mu odpowiada?",
           "options": [
-            "Dziesiąta.",
             "Trzynasta.",
-            "Siedemnasta."
+            "Siedemnasta.",
+            "Dziesiąta."
           ],
           "answer": "Dziesiąta.",
           "evidence": "Apteka będzie czynna od dziewiątej do jedenastej, a po przerwie ponownie od piętnastej do dziewiętnastej.",
@@ -292,9 +292,9 @@
           "skill": "vocabulary",
           "question": "Co oznacza „według zwykłego planu”?",
           "options": [
+            "Dopiero po wcześniejszym zamówieniu.",
             "Tylko w godzinach prac elektrycznych.",
-            "Tak jak w pozostałe normalne dni.",
-            "Dopiero po wcześniejszym zamówieniu."
+            "Tak jak w pozostałe normalne dni."
           ],
           "answer": "Tak jak w pozostałe normalne dni.",
           "evidence": "Pozostałe punkty będą działały według zwykłego planu.",
@@ -315,9 +315,9 @@
           "skill": "main-idea",
           "question": "Co Robert i jego partnerka próbują zmienić?",
           "options": [
-            "Miejsce, w którym jedzą obiady.",
+            "Godziny przyjazdu znajomych.",
             "Sposób planowania posiłków i zakupów.",
-            "Godziny przyjazdu znajomych."
+            "Miejsce, w którym jedzą obiady."
           ],
           "answer": "Sposób planowania posiłków i zakupów.",
           "evidence": "Tym razem najpierw sprawdzają, co już mają.",
@@ -328,9 +328,9 @@
           "skill": "detail",
           "question": "Co planują na środę?",
           "options": [
-            "Zupę.",
             "Kurczaka z ryżem.",
-            "Makaron z sosem pomidorowym."
+            "Makaron z sosem pomidorowym.",
+            "Zupę."
           ],
           "answer": "Makaron z sosem pomidorowym.",
           "evidence": "Na środę planują makaron z sosem pomidorowym",
@@ -342,8 +342,8 @@
           "question": "Dlaczego Robert dzieli listę na części?",
           "options": [
             "Chce sprawniej poruszać się po sklepie.",
-            "Chce kupić wszystkie produkty w różnych sklepach.",
-            "Chce obliczyć cenę posiłku dla gości."
+            "Chce obliczyć cenę posiłku dla gości.",
+            "Chce kupić wszystkie produkty w różnych sklepach."
           ],
           "answer": "Chce sprawniej poruszać się po sklepie.",
           "evidence": "Dzięki temu łatwiej będzie mu robić zakupy bez wracania między półkami.",
@@ -354,8 +354,8 @@
           "skill": "inference",
           "question": "Co prawdopodobnie zrobią po ustaleniu menu ze znajomymi?",
           "options": [
-            "Zrezygnują z zakupów na weekend.",
             "Dopiszą brakujące produkty do listy.",
+            "Zrezygnują z zakupów na weekend.",
             "Wyrzucą produkty przygotowane na poniedziałek."
           ],
           "answer": "Dopiszą brakujące produkty do listy.",
@@ -367,9 +367,9 @@
           "skill": "vocabulary",
           "question": "Co znaczy „brakujące składniki”?",
           "options": [
+            "Produkty potrzebne, których jeszcze nie mają.",
             "Produkty już przygotowane do jedzenia.",
-            "Produkty kupione w promocji.",
-            "Produkty potrzebne, których jeszcze nie mają."
+            "Produkty kupione w promocji."
           ],
           "answer": "Produkty potrzebne, których jeszcze nie mają.",
           "evidence": "Robert zapisuje na liście tylko brakujące składniki.",
@@ -390,9 +390,9 @@
           "skill": "main-idea",
           "question": "Co tekst pokazuje na przykładzie Zosi?",
           "options": [
+            "Jak uporządkować informacje podczas zgłaszania wady.",
             "Jak przygotować kurtkę do sezonu jesiennego.",
-            "Jak znaleźć sklep z tańszymi kurtkami.",
-            "Jak uporządkować informacje podczas zgłaszania wady."
+            "Jak znaleźć sklep z tańszymi kurtkami."
           ],
           "answer": "Jak uporządkować informacje podczas zgłaszania wady.",
           "evidence": "Na kartce znalazła numer zgłoszenia, opis wad i dane kontaktowe sklepu.",
@@ -403,9 +403,9 @@
           "skill": "detail",
           "question": "Jakie problemy zauważyła Zosia?",
           "options": [
+            "Zmianę koloru i uszkodzony kaptur.",
             "Zacinający się zamek i otwierający się szew.",
-            "Zbyt krótkie rękawy i brak kieszeni.",
-            "Zmianę koloru i uszkodzony kaptur."
+            "Zbyt krótkie rękawy i brak kieszeni."
           ],
           "answer": "Zacinający się zamek i otwierający się szew.",
           "evidence": "zamek czasem się zacina, a jeden szew przy kieszeni zaczyna się otwierać",
@@ -416,8 +416,8 @@
           "skill": "cause",
           "question": "Dlaczego Zosia nie naprawiła zamka sama?",
           "options": [
-            "Nie wiedziała, w którym sklepie kupiła kurtkę.",
             "Chciała pokazać sprzedawcy pierwotny stan usterki.",
+            "Nie wiedziała, w którym sklepie kupiła kurtkę.",
             "Pracownik wcześniej odmówił przyjęcia kurtki."
           ],
           "answer": "Chciała pokazać sprzedawcy pierwotny stan usterki.",
@@ -429,9 +429,9 @@
           "skill": "inference",
           "question": "Jeśli do końca przyszłego tygodnia nie będzie telefonu, co ułatwi Zosi dalszą rozmowę ze sklepem?",
           "options": [
-            "Zdjęcie nowej kurtki z internetu.",
             "Numer karty innego klienta.",
-            "Zapisany numer zgłoszenia."
+            "Zapisany numer zgłoszenia.",
+            "Zdjęcie nowej kurtki z internetu."
           ],
           "answer": "Zapisany numer zgłoszenia.",
           "evidence": "Zosia zapisała numer zgłoszenia w telefonie.",
@@ -442,8 +442,8 @@
           "skill": "vocabulary",
           "question": "Co oznacza „usterka”?",
           "options": [
-            "Problem techniczny lub wada.",
             "Potwierdzenie płatności.",
+            "Problem techniczny lub wada.",
             "Propozycja zakupu."
           ],
           "answer": "Problem techniczny lub wada.",
@@ -465,9 +465,9 @@
           "skill": "main-idea",
           "question": "Po co autorka wysyła wiadomość?",
           "options": [
-            "Ustala przygotowanie jedzenia i spotkanie przed podróżą.",
             "Proponuje zmianę celu podróży.",
-            "Pyta o menu restauracji w Gdańsku."
+            "Pyta o menu restauracji w Gdańsku.",
+            "Ustala przygotowanie jedzenia i spotkanie przed podróżą."
           ],
           "answer": "Ustala przygotowanie jedzenia i spotkanie przed podróżą.",
           "evidence": "Wieczorem przygotuję dla nas kanapki.",
@@ -478,8 +478,8 @@
           "skill": "detail",
           "question": "Co będzie w kanapkach Ani zamiast pomidorów?",
           "options": [
-            "Jabłko.",
             "Ogórek.",
+            "Jabłko.",
             "Papryka."
           ],
           "answer": "Ogórek.",
@@ -491,8 +491,8 @@
           "skill": "cause",
           "question": "Dlaczego nie planują śniadania w kawiarni na dworcu?",
           "options": [
-            "Kawiarnia nie sprzedaje kanapek.",
             "Nie chcą spotykać się przed odjazdem.",
+            "Kawiarnia nie sprzedaje kanapek.",
             "Kawiarnia otwiera się po odjeździe pociągu."
           ],
           "answer": "Kawiarnia otwiera się po odjeździe pociągu.",
@@ -517,9 +517,9 @@
           "skill": "vocabulary",
           "question": "Co znaczy „w ostatniej chwili”?",
           "options": [
-            "Wcześniej niż planowano.",
+            "Dopiero po zakończeniu podróży.",
             "Tuż przed wydarzeniem, gdy jest mało czasu.",
-            "Dopiero po zakończeniu podróży."
+            "Wcześniej niż planowano."
           ],
           "answer": "Tuż przed wydarzeniem, gdy jest mało czasu.",
           "evidence": "żeby nie szukać sklepu w ostatniej chwili",
@@ -553,9 +553,9 @@
           "skill": "detail",
           "question": "Czego brakowało na początku przygotowań?",
           "options": [
-            "Garnków i patelni.",
+            "Mąki i cebuli.",
             "Warzyw i sera.",
-            "Mąki i cebuli."
+            "Garnków i patelni."
           ],
           "answer": "Mąki i cebuli.",
           "evidence": "Okazało się, że brakuje mąki i cebuli.",
@@ -566,9 +566,9 @@
           "skill": "cause",
           "question": "Dlaczego uczestnicy podzielili farsz?",
           "options": [
-            "Chcieli przygotować również porcję bez mięsa.",
             "Nie mieli wystarczająco dużego stołu.",
-            "Chcieli zabrać część farszu do sklepu."
+            "Chcieli zabrać część farszu do sklepu.",
+            "Chcieli przygotować również porcję bez mięsa."
           ],
           "answer": "Chcieli przygotować również porcję bez mięsa.",
           "evidence": "W grupie była również Marta, która nie jadła mięsa.",
@@ -593,8 +593,8 @@
           "question": "Co znaczy „udostępniają” w pierwszym akapicie?",
           "options": [
             "Sprzedają uczestnikom na własność.",
-            "Zabierają po zakończeniu pracy.",
-            "Pozwalają uczestnikom korzystać ze sprzętu."
+            "Pozwalają uczestnikom korzystać ze sprzętu.",
+            "Zabierają po zakończeniu pracy."
           ],
           "answer": "Pozwalają uczestnikom korzystać ze sprzętu.",
           "evidence": "Organizatorzy udostępniają garnki, patelnie i duży stół.",
@@ -615,9 +615,9 @@
           "skill": "main-idea",
           "question": "Co Ewa robi podczas wizyty u babci?",
           "options": [
-            "Szuka prezentu dla siostry.",
+            "Porządkuje wszystkie książki w kuchni.",
             "Uczy się przygotowywać rodzinne ciasto.",
-            "Porządkuje wszystkie książki w kuchni."
+            "Szuka prezentu dla siostry."
           ],
           "answer": "Uczy się przygotowywać rodzinne ciasto.",
           "evidence": "Babciu, chcę upiec twoje ciasto z jabłkami",
@@ -628,8 +628,8 @@
           "skill": "detail",
           "question": "Czego nie może odczytać w zeszycie?",
           "options": [
-            "Temperatury pieczenia.",
             "Ilości jabłek.",
+            "Temperatury pieczenia.",
             "Ilości cukru."
           ],
           "answer": "Ilości cukru.",
@@ -655,8 +655,8 @@
           "question": "Co pomoże siostrze Ewy uniknąć błędu, którego nie opisano w zeszycie?",
           "options": [
             "Samo zdjęcie okładki zeszytu.",
-            "Notatka z dodatkowymi wskazówkami babci.",
-            "Lista gości na sobotę."
+            "Lista gości na sobotę.",
+            "Notatka z dodatkowymi wskazówkami babci."
           ],
           "answer": "Notatka z dodatkowymi wskazówkami babci.",
           "evidence": "Po powrocie do domu Ewa przesyła zdjęcie siostrze i dodaje krótką notatkę z rozmowy.",
@@ -690,9 +690,9 @@
           "skill": "main-idea",
           "question": "Dlaczego Joanna opisuje swoje przygotowania?",
           "options": [
-            "Chce pokazać, jak organizuje posiłki w pracowitym tygodniu.",
+            "Chce sprzedać niepotrzebne pojemniki.",
             "Chce zaprosić Tomka do wspólnego robienia zakupów.",
-            "Chce sprzedać niepotrzebne pojemniki."
+            "Chce pokazać, jak organizuje posiłki w pracowitym tygodniu."
           ],
           "answer": "Chce pokazać, jak organizuje posiłki w pracowitym tygodniu.",
           "evidence": "w niedzielę postanowiłam przygotować obiady na kilka dni",
@@ -716,8 +716,8 @@
           "skill": "cause",
           "question": "Dlaczego Joanna zapisuje nazwy dań i daty na pojemnikach?",
           "options": [
-            "Chce przekazać Tomkowi listę zakupów.",
             "Chce obliczyć czas pieczenia warzyw.",
+            "Chce przekazać Tomkowi listę zakupów.",
             "Chce wiedzieć, co znajduje się w pojemnikach i kiedy to przygotowała."
           ],
           "answer": "Chce wiedzieć, co znajduje się w pojemnikach i kiedy to przygotowała.",
@@ -729,9 +729,9 @@
           "skill": "inference",
           "question": "Tomek potwierdzi wizytę w czwartek. Co Joanna może dla niego przygotować bez zamawiania jedzenia?",
           "options": [
-            "Dodatkową porcję zupy.",
+            "Pięć różnych sosów.",
             "Osobny garnek świeżo ugotowanej kaszy.",
-            "Pięć różnych sosów."
+            "Dodatkową porcję zupy."
           ],
           "answer": "Dodatkową porcję zupy.",
           "evidence": "Mam dodatkową porcję zupy dla ciebie.",
@@ -742,8 +742,8 @@
           "skill": "vocabulary",
           "question": "Co oznacza „porcja”?",
           "options": [
-            "Rodzaj opakowania do zamrażania.",
             "Ilość jedzenia przeznaczona do jednego posiłku.",
+            "Rodzaj opakowania do zamrażania.",
             "Data przygotowania dania."
           ],
           "answer": "Ilość jedzenia przeznaczona do jednego posiłku.",

@@ -24,9 +24,9 @@
       "skill": "detail",
       "question": "O której w czwartek sklep papierniczy zacznie pracę?",
       "options": [
-        "O piętnastej.",
         "O szesnastej.",
-        "O osiemnastej."
+        "O osiemnastej.",
+        "O piętnastej."
       ],
       "answer": "O szesnastej.",
       "evidence": "Sklep papierniczy rozpocznie pracę dopiero o szesnastej.",
@@ -37,8 +37,8 @@
       "skill": "cause",
       "question": "Dlaczego trzeba pokazać numer zamówienia w kawiarni?",
       "options": [
-        "Aby uzyskać dostęp do parkingu.",
         "Aby zapłacić za miejsce przy stoliku.",
+        "Aby uzyskać dostęp do parkingu.",
         "Aby pracownik znalazł właściwy tort."
       ],
       "answer": "Aby pracownik znalazł właściwy tort.",
@@ -50,9 +50,9 @@
       "skill": "inference",
       "question": "Klient chce odwiedzić aptekę i piekarnię podczas jednego wyjścia w czwartek. Która godzina mu odpowiada?",
       "options": [
-        "Dziesiąta.",
         "Trzynasta.",
-        "Siedemnasta."
+        "Siedemnasta.",
+        "Dziesiąta."
       ],
       "answer": "Dziesiąta.",
       "evidence": "Apteka będzie czynna od dziewiątej do jedenastej, a po przerwie ponownie od piętnastej do dziewiętnastej.",
@@ -63,9 +63,9 @@
       "skill": "vocabulary",
       "question": "Co oznacza „według zwykłego planu”?",
       "options": [
+        "Dopiero po wcześniejszym zamówieniu.",
         "Tylko w godzinach prac elektrycznych.",
-        "Tak jak w pozostałe normalne dni.",
-        "Dopiero po wcześniejszym zamówieniu."
+        "Tak jak w pozostałe normalne dni."
       ],
       "answer": "Tak jak w pozostałe normalne dni.",
       "evidence": "Pozostałe punkty będą działały według zwykłego planu.",

@@ -11,9 +11,9 @@
       "skill": "main-idea",
       "question": "Co Ewa robi podczas wizyty u babci?",
       "options": [
-        "Szuka prezentu dla siostry.",
+        "Porządkuje wszystkie książki w kuchni.",
         "Uczy się przygotowywać rodzinne ciasto.",
-        "Porządkuje wszystkie książki w kuchni."
+        "Szuka prezentu dla siostry."
       ],
       "answer": "Uczy się przygotowywać rodzinne ciasto.",
       "evidence": "Babciu, chcę upiec twoje ciasto z jabłkami",
@@ -24,8 +24,8 @@
       "skill": "detail",
       "question": "Czego nie może odczytać w zeszycie?",
       "options": [
-        "Temperatury pieczenia.",
         "Ilości jabłek.",
+        "Temperatury pieczenia.",
         "Ilości cukru."
       ],
       "answer": "Ilości cukru.",
@@ -51,8 +51,8 @@
       "question": "Co pomoże siostrze Ewy uniknąć błędu, którego nie opisano w zeszycie?",
       "options": [
         "Samo zdjęcie okładki zeszytu.",
-        "Notatka z dodatkowymi wskazówkami babci.",
-        "Lista gości na sobotę."
+        "Lista gości na sobotę.",
+        "Notatka z dodatkowymi wskazówkami babci."
       ],
       "answer": "Notatka z dodatkowymi wskazówkami babci.",
       "evidence": "Po powrocie do domu Ewa przesyła zdjęcie siostrze i dodaje krótką notatkę z rozmowy.",

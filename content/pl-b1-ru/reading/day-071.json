@@ -11,9 +11,9 @@
       "skill": "main-idea",
       "question": "Po co autorka wysyła wiadomość?",
       "options": [
-        "Ustala przygotowanie jedzenia i spotkanie przed podróżą.",
         "Proponuje zmianę celu podróży.",
-        "Pyta o menu restauracji w Gdańsku."
+        "Pyta o menu restauracji w Gdańsku.",
+        "Ustala przygotowanie jedzenia i spotkanie przed podróżą."
       ],
       "answer": "Ustala przygotowanie jedzenia i spotkanie przed podróżą.",
       "evidence": "Wieczorem przygotuję dla nas kanapki.",
@@ -24,8 +24,8 @@
       "skill": "detail",
       "question": "Co będzie w kanapkach Ani zamiast pomidorów?",
       "options": [
-        "Jabłko.",
         "Ogórek.",
+        "Jabłko.",
         "Papryka."
       ],
       "answer": "Ogórek.",
@@ -37,8 +37,8 @@
       "skill": "cause",
       "question": "Dlaczego nie planują śniadania w kawiarni na dworcu?",
       "options": [
-        "Kawiarnia nie sprzedaje kanapek.",
         "Nie chcą spotykać się przed odjazdem.",
+        "Kawiarnia nie sprzedaje kanapek.",
         "Kawiarnia otwiera się po odjeździe pociągu."
       ],
       "answer": "Kawiarnia otwiera się po odjeździe pociągu.",
@@ -63,9 +63,9 @@
       "skill": "vocabulary",
       "question": "Co znaczy „w ostatniej chwili”?",
       "options": [
-        "Wcześniej niż planowano.",
+        "Dopiero po zakończeniu podróży.",
         "Tuż przed wydarzeniem, gdy jest mało czasu.",
-        "Dopiero po zakończeniu podróży."
+        "Wcześniej niż planowano."
       ],
       "answer": "Tuż przed wydarzeniem, gdy jest mało czasu.",
       "evidence": "żeby nie szukać sklepu w ostatniej chwili",

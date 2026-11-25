@@ -11,8 +11,8 @@
       "skill": "main-idea",
       "question": "Dlaczego Magda pisze do Pawła?",
       "options": [
-        "Chce sprzedać mu lampkę z salonu.",
         "Pyta, gdzie kupić nowy mebel.",
+        "Chce sprzedać mu lampkę z salonu.",
         "Opowiada, jak skorzystała z poleconego warsztatu."
       ],
       "answer": "Opowiada, jak skorzystała z poleconego warsztatu.",
@@ -25,8 +25,8 @@
       "question": "Co trzeba wymienić?",
       "options": [
         "Włącznik.",
-        "Kabel.",
-        "Całą lampkę."
+        "Całą lampkę.",
+        "Kabel."
       ],
       "answer": "Włącznik.",
       "evidence": "uszkodzony jest tylko włącznik",
@@ -37,9 +37,9 @@
       "skill": "cause",
       "question": "Dlaczego naprawa nie będzie gotowa od razu?",
       "options": [
-        "Warsztat jest nieczynny do piątku.",
+        "Magda nie zostawiła numeru telefonu.",
         "Trzeba poczekać na część.",
-        "Magda nie zostawiła numeru telefonu."
+        "Warsztat jest nieczynny do piątku."
       ],
       "answer": "Trzeba poczekać na część.",
       "evidence": "Na naprawę muszę poczekać dwa dni, bo potrzebna część jest w drodze.",
@@ -51,8 +51,8 @@
       "question": "Co pozwala Magdzie poczekać na naprawę bez kupowania nowej lampy?",
       "options": [
         "Wieczorem nie musi niczego czytać.",
-        "Babcia przywiezie jej nową lampkę.",
-        "Może używać innej lampy z mieszkania."
+        "Może używać innej lampy z mieszkania.",
+        "Babcia przywiezie jej nową lampkę."
       ],
       "answer": "Może używać innej lampy z mieszkania.",
       "evidence": "Przeniosłam ją na biurko, więc mogę normalnie pracować do piątku.",
@@ -63,9 +63,9 @@
       "skill": "vocabulary",
       "question": "Co oznacza „uszkodzony”?",
       "options": [
-        "Zepsuty.",
         "Zamówiony.",
-        "Odnowiony."
+        "Odnowiony.",
+        "Zepsuty."
       ],
       "answer": "Zepsuty.",
       "evidence": "uszkodzony jest tylko włącznik",

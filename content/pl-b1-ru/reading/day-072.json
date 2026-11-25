@@ -24,9 +24,9 @@
       "skill": "detail",
       "question": "Czego brakowało na początku przygotowań?",
       "options": [
-        "Garnków i patelni.",
+        "Mąki i cebuli.",
         "Warzyw i sera.",
-        "Mąki i cebuli."
+        "Garnków i patelni."
       ],
       "answer": "Mąki i cebuli.",
       "evidence": "Okazało się, że brakuje mąki i cebuli.",
@@ -37,9 +37,9 @@
       "skill": "cause",
       "question": "Dlaczego uczestnicy podzielili farsz?",
       "options": [
-        "Chcieli przygotować również porcję bez mięsa.",
         "Nie mieli wystarczająco dużego stołu.",
-        "Chcieli zabrać część farszu do sklepu."
+        "Chcieli zabrać część farszu do sklepu.",
+        "Chcieli przygotować również porcję bez mięsa."
       ],
       "answer": "Chcieli przygotować również porcję bez mięsa.",
       "evidence": "W grupie była również Marta, która nie jadła mięsa.",
@@ -64,8 +64,8 @@
       "question": "Co znaczy „udostępniają” w pierwszym akapicie?",
       "options": [
         "Sprzedają uczestnikom na własność.",
-        "Zabierają po zakończeniu pracy.",
-        "Pozwalają uczestnikom korzystać ze sprzętu."
+        "Pozwalają uczestnikom korzystać ze sprzętu.",
+        "Zabierają po zakończeniu pracy."
       ],
       "answer": "Pozwalają uczestnikom korzystać ze sprzętu.",
       "evidence": "Organizatorzy udostępniają garnki, patelnie i duży stół.",

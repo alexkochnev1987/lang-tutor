@@ -24,9 +24,9 @@
       "skill": "detail",
       "question": "Ile kosztuje dostawa drugiego biurka?",
       "options": [
-        "Trzysta dwadzieścia złotych.",
+        "Dwieście osiemdziesiąt złotych.",
         "Siedemdziesiąt złotych.",
-        "Dwieście osiemdziesiąt złotych."
+        "Trzysta dwadzieścia złotych."
       ],
       "answer": "Siedemdziesiąt złotych.",
       "evidence": "Dostawa kosztuje jednak siedemdziesiąt złotych.",
@@ -37,9 +37,9 @@
       "skill": "cause",
       "question": "Dlaczego brak szuflad nie jest dla Karoliny dużym problemem?",
       "options": [
-        "Dostanie je razem z montażem.",
         "Nie potrzebuje żadnych przyborów.",
-        "Może przechowywać przybory na regale."
+        "Może przechowywać przybory na regale.",
+        "Dostanie je razem z montażem."
       ],
       "answer": "Może przechowywać przybory na regale.",
       "evidence": "Ma jednak mały regał, na którym może postawić pudełko z przyborami.",

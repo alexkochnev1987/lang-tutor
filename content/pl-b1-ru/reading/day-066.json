@@ -12,8 +12,8 @@
       "question": "O czym przede wszystkim rozmawia rodzeństwo?",
       "options": [
         "O wyborze trasy sobotniego spaceru.",
-        "O tym, jak bez pośpiechu kupić buty online.",
-        "O szukaniu pracy w sklepie obuwniczym."
+        "O szukaniu pracy w sklepie obuwniczym.",
+        "O tym, jak bez pośpiechu kupić buty online."
       ],
       "answer": "O tym, jak bez pośpiechu kupić buty online.",
       "evidence": "Lena mierzy stopę i porównuje wynik z tabelą producenta.",
@@ -25,8 +25,8 @@
       "question": "Gdzie Lena chce odebrać paczkę?",
       "options": [
         "W sklepie przy swojej ulicy.",
-        "W domu brata.",
-        "W automacie obok pracy."
+        "W automacie obok pracy.",
+        "W domu brata."
       ],
       "answer": "W automacie obok pracy.",
       "evidence": "Wybiera dostawę do automatu paczkowego obok pracy.",
@@ -38,8 +38,8 @@
       "question": "Dlaczego Lena sprawdza zasady zwrotu?",
       "options": [
         "Chce wiedzieć, co zrobić, jeśli buty nie będą pasować.",
-        "Chce od razu zamówić drugą parę.",
-        "Chce zmienić miejsce dostawy."
+        "Chce zmienić miejsce dostawy.",
+        "Chce od razu zamówić drugą parę."
       ],
       "answer": "Chce wiedzieć, co zrobić, jeśli buty nie będą pasować.",
       "evidence": "A jeśli buty nie będą pasować?",
@@ -50,8 +50,8 @@
       "skill": "inference",
       "question": "Paczka dotrze dopiero w poniedziałek. Co Lena najprawdopodobniej zrobi w sobotę?",
       "options": [
-        "Kupi buty w innym sklepie.",
         "Pójdzie na spacer w starych butach.",
+        "Kupi buty w innym sklepie.",
         "Poprosi brata o odebranie nowej pary."
       ],
       "answer": "Pójdzie na spacer w starych butach.",

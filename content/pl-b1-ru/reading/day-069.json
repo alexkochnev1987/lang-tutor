@@ -11,9 +11,9 @@
       "skill": "main-idea",
       "question": "Co Robert i jego partnerka próbują zmienić?",
       "options": [
-        "Miejsce, w którym jedzą obiady.",
+        "Godziny przyjazdu znajomych.",
         "Sposób planowania posiłków i zakupów.",
-        "Godziny przyjazdu znajomych."
+        "Miejsce, w którym jedzą obiady."
       ],
       "answer": "Sposób planowania posiłków i zakupów.",
       "evidence": "Tym razem najpierw sprawdzają, co już mają.",
@@ -24,9 +24,9 @@
       "skill": "detail",
       "question": "Co planują na środę?",
       "options": [
-        "Zupę.",
         "Kurczaka z ryżem.",
-        "Makaron z sosem pomidorowym."
+        "Makaron z sosem pomidorowym.",
+        "Zupę."
       ],
       "answer": "Makaron z sosem pomidorowym.",
       "evidence": "Na środę planują makaron z sosem pomidorowym",
@@ -38,8 +38,8 @@
       "question": "Dlaczego Robert dzieli listę na części?",
       "options": [
         "Chce sprawniej poruszać się po sklepie.",
-        "Chce kupić wszystkie produkty w różnych sklepach.",
-        "Chce obliczyć cenę posiłku dla gości."
+        "Chce obliczyć cenę posiłku dla gości.",
+        "Chce kupić wszystkie produkty w różnych sklepach."
       ],
       "answer": "Chce sprawniej poruszać się po sklepie.",
       "evidence": "Dzięki temu łatwiej będzie mu robić zakupy bez wracania między półkami.",
@@ -50,8 +50,8 @@
       "skill": "inference",
       "question": "Co prawdopodobnie zrobią po ustaleniu menu ze znajomymi?",
       "options": [
-        "Zrezygnują z zakupów na weekend.",
         "Dopiszą brakujące produkty do listy.",
+        "Zrezygnują z zakupów na weekend.",
         "Wyrzucą produkty przygotowane na poniedziałek."
       ],
       "answer": "Dopiszą brakujące produkty do listy.",
@@ -63,9 +63,9 @@
       "skill": "vocabulary",
       "question": "Co znaczy „brakujące składniki”?",
       "options": [
+        "Produkty potrzebne, których jeszcze nie mają.",
         "Produkty już przygotowane do jedzenia.",
-        "Produkty kupione w promocji.",
-        "Produkty potrzebne, których jeszcze nie mają."
+        "Produkty kupione w promocji."
       ],
       "answer": "Produkty potrzebne, których jeszcze nie mają.",
       "evidence": "Robert zapisuje na liście tylko brakujące składniki.",
