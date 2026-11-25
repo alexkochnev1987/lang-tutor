@@ -1,0 +1,76 @@
+{
+  "id": "pl-b1.reading.day-086",
+  "day": 86,
+  "level": "B1",
+  "genre": "artykuł",
+  "title": "Informacja turystyczna",
+  "text": "W niewielkim mieście nad rzeką punkt informacji turystycznej przeniesiono z dworca na rynek. Dawniej korzystali z niego przede wszystkim podróżni przyjeżdżający pociągiem. Teraz pracownicy spotykają również osoby, które zatrzymują się w centrum tylko na kilka godzin. Chcą pomóc każdemu turyście ułożyć plan odpowiedni do jego możliwości.\n\nW punkcie są trzy bezpłatne mapy. Pierwsza pokazuje najważniejsze zabytki, druga prowadzi wzdłuż rzeki, a trzecia zawiera krótką trasę dla rodzin z małymi dziećmi. Na ostatniej mapie zaznaczono miejsca odpoczynku i toalety. W przeciwieństwie do trasy zabytkowej nie prowadzi ona po schodach na wzgórze zamkowe.\n\nPewnego dnia do punktu przyszli Joanna i jej ojciec. Mieli dwie godziny przed odjazdem autobusu. Ojciec interesował się historią, ale po niedawnej kontuzji wolał unikać schodów. Pracownica nie poleciła im całej trasy zabytkowej. Zaznaczyła na mapie dwa budynki przy rynku, a potem pokazała drogę do starego mostu. Z mostu dobrze widać zamek, chociaż nie trzeba wchodzić na wzgórze. Dodała też, że powrót z mostu na dworzec zajmie im około dwudziestu minut.\n\nJoanna zauważyła, że sama prawdopodobnie zaplanowałaby wizytę w zamku, ponieważ na zdjęciach wyglądał imponująco. Po spacerze uznała jednak, że krótsza trasa była dobrym wyborem. Mieli czas zatrzymać się przy zabytkach, przeczytać tablice informacyjne i spokojnie wrócić na autobus. Nie chodziło o to, żeby zobaczyć jak najwięcej miejsc, lecz żeby dobrze wykorzystać dostępny czas.",
+  "questions": [
+    {
+      "id": "main-idea",
+      "skill": "main-idea",
+      "question": "Jaki sposób zwiedzania przedstawia artykuł jako korzystny?",
+      "options": [
+        "Wybieranie przede wszystkim miejsc znanych ze zdjęć.",
+        "Dopasowanie trasy do czasu i możliwości odwiedzających.",
+        "Zwiedzanie wszystkich zabytków w kolejności z mapy."
+      ],
+      "answer": "Dopasowanie trasy do czasu i możliwości odwiedzających.",
+      "evidence": "Nie chodziło o to, żeby zobaczyć jak najwięcej miejsc, lecz żeby dobrze wykorzystać dostępny czas.",
+      "explanation": "Pracownica dopasowała trasę zarówno do czasu odjazdu, jak i możliwości ojca Joanny."
+    },
+    {
+      "id": "detail",
+      "skill": "detail",
+      "question": "Co zaznaczono na mapie dla rodzin z małymi dziećmi?",
+      "options": [
+        "Godziny otwarcia zamku i muzeów.",
+        "Przystanki autobusowe i dworzec.",
+        "Miejsca odpoczynku i toalety."
+      ],
+      "answer": "Miejsca odpoczynku i toalety.",
+      "evidence": "Na ostatniej mapie zaznaczono miejsca odpoczynku i toalety.",
+      "explanation": "Trzecia mapa zawiera informacje przydatne rodzinom."
+    },
+    {
+      "id": "cause",
+      "skill": "cause",
+      "question": "Dlaczego pracownica zaproponowała Joannie i jej ojcu trasę bez wzgórza?",
+      "options": [
+        "Trasa nie odpowiadała możliwościom ojca ani czasowi, którym dysponowali.",
+        "Ojciec nie interesował się historią miasta.",
+        "Nie mieli jeszcze mapy centrum miasta."
+      ],
+      "answer": "Trasa nie odpowiadała możliwościom ojca ani czasowi, którym dysponowali.",
+      "evidence": "Mieli dwie godziny przed odjazdem autobusu. Ojciec interesował się historią, ale po niedawnej kontuzji wolał unikać schodów. Pracownica nie poleciła im całej trasy zabytkowej.",
+      "explanation": "Oba ograniczenia przemawiały za krótszą trasą bez wejścia na wzgórze."
+    },
+    {
+      "id": "inference",
+      "skill": "inference",
+      "question": "Turysta chce zobaczyć zamek z zewnątrz, nie wchodzić po schodach i przeznaczyć ostatnie pół godziny na powrót na dworzec. Co może wybrać?",
+      "options": [
+        "Obejrzeć zamek ze starego mostu i wrócić na dworzec.",
+        "Wejść na wzgórze zamkowe trasą zabytkową.",
+        "Przejść całą trasę zabytkową przed powrotem."
+      ],
+      "answer": "Obejrzeć zamek ze starego mostu i wrócić na dworzec.",
+      "evidence": "Z mostu dobrze widać zamek, chociaż nie trzeba wchodzić na wzgórze. Dodała też, że powrót z mostu na dworzec zajmie im około dwudziestu minut.",
+      "explanation": "Most zapewnia widok bez schodów, a dwadzieścia minut mieści się w półgodzinnym zapasie."
+    },
+    {
+      "id": "vocabulary",
+      "skill": "vocabulary",
+      "question": "Co oznacza w tekście, że zamek wyglądał „imponująco”?",
+      "options": [
+        "Sprawiał wrażenie niedostępnego.",
+        "Był trudny do zauważenia.",
+        "Robił duże wrażenie swoim wyglądem."
+      ],
+      "answer": "Robił duże wrażenie swoim wyglądem.",
+      "evidence": "Joanna zauważyła, że sama prawdopodobnie zaplanowałaby wizytę w zamku, ponieważ na zdjęciach wyglądał imponująco.",
+      "explanation": "Wygląd zamku na zdjęciach zachęcał do odwiedzenia go."
+    }
+  ],
+  "publicationStatus": "practice"
+}

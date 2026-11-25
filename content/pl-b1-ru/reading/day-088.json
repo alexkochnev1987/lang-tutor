@@ -1,0 +1,76 @@
+{
+  "id": "pl-b1.reading.day-088",
+  "day": 88,
+  "level": "B1",
+  "genre": "e-mail",
+  "title": "Wycieczka do skansenu",
+  "text": "Cześć, Pawle!\n\nPamiętasz, jak rozmawialiśmy o wycieczce za miasto? Znalazłam skansen w niewielkiej wsi, do której można dojechać autobusem. Chciałabym zobaczyć dawne domy i warsztaty, a nie tylko przeczytać o nich w książce. Napisałam do organizatorki zwiedzania z pytaniem, czy nasza grupa może przyjechać w sobotę.\n\nOdpowiedziała, że o jedenastej oprowadza grupy po budynkach, natomiast o czternastej prowadzi warsztaty związane z dawnymi zawodami. Na warsztaty trzeba zapisać się osobno, ponieważ w pracowni jest niewiele miejsca. Jeżeli będziemy chcieli w nich uczestniczyć, powinniśmy podać liczbę osób do środy. Na samo zwiedzanie możemy kupić bilety na miejscu.\n\nPrzyjedzie z nami moja kuzynka Ania. Nie zna dobrze polskiego, więc pomogę jej zrozumieć najważniejsze informacje podczas zwiedzania. Organizatorce zaproponowałam, że wcześniej wyślę Ani kilka słów związanych z pracą na wsi. Dostałam w odpowiedzi krótką listę nazw narzędzi. Nie chcę, żeby Ania uczyła się ich wszystkich na pamięć; wystarczy, jeśli będzie rozpoznawała część słów.\n\nSprawdziłam też połączenia. Autobus powrotny odjeżdża o trzynastej trzydzieści lub o szesnastej trzydzieści. Jeśli pojedziemy na warsztaty, wybierzemy późniejszy. Od przystanku do skansenu trzeba iść prosto w kierunku kościoła, a potem skręcić w prawo za sklepem. Nie jest daleko.\n\nDaj mi znać do wtorku wieczorem, czy masz ochotę zostać na warsztatach. Wtedy zdążę podać organizatorce liczbę uczestników.\n\nPozdrawiam,\nNatalia",
+  "questions": [
+    {
+      "id": "main-idea",
+      "skill": "main-idea",
+      "question": "Po co Natalia pisze do Pawła?",
+      "options": [
+        "Przedstawia plan wycieczki i prosi o decyzję dotyczącą warsztatów.",
+        "Chce, żeby sam skontaktował się z organizatorką.",
+        "Prosi go o przygotowanie listy dawnych narzędzi."
+      ],
+      "answer": "Przedstawia plan wycieczki i prosi o decyzję dotyczącą warsztatów.",
+      "evidence": "Daj mi znać do wtorku wieczorem, czy masz ochotę zostać na warsztatach. Wtedy zdążę podać organizatorce liczbę uczestników.",
+      "explanation": "Cała wiadomość przedstawia możliwości wycieczki i warunki wyboru."
+    },
+    {
+      "id": "detail",
+      "skill": "detail",
+      "question": "O której odbywają się warsztaty?",
+      "options": [
+        "O jedenastej.",
+        "O czternastej.",
+        "O trzynastej trzydzieści."
+      ],
+      "answer": "O czternastej.",
+      "evidence": "natomiast o czternastej prowadzi warsztaty związane z dawnymi zawodami.",
+      "explanation": "Podano osobne godziny zwiedzania i warsztatów."
+    },
+    {
+      "id": "cause",
+      "skill": "cause",
+      "question": "Dlaczego Natalia chce dostać odpowiedź od Pawła do wtorku?",
+      "options": [
+        "W środę musi wysłać Ani listę wszystkich narzędzi.",
+        "Tego dnia odjeżdża ostatni autobus do wsi.",
+        "Chce zdążyć zgłosić liczbę uczestników warsztatów."
+      ],
+      "answer": "Chce zdążyć zgłosić liczbę uczestników warsztatów.",
+      "evidence": "Daj mi znać do wtorku wieczorem, czy masz ochotę zostać na warsztatach. Wtedy zdążę podać organizatorce liczbę uczestników.",
+      "explanation": "Termin dla Pawła poprzedza termin zgłoszenia grupy."
+    },
+    {
+      "id": "inference",
+      "skill": "inference",
+      "question": "Paweł musi wyjechać ze wsi przed piętnastą. Co może zrobić, jeśli chce wziąć udział w wycieczce?",
+      "options": [
+        "Zostać na warsztatach i wybrać autobus o szesnastej trzydzieści.",
+        "Zrezygnować z warsztatów, zwiedzić skansen rano i wrócić wcześniejszym autobusem.",
+        "Przyjechać wyłącznie na warsztaty i wrócić autobusem o trzynastej trzydzieści."
+      ],
+      "answer": "Zrezygnować z warsztatów, zwiedzić skansen rano i wrócić wcześniejszym autobusem.",
+      "evidence": "Autobus powrotny odjeżdża o trzynastej trzydzieści lub o szesnastej trzydzieści. Jeśli pojedziemy na warsztaty, wybierzemy późniejszy.",
+      "explanation": "Poranne zwiedzanie pozwala wyjechać o 13:30; po warsztatach dostępny jest dopiero autobus o 16:30."
+    },
+    {
+      "id": "vocabulary",
+      "skill": "vocabulary",
+      "question": "Co oznacza „uczyć się ich na pamięć”?",
+      "options": [
+        "Zapamiętać słowa tak, żeby móc je odtworzyć bez pomocy listy.",
+        "Przetłumaczyć słowa podczas oprowadzania.",
+        "Rozpoznawać przedmioty wyłącznie na zdjęciach."
+      ],
+      "answer": "Zapamiętać słowa tak, żeby móc je odtworzyć bez pomocy listy.",
+      "evidence": "Nie chcę, żeby Ania uczyła się ich wszystkich na pamięć; wystarczy, jeśli będzie rozpoznawała część słów.",
+      "explanation": "Rozpoznawanie słów jest tu przeciwstawione ich pełnemu zapamiętaniu."
+    }
+  ],
+  "publicationStatus": "practice"
+}

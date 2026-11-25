@@ -1,0 +1,76 @@
+{
+  "id": "pl-b1.reading.day-096",
+  "day": 96,
+  "level": "B1",
+  "genre": "ogłoszenie",
+  "title": "Wyprawa na szlak przyrodniczy",
+  "text": "Klub spacerowy Nad Jeziorem zaprasza na niedzielną wyprawę po okolicy. Tym razem chcemy poznać miejsca, które wiosną budzą się do życia: skraj lasu, niewielką łąkę i brzeg jeziora. Nie planujemy szybkiego marszu. Zatrzymamy się kilka razy, żeby przyjrzeć się roślinom i posłuchać ptaków.\n\nSpotykamy się o dziewiątej przy parkingu obok leśniczówki. Do wyboru będą dwie trasy. Obie zaczynają się wspólnym odcinkiem długości trzech kilometrów. Po dojściu do wiaty jedna grupa wróci z przewodnikiem na parking, a druga przejdzie dodatkowe cztery kilometry wzdłuż jeziora. Krótszy spacer zakończy się około południa, dłuższy około czternastej.\n\nWybór trasy zgłosimy na początku spotkania, ale będzie można go zmienić przy wiacie. Osoby, które poczują zmęczenie, nie muszą kontynuować dłuższej wyprawy. Prosimy zabrać wodę, wygodne buty i ubranie odpowiednie do pogody. Na trasie nie ma sklepu. Psy mogą uczestniczyć tylko w krótszym spacerze i powinny być prowadzone na smyczy. Dłuższy odcinek obejmuje miejsce, w którym organizatorzy chcą ograniczyć obecność zwierząt domowych podczas obserwacji ptaków.\n\nPrzy silnym deszczu odwołamy część prowadzącą wzdłuż jeziora, ponieważ ścieżka przy brzegu może być trudna do przejścia. Informację o zmianie podamy rano na stronie klubu. Jeśli pogoda nie pozwoli na żadną z tras, spotkamy się w leśniczówce na rozmowie o zdjęciach z poprzednich wycieczek. Chcemy, żeby uczestnicy mieli okazję spędzić czas razem niezależnie od tego, ile kilometrów uda nam się przejść.",
+  "questions": [
+    {
+      "id": "main-idea",
+      "skill": "main-idea",
+      "question": "Jaki charakter ma planowana wyprawa?",
+      "options": [
+        "Trening szybkiego marszu dla osób przygotowujących się do zawodów.",
+        "Spacer nastawiony na poznawanie przyrody, z możliwością dostosowania trasy.",
+        "Spotkanie fotograficzne odbywające się wyłącznie w leśniczówce."
+      ],
+      "answer": "Spacer nastawiony na poznawanie przyrody, z możliwością dostosowania trasy.",
+      "evidence": "Nie planujemy szybkiego marszu. Zatrzymamy się kilka razy, żeby przyjrzeć się roślinom i posłuchać ptaków.",
+      "explanation": "Plan obejmuje obserwacje i wybór długości spaceru."
+    },
+    {
+      "id": "detail",
+      "skill": "detail",
+      "question": "Gdzie można zmienić wcześniej wybraną trasę?",
+      "options": [
+        "Na końcu odcinka wzdłuż jeziora.",
+        "Przy leśniczówce przed spotkaniem.",
+        "Przy wiacie po wspólnym odcinku."
+      ],
+      "answer": "Przy wiacie po wspólnym odcinku.",
+      "evidence": "Wybór trasy zgłosimy na początku spotkania, ale będzie można go zmienić przy wiacie.",
+      "explanation": "Wiata jest punktem rozdzielenia tras."
+    },
+    {
+      "id": "cause",
+      "skill": "cause",
+      "question": "Dlaczego psy nie mogą uczestniczyć w dłuższym spacerze?",
+      "options": [
+        "Organizatorzy chcą ograniczyć obecność zwierząt domowych podczas obserwacji ptaków.",
+        "Na dłuższym odcinku nie ma miejsca na odpoczynek z psem.",
+        "Dłuższa trasa jest przeznaczona tylko dla osób idących szybko."
+      ],
+      "answer": "Organizatorzy chcą ograniczyć obecność zwierząt domowych podczas obserwacji ptaków.",
+      "evidence": "Dłuższy odcinek obejmuje miejsce, w którym organizatorzy chcą ograniczyć obecność zwierząt domowych podczas obserwacji ptaków.",
+      "explanation": "Ograniczenie dotyczy miejsca obserwacji."
+    },
+    {
+      "id": "inference",
+      "skill": "inference",
+      "question": "Marek przyjdzie z psem, a o trzynastej musi być przy parkingu. Co może zaplanować, jeśli pogoda jest dobra?",
+      "options": [
+        "Dłuższą trasę i powrót przy wiacie dopiero po czternastej.",
+        "Dłuższy spacer z psem, jeśli wcześniej zgłosi swój wybór.",
+        "Krótszy spacer z powrotem około południa, prowadząc psa na smyczy."
+      ],
+      "answer": "Krótszy spacer z powrotem około południa, prowadząc psa na smyczy.",
+      "evidence": "Krótszy spacer zakończy się około południa, dłuższy około czternastej.\n\nWybór trasy zgłosimy na początku spotkania, ale będzie można go zmienić przy wiacie. Osoby, które poczują zmęczenie, nie muszą kontynuować dłuższej wyprawy. Prosimy zabrać wodę, wygodne buty i ubranie odpowiednie do pogody. Na trasie nie ma sklepu. Psy mogą uczestniczyć tylko w krótszym spacerze i powinny być prowadzone na smyczy.",
+      "explanation": "Krótsza trasa mieści się w czasie Marka i dopuszcza psa na smyczy."
+    },
+    {
+      "id": "vocabulary",
+      "skill": "vocabulary",
+      "question": "Co znaczy, że wiosną miejsca „budzą się do życia”?",
+      "options": [
+        "Przyroda staje się aktywniejsza po zimie.",
+        "Zaczynają być dostępne dopiero rano.",
+        "Organizatorzy otwierają je dla turystów po remoncie."
+      ],
+      "answer": "Przyroda staje się aktywniejsza po zimie.",
+      "evidence": "Tym razem chcemy poznać miejsca, które wiosną budzą się do życia: skraj lasu, niewielką łąkę i brzeg jeziora.",
+      "explanation": "To przenośnia dotycząca wiosennych zmian przyrody."
+    }
+  ],
+  "publicationStatus": "practice"
+}

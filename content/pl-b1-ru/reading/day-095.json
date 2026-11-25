@@ -1,0 +1,76 @@
+{
+  "id": "pl-b1.reading.day-095",
+  "day": 95,
+  "level": "B1",
+  "genre": "e-mail",
+  "title": "List do administracji o zieleni",
+  "text": "Szanowni Państwo,\n\npiszę w imieniu kilku mieszkańców budynku przy ulicy Klonowej. Chcielibyśmy zaproponować drobną zmianę w sposobie pielęgnacji zieleni na naszym podwórku. Nie chodzi nam o całkowitą rezygnację z koszenia trawy, lecz o pozostawienie niewielkiego fragmentu, na którym przez część lata mogłyby rosnąć kwiaty.\n\nW zeszłym roku przy ławkach pojawiły się kwitnące rośliny. Mieszkańcy chętnie siadali tam wieczorami, a dzieci przyglądały się owadom. Po kolejnym koszeniu kwiaty zniknęły. Rozumiemy jednak, że wysoka trawa nie wszędzie jest odpowiednia. Przy chodniku i wejściu do budynku powinna pozostać niska, żeby przejście było wygodne.\n\nProponujemy wybrać na próbę miejsce pod murem, z dala od głównej drogi do klatki schodowej. Można byłoby oznaczyć je małą tabliczką. Dzięki niej osoby, które nie uczestniczyły w rozmowie, wiedziałyby, że wyższa trawa jest wynikiem świadomej decyzji, a nie braku pracy ze strony firmy sprzątającej.\n\nChętnie przedstawimy szkic podwórka podczas najbliższego spotkania mieszkańców. Przed spotkaniem prosimy o informację, czy administracja może uzgodnić zmianę z firmą zajmującą się zielenią. Nie chcemy rozpoczynać żadnych prac samodzielnie, ponieważ zależy nam na wspólnym ustaleniu zasad.\n\nJeśli pomysł okaże się możliwy do zrealizowania, proponujemy obserwować wybrany fragment przez jeden sezon. Jesienią wspólnie ocenimy, czy rozwiązanie jest wygodne dla mieszkańców i czy warto je kontynuować. Będziemy wdzięczni za odpowiedź przed końcem miesiąca.\n\nZ poważaniem,\nKarolina Nowak",
+  "questions": [
+    {
+      "id": "main-idea",
+      "skill": "main-idea",
+      "question": "Jaki jest główny cel listu?",
+      "options": [
+        "Zaproponować uzgodnioną próbę innego sposobu pielęgnacji części zieleni.",
+        "Złożyć skargę na firmę sprzątającą za brak regularnej pracy.",
+        "Poprosić o całkowite zakończenie koszenia trawy na podwórku."
+      ],
+      "answer": "Zaproponować uzgodnioną próbę innego sposobu pielęgnacji części zieleni.",
+      "evidence": "Jeśli pomysł okaże się możliwy do zrealizowania, proponujemy obserwować wybrany fragment przez jeden sezon.",
+      "explanation": "List proponuje ograniczoną zmianę, uzgodnienie i późniejszą ocenę."
+    },
+    {
+      "id": "detail",
+      "skill": "detail",
+      "question": "Gdzie mieszkańcy chcą pozostawić wyższą trawę?",
+      "options": [
+        "Przy wejściu do klatki schodowej.",
+        "Wzdłuż głównego chodnika.",
+        "Pod murem, z dala od głównego przejścia."
+      ],
+      "answer": "Pod murem, z dala od głównego przejścia.",
+      "evidence": "Proponujemy wybrać na próbę miejsce pod murem, z dala od głównej drogi do klatki schodowej.",
+      "explanation": "Miejsce nie powinno utrudniać przejścia."
+    },
+    {
+      "id": "cause",
+      "skill": "cause",
+      "question": "Po co miałaby powstać tabliczka?",
+      "options": [
+        "Żeby ogłosić datę najbliższego spotkania mieszkańców.",
+        "Żeby wyjaśnić mieszkańcom, dlaczego wybrany fragment nie jest koszony tak jak reszta.",
+        "Żeby wskazać pracownikom drogę do klatki schodowej."
+      ],
+      "answer": "Żeby wyjaśnić mieszkańcom, dlaczego wybrany fragment nie jest koszony tak jak reszta.",
+      "evidence": "Dzięki niej osoby, które nie uczestniczyły w rozmowie, wiedziałyby, że wyższa trawa jest wynikiem świadomej decyzji, a nie braku pracy ze strony firmy sprzątającej.",
+      "explanation": "Tabliczka wyjaśnia cel zmiany."
+    },
+    {
+      "id": "inference",
+      "skill": "inference",
+      "question": "Administracja zgadza się na próbę, ale chce pozostawić wysoką trawę również przy wejściu. Jaka odpowiedź najlepiej oddaje stanowisko autorów listu?",
+      "options": [
+        "Podtrzymać pomysł próby pod murem i pozostawić niską trawę przy wejściu.",
+        "Zgodzić się, ponieważ mieszkańcy chcieli ograniczyć koszenie całego podwórka.",
+        "Zrezygnować z uzgodnień i samodzielnie zmienić pielęgnację całego terenu."
+      ],
+      "answer": "Podtrzymać pomysł próby pod murem i pozostawić niską trawę przy wejściu.",
+      "evidence": "Rozumiemy jednak, że wysoka trawa nie wszędzie jest odpowiednia. Przy chodniku i wejściu do budynku powinna pozostać niska, żeby przejście było wygodne.",
+      "explanation": "Autorzy chcą próby, ale nie kosztem wygodnego przejścia."
+    },
+    {
+      "id": "vocabulary",
+      "skill": "vocabulary",
+      "question": "Co oznacza formalne wyrażenie „będziemy wdzięczni za odpowiedź”?",
+      "options": [
+        "Oczekujemy decyzji zgodnej z naszym pomysłem.",
+        "Uprzejmie prosimy o udzielenie odpowiedzi.",
+        "Dziękujemy za odpowiedź, którą już otrzymaliśmy."
+      ],
+      "answer": "Uprzejmie prosimy o udzielenie odpowiedzi.",
+      "evidence": "Będziemy wdzięczni za odpowiedź przed końcem miesiąca.",
+      "explanation": "Jest to uprzejma prośba o odpowiedź, a nie żądanie zgody."
+    }
+  ],
+  "publicationStatus": "practice"
+}

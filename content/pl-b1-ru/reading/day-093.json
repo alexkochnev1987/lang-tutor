@@ -1,0 +1,76 @@
+{
+  "id": "pl-b1.reading.day-093",
+  "day": 93,
+  "level": "B1",
+  "genre": "artykuł",
+  "title": "Życie drzew w mieście",
+  "text": "Na osiedlu przy ulicy Lipowej przez wiele lat rosły trzy duże drzewa. Latem ich korony dawały cień na ławkach i na części chodnika. Kiedy w sąsiednim budynku otwarto nowy sklep, mieszkańcy zaczęli rozmawiać o przebudowie niewielkiego placu przed nim. Jedni chcieli więcej miejsc parkingowych, inni woleli pozostawić przestrzeń, w której można odpocząć.\n\nArchitektka przygotowała dwie propozycje. Pierwsza zakładała stworzenie szerokiego parkingu, ale wymagała usunięcia dwóch drzew. Druga przewidywała mniej miejsc dla samochodów i przesunięcie kilku ławek. W tej wersji wszystkie trzy drzewa mogły pozostać na placu. Dodatkowo przy jednym z nich zaplanowano wolną powierzchnię ziemi, na którą mógł padać deszcz.\n\nPodczas spotkania z mieszkańcami pan Robert przyznał, że początkowo popierał pierwszą propozycję. Codziennie szukał miejsca dla samochodu. Zmienił zdanie, kiedy jego córka pokazała mu, gdzie czeka na autobus po zajęciach. W upalne dni stała właśnie pod jednym z drzew przeznaczonych do usunięcia.\n\nOstatecznie mieszkańcy poprosili architektkę o dopracowanie drugiej propozycji. Zależało im także na tym, żeby dostęp do sklepu pozostał wygodny dla dostawców. Nie rozwiązali wszystkich problemów podczas jednego spotkania, ale uzgodnili, które elementy placu są dla nich najważniejsze.\n\nHistoria ulicy Lipowej pokazuje, że przestrzeń miejska służy różnym osobom o różnych porach dnia. To, czego nie zauważamy w drodze do pracy, dla kogoś innego może mieć duże znaczenie.",
+  "questions": [
+    {
+      "id": "main-idea",
+      "skill": "main-idea",
+      "question": "Co pokazuje historia placu przy ulicy Lipowej?",
+      "options": [
+        "Mieszkańcy mogą rozwiązać wszystkie problemy przez pozostawienie drzew bez zmian.",
+        "Nowy sklep powinien zapewniać każdemu klientowi miejsce parkingowe.",
+        "Przebudowę przestrzeni warto rozpatrywać z perspektywy różnych użytkowników."
+      ],
+      "answer": "Przebudowę przestrzeni warto rozpatrywać z perspektywy różnych użytkowników.",
+      "evidence": "Historia ulicy Lipowej pokazuje, że przestrzeń miejska służy różnym osobom o różnych porach dnia.",
+      "explanation": "Zmiana zdania Roberta i rozmowa o dostawcach pokazują różne potrzeby."
+    },
+    {
+      "id": "detail",
+      "skill": "detail",
+      "question": "Ile drzew miało pozostać w drugiej propozycji?",
+      "options": [
+        "Jedno.",
+        "Trzy.",
+        "Dwa."
+      ],
+      "answer": "Trzy.",
+      "evidence": "W tej wersji wszystkie trzy drzewa mogły pozostać na placu.",
+      "explanation": "Druga wersja zachowuje wszystkie trzy drzewa."
+    },
+    {
+      "id": "cause",
+      "skill": "cause",
+      "question": "Dlaczego Robert zmienił zdanie?",
+      "options": [
+        "Zobaczył, jak ważne dla córki jest jedno z drzew.",
+        "Architektka obiecała mu osobne miejsce parkingowe.",
+        "Dowiedział się, że parking będzie dostępny tylko dla dostawców."
+      ],
+      "answer": "Zobaczył, jak ważne dla córki jest jedno z drzew.",
+      "evidence": "Zmienił zdanie, kiedy jego córka pokazała mu, gdzie czeka na autobus po zajęciach. W upalne dni stała właśnie pod jednym z drzew przeznaczonych do usunięcia.",
+      "explanation": "Robert poznał potrzebę, której wcześniej nie brał pod uwagę."
+    },
+    {
+      "id": "inference",
+      "skill": "inference",
+      "question": "Architektka chce zwiększyć liczbę miejsc dla samochodów w drugiej wersji, ale musiałaby usunąć drzewo. Co prawdopodobnie powinna zrobić przed wprowadzeniem zmiany?",
+      "options": [
+        "Porozmawiać z mieszkańcami o konflikcie między parkowaniem a zachowaniem drzew.",
+        "Wprowadzić zmianę bez rozmowy, bo mieszkańcy wybrali drugą wersję.",
+        "Wrócić do pierwszej propozycji i usunąć wszystkie ławki."
+      ],
+      "answer": "Porozmawiać z mieszkańcami o konflikcie między parkowaniem a zachowaniem drzew.",
+      "evidence": "Ostatecznie mieszkańcy poprosili architektkę o dopracowanie drugiej propozycji. Zależało im także na tym, żeby dostęp do sklepu pozostał wygodny dla dostawców. Nie rozwiązali wszystkich problemów podczas jednego spotkania, ale uzgodnili, które elementy placu są dla nich najważniejsze.",
+      "explanation": "Zachowanie drzew było istotną częścią wybranej wersji; nowy konflikt wymaga uzgodnienia."
+    },
+    {
+      "id": "vocabulary",
+      "skill": "vocabulary",
+      "question": "Co znaczy „dopracowanie drugiej propozycji”?",
+      "options": [
+        "Wybór wykonawcy bez zmiany projektu.",
+        "Uzupełnienie i poprawienie szczegółów istniejącej propozycji.",
+        "Rezygnacja z projektu i rozpoczęcie prac od nowa."
+      ],
+      "answer": "Uzupełnienie i poprawienie szczegółów istniejącej propozycji.",
+      "evidence": "Ostatecznie mieszkańcy poprosili architektkę o dopracowanie drugiej propozycji. Zależało im także na tym, żeby dostęp do sklepu pozostał wygodny dla dostawców.",
+      "explanation": "Mieszkańcy wybrali kierunek, ale chcą jeszcze poprawić szczegóły."
+    }
+  ],
+  "publicationStatus": "practice"
+}

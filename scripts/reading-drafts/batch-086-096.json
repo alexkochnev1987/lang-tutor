@@ -1,0 +1,756 @@
+{
+  "version": 1,
+  "status": "draft",
+  "texts": [
+    {
+      "id": "pl-b1.reading.day-086",
+      "day": 86,
+      "level": "B1",
+      "genre": "artykuł",
+      "title": "Informacja turystyczna",
+      "text": "W niewielkim mieście nad rzeką punkt informacji turystycznej przeniesiono z dworca na rynek. Dawniej korzystali z niego przede wszystkim podróżni przyjeżdżający pociągiem. Teraz pracownicy spotykają również osoby, które zatrzymują się w centrum tylko na kilka godzin. Chcą pomóc każdemu turyście ułożyć plan odpowiedni do jego możliwości.\n\nW punkcie są trzy bezpłatne mapy. Pierwsza pokazuje najważniejsze zabytki, druga prowadzi wzdłuż rzeki, a trzecia zawiera krótką trasę dla rodzin z małymi dziećmi. Na ostatniej mapie zaznaczono miejsca odpoczynku i toalety. W przeciwieństwie do trasy zabytkowej nie prowadzi ona po schodach na wzgórze zamkowe.\n\nPewnego dnia do punktu przyszli Joanna i jej ojciec. Mieli dwie godziny przed odjazdem autobusu. Ojciec interesował się historią, ale po niedawnej kontuzji wolał unikać schodów. Pracownica nie poleciła im całej trasy zabytkowej. Zaznaczyła na mapie dwa budynki przy rynku, a potem pokazała drogę do starego mostu. Z mostu dobrze widać zamek, chociaż nie trzeba wchodzić na wzgórze. Dodała też, że powrót z mostu na dworzec zajmie im około dwudziestu minut.\n\nJoanna zauważyła, że sama prawdopodobnie zaplanowałaby wizytę w zamku, ponieważ na zdjęciach wyglądał imponująco. Po spacerze uznała jednak, że krótsza trasa była dobrym wyborem. Mieli czas zatrzymać się przy zabytkach, przeczytać tablice informacyjne i spokojnie wrócić na autobus. Nie chodziło o to, żeby zobaczyć jak najwięcej miejsc, lecz żeby dobrze wykorzystać dostępny czas.",
+      "questions": [
+        {
+          "id": "main-idea",
+          "skill": "main-idea",
+          "question": "Jaki sposób zwiedzania przedstawia artykuł jako korzystny?",
+          "options": [
+            "Wybieranie przede wszystkim miejsc znanych ze zdjęć.",
+            "Dopasowanie trasy do czasu i możliwości odwiedzających.",
+            "Zwiedzanie wszystkich zabytków w kolejności z mapy."
+          ],
+          "answer": "Dopasowanie trasy do czasu i możliwości odwiedzających.",
+          "evidence": "Nie chodziło o to, żeby zobaczyć jak najwięcej miejsc, lecz żeby dobrze wykorzystać dostępny czas.",
+          "explanation": "Pracownica dopasowała trasę zarówno do czasu odjazdu, jak i możliwości ojca Joanny."
+        },
+        {
+          "id": "detail",
+          "skill": "detail",
+          "question": "Co zaznaczono na mapie dla rodzin z małymi dziećmi?",
+          "options": [
+            "Godziny otwarcia zamku i muzeów.",
+            "Przystanki autobusowe i dworzec.",
+            "Miejsca odpoczynku i toalety."
+          ],
+          "answer": "Miejsca odpoczynku i toalety.",
+          "evidence": "Na ostatniej mapie zaznaczono miejsca odpoczynku i toalety.",
+          "explanation": "Trzecia mapa zawiera informacje przydatne rodzinom."
+        },
+        {
+          "id": "cause",
+          "skill": "cause",
+          "question": "Dlaczego pracownica zaproponowała Joannie i jej ojcu trasę bez wzgórza?",
+          "options": [
+            "Trasa nie odpowiadała możliwościom ojca ani czasowi, którym dysponowali.",
+            "Ojciec nie interesował się historią miasta.",
+            "Nie mieli jeszcze mapy centrum miasta."
+          ],
+          "answer": "Trasa nie odpowiadała możliwościom ojca ani czasowi, którym dysponowali.",
+          "evidence": "Mieli dwie godziny przed odjazdem autobusu. Ojciec interesował się historią, ale po niedawnej kontuzji wolał unikać schodów. Pracownica nie poleciła im całej trasy zabytkowej.",
+          "explanation": "Oba ograniczenia przemawiały za krótszą trasą bez wejścia na wzgórze."
+        },
+        {
+          "id": "inference",
+          "skill": "inference",
+          "question": "Turysta chce zobaczyć zamek z zewnątrz, nie wchodzić po schodach i przeznaczyć ostatnie pół godziny na powrót na dworzec. Co może wybrać?",
+          "options": [
+            "Obejrzeć zamek ze starego mostu i wrócić na dworzec.",
+            "Wejść na wzgórze zamkowe trasą zabytkową.",
+            "Przejść całą trasę zabytkową przed powrotem."
+          ],
+          "answer": "Obejrzeć zamek ze starego mostu i wrócić na dworzec.",
+          "evidence": "Z mostu dobrze widać zamek, chociaż nie trzeba wchodzić na wzgórze. Dodała też, że powrót z mostu na dworzec zajmie im około dwudziestu minut.",
+          "explanation": "Most zapewnia widok bez schodów, a dwadzieścia minut mieści się w półgodzinnym zapasie."
+        },
+        {
+          "id": "vocabulary",
+          "skill": "vocabulary",
+          "question": "Co oznacza w tekście, że zamek wyglądał „imponująco”?",
+          "options": [
+            "Sprawiał wrażenie niedostępnego.",
+            "Był trudny do zauważenia.",
+            "Robił duże wrażenie swoim wyglądem."
+          ],
+          "answer": "Robił duże wrażenie swoim wyglądem.",
+          "evidence": "Joanna zauważyła, że sama prawdopodobnie zaplanowałaby wizytę w zamku, ponieważ na zdjęciach wyglądał imponująco.",
+          "explanation": "Wygląd zamku na zdjęciach zachęcał do odwiedzenia go."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-087",
+      "day": 87,
+      "level": "B1",
+      "genre": "dialog",
+      "title": "Droga do domu kultury",
+      "text": "— Przepraszam, czy może mi pan pomóc? Szukam domu kultury. Mam za kwadrans zajęcia i chyba wysiadłam na złym przystanku — powiedziała kobieta stojąca przy skrzyżowaniu.\n\n— Wysiadła pani dobrze, tylko wejście jest po drugiej stronie budynku — odpowiedział mężczyzna. — Widzi pani ten parking za sklepem? Można przejść przez niego prosto do domu kultury, ale od poniedziałku trwa tam remont chodnika. Nie wiem, czy przejście jest dziś otwarte.\n\n— Mam ze sobą dużą torbę z materiałami do malowania. Wolałabym nie chodzić po terenie remontu. Czy jest inna droga?\n\n— Proszę iść wzdłuż ulicy do drugiego skrzyżowania, a następnie skręcić w lewo. Za małym parkiem zobaczy pani bramę. To wejście od strony osiedla. Droga zajmuje mniej więcej dziesięć minut. Zwykle jest nieco dłuższa niż przejście przez parking, ale dziś może się okazać szybsza.\n\n— Dziękuję! Czy przy bramie jest miejsce, gdzie można zostawić rower? W przyszłym tygodniu chcę przyjechać na zajęcia rowerem.\n\n— Tak, stojaki są po prawej stronie bramy. Tylko proszę pamiętać, że w środy po południu odbywa się tam kiermasz książek. Wtedy stojaki przy bramie bywają zajęte. Kolejne stojaki znajdzie pani przy głównym wejściu.\n\nKobieta podziękowała mężczyźnie i wybrała drogę przez osiedle. W domu kultury była kilka minut przed rozpoczęciem zajęć. Po lekcji wyszła głównym wejściem, żeby sprawdzić, jak wygląda przejście przez parking. Okazało się, że zostało zamknięte do końca tygodnia. Dobrze, że nie próbowała tamtędy skracać drogi.",
+      "questions": [
+        {
+          "id": "main-idea",
+          "skill": "main-idea",
+          "question": "Czego przede wszystkim dotyczy rozmowa?",
+          "options": [
+            "Zmiany godziny zajęć z malowania.",
+            "Organizacji kiermaszu książek na osiedlu.",
+            "Wyboru drogi do domu kultury z uwzględnieniem utrudnień."
+          ],
+          "answer": "Wyboru drogi do domu kultury z uwzględnieniem utrudnień.",
+          "evidence": "Droga zajmuje mniej więcej dziesięć minut. Zwykle jest nieco dłuższa niż przejście przez parking, ale dziś może się okazać szybsza.",
+          "explanation": "Rozmowa pomaga dotrzeć na zajęcia i zaplanować kolejną wizytę."
+        },
+        {
+          "id": "detail",
+          "skill": "detail",
+          "question": "Gdzie są drugie stojaki rowerowe?",
+          "options": [
+            "Przy głównym wejściu do domu kultury.",
+            "Za parkiem przy skrzyżowaniu.",
+            "Przy sklepie obok parkingu."
+          ],
+          "answer": "Przy głównym wejściu do domu kultury.",
+          "evidence": "Kolejne stojaki znajdzie pani przy głównym wejściu.",
+          "explanation": "Mężczyzna wskazuje alternatywę dla stojaków przy bramie."
+        },
+        {
+          "id": "cause",
+          "skill": "cause",
+          "question": "Dlaczego kobieta woli ominąć parking?",
+          "options": [
+            "Nie wie, gdzie znajduje się sklep.",
+            "Nie chce iść z dużą torbą przez teren remontu.",
+            "Ma spotkanie z kimś w parku."
+          ],
+          "answer": "Nie chce iść z dużą torbą przez teren remontu.",
+          "evidence": "Mam ze sobą dużą torbę z materiałami do malowania. Wolałabym nie chodzić po terenie remontu.",
+          "explanation": "Torba i remont wpływają na jej wybór trasy."
+        },
+        {
+          "id": "inference",
+          "skill": "inference",
+          "question": "Kobieta przyjedzie rowerem w następną środę, dziesięć minut przed zajęciami. Kiermasz właśnie trwa, a przy bramie nie ma wolnych stojaków. Jak najlepiej postąpić?",
+          "options": [
+            "Zostawić rower przy przystanku i wrócić po niego po kiermaszu.",
+            "Czekać przy bramie do końca kiermaszu.",
+            "Zostawić rower na stojakach przy głównym wejściu."
+          ],
+          "answer": "Zostawić rower na stojakach przy głównym wejściu.",
+          "evidence": "Tylko proszę pamiętać, że w środy po południu odbywa się tam kiermasz książek. Wtedy stojaki przy bramie bywają zajęte. Kolejne stojaki znajdzie pani przy głównym wejściu.",
+          "explanation": "W środę brama może być zajęta, ale przy drugim wejściu są dodatkowe stojaki."
+        },
+        {
+          "id": "vocabulary",
+          "skill": "vocabulary",
+          "question": "Co oznacza tutaj „skracać drogę”?",
+          "options": [
+            "Iść w stronę najbliższego przystanku.",
+            "Wybrać krótszą trasę do tego samego celu.",
+            "Wybrać trasę omijającą skrzyżowanie niezależnie od długości."
+          ],
+          "answer": "Wybrać krótszą trasę do tego samego celu.",
+          "evidence": "Okazało się, że zostało zamknięte do końca tygodnia. Dobrze, że nie próbowała tamtędy skracać drogi.",
+          "explanation": "Parking był zwykle krótszym przejściem do domu kultury."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-088",
+      "day": 88,
+      "level": "B1",
+      "genre": "e-mail",
+      "title": "Wycieczka do skansenu",
+      "text": "Cześć, Pawle!\n\nPamiętasz, jak rozmawialiśmy o wycieczce za miasto? Znalazłam skansen w niewielkiej wsi, do której można dojechać autobusem. Chciałabym zobaczyć dawne domy i warsztaty, a nie tylko przeczytać o nich w książce. Napisałam do organizatorki zwiedzania z pytaniem, czy nasza grupa może przyjechać w sobotę.\n\nOdpowiedziała, że o jedenastej oprowadza grupy po budynkach, natomiast o czternastej prowadzi warsztaty związane z dawnymi zawodami. Na warsztaty trzeba zapisać się osobno, ponieważ w pracowni jest niewiele miejsca. Jeżeli będziemy chcieli w nich uczestniczyć, powinniśmy podać liczbę osób do środy. Na samo zwiedzanie możemy kupić bilety na miejscu.\n\nPrzyjedzie z nami moja kuzynka Ania. Nie zna dobrze polskiego, więc pomogę jej zrozumieć najważniejsze informacje podczas zwiedzania. Organizatorce zaproponowałam, że wcześniej wyślę Ani kilka słów związanych z pracą na wsi. Dostałam w odpowiedzi krótką listę nazw narzędzi. Nie chcę, żeby Ania uczyła się ich wszystkich na pamięć; wystarczy, jeśli będzie rozpoznawała część słów.\n\nSprawdziłam też połączenia. Autobus powrotny odjeżdża o trzynastej trzydzieści lub o szesnastej trzydzieści. Jeśli pojedziemy na warsztaty, wybierzemy późniejszy. Od przystanku do skansenu trzeba iść prosto w kierunku kościoła, a potem skręcić w prawo za sklepem. Nie jest daleko.\n\nDaj mi znać do wtorku wieczorem, czy masz ochotę zostać na warsztatach. Wtedy zdążę podać organizatorce liczbę uczestników.\n\nPozdrawiam,\nNatalia",
+      "questions": [
+        {
+          "id": "main-idea",
+          "skill": "main-idea",
+          "question": "Po co Natalia pisze do Pawła?",
+          "options": [
+            "Przedstawia plan wycieczki i prosi o decyzję dotyczącą warsztatów.",
+            "Chce, żeby sam skontaktował się z organizatorką.",
+            "Prosi go o przygotowanie listy dawnych narzędzi."
+          ],
+          "answer": "Przedstawia plan wycieczki i prosi o decyzję dotyczącą warsztatów.",
+          "evidence": "Daj mi znać do wtorku wieczorem, czy masz ochotę zostać na warsztatach. Wtedy zdążę podać organizatorce liczbę uczestników.",
+          "explanation": "Cała wiadomość przedstawia możliwości wycieczki i warunki wyboru."
+        },
+        {
+          "id": "detail",
+          "skill": "detail",
+          "question": "O której odbywają się warsztaty?",
+          "options": [
+            "O jedenastej.",
+            "O czternastej.",
+            "O trzynastej trzydzieści."
+          ],
+          "answer": "O czternastej.",
+          "evidence": "natomiast o czternastej prowadzi warsztaty związane z dawnymi zawodami.",
+          "explanation": "Podano osobne godziny zwiedzania i warsztatów."
+        },
+        {
+          "id": "cause",
+          "skill": "cause",
+          "question": "Dlaczego Natalia chce dostać odpowiedź od Pawła do wtorku?",
+          "options": [
+            "W środę musi wysłać Ani listę wszystkich narzędzi.",
+            "Tego dnia odjeżdża ostatni autobus do wsi.",
+            "Chce zdążyć zgłosić liczbę uczestników warsztatów."
+          ],
+          "answer": "Chce zdążyć zgłosić liczbę uczestników warsztatów.",
+          "evidence": "Daj mi znać do wtorku wieczorem, czy masz ochotę zostać na warsztatach. Wtedy zdążę podać organizatorce liczbę uczestników.",
+          "explanation": "Termin dla Pawła poprzedza termin zgłoszenia grupy."
+        },
+        {
+          "id": "inference",
+          "skill": "inference",
+          "question": "Paweł musi wyjechać ze wsi przed piętnastą. Co może zrobić, jeśli chce wziąć udział w wycieczce?",
+          "options": [
+            "Zostać na warsztatach i wybrać autobus o szesnastej trzydzieści.",
+            "Zrezygnować z warsztatów, zwiedzić skansen rano i wrócić wcześniejszym autobusem.",
+            "Przyjechać wyłącznie na warsztaty i wrócić autobusem o trzynastej trzydzieści."
+          ],
+          "answer": "Zrezygnować z warsztatów, zwiedzić skansen rano i wrócić wcześniejszym autobusem.",
+          "evidence": "Autobus powrotny odjeżdża o trzynastej trzydzieści lub o szesnastej trzydzieści. Jeśli pojedziemy na warsztaty, wybierzemy późniejszy.",
+          "explanation": "Poranne zwiedzanie pozwala wyjechać o 13:30; po warsztatach dostępny jest dopiero autobus o 16:30."
+        },
+        {
+          "id": "vocabulary",
+          "skill": "vocabulary",
+          "question": "Co oznacza „uczyć się ich na pamięć”?",
+          "options": [
+            "Zapamiętać słowa tak, żeby móc je odtworzyć bez pomocy listy.",
+            "Przetłumaczyć słowa podczas oprowadzania.",
+            "Rozpoznawać przedmioty wyłącznie na zdjęciach."
+          ],
+          "answer": "Zapamiętać słowa tak, żeby móc je odtworzyć bez pomocy listy.",
+          "evidence": "Nie chcę, żeby Ania uczyła się ich wszystkich na pamięć; wystarczy, jeśli będzie rozpoznawała część słów.",
+          "explanation": "Rozpoznawanie słów jest tu przeciwstawione ich pełnemu zapamiętaniu."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-089",
+      "day": 89,
+      "level": "B1",
+      "genre": "ogłoszenie",
+      "title": "Mapa miasta dla gości",
+      "text": "Dom Sąsiedzki zaprasza wszystkich mieszkańców, zarówno nowych, jak i tych mieszkających tu od lat, na spotkanie, podczas którego przygotujemy wspólną mapę dzielnicy. Nie będzie to kolejna mapa ze wszystkimi ulicami i numerami budynków. Chcemy zaznaczyć na niej miejsca, które naprawdę ułatwiają życie osobom mieszkającym w okolicy: punkty usługowe, spokojne miejsca do odpoczynku oraz bezpieczne przejścia przez ruchliwe ulice.\n\nSpotkanie odbędzie się w sobotę w sali po drugiej stronie ulicy, naprzeciwko biblioteki. Na początku każdy uczestnik wybierze dla siebie jedną z trzech grup. Pierwsza zajmie się usługami, druga terenami zielonymi, a trzecia drogami pieszymi. Każda grupa otrzyma dużą mapę i kolorowe kartki. Nie trzeba przynosić własnych materiałów. Wystarczy zastanowić się wcześniej, jakie miejsca warto polecić sąsiadom.\n\nOsoby, które niedawno przeprowadziły się do dzielnicy, są szczególnie mile widziane. Zależy nam na ich pytaniach, ponieważ długoletni mieszkańcy często zapominają, które informacje nie są oczywiste dla kogoś nowego. Jeśli ktoś nie zna jeszcze żadnego miejsca, może dołączyć do grupy i opowiedzieć, czego szuka w swojej okolicy.\n\nO godzinie trzynastej grupy połączą swoje propozycje. Nie wszystkie punkty trafią od razu na mapę. Na przykład nowy skrót przez podwórko trzeba będzie sprawdzić, żeby upewnić się, że można z niego korzystać. Organizatorzy przygotują pierwszą wersję mapy w następnym tygodniu. Każdy uczestnik otrzyma jej plik, a po miesiącu spotkamy się ponownie, żeby omówić uwagi. Mapa ma służyć mieszkańcom, dlatego chcemy ją poprawiać wraz ze zmianami w dzielnicy.",
+      "questions": [
+        {
+          "id": "main-idea",
+          "skill": "main-idea",
+          "question": "Jaki jest główny cel spotkania?",
+          "options": [
+            "Stworzenie dokładnego planu wszystkich budynków dzielnicy.",
+            "Zorganizowanie spaceru wyłącznie dla nowych mieszkańców.",
+            "Przygotowanie praktycznej mapy na podstawie potrzeb mieszkańców."
+          ],
+          "answer": "Przygotowanie praktycznej mapy na podstawie potrzeb mieszkańców.",
+          "evidence": "Mapa ma służyć mieszkańcom, dlatego chcemy ją poprawiać wraz ze zmianami w dzielnicy.",
+          "explanation": "Uczestnicy wspólnie wybierają praktyczne miejsca i później aktualizują mapę."
+        },
+        {
+          "id": "detail",
+          "skill": "detail",
+          "question": "Gdzie odbędzie się spotkanie?",
+          "options": [
+            "W bibliotece przy głównej ulicy.",
+            "W sali po drugiej stronie ulicy, naprzeciw biblioteki.",
+            "W sali obok punktu usługowego."
+          ],
+          "answer": "W sali po drugiej stronie ulicy, naprzeciw biblioteki.",
+          "evidence": "Spotkanie odbędzie się w sobotę w sali po drugiej stronie ulicy, naprzeciwko biblioteki.",
+          "explanation": "Naprzeciwko oznacza po przeciwnej stronie."
+        },
+        {
+          "id": "cause",
+          "skill": "cause",
+          "question": "Dlaczego organizatorom zależy na udziale nowych mieszkańców?",
+          "options": [
+            "Mogą zauważyć braki informacji, których stali mieszkańcy nie dostrzegają.",
+            "Mają przygotować wszystkie materiały do pracy grupowej.",
+            "Znają więcej skrótów niż długoletni mieszkańcy."
+          ],
+          "answer": "Mogą zauważyć braki informacji, których stali mieszkańcy nie dostrzegają.",
+          "evidence": "Zależy nam na ich pytaniach, ponieważ długoletni mieszkańcy często zapominają, które informacje nie są oczywiste dla kogoś nowego.",
+          "explanation": "Pytania nowych osób pomagają dostrzec potrzebne informacje."
+        },
+        {
+          "id": "inference",
+          "skill": "inference",
+          "question": "Nowy mieszkaniec zna tylko skrót przez prywatne podwórko, ale nie wie, czy wolno tam przechodzić. Jak może postąpić zgodnie z zasadami spotkania?",
+          "options": [
+            "Zostać w domu, ponieważ nie zna innych miejsc.",
+            "Dołączyć do grupy dróg pieszych i zgłosić skrót do sprawdzenia.",
+            "Zaznaczyć skrót jako pewne przejście i od razu opublikować mapę."
+          ],
+          "answer": "Dołączyć do grupy dróg pieszych i zgłosić skrót do sprawdzenia.",
+          "evidence": "Nie wszystkie punkty trafią od razu na mapę. Na przykład nowy skrót przez podwórko trzeba będzie sprawdzić, żeby upewnić się, że można z niego korzystać.",
+          "explanation": "Niepewna propozycja jest dopuszczalna, ale wymaga sprawdzenia przed publikacją."
+        },
+        {
+          "id": "vocabulary",
+          "skill": "vocabulary",
+          "question": "Co znaczy, że informacja „nie jest oczywista”?",
+          "options": [
+            "Nie została napisana na kolorowej kartce.",
+            "Nie dotyczy żadnego miejsca na mapie.",
+            "Nie każdy może ją łatwo znać lub zrozumieć bez wyjaśnienia."
+          ],
+          "answer": "Nie każdy może ją łatwo znać lub zrozumieć bez wyjaśnienia.",
+          "evidence": "długoletni mieszkańcy często zapominają, które informacje nie są oczywiste dla kogoś nowego.",
+          "explanation": "To, co stali mieszkańcy znają z doświadczenia, może wymagać wyjaśnienia nowej osobie."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-090",
+      "day": 90,
+      "level": "B1",
+      "genre": "opowiadanie",
+      "title": "Miejsce spotkań w centrum",
+      "text": "W środku miasta, między przystankiem tramwajowym a dużym skrzyżowaniem, znajdował się mały plac z kilkoma ławkami. Mieszkańcy często umawiali się tam ze znajomymi, ponieważ łatwo było do niego dotrzeć z różnych części miasta. Latem jednak plac był prawie cały dzień nasłoneczniony, a hałas samochodów utrudniał rozmowę.\n\nKiedy grupa sąsiadów postanowiła organizować regularne spotkania przy kawie, początkowo wybrała właśnie ten plac. Pierwsze spotkanie wyjątkowo odbyło się w chłodny wieczór i wszystkim się podobało. Na kolejnym, w upalny dzień, część osób szybko wróciła do domu. Ewa zauważyła, że problemem nie była sama lokalizacja, ale brak cienia i wygodnego miejsca do dłuższej rozmowy.\n\nZaczęła szukać innych możliwości. Niedaleko znajdował się ogród przy miejskiej bibliotece. Można było tam usiąść pod drzewami, ale ogród otwierano dopiero o dwunastej. Z kolei kawiarnia przy rynku była otwarta wcześniej i miała stoliki w środku, lecz nie każdy chciał co tydzień wydawać pieniądze na napoje.\n\nGrupa zdecydowała się zmienić porę spotkań z jedenastej na trzynastą. Przy dobrej pogodzie będą korzystać z ogrodu biblioteki, a w chłodniejsze dni spotkają się w jej ogólnodostępnym holu, gdzie można rozmawiać cicho. Plac pozostanie punktem, w którym łatwo się odnaleźć przed wspólnym wyjściem do biblioteki.\n\nPo miesiącu Ewa zauważyła, że na spotkania zaczęły przychodzić również osoby, które wcześniej rezygnowały z powodu upału. Nie trzeba było szukać jednego idealnego miejsca. Wystarczyło rozdzielić miejsce zbiórki od miejsca, w którym grupa spędzała więcej czasu.",
+      "questions": [
+        {
+          "id": "main-idea",
+          "skill": "main-idea",
+          "question": "Jaka jest główna myśl opowiadania?",
+          "options": [
+            "Zmiana grupy uczestników jest ważniejsza od zmiany miejsca.",
+            "Dobre miejsce zbiórki nie zawsze jest dobrym miejscem na dłuższe spotkanie.",
+            "Spotkania sąsiedzkie powinny odbywać się wyłącznie w kawiarni."
+          ],
+          "answer": "Dobre miejsce zbiórki nie zawsze jest dobrym miejscem na dłuższe spotkanie.",
+          "evidence": "Wystarczyło rozdzielić miejsce zbiórki od miejsca, w którym grupa spędzała więcej czasu.",
+          "explanation": "Plac służy zbiórce, a biblioteka daje odpowiednie warunki do dłuższej rozmowy."
+        },
+        {
+          "id": "detail",
+          "skill": "detail",
+          "question": "Od której godziny dostępny jest ogród biblioteki?",
+          "options": [
+            "Od dwunastej.",
+            "Od jedenastej.",
+            "Od trzynastej."
+          ],
+          "answer": "Od dwunastej.",
+          "evidence": "Można było tam usiąść pod drzewami, ale ogród otwierano dopiero o dwunastej.",
+          "explanation": "Ogród otwiera się godzinę przed nową porą spotkań."
+        },
+        {
+          "id": "cause",
+          "skill": "cause",
+          "question": "Dlaczego część osób opuściła drugie spotkanie na placu?",
+          "options": [
+            "Nie mogły zostać z powodu godzin otwarcia biblioteki.",
+            "Nie mogły znaleźć przystanku tramwajowego.",
+            "Upał i brak cienia utrudniały dłuższy pobyt."
+          ],
+          "answer": "Upał i brak cienia utrudniały dłuższy pobyt.",
+          "evidence": "Na kolejnym, w upalny dzień, część osób szybko wróciła do domu. Ewa zauważyła, że problemem nie była sama lokalizacja, ale brak cienia i wygodnego miejsca do dłuższej rozmowy.",
+          "explanation": "Warunki na placu były nieodpowiednie podczas upału."
+        },
+        {
+          "id": "inference",
+          "skill": "inference",
+          "question": "W sobotę jest zimno, nowy uczestnik nie zna drogi do biblioteki i nie chce wydawać pieniędzy. Jak może skorzystać z ustaleń grupy?",
+          "options": [
+            "Spotkać grupę na placu i przejść z nią do holu biblioteki.",
+            "Pójść do kawiarni przed jedenastą i tam czekać na grupę.",
+            "Spotkać grupę bezpośrednio w ogrodzie mimo chłodu."
+          ],
+          "answer": "Spotkać grupę na placu i przejść z nią do holu biblioteki.",
+          "evidence": "Przy dobrej pogodzie będą korzystać z ogrodu biblioteki, a w chłodniejsze dni spotkają się w jej ogólnodostępnym holu, gdzie można rozmawiać cicho. Plac pozostanie punktem, w którym łatwo się odnaleźć przed wspólnym wyjściem do biblioteki.",
+          "explanation": "Plac rozwiązuje problem znalezienia grupy, hol pozwala uniknąć chłodu i nie wymaga zakupu napoju."
+        },
+        {
+          "id": "vocabulary",
+          "skill": "vocabulary",
+          "question": "Co oznacza określenie „ogólnodostępny hol”?",
+          "options": [
+            "Sala otwierana wyłącznie po wcześniejszej rezerwacji.",
+            "Przestrzeń, z której mogą korzystać różni odwiedzający.",
+            "Pomieszczenie przeznaczone tylko dla pracowników."
+          ],
+          "answer": "Przestrzeń, z której mogą korzystać różni odwiedzający.",
+          "evidence": "w chłodniejsze dni spotkają się w jej ogólnodostępnym holu, gdzie można rozmawiać cicho.",
+          "explanation": "Hol jest dostępny dla odwiedzających bibliotekę."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-091",
+      "day": 91,
+      "level": "B1",
+      "genre": "poradnik",
+      "title": "Dostępność budynków publicznych",
+      "text": "Kiedy wybieramy się do muzeum, biblioteki lub domu kultury, zwykle sprawdzamy adres i godziny otwarcia. Jednak dla niektórych osób te dwie informacje nie wystarczą. Ktoś może mieć trudności z chodzeniem po schodach, ktoś inny potrzebuje spokojnego miejsca bez dużego hałasu. Warto ustalić, jakie warunki panują w budynku, zanim podejmiemy decyzję o wizycie.\n\nPrzygotowując spotkanie dla grupy, nie zakładaj, że jedno rozwiązanie będzie odpowiednie dla wszystkich. Zapytaj uczestników, czego potrzebują, ale nie wymagaj od nich wyjaśniania prywatnych spraw. Można po prostu zapytać, czy wygodniejsze będzie wejście bez schodów, możliwość odpoczynku lub krótsza droga od przystanku.\n\nW wyobrażonym domu kultury sala wystawowa znajduje się na piętrze, a do budynku prowadzą dwa wejścia. Główne ma kilka stopni. Boczne jest na poziomie chodnika i prowadzi do windy, ale w godzinach wieczornych otwiera je pracownik po wcześniejszym zgłoszeniu. Na stronie podano numer telefonu do recepcji. Jeżeli grupa planuje wieczorną wizytę i ktoś potrzebuje windy, warto wcześniej ustalić z recepcją sposób wejścia.\n\nPamiętaj również o drodze powrotnej. Informacja, że w pobliżu jest przystanek, nie mówi jeszcze, czy dojście do niego jest wygodne. Jeśli to możliwe, sprawdź trasę, którą grupa rzeczywiście będzie szła. Po spotkaniu możesz zapytać uczestników, co ułatwiło im wizytę, a co należałoby zmienić. Takie uwagi przydadzą się przy planowaniu następnego wyjścia.",
+      "questions": [
+        {
+          "id": "main-idea",
+          "skill": "main-idea",
+          "question": "Jaki jest główny cel poradnika?",
+          "options": [
+            "Pomóc przygotować wizytę z uwzględnieniem różnych potrzeb uczestników.",
+            "Wyjaśnić zasady rezerwacji sal w domach kultury.",
+            "Pokazać, jak wybrać najkrótszą trasę między budynkami."
+          ],
+          "answer": "Pomóc przygotować wizytę z uwzględnieniem różnych potrzeb uczestników.",
+          "evidence": "Przygotowując spotkanie dla grupy, nie zakładaj, że jedno rozwiązanie będzie odpowiednie dla wszystkich.",
+          "explanation": "Tekst obejmuje potrzeby uczestników, wejście, drogę i uwagi po wizycie."
+        },
+        {
+          "id": "detail",
+          "skill": "detail",
+          "question": "Gdzie znajduje się sala wystawowa w opisanym domu kultury?",
+          "options": [
+            "Przy głównym wejściu na parterze.",
+            "Na poziomie chodnika.",
+            "Na piętrze."
+          ],
+          "answer": "Na piętrze.",
+          "evidence": "W wyobrażonym domu kultury sala wystawowa znajduje się na piętrze, a do budynku prowadzą dwa wejścia.",
+          "explanation": "Sala jest na piętrze."
+        },
+        {
+          "id": "cause",
+          "skill": "cause",
+          "question": "Dlaczego warto zapytać uczestników o potrzeby przed wyjściem?",
+          "options": [
+            "Żeby ustalić, kto będzie rozmawiał z recepcją.",
+            "Żeby nie przyjąć rozwiązania niewygodnego dla części grupy.",
+            "Żeby wybrać jedną trasę bez konsultowania jej z grupą."
+          ],
+          "answer": "Żeby nie przyjąć rozwiązania niewygodnego dla części grupy.",
+          "evidence": "Przygotowując spotkanie dla grupy, nie zakładaj, że jedno rozwiązanie będzie odpowiednie dla wszystkich. Zapytaj uczestników, czego potrzebują, ale nie wymagaj od nich wyjaśniania prywatnych spraw.",
+          "explanation": "Różne osoby mogą potrzebować różnych warunków."
+        },
+        {
+          "id": "inference",
+          "skill": "inference",
+          "question": "Grupa chce obejrzeć wystawę wieczorem, a jedna osoba nie może wchodzić po schodach. Jak najlepiej przygotować wizytę?",
+          "options": [
+            "Przyjść do bocznego wejścia bez zgłoszenia i liczyć na otwarte drzwi.",
+            "Wybrać główne wejście, ponieważ wystawa jest na piętrze.",
+            "Uzgodnić z recepcją otwarcie bocznego wejścia i skorzystać z windy."
+          ],
+          "answer": "Uzgodnić z recepcją otwarcie bocznego wejścia i skorzystać z windy.",
+          "evidence": "Główne ma kilka stopni. Boczne jest na poziomie chodnika i prowadzi do windy, ale w godzinach wieczornych otwiera je pracownik po wcześniejszym zgłoszeniu.",
+          "explanation": "Boczne wejście spełnia potrzeby uczestnika, ale wieczorem trzeba zgłosić wizytę."
+        },
+        {
+          "id": "vocabulary",
+          "skill": "vocabulary",
+          "question": "Co oznacza „ustalić sposób wejścia” w tym kontekście?",
+          "options": [
+            "Uzgodnić, którędy i na jakich warunkach można wejść do budynku.",
+            "Sprawdzić, ile osób zmieści się w sali.",
+            "Wybrać godziny otwarcia całej wystawy."
+          ],
+          "answer": "Uzgodnić, którędy i na jakich warunkach można wejść do budynku.",
+          "evidence": "Jeżeli grupa planuje wieczorną wizytę i ktoś potrzebuje windy, warto wcześniej ustalić z recepcją sposób wejścia.",
+          "explanation": "Chodzi o uzgodnienie dostępu do odpowiedniego wejścia."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-093",
+      "day": 93,
+      "level": "B1",
+      "genre": "artykuł",
+      "title": "Życie drzew w mieście",
+      "text": "Na osiedlu przy ulicy Lipowej przez wiele lat rosły trzy duże drzewa. Latem ich korony dawały cień na ławkach i na części chodnika. Kiedy w sąsiednim budynku otwarto nowy sklep, mieszkańcy zaczęli rozmawiać o przebudowie niewielkiego placu przed nim. Jedni chcieli więcej miejsc parkingowych, inni woleli pozostawić przestrzeń, w której można odpocząć.\n\nArchitektka przygotowała dwie propozycje. Pierwsza zakładała stworzenie szerokiego parkingu, ale wymagała usunięcia dwóch drzew. Druga przewidywała mniej miejsc dla samochodów i przesunięcie kilku ławek. W tej wersji wszystkie trzy drzewa mogły pozostać na placu. Dodatkowo przy jednym z nich zaplanowano wolną powierzchnię ziemi, na którą mógł padać deszcz.\n\nPodczas spotkania z mieszkańcami pan Robert przyznał, że początkowo popierał pierwszą propozycję. Codziennie szukał miejsca dla samochodu. Zmienił zdanie, kiedy jego córka pokazała mu, gdzie czeka na autobus po zajęciach. W upalne dni stała właśnie pod jednym z drzew przeznaczonych do usunięcia.\n\nOstatecznie mieszkańcy poprosili architektkę o dopracowanie drugiej propozycji. Zależało im także na tym, żeby dostęp do sklepu pozostał wygodny dla dostawców. Nie rozwiązali wszystkich problemów podczas jednego spotkania, ale uzgodnili, które elementy placu są dla nich najważniejsze.\n\nHistoria ulicy Lipowej pokazuje, że przestrzeń miejska służy różnym osobom o różnych porach dnia. To, czego nie zauważamy w drodze do pracy, dla kogoś innego może mieć duże znaczenie.",
+      "questions": [
+        {
+          "id": "main-idea",
+          "skill": "main-idea",
+          "question": "Co pokazuje historia placu przy ulicy Lipowej?",
+          "options": [
+            "Mieszkańcy mogą rozwiązać wszystkie problemy przez pozostawienie drzew bez zmian.",
+            "Nowy sklep powinien zapewniać każdemu klientowi miejsce parkingowe.",
+            "Przebudowę przestrzeni warto rozpatrywać z perspektywy różnych użytkowników."
+          ],
+          "answer": "Przebudowę przestrzeni warto rozpatrywać z perspektywy różnych użytkowników.",
+          "evidence": "Historia ulicy Lipowej pokazuje, że przestrzeń miejska służy różnym osobom o różnych porach dnia.",
+          "explanation": "Zmiana zdania Roberta i rozmowa o dostawcach pokazują różne potrzeby."
+        },
+        {
+          "id": "detail",
+          "skill": "detail",
+          "question": "Ile drzew miało pozostać w drugiej propozycji?",
+          "options": [
+            "Jedno.",
+            "Trzy.",
+            "Dwa."
+          ],
+          "answer": "Trzy.",
+          "evidence": "W tej wersji wszystkie trzy drzewa mogły pozostać na placu.",
+          "explanation": "Druga wersja zachowuje wszystkie trzy drzewa."
+        },
+        {
+          "id": "cause",
+          "skill": "cause",
+          "question": "Dlaczego Robert zmienił zdanie?",
+          "options": [
+            "Zobaczył, jak ważne dla córki jest jedno z drzew.",
+            "Architektka obiecała mu osobne miejsce parkingowe.",
+            "Dowiedział się, że parking będzie dostępny tylko dla dostawców."
+          ],
+          "answer": "Zobaczył, jak ważne dla córki jest jedno z drzew.",
+          "evidence": "Zmienił zdanie, kiedy jego córka pokazała mu, gdzie czeka na autobus po zajęciach. W upalne dni stała właśnie pod jednym z drzew przeznaczonych do usunięcia.",
+          "explanation": "Robert poznał potrzebę, której wcześniej nie brał pod uwagę."
+        },
+        {
+          "id": "inference",
+          "skill": "inference",
+          "question": "Architektka chce zwiększyć liczbę miejsc dla samochodów w drugiej wersji, ale musiałaby usunąć drzewo. Co prawdopodobnie powinna zrobić przed wprowadzeniem zmiany?",
+          "options": [
+            "Porozmawiać z mieszkańcami o konflikcie między parkowaniem a zachowaniem drzew.",
+            "Wprowadzić zmianę bez rozmowy, bo mieszkańcy wybrali drugą wersję.",
+            "Wrócić do pierwszej propozycji i usunąć wszystkie ławki."
+          ],
+          "answer": "Porozmawiać z mieszkańcami o konflikcie między parkowaniem a zachowaniem drzew.",
+          "evidence": "Ostatecznie mieszkańcy poprosili architektkę o dopracowanie drugiej propozycji. Zależało im także na tym, żeby dostęp do sklepu pozostał wygodny dla dostawców. Nie rozwiązali wszystkich problemów podczas jednego spotkania, ale uzgodnili, które elementy placu są dla nich najważniejsze.",
+          "explanation": "Zachowanie drzew było istotną częścią wybranej wersji; nowy konflikt wymaga uzgodnienia."
+        },
+        {
+          "id": "vocabulary",
+          "skill": "vocabulary",
+          "question": "Co znaczy „dopracowanie drugiej propozycji”?",
+          "options": [
+            "Wybór wykonawcy bez zmiany projektu.",
+            "Uzupełnienie i poprawienie szczegółów istniejącej propozycji.",
+            "Rezygnacja z projektu i rozpoczęcie prac od nowa."
+          ],
+          "answer": "Uzupełnienie i poprawienie szczegółów istniejącej propozycji.",
+          "evidence": "Ostatecznie mieszkańcy poprosili architektkę o dopracowanie drugiej propozycji. Zależało im także na tym, żeby dostęp do sklepu pozostał wygodny dla dostawców.",
+          "explanation": "Mieszkańcy wybrali kierunek, ale chcą jeszcze poprawić szczegóły."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-094",
+      "day": 94,
+      "level": "B1",
+      "genre": "dialog",
+      "title": "Obserwacja ptaków w parku",
+      "text": "— Dzień dobry, czy to pan prowadzi dzisiejszy spacer z obserwacją ptaków? — zapytała pani Teresa, która przyszła do parku z wnukiem.\n\n— Tak, proszę państwa, zbieramy się przy bramie. Za kilka minut wyruszymy nad staw — odpowiedział przewodnik. — Czy mają państwo lornetkę?\n\n— Mamy jedną na dwie osoby. Mój wnuk bardzo chciał zobaczyć ptaki z bliska, ale nie wiem, czy rozpoznamy ich nazwy.\n\n— Nie muszą państwo znać nazw. Na początku będziemy słuchać głosów i przyglądać się temu, jak ptaki się poruszają. Rozdam też kartki ze zdjęciami kilku gatunków. Najważniejsze, żeby nie podchodzić do ptaków tylko po to, by zrobić lepsze zdjęcie.\n\n— A co z pogodą? Niebo jest już całe w chmurach.\n\n— Przy niewielkim deszczu możemy zostać w parku i schować się pod wiatą. Jeśli zacznie się burza, przeniesiemy zajęcia do sali edukacyjnej przy wejściu. Mam tam nagrania głosów ptaków. Wtedy nie będziemy ich obserwować na żywo, ale nauczymy się je odróżniać.\n\nPrzy stawie wnuk Teresy zobaczył ptaka z długą szyją. Chciał natychmiast podejść do brzegu. Przewodnik zaproponował mu użycie lornetki i poprosił, żeby poczekał spokojnie na ławce. Chłopiec po kilku minutach zauważył, jak ptak szukał jedzenia w wodzie. Zamiast jednego szybkiego zdjęcia miał okazję obserwować go przez dłuższy czas.\n\nPo spacerze Teresa powiedziała, że następnym razem przyniesie notatnik. Chce zapisywać nie tylko wygląd ptaków, lecz również ich zachowanie. Przewodnik ucieszył się z tego pomysłu.",
+      "questions": [
+        {
+          "id": "main-idea",
+          "skill": "main-idea",
+          "question": "Czego przede wszystkim uczestnicy uczą się podczas spaceru?",
+          "options": [
+            "Robienia zdjęć ptaków z jak najmniejszej odległości.",
+            "Rozpoznawania i spokojnego obserwowania ptaków bez przeszkadzania im.",
+            "Przygotowywania własnych nagrań głosów w sali."
+          ],
+          "answer": "Rozpoznawania i spokojnego obserwowania ptaków bez przeszkadzania im.",
+          "evidence": "Na początku będziemy słuchać głosów i przyglądać się temu, jak ptaki się poruszają.",
+          "explanation": "Spacer łączy naukę rozpoznawania z obserwacją zachowania."
+        },
+        {
+          "id": "detail",
+          "skill": "detail",
+          "question": "Co przewodnik ma przygotowane w sali edukacyjnej?",
+          "options": [
+            "Nagrania głosów ptaków.",
+            "Notatniki ze zdjęciami ptaków.",
+            "Zapasowe lornetki dla wszystkich uczestników."
+          ],
+          "answer": "Nagrania głosów ptaków.",
+          "evidence": "Mam tam nagrania głosów ptaków.",
+          "explanation": "Nagrania umożliwiają naukę w razie burzy."
+        },
+        {
+          "id": "cause",
+          "skill": "cause",
+          "question": "Dlaczego przewodnik prosi chłopca, żeby pozostał na ławce?",
+          "options": [
+            "Chce, żeby chłopiec poczekał na swoją kolej do lornetki.",
+            "Nie chce, żeby chłopiec przegapił zajęcia w sali.",
+            "Chce umożliwić obserwację bez zbliżania się do ptaka."
+          ],
+          "answer": "Chce umożliwić obserwację bez zbliżania się do ptaka.",
+          "evidence": "Przewodnik zaproponował mu użycie lornetki i poprosił, żeby poczekał spokojnie na ławce.",
+          "explanation": "Lornetka pozwala obserwować z odległości."
+        },
+        {
+          "id": "inference",
+          "skill": "inference",
+          "question": "Nad stawem zaczyna się burza, a uczestnicy chcą kontynuować naukę rozpoznawania ptaków. Co jest zgodne z planem przewodnika?",
+          "options": [
+            "Zostać przy bramie i porównywać głosy ptaków na żywo.",
+            "Przejść do sali i ćwiczyć rozpoznawanie głosów z nagrań.",
+            "Pozostać pod wiatą i obserwować staw przez lornetkę."
+          ],
+          "answer": "Przejść do sali i ćwiczyć rozpoznawanie głosów z nagrań.",
+          "evidence": "Jeśli zacznie się burza, przeniesiemy zajęcia do sali edukacyjnej przy wejściu. Mam tam nagrania głosów ptaków.",
+          "explanation": "Przy burzy zmienia się miejsce i sposób nauki."
+        },
+        {
+          "id": "vocabulary",
+          "skill": "vocabulary",
+          "question": "Co oznacza wyrażenie „odróżniać głosy”?",
+          "options": [
+            "Nagrywać każdy głos osobno.",
+            "Powtarzać wszystkie głosy tak samo.",
+            "Rozpoznawać różnice między głosami."
+          ],
+          "answer": "Rozpoznawać różnice między głosami.",
+          "evidence": "Wtedy nie będziemy ich obserwować na żywo, ale nauczymy się je odróżniać.",
+          "explanation": "Nagrania mają pomóc zauważyć różnice między gatunkami."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-095",
+      "day": 95,
+      "level": "B1",
+      "genre": "e-mail",
+      "title": "List do administracji o zieleni",
+      "text": "Szanowni Państwo,\n\npiszę w imieniu kilku mieszkańców budynku przy ulicy Klonowej. Chcielibyśmy zaproponować drobną zmianę w sposobie pielęgnacji zieleni na naszym podwórku. Nie chodzi nam o całkowitą rezygnację z koszenia trawy, lecz o pozostawienie niewielkiego fragmentu, na którym przez część lata mogłyby rosnąć kwiaty.\n\nW zeszłym roku przy ławkach pojawiły się kwitnące rośliny. Mieszkańcy chętnie siadali tam wieczorami, a dzieci przyglądały się owadom. Po kolejnym koszeniu kwiaty zniknęły. Rozumiemy jednak, że wysoka trawa nie wszędzie jest odpowiednia. Przy chodniku i wejściu do budynku powinna pozostać niska, żeby przejście było wygodne.\n\nProponujemy wybrać na próbę miejsce pod murem, z dala od głównej drogi do klatki schodowej. Można byłoby oznaczyć je małą tabliczką. Dzięki niej osoby, które nie uczestniczyły w rozmowie, wiedziałyby, że wyższa trawa jest wynikiem świadomej decyzji, a nie braku pracy ze strony firmy sprzątającej.\n\nChętnie przedstawimy szkic podwórka podczas najbliższego spotkania mieszkańców. Przed spotkaniem prosimy o informację, czy administracja może uzgodnić zmianę z firmą zajmującą się zielenią. Nie chcemy rozpoczynać żadnych prac samodzielnie, ponieważ zależy nam na wspólnym ustaleniu zasad.\n\nJeśli pomysł okaże się możliwy do zrealizowania, proponujemy obserwować wybrany fragment przez jeden sezon. Jesienią wspólnie ocenimy, czy rozwiązanie jest wygodne dla mieszkańców i czy warto je kontynuować. Będziemy wdzięczni za odpowiedź przed końcem miesiąca.\n\nZ poważaniem,\nKarolina Nowak",
+      "questions": [
+        {
+          "id": "main-idea",
+          "skill": "main-idea",
+          "question": "Jaki jest główny cel listu?",
+          "options": [
+            "Zaproponować uzgodnioną próbę innego sposobu pielęgnacji części zieleni.",
+            "Złożyć skargę na firmę sprzątającą za brak regularnej pracy.",
+            "Poprosić o całkowite zakończenie koszenia trawy na podwórku."
+          ],
+          "answer": "Zaproponować uzgodnioną próbę innego sposobu pielęgnacji części zieleni.",
+          "evidence": "Jeśli pomysł okaże się możliwy do zrealizowania, proponujemy obserwować wybrany fragment przez jeden sezon.",
+          "explanation": "List proponuje ograniczoną zmianę, uzgodnienie i późniejszą ocenę."
+        },
+        {
+          "id": "detail",
+          "skill": "detail",
+          "question": "Gdzie mieszkańcy chcą pozostawić wyższą trawę?",
+          "options": [
+            "Przy wejściu do klatki schodowej.",
+            "Wzdłuż głównego chodnika.",
+            "Pod murem, z dala od głównego przejścia."
+          ],
+          "answer": "Pod murem, z dala od głównego przejścia.",
+          "evidence": "Proponujemy wybrać na próbę miejsce pod murem, z dala od głównej drogi do klatki schodowej.",
+          "explanation": "Miejsce nie powinno utrudniać przejścia."
+        },
+        {
+          "id": "cause",
+          "skill": "cause",
+          "question": "Po co miałaby powstać tabliczka?",
+          "options": [
+            "Żeby ogłosić datę najbliższego spotkania mieszkańców.",
+            "Żeby wyjaśnić mieszkańcom, dlaczego wybrany fragment nie jest koszony tak jak reszta.",
+            "Żeby wskazać pracownikom drogę do klatki schodowej."
+          ],
+          "answer": "Żeby wyjaśnić mieszkańcom, dlaczego wybrany fragment nie jest koszony tak jak reszta.",
+          "evidence": "Dzięki niej osoby, które nie uczestniczyły w rozmowie, wiedziałyby, że wyższa trawa jest wynikiem świadomej decyzji, a nie braku pracy ze strony firmy sprzątającej.",
+          "explanation": "Tabliczka wyjaśnia cel zmiany."
+        },
+        {
+          "id": "inference",
+          "skill": "inference",
+          "question": "Administracja zgadza się na próbę, ale chce pozostawić wysoką trawę również przy wejściu. Jaka odpowiedź najlepiej oddaje stanowisko autorów listu?",
+          "options": [
+            "Podtrzymać pomysł próby pod murem i pozostawić niską trawę przy wejściu.",
+            "Zgodzić się, ponieważ mieszkańcy chcieli ograniczyć koszenie całego podwórka.",
+            "Zrezygnować z uzgodnień i samodzielnie zmienić pielęgnację całego terenu."
+          ],
+          "answer": "Podtrzymać pomysł próby pod murem i pozostawić niską trawę przy wejściu.",
+          "evidence": "Rozumiemy jednak, że wysoka trawa nie wszędzie jest odpowiednia. Przy chodniku i wejściu do budynku powinna pozostać niska, żeby przejście było wygodne.",
+          "explanation": "Autorzy chcą próby, ale nie kosztem wygodnego przejścia."
+        },
+        {
+          "id": "vocabulary",
+          "skill": "vocabulary",
+          "question": "Co oznacza formalne wyrażenie „będziemy wdzięczni za odpowiedź”?",
+          "options": [
+            "Oczekujemy decyzji zgodnej z naszym pomysłem.",
+            "Uprzejmie prosimy o udzielenie odpowiedzi.",
+            "Dziękujemy za odpowiedź, którą już otrzymaliśmy."
+          ],
+          "answer": "Uprzejmie prosimy o udzielenie odpowiedzi.",
+          "evidence": "Będziemy wdzięczni za odpowiedź przed końcem miesiąca.",
+          "explanation": "Jest to uprzejma prośba o odpowiedź, a nie żądanie zgody."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-096",
+      "day": 96,
+      "level": "B1",
+      "genre": "ogłoszenie",
+      "title": "Wyprawa na szlak przyrodniczy",
+      "text": "Klub spacerowy Nad Jeziorem zaprasza na niedzielną wyprawę po okolicy. Tym razem chcemy poznać miejsca, które wiosną budzą się do życia: skraj lasu, niewielką łąkę i brzeg jeziora. Nie planujemy szybkiego marszu. Zatrzymamy się kilka razy, żeby przyjrzeć się roślinom i posłuchać ptaków.\n\nSpotykamy się o dziewiątej przy parkingu obok leśniczówki. Do wyboru będą dwie trasy. Obie zaczynają się wspólnym odcinkiem długości trzech kilometrów. Po dojściu do wiaty jedna grupa wróci z przewodnikiem na parking, a druga przejdzie dodatkowe cztery kilometry wzdłuż jeziora. Krótszy spacer zakończy się około południa, dłuższy około czternastej.\n\nWybór trasy zgłosimy na początku spotkania, ale będzie można go zmienić przy wiacie. Osoby, które poczują zmęczenie, nie muszą kontynuować dłuższej wyprawy. Prosimy zabrać wodę, wygodne buty i ubranie odpowiednie do pogody. Na trasie nie ma sklepu. Psy mogą uczestniczyć tylko w krótszym spacerze i powinny być prowadzone na smyczy. Dłuższy odcinek obejmuje miejsce, w którym organizatorzy chcą ograniczyć obecność zwierząt domowych podczas obserwacji ptaków.\n\nPrzy silnym deszczu odwołamy część prowadzącą wzdłuż jeziora, ponieważ ścieżka przy brzegu może być trudna do przejścia. Informację o zmianie podamy rano na stronie klubu. Jeśli pogoda nie pozwoli na żadną z tras, spotkamy się w leśniczówce na rozmowie o zdjęciach z poprzednich wycieczek. Chcemy, żeby uczestnicy mieli okazję spędzić czas razem niezależnie od tego, ile kilometrów uda nam się przejść.",
+      "questions": [
+        {
+          "id": "main-idea",
+          "skill": "main-idea",
+          "question": "Jaki charakter ma planowana wyprawa?",
+          "options": [
+            "Trening szybkiego marszu dla osób przygotowujących się do zawodów.",
+            "Spacer nastawiony na poznawanie przyrody, z możliwością dostosowania trasy.",
+            "Spotkanie fotograficzne odbywające się wyłącznie w leśniczówce."
+          ],
+          "answer": "Spacer nastawiony na poznawanie przyrody, z możliwością dostosowania trasy.",
+          "evidence": "Nie planujemy szybkiego marszu. Zatrzymamy się kilka razy, żeby przyjrzeć się roślinom i posłuchać ptaków.",
+          "explanation": "Plan obejmuje obserwacje i wybór długości spaceru."
+        },
+        {
+          "id": "detail",
+          "skill": "detail",
+          "question": "Gdzie można zmienić wcześniej wybraną trasę?",
+          "options": [
+            "Na końcu odcinka wzdłuż jeziora.",
+            "Przy leśniczówce przed spotkaniem.",
+            "Przy wiacie po wspólnym odcinku."
+          ],
+          "answer": "Przy wiacie po wspólnym odcinku.",
+          "evidence": "Wybór trasy zgłosimy na początku spotkania, ale będzie można go zmienić przy wiacie.",
+          "explanation": "Wiata jest punktem rozdzielenia tras."
+        },
+        {
+          "id": "cause",
+          "skill": "cause",
+          "question": "Dlaczego psy nie mogą uczestniczyć w dłuższym spacerze?",
+          "options": [
+            "Organizatorzy chcą ograniczyć obecność zwierząt domowych podczas obserwacji ptaków.",
+            "Na dłuższym odcinku nie ma miejsca na odpoczynek z psem.",
+            "Dłuższa trasa jest przeznaczona tylko dla osób idących szybko."
+          ],
+          "answer": "Organizatorzy chcą ograniczyć obecność zwierząt domowych podczas obserwacji ptaków.",
+          "evidence": "Dłuższy odcinek obejmuje miejsce, w którym organizatorzy chcą ograniczyć obecność zwierząt domowych podczas obserwacji ptaków.",
+          "explanation": "Ograniczenie dotyczy miejsca obserwacji."
+        },
+        {
+          "id": "inference",
+          "skill": "inference",
+          "question": "Marek przyjdzie z psem, a o trzynastej musi być przy parkingu. Co może zaplanować, jeśli pogoda jest dobra?",
+          "options": [
+            "Dłuższą trasę i powrót przy wiacie dopiero po czternastej.",
+            "Dłuższy spacer z psem, jeśli wcześniej zgłosi swój wybór.",
+            "Krótszy spacer z powrotem około południa, prowadząc psa na smyczy."
+          ],
+          "answer": "Krótszy spacer z powrotem około południa, prowadząc psa na smyczy.",
+          "evidence": "Krótszy spacer zakończy się około południa, dłuższy około czternastej.\n\nWybór trasy zgłosimy na początku spotkania, ale będzie można go zmienić przy wiacie. Osoby, które poczują zmęczenie, nie muszą kontynuować dłuższej wyprawy. Prosimy zabrać wodę, wygodne buty i ubranie odpowiednie do pogody. Na trasie nie ma sklepu. Psy mogą uczestniczyć tylko w krótszym spacerze i powinny być prowadzone na smyczy.",
+          "explanation": "Krótsza trasa mieści się w czasie Marka i dopuszcza psa na smyczy."
+        },
+        {
+          "id": "vocabulary",
+          "skill": "vocabulary",
+          "question": "Co znaczy, że wiosną miejsca „budzą się do życia”?",
+          "options": [
+            "Przyroda staje się aktywniejsza po zimie.",
+            "Zaczynają być dostępne dopiero rano.",
+            "Organizatorzy otwierają je dla turystów po remoncie."
+          ],
+          "answer": "Przyroda staje się aktywniejsza po zimie.",
+          "evidence": "Tym razem chcemy poznać miejsca, które wiosną budzą się do życia: skraj lasu, niewielką łąkę i brzeg jeziora.",
+          "explanation": "To przenośnia dotycząca wiosennych zmian przyrody."
+        }
+      ]
+    }
+  ]
+}
