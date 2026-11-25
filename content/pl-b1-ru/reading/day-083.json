@@ -1,0 +1,76 @@
+{
+  "id": "pl-b1.reading.day-083",
+  "day": 83,
+  "level": "A2",
+  "genre": "opowiadanie",
+  "title": "Zgłoszenie problemu z internetem",
+  "text": "W środę rano Zuzanna nie mogła rozpocząć pracy przy komputerze, ponieważ w jej mieszkaniu nie działał internet. Sprawdziła, czy problem występuje również w telefonie po połączeniu z domową siecią. Telefon także nie miał dostępu do internetu. Zuzanna zapisała godzinę, o której zauważyła awarię.\n\nZadzwoniła do firmy, od której ma internet. Pracownik zapytał o numer umowy i o to, czy na urządzeniu świecą się lampki. Zuzanna podała informacje, które mogła sprawdzić. Nie wiedziała, czy problem dotyczy tylko jej mieszkania, czy całego budynku.\n\nPracownik przyjął zgłoszenie i podał jego numer. Obiecał wysłać wiadomość, kiedy będzie wiedział więcej. Poprosił też, aby w razie dalszych problemów podać numer zgłoszenia. Zuzanna miała ważne spotkanie o jedenastej, więc nie chciała czekać bez planu. Napisała do koleżanki z pracy, która mieszka blisko. Koleżanka zgodziła się udostępnić jej miejsce przy stole na dwie godziny.\n\nPo spotkaniu Zuzanna dostała wiadomość, że internet znów działa. Wróciła do mieszkania i sprawdziła połączenie. Dopiero gdy komputer i telefon działały prawidłowo, uznała sprawę za zakończoną. Numer zgłoszenia zachowała do końca tygodnia.",
+  "questions": [
+    {
+      "id": "main-idea",
+      "skill": "main-idea",
+      "question": "Co pokazuje historia Zuzanny?",
+      "options": [
+        "Jak urządzić stanowisko pracy u koleżanki.",
+        "Jak zgłosić awarię i zorganizować pracę w czasie problemu.",
+        "Jak zmienić umowę z dostawcą internetu."
+      ],
+      "answer": "Jak zgłosić awarię i zorganizować pracę w czasie problemu.",
+      "evidence": "Zuzanna miała ważne spotkanie o jedenastej, więc nie chciała czekać bez planu.",
+      "explanation": "Zuzanna zgłosiła problem, znalazła rozwiązanie zastępcze i sprawdziła efekt."
+    },
+    {
+      "id": "detail",
+      "skill": "detail",
+      "question": "Jaką informację o umowie chciał otrzymać pracownik?",
+      "options": [
+        "Numer umowy.",
+        "Cenę abonamentu.",
+        "Datę podpisania umowy."
+      ],
+      "answer": "Numer umowy.",
+      "evidence": "Pracownik zapytał o numer umowy i o to, czy na urządzeniu świecą się lampki.",
+      "explanation": "Numer umowy był jedną z potrzebnych informacji."
+    },
+    {
+      "id": "cause",
+      "skill": "cause",
+      "question": "Dlaczego Zuzanna poszła do koleżanki?",
+      "options": [
+        "Chciała zgłosić problem z internetem w drugim mieszkaniu.",
+        "Pracownik firmy poprosił ją o opuszczenie mieszkania.",
+        "Musiała uczestniczyć w spotkaniu służbowym mimo awarii."
+      ],
+      "answer": "Musiała uczestniczyć w spotkaniu służbowym mimo awarii.",
+      "evidence": "Zuzanna miała ważne spotkanie o jedenastej, więc nie chciała czekać bez planu.",
+      "explanation": "U koleżanki mogła pracować podczas przerwy w dostępie do internetu."
+    },
+    {
+      "id": "inference",
+      "skill": "inference",
+      "question": "Po wiadomości od firmy Zuzanna wraca do domu. Telefon działa, ale komputer nadal nie ma internetu. Co powinna zrobić zgodnie z opisanym sposobem działania?",
+      "options": [
+        "Zakończyć sprawę, bo telefon już działa.",
+        "Zadzwonić ponownie i podać numer zgłoszenia.",
+        "Zgłosić nową umowę bez podawania numeru sprawy."
+      ],
+      "answer": "Zadzwonić ponownie i podać numer zgłoszenia.",
+      "evidence": "Pracownik przyjął zgłoszenie i podał jego numer. Obiecał wysłać wiadomość, kiedy będzie wiedział więcej. Poprosił też, aby w razie dalszych problemów podać numer zgłoszenia. Zuzanna miała ważne spotkanie o jedenastej, więc nie chciała czekać bez planu. Napisała do koleżanki z pracy, która mieszka blisko. Koleżanka zgodziła się udostępnić jej miejsce przy stole na dwie godziny.\n\nPo spotkaniu Zuzanna dostała wiadomość, że internet znów działa. Wróciła do mieszkania i sprawdziła połączenie. Dopiero gdy komputer i telefon działały prawidłowo, uznała sprawę za zakończoną.",
+      "explanation": "Dopóki jedno urządzenie nie działa, sprawa nie jest zamknięta; numer umożliwia nawiązanie do zgłoszenia."
+    },
+    {
+      "id": "vocabulary",
+      "skill": "vocabulary",
+      "question": "Co znaczy „udostępnić jej miejsce przy stole”?",
+      "options": [
+        "Przygotować posiłek na spotkanie.",
+        "Przenieść stół do jej mieszkania.",
+        "Pozwolić jej korzystać z miejsca przy stole."
+      ],
+      "answer": "Pozwolić jej korzystać z miejsca przy stole.",
+      "evidence": "Koleżanka zgodziła się udostępnić jej miejsce przy stole na dwie godziny.",
+      "explanation": "Zuzanna mogła tam czasowo pracować."
+    }
+  ],
+  "publicationStatus": "practice"
+}

@@ -1,0 +1,76 @@
+{
+  "id": "pl-b1.reading.day-079",
+  "day": 79,
+  "level": "A2",
+  "genre": "artykuł",
+  "title": "Wizyta w punkcie napraw",
+  "text": "W małym warsztacie na osiedlu można naprawić różne przedmioty codziennego użytku. Do punktu przychodzą osoby z zegarkami, lampami i drobnym sprzętem kuchennym. Przed rozpoczęciem pracy właściciel warsztatu sprawdza, co się zepsuło. Nie przyjmuje wszystkich rzeczy: większy sprzęt odsyła do innego punktu.\n\nW poniedziałek przyszła tam pani Irena. Jej zegarek zatrzymywał się kilka razy w ciągu dnia. Nie wiedziała, czy potrzebuje nowej baterii, czy też innej naprawy. Pracownik poprosił o trochę czasu na sprawdzenie zegarka. Wyjaśnił, że poda cenę przed naprawą, ponieważ różne części mają różne ceny.\n\nIrena miała jeszcze zepsutą lampę, ale nie przyniosła jej tego dnia. Najpierw pokazała pracownikowi zdjęcie lampy i opowiedziała o problemie. Usłyszała, że może ją przynieść w środę, kiedy w warsztacie będzie drugi specjalista.\n\nPo południu dostała wiadomość o zegarku: wystarczy wymienić baterię. Cena była dla niej odpowiednia, więc zgodziła się na usługę. Odbierze zegarek w środę. Dzięki wcześniejszej rozmowie może załatwić obie sprawy podczas jednej kolejnej wizyty.",
+  "questions": [
+    {
+      "id": "main-idea",
+      "skill": "main-idea",
+      "question": "O czym głównie jest artykuł?",
+      "options": [
+        "O organizowaniu pracy dwóch specjalistów.",
+        "O wyborze nowego zegarka i lampy.",
+        "O pracy warsztatu i uzgadnianiu naprawy z klientem."
+      ],
+      "answer": "O pracy warsztatu i uzgadnianiu naprawy z klientem.",
+      "evidence": "Pracownik poprosił o trochę czasu na sprawdzenie zegarka. Wyjaśnił, że poda cenę przed naprawą, ponieważ różne części mają różne ceny.",
+      "explanation": "Przykład Ireny pokazuje sprawdzenie problemu, ustalenie ceny i plan wizyty."
+    },
+    {
+      "id": "detail",
+      "skill": "detail",
+      "question": "Co było nie tak z zegarkiem Ireny?",
+      "options": [
+        "Nie można było wymienić baterii.",
+        "Zatrzymywał się kilka razy dziennie.",
+        "Miał uszkodzoną szybkę."
+      ],
+      "answer": "Zatrzymywał się kilka razy dziennie.",
+      "evidence": "Jej zegarek zatrzymywał się kilka razy w ciągu dnia.",
+      "explanation": "Zegarek czasem przestawał działać."
+    },
+    {
+      "id": "cause",
+      "skill": "cause",
+      "question": "Dlaczego pracownik nie podał ceny od razu?",
+      "options": [
+        "Koszt zależał od rodzaju potrzebnej części.",
+        "Właściciel warsztatu był nieobecny.",
+        "Irena nie przyniosła lampy."
+      ],
+      "answer": "Koszt zależał od rodzaju potrzebnej części.",
+      "evidence": "Wyjaśnił, że poda cenę przed naprawą, ponieważ różne części mają różne ceny.",
+      "explanation": "Przed wyceną musiał ustalić, co wymaga naprawy."
+    },
+    {
+      "id": "inference",
+      "skill": "inference",
+      "question": "Co Irena może zrobić w środę bez dodatkowej wizyty?",
+      "options": [
+        "Odebrać oba naprawione przedmioty.",
+        "Odebrać zegarek i zostawić lampę do sprawdzenia.",
+        "Odebrać lampę i zostawić zegarek po raz pierwszy."
+      ],
+      "answer": "Odebrać zegarek i zostawić lampę do sprawdzenia.",
+      "evidence": "Usłyszała, że może ją przynieść w środę, kiedy w warsztacie będzie drugi specjalista.\n\nPo południu dostała wiadomość o zegarku: wystarczy wymienić baterię. Cena była dla niej odpowiednia, więc zgodziła się na usługę. Odbierze zegarek w środę.",
+      "explanation": "Lampa nie została jeszcze oddana, a zegarek będzie gotowy."
+    },
+    {
+      "id": "vocabulary",
+      "skill": "vocabulary",
+      "question": "Co oznacza „załatwić obie sprawy”?",
+      "options": [
+        "Zapłacić za obie zakończone naprawy.",
+        "Sprawdzić ceny w dwóch różnych punktach.",
+        "Zrobić to, co trzeba, w obu przypadkach."
+      ],
+      "answer": "Zrobić to, co trzeba, w obu przypadkach.",
+      "evidence": "Dzięki wcześniejszej rozmowie może załatwić obie sprawy podczas jednej kolejnej wizyty.",
+      "explanation": "W kontekście chodzi o odbiór jednego przedmiotu i oddanie drugiego."
+    }
+  ],
+  "publicationStatus": "practice"
+}

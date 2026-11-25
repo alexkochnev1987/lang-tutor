@@ -1,0 +1,76 @@
+{
+  "id": "pl-b1.reading.day-080",
+  "day": 80,
+  "level": "A2",
+  "genre": "dialog",
+  "title": "Przesyłka do odbioru",
+  "text": "— Dzień dobry. Dostałem wiadomość o przesyłce — mówi Kuba w punkcie odbioru. — Czy moja paczka jest już tutaj?\n\n— Proszę pokazać kod z wiadomości — odpowiada pracownica. Po chwili sprawdza dane w komputerze. — Tak, paczka czeka na półce. Ma pan jeszcze jedną przesyłkę?\n\n— Tak, zamówiłem też książkę, ale w wiadomości o książce jest napisane, że dostawa będzie jutro.\n\n— W takim razie dzisiaj wydam panu tylko pierwszą paczkę. Druga jest jeszcze w drodze.\n\nKuba ogląda pudełko. W jednym rogu jest trochę mokre. Pyta, czy może zrobić zdjęcie przed wyjściem z punktu. Pracownica pozwala mu to zrobić i zapisuje informację o stanie opakowania. Wyjaśnia, że nie wie, czy w środku wszystko jest w porządku.\n\n— W domu sprawdzę zawartość — mówi Kuba. — A jutro przyjdę po książkę, jeśli dostanę nową wiadomość.\n\nPracownica pokazuje mu jeszcze kartkę z godzinami pracy. Jutro punkt będzie otwarty od dwunastej do osiemnastej, ponieważ rano pracownicy mają szkolenie. Kuba pracuje do czternastej w biurze obok, więc nie będzie musiał zmieniać swoich planów.",
+  "questions": [
+    {
+      "id": "main-idea",
+      "skill": "main-idea",
+      "question": "Co Kuba robi w punkcie odbioru?",
+      "options": [
+        "Wyjaśnia problem z dostawą książki do domu.",
+        "Odbiera jedną paczkę i ustala, co zrobić z drugą.",
+        "Oddaje dwie przesyłki do nadania."
+      ],
+      "answer": "Odbiera jedną paczkę i ustala, co zrobić z drugą.",
+      "evidence": "W takim razie dzisiaj wydam panu tylko pierwszą paczkę. Druga jest jeszcze w drodze.",
+      "explanation": "Rozmowa obejmuje odbiór pierwszej paczki, jej stan i plan kolejnej wizyty."
+    },
+    {
+      "id": "detail",
+      "skill": "detail",
+      "question": "Co pracownica zapisuje podczas pierwszego odbioru?",
+      "options": [
+        "Informację o stanie pudełka.",
+        "Godzinę dostawy książki.",
+        "Adres biura Kuby."
+      ],
+      "answer": "Informację o stanie pudełka.",
+      "evidence": "Pracownica pozwala mu to zrobić i zapisuje informację o stanie opakowania.",
+      "explanation": "Pudełko jest mokre w jednym rogu."
+    },
+    {
+      "id": "cause",
+      "skill": "cause",
+      "question": "Dlaczego jutro punkt otworzy się później?",
+      "options": [
+        "Kurier przyjedzie dopiero po południu.",
+        "Pracownicy będą liczyć paczki na półkach.",
+        "Pracownicy mają poranne szkolenie."
+      ],
+      "answer": "Pracownicy mają poranne szkolenie.",
+      "evidence": "Jutro punkt będzie otwarty od dwunastej do osiemnastej, ponieważ rano pracownicy mają szkolenie.",
+      "explanation": "Szkolenie jest powodem zmiany godzin pracy."
+    },
+    {
+      "id": "inference",
+      "skill": "inference",
+      "question": "Kuba jutro dostaje wiadomość o książce o jedenastej, a o piętnastej ma prywatne spotkanie. W którym przedziale może odebrać książkę po pracy, ale przed spotkaniem?",
+      "options": [
+        "Między czternastą a piętnastą.",
+        "Między jedenastą a dwunastą.",
+        "Między trzynastą a czternastą, przed końcem pracy."
+      ],
+      "answer": "Między czternastą a piętnastą.",
+      "evidence": "Jutro punkt będzie otwarty od dwunastej do osiemnastej, ponieważ rano pracownicy mają szkolenie. Kuba pracuje do czternastej w biurze obok, więc nie będzie musiał zmieniać swoich planów.",
+      "explanation": "Po czternastej Kuba kończy pracę, punkt jest czynny, a spotkanie zaczyna się o piętnastej."
+    },
+    {
+      "id": "vocabulary",
+      "skill": "vocabulary",
+      "question": "Co oznacza „zawartość” w zdaniu Kuby?",
+      "options": [
+        "Wiadomość z kodem odbioru.",
+        "Rzeczy znajdujące się w pudełku.",
+        "Stan zewnętrzny opakowania."
+      ],
+      "answer": "Rzeczy znajdujące się w pudełku.",
+      "evidence": "W domu sprawdzę zawartość",
+      "explanation": "Kuba chce sprawdzić przedmioty w paczce, nie samo pudełko."
+    }
+  ],
+  "publicationStatus": "practice"
+}

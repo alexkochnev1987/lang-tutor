@@ -1,0 +1,76 @@
+{
+  "id": "pl-b1.reading.day-085",
+  "day": 85,
+  "level": "B1",
+  "genre": "wiadomość",
+  "title": "Spacer po nowej dzielnicy",
+  "text": "Cześć, Kasiu!\n\nW zeszłym tygodniu przeprowadziłem się na drugą stronę miasta. Do tej pory znałem tę dzielnicę głównie z okna autobusu, więc w niedzielę postanowiłem przejść się bez konkretnego celu. Wziąłem ze sobą telefon, ale schowałem go do kieszeni, żeby nie patrzeć cały czas na mapę. Chciałem sam odkryć kilka miejsc.\n\nNajpierw trafiłem na niewielki plac, na którym w dni robocze działa targ. W niedzielę było tam spokojnie, a obok fontanny siedziało kilka osób z kawą. Z placu poszedłem w stronę starego kościoła. Za nim znalazłem przejście między kamienicami prowadzące do parku. Nie jest ono dobrze widoczne z głównej ulicy, dlatego prawdopodobnie wcześniej mijałem je wiele razy.\n\nW parku spotkałem sąsiadkę, którą poznałem podczas przeprowadzki. Zapytałem ją o bibliotekę i sklep spożywczy. Pokazała mi krótszą drogę do obu miejsc, ale ostrzegła, że po deszczu ścieżka przez park robi się bardzo błotnista. Zapisałem sobie również trasę prowadzącą chodnikiem wzdłuż ulicy. Jest nieco dłuższa, lecz nie trzeba wchodzić na miękką ziemię.\n\nW sobotę chciałbym pokazać ci okolicę. Jeśli będzie sucho, przejdziemy przez park. Jeśli pogoda nie dopisze, spotkajmy się na placu i przejdźmy do biblioteki ulicą. Możemy potem wypić kawę. Na razie nie znam najlepszej kawiarni w dzielnicy, ale właśnie to jest przyjemne: wciąż mam coś nowego do odkrycia.\n\nDo zobaczenia,\nMichał",
+  "questions": [
+    {
+      "id": "main-idea",
+      "skill": "main-idea",
+      "question": "Co Michał chce przekazać Kasi w całej wiadomości?",
+      "options": [
+        "Wyjaśnia, dlaczego chce ponownie zmienić mieszkanie.",
+        "Opisuje, jak poznaje nową okolicę, i proponuje wspólny spacer.",
+        "Porównuje ceny kawy i zakupów w dwóch dzielnicach."
+      ],
+      "answer": "Opisuje, jak poznaje nową okolicę, i proponuje wspólny spacer.",
+      "evidence": "W sobotę chciałbym pokazać ci okolicę. Jeśli będzie sucho, przejdziemy przez park. Jeśli pogoda nie dopisze, spotkajmy się na placu i przejdźmy do biblioteki ulicą. Możemy potem wypić kawę.",
+      "explanation": "Wcześniejsze akapity opisują odkrywanie miejsc i przygotowanie dwóch tras spaceru."
+    },
+    {
+      "id": "detail",
+      "skill": "detail",
+      "question": "Gdzie znajduje się mało widoczne przejście do parku?",
+      "options": [
+        "Obok fontanny na placu.",
+        "Przy wejściu do biblioteki.",
+        "Za starym kościołem, między kamienicami."
+      ],
+      "answer": "Za starym kościołem, między kamienicami.",
+      "evidence": "Za nim znalazłem przejście między kamienicami prowadzące do parku.",
+      "explanation": "Za kościołem jest przejście do parku."
+    },
+    {
+      "id": "cause",
+      "skill": "cause",
+      "question": "Dlaczego Michał schował telefon do kieszeni podczas niedzielnego spaceru?",
+      "options": [
+        "Chciał samodzielnie poznawać okolicę, bez ciągłego korzystania z mapy.",
+        "Chciał rozmawiać z sąsiadką bez patrzenia na ekran.",
+        "Chciał oszczędzić baterię na drogę do biblioteki."
+      ],
+      "answer": "Chciał samodzielnie poznawać okolicę, bez ciągłego korzystania z mapy.",
+      "evidence": "Wziąłem ze sobą telefon, ale schowałem go do kieszeni, żeby nie patrzeć cały czas na mapę. Chciałem sam odkryć kilka miejsc.",
+      "explanation": "Telefon miał przy sobie, ale zależało mu na samodzielnym odkrywaniu dzielnicy."
+    },
+    {
+      "id": "inference",
+      "skill": "inference",
+      "question": "W piątek padało, ale w sobotę świeci słońce. Kasia chce uniknąć błota. Która trasa będzie najpewniejsza?",
+      "options": [
+        "Przez przejście za kościołem i dalej przez park.",
+        "Przez park, ponieważ w sobotę nie pada.",
+        "Z placu do biblioteki wzdłuż ulicy."
+      ],
+      "answer": "Z placu do biblioteki wzdłuż ulicy.",
+      "evidence": "Pokazała mi krótszą drogę do obu miejsc, ale ostrzegła, że po deszczu ścieżka przez park robi się bardzo błotnista. Zapisałem sobie również trasę prowadzącą chodnikiem wzdłuż ulicy. Jest nieco dłuższa, lecz nie trzeba wchodzić na miękką ziemię.",
+      "explanation": "Nawet po ustaniu deszczu ścieżka może być mokra, a chodnik pozwala uniknąć miękkiej ziemi."
+    },
+    {
+      "id": "vocabulary",
+      "skill": "vocabulary",
+      "question": "Co Michał ma na myśli, pisząc „mijałem je”?",
+      "options": [
+        "Przechodziłem lub przejeżdżałem obok niego.",
+        "Wchodziłem do niego i wracałem tą samą drogą.",
+        "Szukałem go na mapie przed każdym spacerem."
+      ],
+      "answer": "Przechodziłem lub przejeżdżałem obok niego.",
+      "evidence": "Nie jest ono dobrze widoczne z głównej ulicy, dlatego prawdopodobnie wcześniej mijałem je wiele razy.",
+      "explanation": "Michał prawdopodobnie wcześniej przejeżdżał obok przejścia, ale go nie zauważał."
+    }
+  ],
+  "publicationStatus": "practice"
+}
