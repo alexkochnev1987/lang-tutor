@@ -6,7 +6,7 @@ import {
   loadGrammarRules,
   loadGrammarSentences,
   loadMorphology,
-  loadReadingTextForDay,
+  loadDailyReadingTexts,
   loadVocabulary,
   type CurriculumDay,
   type CollocationItem,
@@ -36,13 +36,14 @@ import { buildTodayLesson } from "./session";
 
 export type { SentenceMode } from "./exercises";
 
-export type StageId = "brainstorm" | "words" | "grammar" | "collocations" | "exam";
+export type StageId = "brainstorm" | "words" | "grammar" | "collocations" | "reading" | "exam";
 
 export const STAGE_TITLE: Record<StageId, string> = {
   brainstorm: "Новые слова",
   words: "Слова",
   grammar: "Грамматика",
   collocations: "Сочетания",
+  reading: "Чтение",
   exam: "Экзаменационное задание",
 };
 export type Step =
@@ -183,10 +184,21 @@ export async function buildTodayPlan(): Promise<TodayPlan> {
   );
   const collocationSteps = buildCollocationSteps(collocations, state, localized, dayNumber);
 
+  const readingCount = day.kind === "diagnostic" ? 0 : state.settings.readingTextsPerDay;
+  let readingSteps: Step[] = [];
+  let readingUnavailable = false;
+  if (readingCount > 0) {
+    try {
+      const texts = await loadDailyReadingTexts(day.day, readingCount, state.exerciseResults);
+      readingSteps = texts.flatMap(text => buildReadingSteps(text, day.day, exerciseIdsOf(drillSteps)));
+      readingUnavailable = readingSteps.length === 0;
+    } catch {
+      readingUnavailable = true;
+    }
+  }
+
   const examSteps =
-    day.examFocus === "reading"
-      ? buildReadingSteps(await loadReadingTextForDay(day.day), day.day, exerciseIdsOf(drillSteps))
-      : MODULES_WITH_GENERATOR.has(day.examFocus)
+    MODULES_WITH_GENERATOR.has(day.examFocus)
         ? buildExamSteps(
             [
               ...new Set([
@@ -250,7 +262,18 @@ export async function buildTodayPlan(): Promise<TodayPlan> {
     });
   }
 
-  if (day.timeBudgetSec.exam > 0) {
+  if (readingCount > 0) {
+    stages.push({
+      id: "reading",
+      steps: readingSteps,
+      estimatedSec: sumSec(readingSteps),
+      rule: null,
+      missingContent: readingUnavailable ? "Nie udało się załadować tekstów. Spróbuj ponownie później." : null,
+    });
+  }
+
+  // Reading has its own stage; do not duplicate it on reading-focus days.
+  if (day.examFocus !== "reading" && day.timeBudgetSec.exam > 0) {
     stages.push({
       id: "exam",
       steps: examSteps,
@@ -294,7 +317,7 @@ function buildReadingSteps(
   return exercisesForReading(text, dayNumber)
     .filter((ex) => !used.has(ex.id))
     .slice(0, EXAM_TASK_COUNT)
-    .map((ex): Step => ({ kind: "exercise", ex, review: false, rule: null }));
+    .map((ex): Step => ({ kind: "exercise", ex: { ...ex, attemptsAllowed: 1 }, review: false, rule: null }));
 }
 
 /**

@@ -123,6 +123,7 @@ export interface Settings {
   theme: 'light' | 'dark' | 'system'
   dailyBudgetMinutes: number
   newWordsPerDay: number
+  readingTextsPerDay: number
   grammarExercisesPerDay: number
   grammarLessonFormats: GrammarLessonFormat[]
   ttsVoiceURI: string | null
@@ -138,6 +139,7 @@ export const DEFAULT_SETTINGS: Settings = {
   theme: 'system',
   dailyBudgetMinutes: 15,
   newWordsPerDay: 4,
+  readingTextsPerDay: 1,
   grammarExercisesPerDay: 10,
   grammarLessonFormats: ['choice', 'typed', 'write'],
   ttsVoiceURI: null,

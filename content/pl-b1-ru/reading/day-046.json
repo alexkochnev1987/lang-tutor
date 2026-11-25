@@ -1,0 +1,75 @@
+{
+  "id": "pl-b1.reading.day-046",
+  "day": 46,
+  "level": "A2",
+  "genre": "opowiadanie",
+  "title": "Nowa grupa na zajęciach",
+  "text": "W centrum rekreacji powstała grupa gimnastyczna dla dorosłych. Na pierwsze spotkanie przyszli młodzi ludzie i osoby na emeryturze. Nie wszyscy mieli doświadczenie. Trener powiedział na początku, że każdy może ćwiczyć we własnym tempie. Uczestnicy nie muszą robić wszystkiego tak samo jak osoba obok.\n\nTrener pokazywał dwa sposoby wykonania ćwiczenia. Każdy wybierał wersję łatwiejszą albo trudniejszą. Można też było zrobić krótką przerwę. Trener prosił, żeby powiedzieć mu, jeśli jakieś ćwiczenie sprawia trudność. Po spotkaniu kilka osób zostało w sali. Chciały porozmawiać o tym, o której będą następne zajęcia.\n\nNiektórzy uczestnicy pracują do późnego popołudnia. Organizatorzy zaproponowali więc dwa terminy w tygodniu: jeden rano, drugi wieczorem. Każdy może wybrać dogodną dla siebie porę. Po miesiącu większość uczestników chciała nadal chodzić na zajęcia. Podobało im się, że w grupie jest spokojnie i że sami mogą zdecydować, jak będą ćwiczyć.",
+  "questions": [
+    {
+      "id": "main-idea",
+      "skill": "main-idea",
+      "question": "Co wyróżnia opisane zajęcia?",
+      "options": [
+        "Uczestnicy przygotowują własne ćwiczenia i pokazują je trenerowi.",
+        "Uczestnicy mogą dobrać ćwiczenia i porę spotkania do swoich potrzeb.",
+        "Trener przygotowuje osobną grupę dla każdego wieku."
+      ],
+      "answer": "Uczestnicy mogą dobrać ćwiczenia i porę spotkania do swoich potrzeb.",
+      "evidence": "Każdy wybierał wersję łatwiejszą albo trudniejszą.",
+      "explanation": "Grupa daje uczestnikom wybór wersji ćwiczenia i terminu zajęć."
+    },
+    {
+      "id": "detail",
+      "skill": "detail",
+      "question": "O czym kilka osób chciało porozmawiać po pierwszych zajęciach?",
+      "options": [
+        "O godzinach kolejnych spotkań.",
+        "O liczbie osób w sali podczas zajęć.",
+        "O długości przerw między ćwiczeniami."
+      ],
+      "answer": "O godzinach kolejnych spotkań.",
+      "evidence": "Chciały porozmawiać o tym, o której będą następne zajęcia.",
+      "explanation": "Uczestnicy zostali, żeby omówić pory zajęć."
+    },
+    {
+      "id": "cause",
+      "skill": "cause",
+      "question": "Dlaczego organizatorzy proponują także wieczorne zajęcia?",
+      "options": [
+        "Część osób długo pracuje w ciągu dnia.",
+        "Trener chce wieczorem pokazywać trudniejszą wersję ćwiczeń.",
+        "Część osób chce powtórzyć rano i wieczorem te same ćwiczenia."
+      ],
+      "answer": "Część osób długo pracuje w ciągu dnia.",
+      "evidence": "Niektórzy uczestnicy pracują do późnego popołudnia.",
+      "explanation": "Wieczorny termin pomaga osobom, które wcześniej są w pracy."
+    },
+    {
+      "id": "inference",
+      "skill": "inference",
+      "question": "Marta zaczyna ćwiczyć, a jej koleżanka ćwiczy od lat. Jak mogą skorzystać z tej grupy?",
+      "options": [
+        "Przyjść razem i wybrać różne wersje ćwiczenia.",
+        "Przyjść razem, kiedy Marta nauczy się ćwiczeń koleżanki.",
+        "Przyjść na różne godziny, bo rano ćwiczą początkujący."
+      ],
+      "answer": "Przyjść razem i wybrać różne wersje ćwiczenia.",
+      "evidence": "Każdy wybierał wersję łatwiejszą albo trudniejszą.",
+      "explanation": "Na tych samych zajęciach można ćwiczyć na różnym poziomie."
+    },
+    {
+      "id": "vocabulary",
+      "skill": "vocabulary",
+      "question": "Co tu znaczy „we własnym tempie”?",
+      "options": [
+        "Tak długo, jak ćwiczy osoba obok.",
+        "Tak szybko, jak danej osobie odpowiada.",
+        "W godzinie wybranej na początek zajęć."
+      ],
+      "answer": "Tak szybko, jak danej osobie odpowiada.",
+      "evidence": "Uczestnicy nie muszą robić wszystkiego tak samo jak osoba obok.",
+      "explanation": "Tempo dotyczy szybkości ćwiczenia, którą uczestnik dobiera dla siebie."
+    }
+  ]
+}

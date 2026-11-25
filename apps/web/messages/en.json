@@ -95,6 +95,7 @@
     "lessonSettings": "Lesson settings",
     "newWordsPerDay": "New words per day",
     "newWordsHint": "Each new word is practised with four Brainstorm exercises. Reviews are separate.",
+    "readingTextsPerDay": "Reading passages per day",
     "grammarExercisesPerDay": "Grammar exercises per lesson",
     "grammarLessonFormats": "Exercise types",
     "lessonChoice": "Choose the correct form",
@@ -247,6 +248,9 @@
     "grammar": "Preparing today’s grammar exercises…"
   },
   "readingPreview": {
+    "practice": "Reading practice",
+    "practiceNotice": "Read passages and answer questions. Standalone practice does not change lesson progress.",
+    "legacy": "Additional passage",
     "title": "Reading",
     "experimental": "Experimental mode",
     "notice": "Materials are under review. Results do not affect your main progress.",

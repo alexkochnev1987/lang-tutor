@@ -57,6 +57,11 @@ export function TodayCard() {
       )}
       <DailyWordCounts />
       <WeeklyGoal />
+      <Card><Stack gap="sm">
+        <strong>{t('readingPreview.title')}</strong>
+        <p className="text-sm text-muted">{t('readingPreview.practiceNotice')}</p>
+        <Link href="/reading/" className={buttonStyles({ variant: 'outline', full: true })}>{t('readingPreview.practice')}</Link>
+      </Stack></Card>
 
       {grammar?.rule && (
         <Card>

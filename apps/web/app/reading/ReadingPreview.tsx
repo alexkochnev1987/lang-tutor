@@ -6,7 +6,7 @@ import { useTranslations } from 'next-intl'
 import { Button, Card, Row, Screen, Stack } from '@polski/ui'
 import type { Exercise } from '@polski/engine'
 import { ExerciseView } from '@/app/_components/ExerciseView'
-import { loadReadingPreviewCatalog, loadReadingPreviewText, type ReadingText } from '@/lib/content/curriculum'
+import { loadReadingPreviewCatalog, loadReadingPreviewText, loadLiveReadingCatalog, loadLiveReadingText, type ReadingText } from '@/lib/content/curriculum'
 import type { ReadingCatalogEntry } from '@/lib/content/reading-catalog'
 import { exercisesForReading } from '@/lib/engine/exercises'
 
@@ -21,7 +21,7 @@ function Passage({ text }: { text: ReadingText }) {
   </article>
 }
 
-export function ReadingPreview() {
+export function ReadingPreview({ preview = false }: { preview?: boolean }) {
   const t = useTranslations('readingPreview')
   const lesson = useTranslations('lesson')
   const common = useTranslations('common')
@@ -41,14 +41,15 @@ export function ReadingPreview() {
 
   useEffect(() => {
     let active = true
-    loadReadingPreviewCatalog().then(items => {
+    const loadCatalog = preview ? loadReadingPreviewCatalog : loadLiveReadingCatalog
+    loadCatalog().then(items => {
       if (!active) return
       setEntries(items)
       setError(false)
     }).catch(() => { if (active) setError(true) })
       .finally(() => { if (active) setCatalogLoading(false) })
     return () => { active = false }
-  }, [reload])
+  }, [reload, preview])
 
   useEffect(() => () => { requestId.current++ }, [])
   useEffect(() => { main.current?.scrollTo({ top: 0 }) }, [phase, index])
@@ -58,9 +59,9 @@ export function ReadingPreview() {
     setLoadingId(entry.id)
     setError(false)
     try {
-      const text = await loadReadingPreviewText(entry)
-      const exercises = exercisesForReading(text, entry.day!).map(ex => ({ ...ex, attemptsAllowed: 1 }))
-      if (exercises.length !== 5) throw new Error('invalid_reading_exercises')
+      const text = await (preview ? loadReadingPreviewText(entry) : loadLiveReadingText(entry))
+      const exercises = exercisesForReading(text, entry.day ?? 1).map(ex => ({ ...ex, attemptsAllowed: 1 }))
+      if (exercises.length !== text.questions.length || !exercises.length) throw new Error('invalid_reading_exercises')
       if (request !== requestId.current) return
       setSession({ text, exercises, entry })
       setIndex(0)
@@ -102,21 +103,21 @@ export function ReadingPreview() {
           </Button>
           <div className="min-w-0 flex-1">
             <h1 className="font-semibold">{t('title')}</h1>
-            <p className="text-sm text-muted">{session ? t('day', { day: session.entry.day ?? 0, level: session.entry.level ?? '' }) : t('experimental')}</p>
+            <p className="text-sm text-muted">{session?.entry.day ? t('day', { day: session.entry.day, level: session.entry.level ?? '' }) : t(preview ? 'experimental' : 'practice')}</p>
           </div>
         </Row>
       </header>
       <main ref={main} className="mx-auto w-full max-w-2xl flex-1 px-4 pb-4">
         <Stack gap="md">
           {phase === 'catalog' && <>
-            <Card><p>{t('notice')}</p></Card>
+            <Card><p>{t(preview ? 'notice' : 'practiceNotice')}</p></Card>
             {catalogLoading ? <p role="status">{common('loading')}</p> : <>
               {error && <Card><Stack><p role="alert">{t('loadError')}</p><Button onClick={retry}>{t('retry')}</Button></Stack></Card>}
               {!error && entries.length === 0 && <p>{t('empty')}</p>}
               {entries.map(entry => <Button key={entry.id} variant="outline" full
                 disabled={loadingId !== null} busy={loadingId === entry.id} onClick={() => void select(entry)}>
                 <Stack gap="xs" align="start">
-                  <span className="text-sm">{t('day', { day: entry.day ?? 0, level: entry.level ?? '' })}</span>
+                  <span className="text-sm">{entry.day ? t('day', { day: entry.day, level: entry.level ?? '' }) : t('legacy')}</span>
                   <span lang="pl" className="text-left">{entry.title}</span>
                 </Stack>
               </Button>)}
@@ -140,7 +141,7 @@ export function ReadingPreview() {
             <h2 className="text-xl font-semibold">{t('result')}</h2>
             <p className="text-3xl font-semibold">{correct}/{total}</p>
             <p>{t('correct', { count: correct })} · {t('wrong', { count: total - correct })}</p>
-            <p className="text-sm text-muted">{t('notice')}</p>
+            <p className="text-sm text-muted">{t(preview ? 'notice' : 'practiceNotice')}</p>
           </Stack></Card>}
         </Stack>
       </main>

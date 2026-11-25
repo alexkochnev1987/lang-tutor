@@ -1,0 +1,86 @@
+{
+  "id": "pl-b1.reading.day-051",
+  "day": 51,
+  "level": "A2",
+  "genre": "artykuł",
+  "title": "Jak Marek uczy się po lekcjach",
+  "text": "Na lekcji historii Marek słuchał opowieści o ważnym wydarzeniu. Kiedy nauczyciel skończył mówić, w zeszycie Marka brakowało kilku zdań. Za dwa dni klasa pisze sprawdzian, więc po powrocie do domu Marek chce uzupełnić notatki. Siostra pokazuje mu Zintegrowaną Platformę Edukacyjną. To strona z darmowymi materiałami do nauki, którą prowadzi Ministerstwo Edukacji Narodowej.\n\nMarek znajduje tekst o tym samym wydarzeniu. Czyta go dwa razy, a potem zapisuje w zeszycie kilka zdań własnymi słowami. Jutro przed lekcją porówna je z notatkami kolegi. Dziś nie musi już czekać, aż kolega wróci z treningu.\n\nSiostra Marka uczy w szkole. Chce przygotować na platformie ćwiczenie dla swojej klasy. Żeby otworzyć edytor i napisać własne zadanie, musi się zalogować. Marek też pyta o konto. Siostra pokazuje mu na ekranie inne ogólnodostępne teksty. Każdy może je otworzyć i przeczytać, tak jak Marek przed chwilą.",
+  "source": {
+    "url": "https://www.gov.pl/web/edukacja/zintegrowana-platforma-edukacyjna-20-juz-dostepna",
+    "publisher": "Ministerstwo Edukacji Narodowej",
+    "title": "Zintegrowana Platforma Edukacyjna 2.0 już dostępna",
+    "facts": [
+      "Publicly accessible, free educational resources; sign-in required for the material editor and user features."
+    ],
+    "use": "facts-only",
+    "checked": "2026-11-25",
+    "adaptation": "Original Polish educational composition based on source facts; illustrative people/scenarios are fictional."
+  },
+  "questions": [
+    {
+      "id": "main-idea",
+      "skill": "main-idea",
+      "question": "Co najlepiej opisuje cały tekst?",
+      "options": [
+        "Rodzeństwo wspólnie pisze ćwiczenie z historii dla klasy Marka.",
+        "Rodzeństwo porównuje dwa sposoby prowadzenia notatek na lekcji.",
+        "Rodzeństwo korzysta z jednej strony do różnych zadań związanych z nauką."
+      ],
+      "answer": "Rodzeństwo korzysta z jednej strony do różnych zadań związanych z nauką.",
+      "evidence": "Chce przygotować na platformie ćwiczenie dla swojej klasy.",
+      "explanation": "Marek uzupełnia notatki, a jego siostra przygotowuje własne zadanie."
+    },
+    {
+      "id": "detail",
+      "skill": "detail",
+      "question": "Kiedy Marek chce porównać swoje notatki z notatkami kolegi?",
+      "options": [
+        "Za dwa dni po sprawdzianie.",
+        "Jutro przed lekcją.",
+        "Wieczorem po treningu kolegi."
+      ],
+      "answer": "Jutro przed lekcją.",
+      "evidence": "Jutro przed lekcją porówna je z notatkami kolegi.",
+      "explanation": "Na porównanie zeszytów Marek wybiera następny poranek."
+    },
+    {
+      "id": "cause",
+      "skill": "cause",
+      "question": "Dlaczego Marek szuka tekstu o wydarzeniu?",
+      "options": [
+        "Chce sprawdzić, co kolega napisał po treningu.",
+        "Chce wybrać temat dla klasy siostry.",
+        "Chce dopisać informacje, których brakuje w jego zeszycie."
+      ],
+      "answer": "Chce dopisać informacje, których brakuje w jego zeszycie.",
+      "evidence": "w zeszycie Marka brakowało kilku zdań.",
+      "explanation": "Podczas lekcji Marek nie zapisał wszystkiego, czego potrzebuje do sprawdzianu."
+    },
+    {
+      "id": "inference",
+      "skill": "inference",
+      "question": "Kolega skończy trening później, niż planował. Co Marek może mimo to zrobić jeszcze dziś?",
+      "options": [
+        "Ustalić na podstawie strony, co dokładnie zapisał kolega.",
+        "Przygotować swoją część notatek do jutrzejszego porównania.",
+        "Porównać oba zeszyty podczas spotkania przed lekcją."
+      ],
+      "answer": "Przygotować swoją część notatek do jutrzejszego porównania.",
+      "evidence": "Czyta go dwa razy, a potem zapisuje w zeszycie kilka zdań własnymi słowami.",
+      "explanation": "Własne notatki Marek robi na podstawie tekstu. Zeszyt kolegi będzie mu potrzebny dopiero przy porównaniu."
+    },
+    {
+      "id": "vocabulary",
+      "skill": "vocabulary",
+      "question": "Które teksty siostra nazywa „ogólnodostępnymi”?",
+      "options": [
+        "Teksty, które można czytać bez własnego konta.",
+        "Teksty, które nauczyciel wysyła swojej klasie po zalogowaniu.",
+        "Teksty, które uczeń sam zapisuje w swoim zeszycie."
+      ],
+      "answer": "Teksty, które można czytać bez własnego konta.",
+      "evidence": "Każdy może je otworzyć i przeczytać",
+      "explanation": "Takie teksty może przeczytać każdy, kto otworzy stronę."
+    }
+  ]
+}

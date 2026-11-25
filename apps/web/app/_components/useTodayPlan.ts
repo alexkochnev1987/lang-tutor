@@ -14,7 +14,7 @@ function planKey(state: AppState): string {
   return JSON.stringify([
     state.user.id, settings.timeZone, studyDayKey(settings.timeZone), settings.ruleLanguage,
     settings.dailyBudgetMinutes, settings.newWordsPerDay, settings.grammarExercisesPerDay,
-    settings.grammarLessonFormats, state.course?.startedAt, completedDays.map(({ dayNumber }) => dayNumber).sort(),
+    settings.grammarLessonFormats, settings.readingTextsPerDay, state.course?.startedAt, completedDays.map(({ dayNumber }) => dayNumber).sort(),
   ])
 }
 

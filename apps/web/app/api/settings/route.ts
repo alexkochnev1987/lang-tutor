@@ -15,7 +15,7 @@ export const dynamic = 'force-dynamic'
 const ALLOWED = new Set([
   'uiLanguage', 'sourceLanguage', 'targetLanguage', 'ruleLanguage',
   'theme', 'dailyBudgetMinutes', 'newWordsPerDay', 'grammarExercisesPerDay',
-  'grammarLessonFormats', 'ttsVoiceURI', 'ttsRate', 'timeZone',
+  'readingTextsPerDay', 'grammarLessonFormats', 'ttsVoiceURI', 'ttsRate', 'timeZone',
 ])
 
 export const PATCH = withUser(async ({ userId, req }) => {
@@ -26,8 +26,8 @@ export const PATCH = withUser(async ({ userId, req }) => {
   if (clean.targetLanguage !== undefined && clean.targetLanguage !== 'pl') {
     throw new Error('unsupported_target_language')
   }
-  const { dailyBudgetMinutes, newWordsPerDay, grammarExercisesPerDay, grammarLessonFormats, ttsRate, ttsVoiceURI, timeZone } = clean
-  for (const [value, max] of [[newWordsPerDay, 10], [grammarExercisesPerDay, 20]] as const) {
+  const { dailyBudgetMinutes, newWordsPerDay, grammarExercisesPerDay, readingTextsPerDay, grammarLessonFormats, ttsRate, ttsVoiceURI, timeZone } = clean
+  for (const [value, max] of [[newWordsPerDay, 10], [grammarExercisesPerDay, 20], [readingTextsPerDay, 3]] as const) {
     if (value !== undefined && (typeof value !== 'number' || !Number.isInteger(value) || value < 0 || value > max)) {
       throw new Error('bad_lesson_settings')
     }

@@ -42,7 +42,7 @@ function parse(raw: Record<string, unknown>): AppState {
   settings.dailyBudgetMinutes = typeof budget === 'number' && Number.isInteger(budget) && budget >= 5 && budget <= 90
     ? budget
     : DEFAULT_SETTINGS.dailyBudgetMinutes
-  for (const [field, max] of [['newWordsPerDay', 10], ['grammarExercisesPerDay', 20]] as const) {
+  for (const [field, max] of [['newWordsPerDay', 10], ['grammarExercisesPerDay', 20], ['readingTextsPerDay', 3]] as const) {
     if (!Number.isInteger(settings[field]) || settings[field] < 0 || settings[field] > max) {
       settings[field] = DEFAULT_SETTINGS[field]
     }

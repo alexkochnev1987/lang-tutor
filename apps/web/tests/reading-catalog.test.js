@@ -1,4 +1,4 @@
-import { readingFilename, selectReadingEntry } from '../lib/content/reading-catalog'
+import { readingFilename, selectReadingEntry, selectDailyReadingEntries } from '../lib/content/reading-catalog'
 
 const legacy = { id: 'old', status: 'legacy', title: 'Old', file: 'legacy-001.json' }
 const daily = { id: 'day54', day: 54, status: 'approved', title: 'Daily', file: 'day-054.json' }
@@ -21,5 +21,17 @@ describe('reading selection and lazy paths', () => {
     expect(readingFilename(legacy)).toBe('legacy-001.json')
     expect(() => readingFilename({ ...daily, file: '../reading.json' })).toThrow()
     expect(() => readingFilename({ ...daily, file: 'day-055.json' })).toThrow()
+  })
+})
+
+
+describe('daily reading selection', () => {
+  it('prefers the exact day and excludes preview and future passages', () => {
+    expect(selectDailyReadingEntries([legacy, daily, preview], 54, 3, new Set(), new Set()).map(e => e.id)).toEqual([daily.id, legacy.id])
+    expect(selectDailyReadingEntries([legacy, daily, preview], 53, 1, new Set(), new Set())).toEqual([legacy])
+  })
+  it('resumes a passage already started today and supports disabling reading', () => {
+    expect(selectDailyReadingEntries([legacy, daily], 54, 1, new Set([legacy.id]), new Set([legacy.id]))).toEqual([legacy])
+    expect(selectDailyReadingEntries([legacy, daily], 54, 0, new Set(), new Set())).toEqual([])
   })
 })
