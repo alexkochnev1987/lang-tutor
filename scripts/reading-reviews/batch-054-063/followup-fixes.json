@@ -1,0 +1,80 @@
+{
+  "status": "HOLD_PENDING_INDEPENDENT_REVIEW",
+  "basedOnEditorialReport": "post-edit-editorial-check.json",
+  "priorRevision": "1f8e53cbfe2f81ee08b02ab838d10758bd27d981",
+  "changes": [
+    {
+      "day": 57,
+      "questions": [
+        "q3",
+        "q4"
+      ],
+      "reason": "Parallel distractor syntax and explicit two-condition call-handling procedure."
+    },
+    {
+      "day": 62,
+      "questions": [
+        "q5"
+      ],
+      "reason": "Clarify in-person context; distinguish it from remote direct contact."
+    },
+    {
+      "day": 63,
+      "questions": [
+        "q5"
+      ],
+      "reason": "Use similar work-related but distinct interpretations and contextual wording."
+    }
+  ],
+  "validation": {
+    "method": "Batch-local structural check in connector JS, not Node CLI",
+    "texts": 10,
+    "questions": 50,
+    "wordCounts": [
+      {
+        "day": 54,
+        "words": 154
+      },
+      {
+        "day": 55,
+        "words": 156
+      },
+      {
+        "day": 56,
+        "words": 150
+      },
+      {
+        "day": 57,
+        "words": 164
+      },
+      {
+        "day": 58,
+        "words": 157
+      },
+      {
+        "day": 59,
+        "words": 150
+      },
+      {
+        "day": 60,
+        "words": 152
+      },
+      {
+        "day": 61,
+        "words": 158
+      },
+      {
+        "day": 62,
+        "words": 164
+      },
+      {
+        "day": 63,
+        "words": 153
+      }
+    ],
+    "errors": []
+  },
+  "editorialApproval": false,
+  "independentSecondRound": "NOT_RUN",
+  "scoreNote": "Prior editorial scores are for the prior revision; final quality scores require fresh independent review."
+}

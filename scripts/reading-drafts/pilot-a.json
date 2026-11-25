@@ -1,0 +1,1207 @@
+{
+  "version": 1,
+  "status": "draft",
+  "scope": "pilot",
+  "texts": [
+    {
+      "id": "pl-b1.reading.day-001",
+      "day": 1,
+      "level": "A1",
+      "genre": "opowiadanie",
+      "title": "Rodzina Leny",
+      "text": "Mam na imię Lena. Mieszkam w Łodzi z mężem i córką. Nasze mieszkanie jest małe, ale jasne. Pracuję w sklepie od poniedziałku do piątku. Mój mąż jest kierowcą i często wraca późno. Nasza córka Ola ma osiem lat i lubi rysować.\n\nW sobotę zwykle jemy razem śniadanie. Potem idziemy do parku albo odwiedzamy moją mamę. Mama mieszka blisko nas. W niedzielę mamy mało planów, bo chcemy mieć czas dla siebie. Najbardziej lubię te spokojne poranki, kiedy nikt się nie spieszy.",
+      "questions": [
+        {
+          "id": "main-idea",
+          "skill": "main-idea",
+          "question": "O czym Lena opowiada w obu częściach tekstu?",
+          "options": [
+            "O różnych miejscach pracy w Łodzi.",
+            "O weekendzie Oli u babci.",
+            "O swojej rodzinie i jej zwyczajach."
+          ],
+          "answer": "O swojej rodzinie i jej zwyczajach.",
+          "evidence": "Mieszkam w Łodzi z mężem i córką.",
+          "explanation": "Lena przedstawia rodzinę, a potem opisuje ich wspólne weekendy."
+        },
+        {
+          "id": "detail",
+          "skill": "detail",
+          "question": "Gdzie pracuje Lena?",
+          "options": [
+            "W parku.",
+            "W sklepie.",
+            "W szkole."
+          ],
+          "answer": "W sklepie.",
+          "evidence": "Pracuję w sklepie",
+          "explanation": "Lena sama mówi, gdzie pracuje."
+        },
+        {
+          "id": "cause",
+          "skill": "cause",
+          "question": "Dlaczego rodzina ma mało planów w niedzielę?",
+          "options": [
+            "Chce mieć czas dla siebie.",
+            "Chce pójść wcześnie do sklepu.",
+            "Chce zdążyć do babci na śniadanie."
+          ],
+          "answer": "Chce mieć czas dla siebie.",
+          "evidence": "bo chcemy mieć czas dla siebie.",
+          "explanation": "Lena podaje powód, dla którego zostawiają sobie wolną niedzielę."
+        },
+        {
+          "id": "inference",
+          "skill": "inference",
+          "question": "Który plan na niedzielne śniadanie najbardziej spodobałby się Lenie?",
+          "options": [
+            "Zjeść wcześnie i od razu pobiec do parku.",
+            "Szybko zjeść przed wyjściem do sklepu.",
+            "Długo siedzieć razem przy stole."
+          ],
+          "answer": "Długo siedzieć razem przy stole.",
+          "evidence": "Najbardziej lubię te spokojne poranki, kiedy nikt się nie spieszy.",
+          "explanation": "Długie śniadanie pozwala rodzinie spokojnie spędzić razem czas."
+        },
+        {
+          "id": "vocabulary",
+          "skill": "vocabulary",
+          "question": "Co oznacza tutaj „nikt się nie spieszy”?",
+          "options": [
+            "Każdy może robić wszystko spokojnie.",
+            "Każdy stara się przyjść wcześniej.",
+            "Każdy musi skończyć przed czasem."
+          ],
+          "answer": "Każdy może robić wszystko spokojnie.",
+          "evidence": "te spokojne poranki, kiedy nikt się nie spieszy.",
+          "explanation": "Lena mówi o porankach, kiedy nie trzeba robić nic szybko."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-002",
+      "day": 2,
+      "level": "A1",
+      "genre": "dialog",
+      "title": "Nowy kolega",
+      "text": "— Cześć, jestem Adam. Jestem nowy w tej grupie. A ty?\n\n— Mam na imię Ewa. Jestem tutaj od września. Nasza nauczycielka jest bardzo miła.\n\n— Czy zajęcia są trudne?\n\n— Na początku trochę, ale teraz jest łatwiej. Uczymy się w małych grupach. A skąd jesteś?\n\n— Jestem z Czech, ale od roku mieszkam w Polsce. W domu mówię po czesku. Chcę mówić po polsku z sąsiadami.\n\n— Świetnie! Ja też uczę się polskiego. Po zajęciach jestem zwykle w kawiarni obok szkoły. Możemy tam rozmawiać.\n\n— Dziękuję! Dzisiaj mam czas. Spotkajmy się o czwartej.",
+      "questions": [
+        {
+          "id": "main-idea",
+          "skill": "main-idea",
+          "question": "O czym rozmawiają Adam i Ewa?",
+          "options": [
+            "O wyborze nowej szkoły w Polsce.",
+            "Poznają się na kursie i planują spotkanie.",
+            "Planują pierwszą lekcję dla sąsiadów."
+          ],
+          "answer": "Poznają się na kursie i planują spotkanie.",
+          "evidence": "Jestem nowy w tej grupie. A ty?",
+          "explanation": "Przedstawiają się sobie, rozmawiają o nauce i umawiają się po zajęciach."
+        },
+        {
+          "id": "detail",
+          "skill": "detail",
+          "question": "Skąd jest Adam?",
+          "options": [
+            "Z Polski.",
+            "Z Niemiec.",
+            "Z Czech."
+          ],
+          "answer": "Z Czech.",
+          "evidence": "Jestem z Czech",
+          "explanation": "Adam pochodzi z Czech, a teraz mieszka w Polsce."
+        },
+        {
+          "id": "cause",
+          "skill": "cause",
+          "question": "Po co Adam uczy się polskiego?",
+          "options": [
+            "Chce uczyć innych w szkole.",
+            "Chce rozmawiać z sąsiadami.",
+            "Chce mówić po polsku w domu z rodziną."
+          ],
+          "answer": "Chce rozmawiać z sąsiadami.",
+          "evidence": "Chcę mówić po polsku z sąsiadami.",
+          "explanation": "Adam wymienia osoby, z którymi chce rozmawiać po polsku."
+        },
+        {
+          "id": "inference",
+          "skill": "inference",
+          "question": "Gdzie Ewa powinna czekać na Adama o czwartej?",
+          "options": [
+            "Przy stoliku w kawiarni.",
+            "W sali, w której mają zajęcia.",
+            "Przed domem jego sąsiadów."
+          ],
+          "answer": "Przy stoliku w kawiarni.",
+          "evidence": "Po zajęciach jestem zwykle w kawiarni obok szkoły. Możemy tam rozmawiać.",
+          "explanation": "Ewa proponuje kawiarnię, a Adam zgadza się i podaje godzinę."
+        },
+        {
+          "id": "vocabulary",
+          "skill": "vocabulary",
+          "question": "Kiedy zajęcia były dla Ewy trochę trudne? Co oznacza „na początku”?",
+          "options": [
+            "Po ostatniej lekcji kursu.",
+            "Na każdej lekcji przed przerwą.",
+            "Kiedy zaczęła chodzić na kurs."
+          ],
+          "answer": "Kiedy zaczęła chodzić na kurs.",
+          "evidence": "Na początku trochę, ale teraz jest łatwiej.",
+          "explanation": "Ewa porównuje pierwsze lekcje z tym, jak uczy jej się teraz."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-003",
+      "day": 3,
+      "level": "A1",
+      "genre": "wiadomość",
+      "title": "Dzień w domu",
+      "text": "Cześć, Kasiu! Pytasz, jak wygląda mój dzień. Rano wstaję o siódmej, jem śniadanie i zaczynam pracę o ósmej. Pracuję w domu. Mam biurko przy oknie i małą lampę. W czasie przerwy słucham muzyki albo patrzę przez okno.\n\nO dwunastej rozmawiam z mamą przez telefon. Potem gotuję obiad. Po pracy często spotykam się z koleżanką. Ona mieszka na tej samej ulicy. Razem spacerujemy, a kiedy pada deszcz, zostajemy u niej w domu i gramy w karty. Wieczorem czytam książkę. Nie oglądam telewizji, bo wolę czytać. Pozdrawiam\nAnia",
+      "questions": [
+        {
+          "id": "main-idea",
+          "skill": "main-idea",
+          "question": "Po co Ania pisze do Kasi?",
+          "options": [
+            "Żeby umówić się na wspólny spacer.",
+            "Żeby opisać swój dzień.",
+            "Żeby ustalić godzinę rozmowy telefonicznej."
+          ],
+          "answer": "Żeby opisać swój dzień.",
+          "evidence": "Pytasz, jak wygląda mój dzień.",
+          "explanation": "List jest odpowiedzią na pytanie o zwykły dzień Ani."
+        },
+        {
+          "id": "detail",
+          "skill": "detail",
+          "question": "O której Ania zaczyna pracę?",
+          "options": [
+            "O ósmej.",
+            "O siódmej.",
+            "O dwunastej."
+          ],
+          "answer": "O ósmej.",
+          "evidence": "zaczynam pracę o ósmej.",
+          "explanation": "O siódmej Ania wstaje, a godzinę później zaczyna pracę."
+        },
+        {
+          "id": "cause",
+          "skill": "cause",
+          "question": "Dlaczego wieczorem nie ogląda telewizji?",
+          "options": [
+            "Dopiero wieczorem kończy pracę.",
+            "Woli wtedy grać w karty z mamą.",
+            "Woli czytać książki."
+          ],
+          "answer": "Woli czytać książki.",
+          "evidence": "Nie oglądam telewizji, bo wolę czytać.",
+          "explanation": "Ania wybiera czytanie, bo lubi je bardziej."
+        },
+        {
+          "id": "inference",
+          "skill": "inference",
+          "question": "Ania idzie po pracy do koleżanki. Co najlepiej wziąć, jeśli pada deszcz?",
+          "options": [
+            "Książkę do wspólnego czytania.",
+            "Karty do gry.",
+            "Buty na długi spacer."
+          ],
+          "answer": "Karty do gry.",
+          "evidence": "kiedy pada deszcz, zostajemy u niej w domu i gramy w karty.",
+          "explanation": "Karty przydadzą się do zabawy, którą koleżanki wybierają w deszczowe dni."
+        },
+        {
+          "id": "vocabulary",
+          "skill": "vocabulary",
+          "question": "Co oznacza „przerwa” w pracy?",
+          "options": [
+            "Czas po skończeniu całej pracy.",
+            "Czas tuż przed rozpoczęciem pracy.",
+            "Krótki czas, kiedy się nie pracuje."
+          ],
+          "answer": "Krótki czas, kiedy się nie pracuje.",
+          "evidence": "W czasie przerwy słucham muzyki albo patrzę przez okno.",
+          "explanation": "Ania na chwilę przestaje pracować i może zająć się czymś innym."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-004",
+      "day": 4,
+      "level": "A1",
+      "genre": "dialog",
+      "title": "Michał w recepcji",
+      "text": "W recepcji szkoły językowej jest nowy uczeń. Ma na imię Michał, a pani w recepcji zapisuje jego dane.\n\n— Proszę podać imię i nazwisko.\n\n— Michał Żak.\n\n— Czy nazwisko zaczyna się na Z?\n\n— Na Ż, z kropką. A moje imię ma literę ł.\n\n— Dziękuję. Czy ma pan numer telefonu?\n\n— Tak, ale w pracy nie odbieram telefonu. Mogę wtedy czytać wiadomości na komputerze.\n\nRecepcjonistka sprawdza dane jeszcze raz. Michał widzi na ekranie swoje nazwisko. Wszystkie litery są już poprawne. Teraz może dostać kartę ucznia. Na karcie są jego imię, nazwisko i numer grupy. Nie ma na niej adresu domowego.",
+      "questions": [
+        {
+          "id": "main-idea",
+          "skill": "main-idea",
+          "question": "Co robi Michał w recepcji?",
+          "options": [
+            "Prosi o zmianę swojego nazwiska.",
+            "Podaje dane potrzebne do karty ucznia.",
+            "Wybiera nową grupę w szkole."
+          ],
+          "answer": "Podaje dane potrzebne do karty ucznia.",
+          "evidence": "Recepcjonistka sprawdza dane jeszcze raz.",
+          "explanation": "Michał podaje dane, a po ich sprawdzeniu może dostać kartę."
+        },
+        {
+          "id": "detail",
+          "skill": "detail",
+          "question": "Na jaką literę zaczyna się nazwisko Michała?",
+          "options": [
+            "Z.",
+            "Ż.",
+            "Ł."
+          ],
+          "answer": "Ż.",
+          "evidence": "Na Ż, z kropką.",
+          "explanation": "Michał wyjaśnia różnicę między Z a Ż."
+        },
+        {
+          "id": "cause",
+          "skill": "cause",
+          "question": "Dlaczego pani w recepcji jeszcze raz sprawdza nazwisko?",
+          "options": [
+            "Chce dobrze zapisać pierwszą literę.",
+            "Na karcie ma być tylko imię Michała.",
+            "Michał chce dostać nowy adres e-mail."
+          ],
+          "answer": "Chce dobrze zapisać pierwszą literę.",
+          "evidence": "Czy nazwisko zaczyna się na Z?",
+          "explanation": "Pani pyta o Z, a Michał wyjaśnia, że jego nazwisko zaczyna się na Ż."
+        },
+        {
+          "id": "inference",
+          "skill": "inference",
+          "question": "Michał jest w pracy. Jak szkoła może szybko podać mu nową godzinę lekcji?",
+          "options": [
+            "Zadzwonić do niego teraz.",
+            "Wysłać wiadomość na jego adres e-mail.",
+            "Poczekać z informacją do następnej lekcji."
+          ],
+          "answer": "Wysłać wiadomość na jego adres e-mail.",
+          "evidence": "w pracy nie odbieram telefonu. Mogę wtedy czytać wiadomości na komputerze.",
+          "explanation": "Wiadomość przeczyta na komputerze, nawet jeśli nie może odebrać telefonu."
+        },
+        {
+          "id": "vocabulary",
+          "skill": "vocabulary",
+          "question": "Co oznacza, że litery są „poprawne”?",
+          "options": [
+            "Nazwisko zapisano drugi raz.",
+            "Nazwisko zapisano bez błędu.",
+            "Nazwisko zapisano dużymi literami."
+          ],
+          "answer": "Nazwisko zapisano bez błędu.",
+          "evidence": "Wszystkie litery są już poprawne.",
+          "explanation": "Litery na ekranie są takie, jakie powinny być w nazwisku Michała."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-005",
+      "day": 5,
+      "level": "A1",
+      "genre": "opowiadanie",
+      "title": "Prezent dla babci",
+      "text": "Marta i jej brat Piotr szukają prezentu dla babci. Babcia lubi ogród, książki i herbatę. W małym sklepie na rogu jest duży wybór prezentów. Na półce stoi niebieski kubek, obok leży zielona książka, a przy kasie jest żółte pudełko z herbatą.\n\nPiotr chce kupić kubek, ale Marta wie, że babcia ma już wiele kubków. Książka też nie jest dobrym pomysłem, bo babcia już ją ma. Wybierają więc herbatę. Ma zapach malin. Sprzedawca daje im małą papierową torbę. W domu Marta robi jeszcze kartkę z życzeniami, a Piotr rysuje na niej kwiat.",
+      "questions": [
+        {
+          "id": "main-idea",
+          "skill": "main-idea",
+          "question": "O czym jest ta historia?",
+          "options": [
+            "O tym, jak babcia robi zakupy do domu.",
+            "O tym, jak rodzeństwo wybiera prezent dla babci.",
+            "O tym, jak Marta i Piotr robią własną herbatę."
+          ],
+          "answer": "O tym, jak rodzeństwo wybiera prezent dla babci.",
+          "evidence": "Marta i jej brat Piotr szukają prezentu dla babci.",
+          "explanation": "Kolejne wydarzenia pokazują wybór prezentu i przygotowanie kartki."
+        },
+        {
+          "id": "detail",
+          "skill": "detail",
+          "question": "Jakiego koloru jest kubek?",
+          "options": [
+            "Zielonego.",
+            "Żółtego.",
+            "Niebieskiego."
+          ],
+          "answer": "Niebieskiego.",
+          "evidence": "Na półce stoi niebieski kubek",
+          "explanation": "Zielona jest książka, a żółte jest pudełko z herbatą."
+        },
+        {
+          "id": "cause",
+          "skill": "cause",
+          "question": "Dlaczego Marta nie chce kupić kubka?",
+          "options": [
+            "Babcia nie lubi niebieskiego koloru.",
+            "Kubek jest za ciężki.",
+            "Babcia ma już wiele kubków."
+          ],
+          "answer": "Babcia ma już wiele kubków.",
+          "evidence": "babcia ma już wiele kubków.",
+          "explanation": "Marta uważa, że kolejny kubek jest babci niepotrzebny."
+        },
+        {
+          "id": "inference",
+          "skill": "inference",
+          "question": "Co pomaga Marcie wybrać prezent?",
+          "options": [
+            "To, że zna cenę każdego prezentu.",
+            "To, że pamięta, co babcia już ma.",
+            "To, że babcia podała jej listę zakupów."
+          ],
+          "answer": "To, że pamięta, co babcia już ma.",
+          "evidence": "Marta wie, że babcia ma już wiele kubków. Książka też nie jest dobrym pomysłem, bo babcia już ją ma.",
+          "explanation": "Marta rezygnuje z obu rzeczy, gdy przypomina sobie, co jest u babci."
+        },
+        {
+          "id": "vocabulary",
+          "skill": "vocabulary",
+          "question": "Gdzie jest sklep „na rogu”?",
+          "options": [
+            "Za domem, obok ogrodu.",
+            "W połowie ulicy, między dwoma domami.",
+            "Tam, gdzie jedna ulica spotyka się z drugą."
+          ],
+          "answer": "Tam, gdzie jedna ulica spotyka się z drugą.",
+          "evidence": "W małym sklepie na rogu jest duży wybór prezentów.",
+          "explanation": "„Na rogu” wskazuje miejsce przy skrzyżowaniu ulic."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-006",
+      "day": 6,
+      "level": "A1",
+      "genre": "opowiadanie",
+      "title": "Sąsiadka z drugiego piętra",
+      "text": "Pani Zofia mieszka sama na drugim piętrze. Ma psa o imieniu Burek. Codziennie rano wychodzi z nim na spacer. W domu Zofia lubi robić ciasto i słuchać radia. Jej nowy sąsiad, Tomek, pracuje w biurze. Czasem spotykają się na schodach i rozmawiają.\n\nDzisiaj Tomek widzi, że Zofia niesie ciężką torbę z zakupami. Pomaga jej, bo w budynku nie ma windy. Zofia zaprasza go na herbatę i kawałek ciasta. Tomek ma dziś dużo pracy, ale obiecuje przyjść w sobotę. Zofia już cieszy się na sobotę. Lubi poznawać ludzi z sąsiedztwa.",
+      "questions": [
+        {
+          "id": "main-idea",
+          "skill": "main-idea",
+          "question": "O czym przede wszystkim jest tekst?",
+          "options": [
+            "O sobotnich zakupach do biura.",
+            "O porannych spacerach Tomka z psem.",
+            "O tym, jak nowi sąsiedzi się poznają."
+          ],
+          "answer": "O tym, jak nowi sąsiedzi się poznają.",
+          "evidence": "Czasem spotykają się na schodach i rozmawiają.",
+          "explanation": "Rozmowy, pomoc z zakupami i zaproszenie pokazują, jak rozwija się ich znajomość."
+        },
+        {
+          "id": "detail",
+          "skill": "detail",
+          "question": "Gdzie mieszka Zofia?",
+          "options": [
+            "Na parterze.",
+            "Na czwartym piętrze.",
+            "Na drugim piętrze."
+          ],
+          "answer": "Na drugim piętrze.",
+          "evidence": "Pani Zofia mieszka sama na drugim piętrze.",
+          "explanation": "Drugie piętro to miejsce zamieszkania Zofii."
+        },
+        {
+          "id": "cause",
+          "skill": "cause",
+          "question": "Dlaczego Tomek pomaga Zofii z torbą?",
+          "options": [
+            "Tomek też ma coś w tej torbie.",
+            "Torba jest ciężka, a w domu nie ma windy.",
+            "Zofia szuka drogi z domu do sklepu."
+          ],
+          "answer": "Torba jest ciężka, a w domu nie ma windy.",
+          "evidence": "Zofia niesie ciężką torbę z zakupami. Pomaga jej, bo w budynku nie ma windy.",
+          "explanation": "Zofia musi wnieść ciężką torbę po schodach."
+        },
+        {
+          "id": "inference",
+          "skill": "inference",
+          "question": "Co Zofia chce pokazać, kiedy zaprasza Tomka na ciasto?",
+          "options": [
+            "Że znów potrzebuje pomocy przy zakupach.",
+            "Że chciałaby iść z nim na spacer z psem.",
+            "Że jest mu wdzięczna za pomoc."
+          ],
+          "answer": "Że jest mu wdzięczna za pomoc.",
+          "evidence": "Pomaga jej, bo w budynku nie ma windy. Zofia zaprasza go na herbatę i kawałek ciasta.",
+          "explanation": "Zofia proponuje poczęstunek zaraz po tym, jak sąsiad jej pomaga."
+        },
+        {
+          "id": "vocabulary",
+          "skill": "vocabulary",
+          "question": "Kim są tutaj ludzie „z sąsiedztwa”?",
+          "options": [
+            "Osobami, które razem pracują.",
+            "Osobami, które często przychodzą w gości.",
+            "Osobami, które mieszkają blisko."
+          ],
+          "answer": "Osobami, które mieszkają blisko.",
+          "evidence": "Lubi poznawać ludzi z sąsiedztwa.",
+          "explanation": "Tomek jest jedną z osób, które mieszkają niedaleko Zofii."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-007",
+      "day": 7,
+      "level": "A1",
+      "genre": "ogłoszenie",
+      "title": "Zaproszenie na piknik",
+      "text": "Zapraszamy wszystkich mieszkańców naszej ulicy na rodzinny piknik w niedzielę. Spotykamy się o jedenastej w małym parku obok szkoły. Na miejscu są stoły, ławki i miejsce do zabawy dla dzieci. Każda rodzina przynosi coś do jedzenia lub picia. Nie trzeba kupować biletu.\n\nO dwunastej organizujemy wspólne gry. Później jest czas na rozmowy i odpoczynek. Prosimy przynieść koc, bo jest mało ławek. Jeśli w niedzielę będzie padać, spotkamy się w sali szkolnej o tej samej godzinie. W niedzielę rano przy wejściu do szkoły powiesimy kartkę. Napiszemy na niej, gdzie się spotykamy.",
+      "questions": [
+        {
+          "id": "main-idea",
+          "skill": "main-idea",
+          "question": "Po co mieszkańcy dostają to ogłoszenie?",
+          "options": [
+            "Żeby pomóc wybrać park na piknik.",
+            "Żeby dowiedzieć się o wspólnym pikniku.",
+            "Żeby zapisać dzieci na gry w szkole."
+          ],
+          "answer": "Żeby dowiedzieć się o wspólnym pikniku.",
+          "evidence": "Zapraszamy wszystkich mieszkańców naszej ulicy na rodzinny piknik w niedzielę.",
+          "explanation": "Organizatorzy zapraszają mieszkańców i podają szczegóły spotkania."
+        },
+        {
+          "id": "detail",
+          "skill": "detail",
+          "question": "O której zaczyna się spotkanie?",
+          "options": [
+            "O dziewiątej.",
+            "O dwunastej.",
+            "O jedenastej."
+          ],
+          "answer": "O jedenastej.",
+          "evidence": "Spotykamy się o jedenastej",
+          "explanation": "Gry zaczynają się o dwunastej, już po rozpoczęciu pikniku."
+        },
+        {
+          "id": "cause",
+          "skill": "cause",
+          "question": "Dlaczego warto przynieść koc?",
+          "options": [
+            "Na kocach będą leżeć rzeczy do gier.",
+            "Nie wszyscy będą mogli usiąść na ławkach.",
+            "Na jedzenie nie będzie żadnego stołu."
+          ],
+          "answer": "Nie wszyscy będą mogli usiąść na ławkach.",
+          "evidence": "Prosimy przynieść koc, bo jest mało ławek.",
+          "explanation": "Gdy zabraknie miejsc siedzących, można usiąść na kocu."
+        },
+        {
+          "id": "inference",
+          "skill": "inference",
+          "question": "Rodzina wychodzi z domu o dziesiątej. Nie wie, czy piknik będzie w parku. Dokąd powinna najpierw pójść?",
+          "options": [
+            "Pod drzwi szkoły, żeby sprawdzić wiadomość.",
+            "Do parku, żeby znaleźć organizatora gier.",
+            "Do sali szkolnej, żeby poszukać innych rodzin."
+          ],
+          "answer": "Pod drzwi szkoły, żeby sprawdzić wiadomość.",
+          "evidence": "przy wejściu do szkoły powiesimy kartkę. Napiszemy na niej, gdzie się spotykamy.",
+          "explanation": "Rodzina może najpierw sprawdzić kartkę i dopiero potem iść tam, gdzie będzie piknik."
+        },
+        {
+          "id": "vocabulary",
+          "skill": "vocabulary",
+          "question": "Co oznacza tutaj „na miejscu”?",
+          "options": [
+            "Tam, gdzie ma być piknik.",
+            "W domu każdej rodziny.",
+            "Po drodze z domu do parku."
+          ],
+          "answer": "Tam, gdzie ma być piknik.",
+          "evidence": "Spotykamy się o jedenastej w małym parku obok szkoły. Na miejscu są stoły, ławki i miejsce do zabawy dla dzieci.",
+          "explanation": "Stoły i ławki są w parku, czyli w miejscu pikniku."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-008",
+      "day": 8,
+      "level": "A1",
+      "genre": "ogłoszenie",
+      "title": "Mieszkanie z ogrodem",
+      "text": "Do wynajęcia jest mieszkanie na parterze małego domu. Są w nim dwa pokoje, kuchnia i łazienka. Jeden pokój jest duży i jasny, drugi jest mały. Przy domu jest ogród. Można tam pić kawę, czytać książki albo odpoczywać po pracy.\n\nWłaściciel mieszka na pierwszym piętrze. Lubi zwierzęta, więc pies lub kot nie stanowi problemu. W pobliżu jest sklep i przystanek autobusowy. Nie ma garażu, ale rower można zostawić w zamkniętej szopie. Mieszkanie jest wolne od pierwszego grudnia. Mieszkanie można obejrzeć w środę lub piątek po godzinie siedemnastej.",
+      "questions": [
+        {
+          "id": "main-idea",
+          "skill": "main-idea",
+          "question": "Co można zrobić dzięki temu ogłoszeniu?",
+          "options": [
+            "Wynająć sam ogród przy domu.",
+            "Znaleźć mieszkanie do wynajęcia.",
+            "Znaleźć dom do kupienia."
+          ],
+          "answer": "Znaleźć mieszkanie do wynajęcia.",
+          "evidence": "Do wynajęcia jest mieszkanie na parterze małego domu.",
+          "explanation": "Ogłoszenie opisuje mieszkanie i zaprasza osoby, które chcą je obejrzeć."
+        },
+        {
+          "id": "detail",
+          "skill": "detail",
+          "question": "Ile pokoi ma mieszkanie?",
+          "options": [
+            "Trzy.",
+            "Jeden.",
+            "Dwa."
+          ],
+          "answer": "Dwa.",
+          "evidence": "Są w nim dwa pokoje",
+          "explanation": "Oprócz dwóch pokoi są kuchnia i łazienka."
+        },
+        {
+          "id": "cause",
+          "skill": "cause",
+          "question": "Dlaczego można tu mieszkać z psem?",
+          "options": [
+            "Pies może mieszkać tylko w szopie.",
+            "Właściciel ma dla psa osobny pokój.",
+            "Właściciel lubi zwierzęta."
+          ],
+          "answer": "Właściciel lubi zwierzęta.",
+          "evidence": "Lubi zwierzęta, więc pies lub kot nie stanowi problemu.",
+          "explanation": "Właściciel zgadza się na zwierzęta w mieszkaniu."
+        },
+        {
+          "id": "inference",
+          "skill": "inference",
+          "question": "Kto ma wolny czas, kiedy można obejrzeć mieszkanie?",
+          "options": [
+            "Ewa, która ma wolny piątkowy wieczór.",
+            "Jan, który ma czas tylko w sobotę po południu.",
+            "Ania, która ma czas tylko w środę rano."
+          ],
+          "answer": "Ewa, która ma wolny piątkowy wieczór.",
+          "evidence": "Mieszkanie można obejrzeć w środę lub piątek po godzinie siedemnastej.",
+          "explanation": "Piątkowy wieczór Ewy pasuje do podanego terminu."
+        },
+        {
+          "id": "vocabulary",
+          "skill": "vocabulary",
+          "question": "Co oznacza „mieszkanie jest wolne od pierwszego grudnia”?",
+          "options": [
+            "Od tego dnia nie trzeba za nie płacić.",
+            "Od tego dnia można je wynająć.",
+            "Tego dnia można je kupić."
+          ],
+          "answer": "Od tego dnia można je wynająć.",
+          "evidence": "Mieszkanie jest wolne od pierwszego grudnia.",
+          "explanation": "„Wolne” określa tu datę, od której mieszkanie jest dostępne dla najemcy."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-009",
+      "day": 9,
+      "level": "A1",
+      "genre": "wiadomość",
+      "title": "Przerwa w dostawie wody",
+      "text": "Drodzy sąsiedzi, w czwartek rano w naszym budynku będzie pracował hydraulik. Od dziewiątej do jedenastej nie będzie zimnej wody. Ciepłej wody też może przez ten czas nie być. Prosimy wcześniej przygotować wodę do picia i gotowania.\n\nHydraulik będzie pracował w piwnicy, więc nie trzeba zostawiać kluczy do mieszkań. Po jedenastej woda powinna już być. Jeśli nadal nie będzie wody, prosimy zadzwonić do biura. Numer telefonu jest na tablicy przy drzwiach do budynku. Przepraszamy za kłopot i dziękujemy za cierpliwość. Wiosną znów sprawdzimy rury w piwnicy.",
+      "questions": [
+        {
+          "id": "main-idea",
+          "skill": "main-idea",
+          "question": "Po co sąsiedzi dostają tę wiadomość?",
+          "options": [
+            "Żeby wiedzieli, kiedy zabraknie wody.",
+            "Żeby wybrali nową datę naprawy.",
+            "Żeby umówili wizytę hydraulika w mieszkaniu."
+          ],
+          "answer": "Żeby wiedzieli, kiedy zabraknie wody.",
+          "evidence": "Od dziewiątej do jedenastej nie będzie zimnej wody.",
+          "explanation": "Wiadomość podaje czas przerwy i wyjaśnia, jak się przygotować."
+        },
+        {
+          "id": "detail",
+          "skill": "detail",
+          "question": "Kiedy nie będzie zimnej wody?",
+          "options": [
+            "W piątek od dziewiątej do jedenastej.",
+            "W czwartek od dziewiątej do jedenastej.",
+            "W czwartek po siedemnastej."
+          ],
+          "answer": "W czwartek od dziewiątej do jedenastej.",
+          "evidence": "w czwartek rano w naszym budynku będzie pracował hydraulik. Od dziewiątej do jedenastej nie będzie zimnej wody.",
+          "explanation": "Zapowiedziano dwugodzinną przerwę w czwartek rano."
+        },
+        {
+          "id": "cause",
+          "skill": "cause",
+          "question": "Dlaczego nie trzeba zostawiać kluczy do mieszkań?",
+          "options": [
+            "Wszyscy sąsiedzi będą w domu.",
+            "Hydraulik będzie pracował w piwnicy.",
+            "Hydraulik ma klucze od mieszkań."
+          ],
+          "answer": "Hydraulik będzie pracował w piwnicy.",
+          "evidence": "Hydraulik będzie pracował w piwnicy, więc nie trzeba zostawiać kluczy do mieszkań.",
+          "explanation": "Hydraulik potrzebuje dostępu do piwnicy."
+        },
+        {
+          "id": "inference",
+          "skill": "inference",
+          "question": "Ola chce ugotować zupę w czwartek o dziesiątej. Kiedy najlepiej nalać wodę do garnka?",
+          "options": [
+            "Przed dziewiątą tego dnia.",
+            "O wpół do jedenastej, przed końcem naprawy.",
+            "O dziesiątej, kiedy zacznie gotować."
+          ],
+          "answer": "Przed dziewiątą tego dnia.",
+          "evidence": "Od dziewiątej do jedenastej nie będzie zimnej wody.",
+          "explanation": "Ola potrzebuje wody w czasie przerwy, więc powinna nalać ją wcześniej."
+        },
+        {
+          "id": "vocabulary",
+          "skill": "vocabulary",
+          "question": "Co oznacza „kłopot” w ostatniej części wiadomości?",
+          "options": [
+            "Problem dla mieszkańców.",
+            "Zmianę daty spotkania.",
+            "Prośbę o pomoc."
+          ],
+          "answer": "Problem dla mieszkańców.",
+          "evidence": "Przepraszamy za kłopot i dziękujemy za cierpliwość.",
+          "explanation": "Autorzy przepraszają, bo brak wody utrudni mieszkańcom zwykłe czynności."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-010",
+      "day": 10,
+      "level": "A1",
+      "genre": "dialog",
+      "title": "Pokój dla studenta",
+      "text": "— Dzień dobry, czy pokój jest jeszcze wolny?\n\n— Tak. Pokój ma duże okno, biurko i szafę. Kuchnia i łazienka są wspólne.\n\n— Często wracam późno z zajęć. Czy mogę wtedy coś ugotować?\n\n— Oczywiście. Tylko po dziesiątej wieczorem prosimy o ciszę.\n\n— Rozumiem. Jestem studentem i potrzebuję internetu do nauki. Czy w pokoju działa internet?\n\n— Tak, internet jest w cenie. Woda i prąd są rozliczane osobno.\n\n— A czy blisko jest przystanek autobusu do centrum?\n\n— Przystanek jest obok domu. Autobus jedzie około piętnastu minut.\n\n— Bardzo dobrze. Czy mogę zobaczyć pokój jutro?\n\n— Tak, proszę przyjść po południu.",
+      "questions": [
+        {
+          "id": "main-idea",
+          "skill": "main-idea",
+          "question": "O czym jest ta rozmowa?",
+          "options": [
+            "O tym, jak dojechać z uczelni na zajęcia.",
+            "O tym, jak znaleźć drugą osobę do pokoju.",
+            "O tym, co trzeba wiedzieć przed wynajęciem pokoju."
+          ],
+          "answer": "O tym, co trzeba wiedzieć przed wynajęciem pokoju.",
+          "evidence": "Dzień dobry, czy pokój jest jeszcze wolny?",
+          "explanation": "Student pyta między innymi o wyposażenie, opłaty, zasady i możliwość obejrzenia pokoju."
+        },
+        {
+          "id": "detail",
+          "skill": "detail",
+          "question": "Co jest w cenie pokoju?",
+          "options": [
+            "Prąd.",
+            "Woda.",
+            "Internet."
+          ],
+          "answer": "Internet.",
+          "evidence": "internet jest w cenie.",
+          "explanation": "Za wodę i prąd płaci się osobno."
+        },
+        {
+          "id": "cause",
+          "skill": "cause",
+          "question": "Dlaczego student pyta o gotowanie wieczorem?",
+          "options": [
+            "Często późno wraca z zajęć.",
+            "Kuchnia jest rano zamknięta.",
+            "Chce przygotowywać posiłki dla innych osób."
+          ],
+          "answer": "Często późno wraca z zajęć.",
+          "evidence": "Często wracam późno z zajęć. Czy mogę wtedy coś ugotować?",
+          "explanation": "Chce wiedzieć, czy po późnym powrocie będzie mógł zrobić sobie posiłek."
+        },
+        {
+          "id": "inference",
+          "skill": "inference",
+          "question": "Student wraca o jedenastej wieczorem. Który plan pasuje do zasad domu?",
+          "options": [
+            "Zaprosić kolegów na głośną rozmowę w kuchni.",
+            "Włączyć głośną muzykę w swoim pokoju.",
+            "Po cichu przygotować kolację w kuchni."
+          ],
+          "answer": "Po cichu przygotować kolację w kuchni.",
+          "evidence": "Oczywiście. Tylko po dziesiątej wieczorem prosimy o ciszę.",
+          "explanation": "Wolno gotować wieczorem, ale o tej godzinie trzeba już zachować ciszę."
+        },
+        {
+          "id": "vocabulary",
+          "skill": "vocabulary",
+          "question": "Co znaczy, że woda i prąd są „rozliczane osobno”?",
+          "options": [
+            "Płaci za nie szkoła studenta.",
+            "Płaci się za nie tylko w cenie pokoju.",
+            "Trzeba za nie zapłacić oprócz ceny pokoju."
+          ],
+          "answer": "Trzeba za nie zapłacić oprócz ceny pokoju.",
+          "evidence": "internet jest w cenie. Woda i prąd są rozliczane osobno.",
+          "explanation": "Internet należy do ceny pokoju, a opłaty za wodę i prąd są dodatkowe."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-011",
+      "day": 11,
+      "level": "A1",
+      "genre": "instrukcja",
+      "title": "Wspólna kuchnia",
+      "text": "W mieszkaniu przy ulicy Krótkiej są trzy pokoje. Mieszkają tu trzy osoby: Julia, Bartek i Nina. Każda osoba ma swój pokój, ale kuchnia jest wspólna. Na półkach są talerze, kubki i garnki. W lodówce każdy ma swoją półkę na jedzenie.\n\nNa drzwiach kuchni jest kartka z zasadami. Po gotowaniu trzeba umyć naczynia i wytrzeć stół. W sobotę jedna osoba sprząta kuchnię. W następną sobotę robi to ktoś inny. Jeśli w domu są goście, trzeba o tym powiedzieć innym. Dzięki tym prostym zasadom wszystkim dobrze się tu mieszka.",
+      "questions": [
+        {
+          "id": "main-idea",
+          "skill": "main-idea",
+          "question": "O czym opowiada cały tekst?",
+          "options": [
+            "O tym, jak mieszkańcy korzystają z jednej kuchni.",
+            "O tym, jak mieszkańcy urządzają swoje pokoje.",
+            "O tym, co mieszkańcy zwykle jedzą razem."
+          ],
+          "answer": "O tym, jak mieszkańcy korzystają z jednej kuchni.",
+          "evidence": "Każda osoba ma swój pokój, ale kuchnia jest wspólna.",
+          "explanation": "Tekst opisuje wspólną kuchnię i zasady dla trzech mieszkańców."
+        },
+        {
+          "id": "detail",
+          "skill": "detail",
+          "question": "Gdzie każdy trzyma swoje jedzenie?",
+          "options": [
+            "Na swojej półce w lodówce.",
+            "Na osobnej półce w swoim pokoju.",
+            "Na jednej wspólnej półce przy stole."
+          ],
+          "answer": "Na swojej półce w lodówce.",
+          "evidence": "W lodówce każdy ma swoją półkę na jedzenie.",
+          "explanation": "Każdy z mieszkańców ma w lodówce własne miejsce."
+        },
+        {
+          "id": "cause",
+          "skill": "cause",
+          "question": "Dlaczego mieszkańcy mają te zasady?",
+          "options": [
+            "Chcą, żeby wszyscy jedli o tej samej porze.",
+            "Chcą, żeby wszystkim dobrze się mieszkało.",
+            "Chcą, żeby co dzień gotowała inna osoba."
+          ],
+          "answer": "Chcą, żeby wszystkim dobrze się mieszkało.",
+          "evidence": "Dzięki tym prostym zasadom wszystkim dobrze się tu mieszka.",
+          "explanation": "Zasady pomagają trzem osobom zgodnie korzystać z kuchni."
+        },
+        {
+          "id": "inference",
+          "skill": "inference",
+          "question": "Nina właśnie zrobiła zupę. Stół jest czysty, a garnek jest brudny. Co Nina powinna teraz zrobić?",
+          "options": [
+            "Zostawić garnek dla osoby, która sprząta w sobotę.",
+            "Poczekać, aż ktoś jeszcze zrobi sobie zupę.",
+            "Umyć garnek, zanim wyjdzie z kuchni."
+          ],
+          "answer": "Umyć garnek, zanim wyjdzie z kuchni.",
+          "evidence": "Po gotowaniu trzeba umyć naczynia i wytrzeć stół.",
+          "explanation": "Garnek też jest naczyniem. Nina skończyła gotować, więc powinna go umyć."
+        },
+        {
+          "id": "vocabulary",
+          "skill": "vocabulary",
+          "question": "Co oznacza tutaj słowo „wspólna”?",
+          "options": [
+            "Mieszkańcy mogą gotować tylko wtedy, gdy są razem.",
+            "Wszyscy mieszkańcy mogą korzystać z tej samej kuchni.",
+            "Każda osoba ma taką samą kuchnię w swoim pokoju."
+          ],
+          "answer": "Wszyscy mieszkańcy mogą korzystać z tej samej kuchni.",
+          "evidence": "Każda osoba ma swój pokój, ale kuchnia jest wspólna.",
+          "explanation": "Pokoje są osobne, a z jednej kuchni korzystają trzy osoby."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-012",
+      "day": 12,
+      "level": "A1",
+      "genre": "opis",
+      "title": "Mój ulubiony pokój",
+      "text": "Moje mieszkanie jest na trzecim piętrze. Najbardziej lubię salon. To jasny pokój z dwoma oknami. Przy ścianie stoi wygodna sofa, a obok niej mały stolik. Na stoliku jest lampa. Po drugiej stronie pokoju stoi regał z książkami, a obok niego kilka zielonych roślin.\n\nRano w salonie jest dużo światła. Wtedy piję tam kawę i czytam wiadomości. Wieczorem nie włączam dużej lampy, tylko małą lampę przy sofie. Lubię łagodne światło. Kiedy przychodzą znajomi, siadamy razem przy stole w kuchni, ponieważ w salonie jest za mało miejsca dla większej grupy.",
+      "questions": [
+        {
+          "id": "main-idea",
+          "skill": "main-idea",
+          "question": "O czym jest cały tekst?",
+          "options": [
+            "Swoje nowe meble i miejsca, gdzie je kupuje.",
+            "Swój ulubiony pokój i to, co w nim robi.",
+            "Swoją kuchnię i posiłki dla gości."
+          ],
+          "answer": "Swój ulubiony pokój i to, co w nim robi.",
+          "evidence": "Najbardziej lubię salon.",
+          "explanation": "Dalej poznajemy wygląd salonu i sposób, w jaki ta osoba spędza w nim czas."
+        },
+        {
+          "id": "detail",
+          "skill": "detail",
+          "question": "Co stoi tuż obok sofy?",
+          "options": [
+            "Duży stół z kuchni.",
+            "Regał z książkami.",
+            "Mały stolik."
+          ],
+          "answer": "Mały stolik.",
+          "evidence": "Przy ścianie stoi wygodna sofa, a obok niej mały stolik.",
+          "explanation": "Stolik stoi przy sofie, a regał jest po drugiej stronie pokoju."
+        },
+        {
+          "id": "cause",
+          "skill": "cause",
+          "question": "Dlaczego znajomi siadają w kuchni?",
+          "options": [
+            "W salonie jest za mało miejsca dla całej grupy.",
+            "W salonie wieczorem jest za ciemno.",
+            "W kuchni jest więcej krzeseł przy oknie."
+          ],
+          "answer": "W salonie jest za mało miejsca dla całej grupy.",
+          "evidence": "w salonie jest za mało miejsca dla większej grupy.",
+          "explanation": "O wyborze kuchni decyduje miejsce dla gości."
+        },
+        {
+          "id": "inference",
+          "skill": "inference",
+          "question": "Jutro przyjdzie pięcioro znajomych na kawę. Gdzie najlepiej postawić filiżanki?",
+          "options": [
+            "Na stoliku przy sofie.",
+            "Na stole w kuchni.",
+            "Na regale przy książkach."
+          ],
+          "answer": "Na stole w kuchni.",
+          "evidence": "Kiedy przychodzą znajomi, siadamy razem przy stole w kuchni",
+          "explanation": "Pięć osób to większa grupa, więc najlepiej przygotować miejsce na kawę w kuchni."
+        },
+        {
+          "id": "vocabulary",
+          "skill": "vocabulary",
+          "question": "Gdzie stoi regał, jeśli jest „po drugiej stronie pokoju”?",
+          "options": [
+            "Za drzwiami, w pokoju obok salonu.",
+            "Tuż obok sofy, przy tej samej ścianie.",
+            "W salonie, naprzeciwko miejsca z sofą."
+          ],
+          "answer": "W salonie, naprzeciwko miejsca z sofą.",
+          "evidence": "Po drugiej stronie pokoju stoi regał z książkami",
+          "explanation": "Chodzi o drugi koniec tego samego pokoju."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-013",
+      "day": 13,
+      "level": "A1",
+      "genre": "opowiadanie",
+      "title": "Przeprowadzka Oli",
+      "text": "Ola zmienia mieszkanie. Jej stare mieszkanie jest daleko od pracy, a nowe znajduje się przy stacji metra. W sobotę przyjeżdża brat Oli i pomaga jej przenosić rzeczy. Książki są w małych kartonach, ubrania w dużych torbach. Na każdym kartonie jest napis, na przykład „kuchnia” albo „łazienka”.\n\nOla chce najpierw przygotować kuchnię, żeby można było zrobić herbatę i coś zjeść. Potem ustawia łóżko i biurko. Nie kupuje dziś nowych mebli, bo chce zobaczyć, ile miejsca ma w pokojach. Wieczorem jest zmęczona, ale zadowolona. Teraz droga do pracy zajmie jej mniej czasu.",
+      "questions": [
+        {
+          "id": "main-idea",
+          "skill": "main-idea",
+          "question": "O czym opowiada tekst?",
+          "options": [
+            "O wyborze mebli do starego mieszkania.",
+            "O sobotniej wizycie Oli u brata.",
+            "O przeprowadzce Oli do nowego mieszkania."
+          ],
+          "answer": "O przeprowadzce Oli do nowego mieszkania.",
+          "evidence": "Ola zmienia mieszkanie.",
+          "explanation": "Tekst pokazuje, jak Ola pakuje i ustawia rzeczy w nowym domu."
+        },
+        {
+          "id": "detail",
+          "skill": "detail",
+          "question": "Kto pomaga Oli przenosić rzeczy?",
+          "options": [
+            "Jej brat.",
+            "Jej szef.",
+            "Jej sąsiadka."
+          ],
+          "answer": "Jej brat.",
+          "evidence": "przyjeżdża brat Oli i pomaga jej przenosić rzeczy.",
+          "explanation": "W sobotę pomaga jej brat."
+        },
+        {
+          "id": "cause",
+          "skill": "cause",
+          "question": "Dlaczego Ola zaczyna od kuchni?",
+          "options": [
+            "Chce zrobić herbatę i coś zjeść.",
+            "Chce tam rozpakować wszystkie książki.",
+            "Chce od razu ustawić tam nowe meble."
+          ],
+          "answer": "Chce zrobić herbatę i coś zjeść.",
+          "evidence": "Ola chce najpierw przygotować kuchnię, żeby można było zrobić herbatę i coś zjeść.",
+          "explanation": "Najpierw chce mieć miejsce, gdzie przygotuje jedzenie i picie."
+        },
+        {
+          "id": "inference",
+          "skill": "inference",
+          "question": "Ola nadal ma zaczynać pracę o tej samej porze. Co będzie mogła robić po przeprowadzce?",
+          "options": [
+            "Wracać po pracy pieszo razem z bratem.",
+            "Wychodzić z domu trochę później.",
+            "Chodzić do pracy pieszo w kilka minut."
+          ],
+          "answer": "Wychodzić z domu trochę później.",
+          "evidence": "Teraz droga do pracy zajmie jej mniej czasu.",
+          "explanation": "Skoro droga będzie krótsza, Ola może wyjść później i nadal zdążyć do pracy."
+        },
+        {
+          "id": "vocabulary",
+          "skill": "vocabulary",
+          "question": "Co oznacza tutaj „przenosić rzeczy”?",
+          "options": [
+            "Otwierać torby i układać rzeczy na półkach.",
+            "Brać rzeczy i zanosić je w inne miejsce.",
+            "Wybierać rzeczy, które chce się komuś oddać."
+          ],
+          "answer": "Brać rzeczy i zanosić je w inne miejsce.",
+          "evidence": "pomaga jej przenosić rzeczy.",
+          "explanation": "Przy przeprowadzce brat pomaga Oli nosić rzeczy z jednego miejsca do drugiego."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-014",
+      "day": 14,
+      "level": "A1",
+      "genre": "opowiadanie",
+      "title": "Rzadziej samochodem",
+      "text": "Paweł i Magda mieszkają w domu na spokojnej ulicy. Wcześniej często jeździli samochodem, ale teraz chcą częściej chodzić pieszo i jeździć rowerem. Niedaleko domu są szkoła, apteka i dwa sklepy. Magda może dojechać do pracy autobusem. Paweł pracuje blisko stacji kolejowej.\n\nW garażu stoją dwa rowery. Magda jeździ rowerem na małe zakupy, a Paweł w weekendy jeździ do parku. Kiedy muszą kupić coś dużego, zamawiają dostawę do domu. Dzięki temu nie potrzebują codziennie samochodu. Nadal korzystają z niego podczas dłuższych wyjazdów, na przykład kiedy odwiedzają rodzinę poza miastem.",
+      "questions": [
+        {
+          "id": "main-idea",
+          "skill": "main-idea",
+          "question": "O czym przede wszystkim jest tekst?",
+          "options": [
+            "O tym, jak para planuje wyjazd do rodziny.",
+            "O tym, jak para rzadziej jeździ samochodem.",
+            "O tym, jak para wybiera nowe rowery."
+          ],
+          "answer": "O tym, jak para rzadziej jeździ samochodem.",
+          "evidence": "Wcześniej często jeździli samochodem, ale teraz chcą częściej chodzić pieszo i jeździć rowerem.",
+          "explanation": "Zakupy, dojazdy i wyjazdy pokazują, kiedy para potrzebuje samochodu."
+        },
+        {
+          "id": "detail",
+          "skill": "detail",
+          "question": "Co stoi w garażu?",
+          "options": [
+            "Jeden rower.",
+            "Dwa rowery.",
+            "Trzy rowery."
+          ],
+          "answer": "Dwa rowery.",
+          "evidence": "W garażu stoją dwa rowery.",
+          "explanation": "W garażu jest rower dla każdej z dwóch osób."
+        },
+        {
+          "id": "cause",
+          "skill": "cause",
+          "question": "Po co zamawiają dostawę dużych rzeczy?",
+          "options": [
+            "Żeby ktoś zostawił je u rodziny.",
+            "Żeby ktoś przywiózł je do ich domu.",
+            "Żeby odebrać je po pracy na stacji."
+          ],
+          "answer": "Żeby ktoś przywiózł je do ich domu.",
+          "evidence": "Kiedy muszą kupić coś dużego, zamawiają dostawę do domu.",
+          "explanation": "Dzięki dostawie sami nie muszą wieźć dużych rzeczy."
+        },
+        {
+          "id": "inference",
+          "skill": "inference",
+          "question": "Magda potrzebuje tylko chleba. Jak najłatwiej zrobi zakupy bez samochodu?",
+          "options": [
+            "Pojedzie rowerem do sklepu blisko domu.",
+            "Pojedzie pociągiem do rodziny.",
+            "Pojedzie autobusem do biura po zakupy."
+          ],
+          "answer": "Pojedzie rowerem do sklepu blisko domu.",
+          "evidence": "Magda jeździ rowerem na małe zakupy",
+          "explanation": "Chleb to mały zakup, a niedaleko domu są sklepy."
+        },
+        {
+          "id": "vocabulary",
+          "skill": "vocabulary",
+          "question": "Co znaczy „dostawa do domu”?",
+          "options": [
+            "Klient przynosi ze sklepu torby do domu.",
+            "Klient zamawia towar i odbiera go w sklepie.",
+            "Ktoś przywozi klientowi towar ze sklepu."
+          ],
+          "answer": "Ktoś przywozi klientowi towar ze sklepu.",
+          "evidence": "zamawiają dostawę do domu.",
+          "explanation": "Kupujący czekają w domu, aż ktoś przywiezie ich zakupy."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-029",
+      "day": 29,
+      "level": "A2",
+      "genre": "opowiadanie",
+      "title": "Podróż z planem i bez planu",
+      "text": "Kiedy Karol przygotowuje się do wyjazdu, zwykle robi bardzo dokładny plan. Sprawdza połączenia kolejowe, szuka noclegu i zapisuje adresy ciekawych miejsc. Tym razem postanowił zrobić inaczej. Razem z przyjaciółką kupili bilety do Wrocławia, ale zaplanowali tylko pierwszy wieczór. Mieli zarezerwowany pokój w centrum, żeby nie tracić czasu na szukanie hotelu po przyjeździe.\n\nW sobotę rano wyszli bez mapy. Po drodze znaleźli małą piekarnię, porozmawiali ze sprzedawcą i dowiedzieli się o wystawie fotografii. Nie było jej w ich przewodniku. Spędzili tam prawie dwie godziny. Później chcieli odwiedzić ogród botaniczny, lecz zaczął padać deszcz. Zamiast tego poszli do muzeum. W muzeum było ciepło i spokojnie.\n\nKarol zauważył, że nie wszystko trzeba wcześniej planować. Rezerwacja noclegu była przydatna, ale wolny czas pozwolił im odkryć coś nowego. Na następny wyjazd zamierza znów przygotować podstawowy plan, a o reszcie zdecydować na miejscu.",
+      "questions": [
+        {
+          "id": "main-idea",
+          "skill": "main-idea",
+          "question": "Jaka myśl najlepiej podsumowuje podróż Karola?",
+          "options": [
+            "Najlepiej najpierw zwiedzać, a noclegu szukać wieczorem.",
+            "Warto zaplanować część wyjazdu i mieć czas na nowe pomysły.",
+            "Przewodnik wystarcza do poznania miasta."
+          ],
+          "answer": "Warto zaplanować część wyjazdu i mieć czas na nowe pomysły.",
+          "evidence": "Rezerwacja noclegu była przydatna, ale wolny czas pozwolił im odkryć coś nowego.",
+          "explanation": "Karol docenił zarówno gotową rezerwację, jak i swobodę wyboru atrakcji."
+        },
+        {
+          "id": "detail",
+          "skill": "detail",
+          "question": "Od kogo podróżni dowiedzieli się o wystawie?",
+          "options": [
+            "Od kierowcy autobusu.",
+            "Od pracownika hotelu.",
+            "Od sprzedawcy w piekarni."
+          ],
+          "answer": "Od sprzedawcy w piekarni.",
+          "evidence": "porozmawiali ze sprzedawcą i dowiedzieli się o wystawie fotografii.",
+          "explanation": "O wystawie usłyszeli podczas wizyty w piekarni."
+        },
+        {
+          "id": "cause",
+          "skill": "cause",
+          "question": "Dlaczego poszli do muzeum zamiast do ogrodu?",
+          "options": [
+            "Na zwiedzanie ogrodu trzeba było mieć rezerwację.",
+            "Zaczęło padać.",
+            "Wystawa fotografii trwała za długo."
+          ],
+          "answer": "Zaczęło padać.",
+          "evidence": "Później chcieli odwiedzić ogród botaniczny, lecz zaczął padać deszcz.",
+          "explanation": "Deszcz skłonił ich do wybrania muzeum."
+        },
+        {
+          "id": "inference",
+          "skill": "inference",
+          "question": "Co najłatwiej byłoby im przegapić, gdyby wybierali miejsca tylko z przewodnika?",
+          "options": [
+            "Dworzec, na który przyjechali.",
+            "Wystawę poleconą w piekarni.",
+            "Ich hotel w centrum."
+          ],
+          "answer": "Wystawę poleconą w piekarni.",
+          "evidence": "dowiedzieli się o wystawie fotografii. Nie było jej w ich przewodniku.",
+          "explanation": "Tylko w przypadku wystawy wiadomo, że przewodnik jej nie wymieniał."
+        },
+        {
+          "id": "vocabulary",
+          "skill": "vocabulary",
+          "question": "Co oznacza, że Karol chce o reszcie planu „zdecydować na miejscu”?",
+          "options": [
+            "Chce wybrać część zajęć dopiero podczas podróży.",
+            "Chce przed wyjazdem poprosić hotel o plan wycieczki.",
+            "Chce zmienić datę wyjazdu po kupieniu biletów."
+          ],
+          "answer": "Chce wybrać część zajęć dopiero podczas podróży.",
+          "evidence": "a o reszcie zdecydować na miejscu.",
+          "explanation": "Nie ustali wcześniej wszystkich atrakcji. Wybierze je już podczas wyjazdu."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-050",
+      "day": 50,
+      "level": "A2",
+      "genre": "e-mail",
+      "title": "Kurs, który pasuje do mojego dnia",
+      "text": "Dzień dobry,\n\nchciałabym zapisać się na kurs języka polskiego na poziomie A2. Pracuję do godziny szesnastej, dlatego interesują mnie zajęcia wieczorowe. Na stronie szkoły widzę dwie grupy: we wtorki i czwartki oraz w poniedziałki i środy. Druga grupa jest dla mnie wygodniejsza, ponieważ w czwartki chodzę na basen.\n\nMam już za sobą podstawowy kurs, ale nadal trudno mi rozumieć dłuższe teksty. Chciałabym też więcej mówić po polsku, szczególnie w pracy i w urzędzie. Czy na zajęciach uczniowie rozmawiają w parach? Czy nauczyciel sprawdza krótkie zadania pisemne? Nie zależy mi tylko na nauce reguł gramatycznych.\n\nMam jeszcze pytanie o materiały. Czy podręcznik jest wliczony w cenę kursu? Jeśli nie, proszę o informację, gdzie można go kupić. W przyszłym tygodniu mogę przyjść do szkoły na rozmowę i test poziomujący. Proszę o odpowiedź e-mailem, ponieważ w godzinach pracy rzadko odbieram telefon.\n\nZ poważaniem\nNatalia Kowal",
+      "questions": [
+        {
+          "id": "main-idea",
+          "skill": "main-idea",
+          "question": "Po co Natalia pisze do szkoły?",
+          "options": [
+            "Chce poprosić nauczyciela o wynik napisanego testu.",
+            "Chce zapisać się na odpowiedni kurs i pyta o zajęcia.",
+            "Chce zmienić grupę na kursie, na który już chodzi."
+          ],
+          "answer": "Chce zapisać się na odpowiedni kurs i pyta o zajęcia.",
+          "evidence": "chciałabym zapisać się na kurs języka polskiego na poziomie A2.",
+          "explanation": "Natalia wybiera zajęcia i chce poznać szczegóły przed zapisem."
+        },
+        {
+          "id": "detail",
+          "skill": "detail",
+          "question": "W które dni Natalia woli chodzić na zajęcia?",
+          "options": [
+            "W poniedziałki i środy.",
+            "We wtorki i czwartki.",
+            "W poniedziałki i czwartki."
+          ],
+          "answer": "W poniedziałki i środy.",
+          "evidence": "w poniedziałki i środy. Druga grupa jest dla mnie wygodniejsza",
+          "explanation": "Natalia wskazuje drugą z dwóch grup."
+        },
+        {
+          "id": "cause",
+          "skill": "cause",
+          "question": "Dlaczego Natalia prosi o odpowiedź e-mailem?",
+          "options": [
+            "W pracy rzadko odbiera telefon.",
+            "Chce dostać pisemne zadanie przed testem.",
+            "Potrzebuje wiadomości, żeby kupić bilet na basen."
+          ],
+          "answer": "W pracy rzadko odbiera telefon.",
+          "evidence": "ponieważ w godzinach pracy rzadko odbieram telefon.",
+          "explanation": "E-mail jest dla niej wygodniejszy ze względu na pracę."
+        },
+        {
+          "id": "inference",
+          "skill": "inference",
+          "question": "Który opis zajęć najlepiej pasuje do potrzeb Natalii?",
+          "options": [
+            "Uczymy się słów z podręcznika i samodzielnie tłumaczymy zdania.",
+            "Czytamy i piszemy krótkie teksty oraz rozmawiamy w parach.",
+            "Słuchamy wykładów o gramatyce i robimy testy z reguł."
+          ],
+          "answer": "Czytamy i piszemy krótkie teksty oraz rozmawiamy w parach.",
+          "evidence": "Chciałabym też więcej mówić po polsku, szczególnie w pracy i w urzędzie. Czy na zajęciach uczniowie rozmawiają w parach? Czy nauczyciel sprawdza krótkie zadania pisemne?",
+          "explanation": "Natalia chce ćwiczyć różne umiejętności, w tym rozmowę i pisanie."
+        },
+        {
+          "id": "vocabulary",
+          "skill": "vocabulary",
+          "question": "Co znaczy, że podręcznik jest „wliczony w cenę kursu”?",
+          "options": [
+            "Uczestnik może kupić podręcznik w szkole po niższej cenie.",
+            "Opłata za kurs obejmuje też podręcznik.",
+            "Cenę podręcznika szkoła poda po zapisie na kurs."
+          ],
+          "answer": "Opłata za kurs obejmuje też podręcznik.",
+          "evidence": "Czy podręcznik jest wliczony w cenę kursu? Jeśli nie, proszę o informację, gdzie można go kupić.",
+          "explanation": "Jeśli podręcznik jest wliczony, nie trzeba za niego osobno płacić."
+        }
+      ]
+    }
+  ]
+}

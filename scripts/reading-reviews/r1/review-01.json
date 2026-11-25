@@ -1,0 +1,614 @@
+{
+  "passages": [
+    {
+      "id": "pl-b1.reading.day-001",
+      "scores": {
+        "naturalness": 96,
+        "level": 89,
+        "questions": 77,
+        "ambiguity": 98,
+        "theme": 95,
+        "vocabulary": 84
+      },
+      "criticalIssues": [
+        "Q4 mierzy głównie odczytanie podanego dnia."
+      ],
+      "notes": "Spójna relacja. „Nie planujemy wielu zajęć” jest trudniejsze niż reszta.",
+      "items": [
+        {
+          "id": "q1",
+          "option": "C",
+          "evidence": "Mieszkam w Łodzi z mężem i córką.",
+          "ambiguous": false,
+          "distractorScore": 56,
+          "skillMatches": true,
+          "notes": "Szkoła nie jest omawiana."
+        },
+        {
+          "id": "q2",
+          "option": "A",
+          "evidence": "Pracuję w sklepie",
+          "ambiguous": false,
+          "distractorScore": 78,
+          "skillMatches": true,
+          "notes": "Park jest miejscem spacerów, nie pracy."
+        },
+        {
+          "id": "q3",
+          "option": "B",
+          "evidence": "bo chcemy mieć czas dla siebie.",
+          "ambiguous": false,
+          "distractorScore": 47,
+          "skillMatches": true,
+          "notes": "Odległość do mamy jest jawnie wykluczona."
+        },
+        {
+          "id": "q4",
+          "option": "C",
+          "evidence": "W sobotę zwykle jemy razem śniadanie.",
+          "ambiguous": false,
+          "distractorScore": 60,
+          "skillMatches": false,
+          "notes": "Nowa sytuacja, lecz odpowiedź sprowadza się do odczytania dnia śniadania. Lepiej zapytać, co Lena ceni w weekendach."
+        },
+        {
+          "id": "q5",
+          "option": "A",
+          "evidence": "te spokojne poranki, kiedy nikt się nie spieszy.",
+          "ambiguous": false,
+          "distractorScore": 68,
+          "skillMatches": true,
+          "notes": "A przybliża sens. Precyzyjniej: „Nikt nie musi nic robić szybko”."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-002",
+      "scores": {
+        "naturalness": 87,
+        "level": 93,
+        "questions": 70,
+        "ambiguity": 99,
+        "theme": 94,
+        "vocabulary": 84
+      },
+      "criticalIssues": [
+        "Q4 niemal powtarza ofertę Ewy."
+      ],
+      "notes": "Przejście do „Jestem z Czech” jest nagłe. Dodać pytanie Ewy o pochodzenie.",
+      "items": [
+        {
+          "id": "q1",
+          "option": "B",
+          "evidence": "Cześć, jestem Adam. Jestem nowy w tej grupie.",
+          "ambiguous": false,
+          "distractorScore": 23,
+          "skillMatches": true,
+          "notes": "Mieszkanie i bilety nie pojawiają się w rozmowie."
+        },
+        {
+          "id": "q2",
+          "option": "C",
+          "evidence": "Jestem z Czech",
+          "ambiguous": false,
+          "distractorScore": 75,
+          "skillMatches": true,
+          "notes": "Polska jest wiarygodną pomyłką."
+        },
+        {
+          "id": "q3",
+          "option": "A",
+          "evidence": "Chcę mówić po polsku z sąsiadami.",
+          "ambiguous": false,
+          "distractorScore": 38,
+          "skillMatches": true,
+          "notes": "„Zmienić nauczycielkę” nie ma podstaw. Dodać cel związany z zajęciami."
+        },
+        {
+          "id": "q4",
+          "option": "B",
+          "evidence": "Ja też uczę się polskiego. Po zajęciach jestem zwykle w kawiarni obok szkoły. Możemy tam rozmawiać.",
+          "ambiguous": false,
+          "distractorScore": 39,
+          "skillMatches": false,
+          "notes": "Pomoc przez rozmowę jest niemal dosłowną ofertą Ewy. Zapytać, po co Adam proponuje godzinę spotkania."
+        },
+        {
+          "id": "q5",
+          "option": "C",
+          "evidence": "Na początku trochę, ale teraz jest łatwiej.",
+          "ambiguous": false,
+          "distractorScore": 49,
+          "skillMatches": true,
+          "notes": "„W pierwszym okresie” brzmi podręcznikowo. Prościej: „Kiedy zaczęły się zajęcia”."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-003",
+      "scores": {
+        "naturalness": 94,
+        "level": 93,
+        "questions": 79,
+        "ambiguity": 98,
+        "theme": 97,
+        "vocabulary": 89
+      },
+      "criticalIssues": [],
+      "notes": "Naturalna wiadomość. Podpis „Ania” lepiej umieścić w osobnym wierszu.",
+      "items": [
+        {
+          "id": "q1",
+          "option": "A",
+          "evidence": "Pytasz, jak wygląda mój dzień.",
+          "ambiguous": false,
+          "distractorScore": 52,
+          "skillMatches": true,
+          "notes": "Urodziny nie mają związku z listem."
+        },
+        {
+          "id": "q2",
+          "option": "B",
+          "evidence": "zaczynam pracę o ósmej.",
+          "ambiguous": false,
+          "distractorScore": 94,
+          "skillMatches": true,
+          "notes": "Wszystkie godziny występują w opisie."
+        },
+        {
+          "id": "q3",
+          "option": "C",
+          "evidence": "Nie oglądam telewizji, bo wolę czytać.",
+          "ambiguous": false,
+          "distractorScore": 30,
+          "skillMatches": true,
+          "notes": "Brak lampy jest nielogiczny i sprzeczny z tekstem."
+        },
+        {
+          "id": "q4",
+          "option": "A",
+          "evidence": "Wieczorem czytam książkę. Nie oglądam telewizji, bo wolę czytać.",
+          "ambiguous": false,
+          "distractorScore": 72,
+          "skillMatches": true,
+          "notes": "Zastosowanie preferencji do doboru prezentu. Dodać „najlepiej”, bo kino też może się podobać."
+        },
+        {
+          "id": "q5",
+          "option": "B",
+          "evidence": "W czasie przerwy słucham muzyki albo patrzę przez okno.",
+          "ambiguous": false,
+          "distractorScore": 66,
+          "skillMatches": true,
+          "notes": "Trafna parafraza. Alternatywą dla miejsca pracy może być koniec dnia pracy."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-004",
+      "scores": {
+        "naturalness": 82,
+        "level": 83,
+        "questions": 69,
+        "ambiguity": 99,
+        "theme": 89,
+        "vocabulary": 84
+      },
+      "criticalIssues": [
+        "Q4 powtarza jawny wybór kanału kontaktu."
+      ],
+      "notes": "Tytuł eksponuje imię, rozmowa głównie nazwisko. „Widzi, że jej się udało poprawnie zapisać jego nazwisko” oddaje sens precyzyjniej niż „swoje poprawne nazwisko”.",
+      "items": [
+        {
+          "id": "q1",
+          "option": "C",
+          "evidence": "Recepcjonistka sprawdza dane jeszcze raz.",
+          "ambiguous": false,
+          "distractorScore": 57,
+          "skillMatches": true,
+          "notes": "Dane ucznia obejmują główny temat."
+        },
+        {
+          "id": "q2",
+          "option": "A",
+          "evidence": "Na Ż, z kropką.",
+          "ambiguous": false,
+          "distractorScore": 96,
+          "skillMatches": true,
+          "notes": "Obie błędne litery są wymienione."
+        },
+        {
+          "id": "q3",
+          "option": "B",
+          "evidence": "W pracy nie odbieram telefonu.",
+          "ambiguous": false,
+          "distractorScore": 19,
+          "skillMatches": true,
+          "notes": "Brak komputera nie tłumaczy wyboru e-maili. Zastąpić np. „Często zapomina telefonu”."
+        },
+        {
+          "id": "q4",
+          "option": "C",
+          "evidence": "proszę pisać do mnie e-maile.",
+          "ambiguous": false,
+          "distractorScore": 42,
+          "skillMatches": false,
+          "notes": "To powtórzenie jawnej prośby z Q3. Usunąć prośbę i podać dwie wskazówki o dostępnych kanałach."
+        },
+        {
+          "id": "q5",
+          "option": "A",
+          "evidence": "Michał widzi na ekranie swoje poprawne nazwisko.",
+          "ambiguous": false,
+          "distractorScore": 43,
+          "skillMatches": true,
+          "notes": "Przeciwstawić poprawność np. kompletności zapisu."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-005",
+      "scores": {
+        "naturalness": 93,
+        "level": 90,
+        "questions": 77,
+        "ambiguity": 97,
+        "theme": 96,
+        "vocabulary": 92
+      },
+      "criticalIssues": [],
+      "notes": "Decyzja o książce ma słabą motywację. Bardziej przekonujące: babcia już ma ten tytuł.",
+      "items": [
+        {
+          "id": "q1",
+          "option": "B",
+          "evidence": "Marta i jej brat Piotr szukają prezentu dla babci.",
+          "ambiguous": false,
+          "distractorScore": 54,
+          "skillMatches": true,
+          "notes": "Tytuł prawie podaje odpowiedź."
+        },
+        {
+          "id": "q2",
+          "option": "C",
+          "evidence": "Na półce stoi niebieski kubek",
+          "ambiguous": false,
+          "distractorScore": 96,
+          "skillMatches": true,
+          "notes": "Wszystkie kolory pochodzą z opisu."
+        },
+        {
+          "id": "q3",
+          "option": "A",
+          "evidence": "babcia ma już wiele kubków.",
+          "ambiguous": false,
+          "distractorScore": 77,
+          "skillMatches": true,
+          "notes": "Pomyłki są możliwymi powodami odrzucenia prezentu."
+        },
+        {
+          "id": "q4",
+          "option": "B",
+          "evidence": "Piotr chce kupić kubek, ale Marta wie, że babcia ma już wiele kubków.",
+          "ambiguous": false,
+          "distractorScore": 48,
+          "skillMatches": true,
+          "notes": "Wniosek z decyzji Marty. B naturalniej: „Wie, co babcia lubi i co już ma”."
+        },
+        {
+          "id": "q5",
+          "option": "C",
+          "evidence": "W małym sklepie na rogu jest duży wybór prezentów.",
+          "ambiguous": false,
+          "distractorScore": 15,
+          "skillMatches": true,
+          "notes": "Dach i ogród są trywialne. Użyć „w połowie ulicy” i „na końcu długiej ulicy”."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-006",
+      "scores": {
+        "naturalness": 94,
+        "level": 80,
+        "questions": 76,
+        "ambiguity": 98,
+        "theme": 96,
+        "vocabulary": 89
+      },
+      "criticalIssues": [],
+      "notes": "„Życzliwe relacje” i „co sugeruje” przekraczają prostotę narracji. W pytaniach użyć „O sąsiadach, którzy sobie pomagają” i „Dlaczego Zofia go zaprasza?”.",
+      "items": [
+        {
+          "id": "q1",
+          "option": "A",
+          "evidence": "Pomaga jej, bo w budynku nie ma windy. Zofia zaprasza go na herbatę i kawałek ciasta.",
+          "ambiguous": false,
+          "distractorScore": 65,
+          "skillMatches": true,
+          "notes": "Dwa poboczne motywy, choć szukanie pracy nie występuje."
+        },
+        {
+          "id": "q2",
+          "option": "B",
+          "evidence": "Pani Zofia mieszka sama na drugim piętrze.",
+          "ambiguous": false,
+          "distractorScore": 86,
+          "skillMatches": true,
+          "notes": "Odpowiedzi równoległe, ale tytuł zdradza piętro."
+        },
+        {
+          "id": "q3",
+          "option": "C",
+          "evidence": "Zofia niesie ciężką torbę z zakupami. Pomaga jej, bo w budynku nie ma windy.",
+          "ambiguous": false,
+          "distractorScore": 35,
+          "skillMatches": true,
+          "notes": "Zabranie cudzych zakupów do biura jest mało wiarygodne."
+        },
+        {
+          "id": "q4",
+          "option": "A",
+          "evidence": "Zofia zaprasza go na herbatę i kawałek ciasta.",
+          "ambiguous": false,
+          "distractorScore": 60,
+          "skillMatches": true,
+          "notes": "Wdzięczność wynika z kolejności wydarzeń, a chęć poznania ludzi ze zdania końcowego."
+        },
+        {
+          "id": "q5",
+          "option": "B",
+          "evidence": "Lubi poznawać ludzi z sąsiedztwa.",
+          "ambiguous": false,
+          "distractorScore": 51,
+          "skillMatches": true,
+          "notes": "B właściwe. Zastąpić „inne miasto” np. „tylko nasz dom”."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-007",
+      "scores": {
+        "naturalness": 77,
+        "level": 78,
+        "questions": 60,
+        "ambiguity": 98,
+        "theme": 95,
+        "vocabulary": 85
+      },
+      "criticalIssues": [
+        "Q4 dosłownie odtwarza informację o braku opłaty."
+      ],
+      "notes": "Zapowiedź pojedynczego wydarzenia brzmi naturalniej w przyszłości: „Jeśli będzie padać, spotkamy się…” i „Rano podamy…”. „Bo jest mało ławek” zastąpi sztywne „ponieważ liczba ławek jest mała”.",
+      "items": [
+        {
+          "id": "q1",
+          "option": "C",
+          "evidence": "Zapraszamy wszystkich mieszkańców naszej ulicy na rodzinny piknik w niedzielę.",
+          "ambiguous": false,
+          "distractorScore": 14,
+          "skillMatches": true,
+          "notes": "Sprzedaż biletów do szkoły i szukanie pracy są przypadkowe. Użyć np. ogłoszenia o grze szkolnej."
+        },
+        {
+          "id": "q2",
+          "option": "A",
+          "evidence": "Spotykamy się o jedenastej",
+          "ambiguous": false,
+          "distractorScore": 79,
+          "skillMatches": true,
+          "notes": "Południe to wiarygodna pomyłka."
+        },
+        {
+          "id": "q3",
+          "option": "B",
+          "evidence": "ponieważ liczba ławek jest mała.",
+          "ambiguous": false,
+          "distractorScore": 15,
+          "skillMatches": true,
+          "notes": "Ani bilet, ani odległość nie tłumaczą zabrania koca. Zaproponować możliwe zastosowania koca."
+        },
+        {
+          "id": "q4",
+          "option": "C",
+          "evidence": "Nie trzeba kupować biletu.",
+          "ambiguous": false,
+          "distractorScore": 22,
+          "skillMatches": false,
+          "notes": "Prosta parafraza zdania o bilecie. Zapytać, dokąd powinna pójść rodzina, gdy o jedenastej pada i park jest pusty."
+        },
+        {
+          "id": "q5",
+          "option": "A",
+          "evidence": "Na miejscu są stoły, ławki i miejsce do zabawy dla dzieci.",
+          "ambiguous": false,
+          "distractorScore": 60,
+          "skillMatches": true,
+          "notes": "Znaczenie wynika z poprzedniego zdania o parku."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-008",
+      "scores": {
+        "naturalness": 91,
+        "level": 79,
+        "questions": 76,
+        "ambiguity": 93,
+        "theme": 97,
+        "vocabulary": 90
+      },
+      "criticalIssues": [],
+      "notes": "Ogłoszenie jest wiarygodne. „W zamkniętej szopie” i „osoby zainteresowane” obciążają A1.",
+      "items": [
+        {
+          "id": "q1",
+          "option": "B",
+          "evidence": "Do wynajęcia jest mieszkanie na parterze małego domu.",
+          "ambiguous": false,
+          "distractorScore": 58,
+          "skillMatches": true,
+          "notes": "Obie pomyłki dotyczą wzmiankowanych obiektów, ale nie głównego celu."
+        },
+        {
+          "id": "q2",
+          "option": "C",
+          "evidence": "Są w nim dwa pokoje",
+          "ambiguous": false,
+          "distractorScore": 90,
+          "skillMatches": true,
+          "notes": "Dobre, równoległe liczby."
+        },
+        {
+          "id": "q3",
+          "option": "A",
+          "evidence": "Lubi zwierzęta, więc pies lub kot nie stanowi problemu.",
+          "ambiguous": false,
+          "distractorScore": 16,
+          "skillMatches": true,
+          "notes": "Brak kuchni nie tłumaczy zainteresowania właściciela psa. Użyć uzasadnień dotyczących zwierząt."
+        },
+        {
+          "id": "q4",
+          "option": "B",
+          "evidence": "Osoby zainteresowane mogą je zobaczyć w środę lub piątek po godzinie siedemnastej.",
+          "ambiguous": false,
+          "distractorScore": 83,
+          "skillMatches": true,
+          "notes": "Porównanie czasu pracy i oglądania jest trafne. „Kto może przyjść obejrzeć mieszkanie?” wykluczy interpretację o samym kontakcie w sprawie terminu."
+        },
+        {
+          "id": "q5",
+          "option": "C",
+          "evidence": "Mieszkanie jest wolne od pierwszego grudnia.",
+          "ambiguous": false,
+          "distractorScore": 45,
+          "skillMatches": true,
+          "notes": "Bezpłatność wiarygodna, brak drzwi absurdalny. Zastąpić „Można je kupić”."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-009",
+      "scores": {
+        "naturalness": 77,
+        "level": 60,
+        "questions": 80,
+        "ambiguity": 99,
+        "theme": 94,
+        "vocabulary": 86
+      },
+      "criticalIssues": [
+        "Gęstość słownictwa urzędowego jest nieodpowiednia dla ogólnego A1 bez wsparcia."
+      ],
+      "notes": "Rejestr administracyjny („prywatnych lokali”, „kontrola instalacji”, „niedostępna”) wyraźnie obciąża A1. Użyć „mieszkań”, „sprawdzimy rury” i czasu przyszłego dla zapowiedzi.",
+      "items": [
+        {
+          "id": "q1",
+          "option": "A",
+          "evidence": "Od godziny dziewiątej do jedenastej nie ma zimnej wody.",
+          "ambiguous": false,
+          "distractorScore": 69,
+          "skillMatches": true,
+          "notes": "Trafny cel, ale rzeczownik „poinformowanie” utrudnia A1."
+        },
+        {
+          "id": "q2",
+          "option": "B",
+          "evidence": "w czwartek rano w naszym budynku pracuje hydraulik. Od godziny dziewiątej do jedenastej nie ma zimnej wody.",
+          "ambiguous": false,
+          "distractorScore": 92,
+          "skillMatches": true,
+          "notes": "Równoległe godziny i dni."
+        },
+        {
+          "id": "q3",
+          "option": "C",
+          "evidence": "Praca odbywa się w piwnicy, więc nie trzeba zostawiać kluczy do mieszkań.",
+          "ambiguous": false,
+          "distractorScore": 79,
+          "skillMatches": true,
+          "notes": "Alternatywy wyjaśniałyby, dlaczego klucze są zbędne."
+        },
+        {
+          "id": "q4",
+          "option": "A",
+          "evidence": "Hydraulik nie wchodzi do prywatnych lokali.",
+          "ambiguous": false,
+          "distractorScore": 65,
+          "skillMatches": true,
+          "notes": "Wniosek o obecności z miejsca pracy hydraulika. C słabe; dać inne wyjaśnienie związane z drzwiami."
+        },
+        {
+          "id": "q5",
+          "option": "B",
+          "evidence": "Dziękujemy za cierpliwość i przepraszamy za kłopot.",
+          "ambiguous": false,
+          "distractorScore": 34,
+          "skillMatches": true,
+          "notes": "Plan mieszkania i rozmowa nie pasują do przeprosin. Dodać podobne znaczeniowo słowa."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-010",
+      "scores": {
+        "naturalness": 90,
+        "level": 78,
+        "questions": 78,
+        "ambiguity": 98,
+        "theme": 97,
+        "vocabulary": 90
+      },
+      "criticalIssues": [],
+      "notes": "„Rozliczane osobno” jest autentyczne, lecz trudne na A1. „Czy blisko jest przystanek autobusu do centrum?” brzmi naturalniej niż pytanie o bliskość autobusu.",
+      "items": [
+        {
+          "id": "q1",
+          "option": "C",
+          "evidence": "Dzień dobry, czy pokój jest jeszcze wolny?",
+          "ambiguous": false,
+          "distractorScore": 42,
+          "skillMatches": true,
+          "notes": "Kupno autobusu absurdalne. Zastąpić np. pytaniem o dojazd na uczelnię."
+        },
+        {
+          "id": "q2",
+          "option": "A",
+          "evidence": "internet jest w cenie.",
+          "ambiguous": false,
+          "distractorScore": 98,
+          "skillMatches": true,
+          "notes": "Wszystkie opcje to wymienione usługi."
+        },
+        {
+          "id": "q3",
+          "option": "B",
+          "evidence": "Jestem studentem i często wracam późno z zajęć.",
+          "ambiguous": false,
+          "distractorScore": 25,
+          "skillMatches": true,
+          "notes": "Przyczyna jest sugerowana, a nie wyrażona wprost. Brak okna nielogiczny. Połączyć późny powrót z gotowaniem w jednym zdaniu."
+        },
+        {
+          "id": "q4",
+          "option": "C",
+          "evidence": "Tylko po dziesiątej wieczorem prosimy o ciszę.",
+          "ambiguous": false,
+          "distractorScore": 36,
+          "skillMatches": true,
+          "notes": "Zastosowanie reguły do nowej godziny i zachowania. Opłata za internet w żaden sposób nie dotyczy ciszy."
+        },
+        {
+          "id": "q5",
+          "option": "A",
+          "evidence": "Tak, internet jest w cenie. Woda i prąd są rozliczane osobno.",
+          "ambiguous": false,
+          "distractorScore": 72,
+          "skillMatches": true,
+          "notes": "Kontrast z ceną internetu daje mocną wskazówkę."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,608 @@
+{
+  "version": 1,
+  "status": "draft",
+  "texts": [
+    {
+      "id": "pl-b1.reading.day-051",
+      "day": 51,
+      "level": "A2",
+      "genre": "artykuł",
+      "title": "Jak Marek uczy się po lekcjach",
+      "text": "Na lekcji historii Marek słuchał opowieści o ważnym wydarzeniu. Kiedy nauczyciel skończył mówić, w zeszycie Marka brakowało kilku zdań. Za dwa dni klasa pisze sprawdzian, więc po powrocie do domu Marek chce uzupełnić notatki. Siostra pokazuje mu Zintegrowaną Platformę Edukacyjną. To strona z darmowymi materiałami do nauki, którą prowadzi Ministerstwo Edukacji Narodowej.\n\nMarek znajduje tekst o tym samym wydarzeniu. Czyta go dwa razy, a potem zapisuje w zeszycie kilka zdań własnymi słowami. Jutro przed lekcją porówna je z notatkami kolegi. Dziś nie musi już czekać, aż kolega wróci z treningu.\n\nSiostra Marka uczy w szkole. Chce przygotować na platformie ćwiczenie dla swojej klasy. Żeby otworzyć edytor i napisać własne zadanie, musi się zalogować. Marek też pyta o konto. Siostra pokazuje mu na ekranie inne ogólnodostępne teksty. Każdy może je otworzyć i przeczytać, tak jak Marek przed chwilą.",
+      "source": {
+        "url": "https://www.gov.pl/web/edukacja/zintegrowana-platforma-edukacyjna-20-juz-dostepna",
+        "publisher": "Ministerstwo Edukacji Narodowej",
+        "title": "Zintegrowana Platforma Edukacyjna 2.0 już dostępna",
+        "facts": [
+          "Publicly accessible, free educational resources; sign-in required for the material editor and user features."
+        ],
+        "use": "facts-only",
+        "checked": "2026-11-25",
+        "adaptation": "Original Polish educational composition based on source facts; illustrative people/scenarios are fictional."
+      },
+      "questions": [
+        {
+          "id": "main-idea",
+          "skill": "main-idea",
+          "question": "Co najlepiej opisuje cały tekst?",
+          "options": [
+            "Rodzeństwo wspólnie pisze ćwiczenie z historii dla klasy Marka.",
+            "Rodzeństwo porównuje dwa sposoby prowadzenia notatek na lekcji.",
+            "Rodzeństwo korzysta z jednej strony do różnych zadań związanych z nauką."
+          ],
+          "answer": "Rodzeństwo korzysta z jednej strony do różnych zadań związanych z nauką.",
+          "evidence": "Chce przygotować na platformie ćwiczenie dla swojej klasy.",
+          "explanation": "Marek uzupełnia notatki, a jego siostra przygotowuje własne zadanie."
+        },
+        {
+          "id": "detail",
+          "skill": "detail",
+          "question": "Kiedy Marek chce porównać swoje notatki z notatkami kolegi?",
+          "options": [
+            "Za dwa dni po sprawdzianie.",
+            "Jutro przed lekcją.",
+            "Wieczorem po treningu kolegi."
+          ],
+          "answer": "Jutro przed lekcją.",
+          "evidence": "Jutro przed lekcją porówna je z notatkami kolegi.",
+          "explanation": "Na porównanie zeszytów Marek wybiera następny poranek."
+        },
+        {
+          "id": "cause",
+          "skill": "cause",
+          "question": "Dlaczego Marek szuka tekstu o wydarzeniu?",
+          "options": [
+            "Chce sprawdzić, co kolega napisał po treningu.",
+            "Chce wybrać temat dla klasy siostry.",
+            "Chce dopisać informacje, których brakuje w jego zeszycie."
+          ],
+          "answer": "Chce dopisać informacje, których brakuje w jego zeszycie.",
+          "evidence": "w zeszycie Marka brakowało kilku zdań.",
+          "explanation": "Podczas lekcji Marek nie zapisał wszystkiego, czego potrzebuje do sprawdzianu."
+        },
+        {
+          "id": "inference",
+          "skill": "inference",
+          "question": "Kolega skończy trening później, niż planował. Co Marek może mimo to zrobić jeszcze dziś?",
+          "options": [
+            "Ustalić na podstawie strony, co dokładnie zapisał kolega.",
+            "Przygotować swoją część notatek do jutrzejszego porównania.",
+            "Porównać oba zeszyty podczas spotkania przed lekcją."
+          ],
+          "answer": "Przygotować swoją część notatek do jutrzejszego porównania.",
+          "evidence": "Czyta go dwa razy, a potem zapisuje w zeszycie kilka zdań własnymi słowami.",
+          "explanation": "Własne notatki Marek robi na podstawie tekstu. Zeszyt kolegi będzie mu potrzebny dopiero przy porównaniu."
+        },
+        {
+          "id": "vocabulary",
+          "skill": "vocabulary",
+          "question": "Które teksty siostra nazywa „ogólnodostępnymi”?",
+          "options": [
+            "Teksty, które można czytać bez własnego konta.",
+            "Teksty, które nauczyciel wysyła swojej klasie po zalogowaniu.",
+            "Teksty, które uczeń sam zapisuje w swoim zeszycie."
+          ],
+          "answer": "Teksty, które można czytać bez własnego konta.",
+          "evidence": "Każdy może je otworzyć i przeczytać",
+          "explanation": "Takie teksty może przeczytać każdy, kto otworzy stronę."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-052",
+      "day": 52,
+      "level": "A2",
+      "genre": "artykuł",
+      "title": "Co kupić do szkolnej biblioteki?",
+      "text": "W szkolnej bibliotece ma się pojawić kilka nowych książek. Szkoła korzysta z programu, który pomaga kupować książki do biblioteki. Zanim bibliotekarka zrobi zakupy, spotyka się z przedstawicielami uczniów i rodziców. Prosi ich o tytuły i pyta, kto chciałby czytać takie książki. Na kartce zapisuje wszystkie pomysły.\n\nUczniowie z klasy Oli proszą o książki o przyrodzie. Ola interesuje się ptakami i proponuje książkę o ich życiu. Jej kolega woli czytać o drzewach. Rodzice też mają kilka pomysłów. Lista jest długa, a teraz szkoła może kupić tylko część tytułów. Bibliotekarka chce więc wiedzieć, które książki przydadzą się większej grupie.\n\nSam zakup książek to dopiero początek. Klasa planuje spotkanie o ptakach. Uczniowie przeczytają fragmenty nowych książek i opowiedzą, co ich zaciekawiło. Osoby, które będą chciały sięgnąć po następną książkę, będą mogły wypożyczyć ją także podczas przerwy w nauce.",
+      "source": {
+        "url": "https://www.gov.pl/web/edukacja/pytania-i-odpowiedzi-npc",
+        "publisher": "Ministerstwo Edukacji Narodowej",
+        "title": "Pytania i odpowiedzi – Narodowy Program Rozwoju Czytelnictwa",
+        "facts": [
+          "Participating schools organize educational projects using their collections and consult pupils and parents on book purchases; school libraries organize access for holiday reading."
+        ],
+        "use": "facts-only",
+        "checked": "2026-11-25",
+        "adaptation": "Original Polish educational composition based on source facts; illustrative people/scenarios are fictional."
+      },
+      "questions": [
+        {
+          "id": "main-idea",
+          "skill": "main-idea",
+          "question": "Jak szkoła zachęca uczniów do czytania?",
+          "options": [
+            "Pozwala każdej klasie samodzielnie kupić książki na wybrany temat.",
+            "Zaprasza uczniów na spotkanie, podczas którego rodzice czytają im wybrane fragmenty.",
+            "Pyta czytelników o wybór książek i planuje zajęcia z nowymi tytułami."
+          ],
+          "answer": "Pyta czytelników o wybór książek i planuje zajęcia z nowymi tytułami.",
+          "evidence": "Uczniowie przeczytają fragmenty nowych książek i opowiedzą, co ich zaciekawiło.",
+          "explanation": "Szkoła zbiera propozycje, a potem wykorzystuje książki podczas spotkania."
+        },
+        {
+          "id": "detail",
+          "skill": "detail",
+          "question": "Co bibliotekarka zapisuje podczas rozmowy?",
+          "options": [
+            "Nazwiska uczniów, którzy wypożyczą nowe książki.",
+            "Wszystkie propozycje uczestników spotkania.",
+            "Tytuły książek już kupionych przez szkołę."
+          ],
+          "answer": "Wszystkie propozycje uczestników spotkania.",
+          "evidence": "Na kartce zapisuje wszystkie pomysły.",
+          "explanation": "Kartka służy do zebrania propozycji przed zakupami."
+        },
+        {
+          "id": "cause",
+          "skill": "cause",
+          "question": "Dlaczego bibliotekarka pyta, komu przydadzą się książki?",
+          "options": [
+            "Szkoła chce ustalić, kto opowie o drzewach na spotkaniu.",
+            "Szkoła musi wcześniej ustalić kolejność wypożyczania książek.",
+            "Szkoła musi wybrać część tytułów z długiej listy."
+          ],
+          "answer": "Szkoła musi wybrać część tytułów z długiej listy.",
+          "evidence": "Lista jest długa, a teraz szkoła może kupić tylko część tytułów.",
+          "explanation": "Odpowiedzi pomogą wybrać książki dla większej grupy."
+        },
+        {
+          "id": "inference",
+          "skill": "inference",
+          "question": "Ola przeczytała książkę o ptakach. Która informacja o niej najbardziej pomoże klasie podczas planowanego spotkania?",
+          "options": [
+            "W którym miejscu na półce stoi ta książka.",
+            "Który rozdział pomógł jej poznać zwyczaje ptaków.",
+            "Ile osób można dopisać do listy zakupów."
+          ],
+          "answer": "Który rozdział pomógł jej poznać zwyczaje ptaków.",
+          "evidence": "Uczniowie przeczytają fragmenty nowych książek i opowiedzą, co ich zaciekawiło.",
+          "explanation": "Ola może wskazać fragment i wyjaśnić, czego się z niego dowiedziała."
+        },
+        {
+          "id": "vocabulary",
+          "skill": "vocabulary",
+          "question": "Co znaczy tutaj „sięgnąć po następną książkę”?",
+          "options": [
+            "Dopisać kolejny tytuł do listy zakupów.",
+            "Wybrać kolejną książkę do czytania.",
+            "Przynieść kolejną książkę na spotkanie z rodzicami."
+          ],
+          "answer": "Wybrać kolejną książkę do czytania.",
+          "evidence": "będą mogły wypożyczyć ją także podczas przerwy w nauce.",
+          "explanation": "Możliwość wypożyczenia pozwoli uczniom przeczytać kolejną książkę."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-053",
+      "day": 53,
+      "level": "A2",
+      "genre": "poradnik",
+      "title": "Daria wybiera ćwiczenia",
+      "text": "Daria mieszka w Polsce od kilku miesięcy. W sklepie potrafi poprosić o potrzebne produkty. Umie też krótko opowiedzieć o sobie. Kiedy jednak dostaje od koleżanki długą wiadomość po polsku, nieraz musi ją przeczytać kilka razy. Dlatego chce więcej czytać w domu.\n\nNa stronie Urzędu do Spraw Cudzoziemców znajduje materiały do nauki polskiego. Są tam książki dla początkujących, materiały A2 z elementami B1 oraz materiały dla osób, które znają już polski na poziomie B1. Daria na początek wybiera książkę A2. Nie chce zaczynać od bardzo trudnych tekstów.\n\nW poniedziałek Daria czyta rozdział o zakupach. Rozumie tekst i dobrze odpowiada na pytania. We wtorek próbuje przeczytać wiadomość o spotkaniu. Zna kilka słów, ale nie wie, o co prosi autor. W zeszycie robi dwie listy. Na pierwszej zapisuje tematy, które już zna, a na drugiej te, do których chce wrócić. Na następny wieczór wybiera ćwiczenia z drugiej listy.",
+      "source": {
+        "url": "https://www.gov.pl/web/udsc/materialy-dydaktyczne-do-nauki-jezyka-polskiego3",
+        "publisher": "Urząd do Spraw Cudzoziemców",
+        "title": "Materiały dydaktyczne do nauki języka polskiego",
+        "facts": [
+          "Adult learning material is available for A1, A2 with B1 elements and B1 with B2 elements."
+        ],
+        "use": "facts-only",
+        "checked": "2026-11-25",
+        "adaptation": "Original Polish educational composition based on source facts; illustrative people/scenarios are fictional."
+      },
+      "questions": [
+        {
+          "id": "main-idea",
+          "skill": "main-idea",
+          "question": "Co pokazuje przykład Darii?",
+          "options": [
+            "Jak używać wiadomości od koleżanki podczas zakupów.",
+            "Jak wybierać materiały i planować naukę według własnych potrzeb.",
+            "Jak przygotować własny podręcznik dla osób początkujących."
+          ],
+          "answer": "Jak wybierać materiały i planować naukę według własnych potrzeb.",
+          "evidence": "Na następny wieczór wybiera ćwiczenia z drugiej listy.",
+          "explanation": "Daria dobiera poziom książki i wraca do tematów, które są trudne."
+        },
+        {
+          "id": "detail",
+          "skill": "detail",
+          "question": "Co Daria czyta w poniedziałek?",
+          "options": [
+            "Listę ćwiczeń od koleżanki.",
+            "Rozdział o zakupach.",
+            "Wiadomość o spotkaniu."
+          ],
+          "answer": "Rozdział o zakupach.",
+          "evidence": "W poniedziałek Daria czyta rozdział o zakupach.",
+          "explanation": "Wiadomość o spotkaniu czyta następnego dnia."
+        },
+        {
+          "id": "cause",
+          "skill": "cause",
+          "question": "Dlaczego Daria chce więcej czytać w domu?",
+          "options": [
+            "Chce przygotować koleżance pytania do podręcznika.",
+            "Zrozumienie dłuższych wiadomości sprawia jej trudność.",
+            "Potrzebuje listy polskich nazw produktów do sklepu."
+          ],
+          "answer": "Zrozumienie dłuższych wiadomości sprawia jej trudność.",
+          "evidence": "nieraz musi ją przeczytać kilka razy. Dlatego chce więcej czytać w domu.",
+          "explanation": "Dłuższe wiadomości wymagają od Darii dodatkowej pracy."
+        },
+        {
+          "id": "inference",
+          "skill": "inference",
+          "question": "Które nowe ćwiczenie Daria najpewniej wybierze na następny wieczór?",
+          "options": [
+            "Ułożyć listę produktów przed zakupami.",
+            "Przeczytać zaproszenie i ustalić, co trzeba przynieść.",
+            "Krótko przedstawić się nowej osobie."
+          ],
+          "answer": "Przeczytać zaproszenie i ustalić, co trzeba przynieść.",
+          "evidence": "Zna kilka słów, ale nie wie, o co prosi autor.",
+          "explanation": "W zaproszeniu trzeba rozpoznać prośbę autora. Właśnie to okazało się dla niej trudne."
+        },
+        {
+          "id": "vocabulary",
+          "skill": "vocabulary",
+          "question": "Co znaczy „A2 z elementami B1”?",
+          "options": [
+            "Materiał na poziomie A2 służy do powtarzania całego poziomu B1.",
+            "Po każdym rozdziale A2 trzeba rozpocząć nową książkę B1.",
+            "Większość materiału jest na poziomie A2, a część na B1."
+          ],
+          "answer": "Większość materiału jest na poziomie A2, a część na B1.",
+          "evidence": "materiały A2 z elementami B1 oraz materiały dla osób, które znają już polski na poziomie B1.",
+          "explanation": "Elementy to części. Niektóre treści należą do poziomu B1."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-064",
+      "day": 64,
+      "level": "A2",
+      "genre": "artykuł",
+      "title": "Co Emilia zrobi z butelkami?",
+      "text": "Emilia wraca ze sklepu z dwiema butelkami wody. Obie są podobne, ale tylko na jednej widzi znak systemu kaucyjnego. W Polsce taki system działa od października 2025 roku. Gdy Emilia kupuje wodę w oznaczonej butelce, płaci za wodę i dodatkowo za opakowanie. Ta dodatkowa suma to kaucja. Emilia odzyska ją, jeśli odda pustą butelkę do punktu zbiórki. Paragon nie jest jej do tego potrzebny.\n\nWieczorem obie butelki są już puste. Emilia ogląda je jeszcze raz. Butelkę ze znakiem wkłada do torby na zakupy. Drugą odkłada osobno, żeby wyrzucić ją zgodnie z zasadami segregacji. Jej brat dziwi się, że zabiera do sklepu tylko jedną butelkę. Emilia pokazuje mu znak na opakowaniu.\n\nW sobotę Emilia znów wybiera się po zakupy. Po drodze do sklepu minie punkt zbiórki. Torbę z butelką stawia przy drzwiach, obok listy zakupów. Dzięki temu załatwi dwie sprawy podczas jednego wyjścia.",
+      "source": {
+        "url": "https://www.gov.pl/web/klimat/system-kaucyjny",
+        "publisher": "Ministerstwo Klimatu i Środowiska",
+        "title": "System kaucyjny",
+        "facts": [
+          "Deposit scheme operates since October 2025; marked beverage packaging can be returned for a deposit refund without a receipt."
+        ],
+        "use": "facts-only",
+        "checked": "2026-11-25",
+        "adaptation": "Original Polish educational composition based on source facts; illustrative people/scenarios are fictional."
+      },
+      "questions": [
+        {
+          "id": "main-idea",
+          "skill": "main-idea",
+          "question": "Co wyjaśnia historia Emilii?",
+          "options": [
+            "Jak ułożyć listę zakupów przed oddaniem opakowań.",
+            "Jak wybrać tańszą wodę na podstawie znaku na opakowaniu.",
+            "Jak rozpoznać butelkę z kaucją i odzyskać pieniądze."
+          ],
+          "answer": "Jak rozpoznać butelkę z kaucją i odzyskać pieniądze.",
+          "evidence": "Emilia odzyska ją, jeśli odda pustą butelkę do punktu zbiórki.",
+          "explanation": "Znak pomaga wybrać butelkę, za którą po zwrocie Emilia otrzyma kaucję."
+        },
+        {
+          "id": "detail",
+          "skill": "detail",
+          "question": "Gdzie Emilia wkłada pustą butelkę ze znakiem?",
+          "options": [
+            "Do koszyka w punkcie zbiórki.",
+            "Do torby na zakupy.",
+            "Do miejsca na odpady w domu."
+          ],
+          "answer": "Do torby na zakupy.",
+          "evidence": "Butelkę ze znakiem wkłada do torby na zakupy.",
+          "explanation": "Wieczorem butelka czeka w torbie na następne wyjście."
+        },
+        {
+          "id": "cause",
+          "skill": "cause",
+          "question": "Dlaczego Emilia ogląda puste butelki?",
+          "options": [
+            "Chce ustalić, z której butelki pił jej brat.",
+            "Chce sprawdzić, którą wodę ma dopisać do listy zakupów.",
+            "Chce zdecydować, którą butelkę zabrać do punktu zbiórki."
+          ],
+          "answer": "Chce zdecydować, którą butelkę zabrać do punktu zbiórki.",
+          "evidence": "Butelkę ze znakiem wkłada do torby na zakupy. Drugą odkłada osobno",
+          "explanation": "Obie butelki są podobne, ale tylko oznaczoną Emilia odda za kaucję."
+        },
+        {
+          "id": "inference",
+          "skill": "inference",
+          "question": "Brat chce pomóc Emilii w sobotę. Która propozycja pozwoli jej załatwić obie sprawy podczas tego samego wyjścia?",
+          "options": [
+            "„Poniosę torbę i zatrzymamy się przy punkcie w drodze do sklepu”.",
+            "„Wezmę twoją listę, a torbę przyniosę po zakupach”.",
+            "„Poszukam paragonu, zanim wrócimy do domu po torbę”."
+          ],
+          "answer": "„Poniosę torbę i zatrzymamy się przy punkcie w drodze do sklepu”.",
+          "evidence": "Po drodze do sklepu minie punkt zbiórki. Torbę z butelką stawia przy drzwiach, obok listy zakupów.",
+          "explanation": "Jeśli wezmą torbę od razu, mogą oddać butelkę przed zrobieniem zakupów."
+        },
+        {
+          "id": "vocabulary",
+          "skill": "vocabulary",
+          "question": "Co znaczy „odzyska” w zdaniu o kaucji?",
+          "options": [
+            "Pozna cenę samej wody po odliczeniu opakowania.",
+            "Dostanie z powrotem kwotę zapłaconą za opakowanie.",
+            "Zapłaci za następną butelkę tyle samo co wcześniej."
+          ],
+          "answer": "Dostanie z powrotem kwotę zapłaconą za opakowanie.",
+          "evidence": "Ta dodatkowa suma to kaucja. Emilia odzyska ją, jeśli odda pustą butelkę do punktu zbiórki.",
+          "explanation": "Chodzi o zwrot sumy, którą Emilia wcześniej zapłaciła."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-078",
+      "day": 78,
+      "level": "A2",
+      "genre": "opowiadanie",
+      "title": "Tomasz przed wizytą w banku",
+      "text": "Tomasz chce chronić swoje dane osobowe. Jedną z ważnych informacji jest jego numer PESEL. Tomasz zastrzegł ten numer. Co to dla niego znaczy? Kiedy ktoś chce podpisać umowę kredytową, bank sprawdza, czy numer jest zastrzeżony. Dzięki temu innej osobie trudniej jest wykorzystać dane Tomasza.\n\nTeraz sam Tomasz chce pożyczyć pieniądze z banku. Zanim podpisze umowę, rozmawia z pracownicą banku. Pyta, co ma zrobić z zastrzeżonym numerem. Pracownica radzi mu sprawdzić, czy przed podpisaniem umowy musi cofnąć zastrzeżenie. Tomasz zapisuje nazwę usługi, żeby później spokojnie przeczytać o niej w domu.\n\nWieczorem otwiera oficjalną stronę z informacjami o tej usłudze. Dowiaduje się, że może cofnąć zastrzeżenie, a później znów zastrzec numer. Po podpisaniu umowy chce dalej chronić swoje dane tak jak wcześniej. W kalendarzu zostawia więc miejsce na jeszcze jedną sprawę po wizycie w banku. Sam zajmie się swoim kontem.",
+      "source": {
+        "url": "https://www.gov.pl/web/gov/zastrzez-swoj-numer-pesel-lub-cofnij-zastrzezenie",
+        "publisher": "Gov.pl",
+        "title": "Zastrzeż swój numer PESEL lub cofnij zastrzeżenie",
+        "facts": [
+          "Financial institutions must check restriction status for loans; eligible users can restrict or revoke restriction through available public services."
+        ],
+        "use": "facts-only",
+        "checked": "2026-11-25",
+        "adaptation": "Original Polish educational composition based on source facts; illustrative people/scenarios are fictional."
+      },
+      "questions": [
+        {
+          "id": "main-idea",
+          "skill": "main-idea",
+          "question": "O czym jest ta historia?",
+          "options": [
+            "O tym, jak Tomasz ustala z bankiem wysokość pożyczki.",
+            "O tym, jak pracownica banku zakłada Tomaszowi konto przez internet.",
+            "O tym, jak Tomasz dba o swój PESEL, kiedy planuje wziąć pożyczkę."
+          ],
+          "answer": "O tym, jak Tomasz dba o swój PESEL, kiedy planuje wziąć pożyczkę.",
+          "evidence": "Pyta, co ma zrobić z zastrzeżonym numerem.",
+          "explanation": "Planowana umowa skłania Tomasza do sprawdzenia, jak postąpić z zastrzeżeniem."
+        },
+        {
+          "id": "detail",
+          "skill": "detail",
+          "question": "Co Tomasz zapisuje podczas rozmowy w banku?",
+          "options": [
+            "Termin podpisania umowy.",
+            "Kwotę planowanej pożyczki.",
+            "Nazwę usługi."
+          ],
+          "answer": "Nazwę usługi.",
+          "evidence": "Tomasz zapisuje nazwę usługi",
+          "explanation": "Nazwa pomoże mu później znaleźć informacje w domu."
+        },
+        {
+          "id": "cause",
+          "skill": "cause",
+          "question": "Dlaczego Tomasz pyta pracownicę o swój zastrzeżony numer?",
+          "options": [
+            "Chce zmienić numer, zanim założy konto.",
+            "Chce dowiedzieć się, kto wcześniej sprawdzał jego dane.",
+            "Chce przygotować się do podpisania własnej umowy."
+          ],
+          "answer": "Chce przygotować się do podpisania własnej umowy.",
+          "evidence": "Teraz sam Tomasz chce pożyczyć pieniądze z banku. Zanim podpisze umowę, rozmawia z pracownicą banku.",
+          "explanation": "Chodzi o czynności potrzebne przy planowanej pożyczce."
+        },
+        {
+          "id": "inference",
+          "skill": "inference",
+          "question": "Przed podpisaniem umowy Tomasz cofnął zastrzeżenie. Co najpewniej wpisze do kalendarza na później?",
+          "options": [
+            "„Jeszcze raz zastrzec swój PESEL”.",
+            "„Sprawdzić nazwę usługi przed pierwszą rozmową”.",
+            "„Otworzyć nowe konto, żeby dostać inny numer”."
+          ],
+          "answer": "„Jeszcze raz zastrzec swój PESEL”.",
+          "evidence": "Po podpisaniu umowy chce dalej chronić swoje dane tak jak wcześniej.",
+          "explanation": "Skoro wcześniej chronił dane przez zastrzeżenie PESEL, po zawarciu umowy może to zrobić ponownie."
+        },
+        {
+          "id": "vocabulary",
+          "skill": "vocabulary",
+          "question": "Co znaczy „cofnąć zastrzeżenie”?",
+          "options": [
+            "Przełożyć sprawdzenie numeru na później.",
+            "Usunąć obecne zastrzeżenie numeru.",
+            "Ponownie włączyć ochronę numeru."
+          ],
+          "answer": "Usunąć obecne zastrzeżenie numeru.",
+          "evidence": "może cofnąć zastrzeżenie, a później znów zastrzec numer.",
+          "explanation": "Najpierw zastrzeżenie przestaje działać, później Tomasz może włączyć je ponownie."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-092",
+      "day": 92,
+      "level": "B1",
+      "genre": "artykuł",
+      "title": "Co zrobić z rzeczami z szafy?",
+      "text": "Kiedy Ewa porządkuje mieszkanie, zwykle zaczyna od segregacji odpadów. W Polsce podstawowy podział obejmuje pięć grup. Osobno zbiera się papier, szkło, metale i tworzywa sztuczne, odpady biologiczne oraz pozostałe odpady. Ewa zna te grupy, ale dziś podczas sprzątania znajduje rzeczy, z którymi musi postąpić inaczej.\n\nNa dnie szafy leży torba z urwanym uchem, a obok niej kurtka, która jest na Ewę za mała. Materiał torby jest mocny. Ewa odkłada ją na krzesło obok pudełka z igłami i nićmi. Kurtkę przymierzy jutro jej siostra. Jeśli będzie na nią dobra, chętnie zabierze ją na jesienny wyjazd. W ten sposób ubranie może dalej komuś służyć.\n\nZostają jeszcze mocno zniszczone ubrania. W podstawowym systemie nie ma osobnego, szóstego pojemnika na tekstylia. Ewa sprawdza więc na stronie swojej gminy, gdzie oddać takie rzeczy. Do tego czasu zostawi je w osobnym miejscu. Przy drzwiach stoi też oznaczona butelka po napoju. Ewa zabierze ją do punktu zbiórki w ramach systemu kaucyjnego, który działa obok zwykłej segregacji.\n\nPo sprzątaniu Ewa skreśla nową torbę z listy zakupów. Rozumie, że o ilości śmieci decyduje również to, co zrobi z przedmiotem, zanim uzna go za odpad. Czasem wystarczy chwila pracy albo rozmowa z kimś, komu dana rzecz nadal może się przydać. W kuchni nadal ma tyle samo koszy co wcześniej.",
+      "source": {
+        "url": "https://www.gov.pl/web/klimat/segregacjaodpadow",
+        "publisher": "Ministerstwo Klimatu i Środowiska",
+        "title": "Segregacja odpadów",
+        "facts": [
+          "Five basic bins form the sorting system; textile waste is not a sixth ordinary bin; separate deposit scheme for eligible beverage packaging."
+        ],
+        "use": "facts-only",
+        "checked": "2026-11-25",
+        "adaptation": "Original Polish educational composition based on source facts; illustrative people/scenarios are fictional."
+      },
+      "questions": [
+        {
+          "id": "main-idea",
+          "skill": "main-idea",
+          "question": "Co łączy decyzje Ewy podczas porządków?",
+          "options": [
+            "Ewa urządza kuchnię tak, by każda znaleziona rzecz miała osobny kosz.",
+            "Ewa szuka jednego miejsca, do którego odda wszystkie rzeczy z mieszkania.",
+            "Ewa dobiera sposób postępowania do rzeczy i sprawdza, co może jeszcze służyć ludziom."
+          ],
+          "answer": "Ewa dobiera sposób postępowania do rzeczy i sprawdza, co może jeszcze służyć ludziom.",
+          "evidence": "Czasem wystarczy chwila pracy albo rozmowa z kimś, komu dana rzecz nadal może się przydać.",
+          "explanation": "Ewa rozważa naprawę i przekazanie rzeczy, a dla odpadów szuka odpowiedniej drogi zbiórki."
+        },
+        {
+          "id": "detail",
+          "skill": "detail",
+          "question": "Co Ewa sprawdza na stronie gminy?",
+          "options": [
+            "Gdzie można naprawić torbę.",
+            "Gdzie oddać zniszczone ubrania.",
+            "Gdzie zwrócić oznaczoną butelkę."
+          ],
+          "answer": "Gdzie oddać zniszczone ubrania.",
+          "evidence": "Ewa sprawdza więc na stronie swojej gminy, gdzie oddać takie rzeczy.",
+          "explanation": "W poprzednich zdaniach mowa o zniszczonych ubraniach i tekstyliach."
+        },
+        {
+          "id": "cause",
+          "skill": "cause",
+          "question": "Dlaczego kurtka czeka na siostrę Ewy?",
+          "options": [
+            "Siostra ma ją zanieść do punktu zbiórki tekstyliów.",
+            "Siostra ma pokazać Ewie, jak naprawić kurtkę przed wyjazdem.",
+            "Kurtka może pasować na siostrę i przydać się jej w podróży."
+          ],
+          "answer": "Kurtka może pasować na siostrę i przydać się jej w podróży.",
+          "evidence": "Jeśli będzie na nią dobra, chętnie zabierze ją na jesienny wyjazd.",
+          "explanation": "Kurtka jest za mała dla Ewy, ale siostra może jej nadal używać."
+        },
+        {
+          "id": "inference",
+          "skill": "inference",
+          "question": "Dlaczego Ewa mogła skreślić nową torbę z listy?",
+          "options": [
+            "Siostra zostawi jej swoją torbę w zamian za kurtkę.",
+            "Ewa spodziewa się, że po przyszyciu ucha stara torba znów się przyda.",
+            "Punkt zbiórki przyjmie starą torbę razem z butelką."
+          ],
+          "answer": "Ewa spodziewa się, że po przyszyciu ucha stara torba znów się przyda.",
+          "evidence": "Materiał torby jest mocny. Ewa odkłada ją na krzesło obok pudełka z igłami i nićmi.",
+          "explanation": "Stan materiału i wybór miejsca wskazują na zamiar naprawy. To wyjaśnia rezygnację z zakupu."
+        },
+        {
+          "id": "vocabulary",
+          "skill": "vocabulary",
+          "question": "Co znaczy tutaj „skreśla nową torbę z listy zakupów”?",
+          "options": [
+            "Dopisuje torbę do rzeczy, które siostra ma przymierzyć.",
+            "Odkłada starą torbę do rzeczy przeznaczonych do oddania.",
+            "Rezygnuje z planowanego kupna nowej torby."
+          ],
+          "answer": "Rezygnuje z planowanego kupna nowej torby.",
+          "evidence": "Po sprzątaniu Ewa skreśla nową torbę z listy zakupów.",
+          "explanation": "Skreślenie rzeczy z takiej listy oznacza, że Ewa już nie planuje jej kupić."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-099",
+      "day": 99,
+      "level": "B1",
+      "genre": "artykuł",
+      "title": "Pierwsze spotkanie z klasyką",
+      "text": "Co roku podczas Narodowego Czytania ludzie spotykają się, żeby razem czytać utwory polskich autorów. W wydarzeniu biorą udział między innymi szkoły i biblioteki, a także osoby prywatne. Spotkania odbywają się zarówno w Polsce, jak i za granicą. Wybór tekstu zmienia się w kolejnych latach. W 2025 roku uczestnicy czytali poezję Jana Kochanowskiego, a w 2026 roku wybrano „Dziady” Adama Mickiewicza.\n\nW jednej z bibliotek na wspólne czytanie przyszły osoby uczące się polskiego. Ania pierwszy raz wzięła udział w takim spotkaniu. Wcześniej omijała klasyczne utwory, bo dawny język wydawał jej się za trudny. Gdy miała do wyboru kilka książek, zwykle brała do domu współczesną powieść.\n\nBibliotekarka najpierw opowiedziała kilka zdań o autorze i wyjaśniła, czego dotyczy wybrany fragment. Wiedziała, że część grupy dopiero poznaje polską literaturę. Potem zaprosiła chętnych do głośnego czytania. Ania wolała posłuchać. W czasie rozmowy jeden z uczestników powiedział, z jaką sytuacją kojarzy mu się fragment. Inna osoba zwróciła uwagę na słowa, których Ania wcześniej nawet nie zauważyła.\n\nPo spotkaniu Ania nadal miała w zeszycie kilka wyrażeń do sprawdzenia. Tym razem jednak zaznaczyła też stronę, do której chciała wrócić w domu. Obok zapisała pytanie o to, dlaczego dwoje czytelników tak różnie zrozumiało ostatnie zdanie. Zamierzała jeszcze raz przeczytać je sama, zanim porozmawia o nim z koleżanką.",
+      "source": {
+        "url": "https://www.gov.pl/web/kultura/narodowe-czytanie-2026---czytamy-dziady-adama-mickiewicza",
+        "publisher": "Ministerstwo Kultury i Dziedzictwa Narodowego",
+        "title": "Narodowe Czytanie 2026 – czytamy Dziady Adama Mickiewicza",
+        "facts": [
+          "Annual public reading event involving willing participants and educational/cultural institutions; promotes Polish literature; 2026 selected Dziady, 2025 selected Kochanowski's poetry."
+        ],
+        "use": "facts-only",
+        "checked": "2026-11-25",
+        "adaptation": "Original Polish educational composition based on source facts; illustrative people/scenarios are fictional."
+      },
+      "questions": [
+        {
+          "id": "main-idea",
+          "skill": "main-idea",
+          "question": "Co przykład Ani pokazuje o wspólnym czytaniu?",
+          "options": [
+            "Rozmowa o utworze może zainteresować klasyką osobę, której trudno czytać ją samodzielnie.",
+            "Najwięcej wynoszą ze spotkania te osoby, które przygotowały wcześniej własny fragment do czytania.",
+            "Najważniejszą częścią spotkania jest wybranie tekstu na następną edycję."
+          ],
+          "answer": "Rozmowa o utworze może zainteresować klasyką osobę, której trudno czytać ją samodzielnie.",
+          "evidence": "Obok zapisała pytanie o to, dlaczego dwoje czytelników tak różnie zrozumiało ostatnie zdanie.",
+          "explanation": "Uwagi grupy zainteresowały Anię i zachęciły ją do ponownej lektury."
+        },
+        {
+          "id": "detail",
+          "skill": "detail",
+          "question": "Co bibliotekarka zrobiła przed głośnym czytaniem?",
+          "options": [
+            "Porównała dwie interpretacje ostatniego zdania.",
+            "Poprosiła grupę o przykłady sytuacji z własnego życia.",
+            "Przedstawiła autora i temat fragmentu."
+          ],
+          "answer": "Przedstawiła autora i temat fragmentu.",
+          "evidence": "Bibliotekarka najpierw opowiedziała kilka zdań o autorze i wyjaśniła, czego dotyczy wybrany fragment.",
+          "explanation": "Dopiero po tym wprowadzeniu chętni zaczęli czytać."
+        },
+        {
+          "id": "cause",
+          "skill": "cause",
+          "question": "Dlaczego Ania wcześniej wybierała współczesne powieści zamiast klasyki?",
+          "options": [
+            "Spodziewała się trudności z językiem starszych dzieł.",
+            "Chciała przygotować przykłady do rozmowy w bibliotece.",
+            "Zależało jej na znalezieniu innego zakończenia poznanego utworu."
+          ],
+          "answer": "Spodziewała się trudności z językiem starszych dzieł.",
+          "evidence": "Wcześniej omijała klasyczne utwory, bo dawny język wydawał jej się za trudny.",
+          "explanation": "O jej wyborze decydowała obawa przed trudnym językiem."
+        },
+        {
+          "id": "inference",
+          "skill": "inference",
+          "question": "Co najpewniej zainteresuje Anię, gdy znów otworzy zaznaczoną stronę?",
+          "options": [
+            "Którą część utworu bibliotekarka przydzieliła jej do głośnego czytania.",
+            "Jaką współczesną powieść warto zaproponować na kolejne spotkanie.",
+            "Które słowa mogły podsunąć czytelnikom różne wyjaśnienia tego samego zdania."
+          ],
+          "answer": "Które słowa mogły podsunąć czytelnikom różne wyjaśnienia tego samego zdania.",
+          "evidence": "Obok zapisała pytanie o to, dlaczego dwoje czytelników tak różnie zrozumiało ostatnie zdanie.",
+          "explanation": "Ania chce ponownie przeczytać zakończenie fragmentu i zastanowić się nad różnicą między interpretacjami."
+        },
+        {
+          "id": "vocabulary",
+          "skill": "vocabulary",
+          "question": "Co znaczy, że Ania „omijała klasyczne utwory”?",
+          "options": [
+            "Odkładała przeczytane klasyczne książki na osobną półkę.",
+            "Wybierając lekturę, zazwyczaj rezygnowała z takich książek.",
+            "Czytając takie książki, opuszczała trudniejsze fragmenty."
+          ],
+          "answer": "Wybierając lekturę, zazwyczaj rezygnowała z takich książek.",
+          "evidence": "Gdy miała do wyboru kilka książek, zwykle brała do domu współczesną powieść.",
+          "explanation": "Chodzi o wybór książki jeszcze przed rozpoczęciem czytania."
+        }
+      ]
+    }
+  ]
+}

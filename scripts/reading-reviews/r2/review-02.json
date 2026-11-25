@@ -1,0 +1,610 @@
+{
+  "passages": [
+    {
+      "id": "pl-b1.reading.day-011",
+      "scores": {
+        "naturalness": 98,
+        "level": 87,
+        "questions": 87,
+        "ambiguity": 98,
+        "theme": 98,
+        "vocabulary": 88
+      },
+      "criticalIssues": [],
+      "notes": "Natural, coherent shared-home description. Common objects and short sentences suit A1. Household-rule expressions such as wytrzeć stół and the subordinate clauses in the items lean toward upper A1. The main-idea and vocabulary answers overlap substantially.",
+      "items": [
+        {
+          "id": "q1",
+          "option": "A",
+          "evidence": "Każda osoba ma swój pokój, ale kuchnia jest wspólna.",
+          "ambiguous": false,
+          "distractorScore": 72,
+          "skillMatches": true,
+          "notes": "A covers the shared room and its rules. The distractors borrow the rooms and food, but invent furnishing or shared meals. Q5 nearly supplies the central answer."
+        },
+        {
+          "id": "q2",
+          "option": "A",
+          "evidence": "W lodówce każdy ma swoją półkę na jedzenie.",
+          "ambiguous": false,
+          "distractorScore": 78,
+          "skillMatches": true,
+          "notes": "The other locations and sharing arrangements recombine genuine details."
+        },
+        {
+          "id": "q3",
+          "option": "B",
+          "evidence": "Dzięki tym prostym zasadom wszystkim dobrze się tu mieszka.",
+          "ambiguous": false,
+          "distractorScore": 70,
+          "skillMatches": true,
+          "notes": "B expresses the evident purpose through the stated result. C misapplies the cleaning rota to cooking. A invents a meal schedule."
+        },
+        {
+          "id": "q4",
+          "option": "C",
+          "evidence": "Po gotowaniu trzeba umyć naczynia i wytrzeć stół.",
+          "ambiguous": false,
+          "distractorScore": 63,
+          "skillMatches": true,
+          "notes": "Applies the rule to a dirty pot. A plausibly confuses daily cleanup with Saturday cleaning. B has no basis. The rule does not give an explicit deadline or a clean-table exception. C states a required action without ruling out wiping the table."
+        },
+        {
+          "id": "q5",
+          "option": "B",
+          "evidence": "Każda osoba ma swój pokój, ale kuchnia jest wspólna.",
+          "ambiguous": false,
+          "distractorScore": 55,
+          "skillMatches": true,
+          "notes": "A confuses sharing with simultaneous use. C posits three separate kitchens and is easy to dismiss. The contrast in the sentence supports B."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-012",
+      "scores": {
+        "naturalness": 97,
+        "level": 78,
+        "questions": 75,
+        "ambiguity": 96,
+        "theme": 97,
+        "vocabulary": 91
+      },
+      "criticalIssues": [
+        "Q1 has a question–answer grammar mismatch in every option. The stem O czym jest cały tekst? calls for O + locative, but all three answers are bare accusative noun phrases."
+      ],
+      "notes": "The passage itself is natural and uses a clear spatial layout. Vocabulary such as łagodne and grammatical forms such as pięcioro znajomych make the assessment challenging for early A1. Q1 needs a grammatical repair before use.",
+      "items": [
+        {
+          "id": "q1",
+          "option": "B",
+          "evidence": "Najbardziej lubię salon. To jasny pokój z dwoma oknami. Przy ścianie stoi wygodna sofa, a obok niej mały stolik. Na stoliku jest lampa. Po drugiej stronie pokoju stoi regał z książkami, a obok niego kilka zielonych roślin.\n\nRano w salonie jest dużo światła. Wtedy piję tam kawę i czytam wiadomości.",
+          "ambiguous": false,
+          "distractorScore": 65,
+          "skillMatches": true,
+          "notes": "B is uniquely correct in meaning. Change the stem to Co opisuje osoba w tekście? to license the existing accusatives, or recast every option with O + locative. A invents shopping; C expands the final kitchen reference into a meal theme."
+        },
+        {
+          "id": "q2",
+          "option": "C",
+          "evidence": "Przy ścianie stoi wygodna sofa, a obok niej mały stolik.",
+          "ambiguous": false,
+          "distractorScore": 75,
+          "skillMatches": true,
+          "notes": "The shelf is a nearby discourse referent and a good lure. The kitchen table is real but explicitly in a different room."
+        },
+        {
+          "id": "q3",
+          "option": "A",
+          "evidence": "Kiedy przychodzą znajomi, siadamy razem przy stole w kuchni, ponieważ w salonie jest za mało miejsca dla większej grupy.",
+          "ambiguous": false,
+          "distractorScore": 83,
+          "skillMatches": true,
+          "notes": "The dim light reuses a related detail. More chairs is a plausible extrapolation, but the text supplies lack of space as the cause."
+        },
+        {
+          "id": "q4",
+          "option": "B",
+          "evidence": "Kiedy przychodzą znajomi, siadamy razem przy stole w kuchni, ponieważ w salonie jest za mało miejsca dla większej grupy.",
+          "ambiguous": false,
+          "distractorScore": 65,
+          "skillMatches": true,
+          "notes": "Applies the usual seating arrangement to a visit by five people. A uses the small table associated with the narrator’s coffee. C is an implausible coffee-serving location. Pięcioro raises the language demand of the stem."
+        },
+        {
+          "id": "q5",
+          "option": "C",
+          "evidence": "Przy ścianie stoi wygodna sofa, a obok niej mały stolik. Na stoliku jest lampa. Po drugiej stronie pokoju stoi regał z książkami",
+          "ambiguous": false,
+          "distractorScore": 74,
+          "skillMatches": true,
+          "notes": "C captures the relationship to the sofa area. The passage does not require precise direct alignment, so naprzeciwko miejsca z sofą works as an approximate spatial gloss."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-013",
+      "scores": {
+        "naturalness": 96,
+        "level": 83,
+        "questions": 83,
+        "ambiguity": 97,
+        "theme": 98,
+        "vocabulary": 90
+      },
+      "criticalIssues": [],
+      "notes": "Coherent moving-day narrative with a good range of home vocabulary. Expressions such as znajduje się, żeby można było and zajmie jej mniej czasu increase the burden for early A1. Zmienia mieszkanie is understandable; przeprowadza się is more idiomatic if already taught.",
+      "items": [
+        {
+          "id": "q1",
+          "option": "C",
+          "evidence": "Ola zmienia mieszkanie. Jej stare mieszkanie jest daleko od pracy, a nowe znajduje się przy stacji metra.",
+          "ambiguous": false,
+          "distractorScore": 73,
+          "skillMatches": true,
+          "notes": "Both distractors combine genuine topic details with a changed relationship. B reverses who visits whom."
+        },
+        {
+          "id": "q2",
+          "option": "A",
+          "evidence": "W sobotę przyjeżdża brat Oli i pomaga jej przenosić rzeczy.",
+          "ambiguous": false,
+          "distractorScore": 57,
+          "skillMatches": true,
+          "notes": "A is direct. A neighbour is a plausible helper in real life but absent from the passage, and the boss has little contextual basis."
+        },
+        {
+          "id": "q3",
+          "option": "A",
+          "evidence": "Ola chce najpierw przygotować kuchnię, żeby można było zrobić herbatę i coś zjeść.",
+          "ambiguous": false,
+          "distractorScore": 70,
+          "skillMatches": true,
+          "notes": "Books and furniture both appear. Neither explains the kitchen priority, and the text expressly says she does not buy new furniture that day."
+        },
+        {
+          "id": "q4",
+          "option": "B",
+          "evidence": "Teraz droga do pracy zajmie jej mniej czasu.",
+          "ambiguous": false,
+          "distractorScore": 77,
+          "skillMatches": true,
+          "notes": "Combines the shorter journey with the unchanged start time supplied by the stem. C overstates what follows from the new location. A invents a joint return with her brother. The stem would sound more natural as Jeśli Ola nadal zaczyna pracę o tej samej porze, co może robić po przeprowadzce?"
+        },
+        {
+          "id": "q5",
+          "option": "B",
+          "evidence": "W sobotę przyjeżdża brat Oli i pomaga jej przenosić rzeczy. Książki są w małych kartonach, ubrania w dużych torbach.",
+          "ambiguous": false,
+          "distractorScore": 77,
+          "skillMatches": true,
+          "notes": "Both distractors describe moving-related tasks. The change of dwelling and containers support carrying objects to a different place."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-014",
+      "scores": {
+        "naturalness": 96,
+        "level": 81,
+        "questions": 75,
+        "ambiguity": 95,
+        "theme": 98,
+        "vocabulary": 89
+      },
+      "criticalIssues": [
+        "Q3’s only supported option repeats the meaning of dostawa do domu. It misses the cause/purpose construct and partly gives away Q5."
+      ],
+      "notes": "The shift away from daily car use is clear and coherent. Everyday transport vocabulary fits the topic, with temporal contrasts and expressions such as podczas dłuższych wyjazdów and towar pushing toward upper A1 or early A2.",
+      "items": [
+        {
+          "id": "q1",
+          "option": "B",
+          "evidence": "Wcześniej często jeździli samochodem, ale teraz chcą częściej chodzić pieszo i jeździć rowerem.",
+          "ambiguous": false,
+          "distractorScore": 73,
+          "skillMatches": true,
+          "notes": "The alternatives use real side details. C invents a purchase and A turns an example of remaining car use into the main idea."
+        },
+        {
+          "id": "q2",
+          "option": "B",
+          "evidence": "W garażu stoją dwa rowery.",
+          "ambiguous": false,
+          "distractorScore": 68,
+          "skillMatches": true,
+          "notes": "Adjacent number choices are accessible and plausible, though the matching phrase makes the item very easy."
+        },
+        {
+          "id": "q3",
+          "option": "B",
+          "evidence": "Kiedy muszą kupić coś dużego, zamawiają dostawę do domu. Dzięki temu nie potrzebują codziennie samochodu.",
+          "ambiguous": false,
+          "distractorScore": 50,
+          "skillMatches": false,
+          "notes": "B states the destination and expands the delivery phrase. Add the answer Żeby rzadziej używać samochodu and use alternatives that are plausible reasons. The family and station destinations are weak."
+        },
+        {
+          "id": "q4",
+          "option": "A",
+          "evidence": "Magda jeździ rowerem na małe zakupy",
+          "ambiguous": false,
+          "distractorScore": 29,
+          "skillMatches": true,
+          "notes": "Applies Magda’s usual method to buying one item. The two other options send her away from shops for unrelated purposes. An unlisted walk might be equally easy. Ask what she will most likely do, or present realistic alternatives."
+        },
+        {
+          "id": "q5",
+          "option": "C",
+          "evidence": "Kiedy muszą kupić coś dużego, zamawiają dostawę do domu.",
+          "ambiguous": false,
+          "distractorScore": 76,
+          "skillMatches": true,
+          "notes": "Other ways to get goods are credible contrasts. C should explicitly say do domu klienta to define the destination, and simpler rzeczy or zakupy could replace towar."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-015",
+      "scores": {
+        "naturalness": 95,
+        "level": 87,
+        "questions": 82,
+        "ambiguity": 96,
+        "theme": 98,
+        "vocabulary": 89
+      },
+      "criticalIssues": [],
+      "notes": "The familiar day-off schedule, meals and jobs suit A1. The passage reads naturally as an informal account. Q3 uses a stilted impersonal construction. The coffee time is possible rather than established in the narrative.",
+      "items": [
+        {
+          "id": "q1",
+          "option": "C",
+          "evidence": "Cześć, Moniko! Dzisiaj mam wolny dzień.",
+          "ambiguous": false,
+          "distractorScore": 66,
+          "skillMatches": true,
+          "notes": "School and preparing lunch borrow occupations or activities, but neither describes the message. The title and the opening make C immediate."
+        },
+        {
+          "id": "q2",
+          "option": "C",
+          "evidence": "Moja siostra jest kucharką i umie przygotować bardzo dobry obiad.",
+          "ambiguous": false,
+          "distractorScore": 70,
+          "skillMatches": true,
+          "notes": "Nauczycielką is a strong wrong-person lure. Kierowcą is an unattested occupation in a passage mentioning transit."
+        },
+        {
+          "id": "q3",
+          "option": "C",
+          "evidence": "Nie jadę samochodem, tylko autobusem, bo kino jest w centrum.",
+          "ambiguous": false,
+          "distractorScore": 66,
+          "skillMatches": true,
+          "notes": "The cause is directly stated. Rewrite the stilted stem as Dlaczego osoba pisząca do Moniki jedzie do kina autobusem? A uses the previous outing; B invents a stop by the café."
+        },
+        {
+          "id": "q4",
+          "option": "A",
+          "evidence": "Po południu spotykam się z koleżanką w kawiarni. Ona jest nauczycielką i kończy pracę o trzeciej.",
+          "ambiguous": false,
+          "distractorScore": 64,
+          "skillMatches": true,
+          "notes": "Applies an afternoon work end-time to scheduling. Both distractors are before 15.00. Zaraz po pracy is flexible, and 15.15 is the only possible listed time based on the given schedule."
+        },
+        {
+          "id": "q5",
+          "option": "B",
+          "evidence": "Dzisiaj mam wolny dzień. Rano jem śniadanie z siostrą. Potem idziemy na rynek.",
+          "ambiguous": false,
+          "distractorScore": 76,
+          "skillMatches": true,
+          "notes": "Early finish and remote work are reasonable contrasts. The narrator’s activity pattern supports the day-off meaning."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-016",
+      "scores": {
+        "naturalness": 94,
+        "level": 85,
+        "questions": 74,
+        "ambiguity": 91,
+        "theme": 96,
+        "vocabulary": 88
+      },
+      "criticalIssues": [
+        "Q4 supplies an unsupported detail by assuming the mother intends to give the son food to eat at work. The text supports the sandwiches as the only meal option, while the intended place of eating is unstated."
+      ],
+      "notes": "Engaging dialogue, realistic search and useful reference tracking support A1. The less common brelok and the relative clause w której wychodzisz z psem increase difficulty. Q4 needs a more cautious premise.",
+      "items": [
+        {
+          "id": "q1",
+          "option": "B",
+          "evidence": "Mamo, gdzie są moje klucze? Zaraz wychodzę do pracy.",
+          "ambiguous": false,
+          "distractorScore": 68,
+          "skillMatches": true,
+          "notes": "The key search is the main problem throughout. Both alternatives use secondary objects involved in the search."
+        },
+        {
+          "id": "q2",
+          "option": "B",
+          "evidence": "Moje mają mały czerwony brelok.",
+          "ambiguous": false,
+          "distractorScore": 84,
+          "skillMatches": true,
+          "notes": "One lure changes the colour using the bag’s colour, the other changes the size. They target actual detail reading."
+        },
+        {
+          "id": "q3",
+          "option": "C",
+          "evidence": "— Te na stole?\n\n— Nie, te są twoje.",
+          "ambiguous": false,
+          "distractorScore": 71,
+          "skillMatches": true,
+          "notes": "The answer connects the son’s rejection with the mother's ownership. Dlaczego syn nie bierze kluczy ze stołu? would express the intended action more directly. The father lure is credible and refers to the other set."
+        },
+        {
+          "id": "q4",
+          "option": "C",
+          "evidence": "Syn bierze klucze i torbę. Mama przypomina mu jeszcze o śniadaniu. Na stole stoi pudełko z kanapkami.",
+          "ambiguous": false,
+          "distractorScore": 44,
+          "skillMatches": true,
+          "notes": "C is the only meal-consistent option and connects the breakfast reminder with the nearby sandwiches and imminent departure. The giving intention and work location are presupposed. Use Co syn może zabrać do jedzenia, kiedy wychodzi do pracy? and make the alternatives foods."
+        },
+        {
+          "id": "q5",
+          "option": "A",
+          "evidence": "Sprawdź kieszeń kurtki. Czy to ta kurtka, w której wychodzisz z psem?\n\n— Tak, to ta sama kurtka. O, są! Dziękuję.",
+          "ambiguous": false,
+          "distractorScore": 66,
+          "skillMatches": true,
+          "notes": "Finding the keys after the instruction supports a storage compartment. B and C denote genuine nearby concepts but are easy to eliminate by the noun kurtka."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-017",
+      "scores": {
+        "naturalness": 92,
+        "level": 82,
+        "questions": 85,
+        "ambiguity": 98,
+        "theme": 89,
+        "vocabulary": 90
+      },
+      "criticalIssues": [],
+      "notes": "The transport modes and familiar work routine fit upper A1. Różnie dostaje się do pracy is understandable but less idiomatic than dociera do pracy na różne sposoby. Office tasks and the dinner-shopping sentence dilute the commute theme slightly.",
+      "items": [
+        {
+          "id": "q1",
+          "option": "C",
+          "evidence": "Michał mieszka niedaleko biura i różnie dostaje się do pracy.",
+          "ambiguous": false,
+          "distractorScore": 81,
+          "skillMatches": true,
+          "notes": "The lures target genuine minor themes and therefore assess scope. Most of the passage is about transport to work."
+        },
+        {
+          "id": "q2",
+          "option": "A",
+          "evidence": "Dzisiaj Michał jedzie rowerem, ponieważ rano świeci słońce.",
+          "ambiguous": false,
+          "distractorScore": 90,
+          "skillMatches": true,
+          "notes": "Both lures are real modes in the text, associated with another situation or person."
+        },
+        {
+          "id": "q3",
+          "option": "A",
+          "evidence": "Dzisiaj Michał jedzie rowerem, ponieważ rano świeci słońce.",
+          "ambiguous": false,
+          "distractorScore": 72,
+          "skillMatches": true,
+          "notes": "C misapplies his bad-weather routine. B borrows the kiosk but invents the need and opening-time constraint. Q2 and Q3 draw from the same sentence."
+        },
+        {
+          "id": "q4",
+          "option": "B",
+          "evidence": "Michał mieszka niedaleko biura i różnie dostaje się do pracy. Kiedy ma dużo czasu, idzie pieszo przez park. Po drodze kupuje kawę w małym kiosku. Gdy pada deszcz, jedzie tramwajem. Przystanek jest między szkołą a sklepem.\n\nDzisiaj Michał jedzie rowerem, ponieważ rano świeci słońce. Przed biurem spotyka kolegę. Kolega przyjeżdża autobusem z drugiego końca miasta.",
+          "ambiguous": false,
+          "distractorScore": 68,
+          "skillMatches": true,
+          "notes": "Compares two distance cues. Najpewniej properly allows for the route to be indicative rather than a measured address-to-address distance. C’s rationale is a weak non sequitur."
+        },
+        {
+          "id": "q5",
+          "option": "A",
+          "evidence": "Kiedy ma dużo czasu, idzie pieszo przez park. Po drodze kupuje kawę w małym kiosku.",
+          "ambiguous": false,
+          "distractorScore": 68,
+          "skillMatches": true,
+          "notes": "A, B and C cover the relevant moments. W czasie drogi is understandable but stiff. Gdy idzie z domu do biura is more idiomatic."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-018",
+      "scores": {
+        "naturalness": 97,
+        "level": 87,
+        "questions": 84,
+        "ambiguity": 98,
+        "theme": 98,
+        "vocabulary": 91
+      },
+      "criticalIssues": [],
+      "notes": "The note resembles a real household message and contains useful numbers, quantities and food vocabulary. Genitive numerals and evening clock conversion are defensible at upper A1. The shopping reason and the number inference are cleanly supported.",
+      "items": [
+        {
+          "id": "q1",
+          "option": "B",
+          "evidence": "Cześć, Piotrze! Wracam dziś później z pracy. Proszę, zrób małe zakupy na kolację.",
+          "ambiguous": false,
+          "distractorScore": 81,
+          "skillMatches": true,
+          "notes": "Other purposes borrow lunch and sandwiches with changed dates or agents. It tests communicative purpose, a reasonable main-idea task for a note."
+        },
+        {
+          "id": "q2",
+          "option": "C",
+          "evidence": "Potrzebujemy dwóch pomidorów, jednej cebuli, trzech jajek i czterech bułek.",
+          "ambiguous": false,
+          "distractorScore": 87,
+          "skillMatches": true,
+          "notes": "The wrong numbers belong to other items on the shopping list. Recognizing trzech as trzy matters."
+        },
+        {
+          "id": "q3",
+          "option": "C",
+          "evidence": "W lodówce jest już masło i ser, więc nie kupuj ich ponownie.",
+          "ambiguous": false,
+          "distractorScore": 57,
+          "skillMatches": true,
+          "notes": "Price and preference are possible shopping reasons in real life, but absent here. Reusing a reason elsewhere in the passage would raise plausibility."
+        },
+        {
+          "id": "q4",
+          "option": "C",
+          "evidence": "Sklep przy domu jest czynny do ósmej wieczorem.",
+          "ambiguous": false,
+          "distractorScore": 72,
+          "skillMatches": true,
+          "notes": "Applies 20.00 closing to an arrival at 20.15. B plausibly reverses the time comparison but the impersonal do zamknięcia zostało jeszcze piętnaście minut would read more naturally and avoid kwadrans. A is a weak extreme."
+        },
+        {
+          "id": "q5",
+          "option": "A",
+          "evidence": "Sklep przy domu jest czynny do ósmej wieczorem.",
+          "ambiguous": false,
+          "distractorScore": 69,
+          "skillMatches": true,
+          "notes": "The opening-hours context supports A. B is a plausible contrast; C adds an unsupported service restriction."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-019",
+      "scores": {
+        "naturalness": 96,
+        "level": 84,
+        "questions": 85,
+        "ambiguity": 98,
+        "theme": 98,
+        "vocabulary": 91
+      },
+      "criticalIssues": [],
+      "notes": "A coherent set of everyday errands with clear times and locations. Załatwienie, odpoczynek and multiple time expressions lean toward upper A1. The arithmetic is simple and requires connecting two reported times.",
+      "items": [
+        {
+          "id": "q1",
+          "option": "C",
+          "evidence": "W poniedziałek rano Basia ma trzy sprawy do załatwienia.",
+          "ambiguous": false,
+          "distractorScore": 76,
+          "skillMatches": true,
+          "notes": "The alternatives incorporate shopping, the dentist and work but change the roles or timing."
+        },
+        {
+          "id": "q2",
+          "option": "A",
+          "evidence": "Gabinet jest na drugim piętrze, nad apteką.",
+          "ambiguous": false,
+          "distractorScore": 73,
+          "skillMatches": true,
+          "notes": "Adjacent ordinal choices suit the detail target. Nad apteką makes first floor superficially plausible."
+        },
+        {
+          "id": "q3",
+          "option": "A",
+          "evidence": "Basia nie chce nosić ciężkiej torby przez całe miasto, dlatego zostawia zakupy na koniec.",
+          "ambiguous": false,
+          "distractorScore": 75,
+          "skillMatches": true,
+          "notes": "A preserves the cause, but chce krótko nosić torbę is stiff. Bo nie chce długo nosić ciężkiej torby would be idiomatic. C plausibly borrows opening hours from the post office."
+        },
+        {
+          "id": "q4",
+          "option": "B",
+          "evidence": "O dwunastej jest już w mieszkaniu. Ma jeszcze czas na odpoczynek przed pracą. Dzisiaj zaczyna pracę o drugiej po południu.",
+          "ambiguous": false,
+          "distractorScore": 74,
+          "skillMatches": true,
+          "notes": "Combines 12.00 and 14.00 to obtain a duration. The stem fixes noon as the start of the interval, so it does not require knowing exactly when she got home."
+        },
+        {
+          "id": "q5",
+          "option": "C",
+          "evidence": "W poniedziałek rano Basia ma trzy sprawy do załatwienia. Najpierw idzie na pocztę, żeby wysłać paczkę.",
+          "ambiguous": false,
+          "distractorScore": 70,
+          "skillMatches": true,
+          "notes": "The wording asks for the expression’s realization in this specific context, so completing the intended parcel task is sufficient. A and B are preparatory and postponing actions, respectively."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-020",
+      "scores": {
+        "naturalness": 97,
+        "level": 85,
+        "questions": 84,
+        "ambiguity": 98,
+        "theme": 98,
+        "vocabulary": 91
+      },
+      "criticalIssues": [],
+      "notes": "The routine and activities are familiar, with przedpokój, partia and powtórzyć adding upper-A1 stretch. Checking messages near bedtime is compatible with spending most of the evening away from phones. Q1’s correct option could express the central choice more idiomatically.",
+      "items": [
+        {
+          "id": "q1",
+          "option": "B",
+          "evidence": "Kuba i Iza często patrzą na telefony nawet podczas kolacji. Dzisiaj chcą spędzić wieczór inaczej. Po pracy odkładają telefony na półkę w przedpokoju.",
+          "ambiguous": false,
+          "distractorScore": 67,
+          "skillMatches": true,
+          "notes": "B covers the shared evening and the change in phone use. O tym, jak Kuba i Iza spędzają wieczór, odkładając telefony would better express their choice; O tym, jak Kuba i Iza spędzają wieczór bez ciągłego sprawdzania telefonów is more explicit."
+        },
+        {
+          "id": "q2",
+          "option": "B",
+          "evidence": "Kuba gotuje makaron, a Iza przygotowuje sałatkę.",
+          "ambiguous": false,
+          "distractorScore": 82,
+          "skillMatches": true,
+          "notes": "Both characters cook, so the answers require tracking individual actions."
+        },
+        {
+          "id": "q3",
+          "option": "C",
+          "evidence": "Są zadowoleni, bo mają więcej czasu na rozmowę i odpoczynek.",
+          "ambiguous": false,
+          "distractorScore": 61,
+          "skillMatches": true,
+          "notes": "C reproduces the causal clause. A could be a reasonable benefit but has no cue beyond the mention of bedtime. B is distant from the events."
+        },
+        {
+          "id": "q4",
+          "option": "A",
+          "evidence": "Przed snem sprawdzają wiadomości na telefonach.",
+          "ambiguous": false,
+          "distractorScore": 70,
+          "skillMatches": true,
+          "notes": "Applies the stated checking time to a new incoming message during dinner. C reflects their usual phone use and B is an implausibly late alternative."
+        },
+        {
+          "id": "q5",
+          "option": "C",
+          "evidence": "Dzisiaj chcą spędzić wieczór inaczej. Po pracy odkładają telefony na półkę w przedpokoju.",
+          "ambiguous": false,
+          "distractorScore": 72,
+          "skillMatches": true,
+          "notes": "A reverses the movement. Charging on a shelf is possible but not the meaning of odkładają. C captures the placement and temporary disuse in context."
+        }
+      ]
+    }
+  ]
+}

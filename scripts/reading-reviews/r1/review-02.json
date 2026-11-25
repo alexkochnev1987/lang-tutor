@@ -1,0 +1,616 @@
+{
+  "passages": [
+    {
+      "id": "pl-b1.reading.day-011",
+      "scores": {
+        "naturalness": 91,
+        "level": 82,
+        "questions": 67,
+        "ambiguity": 99,
+        "theme": 94,
+        "vocabulary": 88
+      },
+      "criticalIssues": [
+        "Q4 repeats the rotation rule."
+      ],
+      "notes": "Formal 'należy powiedzieć o tym pozostałym osobom' is heavy for A1. Use 'powiedz o tym Julii i Bartkowi' in a concrete example. The guest rule extends beyond kitchen use.",
+      "items": [
+        {
+          "id": "q1",
+          "option": "B",
+          "evidence": "Na drzwiach kuchni jest kartka z zasadami.",
+          "ambiguous": false,
+          "distractorScore": 32,
+          "skillMatches": true,
+          "notes": "Both wrong summaries involve furnishing. Use a narrower plausible kitchen topic."
+        },
+        {
+          "id": "q2",
+          "option": "C",
+          "evidence": "W lodówce każdy ma swoją półkę na jedzenie.",
+          "ambiguous": false,
+          "distractorScore": 81,
+          "skillMatches": true,
+          "notes": "The table is mentioned and the alternatives are parallel."
+        },
+        {
+          "id": "q3",
+          "option": "A",
+          "evidence": "Dzięki tym prostym zasadom wszystkim mieszka się wygodnie.",
+          "ambiguous": false,
+          "distractorScore": 15,
+          "skillMatches": true,
+          "notes": "Purpose is clear. Neither changing room numbers nor closing the kitchen is a credible household aim."
+        },
+        {
+          "id": "q4",
+          "option": "B",
+          "evidence": "W następną sobotę robi to ktoś inny.",
+          "ambiguous": false,
+          "distractorScore": 31,
+          "skillMatches": false,
+          "notes": "'Inna osoba' simply repeats 'ktoś inny'. Ask which of two Saturday plans Julia could make given the rotation."
+        },
+        {
+          "id": "q5",
+          "option": "C",
+          "evidence": "Każda osoba ma swój pokój, ale kuchnia jest wspólna.",
+          "ambiguous": false,
+          "distractorScore": 58,
+          "skillMatches": true,
+          "notes": "The shared/private contrast supplies a clue. Replace 'closed to everyone' with use by one person at a time."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-012",
+      "scores": {
+        "naturalness": 84,
+        "level": 91,
+        "questions": 72,
+        "ambiguity": 99,
+        "theme": 96,
+        "vocabulary": 91
+      },
+      "criticalIssues": [],
+      "notes": "Prefer 'łagodne światło' and place the books on a shelf; these are idiomatic improvements, not agreement errors.",
+      "items": [
+        {
+          "id": "q1",
+          "option": "A",
+          "evidence": "Najbardziej lubię salon.",
+          "ambiguous": false,
+          "distractorScore": 30,
+          "skillMatches": true,
+          "notes": "Moving cities and renovating are remote. Use alternatives about uses of familiar rooms."
+        },
+        {
+          "id": "q2",
+          "option": "B",
+          "evidence": "Przy ścianie stoi wygodna sofa, a obok niej mały stolik.",
+          "ambiguous": false,
+          "distractorScore": 56,
+          "skillMatches": true,
+          "notes": "A fridge is weak in a living room. Use a plant or bookcase."
+        },
+        {
+          "id": "q3",
+          "option": "C",
+          "evidence": "ponieważ w salonie jest za mało miejsca dla większej grupy.",
+          "ambiguous": false,
+          "distractorScore": 44,
+          "skillMatches": true,
+          "notes": "The plant count is an unconvincing reason to meet. Use possible seating or lighting reasons."
+        },
+        {
+          "id": "q4",
+          "option": "A",
+          "evidence": "Wtedy piję tam kawę i czytam wiadomości.",
+          "ambiguous": false,
+          "distractorScore": 48,
+          "skillMatches": true,
+          "notes": "Valid synthesis with the group's need for more space. Cooking is a weak living-room activity."
+        },
+        {
+          "id": "q5",
+          "option": "B",
+          "evidence": "Po drugiej stronie pokoju stoją książki i kilka zielonych roślin.",
+          "ambiguous": false,
+          "distractorScore": 38,
+          "skillMatches": true,
+          "notes": "Replace 'poza mieszkaniem' with a location in the same room."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-013",
+      "scores": {
+        "naturalness": 95,
+        "level": 79,
+        "questions": 75,
+        "ambiguity": 97,
+        "theme": 97,
+        "vocabulary": 94
+      },
+      "criticalIssues": [],
+      "notes": "The moving-day sequence is clear; 'znacznie krótszy', the impersonal purpose clause and the nominal phrasing of q3B stretch A1. A shorter commute need not mean a physically closer address.",
+      "items": [
+        {
+          "id": "q1",
+          "option": "C",
+          "evidence": "Ola zmienia mieszkanie.",
+          "ambiguous": false,
+          "distractorScore": 32,
+          "skillMatches": true,
+          "notes": "C is the closest summary; say 'łatwiej dojechać do pracy' to avoid claiming a shorter distance."
+        },
+        {
+          "id": "q2",
+          "option": "A",
+          "evidence": "W sobotę przyjeżdża brat Oli i pomaga jej przenosić rzeczy.",
+          "ambiguous": false,
+          "distractorScore": 88,
+          "skillMatches": true,
+          "notes": "Parallel, plausible helpers."
+        },
+        {
+          "id": "q3",
+          "option": "B",
+          "evidence": "żeby można było zrobić herbatę i coś zjeść.",
+          "ambiguous": false,
+          "distractorScore": 54,
+          "skillMatches": true,
+          "notes": "Simplify B to 'Chce zrobić herbatę i coś zjeść'; make A a plausible reason for unpacking."
+        },
+        {
+          "id": "q4",
+          "option": "C",
+          "evidence": "Teraz dojazd do pracy będzie znacznie krótszy.",
+          "ambiguous": false,
+          "distractorScore": 34,
+          "skillMatches": true,
+          "notes": "Saved time is a valid inference. Free food is implausible; use attractive but unsupported housing benefits."
+        },
+        {
+          "id": "q5",
+          "option": "A",
+          "evidence": "Teraz dojazd do pracy będzie znacznie krótszy.",
+          "ambiguous": false,
+          "distractorScore": 65,
+          "skillMatches": true,
+          "notes": "The travel meaning has a metro clue. 'Czas odpoczynku' is a weak alternative."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-014",
+      "scores": {
+        "naturalness": 82,
+        "level": 72,
+        "questions": 62,
+        "ambiguity": 99,
+        "theme": 94,
+        "vocabulary": 93
+      },
+      "criticalIssues": [],
+      "notes": "Prefer 'Magda może dojechać do pracy autobusem' and habitual 'Paweł w weekendy jeździ do parku'. The nominalizations in q1B and q4B are harder than the passage.",
+      "items": [
+        {
+          "id": "q1",
+          "option": "B",
+          "evidence": "teraz chcą częściej chodzić pieszo i jeździć rowerem.",
+          "ambiguous": false,
+          "distractorScore": 23,
+          "skillMatches": true,
+          "notes": "Selling a house and building a pharmacy are remote. Use other transport plans."
+        },
+        {
+          "id": "q2",
+          "option": "C",
+          "evidence": "W garażu stoją dwa rowery.",
+          "ambiguous": false,
+          "distractorScore": 58,
+          "skillMatches": true,
+          "notes": "Tables are weak; vary quantities or vehicles."
+        },
+        {
+          "id": "q3",
+          "option": "A",
+          "evidence": "Kiedy muszą kupić coś dużego, zamawiają dostawę do domu.",
+          "ambiguous": false,
+          "distractorScore": 23,
+          "skillMatches": true,
+          "notes": "The purpose follows logically, although unstated. Replace the free bike and family visit with shopping motives."
+        },
+        {
+          "id": "q4",
+          "option": "B",
+          "evidence": "Niedaleko domu są szkoła, apteka i dwa sklepy. Do pracy Magdy jedzie autobus. Paweł pracuje blisko stacji kolejowej.",
+          "ambiguous": false,
+          "distractorScore": 18,
+          "skillMatches": true,
+          "notes": "Valid synthesis, but only B names an advantage. Give three possible advantages phrased in everyday language."
+        },
+        {
+          "id": "q5",
+          "option": "C",
+          "evidence": "zamawiają dostawę do domu.",
+          "ambiguous": false,
+          "distractorScore": 45,
+          "skillMatches": true,
+          "notes": "Collection is a useful contrast. Selling a house is trivial; use a shopping-related alternative."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-015",
+      "scores": {
+        "naturalness": 88,
+        "level": 94,
+        "questions": 76,
+        "ambiguity": 97,
+        "theme": 65,
+        "vocabulary": 88
+      },
+      "criticalIssues": [
+        "Title places the friend in the morning, contradicting the passage."
+      ],
+      "notes": "Title contradicts the timeline: morning with the sister, afternoon with the friend. Retitle 'Mój wolny dzień'. 'Jestem w domu' could become 'Nie idę dziś do pracy'. No textual marker establishes a female narrator; use gender-neutral stems.",
+      "items": [
+        {
+          "id": "q1",
+          "option": "A",
+          "evidence": "mam wolny dzień.",
+          "ambiguous": false,
+          "distractorScore": 35,
+          "skillMatches": true,
+          "notes": "Lessons and cinema work are tangential. Use narrower summaries based on activities in the message."
+        },
+        {
+          "id": "q2",
+          "option": "B",
+          "evidence": "Moja siostra jest kucharką",
+          "ambiguous": false,
+          "distractorScore": 83,
+          "skillMatches": true,
+          "notes": "The friend's profession is a well-grounded distractor."
+        },
+        {
+          "id": "q3",
+          "option": "C",
+          "evidence": "bo kino jest w centrum.",
+          "ambiguous": false,
+          "distractorScore": 22,
+          "skillMatches": true,
+          "notes": "Neither taking the bike nor working on a bus plausibly explains her choice. Use travel reasons."
+        },
+        {
+          "id": "q4",
+          "option": "A",
+          "evidence": "Ona jest nauczycielką i kończy pracę o trzeciej.",
+          "ambiguous": false,
+          "distractorScore": 71,
+          "skillMatches": true,
+          "notes": "A small scheduling inference. Anchor 'najlepiej' to a meeting after her lessons."
+        },
+        {
+          "id": "q5",
+          "option": "B",
+          "evidence": "Dzisiaj jestem w domu, bo mam wolny dzień.",
+          "ambiguous": false,
+          "distractorScore": 41,
+          "skillMatches": true,
+          "notes": "'Dzień bez pieniędzy' is trivial. Contrast a free day with a short working day."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-016",
+      "scores": {
+        "naturalness": 90,
+        "level": 92,
+        "questions": 78,
+        "ambiguity": 99,
+        "theme": 95,
+        "vocabulary": 92
+      },
+      "criticalIssues": [],
+      "notes": "Natural object search with good spatial cues. The exchange about the dog-walking jacket reads slightly staged. 'Czy to ta kurtka, w której wychodzisz z psem?' would sound more conversational.",
+      "items": [
+        {
+          "id": "q1",
+          "option": "C",
+          "evidence": "Mamo, gdzie są moje klucze?",
+          "ambiguous": false,
+          "distractorScore": 51,
+          "skillMatches": true,
+          "notes": "Answer captures the central problem. Use other misplaced objects as plausible alternatives."
+        },
+        {
+          "id": "q2",
+          "option": "A",
+          "evidence": "Moje mają mały czerwony brelok.",
+          "ambiguous": false,
+          "distractorScore": 12,
+          "skillMatches": true,
+          "notes": "Keys do not normally have a bag or wallet. Offer three colours or sizes of key ring."
+        },
+        {
+          "id": "q3",
+          "option": "B",
+          "evidence": "Nie, te są twoje.",
+          "ambiguous": false,
+          "distractorScore": 73,
+          "skillMatches": true,
+          "notes": "Clear ownership reasoning from the dialogue; father's keys offer a stronger distractor."
+        },
+        {
+          "id": "q4",
+          "option": "C",
+          "evidence": "Mama przypomina mu jeszcze o śniadaniu. Na stole stoi pudełko z kanapkami.",
+          "ambiguous": false,
+          "distractorScore": 68,
+          "skillMatches": true,
+          "notes": "Valid modest inference about what he can take; replace father's phone with another object in the scene."
+        },
+        {
+          "id": "q5",
+          "option": "A",
+          "evidence": "Sprawdź kieszeń kurtki.",
+          "ambiguous": false,
+          "distractorScore": 75,
+          "skillMatches": true,
+          "notes": "The jacket and location of the keys establish the meaning."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-017",
+      "scores": {
+        "naturalness": 82,
+        "level": 87,
+        "questions": 69,
+        "ambiguity": 99,
+        "theme": 89,
+        "vocabulary": 88
+      },
+      "criticalIssues": [
+        "Q4 is direct retrieval."
+      ],
+      "notes": "Opening promises different routes but passage mostly distinguishes means of travel. Prefer 'Michał różnie dostaje się do pracy' and 'pracuje przy komputerze'.",
+      "items": [
+        {
+          "id": "q1",
+          "option": "B",
+          "evidence": "Kiedy ma dużo czasu, idzie pieszo przez park. Po drodze kupuje kawę w małym kiosku. Gdy pada deszcz, jedzie tramwajem.",
+          "ambiguous": false,
+          "distractorScore": 34,
+          "skillMatches": true,
+          "notes": "The walking example also favours 'jak Michał dostaje się do pracy'. Use alternatives grounded in his routine."
+        },
+        {
+          "id": "q2",
+          "option": "C",
+          "evidence": "Dzisiaj Michał jedzie rowerem",
+          "ambiguous": false,
+          "distractorScore": 96,
+          "skillMatches": true,
+          "notes": "Both other modes occur with different conditions or people."
+        },
+        {
+          "id": "q3",
+          "option": "A",
+          "evidence": "ponieważ rano świeci słońce.",
+          "ambiguous": false,
+          "distractorScore": 83,
+          "skillMatches": true,
+          "notes": "Rain is a relevant competing cue. Q2 and Q3 use the same sentence."
+        },
+        {
+          "id": "q4",
+          "option": "B",
+          "evidence": "Gdy pada deszcz, jedzie tramwajem.",
+          "ambiguous": false,
+          "distractorScore": 80,
+          "skillMatches": false,
+          "notes": "Direct paraphrase of the rain rule. Ask which traveller likely lives farther away using both descriptions."
+        },
+        {
+          "id": "q5",
+          "option": "C",
+          "evidence": "Po drodze kupuje kawę w małym kiosku.",
+          "ambiguous": false,
+          "distractorScore": 44,
+          "skillMatches": true,
+          "notes": "An unrelated city is easy to reject; contrast before departure and after arrival."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-018",
+      "scores": {
+        "naturalness": 95,
+        "level": 92,
+        "questions": 77,
+        "ambiguity": 99,
+        "theme": 98,
+        "vocabulary": 94
+      },
+      "criticalIssues": [
+        "Q4 is direct retrieval."
+      ],
+      "notes": "Authentic shopping request with well-supported quantities, substitutions and timing. The isolated signature is more conventional as 'Ania' without a full stop.",
+      "items": [
+        {
+          "id": "q1",
+          "option": "A",
+          "evidence": "Proszę, zrób małe zakupy na kolację.",
+          "ambiguous": false,
+          "distractorScore": 68,
+          "skillMatches": true,
+          "notes": "Q1A is sound; mother's lunch makes C partly grounded."
+        },
+        {
+          "id": "q2",
+          "option": "B",
+          "evidence": "dwóch pomidorów, jednej cebuli, trzech jajek i czterech bułek",
+          "ambiguous": false,
+          "distractorScore": 97,
+          "skillMatches": true,
+          "notes": "Good numerical distractors from the list."
+        },
+        {
+          "id": "q3",
+          "option": "C",
+          "evidence": "W lodówce jest już masło i ser, więc nie kupuj ich ponownie.",
+          "ambiguous": false,
+          "distractorScore": 84,
+          "skillMatches": true,
+          "notes": "Both wrong explanations are credible reasons for skipping an item."
+        },
+        {
+          "id": "q4",
+          "option": "A",
+          "evidence": "Jeśli nie ma świeżych bułek, możesz kupić chleb.",
+          "ambiguous": false,
+          "distractorScore": 38,
+          "skillMatches": false,
+          "notes": "Repeats the explicit substitution rule. Instead ask what Piotr should do if he reaches this shop at 20:15."
+        },
+        {
+          "id": "q5",
+          "option": "B",
+          "evidence": "Sklep przy domu jest czynny do ósmej wieczorem.",
+          "ambiguous": false,
+          "distractorScore": 65,
+          "skillMatches": true,
+          "notes": "Closed is a plausible confusion; replace 'dopiero budowany' with a shopping-hours misconception."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-019",
+      "scores": {
+        "naturalness": 95,
+        "level": 89,
+        "questions": 73,
+        "ambiguity": 99,
+        "theme": 97,
+        "vocabulary": 91
+      },
+      "criticalIssues": [
+        "Q4 is direct retrieval."
+      ],
+      "notes": "Clear chronological task. 'Sprawy do załatwienia' is idiomatic and sufficiently illustrated, though demanding for beginners.",
+      "items": [
+        {
+          "id": "q1",
+          "option": "C",
+          "evidence": "W poniedziałek rano Basia ma trzy sprawy do załatwienia.",
+          "ambiguous": false,
+          "distractorScore": 49,
+          "skillMatches": true,
+          "notes": "Doctor and post office cue plausible subtopics, but the invented child weakens A."
+        },
+        {
+          "id": "q2",
+          "option": "A",
+          "evidence": "Gabinet jest na drugim piętrze, nad apteką.",
+          "ambiguous": false,
+          "distractorScore": 94,
+          "skillMatches": true,
+          "notes": "Parallel floor numbers provide suitable distractors."
+        },
+        {
+          "id": "q3",
+          "option": "B",
+          "evidence": "Basia nie chce nosić ciężkiej torby przez całe miasto",
+          "ambiguous": false,
+          "distractorScore": 48,
+          "skillMatches": true,
+          "notes": "Evening opening contradicts the entire morning trip. Replace with a plausible daytime scheduling reason."
+        },
+        {
+          "id": "q4",
+          "option": "C",
+          "evidence": "Ma jeszcze czas na odpoczynek przed pracą.",
+          "ambiguous": false,
+          "distractorScore": 57,
+          "skillMatches": false,
+          "notes": "Direct retrieval. Ask how much time she has from arrival home to starting work and offer nearby intervals."
+        },
+        {
+          "id": "q5",
+          "option": "A",
+          "evidence": "Basia ma trzy sprawy do załatwienia.",
+          "ambiguous": false,
+          "distractorScore": 27,
+          "skillMatches": true,
+          "notes": "Wrong choices are unrelated to accomplishing a task. Contrast completing, planning and postponing an errand."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-020",
+      "scores": {
+        "naturalness": 88,
+        "level": 90,
+        "questions": 63,
+        "ambiguity": 99,
+        "theme": 96,
+        "vocabulary": 90
+      },
+      "criticalIssues": [
+        "Q4 is effectively direct retrieval."
+      ],
+      "notes": "Prefer 'pierwszą partię' and shorten q1B to 'O tym, jak Kuba i Iza spędzają wieczór bez ciągłego patrzenia w telefon'.",
+      "items": [
+        {
+          "id": "q1",
+          "option": "B",
+          "evidence": "Dzisiaj chcą spędzić wieczór inaczej. Po pracy odkładają telefony na półkę w przedpokoju.",
+          "ambiguous": false,
+          "distractorScore": 28,
+          "skillMatches": true,
+          "notes": "The correct answer is noticeably longer and less idiomatic; balance all summaries."
+        },
+        {
+          "id": "q2",
+          "option": "C",
+          "evidence": "Kuba gotuje makaron, a Iza przygotowuje sałatkę.",
+          "ambiguous": false,
+          "distractorScore": 56,
+          "skillMatches": true,
+          "notes": "Kuba is a strong foil; use 'oboje' instead of an unmentioned neighbour."
+        },
+        {
+          "id": "q3",
+          "option": "A",
+          "evidence": "Są zadowoleni, bo mają więcej czasu na rozmowę i odpoczynek.",
+          "ambiguous": false,
+          "distractorScore": 31,
+          "skillMatches": true,
+          "notes": "Wrong reasons are contradicted or unrelated. Use plausible reasons connected to games or the walk."
+        },
+        {
+          "id": "q4",
+          "option": "B",
+          "evidence": "Przed snem sprawdzają wiadomości na telefonach.",
+          "ambiguous": false,
+          "distractorScore": 29,
+          "skillMatches": false,
+          "notes": "The option copies the stated exception; the two yes-answers add implausible explanations. Ask when a message sent during dinner would probably be read."
+        },
+        {
+          "id": "q5",
+          "option": "C",
+          "evidence": "Po pracy odkładają telefony na półkę w przedpokoju.",
+          "ambiguous": false,
+          "distractorScore": 23,
+          "skillMatches": true,
+          "notes": "Buying and repairing are remote. Offer three ways of handling a phone."
+        }
+      ]
+    }
+  ]
+}

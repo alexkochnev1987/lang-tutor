@@ -1,0 +1,756 @@
+{
+  "version": 1,
+  "status": "draft",
+  "texts": [
+    {
+      "id": "pl-b1.reading.day-040",
+      "day": 40,
+      "level": "A2",
+      "genre": "opowiadanie",
+      "title": "Spotkanie w klubie językowym",
+      "text": "Kiedy Igor przeprowadził się do Polski, rozumiał wiele słów, ale bał się rozmawiać z ludźmi. W sklepie zwykle odpowiadał bardzo krótko, a podczas spotkań ze znajomymi częściej słuchał, niż mówił. Pewnego dnia zobaczył informację o bezpłatnym klubie językowym, który spotyka się w bibliotece w każdy wtorek. Postanowił spróbować.\n\nNa pierwszym spotkaniu uczestnicy przedstawili się i podzielili na małe grupy. Rozmawiali o podróżach, pracy oraz codziennych zwyczajach. Prowadząca poprosiła, żeby nie poprawiać każdego błędu w trakcie rozmowy. Po zakończeniu zadania uczestnicy wspólnie zastanawiali się nad trudniejszymi wyrażeniami. Igor poczuł się swobodniej, ponieważ mógł dokończyć swoją wypowiedź.\n\nPo kilku tygodniach zaczął sam proponować tematy do rozmowy. Zauważył też, że łatwiej porozumiewa się z kolegami w pracy. Nadal popełnia błędy, ale nie rezygnuje z rozmowy, gdy nie zna jakiegoś słowa. Próbuje wtedy powiedzieć to samo innymi słowami. Teraz chętnie zaprasza do klubu osoby, które dopiero uczą się polskiego.",
+      "questions": [
+        {
+          "id": "main-idea",
+          "skill": "main-idea",
+          "question": "Co przede wszystkim zmieniły spotkania w życiu Igora?",
+          "options": [
+            "Igor zaczął uczyć polskiego kolegów w pracy.",
+            "Igor nabrał odwagi do rozmów po polsku.",
+            "Igor znalazł w bibliotece nową pracę."
+          ],
+          "answer": "Igor nabrał odwagi do rozmów po polsku.",
+          "evidence": "łatwiej porozumiewa się z kolegami w pracy",
+          "explanation": "Na początku bał się mówić, a z czasem sam proponował tematy i pewniej rozmawiał."
+        },
+        {
+          "id": "detail",
+          "skill": "detail",
+          "question": "Gdzie odbywają się spotkania?",
+          "options": [
+            "W sklepie.",
+            "W biurze Igora.",
+            "W bibliotece."
+          ],
+          "answer": "W bibliotece.",
+          "evidence": "spotyka się w bibliotece w każdy wtorek",
+          "explanation": "Biblioteka jest miejscem spotkań klubu."
+        },
+        {
+          "id": "cause",
+          "skill": "cause",
+          "question": "Co pomogło Igorowi poczuć się swobodniej podczas rozmowy?",
+          "options": [
+            "Mógł przed spotkaniem przygotować wszystkie odpowiedzi.",
+            "Miał czas dokończyć myśl, zanim omówiono błędy.",
+            "Mógł oddać głos prowadzącej, gdy brakowało mu słowa."
+          ],
+          "answer": "Miał czas dokończyć myśl, zanim omówiono błędy.",
+          "evidence": "Igor poczuł się swobodniej, ponieważ mógł dokończyć swoją wypowiedź.",
+          "explanation": "Grupa omawiała trudne wyrażenia dopiero po zadaniu."
+        },
+        {
+          "id": "inference",
+          "skill": "inference",
+          "question": "Koleżanka Igora zna sporo słów, ale boi się odezwać. Dlaczego klub mógłby jej odpowiadać?",
+          "options": [
+            "Będzie mogła uczyć się głównie przez słuchanie wykładów prowadzącej.",
+            "Będzie mogła od razu usłyszeć poprawną wersję każdego swojego zdania.",
+            "Będzie mogła spokojnie poćwiczyć rozmowę w małej grupie."
+          ],
+          "answer": "Będzie mogła spokojnie poćwiczyć rozmowę w małej grupie.",
+          "evidence": "Prowadząca poprosiła, żeby nie poprawiać każdego błędu w trakcie rozmowy.",
+          "explanation": "Podobnie jak Igor koleżanka potrzebuje okazji do mówienia bez ciągłych przerw na poprawki."
+        },
+        {
+          "id": "vocabulary",
+          "skill": "vocabulary",
+          "question": "Jak czuł się Igor, gdy „poczuł się swobodniej”?",
+          "options": [
+            "Mniej się spieszył, bo spotkanie trwało dłużej.",
+            "Mniej się denerwował, kiedy mówił.",
+            "Mniej się męczył, bo zadania były krótsze."
+          ],
+          "answer": "Mniej się denerwował, kiedy mówił.",
+          "evidence": "ponieważ mógł dokończyć swoją wypowiedź",
+          "explanation": "Swoboda dotyczy tu jego samopoczucia w rozmowie."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-041",
+      "day": 41,
+      "level": "A2",
+      "genre": "artykuł",
+      "title": "Wspólny ogród",
+      "text": "Na miejscu starego parkingu mieszkańcy założyli ogród. Przez kilka miesięcy przygotowywali ziemię i przynosili narzędzia z domu. Na początku każdy miał swój kawałek ziemi, czyli własną grządkę. Po jakimś czasie sąsiedzi zauważyli, że kiedy pracują razem, mają więcej miejsca na rośliny i lepiej wykorzystują wodę.\n\nTeraz mieszkańcy umawiają się, kto i kiedy podleje ogród. Jedni wolą przyjść rano przed pracą, inni mają czas wieczorem albo w weekend. Dzieci też pomagają, kiedy praca jest dla nich łatwa. Gdy warzywa są już gotowe do zebrania, uczestnicy dzielą je między siebie. Jeśli zostaje nadmiar warzyw, zanoszą go do kuchni społecznej.\n\nDla sąsiadów ważne jest też coś innego. Dawniej mijali się na schodach, a dziś dzięki ogrodowi spędzają razem czas. W przyszłym roku chcą zaprosić na warsztaty także ludzi z innych osiedli. Pokażą im, jak uprawiać warzywa w mieście.",
+      "questions": [
+        {
+          "id": "main-idea",
+          "skill": "main-idea",
+          "question": "Co zmienił wspólny ogród?",
+          "options": [
+            "Mieszkańcy prowadzą kuchnię i uczą dzieci gotować.",
+            "Mieszkańcy urządzają warsztaty zamiast pracować w ogrodzie.",
+            "Mieszkańcy razem uprawiają warzywa i lepiej się znają."
+          ],
+          "answer": "Mieszkańcy razem uprawiają warzywa i lepiej się znają.",
+          "evidence": "Dawniej mijali się na schodach, a dziś dzięki ogrodowi spędzają razem czas.",
+          "explanation": "Wspólna praca przy roślinach pozwala sąsiadom lepiej się poznać."
+        },
+        {
+          "id": "detail",
+          "skill": "detail",
+          "question": "Komu mieszkańcy oddają warzywa, które zostają po podziale?",
+          "options": [
+            "Kuchni społecznej.",
+            "Osobom z innych osiedli.",
+            "Dzieciom, które pomagały w ogrodzie."
+          ],
+          "answer": "Kuchni społecznej.",
+          "evidence": "Jeśli zostaje nadmiar warzyw, zanoszą go do kuchni społecznej.",
+          "explanation": "Warzywa pozostałe po podziale trafiają do kuchni."
+        },
+        {
+          "id": "cause",
+          "skill": "cause",
+          "question": "Dlaczego jedni podlewają ogród rano, a inni wieczorem?",
+          "options": [
+            "Każda grządka ma swoją porę podlewania.",
+            "Dzieci potrzebują pomocy przy wieczornym podlewaniu.",
+            "Mają wolny czas o różnych porach."
+          ],
+          "answer": "Mają wolny czas o różnych porach.",
+          "evidence": "Jedni wolą przyjść rano przed pracą, inni mają czas wieczorem albo w weekend.",
+          "explanation": "Sąsiedzi wybierają porę, która im odpowiada."
+        },
+        {
+          "id": "inference",
+          "skill": "inference",
+          "question": "Tomek mieszka daleko i chce zacząć uprawiać warzywa na swoim osiedlu. Co najbardziej mu pomoże?",
+          "options": [
+            "Udział w planowanych warsztatach.",
+            "Zapisanie się na podział tegorocznych zbiorów.",
+            "Odebranie warzyw z kuchni społecznej."
+          ],
+          "answer": "Udział w planowanych warsztatach.",
+          "evidence": "Pokażą im, jak uprawiać warzywa w mieście.",
+          "explanation": "Na warsztatach Tomek może zdobyć wiedzę potrzebną we własnym ogrodzie."
+        },
+        {
+          "id": "vocabulary",
+          "skill": "vocabulary",
+          "question": "Co w tym tekście oznacza „nadmiar warzyw”?",
+          "options": [
+            "Warzywa, które należą do jednego uczestnika.",
+            "Warzywa, które są już gotowe do zebrania.",
+            "Warzywa, których uczestnicy już nie potrzebują."
+          ],
+          "answer": "Warzywa, których uczestnicy już nie potrzebują.",
+          "evidence": "Jeśli zostaje nadmiar warzyw, zanoszą go do kuchni społecznej.",
+          "explanation": "Chodzi o część zbiorów, która zostaje po podziale."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-042",
+      "day": 42,
+      "level": "A2",
+      "genre": "artykuł",
+      "title": "Pomysły mieszkańców",
+      "text": "Co można zmienić w naszej okolicy? W tym roku urząd miasta pyta o to mieszkańców. Każdy może przedstawić swój pomysł. Jedni chcą postawić ławki, inni proponują stojaki na rowery albo zajęcia dla dzieci. Miejsce, którego dotyczy projekt, musi być otwarte dla wszystkich. Miasto podaje też kwotę, którą może wydać. Projekt nie może kosztować więcej.\n\nNajpierw pracownicy urzędu sprawdzają cenę i to, czy przepisy pozwalają wykonać projekt. Czasem autor musi jeszcze coś dokładniej opisać. Potem mieszkańcy głosują. Mogą to zrobić w internecie albo w jednym z kilku punktów w mieście. Każdy głosuje raz, ale może zaznaczyć kilka pomysłów.\n\nW zeszłym roku mieszkańcy wybrali remont boiska i nowe drzewa przy szkole. Nie wszystkie prace są już gotowe. Jeśli prace trwają dłużej, niż planowano, urząd wyjaśnia mieszkańcom, dlaczego tak się dzieje. Dzięki temu łatwiej zrozumieć, na co miasto wydaje wspólne pieniądze.",
+      "questions": [
+        {
+          "id": "main-idea",
+          "skill": "main-idea",
+          "question": "O czym jest cały tekst?",
+          "options": [
+            "O tym, jak urząd szuka firmy do remontu boiska.",
+            "O tym, jak szkoła urządza zajęcia dla dzieci w parku.",
+            "O tym, jak mieszkańcy zgłaszają i wybierają pomysły dla miasta."
+          ],
+          "answer": "O tym, jak mieszkańcy zgłaszają i wybierają pomysły dla miasta.",
+          "evidence": "Każdy głosuje raz, ale może zaznaczyć kilka pomysłów.",
+          "explanation": "Tekst opisuje drogę od pomysłu mieszkańca do głosowania i wykonania prac."
+        },
+        {
+          "id": "detail",
+          "skill": "detail",
+          "question": "Jak mieszkaniec może oddać głos?",
+          "options": [
+            "W internecie albo w wybranym punkcie w mieście.",
+            "W wybranym punkcie albo listem do szkoły.",
+            "W internecie albo podczas rozmowy telefonicznej."
+          ],
+          "answer": "W internecie albo w wybranym punkcie w mieście.",
+          "evidence": "Mogą to zrobić w internecie albo w jednym z kilku punktów w mieście.",
+          "explanation": "Podano dwie możliwości głosowania."
+        },
+        {
+          "id": "cause",
+          "skill": "cause",
+          "question": "Dlaczego urząd sprawdza cenę projektu?",
+          "options": [
+            "Od ceny zależy liczba głosów mieszkańca.",
+            "Miasto może wydać tylko określoną sumę.",
+            "Autor musi dostać zwrot pieniędzy za swój pomysł."
+          ],
+          "answer": "Miasto może wydać tylko określoną sumę.",
+          "evidence": "Miasto podaje też kwotę, którą może wydać. Projekt nie może kosztować więcej.",
+          "explanation": "Cena musi się mieścić w kwocie podanej przez miasto."
+        },
+        {
+          "id": "inference",
+          "skill": "inference",
+          "question": "Ktoś proponuje ławkę na tanim, ale zamkniętym podwórku jednej rodziny. Co trzeba zmienić?",
+          "options": [
+            "Dodać do projektu stojak na rowery.",
+            "Wybrać miejsce dostępne dla innych ludzi.",
+            "Zaproponować jeszcze niższą cenę ławki."
+          ],
+          "answer": "Wybrać miejsce dostępne dla innych ludzi.",
+          "evidence": "Miejsce, którego dotyczy projekt, musi być otwarte dla wszystkich.",
+          "explanation": "Niska cena nie wystarczy, jeśli na podwórko może wejść tylko rodzina."
+        },
+        {
+          "id": "vocabulary",
+          "skill": "vocabulary",
+          "question": "Co znaczy w tekście „oddać głos”, czyli „zagłosować”?",
+          "options": [
+            "Opisać własny pomysł przed sprawdzeniem ceny.",
+            "Wskazać pomysł, który się popiera.",
+            "Wyjaśnić, dlaczego prace jeszcze trwają."
+          ],
+          "answer": "Wskazać pomysł, który się popiera.",
+          "evidence": "Każdy głosuje raz, ale może zaznaczyć kilka pomysłów.",
+          "explanation": "Podczas głosowania mieszkaniec wskazuje projekty, które wybiera."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-043",
+      "day": 43,
+      "level": "A2",
+      "genre": "dialog",
+      "title": "Wizyta, którą trzeba przełożyć",
+      "text": "Ewa ma umówioną wizytę kontrolną u dentysty w środę o jedenastej. We wtorek dowiaduje się jednak, że w tym samym czasie będzie musiała uczestniczyć w ważnym spotkaniu w pracy. Dzwoni więc do gabinetu, aby znaleźć inny termin.\n\n— Dzień dobry, chciałabym przełożyć jutrzejszą wizytę. Czy lekarz przyjmuje jeszcze w tym tygodniu? — pyta Ewa.\n\n— W czwartek mamy wolne miejsce o dziewiątej, a w piątek o piętnastej trzydzieści — odpowiada recepcjonistka.\n\n— W czwartek muszę być w biurze od ósmej. W piątek mogę wyjść wcześniej. Czy ten drugi termin jest nadal aktualny?\n\n— Tak, zapisuję panią na piątek. Poprzednią wizytę anuluję. Proszę przyjść dziesięć minut przed czasem, ponieważ trzeba zaktualizować dane w dokumentacji.\n\nEwa zapisuje nowy termin w kalendarzu. Prosi również o wiadomość z potwierdzeniem. Otrzymuje ją kilka minut później i może spokojnie zaplanować resztę tygodnia. Nie musi już wybierać między wizytą a obowiązkami zawodowymi.",
+      "questions": [
+        {
+          "id": "main-idea",
+          "skill": "main-idea",
+          "question": "Po co Ewa dzwoni do gabinetu?",
+          "options": [
+            "Chce zmienić termin umówionej wizyty.",
+            "Chce zapytać, ile potrwa wizyta kontrolna.",
+            "Chce potwierdzić godzinę środowej wizyty."
+          ],
+          "answer": "Chce zmienić termin umówionej wizyty.",
+          "evidence": "chciałabym przełożyć jutrzejszą wizytę.",
+          "explanation": "Ewa ma już termin, ale potrzebuje innego."
+        },
+        {
+          "id": "detail",
+          "skill": "detail",
+          "question": "Na kiedy ostatecznie zapisano Ewę?",
+          "options": [
+            "Na piątek o piętnastej trzydzieści.",
+            "Na czwartek o dziewiątej.",
+            "Na środę o jedenastej."
+          ],
+          "answer": "Na piątek o piętnastej trzydzieści.",
+          "evidence": "a w piątek o piętnastej trzydzieści",
+          "explanation": "Ewa wybiera drugi z podanych terminów, czyli piątek."
+        },
+        {
+          "id": "cause",
+          "skill": "cause",
+          "question": "Dlaczego Ewa ma przyjść wcześniej?",
+          "options": [
+            "Lekarz chce zacząć badanie dziesięć minut wcześniej.",
+            "Gabinet musi sprawdzić i poprawić jej dane.",
+            "Recepcjonistka chce na miejscu potwierdzić wolny termin."
+          ],
+          "answer": "Gabinet musi sprawdzić i poprawić jej dane.",
+          "evidence": "ponieważ trzeba zaktualizować dane w dokumentacji.",
+          "explanation": "Dodatkowy czas jest potrzebny na formalności."
+        },
+        {
+          "id": "inference",
+          "skill": "inference",
+          "question": "O której Ewa powinna być w gabinecie?",
+          "options": [
+            "O piętnastej dwadzieścia.",
+            "O piętnastej czterdzieści.",
+            "O piętnastej trzydzieści."
+          ],
+          "answer": "O piętnastej dwadzieścia.",
+          "evidence": "Proszę przyjść dziesięć minut przed czasem",
+          "explanation": "Dziesięć minut przed 15.30 to 15.20."
+        },
+        {
+          "id": "vocabulary",
+          "skill": "vocabulary",
+          "question": "Co tutaj znaczy „przełożyć wizytę”?",
+          "options": [
+            "Odwołać wizytę bez ustalania nowej daty.",
+            "Potwierdzić wcześniej umówioną wizytę.",
+            "Umówić tę wizytę na inny termin."
+          ],
+          "answer": "Umówić tę wizytę na inny termin.",
+          "evidence": "Dzwoni więc do gabinetu, aby znaleźć inny termin.",
+          "explanation": "Ewa nadal chce iść do dentysty, tylko innego dnia."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-044",
+      "day": 44,
+      "level": "A2",
+      "genre": "opowiadanie",
+      "title": "Spacer po pracy",
+      "text": "Robert pracuje przy komputerze. Po pracy często czuje się zmęczony i najchętniej siada przed telewizorem. Chciał jednak więcej się ruszać. Postanowił zacząć od spacerów po parku niedaleko domu. Na spacer zwykle przeznacza około dwudziestu minut. Nie planuje na razie długich treningów.\n\nNa początku często zapominał o swoim postanowieniu. Kiedy wreszcie wstawał sprzed telewizora, w parku było już ciemno. Teraz przed pracą stawia wygodne buty przy drzwiach. Gdy kończy pracę, widzi je i od razu pamięta o spacerze. Dwa razy w tygodniu umawia się z sąsiadem. W pozostałe dni może spacerować sam.\n\nPo miesiącu Robert zauważył, że coraz łatwiej jest mu wyjść z domu. Kiedy pada, czasem wybiera krótszą trasę, a czasem zostaje w domu. Jeden wieczór bez spaceru nie jest dla niego problemem. Zależy mu na tym, żeby regularnie się ruszać także wtedy, gdy ma dużo pracy.",
+      "questions": [
+        {
+          "id": "main-idea",
+          "skill": "main-idea",
+          "question": "O czym jest tekst?",
+          "options": [
+            "O tym, jak Robert i sąsiad przygotowują wspólny trening.",
+            "O tym, jak Robert szuka lepszej drogi z pracy do domu.",
+            "O tym, jak Robert wprowadza spacery do swojego dnia."
+          ],
+          "answer": "O tym, jak Robert wprowadza spacery do swojego dnia.",
+          "evidence": "Zależy mu na tym, żeby regularnie się ruszać także wtedy, gdy ma dużo pracy.",
+          "explanation": "Robert szuka prostego sposobu na regularny ruch po pracy."
+        },
+        {
+          "id": "detail",
+          "skill": "detail",
+          "question": "Jak często Robert planuje spacer z sąsiadem?",
+          "options": [
+            "Dwa razy w tygodniu.",
+            "Co wieczór po pracy.",
+            "W każdy weekend, raz w tygodniu."
+          ],
+          "answer": "Dwa razy w tygodniu.",
+          "evidence": "Dwa razy w tygodniu umawia się z sąsiadem.",
+          "explanation": "W inne dni może chodzić sam."
+        },
+        {
+          "id": "cause",
+          "skill": "cause",
+          "question": "Dlaczego Robert stawia buty przy drzwiach?",
+          "options": [
+            "Ich widok przypomina mu o spacerze.",
+            "Robert potrzebuje ich rano w drodze do pracy.",
+            "Sąsiad po butach poznaje, czy Robert jest w domu."
+          ],
+          "answer": "Ich widok przypomina mu o spacerze.",
+          "evidence": "Gdy kończy pracę, widzi je i od razu pamięta o spacerze.",
+          "explanation": "Przygotowane buty pomagają mu pamiętać o wyjściu."
+        },
+        {
+          "id": "inference",
+          "skill": "inference",
+          "question": "Co Robert prawdopodobnie zrobi po deszczowym wieczorze bez spaceru?",
+          "options": [
+            "Wróci do spacerów, kiedy znów będzie mógł wyjść.",
+            "Z kolejnym wyjściem zaczeka na spotkanie z sąsiadem.",
+            "Następny spacer zaplanuje dwa razy dłuższy."
+          ],
+          "answer": "Wróci do spacerów, kiedy znów będzie mógł wyjść.",
+          "evidence": "Jeden wieczór bez spaceru nie jest dla niego problemem.",
+          "explanation": "Robert chce spacerować regularnie i akceptuje dzień przerwy."
+        },
+        {
+          "id": "vocabulary",
+          "skill": "vocabulary",
+          "question": "Co oznacza tu „postanowienie”?",
+          "options": [
+            "Prośbę z pracy, żeby Robert więcej się ruszał.",
+            "Zaproszenie od sąsiada na spacer po parku.",
+            "Decyzję Roberta, że zacznie chodzić na spacery."
+          ],
+          "answer": "Decyzję Roberta, że zacznie chodzić na spacery.",
+          "evidence": "Postanowił zacząć od spacerów po parku niedaleko domu.",
+          "explanation": "Robert sam zdecydował, co zamierza robić."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-045",
+      "day": 45,
+      "level": "A2",
+      "genre": "artykuł",
+      "title": "Badania w miejscu pracy",
+      "text": "Przez dwa dni w pewnej firmie można było bezpłatnie skorzystać z badań. Na miejsce przyjechali lekarze i pielęgniarki. Spotykali się z pracownikami w osobnym pokoju. Nie trzeba było przychodzić do firmy po pracy. Każdy sam decydował, czy chce wziąć udział w badaniach.\n\nŻeby zarezerwować godzinę, trzeba było wypełnić formularz. Kilka osób miało trudności ze znalezieniem wolnej godziny. Dlatego organizatorzy dodali terminy na drugi dzień. Każdy uczestnik dostał swoje wyniki od personelu medycznego. Kierownicy dowiedzieli się tylko, ile osób przyszło na badania.\n\nPo tych dwóch dniach pracownicy podzielili się pomysłami. Jedni chcieli, żeby badania w firmie odbywały się częściej. Inni zaproponowali krótkie zajęcia o tym, jak odpoczywać i organizować pracę. Firma chce najpierw poznać opinie pracowników, a potem zaplanować kolejne spotkanie. Lekarze przypomnieli, że jeśli ktoś potrzebuje dalszych badań, spotkanie w firmie nie zastąpi osobnej wizyty.",
+      "questions": [
+        {
+          "id": "main-idea",
+          "skill": "main-idea",
+          "question": "Co opisuje tekst?",
+          "options": [
+            "Jak firma wybrała datę następnego spotkania z lekarzami.",
+            "Jak firma zorganizowała badania dla chętnych pracowników.",
+            "Jak firma prowadziła zajęcia o odpoczynku w pracy."
+          ],
+          "answer": "Jak firma zorganizowała badania dla chętnych pracowników.",
+          "evidence": "Przez dwa dni w pewnej firmie można było bezpłatnie skorzystać z badań.",
+          "explanation": "Głównym tematem są badania, ich organizacja i opinie pracowników."
+        },
+        {
+          "id": "detail",
+          "skill": "detail",
+          "question": "Jaką informację dostali kierownicy?",
+          "options": [
+            "Kto zarezerwował ostatni wolny termin.",
+            "Kto potrzebuje jeszcze jednej wizyty.",
+            "Ile osób skorzystało z badań."
+          ],
+          "answer": "Ile osób skorzystało z badań.",
+          "evidence": "Kierownicy dowiedzieli się tylko, ile osób przyszło na badania.",
+          "explanation": "Kierownicy poznali liczbę uczestników."
+        },
+        {
+          "id": "cause",
+          "skill": "cause",
+          "question": "Dlaczego dodano terminy na drugi dzień?",
+          "options": [
+            "Pierwszy dzień był przeznaczony dla kierowników.",
+            "Pracownicy chcieli przyjść dopiero po pracy.",
+            "Trudno było znaleźć wolną godzinę."
+          ],
+          "answer": "Trudno było znaleźć wolną godzinę.",
+          "evidence": "Kilka osób miało trudności ze znalezieniem wolnej godziny. Dlatego organizatorzy dodali terminy na drugi dzień.",
+          "explanation": "Nowe terminy ułatwiały zapis osobom, które miały z tym trudność."
+        },
+        {
+          "id": "inference",
+          "skill": "inference",
+          "question": "Kierownik chce się dowiedzieć, jaki wynik dostała pani Anna. Co może zrobić, jeśli Anna chce mu o tym opowiedzieć?",
+          "options": [
+            "Sprawdzić wynik w formularzu do rezerwacji.",
+            "Odczytać wynik z informacji dla kierowników.",
+            "Porozmawiać z Anną o jej wyniku."
+          ],
+          "answer": "Porozmawiać z Anną o jej wyniku.",
+          "evidence": "Każdy uczestnik dostał swoje wyniki od personelu medycznego. Kierownicy dowiedzieli się tylko, ile osób przyszło na badania.",
+          "explanation": "Anna zna własny wynik, a w informacji dla kierowników jest tylko liczba osób."
+        },
+        {
+          "id": "vocabulary",
+          "skill": "vocabulary",
+          "question": "Co tu znaczy „zarezerwować godzinę”?",
+          "options": [
+            "Sprawdzić, ile trwało badanie.",
+            "Zapisać się na wybraną porę badania.",
+            "Zapisać, o której zakończono badanie."
+          ],
+          "answer": "Zapisać się na wybraną porę badania.",
+          "evidence": "Żeby zarezerwować godzinę, trzeba było wypełnić formularz.",
+          "explanation": "Pracownik wcześniej ustalał, o której przyjdzie."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-046",
+      "day": 46,
+      "level": "A2",
+      "genre": "opowiadanie",
+      "title": "Nowa grupa na zajęciach",
+      "text": "W centrum rekreacji powstała grupa gimnastyczna dla dorosłych. Na pierwsze spotkanie przyszli młodzi ludzie i osoby na emeryturze. Nie wszyscy mieli doświadczenie. Trener powiedział na początku, że każdy może ćwiczyć we własnym tempie. Uczestnicy nie muszą robić wszystkiego tak samo jak osoba obok.\n\nTrener pokazywał dwa sposoby wykonania ćwiczenia. Każdy wybierał wersję łatwiejszą albo trudniejszą. Można też było zrobić krótką przerwę. Trener prosił, żeby powiedzieć mu, jeśli jakieś ćwiczenie sprawia trudność. Po spotkaniu kilka osób zostało w sali. Chciały porozmawiać o tym, o której będą następne zajęcia.\n\nNiektórzy uczestnicy pracują do późnego popołudnia. Organizatorzy zaproponowali więc dwa terminy w tygodniu: jeden rano, drugi wieczorem. Każdy może wybrać dogodną dla siebie porę. Po miesiącu większość uczestników chciała nadal chodzić na zajęcia. Podobało im się, że w grupie jest spokojnie i że sami mogą zdecydować, jak będą ćwiczyć.",
+      "questions": [
+        {
+          "id": "main-idea",
+          "skill": "main-idea",
+          "question": "Co wyróżnia opisane zajęcia?",
+          "options": [
+            "Uczestnicy przygotowują własne ćwiczenia i pokazują je trenerowi.",
+            "Uczestnicy mogą dobrać ćwiczenia i porę spotkania do swoich potrzeb.",
+            "Trener przygotowuje osobną grupę dla każdego wieku."
+          ],
+          "answer": "Uczestnicy mogą dobrać ćwiczenia i porę spotkania do swoich potrzeb.",
+          "evidence": "Każdy wybierał wersję łatwiejszą albo trudniejszą.",
+          "explanation": "Grupa daje uczestnikom wybór wersji ćwiczenia i terminu zajęć."
+        },
+        {
+          "id": "detail",
+          "skill": "detail",
+          "question": "O czym kilka osób chciało porozmawiać po pierwszych zajęciach?",
+          "options": [
+            "O godzinach kolejnych spotkań.",
+            "O liczbie osób w sali podczas zajęć.",
+            "O długości przerw między ćwiczeniami."
+          ],
+          "answer": "O godzinach kolejnych spotkań.",
+          "evidence": "Chciały porozmawiać o tym, o której będą następne zajęcia.",
+          "explanation": "Uczestnicy zostali, żeby omówić pory zajęć."
+        },
+        {
+          "id": "cause",
+          "skill": "cause",
+          "question": "Dlaczego organizatorzy proponują także wieczorne zajęcia?",
+          "options": [
+            "Część osób długo pracuje w ciągu dnia.",
+            "Trener chce wieczorem pokazywać trudniejszą wersję ćwiczeń.",
+            "Część osób chce powtórzyć rano i wieczorem te same ćwiczenia."
+          ],
+          "answer": "Część osób długo pracuje w ciągu dnia.",
+          "evidence": "Niektórzy uczestnicy pracują do późnego popołudnia.",
+          "explanation": "Wieczorny termin pomaga osobom, które wcześniej są w pracy."
+        },
+        {
+          "id": "inference",
+          "skill": "inference",
+          "question": "Marta zaczyna ćwiczyć, a jej koleżanka ćwiczy od lat. Jak mogą skorzystać z tej grupy?",
+          "options": [
+            "Przyjść razem i wybrać różne wersje ćwiczenia.",
+            "Przyjść razem, kiedy Marta nauczy się ćwiczeń koleżanki.",
+            "Przyjść na różne godziny, bo rano ćwiczą początkujący."
+          ],
+          "answer": "Przyjść razem i wybrać różne wersje ćwiczenia.",
+          "evidence": "Każdy wybierał wersję łatwiejszą albo trudniejszą.",
+          "explanation": "Na tych samych zajęciach można ćwiczyć na różnym poziomie."
+        },
+        {
+          "id": "vocabulary",
+          "skill": "vocabulary",
+          "question": "Co tu znaczy „we własnym tempie”?",
+          "options": [
+            "Tak długo, jak ćwiczy osoba obok.",
+            "Tak szybko, jak danej osobie odpowiada.",
+            "W godzinie wybranej na początek zajęć."
+          ],
+          "answer": "Tak szybko, jak danej osobie odpowiada.",
+          "evidence": "Uczestnicy nie muszą robić wszystkiego tak samo jak osoba obok.",
+          "explanation": "Tempo dotyczy szybkości ćwiczenia, którą uczestnik dobiera dla siebie."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-047",
+      "day": 47,
+      "level": "A2",
+      "genre": "dialog",
+      "title": "W aptece przed wyjazdem",
+      "text": "Anna szykowała się na krótką wycieczkę. Miała już swoje leki, ale chciała uzupełnić małą apteczkę. Podczas poprzedniego wyjazdu otarła piętę. Pamiętała, ile czasu zajęło jej wtedy szukanie sklepu w obcym mieście.\n\nW aptece poprosiła o plastry i małe opakowanie środka do dezynfekcji. Farmaceutka spytała, czy Anna chce kupić zwykłe plastry, czy plastry na otarcia. Anna potrzebowała obu rodzajów. Nie chciała jednak dużych opakowań, bo wyjeżdżała tylko na cztery dni. Farmaceutka pokazała jej dwa małe zestawy i wyjaśniła różnicę między nimi. Anna wybrała potrzebne rzeczy.\n\nPrzy okazji zapytała, jak przechowywać jeden z leków, które miała w domu. Farmaceutka poradziła jej sprawdzić tę informację w ulotce z opakowania tego leku. Po powrocie z apteki Anna sprawdziła daty ważności. Potem włożyła apteczkę do plecaka tak, żeby łatwo było ją wyjąć. Reszta rzeczy z domowej szafki została w domu.",
+      "questions": [
+        {
+          "id": "main-idea",
+          "skill": "main-idea",
+          "question": "Po co Anna przyszła do apteki?",
+          "options": [
+            "Chciała znaleźć zestaw, który zastąpi jej domową apteczkę.",
+            "Chciała wymienić swoje leki na mniejsze opakowania.",
+            "Chciała dokupić kilka rzeczy do apteczki na wycieczkę."
+          ],
+          "answer": "Chciała dokupić kilka rzeczy do apteczki na wycieczkę.",
+          "evidence": "Miała już swoje leki, ale chciała uzupełnić małą apteczkę.",
+          "explanation": "Anna szukała tylko rzeczy brakujących przed wyjazdem."
+        },
+        {
+          "id": "detail",
+          "skill": "detail",
+          "question": "Kiedy Anna sprawdziła daty ważności?",
+          "options": [
+            "Przed wyjściem do apteki.",
+            "Podczas oglądania zestawów w aptece.",
+            "Po powrocie z apteki."
+          ],
+          "answer": "Po powrocie z apteki.",
+          "evidence": "Po powrocie z apteki Anna sprawdziła daty ważności.",
+          "explanation": "Anna sprawdziła daty już w domu."
+        },
+        {
+          "id": "cause",
+          "skill": "cause",
+          "question": "Dlaczego Anna wybrała małe opakowania?",
+          "options": [
+            "Chciała zwolnić miejsce w domowej szafce.",
+            "W domu miała już oba rodzaje plastrów.",
+            "Wycieczka miała trwać tylko kilka dni."
+          ],
+          "answer": "Wycieczka miała trwać tylko kilka dni.",
+          "evidence": "Nie chciała jednak dużych opakowań, bo wyjeżdżała tylko na cztery dni.",
+          "explanation": "Krótki wyjazd nie wymagał dużych opakowań."
+        },
+        {
+          "id": "inference",
+          "skill": "inference",
+          "question": "Które miejsce w plecaku Anna najchętniej wybierze na apteczkę?",
+          "options": [
+            "Środek torby z ubraniami włożonej do plecaka.",
+            "Dno plecaka pod zapasowymi ubraniami.",
+            "Kieszeń, do której można szybko sięgnąć."
+          ],
+          "answer": "Kieszeń, do której można szybko sięgnąć.",
+          "evidence": "Potem włożyła apteczkę do plecaka tak, żeby łatwo było ją wyjąć.",
+          "explanation": "Łatwo dostępna kieszeń najlepiej odpowiada sposobowi pakowania Anny."
+        },
+        {
+          "id": "vocabulary",
+          "skill": "vocabulary",
+          "question": "Co tutaj znaczy „uzupełnić” apteczkę?",
+          "options": [
+            "Dodać to, czego w niej brakuje.",
+            "Zamienić jej zawartość na nowy zestaw.",
+            "Sprawdzić, co już w niej jest."
+          ],
+          "answer": "Dodać to, czego w niej brakuje.",
+          "evidence": "Miała już swoje leki, ale chciała uzupełnić małą apteczkę.",
+          "explanation": "Leki już miała, a dokupiła inne potrzebne rzeczy."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-048",
+      "day": 48,
+      "level": "A2",
+      "genre": "opowiadanie",
+      "title": "Zmiana codziennych zwyczajów",
+      "text": "Kasia chciała mieć po pracy więcej czasu na odpoczynek. W ciągu dnia często kupowała na obiad to, co akurat znalazła w sklepie. Wieczorem za długo korzystała z telefonu. W niedzielę usiadła i zrobiła prosty plan na następny tydzień.\n\nWybrała dwa wieczory, na które nie umówiła żadnych dodatkowych spotkań. Zapisała też kilka pomysłów na proste posiłki i kupiła produkty. Nie chciała planować każdej godziny. W pracy czasem niespodziewanie dostawała nowe zadanie i musiała zmienić plany na resztę dnia. Pół godziny przed snem odkładała telefon na półkę. Miała wtedy chwilę na spokojne zajęcia.\n\nPo pierwszym tygodniu Kasia zauważyła, że częściej ma gotowy posiłek i krócej korzysta z telefonu przed snem. Nie każdego dnia wszystko się udało, ale chciała spróbować jeszcze przez tydzień. Na razie nie zamierzała wprowadzać nowych zasad. Dopiero po kolejnym tygodniu chciała zdecydować, co dalej.",
+      "questions": [
+        {
+          "id": "main-idea",
+          "skill": "main-idea",
+          "question": "O czym jest tekst?",
+          "options": [
+            "O tym, jak Kasia organizuje spotkania dla kolegów z pracy.",
+            "O małych zmianach w codziennym życiu Kasi.",
+            "O tym, jak Kasia wybiera sklep z gotowymi obiadami."
+          ],
+          "answer": "O małych zmianach w codziennym życiu Kasi.",
+          "evidence": "Po pierwszym tygodniu Kasia zauważyła, że częściej ma gotowy posiłek i krócej korzysta z telefonu przed snem.",
+          "explanation": "Tekst opisuje kilka zmian i ich pierwsze efekty."
+        },
+        {
+          "id": "detail",
+          "skill": "detail",
+          "question": "Kiedy Kasia odkładała telefon?",
+          "options": [
+            "Zaraz po zakończeniu pracy.",
+            "Pół godziny przed snem.",
+            "Przed przygotowaniem obiadu."
+          ],
+          "answer": "Pół godziny przed snem.",
+          "evidence": "Pół godziny przed snem odkładała telefon na półkę.",
+          "explanation": "Telefon trafiał na półkę pod koniec wieczoru."
+        },
+        {
+          "id": "cause",
+          "skill": "cause",
+          "question": "Dlaczego Kasia nie planowała każdej godziny?",
+          "options": [
+            "Nie wiedziała jeszcze, jakie produkty kupi na obiad.",
+            "Każdego wieczoru chciała spotykać się z kimś innym.",
+            "Nowe zadania w pracy mogły zmienić jej plany."
+          ],
+          "answer": "Nowe zadania w pracy mogły zmienić jej plany.",
+          "evidence": "W pracy czasem niespodziewanie dostawała nowe zadanie i musiała zmienić plany na resztę dnia.",
+          "explanation": "Kasia zostawiała czas na sprawy, o których wcześniej nie wiedziała."
+        },
+        {
+          "id": "inference",
+          "skill": "inference",
+          "question": "Koleżanka proponuje Kasi nowe zasady już na drugi tydzień. Co Kasia najpewniej odpowie?",
+          "options": [
+            "„Wolę teraz zrobić sobie tydzień przerwy od planowania”.",
+            "„Chcę jeszcze sprawdzić, jak działają obecne zasady”.",
+            "„Zacznę od nowych zasad, a potem wrócę do starych”."
+          ],
+          "answer": "„Chcę jeszcze sprawdzić, jak działają obecne zasady”.",
+          "evidence": "Dopiero po kolejnym tygodniu chciała zdecydować, co dalej.",
+          "explanation": "Kasia chce dać swojemu planowi więcej czasu przed zmianami."
+        },
+        {
+          "id": "vocabulary",
+          "skill": "vocabulary",
+          "question": "Co oznacza tu „niespodziewanie”?",
+          "options": [
+            "Tak, że Kasia wcześniej o tym nie wiedziała.",
+            "Tak często, że Kasia mogła to zaplanować.",
+            "Tak późno, że Kasia kończyła już pracę."
+          ],
+          "answer": "Tak, że Kasia wcześniej o tym nie wiedziała.",
+          "evidence": "W pracy czasem niespodziewanie dostawała nowe zadanie i musiała zmienić plany na resztę dnia.",
+          "explanation": "Nowe zadanie było dla Kasi zaskoczeniem."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-049",
+      "day": 49,
+      "level": "A2",
+      "genre": "artykuł",
+      "title": "Pytania do specjalisty",
+      "text": "Dom kultury zaprosił na spotkanie osoby, które dużo pracują przy biurku. Gościem był fizjoterapeuta. Miał opowiedzieć o tym, jak urządzić miejsce do pracy i dlaczego ważne są przerwy. Przed spotkaniem uczestnicy przysłali mu pytania. Dzięki nim przygotował przykłady związane ze sprawami, o które pytało wiele osób.\n\nNajpierw gość mówił o tym, jak ludzie siedzą przy pracy. Wyjaśnił, że jedna pozycja nie będzie wygodna dla wszystkich przez cały dzień. Potem uczestnicy próbowali inaczej ustawić krzesło i monitor. Spotkanie było dla całej grupy. Fizjoterapeuta nie badał poszczególnych osób.\n\nNa koniec uczestnicy dostali kartki z podsumowaniem. Były tam najważniejsze informacje ze spotkania i wiadomość, gdzie można umówić się na osobną rozmowę ze specjalistą. Kilka osób chciałoby też porozmawiać o odpoczynku po pracy. Organizatorzy pytają teraz uczestników o zdanie. Zastanawiają się nad datą kolejnego bezpłatnego spotkania.",
+      "questions": [
+        {
+          "id": "main-idea",
+          "skill": "main-idea",
+          "question": "Po co dom kultury zaprosił fizjoterapeutę?",
+          "options": [
+            "Żeby zbadał osoby, które przesłały pytania o swoje zdrowie.",
+            "Żeby poprowadził spotkanie o odpoczynku po zakończeniu pracy.",
+            "Żeby opowiedział o miejscu pracy przy biurku i przerwach."
+          ],
+          "answer": "Żeby opowiedział o miejscu pracy przy biurku i przerwach.",
+          "evidence": "Miał opowiedzieć o tym, jak urządzić miejsce do pracy i dlaczego ważne są przerwy.",
+          "explanation": "Pierwsze spotkanie dotyczyło pracy przy biurku; odpoczynek po pracy to propozycja na przyszłość."
+        },
+        {
+          "id": "detail",
+          "skill": "detail",
+          "question": "Co uczestnicy robili po pierwszej części spotkania?",
+          "options": [
+            "Próbowali zmienić ustawienie krzesła i monitora.",
+            "Ustalali daty osobnych rozmów z fizjoterapeutą.",
+            "Przesyłali fizjoterapeucie pierwsze pytania."
+          ],
+          "answer": "Próbowali zmienić ustawienie krzesła i monitora.",
+          "evidence": "Potem uczestnicy próbowali inaczej ustawić krzesło i monitor.",
+          "explanation": "Po rozmowie o siedzeniu uczestnicy sami zmieniali ustawienie sprzętu."
+        },
+        {
+          "id": "cause",
+          "skill": "cause",
+          "question": "Dlaczego pytania przesłane przed spotkaniem pomogły fizjoterapeucie?",
+          "options": [
+            "Mógł wybrać przykłady dotyczące częstych problemów.",
+            "Mógł ustalić, kto potrzebuje osobnego badania.",
+            "Mógł podzielić uczestników na grupy do ćwiczeń."
+          ],
+          "answer": "Mógł wybrać przykłady dotyczące częstych problemów.",
+          "evidence": "Dzięki nim przygotował przykłady związane ze sprawami, o które pytało wiele osób.",
+          "explanation": "Pytania pokazały, jakie tematy interesują uczestników."
+        },
+        {
+          "id": "inference",
+          "skill": "inference",
+          "question": "Piotr chce omówić ze specjalistą tylko swój problem. Co najlepiej odpowiada jego celowi?",
+          "options": [
+            "Skorzystanie z informacji na kartce i umówienie osobnej rozmowy.",
+            "Napisanie organizatorom opinii o ustawianiu krzesła.",
+            "Udział w następnym spotkaniu grupowym o odpoczynku."
+          ],
+          "answer": "Skorzystanie z informacji na kartce i umówienie osobnej rozmowy.",
+          "evidence": "gdzie można umówić się na osobną rozmowę ze specjalistą.",
+          "explanation": "Osobna rozmowa daje Piotrowi okazję do omówienia własnej sytuacji."
+        },
+        {
+          "id": "vocabulary",
+          "skill": "vocabulary",
+          "question": "Co oznacza tu „podsumowanie”?",
+          "options": [
+            "Plan tematów na następne spotkanie.",
+            "Zbiór pytań przesłanych przed spotkaniem.",
+            "Krótki opis najważniejszych treści spotkania."
+          ],
+          "answer": "Krótki opis najważniejszych treści spotkania.",
+          "evidence": "Były tam najważniejsze informacje ze spotkania",
+          "explanation": "Podsumowanie przypomina główne treści po wydarzeniu."
+        }
+      ]
+    }
+  ]
+}

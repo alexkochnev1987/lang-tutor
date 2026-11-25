@@ -1,0 +1,1056 @@
+{
+  "version": 1,
+  "status": "draft",
+  "texts": [
+    {
+      "id": "pl-b1.reading.day-015",
+      "day": 15,
+      "level": "A1",
+      "genre": "wiadomość",
+      "title": "Mój wolny dzień",
+      "text": "Cześć, Moniko! Dzisiaj mam wolny dzień. Rano jem śniadanie z siostrą. Potem idziemy na rynek. Kupujemy chleb, ser i świeże warzywa. Moja siostra jest kucharką i umie przygotować bardzo dobry obiad. Ja zwykle robię proste kanapki.\n\nPo południu spotykam się z koleżanką w kawiarni. Ona jest nauczycielką i kończy pracę o trzeciej. Chcemy razem pójść do kina, ale najpierw pijemy kawę. Nie jadę samochodem, tylko autobusem, bo kino jest w centrum. Wieczorem wracam do domu i przygotowuję rzeczy na jutro.",
+      "questions": [
+        {
+          "id": "main-idea",
+          "skill": "main-idea",
+          "question": "O czym jest ta wiadomość?",
+          "options": [
+            "O tym, jak wygląda dzień pracy w szkole.",
+            "O tym, jak przygotować obiad dla koleżanki.",
+            "O tym, jak mija wolny dzień."
+          ],
+          "answer": "O tym, jak mija wolny dzień.",
+          "evidence": "mam wolny dzień.",
+          "explanation": "Nadawca opisuje zajęcia od śniadania aż do wieczora."
+        },
+        {
+          "id": "detail",
+          "skill": "detail",
+          "question": "Kim jest siostra osoby, która pisze do Moniki?",
+          "options": [
+            "Kierowcą.",
+            "Nauczycielką.",
+            "Kucharką."
+          ],
+          "answer": "Kucharką.",
+          "evidence": "Moja siostra jest kucharką",
+          "explanation": "W szkole pracuje koleżanka, a siostra gotuje zawodowo."
+        },
+        {
+          "id": "cause",
+          "skill": "cause",
+          "question": "Dlaczego na drogę do kina wybrano autobus?",
+          "options": [
+            "Rynek jest daleko od domu.",
+            "Kawiarnia jest przy przystanku.",
+            "Kino jest w centrum miasta."
+          ],
+          "answer": "Kino jest w centrum miasta.",
+          "evidence": "Nie jadę samochodem, tylko autobusem, bo kino jest w centrum.",
+          "explanation": "W wiadomości podano położenie kina jako powód wyboru autobusu."
+        },
+        {
+          "id": "inference",
+          "skill": "inference",
+          "question": "Koleżanka chce pójść na kawę zaraz po pracy. Którą godzinę może wybrać?",
+          "options": [
+            "15.15.",
+            "14.45.",
+            "14.15."
+          ],
+          "answer": "15.15.",
+          "evidence": "kończy pracę o trzeciej.",
+          "explanation": "Spotkanie jest po południu. Kwadrans po trzeciej koleżanka już nie pracuje."
+        },
+        {
+          "id": "vocabulary",
+          "skill": "vocabulary",
+          "question": "Co oznacza tutaj „wolny dzień”?",
+          "options": [
+            "Dzień, w którym kończy się pracę wcześniej.",
+            "Dzień, w którym nie trzeba iść do pracy.",
+            "Dzień, w którym pracuje się w domu."
+          ],
+          "answer": "Dzień, w którym nie trzeba iść do pracy.",
+          "evidence": "Dzisiaj mam wolny dzień.",
+          "explanation": "Tego dnia są zakupy i spotkanie z koleżanką, a do pracy nie trzeba iść."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-016",
+      "day": 16,
+      "level": "A1",
+      "genre": "dialog",
+      "title": "Te klucze są moje?",
+      "text": "— Mamo, gdzie są moje klucze? Zaraz wychodzę do pracy.\n\n— Te na stole?\n\n— Nie, te są twoje. Moje mają mały czerwony brelok.\n\n— A tamte przy oknie?\n\n— To klucze taty.\n\nMama patrzy na krzesło przy drzwiach. Na krześle leży niebieska torba. W torbie jest portfel i książka, ale nie ma kluczy.\n\n— Sprawdź kieszeń kurtki. Czy to ta kurtka, w której wychodzisz z psem?\n\n— Tak, to ta sama kurtka. O, są! Dziękuję.\n\nSyn bierze klucze i torbę. Mama przypomina mu jeszcze o śniadaniu. Na stole stoi pudełko z kanapkami.",
+      "questions": [
+        {
+          "id": "main-idea",
+          "skill": "main-idea",
+          "question": "Jaki problem chce rozwiązać syn przed wyjściem?",
+          "options": [
+            "Chce znaleźć kurtkę na spacer.",
+            "Chce znaleźć swoje klucze.",
+            "Chce znaleźć torbę do pracy."
+          ],
+          "answer": "Chce znaleźć swoje klucze.",
+          "evidence": "Mamo, gdzie są moje klucze?",
+          "explanation": "Rozmówcy sprawdzają kilka miejsc, aż syn odnajduje klucze."
+        },
+        {
+          "id": "detail",
+          "skill": "detail",
+          "question": "Po czym syn poznaje swoje klucze?",
+          "options": [
+            "Po małym niebieskim breloku.",
+            "Po małym czerwonym breloku.",
+            "Po dużym czerwonym breloku."
+          ],
+          "answer": "Po małym czerwonym breloku.",
+          "evidence": "Moje mają mały czerwony brelok.",
+          "explanation": "Ważne są kolor i wielkość breloka."
+        },
+        {
+          "id": "cause",
+          "skill": "cause",
+          "question": "Dlaczego syn zostawia klucze na stole?",
+          "options": [
+            "Bo należą do taty.",
+            "Bo są od drzwi do biura.",
+            "Bo należą do mamy."
+          ],
+          "answer": "Bo należą do mamy.",
+          "evidence": "Nie, te są twoje.",
+          "explanation": "Syn mówi do mamy, więc „twoje” wskazuje na jej klucze."
+        },
+        {
+          "id": "inference",
+          "skill": "inference",
+          "question": "Co mama chce dać synowi na posiłek w pracy?",
+          "options": [
+            "Coś z niebieskiej torby.",
+            "Coś z kieszeni kurtki.",
+            "Coś z pudełka na stole."
+          ],
+          "answer": "Coś z pudełka na stole.",
+          "evidence": "Mama przypomina mu jeszcze o śniadaniu. Na stole stoi pudełko z kanapkami.",
+          "explanation": "Zestawienie przypomnienia o śniadaniu z pudełkiem wskazuje na kanapki do zabrania."
+        },
+        {
+          "id": "vocabulary",
+          "skill": "vocabulary",
+          "question": "Czym jest „kieszeń” w tej historii?",
+          "options": [
+            "Częścią kurtki, do której można coś włożyć.",
+            "Częścią torby, za którą można ją trzymać.",
+            "Częścią kluczy, po której można je poznać."
+          ],
+          "answer": "Częścią kurtki, do której można coś włożyć.",
+          "evidence": "Sprawdź kieszeń kurtki.",
+          "explanation": "Mama proponuje zajrzeć do miejsca w kurtce, gdzie można schować klucze."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-017",
+      "day": 17,
+      "level": "A1",
+      "genre": "opowiadanie",
+      "title": "W drodze do biura",
+      "text": "Michał mieszka niedaleko biura i różnie dostaje się do pracy. Kiedy ma dużo czasu, idzie pieszo przez park. Po drodze kupuje kawę w małym kiosku. Gdy pada deszcz, jedzie tramwajem. Przystanek jest między szkołą a sklepem.\n\nDzisiaj Michał jedzie rowerem, ponieważ rano świeci słońce. Przed biurem spotyka kolegę. Kolega przyjeżdża autobusem z drugiego końca miasta. Razem wchodzą do budynku. Michał pracuje przy komputerze, a jego kolega rozmawia z klientami. Po pracy planują wrócić do domu różnymi drogami. Michał chce jeszcze zrobić zakupy na kolację.",
+      "questions": [
+        {
+          "id": "main-idea",
+          "skill": "main-idea",
+          "question": "O czym przede wszystkim jest tekst?",
+          "options": [
+            "O tym, co Michał kupuje przed pracą.",
+            "O tym, co Michał robi w biurze.",
+            "O tym, jak Michał dostaje się do pracy."
+          ],
+          "answer": "O tym, jak Michał dostaje się do pracy.",
+          "evidence": "Michał mieszka niedaleko biura i różnie dostaje się do pracy.",
+          "explanation": "Poznajemy kilka sposobów dotarcia do biura."
+        },
+        {
+          "id": "detail",
+          "skill": "detail",
+          "question": "Czym Michał jedzie dzisiaj do biura?",
+          "options": [
+            "Rowerem.",
+            "Tramwajem.",
+            "Autobusem."
+          ],
+          "answer": "Rowerem.",
+          "evidence": "Dzisiaj Michał jedzie rowerem",
+          "explanation": "Dziś wybiera rower, a kolega przyjeżdża autobusem."
+        },
+        {
+          "id": "cause",
+          "skill": "cause",
+          "question": "Dlaczego Michał dzisiaj wybiera rower?",
+          "options": [
+            "Rano świeci słońce.",
+            "Musi dojechać do kiosku przed otwarciem biura.",
+            "Rano pada deszcz."
+          ],
+          "answer": "Rano świeci słońce.",
+          "evidence": "ponieważ rano świeci słońce.",
+          "explanation": "Słoneczna pogoda zachęca go do jazdy rowerem."
+        },
+        {
+          "id": "inference",
+          "skill": "inference",
+          "question": "Kto najpewniej ma dalej z domu do biura?",
+          "options": [
+            "Michał, bo czasem idzie przez park.",
+            "Kolega, bo jedzie z drugiego końca miasta.",
+            "Obaj mają tak samo daleko, bo pracują razem."
+          ],
+          "answer": "Kolega, bo jedzie z drugiego końca miasta.",
+          "evidence": "Kolega przyjeżdża autobusem z drugiego końca miasta.",
+          "explanation": "Michał mieszka blisko biura, a kolega musi przejechać przez miasto."
+        },
+        {
+          "id": "vocabulary",
+          "skill": "vocabulary",
+          "question": "Kiedy Michał kupuje kawę, jeśli robi to „po drodze”?",
+          "options": [
+            "W czasie drogi z domu do biura.",
+            "Kiedy już dotrze do biura.",
+            "Zanim wyjdzie z domu."
+          ],
+          "answer": "W czasie drogi z domu do biura.",
+          "evidence": "Po drodze kupuje kawę w małym kiosku.",
+          "explanation": "Zatrzymuje się w kiosku w czasie drogi do pracy."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-018",
+      "day": 18,
+      "level": "A1",
+      "genre": "wiadomość",
+      "title": "Zakupy na kolację",
+      "text": "Cześć, Piotrze! Wracam dziś później z pracy. Proszę, zrób małe zakupy na kolację. Potrzebujemy dwóch pomidorów, jednej cebuli, trzech jajek i czterech bułek. W lodówce jest już masło i ser, więc nie kupuj ich ponownie. Na stole leży lista zakupów.\n\nSklep przy domu jest czynny do ósmej wieczorem. Jeśli nie ma świeżych bułek, możesz kupić chleb. Chcę przygotować omlet z warzywami, a później zrobić kanapki na jutro. Nie potrzebujemy dużo jedzenia, ponieważ jutro idziemy na obiad do mojej mamy. Dziękuję za pomoc!\n\nAnia",
+      "questions": [
+        {
+          "id": "main-idea",
+          "skill": "main-idea",
+          "question": "Po co Ania pisze do Piotra?",
+          "options": [
+            "Zaprasza go dzisiaj na obiad do mamy.",
+            "Prosi go o zakupy na kolację.",
+            "Prosi go o zrobienie kanapek do pracy."
+          ],
+          "answer": "Prosi go o zakupy na kolację.",
+          "evidence": "Proszę, zrób małe zakupy na kolację.",
+          "explanation": "Wiadomość podaje produkty, które Piotr ma kupić."
+        },
+        {
+          "id": "detail",
+          "skill": "detail",
+          "question": "Ile jajek trzeba kupić?",
+          "options": [
+            "Dwa.",
+            "Cztery.",
+            "Trzy."
+          ],
+          "answer": "Trzy.",
+          "evidence": "trzech jajek",
+          "explanation": "Wśród produktów na liście są trzy jajka."
+        },
+        {
+          "id": "cause",
+          "skill": "cause",
+          "question": "Dlaczego nie trzeba kupować sera?",
+          "options": [
+            "Ser jest za drogi.",
+            "Piotr nie lubi sera.",
+            "Ser jest już w lodówce."
+          ],
+          "answer": "Ser jest już w lodówce.",
+          "evidence": "W lodówce jest już masło i ser",
+          "explanation": "Ania i Piotr mają już ser w domu."
+        },
+        {
+          "id": "inference",
+          "skill": "inference",
+          "question": "Piotr będzie przy sklepie o 20.15. Czy może wtedy zrobić zakupy w tym sklepie?",
+          "options": [
+            "Tak, sklep jest otwarty przez całą noc.",
+            "Tak, do zamknięcia ma jeszcze kwadrans.",
+            "Nie, sklep jest już zamknięty."
+          ],
+          "answer": "Nie, sklep jest już zamknięty.",
+          "evidence": "Sklep przy domu jest czynny do ósmej wieczorem.",
+          "explanation": "Ósma wieczorem to 20.00. Kwadrans później sklep jest zamknięty."
+        },
+        {
+          "id": "vocabulary",
+          "skill": "vocabulary",
+          "question": "Co oznacza „czynny” w zdaniu o sklepie?",
+          "options": [
+            "Klienci mogą wejść i zrobić zakupy.",
+            "Klienci czekają przed wejściem na otwarcie.",
+            "Klienci mogą odebrać tylko gotowe zamówienia."
+          ],
+          "answer": "Klienci mogą wejść i zrobić zakupy.",
+          "evidence": "Sklep przy domu jest czynny do ósmej wieczorem.",
+          "explanation": "Do tej godziny sklep jest otwarty dla klientów."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-019",
+      "day": 19,
+      "level": "A1",
+      "genre": "opis",
+      "title": "Trzy sprawy w mieście",
+      "text": "W poniedziałek rano Basia ma trzy sprawy do załatwienia. Najpierw idzie na pocztę, żeby wysłać paczkę. Poczta otwiera się o ósmej. Potem ma wizytę u dentysty o dziesiątej. Gabinet jest na drugim piętrze, nad apteką. Trzecia sprawa to zakupy na obiad.\n\nBasia nie chce nosić ciężkiej torby przez całe miasto, dlatego zostawia zakupy na koniec. Po wizycie u dentysty idzie do sklepu obok domu. Kupuje warzywa i ryż. O dwunastej jest już w mieszkaniu. Ma jeszcze czas na odpoczynek przed pracą. Dzisiaj zaczyna pracę o drugiej po południu.",
+      "questions": [
+        {
+          "id": "main-idea",
+          "skill": "main-idea",
+          "question": "Co opisuje tekst?",
+          "options": [
+            "Zakupy Basi po dniu pracy.",
+            "Pracę Basi w gabinecie dentystycznym.",
+            "Kilka spraw Basi przed pracą."
+          ],
+          "answer": "Kilka spraw Basi przed pracą.",
+          "evidence": "W poniedziałek rano Basia ma trzy sprawy do załatwienia.",
+          "explanation": "Przed pracą Basia wysyła paczkę, idzie do dentysty i robi zakupy."
+        },
+        {
+          "id": "detail",
+          "skill": "detail",
+          "question": "Na którym piętrze jest gabinet?",
+          "options": [
+            "Na drugim.",
+            "Na pierwszym.",
+            "Na trzecim."
+          ],
+          "answer": "Na drugim.",
+          "evidence": "Gabinet jest na drugim piętrze, nad apteką.",
+          "explanation": "Wizyta odbywa się na drugim piętrze."
+        },
+        {
+          "id": "cause",
+          "skill": "cause",
+          "question": "Dlaczego Basia robi zakupy na końcu?",
+          "options": [
+            "Bo chce krótko nosić torbę z zakupami.",
+            "Bo chce najpierw zjeść obiad w domu.",
+            "Bo jej sklep otwiera się dopiero w południe."
+          ],
+          "answer": "Bo chce krótko nosić torbę z zakupami.",
+          "evidence": "Basia nie chce nosić ciężkiej torby przez całe miasto",
+          "explanation": "Robi zakupy koło domu, więc niesie ciężką torbę tylko przez chwilę."
+        },
+        {
+          "id": "inference",
+          "skill": "inference",
+          "question": "Ile czasu mija od dwunastej, kiedy Basia jest już w domu, do początku jej pracy?",
+          "options": [
+            "Godzina.",
+            "Dwie godziny.",
+            "Trzy godziny."
+          ],
+          "answer": "Dwie godziny.",
+          "evidence": "O dwunastej jest już w mieszkaniu. Ma jeszcze czas na odpoczynek przed pracą. Dzisiaj zaczyna pracę o drugiej po południu.",
+          "explanation": "Od dwunastej do drugiej po południu mijają dwie godziny."
+        },
+        {
+          "id": "vocabulary",
+          "skill": "vocabulary",
+          "question": "Co oznacza „załatwić sprawę”, gdy Basia idzie na pocztę?",
+          "options": [
+            "Zapisać sobie, że trzeba wysłać paczkę.",
+            "Odłożyć wysłanie paczki na inny dzień.",
+            "Wysłać paczkę tak, jak planowała."
+          ],
+          "answer": "Wysłać paczkę tak, jak planowała.",
+          "evidence": "Najpierw idzie na pocztę, żeby wysłać paczkę.",
+          "explanation": "Załatwienie sprawy oznacza wykonanie potrzebnego zadania."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-020",
+      "day": 20,
+      "level": "A1",
+      "genre": "opowiadanie",
+      "title": "Wieczór bez telefonu",
+      "text": "Kuba i Iza często patrzą na telefony nawet podczas kolacji. Dzisiaj chcą spędzić wieczór inaczej. Po pracy odkładają telefony na półkę w przedpokoju. Kuba gotuje makaron, a Iza przygotowuje sałatkę. Jedzą razem i rozmawiają o swoich planach na weekend.\n\nPo kolacji grają w grę planszową. Iza wygrywa pierwszą partię, Kuba drugą. Potem idą na krótki spacer z psem. W domu nie włączają telewizora, tylko czytają książki. Przed snem sprawdzają wiadomości na telefonach. Są zadowoleni, bo mają więcej czasu na rozmowę i odpoczynek. Chcą powtórzyć taki wieczór w następnym tygodniu.",
+      "questions": [
+        {
+          "id": "main-idea",
+          "skill": "main-idea",
+          "question": "O czym opowiada tekst?",
+          "options": [
+            "O tym, jak Kuba i Iza wybierają nową grę.",
+            "O wspólnym wieczorze z telefonami na półce.",
+            "O tym, jak Kuba i Iza spędzają weekend u znajomych."
+          ],
+          "answer": "O wspólnym wieczorze z telefonami na półce.",
+          "evidence": "Dzisiaj chcą spędzić wieczór inaczej. Po pracy odkładają telefony na półkę w przedpokoju.",
+          "explanation": "Podczas kolacji, gry i spaceru para spędza razem czas bez telefonu."
+        },
+        {
+          "id": "detail",
+          "skill": "detail",
+          "question": "Kto przygotowuje sałatkę?",
+          "options": [
+            "Kuba i Iza razem.",
+            "Iza.",
+            "Kuba."
+          ],
+          "answer": "Iza.",
+          "evidence": "Kuba gotuje makaron, a Iza przygotowuje sałatkę.",
+          "explanation": "Iza robi sałatkę, a Kuba przygotowuje makaron."
+        },
+        {
+          "id": "cause",
+          "skill": "cause",
+          "question": "Dlaczego Kuba i Iza są zadowoleni z wieczoru?",
+          "options": [
+            "Udało im się wcześniej pójść spać.",
+            "Udało im się przygotować kolację na cały weekend.",
+            "Mają więcej czasu na rozmowę i odpoczynek."
+          ],
+          "answer": "Mają więcej czasu na rozmowę i odpoczynek.",
+          "evidence": "Są zadowoleni, bo mają więcej czasu na rozmowę i odpoczynek.",
+          "explanation": "Cieszą się z czasu, który mogą spędzić razem."
+        },
+        {
+          "id": "inference",
+          "skill": "inference",
+          "question": "Kolega pisze do Kuby podczas kolacji. Kiedy Kuba najpewniej przeczyta wiadomość?",
+          "options": [
+            "Wieczorem przed snem.",
+            "Następnego dnia po pracy.",
+            "W trakcie jedzenia."
+          ],
+          "answer": "Wieczorem przed snem.",
+          "evidence": "Przed snem sprawdzają wiadomości na telefonach.",
+          "explanation": "Podczas wieczoru telefon leży na półce, a Kuba zagląda do wiadomości przed snem."
+        },
+        {
+          "id": "vocabulary",
+          "skill": "vocabulary",
+          "question": "Co oznacza „odkładają telefony na półkę”?",
+          "options": [
+            "Biorą telefony z półki, żeby ich użyć.",
+            "Podłączają telefony do prądu na półce.",
+            "Kładą telefony na półce i na razie ich nie używają."
+          ],
+          "answer": "Kładą telefony na półce i na razie ich nie używają.",
+          "evidence": "Po pracy odkładają telefony na półkę w przedpokoju.",
+          "explanation": "Para zostawia telefony w przedpokoju na czas wspólnego wieczoru."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-021",
+      "day": 21,
+      "level": "A1",
+      "genre": "opowiadanie",
+      "title": "Inny plan na niedzielę",
+      "text": "W niedzielę rodzina Nowaków zwykle je obiad w restauracji. Dzisiaj pogoda jest piękna, więc wszyscy chcą spędzić więcej czasu na dworze. Tata przygotowuje kanapki, mama pakuje owoce, a dzieci biorą piłkę i koc. Rodzina jedzie autobusem do dużego parku.\n\nW parku jest dużo ludzi, ale znajdują spokojne miejsce pod drzewem. Dzieci grają w piłkę, a rodzice czytają gazetę. Po jedzeniu wszyscy idą na spacer nad jezioro. Nie zostawiają po sobie śmieci: wkładają je do torby i wyrzucają do kosza. Wieczorem wracają do domu zmęczeni, ale w dobrym humorze.",
+      "questions": [
+        {
+          "id": "main-idea",
+          "skill": "main-idea",
+          "question": "O czym opowiada tekst?",
+          "options": [
+            "O rodzinnym obiedzie w restauracji.",
+            "O pikniku rodziny Nowaków.",
+            "O meczu dzieci w szkole."
+          ],
+          "answer": "O pikniku rodziny Nowaków.",
+          "evidence": "Rodzina jedzie autobusem do dużego parku.",
+          "explanation": "Nowakowie biorą jedzenie, jedzą w parku i spędzają tam dzień."
+        },
+        {
+          "id": "detail",
+          "skill": "detail",
+          "question": "Co mama wkłada do torby przed wyjazdem?",
+          "options": [
+            "Piłkę.",
+            "Gazetę.",
+            "Owoce."
+          ],
+          "answer": "Owoce.",
+          "evidence": "mama pakuje owoce",
+          "explanation": "Tata robi kanapki, a mama pakuje owoce."
+        },
+        {
+          "id": "cause",
+          "skill": "cause",
+          "question": "Dlaczego Nowakowie wybierają dziś park?",
+          "options": [
+            "Chcą zjeść obiad nad jeziorem.",
+            "Chcą zagrać w piłkę z inną rodziną.",
+            "Chcą wykorzystać ładną pogodę."
+          ],
+          "answer": "Chcą wykorzystać ładną pogodę.",
+          "evidence": "Dzisiaj pogoda jest piękna, więc wszyscy chcą spędzić więcej czasu na dworze.",
+          "explanation": "Ładna pogoda zachęca ich do wyjścia."
+        },
+        {
+          "id": "inference",
+          "skill": "inference",
+          "question": "Co zobaczy ktoś, kto po pikniku usiądzie pod tym samym drzewem?",
+          "options": [
+            "Puste pudełko po kanapkach.",
+            "Torbę pełną śmieci.",
+            "Czyste miejsce."
+          ],
+          "answer": "Czyste miejsce.",
+          "evidence": "Nie zostawiają po sobie śmieci: wkładają je do torby i wyrzucają do kosza.",
+          "explanation": "Rodzina sprząta po pikniku, więc pod drzewem będzie czysto."
+        },
+        {
+          "id": "vocabulary",
+          "skill": "vocabulary",
+          "question": "Kto jest „na dworze”?",
+          "options": [
+            "Mama w kuchni.",
+            "Dzieci pod drzewem.",
+            "Tata w autobusie."
+          ],
+          "answer": "Dzieci pod drzewem.",
+          "evidence": "Dzisiaj pogoda jest piękna, więc wszyscy chcą spędzić więcej czasu na dworze.",
+          "explanation": "Na dworze znaczy na zewnątrz. Dzieci pod drzewem są na zewnątrz."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-022",
+      "day": 22,
+      "level": "A1",
+      "genre": "dialog",
+      "title": "Gdzie dziś idziemy?",
+      "text": "— Co robimy w sobotę? — pyta Ola.\n\n— Możemy iść na wystawę albo na koncert — odpowiada Marek.\n\n— Jaki koncert?\n\n— W parku gra mały zespół jazzowy. Wstęp jest wolny.\n\n— O której zaczyna grać?\n\n— O siedemnastej. A wystawa jest otwarta od dziesiątej do piętnastej.\n\nOla chce zobaczyć zdjęcia na wystawie, ale rano pracuje. Kończy o czternastej i jedzie do domu pół godziny. Marek ma wolny cały dzień.\n\n— Może spotkamy się o szesnastej przy wejściu do parku? Najpierw kupimy coś do picia.\n\n— Dobry pomysł. Będę czekać przy wejściu. Na wystawę pójdę w niedzielę.",
+      "questions": [
+        {
+          "id": "main-idea",
+          "skill": "main-idea",
+          "question": "Co ustalają Ola i Marek?",
+          "options": [
+            "Jak dojadą razem do pracy.",
+            "Co zobaczą razem na wystawie zdjęć.",
+            "Jak spędzą razem sobotę."
+          ],
+          "answer": "Jak spędzą razem sobotę.",
+          "evidence": "Możemy iść na wystawę albo na koncert",
+          "explanation": "Rozważają dwa pomysły i ustalają spotkanie przy parku."
+        },
+        {
+          "id": "detail",
+          "skill": "detail",
+          "question": "O której zaczyna się koncert?",
+          "options": [
+            "O piętnastej.",
+            "O czternastej.",
+            "O siedemnastej."
+          ],
+          "answer": "O siedemnastej.",
+          "evidence": "O siedemnastej. A wystawa jest otwarta od dziesiątej do piętnastej.",
+          "explanation": "O siedemnastej zaczyna grać zespół."
+        },
+        {
+          "id": "cause",
+          "skill": "cause",
+          "question": "Dlaczego Ola odkłada wystawę na niedzielę?",
+          "options": [
+            "Koncert zaczyna się przed zamknięciem wystawy.",
+            "W sobotę wystawa kończy się przed jej pracą.",
+            "Po pracy ma mało czasu na wystawę."
+          ],
+          "answer": "Po pracy ma mało czasu na wystawę.",
+          "evidence": "Kończy o czternastej i jedzie do domu pół godziny.",
+          "explanation": "Wystawa jest otwarta do piętnastej, a Ola wraca do domu dopiero około wpół do trzeciej."
+        },
+        {
+          "id": "inference",
+          "skill": "inference",
+          "question": "Kto w sobotę o jedenastej może już zwiedzać wystawę?",
+          "options": [
+            "Ola i Marek.",
+            "Tylko Ola.",
+            "Tylko Marek."
+          ],
+          "answer": "Tylko Marek.",
+          "evidence": "Ola chce zobaczyć zdjęcia na wystawie, ale rano pracuje. Kończy o czternastej i jedzie do domu pół godziny. Marek ma wolny cały dzień.",
+          "explanation": "O jedenastej wystawa jest już otwarta. Ola wtedy pracuje, a Marek ma wolne."
+        },
+        {
+          "id": "vocabulary",
+          "skill": "vocabulary",
+          "question": "Co oznacza zdanie „Wstęp jest wolny”?",
+          "options": [
+            "Można wejść bez opłaty.",
+            "Za wejście płaci się po koncercie.",
+            "Bilet kosztuje mniej w sobotę."
+          ],
+          "answer": "Można wejść bez opłaty.",
+          "evidence": "Wstęp jest wolny.",
+          "explanation": "Za wejście na koncert nic się nie płaci."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-023",
+      "day": 23,
+      "level": "A1",
+      "genre": "ogłoszenie",
+      "title": "Zajęcia w klubie sportowym",
+      "text": "Chcesz zacząć uprawiać sport, ale nie wiesz, które zajęcia wybrać? Nasz klub zaprasza na bezpłatny dzień otwarty w sobotę. O dziewiątej jest gimnastyka, o jedenastej taniec, a po południu ćwiczenia z małymi ciężarkami dla początkujących. Każde zajęcia trwają czterdzieści pięć minut.\n\nNie musisz mieć własnego sprzętu. Maty i ciężarki są na sali. Przynieś wygodne ubranie, wodę i czyste buty sportowe. Na miejscu można porozmawiać z trenerem i zapytać o plan ćwiczeń. Sala jest mała, dlatego prosimy o wcześniejsze zapisy przez internet. Po zajęciach można odpocząć w małej kawiarni.",
+      "questions": [
+        {
+          "id": "main-idea",
+          "skill": "main-idea",
+          "question": "Po co klub napisał to ogłoszenie?",
+          "options": [
+            "Żeby zaprosić ludzi na dzień próbnych ćwiczeń.",
+            "Żeby zaprosić ludzi na zakupy w klubie.",
+            "Żeby zaprosić ludzi na spotkanie w kawiarni."
+          ],
+          "answer": "Żeby zaprosić ludzi na dzień próbnych ćwiczeń.",
+          "evidence": "Nasz klub zaprasza na bezpłatny dzień otwarty w sobotę.",
+          "explanation": "Klub proponuje kilka zajęć, których można spróbować w sobotę."
+        },
+        {
+          "id": "detail",
+          "skill": "detail",
+          "question": "Ile trwają jedne zajęcia?",
+          "options": [
+            "Trzydzieści minut.",
+            "Czterdzieści pięć minut.",
+            "Godzinę."
+          ],
+          "answer": "Czterdzieści pięć minut.",
+          "evidence": "Każde zajęcia trwają czterdzieści pięć minut.",
+          "explanation": "Wszystkie zajęcia mają tę samą długość."
+        },
+        {
+          "id": "cause",
+          "skill": "cause",
+          "question": "Dlaczego klub prosi o wcześniejsze zapisy?",
+          "options": [
+            "Trener chce wcześniej wybrać muzykę.",
+            "Sala jest mała.",
+            "Trzeba wcześniej zamówić matę."
+          ],
+          "answer": "Sala jest mała.",
+          "evidence": "Sala jest mała, dlatego prosimy o wcześniejsze zapisy przez internet.",
+          "explanation": "Nie wszyscy zmieszczą się w małej sali."
+        },
+        {
+          "id": "inference",
+          "skill": "inference",
+          "question": "Ewa w sobotę pracuje do dwunastej. Na które zajęcia zdąży po pracy?",
+          "options": [
+            "Na taniec.",
+            "Na ćwiczenia z ciężarkami.",
+            "Na gimnastykę."
+          ],
+          "answer": "Na ćwiczenia z ciężarkami.",
+          "evidence": "O dziewiątej jest gimnastyka, o jedenastej taniec, a po południu ćwiczenia z małymi ciężarkami dla początkujących.",
+          "explanation": "Dwa pierwsze zajęcia skończą się przed dwunastą. Ćwiczenia z ciężarkami są później."
+        },
+        {
+          "id": "vocabulary",
+          "skill": "vocabulary",
+          "question": "Dla kogo są ćwiczenia „dla początkujących”?",
+          "options": [
+            "Dla osób, które dopiero zaczynają ćwiczyć.",
+            "Dla osób, które uczą innych ćwiczyć.",
+            "Dla osób, które ćwiczą już od lat."
+          ],
+          "answer": "Dla osób, które dopiero zaczynają ćwiczyć.",
+          "evidence": "ćwiczenia z małymi ciężarkami dla początkujących",
+          "explanation": "Początkujący ma mało doświadczenia i uczy się podstaw."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-024",
+      "day": 24,
+      "level": "A1",
+      "genre": "wiadomość",
+      "title": "Film czy spacer?",
+      "text": "Cześć, Tomku! Dzisiaj po południu mam czas, więc możemy się spotkać. W kinie obok dworca jest nowa komedia. Film zaczyna się o szóstej, ale bilety kosztują dość dużo. Możemy też pójść na spacer nad Wisłą i kupić lody. Prognoza pogody jest dobra, choć wieczorem może być chłodno.\n\nJa wolę spacer, ponieważ przez cały tydzień siedzę przy komputerze. Jeśli jednak będzie padał deszcz, wybierzmy kino. Przyjdź do mnie o piątej albo spotkajmy się od razu przy dworcu. Napisz, która opcja jest dla ciebie wygodniejsza. Wezmę dodatkową bluzę.",
+      "questions": [
+        {
+          "id": "main-idea",
+          "skill": "main-idea",
+          "question": "Po co autor pisze do Tomka?",
+          "options": [
+            "Żeby poprosić go o pomoc przy komputerze.",
+            "Żeby opowiedzieć mu o komedii, którą widział.",
+            "Żeby razem wybrali, co zrobią po południu."
+          ],
+          "answer": "Żeby razem wybrali, co zrobią po południu.",
+          "evidence": "Dzisiaj po południu mam czas, więc możemy się spotkać.",
+          "explanation": "Autor podaje dwa pomysły na wspólne popołudnie i prosi o odpowiedź."
+        },
+        {
+          "id": "detail",
+          "skill": "detail",
+          "question": "O której zaczyna się film?",
+          "options": [
+            "O piątej.",
+            "O siódmej.",
+            "O szóstej."
+          ],
+          "answer": "O szóstej.",
+          "evidence": "Film zaczyna się o szóstej",
+          "explanation": "O szóstej zaczyna się komedia, a o piątej mogą się spotkać."
+        },
+        {
+          "id": "cause",
+          "skill": "cause",
+          "question": "Dlaczego autor ma ochotę na spacer?",
+          "options": [
+            "Chce zrobić zdjęcia nad rzeką.",
+            "Chce się ruszyć po tygodniu przy komputerze.",
+            "Chce porozmawiać z Tomkiem o pracy."
+          ],
+          "answer": "Chce się ruszyć po tygodniu przy komputerze.",
+          "evidence": "Ja wolę spacer, ponieważ przez cały tydzień siedzę przy komputerze.",
+          "explanation": "Po wielu godzinach siedzenia autor woli spacer."
+        },
+        {
+          "id": "inference",
+          "skill": "inference",
+          "question": "Który przedmiot najlepiej zabrać na spacer, jeśli skończy się dopiero wieczorem?",
+          "options": [
+            "Ciepłą bluzę.",
+            "Czapkę od słońca.",
+            "Okulary przeciwsłoneczne."
+          ],
+          "answer": "Ciepłą bluzę.",
+          "evidence": "wieczorem może być chłodno.",
+          "explanation": "Autor planuje spacer i bierze bluzę, bo pod wieczór może potrzebować cieplejszego ubrania."
+        },
+        {
+          "id": "vocabulary",
+          "skill": "vocabulary",
+          "question": "Które zdanie jest prognozą pogody?",
+          "options": [
+            "Wczoraj nad rzeką było ciepło.",
+            "Teraz nad rzeką świeci słońce.",
+            "Wieczorem nad rzeką może być chłodno."
+          ],
+          "answer": "Wieczorem nad rzeką może być chłodno.",
+          "evidence": "Prognoza pogody jest dobra, choć wieczorem może być chłodno.",
+          "explanation": "Prognoza mówi, jakiej pogody można się spodziewać."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-025",
+      "day": 25,
+      "level": "A1",
+      "genre": "opowiadanie",
+      "title": "Mój pierwszy aparat",
+      "text": "Mój tata ma dużo starych zdjęć z wakacji. Jego ulubionym hobby jest fotografia. Kiedy jestem w domu rodziców, często oglądamy razem jego albumy. Na jednej fotografii jest nasz dawny dom, na innej moja siostra i jej pies. Tata pamięta wiele historii związanych z tymi zdjęciami.\n\nW tym miesiącu chcę kupić własny aparat. Moja koleżanka ma mały aparat cyfrowy i pokazuje mi, jak robić zdjęcia. W sobotę idziemy razem do parku. Chcę sfotografować drzewa i ludzi podczas spaceru. Nie chcę od razu kupować drogiego sprzętu, bo dopiero uczę się fotografii.",
+      "questions": [
+        {
+          "id": "main-idea",
+          "skill": "main-idea",
+          "question": "O czym opowiada autor?",
+          "options": [
+            "O tym, jak poznaje fotografię i chce robić własne zdjęcia.",
+            "O tym, jak tata poznał jego koleżankę.",
+            "O tym, jak rodzina mieszkała w dawnym domu."
+          ],
+          "answer": "O tym, jak poznaje fotografię i chce robić własne zdjęcia.",
+          "evidence": "W tym miesiącu chcę kupić własny aparat.",
+          "explanation": "Autor ogląda zdjęcia taty, uczy się od koleżanki i planuje pierwsze własne zdjęcia."
+        },
+        {
+          "id": "detail",
+          "skill": "detail",
+          "question": "Do kogo należą albumy?",
+          "options": [
+            "Do jego siostry.",
+            "Do taty autora.",
+            "Do jego koleżanki."
+          ],
+          "answer": "Do taty autora.",
+          "evidence": "często oglądamy razem jego albumy",
+          "explanation": "Autor ogląda z tatą albumy taty."
+        },
+        {
+          "id": "cause",
+          "skill": "cause",
+          "question": "Dlaczego autor na razie nie chce drogiego aparatu?",
+          "options": [
+            "Chce najpierw sprzedać stare zdjęcia.",
+            "Czeka, aż tata da mu swój aparat.",
+            "Dopiero uczy się robić zdjęcia."
+          ],
+          "answer": "Dopiero uczy się robić zdjęcia.",
+          "evidence": "Nie chcę od razu kupować drogiego sprzętu, bo dopiero uczę się fotografii.",
+          "explanation": "Autor jest na początku nauki, więc nie chce dużo wydawać."
+        },
+        {
+          "id": "inference",
+          "skill": "inference",
+          "question": "Kogo najlepiej zapytać o historię zdjęcia dawnego domu?",
+          "options": [
+            "Tatę autora.",
+            "Siostrę autora.",
+            "Koleżankę autora."
+          ],
+          "answer": "Tatę autora.",
+          "evidence": "Tata pamięta wiele historii związanych z tymi zdjęciami.",
+          "explanation": "Zdjęcie jest w albumie taty, a tata zna historie rodzinnych fotografii."
+        },
+        {
+          "id": "vocabulary",
+          "skill": "vocabulary",
+          "question": "Który aparat jest własnym aparatem autora?",
+          "options": [
+            "Ten, który koleżanka pożyczy mu na spacer.",
+            "Ten, który autor kupi dla siebie.",
+            "Ten, który tata da mu do ręki na chwilę."
+          ],
+          "answer": "Ten, który autor kupi dla siebie.",
+          "evidence": "W tym miesiącu chcę kupić własny aparat.",
+          "explanation": "Własny aparat należy do autora. Pożyczony trzeba oddać."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-026",
+      "day": 26,
+      "level": "A1",
+      "genre": "opowiadanie",
+      "title": "Pierwszy koncert",
+      "text": "Wczoraj wieczorem byłam na swoim pierwszym koncercie jazzowym. Poszłam tam z kolegą, który bardzo lubi tę muzykę. Na początku nie znałam żadnego utworu, ale szybko zaczęłam słuchać z zainteresowaniem. Muzycy grali na trąbce, pianinie i perkusji. Sala była mała, więc dobrze widziałam scenę.\n\nPodczas przerwy kupiłam wodę i rozmawiałam z kolegą o muzyce. Po koncercie wróciłam do domu tramwajem. Byłam zmęczona, ale zadowolona. Dzisiaj rano znalazłam w internecie muzykę tego zespołu i słuchałam jej podczas śniadania. Chcę pójść na kolejny koncert, kiedy zespół znów przyjedzie do naszego miasta.",
+      "questions": [
+        {
+          "id": "main-idea",
+          "skill": "main-idea",
+          "question": "O czym opowiada autorka?",
+          "options": [
+            "O pierwszej lekcji gry na pianinie.",
+            "O pierwszej wizycie na koncercie jazzowym.",
+            "O pierwszej próbie swojego zespołu."
+          ],
+          "answer": "O pierwszej wizycie na koncercie jazzowym.",
+          "evidence": "Wczoraj wieczorem byłam na swoim pierwszym koncercie jazzowym.",
+          "explanation": "Autorka opisuje występ, którego słuchała, i swoje wrażenia."
+        },
+        {
+          "id": "detail",
+          "skill": "detail",
+          "question": "Czym autorka wróciła do domu?",
+          "options": [
+            "Rowerem.",
+            "Tramwajem.",
+            "Pociągiem."
+          ],
+          "answer": "Tramwajem.",
+          "evidence": "Po koncercie wróciłam do domu tramwajem.",
+          "explanation": "Po występie jechała tramwajem."
+        },
+        {
+          "id": "cause",
+          "skill": "cause",
+          "question": "Dlaczego dobrze widziała scenę?",
+          "options": [
+            "Sala była mała.",
+            "Stała blisko muzyków.",
+            "Siedziała w pierwszym rzędzie."
+          ],
+          "answer": "Sala była mała.",
+          "evidence": "Sala była mała, więc dobrze widziałam scenę.",
+          "explanation": "Autorka wyjaśnia to wielkością sali."
+        },
+        {
+          "id": "inference",
+          "skill": "inference",
+          "question": "Co można powiedzieć o autorce po koncercie?",
+          "options": [
+            "Ma ochotę lepiej poznać ten zespół.",
+            "Woli nagrania od muzyki na żywo.",
+            "Chce sama uczyć się gry na trąbce."
+          ],
+          "answer": "Ma ochotę lepiej poznać ten zespół.",
+          "evidence": "Dzisiaj rano znalazłam w internecie muzykę tego zespołu i słuchałam jej podczas śniadania.",
+          "explanation": "Szuka nagrań i chce wrócić na koncert, co wskazuje na zainteresowanie zespołem."
+        },
+        {
+          "id": "vocabulary",
+          "skill": "vocabulary",
+          "question": "Co to jest „utwór” na koncercie?",
+          "options": [
+            "Jeden kawałek muzyki, który gra zespół.",
+            "Instrument, na którym gra muzyk.",
+            "Przerwa między dwiema piosenkami."
+          ],
+          "answer": "Jeden kawałek muzyki, który gra zespół.",
+          "evidence": "Na początku nie znałam żadnego utworu, ale szybko zaczęłam słuchać z zainteresowaniem.",
+          "explanation": "Utwór to jedna kompozycja, na przykład piosenka."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-027",
+      "day": 27,
+      "level": "A1",
+      "genre": "opowiadanie",
+      "title": "Niedziela w muzeum",
+      "text": "W niedzielę poszliśmy z rodziną do muzeum. Nasz syn interesuje się techniką, dlatego wybraliśmy wystawę starych urządzeń. W pierwszej sali były telefony i radia, w drugiej można było zobaczyć pierwsze komputery. Syn czytał napisy i zadawał wiele pytań.\n\nNajbardziej podobał mu się stary aparat fotograficzny. Pracownik muzeum pokazał, jak kiedyś ludzie robili zdjęcia. Potem odpoczęliśmy w kawiarni i zjedliśmy ciasto. Nie zobaczyliśmy całego muzeum, ponieważ córka była już zmęczona. Kupiliśmy więc mały przewodnik i postanowiliśmy wrócić za miesiąc. W domu syn opowiadał o wystawie babci.",
+      "questions": [
+        {
+          "id": "main-idea",
+          "skill": "main-idea",
+          "question": "O czym opowiada rodzic?",
+          "options": [
+            "O rodzinnym spotkaniu z babcią w kawiarni.",
+            "O nauce fotografii w rodzinnym domu.",
+            "O rodzinnej wizycie na wystawie starych urządzeń."
+          ],
+          "answer": "O rodzinnej wizycie na wystawie starych urządzeń.",
+          "evidence": "Nasz syn interesuje się techniką, dlatego wybraliśmy wystawę starych urządzeń.",
+          "explanation": "Rodzina ogląda urządzenia w muzeum, a syn poznaje między innymi dawny aparat."
+        },
+        {
+          "id": "detail",
+          "skill": "detail",
+          "question": "Co najbardziej podobało się synowi?",
+          "options": [
+            "Stare radio.",
+            "Stary telefon.",
+            "Stary aparat fotograficzny."
+          ],
+          "answer": "Stary aparat fotograficzny.",
+          "evidence": "Najbardziej podobał mu się stary aparat fotograficzny.",
+          "explanation": "W tekście rodzic wyróżnia aparat."
+        },
+        {
+          "id": "cause",
+          "skill": "cause",
+          "question": "Dlaczego rodzina skończyła zwiedzanie wcześniej?",
+          "options": [
+            "Syn chciał zdążyć do babci.",
+            "Córka potrzebowała odpoczynku.",
+            "Muzeum już zamykano."
+          ],
+          "answer": "Córka potrzebowała odpoczynku.",
+          "evidence": "Nie zobaczyliśmy całego muzeum, ponieważ córka była już zmęczona.",
+          "explanation": "Rodzina przerwała zwiedzanie z powodu zmęczenia córki."
+        },
+        {
+          "id": "inference",
+          "skill": "inference",
+          "question": "Jak syn najpewniej przyjmie zaproszenie na podobną wystawę?",
+          "options": [
+            "Wybierze ją tylko wtedy, gdy będzie tam ciasto.",
+            "Poprosi o wystawę nowych urządzeń zamiast starych.",
+            "Chętnie pójdzie zobaczyć inne dawne urządzenia."
+          ],
+          "answer": "Chętnie pójdzie zobaczyć inne dawne urządzenia.",
+          "evidence": "Syn czytał napisy i zadawał wiele pytań.",
+          "explanation": "Interesuje się techniką, pytał o urządzenia i opowiadał o nich babci, więc podobna wystawa powinna mu się spodobać."
+        },
+        {
+          "id": "vocabulary",
+          "skill": "vocabulary",
+          "question": "Co oznacza słowo „przewodnik” w zdaniu o zakupie?",
+          "options": [
+            "Osoba, która oprowadza gości.",
+            "Bilet na następną wystawę.",
+            "Książeczka z informacjami o muzeum."
+          ],
+          "answer": "Książeczka z informacjami o muzeum.",
+          "evidence": "Kupiliśmy więc mały przewodnik",
+          "explanation": "Tutaj przewodnik to publikacja, która pomaga poznać muzeum."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-028",
+      "day": 28,
+      "level": "A1",
+      "genre": "opowiadanie",
+      "title": "Wspólny dzień na działce",
+      "text": "W ostatnią sobotę odwiedziliśmy znajomych na działce. Przywieźliśmy owoce i chleb, a oni przygotowali sałatkę i zupę. Dzieci grały w piłkę, dorośli rozmawiali przy stole. Było ciepło, ale po obiedzie pojawiły się ciemne chmury.\n\nZebraliśmy rzeczy z ogrodu i przenieśliśmy się do małego domku. Tam graliśmy w karty i słuchaliśmy muzyki. Deszcz trwał tylko pół godziny. Kiedy znów wyszło słońce, poszliśmy na spacer po okolicy. Wieczorem pomagaliśmy gospodarzom sprzątać. Nie musieliśmy wiele planować, a wszyscy dobrze spędzili czas. Chcemy spotkać się w ten sposób jeszcze raz.",
+      "questions": [
+        {
+          "id": "main-idea",
+          "skill": "main-idea",
+          "question": "O czym jest tekst?",
+          "options": [
+            "O przygotowaniach do meczu na działce.",
+            "O dniu spędzonym na działce u znajomych.",
+            "O pracy przy nowym domku znajomych."
+          ],
+          "answer": "O dniu spędzonym na działce u znajomych.",
+          "evidence": "W ostatnią sobotę odwiedziliśmy znajomych na działce.",
+          "explanation": "Tekst opowiada o jedzeniu, zabawie i spacerze podczas odwiedzin."
+        },
+        {
+          "id": "detail",
+          "skill": "detail",
+          "question": "Co przywieźli goście?",
+          "options": [
+            "Sałatkę i zupę.",
+            "Chleb i sałatkę.",
+            "Owoce i chleb."
+          ],
+          "answer": "Owoce i chleb.",
+          "evidence": "Przywieźliśmy owoce i chleb, a oni przygotowali sałatkę i zupę.",
+          "explanation": "Goście przywieźli pierwsze dwa produkty, a znajomi przygotowali resztę."
+        },
+        {
+          "id": "cause",
+          "skill": "cause",
+          "question": "Dlaczego przenieśli się do domku?",
+          "options": [
+            "Chcieli tam zjeść obiad.",
+            "Zobaczyli chmury i spodziewali się deszczu.",
+            "Chcieli odpocząć po spacerze."
+          ],
+          "answer": "Zobaczyli chmury i spodziewali się deszczu.",
+          "evidence": "po obiedzie pojawiły się ciemne chmury.",
+          "explanation": "Schowali rzeczy i weszli do środka tuż przed deszczem."
+        },
+        {
+          "id": "inference",
+          "skill": "inference",
+          "question": "Co warto zabrać następnym razem, żeby podczas deszczu powtórzyć udaną zabawę?",
+          "options": [
+            "Karty do gry przy stole.",
+            "Wygodne buty na spacer.",
+            "Piłkę do gry w ogrodzie."
+          ],
+          "answer": "Karty do gry przy stole.",
+          "evidence": "Tam graliśmy w karty i słuchaliśmy muzyki.",
+          "explanation": "Goście dobrze się bawili także w domku. Karty pozwolą im znów zagrać, nawet jeśli będzie padać."
+        },
+        {
+          "id": "vocabulary",
+          "skill": "vocabulary",
+          "question": "Komu pomagali wieczorem, gdy pomagali gospodarzom?",
+          "options": [
+            "Znajomym, którzy ich zaprosili.",
+            "Dzieciom, które grały w piłkę.",
+            "Gościom, którzy przywieźli chleb."
+          ],
+          "answer": "Znajomym, którzy ich zaprosili.",
+          "evidence": "W ostatnią sobotę odwiedziliśmy znajomych na działce.",
+          "explanation": "Gospodarze to osoby, u których odbywało się spotkanie."
+        }
+      ]
+    }
+  ]
+}

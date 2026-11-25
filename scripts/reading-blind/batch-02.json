@@ -1,0 +1,985 @@
+{
+  "instructions": "You are a Polish-as-a-foreign-language examiner reviewing an anonymous reading practice corpus. You have no answer keys or prior conversation. Use ONLY the passage and options. Do not look up the author or repository. Independently solve each item. For each question return its ID, chosen option ID (A/B/C, or null if no uniquely supported option), exact evidence quote from the passage, ambiguity flag, distractor plausibility score 0–100, and a concise issue description. Then evaluate each passage's naturalness, CEFR suitability for the provided target level, question quality, unambiguity, topic coherence and vocabulary variety, each on a 0–100 scale. Distinguish errors, stylistic preferences and level mismatches. Flag any grammatical error, unsupported answer, trivial distractor or false inference. Give suggested improvements without altering the provided data. Return JSON with one result per passage; no keys are supplied. Weights: naturalness 25%, CEFR 20%, question quality 20%, ambiguity 20%, coherence 10%, vocabulary 5%. Be strict; do not approve solely because a passage has no grammatical errors.",
+  "passages": [
+    {
+      "id": "pl-b1.reading.day-011",
+      "targetLevel": "A1",
+      "title": "Wspólna kuchnia",
+      "passage": "W mieszkaniu przy ulicy Krótkiej są trzy pokoje. Mieszkają tu trzy osoby: Julia, Bartek i Nina. Każda osoba ma swój pokój, ale kuchnia jest wspólna. Na półkach są talerze, kubki i garnki. W lodówce każdy ma swoją półkę na jedzenie.\n\nNa drzwiach kuchni jest kartka z zasadami. Po gotowaniu trzeba umyć naczynia i wytrzeć stół. W sobotę jedna osoba sprząta kuchnię. W następną sobotę robi to ktoś inny. Jeśli w domu są goście, trzeba o tym powiedzieć innym. Dzięki tym prostym zasadom wszystkim dobrze się tu mieszka.",
+      "questions": [
+        {
+          "id": "q1",
+          "question": "O czym opowiada cały tekst?",
+          "options": [
+            {
+              "id": "A",
+              "text": "O tym, jak mieszkańcy korzystają z jednej kuchni."
+            },
+            {
+              "id": "B",
+              "text": "O tym, jak mieszkańcy urządzają swoje pokoje."
+            },
+            {
+              "id": "C",
+              "text": "O tym, co mieszkańcy zwykle jedzą razem."
+            }
+          ]
+        },
+        {
+          "id": "q2",
+          "question": "Gdzie każdy trzyma swoje jedzenie?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Na swojej półce w lodówce."
+            },
+            {
+              "id": "B",
+              "text": "Na osobnej półce w swoim pokoju."
+            },
+            {
+              "id": "C",
+              "text": "Na jednej wspólnej półce przy stole."
+            }
+          ]
+        },
+        {
+          "id": "q3",
+          "question": "Dlaczego mieszkańcy mają te zasady?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Chcą, żeby wszyscy jedli o tej samej porze."
+            },
+            {
+              "id": "B",
+              "text": "Chcą, żeby wszystkim dobrze się mieszkało."
+            },
+            {
+              "id": "C",
+              "text": "Chcą, żeby co dzień gotowała inna osoba."
+            }
+          ]
+        },
+        {
+          "id": "q4",
+          "question": "Nina właśnie zrobiła zupę. Stół jest czysty, a garnek jest brudny. Co Nina powinna teraz zrobić?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Zostawić garnek dla osoby, która sprząta w sobotę."
+            },
+            {
+              "id": "B",
+              "text": "Poczekać, aż ktoś jeszcze zrobi sobie zupę."
+            },
+            {
+              "id": "C",
+              "text": "Umyć garnek, zanim wyjdzie z kuchni."
+            }
+          ]
+        },
+        {
+          "id": "q5",
+          "question": "Co oznacza tutaj słowo „wspólna”?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Mieszkańcy mogą gotować tylko wtedy, gdy są razem."
+            },
+            {
+              "id": "B",
+              "text": "Wszyscy mieszkańcy mogą korzystać z tej samej kuchni."
+            },
+            {
+              "id": "C",
+              "text": "Każda osoba ma taką samą kuchnię w swoim pokoju."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-012",
+      "targetLevel": "A1",
+      "title": "Mój ulubiony pokój",
+      "passage": "Moje mieszkanie jest na trzecim piętrze. Najbardziej lubię salon. To jasny pokój z dwoma oknami. Przy ścianie stoi wygodna sofa, a obok niej mały stolik. Na stoliku jest lampa. Po drugiej stronie pokoju stoi regał z książkami, a obok niego kilka zielonych roślin.\n\nRano w salonie jest dużo światła. Wtedy piję tam kawę i czytam wiadomości. Wieczorem nie włączam dużej lampy, tylko małą lampę przy sofie. Lubię łagodne światło. Kiedy przychodzą znajomi, siadamy razem przy stole w kuchni, ponieważ w salonie jest za mało miejsca dla większej grupy.",
+      "questions": [
+        {
+          "id": "q1",
+          "question": "O czym jest cały tekst?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Swoje nowe meble i miejsca, gdzie je kupuje."
+            },
+            {
+              "id": "B",
+              "text": "Swój ulubiony pokój i to, co w nim robi."
+            },
+            {
+              "id": "C",
+              "text": "Swoją kuchnię i posiłki dla gości."
+            }
+          ]
+        },
+        {
+          "id": "q2",
+          "question": "Co stoi tuż obok sofy?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Duży stół z kuchni."
+            },
+            {
+              "id": "B",
+              "text": "Regał z książkami."
+            },
+            {
+              "id": "C",
+              "text": "Mały stolik."
+            }
+          ]
+        },
+        {
+          "id": "q3",
+          "question": "Dlaczego znajomi siadają w kuchni?",
+          "options": [
+            {
+              "id": "A",
+              "text": "W salonie jest za mało miejsca dla całej grupy."
+            },
+            {
+              "id": "B",
+              "text": "W salonie wieczorem jest za ciemno."
+            },
+            {
+              "id": "C",
+              "text": "W kuchni jest więcej krzeseł przy oknie."
+            }
+          ]
+        },
+        {
+          "id": "q4",
+          "question": "Jutro przyjdzie pięcioro znajomych na kawę. Gdzie najlepiej postawić filiżanki?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Na stoliku przy sofie."
+            },
+            {
+              "id": "B",
+              "text": "Na stole w kuchni."
+            },
+            {
+              "id": "C",
+              "text": "Na regale przy książkach."
+            }
+          ]
+        },
+        {
+          "id": "q5",
+          "question": "Gdzie stoi regał, jeśli jest „po drugiej stronie pokoju”?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Za drzwiami, w pokoju obok salonu."
+            },
+            {
+              "id": "B",
+              "text": "Tuż obok sofy, przy tej samej ścianie."
+            },
+            {
+              "id": "C",
+              "text": "W salonie, naprzeciwko miejsca z sofą."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-013",
+      "targetLevel": "A1",
+      "title": "Przeprowadzka Oli",
+      "passage": "Ola zmienia mieszkanie. Jej stare mieszkanie jest daleko od pracy, a nowe znajduje się przy stacji metra. W sobotę przyjeżdża brat Oli i pomaga jej przenosić rzeczy. Książki są w małych kartonach, ubrania w dużych torbach. Na każdym kartonie jest napis, na przykład „kuchnia” albo „łazienka”.\n\nOla chce najpierw przygotować kuchnię, żeby można było zrobić herbatę i coś zjeść. Potem ustawia łóżko i biurko. Nie kupuje dziś nowych mebli, bo chce zobaczyć, ile miejsca ma w pokojach. Wieczorem jest zmęczona, ale zadowolona. Teraz droga do pracy zajmie jej mniej czasu.",
+      "questions": [
+        {
+          "id": "q1",
+          "question": "O czym opowiada tekst?",
+          "options": [
+            {
+              "id": "A",
+              "text": "O wyborze mebli do starego mieszkania."
+            },
+            {
+              "id": "B",
+              "text": "O sobotniej wizycie Oli u brata."
+            },
+            {
+              "id": "C",
+              "text": "O przeprowadzce Oli do nowego mieszkania."
+            }
+          ]
+        },
+        {
+          "id": "q2",
+          "question": "Kto pomaga Oli przenosić rzeczy?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Jej brat."
+            },
+            {
+              "id": "B",
+              "text": "Jej szef."
+            },
+            {
+              "id": "C",
+              "text": "Jej sąsiadka."
+            }
+          ]
+        },
+        {
+          "id": "q3",
+          "question": "Dlaczego Ola zaczyna od kuchni?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Chce zrobić herbatę i coś zjeść."
+            },
+            {
+              "id": "B",
+              "text": "Chce tam rozpakować wszystkie książki."
+            },
+            {
+              "id": "C",
+              "text": "Chce od razu ustawić tam nowe meble."
+            }
+          ]
+        },
+        {
+          "id": "q4",
+          "question": "Ola nadal ma zaczynać pracę o tej samej porze. Co będzie mogła robić po przeprowadzce?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Wracać po pracy pieszo razem z bratem."
+            },
+            {
+              "id": "B",
+              "text": "Wychodzić z domu trochę później."
+            },
+            {
+              "id": "C",
+              "text": "Chodzić do pracy pieszo w kilka minut."
+            }
+          ]
+        },
+        {
+          "id": "q5",
+          "question": "Co oznacza tutaj „przenosić rzeczy”?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Otwierać torby i układać rzeczy na półkach."
+            },
+            {
+              "id": "B",
+              "text": "Brać rzeczy i zanosić je w inne miejsce."
+            },
+            {
+              "id": "C",
+              "text": "Wybierać rzeczy, które chce się komuś oddać."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-014",
+      "targetLevel": "A1",
+      "title": "Rzadziej samochodem",
+      "passage": "Paweł i Magda mieszkają w domu na spokojnej ulicy. Wcześniej często jeździli samochodem, ale teraz chcą częściej chodzić pieszo i jeździć rowerem. Niedaleko domu są szkoła, apteka i dwa sklepy. Magda może dojechać do pracy autobusem. Paweł pracuje blisko stacji kolejowej.\n\nW garażu stoją dwa rowery. Magda jeździ rowerem na małe zakupy, a Paweł w weekendy jeździ do parku. Kiedy muszą kupić coś dużego, zamawiają dostawę do domu. Dzięki temu nie potrzebują codziennie samochodu. Nadal korzystają z niego podczas dłuższych wyjazdów, na przykład kiedy odwiedzają rodzinę poza miastem.",
+      "questions": [
+        {
+          "id": "q1",
+          "question": "O czym przede wszystkim jest tekst?",
+          "options": [
+            {
+              "id": "A",
+              "text": "O tym, jak para planuje wyjazd do rodziny."
+            },
+            {
+              "id": "B",
+              "text": "O tym, jak para rzadziej jeździ samochodem."
+            },
+            {
+              "id": "C",
+              "text": "O tym, jak para wybiera nowe rowery."
+            }
+          ]
+        },
+        {
+          "id": "q2",
+          "question": "Co stoi w garażu?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Jeden rower."
+            },
+            {
+              "id": "B",
+              "text": "Dwa rowery."
+            },
+            {
+              "id": "C",
+              "text": "Trzy rowery."
+            }
+          ]
+        },
+        {
+          "id": "q3",
+          "question": "Po co zamawiają dostawę dużych rzeczy?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Żeby ktoś zostawił je u rodziny."
+            },
+            {
+              "id": "B",
+              "text": "Żeby ktoś przywiózł je do ich domu."
+            },
+            {
+              "id": "C",
+              "text": "Żeby odebrać je po pracy na stacji."
+            }
+          ]
+        },
+        {
+          "id": "q4",
+          "question": "Magda potrzebuje tylko chleba. Jak najłatwiej zrobi zakupy bez samochodu?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Pojedzie rowerem do sklepu blisko domu."
+            },
+            {
+              "id": "B",
+              "text": "Pojedzie pociągiem do rodziny."
+            },
+            {
+              "id": "C",
+              "text": "Pojedzie autobusem do biura po zakupy."
+            }
+          ]
+        },
+        {
+          "id": "q5",
+          "question": "Co znaczy „dostawa do domu”?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Klient przynosi ze sklepu torby do domu."
+            },
+            {
+              "id": "B",
+              "text": "Klient zamawia towar i odbiera go w sklepie."
+            },
+            {
+              "id": "C",
+              "text": "Ktoś przywozi klientowi towar ze sklepu."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-015",
+      "targetLevel": "A1",
+      "title": "Mój wolny dzień",
+      "passage": "Cześć, Moniko! Dzisiaj mam wolny dzień. Rano jem śniadanie z siostrą. Potem idziemy na rynek. Kupujemy chleb, ser i świeże warzywa. Moja siostra jest kucharką i umie przygotować bardzo dobry obiad. Ja zwykle robię proste kanapki.\n\nPo południu spotykam się z koleżanką w kawiarni. Ona jest nauczycielką i kończy pracę o trzeciej. Chcemy razem pójść do kina, ale najpierw pijemy kawę. Nie jadę samochodem, tylko autobusem, bo kino jest w centrum. Wieczorem wracam do domu i przygotowuję rzeczy na jutro.",
+      "questions": [
+        {
+          "id": "q1",
+          "question": "O czym jest ta wiadomość?",
+          "options": [
+            {
+              "id": "A",
+              "text": "O tym, jak wygląda dzień pracy w szkole."
+            },
+            {
+              "id": "B",
+              "text": "O tym, jak przygotować obiad dla koleżanki."
+            },
+            {
+              "id": "C",
+              "text": "O tym, jak mija wolny dzień."
+            }
+          ]
+        },
+        {
+          "id": "q2",
+          "question": "Kim jest siostra osoby, która pisze do Moniki?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Kierowcą."
+            },
+            {
+              "id": "B",
+              "text": "Nauczycielką."
+            },
+            {
+              "id": "C",
+              "text": "Kucharką."
+            }
+          ]
+        },
+        {
+          "id": "q3",
+          "question": "Dlaczego na drogę do kina wybrano autobus?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Rynek jest daleko od domu."
+            },
+            {
+              "id": "B",
+              "text": "Kawiarnia jest przy przystanku."
+            },
+            {
+              "id": "C",
+              "text": "Kino jest w centrum miasta."
+            }
+          ]
+        },
+        {
+          "id": "q4",
+          "question": "Koleżanka chce pójść na kawę zaraz po pracy. Którą godzinę może wybrać?",
+          "options": [
+            {
+              "id": "A",
+              "text": "15.15."
+            },
+            {
+              "id": "B",
+              "text": "14.45."
+            },
+            {
+              "id": "C",
+              "text": "14.15."
+            }
+          ]
+        },
+        {
+          "id": "q5",
+          "question": "Co oznacza tutaj „wolny dzień”?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Dzień, w którym kończy się pracę wcześniej."
+            },
+            {
+              "id": "B",
+              "text": "Dzień, w którym nie trzeba iść do pracy."
+            },
+            {
+              "id": "C",
+              "text": "Dzień, w którym pracuje się w domu."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-016",
+      "targetLevel": "A1",
+      "title": "Te klucze są moje?",
+      "passage": "— Mamo, gdzie są moje klucze? Zaraz wychodzę do pracy.\n\n— Te na stole?\n\n— Nie, te są twoje. Moje mają mały czerwony brelok.\n\n— A tamte przy oknie?\n\n— To klucze taty.\n\nMama patrzy na krzesło przy drzwiach. Na krześle leży niebieska torba. W torbie jest portfel i książka, ale nie ma kluczy.\n\n— Sprawdź kieszeń kurtki. Czy to ta kurtka, w której wychodzisz z psem?\n\n— Tak, to ta sama kurtka. O, są! Dziękuję.\n\nSyn bierze klucze i torbę. Mama przypomina mu jeszcze o śniadaniu. Na stole stoi pudełko z kanapkami.",
+      "questions": [
+        {
+          "id": "q1",
+          "question": "Jaki problem chce rozwiązać syn przed wyjściem?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Chce znaleźć kurtkę na spacer."
+            },
+            {
+              "id": "B",
+              "text": "Chce znaleźć swoje klucze."
+            },
+            {
+              "id": "C",
+              "text": "Chce znaleźć torbę do pracy."
+            }
+          ]
+        },
+        {
+          "id": "q2",
+          "question": "Po czym syn poznaje swoje klucze?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Po małym niebieskim breloku."
+            },
+            {
+              "id": "B",
+              "text": "Po małym czerwonym breloku."
+            },
+            {
+              "id": "C",
+              "text": "Po dużym czerwonym breloku."
+            }
+          ]
+        },
+        {
+          "id": "q3",
+          "question": "Dlaczego syn zostawia klucze na stole?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Bo należą do taty."
+            },
+            {
+              "id": "B",
+              "text": "Bo są od drzwi do biura."
+            },
+            {
+              "id": "C",
+              "text": "Bo należą do mamy."
+            }
+          ]
+        },
+        {
+          "id": "q4",
+          "question": "Co mama chce dać synowi na posiłek w pracy?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Coś z niebieskiej torby."
+            },
+            {
+              "id": "B",
+              "text": "Coś z kieszeni kurtki."
+            },
+            {
+              "id": "C",
+              "text": "Coś z pudełka na stole."
+            }
+          ]
+        },
+        {
+          "id": "q5",
+          "question": "Czym jest „kieszeń” w tej historii?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Częścią kurtki, do której można coś włożyć."
+            },
+            {
+              "id": "B",
+              "text": "Częścią torby, za którą można ją trzymać."
+            },
+            {
+              "id": "C",
+              "text": "Częścią kluczy, po której można je poznać."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-017",
+      "targetLevel": "A1",
+      "title": "W drodze do biura",
+      "passage": "Michał mieszka niedaleko biura i różnie dostaje się do pracy. Kiedy ma dużo czasu, idzie pieszo przez park. Po drodze kupuje kawę w małym kiosku. Gdy pada deszcz, jedzie tramwajem. Przystanek jest między szkołą a sklepem.\n\nDzisiaj Michał jedzie rowerem, ponieważ rano świeci słońce. Przed biurem spotyka kolegę. Kolega przyjeżdża autobusem z drugiego końca miasta. Razem wchodzą do budynku. Michał pracuje przy komputerze, a jego kolega rozmawia z klientami. Po pracy planują wrócić do domu różnymi drogami. Michał chce jeszcze zrobić zakupy na kolację.",
+      "questions": [
+        {
+          "id": "q1",
+          "question": "O czym przede wszystkim jest tekst?",
+          "options": [
+            {
+              "id": "A",
+              "text": "O tym, co Michał kupuje przed pracą."
+            },
+            {
+              "id": "B",
+              "text": "O tym, co Michał robi w biurze."
+            },
+            {
+              "id": "C",
+              "text": "O tym, jak Michał dostaje się do pracy."
+            }
+          ]
+        },
+        {
+          "id": "q2",
+          "question": "Czym Michał jedzie dzisiaj do biura?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Rowerem."
+            },
+            {
+              "id": "B",
+              "text": "Tramwajem."
+            },
+            {
+              "id": "C",
+              "text": "Autobusem."
+            }
+          ]
+        },
+        {
+          "id": "q3",
+          "question": "Dlaczego Michał dzisiaj wybiera rower?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Rano świeci słońce."
+            },
+            {
+              "id": "B",
+              "text": "Musi dojechać do kiosku przed otwarciem biura."
+            },
+            {
+              "id": "C",
+              "text": "Rano pada deszcz."
+            }
+          ]
+        },
+        {
+          "id": "q4",
+          "question": "Kto najpewniej ma dalej z domu do biura?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Michał, bo czasem idzie przez park."
+            },
+            {
+              "id": "B",
+              "text": "Kolega, bo jedzie z drugiego końca miasta."
+            },
+            {
+              "id": "C",
+              "text": "Obaj mają tak samo daleko, bo pracują razem."
+            }
+          ]
+        },
+        {
+          "id": "q5",
+          "question": "Kiedy Michał kupuje kawę, jeśli robi to „po drodze”?",
+          "options": [
+            {
+              "id": "A",
+              "text": "W czasie drogi z domu do biura."
+            },
+            {
+              "id": "B",
+              "text": "Kiedy już dotrze do biura."
+            },
+            {
+              "id": "C",
+              "text": "Zanim wyjdzie z domu."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-018",
+      "targetLevel": "A1",
+      "title": "Zakupy na kolację",
+      "passage": "Cześć, Piotrze! Wracam dziś później z pracy. Proszę, zrób małe zakupy na kolację. Potrzebujemy dwóch pomidorów, jednej cebuli, trzech jajek i czterech bułek. W lodówce jest już masło i ser, więc nie kupuj ich ponownie. Na stole leży lista zakupów.\n\nSklep przy domu jest czynny do ósmej wieczorem. Jeśli nie ma świeżych bułek, możesz kupić chleb. Chcę przygotować omlet z warzywami, a później zrobić kanapki na jutro. Nie potrzebujemy dużo jedzenia, ponieważ jutro idziemy na obiad do mojej mamy. Dziękuję za pomoc!\n\nAnia",
+      "questions": [
+        {
+          "id": "q1",
+          "question": "Po co Ania pisze do Piotra?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Zaprasza go dzisiaj na obiad do mamy."
+            },
+            {
+              "id": "B",
+              "text": "Prosi go o zakupy na kolację."
+            },
+            {
+              "id": "C",
+              "text": "Prosi go o zrobienie kanapek do pracy."
+            }
+          ]
+        },
+        {
+          "id": "q2",
+          "question": "Ile jajek trzeba kupić?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Dwa."
+            },
+            {
+              "id": "B",
+              "text": "Cztery."
+            },
+            {
+              "id": "C",
+              "text": "Trzy."
+            }
+          ]
+        },
+        {
+          "id": "q3",
+          "question": "Dlaczego nie trzeba kupować sera?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Ser jest za drogi."
+            },
+            {
+              "id": "B",
+              "text": "Piotr nie lubi sera."
+            },
+            {
+              "id": "C",
+              "text": "Ser jest już w lodówce."
+            }
+          ]
+        },
+        {
+          "id": "q4",
+          "question": "Piotr będzie przy sklepie o 20.15. Czy może wtedy zrobić zakupy w tym sklepie?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Tak, sklep jest otwarty przez całą noc."
+            },
+            {
+              "id": "B",
+              "text": "Tak, do zamknięcia ma jeszcze kwadrans."
+            },
+            {
+              "id": "C",
+              "text": "Nie, sklep jest już zamknięty."
+            }
+          ]
+        },
+        {
+          "id": "q5",
+          "question": "Co oznacza „czynny” w zdaniu o sklepie?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Klienci mogą wejść i zrobić zakupy."
+            },
+            {
+              "id": "B",
+              "text": "Klienci czekają przed wejściem na otwarcie."
+            },
+            {
+              "id": "C",
+              "text": "Klienci mogą odebrać tylko gotowe zamówienia."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-019",
+      "targetLevel": "A1",
+      "title": "Trzy sprawy w mieście",
+      "passage": "W poniedziałek rano Basia ma trzy sprawy do załatwienia. Najpierw idzie na pocztę, żeby wysłać paczkę. Poczta otwiera się o ósmej. Potem ma wizytę u dentysty o dziesiątej. Gabinet jest na drugim piętrze, nad apteką. Trzecia sprawa to zakupy na obiad.\n\nBasia nie chce nosić ciężkiej torby przez całe miasto, dlatego zostawia zakupy na koniec. Po wizycie u dentysty idzie do sklepu obok domu. Kupuje warzywa i ryż. O dwunastej jest już w mieszkaniu. Ma jeszcze czas na odpoczynek przed pracą. Dzisiaj zaczyna pracę o drugiej po południu.",
+      "questions": [
+        {
+          "id": "q1",
+          "question": "Co opisuje tekst?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Zakupy Basi po dniu pracy."
+            },
+            {
+              "id": "B",
+              "text": "Pracę Basi w gabinecie dentystycznym."
+            },
+            {
+              "id": "C",
+              "text": "Kilka spraw Basi przed pracą."
+            }
+          ]
+        },
+        {
+          "id": "q2",
+          "question": "Na którym piętrze jest gabinet?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Na drugim."
+            },
+            {
+              "id": "B",
+              "text": "Na pierwszym."
+            },
+            {
+              "id": "C",
+              "text": "Na trzecim."
+            }
+          ]
+        },
+        {
+          "id": "q3",
+          "question": "Dlaczego Basia robi zakupy na końcu?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Bo chce krótko nosić torbę z zakupami."
+            },
+            {
+              "id": "B",
+              "text": "Bo chce najpierw zjeść obiad w domu."
+            },
+            {
+              "id": "C",
+              "text": "Bo jej sklep otwiera się dopiero w południe."
+            }
+          ]
+        },
+        {
+          "id": "q4",
+          "question": "Ile czasu mija od dwunastej, kiedy Basia jest już w domu, do początku jej pracy?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Godzina."
+            },
+            {
+              "id": "B",
+              "text": "Dwie godziny."
+            },
+            {
+              "id": "C",
+              "text": "Trzy godziny."
+            }
+          ]
+        },
+        {
+          "id": "q5",
+          "question": "Co oznacza „załatwić sprawę”, gdy Basia idzie na pocztę?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Zapisać sobie, że trzeba wysłać paczkę."
+            },
+            {
+              "id": "B",
+              "text": "Odłożyć wysłanie paczki na inny dzień."
+            },
+            {
+              "id": "C",
+              "text": "Wysłać paczkę tak, jak planowała."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-020",
+      "targetLevel": "A1",
+      "title": "Wieczór bez telefonu",
+      "passage": "Kuba i Iza często patrzą na telefony nawet podczas kolacji. Dzisiaj chcą spędzić wieczór inaczej. Po pracy odkładają telefony na półkę w przedpokoju. Kuba gotuje makaron, a Iza przygotowuje sałatkę. Jedzą razem i rozmawiają o swoich planach na weekend.\n\nPo kolacji grają w grę planszową. Iza wygrywa pierwszą partię, Kuba drugą. Potem idą na krótki spacer z psem. W domu nie włączają telewizora, tylko czytają książki. Przed snem sprawdzają wiadomości na telefonach. Są zadowoleni, bo mają więcej czasu na rozmowę i odpoczynek. Chcą powtórzyć taki wieczór w następnym tygodniu.",
+      "questions": [
+        {
+          "id": "q1",
+          "question": "O czym opowiada tekst?",
+          "options": [
+            {
+              "id": "A",
+              "text": "O tym, jak Kuba i Iza wybierają nową grę."
+            },
+            {
+              "id": "B",
+              "text": "O wspólnym wieczorze z telefonami na półce."
+            },
+            {
+              "id": "C",
+              "text": "O tym, jak Kuba i Iza spędzają weekend u znajomych."
+            }
+          ]
+        },
+        {
+          "id": "q2",
+          "question": "Kto przygotowuje sałatkę?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Kuba i Iza razem."
+            },
+            {
+              "id": "B",
+              "text": "Iza."
+            },
+            {
+              "id": "C",
+              "text": "Kuba."
+            }
+          ]
+        },
+        {
+          "id": "q3",
+          "question": "Dlaczego Kuba i Iza są zadowoleni z wieczoru?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Udało im się wcześniej pójść spać."
+            },
+            {
+              "id": "B",
+              "text": "Udało im się przygotować kolację na cały weekend."
+            },
+            {
+              "id": "C",
+              "text": "Mają więcej czasu na rozmowę i odpoczynek."
+            }
+          ]
+        },
+        {
+          "id": "q4",
+          "question": "Kolega pisze do Kuby podczas kolacji. Kiedy Kuba najpewniej przeczyta wiadomość?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Wieczorem przed snem."
+            },
+            {
+              "id": "B",
+              "text": "Następnego dnia po pracy."
+            },
+            {
+              "id": "C",
+              "text": "W trakcie jedzenia."
+            }
+          ]
+        },
+        {
+          "id": "q5",
+          "question": "Co oznacza „odkładają telefony na półkę”?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Biorą telefony z półki, żeby ich użyć."
+            },
+            {
+              "id": "B",
+              "text": "Podłączają telefony do prądu na półce."
+            },
+            {
+              "id": "C",
+              "text": "Kładą telefony na półce i na razie ich nie używają."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -245,5 +245,22 @@
     "roadmap": "Loading the course map…",
     "courseProgress": "Loading course progress…",
     "grammar": "Preparing today’s grammar exercises…"
+  },
+  "readingPreview": {
+    "title": "Reading",
+    "experimental": "Experimental mode",
+    "notice": "Materials are under review. Results do not affect your main progress.",
+    "day": "Day {day} · {level}",
+    "back": "Back",
+    "loadError": "Could not load the materials. Check your connection and try again.",
+    "retry": "Retry",
+    "empty": "No materials available.",
+    "showText": "Show text",
+    "hideText": "Hide text",
+    "startQuestions": "Start questions",
+    "result": "Reading result",
+    "correct": "Correct: {count}",
+    "wrong": "Wrong: {count}",
+    "chooseAnother": "Choose another text"
   }
 }

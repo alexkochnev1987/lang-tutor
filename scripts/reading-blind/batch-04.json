@@ -1,0 +1,985 @@
+{
+  "instructions": "You are a Polish-as-a-foreign-language examiner reviewing an anonymous reading practice corpus. You have no answer keys or prior conversation. Use ONLY the passage and options. Do not look up the author or repository. Independently solve each item. For each question return its ID, chosen option ID (A/B/C, or null if no uniquely supported option), exact evidence quote from the passage, ambiguity flag, distractor plausibility score 0–100, and a concise issue description. Then evaluate each passage's naturalness, CEFR suitability for the provided target level, question quality, unambiguity, topic coherence and vocabulary variety, each on a 0–100 scale. Distinguish errors, stylistic preferences and level mismatches. Flag any grammatical error, unsupported answer, trivial distractor or false inference. Give suggested improvements without altering the provided data. Return JSON with one result per passage; no keys are supplied. Weights: naturalness 25%, CEFR 20%, question quality 20%, ambiguity 20%, coherence 10%, vocabulary 5%. Be strict; do not approve solely because a passage has no grammatical errors.",
+  "passages": [
+    {
+      "id": "pl-b1.reading.day-031",
+      "targetLevel": "A2",
+      "title": "Co zobaczymy w Poznaniu?",
+      "passage": "Cześć, Mario! W przyszły weekend przyjedziesz do Poznania po raz pierwszy. Mam kilka pomysłów na nasze spotkanie. W sobotę rano odbiorę cię z dworca i pojedziemy tramwajem do mojego mieszkania. Zostawisz tam bagaż, a potem pójdziemy na Stary Rynek. W południe zobaczymy słynne koziołki.\n\nPo obiedzie odwiedzimy muzeum, jeśli uda mi się kupić bilety przez internet. W soboty jest tam dużo turystów, więc chcę kupić bilety wcześniej. Jeśli nie będzie wolnych miejsc, wybierzemy spacer nad Wartą. Wieczorem spotkamy się z moimi znajomymi w restauracji niedaleko domu.\n\nW niedzielę wstaniemy trochę później i zjemy śniadanie w kawiarni. Twój pociąg odjeżdża o szesnastej, dlatego nie pojedziemy do miejsc położonych daleko od centrum. Możemy jeszcze odwiedzić targ i kupić coś na drogę. Napisz, czy taki plan ci odpowiada. Jeśli wolisz inne atrakcje, zmienimy kilka punktów. Najważniejsze, żebyśmy miały czas spokojnie porozmawiać.",
+      "questions": [
+        {
+          "id": "q1",
+          "question": "Po co autorka pisze do Marii?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Chce opowiedzieć, jak minął jej ostatni weekend."
+            },
+            {
+              "id": "B",
+              "text": "Chce zapytać o połączenia kolejowe z Poznania."
+            },
+            {
+              "id": "C",
+              "text": "Chce wspólnie ustalić, jak spędzą weekend."
+            }
+          ]
+        },
+        {
+          "id": "q2",
+          "question": "Gdzie Maria zostawi bagaż?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Na dworcu."
+            },
+            {
+              "id": "B",
+              "text": "W muzeum."
+            },
+            {
+              "id": "C",
+              "text": "W mieszkaniu znajomej."
+            }
+          ]
+        },
+        {
+          "id": "q3",
+          "question": "Dlaczego autorka chce wcześniej kupić bilety do muzeum?",
+          "options": [
+            {
+              "id": "A",
+              "text": "W sobotę kasa zamyka się przed obiadem."
+            },
+            {
+              "id": "B",
+              "text": "Przy kasie bilety kosztują więcej."
+            },
+            {
+              "id": "C",
+              "text": "W sobotę może zabraknąć miejsc."
+            }
+          ]
+        },
+        {
+          "id": "q4",
+          "question": "Na kiedy najlepiej zaplanować spotkanie z koleżanką Marii przy targu, dziesięć minut od dworca?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Na niedzielę o czternastej."
+            },
+            {
+              "id": "B",
+              "text": "Na niedzielę godzinę po odjeździe pociągu."
+            },
+            {
+              "id": "C",
+              "text": "Na sobotę w południe podczas pokazu koziołków."
+            }
+          ]
+        },
+        {
+          "id": "q5",
+          "question": "Maria kupi coś „na drogę”. Kiedy ma jej się to przydać?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Podczas podróży do domu."
+            },
+            {
+              "id": "B",
+              "text": "Podczas spaceru ze znajomymi w sobotę."
+            },
+            {
+              "id": "C",
+              "text": "Podczas niedzielnego śniadania w kawiarni."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-032",
+      "targetLevel": "A2",
+      "title": "Walizka, której nie trzeba dźwigać",
+      "passage": "Nawet na krótką podróż wiele osób zabiera zbyt dużo rzeczy. Najpierw warto sprawdzić pogodę tam, dokąd jedziemy i zapisać, co naprawdę będzie potrzebne. Jeśli jedziemy na trzy dni, nie musimy pakować ubrań na cały tydzień. Dobrze wybrać takie rzeczy, które pasują do siebie i nadają się na kilka różnych okazji.\n\nPrzed spakowaniem kosmetyków sprawdźmy, co zapewnia hotel. Ręczniki i mydło często czekają już w pokoju. W małej torbie podręcznej powinny znaleźć się dokumenty, telefon, ładowarka, woda i potrzebne leki. Dzięki temu nie trzeba otwierać dużej walizki za każdym razem, gdy chcemy wyjąć jedną rzecz.\n\nPo przygotowaniu bagażu warto go zważyć. Niektóre linie lotnicze mają różne limity zależnie od rodzaju biletu. Sprawdzenie zasad przed wyjazdem pomaga uniknąć dodatkowych kosztów na lotnisku. Ostatni krok to zostawienie odrobiny wolnego miejsca. Być może podczas podróży kupimy prezent lub pamiątkę, którą będziemy chcieli przywieźć do domu.",
+      "questions": [
+        {
+          "id": "q1",
+          "question": "Jakiego pytania dotyczą wszystkie trzy części poradnika?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Jak wybrać tani bilet lotniczy?"
+            },
+            {
+              "id": "B",
+              "text": "Jak spakować się na krótki wyjazd?"
+            },
+            {
+              "id": "C",
+              "text": "Jak znaleźć hotel z dobrym wyposażeniem?"
+            }
+          ]
+        },
+        {
+          "id": "q2",
+          "question": "Którą parę rzeczy autor radzi włożyć do małej torby?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Mydło i ręcznik."
+            },
+            {
+              "id": "B",
+              "text": "Ubrania i kosmetyki."
+            },
+            {
+              "id": "C",
+              "text": "Dokumenty i ładowarkę."
+            }
+          ]
+        },
+        {
+          "id": "q3",
+          "question": "Dlaczego przed lotem warto sprawdzić zasady przewozu bagażu?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Żeby sprawdzić cenę przejazdu z lotniska do hotelu."
+            },
+            {
+              "id": "B",
+              "text": "Żeby uniknąć dopłaty na lotnisku."
+            },
+            {
+              "id": "C",
+              "text": "Żeby dowiedzieć się, ile kosztują zakupy na lotnisku."
+            }
+          ]
+        },
+        {
+          "id": "q4",
+          "question": "Ewa nie może zamknąć walizki. Hotel daje gościom ręczniki, a Ewa chce przywieźć prezent. Co najlepiej zrobić?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Wyjąć własny ręcznik i zostawić wolne miejsce."
+            },
+            {
+              "id": "B",
+              "text": "Wyjąć własny ręcznik i dołożyć drugi komplet ubrań."
+            },
+            {
+              "id": "C",
+              "text": "Zostawić własny ręcznik i przełożyć prezent do walizki przed wyjazdem."
+            }
+          ]
+        },
+        {
+          "id": "q5",
+          "question": "Po czym poznać, że torba jest „podręczna” w tym tekście?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Podróżny ma ją przy sobie i łatwo sięga do środka."
+            },
+            {
+              "id": "B",
+              "text": "Podróżny wkłada ją do dużej walizki na czas lotu."
+            },
+            {
+              "id": "C",
+              "text": "Podróżny zostawia ją na lotnisku do odbioru po powrocie."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-033",
+      "targetLevel": "A2",
+      "title": "Wakacje w górach",
+      "passage": "Za dwa tygodnie Monika i jej siostra będą spędzać urlop w górach. Wynajęły mały apartament w pobliżu szlaków turystycznych. Nie chcą codziennie korzystać z samochodu, dlatego przed wyjazdem sprawdzą rozkład lokalnych autobusów. Monika lubi długie spacery, ale jej siostra dopiero zaczyna chodzić po górach.\n\nPierwszego dnia będą odpoczywać po podróży i zwiedzą miasteczko. Następnego dnia wybiorą łatwy szlak, który kończy się przy schronisku. Jeśli obie będą się dobrze czuły, później zaplanują dłuższą trasę. Nie zamierzają wychodzić wysoko w góry podczas burzy ani przy bardzo silnym wietrze.\n\nWieczorami będą przygotowywać kolację w apartamencie. Monika weźmie kilka książek, a jej siostra zabierze aparat fotograficzny. Gospodarz wysłał im listę pobliskich sklepów i numer telefonu do informacji turystycznej. Obie cieszą się, że będą mogły zmieniać plan zależnie od pogody. Nie chodzi im o zdobycie jak największej liczby szczytów, lecz o przyjemny i spokojny odpoczynek.",
+      "questions": [
+        {
+          "id": "q1",
+          "question": "Na czym najbardziej zależy siostrom?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Na odpoczynku w tempie dobrym dla obu."
+            },
+            {
+              "id": "B",
+              "text": "Na przejściu jak największej liczby szlaków."
+            },
+            {
+              "id": "C",
+              "text": "Na zwiedzaniu codziennie innej miejscowości."
+            }
+          ]
+        },
+        {
+          "id": "q2",
+          "question": "Jak siostry spędzą pierwszy dzień?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Odpoczną i zwiedzą miasteczko."
+            },
+            {
+              "id": "B",
+              "text": "Przejdą dłuższą trasę i wrócą autobusem."
+            },
+            {
+              "id": "C",
+              "text": "Pójdą do schroniska i tam odpoczną."
+            }
+          ]
+        },
+        {
+          "id": "q3",
+          "question": "Dlaczego na początek wybrały łatwy szlak?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Jedna z nich dopiero poznaje górskie wędrówki."
+            },
+            {
+              "id": "B",
+              "text": "Jedna z nich umówiła się z gospodarzem w południe."
+            },
+            {
+              "id": "C",
+              "text": "Jedna z nich chce wrócić do auta przy schronisku."
+            }
+          ]
+        },
+        {
+          "id": "q4",
+          "question": "Po powrocie ze schroniska siostra Moniki jest zmęczona. Co najlepiej pasuje do ich planu na jutro?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Wybrać krótszy spacer, nawet przy ładnej pogodzie."
+            },
+            {
+              "id": "B",
+              "text": "Wybrać dłuższą trasę, skoro jutro ma być pogodnie."
+            },
+            {
+              "id": "C",
+              "text": "Powtórzyć trasę do schroniska, bo tak wcześniej ustaliły."
+            }
+          ]
+        },
+        {
+          "id": "q5",
+          "question": "Co tutaj oznacza „szlak”?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Punkt, z którego turyści oglądają góry."
+            },
+            {
+              "id": "B",
+              "text": "Trasę, którą turyści idą przez góry."
+            },
+            {
+              "id": "C",
+              "text": "Miejsce, gdzie turyści odpoczywają po drodze."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-034",
+      "targetLevel": "A2",
+      "title": "Zagubiona torba",
+      "passage": "Po weekendowym wyjeździe Paweł wracał pociągiem do domu. Na półce nad siedzeniem położył małą czarną torbę z ubraniami i książką. Gdy pociąg zatrzymał się na jego stacji, Paweł rozmawiał przez telefon. Wziął plecak stojący przy nogach i szybko wysiadł. Dopiero przed dworcem zauważył, że nie ma torby.\n\nWrócił na peron, ale pociąg już odjechał. Pracownica informacji poradziła mu, żeby wypełnił formularz zgłoszenia zagubionej rzeczy. Paweł podał numer pociągu, godzinę przejazdu, opis torby i swoje dane kontaktowe. Nie pamiętał numeru wagonu, więc sprawdził go na bilecie w telefonie.\n\nNastępnego dnia otrzymał wiadomość, że obsługa znalazła podobną torbę na stacji końcowej. Aby potwierdzić, że należy do niego, musiał opisać przedmioty znajdujące się w środku. Po dwóch dniach odebrał ją w biurze rzeczy znalezionych. Od tej pory przed wysiadaniem zawsze sprawdza półkę i miejsce pod siedzeniem.",
+      "questions": [
+        {
+          "id": "q1",
+          "question": "Który tytuł najlepiej podsumowuje historię?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Jak Paweł odzyskał swój bagaż"
+            },
+            {
+              "id": "B",
+              "text": "Jak Paweł szukał właściwego wagonu"
+            },
+            {
+              "id": "C",
+              "text": "Jak Paweł zgłosił zgubiony bilet"
+            }
+          ]
+        },
+        {
+          "id": "q2",
+          "question": "Skąd Paweł wziął numer wagonu?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Z formularza na peronie."
+            },
+            {
+              "id": "B",
+              "text": "Z wiadomości od obsługi."
+            },
+            {
+              "id": "C",
+              "text": "Z biletu w telefonie."
+            }
+          ]
+        },
+        {
+          "id": "q3",
+          "question": "Po co obsługa zapytała Pawła, co było w torbie?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Żeby sprawdzić, czy zgłosił się właściciel."
+            },
+            {
+              "id": "B",
+              "text": "Żeby ustalić, w którym wagonie szukać."
+            },
+            {
+              "id": "C",
+              "text": "Żeby wybrać biuro, do którego wysłać torbę."
+            }
+          ]
+        },
+        {
+          "id": "q4",
+          "question": "W biurze są dwie podobne czarne torby. Która informacja Pawła najbardziej pomoże je odróżnić?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Godzina, o której zadzwonił telefon."
+            },
+            {
+              "id": "B",
+              "text": "Kolor plecaka, z którym wysiadł."
+            },
+            {
+              "id": "C",
+              "text": "Tytuł książki, którą spakował."
+            }
+          ]
+        },
+        {
+          "id": "q5",
+          "question": "Gdzie znaleziono torbę, skoro była „na stacji końcowej”?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Tam, gdzie pociąg kończył trasę."
+            },
+            {
+              "id": "B",
+              "text": "Tam, gdzie Paweł zaczął podróż."
+            },
+            {
+              "id": "C",
+              "text": "Tam, gdzie Paweł zakończył podróż."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-035",
+      "targetLevel": "A2",
+      "title": "Wolny weekend nad jeziorem",
+      "passage": "Zapraszamy na weekendowy wyjazd nad jezioro dla osób, które chcą odpocząć od miasta. Wyruszamy w sobotę o ósmej rano spod domu kultury. Cena obejmuje przejazd autokarem, nocleg w dwuosobowym pokoju i śniadanie w niedzielę. Obiad oraz kolację uczestnicy organizują we własnym zakresie.\n\nNa miejscu można wypożyczyć rower, spacerować po lesie lub odpocząć na plaży. W sobotę po południu organizujemy krótką wycieczkę z przewodnikiem. Udział jest dobrowolny i nie wymaga dodatkowej opłaty. Osoby, które wolą spędzić czas samodzielnie, mogą pozostać w ośrodku.\n\nZgłoszenia przyjmujemy do środy. Po środzie też można zrezygnować. Żeby jednak odzyskać pieniądze, trzeba znaleźć kogoś na swoje miejsce. Prosimy zabrać wygodne buty oraz ubranie na chłodny wieczór. W razie silnego deszczu proponujemy zajęcia w świetlicy zamiast wycieczki. Powrót planujemy w niedzielę około dziewiętnastej. Po zapisaniu się otrzymasz szczegóły i numer telefonu organizatora.",
+      "questions": [
+        {
+          "id": "q1",
+          "question": "Co można znaleźć w ogłoszeniu?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Program weekendowego kursu dla przewodników."
+            },
+            {
+              "id": "B",
+              "text": "Zasady wynajmu pokoju na całe wakacje."
+            },
+            {
+              "id": "C",
+              "text": "Warunki krótkiego wyjazdu grupowego nad jezioro."
+            }
+          ]
+        },
+        {
+          "id": "q2",
+          "question": "Który posiłek jest w cenie?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Niedzielne śniadanie."
+            },
+            {
+              "id": "B",
+              "text": "Niedzielny obiad."
+            },
+            {
+              "id": "C",
+              "text": "Sobotnia kolacja."
+            }
+          ]
+        },
+        {
+          "id": "q3",
+          "question": "Dlaczego po środzie uczestnik może nie odzyskać pieniędzy?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Może już być za późno na odwołanie posiłku."
+            },
+            {
+              "id": "B",
+              "text": "Jego miejsca może nikt nie zająć."
+            },
+            {
+              "id": "C",
+              "text": "Może już być za późno na zmianę pokoju."
+            }
+          ]
+        },
+        {
+          "id": "q4",
+          "question": "Ola ma pieniądze na wyjazd i jedzenie, ale nie na dodatkowe atrakcje. Jak może spędzić sobotnie popołudnie bez dopłaty?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Pójść z przewodnikiem na wycieczkę."
+            },
+            {
+              "id": "B",
+              "text": "Zamówić kolację w ramach ceny wyjazdu."
+            },
+            {
+              "id": "C",
+              "text": "Poprosić o zwrot kosztu obiadu zamiast spaceru."
+            }
+          ]
+        },
+        {
+          "id": "q5",
+          "question": "Co mają zrobić uczestnicy, skoro organizują kolację „we własnym zakresie”?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Sami zadbać o wieczorny posiłek."
+            },
+            {
+              "id": "B",
+              "text": "Podać organizatorowi godzinę wspólnej kolacji."
+            },
+            {
+              "id": "C",
+              "text": "Wybrać jedno z dań wliczonych w cenę."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-036",
+      "targetLevel": "A2",
+      "title": "Książki dla sąsiadów",
+      "passage": "Na jednym z osiedli w Warszawie działa niewielka biblioteczka społeczna. Mieszkańcy zostawiają na drewnianym regale książki, których już nie czytają. Każdy może wziąć wybraną książkę do domu. Nie trzeba zakładać konta ani płacić za wypożyczenie. Pomysł pojawił się podczas zebrania mieszkańców, gdy kilka osób zastanawiało się, co zrobić z niepotrzebnymi książkami.\n\nNa początku regał stał na otwartym podwórku. Po kilku deszczowych dniach okazało się, że część książek jest wilgotna. Mieszkańcy dostali zgodę na przeniesienie biblioteczki pod dach przy wejściu do świetlicy. Teraz mieszkańcy odwiedzają ją przy okazji spaceru lub powrotu z pracy.\n\nRaz w miesiącu wolontariusze porządkują półki. Odkładają zniszczone książki i sprawdzają, czy na półkach są też książki dla dzieci. Nie prowadzą listy wypożyczeń, ale proszą o zwracanie książek po przeczytaniu albo przyniesienie innych. Biblioteczka nie zastępuje dużej biblioteki miejskiej, lecz daje sąsiadom prosty sposób na dzielenie się książkami i poznawanie nowych ludzi.",
+      "questions": [
+        {
+          "id": "q1",
+          "question": "Czego głównie dotyczy artykuł?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Tego, jak powstały zajęcia czytelnicze w świetlicy."
+            },
+            {
+              "id": "B",
+              "text": "Tego, jak sąsiedzi dzielą się książkami."
+            },
+            {
+              "id": "C",
+              "text": "Tego, jak biblioteka miejska wybiera nowe książki."
+            }
+          ]
+        },
+        {
+          "id": "q2",
+          "question": "Gdzie obecnie stoi biblioteczka?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Pod dachem przy wejściu do świetlicy."
+            },
+            {
+              "id": "B",
+              "text": "W dużej bibliotece miejskiej."
+            },
+            {
+              "id": "C",
+              "text": "Na otwartym podwórku."
+            }
+          ]
+        },
+        {
+          "id": "q3",
+          "question": "Dlaczego regał przeniesiono?",
+          "options": [
+            {
+              "id": "A",
+              "text": "W świetlicy zabrakło miejsca na książki."
+            },
+            {
+              "id": "B",
+              "text": "Książki mokły na deszczu."
+            },
+            {
+              "id": "C",
+              "text": "Mieszkańcy nie mogli znaleźć regału na podwórku."
+            }
+          ]
+        },
+        {
+          "id": "q4",
+          "question": "Ewa nadal czyta książkę z regału. Ma jednak w domu inną, której już nie potrzebuje. Jak może już dziś podziękować sąsiadom?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Wpisać tytuł czytanej książki na listę wypożyczeń."
+            },
+            {
+              "id": "B",
+              "text": "Zapłacić za kolejny tydzień czytania."
+            },
+            {
+              "id": "C",
+              "text": "Zostawić na regale własną książkę."
+            }
+          ]
+        },
+        {
+          "id": "q5",
+          "question": "Kasia odwiedza regał „przy okazji” spaceru. Co to znaczy?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Zagląda tam, kiedy już jest na spacerze."
+            },
+            {
+              "id": "B",
+              "text": "Odwiedza regał dopiero po powrocie do domu."
+            },
+            {
+              "id": "C",
+              "text": "Wybiera się tam specjalnie po książkę."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-037",
+      "targetLevel": "A2",
+      "title": "Pomoc w sąsiedztwie",
+      "passage": "W małej miejscowości powstała grupa sąsiedzka, do której należą osoby w różnym wieku. Jej członkowie pomagają sobie w prostych codziennych sprawach. Młodsi często robią zakupy osobom starszym albo pomagają im korzystać z internetu. Starsi mieszkańcy dzielą się doświadczeniem, uczą gotować tradycyjne potrawy i opowiadają o historii okolicy.\n\nKiedy Marta dołączyła do grupy, obawiała się, że nie znajdzie czasu na regularne spotkania. Pracuje zmianowo i nie zawsze wie, kiedy będzie wolna. Okazało się jednak, że każdy może pomagać wtedy, gdy ma czas. Mieszkańcy piszą na wspólnym czacie, czego potrzebują. Każdy odpowiada na te, które pasują do jego możliwości.\n\nMarta niedawno pomogła sąsiadowi zarezerwować wizytę przez internet. Kilka dni później sąsiad pokazał jej, jak naprawić zepsute krzesło. Marta zobaczyła, że ona i sąsiad potrafią robić różne rzeczy i mogą się od siebie uczyć. Ważniejsze jest to, że każdy może coś zaoferować, nawet jeśli nie ma dużo wolnego czasu.",
+      "questions": [
+        {
+          "id": "q1",
+          "question": "Co pokazuje przykład Marty i jej sąsiada?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Jak mieszkańcy prowadzą kurs naprawy mebli."
+            },
+            {
+              "id": "B",
+              "text": "Jak mieszkańcy ustalają godziny zebrań."
+            },
+            {
+              "id": "C",
+              "text": "Jak mieszkańcy pomagają sobie nawzajem."
+            }
+          ]
+        },
+        {
+          "id": "q2",
+          "question": "W czym Marta pomogła sąsiadowi?",
+          "options": [
+            {
+              "id": "A",
+              "text": "W naprawie krzesła."
+            },
+            {
+              "id": "B",
+              "text": "W rezerwacji wizyty przez internet."
+            },
+            {
+              "id": "C",
+              "text": "W przygotowaniu tradycyjnego obiadu."
+            }
+          ]
+        },
+        {
+          "id": "q3",
+          "question": "Dlaczego Marta obawiała się regularnych spotkań?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Prowadziła w tym czasie zajęcia z gotowania."
+            },
+            {
+              "id": "B",
+              "text": "Pracowała na różne zmiany."
+            },
+            {
+              "id": "C",
+              "text": "Musiała codziennie pomagać starszym sąsiadom."
+            }
+          ]
+        },
+        {
+          "id": "q4",
+          "question": "Jan umie gotować i dopiero w sobotę rano będzie znał swój plan dnia. Jak może skorzystać z zasad grupy?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Może pomóc tylko osobie, która już wcześniej coś dla niego ugotowała."
+            },
+            {
+              "id": "B",
+              "text": "Gdy pozna plan, może odpowiedzieć komuś, kto chce nauczyć się gotować."
+            },
+            {
+              "id": "C",
+              "text": "Przed sobotą musi znaleźć kogoś, kto go zastąpi przy gotowaniu."
+            }
+          ]
+        },
+        {
+          "id": "q5",
+          "question": "Co robią starsi mieszkańcy, kiedy „dzielą się doświadczeniem”?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Ustalają, kto zajmie się kolejną prośbą."
+            },
+            {
+              "id": "B",
+              "text": "Pytają innych, czego warto się nauczyć."
+            },
+            {
+              "id": "C",
+              "text": "Pokazują innym to, czego sami się nauczyli."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-038",
+      "targetLevel": "A2",
+      "title": "Dzień sprzątania parku",
+      "passage": "W najbliższą sobotę organizujemy wspólne sprzątanie parku przy ulicy Lipowej. Chcemy przygotować teren do wiosennych spacerów. Przyjdź o godzinie dziesiątej pod główne wejście i zgłoś się do osoby w zielonej kamizelce. Otrzymasz rękawice, worki oraz krótką instrukcję, jak segregować odpady.\n\nNie zbieraj samodzielnie ostrych przedmiotów ani nieznanych substancji. Jeśli zauważysz coś niebezpiecznego, powiedz o tym organizatorowi. Dzieci mogą brać udział w wydarzeniu tylko pod opieką osoby dorosłej. Włóż wygodne buty, które mogą się zabrudzić, oraz zabierz wodę do picia. Sprzątanie potrwa około dwóch godzin.\n\nPo zakończeniu zapraszamy na herbatę i ciasto w domu kultury. Nie trzeba zapisywać się wcześniej, jednak osoby, które chcą przyjść z większą grupą, prosimy o wiadomość. Dzięki temu przygotujemy wystarczającą liczbę rękawic. Jeśli pogoda będzie bardzo zła, informację o zmianie terminu opublikujemy w piątek wieczorem na stronie osiedla. Nawet godzina pomocy będzie dla nas cenna.",
+      "questions": [
+        {
+          "id": "q1",
+          "question": "W jakim celu napisano ogłoszenie?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Żeby zaprosić mieszkańców na spacer po gotowym już parku."
+            },
+            {
+              "id": "B",
+              "text": "Żeby zaprosić mieszkańców do sprzątania parku."
+            },
+            {
+              "id": "C",
+              "text": "Żeby zaprosić mieszkańców na kurs w domu kultury."
+            }
+          ]
+        },
+        {
+          "id": "q2",
+          "question": "Co uczestnik otrzyma na miejscu?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Buty i wodę."
+            },
+            {
+              "id": "B",
+              "text": "Rękawice, worki i instrukcję."
+            },
+            {
+              "id": "C",
+              "text": "Zieloną kamizelkę i obiad."
+            }
+          ]
+        },
+        {
+          "id": "q3",
+          "question": "Po co organizator prosi większe grupy o wiadomość?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Chce przydzielić każdej grupie opiekuna dla dzieci."
+            },
+            {
+              "id": "B",
+              "text": "Chce mieć dość rękawic dla uczestników."
+            },
+            {
+              "id": "C",
+              "text": "Chce wyznaczyć każdej grupie osobną godzinę rozpoczęcia."
+            }
+          ]
+        },
+        {
+          "id": "q4",
+          "question": "Tata może przyjść z córką o dziesiątej, ale o jedenastej oboje muszą wyjść. Co pasuje do ogłoszenia?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Tata musi zostać dwie godziny, żeby córka mogła przyjść."
+            },
+            {
+              "id": "B",
+              "text": "Mogą wspólnie pomóc przez pierwszą godzinę."
+            },
+            {
+              "id": "C",
+              "text": "Mogą przyjść tylko na poczęstunek po sprzątaniu."
+            }
+          ]
+        },
+        {
+          "id": "q5",
+          "question": "Co robi osoba, która „segreguje odpady”?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Przenosi pełne worki do jednego miejsca."
+            },
+            {
+              "id": "B",
+              "text": "Liczy, ile worków śmieci zebrano."
+            },
+            {
+              "id": "C",
+              "text": "Rozdziela śmieci według rodzaju."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-039",
+      "targetLevel": "A2",
+      "title": "Spotkanie w radzie osiedla",
+      "passage": "W środę mieszkańcy spotkali się z przedstawicielami rady osiedla, żeby omówić problemy związane z placem zabaw. Niektóre urządzenia są już stare, a przy wejściu brakuje stojaków na rowery. Rodzice małych dzieci zwrócili uwagę na brak cienia latem. Inni mieszkańcy prosili o dodatkowe ławki dla osób starszych.\n\nRada ma za mało pieniędzy, żeby zrobić wszystko od razu. Przewodnicząca zaproponowała, żeby w pierwszej kolejności naprawić urządzenia. Następnie mieszkańcy będą mogli głosować na pozostałe pomysły. Poprosiła też mieszkańców, żeby przed końcem miesiąca przysłali do rady swoje pomysły.\n\nNa kolejnym spotkaniu rada poda wyniki głosowania. Rada nie obiecuje, że wszystkie zwycięskie pomysły uda się zrealizować jeszcze w tym roku. Chce jednak wiedzieć, czego mieszkańcy potrzebują najbardziej i na co warto wydać pieniądze. Mieszkańcy ustalili również, że informacje o postępie prac będą regularnie pojawiać się na tablicy ogłoszeń oraz na stronie internetowej osiedla.",
+      "questions": [
+        {
+          "id": "q1",
+          "question": "Czego dotyczyło spotkanie mieszkańców z radą?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Tego, gdzie zbudować drugi plac zabaw."
+            },
+            {
+              "id": "B",
+              "text": "Tego, co poprawić na placu zabaw i od czego zacząć."
+            },
+            {
+              "id": "C",
+              "text": "Tego, jak wybrać osoby do nowej rady osiedla."
+            }
+          ]
+        },
+        {
+          "id": "q2",
+          "question": "Na co zwrócili uwagę rodzice małych dzieci?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Na brak stojaków przy wejściu."
+            },
+            {
+              "id": "B",
+              "text": "Na brak cienia latem."
+            },
+            {
+              "id": "C",
+              "text": "Na brak dodatkowych ławek."
+            }
+          ]
+        },
+        {
+          "id": "q3",
+          "question": "Dlaczego rada nie zajmie się wszystkim od razu?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Najpierw trzeba wybrać nową przewodniczącą."
+            },
+            {
+              "id": "B",
+              "text": "Nie wystarczy na to pieniędzy."
+            },
+            {
+              "id": "C",
+              "text": "Trzeba poczekać, aż dzieci skończą wakacje."
+            }
+          ]
+        },
+        {
+          "id": "q4",
+          "question": "Pomysł nowych ławek wygrał głosowanie. Co można teraz powiedzieć mieszkańcom?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Rada zna ich wybór, ale na ławki być może trzeba będzie poczekać."
+            },
+            {
+              "id": "B",
+              "text": "Rada postawi ławki jeszcze w tym roku, bo mieszkańcy je wybrali."
+            },
+            {
+              "id": "C",
+              "text": "Rada zacznie od ławek, zanim zajmie się naprawą urządzeń."
+            }
+          ]
+        },
+        {
+          "id": "q5",
+          "question": "Co oznaczają „informacje o postępie prac”?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Wiadomości o tym, co już udało się zrobić."
+            },
+            {
+              "id": "B",
+              "text": "Ogłoszenia o terminie głosowania."
+            },
+            {
+              "id": "C",
+              "text": "Prośby o zgłaszanie nowych pomysłów."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-040",
+      "targetLevel": "A2",
+      "title": "Spotkanie w klubie językowym",
+      "passage": "Kiedy Igor przeprowadził się do Polski, rozumiał wiele słów, ale bał się rozmawiać z ludźmi. W sklepie zwykle odpowiadał bardzo krótko, a podczas spotkań ze znajomymi częściej słuchał, niż mówił. Pewnego dnia zobaczył informację o bezpłatnym klubie językowym, który spotyka się w bibliotece w każdy wtorek. Postanowił spróbować.\n\nNa pierwszym spotkaniu uczestnicy przedstawili się i podzielili na małe grupy. Rozmawiali o podróżach, pracy oraz codziennych zwyczajach. Prowadząca poprosiła, żeby nie poprawiać każdego błędu w trakcie rozmowy. Po zakończeniu zadania uczestnicy wspólnie zastanawiali się nad trudniejszymi wyrażeniami. Igor poczuł się swobodniej, ponieważ mógł dokończyć swoją wypowiedź.\n\nPo kilku tygodniach zaczął sam proponować tematy do rozmowy. Zauważył też, że łatwiej porozumiewa się z kolegami w pracy. Nadal popełnia błędy, ale nie rezygnuje z rozmowy, gdy nie zna jakiegoś słowa. Próbuje wtedy powiedzieć to samo innymi słowami. Teraz chętnie zaprasza do klubu osoby, które dopiero uczą się polskiego.",
+      "questions": [
+        {
+          "id": "q1",
+          "question": "Co przede wszystkim zmieniły spotkania w życiu Igora?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Igor zaczął uczyć polskiego kolegów w pracy."
+            },
+            {
+              "id": "B",
+              "text": "Igor nabrał odwagi do rozmów po polsku."
+            },
+            {
+              "id": "C",
+              "text": "Igor znalazł w bibliotece nową pracę."
+            }
+          ]
+        },
+        {
+          "id": "q2",
+          "question": "Gdzie odbywają się spotkania?",
+          "options": [
+            {
+              "id": "A",
+              "text": "W sklepie."
+            },
+            {
+              "id": "B",
+              "text": "W biurze Igora."
+            },
+            {
+              "id": "C",
+              "text": "W bibliotece."
+            }
+          ]
+        },
+        {
+          "id": "q3",
+          "question": "Co pomogło Igorowi poczuć się swobodniej podczas rozmowy?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Mógł przed spotkaniem przygotować wszystkie odpowiedzi."
+            },
+            {
+              "id": "B",
+              "text": "Miał czas dokończyć myśl, zanim omówiono błędy."
+            },
+            {
+              "id": "C",
+              "text": "Mógł oddać głos prowadzącej, gdy brakowało mu słowa."
+            }
+          ]
+        },
+        {
+          "id": "q4",
+          "question": "Koleżanka Igora zna sporo słów, ale boi się odezwać. Dlaczego klub mógłby jej odpowiadać?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Będzie mogła uczyć się głównie przez słuchanie wykładów prowadzącej."
+            },
+            {
+              "id": "B",
+              "text": "Będzie mogła od razu usłyszeć poprawną wersję każdego swojego zdania."
+            },
+            {
+              "id": "C",
+              "text": "Będzie mogła spokojnie poćwiczyć rozmowę w małej grupie."
+            }
+          ]
+        },
+        {
+          "id": "q5",
+          "question": "Jak czuł się Igor, gdy „poczuł się swobodniej”?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Mniej się spieszył, bo spotkanie trwało dłużej."
+            },
+            {
+              "id": "B",
+              "text": "Mniej się denerwował, kiedy mówił."
+            },
+            {
+              "id": "C",
+              "text": "Mniej się męczył, bo zadania były krótsze."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

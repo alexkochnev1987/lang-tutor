@@ -1,0 +1,984 @@
+{
+  "passages": [
+    {
+      "id": "pl-b1.reading.day-054",
+      "targetLevel": "A2",
+      "title": "Zapis na zajęcia dodatkowe",
+      "passage": "Uczniowie naszej szkoły mogą od grudnia chodzić na dodatkowe zajęcia z matematyki lub języka polskiego. Zajęcia są bezpłatne, ale w każdej grupie jest tylko osiem miejsc. Zajęcia z matematyki odbywają się w poniedziałki i środy od godziny piętnastej. Zajęcia z języka polskiego odbywają się we wtorki o tej samej porze. Jedna lekcja trwa godzinę.\n\nDo piątku trzeba oddać formularz w pokoju obok gabinetu dyrektora. W formularzu trzeba podać imię, nazwisko, klasę i wybrany przedmiot. Nie zapisujemy uczniów przez telefon, ponieważ nauczyciele potrzebują podpisanych formularzy. Długopisy są dostępne na miejscu. Podczas długiej przerwy można również porozmawiać z nauczycielem o poziomie zajęć.\n\nJeżeli w grupie nie ma już miejsca, nazwisko ucznia trafia na listę osób oczekujących. Nauczyciel skontaktuje się z uczniem, gdy ktoś zrezygnuje z zajęć. Osoby, które otrzymały miejsce, przynoszą na pierwszą lekcję tylko zeszyt i ołówek. Numer sali pojawi się na tablicy przy wejściu w ostatni poniedziałek listopada. Nie trzeba wcześniej kupować żadnego podręcznika.",
+      "questions": [
+        {
+          "id": "q1",
+          "question": "Które zdanie najlepiej oddaje cel ogłoszenia?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Szkoła wyjaśnia, jak wybrać odpowiedni poziom zajęć i nauczyciela."
+            },
+            {
+              "id": "B",
+              "text": "Szkoła wyjaśnia, jak zapisać się na zajęcia i co zrobić, gdy zabraknie miejsc."
+            },
+            {
+              "id": "C",
+              "text": "Szkoła wyjaśnia, jak będzie wyglądać nauka na zajęciach w grudniu."
+            }
+          ]
+        },
+        {
+          "id": "q2",
+          "question": "Kiedy będzie można sprawdzić numer sali?",
+          "options": [
+            {
+              "id": "A",
+              "text": "W ostatni poniedziałek listopada."
+            },
+            {
+              "id": "B",
+              "text": "W pierwszy poniedziałek grudnia."
+            },
+            {
+              "id": "C",
+              "text": "W piątek po lekcjach."
+            }
+          ]
+        },
+        {
+          "id": "q3",
+          "question": "Dlaczego szkoła nie przyjmuje zgłoszeń telefonicznych?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Potrzebuje wcześniejszej rozmowy o poziomie."
+            },
+            {
+              "id": "B",
+              "text": "Potrzebuje potwierdzenia wolnego miejsca."
+            },
+            {
+              "id": "C",
+              "text": "Potrzebuje dokumentów z podpisem."
+            }
+          ]
+        },
+        {
+          "id": "q4",
+          "question": "Klara może zostać w szkole po lekcjach tylko we wtorki i czwartki. Chce dołączyć do jednej grupy. Co powinna zrobić?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Wybrać matematykę i oddać formularz do piątku."
+            },
+            {
+              "id": "B",
+              "text": "Wybrać polski i zgłosić się po raz pierwszy w grudniu."
+            },
+            {
+              "id": "C",
+              "text": "Wybrać polski i oddać formularz do piątku."
+            }
+          ]
+        },
+        {
+          "id": "q5",
+          "question": "Co oznacza w tekście „lista osób oczekujących”?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Lista uczniów, którzy już mają miejsce i czekają na numer sali."
+            },
+            {
+              "id": "B",
+              "text": "Lista uczniów bez miejsca, którzy mogą je jeszcze dostać."
+            },
+            {
+              "id": "C",
+              "text": "Lista uczniów, którzy oddali formularz, ale jeszcze nie wybrali przedmiotu."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-055",
+      "targetLevel": "A2",
+      "title": "Nauka w parze",
+      "passage": "Julia i Filip chodzą do tej samej klasy i w przyszłym roku będą zdawać maturę. W tym semestrze postanowili spotykać się po lekcjach dwa razy w tygodniu. Julia dobrze rozumie zadania z matematyki, ale robi dużo błędów w języku angielskim. Filip chętnie mówi po angielsku, lecz potrzebuje więcej czasu na rozwiązanie zadań matematycznych.\n\nNa początku każde z nich przynosiło pełny plecak książek. Otwierali podręczniki i razem czytali kolejne rozdziały. Po kilku spotkaniach zauważyli, że spędzają dużo czasu na powtarzaniu tematów, które oboje już znają. Dlatego zmienili sposób pracy. Teraz przed spotkaniem każde przygotowuje dwa pytania do drugiej osoby. Julia wyjaśnia matematykę, a Filip pomaga jej ćwiczyć krótkie rozmowy po angielsku.\n\nW środę Filip nie mógł przyjść, więc wysłał Julii nagranie z trzema pytaniami. Julia odpowiedziała na nie wieczorem. W piątek przygotowała dla niego podobne zadania do samodzielnego rozwiązania. Nadal lubią pracować razem, ale ich plan działa także wtedy, gdy jedno z nich musi zostać w domu.",
+      "questions": [
+        {
+          "id": "q1",
+          "question": "Co pokazuje historia Julii i Filipa?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Jak wspólna nauka może odpowiadać na różne potrzeby uczniów."
+            },
+            {
+              "id": "B",
+              "text": "Jak uczniowie ustalają stałe dni wspólnej nauki i pracy w domu."
+            },
+            {
+              "id": "C",
+              "text": "Jak uczniowie przygotowują wspólną listę tematów do matury."
+            }
+          ]
+        },
+        {
+          "id": "q2",
+          "question": "W jakiej formie Filip przesłał Julii pytania w środę?",
+          "options": [
+            {
+              "id": "A",
+              "text": "W formie wiadomości tekstowej."
+            },
+            {
+              "id": "B",
+              "text": "W formie zdjęcia z podręcznika."
+            },
+            {
+              "id": "C",
+              "text": "W formie nagrania."
+            }
+          ]
+        },
+        {
+          "id": "q3",
+          "question": "Dlaczego przestali wspólnie czytać całe rozdziały?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Zbyt często brakowało im odpowiednich książek."
+            },
+            {
+              "id": "B",
+              "text": "Za dużo czasu poświęcali znanym już tematom."
+            },
+            {
+              "id": "C",
+              "text": "Zbyt rzadko kończyli rozdział przed następną lekcją."
+            }
+          ]
+        },
+        {
+          "id": "q4",
+          "question": "Przed kolejnym spotkaniem Julia nie radzi sobie z rozmową o wakacjach po angielsku, a Filip nie rozumie zadania z matematyki. Jak najlepiej wykorzystają swój czas?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Julia wyjaśni zadanie, a Filip przećwiczy z nią rozmowę."
+            },
+            {
+              "id": "B",
+              "text": "Julia przygotuje rozmowę, a Filip sam rozwiąże swoje zadanie."
+            },
+            {
+              "id": "C",
+              "text": "Oboje przeczytają te same rozdziały, zanim zadadzą sobie pytania."
+            }
+          ]
+        },
+        {
+          "id": "q5",
+          "question": "Co znaczy „do samodzielnego rozwiązania”?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Do wykonania bez bezpośredniej pomocy drugiej osoby."
+            },
+            {
+              "id": "B",
+              "text": "Do wykonania bez podręcznika, ale z pomocą kolegi."
+            },
+            {
+              "id": "C",
+              "text": "Do wykonania razem, bez pomocy nauczyciela."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-056",
+      "targetLevel": "A2",
+      "title": "Jak przygotować się do sprawdzianu",
+      "passage": "Jeśli masz kilka dni do sprawdzianu, nie zaczynaj od czytania całego podręcznika od pierwszej do ostatniej strony. Najpierw weź zeszyt i zapisz tematy, które będą na sprawdzianie. Przy każdym temacie postaw znak plus, jeśli dobrze go rozumiesz, lub znak zapytania, jeśli potrzebujesz pomocy.\n\nZacznij od tematów ze znakiem zapytania. Po przeczytaniu krótkiego fragmentu zamknij książkę i spróbuj własnymi słowami powiedzieć, o czym był. Jeżeli nie potrafisz odpowiedzieć na pytanie, wróć do odpowiedniej strony. Nie przepisuj jednak całej lekcji. Wystarczy krótka notatka z przykładem. W ten sposób możesz później szybko sprawdzić, co już pamiętasz.\n\nZostaw ostatni dzień na krótkie powtórzenie wszystkich tematów. Przygotuj kilka zadań bez gotowych odpowiedzi i wykonaj je w takim czasie, jaki zwykle masz na lekcji. Potem sprawdź błędy i wybierz najwyżej dwa najtrudniejsze tematy do ponownej nauki. Zaplanuj również czas na odpoczynek. Wieczorem lepiej zakończyć pracę nad materiałem o wybranej godzinie niż próbować jeszcze raz przeczytać wszystko.",
+      "questions": [
+        {
+          "id": "q1",
+          "question": "Jaką metodę nauki proponuje autor?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Powtarzanie tematów po kolei i sprawdzanie wiedzy na końcu."
+            },
+            {
+              "id": "B",
+              "text": "Robienie notatek z każdego tematu i powtarzanie ich codziennie."
+            },
+            {
+              "id": "C",
+              "text": "Planowanie nauki według własnych trudności i sprawdzanie wiedzy."
+            }
+          ]
+        },
+        {
+          "id": "q2",
+          "question": "Ile trudnych tematów trzeba wybrać do ponownej nauki po próbnych zadaniach?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Dokładnie trzy."
+            },
+            {
+              "id": "B",
+              "text": "Nie więcej niż dwa."
+            },
+            {
+              "id": "C",
+              "text": "Tyle, ile było tematów na liście."
+            }
+          ]
+        },
+        {
+          "id": "q3",
+          "question": "Po co autor zaleca robienie krótkich notatek z przykładem?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Żeby łatwiej znaleźć ważne miejsca w książce podczas nauki."
+            },
+            {
+              "id": "B",
+              "text": "Żeby później łatwo sprawdzić, co się pamięta."
+            },
+            {
+              "id": "C",
+              "text": "Żeby pokazać nauczycielowi, co już się zrobiło."
+            }
+          ]
+        },
+        {
+          "id": "q4",
+          "question": "Ola ma trzy dni do sprawdzianu. Dwa tematy rozumie dobrze, a dwóch nie umie wyjaśnić bez książki. Który plan pasuje do poradnika?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Najpierw powtórzyć dwa łatwe tematy, a trudne zostawić na ostatni wieczór."
+            },
+            {
+              "id": "B",
+              "text": "Codziennie czytać wszystkie cztery tematy, a ostatniego dnia przepisać notatki."
+            },
+            {
+              "id": "C",
+              "text": "Najpierw przećwiczyć dwa trudne tematy, a ostatniego dnia rozwiązać zadania ze wszystkich."
+            }
+          ]
+        },
+        {
+          "id": "q5",
+          "question": "Co oznacza „własnymi słowami”?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Tak, jak samemu rozumie się tekst, bez kopiowania zdań."
+            },
+            {
+              "id": "B",
+              "text": "Krótko, ale bez podawania żadnych przykładów."
+            },
+            {
+              "id": "C",
+              "text": "Tak, jak nauczyciel zapisał to na lekcji."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-057",
+      "targetLevel": "A2",
+      "title": "Pierwszy dzień w nowym zespole",
+      "passage": "Cześć, Doroto! Dzisiaj był mój pierwszy dzień w nowej pracy. W biurze nie znałem nikogo oprócz szefa, z którym rozmawiałem przed podpisaniem umowy. Rano jeden z pracowników pokazał mi moje miejsce i wyjaśnił, gdzie mogę znaleźć potrzebne dokumenty. Potem przy kawie poznałem innych pracowników.\n\nMiałem już zacząć pracę z klientem, ale szef powiedział, że przez pierwsze dwa dni nie będę rozmawiać z klientami sam. Jeśli zadzwoni klient, Marta poprowadzi rozmowę, a ja będę zapisywać informacje o zamówieniu. Mam pytać Martę, gdy nie wiem, gdzie coś zapisać. Marta dała mi też jedno małe zadanie na komputerze. Sprawdziła je razem ze mną przed obiadem, żebym nauczył się zapisywać zamówienia.\n\nNajbardziej zaskoczyła mnie atmosfera. Nikt nie myślał, że od razu będę wszystko wiedział. Kiedy czegoś nie rozumiałem, mogłem o to zapytać. Po południu dostałem plan na jutro i adres strony z materiałami do nauki. W środę mam już poprowadzić krótką rozmowę z klientem, a Marta będzie wtedy obok mnie. Chcę przygotować się do niej wieczorem. Pa, Daniel.",
+      "questions": [
+        {
+          "id": "q1",
+          "question": "O czym przede wszystkim Daniel opowiada Dorocie?",
+          "options": [
+            {
+              "id": "A",
+              "text": "O tym, jak przygotowuje się do pierwszego zadania z klientem."
+            },
+            {
+              "id": "B",
+              "text": "O tym, jak poznaje nową pracę i stopniowo otrzymuje obowiązki."
+            },
+            {
+              "id": "C",
+              "text": "O tym, jak wygląda zwykły dzień zespołu po okresie nauki."
+            }
+          ]
+        },
+        {
+          "id": "q2",
+          "question": "Co Daniel otrzymał po południu?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Nową umowę i listę klientów."
+            },
+            {
+              "id": "B",
+              "text": "Dokumenty o zamówieniach i zadanie na dziś."
+            },
+            {
+              "id": "C",
+              "text": "Plan na kolejny dzień i adres strony z materiałami."
+            }
+          ]
+        },
+        {
+          "id": "q3",
+          "question": "Dlaczego Marta sprawdziła zadanie razem z Danielem?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Marta chce nauczyć Daniela, jak zapisywać zamówienia."
+            },
+            {
+              "id": "B",
+              "text": "Marta chce sprawdzić, czy Daniel umie znaleźć dokumenty."
+            },
+            {
+              "id": "C",
+              "text": "Marta chce nauczyć Daniela, jak zaczynać rozmowę z klientem."
+            }
+          ]
+        },
+        {
+          "id": "q4",
+          "question": "Klient dzwoni do Daniela następnego dnia rano. Daniel nie wie, gdzie zapisać nowe zamówienie. Jak powinien postąpić zgodnie z planem?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Samemu porozmawiać z klientem, a potem poprosić Martę o pomoc w zapisie."
+            },
+            {
+              "id": "B",
+              "text": "Poprosić Martę, by poprowadziła rozmowę, i zapytać ją, gdzie zapisać zamówienie."
+            },
+            {
+              "id": "C",
+              "text": "Poprosić klienta o telefon w środę, a Marcie przekazać tylko jego numer."
+            }
+          ]
+        },
+        {
+          "id": "q5",
+          "question": "Co znaczy tutaj „od razu”?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Po kilku dniach ćwiczeń."
+            },
+            {
+              "id": "B",
+              "text": "Jeszcze przed rozpoczęciem nowej pracy."
+            },
+            {
+              "id": "C",
+              "text": "Natychmiast, bez czasu na przygotowanie."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-058",
+      "targetLevel": "A2",
+      "title": "Zmiana godzin pracy",
+      "passage": "W pewnej małej firmie pracownicy przez wiele lat zaczynali pracę o ósmej. Część z nich przyjeżdżała z małych miast i wsi w okolicy. Poranny pociąg przyjeżdżał za późno, a wcześniejszy pociąg oznaczał prawie godzinę czekania przed otwarciem biura. Pracownicy prosili więc szefa o zmianę godzin pracy.\n\nFirma przez miesiąc testowała nowy plan. Można było zaczynać między siódmą a dziewiątą, ale od dziesiątej do czternastej cały zespół musiał być w biurze. W tym czasie odbywały się spotkania z klientami. Nie zmieniła się liczba godzin pracy ani pensja. Osoby, które przychodziły później, także kończyły później.\n\nPo miesiącu szef zebrał opinie pracowników. Większość chciała zachować nowy plan. Niektórzy woleli jednak zaczynać o ósmej jak dawniej, ponieważ po pracy odbierali dzieci ze szkoły. Firma nie wprowadziła jednej nowej godziny dla wszystkich. Każdy mógł wybrać godzinę rozpoczęcia pracy między siódmą a dziewiątą i nie musiał zaczynać o tej samej godzinie każdego dnia. Dzięki temu pracownicy mogli lepiej planować dojazdy i sprawy rodzinne.",
+      "questions": [
+        {
+          "id": "q1",
+          "question": "Co jest najważniejszą cechą nowego planu pracy?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Wybór godziny rozpoczęcia pracy przy zachowaniu wspólnych godzin w biurze."
+            },
+            {
+              "id": "B",
+              "text": "Krótszy dzień pracy bez zmiany pensji."
+            },
+            {
+              "id": "C",
+              "text": "Wybór godzin spotkań z klientami przez każdego pracownika."
+            }
+          ]
+        },
+        {
+          "id": "q2",
+          "question": "W jakich godzinach odbywały się spotkania z klientami?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Między dziesiątą a czternastą."
+            },
+            {
+              "id": "B",
+              "text": "Między siódmą a dziewiątą."
+            },
+            {
+              "id": "C",
+              "text": "Między ósmą a dwunastą."
+            }
+          ]
+        },
+        {
+          "id": "q3",
+          "question": "Dlaczego część pracowników chciała nadal zaczynać o ósmej?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Po zmianie zarabiali mniej niż wcześniej."
+            },
+            {
+              "id": "B",
+              "text": "Przed ósmą nie mogli dojechać do biura."
+            },
+            {
+              "id": "C",
+              "text": "Po pracy mieli obowiązki związane z dziećmi."
+            }
+          ]
+        },
+        {
+          "id": "q4",
+          "question": "Anna chce w poniedziałek przyjść o dziewiątej, a we wtorek o siódmej. Co wynika z opisanego planu?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Może tak zrobić, jeśli we wtorek skończy o tej samej godzinie co w poniedziałek."
+            },
+            {
+              "id": "B",
+              "text": "Może tak zrobić, jeśli przepracuje tyle samo godzin i będzie w biurze od dziesiątej do czternastej."
+            },
+            {
+              "id": "C",
+              "text": "Musi wybrać jedną z tych godzin na cały tydzień, aby zachować pensję."
+            }
+          ]
+        },
+        {
+          "id": "q5",
+          "question": "Co oznacza w artykule „zebrał opinie”?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Dowiedział się, co pracownicy myślą o planie."
+            },
+            {
+              "id": "B",
+              "text": "Sprawdził, z których nowych godzin pracownicy korzystali najczęściej."
+            },
+            {
+              "id": "C",
+              "text": "Poprosił pracowników o ocenę pracy kolegów."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-059",
+      "targetLevel": "A2",
+      "title": "Rozmowa o zadaniach",
+      "passage": "— Aniu, potrzebuję twojej pomocy przy projekcie dla nowego klienta — mówi Jacek. — W piątek mamy pokazać mu pierwszy plan. Czy masz dziś czas?\n\n— Do południa kończę raport z poprzedniego tygodnia. Później mogę pomóc przez dwie godziny. W środę mam więcej czasu, ale w czwartek nie będzie mnie w biurze.\n\n— To dobrze. Brakuje nam informacji o cenach. Dzisiaj wystarczy, że sprawdzisz dokumenty od klienta. Nie dzwoń jeszcze do niego. Najpierw musimy sprawdzić, czego nie wiemy.\n\n— A kto przygotuje tabelę z kosztami? Nie mam w tym dużego doświadczenia.\n\n— Zrobię ją ja. W środę pokażę ci, jak pracujemy z takimi danymi. Chcę, żebyś w następnym miesiącu mogła przygotować podobny plan sama.\n\n— Dobrze, zapiszę dziś wszystkie pytania w jednym pliku. Jeśli nie znajdę odpowiedzi w dokumentach, zostawię wolne miejsce obok pytania.\n\n— Świetnie. Jutro rano przeczytam twoją listę. Dopiero wtedy wspólnie zdecydujemy, o które informacje trzeba jeszcze zapytać klienta. Przed piątkiem spotkamy się jeszcze z szefem.",
+      "questions": [
+        {
+          "id": "q1",
+          "question": "Co jest celem rozmowy?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Ustalenie, jak Ania ma sama przygotować cały plan dla klienta."
+            },
+            {
+              "id": "B",
+              "text": "Ustalenie programu i godziny spotkania z klientem."
+            },
+            {
+              "id": "C",
+              "text": "Ustalenie, kto co zrobi i w jakiej kolejności."
+            }
+          ]
+        },
+        {
+          "id": "q2",
+          "question": "Kto przygotuje tabelę z kosztami?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Ania."
+            },
+            {
+              "id": "B",
+              "text": "Jacek."
+            },
+            {
+              "id": "C",
+              "text": "Szef."
+            }
+          ]
+        },
+        {
+          "id": "q3",
+          "question": "Dlaczego Jacek prosi Anię, żeby jeszcze nie dzwoniła do klienta?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Najpierw chcą pokazać klientowi gotowy plan."
+            },
+            {
+              "id": "B",
+              "text": "Najpierw chcą zakończyć szkolenie z kosztów."
+            },
+            {
+              "id": "C",
+              "text": "Najpierw chcą ustalić, jakich danych brakuje."
+            }
+          ]
+        },
+        {
+          "id": "q4",
+          "question": "Ania znajduje w dokumentach cenę jednego produktu, ale nie zna ceny drugiego. Jak powinna przygotować listę dla Jacka?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Przy pierwszym pytaniu wpisać cenę, przy drugim zostawić puste miejsce."
+            },
+            {
+              "id": "B",
+              "text": "Przy obu pytaniach zostawić puste miejsca, żeby Jacek sam sprawdził ceny."
+            },
+            {
+              "id": "C",
+              "text": "Wpisać tylko znalezioną cenę i usunąć pytanie bez odpowiedzi."
+            }
+          ]
+        },
+        {
+          "id": "q5",
+          "question": "Co oznacza „brakuje nam informacji”?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Mamy dane, ale musimy jeszcze sprawdzić, czy są poprawne."
+            },
+            {
+              "id": "B",
+              "text": "Mamy za mało danych, żeby wykonać zadanie."
+            },
+            {
+              "id": "C",
+              "text": "Mamy potrzebne dane, ale są w kilku różnych dokumentach."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-060",
+      "targetLevel": "A2",
+      "title": "Wiadomość o rozmowie w sprawie pracy",
+      "passage": "Temat: Rozmowa w sprawie pracy w biurze\n\nDzień dobry, Pani Marto!\n\nDziękujemy za zainteresowanie naszym ogłoszeniem o pracy. Szukamy osoby do obsługi zamówień w małej firmie, która sprzedaje meble. Codzienna praca to rozmowy z klientami, sprawdzanie adresów dostaw oraz zapisywanie nowych zamówień w komputerze. Nie trzeba mieć doświadczenia w sprzedaży, ale potrzebujemy osoby, która dobrze organizuje swoją pracę i potrafi jasno pisać wiadomości.\n\nPierwsza rozmowa będzie przez internet i potrwa około dwudziestu minut. Prosimy przygotować krótki opis swoich poprzednich obowiązków. Nie trzeba wysyłać dodatkowego życiorysu, ponieważ mamy już Pani dokumenty. Po rozmowie zaprosimy wybrane osoby do biura. Tam otrzymają krótkie zadanie dotyczące zamówień, aby poznać sposób naszej pracy.\n\nPraca jest na pełny etat od poniedziałku do piątku. W pierwszym miesiącu nowa osoba pracuje razem z bardziej doświadczonym kolegą. O pensji porozmawiamy podczas pierwszej rozmowy. Możemy zaproponować wtorek o jedenastej lub środę o szesnastej. Prosimy o odpowiedź do poniedziałku.\n\nPozdrawiam\nAnna, dział rekrutacji",
+      "questions": [
+        {
+          "id": "q1",
+          "question": "Po co Anna wysyła tę wiadomość?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Żeby potwierdzić przyjęcie Marty do pracy w biurze."
+            },
+            {
+              "id": "B",
+              "text": "Żeby przedstawić warunki pracy i następne kroki rekrutacji."
+            },
+            {
+              "id": "C",
+              "text": "Żeby poprosić Martę o wykonanie zadania przed rozmową."
+            }
+          ]
+        },
+        {
+          "id": "q2",
+          "question": "Ile ma trwać pierwsza rozmowa?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Około czterdziestu minut."
+            },
+            {
+              "id": "B",
+              "text": "Około dwudziestu minut."
+            },
+            {
+              "id": "C",
+              "text": "Około jednej godziny."
+            }
+          ]
+        },
+        {
+          "id": "q3",
+          "question": "Dlaczego Marta nie musi ponownie wysyłać życiorysu?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Firma otrzymała już jej dokumenty."
+            },
+            {
+              "id": "B",
+              "text": "Firma zbiera życiorysy dopiero podczas spotkań w biurze."
+            },
+            {
+              "id": "C",
+              "text": "Firma przyjmuje życiorysy tylko w dniu pierwszej rozmowy."
+            }
+          ]
+        },
+        {
+          "id": "q4",
+          "question": "Marta nie pracowała w sprzedaży, ale wcześniej odpowiadała na wiadomości i zajmowała się zamówieniami. We wtorek pracuje do piętnastej, a w środę jest wolna po piętnastej. Co powinna zrobić zgodnie z wiadomością?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Wybrać wtorek i przygotować opis poprzedniej pracy."
+            },
+            {
+              "id": "B",
+              "text": "Wybrać środę i przygotować zadanie dotyczące zamówień zamiast opisu poprzedniej pracy."
+            },
+            {
+              "id": "C",
+              "text": "Wybrać środę i opowiedzieć o swoich dotychczasowych obowiązkach."
+            }
+          ]
+        },
+        {
+          "id": "q5",
+          "question": "Co oznacza „obsługa zamówień”?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Doradzanie klientom, jakie meble kupić."
+            },
+            {
+              "id": "B",
+              "text": "Pakowanie mebli i planowanie ich transportu."
+            },
+            {
+              "id": "C",
+              "text": "Przyjmowanie zamówień i sprawdzanie danych klientów."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-061",
+      "targetLevel": "A2",
+      "title": "Spotkanie zespołu po projekcie",
+      "passage": "Do wszystkich osób z zespołu projektu „Nowe biuro”!\n\nW przyszły czwartek od godziny dziesiątej do dwunastej będzie zebranie po zakończeniu projektu. Nie będziemy przedstawiać klientowi nowej prezentacji. Chcemy wspólnie porozmawiać o tym, jak pracowaliśmy przez ostatnie trzy miesiące, co nam się udało i co możemy zmienić przy następnym zadaniu.\n\nPrzed spotkaniem prosimy każdego pracownika o przygotowanie jednej krótkiej notatki. Trzeba w niej opisać jeden przykład dobrej współpracy i jedną sytuację, w której mogliśmy lepiej pracować. Nie trzeba wpisywać nazwisk innych pracowników, ponieważ rozmowa ma dotyczyć sposobu pracy, a nie oceniania poszczególnych osób. Notatkę prosimy wysłać do środy do godziny piętnastej.\n\nNa początku zebrania porozmawiamy o uwagach, które pojawiły się najczęściej. Następnie w małych grupach wybierzemy po jednym pomyśle na poprawę pracy. Na koniec ustalimy dwie zmiany do wypróbowania w następnym projekcie. Osoby, które w czwartek będą służbowo poza biurem, mogą wysłać również pomysł na zmianę razem z notatką. Krótki raport ze spotkania otrzyma cały zespół w piątek rano.",
+      "questions": [
+        {
+          "id": "q1",
+          "question": "Po co zespół organizuje to zebranie?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Żeby omówić, co się udało, i poprawić pracę przy kolejnym projekcie."
+            },
+            {
+              "id": "B",
+              "text": "Żeby sprawdzić, czy klient jest zadowolony z wyniku projektu."
+            },
+            {
+              "id": "C",
+              "text": "Żeby podzielić nowe zadania między pracowników."
+            }
+          ]
+        },
+        {
+          "id": "q2",
+          "question": "Kiedy cały zespół otrzyma raport?",
+          "options": [
+            {
+              "id": "A",
+              "text": "W czwartek po południu."
+            },
+            {
+              "id": "B",
+              "text": "W środę przed piętnastą."
+            },
+            {
+              "id": "C",
+              "text": "W piątek rano."
+            }
+          ]
+        },
+        {
+          "id": "q3",
+          "question": "Dlaczego w notatkach nie trzeba podawać nazwisk?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Ważne jest, jak zespół pracował, a nie jak pracował każdy z osobna."
+            },
+            {
+              "id": "B",
+              "text": "Nazwiska będą potrzebne dopiero w raporcie po spotkaniu."
+            },
+            {
+              "id": "C",
+              "text": "Zespół chce najpierw zebrać pomysły, a później ocenić osoby odpowiedzialne za błędy."
+            }
+          ]
+        },
+        {
+          "id": "q4",
+          "question": "Łukasz w czwartek będzie poza biurem z powodu pracy i ma pomysł na lepsze planowanie spotkań. Jak może pomóc zespołowi przygotować zmiany?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Przesłać notatkę z pomysłem najpóźniej w środę do piętnastej."
+            },
+            {
+              "id": "B",
+              "text": "Wysłać notatkę do środy, a pomysł dopiero po otrzymaniu raportu."
+            },
+            {
+              "id": "C",
+              "text": "Wysłać sam pomysł w środę, a notatkę przygotować po zebraniu."
+            }
+          ]
+        },
+        {
+          "id": "q5",
+          "question": "Co oznacza „uwagi” w tym ogłoszeniu?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Pytania o szczegóły nowego projektu."
+            },
+            {
+              "id": "B",
+              "text": "Opinie o tym, jak pracował zespół."
+            },
+            {
+              "id": "C",
+              "text": "Zadania do wykonania po spotkaniu."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-062",
+      "targetLevel": "A2",
+      "title": "Praca z domu a biuro",
+      "passage": "Gdy w firmie Zosi pojawiła się możliwość pracy z domu, zdecydowała się pracować w domu przez cały tydzień. Dzięki temu nie traciła czasu na dojazdy i mogła rano spokojnie zjeść śniadanie. Pracowała przy biurku w swoim pokoju. Przez pierwsze tygodnie bardzo podobał jej się ten sposób organizacji dnia.\n\nZ czasem zauważyła jednak pewien problem. Kiedy potrzebowała szybkiej odpowiedzi od kolegi, często musiała czekać na wiadomość, a krótkie rozmowy zamieniały się w długie spotkania przez internet. W dni, kiedy przygotowywała własny raport, nie przeszkadzało jej to. Trudniej było wtedy, gdy kilka osób miało wspólnie ustalić plan pracy.\n\nZosia porozmawiała z szefem i zaczęła przychodzić do biura we wtorki i czwartki. W tych dniach jej zespół planuje wspólne zadania oraz rozwiązuje problemy klientów. W inne dni Zosia pracuje w domu i przygotowuje dokumenty. Teraz nie musi codziennie dojeżdżać do pracy, a ważne rozmowy może prowadzić bezpośrednio z kolegami, siedząc z nimi w jednym pokoju. Nie uważa już, że jedno miejsce pracy jest najlepsze do wszystkich zadań.",
+      "questions": [
+        {
+          "id": "q1",
+          "question": "Do jakiego wniosku dochodzi Zosia?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Najlepiej planować wspólne zadania w domu, a dokumenty przygotowywać w biurze."
+            },
+            {
+              "id": "B",
+              "text": "Najlepiej wybierać miejsce pracy według czasu dojazdu do biura."
+            },
+            {
+              "id": "C",
+              "text": "Różne rodzaje zadań lepiej wykonywać w różnych miejscach."
+            }
+          ]
+        },
+        {
+          "id": "q2",
+          "question": "W które dni Zosia chodzi teraz do biura?",
+          "options": [
+            {
+              "id": "A",
+              "text": "We wtorki i czwartki."
+            },
+            {
+              "id": "B",
+              "text": "W poniedziałki i środy."
+            },
+            {
+              "id": "C",
+              "text": "W środy i piątki."
+            }
+          ]
+        },
+        {
+          "id": "q3",
+          "question": "Dlaczego praca wyłącznie z domu stała się mniej wygodna?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Przygotowanie własnych raportów wymagało dokumentów z biura."
+            },
+            {
+              "id": "B",
+              "text": "Szybkie ustalenia z kolegami często trwały zbyt długo."
+            },
+            {
+              "id": "C",
+              "text": "Spotkania przez internet przeszkadzały Zosi głównie w pisaniu własnych raportów."
+            }
+          ]
+        },
+        {
+          "id": "q4",
+          "question": "Zespół ma ustalić plan dla klienta, a Zosia musi też napisać długi raport bez pomocy innych. Który plan najlepiej odpowiada jej nowym zwyczajom?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Ustalić plan w środę przez internet, a raport napisać w czwartek w biurze."
+            },
+            {
+              "id": "B",
+              "text": "Ustalić plan i przygotować raport w poniedziałek w domu."
+            },
+            {
+              "id": "C",
+              "text": "Ustalić plan we wtorek w biurze, a raport przygotować w środę w domu."
+            }
+          ]
+        },
+        {
+          "id": "q5",
+          "question": "Co znaczy „bezpośrednio z kolegami” w ostatnim akapicie?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Przekazując swoje pytania kolegom przez kierownika zespołu."
+            },
+            {
+              "id": "B",
+              "text": "Rozmawiając z kolegami twarzą w twarz w biurze."
+            },
+            {
+              "id": "C",
+              "text": "Rozmawiając z kolegami przez internet zamiast pisać wiadomości."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-063",
+      "targetLevel": "A2",
+      "title": "Plan rozwoju zawodowego",
+      "passage": "Chcesz nauczyć się czegoś nowego w pracy, ale nie wiesz, od czego zacząć? Zamiast zapisywać się od razu na kilka kursów, wybierz jedną umiejętność, która przyda ci się w codziennej pracy. Może to być przygotowywanie prezentacji, rozmowa z klientem albo pisanie raportów. Porozmawiaj z szefem lub kolegą, żeby dowiedzieć się, czego dokładnie potrzebujesz.\n\nNastępnie zaplanuj mały cel na najbliższy miesiąc. Jeśli chcesz lepiej przygotowywać prezentacje, zrób jedną krótką prezentację na temat, który dobrze znasz. Pokaż ją koledze i poproś o dwie konkretne uwagi. Nie zmieniaj od razu wszystkich elementów. Wybierz jedną rzecz, nad którą będziesz pracować w następnym tygodniu.\n\nPod koniec miesiąca wróć do pierwszej wersji swojej pracy i porównaj ją z ostatnią. Zapisz, co potrafisz zrobić samodzielnie, a przy czym nadal potrzebujesz pomocy. Jeżeli nie widzisz poprawy, sprawdź, czy masz dość czasu i możliwości, żeby ćwiczyć. Być może warto zmienić sposób nauki zamiast zaczynać naukę czegoś innego. Dopiero potem ustal kolejny cel.",
+      "questions": [
+        {
+          "id": "q1",
+          "question": "Jak autor radzi uczyć się nowych rzeczy w pracy?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Wybierać kilka potrzebnych rzeczy i ćwiczyć każdą przez tydzień."
+            },
+            {
+              "id": "B",
+              "text": "Ćwiczyć jedną wybraną rzecz krok po kroku i sprawdzać, czy jest poprawa."
+            },
+            {
+              "id": "C",
+              "text": "Ćwiczyć jedną rzecz przez miesiąc, zawsze w ten sam sposób."
+            }
+          ]
+        },
+        {
+          "id": "q2",
+          "question": "O ile konkretnych uwag należy poprosić kolegę po pierwszej prezentacji?",
+          "options": [
+            {
+              "id": "A",
+              "text": "O jedną."
+            },
+            {
+              "id": "B",
+              "text": "O trzy."
+            },
+            {
+              "id": "C",
+              "text": "O dwie."
+            }
+          ]
+        },
+        {
+          "id": "q3",
+          "question": "Po co pod koniec miesiąca porównywać pierwszą i ostatnią wersję pracy?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Żeby sprawdzić, czego się nauczyliśmy i co jest jeszcze trudne."
+            },
+            {
+              "id": "B",
+              "text": "Żeby wybrać wersję pracy, którą pokażemy koledze."
+            },
+            {
+              "id": "C",
+              "text": "Żeby sprawdzić, ile czasu zajmuje przygotowanie prezentacji."
+            }
+          ]
+        },
+        {
+          "id": "q4",
+          "question": "Tomek chciał poprawić rozmowy z klientami, ale przez miesiąc głównie czytał o nich i rozmawiał tylko z jednym klientem. Nie widzi poprawy. Co najlepiej odpowiada poradnikowi?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Ćwiczyć rozmowy dalej, głównie czytając teksty o obsłudze klienta."
+            },
+            {
+              "id": "B",
+              "text": "Zorganizować więcej prób rozmowy i ponownie ocenić tę umiejętność."
+            },
+            {
+              "id": "C",
+              "text": "Najpierw przygotować prezentację, a rozmowy z klientami ćwiczyć w kolejnym miesiącu."
+            }
+          ]
+        },
+        {
+          "id": "q5",
+          "question": "Co znaczy „przyda ci się” w pierwszym akapicie?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Będzie pomocne w twojej pracy."
+            },
+            {
+              "id": "B",
+              "text": "Będzie konieczne, żeby dostać nową pracę."
+            },
+            {
+              "id": "C",
+              "text": "Będzie należało do zadań, które musisz wykonywać codziennie."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

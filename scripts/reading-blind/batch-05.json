@@ -1,0 +1,985 @@
+{
+  "instructions": "You are a Polish-as-a-foreign-language examiner reviewing an anonymous reading practice corpus. You have no answer keys or prior conversation. Use ONLY the passage and options. Do not look up the author or repository. Independently solve each item. For each question return its ID, chosen option ID (A/B/C, or null if no uniquely supported option), exact evidence quote from the passage, ambiguity flag, distractor plausibility score 0–100, and a concise issue description. Then evaluate each passage's naturalness, CEFR suitability for the provided target level, question quality, unambiguity, topic coherence and vocabulary variety, each on a 0–100 scale. Distinguish errors, stylistic preferences and level mismatches. Flag any grammatical error, unsupported answer, trivial distractor or false inference. Give suggested improvements without altering the provided data. Return JSON with one result per passage; no keys are supplied. Weights: naturalness 25%, CEFR 20%, question quality 20%, ambiguity 20%, coherence 10%, vocabulary 5%. Be strict; do not approve solely because a passage has no grammatical errors.",
+  "passages": [
+    {
+      "id": "pl-b1.reading.day-041",
+      "targetLevel": "A2",
+      "title": "Wspólny ogród",
+      "passage": "Na miejscu starego parkingu mieszkańcy założyli ogród. Przez kilka miesięcy przygotowywali ziemię i przynosili narzędzia z domu. Na początku każdy miał swój kawałek ziemi, czyli własną grządkę. Po jakimś czasie sąsiedzi zauważyli, że kiedy pracują razem, mają więcej miejsca na rośliny i lepiej wykorzystują wodę.\n\nTeraz mieszkańcy umawiają się, kto i kiedy podleje ogród. Jedni wolą przyjść rano przed pracą, inni mają czas wieczorem albo w weekend. Dzieci też pomagają, kiedy praca jest dla nich łatwa. Gdy warzywa są już gotowe do zebrania, uczestnicy dzielą je między siebie. Jeśli zostaje nadmiar warzyw, zanoszą go do kuchni społecznej.\n\nDla sąsiadów ważne jest też coś innego. Dawniej mijali się na schodach, a dziś dzięki ogrodowi spędzają razem czas. W przyszłym roku chcą zaprosić na warsztaty także ludzi z innych osiedli. Pokażą im, jak uprawiać warzywa w mieście.",
+      "questions": [
+        {
+          "id": "q1",
+          "question": "Co zmienił wspólny ogród?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Mieszkańcy prowadzą kuchnię i uczą dzieci gotować."
+            },
+            {
+              "id": "B",
+              "text": "Mieszkańcy urządzają warsztaty zamiast pracować w ogrodzie."
+            },
+            {
+              "id": "C",
+              "text": "Mieszkańcy razem uprawiają warzywa i lepiej się znają."
+            }
+          ]
+        },
+        {
+          "id": "q2",
+          "question": "Komu mieszkańcy oddają warzywa, które zostają po podziale?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Kuchni społecznej."
+            },
+            {
+              "id": "B",
+              "text": "Osobom z innych osiedli."
+            },
+            {
+              "id": "C",
+              "text": "Dzieciom, które pomagały w ogrodzie."
+            }
+          ]
+        },
+        {
+          "id": "q3",
+          "question": "Dlaczego jedni podlewają ogród rano, a inni wieczorem?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Każda grządka ma swoją porę podlewania."
+            },
+            {
+              "id": "B",
+              "text": "Dzieci potrzebują pomocy przy wieczornym podlewaniu."
+            },
+            {
+              "id": "C",
+              "text": "Mają wolny czas o różnych porach."
+            }
+          ]
+        },
+        {
+          "id": "q4",
+          "question": "Tomek mieszka daleko i chce zacząć uprawiać warzywa na swoim osiedlu. Co najbardziej mu pomoże?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Udział w planowanych warsztatach."
+            },
+            {
+              "id": "B",
+              "text": "Zapisanie się na podział tegorocznych zbiorów."
+            },
+            {
+              "id": "C",
+              "text": "Odebranie warzyw z kuchni społecznej."
+            }
+          ]
+        },
+        {
+          "id": "q5",
+          "question": "Co w tym tekście oznacza „nadmiar warzyw”?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Warzywa, które należą do jednego uczestnika."
+            },
+            {
+              "id": "B",
+              "text": "Warzywa, które są już gotowe do zebrania."
+            },
+            {
+              "id": "C",
+              "text": "Warzywa, których uczestnicy już nie potrzebują."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-042",
+      "targetLevel": "A2",
+      "title": "Pomysły mieszkańców",
+      "passage": "Co można zmienić w naszej okolicy? W tym roku urząd miasta pyta o to mieszkańców. Każdy może przedstawić swój pomysł. Jedni chcą postawić ławki, inni proponują stojaki na rowery albo zajęcia dla dzieci. Miejsce, którego dotyczy projekt, musi być otwarte dla wszystkich. Miasto podaje też kwotę, którą może wydać. Projekt nie może kosztować więcej.\n\nNajpierw pracownicy urzędu sprawdzają cenę i to, czy przepisy pozwalają wykonać projekt. Czasem autor musi jeszcze coś dokładniej opisać. Potem mieszkańcy głosują. Mogą to zrobić w internecie albo w jednym z kilku punktów w mieście. Każdy głosuje raz, ale może zaznaczyć kilka pomysłów.\n\nW zeszłym roku mieszkańcy wybrali remont boiska i nowe drzewa przy szkole. Nie wszystkie prace są już gotowe. Jeśli prace trwają dłużej, niż planowano, urząd wyjaśnia mieszkańcom, dlaczego tak się dzieje. Dzięki temu łatwiej zrozumieć, na co miasto wydaje wspólne pieniądze.",
+      "questions": [
+        {
+          "id": "q1",
+          "question": "O czym jest cały tekst?",
+          "options": [
+            {
+              "id": "A",
+              "text": "O tym, jak urząd szuka firmy do remontu boiska."
+            },
+            {
+              "id": "B",
+              "text": "O tym, jak szkoła urządza zajęcia dla dzieci w parku."
+            },
+            {
+              "id": "C",
+              "text": "O tym, jak mieszkańcy zgłaszają i wybierają pomysły dla miasta."
+            }
+          ]
+        },
+        {
+          "id": "q2",
+          "question": "Jak mieszkaniec może oddać głos?",
+          "options": [
+            {
+              "id": "A",
+              "text": "W internecie albo w wybranym punkcie w mieście."
+            },
+            {
+              "id": "B",
+              "text": "W wybranym punkcie albo listem do szkoły."
+            },
+            {
+              "id": "C",
+              "text": "W internecie albo podczas rozmowy telefonicznej."
+            }
+          ]
+        },
+        {
+          "id": "q3",
+          "question": "Dlaczego urząd sprawdza cenę projektu?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Od ceny zależy liczba głosów mieszkańca."
+            },
+            {
+              "id": "B",
+              "text": "Miasto może wydać tylko określoną sumę."
+            },
+            {
+              "id": "C",
+              "text": "Autor musi dostać zwrot pieniędzy za swój pomysł."
+            }
+          ]
+        },
+        {
+          "id": "q4",
+          "question": "Ktoś proponuje ławkę na tanim, ale zamkniętym podwórku jednej rodziny. Co trzeba zmienić?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Dodać do projektu stojak na rowery."
+            },
+            {
+              "id": "B",
+              "text": "Wybrać miejsce dostępne dla innych ludzi."
+            },
+            {
+              "id": "C",
+              "text": "Zaproponować jeszcze niższą cenę ławki."
+            }
+          ]
+        },
+        {
+          "id": "q5",
+          "question": "Co znaczy w tekście „oddać głos”, czyli „zagłosować”?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Opisać własny pomysł przed sprawdzeniem ceny."
+            },
+            {
+              "id": "B",
+              "text": "Wskazać pomysł, który się popiera."
+            },
+            {
+              "id": "C",
+              "text": "Wyjaśnić, dlaczego prace jeszcze trwają."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-043",
+      "targetLevel": "A2",
+      "title": "Wizyta, którą trzeba przełożyć",
+      "passage": "Ewa ma umówioną wizytę kontrolną u dentysty w środę o jedenastej. We wtorek dowiaduje się jednak, że w tym samym czasie będzie musiała uczestniczyć w ważnym spotkaniu w pracy. Dzwoni więc do gabinetu, aby znaleźć inny termin.\n\n— Dzień dobry, chciałabym przełożyć jutrzejszą wizytę. Czy lekarz przyjmuje jeszcze w tym tygodniu? — pyta Ewa.\n\n— W czwartek mamy wolne miejsce o dziewiątej, a w piątek o piętnastej trzydzieści — odpowiada recepcjonistka.\n\n— W czwartek muszę być w biurze od ósmej. W piątek mogę wyjść wcześniej. Czy ten drugi termin jest nadal aktualny?\n\n— Tak, zapisuję panią na piątek. Poprzednią wizytę anuluję. Proszę przyjść dziesięć minut przed czasem, ponieważ trzeba zaktualizować dane w dokumentacji.\n\nEwa zapisuje nowy termin w kalendarzu. Prosi również o wiadomość z potwierdzeniem. Otrzymuje ją kilka minut później i może spokojnie zaplanować resztę tygodnia. Nie musi już wybierać między wizytą a obowiązkami zawodowymi.",
+      "questions": [
+        {
+          "id": "q1",
+          "question": "Po co Ewa dzwoni do gabinetu?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Chce zmienić termin umówionej wizyty."
+            },
+            {
+              "id": "B",
+              "text": "Chce zapytać, ile potrwa wizyta kontrolna."
+            },
+            {
+              "id": "C",
+              "text": "Chce potwierdzić godzinę środowej wizyty."
+            }
+          ]
+        },
+        {
+          "id": "q2",
+          "question": "Na kiedy ostatecznie zapisano Ewę?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Na piątek o piętnastej trzydzieści."
+            },
+            {
+              "id": "B",
+              "text": "Na czwartek o dziewiątej."
+            },
+            {
+              "id": "C",
+              "text": "Na środę o jedenastej."
+            }
+          ]
+        },
+        {
+          "id": "q3",
+          "question": "Dlaczego Ewa ma przyjść wcześniej?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Lekarz chce zacząć badanie dziesięć minut wcześniej."
+            },
+            {
+              "id": "B",
+              "text": "Gabinet musi sprawdzić i poprawić jej dane."
+            },
+            {
+              "id": "C",
+              "text": "Recepcjonistka chce na miejscu potwierdzić wolny termin."
+            }
+          ]
+        },
+        {
+          "id": "q4",
+          "question": "O której Ewa powinna być w gabinecie?",
+          "options": [
+            {
+              "id": "A",
+              "text": "O piętnastej dwadzieścia."
+            },
+            {
+              "id": "B",
+              "text": "O piętnastej czterdzieści."
+            },
+            {
+              "id": "C",
+              "text": "O piętnastej trzydzieści."
+            }
+          ]
+        },
+        {
+          "id": "q5",
+          "question": "Co tutaj znaczy „przełożyć wizytę”?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Odwołać wizytę bez ustalania nowej daty."
+            },
+            {
+              "id": "B",
+              "text": "Potwierdzić wcześniej umówioną wizytę."
+            },
+            {
+              "id": "C",
+              "text": "Umówić tę wizytę na inny termin."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-044",
+      "targetLevel": "A2",
+      "title": "Spacer po pracy",
+      "passage": "Robert pracuje przy komputerze. Po pracy często czuje się zmęczony i najchętniej siada przed telewizorem. Chciał jednak więcej się ruszać. Postanowił zacząć od spacerów po parku niedaleko domu. Na spacer zwykle przeznacza około dwudziestu minut. Nie planuje na razie długich treningów.\n\nNa początku często zapominał o swoim postanowieniu. Kiedy wreszcie wstawał sprzed telewizora, w parku było już ciemno. Teraz przed pracą stawia wygodne buty przy drzwiach. Gdy kończy pracę, widzi je i od razu pamięta o spacerze. Dwa razy w tygodniu umawia się z sąsiadem. W pozostałe dni może spacerować sam.\n\nPo miesiącu Robert zauważył, że coraz łatwiej jest mu wyjść z domu. Kiedy pada, czasem wybiera krótszą trasę, a czasem zostaje w domu. Jeden wieczór bez spaceru nie jest dla niego problemem. Zależy mu na tym, żeby regularnie się ruszać także wtedy, gdy ma dużo pracy.",
+      "questions": [
+        {
+          "id": "q1",
+          "question": "O czym jest tekst?",
+          "options": [
+            {
+              "id": "A",
+              "text": "O tym, jak Robert i sąsiad przygotowują wspólny trening."
+            },
+            {
+              "id": "B",
+              "text": "O tym, jak Robert szuka lepszej drogi z pracy do domu."
+            },
+            {
+              "id": "C",
+              "text": "O tym, jak Robert wprowadza spacery do swojego dnia."
+            }
+          ]
+        },
+        {
+          "id": "q2",
+          "question": "Jak często Robert planuje spacer z sąsiadem?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Dwa razy w tygodniu."
+            },
+            {
+              "id": "B",
+              "text": "Co wieczór po pracy."
+            },
+            {
+              "id": "C",
+              "text": "W każdy weekend, raz w tygodniu."
+            }
+          ]
+        },
+        {
+          "id": "q3",
+          "question": "Dlaczego Robert stawia buty przy drzwiach?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Ich widok przypomina mu o spacerze."
+            },
+            {
+              "id": "B",
+              "text": "Robert potrzebuje ich rano w drodze do pracy."
+            },
+            {
+              "id": "C",
+              "text": "Sąsiad po butach poznaje, czy Robert jest w domu."
+            }
+          ]
+        },
+        {
+          "id": "q4",
+          "question": "Co Robert prawdopodobnie zrobi po deszczowym wieczorze bez spaceru?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Wróci do spacerów, kiedy znów będzie mógł wyjść."
+            },
+            {
+              "id": "B",
+              "text": "Z kolejnym wyjściem zaczeka na spotkanie z sąsiadem."
+            },
+            {
+              "id": "C",
+              "text": "Następny spacer zaplanuje dwa razy dłuższy."
+            }
+          ]
+        },
+        {
+          "id": "q5",
+          "question": "Co oznacza tu „postanowienie”?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Prośbę z pracy, żeby Robert więcej się ruszał."
+            },
+            {
+              "id": "B",
+              "text": "Zaproszenie od sąsiada na spacer po parku."
+            },
+            {
+              "id": "C",
+              "text": "Decyzję Roberta, że zacznie chodzić na spacery."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-045",
+      "targetLevel": "A2",
+      "title": "Badania w miejscu pracy",
+      "passage": "Przez dwa dni w pewnej firmie można było bezpłatnie skorzystać z badań. Na miejsce przyjechali lekarze i pielęgniarki. Spotykali się z pracownikami w osobnym pokoju. Nie trzeba było przychodzić do firmy po pracy. Każdy sam decydował, czy chce wziąć udział w badaniach.\n\nŻeby zarezerwować godzinę, trzeba było wypełnić formularz. Kilka osób miało trudności ze znalezieniem wolnej godziny. Dlatego organizatorzy dodali terminy na drugi dzień. Każdy uczestnik dostał swoje wyniki od personelu medycznego. Kierownicy dowiedzieli się tylko, ile osób przyszło na badania.\n\nPo tych dwóch dniach pracownicy podzielili się pomysłami. Jedni chcieli, żeby badania w firmie odbywały się częściej. Inni zaproponowali krótkie zajęcia o tym, jak odpoczywać i organizować pracę. Firma chce najpierw poznać opinie pracowników, a potem zaplanować kolejne spotkanie. Lekarze przypomnieli, że jeśli ktoś potrzebuje dalszych badań, spotkanie w firmie nie zastąpi osobnej wizyty.",
+      "questions": [
+        {
+          "id": "q1",
+          "question": "Co opisuje tekst?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Jak firma wybrała datę następnego spotkania z lekarzami."
+            },
+            {
+              "id": "B",
+              "text": "Jak firma zorganizowała badania dla chętnych pracowników."
+            },
+            {
+              "id": "C",
+              "text": "Jak firma prowadziła zajęcia o odpoczynku w pracy."
+            }
+          ]
+        },
+        {
+          "id": "q2",
+          "question": "Jaką informację dostali kierownicy?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Kto zarezerwował ostatni wolny termin."
+            },
+            {
+              "id": "B",
+              "text": "Kto potrzebuje jeszcze jednej wizyty."
+            },
+            {
+              "id": "C",
+              "text": "Ile osób skorzystało z badań."
+            }
+          ]
+        },
+        {
+          "id": "q3",
+          "question": "Dlaczego dodano terminy na drugi dzień?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Pierwszy dzień był przeznaczony dla kierowników."
+            },
+            {
+              "id": "B",
+              "text": "Pracownicy chcieli przyjść dopiero po pracy."
+            },
+            {
+              "id": "C",
+              "text": "Trudno było znaleźć wolną godzinę."
+            }
+          ]
+        },
+        {
+          "id": "q4",
+          "question": "Kierownik chce się dowiedzieć, jaki wynik dostała pani Anna. Co może zrobić, jeśli Anna chce mu o tym opowiedzieć?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Sprawdzić wynik w formularzu do rezerwacji."
+            },
+            {
+              "id": "B",
+              "text": "Odczytać wynik z informacji dla kierowników."
+            },
+            {
+              "id": "C",
+              "text": "Porozmawiać z Anną o jej wyniku."
+            }
+          ]
+        },
+        {
+          "id": "q5",
+          "question": "Co tu znaczy „zarezerwować godzinę”?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Sprawdzić, ile trwało badanie."
+            },
+            {
+              "id": "B",
+              "text": "Zapisać się na wybraną porę badania."
+            },
+            {
+              "id": "C",
+              "text": "Zapisać, o której zakończono badanie."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-046",
+      "targetLevel": "A2",
+      "title": "Nowa grupa na zajęciach",
+      "passage": "W centrum rekreacji powstała grupa gimnastyczna dla dorosłych. Na pierwsze spotkanie przyszli młodzi ludzie i osoby na emeryturze. Nie wszyscy mieli doświadczenie. Trener powiedział na początku, że każdy może ćwiczyć we własnym tempie. Uczestnicy nie muszą robić wszystkiego tak samo jak osoba obok.\n\nTrener pokazywał dwa sposoby wykonania ćwiczenia. Każdy wybierał wersję łatwiejszą albo trudniejszą. Można też było zrobić krótką przerwę. Trener prosił, żeby powiedzieć mu, jeśli jakieś ćwiczenie sprawia trudność. Po spotkaniu kilka osób zostało w sali. Chciały porozmawiać o tym, o której będą następne zajęcia.\n\nNiektórzy uczestnicy pracują do późnego popołudnia. Organizatorzy zaproponowali więc dwa terminy w tygodniu: jeden rano, drugi wieczorem. Każdy może wybrać dogodną dla siebie porę. Po miesiącu większość uczestników chciała nadal chodzić na zajęcia. Podobało im się, że w grupie jest spokojnie i że sami mogą zdecydować, jak będą ćwiczyć.",
+      "questions": [
+        {
+          "id": "q1",
+          "question": "Co wyróżnia opisane zajęcia?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Uczestnicy przygotowują własne ćwiczenia i pokazują je trenerowi."
+            },
+            {
+              "id": "B",
+              "text": "Uczestnicy mogą dobrać ćwiczenia i porę spotkania do swoich potrzeb."
+            },
+            {
+              "id": "C",
+              "text": "Trener przygotowuje osobną grupę dla każdego wieku."
+            }
+          ]
+        },
+        {
+          "id": "q2",
+          "question": "O czym kilka osób chciało porozmawiać po pierwszych zajęciach?",
+          "options": [
+            {
+              "id": "A",
+              "text": "O godzinach kolejnych spotkań."
+            },
+            {
+              "id": "B",
+              "text": "O liczbie osób w sali podczas zajęć."
+            },
+            {
+              "id": "C",
+              "text": "O długości przerw między ćwiczeniami."
+            }
+          ]
+        },
+        {
+          "id": "q3",
+          "question": "Dlaczego organizatorzy proponują także wieczorne zajęcia?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Część osób długo pracuje w ciągu dnia."
+            },
+            {
+              "id": "B",
+              "text": "Trener chce wieczorem pokazywać trudniejszą wersję ćwiczeń."
+            },
+            {
+              "id": "C",
+              "text": "Część osób chce powtórzyć rano i wieczorem te same ćwiczenia."
+            }
+          ]
+        },
+        {
+          "id": "q4",
+          "question": "Marta zaczyna ćwiczyć, a jej koleżanka ćwiczy od lat. Jak mogą skorzystać z tej grupy?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Przyjść razem i wybrać różne wersje ćwiczenia."
+            },
+            {
+              "id": "B",
+              "text": "Przyjść razem, kiedy Marta nauczy się ćwiczeń koleżanki."
+            },
+            {
+              "id": "C",
+              "text": "Przyjść na różne godziny, bo rano ćwiczą początkujący."
+            }
+          ]
+        },
+        {
+          "id": "q5",
+          "question": "Co tu znaczy „we własnym tempie”?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Tak długo, jak ćwiczy osoba obok."
+            },
+            {
+              "id": "B",
+              "text": "Tak szybko, jak danej osobie odpowiada."
+            },
+            {
+              "id": "C",
+              "text": "W godzinie wybranej na początek zajęć."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-047",
+      "targetLevel": "A2",
+      "title": "W aptece przed wyjazdem",
+      "passage": "Anna szykowała się na krótką wycieczkę. Miała już swoje leki, ale chciała uzupełnić małą apteczkę. Podczas poprzedniego wyjazdu otarła piętę. Pamiętała, ile czasu zajęło jej wtedy szukanie sklepu w obcym mieście.\n\nW aptece poprosiła o plastry i małe opakowanie środka do dezynfekcji. Farmaceutka spytała, czy Anna chce kupić zwykłe plastry, czy plastry na otarcia. Anna potrzebowała obu rodzajów. Nie chciała jednak dużych opakowań, bo wyjeżdżała tylko na cztery dni. Farmaceutka pokazała jej dwa małe zestawy i wyjaśniła różnicę między nimi. Anna wybrała potrzebne rzeczy.\n\nPrzy okazji zapytała, jak przechowywać jeden z leków, które miała w domu. Farmaceutka poradziła jej sprawdzić tę informację w ulotce z opakowania tego leku. Po powrocie z apteki Anna sprawdziła daty ważności. Potem włożyła apteczkę do plecaka tak, żeby łatwo było ją wyjąć. Reszta rzeczy z domowej szafki została w domu.",
+      "questions": [
+        {
+          "id": "q1",
+          "question": "Po co Anna przyszła do apteki?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Chciała znaleźć zestaw, który zastąpi jej domową apteczkę."
+            },
+            {
+              "id": "B",
+              "text": "Chciała wymienić swoje leki na mniejsze opakowania."
+            },
+            {
+              "id": "C",
+              "text": "Chciała dokupić kilka rzeczy do apteczki na wycieczkę."
+            }
+          ]
+        },
+        {
+          "id": "q2",
+          "question": "Kiedy Anna sprawdziła daty ważności?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Przed wyjściem do apteki."
+            },
+            {
+              "id": "B",
+              "text": "Podczas oglądania zestawów w aptece."
+            },
+            {
+              "id": "C",
+              "text": "Po powrocie z apteki."
+            }
+          ]
+        },
+        {
+          "id": "q3",
+          "question": "Dlaczego Anna wybrała małe opakowania?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Chciała zwolnić miejsce w domowej szafce."
+            },
+            {
+              "id": "B",
+              "text": "W domu miała już oba rodzaje plastrów."
+            },
+            {
+              "id": "C",
+              "text": "Wycieczka miała trwać tylko kilka dni."
+            }
+          ]
+        },
+        {
+          "id": "q4",
+          "question": "Które miejsce w plecaku Anna najchętniej wybierze na apteczkę?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Środek torby z ubraniami włożonej do plecaka."
+            },
+            {
+              "id": "B",
+              "text": "Dno plecaka pod zapasowymi ubraniami."
+            },
+            {
+              "id": "C",
+              "text": "Kieszeń, do której można szybko sięgnąć."
+            }
+          ]
+        },
+        {
+          "id": "q5",
+          "question": "Co tutaj znaczy „uzupełnić” apteczkę?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Dodać to, czego w niej brakuje."
+            },
+            {
+              "id": "B",
+              "text": "Zamienić jej zawartość na nowy zestaw."
+            },
+            {
+              "id": "C",
+              "text": "Sprawdzić, co już w niej jest."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-048",
+      "targetLevel": "A2",
+      "title": "Zmiana codziennych zwyczajów",
+      "passage": "Kasia chciała mieć po pracy więcej czasu na odpoczynek. W ciągu dnia często kupowała na obiad to, co akurat znalazła w sklepie. Wieczorem za długo korzystała z telefonu. W niedzielę usiadła i zrobiła prosty plan na następny tydzień.\n\nWybrała dwa wieczory, na które nie umówiła żadnych dodatkowych spotkań. Zapisała też kilka pomysłów na proste posiłki i kupiła produkty. Nie chciała planować każdej godziny. W pracy czasem niespodziewanie dostawała nowe zadanie i musiała zmienić plany na resztę dnia. Pół godziny przed snem odkładała telefon na półkę. Miała wtedy chwilę na spokojne zajęcia.\n\nPo pierwszym tygodniu Kasia zauważyła, że częściej ma gotowy posiłek i krócej korzysta z telefonu przed snem. Nie każdego dnia wszystko się udało, ale chciała spróbować jeszcze przez tydzień. Na razie nie zamierzała wprowadzać nowych zasad. Dopiero po kolejnym tygodniu chciała zdecydować, co dalej.",
+      "questions": [
+        {
+          "id": "q1",
+          "question": "O czym jest tekst?",
+          "options": [
+            {
+              "id": "A",
+              "text": "O tym, jak Kasia organizuje spotkania dla kolegów z pracy."
+            },
+            {
+              "id": "B",
+              "text": "O małych zmianach w codziennym życiu Kasi."
+            },
+            {
+              "id": "C",
+              "text": "O tym, jak Kasia wybiera sklep z gotowymi obiadami."
+            }
+          ]
+        },
+        {
+          "id": "q2",
+          "question": "Kiedy Kasia odkładała telefon?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Zaraz po zakończeniu pracy."
+            },
+            {
+              "id": "B",
+              "text": "Pół godziny przed snem."
+            },
+            {
+              "id": "C",
+              "text": "Przed przygotowaniem obiadu."
+            }
+          ]
+        },
+        {
+          "id": "q3",
+          "question": "Dlaczego Kasia nie planowała każdej godziny?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Nie wiedziała jeszcze, jakie produkty kupi na obiad."
+            },
+            {
+              "id": "B",
+              "text": "Każdego wieczoru chciała spotykać się z kimś innym."
+            },
+            {
+              "id": "C",
+              "text": "Nowe zadania w pracy mogły zmienić jej plany."
+            }
+          ]
+        },
+        {
+          "id": "q4",
+          "question": "Koleżanka proponuje Kasi nowe zasady już na drugi tydzień. Co Kasia najpewniej odpowie?",
+          "options": [
+            {
+              "id": "A",
+              "text": "„Wolę teraz zrobić sobie tydzień przerwy od planowania”."
+            },
+            {
+              "id": "B",
+              "text": "„Chcę jeszcze sprawdzić, jak działają obecne zasady”."
+            },
+            {
+              "id": "C",
+              "text": "„Zacznę od nowych zasad, a potem wrócę do starych”."
+            }
+          ]
+        },
+        {
+          "id": "q5",
+          "question": "Co oznacza tu „niespodziewanie”?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Tak, że Kasia wcześniej o tym nie wiedziała."
+            },
+            {
+              "id": "B",
+              "text": "Tak często, że Kasia mogła to zaplanować."
+            },
+            {
+              "id": "C",
+              "text": "Tak późno, że Kasia kończyła już pracę."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-049",
+      "targetLevel": "A2",
+      "title": "Pytania do specjalisty",
+      "passage": "Dom kultury zaprosił na spotkanie osoby, które dużo pracują przy biurku. Gościem był fizjoterapeuta. Miał opowiedzieć o tym, jak urządzić miejsce do pracy i dlaczego ważne są przerwy. Przed spotkaniem uczestnicy przysłali mu pytania. Dzięki nim przygotował przykłady związane ze sprawami, o które pytało wiele osób.\n\nNajpierw gość mówił o tym, jak ludzie siedzą przy pracy. Wyjaśnił, że jedna pozycja nie będzie wygodna dla wszystkich przez cały dzień. Potem uczestnicy próbowali inaczej ustawić krzesło i monitor. Spotkanie było dla całej grupy. Fizjoterapeuta nie badał poszczególnych osób.\n\nNa koniec uczestnicy dostali kartki z podsumowaniem. Były tam najważniejsze informacje ze spotkania i wiadomość, gdzie można umówić się na osobną rozmowę ze specjalistą. Kilka osób chciałoby też porozmawiać o odpoczynku po pracy. Organizatorzy pytają teraz uczestników o zdanie. Zastanawiają się nad datą kolejnego bezpłatnego spotkania.",
+      "questions": [
+        {
+          "id": "q1",
+          "question": "Po co dom kultury zaprosił fizjoterapeutę?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Żeby zbadał osoby, które przesłały pytania o swoje zdrowie."
+            },
+            {
+              "id": "B",
+              "text": "Żeby poprowadził spotkanie o odpoczynku po zakończeniu pracy."
+            },
+            {
+              "id": "C",
+              "text": "Żeby opowiedział o miejscu pracy przy biurku i przerwach."
+            }
+          ]
+        },
+        {
+          "id": "q2",
+          "question": "Co uczestnicy robili po pierwszej części spotkania?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Próbowali zmienić ustawienie krzesła i monitora."
+            },
+            {
+              "id": "B",
+              "text": "Ustalali daty osobnych rozmów z fizjoterapeutą."
+            },
+            {
+              "id": "C",
+              "text": "Przesyłali fizjoterapeucie pierwsze pytania."
+            }
+          ]
+        },
+        {
+          "id": "q3",
+          "question": "Dlaczego pytania przesłane przed spotkaniem pomogły fizjoterapeucie?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Mógł wybrać przykłady dotyczące częstych problemów."
+            },
+            {
+              "id": "B",
+              "text": "Mógł ustalić, kto potrzebuje osobnego badania."
+            },
+            {
+              "id": "C",
+              "text": "Mógł podzielić uczestników na grupy do ćwiczeń."
+            }
+          ]
+        },
+        {
+          "id": "q4",
+          "question": "Piotr chce omówić ze specjalistą tylko swój problem. Co najlepiej odpowiada jego celowi?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Skorzystanie z informacji na kartce i umówienie osobnej rozmowy."
+            },
+            {
+              "id": "B",
+              "text": "Napisanie organizatorom opinii o ustawianiu krzesła."
+            },
+            {
+              "id": "C",
+              "text": "Udział w następnym spotkaniu grupowym o odpoczynku."
+            }
+          ]
+        },
+        {
+          "id": "q5",
+          "question": "Co oznacza tu „podsumowanie”?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Plan tematów na następne spotkanie."
+            },
+            {
+              "id": "B",
+              "text": "Zbiór pytań przesłanych przed spotkaniem."
+            },
+            {
+              "id": "C",
+              "text": "Krótki opis najważniejszych treści spotkania."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-050",
+      "targetLevel": "A2",
+      "title": "Kurs, który pasuje do mojego dnia",
+      "passage": "Dzień dobry,\n\nchciałabym zapisać się na kurs języka polskiego na poziomie A2. Pracuję do godziny szesnastej, dlatego interesują mnie zajęcia wieczorowe. Na stronie szkoły widzę dwie grupy: we wtorki i czwartki oraz w poniedziałki i środy. Druga grupa jest dla mnie wygodniejsza, ponieważ w czwartki chodzę na basen.\n\nMam już za sobą podstawowy kurs, ale nadal trudno mi rozumieć dłuższe teksty. Chciałabym też więcej mówić po polsku, szczególnie w pracy i w urzędzie. Czy na zajęciach uczniowie rozmawiają w parach? Czy nauczyciel sprawdza krótkie zadania pisemne? Nie zależy mi tylko na nauce reguł gramatycznych.\n\nMam jeszcze pytanie o materiały. Czy podręcznik jest wliczony w cenę kursu? Jeśli nie, proszę o informację, gdzie można go kupić. W przyszłym tygodniu mogę przyjść do szkoły na rozmowę i test poziomujący. Proszę o odpowiedź e-mailem, ponieważ w godzinach pracy rzadko odbieram telefon.\n\nZ poważaniem\nNatalia Kowal",
+      "questions": [
+        {
+          "id": "q1",
+          "question": "Po co Natalia pisze do szkoły?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Chce poprosić nauczyciela o wynik napisanego testu."
+            },
+            {
+              "id": "B",
+              "text": "Chce zapisać się na odpowiedni kurs i pyta o zajęcia."
+            },
+            {
+              "id": "C",
+              "text": "Chce zmienić grupę na kursie, na który już chodzi."
+            }
+          ]
+        },
+        {
+          "id": "q2",
+          "question": "W które dni Natalia woli chodzić na zajęcia?",
+          "options": [
+            {
+              "id": "A",
+              "text": "W poniedziałki i środy."
+            },
+            {
+              "id": "B",
+              "text": "We wtorki i czwartki."
+            },
+            {
+              "id": "C",
+              "text": "W poniedziałki i czwartki."
+            }
+          ]
+        },
+        {
+          "id": "q3",
+          "question": "Dlaczego Natalia prosi o odpowiedź e-mailem?",
+          "options": [
+            {
+              "id": "A",
+              "text": "W pracy rzadko odbiera telefon."
+            },
+            {
+              "id": "B",
+              "text": "Chce dostać pisemne zadanie przed testem."
+            },
+            {
+              "id": "C",
+              "text": "Potrzebuje wiadomości, żeby kupić bilet na basen."
+            }
+          ]
+        },
+        {
+          "id": "q4",
+          "question": "Który opis zajęć najlepiej pasuje do potrzeb Natalii?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Uczymy się słów z podręcznika i samodzielnie tłumaczymy zdania."
+            },
+            {
+              "id": "B",
+              "text": "Czytamy i piszemy krótkie teksty oraz rozmawiamy w parach."
+            },
+            {
+              "id": "C",
+              "text": "Słuchamy wykładów o gramatyce i robimy testy z reguł."
+            }
+          ]
+        },
+        {
+          "id": "q5",
+          "question": "Co znaczy, że podręcznik jest „wliczony w cenę kursu”?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Uczestnik może kupić podręcznik w szkole po niższej cenie."
+            },
+            {
+              "id": "B",
+              "text": "Opłata za kurs obejmuje też podręcznik."
+            },
+            {
+              "id": "C",
+              "text": "Cenę podręcznika szkoła poda po zapisie na kurs."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

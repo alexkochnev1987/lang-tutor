@@ -1,0 +1,222 @@
+{
+  "status": "edited-awaiting-fresh-blind-review",
+  "originalBlindBlob": "ac1f1dadfac423816d4c77fa0a423227d9df4b05",
+  "originalDraftBlob": "ea35aea43d526f4eaccaf4210129e9389f71b415",
+  "preliminaryReviewCommit": "749305a64fba044690a0e63c593cbf463167dc7c",
+  "changes": [
+    {
+      "day": 54,
+      "passageChanged": true,
+      "changedQuestions": [
+        "2",
+        "5"
+      ]
+    },
+    {
+      "day": 55,
+      "passageChanged": true,
+      "changedQuestions": [
+        "1",
+        "5"
+      ]
+    },
+    {
+      "day": 56,
+      "passageChanged": true,
+      "changedQuestions": [
+        "1",
+        "2",
+        "3",
+        "5"
+      ]
+    },
+    {
+      "day": 57,
+      "passageChanged": true,
+      "changedQuestions": [
+        "1",
+        "2",
+        "3",
+        "5"
+      ]
+    },
+    {
+      "day": 58,
+      "passageChanged": true,
+      "changedQuestions": [
+        "1",
+        "4",
+        "5"
+      ]
+    },
+    {
+      "day": 59,
+      "passageChanged": true,
+      "changedQuestions": [
+        "1",
+        "5"
+      ]
+    },
+    {
+      "day": 60,
+      "passageChanged": true,
+      "changedQuestions": [
+        "3",
+        "4",
+        "5"
+      ]
+    },
+    {
+      "day": 61,
+      "passageChanged": true,
+      "changedQuestions": [
+        "1",
+        "3",
+        "4",
+        "5"
+      ]
+    },
+    {
+      "day": 62,
+      "passageChanged": true,
+      "changedQuestions": [
+        "1",
+        "3",
+        "5"
+      ]
+    },
+    {
+      "day": 63,
+      "passageChanged": true,
+      "changedQuestions": [
+        "1",
+        "3",
+        "5"
+      ]
+    }
+  ],
+  "validation": {
+    "method": "Reimplemented validateText/loadDrafts rules in connector JS; original Node CLI not executed",
+    "totalDrafts": 67,
+    "checkedDays": [
+      54,
+      63
+    ],
+    "texts": 10,
+    "questions": 50,
+    "counts": [
+      {
+        "day": 54,
+        "words": 154
+      },
+      {
+        "day": 55,
+        "words": 156
+      },
+      {
+        "day": 56,
+        "words": 150
+      },
+      {
+        "day": 57,
+        "words": 155
+      },
+      {
+        "day": 58,
+        "words": 157
+      },
+      {
+        "day": 59,
+        "words": 150
+      },
+      {
+        "day": 60,
+        "words": 152
+      },
+      {
+        "day": 61,
+        "words": 158
+      },
+      {
+        "day": 62,
+        "words": 158
+      },
+      {
+        "day": 63,
+        "words": 153
+      }
+    ],
+    "errors": []
+  },
+  "reviewLimit": "Editor is the same conversation as preliminary review. No independent second-round approval.",
+  "followupCopyEdit": [
+    {
+      "day": 54,
+      "passageChanged": false,
+      "changedQuestions": [
+        "1"
+      ]
+    },
+    {
+      "day": 55,
+      "passageChanged": true,
+      "changedQuestions": [
+        "1",
+        "2"
+      ]
+    },
+    {
+      "day": 56,
+      "passageChanged": true,
+      "changedQuestions": [
+        "1",
+        "5"
+      ]
+    },
+    {
+      "day": 57,
+      "passageChanged": false,
+      "changedQuestions": [
+        "4"
+      ]
+    },
+    {
+      "day": 58,
+      "passageChanged": true,
+      "changedQuestions": []
+    },
+    {
+      "day": 59,
+      "passageChanged": true,
+      "changedQuestions": []
+    },
+    {
+      "day": 60,
+      "passageChanged": false,
+      "changedQuestions": [
+        "4"
+      ]
+    },
+    {
+      "day": 61,
+      "passageChanged": false,
+      "changedQuestions": [
+        "4"
+      ]
+    },
+    {
+      "day": 62,
+      "passageChanged": false,
+      "changedQuestions": [
+        "3"
+      ]
+    },
+    {
+      "day": 63,
+      "passageChanged": true,
+      "changedQuestions": [
+        "4"
+      ]
+    }
+  ]
+}

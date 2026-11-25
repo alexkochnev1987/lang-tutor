@@ -1,0 +1,691 @@
+{
+  "instructions": "You are a Polish-as-a-foreign-language examiner reviewing an anonymous reading practice corpus. You have no answer keys or prior conversation. Use ONLY the passage and options. Do not look up the author or repository. Independently solve each item. For each question return its ID, chosen option ID (A/B/C, or null if no uniquely supported option), exact evidence quote from the passage, ambiguity flag, distractor plausibility score 0–100, and a concise issue description. Then evaluate each passage's naturalness, CEFR suitability for the provided target level, question quality, unambiguity, topic coherence and vocabulary variety, each on a 0–100 scale. Distinguish errors, stylistic preferences and level mismatches. Flag any grammatical error, unsupported answer, trivial distractor or false inference. Give suggested improvements without altering the provided data. Return JSON with one result per passage; no keys are supplied. Weights: naturalness 25%, CEFR 20%, question quality 20%, ambiguity 20%, coherence 10%, vocabulary 5%. Be strict; do not approve solely because a passage has no grammatical errors.",
+  "passages": [
+    {
+      "id": "pl-b1.reading.day-051",
+      "targetLevel": "A2",
+      "title": "Jak Marek uczy się po lekcjach",
+      "passage": "Na lekcji historii Marek słuchał opowieści o ważnym wydarzeniu. Kiedy nauczyciel skończył mówić, w zeszycie Marka brakowało kilku zdań. Za dwa dni klasa pisze sprawdzian, więc po powrocie do domu Marek chce uzupełnić notatki. Siostra pokazuje mu Zintegrowaną Platformę Edukacyjną. To strona z darmowymi materiałami do nauki, którą prowadzi Ministerstwo Edukacji Narodowej.\n\nMarek znajduje tekst o tym samym wydarzeniu. Czyta go dwa razy, a potem zapisuje w zeszycie kilka zdań własnymi słowami. Jutro przed lekcją porówna je z notatkami kolegi. Dziś nie musi już czekać, aż kolega wróci z treningu.\n\nSiostra Marka uczy w szkole. Chce przygotować na platformie ćwiczenie dla swojej klasy. Żeby otworzyć edytor i napisać własne zadanie, musi się zalogować. Marek też pyta o konto. Siostra pokazuje mu na ekranie inne ogólnodostępne teksty. Każdy może je otworzyć i przeczytać, tak jak Marek przed chwilą.",
+      "questions": [
+        {
+          "id": "q1",
+          "question": "Co najlepiej opisuje cały tekst?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Rodzeństwo wspólnie pisze ćwiczenie z historii dla klasy Marka."
+            },
+            {
+              "id": "B",
+              "text": "Rodzeństwo porównuje dwa sposoby prowadzenia notatek na lekcji."
+            },
+            {
+              "id": "C",
+              "text": "Rodzeństwo korzysta z jednej strony do różnych zadań związanych z nauką."
+            }
+          ]
+        },
+        {
+          "id": "q2",
+          "question": "Kiedy Marek chce porównać swoje notatki z notatkami kolegi?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Za dwa dni po sprawdzianie."
+            },
+            {
+              "id": "B",
+              "text": "Jutro przed lekcją."
+            },
+            {
+              "id": "C",
+              "text": "Wieczorem po treningu kolegi."
+            }
+          ]
+        },
+        {
+          "id": "q3",
+          "question": "Dlaczego Marek szuka tekstu o wydarzeniu?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Chce sprawdzić, co kolega napisał po treningu."
+            },
+            {
+              "id": "B",
+              "text": "Chce wybrać temat dla klasy siostry."
+            },
+            {
+              "id": "C",
+              "text": "Chce dopisać informacje, których brakuje w jego zeszycie."
+            }
+          ]
+        },
+        {
+          "id": "q4",
+          "question": "Kolega skończy trening później, niż planował. Co Marek może mimo to zrobić jeszcze dziś?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Ustalić na podstawie strony, co dokładnie zapisał kolega."
+            },
+            {
+              "id": "B",
+              "text": "Przygotować swoją część notatek do jutrzejszego porównania."
+            },
+            {
+              "id": "C",
+              "text": "Porównać oba zeszyty podczas spotkania przed lekcją."
+            }
+          ]
+        },
+        {
+          "id": "q5",
+          "question": "Które teksty siostra nazywa „ogólnodostępnymi”?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Teksty, które można czytać bez własnego konta."
+            },
+            {
+              "id": "B",
+              "text": "Teksty, które nauczyciel wysyła swojej klasie po zalogowaniu."
+            },
+            {
+              "id": "C",
+              "text": "Teksty, które uczeń sam zapisuje w swoim zeszycie."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-052",
+      "targetLevel": "A2",
+      "title": "Co kupić do szkolnej biblioteki?",
+      "passage": "W szkolnej bibliotece ma się pojawić kilka nowych książek. Szkoła korzysta z programu, który pomaga kupować książki do biblioteki. Zanim bibliotekarka zrobi zakupy, spotyka się z przedstawicielami uczniów i rodziców. Prosi ich o tytuły i pyta, kto chciałby czytać takie książki. Na kartce zapisuje wszystkie pomysły.\n\nUczniowie z klasy Oli proszą o książki o przyrodzie. Ola interesuje się ptakami i proponuje książkę o ich życiu. Jej kolega woli czytać o drzewach. Rodzice też mają kilka pomysłów. Lista jest długa, a teraz szkoła może kupić tylko część tytułów. Bibliotekarka chce więc wiedzieć, które książki przydadzą się większej grupie.\n\nSam zakup książek to dopiero początek. Klasa planuje spotkanie o ptakach. Uczniowie przeczytają fragmenty nowych książek i opowiedzą, co ich zaciekawiło. Osoby, które będą chciały sięgnąć po następną książkę, będą mogły wypożyczyć ją także podczas przerwy w nauce.",
+      "questions": [
+        {
+          "id": "q1",
+          "question": "Jak szkoła zachęca uczniów do czytania?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Pozwala każdej klasie samodzielnie kupić książki na wybrany temat."
+            },
+            {
+              "id": "B",
+              "text": "Zaprasza uczniów na spotkanie, podczas którego rodzice czytają im wybrane fragmenty."
+            },
+            {
+              "id": "C",
+              "text": "Pyta czytelników o wybór książek i planuje zajęcia z nowymi tytułami."
+            }
+          ]
+        },
+        {
+          "id": "q2",
+          "question": "Co bibliotekarka zapisuje podczas rozmowy?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Nazwiska uczniów, którzy wypożyczą nowe książki."
+            },
+            {
+              "id": "B",
+              "text": "Wszystkie propozycje uczestników spotkania."
+            },
+            {
+              "id": "C",
+              "text": "Tytuły książek już kupionych przez szkołę."
+            }
+          ]
+        },
+        {
+          "id": "q3",
+          "question": "Dlaczego bibliotekarka pyta, komu przydadzą się książki?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Szkoła chce ustalić, kto opowie o drzewach na spotkaniu."
+            },
+            {
+              "id": "B",
+              "text": "Szkoła musi wcześniej ustalić kolejność wypożyczania książek."
+            },
+            {
+              "id": "C",
+              "text": "Szkoła musi wybrać część tytułów z długiej listy."
+            }
+          ]
+        },
+        {
+          "id": "q4",
+          "question": "Ola przeczytała książkę o ptakach. Która informacja o niej najbardziej pomoże klasie podczas planowanego spotkania?",
+          "options": [
+            {
+              "id": "A",
+              "text": "W którym miejscu na półce stoi ta książka."
+            },
+            {
+              "id": "B",
+              "text": "Który rozdział pomógł jej poznać zwyczaje ptaków."
+            },
+            {
+              "id": "C",
+              "text": "Ile osób można dopisać do listy zakupów."
+            }
+          ]
+        },
+        {
+          "id": "q5",
+          "question": "Co znaczy tutaj „sięgnąć po następną książkę”?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Dopisać kolejny tytuł do listy zakupów."
+            },
+            {
+              "id": "B",
+              "text": "Wybrać kolejną książkę do czytania."
+            },
+            {
+              "id": "C",
+              "text": "Przynieść kolejną książkę na spotkanie z rodzicami."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-053",
+      "targetLevel": "A2",
+      "title": "Daria wybiera ćwiczenia",
+      "passage": "Daria mieszka w Polsce od kilku miesięcy. W sklepie potrafi poprosić o potrzebne produkty. Umie też krótko opowiedzieć o sobie. Kiedy jednak dostaje od koleżanki długą wiadomość po polsku, nieraz musi ją przeczytać kilka razy. Dlatego chce więcej czytać w domu.\n\nNa stronie Urzędu do Spraw Cudzoziemców znajduje materiały do nauki polskiego. Są tam książki dla początkujących, materiały A2 z elementami B1 oraz materiały dla osób, które znają już polski na poziomie B1. Daria na początek wybiera książkę A2. Nie chce zaczynać od bardzo trudnych tekstów.\n\nW poniedziałek Daria czyta rozdział o zakupach. Rozumie tekst i dobrze odpowiada na pytania. We wtorek próbuje przeczytać wiadomość o spotkaniu. Zna kilka słów, ale nie wie, o co prosi autor. W zeszycie robi dwie listy. Na pierwszej zapisuje tematy, które już zna, a na drugiej te, do których chce wrócić. Na następny wieczór wybiera ćwiczenia z drugiej listy.",
+      "questions": [
+        {
+          "id": "q1",
+          "question": "Co pokazuje przykład Darii?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Jak używać wiadomości od koleżanki podczas zakupów."
+            },
+            {
+              "id": "B",
+              "text": "Jak wybierać materiały i planować naukę według własnych potrzeb."
+            },
+            {
+              "id": "C",
+              "text": "Jak przygotować własny podręcznik dla osób początkujących."
+            }
+          ]
+        },
+        {
+          "id": "q2",
+          "question": "Co Daria czyta w poniedziałek?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Listę ćwiczeń od koleżanki."
+            },
+            {
+              "id": "B",
+              "text": "Rozdział o zakupach."
+            },
+            {
+              "id": "C",
+              "text": "Wiadomość o spotkaniu."
+            }
+          ]
+        },
+        {
+          "id": "q3",
+          "question": "Dlaczego Daria chce więcej czytać w domu?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Chce przygotować koleżance pytania do podręcznika."
+            },
+            {
+              "id": "B",
+              "text": "Zrozumienie dłuższych wiadomości sprawia jej trudność."
+            },
+            {
+              "id": "C",
+              "text": "Potrzebuje listy polskich nazw produktów do sklepu."
+            }
+          ]
+        },
+        {
+          "id": "q4",
+          "question": "Które nowe ćwiczenie Daria najpewniej wybierze na następny wieczór?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Ułożyć listę produktów przed zakupami."
+            },
+            {
+              "id": "B",
+              "text": "Przeczytać zaproszenie i ustalić, co trzeba przynieść."
+            },
+            {
+              "id": "C",
+              "text": "Krótko przedstawić się nowej osobie."
+            }
+          ]
+        },
+        {
+          "id": "q5",
+          "question": "Co znaczy „A2 z elementami B1”?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Materiał na poziomie A2 służy do powtarzania całego poziomu B1."
+            },
+            {
+              "id": "B",
+              "text": "Po każdym rozdziale A2 trzeba rozpocząć nową książkę B1."
+            },
+            {
+              "id": "C",
+              "text": "Większość materiału jest na poziomie A2, a część na B1."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-064",
+      "targetLevel": "A2",
+      "title": "Co Emilia zrobi z butelkami?",
+      "passage": "Emilia wraca ze sklepu z dwiema butelkami wody. Obie są podobne, ale tylko na jednej widzi znak systemu kaucyjnego. W Polsce taki system działa od października 2025 roku. Gdy Emilia kupuje wodę w oznaczonej butelce, płaci za wodę i dodatkowo za opakowanie. Ta dodatkowa suma to kaucja. Emilia odzyska ją, jeśli odda pustą butelkę do punktu zbiórki. Paragon nie jest jej do tego potrzebny.\n\nWieczorem obie butelki są już puste. Emilia ogląda je jeszcze raz. Butelkę ze znakiem wkłada do torby na zakupy. Drugą odkłada osobno, żeby wyrzucić ją zgodnie z zasadami segregacji. Jej brat dziwi się, że zabiera do sklepu tylko jedną butelkę. Emilia pokazuje mu znak na opakowaniu.\n\nW sobotę Emilia znów wybiera się po zakupy. Po drodze do sklepu minie punkt zbiórki. Torbę z butelką stawia przy drzwiach, obok listy zakupów. Dzięki temu załatwi dwie sprawy podczas jednego wyjścia.",
+      "questions": [
+        {
+          "id": "q1",
+          "question": "Co wyjaśnia historia Emilii?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Jak ułożyć listę zakupów przed oddaniem opakowań."
+            },
+            {
+              "id": "B",
+              "text": "Jak wybrać tańszą wodę na podstawie znaku na opakowaniu."
+            },
+            {
+              "id": "C",
+              "text": "Jak rozpoznać butelkę z kaucją i odzyskać pieniądze."
+            }
+          ]
+        },
+        {
+          "id": "q2",
+          "question": "Gdzie Emilia wkłada pustą butelkę ze znakiem?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Do koszyka w punkcie zbiórki."
+            },
+            {
+              "id": "B",
+              "text": "Do torby na zakupy."
+            },
+            {
+              "id": "C",
+              "text": "Do miejsca na odpady w domu."
+            }
+          ]
+        },
+        {
+          "id": "q3",
+          "question": "Dlaczego Emilia ogląda puste butelki?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Chce ustalić, z której butelki pił jej brat."
+            },
+            {
+              "id": "B",
+              "text": "Chce sprawdzić, którą wodę ma dopisać do listy zakupów."
+            },
+            {
+              "id": "C",
+              "text": "Chce zdecydować, którą butelkę zabrać do punktu zbiórki."
+            }
+          ]
+        },
+        {
+          "id": "q4",
+          "question": "Brat chce pomóc Emilii w sobotę. Która propozycja pozwoli jej załatwić obie sprawy podczas tego samego wyjścia?",
+          "options": [
+            {
+              "id": "A",
+              "text": "„Poniosę torbę i zatrzymamy się przy punkcie w drodze do sklepu”."
+            },
+            {
+              "id": "B",
+              "text": "„Wezmę twoją listę, a torbę przyniosę po zakupach”."
+            },
+            {
+              "id": "C",
+              "text": "„Poszukam paragonu, zanim wrócimy do domu po torbę”."
+            }
+          ]
+        },
+        {
+          "id": "q5",
+          "question": "Co znaczy „odzyska” w zdaniu o kaucji?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Pozna cenę samej wody po odliczeniu opakowania."
+            },
+            {
+              "id": "B",
+              "text": "Dostanie z powrotem kwotę zapłaconą za opakowanie."
+            },
+            {
+              "id": "C",
+              "text": "Zapłaci za następną butelkę tyle samo co wcześniej."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-078",
+      "targetLevel": "A2",
+      "title": "Tomasz przed wizytą w banku",
+      "passage": "Tomasz chce chronić swoje dane osobowe. Jedną z ważnych informacji jest jego numer PESEL. Tomasz zastrzegł ten numer. Co to dla niego znaczy? Kiedy ktoś chce podpisać umowę kredytową, bank sprawdza, czy numer jest zastrzeżony. Dzięki temu innej osobie trudniej jest wykorzystać dane Tomasza.\n\nTeraz sam Tomasz chce pożyczyć pieniądze z banku. Zanim podpisze umowę, rozmawia z pracownicą banku. Pyta, co ma zrobić z zastrzeżonym numerem. Pracownica radzi mu sprawdzić, czy przed podpisaniem umowy musi cofnąć zastrzeżenie. Tomasz zapisuje nazwę usługi, żeby później spokojnie przeczytać o niej w domu.\n\nWieczorem otwiera oficjalną stronę z informacjami o tej usłudze. Dowiaduje się, że może cofnąć zastrzeżenie, a później znów zastrzec numer. Po podpisaniu umowy chce dalej chronić swoje dane tak jak wcześniej. W kalendarzu zostawia więc miejsce na jeszcze jedną sprawę po wizycie w banku. Sam zajmie się swoim kontem.",
+      "questions": [
+        {
+          "id": "q1",
+          "question": "O czym jest ta historia?",
+          "options": [
+            {
+              "id": "A",
+              "text": "O tym, jak Tomasz ustala z bankiem wysokość pożyczki."
+            },
+            {
+              "id": "B",
+              "text": "O tym, jak pracownica banku zakłada Tomaszowi konto przez internet."
+            },
+            {
+              "id": "C",
+              "text": "O tym, jak Tomasz dba o swój PESEL, kiedy planuje wziąć pożyczkę."
+            }
+          ]
+        },
+        {
+          "id": "q2",
+          "question": "Co Tomasz zapisuje podczas rozmowy w banku?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Termin podpisania umowy."
+            },
+            {
+              "id": "B",
+              "text": "Kwotę planowanej pożyczki."
+            },
+            {
+              "id": "C",
+              "text": "Nazwę usługi."
+            }
+          ]
+        },
+        {
+          "id": "q3",
+          "question": "Dlaczego Tomasz pyta pracownicę o swój zastrzeżony numer?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Chce zmienić numer, zanim założy konto."
+            },
+            {
+              "id": "B",
+              "text": "Chce dowiedzieć się, kto wcześniej sprawdzał jego dane."
+            },
+            {
+              "id": "C",
+              "text": "Chce przygotować się do podpisania własnej umowy."
+            }
+          ]
+        },
+        {
+          "id": "q4",
+          "question": "Przed podpisaniem umowy Tomasz cofnął zastrzeżenie. Co najpewniej wpisze do kalendarza na później?",
+          "options": [
+            {
+              "id": "A",
+              "text": "„Jeszcze raz zastrzec swój PESEL”."
+            },
+            {
+              "id": "B",
+              "text": "„Sprawdzić nazwę usługi przed pierwszą rozmową”."
+            },
+            {
+              "id": "C",
+              "text": "„Otworzyć nowe konto, żeby dostać inny numer”."
+            }
+          ]
+        },
+        {
+          "id": "q5",
+          "question": "Co znaczy „cofnąć zastrzeżenie”?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Przełożyć sprawdzenie numeru na później."
+            },
+            {
+              "id": "B",
+              "text": "Usunąć obecne zastrzeżenie numeru."
+            },
+            {
+              "id": "C",
+              "text": "Ponownie włączyć ochronę numeru."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-092",
+      "targetLevel": "B1",
+      "title": "Co zrobić z rzeczami z szafy?",
+      "passage": "Kiedy Ewa porządkuje mieszkanie, zwykle zaczyna od segregacji odpadów. W Polsce podstawowy podział obejmuje pięć grup. Osobno zbiera się papier, szkło, metale i tworzywa sztuczne, odpady biologiczne oraz pozostałe odpady. Ewa zna te grupy, ale dziś podczas sprzątania znajduje rzeczy, z którymi musi postąpić inaczej.\n\nNa dnie szafy leży torba z urwanym uchem, a obok niej kurtka, która jest na Ewę za mała. Materiał torby jest mocny. Ewa odkłada ją na krzesło obok pudełka z igłami i nićmi. Kurtkę przymierzy jutro jej siostra. Jeśli będzie na nią dobra, chętnie zabierze ją na jesienny wyjazd. W ten sposób ubranie może dalej komuś służyć.\n\nZostają jeszcze mocno zniszczone ubrania. W podstawowym systemie nie ma osobnego, szóstego pojemnika na tekstylia. Ewa sprawdza więc na stronie swojej gminy, gdzie oddać takie rzeczy. Do tego czasu zostawi je w osobnym miejscu. Przy drzwiach stoi też oznaczona butelka po napoju. Ewa zabierze ją do punktu zbiórki w ramach systemu kaucyjnego, który działa obok zwykłej segregacji.\n\nPo sprzątaniu Ewa skreśla nową torbę z listy zakupów. Rozumie, że o ilości śmieci decyduje również to, co zrobi z przedmiotem, zanim uzna go za odpad. Czasem wystarczy chwila pracy albo rozmowa z kimś, komu dana rzecz nadal może się przydać. W kuchni nadal ma tyle samo koszy co wcześniej.",
+      "questions": [
+        {
+          "id": "q1",
+          "question": "Co łączy decyzje Ewy podczas porządków?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Ewa urządza kuchnię tak, by każda znaleziona rzecz miała osobny kosz."
+            },
+            {
+              "id": "B",
+              "text": "Ewa szuka jednego miejsca, do którego odda wszystkie rzeczy z mieszkania."
+            },
+            {
+              "id": "C",
+              "text": "Ewa dobiera sposób postępowania do rzeczy i sprawdza, co może jeszcze służyć ludziom."
+            }
+          ]
+        },
+        {
+          "id": "q2",
+          "question": "Co Ewa sprawdza na stronie gminy?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Gdzie można naprawić torbę."
+            },
+            {
+              "id": "B",
+              "text": "Gdzie oddać zniszczone ubrania."
+            },
+            {
+              "id": "C",
+              "text": "Gdzie zwrócić oznaczoną butelkę."
+            }
+          ]
+        },
+        {
+          "id": "q3",
+          "question": "Dlaczego kurtka czeka na siostrę Ewy?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Siostra ma ją zanieść do punktu zbiórki tekstyliów."
+            },
+            {
+              "id": "B",
+              "text": "Siostra ma pokazać Ewie, jak naprawić kurtkę przed wyjazdem."
+            },
+            {
+              "id": "C",
+              "text": "Kurtka może pasować na siostrę i przydać się jej w podróży."
+            }
+          ]
+        },
+        {
+          "id": "q4",
+          "question": "Dlaczego Ewa mogła skreślić nową torbę z listy?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Siostra zostawi jej swoją torbę w zamian za kurtkę."
+            },
+            {
+              "id": "B",
+              "text": "Ewa spodziewa się, że po przyszyciu ucha stara torba znów się przyda."
+            },
+            {
+              "id": "C",
+              "text": "Punkt zbiórki przyjmie starą torbę razem z butelką."
+            }
+          ]
+        },
+        {
+          "id": "q5",
+          "question": "Co znaczy tutaj „skreśla nową torbę z listy zakupów”?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Dopisuje torbę do rzeczy, które siostra ma przymierzyć."
+            },
+            {
+              "id": "B",
+              "text": "Odkłada starą torbę do rzeczy przeznaczonych do oddania."
+            },
+            {
+              "id": "C",
+              "text": "Rezygnuje z planowanego kupna nowej torby."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-099",
+      "targetLevel": "B1",
+      "title": "Pierwsze spotkanie z klasyką",
+      "passage": "Co roku podczas Narodowego Czytania ludzie spotykają się, żeby razem czytać utwory polskich autorów. W wydarzeniu biorą udział między innymi szkoły i biblioteki, a także osoby prywatne. Spotkania odbywają się zarówno w Polsce, jak i za granicą. Wybór tekstu zmienia się w kolejnych latach. W 2025 roku uczestnicy czytali poezję Jana Kochanowskiego, a w 2026 roku wybrano „Dziady” Adama Mickiewicza.\n\nW jednej z bibliotek na wspólne czytanie przyszły osoby uczące się polskiego. Ania pierwszy raz wzięła udział w takim spotkaniu. Wcześniej omijała klasyczne utwory, bo dawny język wydawał jej się za trudny. Gdy miała do wyboru kilka książek, zwykle brała do domu współczesną powieść.\n\nBibliotekarka najpierw opowiedziała kilka zdań o autorze i wyjaśniła, czego dotyczy wybrany fragment. Wiedziała, że część grupy dopiero poznaje polską literaturę. Potem zaprosiła chętnych do głośnego czytania. Ania wolała posłuchać. W czasie rozmowy jeden z uczestników powiedział, z jaką sytuacją kojarzy mu się fragment. Inna osoba zwróciła uwagę na słowa, których Ania wcześniej nawet nie zauważyła.\n\nPo spotkaniu Ania nadal miała w zeszycie kilka wyrażeń do sprawdzenia. Tym razem jednak zaznaczyła też stronę, do której chciała wrócić w domu. Obok zapisała pytanie o to, dlaczego dwoje czytelników tak różnie zrozumiało ostatnie zdanie. Zamierzała jeszcze raz przeczytać je sama, zanim porozmawia o nim z koleżanką.",
+      "questions": [
+        {
+          "id": "q1",
+          "question": "Co przykład Ani pokazuje o wspólnym czytaniu?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Rozmowa o utworze może zainteresować klasyką osobę, której trudno czytać ją samodzielnie."
+            },
+            {
+              "id": "B",
+              "text": "Najwięcej wynoszą ze spotkania te osoby, które przygotowały wcześniej własny fragment do czytania."
+            },
+            {
+              "id": "C",
+              "text": "Najważniejszą częścią spotkania jest wybranie tekstu na następną edycję."
+            }
+          ]
+        },
+        {
+          "id": "q2",
+          "question": "Co bibliotekarka zrobiła przed głośnym czytaniem?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Porównała dwie interpretacje ostatniego zdania."
+            },
+            {
+              "id": "B",
+              "text": "Poprosiła grupę o przykłady sytuacji z własnego życia."
+            },
+            {
+              "id": "C",
+              "text": "Przedstawiła autora i temat fragmentu."
+            }
+          ]
+        },
+        {
+          "id": "q3",
+          "question": "Dlaczego Ania wcześniej wybierała współczesne powieści zamiast klasyki?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Spodziewała się trudności z językiem starszych dzieł."
+            },
+            {
+              "id": "B",
+              "text": "Chciała przygotować przykłady do rozmowy w bibliotece."
+            },
+            {
+              "id": "C",
+              "text": "Zależało jej na znalezieniu innego zakończenia poznanego utworu."
+            }
+          ]
+        },
+        {
+          "id": "q4",
+          "question": "Co najpewniej zainteresuje Anię, gdy znów otworzy zaznaczoną stronę?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Którą część utworu bibliotekarka przydzieliła jej do głośnego czytania."
+            },
+            {
+              "id": "B",
+              "text": "Jaką współczesną powieść warto zaproponować na kolejne spotkanie."
+            },
+            {
+              "id": "C",
+              "text": "Które słowa mogły podsunąć czytelnikom różne wyjaśnienia tego samego zdania."
+            }
+          ]
+        },
+        {
+          "id": "q5",
+          "question": "Co znaczy, że Ania „omijała klasyczne utwory”?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Odkładała przeczytane klasyczne książki na osobną półkę."
+            },
+            {
+              "id": "B",
+              "text": "Wybierając lekturę, zazwyczaj rezygnowała z takich książek."
+            },
+            {
+              "id": "C",
+              "text": "Czytając takie książki, opuszczała trudniejsze fragmenty."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

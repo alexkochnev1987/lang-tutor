@@ -1,0 +1,604 @@
+{
+  "passages": [
+    {
+      "id": "pl-b1.reading.day-041",
+      "scores": {
+        "naturalness": 96,
+        "level": 88,
+        "questions": 85,
+        "ambiguity": 100,
+        "theme": 99,
+        "vocabulary": 94
+      },
+      "criticalIssues": [],
+      "notes": "Coherent shift from establishing the garden to sharing work, food and knowledge. The concrete activity supports A2, while 'założyli', 'wykorzystują', 'nadmiar' and 'uprawiać' stretch the range. The garden passage glosses 'grządkę' and gives enough clues for 'nadmiar'.",
+      "items": [
+        {
+          "id": "q1",
+          "option": "C",
+          "evidence": "Dawniej mijali się na schodach, a dziś dzięki ogrodowi spędzają razem czas.",
+          "ambiguous": false,
+          "distractorScore": 73,
+          "skillMatches": true,
+          "notes": "The contrast supports social change. The garden work is covered earlier. A and B use genuine details but substitute invented activities or chronology."
+        },
+        {
+          "id": "q2",
+          "option": "A",
+          "evidence": "Jeśli zostaje nadmiar warzyw, zanoszą go do kuchni społecznej.",
+          "ambiguous": false,
+          "distractorScore": 88,
+          "skillMatches": true,
+          "notes": "Both alternative recipients are mentioned elsewhere in the passage."
+        },
+        {
+          "id": "q3",
+          "option": "C",
+          "evidence": "Teraz mieszkańcy umawiają się, kto i kiedy podleje ogród. Jedni wolą przyjść rano przed pracą, inni mają czas wieczorem albo w weekend.",
+          "ambiguous": false,
+          "distractorScore": 75,
+          "skillMatches": true,
+          "notes": "C summarizes scheduling preferences and availability. A is a plausible garden rule; B imports a role for the children that the text does not establish."
+        },
+        {
+          "id": "q4",
+          "option": "A",
+          "evidence": "W przyszłym roku chcą zaprosić na warsztaty także ludzi z innych osiedli. Pokażą im, jak uprawiać warzywa w mieście.",
+          "ambiguous": false,
+          "distractorScore": 76,
+          "skillMatches": true,
+          "notes": "Uses both intended audience and workshop purpose to find a relevant new recommendation. B assumes a signup procedure. A plausible preparation activity would be stronger."
+        },
+        {
+          "id": "q5",
+          "option": "C",
+          "evidence": "Gdy warzywa są już gotowe do zebrania, uczestnicy dzielą je między siebie. Jeśli zostaje nadmiar warzyw, zanoszą go do kuchni społecznej.",
+          "ambiguous": false,
+          "distractorScore": 84,
+          "skillMatches": true,
+          "notes": "What remains after distribution supports surplus. 'Warzywa, które zostają po podziale' would preserve the more precise sense."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-042",
+      "scores": {
+        "naturalness": 94,
+        "level": 83,
+        "questions": 76,
+        "ambiguity": 100,
+        "theme": 99,
+        "vocabulary": 94
+      },
+      "criticalIssues": [],
+      "notes": "A credible explanation of a municipal voting process. Relative clauses and civic terms such as 'przepisy', 'kwota' and 'głosuje' make it upper A2. Q4 attaches the low price to the courtyard instead of the project. Q5 quotes a term absent from the passage.",
+      "items": [
+        {
+          "id": "q1",
+          "option": "C",
+          "evidence": "Co można zmienić w naszej okolicy? W tym roku urząd miasta pyta o to mieszkańców. Każdy może przedstawić swój pomysł.",
+          "ambiguous": false,
+          "distractorScore": 73,
+          "skillMatches": true,
+          "notes": "C also incorporates the voting phase. The distractors reuse minor elements but introduce events absent from the passage."
+        },
+        {
+          "id": "q2",
+          "option": "A",
+          "evidence": "Potem mieszkańcy głosują. Mogą to zrobić w internecie albo w jednym z kilku punktów w mieście.",
+          "ambiguous": false,
+          "distractorScore": 92,
+          "skillMatches": true,
+          "notes": "Parallel choices each preserve one real method and mix it with another plausible channel."
+        },
+        {
+          "id": "q3",
+          "option": "B",
+          "evidence": "Miasto podaje też kwotę, którą może wydać. Projekt nie może kosztować więcej.",
+          "ambiguous": false,
+          "distractorScore": 58,
+          "skillMatches": true,
+          "notes": "The budget limit explains the cost check. The proposed link between cost and an individual's vote allowance is weak. A plausible trade-off involving project ranking would serve better."
+        },
+        {
+          "id": "q4",
+          "option": "B",
+          "evidence": "Miejsce, którego dotyczy projekt, musi być otwarte dla wszystkich.",
+          "ambiguous": false,
+          "distractorScore": 80,
+          "skillMatches": true,
+          "notes": "Applies the public-access criterion to a private courtyard. 'Na tanim […] podwórku' puts the cost on the location. Use 'Ktoś proponuje tanią ławkę na zamkniętym podwórku' and 'dostępne dla wszystkich' in B."
+        },
+        {
+          "id": "q5",
+          "option": "B",
+          "evidence": "Każdy głosuje raz, ale może zaznaczyć kilka pomysłów.",
+          "ambiguous": false,
+          "distractorScore": 76,
+          "skillMatches": false,
+          "notes": "The activity is clear, but 'oddać głos' and the supplied gloss 'zagłosować' do not appear in the passage. The near form 'głosuje' does. Test that form in context or put the intended expression in the passage. B could allow several projects."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-043",
+      "scores": {
+        "naturalness": 97,
+        "level": 86,
+        "questions": 91,
+        "ambiguity": 100,
+        "theme": 100,
+        "vocabulary": 93
+      },
+      "criticalIssues": [],
+      "notes": "Natural rescheduling dialogue with useful date and time language. 'Zaktualizować dane w dokumentacji' and 'obowiązkami zawodowymi' stretch A2, but actions and replies supply the context. Q1 and Q5 reinforce the same meaning and give clues to each other.",
+      "items": [
+        {
+          "id": "q1",
+          "option": "A",
+          "evidence": "Dzwoni więc do gabinetu, aby znaleźć inny termin.",
+          "ambiguous": false,
+          "distractorScore": 90,
+          "skillMatches": true,
+          "notes": "Both wrong options represent common and plausible reasons to call about a current appointment."
+        },
+        {
+          "id": "q2",
+          "option": "A",
+          "evidence": "— W czwartek mamy wolne miejsce o dziewiątej, a w piątek o piętnastej trzydzieści — odpowiada recepcjonistka.\n\n— W czwartek muszę być w biurze od ósmej. W piątek mogę wyjść wcześniej. Czy ten drugi termin jest nadal aktualny?\n\n— Tak, zapisuję panią na piątek.",
+          "ambiguous": false,
+          "distractorScore": 96,
+          "skillMatches": true,
+          "notes": "Both wrong times actually appear in the passage and are ruled out by the outcome. Linking the selected weekday to its time is a detail-reading task."
+        },
+        {
+          "id": "q3",
+          "option": "B",
+          "evidence": "Proszę przyjść dziesięć minut przed czasem, ponieważ trzeba zaktualizować dane w dokumentacji.",
+          "ambiguous": false,
+          "distractorScore": 88,
+          "skillMatches": true,
+          "notes": "All options suggest plausible administrative or appointment reasons. 'Uaktualnić jej dane' would be more exact than implying that incorrect details were established."
+        },
+        {
+          "id": "q4",
+          "option": "A",
+          "evidence": "— W czwartek mamy wolne miejsce o dziewiątej, a w piątek o piętnastej trzydzieści — odpowiada recepcjonistka.\n\n— W czwartek muszę być w biurze od ósmej. W piątek mogę wyjść wcześniej. Czy ten drugi termin jest nadal aktualny?\n\n— Tak, zapisuję panią na piątek. Poprzednią wizytę anuluję. Proszę przyjść dziesięć minut przed czasem, ponieważ trzeba zaktualizować dane w dokumentacji.",
+          "ambiguous": false,
+          "distractorScore": 89,
+          "skillMatches": true,
+          "notes": "Combines final appointment time with the ten-minute instruction. The options test applying before and distinguishing arrival from appointment."
+        },
+        {
+          "id": "q5",
+          "option": "C",
+          "evidence": "— Dzień dobry, chciałabym przełożyć jutrzejszą wizytę. Czy lekarz przyjmuje jeszcze w tym tygodniu? — pyta Ewa.",
+          "ambiguous": false,
+          "distractorScore": 94,
+          "skillMatches": true,
+          "notes": "Finding another day and canceling the old booking together distinguish rescheduling from cancellation only or confirmation."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-044",
+      "scores": {
+        "naturalness": 98,
+        "level": 91,
+        "questions": 88,
+        "ambiguity": 100,
+        "theme": 99,
+        "vocabulary": 95
+      },
+      "criticalIssues": [],
+      "notes": "Natural progression through starting, remembering and sustaining a habit. Time markers and repeated activity keep less common vocabulary accessible at A2.",
+      "items": [
+        {
+          "id": "q1",
+          "option": "C",
+          "evidence": "Chciał jednak więcej się ruszać. Postanowił zacząć od spacerów po parku niedaleko domu.",
+          "ambiguous": false,
+          "distractorScore": 78,
+          "skillMatches": true,
+          "notes": "C covers the whole habit, while A elevates the neighbor to a central role and B mistakes possible routes for a commute."
+        },
+        {
+          "id": "q2",
+          "option": "A",
+          "evidence": "Dwa razy w tygodniu umawia się z sąsiadem. W pozostałe dni może spacerować sam.",
+          "ambiguous": false,
+          "distractorScore": 85,
+          "skillMatches": true,
+          "notes": "Wrong frequency options are realistic. 'W każdy weekend, raz w tygodniu' is slightly repetitive."
+        },
+        {
+          "id": "q3",
+          "option": "A",
+          "evidence": "Teraz przed pracą stawia wygodne buty przy drzwiach. Gdy kończy pracę, widzi je i od razu pamięta o spacerze.",
+          "ambiguous": false,
+          "distractorScore": 74,
+          "skillMatches": true,
+          "notes": "B fits the time of placing the shoes and can mislead skimming. C depends on an unlikely way for the neighbor to see the shoes."
+        },
+        {
+          "id": "q4",
+          "option": "A",
+          "evidence": "Kiedy pada, czasem wybiera krótszą trasę, a czasem zostaje w domu. Jeden wieczór bez spaceru nie jest dla niego problemem. Zależy mu na tym, żeby regularnie się ruszać także wtedy, gdy ma dużo pracy.",
+          "ambiguous": false,
+          "distractorScore": 87,
+          "skillMatches": true,
+          "notes": "Infers resumption from flexibility and desire for regular walks. Waiting for company and compensating with a longer walk are plausible behaviors, but neither matches his established pattern."
+        },
+        {
+          "id": "q5",
+          "option": "C",
+          "evidence": "Postanowił zacząć od spacerów po parku niedaleko domu. Na spacer zwykle przeznacza około dwudziestu minut. Nie planuje na razie długich treningów.\n\nNa początku często zapominał o swoim postanowieniu.",
+          "ambiguous": false,
+          "distractorScore": 82,
+          "skillMatches": true,
+          "notes": "Explicit earlier action and the related verb strongly anchor the word in context."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-045",
+      "scores": {
+        "naturalness": 94,
+        "level": 83,
+        "questions": 81,
+        "ambiguity": 100,
+        "theme": 97,
+        "vocabulary": 92
+      },
+      "criticalIssues": [],
+      "notes": "Concrete workplace scenario with a coherent sequence and meaningful information distinctions. 'Personel medyczny', 'odbywały się' and 'nie zastąpi osobnej wizyty' increase difficulty toward upper A2. 'Nie trzeba było przychodzić do firmy po pracy' suggests on-shift access but is less direct than saying this explicitly.",
+      "items": [
+        {
+          "id": "q1",
+          "option": "B",
+          "evidence": "Przez dwa dni w pewnej firmie można było bezpłatnie skorzystać z badań. Na miejsce przyjechali lekarze i pielęgniarki. Spotykali się z pracownikami w osobnym pokoju. Nie trzeba było przychodzić do firmy po pracy. Każdy sam decydował, czy chce wziąć udział w badaniach.",
+          "ambiguous": false,
+          "distractorScore": 82,
+          "skillMatches": true,
+          "notes": "A and C convert plans and suggestions into completed events. B captures the realized event and voluntary participation."
+        },
+        {
+          "id": "q2",
+          "option": "C",
+          "evidence": "Każdy uczestnik dostał swoje wyniki od personelu medycznego. Kierownicy dowiedzieli się tylko, ile osób przyszło na badania.",
+          "ambiguous": false,
+          "distractorScore": 85,
+          "skillMatches": true,
+          "notes": "Wrong options contrast aggregate attendance with plausible individual information."
+        },
+        {
+          "id": "q3",
+          "option": "C",
+          "evidence": "Kilka osób miało trudności ze znalezieniem wolnej godziny. Dlatego organizatorzy dodali terminy na drugi dzień.",
+          "ambiguous": false,
+          "distractorScore": 78,
+          "skillMatches": true,
+          "notes": "Clear causal cue. A muddles the roles and B assumes after-work preferences not stated."
+        },
+        {
+          "id": "q4",
+          "option": "C",
+          "evidence": "Każdy uczestnik dostał swoje wyniki od personelu medycznego. Kierownicy dowiedzieli się tylko, ile osób przyszło na badania.",
+          "ambiguous": false,
+          "distractorScore": 46,
+          "skillMatches": true,
+          "notes": "Applies the results-sharing arrangement to a new case. However, 'jeśli Anna chce mu o tym opowiedzieć' practically gives the answer without reading. Ask which source could contain her individual result and give equally credible sources."
+        },
+        {
+          "id": "q5",
+          "option": "B",
+          "evidence": "Żeby zarezerwować godzinę, trzeba było wypełnić formularz. Kilka osób miało trudności ze znalezieniem wolnej godziny.",
+          "ambiguous": false,
+          "distractorScore": 73,
+          "skillMatches": true,
+          "notes": "The form and available times support making an appointment. A and C are retrospective and less plausible in an obvious booking context."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-046",
+      "scores": {
+        "naturalness": 97,
+        "level": 86,
+        "questions": 88,
+        "ambiguity": 100,
+        "theme": 99,
+        "vocabulary": 93
+      },
+      "criticalIssues": [],
+      "notes": "Natural account of a new class. A2 readers get useful contextual support for 'we własnym tempie' and 'dogodną porę', despite some longer subordinate clauses and less frequent vocabulary.",
+      "items": [
+        {
+          "id": "q1",
+          "option": "B",
+          "evidence": "Każdy może wybrać dogodną dla siebie porę. Po miesiącu większość uczestników chciała nadal chodzić na zajęcia. Podobało im się, że w grupie jest spokojnie i że sami mogą zdecydować, jak będą ćwiczyć.",
+          "ambiguous": false,
+          "distractorScore": 84,
+          "skillMatches": true,
+          "notes": "Combines flexibility in activity and timing. Both wrong choices reinterpret actual flexibility or the mix of ages."
+        },
+        {
+          "id": "q2",
+          "option": "A",
+          "evidence": "Po spotkaniu kilka osób zostało w sali. Chciały porozmawiać o tym, o której będą następne zajęcia.",
+          "ambiguous": false,
+          "distractorScore": 84,
+          "skillMatches": true,
+          "notes": "Both alternatives are natural class concerns, and breaks are discussed elsewhere."
+        },
+        {
+          "id": "q3",
+          "option": "A",
+          "evidence": "Niektórzy uczestnicy pracują do późnego popołudnia. Organizatorzy zaproponowali więc dwa terminy w tygodniu: jeden rano, drugi wieczorem.",
+          "ambiguous": false,
+          "distractorScore": 81,
+          "skillMatches": true,
+          "notes": "Both distractors map details from elsewhere onto the evening slot. 'Część osób pracuje do późnego popołudnia' would preserve the reason more precisely than 'długo pracuje'."
+        },
+        {
+          "id": "q4",
+          "option": "A",
+          "evidence": "Trener pokazywał dwa sposoby wykonania ćwiczenia. Każdy wybierał wersję łatwiejszą albo trudniejszą.",
+          "ambiguous": false,
+          "distractorScore": 88,
+          "skillMatches": true,
+          "notes": "Applies differentiated exercises to two new learners. B overlooks simultaneous exercise at different levels, and C falsely assigns a level to one time slot."
+        },
+        {
+          "id": "q5",
+          "option": "B",
+          "evidence": "Trener powiedział na początku, że każdy może ćwiczyć we własnym tempie. Uczestnicy nie muszą robić wszystkiego tak samo jak osoba obok.",
+          "ambiguous": false,
+          "distractorScore": 81,
+          "skillMatches": true,
+          "notes": "The adjacent sentence explicitly supports individual pace. Timing and imitation are context-related confusions."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-047",
+      "scores": {
+        "naturalness": 95,
+        "level": 83,
+        "questions": 84,
+        "ambiguity": 100,
+        "theme": 98,
+        "vocabulary": 96
+      },
+      "criticalIssues": [],
+      "notes": "Coherent practical errand with upper-A2 lexical density, especially 'otarła piętę', 'środka do dezynfekcji' and 'przechowywać'. 'W ulotce dołączonej do leku' is a smoother stylistic version of 'w ulotce z opakowania tego leku'.",
+      "items": [
+        {
+          "id": "q1",
+          "option": "C",
+          "evidence": "Anna szykowała się na krótką wycieczkę. Miała już swoje leki, ale chciała uzupełnić małą apteczkę.",
+          "ambiguous": false,
+          "distractorScore": 88,
+          "skillMatches": true,
+          "notes": "Alternatives exploit actual package and medicine details without matching the overall errand."
+        },
+        {
+          "id": "q2",
+          "option": "C",
+          "evidence": "Po powrocie z apteki Anna sprawdziła daty ważności.",
+          "ambiguous": false,
+          "distractorScore": 88,
+          "skillMatches": true,
+          "notes": "Parallel chronology choices describe reasonable times to check expiry."
+        },
+        {
+          "id": "q3",
+          "option": "C",
+          "evidence": "Nie chciała jednak dużych opakowań, bo wyjeżdżała tylko na cztery dni.",
+          "ambiguous": false,
+          "distractorScore": 77,
+          "skillMatches": true,
+          "notes": "B echoes two kinds of plasters, and A borrows the cupboard from the closing detail. A luggage-capacity distractor would create a more plausible competing motive."
+        },
+        {
+          "id": "q4",
+          "option": "C",
+          "evidence": "Potem włożyła apteczkę do plecaka tak, żeby łatwo było ją wyjąć.",
+          "ambiguous": false,
+          "distractorScore": 49,
+          "skillMatches": true,
+          "notes": "Applies the quick-access preference to implied packing choices. Both wrong options conspicuously bury the kit. Introduce one plausible storage option that trades off access, and use conditional 'wybrałaby' to signal the hypothetical after the past tense narrative."
+        },
+        {
+          "id": "q5",
+          "option": "A",
+          "evidence": "Miała już swoje leki, ale chciała uzupełnić małą apteczkę.",
+          "ambiguous": false,
+          "distractorScore": 87,
+          "skillMatches": true,
+          "notes": "Existing items plus subsequent purchases disambiguate replenishing, replacing and inspecting. Q1 also provides a close paraphrase."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-048",
+      "scores": {
+        "naturalness": 96,
+        "level": 89,
+        "questions": 85,
+        "ambiguity": 100,
+        "theme": 99,
+        "vocabulary": 93
+      },
+      "criticalIssues": [],
+      "notes": "The trial-and-adjust narrative is natural and coherent. 'Nie chciała planować każdej godziny' and repeated time markers support the relatively abstract habit-planning language. 'Na które nie planowała żadnych spotkań' would be smoother than 'na które nie umówiła żadnych dodatkowych spotkań'.",
+      "items": [
+        {
+          "id": "q1",
+          "option": "B",
+          "evidence": "Kasia chciała mieć po pracy więcej czasu na odpoczynek. W ciągu dnia często kupowała na obiad to, co akurat znalazła w sklepie. Wieczorem za długo korzystała z telefonu. W niedzielę usiadła i zrobiła prosty plan na następny tydzień.",
+          "ambiguous": false,
+          "distractorScore": 72,
+          "skillMatches": true,
+          "notes": "B covers the separate strands. The other topics take work or food details as cues but misrepresent the actions."
+        },
+        {
+          "id": "q2",
+          "option": "B",
+          "evidence": "Pół godziny przed snem odkładała telefon na półkę.",
+          "ambiguous": false,
+          "distractorScore": 83,
+          "skillMatches": true,
+          "notes": "Alternatives reflect actual elements of the routine with different timing."
+        },
+        {
+          "id": "q3",
+          "option": "C",
+          "evidence": "Nie chciała planować każdej godziny. W pracy czasem niespodziewanie dostawała nowe zadanie i musiała zmienić plany na resztę dnia.",
+          "ambiguous": false,
+          "distractorScore": 79,
+          "skillMatches": true,
+          "notes": "C states the cause signaled by the sequence. A and B confuse distinct components of her plan."
+        },
+        {
+          "id": "q4",
+          "option": "B",
+          "evidence": "Nie każdego dnia wszystko się udało, ale chciała spróbować jeszcze przez tydzień. Na razie nie zamierzała wprowadzać nowych zasad. Dopiero po kolejnym tygodniu chciała zdecydować, co dalej.",
+          "ambiguous": false,
+          "distractorScore": 88,
+          "skillMatches": true,
+          "notes": "Applies the decision to continue the current trial to a hypothetical suggestion. The wrong responses are plausible decisions after an imperfect first week."
+        },
+        {
+          "id": "q5",
+          "option": "A",
+          "evidence": "W pracy czasem niespodziewanie dostawała nowe zadanie i musiała zmienić plany na resztę dnia.",
+          "ambiguous": false,
+          "distractorScore": 80,
+          "skillMatches": true,
+          "notes": "The disruption gives a useful contextual cue. 'Kasia wcześniej się tego nie spodziewała' would be more exact than lack of knowledge alone."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-049",
+      "scores": {
+        "naturalness": 95,
+        "level": 84,
+        "questions": 88,
+        "ambiguity": 100,
+        "theme": 98,
+        "vocabulary": 94
+      },
+      "criticalIssues": [],
+      "notes": "Coherent public workshop report, with enough concrete examples to anchor 'fizjoterapeuta' and the information handout. 'Poszczególnych' and dense clauses raise the level. 'Informacja o tym, gdzie…' would sound more natural than 'wiadomość, gdzie…' in the handout description.",
+      "items": [
+        {
+          "id": "q1",
+          "option": "C",
+          "evidence": "Gościem był fizjoterapeuta. Miał opowiedzieć o tym, jak urządzić miejsce do pracy i dlaczego ważne są przerwy.",
+          "ambiguous": false,
+          "distractorScore": 88,
+          "skillMatches": true,
+          "notes": "A and B are realistic misreadings of the follow-up arrangements or interests."
+        },
+        {
+          "id": "q2",
+          "option": "A",
+          "evidence": "Potem uczestnicy próbowali inaczej ustawić krzesło i monitor.",
+          "ambiguous": false,
+          "distractorScore": 87,
+          "skillMatches": true,
+          "notes": "Wrong choices borrow context but place a pre-meeting or potential future activity during the workshop."
+        },
+        {
+          "id": "q3",
+          "option": "A",
+          "evidence": "Przed spotkaniem uczestnicy przysłali mu pytania. Dzięki nim przygotował przykłady związane ze sprawami, o które pytało wiele osób.",
+          "ambiguous": false,
+          "distractorScore": 83,
+          "skillMatches": true,
+          "notes": "Clear cause and purpose. B and C are plausible ways to use preparatory questions, though neither happened."
+        },
+        {
+          "id": "q4",
+          "option": "A",
+          "evidence": "Na koniec uczestnicy dostali kartki z podsumowaniem. Były tam najważniejsze informacje ze spotkania i wiadomość, gdzie można umówić się na osobną rozmowę ze specjalistą.",
+          "ambiguous": false,
+          "distractorScore": 77,
+          "skillMatches": true,
+          "notes": "Transfers the individual-appointment information to a new goal. A echoes 'osobna rozmowa' while the other options clearly address other goals. C treats a possible future topic as settled."
+        },
+        {
+          "id": "q5",
+          "option": "C",
+          "evidence": "Na koniec uczestnicy dostali kartki z podsumowaniem. Były tam najważniejsze informacje ze spotkania i wiadomość, gdzie można umówić się na osobną rozmowę ze specjalistą.",
+          "ambiguous": false,
+          "distractorScore": 88,
+          "skillMatches": true,
+          "notes": "The next sentence defines the central content. Both alternatives are credible documents for different stages of an event."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-050",
+      "scores": {
+        "naturalness": 96,
+        "level": 85,
+        "questions": 86,
+        "ambiguity": 100,
+        "theme": 99,
+        "vocabulary": 95
+      },
+      "criticalIssues": [],
+      "notes": "Natural formal enquiry at upper A2, with clear goals and authentic formulas. 'Test poziomujący', 'reguł gramatycznych' and 'wliczony w cenę' stretch the level. The schedule sentence would read more smoothly with 'dwie grupy: jedną we wtorki i czwartki, drugą w poniedziałki i środy'.",
+      "items": [
+        {
+          "id": "q1",
+          "option": "B",
+          "evidence": "chciałabym zapisać się na kurs języka polskiego na poziomie A2.",
+          "ambiguous": false,
+          "distractorScore": 85,
+          "skillMatches": true,
+          "notes": "B incorporates the questions in the rest of the letter. The other options plausibly confuse an upcoming test or a previous course with current enrollment."
+        },
+        {
+          "id": "q2",
+          "option": "A",
+          "evidence": "Na stronie szkoły widzę dwie grupy: we wtorki i czwartki oraz w poniedziałki i środy. Druga grupa jest dla mnie wygodniejsza, ponieważ w czwartki chodzę na basen.",
+          "ambiguous": false,
+          "distractorScore": 93,
+          "skillMatches": true,
+          "notes": "An actual competing pair and a mix of the two require careful schedule reading."
+        },
+        {
+          "id": "q3",
+          "option": "A",
+          "evidence": "Proszę o odpowiedź e-mailem, ponieważ w godzinach pracy rzadko odbieram telefon.",
+          "ambiguous": false,
+          "distractorScore": 47,
+          "skillMatches": true,
+          "notes": "C has an implausible connection to the school. B uses an actual concern but invents a prerequisite. A would be better challenged by a plausible work-related communication preference."
+        },
+        {
+          "id": "q4",
+          "option": "B",
+          "evidence": "Mam już za sobą podstawowy kurs, ale nadal trudno mi rozumieć dłuższe teksty. Chciałabym też więcej mówić po polsku, szczególnie w pracy i w urzędzie. Czy na zajęciach uczniowie rozmawiają w parach? Czy nauczyciel sprawdza krótkie zadania pisemne? Nie zależy mi tylko na nauce reguł gramatycznych.",
+          "ambiguous": false,
+          "distractorScore": 80,
+          "skillMatches": true,
+          "notes": "Matches multiple preferences to proposed lesson designs. The explicit 'rozmawiamy w parach' match makes B detectable from one cue. Keep that feature in one wrong option but vary support for reading and writing."
+        },
+        {
+          "id": "q5",
+          "option": "B",
+          "evidence": "Czy podręcznik jest wliczony w cenę kursu? Jeśli nie, proszę o informację, gdzie można go kupić.",
+          "ambiguous": false,
+          "distractorScore": 87,
+          "skillMatches": true,
+          "notes": "The fallback purchase question anchors the meaning. Both alternatives could be different purchasing arrangements."
+        }
+      ]
+    }
+  ]
+}

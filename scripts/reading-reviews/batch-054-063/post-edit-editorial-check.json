@@ -1,0 +1,578 @@
+{
+  "reviewKind": "post-edit-editorial-self-check-not-blind-not-independent",
+  "approval": false,
+  "reason": "Same conversation edited the texts and saw author keys. Scores are provisional editorial judgments and must not be treated as independent evaluation or a fresh blind solve.",
+  "reviewedRevision": "7a066f83c0685c440bc1613cbcf910425e383574",
+  "blindBlob": "7b0a01d519faf4ad0ad28e230ad4d65678101d85",
+  "initialMean": 89.94,
+  "editorialMean": 92.87999999999998,
+  "initialPassagesAt90": 4,
+  "editorialPassagesAt90": 10,
+  "initialWeakDistractors": 22,
+  "editorialWeakDistractors": 3,
+  "authorKeysPresent": 50,
+  "authorEvidenceExact": 50,
+  "independentSecondRound": "NOT_RUN",
+  "passages": [
+    {
+      "id": "pl-b1.reading.day-054",
+      "before": 91.8,
+      "after": 93.7,
+      "scores": {
+        "naturalness": 97,
+        "level": 90,
+        "questions": 88,
+        "ambiguity": 98,
+        "theme": 97,
+        "vocabulary": 91
+      },
+      "notes": "Zapis i lista oczekujących są jasne; Q3 wariant A trochę słabszy, ale oba możliwe powody administracyjne.",
+      "items": [
+        {
+          "id": "q1",
+          "proposedKey": "B",
+          "authorEvidenceIsExact": true,
+          "distractorScore": 82,
+          "skillMatches": true,
+          "notes": "No additional blocker identified during non-blind editorial reread."
+        },
+        {
+          "id": "q2",
+          "proposedKey": "A",
+          "authorEvidenceIsExact": true,
+          "distractorScore": 86,
+          "skillMatches": true,
+          "notes": "No additional blocker identified during non-blind editorial reread."
+        },
+        {
+          "id": "q3",
+          "proposedKey": "C",
+          "authorEvidenceIsExact": true,
+          "distractorScore": 77,
+          "skillMatches": true,
+          "notes": "No additional blocker identified during non-blind editorial reread."
+        },
+        {
+          "id": "q4",
+          "proposedKey": "C",
+          "authorEvidenceIsExact": true,
+          "distractorScore": 90,
+          "skillMatches": true,
+          "notes": "No additional blocker identified during non-blind editorial reread."
+        },
+        {
+          "id": "q5",
+          "proposedKey": "B",
+          "authorEvidenceIsExact": true,
+          "distractorScore": 83,
+          "skillMatches": true,
+          "notes": "No additional blocker identified during non-blind editorial reread."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-055",
+      "before": 90.8,
+      "after": 93.55,
+      "scores": {
+        "naturalness": 97,
+        "level": 90,
+        "questions": 88,
+        "ambiguity": 98,
+        "theme": 96,
+        "vocabulary": 90
+      },
+      "notes": "Q1 alternatywa o stałych dniach jest węższą, ale błędną interpretacją; Q4 stara metoda pozostaje stosunkowo łatwa do odrzucenia.",
+      "items": [
+        {
+          "id": "q1",
+          "proposedKey": "A",
+          "authorEvidenceIsExact": true,
+          "distractorScore": 80,
+          "skillMatches": true,
+          "notes": "No additional blocker identified during non-blind editorial reread."
+        },
+        {
+          "id": "q2",
+          "proposedKey": "C",
+          "authorEvidenceIsExact": true,
+          "distractorScore": 90,
+          "skillMatches": true,
+          "notes": "No additional blocker identified during non-blind editorial reread."
+        },
+        {
+          "id": "q3",
+          "proposedKey": "B",
+          "authorEvidenceIsExact": true,
+          "distractorScore": 85,
+          "skillMatches": true,
+          "notes": "No additional blocker identified during non-blind editorial reread."
+        },
+        {
+          "id": "q4",
+          "proposedKey": "A",
+          "authorEvidenceIsExact": true,
+          "distractorScore": 76,
+          "skillMatches": true,
+          "notes": "No additional blocker identified during non-blind editorial reread."
+        },
+        {
+          "id": "q5",
+          "proposedKey": "A",
+          "authorEvidenceIsExact": true,
+          "distractorScore": 81,
+          "skillMatches": true,
+          "notes": "No additional blocker identified during non-blind editorial reread."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-056",
+      "before": 89.25,
+      "after": 92.7,
+      "scores": {
+        "naturalness": 96,
+        "level": 89,
+        "questions": 86,
+        "ambiguity": 98,
+        "theme": 97,
+        "vocabulary": 88
+      },
+      "notes": "Uproszczono język i poprawiono interpunkcję. Q5 alternatywy dotyczą sposobu streszczania, nie są synonimami; mogą nadal być stosunkowo łatwe dla osoby znającej wyrażenie.",
+      "items": [
+        {
+          "id": "q1",
+          "proposedKey": "C",
+          "authorEvidenceIsExact": true,
+          "distractorScore": 82,
+          "skillMatches": true,
+          "notes": "No additional blocker identified during non-blind editorial reread."
+        },
+        {
+          "id": "q2",
+          "proposedKey": "B",
+          "authorEvidenceIsExact": true,
+          "distractorScore": 80,
+          "skillMatches": true,
+          "notes": "No additional blocker identified during non-blind editorial reread."
+        },
+        {
+          "id": "q3",
+          "proposedKey": "B",
+          "authorEvidenceIsExact": true,
+          "distractorScore": 83,
+          "skillMatches": true,
+          "notes": "No additional blocker identified during non-blind editorial reread."
+        },
+        {
+          "id": "q4",
+          "proposedKey": "C",
+          "authorEvidenceIsExact": true,
+          "distractorScore": 80,
+          "skillMatches": true,
+          "notes": "No additional blocker identified during non-blind editorial reread."
+        },
+        {
+          "id": "q5",
+          "proposedKey": "A",
+          "authorEvidenceIsExact": true,
+          "distractorScore": 78,
+          "skillMatches": true,
+          "notes": "No additional blocker identified during non-blind editorial reread."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-057",
+      "before": 89.95,
+      "after": 91.9,
+      "scores": {
+        "naturalness": 96,
+        "level": 90,
+        "questions": 85,
+        "ambiguity": 94,
+        "theme": 96,
+        "vocabulary": 90
+      },
+      "notes": "Q3 poprawny wariant jest zauważalnie krótszy i ma inną konstrukcję od pozostałych. Q4 najlepiej odpowiada planowi B, ale warto dokładniej określić, jak postępować, gdy klient dzwoni przed końcem wdrożenia.",
+      "items": [
+        {
+          "id": "q1",
+          "proposedKey": "B",
+          "authorEvidenceIsExact": true,
+          "distractorScore": 81,
+          "skillMatches": true,
+          "notes": "No additional blocker identified during non-blind editorial reread."
+        },
+        {
+          "id": "q2",
+          "proposedKey": "C",
+          "authorEvidenceIsExact": true,
+          "distractorScore": 86,
+          "skillMatches": true,
+          "notes": "No additional blocker identified during non-blind editorial reread."
+        },
+        {
+          "id": "q3",
+          "proposedKey": "A",
+          "authorEvidenceIsExact": true,
+          "distractorScore": 74,
+          "skillMatches": true,
+          "notes": "Q3 poprawny wariant jest zauważalnie krótszy i ma inną konstrukcję od pozostałych. Q4 najlepiej odpowiada planowi B, ale warto dokładniej określić, jak postępować, gdy klient dzwoni przed końcem wdrożenia."
+        },
+        {
+          "id": "q4",
+          "proposedKey": "B",
+          "authorEvidenceIsExact": true,
+          "distractorScore": 77,
+          "skillMatches": true,
+          "notes": "No additional blocker identified during non-blind editorial reread."
+        },
+        {
+          "id": "q5",
+          "proposedKey": "C",
+          "authorEvidenceIsExact": true,
+          "distractorScore": 80,
+          "skillMatches": true,
+          "notes": "No additional blocker identified during non-blind editorial reread."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-058",
+      "before": 89.2,
+      "after": 92.45,
+      "scores": {
+        "naturalness": 96,
+        "level": 87,
+        "questions": 87,
+        "ambiguity": 98,
+        "theme": 96,
+        "vocabulary": 89
+      },
+      "notes": "Prostsze słownictwo; opis zasad pracy nadal wymaga kilku warunków. Q4 poprawna odpowiedź jest dłuższa, ale pozostałe mają realistyczną treść.",
+      "items": [
+        {
+          "id": "q1",
+          "proposedKey": "A",
+          "authorEvidenceIsExact": true,
+          "distractorScore": 80,
+          "skillMatches": true,
+          "notes": "No additional blocker identified during non-blind editorial reread."
+        },
+        {
+          "id": "q2",
+          "proposedKey": "A",
+          "authorEvidenceIsExact": true,
+          "distractorScore": 90,
+          "skillMatches": true,
+          "notes": "No additional blocker identified during non-blind editorial reread."
+        },
+        {
+          "id": "q3",
+          "proposedKey": "C",
+          "authorEvidenceIsExact": true,
+          "distractorScore": 77,
+          "skillMatches": true,
+          "notes": "No additional blocker identified during non-blind editorial reread."
+        },
+        {
+          "id": "q4",
+          "proposedKey": "B",
+          "authorEvidenceIsExact": true,
+          "distractorScore": 82,
+          "skillMatches": true,
+          "notes": "No additional blocker identified during non-blind editorial reread."
+        },
+        {
+          "id": "q5",
+          "proposedKey": "A",
+          "authorEvidenceIsExact": true,
+          "distractorScore": 81,
+          "skillMatches": true,
+          "notes": "No additional blocker identified during non-blind editorial reread."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-059",
+      "before": 91.8,
+      "after": 93.5,
+      "scores": {
+        "naturalness": 97,
+        "level": 89,
+        "questions": 88,
+        "ambiguity": 98,
+        "theme": 97,
+        "vocabulary": 91
+      },
+      "notes": "Dialog i warianty dobrze osadzone w sytuacji. Q4 wymaga zastosowania zasady do znanej i nieznanej ceny.",
+      "items": [
+        {
+          "id": "q1",
+          "proposedKey": "C",
+          "authorEvidenceIsExact": true,
+          "distractorScore": 82,
+          "skillMatches": true,
+          "notes": "No additional blocker identified during non-blind editorial reread."
+        },
+        {
+          "id": "q2",
+          "proposedKey": "B",
+          "authorEvidenceIsExact": true,
+          "distractorScore": 85,
+          "skillMatches": true,
+          "notes": "No additional blocker identified during non-blind editorial reread."
+        },
+        {
+          "id": "q3",
+          "proposedKey": "C",
+          "authorEvidenceIsExact": true,
+          "distractorScore": 84,
+          "skillMatches": true,
+          "notes": "No additional blocker identified during non-blind editorial reread."
+        },
+        {
+          "id": "q4",
+          "proposedKey": "A",
+          "authorEvidenceIsExact": true,
+          "distractorScore": 84,
+          "skillMatches": true,
+          "notes": "No additional blocker identified during non-blind editorial reread."
+        },
+        {
+          "id": "q5",
+          "proposedKey": "B",
+          "authorEvidenceIsExact": true,
+          "distractorScore": 85,
+          "skillMatches": true,
+          "notes": "No additional blocker identified during non-blind editorial reread."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-060",
+      "before": 88.5,
+      "after": 92.5,
+      "scores": {
+        "naturalness": 96,
+        "level": 88,
+        "questions": 87,
+        "ambiguity": 97,
+        "theme": 96,
+        "vocabulary": 90
+      },
+      "notes": "Q4 dwa warunki, termin oraz przygotowanie do rozmowy. Q3 dwa błędne warianty dotyczą momentu przyjęcia CV, przez co mają podobny charakter.",
+      "items": [
+        {
+          "id": "q1",
+          "proposedKey": "B",
+          "authorEvidenceIsExact": true,
+          "distractorScore": 78,
+          "skillMatches": true,
+          "notes": "No additional blocker identified during non-blind editorial reread."
+        },
+        {
+          "id": "q2",
+          "proposedKey": "B",
+          "authorEvidenceIsExact": true,
+          "distractorScore": 90,
+          "skillMatches": true,
+          "notes": "No additional blocker identified during non-blind editorial reread."
+        },
+        {
+          "id": "q3",
+          "proposedKey": "A",
+          "authorEvidenceIsExact": true,
+          "distractorScore": 77,
+          "skillMatches": true,
+          "notes": "No additional blocker identified during non-blind editorial reread."
+        },
+        {
+          "id": "q4",
+          "proposedKey": "C",
+          "authorEvidenceIsExact": true,
+          "distractorScore": 83,
+          "skillMatches": true,
+          "notes": "No additional blocker identified during non-blind editorial reread."
+        },
+        {
+          "id": "q5",
+          "proposedKey": "C",
+          "authorEvidenceIsExact": true,
+          "distractorScore": 83,
+          "skillMatches": true,
+          "notes": "No additional blocker identified during non-blind editorial reread."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-061",
+      "before": 88.35,
+      "after": 92.55,
+      "scores": {
+        "naturalness": 96,
+        "level": 87,
+        "questions": 87,
+        "ambiguity": 98,
+        "theme": 97,
+        "vocabulary": 89
+      },
+      "notes": "Uproszczono tytuł i opis zebrania; nadal kilka słów z kontekstu pracy wykracza poza podstawowe A2.",
+      "items": [
+        {
+          "id": "q1",
+          "proposedKey": "A",
+          "authorEvidenceIsExact": true,
+          "distractorScore": 81,
+          "skillMatches": true,
+          "notes": "No additional blocker identified during non-blind editorial reread."
+        },
+        {
+          "id": "q2",
+          "proposedKey": "C",
+          "authorEvidenceIsExact": true,
+          "distractorScore": 89,
+          "skillMatches": true,
+          "notes": "No additional blocker identified during non-blind editorial reread."
+        },
+        {
+          "id": "q3",
+          "proposedKey": "A",
+          "authorEvidenceIsExact": true,
+          "distractorScore": 80,
+          "skillMatches": true,
+          "notes": "No additional blocker identified during non-blind editorial reread."
+        },
+        {
+          "id": "q4",
+          "proposedKey": "A",
+          "authorEvidenceIsExact": true,
+          "distractorScore": 85,
+          "skillMatches": true,
+          "notes": "No additional blocker identified during non-blind editorial reread."
+        },
+        {
+          "id": "q5",
+          "proposedKey": "B",
+          "authorEvidenceIsExact": true,
+          "distractorScore": 80,
+          "skillMatches": true,
+          "notes": "No additional blocker identified during non-blind editorial reread."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-062",
+      "before": 90.4,
+      "after": 93.05,
+      "scores": {
+        "naturalness": 97,
+        "level": 90,
+        "questions": 87,
+        "ambiguity": 96,
+        "theme": 97,
+        "vocabulary": 90
+      },
+      "notes": "Q3 dwa błędne warianty dotyczą trudności z raportami. Q5 słowo «bezpośrednio» może również oznaczać kontakt zdalny bez pośrednika; w tym kontekście B jest najlepsze, ale kontrast w tekście warto wzmocnić.",
+      "items": [
+        {
+          "id": "q1",
+          "proposedKey": "C",
+          "authorEvidenceIsExact": true,
+          "distractorScore": 81,
+          "skillMatches": true,
+          "notes": "No additional blocker identified during non-blind editorial reread."
+        },
+        {
+          "id": "q2",
+          "proposedKey": "A",
+          "authorEvidenceIsExact": true,
+          "distractorScore": 91,
+          "skillMatches": true,
+          "notes": "No additional blocker identified during non-blind editorial reread."
+        },
+        {
+          "id": "q3",
+          "proposedKey": "B",
+          "authorEvidenceIsExact": true,
+          "distractorScore": 77,
+          "skillMatches": true,
+          "notes": "No additional blocker identified during non-blind editorial reread."
+        },
+        {
+          "id": "q4",
+          "proposedKey": "C",
+          "authorEvidenceIsExact": true,
+          "distractorScore": 88,
+          "skillMatches": true,
+          "notes": "No additional blocker identified during non-blind editorial reread."
+        },
+        {
+          "id": "q5",
+          "proposedKey": "B",
+          "authorEvidenceIsExact": true,
+          "distractorScore": 74,
+          "skillMatches": true,
+          "notes": "Q3 dwa błędne warianty dotyczą trudności z raportami. Q5 słowo «bezpośrednio» może również oznaczać kontakt zdalny bez pośrednika; w tym kontekście B jest najlepsze, ale kontrast w tekście warto wzmocnić."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-063",
+      "before": 89.35,
+      "after": 92.9,
+      "scores": {
+        "naturalness": 97,
+        "level": 89,
+        "questions": 86,
+        "ambiguity": 98,
+        "theme": 96,
+        "vocabulary": 89
+      },
+      "notes": "Q5 wariant o łatwości nauki nadal jest mniej prawdopodobny; uprościć poprawną odpowiedź «Będzie pomocne w twojej pracy» i dopracować alternatywy.",
+      "items": [
+        {
+          "id": "q1",
+          "proposedKey": "B",
+          "authorEvidenceIsExact": true,
+          "distractorScore": 82,
+          "skillMatches": true,
+          "notes": "No additional blocker identified during non-blind editorial reread."
+        },
+        {
+          "id": "q2",
+          "proposedKey": "C",
+          "authorEvidenceIsExact": true,
+          "distractorScore": 90,
+          "skillMatches": true,
+          "notes": "No additional blocker identified during non-blind editorial reread."
+        },
+        {
+          "id": "q3",
+          "proposedKey": "A",
+          "authorEvidenceIsExact": true,
+          "distractorScore": 82,
+          "skillMatches": true,
+          "notes": "No additional blocker identified during non-blind editorial reread."
+        },
+        {
+          "id": "q4",
+          "proposedKey": "B",
+          "authorEvidenceIsExact": true,
+          "distractorScore": 82,
+          "skillMatches": true,
+          "notes": "No additional blocker identified during non-blind editorial reread."
+        },
+        {
+          "id": "q5",
+          "proposedKey": "A",
+          "authorEvidenceIsExact": true,
+          "distractorScore": 73,
+          "skillMatches": true,
+          "notes": "Q5 wariant o łatwości nauki nadal jest mniej prawdopodobny; uprościć poprawną odpowiedź «Będzie pomocne w twojej pracy» i dopracować alternatywy."
+        }
+      ]
+    }
+  ]
+}

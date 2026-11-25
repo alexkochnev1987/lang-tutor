@@ -1,0 +1,985 @@
+{
+  "instructions": "You are a Polish-as-a-foreign-language examiner reviewing an anonymous reading practice corpus. You have no answer keys or prior conversation. Use ONLY the passage and options. Do not look up the author or repository. Independently solve each item. For each question return its ID, chosen option ID (A/B/C, or null if no uniquely supported option), exact evidence quote from the passage, ambiguity flag, distractor plausibility score 0–100, and a concise issue description. Then evaluate each passage's naturalness, CEFR suitability for the provided target level, question quality, unambiguity, topic coherence and vocabulary variety, each on a 0–100 scale. Distinguish errors, stylistic preferences and level mismatches. Flag any grammatical error, unsupported answer, trivial distractor or false inference. Give suggested improvements without altering the provided data. Return JSON with one result per passage; no keys are supplied. Weights: naturalness 25%, CEFR 20%, question quality 20%, ambiguity 20%, coherence 10%, vocabulary 5%. Be strict; do not approve solely because a passage has no grammatical errors.",
+  "passages": [
+    {
+      "id": "pl-b1.reading.day-001",
+      "targetLevel": "A1",
+      "title": "Rodzina Leny",
+      "passage": "Mam na imię Lena. Mieszkam w Łodzi z mężem i córką. Nasze mieszkanie jest małe, ale jasne. Pracuję w sklepie od poniedziałku do piątku. Mój mąż jest kierowcą i często wraca późno. Nasza córka Ola ma osiem lat i lubi rysować.\n\nW sobotę zwykle jemy razem śniadanie. Potem idziemy do parku albo odwiedzamy moją mamę. Mama mieszka blisko nas. W niedzielę mamy mało planów, bo chcemy mieć czas dla siebie. Najbardziej lubię te spokojne poranki, kiedy nikt się nie spieszy.",
+      "questions": [
+        {
+          "id": "q1",
+          "question": "O czym Lena opowiada w obu częściach tekstu?",
+          "options": [
+            {
+              "id": "A",
+              "text": "O różnych miejscach pracy w Łodzi."
+            },
+            {
+              "id": "B",
+              "text": "O weekendzie Oli u babci."
+            },
+            {
+              "id": "C",
+              "text": "O swojej rodzinie i jej zwyczajach."
+            }
+          ]
+        },
+        {
+          "id": "q2",
+          "question": "Gdzie pracuje Lena?",
+          "options": [
+            {
+              "id": "A",
+              "text": "W parku."
+            },
+            {
+              "id": "B",
+              "text": "W sklepie."
+            },
+            {
+              "id": "C",
+              "text": "W szkole."
+            }
+          ]
+        },
+        {
+          "id": "q3",
+          "question": "Dlaczego rodzina ma mało planów w niedzielę?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Chce mieć czas dla siebie."
+            },
+            {
+              "id": "B",
+              "text": "Chce pójść wcześnie do sklepu."
+            },
+            {
+              "id": "C",
+              "text": "Chce zdążyć do babci na śniadanie."
+            }
+          ]
+        },
+        {
+          "id": "q4",
+          "question": "Który plan na niedzielne śniadanie najbardziej spodobałby się Lenie?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Zjeść wcześnie i od razu pobiec do parku."
+            },
+            {
+              "id": "B",
+              "text": "Szybko zjeść przed wyjściem do sklepu."
+            },
+            {
+              "id": "C",
+              "text": "Długo siedzieć razem przy stole."
+            }
+          ]
+        },
+        {
+          "id": "q5",
+          "question": "Co oznacza tutaj „nikt się nie spieszy”?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Każdy może robić wszystko spokojnie."
+            },
+            {
+              "id": "B",
+              "text": "Każdy stara się przyjść wcześniej."
+            },
+            {
+              "id": "C",
+              "text": "Każdy musi skończyć przed czasem."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-002",
+      "targetLevel": "A1",
+      "title": "Nowy kolega",
+      "passage": "— Cześć, jestem Adam. Jestem nowy w tej grupie. A ty?\n\n— Mam na imię Ewa. Jestem tutaj od września. Nasza nauczycielka jest bardzo miła.\n\n— Czy zajęcia są trudne?\n\n— Na początku trochę, ale teraz jest łatwiej. Uczymy się w małych grupach. A skąd jesteś?\n\n— Jestem z Czech, ale od roku mieszkam w Polsce. W domu mówię po czesku. Chcę mówić po polsku z sąsiadami.\n\n— Świetnie! Ja też uczę się polskiego. Po zajęciach jestem zwykle w kawiarni obok szkoły. Możemy tam rozmawiać.\n\n— Dziękuję! Dzisiaj mam czas. Spotkajmy się o czwartej.",
+      "questions": [
+        {
+          "id": "q1",
+          "question": "O czym rozmawiają Adam i Ewa?",
+          "options": [
+            {
+              "id": "A",
+              "text": "O wyborze nowej szkoły w Polsce."
+            },
+            {
+              "id": "B",
+              "text": "Poznają się na kursie i planują spotkanie."
+            },
+            {
+              "id": "C",
+              "text": "Planują pierwszą lekcję dla sąsiadów."
+            }
+          ]
+        },
+        {
+          "id": "q2",
+          "question": "Skąd jest Adam?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Z Polski."
+            },
+            {
+              "id": "B",
+              "text": "Z Niemiec."
+            },
+            {
+              "id": "C",
+              "text": "Z Czech."
+            }
+          ]
+        },
+        {
+          "id": "q3",
+          "question": "Po co Adam uczy się polskiego?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Chce uczyć innych w szkole."
+            },
+            {
+              "id": "B",
+              "text": "Chce rozmawiać z sąsiadami."
+            },
+            {
+              "id": "C",
+              "text": "Chce mówić po polsku w domu z rodziną."
+            }
+          ]
+        },
+        {
+          "id": "q4",
+          "question": "Gdzie Ewa powinna czekać na Adama o czwartej?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Przy stoliku w kawiarni."
+            },
+            {
+              "id": "B",
+              "text": "W sali, w której mają zajęcia."
+            },
+            {
+              "id": "C",
+              "text": "Przed domem jego sąsiadów."
+            }
+          ]
+        },
+        {
+          "id": "q5",
+          "question": "Kiedy zajęcia były dla Ewy trochę trudne? Co oznacza „na początku”?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Po ostatniej lekcji kursu."
+            },
+            {
+              "id": "B",
+              "text": "Na każdej lekcji przed przerwą."
+            },
+            {
+              "id": "C",
+              "text": "Kiedy zaczęła chodzić na kurs."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-003",
+      "targetLevel": "A1",
+      "title": "Dzień w domu",
+      "passage": "Cześć, Kasiu! Pytasz, jak wygląda mój dzień. Rano wstaję o siódmej, jem śniadanie i zaczynam pracę o ósmej. Pracuję w domu. Mam biurko przy oknie i małą lampę. W czasie przerwy słucham muzyki albo patrzę przez okno.\n\nO dwunastej rozmawiam z mamą przez telefon. Potem gotuję obiad. Po pracy często spotykam się z koleżanką. Ona mieszka na tej samej ulicy. Razem spacerujemy, a kiedy pada deszcz, zostajemy u niej w domu i gramy w karty. Wieczorem czytam książkę. Nie oglądam telewizji, bo wolę czytać. Pozdrawiam\nAnia",
+      "questions": [
+        {
+          "id": "q1",
+          "question": "Po co Ania pisze do Kasi?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Żeby umówić się na wspólny spacer."
+            },
+            {
+              "id": "B",
+              "text": "Żeby opisać swój dzień."
+            },
+            {
+              "id": "C",
+              "text": "Żeby ustalić godzinę rozmowy telefonicznej."
+            }
+          ]
+        },
+        {
+          "id": "q2",
+          "question": "O której Ania zaczyna pracę?",
+          "options": [
+            {
+              "id": "A",
+              "text": "O ósmej."
+            },
+            {
+              "id": "B",
+              "text": "O siódmej."
+            },
+            {
+              "id": "C",
+              "text": "O dwunastej."
+            }
+          ]
+        },
+        {
+          "id": "q3",
+          "question": "Dlaczego wieczorem nie ogląda telewizji?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Dopiero wieczorem kończy pracę."
+            },
+            {
+              "id": "B",
+              "text": "Woli wtedy grać w karty z mamą."
+            },
+            {
+              "id": "C",
+              "text": "Woli czytać książki."
+            }
+          ]
+        },
+        {
+          "id": "q4",
+          "question": "Ania idzie po pracy do koleżanki. Co najlepiej wziąć, jeśli pada deszcz?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Książkę do wspólnego czytania."
+            },
+            {
+              "id": "B",
+              "text": "Karty do gry."
+            },
+            {
+              "id": "C",
+              "text": "Buty na długi spacer."
+            }
+          ]
+        },
+        {
+          "id": "q5",
+          "question": "Co oznacza „przerwa” w pracy?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Czas po skończeniu całej pracy."
+            },
+            {
+              "id": "B",
+              "text": "Czas tuż przed rozpoczęciem pracy."
+            },
+            {
+              "id": "C",
+              "text": "Krótki czas, kiedy się nie pracuje."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-004",
+      "targetLevel": "A1",
+      "title": "Michał w recepcji",
+      "passage": "W recepcji szkoły językowej jest nowy uczeń. Ma na imię Michał, a pani w recepcji zapisuje jego dane.\n\n— Proszę podać imię i nazwisko.\n\n— Michał Żak.\n\n— Czy nazwisko zaczyna się na Z?\n\n— Na Ż, z kropką. A moje imię ma literę ł.\n\n— Dziękuję. Czy ma pan numer telefonu?\n\n— Tak, ale w pracy nie odbieram telefonu. Mogę wtedy czytać wiadomości na komputerze.\n\nRecepcjonistka sprawdza dane jeszcze raz. Michał widzi na ekranie swoje nazwisko. Wszystkie litery są już poprawne. Teraz może dostać kartę ucznia. Na karcie są jego imię, nazwisko i numer grupy. Nie ma na niej adresu domowego.",
+      "questions": [
+        {
+          "id": "q1",
+          "question": "Co robi Michał w recepcji?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Prosi o zmianę swojego nazwiska."
+            },
+            {
+              "id": "B",
+              "text": "Podaje dane potrzebne do karty ucznia."
+            },
+            {
+              "id": "C",
+              "text": "Wybiera nową grupę w szkole."
+            }
+          ]
+        },
+        {
+          "id": "q2",
+          "question": "Na jaką literę zaczyna się nazwisko Michała?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Z."
+            },
+            {
+              "id": "B",
+              "text": "Ż."
+            },
+            {
+              "id": "C",
+              "text": "Ł."
+            }
+          ]
+        },
+        {
+          "id": "q3",
+          "question": "Dlaczego pani w recepcji jeszcze raz sprawdza nazwisko?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Chce dobrze zapisać pierwszą literę."
+            },
+            {
+              "id": "B",
+              "text": "Na karcie ma być tylko imię Michała."
+            },
+            {
+              "id": "C",
+              "text": "Michał chce dostać nowy adres e-mail."
+            }
+          ]
+        },
+        {
+          "id": "q4",
+          "question": "Michał jest w pracy. Jak szkoła może szybko podać mu nową godzinę lekcji?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Zadzwonić do niego teraz."
+            },
+            {
+              "id": "B",
+              "text": "Wysłać wiadomość na jego adres e-mail."
+            },
+            {
+              "id": "C",
+              "text": "Poczekać z informacją do następnej lekcji."
+            }
+          ]
+        },
+        {
+          "id": "q5",
+          "question": "Co oznacza, że litery są „poprawne”?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Nazwisko zapisano drugi raz."
+            },
+            {
+              "id": "B",
+              "text": "Nazwisko zapisano bez błędu."
+            },
+            {
+              "id": "C",
+              "text": "Nazwisko zapisano dużymi literami."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-005",
+      "targetLevel": "A1",
+      "title": "Prezent dla babci",
+      "passage": "Marta i jej brat Piotr szukają prezentu dla babci. Babcia lubi ogród, książki i herbatę. W małym sklepie na rogu jest duży wybór prezentów. Na półce stoi niebieski kubek, obok leży zielona książka, a przy kasie jest żółte pudełko z herbatą.\n\nPiotr chce kupić kubek, ale Marta wie, że babcia ma już wiele kubków. Książka też nie jest dobrym pomysłem, bo babcia już ją ma. Wybierają więc herbatę. Ma zapach malin. Sprzedawca daje im małą papierową torbę. W domu Marta robi jeszcze kartkę z życzeniami, a Piotr rysuje na niej kwiat.",
+      "questions": [
+        {
+          "id": "q1",
+          "question": "O czym jest ta historia?",
+          "options": [
+            {
+              "id": "A",
+              "text": "O tym, jak babcia robi zakupy do domu."
+            },
+            {
+              "id": "B",
+              "text": "O tym, jak rodzeństwo wybiera prezent dla babci."
+            },
+            {
+              "id": "C",
+              "text": "O tym, jak Marta i Piotr robią własną herbatę."
+            }
+          ]
+        },
+        {
+          "id": "q2",
+          "question": "Jakiego koloru jest kubek?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Zielonego."
+            },
+            {
+              "id": "B",
+              "text": "Żółtego."
+            },
+            {
+              "id": "C",
+              "text": "Niebieskiego."
+            }
+          ]
+        },
+        {
+          "id": "q3",
+          "question": "Dlaczego Marta nie chce kupić kubka?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Babcia nie lubi niebieskiego koloru."
+            },
+            {
+              "id": "B",
+              "text": "Kubek jest za ciężki."
+            },
+            {
+              "id": "C",
+              "text": "Babcia ma już wiele kubków."
+            }
+          ]
+        },
+        {
+          "id": "q4",
+          "question": "Co pomaga Marcie wybrać prezent?",
+          "options": [
+            {
+              "id": "A",
+              "text": "To, że zna cenę każdego prezentu."
+            },
+            {
+              "id": "B",
+              "text": "To, że pamięta, co babcia już ma."
+            },
+            {
+              "id": "C",
+              "text": "To, że babcia podała jej listę zakupów."
+            }
+          ]
+        },
+        {
+          "id": "q5",
+          "question": "Gdzie jest sklep „na rogu”?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Za domem, obok ogrodu."
+            },
+            {
+              "id": "B",
+              "text": "W połowie ulicy, między dwoma domami."
+            },
+            {
+              "id": "C",
+              "text": "Tam, gdzie jedna ulica spotyka się z drugą."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-006",
+      "targetLevel": "A1",
+      "title": "Sąsiadka z drugiego piętra",
+      "passage": "Pani Zofia mieszka sama na drugim piętrze. Ma psa o imieniu Burek. Codziennie rano wychodzi z nim na spacer. W domu Zofia lubi robić ciasto i słuchać radia. Jej nowy sąsiad, Tomek, pracuje w biurze. Czasem spotykają się na schodach i rozmawiają.\n\nDzisiaj Tomek widzi, że Zofia niesie ciężką torbę z zakupami. Pomaga jej, bo w budynku nie ma windy. Zofia zaprasza go na herbatę i kawałek ciasta. Tomek ma dziś dużo pracy, ale obiecuje przyjść w sobotę. Zofia już cieszy się na sobotę. Lubi poznawać ludzi z sąsiedztwa.",
+      "questions": [
+        {
+          "id": "q1",
+          "question": "O czym przede wszystkim jest tekst?",
+          "options": [
+            {
+              "id": "A",
+              "text": "O sobotnich zakupach do biura."
+            },
+            {
+              "id": "B",
+              "text": "O porannych spacerach Tomka z psem."
+            },
+            {
+              "id": "C",
+              "text": "O tym, jak nowi sąsiedzi się poznają."
+            }
+          ]
+        },
+        {
+          "id": "q2",
+          "question": "Gdzie mieszka Zofia?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Na parterze."
+            },
+            {
+              "id": "B",
+              "text": "Na czwartym piętrze."
+            },
+            {
+              "id": "C",
+              "text": "Na drugim piętrze."
+            }
+          ]
+        },
+        {
+          "id": "q3",
+          "question": "Dlaczego Tomek pomaga Zofii z torbą?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Tomek też ma coś w tej torbie."
+            },
+            {
+              "id": "B",
+              "text": "Torba jest ciężka, a w domu nie ma windy."
+            },
+            {
+              "id": "C",
+              "text": "Zofia szuka drogi z domu do sklepu."
+            }
+          ]
+        },
+        {
+          "id": "q4",
+          "question": "Co Zofia chce pokazać, kiedy zaprasza Tomka na ciasto?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Że znów potrzebuje pomocy przy zakupach."
+            },
+            {
+              "id": "B",
+              "text": "Że chciałaby iść z nim na spacer z psem."
+            },
+            {
+              "id": "C",
+              "text": "Że jest mu wdzięczna za pomoc."
+            }
+          ]
+        },
+        {
+          "id": "q5",
+          "question": "Kim są tutaj ludzie „z sąsiedztwa”?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Osobami, które razem pracują."
+            },
+            {
+              "id": "B",
+              "text": "Osobami, które często przychodzą w gości."
+            },
+            {
+              "id": "C",
+              "text": "Osobami, które mieszkają blisko."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-007",
+      "targetLevel": "A1",
+      "title": "Zaproszenie na piknik",
+      "passage": "Zapraszamy wszystkich mieszkańców naszej ulicy na rodzinny piknik w niedzielę. Spotykamy się o jedenastej w małym parku obok szkoły. Na miejscu są stoły, ławki i miejsce do zabawy dla dzieci. Każda rodzina przynosi coś do jedzenia lub picia. Nie trzeba kupować biletu.\n\nO dwunastej organizujemy wspólne gry. Później jest czas na rozmowy i odpoczynek. Prosimy przynieść koc, bo jest mało ławek. Jeśli w niedzielę będzie padać, spotkamy się w sali szkolnej o tej samej godzinie. W niedzielę rano przy wejściu do szkoły powiesimy kartkę. Napiszemy na niej, gdzie się spotykamy.",
+      "questions": [
+        {
+          "id": "q1",
+          "question": "Po co mieszkańcy dostają to ogłoszenie?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Żeby pomóc wybrać park na piknik."
+            },
+            {
+              "id": "B",
+              "text": "Żeby dowiedzieć się o wspólnym pikniku."
+            },
+            {
+              "id": "C",
+              "text": "Żeby zapisać dzieci na gry w szkole."
+            }
+          ]
+        },
+        {
+          "id": "q2",
+          "question": "O której zaczyna się spotkanie?",
+          "options": [
+            {
+              "id": "A",
+              "text": "O dziewiątej."
+            },
+            {
+              "id": "B",
+              "text": "O dwunastej."
+            },
+            {
+              "id": "C",
+              "text": "O jedenastej."
+            }
+          ]
+        },
+        {
+          "id": "q3",
+          "question": "Dlaczego warto przynieść koc?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Na kocach będą leżeć rzeczy do gier."
+            },
+            {
+              "id": "B",
+              "text": "Nie wszyscy będą mogli usiąść na ławkach."
+            },
+            {
+              "id": "C",
+              "text": "Na jedzenie nie będzie żadnego stołu."
+            }
+          ]
+        },
+        {
+          "id": "q4",
+          "question": "Rodzina wychodzi z domu o dziesiątej. Nie wie, czy piknik będzie w parku. Dokąd powinna najpierw pójść?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Pod drzwi szkoły, żeby sprawdzić wiadomość."
+            },
+            {
+              "id": "B",
+              "text": "Do parku, żeby znaleźć organizatora gier."
+            },
+            {
+              "id": "C",
+              "text": "Do sali szkolnej, żeby poszukać innych rodzin."
+            }
+          ]
+        },
+        {
+          "id": "q5",
+          "question": "Co oznacza tutaj „na miejscu”?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Tam, gdzie ma być piknik."
+            },
+            {
+              "id": "B",
+              "text": "W domu każdej rodziny."
+            },
+            {
+              "id": "C",
+              "text": "Po drodze z domu do parku."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-008",
+      "targetLevel": "A1",
+      "title": "Mieszkanie z ogrodem",
+      "passage": "Do wynajęcia jest mieszkanie na parterze małego domu. Są w nim dwa pokoje, kuchnia i łazienka. Jeden pokój jest duży i jasny, drugi jest mały. Przy domu jest ogród. Można tam pić kawę, czytać książki albo odpoczywać po pracy.\n\nWłaściciel mieszka na pierwszym piętrze. Lubi zwierzęta, więc pies lub kot nie stanowi problemu. W pobliżu jest sklep i przystanek autobusowy. Nie ma garażu, ale rower można zostawić w zamkniętej szopie. Mieszkanie jest wolne od pierwszego grudnia. Mieszkanie można obejrzeć w środę lub piątek po godzinie siedemnastej.",
+      "questions": [
+        {
+          "id": "q1",
+          "question": "Co można zrobić dzięki temu ogłoszeniu?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Wynająć sam ogród przy domu."
+            },
+            {
+              "id": "B",
+              "text": "Znaleźć mieszkanie do wynajęcia."
+            },
+            {
+              "id": "C",
+              "text": "Znaleźć dom do kupienia."
+            }
+          ]
+        },
+        {
+          "id": "q2",
+          "question": "Ile pokoi ma mieszkanie?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Trzy."
+            },
+            {
+              "id": "B",
+              "text": "Jeden."
+            },
+            {
+              "id": "C",
+              "text": "Dwa."
+            }
+          ]
+        },
+        {
+          "id": "q3",
+          "question": "Dlaczego można tu mieszkać z psem?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Pies może mieszkać tylko w szopie."
+            },
+            {
+              "id": "B",
+              "text": "Właściciel ma dla psa osobny pokój."
+            },
+            {
+              "id": "C",
+              "text": "Właściciel lubi zwierzęta."
+            }
+          ]
+        },
+        {
+          "id": "q4",
+          "question": "Kto ma wolny czas, kiedy można obejrzeć mieszkanie?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Ewa, która ma wolny piątkowy wieczór."
+            },
+            {
+              "id": "B",
+              "text": "Jan, który ma czas tylko w sobotę po południu."
+            },
+            {
+              "id": "C",
+              "text": "Ania, która ma czas tylko w środę rano."
+            }
+          ]
+        },
+        {
+          "id": "q5",
+          "question": "Co oznacza „mieszkanie jest wolne od pierwszego grudnia”?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Od tego dnia nie trzeba za nie płacić."
+            },
+            {
+              "id": "B",
+              "text": "Od tego dnia można je wynająć."
+            },
+            {
+              "id": "C",
+              "text": "Tego dnia można je kupić."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-009",
+      "targetLevel": "A1",
+      "title": "Przerwa w dostawie wody",
+      "passage": "Drodzy sąsiedzi, w czwartek rano w naszym budynku będzie pracował hydraulik. Od dziewiątej do jedenastej nie będzie zimnej wody. Ciepłej wody też może przez ten czas nie być. Prosimy wcześniej przygotować wodę do picia i gotowania.\n\nHydraulik będzie pracował w piwnicy, więc nie trzeba zostawiać kluczy do mieszkań. Po jedenastej woda powinna już być. Jeśli nadal nie będzie wody, prosimy zadzwonić do biura. Numer telefonu jest na tablicy przy drzwiach do budynku. Przepraszamy za kłopot i dziękujemy za cierpliwość. Wiosną znów sprawdzimy rury w piwnicy.",
+      "questions": [
+        {
+          "id": "q1",
+          "question": "Po co sąsiedzi dostają tę wiadomość?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Żeby wiedzieli, kiedy zabraknie wody."
+            },
+            {
+              "id": "B",
+              "text": "Żeby wybrali nową datę naprawy."
+            },
+            {
+              "id": "C",
+              "text": "Żeby umówili wizytę hydraulika w mieszkaniu."
+            }
+          ]
+        },
+        {
+          "id": "q2",
+          "question": "Kiedy nie będzie zimnej wody?",
+          "options": [
+            {
+              "id": "A",
+              "text": "W piątek od dziewiątej do jedenastej."
+            },
+            {
+              "id": "B",
+              "text": "W czwartek od dziewiątej do jedenastej."
+            },
+            {
+              "id": "C",
+              "text": "W czwartek po siedemnastej."
+            }
+          ]
+        },
+        {
+          "id": "q3",
+          "question": "Dlaczego nie trzeba zostawiać kluczy do mieszkań?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Wszyscy sąsiedzi będą w domu."
+            },
+            {
+              "id": "B",
+              "text": "Hydraulik będzie pracował w piwnicy."
+            },
+            {
+              "id": "C",
+              "text": "Hydraulik ma klucze od mieszkań."
+            }
+          ]
+        },
+        {
+          "id": "q4",
+          "question": "Ola chce ugotować zupę w czwartek o dziesiątej. Kiedy najlepiej nalać wodę do garnka?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Przed dziewiątą tego dnia."
+            },
+            {
+              "id": "B",
+              "text": "O wpół do jedenastej, przed końcem naprawy."
+            },
+            {
+              "id": "C",
+              "text": "O dziesiątej, kiedy zacznie gotować."
+            }
+          ]
+        },
+        {
+          "id": "q5",
+          "question": "Co oznacza „kłopot” w ostatniej części wiadomości?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Problem dla mieszkańców."
+            },
+            {
+              "id": "B",
+              "text": "Zmianę daty spotkania."
+            },
+            {
+              "id": "C",
+              "text": "Prośbę o pomoc."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-010",
+      "targetLevel": "A1",
+      "title": "Pokój dla studenta",
+      "passage": "— Dzień dobry, czy pokój jest jeszcze wolny?\n\n— Tak. Pokój ma duże okno, biurko i szafę. Kuchnia i łazienka są wspólne.\n\n— Często wracam późno z zajęć. Czy mogę wtedy coś ugotować?\n\n— Oczywiście. Tylko po dziesiątej wieczorem prosimy o ciszę.\n\n— Rozumiem. Jestem studentem i potrzebuję internetu do nauki. Czy w pokoju działa internet?\n\n— Tak, internet jest w cenie. Woda i prąd są rozliczane osobno.\n\n— A czy blisko jest przystanek autobusu do centrum?\n\n— Przystanek jest obok domu. Autobus jedzie około piętnastu minut.\n\n— Bardzo dobrze. Czy mogę zobaczyć pokój jutro?\n\n— Tak, proszę przyjść po południu.",
+      "questions": [
+        {
+          "id": "q1",
+          "question": "O czym jest ta rozmowa?",
+          "options": [
+            {
+              "id": "A",
+              "text": "O tym, jak dojechać z uczelni na zajęcia."
+            },
+            {
+              "id": "B",
+              "text": "O tym, jak znaleźć drugą osobę do pokoju."
+            },
+            {
+              "id": "C",
+              "text": "O tym, co trzeba wiedzieć przed wynajęciem pokoju."
+            }
+          ]
+        },
+        {
+          "id": "q2",
+          "question": "Co jest w cenie pokoju?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Prąd."
+            },
+            {
+              "id": "B",
+              "text": "Woda."
+            },
+            {
+              "id": "C",
+              "text": "Internet."
+            }
+          ]
+        },
+        {
+          "id": "q3",
+          "question": "Dlaczego student pyta o gotowanie wieczorem?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Często późno wraca z zajęć."
+            },
+            {
+              "id": "B",
+              "text": "Kuchnia jest rano zamknięta."
+            },
+            {
+              "id": "C",
+              "text": "Chce przygotowywać posiłki dla innych osób."
+            }
+          ]
+        },
+        {
+          "id": "q4",
+          "question": "Student wraca o jedenastej wieczorem. Który plan pasuje do zasad domu?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Zaprosić kolegów na głośną rozmowę w kuchni."
+            },
+            {
+              "id": "B",
+              "text": "Włączyć głośną muzykę w swoim pokoju."
+            },
+            {
+              "id": "C",
+              "text": "Po cichu przygotować kolację w kuchni."
+            }
+          ]
+        },
+        {
+          "id": "q5",
+          "question": "Co znaczy, że woda i prąd są „rozliczane osobno”?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Płaci za nie szkoła studenta."
+            },
+            {
+              "id": "B",
+              "text": "Płaci się za nie tylko w cenie pokoju."
+            },
+            {
+              "id": "C",
+              "text": "Trzeba za nie zapłacić oprócz ceny pokoju."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

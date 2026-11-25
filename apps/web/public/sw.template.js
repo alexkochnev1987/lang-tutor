@@ -89,7 +89,8 @@ self.addEventListener('fetch', (event) => {
     return
   }
 
-  if (/\/sentence-corpus\/(?:index|[a-f0-9]{12}-\d+)\.json$/.test(url.pathname)) {
+  if (/\/sentence-corpus\/(?:index|[a-f0-9]{12}-\d+)\.json$/.test(url.pathname) ||
+      /\/reading(?:-preview)?\/(?:index|(?:day|legacy)-\d{3,})\.json$/.test(url.pathname)) {
     event.respondWith(cacheFirst(request, CONTENT_CACHE, event))
     return
   }

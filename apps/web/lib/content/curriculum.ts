@@ -11,6 +11,7 @@
  */
 import { CLOSED_CLASS_PARADIGMS } from '@/lib/lang-pl/closed-class'
 import { loadState } from '@/lib/data/store'
+import { readingFilename, selectReadingEntry, type ReadingCatalog, type ReadingCatalogEntry } from './reading-catalog'
 
 export const COURSE_ID = process.env.NEXT_PUBLIC_COURSE_ID ?? 'pl-b1-ru'
 
@@ -236,13 +237,34 @@ export interface ReadingText {
   questions: ReadingQuestion[]
 }
 
-export async function loadReadingTexts(): Promise<ReadingText[]> {
+async function loadReadingCatalog(folder: 'reading' | 'reading-preview'): Promise<ReadingCatalogEntry[]> {
+  const index = await loadPack<ReadingCatalog>(folder + '/index.json')
+  if (index.version !== 1 || !Array.isArray(index.entries)) throw new Error('invalid_reading_catalog')
+  return index.entries
+}
+
+async function loadReadingEntry(folder: 'reading' | 'reading-preview', entry: ReadingCatalogEntry): Promise<ReadingText> {
+  const text = await loadPack<ReadingText>(folder + '/' + readingFilename(entry))
+  if (text.id !== entry.id || !Array.isArray(text.questions)) throw new Error('invalid_reading_text')
+  return text
+}
+
+export async function loadReadingTextForDay(day: number): Promise<ReadingText | null> {
   try {
-    const pack = await loadPack<{ texts: ReadingText[] }>('reading.json')
-    return pack.texts ?? []
+    const entry = selectReadingEntry(await loadReadingCatalog('reading'), day)
+    return entry ? await loadReadingEntry('reading', entry) : null
   } catch {
-    return []
+    return null
   }
+}
+
+export async function loadReadingPreviewCatalog(): Promise<ReadingCatalogEntry[]> {
+  return (await loadReadingCatalog('reading-preview')).filter(entry => entry.status === 'preview')
+}
+
+export async function loadReadingPreviewText(entry: ReadingCatalogEntry): Promise<ReadingText> {
+  if (entry.status !== 'preview') throw new Error('invalid_reading_status')
+  return loadReadingEntry('reading-preview', entry)
 }
 
 /**
