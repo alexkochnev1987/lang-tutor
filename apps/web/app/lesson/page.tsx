@@ -760,7 +760,7 @@ export default function LessonPage() {
             <Row gap="sm" justify="center">
               {slot.step.rule && <RuleSheet rule={slot.step.rule} />}
             </Row>
-            {!wordStudyExercise && (canAdvance || Boolean(restoredResult) || lessonSave.status === "saving") && (
+            {!wordStudyExercise && (canAdvance || (grammarExerciseIndex !== 1 && Boolean(restoredResult)) || lessonSave.status === "saving") && (
               <Button size="lg" full disabled={pendingAnswers > 0 || Object.keys(answerFailures).length > 0} busy={lessonSave.status === "saving"} busyLabel="Сохраняем итог…" onClick={next}>
                 {i + 1 < slots.length ? "Dalej" : "Zakończ"}
               </Button>

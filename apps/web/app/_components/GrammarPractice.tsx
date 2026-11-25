@@ -190,7 +190,7 @@ export function GrammarPractice({ weakOnly = false }: { weakOnly?: boolean }) {
         <Stack gap="sm">
           <h2 id="practice-format-label" className="font-semibold">Тип тренировки</h2>
           <div role="group" aria-labelledby="practice-format-label" className="grid gap-2 sm:grid-cols-2">
-            {FORMATS.map(({ id, label, description }) => (
+            {FORMATS.filter(({ id }) => !weakOnly || id !== 'collocation').map(({ id, label, description }) => (
               <button
                 key={id}
                 type="button"
