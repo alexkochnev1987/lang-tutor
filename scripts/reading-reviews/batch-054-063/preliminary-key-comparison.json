@@ -1,0 +1,558 @@
+{
+  "reviewKind": "in-chat-blind-not-independent",
+  "reviewCommit": "749305a64fba044690a0e63c593cbf463167dc7c",
+  "matched": 50,
+  "total": 50,
+  "passages": [
+    {
+      "id": "pl-b1.reading.day-054",
+      "items": [
+        {
+          "id": "q1",
+          "skill": "main-idea",
+          "author": "B",
+          "reviewer": "B",
+          "match": true,
+          "exactOptions": true,
+          "evidenceValid": true,
+          "distractorScore": 82
+        },
+        {
+          "id": "q2",
+          "skill": "detail",
+          "author": "A",
+          "reviewer": "A",
+          "match": true,
+          "exactOptions": true,
+          "evidenceValid": true,
+          "distractorScore": 80
+        },
+        {
+          "id": "q3",
+          "skill": "cause",
+          "author": "C",
+          "reviewer": "C",
+          "match": true,
+          "exactOptions": true,
+          "evidenceValid": true,
+          "distractorScore": 76
+        },
+        {
+          "id": "q4",
+          "skill": "inference",
+          "author": "C",
+          "reviewer": "C",
+          "match": true,
+          "exactOptions": true,
+          "evidenceValid": true,
+          "distractorScore": 90
+        },
+        {
+          "id": "q5",
+          "skill": "vocabulary",
+          "author": "B",
+          "reviewer": "B",
+          "match": true,
+          "exactOptions": true,
+          "evidenceValid": true,
+          "distractorScore": 68
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-055",
+      "items": [
+        {
+          "id": "q1",
+          "skill": "main-idea",
+          "author": "A",
+          "reviewer": "A",
+          "match": true,
+          "exactOptions": true,
+          "evidenceValid": true,
+          "distractorScore": 72
+        },
+        {
+          "id": "q2",
+          "skill": "detail",
+          "author": "C",
+          "reviewer": "C",
+          "match": true,
+          "exactOptions": true,
+          "evidenceValid": true,
+          "distractorScore": 85
+        },
+        {
+          "id": "q3",
+          "skill": "cause",
+          "author": "B",
+          "reviewer": "B",
+          "match": true,
+          "exactOptions": true,
+          "evidenceValid": true,
+          "distractorScore": 85
+        },
+        {
+          "id": "q4",
+          "skill": "inference",
+          "author": "A",
+          "reviewer": "A",
+          "match": true,
+          "exactOptions": true,
+          "evidenceValid": true,
+          "distractorScore": 75
+        },
+        {
+          "id": "q5",
+          "skill": "vocabulary",
+          "author": "A",
+          "reviewer": "A",
+          "match": true,
+          "exactOptions": true,
+          "evidenceValid": true,
+          "distractorScore": 61
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-056",
+      "items": [
+        {
+          "id": "q1",
+          "skill": "main-idea",
+          "author": "C",
+          "reviewer": "C",
+          "match": true,
+          "exactOptions": true,
+          "evidenceValid": true,
+          "distractorScore": 70
+        },
+        {
+          "id": "q2",
+          "skill": "detail",
+          "author": "B",
+          "reviewer": "B",
+          "match": true,
+          "exactOptions": true,
+          "evidenceValid": true,
+          "distractorScore": 80
+        },
+        {
+          "id": "q3",
+          "skill": "cause",
+          "author": "B",
+          "reviewer": "B",
+          "match": true,
+          "exactOptions": true,
+          "evidenceValid": true,
+          "distractorScore": 66
+        },
+        {
+          "id": "q4",
+          "skill": "inference",
+          "author": "C",
+          "reviewer": "C",
+          "match": true,
+          "exactOptions": true,
+          "evidenceValid": true,
+          "distractorScore": 80
+        },
+        {
+          "id": "q5",
+          "skill": "vocabulary",
+          "author": "A",
+          "reviewer": "A",
+          "match": true,
+          "exactOptions": true,
+          "evidenceValid": true,
+          "distractorScore": 68
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-057",
+      "items": [
+        {
+          "id": "q1",
+          "skill": "main-idea",
+          "author": "B",
+          "reviewer": "B",
+          "match": true,
+          "exactOptions": true,
+          "evidenceValid": true,
+          "distractorScore": 64
+        },
+        {
+          "id": "q2",
+          "skill": "detail",
+          "author": "C",
+          "reviewer": "C",
+          "match": true,
+          "exactOptions": true,
+          "evidenceValid": true,
+          "distractorScore": 86
+        },
+        {
+          "id": "q3",
+          "skill": "cause",
+          "author": "A",
+          "reviewer": "A",
+          "match": true,
+          "exactOptions": true,
+          "evidenceValid": true,
+          "distractorScore": 64
+        },
+        {
+          "id": "q4",
+          "skill": "inference",
+          "author": "B",
+          "reviewer": "B",
+          "match": true,
+          "exactOptions": true,
+          "evidenceValid": true,
+          "distractorScore": 81
+        },
+        {
+          "id": "q5",
+          "skill": "vocabulary",
+          "author": "C",
+          "reviewer": "C",
+          "match": true,
+          "exactOptions": true,
+          "evidenceValid": true,
+          "distractorScore": 62
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-058",
+      "items": [
+        {
+          "id": "q1",
+          "skill": "main-idea",
+          "author": "A",
+          "reviewer": "A",
+          "match": true,
+          "exactOptions": true,
+          "evidenceValid": true,
+          "distractorScore": 83
+        },
+        {
+          "id": "q2",
+          "skill": "detail",
+          "author": "A",
+          "reviewer": "A",
+          "match": true,
+          "exactOptions": true,
+          "evidenceValid": true,
+          "distractorScore": 90
+        },
+        {
+          "id": "q3",
+          "skill": "cause",
+          "author": "C",
+          "reviewer": "C",
+          "match": true,
+          "exactOptions": true,
+          "evidenceValid": true,
+          "distractorScore": 77
+        },
+        {
+          "id": "q4",
+          "skill": "inference",
+          "author": "B",
+          "reviewer": "B",
+          "match": true,
+          "exactOptions": true,
+          "evidenceValid": true,
+          "distractorScore": 82
+        },
+        {
+          "id": "q5",
+          "skill": "vocabulary",
+          "author": "A",
+          "reviewer": "A",
+          "match": true,
+          "exactOptions": true,
+          "evidenceValid": true,
+          "distractorScore": 69
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-059",
+      "items": [
+        {
+          "id": "q1",
+          "skill": "main-idea",
+          "author": "C",
+          "reviewer": "C",
+          "match": true,
+          "exactOptions": true,
+          "evidenceValid": true,
+          "distractorScore": 71
+        },
+        {
+          "id": "q2",
+          "skill": "detail",
+          "author": "B",
+          "reviewer": "B",
+          "match": true,
+          "exactOptions": true,
+          "evidenceValid": true,
+          "distractorScore": 85
+        },
+        {
+          "id": "q3",
+          "skill": "cause",
+          "author": "C",
+          "reviewer": "C",
+          "match": true,
+          "exactOptions": true,
+          "evidenceValid": true,
+          "distractorScore": 84
+        },
+        {
+          "id": "q4",
+          "skill": "inference",
+          "author": "A",
+          "reviewer": "A",
+          "match": true,
+          "exactOptions": true,
+          "evidenceValid": true,
+          "distractorScore": 84
+        },
+        {
+          "id": "q5",
+          "skill": "vocabulary",
+          "author": "B",
+          "reviewer": "B",
+          "match": true,
+          "exactOptions": true,
+          "evidenceValid": true,
+          "distractorScore": 70
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-060",
+      "items": [
+        {
+          "id": "q1",
+          "skill": "main-idea",
+          "author": "B",
+          "reviewer": "B",
+          "match": true,
+          "exactOptions": true,
+          "evidenceValid": true,
+          "distractorScore": 78
+        },
+        {
+          "id": "q2",
+          "skill": "detail",
+          "author": "B",
+          "reviewer": "B",
+          "match": true,
+          "exactOptions": true,
+          "evidenceValid": true,
+          "distractorScore": 90
+        },
+        {
+          "id": "q3",
+          "skill": "cause",
+          "author": "A",
+          "reviewer": "A",
+          "match": true,
+          "exactOptions": true,
+          "evidenceValid": true,
+          "distractorScore": 69
+        },
+        {
+          "id": "q4",
+          "skill": "inference",
+          "author": "C",
+          "reviewer": "C",
+          "match": true,
+          "exactOptions": true,
+          "evidenceValid": true,
+          "distractorScore": 75
+        },
+        {
+          "id": "q5",
+          "skill": "vocabulary",
+          "author": "C",
+          "reviewer": "C",
+          "match": true,
+          "exactOptions": true,
+          "evidenceValid": true,
+          "distractorScore": 65
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-061",
+      "items": [
+        {
+          "id": "q1",
+          "skill": "main-idea",
+          "author": "A",
+          "reviewer": "A",
+          "match": true,
+          "exactOptions": true,
+          "evidenceValid": true,
+          "distractorScore": 73
+        },
+        {
+          "id": "q2",
+          "skill": "detail",
+          "author": "C",
+          "reviewer": "C",
+          "match": true,
+          "exactOptions": true,
+          "evidenceValid": true,
+          "distractorScore": 89
+        },
+        {
+          "id": "q3",
+          "skill": "cause",
+          "author": "A",
+          "reviewer": "A",
+          "match": true,
+          "exactOptions": true,
+          "evidenceValid": true,
+          "distractorScore": 66
+        },
+        {
+          "id": "q4",
+          "skill": "inference",
+          "author": "A",
+          "reviewer": "A",
+          "match": true,
+          "exactOptions": true,
+          "evidenceValid": true,
+          "distractorScore": 81
+        },
+        {
+          "id": "q5",
+          "skill": "vocabulary",
+          "author": "B",
+          "reviewer": "B",
+          "match": true,
+          "exactOptions": true,
+          "evidenceValid": true,
+          "distractorScore": 72
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-062",
+      "items": [
+        {
+          "id": "q1",
+          "skill": "main-idea",
+          "author": "C",
+          "reviewer": "C",
+          "match": true,
+          "exactOptions": true,
+          "evidenceValid": true,
+          "distractorScore": 66
+        },
+        {
+          "id": "q2",
+          "skill": "detail",
+          "author": "A",
+          "reviewer": "A",
+          "match": true,
+          "exactOptions": true,
+          "evidenceValid": true,
+          "distractorScore": 91
+        },
+        {
+          "id": "q3",
+          "skill": "cause",
+          "author": "B",
+          "reviewer": "B",
+          "match": true,
+          "exactOptions": true,
+          "evidenceValid": true,
+          "distractorScore": 78
+        },
+        {
+          "id": "q4",
+          "skill": "inference",
+          "author": "C",
+          "reviewer": "C",
+          "match": true,
+          "exactOptions": true,
+          "evidenceValid": true,
+          "distractorScore": 88
+        },
+        {
+          "id": "q5",
+          "skill": "vocabulary",
+          "author": "B",
+          "reviewer": "B",
+          "match": true,
+          "exactOptions": true,
+          "evidenceValid": true,
+          "distractorScore": 65
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-063",
+      "items": [
+        {
+          "id": "q1",
+          "skill": "main-idea",
+          "author": "B",
+          "reviewer": "B",
+          "match": true,
+          "exactOptions": true,
+          "evidenceValid": true,
+          "distractorScore": 71
+        },
+        {
+          "id": "q2",
+          "skill": "detail",
+          "author": "C",
+          "reviewer": "C",
+          "match": true,
+          "exactOptions": true,
+          "evidenceValid": true,
+          "distractorScore": 90
+        },
+        {
+          "id": "q3",
+          "skill": "cause",
+          "author": "A",
+          "reviewer": "A",
+          "match": true,
+          "exactOptions": true,
+          "evidenceValid": true,
+          "distractorScore": 66
+        },
+        {
+          "id": "q4",
+          "skill": "inference",
+          "author": "B",
+          "reviewer": "B",
+          "match": true,
+          "exactOptions": true,
+          "evidenceValid": true,
+          "distractorScore": 80
+        },
+        {
+          "id": "q5",
+          "skill": "vocabulary",
+          "author": "A",
+          "reviewer": "A",
+          "match": true,
+          "exactOptions": true,
+          "evidenceValid": true,
+          "distractorScore": 64
+        }
+      ]
+    }
+  ]
+}
