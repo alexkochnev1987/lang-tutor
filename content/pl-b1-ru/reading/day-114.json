@@ -1,0 +1,76 @@
+{
+  "id": "pl-b1.reading.day-114",
+  "day": 114,
+  "level": "B1",
+  "genre": "artykuł",
+  "title": "Pomoc osobie, która dopiero przyjechała",
+  "text": "Kiedy Nadia przeprowadziła się do nowego miasta, znała już trochę język, ale nie wiedziała, jak wygląda codzienne życie w jej dzielnicy. Pierwszego dnia sąsiadka Ewa zaproponowała jej wspólny spacer. Nadia chciała znaleźć sklep, przystanek i miejsce, w którym mogłaby spokojnie pracować przy komputerze.\n\nEwa początkowo przygotowała bardzo długą listę adresów. Zamierzała pokazać Nadii wszystkie miejsca, które sama uważała za przydatne. W trakcie spaceru zauważyła jednak, że Nadia coraz częściej robi notatki i przestaje zadawać pytania. Gdy zapytała, czy potrzebuje przerwy, Nadia odpowiedziała, że najchętniej zapamiętałaby najpierw drogę do pracy, a inne miejsca poznałaby później.\n\nSąsiadki zmieniły plan. Przeszły krótką trasę do przystanku, sprawdziły dwa wejścia do biblioteki i zatrzymały się na kawę. Ewa zapisała Nadii adresy w wiadomości, żeby ta mogła wrócić do nich we własnym tempie. Nie załatwiała za nią wszystkich spraw. Kiedy Nadia chciała kupić bilet, Ewa wyjaśniła jej, gdzie znajduje się automat, a wybór pozostawiła samej Nadii.\n\nPo tygodniu Nadia zaprosiła Ewę na spacer. Pokazała jej małą kawiarnię, którą odkryła samodzielnie. Ewa zrozumiała, że pomoc nie musi oznaczać ciągłego prowadzenia nowej osoby za rękę. Gdyby od początku próbowała podejmować wszystkie decyzje za Nadię, utrudniłaby jej samodzielne poznawanie miasta.\n\nDla obu kobiet ważne okazało się także to, że mogły sobie nawzajem coś pokazać. Nadia przestała być wyłącznie osobą, której trzeba pomagać. Stała się sąsiadką, z którą Ewa mogła odkrywać własną okolicę na nowo.",
+  "questions": [
+    {
+      "id": "main-idea",
+      "skill": "main-idea",
+      "question": "Co pokazuje historia Ewy i Nadii?",
+      "options": [
+        "Najlepsza pomoc polega na załatwieniu wszystkich spraw za nową osobę.",
+        "Nowy mieszkaniec powinien poznać wszystkie ważne miejsca pierwszego dnia.",
+        "Pomoc jest skuteczniejsza, gdy uwzględnia potrzeby i samodzielność drugiej osoby."
+      ],
+      "answer": "Pomoc jest skuteczniejsza, gdy uwzględnia potrzeby i samodzielność drugiej osoby.",
+      "evidence": "Ewa zrozumiała, że pomoc nie musi oznaczać ciągłego prowadzenia nowej osoby za rękę.",
+      "explanation": "Ewa zmieniła sposób pomocy, aby Nadia mogła poznawać miasto samodzielnie."
+    },
+    {
+      "id": "detail",
+      "skill": "detail",
+      "question": "Które miejsce Nadia odkryła sama?",
+      "options": [
+        "Automat biletowy przy przystanku.",
+        "Małą kawiarnię.",
+        "Drugie wejście do biblioteki."
+      ],
+      "answer": "Małą kawiarnię.",
+      "evidence": "Pokazała jej małą kawiarnię, którą odkryła samodzielnie.",
+      "explanation": "Nadia sama znalazła kawiarnię i zaprowadziła tam Ewę."
+    },
+    {
+      "id": "cause",
+      "skill": "cause",
+      "question": "Dlaczego sąsiadki skróciły pierwszy plan spaceru?",
+      "options": [
+        "Nadia chciała najpierw zapamiętać najpotrzebniejszą trasę.",
+        "Ewa musiała szybko wrócić do pracy.",
+        "Biblioteka była zamknięta przez cały dzień."
+      ],
+      "answer": "Nadia chciała najpierw zapamiętać najpotrzebniejszą trasę.",
+      "evidence": "Nadia odpowiedziała, że najchętniej zapamiętałaby najpierw drogę do pracy, a inne miejsca poznałaby później.",
+      "explanation": "Długa lista była zbyt obszerna wobec aktualnej potrzeby Nadii."
+    },
+    {
+      "id": "inference",
+      "skill": "inference",
+      "question": "Nadia planuje samodzielnie odwiedzić punkt usługowy i nie rozumie oznaczenia na mapie. Jak Ewa może jej pomóc zgodnie z opisanym podejściem?",
+      "options": [
+        "Wyjaśnić oznaczenie i pozwolić Nadii samej zdecydować o wizycie.",
+        "Pójść do punktu i załatwić sprawę bez udziału Nadii.",
+        "Przygotować pełną listę innych usług i zaplanować wszystkie wizyty."
+      ],
+      "answer": "Wyjaśnić oznaczenie i pozwolić Nadii samej zdecydować o wizycie.",
+      "evidence": "Kiedy Nadia chciała kupić bilet, Ewa wyjaśniła jej, gdzie znajduje się automat, a wybór pozostawiła samej Nadii.",
+      "explanation": "Ewa przekazuje potrzebną informację, ale nie przejmuje decyzji."
+    },
+    {
+      "id": "vocabulary",
+      "skill": "vocabulary",
+      "question": "Co oznacza wyrażenie „prowadzić kogoś za rękę” w ostatniej części tekstu?",
+      "options": [
+        "Pokazać komuś miejsce, które samodzielnie się odkryło.",
+        "Kierować każdą czynnością drugiej osoby zamiast pozwolić jej działać samodzielnie.",
+        "Towarzyszyć komuś wyłącznie podczas krótkiego spaceru."
+      ],
+      "answer": "Kierować każdą czynnością drugiej osoby zamiast pozwolić jej działać samodzielnie.",
+      "evidence": "pomoc nie musi oznaczać ciągłego prowadzenia nowej osoby za rękę.",
+      "explanation": "To przenośne określenie nadmiernego kierowania działaniami innej osoby."
+    }
+  ],
+  "publicationStatus": "practice"
+}

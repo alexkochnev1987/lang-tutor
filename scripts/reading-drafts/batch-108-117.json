@@ -1,0 +1,756 @@
+{
+  "version": 1,
+  "status": "draft",
+  "texts": [
+    {
+      "id": "pl-b1.reading.day-108",
+      "day": 108,
+      "level": "B1",
+      "genre": "dialog",
+      "title": "Czas na naukę nowej umiejętności",
+      "text": "— Gdybym miała więcej wolnego czasu, nauczyłabym się szyć — powiedziała Monika, oglądając kurtkę, której zamek błyskawiczny znów się zepsuł.\n\n— A ile czasu naprawdę potrzebowałabyś na początek? — zapytał jej znajomy Adam. — Moja siostra prowadzi zajęcia dla początkujących. Nie wszyscy uczestnicy chcą od razu robić ubrania. Niektórzy przychodzą tylko po to, żeby nauczyć się prostych napraw.\n\n— Myślałam o kursie, ale w środy pracuję do późna. Nie mogłabym regularnie chodzić na zajęcia.\n\nAdam pokazał jej dwa opisy spotkań. Pierwsza grupa spotykała się co środę przez sześć tygodni i przygotowywała na koniec własną torbę. Druga miała pojedyncze sobotnie warsztaty poświęcone różnym tematom. Można było zapisać się tylko na wybrany temat, bez udziału w całym cyklu.\n\n— Chciałabym najpierw sprawdzić, czy w ogóle spodoba mi się ta praca — powiedziała Monika. — Mam maszynę po cioci, ale nie wiem, czy działa.\n\n— W takim razie zapytaj prowadzącą, czy możesz skorzystać z maszyny na miejscu. Nie kupowałbym nowych narzędzi przed pierwszym spotkaniem.\n\nMonika wysłała pytanie do organizatorki. Otrzymała odpowiedź, że w sobotę będzie można korzystać z wyposażenia pracowni, a własne materiały nie są potrzebne. Zapisała się na warsztat dotyczący napraw, ale nie zrezygnowała z pomysłu dłuższego kursu.\n\nPo rozmowie stwierdziła, że przez wiele miesięcy odkładała naukę, ponieważ wyobrażała sobie od razu duży projekt. Adamowi podobało się jej nowe podejście: pierwsze spotkanie miało być próbą, która pozwoli jej zdecydować, czy chce kontynuować naukę.",
+      "questions": [
+        {
+          "id": "main-idea",
+          "skill": "main-idea",
+          "question": "Co zmienia się w podejściu Moniki do nauki?",
+          "options": [
+            "Rezygnuje z nauki, dopóki nie będzie miała wolnych śród.",
+            "Zamiast planować od razu długi kurs, wybiera niewielką próbę przed dalszą decyzją.",
+            "Postanawia samodzielnie przygotować ubranie przed udziałem w warsztatach."
+          ],
+          "answer": "Zamiast planować od razu długi kurs, wybiera niewielką próbę przed dalszą decyzją.",
+          "evidence": "pierwsze spotkanie miało być próbą, która pozwoli jej zdecydować, czy chce kontynuować naukę.",
+          "explanation": "Monika zaczyna od jednego spotkania, żeby sprawdzić swoje zainteresowanie."
+        },
+        {
+          "id": "detail",
+          "skill": "detail",
+          "question": "Jaki przedmiot przygotowuje pierwsza grupa na koniec kursu?",
+          "options": [
+            "Kurtkę z nowym zamkiem.",
+            "Pokrowiec na maszynę.",
+            "Własną torbę."
+          ],
+          "answer": "Własną torbę.",
+          "evidence": "Pierwsza grupa spotykała się co środę przez sześć tygodni i przygotowywała na koniec własną torbę.",
+          "explanation": "Celem sześciotygodniowego kursu jest torba."
+        },
+        {
+          "id": "cause",
+          "skill": "cause",
+          "question": "Dlaczego Adam radzi nie kupować nowych narzędzi przed pierwszym spotkaniem?",
+          "options": [
+            "Monika może najpierw sprawdzić, czy chce się uczyć, korzystając z wyposażenia pracowni.",
+            "Monika ma już sprawną maszynę i wszystkie materiały.",
+            "Kurs obejmuje wyłącznie pracę bez narzędzi."
+          ],
+          "answer": "Monika może najpierw sprawdzić, czy chce się uczyć, korzystając z wyposażenia pracowni.",
+          "evidence": "W takim razie zapytaj prowadzącą, czy możesz skorzystać z maszyny na miejscu. Nie kupowałbym nowych narzędzi przed pierwszym spotkaniem.",
+          "explanation": "Własne wyposażenie nie jest potrzebne do pierwszej próby."
+        },
+        {
+          "id": "inference",
+          "skill": "inference",
+          "question": "Monika może w przyszłym miesiącu zmienić grafik i chodzić na zajęcia w środy, ale nadal nie wie, czy lubi szyć. Co byłoby zgodne z jej nowym podejściem?",
+          "options": [
+            "Najpierw wziąć udział w jednym warsztacie i na podstawie doświadczenia zdecydować o dłuższym kursie.",
+            "Od razu zapisać się na sześć spotkań, skoro zmieniła grafik.",
+            "Przygotować własną torbę przed pierwszą wizytą w pracowni."
+          ],
+          "answer": "Najpierw wziąć udział w jednym warsztacie i na podstawie doświadczenia zdecydować o dłuższym kursie.",
+          "evidence": "Zapisała się na warsztat dotyczący napraw, ale nie zrezygnowała z pomysłu dłuższego kursu.\n\nPo rozmowie stwierdziła, że przez wiele miesięcy odkładała naukę, ponieważ wyobrażała sobie od razu duży projekt. Adamowi podobało się jej nowe podejście: pierwsze spotkanie miało być próbą, która pozwoli jej zdecydować, czy chce kontynuować naukę.",
+          "explanation": "Dostępność śród usuwa przeszkodę czasową, lecz Monika nadal chce najpierw sprawdzić swoje zainteresowanie."
+        },
+        {
+          "id": "vocabulary",
+          "skill": "vocabulary",
+          "question": "Co oznacza tu „odkładała naukę”?",
+          "options": [
+            "Oddawała materiały po zakończeniu kursu.",
+            "Przerywała rozpoczęte zajęcia po kilku minutach.",
+            "Przesuwała rozpoczęcie nauki na później."
+          ],
+          "answer": "Przesuwała rozpoczęcie nauki na później.",
+          "evidence": "przez wiele miesięcy odkładała naukę, ponieważ wyobrażała sobie od razu duży projekt.",
+          "explanation": "Odkładanie oznacza tu niepodejmowanie działania przez dłuższy czas."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-109",
+      "day": 109,
+      "level": "B1",
+      "genre": "e-mail",
+      "title": "Jak odmawiać z szacunkiem",
+      "text": "Cześć, Ewelino!\n\nDziękuję za zaproszenie do pomocy przy sobotnim kiermaszu. Cieszę się, że udało ci się zebrać grupę osób i że projekt nabiera kształtu. Niestety w tę sobotę nie mogę zostać z wami do wieczora. Obiecałam już rodzinie, że zawiozę babcię na spotkanie, na które czeka od dawna.\n\nJeszcze niedawno odpowiedziałabym od razu, że postaram się jakoś pogodzić obie sprawy. Później prawdopodobnie musiałabym odwołać jedną z nich w ostatniej chwili. W zeszłym miesiącu przyjęłam zbyt wiele zaproszeń i zauważyłam, że ani znajomi, ani ja nie byliśmy zadowoleni z takiego rozwiązania. Dlatego tym razem wolę jasno powiedzieć, ile czasu naprawdę mam.\n\nMogę przyjść w piątek po pracy i pomóc przygotować ceny oraz oznaczenia stoisk. W sobotę jestem dostępna między dziewiątą a jedenastą. Jeżeli potrzebujesz osoby, która będzie obsługiwała stoisko przez cały dzień, lepiej poszukaj kogoś innego. Nie chciałabym, żebyś zaplanowała pracę grupy na podstawie obietnicy, której nie będę mogła spełnić.\n\nNie oczekuję, że dopasujesz program kiermaszu do moich możliwości. Jeśli moja pomoc w tych godzinach nie jest potrzebna, zrozumiem to. Chętnie wesprę kolejną akcję, o ile wcześniej ustalimy termin.\n\nMam nadzieję, że moja odpowiedź nie zabrzmi jak brak zainteresowania. Podoba mi się cel waszego projektu, a odmowa dotyczy tylko tego konkretnego zadania i dnia. Daj znać, czy któraś z propozycji będzie dla ciebie przydatna.\n\nPozdrawiam,\nKinga",
+      "questions": [
+        {
+          "id": "main-idea",
+          "skill": "main-idea",
+          "question": "Co Kinga chce osiągnąć swoim e-mailem?",
+          "options": [
+            "Przekonać Ewelinę do zmiany daty kiermaszu dla całej grupy.",
+            "Zrezygnować ze wszystkich przyszłych działań w projekcie.",
+            "Odmówić udziału w całym sobotnim dyżurze, proponując realną pomoc w innym czasie."
+          ],
+          "answer": "Odmówić udziału w całym sobotnim dyżurze, proponując realną pomoc w innym czasie.",
+          "evidence": "Nie oczekuję, że dopasujesz program kiermaszu do moich możliwości.",
+          "explanation": "Kinga wyznacza granicę, ale pozostaje otwarta na inną formę pomocy."
+        },
+        {
+          "id": "detail",
+          "skill": "detail",
+          "question": "W jakich godzinach Kinga może pomóc w sobotę?",
+          "options": [
+            "Od dziewiątej do jedenastej.",
+            "Po zakończeniu spotkania babci.",
+            "Od jedenastej do wieczora."
+          ],
+          "answer": "Od dziewiątej do jedenastej.",
+          "evidence": "W sobotę jestem dostępna między dziewiątą a jedenastą.",
+          "explanation": "Podała konkretny przedział czasu."
+        },
+        {
+          "id": "cause",
+          "skill": "cause",
+          "question": "Dlaczego Kinga woli teraz podać rzeczywistą dostępność?",
+          "options": [
+            "Nie zna jeszcze celu projektu.",
+            "Wcześniej przyjęła za dużo zaproszeń, co prowadziło do trudności.",
+            "Chce sprawdzić, ile osób Ewelina zaprosi."
+          ],
+          "answer": "Wcześniej przyjęła za dużo zaproszeń, co prowadziło do trudności.",
+          "evidence": "W zeszłym miesiącu przyjęłam zbyt wiele zaproszeń i zauważyłam, że ani znajomi, ani ja nie byliśmy zadowoleni z takiego rozwiązania.",
+          "explanation": "Kinga wyciągnęła wnioski z wcześniejszych doświadczeń."
+        },
+        {
+          "id": "inference",
+          "skill": "inference",
+          "question": "Ewelina potrzebuje kogoś na cały sobotni dzień oraz osoby do przygotowania kartek z cenami w piątek. Jak może wykorzystać odpowiedź Kingi?",
+          "options": [
+            "Przenieść kiermasz na piątek, aby Kinga mogła prowadzić stoisko.",
+            "Powierzyć Kindze oba zadania, skoro popiera cel projektu.",
+            "Powierzyć Kindze przygotowanie kartek, a całodniowy dyżur zaproponować innej osobie."
+          ],
+          "answer": "Powierzyć Kindze przygotowanie kartek, a całodniowy dyżur zaproponować innej osobie.",
+          "evidence": "Mogę przyjść w piątek po pracy i pomóc przygotować ceny oraz oznaczenia stoisk. W sobotę jestem dostępna między dziewiątą a jedenastą. Jeżeli potrzebujesz osoby, która będzie obsługiwała stoisko przez cały dzień, lepiej poszukaj kogoś innego.",
+          "explanation": "Dostępność Kingi pasuje do piątkowych przygotowań, nie do pełnego dyżuru."
+        },
+        {
+          "id": "vocabulary",
+          "skill": "vocabulary",
+          "question": "Co oznacza tu, że projekt „nabiera kształtu”?",
+          "options": [
+            "Zostaje przeniesiony do większego budynku.",
+            "Stopniowo staje się konkretnym planem.",
+            "Zmienia swój główny cel."
+          ],
+          "answer": "Stopniowo staje się konkretnym planem.",
+          "evidence": "Cieszę się, że udało ci się zebrać grupę osób i że projekt nabiera kształtu.",
+          "explanation": "Zebranie grupy pokazuje postęp w organizacji projektu."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-110",
+      "day": 110,
+      "level": "B1",
+      "genre": "ogłoszenie",
+      "title": "Dlaczego zmieniamy plany",
+      "text": "Informacja dla uczestników sobotniego spotkania „Poznaj swoją okolicę”\n\nPrzez ostatnie dwa tygodnie przygotowywaliśmy spacer po terenach nad rzeką. Wczoraj otrzymaliśmy od administratora terenu informację, że fragment ścieżki zostanie zamknięty na czas naprawy. Ponieważ bez tego przejścia nie można zakończyć zaplanowanej trasy w wyznaczonym czasie, proponujemy uczestnikom inny program.\n\nSpotkamy się o tej samej godzinie, czyli o dziesiątej, ale nie przy moście. Nowe miejsce zbiórki to wejście do biblioteki przy rynku. Tam podzielimy się na dwie grupy. Pierwsza obejrzy stare fotografie dzielnicy z pracownikiem biblioteki, a druga przejdzie krótką trasę po ulicach centrum z przewodniczką. Po godzinie grupy zamienią się miejscami. Dzięki temu wszyscy zainteresowani będą mogli wziąć udział w obu częściach programu.\n\nOsoby, które zapisały się na pierwotny spacer, nie muszą ponownie wypełniać formularza. Prosimy jednak o wiadomość do piątku do osiemnastej, jeśli nowy program im nie odpowiada. Zwolnione miejsca udostępnimy osobom, które wcześniej nie zmieściły się na liście. Nie pobieramy dodatkowej opłaty za zmianę programu.\n\nWiemy, że część uczestników czekała właśnie na spacer nad rzeką. Nie chcemy go całkowicie usuwać z naszego kalendarza. Kiedy ścieżka będzie ponownie dostępna, ogłosimy nowy termin. Zainteresowani otrzymają informację e-mailem, ale sami zdecydują, czy się zapiszą.\n\nDziękujemy za wyrozumiałość. Zmieniamy program, ponieważ chcemy zapewnić uczestnikom dobrze przygotowane spotkanie, zamiast w ostatniej chwili improwizować trasę, której nie mieliśmy okazji wcześniej sprawdzić.",
+      "questions": [
+        {
+          "id": "main-idea",
+          "skill": "main-idea",
+          "question": "Jaki jest cel ogłoszenia?",
+          "options": [
+            "Wyjaśnić zmianę sobotniego programu i podać uczestnikom nowe zasady udziału.",
+            "Zachęcić uczestników do samodzielnego przejścia zamkniętą ścieżką.",
+            "Odwołać wszystkie spotkania dotyczące okolicy do końca roku."
+          ],
+          "answer": "Wyjaśnić zmianę sobotniego programu i podać uczestnikom nowe zasady udziału.",
+          "evidence": "Ponieważ bez tego przejścia nie można zakończyć zaplanowanej trasy w wyznaczonym czasie, proponujemy uczestnikom inny program.",
+          "explanation": "Ogłoszenie opisuje powód zmiany, nowy program i sposób rezygnacji."
+        },
+        {
+          "id": "detail",
+          "skill": "detail",
+          "question": "Gdzie odbędzie się nowa zbiórka?",
+          "options": [
+            "Przy moście nad rzeką.",
+            "Przy wejściu do biblioteki.",
+            "Na końcu trasy w centrum."
+          ],
+          "answer": "Przy wejściu do biblioteki.",
+          "evidence": "Nowe miejsce zbiórki to wejście do biblioteki przy rynku.",
+          "explanation": "Zmieniło się miejsce, nie godzina."
+        },
+        {
+          "id": "cause",
+          "skill": "cause",
+          "question": "Dlaczego organizatorzy proszą o wiadomość w razie rezygnacji?",
+          "options": [
+            "Muszą przygotować nowe formularze dla wszystkich.",
+            "Chcą zebrać dodatkowe opłaty od uczestników.",
+            "Chcą przekazać wolne miejsca osobom spoza pierwotnej listy."
+          ],
+          "answer": "Chcą przekazać wolne miejsca osobom spoza pierwotnej listy.",
+          "evidence": "Zwolnione miejsca udostępnimy osobom, które wcześniej nie zmieściły się na liście.",
+          "explanation": "Rezygnacja umożliwia udział kolejnej osobie."
+        },
+        {
+          "id": "inference",
+          "skill": "inference",
+          "question": "Zapisany uczestnik chce w sobotę obejrzeć fotografie, ale nie interesuje go przyszły spacer nad rzeką. Co powinien zrobić?",
+          "options": [
+            "Złożyć nowy formularz na sobotę i automatycznie zapisać się na przyszły spacer.",
+            "Przyjść o dziesiątej do biblioteki, a zapis na przyszły spacer potraktować jako osobną decyzję.",
+            "Przyjść o dziesiątej pod most i tam poczekać na grupę fotograficzną."
+          ],
+          "answer": "Przyjść o dziesiątej do biblioteki, a zapis na przyszły spacer potraktować jako osobną decyzję.",
+          "evidence": "Spotkamy się o tej samej godzinie, czyli o dziesiątej, ale nie przy moście. Nowe miejsce zbiórki to wejście do biblioteki przy rynku. Tam podzielimy się na dwie grupy. Pierwsza obejrzy stare fotografie dzielnicy z pracownikiem biblioteki, a druga przejdzie krótką trasę po ulicach centrum z przewodniczką. Po godzinie grupy zamienią się miejscami. Dzięki temu wszyscy zainteresowani będą mogli wziąć udział w obu częściach programu.\n\nOsoby, które zapisały się na pierwotny spacer, nie muszą ponownie wypełniać formularza. Prosimy jednak o wiadomość do piątku do osiemnastej, jeśli nowy program im nie odpowiada. Zwolnione miejsca udostępnimy osobom, które wcześniej nie zmieściły się na liście. Nie pobieramy dodatkowej opłaty za zmianę programu.\n\nWiemy, że część uczestników czekała właśnie na spacer nad rzeką. Nie chcemy go całkowicie usuwać z naszego kalendarza. Kiedy ścieżka będzie ponownie dostępna, ogłosimy nowy termin. Zainteresowani otrzymają informację e-mailem, ale sami zdecydują, czy się zapiszą.",
+          "explanation": "Sobotni zapis pozostaje ważny, a udział w przyszłym spacerze wymaga osobnej decyzji."
+        },
+        {
+          "id": "vocabulary",
+          "skill": "vocabulary",
+          "question": "Co oznacza tutaj „improwizować trasę”?",
+          "options": [
+            "Ustalać przebieg spaceru na bieżąco, bez wcześniejszego przygotowania.",
+            "Przesunąć spotkanie na inną godzinę bez zmiany trasy.",
+            "Powtórzyć dokładnie wcześniej ustalony spacer."
+          ],
+          "answer": "Ustalać przebieg spaceru na bieżąco, bez wcześniejszego przygotowania.",
+          "evidence": "zamiast w ostatniej chwili improwizować trasę, której nie mieliśmy okazji wcześniej sprawdzić.",
+          "explanation": "Improwizacja oznaczałaby organizowanie trasy bez wcześniejszego sprawdzenia."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-111",
+      "day": 111,
+      "level": "B1",
+      "genre": "opowiadanie",
+      "title": "Wybór między dwiema możliwościami",
+      "text": "Michał otrzymał zaproszenia na dwa wydarzenia odbywające się w tę samą sobotę. Koleżanka z pracy zaprosiła go na wystawę swoich fotografii, a brat zaproponował wspólną wycieczkę rowerową za miasto. Oba pomysły były dla Michała atrakcyjne, lecz nie chciał spędzić całego dnia na przemieszczaniu się między miejscami.\n\nNajpierw zapisał godziny obu wydarzeń. Wystawa rozpoczynała się o jedenastej, ale koleżanka miała opowiadać o swoich zdjęciach dopiero o trzynastej. Wycieczka miała zacząć się o dziewiątej przy stacji kolejowej. Brat planował powrót pociągiem około szesnastej. Michał zauważył, że nie zdążyłby na rozmowę z autorką wystawy, gdyby wybrał całą wycieczkę.\n\nZadzwonił więc do obu osób. Dowiedział się, że wystawa będzie otwarta także przez następne dwa tygodnie, ale koleżanka nie zna jeszcze terminu kolejnego oprowadzania. Brat powiedział, że podobną trasę rowerową można przejechać również w następnym miesiącu, choć wtedy prawdopodobnie nie zbierze się tak duża grupa.\n\nMichał przez chwilę zastanawiał się, czy może dołączyć do rowerzystów tylko na godzinę. Sprawdził jednak, że pierwszy dogodny pociąg powrotny odjeżdża dopiero po dwunastej, a droga ze stacji na wystawę zajmuje mu prawie godzinę. Taki plan zostawiałby bardzo mało czasu na ewentualne opóźnienia.\n\nOstatecznie wybrał wystawę i umówił się z bratem na krótszą przejażdżkę w przyszłą niedzielę. Nie oznaczało to, że fotografia jest dla niego ważniejsza od roweru. Chciał po prostu wykorzystać okazję do rozmowy, której nie mógł łatwo zaplanować w innym terminie.",
+      "questions": [
+        {
+          "id": "main-idea",
+          "skill": "main-idea",
+          "question": "Co przede wszystkim pomogło Michałowi podjąć decyzję?",
+          "options": [
+            "Porównanie ceny biletów na oba wydarzenia.",
+            "Wybór wydarzenia, na którym będzie więcej uczestników.",
+            "Sprawdzenie terminów i tego, którą okazję trudniej powtórzyć."
+          ],
+          "answer": "Sprawdzenie terminów i tego, którą okazję trudniej powtórzyć.",
+          "evidence": "Chciał po prostu wykorzystać okazję do rozmowy, której nie mógł łatwo zaplanować w innym terminie.",
+          "explanation": "Michał ocenił nie tylko atrakcyjność wydarzeń, ale też możliwość ich powtórzenia."
+        },
+        {
+          "id": "detail",
+          "skill": "detail",
+          "question": "O której autorka wystawy ma opowiadać o zdjęciach?",
+          "options": [
+            "O jedenastej.",
+            "O trzynastej.",
+            "O dziewiątej."
+          ],
+          "answer": "O trzynastej.",
+          "evidence": "Wystawa rozpoczynała się o jedenastej, ale koleżanka miała opowiadać o swoich zdjęciach dopiero o trzynastej.",
+          "explanation": "Rozmowa z autorką rozpocznie się później niż wystawa."
+        },
+        {
+          "id": "cause",
+          "skill": "cause",
+          "question": "Dlaczego Michał nie zdecydował się na godzinę jazdy z grupą?",
+          "options": [
+            "Dojazd pociągiem i dalsza droga pozostawiały zbyt mały zapas czasu.",
+            "Brat nie pozwalał nikomu wcześniej zakończyć wycieczki.",
+            "Wystawa została przeniesiona do innego miasta."
+          ],
+          "answer": "Dojazd pociągiem i dalsza droga pozostawiały zbyt mały zapas czasu.",
+          "evidence": "pierwszy dogodny pociąg powrotny odjeżdża dopiero po dwunastej, a droga ze stacji na wystawę zajmuje mu prawie godzinę.",
+          "explanation": "Plan byłby wrażliwy nawet na małe opóźnienie."
+        },
+        {
+          "id": "inference",
+          "skill": "inference",
+          "question": "Gdyby Michał przed podjęciem decyzji dowiedział się o drugim oprowadzaniu w kolejną niedzielę, co zmieniłoby się w jego sytuacji?",
+          "options": [
+            "Musiałby przejechać tę samą trasę rowerową w oba weekendy.",
+            "Mógłby wybrać sobotnią wycieczkę bez rezygnowania z rozmowy z autorką.",
+            "Nie mógłby już odwiedzić wystawy w innym terminie."
+          ],
+          "answer": "Mógłby wybrać sobotnią wycieczkę bez rezygnowania z rozmowy z autorką.",
+          "evidence": "wystawa będzie otwarta także przez następne dwa tygodnie, ale koleżanka nie zna jeszcze terminu kolejnego oprowadzania.",
+          "explanation": "Nowy termin oprowadzania usunąłby najważniejszy konflikt."
+        },
+        {
+          "id": "vocabulary",
+          "skill": "vocabulary",
+          "question": "Co znaczy „dogodny pociąg”?",
+          "options": [
+            "Pociąg jadący wyłącznie bez przystanków.",
+            "Pociąg, w którym można bezpłatnie przewozić rower.",
+            "Połączenie odpowiednie dla planów i potrzeb podróżnego."
+          ],
+          "answer": "Połączenie odpowiednie dla planów i potrzeb podróżnego.",
+          "evidence": "pierwszy dogodny pociąg powrotny odjeżdża dopiero po dwunastej",
+          "explanation": "Dogodność dotyczy dopasowania połączenia do planu podróży."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-112",
+      "day": 112,
+      "level": "B1",
+      "genre": "poradnik",
+      "title": "Tydzień małych decyzji",
+      "text": "Duże zmiany w codziennym życiu często zaczynają się od kilku małych decyzji. Problem pojawia się wtedy, gdy próbujemy wprowadzić wszystko jednocześnie: wcześniej wstawać, więcej czytać, regularnie ćwiczyć i przygotowywać każdy posiłek w domu. Po kilku dniach trudno już ocenić, co rzeczywiście działa, a co tylko zwiększa liczbę obowiązków.\n\nSpróbuj przez tydzień wybrać jeden obszar, który chcesz uporządkować. Nie musisz ustalać szczegółowego planu na każdy dzień. Wystarczy określić prostą zasadę i zapisać, w jakich sytuacjach udało się jej przestrzegać. Zwracaj uwagę także na przeszkody, ponieważ mogą podpowiedzieć ci, jak zmienić zasadę.\n\nNa przykład Jarek chciał częściej czytać książki. Początkowo postanowił czytać trzydzieści minut codziennie po kolacji. W dwa dni pracował jednak do późna i był zbyt zmęczony. Zauważył natomiast, że rano przed wyjściem z domu miał dziesięć spokojnych minut. Przeniósł więc krótsze czytanie na rano, a dłuższe zostawił na weekend.\n\nPod koniec tygodnia nie porównywał liczby przeczytanych stron z wynikami znajomych. Sprawdził, czy nowy zwyczaj pasował do jego rytmu dnia. Okazało się, że przeczytał mniej, niż początkowo planował, lecz znacznie częściej otwierał książkę.\n\nPodobne podejście można zastosować do nauki języka lub porządkowania mieszkania. Jeżeli zasada jest trudna do wykonania, nie zawsze trzeba z niej całkowicie rezygnować. Czasami wystarczy zmienić porę, skrócić zadanie lub przygotować potrzebne materiały wcześniej. Po tygodniu wybierz to, co chcesz kontynuować, zamiast automatycznie dodawać następny obowiązek.",
+      "questions": [
+        {
+          "id": "main-idea",
+          "skill": "main-idea",
+          "question": "Jaka jest główna rada tekstu?",
+          "options": [
+            "Mierzyć postęp przede wszystkim przez porównanie z innymi.",
+            "Zmieniać codzienność stopniowo, obserwując przeszkody i dopasowując zasady.",
+            "Rozpocząć wszystkie planowane działania w tym samym tygodniu."
+          ],
+          "answer": "Zmieniać codzienność stopniowo, obserwując przeszkody i dopasowując zasady.",
+          "evidence": "Jeżeli zasada jest trudna do wykonania, nie zawsze trzeba z niej całkowicie rezygnować.",
+          "explanation": "Poradnik zaleca testowanie i dostosowanie niewielkich zmian."
+        },
+        {
+          "id": "detail",
+          "skill": "detail",
+          "question": "Ile czasu Jarek znalazł rano na czytanie?",
+          "options": [
+            "Dziesięć minut.",
+            "Trzydzieści minut.",
+            "Piętnaście minut."
+          ],
+          "answer": "Dziesięć minut.",
+          "evidence": "Zauważył natomiast, że rano przed wyjściem z domu miał dziesięć spokojnych minut.",
+          "explanation": "Rano miał krótszy, ale dostępny czas."
+        },
+        {
+          "id": "cause",
+          "skill": "cause",
+          "question": "Dlaczego Jarek zmienił porę czytania?",
+          "options": [
+            "Znajomi czytali więcej stron w weekend.",
+            "Wieczorem nie miał już żadnej książki do czytania.",
+            "Po długiej pracy wieczorem był zbyt zmęczony."
+          ],
+          "answer": "Po długiej pracy wieczorem był zbyt zmęczony.",
+          "evidence": "W dwa dni pracował jednak do późna i był zbyt zmęczony.",
+          "explanation": "Zmęczenie przeszkadzało w realizacji pierwotnego planu."
+        },
+        {
+          "id": "inference",
+          "skill": "inference",
+          "question": "Osoba uczy się języka wieczorem przez godzinę, ale regularnie opuszcza naukę po późnej pracy. Ma wolne kwadranse rano. Co byłoby zgodne z poradnikiem?",
+          "options": [
+            "Wypróbować krótszą poranną naukę i ocenić, czy łatwiej zachować regularność.",
+            "Dodać drugą godzinę nauki w weekend, pozostawiając trudny plan wieczorny bez zmian.",
+            "Zrezygnować z nauki, ponieważ nie udało się realizować pełnej godziny."
+          ],
+          "answer": "Wypróbować krótszą poranną naukę i ocenić, czy łatwiej zachować regularność.",
+          "evidence": "Czasami wystarczy zmienić porę, skrócić zadanie lub przygotować potrzebne materiały wcześniej.",
+          "explanation": "Nowy plan wykorzystuje dostępny czas i zmniejsza przeszkodę."
+        },
+        {
+          "id": "vocabulary",
+          "skill": "vocabulary",
+          "question": "Co znaczy „przestrzegać zasady”?",
+          "options": [
+            "Porównywać ją z planem znajomych.",
+            "Postępować zgodnie z nią.",
+            "Zmieniać ją każdego dnia bez powodu."
+          ],
+          "answer": "Postępować zgodnie z nią.",
+          "evidence": "Wystarczy określić prostą zasadę i zapisać, w jakich sytuacjach udało się jej przestrzegać.",
+          "explanation": "Przestrzeganie polega na stosowaniu ustalonej zasady."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-113",
+      "day": 113,
+      "level": "B1",
+      "genre": "wiadomość",
+      "title": "Jak podtrzymywać przyjaźń na odległość",
+      "text": "Cześć, Łukaszu!\n\nMinęły już trzy miesiące, odkąd przeprowadziłeś się do innego miasta. Na początku wydawało mi się, że będziemy rozmawiać przez telefon równie często, jak wcześniej spotykaliśmy się po pracy. Teraz widzę, że nie zawsze jest to możliwe. Ty zaczynasz pracę rano, a ja często kończę zajęcia dopiero wieczorem.\n\nChciałbym zaproponować coś, co moglibyśmy robić bez ciągłego ustalania nowych terminów. Gdybyśmy raz na dwa tygodnie rezerwowali niedzielny wieczór na dłuższą rozmowę, mielibyśmy okazję spokojnie opowiedzieć sobie, co u nas słychać. Jeśli któregoś dnia jedno z nas nie będzie mogło rozmawiać, po prostu ustalimy kolejny termin. Nie chciałbym, żeby telefon stał się obowiązkiem, z którego trzeba się tłumaczyć.\n\nOstatnio zacząłem też robić zdjęcia miejsc, które odwiedzaliśmy razem. Wczoraj zauważyłem, że w naszej dawnej kawiarni zmieniono wystrój. Pomyślałem, że prześlę ci zdjęcie, zamiast czekać z każdą drobną wiadomością na rozmowę. Możesz odpowiedzieć, kiedy znajdziesz czas. Wiem, że lubisz poznawać nowe miejsca, więc chętnie zobaczyłbym również twoją okolicę.\n\nW przyszłym miesiącu będę miał wolne dwa dni. Zastanawiam się, czy nie przyjechać do ciebie pociągiem. Nie kupię jeszcze biletu, ponieważ chciałbym najpierw sprawdzić, czy będziesz wtedy w domu.\n\nBrakuje mi naszych spontanicznych spotkań, ale nie sądzę, żeby zmiana miasta musiała oznaczać koniec przyjaźni. Potrzebujemy raczej sposobu kontaktu, który uwzględni nasze nowe zajęcia i pozwoli nam nadal dzielić się codziennymi sprawami.\n\nDaj znać, co o tym myślisz.\nMarek",
+      "questions": [
+        {
+          "id": "main-idea",
+          "skill": "main-idea",
+          "question": "Co Marek proponuje przyjacielowi?",
+          "options": [
+            "Znaleźć elastyczny sposób utrzymania kontaktu mimo różnych planów dnia.",
+            "Rozmawiać codziennie o tej samej godzinie, bez wyjątków.",
+            "Zastąpić wszystkie rozmowy wyłącznie przesyłaniem zdjęć."
+          ],
+          "answer": "Znaleźć elastyczny sposób utrzymania kontaktu mimo różnych planów dnia.",
+          "evidence": "Potrzebujemy raczej sposobu kontaktu, który uwzględni nasze nowe zajęcia i pozwoli nam nadal dzielić się codziennymi sprawami.",
+          "explanation": "Marek proponuje regularne rozmowy, wiadomości i ewentualną wizytę."
+        },
+        {
+          "id": "detail",
+          "skill": "detail",
+          "question": "Jak często Marek chciałby odbywać dłuższą rozmowę?",
+          "options": [
+            "Raz na miesiąc.",
+            "Raz na tydzień.",
+            "Raz na dwa tygodnie."
+          ],
+          "answer": "Raz na dwa tygodnie.",
+          "evidence": "Gdybyśmy raz na dwa tygodnie rezerwowali niedzielny wieczór na dłuższą rozmowę",
+          "explanation": "Proponuje rytm co dwa tygodnie."
+        },
+        {
+          "id": "cause",
+          "skill": "cause",
+          "question": "Dlaczego Marek nie kupił jeszcze biletu na pociąg?",
+          "options": [
+            "Nie wybrał miasta, do którego chce pojechać.",
+            "Chce najpierw potwierdzić, że Łukasz będzie w domu.",
+            "Nie wie, czy będzie miał wolne dwa dni."
+          ],
+          "answer": "Chce najpierw potwierdzić, że Łukasz będzie w domu.",
+          "evidence": "Nie kupię jeszcze biletu, ponieważ chciałbym najpierw sprawdzić, czy będziesz wtedy w domu.",
+          "explanation": "Wizyta wymaga uzgodnienia dostępności przyjaciela."
+        },
+        {
+          "id": "inference",
+          "skill": "inference",
+          "question": "Łukasz nie może rozmawiać w ustaloną niedzielę, ale chciałby pokazać Markowi zdjęcia z nowej dzielnicy. Jak najlepiej postąpić według propozycji Marka?",
+          "options": [
+            "Odwołać dalsze rozmowy, skoro nie udało się dotrzymać terminu.",
+            "Poczekać z wiadomością do następnego miesiąca.",
+            "Przesłać zdjęcia i uzgodnić inny termin rozmowy."
+          ],
+          "answer": "Przesłać zdjęcia i uzgodnić inny termin rozmowy.",
+          "evidence": "Jeśli któregoś dnia jedno z nas nie będzie mogło rozmawiać, po prostu ustalimy kolejny termin. Nie chciałbym, żeby telefon stał się obowiązkiem, z którego trzeba się tłumaczyć.\n\nOstatnio zacząłem też robić zdjęcia miejsc, które odwiedzaliśmy razem. Wczoraj zauważyłem, że w naszej dawnej kawiarni zmieniono wystrój. Pomyślałem, że prześlę ci zdjęcie, zamiast czekać z każdą drobną wiadomością na rozmowę. Możesz odpowiedzieć, kiedy znajdziesz czas.",
+          "explanation": "Regularny kontakt może być elastyczny; zdjęcia można przesyłać niezależnie od rozmowy."
+        },
+        {
+          "id": "vocabulary",
+          "skill": "vocabulary",
+          "question": "Co oznacza tu „spontaniczne spotkania”?",
+          "options": [
+            "Spotkania, do których dochodzi bez długiego wcześniejszego planowania.",
+            "Spotkania planowane z kilkumiesięcznym wyprzedzeniem.",
+            "Spotkania odbywające się tylko przez telefon."
+          ],
+          "answer": "Spotkania, do których dochodzi bez długiego wcześniejszego planowania.",
+          "evidence": "Brakuje mi naszych spontanicznych spotkań",
+          "explanation": "Wcześniejsza bliskość pozwalała spotykać się bez długiego ustalania terminów."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-114",
+      "day": 114,
+      "level": "B1",
+      "genre": "artykuł",
+      "title": "Pomoc osobie, która dopiero przyjechała",
+      "text": "Kiedy Nadia przeprowadziła się do nowego miasta, znała już trochę język, ale nie wiedziała, jak wygląda codzienne życie w jej dzielnicy. Pierwszego dnia sąsiadka Ewa zaproponowała jej wspólny spacer. Nadia chciała znaleźć sklep, przystanek i miejsce, w którym mogłaby spokojnie pracować przy komputerze.\n\nEwa początkowo przygotowała bardzo długą listę adresów. Zamierzała pokazać Nadii wszystkie miejsca, które sama uważała za przydatne. W trakcie spaceru zauważyła jednak, że Nadia coraz częściej robi notatki i przestaje zadawać pytania. Gdy zapytała, czy potrzebuje przerwy, Nadia odpowiedziała, że najchętniej zapamiętałaby najpierw drogę do pracy, a inne miejsca poznałaby później.\n\nSąsiadki zmieniły plan. Przeszły krótką trasę do przystanku, sprawdziły dwa wejścia do biblioteki i zatrzymały się na kawę. Ewa zapisała Nadii adresy w wiadomości, żeby ta mogła wrócić do nich we własnym tempie. Nie załatwiała za nią wszystkich spraw. Kiedy Nadia chciała kupić bilet, Ewa wyjaśniła jej, gdzie znajduje się automat, a wybór pozostawiła samej Nadii.\n\nPo tygodniu Nadia zaprosiła Ewę na spacer. Pokazała jej małą kawiarnię, którą odkryła samodzielnie. Ewa zrozumiała, że pomoc nie musi oznaczać ciągłego prowadzenia nowej osoby za rękę. Gdyby od początku próbowała podejmować wszystkie decyzje za Nadię, utrudniłaby jej samodzielne poznawanie miasta.\n\nDla obu kobiet ważne okazało się także to, że mogły sobie nawzajem coś pokazać. Nadia przestała być wyłącznie osobą, której trzeba pomagać. Stała się sąsiadką, z którą Ewa mogła odkrywać własną okolicę na nowo.",
+      "questions": [
+        {
+          "id": "main-idea",
+          "skill": "main-idea",
+          "question": "Co pokazuje historia Ewy i Nadii?",
+          "options": [
+            "Najlepsza pomoc polega na załatwieniu wszystkich spraw za nową osobę.",
+            "Nowy mieszkaniec powinien poznać wszystkie ważne miejsca pierwszego dnia.",
+            "Pomoc jest skuteczniejsza, gdy uwzględnia potrzeby i samodzielność drugiej osoby."
+          ],
+          "answer": "Pomoc jest skuteczniejsza, gdy uwzględnia potrzeby i samodzielność drugiej osoby.",
+          "evidence": "Ewa zrozumiała, że pomoc nie musi oznaczać ciągłego prowadzenia nowej osoby za rękę.",
+          "explanation": "Ewa zmieniła sposób pomocy, aby Nadia mogła poznawać miasto samodzielnie."
+        },
+        {
+          "id": "detail",
+          "skill": "detail",
+          "question": "Które miejsce Nadia odkryła sama?",
+          "options": [
+            "Automat biletowy przy przystanku.",
+            "Małą kawiarnię.",
+            "Drugie wejście do biblioteki."
+          ],
+          "answer": "Małą kawiarnię.",
+          "evidence": "Pokazała jej małą kawiarnię, którą odkryła samodzielnie.",
+          "explanation": "Nadia sama znalazła kawiarnię i zaprowadziła tam Ewę."
+        },
+        {
+          "id": "cause",
+          "skill": "cause",
+          "question": "Dlaczego sąsiadki skróciły pierwszy plan spaceru?",
+          "options": [
+            "Nadia chciała najpierw zapamiętać najpotrzebniejszą trasę.",
+            "Ewa musiała szybko wrócić do pracy.",
+            "Biblioteka była zamknięta przez cały dzień."
+          ],
+          "answer": "Nadia chciała najpierw zapamiętać najpotrzebniejszą trasę.",
+          "evidence": "Nadia odpowiedziała, że najchętniej zapamiętałaby najpierw drogę do pracy, a inne miejsca poznałaby później.",
+          "explanation": "Długa lista była zbyt obszerna wobec aktualnej potrzeby Nadii."
+        },
+        {
+          "id": "inference",
+          "skill": "inference",
+          "question": "Nadia planuje samodzielnie odwiedzić punkt usługowy i nie rozumie oznaczenia na mapie. Jak Ewa może jej pomóc zgodnie z opisanym podejściem?",
+          "options": [
+            "Wyjaśnić oznaczenie i pozwolić Nadii samej zdecydować o wizycie.",
+            "Pójść do punktu i załatwić sprawę bez udziału Nadii.",
+            "Przygotować pełną listę innych usług i zaplanować wszystkie wizyty."
+          ],
+          "answer": "Wyjaśnić oznaczenie i pozwolić Nadii samej zdecydować o wizycie.",
+          "evidence": "Kiedy Nadia chciała kupić bilet, Ewa wyjaśniła jej, gdzie znajduje się automat, a wybór pozostawiła samej Nadii.",
+          "explanation": "Ewa przekazuje potrzebną informację, ale nie przejmuje decyzji."
+        },
+        {
+          "id": "vocabulary",
+          "skill": "vocabulary",
+          "question": "Co oznacza wyrażenie „prowadzić kogoś za rękę” w ostatniej części tekstu?",
+          "options": [
+            "Pokazać komuś miejsce, które samodzielnie się odkryło.",
+            "Kierować każdą czynnością drugiej osoby zamiast pozwolić jej działać samodzielnie.",
+            "Towarzyszyć komuś wyłącznie podczas krótkiego spaceru."
+          ],
+          "answer": "Kierować każdą czynnością drugiej osoby zamiast pozwolić jej działać samodzielnie.",
+          "evidence": "pomoc nie musi oznaczać ciągłego prowadzenia nowej osoby za rękę.",
+          "explanation": "To przenośne określenie nadmiernego kierowania działaniami innej osoby."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-115",
+      "day": 115,
+      "level": "B1",
+      "genre": "dialog",
+      "title": "Co daje wspólne hobby",
+      "text": "— Dziadku, pamiętasz te stare zdjęcia rodzinne, które leżą w szufladzie? Chciałbym zrobić z nich album w komputerze — powiedział Oskar.\n\n— Chętnie ci je pokażę, ale nie wiem, czy poradzę sobie z tym programem. Dla mnie ważne jest przede wszystkim to, żeby przy zdjęciach zapisać imiona osób — odpowiedział dziadek.\n\nOskar zaproponował, żeby spotykali się co drugą sobotę. On zajmie się przenoszeniem fotografii do komputera, a dziadek opowie, kto znajduje się na zdjęciach i z jakiej okazji je zrobiono. Szybko jednak okazało się, że wnuk chce zakończyć pracę nad jak największą liczbą zdjęć, podczas gdy dziadek przy jednej fotografii potrafi zatrzymać się na kilkanaście minut.\n\n— Im szybciej pracujemy, tym mniej pamiętam szczegółów — powiedział dziadek podczas drugiego spotkania. — Kiedy mogę spokojnie obejrzeć zdjęcie, przypominają mi się różne historie.\n\nOskar odłożył listę fotografii, które planował zeskanować tego dnia. Uzgodnili, że najpierw wybiorą pięć zdjęć i porozmawiają o nich, a dopiero później zapiszą je w albumie. Jeśli zostanie czas, zajmą się kolejnymi.\n\n— Może nauczysz mnie też, jak samemu dodać podpis? — zapytał dziadek. — Chciałbym uzupełniać album między naszymi spotkaniami.\n\nWnuk pokazał mu prosty sposób wpisywania tekstu i przygotował krótką instrukcję. Dziadek natomiast nauczył Oskara rozpoznawać miejsca, których wygląd bardzo zmienił się od czasu zrobienia zdjęć.\n\nPo kilku tygodniach album nie był jeszcze duży. Obaj byli jednak zadowoleni z pracy, ponieważ wspólne hobby pozwoliło im zarówno nauczyć się nowych rzeczy, jak i poznać historie, których wcześniej nie mieli okazji sobie opowiedzieć.",
+      "questions": [
+        {
+          "id": "main-idea",
+          "skill": "main-idea",
+          "question": "Co wnuk i dziadek odkrywają dzięki wspólnej pracy?",
+          "options": [
+            "Najważniejsze jest zakończenie całego albumu w jak najkrótszym czasie.",
+            "Wartość hobby może polegać na wzajemnej nauce i rozmowie, nie tylko na wyniku.",
+            "Album ma sens jedynie wtedy, gdy powstaje bez użycia komputera."
+          ],
+          "answer": "Wartość hobby może polegać na wzajemnej nauce i rozmowie, nie tylko na wyniku.",
+          "evidence": "wspólne hobby pozwoliło im zarówno nauczyć się nowych rzeczy, jak i poznać historie, których wcześniej nie mieli okazji sobie opowiedzieć.",
+          "explanation": "Obaj dzielą się wiedzą i dopasowują tempo pracy."
+        },
+        {
+          "id": "detail",
+          "skill": "detail",
+          "question": "Jak często planowali się spotykać?",
+          "options": [
+            "Co drugą sobotę.",
+            "Raz na miesiąc.",
+            "W każdą sobotę."
+          ],
+          "answer": "Co drugą sobotę.",
+          "evidence": "Oskar zaproponował, żeby spotykali się co drugą sobotę.",
+          "explanation": "Spotkania miały odbywać się co dwa tygodnie."
+        },
+        {
+          "id": "cause",
+          "skill": "cause",
+          "question": "Dlaczego Oskar zmienił plan liczby zdjęć na spotkanie?",
+          "options": [
+            "Dziadek chciał kupić nowy komputer.",
+            "Program nie pozwalał zapisać większej liczby zdjęć.",
+            "Dziadek potrzebował spokojnego czasu na przypominanie sobie historii."
+          ],
+          "answer": "Dziadek potrzebował spokojnego czasu na przypominanie sobie historii.",
+          "evidence": "Im szybciej pracujemy, tym mniej pamiętam szczegółów",
+          "explanation": "Tempo pracy wpływało na wspomnienia dziadka."
+        },
+        {
+          "id": "inference",
+          "skill": "inference",
+          "question": "Dziadek przypomina sobie historię kolejnego zdjęcia w tygodniu, gdy Oskar nie może przyjść. Co może zrobić po ich wspólnej nauce?",
+          "options": [
+            "Usunąć poprzednie podpisy, aby zacząć pracę od nowa.",
+            "Samodzielnie dopisać informację do albumu, a szczegóły omówić przy następnym spotkaniu.",
+            "Odłożyć zdjęcie bez podpisu, bo tylko Oskar może uzupełniać album."
+          ],
+          "answer": "Samodzielnie dopisać informację do albumu, a szczegóły omówić przy następnym spotkaniu.",
+          "evidence": "— Może nauczysz mnie też, jak samemu dodać podpis? — zapytał dziadek. — Chciałbym uzupełniać album między naszymi spotkaniami.\n\nWnuk pokazał mu prosty sposób wpisywania tekstu i przygotował krótką instrukcję.",
+          "explanation": "Dziadek nauczył się samodzielnie dodawać podpisy pomiędzy spotkaniami."
+        },
+        {
+          "id": "vocabulary",
+          "skill": "vocabulary",
+          "question": "Co oznacza „przenieść fotografie do komputera”?",
+          "options": [
+            "Przechowywać papierowe zdjęcia obok komputera.",
+            "Wysłać wszystkie zdjęcia do innych członków rodziny.",
+            "Zapisać fotografie w postaci cyfrowej."
+          ],
+          "answer": "Zapisać fotografie w postaci cyfrowej.",
+          "evidence": "On zajmie się przenoszeniem fotografii do komputera",
+          "explanation": "Chodzi o stworzenie cyfrowych kopii starych zdjęć."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-116",
+      "day": 116,
+      "level": "B1",
+      "genre": "e-mail",
+      "title": "Rozmowa międzypokoleniowa",
+      "text": "Cześć, Aniu!\n\nWczoraj odwiedziłam ciocię Halinę, z którą od dawna chciałam porozmawiać o historii naszej rodziny. Zabierałam się do tego od kilku miesięcy, ale za każdym razem, kiedy spotykałyśmy się w większym gronie krewnych, rozmowa szybko przechodziła na bieżące sprawy.\n\nTym razem przyszłam z kilkoma pytaniami. Chciałam wiedzieć, jak wyglądało jej pierwsze mieszkanie, dlaczego wybrała zawód nauczycielki i gdzie poznała wujka. Przygotowałam też telefon do nagrywania. Zanim go włączyłam, zapytałam ciocię, czy czuje się z tym dobrze. Zgodziła się na nagranie historii o pracy, ale wolała, żeby rozmowa o małżeństwie pozostała między nami.\n\nPoczątkowo trzymałam się kolejności pytań. Później zauważyłam, że najciekawsze wspomnienia pojawiały się przy tematach, których w ogóle nie zapisałam. Kiedy ciocia opowiadała o pierwszych uczniach, zapytałam ją o rzeczy, które pomagały jej radzić sobie z trudnymi dniami w pracy. Rozmawiałyśmy o tym dłużej niż o samym początku jej kariery.\n\nPo powrocie do domu zapisałam kilka nowych pytań. Nie zamierzam od razu przesyłać nagrania wszystkim krewnym. Obiecałam cioci, że najpierw wspólnie wybierzemy fragmenty, którymi chciałaby się podzielić. Myślę, że dzięki temu następnym razem będzie mogła swobodnie zdecydować, o czym opowiedzieć.\n\nJeśli masz ochotę, możemy odwiedzić ją razem za dwa tygodnie. Wiem, że interesujesz się dawnymi mieszkaniami i mogłabyś zapytać o szczegóły, których ja nie zauważyłam. Nie przygotowuj jednak bardzo długiej listy. Najwięcej dowiedziałam się wtedy, gdy przestałam myśleć o kolejnych pytaniach i zaczęłam naprawdę słuchać odpowiedzi.\n\nPozdrawiam,\nIza",
+      "questions": [
+        {
+          "id": "main-idea",
+          "skill": "main-idea",
+          "question": "Jakie podejście do rozmowy Iza uznała za wartościowe?",
+          "options": [
+            "Rozmowę z szacunkiem dla granic rozmówcy i otwartością na nieplanowane tematy.",
+            "Nagrywanie całej historii rodzinnej i natychmiastowe udostępnianie jej bliskim.",
+            "Zadawanie wszystkim krewnym identycznych pytań w tej samej kolejności."
+          ],
+          "answer": "Rozmowę z szacunkiem dla granic rozmówcy i otwartością na nieplanowane tematy.",
+          "evidence": "Najwięcej dowiedziałam się wtedy, gdy przestałam myśleć o kolejnych pytaniach i zaczęłam naprawdę słuchać odpowiedzi.",
+          "explanation": "Iza szanuje zgodę cioci i dostosowuje pytania do jej opowieści."
+        },
+        {
+          "id": "detail",
+          "skill": "detail",
+          "question": "Którą część rozmowy ciocia pozwoliła nagrać?",
+          "options": [
+            "Historię swojego małżeństwa.",
+            "Całą rozmowę o rodzinie.",
+            "Historię dotyczącą pracy."
+          ],
+          "answer": "Historię dotyczącą pracy.",
+          "evidence": "Zgodziła się na nagranie historii o pracy, ale wolała, żeby rozmowa o małżeństwie pozostała między nami.",
+          "explanation": "Zgoda obejmuje pracę, nie wszystkie prywatne tematy."
+        },
+        {
+          "id": "cause",
+          "skill": "cause",
+          "question": "Dlaczego Iza nie wyśle od razu nagrania krewnym?",
+          "options": [
+            "Nie udało jej się zapisać żadnej wypowiedzi.",
+            "Obiecała uzgodnić z ciocią fragmenty przeznaczone do udostępnienia.",
+            "Nagranie trzeba najpierw przetłumaczyć na inny język."
+          ],
+          "answer": "Obiecała uzgodnić z ciocią fragmenty przeznaczone do udostępnienia.",
+          "evidence": "Obiecałam cioci, że najpierw wspólnie wybierzemy fragmenty, którymi chciałaby się podzielić.",
+          "explanation": "Zgoda na nagranie nie oznacza automatycznej zgody na udostępnienie."
+        },
+        {
+          "id": "inference",
+          "skill": "inference",
+          "question": "Ania chciałaby usłyszeć historię małżeństwa cioci podczas następnego spotkania i przekazać ją kuzynowi. Co powinna zrobić zgodnie z podejściem Izy?",
+          "options": [
+            "Zapytać ciocię o zgodę na rozmowę i ewentualne udostępnienie, akceptując odmowę.",
+            "Poprosić Izę o przesłanie prywatnej części rozmowy bez pytania cioci.",
+            "Nagrać historię przy okazji rozmowy o mieszkaniu, aby nie pytać drugi raz."
+          ],
+          "answer": "Zapytać ciocię o zgodę na rozmowę i ewentualne udostępnienie, akceptując odmowę.",
+          "evidence": "Zgodziła się na nagranie historii o pracy, ale wolała, żeby rozmowa o małżeństwie pozostała między nami.\n\nPoczątkowo trzymałam się kolejności pytań. Później zauważyłam, że najciekawsze wspomnienia pojawiały się przy tematach, których w ogóle nie zapisałam. Kiedy ciocia opowiadała o pierwszych uczniach, zapytałam ją o rzeczy, które pomagały jej radzić sobie z trudnymi dniami w pracy. Rozmawiałyśmy o tym dłużej niż o samym początku jej kariery.\n\nPo powrocie do domu zapisałam kilka nowych pytań. Nie zamierzam od razu przesyłać nagrania wszystkim krewnym. Obiecałam cioci, że najpierw wspólnie wybierzemy fragmenty, którymi chciałaby się podzielić.",
+          "explanation": "Prywatność cioci jest ważniejsza od przekazania historii krewnym."
+        },
+        {
+          "id": "vocabulary",
+          "skill": "vocabulary",
+          "question": "Co oznacza „trzymałam się kolejności pytań”?",
+          "options": [
+            "Pomijałam wszystkie pytania dotyczące pracy.",
+            "Zadawałam pytania według wcześniej przygotowanego porządku.",
+            "Zmieniałam temat po każdej odpowiedzi niezależnie od planu."
+          ],
+          "answer": "Zadawałam pytania według wcześniej przygotowanego porządku.",
+          "evidence": "Początkowo trzymałam się kolejności pytań.",
+          "explanation": "Iza na początku realizowała ustalony plan rozmowy."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-117",
+      "day": 117,
+      "level": "B1",
+      "genre": "ogłoszenie",
+      "title": "Człowiek, od którego się uczę",
+      "text": "Biblioteka osiedlowa zaprasza na cykl krótkich spotkań pod hasłem „Człowiek, od którego się uczę”. Chcemy poznać historie o osobach, które pomogły nam zdobyć umiejętność, zmienić sposób myślenia lub odważyć się na nowe działanie. Bohaterem opowieści może być członek rodziny, sąsiad, znajomy z pracy albo ktoś, kogo spotkaliśmy tylko kilka razy.\n\nKażdy uczestnik, który chciałby wystąpić, przygotuje opowieść trwającą nie więcej niż pięć minut. Nie musi przedstawiać całego życia wybranej osoby. Lepiej opisać jedno zdarzenie i wyjaśnić, czego nauczył się dzięki niemu. Jeżeli bohater opowieści nie chce być rozpoznany, można użyć innego imienia i pominąć szczegóły, które pozwoliłyby go zidentyfikować.\n\nSpotkania będą odbywać się w ostatni czwartek miesiąca. W pierwszej części wieczoru posłuchamy trzech przygotowanych historii. W drugiej uczestnicy będą mogli zadawać pytania i opowiedzieć o podobnych doświadczeniach. Nie trzeba zgłaszać własnej historii, żeby przyjść jako słuchacz.\n\nOsoby zainteresowane wystąpieniem prosimy o przesłanie krótkiego opisu tematu najpóźniej tydzień przed spotkaniem. Organizatorzy skontaktują się z nimi, aby potwierdzić termin. Jeżeli zgłoszeń będzie więcej, część chętnych zaprosimy na kolejny wieczór. Nie oceniamy opowieści według tego, czy dotyczą znanej osoby. Ważniejsze jest to, czy pokazują konkretne doświadczenie i jego znaczenie.\n\nNa zakończenie każdego spotkania zapiszemy kilka anonimowych wniosków na wspólnej tablicy. Nie będziemy nagrywać wystąpień. Zależy nam na stworzeniu przestrzeni, w której można swobodnie dzielić się tym, czego nauczyliśmy się od innych ludzi.",
+      "questions": [
+        {
+          "id": "main-idea",
+          "skill": "main-idea",
+          "question": "Jaki jest główny cel cyklu spotkań?",
+          "options": [
+            "Tworzenie pełnych biografii znanych mieszkańców osiedla.",
+            "Wymiana konkretnych doświadczeń związanych z uczeniem się od innych ludzi.",
+            "Wybór najlepszego mówcy na podstawie liczby opowiedzianych historii."
+          ],
+          "answer": "Wymiana konkretnych doświadczeń związanych z uczeniem się od innych ludzi.",
+          "evidence": "Zależy nam na stworzeniu przestrzeni, w której można swobodnie dzielić się tym, czego nauczyliśmy się od innych ludzi.",
+          "explanation": "Cykl koncentruje się na znaczeniu doświadczeń, nie sławie bohaterów."
+        },
+        {
+          "id": "detail",
+          "skill": "detail",
+          "question": "Ile przygotowanych historii będzie w pierwszej części wieczoru?",
+          "options": [
+            "Pięć.",
+            "Dwie.",
+            "Trzy."
+          ],
+          "answer": "Trzy.",
+          "evidence": "W pierwszej części wieczoru posłuchamy trzech przygotowanych historii.",
+          "explanation": "Przewidziano trzy wystąpienia."
+        },
+        {
+          "id": "cause",
+          "skill": "cause",
+          "question": "Dlaczego można zmienić imię bohatera opowieści?",
+          "options": [
+            "Aby uszanować prośbę osoby, która nie chce zostać rozpoznana.",
+            "Aby opowieść mogła trwać dłużej niż pięć minut.",
+            "Aby uczestnicy nie musieli opisywać żadnego zdarzenia."
+          ],
+          "answer": "Aby uszanować prośbę osoby, która nie chce zostać rozpoznana.",
+          "evidence": "Jeżeli bohater opowieści nie chce być rozpoznany, można użyć innego imienia i pominąć szczegóły, które pozwoliłyby go zidentyfikować.",
+          "explanation": "Zmiana imienia pomaga chronić prywatność."
+        },
+        {
+          "id": "inference",
+          "skill": "inference",
+          "question": "Ktoś chciałby opowiedzieć o sąsiedzie, ale zgłasza się dwa dni przed najbliższym spotkaniem. Co może zrobić zgodnie z zasadami?",
+          "options": [
+            "Przygotować nagranie zamiast zgłoszenia, aby odtworzyć je na spotkaniu.",
+            "Oczekiwać, że organizatorzy automatycznie zastąpią jedną z trzech historii jego wystąpieniem.",
+            "Przyjść jako słuchacz, a temat zgłosić na kolejny termin z odpowiednim wyprzedzeniem."
+          ],
+          "answer": "Przyjść jako słuchacz, a temat zgłosić na kolejny termin z odpowiednim wyprzedzeniem.",
+          "evidence": "Nie trzeba zgłaszać własnej historii, żeby przyjść jako słuchacz.\n\nOsoby zainteresowane wystąpieniem prosimy o przesłanie krótkiego opisu tematu najpóźniej tydzień przed spotkaniem.",
+          "explanation": "Można uczestniczyć bez wystąpienia i zgłosić temat odpowiednio wcześnie na przyszłość."
+        },
+        {
+          "id": "vocabulary",
+          "skill": "vocabulary",
+          "question": "Co oznacza „anonimowe wnioski”?",
+          "options": [
+            "Podsumowania bez danych pozwalających rozpoznać ich autorów.",
+            "Wnioski, które nie mają związku z opowiedzianymi historiami.",
+            "Oceny wystąpień zapisane w prywatnych notatkach organizatorów."
+          ],
+          "answer": "Podsumowania bez danych pozwalających rozpoznać ich autorów.",
+          "evidence": "Na zakończenie każdego spotkania zapiszemy kilka anonimowych wniosków na wspólnej tablicy.",
+          "explanation": "Anonimowość pozwala dzielić się pomysłami bez przypisywania ich konkretnej osobie."
+        }
+      ]
+    }
+  ]
+}

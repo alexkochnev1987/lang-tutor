@@ -1,0 +1,76 @@
+{
+  "id": "pl-b1.reading.day-113",
+  "day": 113,
+  "level": "B1",
+  "genre": "wiadomość",
+  "title": "Jak podtrzymywać przyjaźń na odległość",
+  "text": "Cześć, Łukaszu!\n\nMinęły już trzy miesiące, odkąd przeprowadziłeś się do innego miasta. Na początku wydawało mi się, że będziemy rozmawiać przez telefon równie często, jak wcześniej spotykaliśmy się po pracy. Teraz widzę, że nie zawsze jest to możliwe. Ty zaczynasz pracę rano, a ja często kończę zajęcia dopiero wieczorem.\n\nChciałbym zaproponować coś, co moglibyśmy robić bez ciągłego ustalania nowych terminów. Gdybyśmy raz na dwa tygodnie rezerwowali niedzielny wieczór na dłuższą rozmowę, mielibyśmy okazję spokojnie opowiedzieć sobie, co u nas słychać. Jeśli któregoś dnia jedno z nas nie będzie mogło rozmawiać, po prostu ustalimy kolejny termin. Nie chciałbym, żeby telefon stał się obowiązkiem, z którego trzeba się tłumaczyć.\n\nOstatnio zacząłem też robić zdjęcia miejsc, które odwiedzaliśmy razem. Wczoraj zauważyłem, że w naszej dawnej kawiarni zmieniono wystrój. Pomyślałem, że prześlę ci zdjęcie, zamiast czekać z każdą drobną wiadomością na rozmowę. Możesz odpowiedzieć, kiedy znajdziesz czas. Wiem, że lubisz poznawać nowe miejsca, więc chętnie zobaczyłbym również twoją okolicę.\n\nW przyszłym miesiącu będę miał wolne dwa dni. Zastanawiam się, czy nie przyjechać do ciebie pociągiem. Nie kupię jeszcze biletu, ponieważ chciałbym najpierw sprawdzić, czy będziesz wtedy w domu.\n\nBrakuje mi naszych spontanicznych spotkań, ale nie sądzę, żeby zmiana miasta musiała oznaczać koniec przyjaźni. Potrzebujemy raczej sposobu kontaktu, który uwzględni nasze nowe zajęcia i pozwoli nam nadal dzielić się codziennymi sprawami.\n\nDaj znać, co o tym myślisz.\nMarek",
+  "questions": [
+    {
+      "id": "main-idea",
+      "skill": "main-idea",
+      "question": "Co Marek proponuje przyjacielowi?",
+      "options": [
+        "Znaleźć elastyczny sposób utrzymania kontaktu mimo różnych planów dnia.",
+        "Rozmawiać codziennie o tej samej godzinie, bez wyjątków.",
+        "Zastąpić wszystkie rozmowy wyłącznie przesyłaniem zdjęć."
+      ],
+      "answer": "Znaleźć elastyczny sposób utrzymania kontaktu mimo różnych planów dnia.",
+      "evidence": "Potrzebujemy raczej sposobu kontaktu, który uwzględni nasze nowe zajęcia i pozwoli nam nadal dzielić się codziennymi sprawami.",
+      "explanation": "Marek proponuje regularne rozmowy, wiadomości i ewentualną wizytę."
+    },
+    {
+      "id": "detail",
+      "skill": "detail",
+      "question": "Jak często Marek chciałby odbywać dłuższą rozmowę?",
+      "options": [
+        "Raz na miesiąc.",
+        "Raz na tydzień.",
+        "Raz na dwa tygodnie."
+      ],
+      "answer": "Raz na dwa tygodnie.",
+      "evidence": "Gdybyśmy raz na dwa tygodnie rezerwowali niedzielny wieczór na dłuższą rozmowę",
+      "explanation": "Proponuje rytm co dwa tygodnie."
+    },
+    {
+      "id": "cause",
+      "skill": "cause",
+      "question": "Dlaczego Marek nie kupił jeszcze biletu na pociąg?",
+      "options": [
+        "Nie wybrał miasta, do którego chce pojechać.",
+        "Chce najpierw potwierdzić, że Łukasz będzie w domu.",
+        "Nie wie, czy będzie miał wolne dwa dni."
+      ],
+      "answer": "Chce najpierw potwierdzić, że Łukasz będzie w domu.",
+      "evidence": "Nie kupię jeszcze biletu, ponieważ chciałbym najpierw sprawdzić, czy będziesz wtedy w domu.",
+      "explanation": "Wizyta wymaga uzgodnienia dostępności przyjaciela."
+    },
+    {
+      "id": "inference",
+      "skill": "inference",
+      "question": "Łukasz nie może rozmawiać w ustaloną niedzielę, ale chciałby pokazać Markowi zdjęcia z nowej dzielnicy. Jak najlepiej postąpić według propozycji Marka?",
+      "options": [
+        "Odwołać dalsze rozmowy, skoro nie udało się dotrzymać terminu.",
+        "Poczekać z wiadomością do następnego miesiąca.",
+        "Przesłać zdjęcia i uzgodnić inny termin rozmowy."
+      ],
+      "answer": "Przesłać zdjęcia i uzgodnić inny termin rozmowy.",
+      "evidence": "Jeśli któregoś dnia jedno z nas nie będzie mogło rozmawiać, po prostu ustalimy kolejny termin. Nie chciałbym, żeby telefon stał się obowiązkiem, z którego trzeba się tłumaczyć.\n\nOstatnio zacząłem też robić zdjęcia miejsc, które odwiedzaliśmy razem. Wczoraj zauważyłem, że w naszej dawnej kawiarni zmieniono wystrój. Pomyślałem, że prześlę ci zdjęcie, zamiast czekać z każdą drobną wiadomością na rozmowę. Możesz odpowiedzieć, kiedy znajdziesz czas.",
+      "explanation": "Regularny kontakt może być elastyczny; zdjęcia można przesyłać niezależnie od rozmowy."
+    },
+    {
+      "id": "vocabulary",
+      "skill": "vocabulary",
+      "question": "Co oznacza tu „spontaniczne spotkania”?",
+      "options": [
+        "Spotkania, do których dochodzi bez długiego wcześniejszego planowania.",
+        "Spotkania planowane z kilkumiesięcznym wyprzedzeniem.",
+        "Spotkania odbywające się tylko przez telefon."
+      ],
+      "answer": "Spotkania, do których dochodzi bez długiego wcześniejszego planowania.",
+      "evidence": "Brakuje mi naszych spontanicznych spotkań",
+      "explanation": "Wcześniejsza bliskość pozwalała spotykać się bez długiego ustalania terminów."
+    }
+  ],
+  "publicationStatus": "practice"
+}

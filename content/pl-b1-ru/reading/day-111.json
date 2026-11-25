@@ -1,0 +1,76 @@
+{
+  "id": "pl-b1.reading.day-111",
+  "day": 111,
+  "level": "B1",
+  "genre": "opowiadanie",
+  "title": "Wybór między dwiema możliwościami",
+  "text": "Michał otrzymał zaproszenia na dwa wydarzenia odbywające się w tę samą sobotę. Koleżanka z pracy zaprosiła go na wystawę swoich fotografii, a brat zaproponował wspólną wycieczkę rowerową za miasto. Oba pomysły były dla Michała atrakcyjne, lecz nie chciał spędzić całego dnia na przemieszczaniu się między miejscami.\n\nNajpierw zapisał godziny obu wydarzeń. Wystawa rozpoczynała się o jedenastej, ale koleżanka miała opowiadać o swoich zdjęciach dopiero o trzynastej. Wycieczka miała zacząć się o dziewiątej przy stacji kolejowej. Brat planował powrót pociągiem około szesnastej. Michał zauważył, że nie zdążyłby na rozmowę z autorką wystawy, gdyby wybrał całą wycieczkę.\n\nZadzwonił więc do obu osób. Dowiedział się, że wystawa będzie otwarta także przez następne dwa tygodnie, ale koleżanka nie zna jeszcze terminu kolejnego oprowadzania. Brat powiedział, że podobną trasę rowerową można przejechać również w następnym miesiącu, choć wtedy prawdopodobnie nie zbierze się tak duża grupa.\n\nMichał przez chwilę zastanawiał się, czy może dołączyć do rowerzystów tylko na godzinę. Sprawdził jednak, że pierwszy dogodny pociąg powrotny odjeżdża dopiero po dwunastej, a droga ze stacji na wystawę zajmuje mu prawie godzinę. Taki plan zostawiałby bardzo mało czasu na ewentualne opóźnienia.\n\nOstatecznie wybrał wystawę i umówił się z bratem na krótszą przejażdżkę w przyszłą niedzielę. Nie oznaczało to, że fotografia jest dla niego ważniejsza od roweru. Chciał po prostu wykorzystać okazję do rozmowy, której nie mógł łatwo zaplanować w innym terminie.",
+  "questions": [
+    {
+      "id": "main-idea",
+      "skill": "main-idea",
+      "question": "Co przede wszystkim pomogło Michałowi podjąć decyzję?",
+      "options": [
+        "Porównanie ceny biletów na oba wydarzenia.",
+        "Wybór wydarzenia, na którym będzie więcej uczestników.",
+        "Sprawdzenie terminów i tego, którą okazję trudniej powtórzyć."
+      ],
+      "answer": "Sprawdzenie terminów i tego, którą okazję trudniej powtórzyć.",
+      "evidence": "Chciał po prostu wykorzystać okazję do rozmowy, której nie mógł łatwo zaplanować w innym terminie.",
+      "explanation": "Michał ocenił nie tylko atrakcyjność wydarzeń, ale też możliwość ich powtórzenia."
+    },
+    {
+      "id": "detail",
+      "skill": "detail",
+      "question": "O której autorka wystawy ma opowiadać o zdjęciach?",
+      "options": [
+        "O jedenastej.",
+        "O trzynastej.",
+        "O dziewiątej."
+      ],
+      "answer": "O trzynastej.",
+      "evidence": "Wystawa rozpoczynała się o jedenastej, ale koleżanka miała opowiadać o swoich zdjęciach dopiero o trzynastej.",
+      "explanation": "Rozmowa z autorką rozpocznie się później niż wystawa."
+    },
+    {
+      "id": "cause",
+      "skill": "cause",
+      "question": "Dlaczego Michał nie zdecydował się na godzinę jazdy z grupą?",
+      "options": [
+        "Dojazd pociągiem i dalsza droga pozostawiały zbyt mały zapas czasu.",
+        "Brat nie pozwalał nikomu wcześniej zakończyć wycieczki.",
+        "Wystawa została przeniesiona do innego miasta."
+      ],
+      "answer": "Dojazd pociągiem i dalsza droga pozostawiały zbyt mały zapas czasu.",
+      "evidence": "pierwszy dogodny pociąg powrotny odjeżdża dopiero po dwunastej, a droga ze stacji na wystawę zajmuje mu prawie godzinę.",
+      "explanation": "Plan byłby wrażliwy nawet na małe opóźnienie."
+    },
+    {
+      "id": "inference",
+      "skill": "inference",
+      "question": "Gdyby Michał przed podjęciem decyzji dowiedział się o drugim oprowadzaniu w kolejną niedzielę, co zmieniłoby się w jego sytuacji?",
+      "options": [
+        "Musiałby przejechać tę samą trasę rowerową w oba weekendy.",
+        "Mógłby wybrać sobotnią wycieczkę bez rezygnowania z rozmowy z autorką.",
+        "Nie mógłby już odwiedzić wystawy w innym terminie."
+      ],
+      "answer": "Mógłby wybrać sobotnią wycieczkę bez rezygnowania z rozmowy z autorką.",
+      "evidence": "wystawa będzie otwarta także przez następne dwa tygodnie, ale koleżanka nie zna jeszcze terminu kolejnego oprowadzania.",
+      "explanation": "Nowy termin oprowadzania usunąłby najważniejszy konflikt."
+    },
+    {
+      "id": "vocabulary",
+      "skill": "vocabulary",
+      "question": "Co znaczy „dogodny pociąg”?",
+      "options": [
+        "Pociąg jadący wyłącznie bez przystanków.",
+        "Pociąg, w którym można bezpłatnie przewozić rower.",
+        "Połączenie odpowiednie dla planów i potrzeb podróżnego."
+      ],
+      "answer": "Połączenie odpowiednie dla planów i potrzeb podróżnego.",
+      "evidence": "pierwszy dogodny pociąg powrotny odjeżdża dopiero po dwunastej",
+      "explanation": "Dogodność dotyczy dopasowania połączenia do planu podróży."
+    }
+  ],
+  "publicationStatus": "practice"
+}

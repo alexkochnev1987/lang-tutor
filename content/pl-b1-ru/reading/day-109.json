@@ -1,0 +1,76 @@
+{
+  "id": "pl-b1.reading.day-109",
+  "day": 109,
+  "level": "B1",
+  "genre": "e-mail",
+  "title": "Jak odmawiać z szacunkiem",
+  "text": "Cześć, Ewelino!\n\nDziękuję za zaproszenie do pomocy przy sobotnim kiermaszu. Cieszę się, że udało ci się zebrać grupę osób i że projekt nabiera kształtu. Niestety w tę sobotę nie mogę zostać z wami do wieczora. Obiecałam już rodzinie, że zawiozę babcię na spotkanie, na które czeka od dawna.\n\nJeszcze niedawno odpowiedziałabym od razu, że postaram się jakoś pogodzić obie sprawy. Później prawdopodobnie musiałabym odwołać jedną z nich w ostatniej chwili. W zeszłym miesiącu przyjęłam zbyt wiele zaproszeń i zauważyłam, że ani znajomi, ani ja nie byliśmy zadowoleni z takiego rozwiązania. Dlatego tym razem wolę jasno powiedzieć, ile czasu naprawdę mam.\n\nMogę przyjść w piątek po pracy i pomóc przygotować ceny oraz oznaczenia stoisk. W sobotę jestem dostępna między dziewiątą a jedenastą. Jeżeli potrzebujesz osoby, która będzie obsługiwała stoisko przez cały dzień, lepiej poszukaj kogoś innego. Nie chciałabym, żebyś zaplanowała pracę grupy na podstawie obietnicy, której nie będę mogła spełnić.\n\nNie oczekuję, że dopasujesz program kiermaszu do moich możliwości. Jeśli moja pomoc w tych godzinach nie jest potrzebna, zrozumiem to. Chętnie wesprę kolejną akcję, o ile wcześniej ustalimy termin.\n\nMam nadzieję, że moja odpowiedź nie zabrzmi jak brak zainteresowania. Podoba mi się cel waszego projektu, a odmowa dotyczy tylko tego konkretnego zadania i dnia. Daj znać, czy któraś z propozycji będzie dla ciebie przydatna.\n\nPozdrawiam,\nKinga",
+  "questions": [
+    {
+      "id": "main-idea",
+      "skill": "main-idea",
+      "question": "Co Kinga chce osiągnąć swoim e-mailem?",
+      "options": [
+        "Przekonać Ewelinę do zmiany daty kiermaszu dla całej grupy.",
+        "Zrezygnować ze wszystkich przyszłych działań w projekcie.",
+        "Odmówić udziału w całym sobotnim dyżurze, proponując realną pomoc w innym czasie."
+      ],
+      "answer": "Odmówić udziału w całym sobotnim dyżurze, proponując realną pomoc w innym czasie.",
+      "evidence": "Nie oczekuję, że dopasujesz program kiermaszu do moich możliwości.",
+      "explanation": "Kinga wyznacza granicę, ale pozostaje otwarta na inną formę pomocy."
+    },
+    {
+      "id": "detail",
+      "skill": "detail",
+      "question": "W jakich godzinach Kinga może pomóc w sobotę?",
+      "options": [
+        "Od dziewiątej do jedenastej.",
+        "Po zakończeniu spotkania babci.",
+        "Od jedenastej do wieczora."
+      ],
+      "answer": "Od dziewiątej do jedenastej.",
+      "evidence": "W sobotę jestem dostępna między dziewiątą a jedenastą.",
+      "explanation": "Podała konkretny przedział czasu."
+    },
+    {
+      "id": "cause",
+      "skill": "cause",
+      "question": "Dlaczego Kinga woli teraz podać rzeczywistą dostępność?",
+      "options": [
+        "Nie zna jeszcze celu projektu.",
+        "Wcześniej przyjęła za dużo zaproszeń, co prowadziło do trudności.",
+        "Chce sprawdzić, ile osób Ewelina zaprosi."
+      ],
+      "answer": "Wcześniej przyjęła za dużo zaproszeń, co prowadziło do trudności.",
+      "evidence": "W zeszłym miesiącu przyjęłam zbyt wiele zaproszeń i zauważyłam, że ani znajomi, ani ja nie byliśmy zadowoleni z takiego rozwiązania.",
+      "explanation": "Kinga wyciągnęła wnioski z wcześniejszych doświadczeń."
+    },
+    {
+      "id": "inference",
+      "skill": "inference",
+      "question": "Ewelina potrzebuje kogoś na cały sobotni dzień oraz osoby do przygotowania kartek z cenami w piątek. Jak może wykorzystać odpowiedź Kingi?",
+      "options": [
+        "Przenieść kiermasz na piątek, aby Kinga mogła prowadzić stoisko.",
+        "Powierzyć Kindze oba zadania, skoro popiera cel projektu.",
+        "Powierzyć Kindze przygotowanie kartek, a całodniowy dyżur zaproponować innej osobie."
+      ],
+      "answer": "Powierzyć Kindze przygotowanie kartek, a całodniowy dyżur zaproponować innej osobie.",
+      "evidence": "Mogę przyjść w piątek po pracy i pomóc przygotować ceny oraz oznaczenia stoisk. W sobotę jestem dostępna między dziewiątą a jedenastą. Jeżeli potrzebujesz osoby, która będzie obsługiwała stoisko przez cały dzień, lepiej poszukaj kogoś innego.",
+      "explanation": "Dostępność Kingi pasuje do piątkowych przygotowań, nie do pełnego dyżuru."
+    },
+    {
+      "id": "vocabulary",
+      "skill": "vocabulary",
+      "question": "Co oznacza tu, że projekt „nabiera kształtu”?",
+      "options": [
+        "Zostaje przeniesiony do większego budynku.",
+        "Stopniowo staje się konkretnym planem.",
+        "Zmienia swój główny cel."
+      ],
+      "answer": "Stopniowo staje się konkretnym planem.",
+      "evidence": "Cieszę się, że udało ci się zebrać grupę osób i że projekt nabiera kształtu.",
+      "explanation": "Zebranie grupy pokazuje postęp w organizacji projektu."
+    }
+  ],
+  "publicationStatus": "practice"
+}

@@ -1,0 +1,76 @@
+{
+  "id": "pl-b1.reading.day-112",
+  "day": 112,
+  "level": "B1",
+  "genre": "poradnik",
+  "title": "Tydzień małych decyzji",
+  "text": "Duże zmiany w codziennym życiu często zaczynają się od kilku małych decyzji. Problem pojawia się wtedy, gdy próbujemy wprowadzić wszystko jednocześnie: wcześniej wstawać, więcej czytać, regularnie ćwiczyć i przygotowywać każdy posiłek w domu. Po kilku dniach trudno już ocenić, co rzeczywiście działa, a co tylko zwiększa liczbę obowiązków.\n\nSpróbuj przez tydzień wybrać jeden obszar, który chcesz uporządkować. Nie musisz ustalać szczegółowego planu na każdy dzień. Wystarczy określić prostą zasadę i zapisać, w jakich sytuacjach udało się jej przestrzegać. Zwracaj uwagę także na przeszkody, ponieważ mogą podpowiedzieć ci, jak zmienić zasadę.\n\nNa przykład Jarek chciał częściej czytać książki. Początkowo postanowił czytać trzydzieści minut codziennie po kolacji. W dwa dni pracował jednak do późna i był zbyt zmęczony. Zauważył natomiast, że rano przed wyjściem z domu miał dziesięć spokojnych minut. Przeniósł więc krótsze czytanie na rano, a dłuższe zostawił na weekend.\n\nPod koniec tygodnia nie porównywał liczby przeczytanych stron z wynikami znajomych. Sprawdził, czy nowy zwyczaj pasował do jego rytmu dnia. Okazało się, że przeczytał mniej, niż początkowo planował, lecz znacznie częściej otwierał książkę.\n\nPodobne podejście można zastosować do nauki języka lub porządkowania mieszkania. Jeżeli zasada jest trudna do wykonania, nie zawsze trzeba z niej całkowicie rezygnować. Czasami wystarczy zmienić porę, skrócić zadanie lub przygotować potrzebne materiały wcześniej. Po tygodniu wybierz to, co chcesz kontynuować, zamiast automatycznie dodawać następny obowiązek.",
+  "questions": [
+    {
+      "id": "main-idea",
+      "skill": "main-idea",
+      "question": "Jaka jest główna rada tekstu?",
+      "options": [
+        "Mierzyć postęp przede wszystkim przez porównanie z innymi.",
+        "Zmieniać codzienność stopniowo, obserwując przeszkody i dopasowując zasady.",
+        "Rozpocząć wszystkie planowane działania w tym samym tygodniu."
+      ],
+      "answer": "Zmieniać codzienność stopniowo, obserwując przeszkody i dopasowując zasady.",
+      "evidence": "Jeżeli zasada jest trudna do wykonania, nie zawsze trzeba z niej całkowicie rezygnować.",
+      "explanation": "Poradnik zaleca testowanie i dostosowanie niewielkich zmian."
+    },
+    {
+      "id": "detail",
+      "skill": "detail",
+      "question": "Ile czasu Jarek znalazł rano na czytanie?",
+      "options": [
+        "Dziesięć minut.",
+        "Trzydzieści minut.",
+        "Piętnaście minut."
+      ],
+      "answer": "Dziesięć minut.",
+      "evidence": "Zauważył natomiast, że rano przed wyjściem z domu miał dziesięć spokojnych minut.",
+      "explanation": "Rano miał krótszy, ale dostępny czas."
+    },
+    {
+      "id": "cause",
+      "skill": "cause",
+      "question": "Dlaczego Jarek zmienił porę czytania?",
+      "options": [
+        "Znajomi czytali więcej stron w weekend.",
+        "Wieczorem nie miał już żadnej książki do czytania.",
+        "Po długiej pracy wieczorem był zbyt zmęczony."
+      ],
+      "answer": "Po długiej pracy wieczorem był zbyt zmęczony.",
+      "evidence": "W dwa dni pracował jednak do późna i był zbyt zmęczony.",
+      "explanation": "Zmęczenie przeszkadzało w realizacji pierwotnego planu."
+    },
+    {
+      "id": "inference",
+      "skill": "inference",
+      "question": "Osoba uczy się języka wieczorem przez godzinę, ale regularnie opuszcza naukę po późnej pracy. Ma wolne kwadranse rano. Co byłoby zgodne z poradnikiem?",
+      "options": [
+        "Wypróbować krótszą poranną naukę i ocenić, czy łatwiej zachować regularność.",
+        "Dodać drugą godzinę nauki w weekend, pozostawiając trudny plan wieczorny bez zmian.",
+        "Zrezygnować z nauki, ponieważ nie udało się realizować pełnej godziny."
+      ],
+      "answer": "Wypróbować krótszą poranną naukę i ocenić, czy łatwiej zachować regularność.",
+      "evidence": "Czasami wystarczy zmienić porę, skrócić zadanie lub przygotować potrzebne materiały wcześniej.",
+      "explanation": "Nowy plan wykorzystuje dostępny czas i zmniejsza przeszkodę."
+    },
+    {
+      "id": "vocabulary",
+      "skill": "vocabulary",
+      "question": "Co znaczy „przestrzegać zasady”?",
+      "options": [
+        "Porównywać ją z planem znajomych.",
+        "Postępować zgodnie z nią.",
+        "Zmieniać ją każdego dnia bez powodu."
+      ],
+      "answer": "Postępować zgodnie z nią.",
+      "evidence": "Wystarczy określić prostą zasadę i zapisać, w jakich sytuacjach udało się jej przestrzegać.",
+      "explanation": "Przestrzeganie polega na stosowaniu ustalonej zasady."
+    }
+  ],
+  "publicationStatus": "practice"
+}

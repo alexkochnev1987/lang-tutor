@@ -1,0 +1,76 @@
+{
+  "id": "pl-b1.reading.day-115",
+  "day": 115,
+  "level": "B1",
+  "genre": "dialog",
+  "title": "Co daje wspólne hobby",
+  "text": "— Dziadku, pamiętasz te stare zdjęcia rodzinne, które leżą w szufladzie? Chciałbym zrobić z nich album w komputerze — powiedział Oskar.\n\n— Chętnie ci je pokażę, ale nie wiem, czy poradzę sobie z tym programem. Dla mnie ważne jest przede wszystkim to, żeby przy zdjęciach zapisać imiona osób — odpowiedział dziadek.\n\nOskar zaproponował, żeby spotykali się co drugą sobotę. On zajmie się przenoszeniem fotografii do komputera, a dziadek opowie, kto znajduje się na zdjęciach i z jakiej okazji je zrobiono. Szybko jednak okazało się, że wnuk chce zakończyć pracę nad jak największą liczbą zdjęć, podczas gdy dziadek przy jednej fotografii potrafi zatrzymać się na kilkanaście minut.\n\n— Im szybciej pracujemy, tym mniej pamiętam szczegółów — powiedział dziadek podczas drugiego spotkania. — Kiedy mogę spokojnie obejrzeć zdjęcie, przypominają mi się różne historie.\n\nOskar odłożył listę fotografii, które planował zeskanować tego dnia. Uzgodnili, że najpierw wybiorą pięć zdjęć i porozmawiają o nich, a dopiero później zapiszą je w albumie. Jeśli zostanie czas, zajmą się kolejnymi.\n\n— Może nauczysz mnie też, jak samemu dodać podpis? — zapytał dziadek. — Chciałbym uzupełniać album między naszymi spotkaniami.\n\nWnuk pokazał mu prosty sposób wpisywania tekstu i przygotował krótką instrukcję. Dziadek natomiast nauczył Oskara rozpoznawać miejsca, których wygląd bardzo zmienił się od czasu zrobienia zdjęć.\n\nPo kilku tygodniach album nie był jeszcze duży. Obaj byli jednak zadowoleni z pracy, ponieważ wspólne hobby pozwoliło im zarówno nauczyć się nowych rzeczy, jak i poznać historie, których wcześniej nie mieli okazji sobie opowiedzieć.",
+  "questions": [
+    {
+      "id": "main-idea",
+      "skill": "main-idea",
+      "question": "Co wnuk i dziadek odkrywają dzięki wspólnej pracy?",
+      "options": [
+        "Najważniejsze jest zakończenie całego albumu w jak najkrótszym czasie.",
+        "Wartość hobby może polegać na wzajemnej nauce i rozmowie, nie tylko na wyniku.",
+        "Album ma sens jedynie wtedy, gdy powstaje bez użycia komputera."
+      ],
+      "answer": "Wartość hobby może polegać na wzajemnej nauce i rozmowie, nie tylko na wyniku.",
+      "evidence": "wspólne hobby pozwoliło im zarówno nauczyć się nowych rzeczy, jak i poznać historie, których wcześniej nie mieli okazji sobie opowiedzieć.",
+      "explanation": "Obaj dzielą się wiedzą i dopasowują tempo pracy."
+    },
+    {
+      "id": "detail",
+      "skill": "detail",
+      "question": "Jak często planowali się spotykać?",
+      "options": [
+        "Co drugą sobotę.",
+        "Raz na miesiąc.",
+        "W każdą sobotę."
+      ],
+      "answer": "Co drugą sobotę.",
+      "evidence": "Oskar zaproponował, żeby spotykali się co drugą sobotę.",
+      "explanation": "Spotkania miały odbywać się co dwa tygodnie."
+    },
+    {
+      "id": "cause",
+      "skill": "cause",
+      "question": "Dlaczego Oskar zmienił plan liczby zdjęć na spotkanie?",
+      "options": [
+        "Dziadek chciał kupić nowy komputer.",
+        "Program nie pozwalał zapisać większej liczby zdjęć.",
+        "Dziadek potrzebował spokojnego czasu na przypominanie sobie historii."
+      ],
+      "answer": "Dziadek potrzebował spokojnego czasu na przypominanie sobie historii.",
+      "evidence": "Im szybciej pracujemy, tym mniej pamiętam szczegółów",
+      "explanation": "Tempo pracy wpływało na wspomnienia dziadka."
+    },
+    {
+      "id": "inference",
+      "skill": "inference",
+      "question": "Dziadek przypomina sobie historię kolejnego zdjęcia w tygodniu, gdy Oskar nie może przyjść. Co może zrobić po ich wspólnej nauce?",
+      "options": [
+        "Usunąć poprzednie podpisy, aby zacząć pracę od nowa.",
+        "Samodzielnie dopisać informację do albumu, a szczegóły omówić przy następnym spotkaniu.",
+        "Odłożyć zdjęcie bez podpisu, bo tylko Oskar może uzupełniać album."
+      ],
+      "answer": "Samodzielnie dopisać informację do albumu, a szczegóły omówić przy następnym spotkaniu.",
+      "evidence": "— Może nauczysz mnie też, jak samemu dodać podpis? — zapytał dziadek. — Chciałbym uzupełniać album między naszymi spotkaniami.\n\nWnuk pokazał mu prosty sposób wpisywania tekstu i przygotował krótką instrukcję.",
+      "explanation": "Dziadek nauczył się samodzielnie dodawać podpisy pomiędzy spotkaniami."
+    },
+    {
+      "id": "vocabulary",
+      "skill": "vocabulary",
+      "question": "Co oznacza „przenieść fotografie do komputera”?",
+      "options": [
+        "Przechowywać papierowe zdjęcia obok komputera.",
+        "Wysłać wszystkie zdjęcia do innych członków rodziny.",
+        "Zapisać fotografie w postaci cyfrowej."
+      ],
+      "answer": "Zapisać fotografie w postaci cyfrowej.",
+      "evidence": "On zajmie się przenoszeniem fotografii do komputera",
+      "explanation": "Chodzi o stworzenie cyfrowych kopii starych zdjęć."
+    }
+  ],
+  "publicationStatus": "practice"
+}
