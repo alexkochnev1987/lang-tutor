@@ -1,3 +1,4 @@
+import { reconcileLessonAssignments } from './lesson-assignments';
 import { hashString, type Exercise } from "@polski/engine";
 import {
   currentDayNumber,
@@ -123,7 +124,7 @@ const sumSec = (steps: Step[]): number =>
 const exerciseIdsOf = (steps: Step[]): Set<string> =>
   new Set(steps.flatMap((s) => (s.kind === "exercise" ? [s.ex.id] : [])));
 
-export async function buildTodayPlan(): Promise<TodayPlan> {
+export async function buildTodayPlan(persistAssignments = false): Promise<TodayPlan> {
   const [curriculum, vocabulary, morphology, rules, sentences, collocations, state, dailyQueue] =
     await Promise.all([
       loadCurriculum(),
@@ -285,7 +286,7 @@ export async function buildTodayPlan(): Promise<TodayPlan> {
     });
   }
 
-  return {
+  return reconcileLessonAssignments({
     day,
     dayNumber,
     totalDays: curriculum.stats.totalDays,
@@ -295,7 +296,7 @@ export async function buildTodayPlan(): Promise<TodayPlan> {
     newWords,
     reviewCount: reviewSteps.length,
     deferredCount: lesson.queue.deferred,
-  };
+  }, persistAssignments);
 }
 
 function missingExamContent(moduleId: string): string {

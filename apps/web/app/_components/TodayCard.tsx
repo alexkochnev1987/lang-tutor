@@ -12,6 +12,9 @@ import { GrammarLink } from './GrammarLink'
 import { DailyWordCounts } from './DailyWordCounts'
 import { WeeklyGoal } from './WeeklyGoal'
 import { useTodayPlan } from './useTodayPlan'
+import { ReviewCenter } from './ReviewCenter'
+import { assignmentProgress } from '@/lib/engine/lesson-assignments'
+import { useAppState } from '@/lib/data/store'
 
 const KIND_LABEL: Record<CurriculumDay['kind'], string> = {
   diagnostic: 'Диагностика',
@@ -55,6 +58,7 @@ export function TodayCard() {
       ) : plan ? <TodayLessonCard plan={plan} /> : (
         <TodayLessonCard />
       )}
+      <ReviewCenter />
       <DailyWordCounts />
       <WeeklyGoal />
       <Card><Stack gap="sm">
@@ -102,6 +106,8 @@ export function TodayCard() {
 
 function TodayLessonCard({ plan }: { plan?: TodayPlan }) {
   const t = useTranslations()
+  const state = useAppState()
+  const progress = plan && state ? assignmentProgress(plan.stages, state.exerciseResults, plan.dayNumber) : null
   const day = plan?.day
   const minutes = Math.max(1, Math.round((plan?.estimatedSec ?? 0) / 60))
 
@@ -164,8 +170,9 @@ function TodayLessonCard({ plan }: { plan?: TodayPlan }) {
           </p>
         ))}
 
+        {progress && progress.answered > 0 && <div className="space-y-1"><p className="text-sm text-muted">{t('reviewCenter.lessonProgress', { answered: progress.answered, total: progress.total })}</p><progress className="h-2 w-full accent-primary" max={progress.total} value={progress.answered} /></div>}
         <Link href="/lesson" className={buttonStyles({ size: 'lg', full: true })}>
-          {t('today.start', { minutes })}
+          {progress && progress.answered > 0 ? t('reviewCenter.continueLesson') : t('today.start', { minutes })}
           <AppIcon name="arrow" className="size-5 shrink-0" />
         </Link>
 

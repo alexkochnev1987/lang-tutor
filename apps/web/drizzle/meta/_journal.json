@@ -50,6 +50,13 @@
       "when": 1795276800000,
       "tag": "0006_target_language",
       "breakpoints": true
+    },
+    {
+      "idx": 7,
+      "version": "7",
+      "when": 1795624800000,
+      "tag": "0007_lesson_assignments_attempts",
+      "breakpoints": true
     }
   ]
 }

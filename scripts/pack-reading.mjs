@@ -45,7 +45,7 @@ export function makeReadingPack({ legacy = [], daily = [], status = 'approved' }
     validate(text, kind)
     assert(!files.has(file), 'duplicate file ' + file)
     const { id, title, questions } = text
-    const entry = { id, title, file, status: kind, ...(kind === 'legacy' ? {} : { day: text.day, level: text.level }) }
+    const entry = { id, title, file, status: kind, questionIds: questions.map(q => q.id), ...(kind === 'legacy' ? {} : { day: text.day, level: text.level }) }
     entries.push(entry)
     // Runtime fields only. Do not publish author evidence, model details or reviews.
     files.set(file, {

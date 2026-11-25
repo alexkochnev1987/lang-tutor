@@ -318,3 +318,26 @@ export const extensionAuthCodes = pgTable(
   },
   (t) => [index("extension_auth_codes_expiry_idx").on(t.expiresAt)],
 );
+
+/** Immutable per-day assignments; dynamic FSRS word queues are deliberately excluded. */
+export const lessonAssignments = pgTable("lesson_assignments", {
+  userId: text("user_id").notNull().references(() => users.id, { onDelete: "cascade" }),
+  courseId: text("course_id").notNull(),
+  dayNumber: integer("day_number").notNull(),
+  stages: jsonb("stages").notNull(),
+  createdAt: timestamp("created_at", { withTimezone: true }).notNull().defaultNow(),
+}, (t) => [primaryKey({ name: 'lesson_assignments_pk', columns: [t.userId, t.courseId, t.dayNumber] })]);
+
+/** Append-only archive maintained by a trigger on exercise_results. */
+export const exerciseAttempts = pgTable("exercise_attempts", {
+  userId: text("user_id").notNull().references(() => users.id, { onDelete: "cascade" }),
+  courseId: text("course_id").notNull(),
+  dayNumber: integer("day_number").notNull(),
+  exerciseId: text("exercise_id").notNull(),
+  attempts: integer("attempts").notNull(),
+  correct: integer("correct").notNull(),
+  answer: text("answer").notNull(),
+  expected: text("expected").notNull(),
+  errorKind: text("error_kind"),
+  completedAt: timestamp("completed_at", { withTimezone: true }).notNull(),
+}, (t) => [primaryKey({ name: 'exercise_attempts_pk', columns: [t.userId, t.courseId, t.dayNumber, t.exerciseId, t.completedAt] })]);

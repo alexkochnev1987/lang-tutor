@@ -250,7 +250,7 @@
   "readingPreview": {
     "practiceReviewPending": "Practice passage · independent review pending",
     "practice": "Reading practice",
-    "practiceNotice": "Read passages and answer questions. Standalone practice does not change lesson progress.",
+    "practiceNotice": "Practice answers are saved separately from lesson results.",
     "legacy": "Additional passage",
     "title": "Reading",
     "experimental": "Experimental mode",
@@ -266,6 +266,50 @@
     "result": "Reading result",
     "correct": "Correct: {count}",
     "wrong": "Wrong: {count}",
-    "chooseAnother": "Choose another text"
+    "chooseAnother": "Choose another text",
+    "filter": {
+      "all": "All",
+      "new": "New",
+      "missed": "Missed",
+      "unfinished": "Unfinished",
+      "mistakes": "Mistakes",
+      "done": "Completed"
+    },
+    "saveError": "Could not save the answer."
+  },
+  "reviewCenter": {
+    "title": "Review",
+    "missed": "Missed passages",
+    "missedHint": "From completed curriculum days",
+    "unfinished": "Unfinished reading",
+    "unfinishedHint": "Continue remaining questions",
+    "mistakes": "Reading mistakes",
+    "mistakesHint": "Retry incorrect answers",
+    "grammar": "Weak rules",
+    "grammarHint": "Open grammar practice",
+    "retry": "Retry loading",
+    "lessonProgress": "Lesson exercises completed (excluding words): {answered}/{total}",
+    "continueLesson": "Continue lesson",
+    "assignmentMissing": "Missed exercises",
+    "assignmentMissingHint": "From saved lessons",
+    "assignmentMistakes": "Exercise mistakes",
+    "assignmentMistakesHint": "Grammar, combinations and exam",
+    "history": "Review past lesson exercises",
+    "assignmentFilter": {
+      "all": "All",
+      "missing": "Missed",
+      "mistakes": "Mistakes"
+    },
+    "assignmentNotice": "Saved lesson exercises are available here. Reading and words are reviewed separately.",
+    "assignmentDay": "Day {day}",
+    "assignmentCounts": "Missed: {missing} · Mistakes: {mistakes} · Total: {total}",
+    "repeatAssigned": "Practice again",
+    "startReview": "Start review",
+    "noAssignments": "No exercises available in this category.",
+    "back": "Back",
+    "loadError": "Could not load exercises.",
+    "saveError": "Could not save the answer.",
+    "next": "Next",
+    "result": "Result"
   }
 }
