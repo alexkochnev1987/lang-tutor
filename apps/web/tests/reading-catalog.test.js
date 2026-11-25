@@ -35,3 +35,10 @@ describe('daily reading selection', () => {
     expect(selectDailyReadingEntries([legacy, daily], 54, 0, new Set(), new Set())).toEqual([])
   })
 })
+
+
+it('includes released practice passages but not preview-only passages', () => {
+  const practice = { ...daily, status: 'practice' }
+  expect(selectDailyReadingEntries([legacy, practice, preview], 54, 1, new Set(), new Set())).toEqual([practice])
+  expect(selectReadingEntry([legacy, practice, preview], 54)).toEqual(practice)
+})
