@@ -1,0 +1,76 @@
+{
+  "id": "pl-b1.reading.day-146",
+  "day": 146,
+  "level": "B1",
+  "genre": "opowiadanie",
+  "title": "Wycieczka dostępna dla różnych osób",
+  "text": "Grupa znajomych postanowiła zorganizować wycieczkę na punkt widokowy za miastem. Dla części osób była to okazja do dłuższego marszu. Inni chcieli przede wszystkim spotkać się i spędzić kilka godzin na świeżym powietrzu. Zuzia, która zaproponowała wyjazd, początkowo znalazła tylko jedną trasę prowadzącą przez las.\n\nKiedy opisała pomysł znajomym, Bartek powiedział, że nie może długo chodzić po stromym terenie. Asia natomiast musiała wrócić do domu przed szesnastą. Zuzia nie chciała rezygnować z wycieczki ani prosić wszystkich, żeby zmienili swoje plany. Sprawdziła więc, czy w okolicy są inne drogi.\n\nOkazało się, że do małej polany poniżej punktu widokowego można dojechać autobusem. Od przystanku prowadziła krótka, łagodna ścieżka. Z polany część osób mogła pójść dalej na wzgórze, a pozostałe zostać w pobliżu miejsca odpoczynku. Obie grupy miałyby później możliwość spotkania się przy wspólnym posiłku.\n\nZuzia zaproponowała, żeby wszyscy wyjechali rano tym samym autobusem i przeszli razem pierwszy odcinek. Dalsza część spaceru miała być dobrowolna. Ustaliła również konkretną godzinę spotkania na polanie, aby osoby wracające wcześniej mogły zdążyć na autobus o czternastej.\n\nW dniu wycieczki Bartek i Asia zostali na polanie, a trzy osoby weszły na wzgórze. Po powrocie wszyscy opowiadali sobie, co zobaczyli. Bartek zauważył ciekawe ptaki przy ścieżce, których nie dostrzegli pozostali. Wyjazd udał się nie dlatego, że każdy przeszedł tę samą liczbę kilometrów, lecz dlatego, że organizatorzy znaleźli wspólną część planu oraz pozostawili miejsce na różne możliwości.",
+  "questions": [
+    {
+      "id": "main-idea",
+      "skill": "main-idea",
+      "question": "Co zdecydowało o powodzeniu wycieczki?",
+      "options": [
+        "Połączenie wspólnego programu z możliwością wyboru dalszej aktywności.",
+        "Zrezygnowanie ze wszystkich części wycieczki poza dojazdem.",
+        "Przekonanie wszystkich do wejścia na wzgórze."
+      ],
+      "answer": "Połączenie wspólnego programu z możliwością wyboru dalszej aktywności.",
+      "evidence": "Wyjazd udał się nie dlatego, że każdy przeszedł tę samą liczbę kilometrów, lecz dlatego, że organizatorzy znaleźli wspólną część planu oraz pozostawili miejsce na różne możliwości.",
+      "explanation": "Wspólny odcinek i indywidualny wybór pozwoliły uczestniczyć różnym osobom."
+    },
+    {
+      "id": "detail",
+      "skill": "detail",
+      "question": "O której odjeżdżał autobus dla wracających wcześniej?",
+      "options": [
+        "O szesnastej.",
+        "O czternastej.",
+        "O dwunastej."
+      ],
+      "answer": "O czternastej.",
+      "evidence": "aby osoby wracające wcześniej mogły zdążyć na autobus o czternastej.",
+      "explanation": "Podano godzinę autobusu."
+    },
+    {
+      "id": "cause",
+      "skill": "cause",
+      "question": "Dlaczego Zuzia szukała innych dróg?",
+      "options": [
+        "Grupa chciała pojechać wyłącznie samochodem.",
+        "Las został zamknięty dla wszystkich spacerowiczów.",
+        "Pierwsza trasa nie odpowiadała potrzebom wszystkich znajomych."
+      ],
+      "answer": "Pierwsza trasa nie odpowiadała potrzebom wszystkich znajomych.",
+      "evidence": "Bartek powiedział, że nie może długo chodzić po stromym terenie. Asia natomiast musiała wrócić do domu przed szesnastą.",
+      "explanation": "Trasa musiała uwzględniać możliwości ruchowe i czas."
+    },
+    {
+      "id": "inference",
+      "skill": "inference",
+      "question": "Nowa osoba chce uczestniczyć w posiłku, ale nie może wejść na wzgórze i chce wrócić wcześniejszym autobusem. Jak może zaplanować udział?",
+      "options": [
+        "Wejść na wzgórze, aby nie przegapić jedynego miejsca spotkania.",
+        "Przejść wspólny łagodny odcinek, zostać na polanie i wrócić o ustalonej porze.",
+        "Dołączyć dopiero po odjeździe autobusu powrotnego."
+      ],
+      "answer": "Przejść wspólny łagodny odcinek, zostać na polanie i wrócić o ustalonej porze.",
+      "evidence": "Dalsza część spaceru miała być dobrowolna. Ustaliła również konkretną godzinę spotkania na polanie, aby osoby wracające wcześniej mogły zdążyć na autobus o czternastej.",
+      "explanation": "Wspólny punkt i dobrowolny dalszy spacer umożliwiają udział."
+    },
+    {
+      "id": "vocabulary",
+      "skill": "vocabulary",
+      "question": "Co oznacza „łagodna ścieżka”?",
+      "options": [
+        "Najdłuższa możliwa droga na szczyt.",
+        "Ścieżka, na której obowiązuje zakaz rozmów.",
+        "Droga bez dużej stromizny, łatwiejsza do przejścia."
+      ],
+      "answer": "Droga bez dużej stromizny, łatwiejsza do przejścia.",
+      "evidence": "Od przystanku prowadziła krótka, łagodna ścieżka.",
+      "explanation": "Łagodność jest przeciwstawiona stromemu terenowi."
+    }
+  ],
+  "publicationStatus": "practice"
+}

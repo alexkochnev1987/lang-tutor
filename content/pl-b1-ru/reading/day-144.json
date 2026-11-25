@@ -1,0 +1,76 @@
+{
+  "id": "pl-b1.reading.day-144",
+  "day": 144,
+  "level": "B1",
+  "genre": "e-mail",
+  "title": "Nocleg blisko transportu publicznego",
+  "text": "Cześć, Karolu!\n\nZnalazłam dwa mieszkania na nasz wyjazd do miasta, w którym odbędzie się festiwal filmowy. Pierwsze wygląda bardzo ładnie na zdjęciach i znajduje się przy głównym rynku. Drugie jest trochę skromniejsze, ale leży blisko przystanku tramwajowego. Na początku byłam przekonana, że powinniśmy wybrać rynek. Później sprawdziłam, gdzie będą odbywać się pokazy.\n\nNajwięcej interesujących nas filmów będzie wyświetlanych w kinie po drugiej stronie rzeki. Z mieszkania przy rynku trzeba do niego iść przez około dwadzieścia pięć minut. W dzień nie przeszkadzałaby mi taka droga, ale dwa pokazy kończą się tuż przed północą. Nie chcę codziennie szukać taksówki, jeśli będziemy zmęczeni albo zacznie padać.\n\nZ drugiego mieszkania możemy dojechać do kina bez przesiadki. Sprawdziłam też rozkład na piątek i sobotę. Po późnych pokazach kursują jeszcze tramwaje w stronę tego przystanku. W niedzielę planujemy wrócić wcześniej, więc rzadsze wieczorne połączenia nie powinny stanowić problemu.\n\nWłaściciel drugiego mieszkania napisał, że możemy zostawić bagaż wcześniej, ale sam lokal będzie gotowy dopiero o piętnastej. Pierwszy film, który chcemy zobaczyć w piątek, zaczyna się o czternastej. Moglibyśmy więc zostawić torby i pójść do kina, a po seansie odebrać klucze.\n\nNie rezerwowałam jeszcze żadnego noclegu, ponieważ chciałabym znać twoją opinię. Jeśli zależy ci przede wszystkim na spacerach po rynku, możemy ponownie porównać oba miejsca. Dla mnie drugie mieszkanie stało się ciekawsze, kiedy zobaczyłam cały plan festiwalu, a nie tylko fotografie wnętrz.\n\nPozdrawiam,\nOla",
+  "questions": [
+    {
+      "id": "main-idea",
+      "skill": "main-idea",
+      "question": "Dlaczego Ola skłania się ku drugiemu mieszkaniu?",
+      "options": [
+        "Pozwala uczestniczyć w festiwalu bez wcześniejszego wyboru filmów.",
+        "Lepiej pasuje do godzin i miejsc wydarzeń zaplanowanych podczas wyjazdu.",
+        "Jest większe i znajduje się bezpośrednio na głównym rynku."
+      ],
+      "answer": "Lepiej pasuje do godzin i miejsc wydarzeń zaplanowanych podczas wyjazdu.",
+      "evidence": "Dla mnie drugie mieszkanie stało się ciekawsze, kiedy zobaczyłam cały plan festiwalu, a nie tylko fotografie wnętrz.",
+      "explanation": "Ola ocenia nocleg w powiązaniu z programem."
+    },
+    {
+      "id": "detail",
+      "skill": "detail",
+      "question": "Kiedy drugi lokal będzie gotowy?",
+      "options": [
+        "O czternastej.",
+        "Przed południem.",
+        "O piętnastej."
+      ],
+      "answer": "O piętnastej.",
+      "evidence": "sam lokal będzie gotowy dopiero o piętnastej.",
+      "explanation": "Odbiór kluczy jest późniejszy niż pierwszy film."
+    },
+    {
+      "id": "cause",
+      "skill": "cause",
+      "question": "Dlaczego Ola sprawdziła rozkład wieczornych tramwajów?",
+      "options": [
+        "Niektóre pokazy kończą się późno i chce mieć wygodną drogę powrotną.",
+        "Planuje wypożyczyć tramwaj dla uczestników festiwalu.",
+        "Chce odwiedzić wszystkie przystanki po drugiej stronie rzeki."
+      ],
+      "answer": "Niektóre pokazy kończą się późno i chce mieć wygodną drogę powrotną.",
+      "evidence": "W dzień nie przeszkadzałaby mi taka droga, ale dwa pokazy kończą się tuż przed północą.",
+      "explanation": "Późne zakończenie pokazów wpływa na wybór transportu."
+    },
+    {
+      "id": "inference",
+      "skill": "inference",
+      "question": "Jeśli znajomi przyjadą w piątek o dwunastej i wybiorą drugi lokal, jak mogą zdążyć na pierwszy film?",
+      "options": [
+        "Zostawić bagaż wcześniej i odebrać klucze po seansie.",
+        "Poczekać na gotowość lokalu do piętnastej, a potem pójść na film o czternastej.",
+        "Przenieść wszystkie piątkowe pokazy na niedzielę."
+      ],
+      "answer": "Zostawić bagaż wcześniej i odebrać klucze po seansie.",
+      "evidence": "Właściciel drugiego mieszkania napisał, że możemy zostawić bagaż wcześniej, ale sam lokal będzie gotowy dopiero o piętnastej. Pierwszy film, który chcemy zobaczyć w piątek, zaczyna się o czternastej.",
+      "explanation": "Wcześniejsze pozostawienie bagażu umożliwia dotarcie na seans."
+    },
+    {
+      "id": "vocabulary",
+      "skill": "vocabulary",
+      "question": "Co oznacza „rzadsze połączenia”?",
+      "options": [
+        "Bilety są dostępne tylko dla części pasażerów.",
+        "Środki transportu odjeżdżają w większych odstępach czasu.",
+        "Tramwaje jadą krótszą trasą bez przystanków."
+      ],
+      "answer": "Środki transportu odjeżdżają w większych odstępach czasu.",
+      "evidence": "W niedzielę planujemy wrócić wcześniej, więc rzadsze wieczorne połączenia nie powinny stanowić problemu.",
+      "explanation": "Rzadziej kursujące tramwaje oznaczają mniej odjazdów."
+    }
+  ],
+  "publicationStatus": "practice"
+}

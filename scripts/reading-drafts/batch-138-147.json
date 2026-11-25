@@ -1,0 +1,767 @@
+{
+  "version": 1,
+  "status": "draft",
+  "texts": [
+    {
+      "id": "pl-b1.reading.day-138",
+      "day": 138,
+      "level": "B1",
+      "genre": "ogłoszenie",
+      "title": "Koncert w małym mieście",
+      "text": "Stowarzyszenie Muzyczne zaprasza na letni koncert na dziedzińcu miejskiego domu kultury. Wystąpią trzy zespoły z okolicy: grupa grająca na gitarach, chór oraz młodzi muzycy przygotowujący własne utwory. Chcemy, żeby publiczność mogła posłuchać różnych stylów muzyki i poznać osoby, które tworzą ją na co dzień w naszym mieście.\n\nKoncert rozpocznie się o siedemnastej. Między występami przewidziano krótkie przerwy, podczas których będzie można porozmawiać z wykonawcami. Organizatorzy przygotują ławki i część miejsc siedzących. Osoby, które potrzebują krzesła przez cały koncert, mogą zgłosić taką potrzebę przy zapisie. Pozostali mogą przynieść własny lekki składany stołek.\n\nWstęp na dziedziniec jest bezpłatny, ale liczba osób jest ograniczona. W tym roku nie wydajemy papierowych zaproszeń. Wystarczy wypełnić formularz na stronie stowarzyszenia i zachować wiadomość z potwierdzeniem. Jeżeli ktoś zrezygnuje, prosimy o informację, ponieważ z wolnego miejsca będzie mogła skorzystać inna osoba.\n\nW przypadku deszczu koncert przeniesiemy do sali wewnątrz budynku. Sala jest mniejsza od dziedzińca, dlatego przy zapisie można wybrać pierwszą albo drugą część programu w razie zmiany miejsca. Jeżeli pogoda będzie dobra, wszyscy zapisani będą mogli zostać na całym koncercie. Ostateczną informację wyślemy uczestnikom w dniu wydarzenia przed południem.\n\nNie trzeba znać wykonawców ani ich muzyki, aby przyjść. Po koncercie będzie można dowiedzieć się, gdzie zespoły ćwiczą i czy przyjmują nowych członków. Być może ktoś, kto dotąd tylko słuchał muzyki, znajdzie dzięki temu okazję, by samemu zacząć grać.",
+      "questions": [
+        {
+          "id": "main-idea",
+          "skill": "main-idea",
+          "question": "Jaki cel ma koncert oprócz słuchania muzyki?",
+          "options": [
+            "Sprzedaż instrumentów wszystkim osobom z publiczności.",
+            "Poznanie miejscowych muzyków i możliwości uczestniczenia w ich działalności.",
+            "Wybór najlepszego zespołu w ogólnopolskim konkursie."
+          ],
+          "answer": "Poznanie miejscowych muzyków i możliwości uczestniczenia w ich działalności.",
+          "evidence": "Po koncercie będzie można dowiedzieć się, gdzie zespoły ćwiczą i czy przyjmują nowych członków.",
+          "explanation": "Program łączy występy z możliwością poznania lokalnych wykonawców."
+        },
+        {
+          "id": "detail",
+          "skill": "detail",
+          "question": "O której zacznie się koncert?",
+          "options": [
+            "O siedemnastej.",
+            "Przed południem.",
+            "O dziewiętnastej."
+          ],
+          "answer": "O siedemnastej.",
+          "evidence": "Koncert rozpocznie się o siedemnastej.",
+          "explanation": "Podano konkretną godzinę."
+        },
+        {
+          "id": "cause",
+          "skill": "cause",
+          "question": "Dlaczego w razie rezygnacji należy powiadomić organizatorów?",
+          "options": [
+            "Aby zmienić program występów zespołów.",
+            "Aby otrzymać papierowe zaproszenie na kolejne wydarzenie.",
+            "Aby zwolnione miejsce mogła wykorzystać inna osoba."
+          ],
+          "answer": "Aby zwolnione miejsce mogła wykorzystać inna osoba.",
+          "evidence": "Jeżeli ktoś zrezygnuje, prosimy o informację, ponieważ z wolnego miejsca będzie mogła skorzystać inna osoba.",
+          "explanation": "Liczba miejsc jest ograniczona."
+        },
+        {
+          "id": "inference",
+          "skill": "inference",
+          "question": "Osoba potrzebuje krzesła i najbardziej chce usłyszeć wykonawców z drugiej części. Co powinna zrobić przy zapisie?",
+          "options": [
+            "Zarezerwować tylko miejsce na dziedzińcu, nie podając potrzeb.",
+            "Wybrać pierwszą część i oczekiwać gwarancji udziału w drugiej podczas deszczu.",
+            "Zgłosić potrzebę krzesła i wybrać drugą część na wypadek przeniesienia koncertu do sali."
+          ],
+          "answer": "Zgłosić potrzebę krzesła i wybrać drugą część na wypadek przeniesienia koncertu do sali.",
+          "evidence": "Osoby, które potrzebują krzesła przez cały koncert, mogą zgłosić taką potrzebę przy zapisie. Pozostali mogą przynieść własny lekki składany stołek.\n\nWstęp na dziedziniec jest bezpłatny, ale liczba osób jest ograniczona. W tym roku nie wydajemy papierowych zaproszeń. Wystarczy wypełnić formularz na stronie stowarzyszenia i zachować wiadomość z potwierdzeniem. Jeżeli ktoś zrezygnuje, prosimy o informację, ponieważ z wolnego miejsca będzie mogła skorzystać inna osoba.\n\nW przypadku deszczu koncert przeniesiemy do sali wewnątrz budynku. Sala jest mniejsza od dziedzińca, dlatego przy zapisie można wybrać pierwszą albo drugą część programu w razie zmiany miejsca.",
+          "explanation": "Krzesło można zgłosić, a wybór części ogranicza ryzyko przegapienia preferowanego występu."
+        },
+        {
+          "id": "vocabulary",
+          "skill": "vocabulary",
+          "question": "Co oznacza „przyjmują nowych członków”?",
+          "options": [
+            "Wybierają słuchaczy do pierwszego rzędu.",
+            "Są otwarci na osoby, które chcą dołączyć do zespołu.",
+            "Sprzedają publiczności nowe bilety."
+          ],
+          "answer": "Są otwarci na osoby, które chcą dołączyć do zespołu.",
+          "evidence": "Po koncercie będzie można dowiedzieć się, gdzie zespoły ćwiczą i czy przyjmują nowych członków.",
+          "explanation": "Chodzi o dołączenie do grupy muzycznej."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-139",
+      "day": 139,
+      "level": "B1",
+      "genre": "opowiadanie",
+      "title": "Biblioteka jako miejsce spotkań",
+      "text": "Po przeprowadzce do niewielkiego miasta Daria zaczęła regularnie odwiedzać bibliotekę. Przychodziła tam głównie po książki, ponieważ nie znała jeszcze wielu osób w okolicy. Zazwyczaj wybierała kilka powieści, oddawała poprzednie i wracała do domu. Nie zwracała uwagi na ogłoszenia umieszczone przy wejściu.\n\nPewnego dnia bibliotekarka zapytała, czy Daria chciałaby wziąć udział w spotkaniu osób, które czytają krótkie opowiadania. Daria obawiała się, że wszyscy uczestnicy dobrze się znają i że nie będzie wiedziała, co powiedzieć. Bibliotekarka wyjaśniła, że można przyjść tylko posłuchać i nie trzeba wcześniej przeczytać konkretnej książki.\n\nNa pierwszym spotkaniu prowadzący rozdał wszystkim po jednym krótkim tekście. Po kilku minutach czytania uczestnicy rozmawiali o decyzji głównego bohatera. Daria początkowo milczała, ale kiedy jedna z osób przedstawiła opinię podobną do jej własnej, zadała dodatkowe pytanie. Rozmowa potoczyła się zupełnie inaczej, niż się spodziewała.\n\nPo spotkaniu poznała kobietę, która mieszkała w sąsiednim budynku i również niedawno przeprowadziła się do miasta. Umówiły się, że następnym razem przyjdą razem. Daria dowiedziała się także o niewielkiej grupie osób, które w bibliotece pomagają innym korzystać z komputera. Ponieważ w pracy często przygotowywała proste instrukcje, zaproponowała pomoc przy jednym ze spotkań.\n\nPo kilku tygodniach nadal wypożyczała książki, lecz jej wizyty wyglądały inaczej. Czasami przychodziła bez zamiaru zabrania czegokolwiek do domu. Biblioteka stała się dla niej miejscem, w którym mogła nie tylko spędzać czas z własnymi zainteresowaniami, lecz także spotykać ludzi i robić coś razem z nimi.",
+      "questions": [
+        {
+          "id": "main-idea",
+          "skill": "main-idea",
+          "question": "Jak zmieniło się znaczenie biblioteki dla Darii?",
+          "options": [
+            "Zaczęła służyć wyłącznie do przygotowywania instrukcji komputerowych.",
+            "Przestała być miejscem, w którym Daria interesowała się czytaniem.",
+            "Z miejsca wypożyczania książek stała się także przestrzenią kontaktów i wspólnych działań."
+          ],
+          "answer": "Z miejsca wypożyczania książek stała się także przestrzenią kontaktów i wspólnych działań.",
+          "evidence": "Biblioteka stała się dla niej miejscem, w którym mogła nie tylko spędzać czas z własnymi zainteresowaniami, lecz także spotykać ludzi i robić coś razem z nimi.",
+          "explanation": "Daria rozszerzyła sposób korzystania z biblioteki."
+        },
+        {
+          "id": "detail",
+          "skill": "detail",
+          "question": "Co uczestnicy otrzymali na pierwszym spotkaniu?",
+          "options": [
+            "Instrukcję obsługi komputera.",
+            "Krótki tekst do przeczytania.",
+            "Listę książek do kupienia."
+          ],
+          "answer": "Krótki tekst do przeczytania.",
+          "evidence": "Na pierwszym spotkaniu prowadzący rozdał wszystkim po jednym krótkim tekście.",
+          "explanation": "Materiał do rozmowy był dostępny na miejscu."
+        },
+        {
+          "id": "cause",
+          "skill": "cause",
+          "question": "Dlaczego Daria początkowo obawiała się spotkania?",
+          "options": [
+            "Nie znała uczestników i nie wiedziała, czy będzie umiała zabrać głos.",
+            "Nie miała już żadnej książki do oddania.",
+            "Bibliotekarka wymagała przygotowania prezentacji."
+          ],
+          "answer": "Nie znała uczestników i nie wiedziała, czy będzie umiała zabrać głos.",
+          "evidence": "Daria obawiała się, że wszyscy uczestnicy dobrze się znają i że nie będzie wiedziała, co powiedzieć.",
+          "explanation": "Obawa dotyczyła kontaktu z grupą, nie samego tekstu."
+        },
+        {
+          "id": "inference",
+          "skill": "inference",
+          "question": "Nowy uczestnik nie czytał wcześniej opowiadań i obawia się dyskusji. Co może zrobić według zasad spotkania?",
+          "options": [
+            "Poczekać, aż przeczyta powieści znane całej grupie.",
+            "Przyjść, przeczytać tekst na miejscu i początkowo tylko słuchać.",
+            "Przygotować referat o wszystkich książkach prowadzącego."
+          ],
+          "answer": "Przyjść, przeczytać tekst na miejscu i początkowo tylko słuchać.",
+          "evidence": "Bibliotekarka wyjaśniła, że można przyjść tylko posłuchać i nie trzeba wcześniej przeczytać konkretnej książki.",
+          "explanation": "Brak przygotowania i gotowości do mówienia nie wykluczają udziału."
+        },
+        {
+          "id": "vocabulary",
+          "skill": "vocabulary",
+          "question": "Co oznacza „rozmowa potoczyła się inaczej”?",
+          "options": [
+            "Rozmowa rozwinęła się w inny sposób, niż Daria przewidywała.",
+            "Rozmówcy przenieśli spotkanie do innego budynku.",
+            "Prowadzący przerwał rozmowę przed rozpoczęciem."
+          ],
+          "answer": "Rozmowa rozwinęła się w inny sposób, niż Daria przewidywała.",
+          "evidence": "Rozmowa potoczyła się zupełnie inaczej, niż się spodziewała.",
+          "explanation": "Czasownik opisuje przebieg rozmowy."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-140",
+      "day": 140,
+      "level": "B1",
+      "genre": "poradnik",
+      "title": "Weekend bez rezerwacji",
+      "text": "Wyjazd na weekend bez dokładnych rezerwacji może być przyjemny, jeśli przed podróżą ustalimy kilka podstawowych rzeczy. Nie chodzi o to, żeby planować każdy posiłek i każdą godzinę zwiedzania. Warto jednak wiedzieć, które decyzje można podjąć na miejscu, a których lepiej nie odkładać do ostatniej chwili.\n\nZacznij od sprawdzenia transportu. Jeśli wracasz w niedzielę wieczorem, dowiedz się, o której odjeżdża ostatnie odpowiednie połączenie. Jeżeli planujesz nocleg, sprawdź, czy w wybranym miejscu odbywa się duże wydarzenie. W takim okresie wolnych pokoi może być mniej, więc pełna spontaniczność nie zawsze jest najlepszym rozwiązaniem.\n\nW wyobrażonej sytuacji Nina i Artur pojechali na jeden dzień do miasta nad jeziorem. Kupili bilety na pociąg powrotny, ale nie ustalili dokładnej trasy zwiedzania. Mieli trzy pomysły: spacer nad wodą, małe muzeum i obiad na rynku. Wiedzieli tylko, że muzeum zamyka się wcześniej niż restauracje. Zdecydowali więc, że jeśli będą chcieli je odwiedzić, zrobią to przed obiadem.\n\nNa miejscu okazało się, że przy jeziorze wieje silny wiatr. Para zmieniła kolejność planu i zaczęła od muzeum. Po obiedzie pogoda się poprawiła, więc zdążyli jeszcze na krótki spacer przed powrotem. Nie musieli rezygnować z biletu ani szukać połączenia późnym wieczorem.\n\nPrzygotowując podobny wyjazd, oddziel elementy, których brak może spowodować duży problem, od drobnych wyborów. Transport powrotny lub miejsce do spania bywają ważniejsze niż kolejność zwiedzania. Dobrze zaplanowane minimum pozwala zostawić więcej miejsca na niespodzianki, które sprawiają przyjemność, zamiast tych, które utrudniają powrót.",
+      "questions": [
+        {
+          "id": "main-idea",
+          "skill": "main-idea",
+          "question": "Jaki rodzaj planowania zaleca poradnik?",
+          "options": [
+            "Zabezpieczyć najważniejsze elementy wyjazdu, pozostawiając swobodę w drobnych decyzjach.",
+            "Rezerwować każdą restaurację i godzinę spaceru przed wyjazdem.",
+            "Nie sprawdzać żadnych informacji przed spontaniczną podróżą."
+          ],
+          "answer": "Zabezpieczyć najważniejsze elementy wyjazdu, pozostawiając swobodę w drobnych decyzjach.",
+          "evidence": "Dobrze zaplanowane minimum pozwala zostawić więcej miejsca na niespodzianki, które sprawiają przyjemność, zamiast tych, które utrudniają powrót.",
+          "explanation": "Ważne ograniczenia trzeba znać, ale kolejność aktywności może pozostać elastyczna."
+        },
+        {
+          "id": "detail",
+          "skill": "detail",
+          "question": "Co Nina i Artur kupili przed wyjazdem?",
+          "options": [
+            "Bilety do muzeum na konkretną godzinę.",
+            "Nocleg nad jeziorem.",
+            "Bilety na pociąg powrotny."
+          ],
+          "answer": "Bilety na pociąg powrotny.",
+          "evidence": "Kupili bilety na pociąg powrotny, ale nie ustalili dokładnej trasy zwiedzania.",
+          "explanation": "Zabezpieczyli powrót."
+        },
+        {
+          "id": "cause",
+          "skill": "cause",
+          "question": "Dlaczego zaczęli od muzeum?",
+          "options": [
+            "Nie mieli już czasu na spacer przed powrotem.",
+            "Nad jeziorem wiał silny wiatr.",
+            "Restauracje tego dnia były nieczynne."
+          ],
+          "answer": "Nad jeziorem wiał silny wiatr.",
+          "evidence": "Na miejscu okazało się, że przy jeziorze wieje silny wiatr. Para zmieniła kolejność planu i zaczęła od muzeum.",
+          "explanation": "Pogoda zmieniła kolejność aktywności."
+        },
+        {
+          "id": "inference",
+          "skill": "inference",
+          "question": "W mieście odbywa się duży festiwal, a podróżny chce zostać na noc i spontanicznie wybierać atrakcje. Co jest zgodne z poradnikiem?",
+          "options": [
+            "Sprawdzić dostępność noclegu wcześniej, a kolejność atrakcji ustalać na miejscu.",
+            "Odłożyć sprawę noclegu, ale zarezerwować każdy spacer.",
+            "Przyjąć, że podczas festiwalu zawsze będzie więcej wolnych pokoi."
+          ],
+          "answer": "Sprawdzić dostępność noclegu wcześniej, a kolejność atrakcji ustalać na miejscu.",
+          "evidence": "Jeżeli planujesz nocleg, sprawdź, czy w wybranym miejscu odbywa się duże wydarzenie. W takim okresie wolnych pokoi może być mniej",
+          "explanation": "Nocleg jest ważnym ograniczeniem, a atrakcje mogą pozostać elastyczne."
+        },
+        {
+          "id": "vocabulary",
+          "skill": "vocabulary",
+          "question": "Co oznacza „zaplanowane minimum”?",
+          "options": [
+            "Szczegółowy rozkład wszystkich godzin weekendu.",
+            "Plan najtańszej możliwej podróży bez biletów powrotnych.",
+            "Niewielki zestaw ustaleń niezbędnych do bezpiecznego i wygodnego wyjazdu."
+          ],
+          "answer": "Niewielki zestaw ustaleń niezbędnych do bezpiecznego i wygodnego wyjazdu.",
+          "evidence": "Dobrze zaplanowane minimum pozwala zostawić więcej miejsca na niespodzianki",
+          "explanation": "Minimum to najważniejsze przygotowania."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-141",
+      "day": 141,
+      "level": "B1",
+      "genre": "wiadomość",
+      "title": "Dokumenty przed podróżą do Europy",
+      "text": "Przed krótką podróżą do innego kraju warto przygotować dokumenty potrzebne nie tylko podczas przejazdu, lecz także w sytuacji, gdy na miejscu trzeba skorzystać z pomocy medycznej. Osoby uprawnione do korzystania z Europejskiej Karty Ubezpieczenia Zdrowotnego, nazywanej EKUZ, mogą używać jej podczas tymczasowego pobytu w krajach Unii Europejskiej, krajach EFTA oraz w Wielkiej Brytanii w celu uzyskania niezbędnego leczenia.\n\nKartę należy mieć razem z dokumentem tożsamości. Przed wyjazdem dobrze jest sprawdzić zakres pomocy dostępnej w kraju docelowym. Sama nazwa dokumentu nie odpowiada bowiem na wszystkie pytania o to, jakie świadczenia będą dostępne podczas podróży.\n\nWyobraźmy sobie dwoje znajomych, którzy planują kilkudniową wycieczkę do stolicy innego kraju europejskiego. Alicja przygotowała kartę EKUZ i dokument tożsamości, a Kuba zapisał tylko numer swojego dokumentu w telefonie. Postanowili wspólnie sprawdzić, jakie informacje będą im potrzebne w razie konieczności skorzystania z leczenia. Nie chcą dopiero na miejscu szukać odpowiedzi na pytanie o zakres świadczeń.\n\nAlicja przygotowała również prostą listę rzeczy do sprawdzenia. Obok dokumentów zapisała adres noclegu, informacje o planowanym transporcie i numer osoby, z którą można się skontaktować w razie zmiany planów. Lista nie ma zastąpić dokumentów. Ma jedynie pomóc pamiętać o ważnych sprawach przed wyjazdem.\n\nW tym wyobrażonym przykładzie znajomi nie zakładają, że ich przygotowania wyjaśniają każdą możliwą sytuację. Chcą przede wszystkim rozróżnić to, co już wiedzą o karcie, od informacji, które muszą jeszcze sprawdzić dla konkretnego kraju. Dzięki temu mogą przygotować się do podróży bez przypisywania dokumentowi szerszego znaczenia, niż rzeczywiście ma.",
+      "questions": [
+        {
+          "id": "main-idea",
+          "skill": "main-idea",
+          "question": "Co jest głównym celem wiadomości?",
+          "options": [
+            "Wyjaśnić zasady kupowania biletów kolejowych w każdym kraju Europy.",
+            "Zwrócić uwagę na przygotowanie dokumentów i sprawdzenie zakresu pomocy medycznej przed podróżą.",
+            "Przedstawić gotową listę wszystkich świadczeń medycznych dostępnych za granicą."
+          ],
+          "answer": "Zwrócić uwagę na przygotowanie dokumentów i sprawdzenie zakresu pomocy medycznej przed podróżą.",
+          "evidence": "Chcą przede wszystkim rozróżnić to, co już wiedzą o karcie, od informacji, które muszą jeszcze sprawdzić dla konkretnego kraju.",
+          "explanation": "Tekst mówi o przygotowaniu i sprawdzaniu warunków w kraju docelowym."
+        },
+        {
+          "id": "detail",
+          "skill": "detail",
+          "question": "Z jakim dokumentem należy mieć kartę EKUZ?",
+          "options": [
+            "Z biletem powrotnym.",
+            "Z potwierdzeniem rezerwacji noclegu.",
+            "Z dokumentem tożsamości."
+          ],
+          "answer": "Z dokumentem tożsamości.",
+          "evidence": "Kartę należy mieć razem z dokumentem tożsamości.",
+          "explanation": "Tekst wskazuje dokument tożsamości."
+        },
+        {
+          "id": "cause",
+          "skill": "cause",
+          "question": "Dlaczego znajomi sprawdzają zakres świadczeń przed wyjazdem?",
+          "options": [
+            "Chcą wiedzieć, jakie informacje będą potrzebne, zamiast szukać ich dopiero w razie potrzeby leczenia.",
+            "Chcą zastąpić kartę zapisanym adresem noclegu.",
+            "Zamierzają ustalić wspólną cenę transportu."
+          ],
+          "answer": "Chcą wiedzieć, jakie informacje będą potrzebne, zamiast szukać ich dopiero w razie potrzeby leczenia.",
+          "evidence": "Nie chcą dopiero na miejscu szukać odpowiedzi na pytanie o zakres świadczeń.",
+          "explanation": "Sprawdzenie dotyczy kraju docelowego."
+        },
+        {
+          "id": "inference",
+          "skill": "inference",
+          "question": "Kuba ma EKUZ i dokument tożsamości. Alicja sprawdziła zakres świadczeń w kraju, do którego jedzie. Kuba wybiera się do innego kraju. Co powinien zrobić?",
+          "options": [
+            "Zastąpić sprawdzenie warunków listą atrakcji w stolicy.",
+            "Sprawdzić zakres pomocy dla własnego kraju docelowego i zabrać oba dokumenty.",
+            "Zostawić dokument tożsamości w domu, bo karta wystarcza do wszystkich celów."
+          ],
+          "answer": "Sprawdzić zakres pomocy dla własnego kraju docelowego i zabrać oba dokumenty.",
+          "evidence": "Kartę należy mieć razem z dokumentem tożsamości. Przed wyjazdem dobrze jest sprawdzić zakres pomocy dostępnej w kraju docelowym.",
+          "explanation": "Zakres pomocy należy sprawdzić dla konkretnego kraju; dokumenty Alicji ani jej ustalenia nie zastępują tego sprawdzenia."
+        },
+        {
+          "id": "vocabulary",
+          "skill": "vocabulary",
+          "question": "Co oznacza „tymczasowy pobyt”?",
+          "options": [
+            "Pobyt w miejscu zamieszkania bez wyjazdu.",
+            "Przejazd wyłącznie taksówką przez stolicę.",
+            "Pobyt przez ograniczony czas, bez zamiaru stałego zamieszkania."
+          ],
+          "answer": "Pobyt przez ograniczony czas, bez zamiaru stałego zamieszkania.",
+          "evidence": "podczas tymczasowego pobytu w krajach Unii Europejskiej, krajach EFTA oraz w Wielkiej Brytanii",
+          "explanation": "Tymczasowy pobyt jest ograniczony w czasie."
+        }
+      ],
+      "source": {
+        "url": "https://pacjent.gov.pl/planujesz-wyjazd-w-europie-sprawdz-zasady-ubezpieczenia",
+        "publisher": "Pacjent.gov.pl",
+        "title": "Planujesz wyjazd w Europie – sprawdź zasady ubezpieczenia",
+        "facts": [
+          "EHIC covers medically necessary treatment during temporary stays in EU/EFTA and UK; used with ID; check the scope in destination country."
+        ],
+        "use": "facts-only",
+        "checked": "2026-11-25",
+        "adaptation": "Original Polish educational composition based on registered source facts; illustrative people/scenarios are fictional."
+      }
+    },
+    {
+      "id": "pl-b1.reading.day-142",
+      "day": 142,
+      "level": "B1",
+      "genre": "artykuł",
+      "title": "Dwie trasy na urlop",
+      "text": "W biurze podróży pracownica pomagała klientom przygotować samodzielny wyjazd do nadmorskiego miasta. Państwo Krawczykowie chcieli spędzić tam pięć dni, ale nie byli pewni, czy pojechać własnym samochodem, czy pociągiem. Porównali obie możliwości nie tylko pod względem czasu samej podróży.\n\nSamochodem mogli dotrzeć bezpośrednio do pensjonatu. Droga prowadziła głównie autostradą, lecz w ostatniej części trzeba było przejechać przez centrum miasta. Pensjonat oferował miejsce parkingowe po wcześniejszym zgłoszeniu. Krawczykowie planowali jednak większość dni spędzić nad morzem i zwiedzać okolice pieszo.\n\nPociągiem dojechaliby do głównej stacji, a następnie tramwajem do pensjonatu. Przejazd z przesiadką trwałby trochę dłużej, ale w czasie jazdy nie musieliby prowadzić samochodu. Pracownica zauważyła, że warto również sprawdzić, jak chcą poruszać się już podczas urlopu.\n\nPara planowała jednodniową wycieczkę do małej miejscowości poza miastem. W sobotę działało tam połączenie autobusowe, lecz w niedzielę autobusy jeździły rzadziej. Zdecydowali się więc na podróż pociągiem i przenieśli wycieczkę do tej miejscowości z niedzieli na sobotę. Pozostałe dni mogli zaplanować bez samochodu.\n\nKrawczykowie nie uważali, że pociąg jest zawsze lepszy. Gdyby chcieli codziennie odwiedzać inne miejsca daleko od miasta, własny samochód mógłby odpowiadać ich potrzebom bardziej. W tym przypadku ważniejsze było to, że nie muszą martwić się parkowaniem i mogą odpocząć podczas przejazdu. Porównanie dwóch tras pomogło im także zmienić kolejność atrakcji, dzięki czemu wybrany sposób podróżowania pasował do całego planu urlopu.",
+      "questions": [
+        {
+          "id": "main-idea",
+          "skill": "main-idea",
+          "question": "Jakie podejście do wyboru transportu pokazuje artykuł?",
+          "options": [
+            "Oceniać podróż wyłącznie na podstawie rodzaju drogi.",
+            "Wybrać zawsze pojazd o najkrótszym czasie przejazdu do pensjonatu.",
+            "Uwzględnić dojazd, przemieszczanie się na miejscu i cały program urlopu."
+          ],
+          "answer": "Uwzględnić dojazd, przemieszczanie się na miejscu i cały program urlopu.",
+          "evidence": "Porównanie dwóch tras pomogło im także zmienić kolejność atrakcji, dzięki czemu wybrany sposób podróżowania pasował do całego planu urlopu.",
+          "explanation": "Decyzja obejmuje cały pobyt, nie tylko dojazd."
+        },
+        {
+          "id": "detail",
+          "skill": "detail",
+          "question": "Co trzeba zrobić, aby mieć miejsce parkingowe w pensjonacie?",
+          "options": [
+            "Zgłosić potrzebę wcześniej.",
+            "Zarezerwować wycieczkę na niedzielę.",
+            "Kupić bilet na tramwaj."
+          ],
+          "answer": "Zgłosić potrzebę wcześniej.",
+          "evidence": "Pensjonat oferował miejsce parkingowe po wcześniejszym zgłoszeniu.",
+          "explanation": "Miejsce wymaga zgłoszenia."
+        },
+        {
+          "id": "cause",
+          "skill": "cause",
+          "question": "Dlaczego para przeniosła wycieczkę na sobotę?",
+          "options": [
+            "W sobotę autostrada miała zostać zamknięta.",
+            "W niedzielę połączenia autobusowe były rzadsze.",
+            "Pensjonat był nieczynny w sobotę."
+          ],
+          "answer": "W niedzielę połączenia autobusowe były rzadsze.",
+          "evidence": "W sobotę działało tam połączenie autobusowe, lecz w niedzielę autobusy jeździły rzadziej.",
+          "explanation": "Zmiana dostosowała atrakcję do transportu."
+        },
+        {
+          "id": "inference",
+          "skill": "inference",
+          "question": "Gdyby para planowała odwiedzać każdego dnia odległe miejsca bez dogodnych połączeń, jak zmieniłoby się porównanie?",
+          "options": [
+            "Samochód mógłby lepiej odpowiadać planowi pobytu, mimo potrzeby parkowania.",
+            "Pociąg stałby się jedynym możliwym środkiem transportu.",
+            "Nadal wystarczyłoby przenieść tylko jedną wycieczkę na sobotę."
+          ],
+          "answer": "Samochód mógłby lepiej odpowiadać planowi pobytu, mimo potrzeby parkowania.",
+          "evidence": "Gdyby chcieli codziennie odwiedzać inne miejsca daleko od miasta, własny samochód mógłby odpowiadać ich potrzebom bardziej.",
+          "explanation": "Inny program pobytu zmienia wartość dostępnych środków transportu."
+        },
+        {
+          "id": "vocabulary",
+          "skill": "vocabulary",
+          "question": "Co oznacza „dojechać bezpośrednio”?",
+          "options": [
+            "Wyruszyć bez wcześniejszego ustalenia adresu.",
+            "Dotrzeć do miejsca bez zmiany środka transportu po drodze.",
+            "Dojazd wyłącznie autostradą przez cały kraj."
+          ],
+          "answer": "Dotrzeć do miejsca bez zmiany środka transportu po drodze.",
+          "evidence": "Samochodem mogli dotrzeć bezpośrednio do pensjonatu.",
+          "explanation": "Samochód pozwalał dojechać do samego pensjonatu."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-143",
+      "day": 143,
+      "level": "B1",
+      "genre": "dialog",
+      "title": "Spóźniony pociąg i zmiana planów",
+      "text": "— Przepraszam, czy ten pociąg naprawdę przyjedzie dopiero za czterdzieści minut? — zapytała Marta pracownika informacji na dworcu.\n\n— Taki jest obecny komunikat, ale czas może się jeszcze zmienić. Dokąd pani jedzie?\n\n— Do portu. Mam później prom, który odpływa o czternastej. Zgodnie z pierwotnym rozkładem miałam dotrzeć na stację przy porcie o dwunastej trzydzieści.\n\nPracownik sprawdził inne połączenia. Powiedział, że za dwadzieścia minut odjeżdża pociąg do pobliskiego miasta. Stamtąd kursuje autobus do portu. Według rozkładu Marta dotarłaby na miejsce około trzynastej dziesięć, ale musiałaby kupić osobny bilet na autobus.\n\n— Nie chciałabym kupować kolejnego biletu, jeśli mój pociąg za chwilę przyjedzie — odpowiedziała Marta.\n\n— Rozumiem. Proszę też sprawdzić informację od przewoźnika promowego. Nie wiem, o której zamykają wejście na pokład.\n\nMarta odnalazła wiadomość dotyczącą rezerwacji. W jej przypadku należało zgłosić się do wejścia najpóźniej trzydzieści minut przed odpłynięciem. Od stacji kolejowej do portu trzeba było jeszcze przejść około dziesięciu minut. Uznała więc, że pierwotne połączenie zostawia coraz mniejszy zapas czasu.\n\nKupiła bilet na autobus i wybrała drugą trasę. Po przyjeździe do portu okazało się, że autobus miał niewielkie opóźnienie, lecz Marta zdążyła zgłosić się do wejścia. Podziękowała później pracownikowi informacji w wiadomości przesłanej przez formularz kontaktowy.\n\nNie była zadowolona z dodatkowego kosztu, ale zrozumiała, że sama godzina odpłynięcia promu nie była jedynym ważnym terminem. Musiała wziąć pod uwagę czas dojścia i wcześniejsze zakończenie przyjmowania pasażerów.",
+      "questions": [
+        {
+          "id": "main-idea",
+          "skill": "main-idea",
+          "question": "Co przede wszystkim wpłynęło na zmianę trasy Marty?",
+          "options": [
+            "Potrzeba uwzględnienia nie tylko odpłynięcia promu, lecz także czasu dotarcia do wejścia.",
+            "Chęć odwiedzenia pobliskiego miasta przed podróżą promem.",
+            "Możliwość uniknięcia wszystkich kosztów dodatkowego transportu."
+          ],
+          "answer": "Potrzeba uwzględnienia nie tylko odpłynięcia promu, lecz także czasu dotarcia do wejścia.",
+          "evidence": "Musiała wziąć pod uwagę czas dojścia i wcześniejsze zakończenie przyjmowania pasażerów.",
+          "explanation": "Plan wynikał z całego łańcucha terminów."
+        },
+        {
+          "id": "detail",
+          "skill": "detail",
+          "question": "Ile minut przed odpłynięciem promu Marta musiała zgłosić się do wejścia?",
+          "options": [
+            "Dziesięć minut.",
+            "Trzydzieści minut.",
+            "Czterdzieści minut."
+          ],
+          "answer": "Trzydzieści minut.",
+          "evidence": "W jej przypadku należało zgłosić się do wejścia najpóźniej trzydzieści minut przed odpłynięciem.",
+          "explanation": "W potwierdzeniu rezerwacji wskazano trzydzieści minut."
+        },
+        {
+          "id": "cause",
+          "skill": "cause",
+          "question": "Dlaczego pracownik polecił sprawdzić wiadomość przewoźnika promowego?",
+          "options": [
+            "Chciał anulować rezerwację promu.",
+            "Nie wiedział, do którego miasta jedzie autobus.",
+            "Nie znał godziny zamknięcia wejścia na pokład."
+          ],
+          "answer": "Nie znał godziny zamknięcia wejścia na pokład.",
+          "evidence": "Nie wiem, o której zamykają wejście na pokład.",
+          "explanation": "Warunki wejścia były ważne dla decyzji."
+        },
+        {
+          "id": "inference",
+          "skill": "inference",
+          "question": "Jeśli pierwszy pociąg dotrze na stację przy porcie o trzynastej dwadzieścia pięć, a droga piesza zajmie dziesięć minut, co wynika z warunków rezerwacji?",
+          "options": [
+            "Marta mogłaby spokojnie czekać na drugi autobus do portu.",
+            "Marta miałaby jeszcze pół godziny zapasu przed zgłoszeniem.",
+            "Marta dotarłaby pięć minut po wymaganej godzinie zgłoszenia."
+          ],
+          "answer": "Marta dotarłaby pięć minut po wymaganej godzinie zgłoszenia.",
+          "evidence": "Mam później prom, który odpływa o czternastej. Zgodnie z pierwotnym rozkładem miałam dotrzeć na stację przy porcie o dwunastej trzydzieści.\n\nPracownik sprawdził inne połączenia. Powiedział, że za dwadzieścia minut odjeżdża pociąg do pobliskiego miasta. Stamtąd kursuje autobus do portu. Według rozkładu Marta dotarłaby na miejsce około trzynastej dziesięć, ale musiałaby kupić osobny bilet na autobus.\n\n— Nie chciałabym kupować kolejnego biletu, jeśli mój pociąg za chwilę przyjedzie — odpowiedziała Marta.\n\n— Rozumiem. Proszę też sprawdzić informację od przewoźnika promowego. Nie wiem, o której zamykają wejście na pokład.\n\nMarta odnalazła wiadomość dotyczącą rezerwacji. W jej przypadku należało zgłosić się do wejścia najpóźniej trzydzieści minut przed odpłynięciem. Od stacji kolejowej do portu trzeba było jeszcze przejść około dziesięciu minut.",
+          "explanation": "Przyjście o 13:35 byłoby po terminie 13:30."
+        },
+        {
+          "id": "vocabulary",
+          "skill": "vocabulary",
+          "question": "Co oznacza „zapas czasu”?",
+          "options": [
+            "Dodatkowy czas pozwalający uwzględnić nieprzewidziane opóźnienia.",
+            "Czas potrzebny wyłącznie na kupienie biletu.",
+            "Planowaną godzinę odpłynięcia promu."
+          ],
+          "answer": "Dodatkowy czas pozwalający uwzględnić nieprzewidziane opóźnienia.",
+          "evidence": "Uznała więc, że pierwotne połączenie zostawia coraz mniejszy zapas czasu.",
+          "explanation": "Zapas to margines między planowanym dotarciem a wymaganym terminem."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-144",
+      "day": 144,
+      "level": "B1",
+      "genre": "e-mail",
+      "title": "Nocleg blisko transportu publicznego",
+      "text": "Cześć, Karolu!\n\nZnalazłam dwa mieszkania na nasz wyjazd do miasta, w którym odbędzie się festiwal filmowy. Pierwsze wygląda bardzo ładnie na zdjęciach i znajduje się przy głównym rynku. Drugie jest trochę skromniejsze, ale leży blisko przystanku tramwajowego. Na początku byłam przekonana, że powinniśmy wybrać rynek. Później sprawdziłam, gdzie będą odbywać się pokazy.\n\nNajwięcej interesujących nas filmów będzie wyświetlanych w kinie po drugiej stronie rzeki. Z mieszkania przy rynku trzeba do niego iść przez około dwadzieścia pięć minut. W dzień nie przeszkadzałaby mi taka droga, ale dwa pokazy kończą się tuż przed północą. Nie chcę codziennie szukać taksówki, jeśli będziemy zmęczeni albo zacznie padać.\n\nZ drugiego mieszkania możemy dojechać do kina bez przesiadki. Sprawdziłam też rozkład na piątek i sobotę. Po późnych pokazach kursują jeszcze tramwaje w stronę tego przystanku. W niedzielę planujemy wrócić wcześniej, więc rzadsze wieczorne połączenia nie powinny stanowić problemu.\n\nWłaściciel drugiego mieszkania napisał, że możemy zostawić bagaż wcześniej, ale sam lokal będzie gotowy dopiero o piętnastej. Pierwszy film, który chcemy zobaczyć w piątek, zaczyna się o czternastej. Moglibyśmy więc zostawić torby i pójść do kina, a po seansie odebrać klucze.\n\nNie rezerwowałam jeszcze żadnego noclegu, ponieważ chciałabym znać twoją opinię. Jeśli zależy ci przede wszystkim na spacerach po rynku, możemy ponownie porównać oba miejsca. Dla mnie drugie mieszkanie stało się ciekawsze, kiedy zobaczyłam cały plan festiwalu, a nie tylko fotografie wnętrz.\n\nPozdrawiam,\nOla",
+      "questions": [
+        {
+          "id": "main-idea",
+          "skill": "main-idea",
+          "question": "Dlaczego Ola skłania się ku drugiemu mieszkaniu?",
+          "options": [
+            "Pozwala uczestniczyć w festiwalu bez wcześniejszego wyboru filmów.",
+            "Lepiej pasuje do godzin i miejsc wydarzeń zaplanowanych podczas wyjazdu.",
+            "Jest większe i znajduje się bezpośrednio na głównym rynku."
+          ],
+          "answer": "Lepiej pasuje do godzin i miejsc wydarzeń zaplanowanych podczas wyjazdu.",
+          "evidence": "Dla mnie drugie mieszkanie stało się ciekawsze, kiedy zobaczyłam cały plan festiwalu, a nie tylko fotografie wnętrz.",
+          "explanation": "Ola ocenia nocleg w powiązaniu z programem."
+        },
+        {
+          "id": "detail",
+          "skill": "detail",
+          "question": "Kiedy drugi lokal będzie gotowy?",
+          "options": [
+            "O czternastej.",
+            "Przed południem.",
+            "O piętnastej."
+          ],
+          "answer": "O piętnastej.",
+          "evidence": "sam lokal będzie gotowy dopiero o piętnastej.",
+          "explanation": "Odbiór kluczy jest późniejszy niż pierwszy film."
+        },
+        {
+          "id": "cause",
+          "skill": "cause",
+          "question": "Dlaczego Ola sprawdziła rozkład wieczornych tramwajów?",
+          "options": [
+            "Niektóre pokazy kończą się późno i chce mieć wygodną drogę powrotną.",
+            "Planuje wypożyczyć tramwaj dla uczestników festiwalu.",
+            "Chce odwiedzić wszystkie przystanki po drugiej stronie rzeki."
+          ],
+          "answer": "Niektóre pokazy kończą się późno i chce mieć wygodną drogę powrotną.",
+          "evidence": "W dzień nie przeszkadzałaby mi taka droga, ale dwa pokazy kończą się tuż przed północą.",
+          "explanation": "Późne zakończenie pokazów wpływa na wybór transportu."
+        },
+        {
+          "id": "inference",
+          "skill": "inference",
+          "question": "Jeśli znajomi przyjadą w piątek o dwunastej i wybiorą drugi lokal, jak mogą zdążyć na pierwszy film?",
+          "options": [
+            "Zostawić bagaż wcześniej i odebrać klucze po seansie.",
+            "Poczekać na gotowość lokalu do piętnastej, a potem pójść na film o czternastej.",
+            "Przenieść wszystkie piątkowe pokazy na niedzielę."
+          ],
+          "answer": "Zostawić bagaż wcześniej i odebrać klucze po seansie.",
+          "evidence": "Właściciel drugiego mieszkania napisał, że możemy zostawić bagaż wcześniej, ale sam lokal będzie gotowy dopiero o piętnastej. Pierwszy film, który chcemy zobaczyć w piątek, zaczyna się o czternastej.",
+          "explanation": "Wcześniejsze pozostawienie bagażu umożliwia dotarcie na seans."
+        },
+        {
+          "id": "vocabulary",
+          "skill": "vocabulary",
+          "question": "Co oznacza „rzadsze połączenia”?",
+          "options": [
+            "Bilety są dostępne tylko dla części pasażerów.",
+            "Środki transportu odjeżdżają w większych odstępach czasu.",
+            "Tramwaje jadą krótszą trasą bez przystanków."
+          ],
+          "answer": "Środki transportu odjeżdżają w większych odstępach czasu.",
+          "evidence": "W niedzielę planujemy wrócić wcześniej, więc rzadsze wieczorne połączenia nie powinny stanowić problemu.",
+          "explanation": "Rzadziej kursujące tramwaje oznaczają mniej odjazdów."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-145",
+      "day": 145,
+      "level": "B1",
+      "genre": "ogłoszenie",
+      "title": "Wakacje poza sezonem",
+      "text": "Pensjonat Brzoza zaprasza na pobyty w październiku i listopadzie. Po zakończeniu letniego sezonu w okolicy jest mniej turystów, a część miejsc oferuje inne godziny otwarcia. Chcemy przedstawić gościom warunki pobytu, aby mogli wybrać termin odpowiedni do swoich oczekiwań.\n\nŚniadania są dostępne codziennie w godzinach od ósmej do dziesiątej. W piątki i soboty przygotowujemy również kolację dla osób, które zgłoszą się do południa. W pozostałe dni zachęcamy do korzystania z niewielkiej wspólnej kuchni albo odwiedzenia restauracji w miasteczku. Przy recepcji znajduje się lista miejsc, które według przekazanych nam informacji działają jesienią. Przed wyjściem warto jeszcze sprawdzić ich aktualne godziny.\n\nOsoby zainteresowane spacerami mogą otrzymać mapę okolicy. W każdą sobotę organizujemy krótką wycieczkę z przewodnikiem, jeżeli zbierze się co najmniej sześć osób. W przypadku mniejszej grupy pracownik recepcji zaproponuje trasę do samodzielnego przejścia. Długość spaceru można dopasować do pogody.\n\nPoza sezonem nie organizujemy wypożyczalni rowerów na miejscu. Jeśli ktoś chciałby korzystać z roweru, prosimy o kontakt przed przyjazdem. Możemy wskazać firmę w pobliskim mieście, która przygotowuje rowery po wcześniejszym uzgodnieniu.\n\nNie wszystkie letnie atrakcje są dostępne przez cały rok. Nasza oferta jest skierowana przede wszystkim do osób, które chcą odpocząć, spacerować i poznawać okolicę w spokojniejszym tempie. Jeśli planują Państwo konkretne wydarzenie lub zależy Państwu na określonej usłudze, zachęcamy do zadawania pytań przed rezerwacją. Dzięki temu łatwiej uniknąć sytuacji, w której przyjeżdżają Państwo z oczekiwaniami dotyczącymi letniego programu.",
+      "questions": [
+        {
+          "id": "main-idea",
+          "skill": "main-idea",
+          "question": "Jaki cel ma ogłoszenie?",
+          "options": [
+            "Zapewnić, że wszystkie letnie usługi są dostępne w identycznym zakresie.",
+            "Zachęcić wyłącznie do pobytów połączonych z wypożyczeniem roweru.",
+            "Wyjaśnić, czym różni się jesienny pobyt od letniego i czego mogą oczekiwać goście."
+          ],
+          "answer": "Wyjaśnić, czym różni się jesienny pobyt od letniego i czego mogą oczekiwać goście.",
+          "evidence": "Nie wszystkie letnie atrakcje są dostępne przez cały rok.",
+          "explanation": "Ogłoszenie podaje konkretne ograniczenia poza sezonem."
+        },
+        {
+          "id": "detail",
+          "skill": "detail",
+          "question": "Kiedy pensjonat przygotowuje kolacje?",
+          "options": [
+            "W piątki i soboty po wcześniejszym zgłoszeniu.",
+            "Wyłącznie w niedziele wieczorem.",
+            "Codziennie po godzinie dziesiątej."
+          ],
+          "answer": "W piątki i soboty po wcześniejszym zgłoszeniu.",
+          "evidence": "W piątki i soboty przygotowujemy również kolację dla osób, które zgłoszą się do południa.",
+          "explanation": "Kolacje są dostępne w wybrane dni."
+        },
+        {
+          "id": "cause",
+          "skill": "cause",
+          "question": "Dlaczego warto sprawdzić godziny restauracji przed wyjściem?",
+          "options": [
+            "Pensjonat pozwala odwiedzać tylko jedną restaurację.",
+            "Jesienią część miejsc działa w innych godzinach, a lista może wymagać aktualizacji.",
+            "Wszystkie restauracje przyjmują wyłącznie z rezerwacją dokonaną w recepcji."
+          ],
+          "answer": "Jesienią część miejsc działa w innych godzinach, a lista może wymagać aktualizacji.",
+          "evidence": "Przy recepcji znajduje się lista miejsc, które według przekazanych nam informacji działają jesienią. Przed wyjściem warto jeszcze sprawdzić ich aktualne godziny.",
+          "explanation": "Lista opiera się na przekazanych informacjach, które warto sprawdzić przed wyjściem."
+        },
+        {
+          "id": "inference",
+          "skill": "inference",
+          "question": "W sobotę cztery osoby chcą spacerować z przewodnikiem, a jedna z nich potrzebuje roweru na niedzielę. Co wynika z ogłoszenia?",
+          "options": [
+            "Muszą zrezygnować ze spaceru, ponieważ poza sezonem nie ma map.",
+            "Mają zagwarantowanego przewodnika, a rower wypożyczą na miejscu.",
+            "Nie mogą zakładać, że spacer z przewodnikiem się odbędzie; o rower trzeba zapytać wcześniej."
+          ],
+          "answer": "Nie mogą zakładać, że spacer z przewodnikiem się odbędzie; o rower trzeba zapytać wcześniej.",
+          "evidence": "W każdą sobotę organizujemy krótką wycieczkę z przewodnikiem, jeżeli zbierze się co najmniej sześć osób. W przypadku mniejszej grupy pracownik recepcji zaproponuje trasę do samodzielnego przejścia. Długość spaceru można dopasować do pogody.\n\nPoza sezonem nie organizujemy wypożyczalni rowerów na miejscu. Jeśli ktoś chciałby korzystać z roweru, prosimy o kontakt przed przyjazdem. Możemy wskazać firmę w pobliskim mieście, która przygotowuje rowery po wcześniejszym uzgodnieniu.",
+          "explanation": "Przewodnik wymaga sześciu uczestników, a rowery nie są dostępne w pensjonacie."
+        },
+        {
+          "id": "vocabulary",
+          "skill": "vocabulary",
+          "question": "Co oznacza „poza sezonem”?",
+          "options": [
+            "W okresie mniejszego ruchu turystycznego niż w głównych miesiącach wypoczynku.",
+            "Wyłącznie poza terenem pensjonatu.",
+            "Podczas pobytu trwającego mniej niż jeden dzień."
+          ],
+          "answer": "W okresie mniejszego ruchu turystycznego niż w głównych miesiącach wypoczynku.",
+          "evidence": "Po zakończeniu letniego sezonu w okolicy jest mniej turystów",
+          "explanation": "Poza sezonem oznacza czas po głównym okresie turystycznym."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-146",
+      "day": 146,
+      "level": "B1",
+      "genre": "opowiadanie",
+      "title": "Wycieczka dostępna dla różnych osób",
+      "text": "Grupa znajomych postanowiła zorganizować wycieczkę na punkt widokowy za miastem. Dla części osób była to okazja do dłuższego marszu. Inni chcieli przede wszystkim spotkać się i spędzić kilka godzin na świeżym powietrzu. Zuzia, która zaproponowała wyjazd, początkowo znalazła tylko jedną trasę prowadzącą przez las.\n\nKiedy opisała pomysł znajomym, Bartek powiedział, że nie może długo chodzić po stromym terenie. Asia natomiast musiała wrócić do domu przed szesnastą. Zuzia nie chciała rezygnować z wycieczki ani prosić wszystkich, żeby zmienili swoje plany. Sprawdziła więc, czy w okolicy są inne drogi.\n\nOkazało się, że do małej polany poniżej punktu widokowego można dojechać autobusem. Od przystanku prowadziła krótka, łagodna ścieżka. Z polany część osób mogła pójść dalej na wzgórze, a pozostałe zostać w pobliżu miejsca odpoczynku. Obie grupy miałyby później możliwość spotkania się przy wspólnym posiłku.\n\nZuzia zaproponowała, żeby wszyscy wyjechali rano tym samym autobusem i przeszli razem pierwszy odcinek. Dalsza część spaceru miała być dobrowolna. Ustaliła również konkretną godzinę spotkania na polanie, aby osoby wracające wcześniej mogły zdążyć na autobus o czternastej.\n\nW dniu wycieczki Bartek i Asia zostali na polanie, a trzy osoby weszły na wzgórze. Po powrocie wszyscy opowiadali sobie, co zobaczyli. Bartek zauważył ciekawe ptaki przy ścieżce, których nie dostrzegli pozostali. Wyjazd udał się nie dlatego, że każdy przeszedł tę samą liczbę kilometrów, lecz dlatego, że organizatorzy znaleźli wspólną część planu oraz pozostawili miejsce na różne możliwości.",
+      "questions": [
+        {
+          "id": "main-idea",
+          "skill": "main-idea",
+          "question": "Co zdecydowało o powodzeniu wycieczki?",
+          "options": [
+            "Połączenie wspólnego programu z możliwością wyboru dalszej aktywności.",
+            "Zrezygnowanie ze wszystkich części wycieczki poza dojazdem.",
+            "Przekonanie wszystkich do wejścia na wzgórze."
+          ],
+          "answer": "Połączenie wspólnego programu z możliwością wyboru dalszej aktywności.",
+          "evidence": "Wyjazd udał się nie dlatego, że każdy przeszedł tę samą liczbę kilometrów, lecz dlatego, że organizatorzy znaleźli wspólną część planu oraz pozostawili miejsce na różne możliwości.",
+          "explanation": "Wspólny odcinek i indywidualny wybór pozwoliły uczestniczyć różnym osobom."
+        },
+        {
+          "id": "detail",
+          "skill": "detail",
+          "question": "O której odjeżdżał autobus dla wracających wcześniej?",
+          "options": [
+            "O szesnastej.",
+            "O czternastej.",
+            "O dwunastej."
+          ],
+          "answer": "O czternastej.",
+          "evidence": "aby osoby wracające wcześniej mogły zdążyć na autobus o czternastej.",
+          "explanation": "Podano godzinę autobusu."
+        },
+        {
+          "id": "cause",
+          "skill": "cause",
+          "question": "Dlaczego Zuzia szukała innych dróg?",
+          "options": [
+            "Grupa chciała pojechać wyłącznie samochodem.",
+            "Las został zamknięty dla wszystkich spacerowiczów.",
+            "Pierwsza trasa nie odpowiadała potrzebom wszystkich znajomych."
+          ],
+          "answer": "Pierwsza trasa nie odpowiadała potrzebom wszystkich znajomych.",
+          "evidence": "Bartek powiedział, że nie może długo chodzić po stromym terenie. Asia natomiast musiała wrócić do domu przed szesnastą.",
+          "explanation": "Trasa musiała uwzględniać możliwości ruchowe i czas."
+        },
+        {
+          "id": "inference",
+          "skill": "inference",
+          "question": "Nowa osoba chce uczestniczyć w posiłku, ale nie może wejść na wzgórze i chce wrócić wcześniejszym autobusem. Jak może zaplanować udział?",
+          "options": [
+            "Wejść na wzgórze, aby nie przegapić jedynego miejsca spotkania.",
+            "Przejść wspólny łagodny odcinek, zostać na polanie i wrócić o ustalonej porze.",
+            "Dołączyć dopiero po odjeździe autobusu powrotnego."
+          ],
+          "answer": "Przejść wspólny łagodny odcinek, zostać na polanie i wrócić o ustalonej porze.",
+          "evidence": "Dalsza część spaceru miała być dobrowolna. Ustaliła również konkretną godzinę spotkania na polanie, aby osoby wracające wcześniej mogły zdążyć na autobus o czternastej.",
+          "explanation": "Wspólny punkt i dobrowolny dalszy spacer umożliwiają udział."
+        },
+        {
+          "id": "vocabulary",
+          "skill": "vocabulary",
+          "question": "Co oznacza „łagodna ścieżka”?",
+          "options": [
+            "Najdłuższa możliwa droga na szczyt.",
+            "Ścieżka, na której obowiązuje zakaz rozmów.",
+            "Droga bez dużej stromizny, łatwiejsza do przejścia."
+          ],
+          "answer": "Droga bez dużej stromizny, łatwiejsza do przejścia.",
+          "evidence": "Od przystanku prowadziła krótka, łagodna ścieżka.",
+          "explanation": "Łagodność jest przeciwstawiona stromemu terenowi."
+        }
+      ]
+    },
+    {
+      "id": "pl-b1.reading.day-147",
+      "day": 147,
+      "level": "B1",
+      "genre": "poradnik",
+      "title": "Podróż z małym budżetem",
+      "text": "Planując podróż z ograniczonym budżetem, łatwo skupić się na najtańszym bilecie albo najniższej cenie noclegu. Tymczasem dopiero suma wydatków pokazuje, ile rzeczywiście kosztuje cały wyjazd. Tani nocleg daleko od centrum może wymagać codziennych przejazdów, a bardzo wczesny pociąg może oznaczać konieczność zamówienia taksówki.\n\nNajpierw wypisz koszty, których nie da się łatwo zmienić: transport w obie strony, nocleg i opłaty za wydarzenia, w których koniecznie chcesz uczestniczyć. Następnie oszacuj zwykłe wydatki na jedzenie i przemieszczanie się na miejscu. Zostaw również niewielką kwotę na nieprzewidziane sytuacje, zamiast rozdzielać wszystkie pieniądze jeszcze przed wyjazdem.\n\nW przykładowym planie dwóch osób jeden nocleg kosztował sto dwadzieścia złotych za dobę i wymagał wydania czterdziestu złotych dziennie na wspólny transport. Drugi kosztował sto pięćdziesiąt złotych, ale znajdował się obok miejsc, które chcieli odwiedzić pieszo. Przy tych założeniach, porównując jedną dobę pobytu z jednym dniem dojazdów, druga opcja kosztowała mniej. Nie oznacza to, że droższe mieszkanie zawsze jest bardziej opłacalne. W innym planie wynik porównania mógłby być odwrotny.\n\nWarto też rozróżnić rzeczy, z których naprawdę chcesz korzystać, od tych, na które wydajesz pieniądze tylko dlatego, że są dostępne. Jeśli zależy ci na jednym koncercie, możesz przeznaczyć część budżetu właśnie na niego, a w pozostałym czasie wybierać bezpłatne spacery lub spotkania.\n\nPo powrocie sprawdź, które wydatki okazały się większe od przewidywanych. Taka informacja może być bardziej przydatna podczas kolejnego wyjazdu niż sama pamięć o cenie biletu.",
+      "questions": [
+        {
+          "id": "main-idea",
+          "skill": "main-idea",
+          "question": "Jaka jest najważniejsza rada dotycząca budżetu?",
+          "options": [
+            "Zawsze wybierać najtańszy nocleg niezależnie od położenia.",
+            "Wydawać cały budżet na transport przed ustaleniem atrakcji.",
+            "Porównać całkowite koszty wyjazdu i zachować środki na ważne oraz nieprzewidziane wydatki."
+          ],
+          "answer": "Porównać całkowite koszty wyjazdu i zachować środki na ważne oraz nieprzewidziane wydatki.",
+          "evidence": "Tymczasem dopiero suma wydatków pokazuje, ile rzeczywiście kosztuje cały wyjazd.",
+          "explanation": "Cena jednego elementu nie wystarcza do oceny całego kosztu."
+        },
+        {
+          "id": "detail",
+          "skill": "detail",
+          "question": "Ile kosztował tańszy nocleg za dobę w przykładzie?",
+          "options": [
+            "Czterdzieści złotych.",
+            "Sto dwadzieścia złotych.",
+            "Sto pięćdziesiąt złotych."
+          ],
+          "answer": "Sto dwadzieścia złotych.",
+          "evidence": "jeden nocleg kosztował sto dwadzieścia złotych za dobę",
+          "explanation": "Podano koszt pierwszego noclegu."
+        },
+        {
+          "id": "cause",
+          "skill": "cause",
+          "question": "Dlaczego warto zostawić część pieniędzy niewydanych przed wyjazdem?",
+          "options": [
+            "Żeby móc zapłacić za nieprzewidziane sytuacje.",
+            "Żeby po powrocie nie trzeba było sprawdzać kosztów.",
+            "Żeby zawsze kupować droższe bilety na wydarzenia."
+          ],
+          "answer": "Żeby móc zapłacić za nieprzewidziane sytuacje.",
+          "evidence": "Zostaw również niewielką kwotę na nieprzewidziane sytuacje",
+          "explanation": "Rezerwa odpowiada nieplanowanym wydatkom."
+        },
+        {
+          "id": "inference",
+          "skill": "inference",
+          "question": "Jeśli koszt transportu z pierwszego noclegu spadnie do dwudziestu złotych dziennie, która opcja będzie tańsza przy porównaniu jednej doby i jednego dnia dojazdów?",
+          "options": [
+            "Pierwsza: sto czterdzieści złotych dziennie.",
+            "Obie będą kosztowały po sto pięćdziesiąt złotych dziennie.",
+            "Druga: sto pięćdziesiąt złotych dziennie."
+          ],
+          "answer": "Pierwsza: sto czterdzieści złotych dziennie.",
+          "evidence": "jeden nocleg kosztował sto dwadzieścia złotych za dobę i wymagał wydania czterdziestu złotych dziennie na wspólny transport. Drugi kosztował sto pięćdziesiąt złotych, ale znajdował się obok miejsc, które chcieli odwiedzić pieszo.",
+          "explanation": "Nowy koszt pierwszej opcji to 120 + 20 = 140 zł, mniej niż 150 zł."
+        },
+        {
+          "id": "vocabulary",
+          "skill": "vocabulary",
+          "question": "Co oznacza „bardziej opłacalne” w tym tekście?",
+          "options": [
+            "Dostępne wyłącznie z wcześniejszym zakupem biletu.",
+            "Korzystniejsze pod względem łącznych kosztów.",
+            "Położone dalej od wszystkich atrakcji."
+          ],
+          "answer": "Korzystniejsze pod względem łącznych kosztów.",
+          "evidence": "Nie oznacza to, że droższe mieszkanie zawsze jest bardziej opłacalne.",
+          "explanation": "Opłacalność zależy tutaj od całkowitej ceny."
+        }
+      ]
+    }
+  ]
+}

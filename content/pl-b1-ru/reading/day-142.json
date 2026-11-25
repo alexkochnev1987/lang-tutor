@@ -1,0 +1,76 @@
+{
+  "id": "pl-b1.reading.day-142",
+  "day": 142,
+  "level": "B1",
+  "genre": "artykuł",
+  "title": "Dwie trasy na urlop",
+  "text": "W biurze podróży pracownica pomagała klientom przygotować samodzielny wyjazd do nadmorskiego miasta. Państwo Krawczykowie chcieli spędzić tam pięć dni, ale nie byli pewni, czy pojechać własnym samochodem, czy pociągiem. Porównali obie możliwości nie tylko pod względem czasu samej podróży.\n\nSamochodem mogli dotrzeć bezpośrednio do pensjonatu. Droga prowadziła głównie autostradą, lecz w ostatniej części trzeba było przejechać przez centrum miasta. Pensjonat oferował miejsce parkingowe po wcześniejszym zgłoszeniu. Krawczykowie planowali jednak większość dni spędzić nad morzem i zwiedzać okolice pieszo.\n\nPociągiem dojechaliby do głównej stacji, a następnie tramwajem do pensjonatu. Przejazd z przesiadką trwałby trochę dłużej, ale w czasie jazdy nie musieliby prowadzić samochodu. Pracownica zauważyła, że warto również sprawdzić, jak chcą poruszać się już podczas urlopu.\n\nPara planowała jednodniową wycieczkę do małej miejscowości poza miastem. W sobotę działało tam połączenie autobusowe, lecz w niedzielę autobusy jeździły rzadziej. Zdecydowali się więc na podróż pociągiem i przenieśli wycieczkę do tej miejscowości z niedzieli na sobotę. Pozostałe dni mogli zaplanować bez samochodu.\n\nKrawczykowie nie uważali, że pociąg jest zawsze lepszy. Gdyby chcieli codziennie odwiedzać inne miejsca daleko od miasta, własny samochód mógłby odpowiadać ich potrzebom bardziej. W tym przypadku ważniejsze było to, że nie muszą martwić się parkowaniem i mogą odpocząć podczas przejazdu. Porównanie dwóch tras pomogło im także zmienić kolejność atrakcji, dzięki czemu wybrany sposób podróżowania pasował do całego planu urlopu.",
+  "questions": [
+    {
+      "id": "main-idea",
+      "skill": "main-idea",
+      "question": "Jakie podejście do wyboru transportu pokazuje artykuł?",
+      "options": [
+        "Oceniać podróż wyłącznie na podstawie rodzaju drogi.",
+        "Wybrać zawsze pojazd o najkrótszym czasie przejazdu do pensjonatu.",
+        "Uwzględnić dojazd, przemieszczanie się na miejscu i cały program urlopu."
+      ],
+      "answer": "Uwzględnić dojazd, przemieszczanie się na miejscu i cały program urlopu.",
+      "evidence": "Porównanie dwóch tras pomogło im także zmienić kolejność atrakcji, dzięki czemu wybrany sposób podróżowania pasował do całego planu urlopu.",
+      "explanation": "Decyzja obejmuje cały pobyt, nie tylko dojazd."
+    },
+    {
+      "id": "detail",
+      "skill": "detail",
+      "question": "Co trzeba zrobić, aby mieć miejsce parkingowe w pensjonacie?",
+      "options": [
+        "Zgłosić potrzebę wcześniej.",
+        "Zarezerwować wycieczkę na niedzielę.",
+        "Kupić bilet na tramwaj."
+      ],
+      "answer": "Zgłosić potrzebę wcześniej.",
+      "evidence": "Pensjonat oferował miejsce parkingowe po wcześniejszym zgłoszeniu.",
+      "explanation": "Miejsce wymaga zgłoszenia."
+    },
+    {
+      "id": "cause",
+      "skill": "cause",
+      "question": "Dlaczego para przeniosła wycieczkę na sobotę?",
+      "options": [
+        "W sobotę autostrada miała zostać zamknięta.",
+        "W niedzielę połączenia autobusowe były rzadsze.",
+        "Pensjonat był nieczynny w sobotę."
+      ],
+      "answer": "W niedzielę połączenia autobusowe były rzadsze.",
+      "evidence": "W sobotę działało tam połączenie autobusowe, lecz w niedzielę autobusy jeździły rzadziej.",
+      "explanation": "Zmiana dostosowała atrakcję do transportu."
+    },
+    {
+      "id": "inference",
+      "skill": "inference",
+      "question": "Gdyby para planowała odwiedzać każdego dnia odległe miejsca bez dogodnych połączeń, jak zmieniłoby się porównanie?",
+      "options": [
+        "Samochód mógłby lepiej odpowiadać planowi pobytu, mimo potrzeby parkowania.",
+        "Pociąg stałby się jedynym możliwym środkiem transportu.",
+        "Nadal wystarczyłoby przenieść tylko jedną wycieczkę na sobotę."
+      ],
+      "answer": "Samochód mógłby lepiej odpowiadać planowi pobytu, mimo potrzeby parkowania.",
+      "evidence": "Gdyby chcieli codziennie odwiedzać inne miejsca daleko od miasta, własny samochód mógłby odpowiadać ich potrzebom bardziej.",
+      "explanation": "Inny program pobytu zmienia wartość dostępnych środków transportu."
+    },
+    {
+      "id": "vocabulary",
+      "skill": "vocabulary",
+      "question": "Co oznacza „dojechać bezpośrednio”?",
+      "options": [
+        "Wyruszyć bez wcześniejszego ustalenia adresu.",
+        "Dotrzeć do miejsca bez zmiany środka transportu po drodze.",
+        "Dojazd wyłącznie autostradą przez cały kraj."
+      ],
+      "answer": "Dotrzeć do miejsca bez zmiany środka transportu po drodze.",
+      "evidence": "Samochodem mogli dotrzeć bezpośrednio do pensjonatu.",
+      "explanation": "Samochód pozwalał dojechać do samego pensjonatu."
+    }
+  ],
+  "publicationStatus": "practice"
+}

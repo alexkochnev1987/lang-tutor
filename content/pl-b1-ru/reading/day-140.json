@@ -1,0 +1,76 @@
+{
+  "id": "pl-b1.reading.day-140",
+  "day": 140,
+  "level": "B1",
+  "genre": "poradnik",
+  "title": "Weekend bez rezerwacji",
+  "text": "Wyjazd na weekend bez dokładnych rezerwacji może być przyjemny, jeśli przed podróżą ustalimy kilka podstawowych rzeczy. Nie chodzi o to, żeby planować każdy posiłek i każdą godzinę zwiedzania. Warto jednak wiedzieć, które decyzje można podjąć na miejscu, a których lepiej nie odkładać do ostatniej chwili.\n\nZacznij od sprawdzenia transportu. Jeśli wracasz w niedzielę wieczorem, dowiedz się, o której odjeżdża ostatnie odpowiednie połączenie. Jeżeli planujesz nocleg, sprawdź, czy w wybranym miejscu odbywa się duże wydarzenie. W takim okresie wolnych pokoi może być mniej, więc pełna spontaniczność nie zawsze jest najlepszym rozwiązaniem.\n\nW wyobrażonej sytuacji Nina i Artur pojechali na jeden dzień do miasta nad jeziorem. Kupili bilety na pociąg powrotny, ale nie ustalili dokładnej trasy zwiedzania. Mieli trzy pomysły: spacer nad wodą, małe muzeum i obiad na rynku. Wiedzieli tylko, że muzeum zamyka się wcześniej niż restauracje. Zdecydowali więc, że jeśli będą chcieli je odwiedzić, zrobią to przed obiadem.\n\nNa miejscu okazało się, że przy jeziorze wieje silny wiatr. Para zmieniła kolejność planu i zaczęła od muzeum. Po obiedzie pogoda się poprawiła, więc zdążyli jeszcze na krótki spacer przed powrotem. Nie musieli rezygnować z biletu ani szukać połączenia późnym wieczorem.\n\nPrzygotowując podobny wyjazd, oddziel elementy, których brak może spowodować duży problem, od drobnych wyborów. Transport powrotny lub miejsce do spania bywają ważniejsze niż kolejność zwiedzania. Dobrze zaplanowane minimum pozwala zostawić więcej miejsca na niespodzianki, które sprawiają przyjemność, zamiast tych, które utrudniają powrót.",
+  "questions": [
+    {
+      "id": "main-idea",
+      "skill": "main-idea",
+      "question": "Jaki rodzaj planowania zaleca poradnik?",
+      "options": [
+        "Zabezpieczyć najważniejsze elementy wyjazdu, pozostawiając swobodę w drobnych decyzjach.",
+        "Rezerwować każdą restaurację i godzinę spaceru przed wyjazdem.",
+        "Nie sprawdzać żadnych informacji przed spontaniczną podróżą."
+      ],
+      "answer": "Zabezpieczyć najważniejsze elementy wyjazdu, pozostawiając swobodę w drobnych decyzjach.",
+      "evidence": "Dobrze zaplanowane minimum pozwala zostawić więcej miejsca na niespodzianki, które sprawiają przyjemność, zamiast tych, które utrudniają powrót.",
+      "explanation": "Ważne ograniczenia trzeba znać, ale kolejność aktywności może pozostać elastyczna."
+    },
+    {
+      "id": "detail",
+      "skill": "detail",
+      "question": "Co Nina i Artur kupili przed wyjazdem?",
+      "options": [
+        "Bilety do muzeum na konkretną godzinę.",
+        "Nocleg nad jeziorem.",
+        "Bilety na pociąg powrotny."
+      ],
+      "answer": "Bilety na pociąg powrotny.",
+      "evidence": "Kupili bilety na pociąg powrotny, ale nie ustalili dokładnej trasy zwiedzania.",
+      "explanation": "Zabezpieczyli powrót."
+    },
+    {
+      "id": "cause",
+      "skill": "cause",
+      "question": "Dlaczego zaczęli od muzeum?",
+      "options": [
+        "Nie mieli już czasu na spacer przed powrotem.",
+        "Nad jeziorem wiał silny wiatr.",
+        "Restauracje tego dnia były nieczynne."
+      ],
+      "answer": "Nad jeziorem wiał silny wiatr.",
+      "evidence": "Na miejscu okazało się, że przy jeziorze wieje silny wiatr. Para zmieniła kolejność planu i zaczęła od muzeum.",
+      "explanation": "Pogoda zmieniła kolejność aktywności."
+    },
+    {
+      "id": "inference",
+      "skill": "inference",
+      "question": "W mieście odbywa się duży festiwal, a podróżny chce zostać na noc i spontanicznie wybierać atrakcje. Co jest zgodne z poradnikiem?",
+      "options": [
+        "Sprawdzić dostępność noclegu wcześniej, a kolejność atrakcji ustalać na miejscu.",
+        "Odłożyć sprawę noclegu, ale zarezerwować każdy spacer.",
+        "Przyjąć, że podczas festiwalu zawsze będzie więcej wolnych pokoi."
+      ],
+      "answer": "Sprawdzić dostępność noclegu wcześniej, a kolejność atrakcji ustalać na miejscu.",
+      "evidence": "Jeżeli planujesz nocleg, sprawdź, czy w wybranym miejscu odbywa się duże wydarzenie. W takim okresie wolnych pokoi może być mniej",
+      "explanation": "Nocleg jest ważnym ograniczeniem, a atrakcje mogą pozostać elastyczne."
+    },
+    {
+      "id": "vocabulary",
+      "skill": "vocabulary",
+      "question": "Co oznacza „zaplanowane minimum”?",
+      "options": [
+        "Szczegółowy rozkład wszystkich godzin weekendu.",
+        "Plan najtańszej możliwej podróży bez biletów powrotnych.",
+        "Niewielki zestaw ustaleń niezbędnych do bezpiecznego i wygodnego wyjazdu."
+      ],
+      "answer": "Niewielki zestaw ustaleń niezbędnych do bezpiecznego i wygodnego wyjazdu.",
+      "evidence": "Dobrze zaplanowane minimum pozwala zostawić więcej miejsca na niespodzianki",
+      "explanation": "Minimum to najważniejsze przygotowania."
+    }
+  ],
+  "publicationStatus": "practice"
+}

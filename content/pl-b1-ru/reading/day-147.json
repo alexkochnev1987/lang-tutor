@@ -1,0 +1,76 @@
+{
+  "id": "pl-b1.reading.day-147",
+  "day": 147,
+  "level": "B1",
+  "genre": "poradnik",
+  "title": "Podróż z małym budżetem",
+  "text": "Planując podróż z ograniczonym budżetem, łatwo skupić się na najtańszym bilecie albo najniższej cenie noclegu. Tymczasem dopiero suma wydatków pokazuje, ile rzeczywiście kosztuje cały wyjazd. Tani nocleg daleko od centrum może wymagać codziennych przejazdów, a bardzo wczesny pociąg może oznaczać konieczność zamówienia taksówki.\n\nNajpierw wypisz koszty, których nie da się łatwo zmienić: transport w obie strony, nocleg i opłaty za wydarzenia, w których koniecznie chcesz uczestniczyć. Następnie oszacuj zwykłe wydatki na jedzenie i przemieszczanie się na miejscu. Zostaw również niewielką kwotę na nieprzewidziane sytuacje, zamiast rozdzielać wszystkie pieniądze jeszcze przed wyjazdem.\n\nW przykładowym planie dwóch osób jeden nocleg kosztował sto dwadzieścia złotych za dobę i wymagał wydania czterdziestu złotych dziennie na wspólny transport. Drugi kosztował sto pięćdziesiąt złotych, ale znajdował się obok miejsc, które chcieli odwiedzić pieszo. Przy tych założeniach, porównując jedną dobę pobytu z jednym dniem dojazdów, druga opcja kosztowała mniej. Nie oznacza to, że droższe mieszkanie zawsze jest bardziej opłacalne. W innym planie wynik porównania mógłby być odwrotny.\n\nWarto też rozróżnić rzeczy, z których naprawdę chcesz korzystać, od tych, na które wydajesz pieniądze tylko dlatego, że są dostępne. Jeśli zależy ci na jednym koncercie, możesz przeznaczyć część budżetu właśnie na niego, a w pozostałym czasie wybierać bezpłatne spacery lub spotkania.\n\nPo powrocie sprawdź, które wydatki okazały się większe od przewidywanych. Taka informacja może być bardziej przydatna podczas kolejnego wyjazdu niż sama pamięć o cenie biletu.",
+  "questions": [
+    {
+      "id": "main-idea",
+      "skill": "main-idea",
+      "question": "Jaka jest najważniejsza rada dotycząca budżetu?",
+      "options": [
+        "Zawsze wybierać najtańszy nocleg niezależnie od położenia.",
+        "Wydawać cały budżet na transport przed ustaleniem atrakcji.",
+        "Porównać całkowite koszty wyjazdu i zachować środki na ważne oraz nieprzewidziane wydatki."
+      ],
+      "answer": "Porównać całkowite koszty wyjazdu i zachować środki na ważne oraz nieprzewidziane wydatki.",
+      "evidence": "Tymczasem dopiero suma wydatków pokazuje, ile rzeczywiście kosztuje cały wyjazd.",
+      "explanation": "Cena jednego elementu nie wystarcza do oceny całego kosztu."
+    },
+    {
+      "id": "detail",
+      "skill": "detail",
+      "question": "Ile kosztował tańszy nocleg za dobę w przykładzie?",
+      "options": [
+        "Czterdzieści złotych.",
+        "Sto dwadzieścia złotych.",
+        "Sto pięćdziesiąt złotych."
+      ],
+      "answer": "Sto dwadzieścia złotych.",
+      "evidence": "jeden nocleg kosztował sto dwadzieścia złotych za dobę",
+      "explanation": "Podano koszt pierwszego noclegu."
+    },
+    {
+      "id": "cause",
+      "skill": "cause",
+      "question": "Dlaczego warto zostawić część pieniędzy niewydanych przed wyjazdem?",
+      "options": [
+        "Żeby móc zapłacić za nieprzewidziane sytuacje.",
+        "Żeby po powrocie nie trzeba było sprawdzać kosztów.",
+        "Żeby zawsze kupować droższe bilety na wydarzenia."
+      ],
+      "answer": "Żeby móc zapłacić za nieprzewidziane sytuacje.",
+      "evidence": "Zostaw również niewielką kwotę na nieprzewidziane sytuacje",
+      "explanation": "Rezerwa odpowiada nieplanowanym wydatkom."
+    },
+    {
+      "id": "inference",
+      "skill": "inference",
+      "question": "Jeśli koszt transportu z pierwszego noclegu spadnie do dwudziestu złotych dziennie, która opcja będzie tańsza przy porównaniu jednej doby i jednego dnia dojazdów?",
+      "options": [
+        "Pierwsza: sto czterdzieści złotych dziennie.",
+        "Obie będą kosztowały po sto pięćdziesiąt złotych dziennie.",
+        "Druga: sto pięćdziesiąt złotych dziennie."
+      ],
+      "answer": "Pierwsza: sto czterdzieści złotych dziennie.",
+      "evidence": "jeden nocleg kosztował sto dwadzieścia złotych za dobę i wymagał wydania czterdziestu złotych dziennie na wspólny transport. Drugi kosztował sto pięćdziesiąt złotych, ale znajdował się obok miejsc, które chcieli odwiedzić pieszo.",
+      "explanation": "Nowy koszt pierwszej opcji to 120 + 20 = 140 zł, mniej niż 150 zł."
+    },
+    {
+      "id": "vocabulary",
+      "skill": "vocabulary",
+      "question": "Co oznacza „bardziej opłacalne” w tym tekście?",
+      "options": [
+        "Dostępne wyłącznie z wcześniejszym zakupem biletu.",
+        "Korzystniejsze pod względem łącznych kosztów.",
+        "Położone dalej od wszystkich atrakcji."
+      ],
+      "answer": "Korzystniejsze pod względem łącznych kosztów.",
+      "evidence": "Nie oznacza to, że droższe mieszkanie zawsze jest bardziej opłacalne.",
+      "explanation": "Opłacalność zależy tutaj od całkowitej ceny."
+    }
+  ],
+  "publicationStatus": "practice"
+}
