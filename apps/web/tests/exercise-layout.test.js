@@ -100,13 +100,16 @@ describe('shared full-screen practice slots', () => {
 
 
 describe('compact practice', () => {
-  it('uses two columns, gives long labels the full row and keeps grading geometry', () => {
+  it('uses an adaptive grid for short labels and one column for long labels without changing grading geometry', () => {
     const options = ['паром', 'женщина', 'укол', 'осматривать, ходить по достопримечательностям']
     const before = render(ExerciseOptions, { options, practice: true, outcomeFor: () => 'none', disabledFor: () => false, onSelect: () => {} })
     const after = render(ExerciseOptions, { options, practice: true, outcomeFor: option => option === 'женщина' ? 'correct' : 'none', disabledFor: () => true, onSelect: () => {} })
+    const short = render(ExerciseOptions, { options: options.slice(0, 3), outcomeFor: () => 'none', disabledFor: () => false, onSelect: () => {} })
+    expect(short).toContain('data-option-layout="adaptive"')
+    expect(short).toContain('repeat(auto-fit')
     for (const markup of [before, after]) {
-      expect(markup).toContain('grid-cols-2')
-      expect(markup.match(/col-span-2/g)).toHaveLength(1)
+      expect(markup).toContain('data-option-layout="single"')
+      expect(markup).toContain('minmax(0, 1fr)')
       expect(markup.match(/min-h-12/g)).toHaveLength(4)
       for (const option of options) expect(markup).toContain(option)
     }
