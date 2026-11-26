@@ -1,3 +1,4 @@
+import { paginateText } from '../app/_components/PaginatedText'
 import { createElement as h } from 'react'
 import { renderToStaticMarkup } from 'react-dom/server'
 import { exerciseLayout, ExerciseActions, ExerciseAnswerForm, ExerciseCard, ExerciseFeedback, ExerciseOptions, ExercisePrompt, ExercisePromptArea, ExerciseResultMark, ExerciseSlot } from '../app/_components/exercise/ExerciseCard'
@@ -136,5 +137,25 @@ describe('compact outcome marks', () => {
         expect(markup).not.toContain(correct ? '>Correct<' : '>Incorrect<')
       }
     }
+  })
+})
+
+describe('reading pagination', () => {
+  const fits = max => value => value.length <= max
+  it('keeps short text on one page', () => {
+    const text = 'Krótki tekst.'
+    expect(paginateText(text, fits(100))).toEqual([{ start: 0, end: text.length }])
+  })
+  it('prefers sentence boundaries without losing any characters', () => {
+    const text = 'Pierwsze zdanie. Drugie zdanie. Trzecie zdanie.'
+    const pages = paginateText(text, fits(22))
+    expect(pages.map(p => text.slice(p.start, p.end)).join('')).toBe(text)
+    expect(pages.map(p => text.slice(p.start, p.end).trim())).toEqual(['Pierwsze zdanie.', 'Drugie zdanie.', 'Trzecie zdanie.'])
+  })
+  it('splits long sentences at words and always makes progress', () => {
+    const text = '   Jeden bardzo_długi_wyraz dwa trzy.'
+    const pages = paginateText(text, fits(4))
+    expect(pages.map(p => text.slice(p.start, p.end)).join('')).toBe(text)
+    expect(pages.every(p => p.end > p.start)).toBe(true)
   })
 })
