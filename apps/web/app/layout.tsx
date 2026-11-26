@@ -27,8 +27,8 @@ export const viewport: Viewport = {
   width: 'device-width',
   initialScale: 1,
   viewportFit: 'cover',
-  // UX_UI.md §1.5б: без этого виртуальная клавиатура накрывает поле ввода,
-  // а 100dvh продолжает считаться по полной высоте
+  // UX_UI.md §1.5б: resize the layout viewport where supported;
+  // iOS practice screens additionally use the visual viewport.
   interactiveWidget: 'resizes-content',
   // Конкретное значение ставит lib/theme из активного токена --head:
   // у каждой палитры своя шапка
