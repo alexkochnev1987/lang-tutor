@@ -2,7 +2,7 @@
 
 import { useLayoutEffect, useRef, type ReactNode } from 'react'
 import { Screen } from '@polski/ui'
-import { createPracticeKeyboardTracker } from './exercise/practiceKeyboard'
+import { createPracticeKeyboardTracker, practiceViewportOffset } from './exercise/practiceKeyboard'
 
 /** Normal-flow screen with a small visual-viewport fallback for touch keyboards.
  * Only compensate native panning when the focused field still fits. */
@@ -54,14 +54,16 @@ export function WordPracticeScreen({ children, enabled = true }: { children: Rea
         // Safari may pan the visual viewport without scrolling the main region.
         // Keep short exercises anchored; leave native panning alone when a
         // field genuinely needs the space (e.g. a long exercise or landscape).
-        const field = document.activeElement
-        const focused = field instanceof HTMLInputElement && screen.contains(field)
-        const rect = focused ? field.getBoundingClientRect() : null
-        const rootTop = screen.getBoundingClientRect().top + window.scrollY - appliedOffset
-        const pan = Math.max(0, Math.round(viewport.pageTop - rootTop))
-        const fits = rect && rect.top - appliedOffset + window.scrollY - rootTop >= 0 &&
-          rect.bottom - appliedOffset + window.scrollY - rootTop <= height
-        const offset = blocked && (fits || !focused) ? pan : 0
+        let offset = 0
+        if (blocked) {
+          const field = document.activeElement
+          const focused = field instanceof HTMLElement && field.matches('input, textarea') && screen.contains(field)
+          const rect = focused ? field.getBoundingClientRect() : null
+          const rootTop = screen.getBoundingClientRect().top + window.scrollY - appliedOffset
+          const fieldOrigin = rootTop + appliedOffset - window.scrollY
+          offset = practiceViewportOffset(viewport.pageTop - rootTop, height,
+            rect ? { top: rect.top - fieldOrigin, bottom: rect.bottom - fieldOrigin } : null)
+        }
         if (offset !== appliedOffset) {
           appliedOffset = offset
           screen.style.setProperty('--study-viewport-offset', `${offset}px`)
