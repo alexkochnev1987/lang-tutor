@@ -50,6 +50,7 @@ import { formatOfWordExercise, wordSkill } from "@/lib/engine/daily-words";
 import { WeeklyGoalCredit } from "@/app/_components/WeeklyGoal";
 import { WordPracticeFooter } from "@/app/_components/WordPracticeFooter";
 import { WordPracticeScreen } from "@/app/_components/WordPracticeScreen";
+import { PaginatedText } from "@/app/_components/PaginatedText";
 import { WordSaveIndicator } from "@/app/_components/WordSaveIndicator";
 import { useTranslations } from "next-intl";
 import { assignmentProgress, isAssignedStage, stageExerciseIds } from '@/lib/engine/lesson-assignments';
@@ -563,6 +564,26 @@ export default function LessonPage() {
         )}
   </>;
 
+  const passage = slot?.kind === "step" && slot.step.kind === "exercise" ? readingTextOf(slot.step.ex) : null;
+  if (passage && slot?.kind === "step" && slot.step.kind === "exercise") {
+    const exercise = slot.step.ex;
+    return <ReadingExerciseBlock
+      key={passage}
+      text={passage}
+      exercise={exercise}
+      status={<span className="text-sm text-muted">Czytanie · {indexInStage} / {stageSlots.length}</span>}
+      progress={((i + 1) / Math.max(1, slots.length)) * 100}
+      restoredResult={restoredResult}
+      notices={screenNotices}
+      canAdvance={canAdvance || Boolean(restoredResult)}
+      busy={lessonSave.status === "saving"}
+      blocked={pendingAnswers > 0 || Object.keys(answerFailures).length > 0}
+      nextLabel={i + 1 < slots.length ? "Dalej" : "Zakończ"}
+      onNext={next}
+      onAnswered={(result, ms, attempts, answer) => void onAnswered(exercise, result, ms, true, attempts, answer)}
+    />;
+  }
+
   return (
     <LessonLayout wordScreen={wordScreen} mainRef={wordMain}
       status={<>{slot && (
@@ -686,25 +707,6 @@ export default function LessonPage() {
                 onComplete={() => setCanAdvance(true)}
                 canReset={pendingAnswers === 0 && Object.keys(answerFailures).length === 0}
                 onReset={() => setCanAdvance(false)}
-              />
-            ) : readingTextOf(slot.step.ex) ? (
-              <ReadingExerciseBlock
-                text={readingTextOf(slot.step.ex)!}
-                exercise={slot.step.ex}
-                restoredResult={restoredResult}
-                onAnswered={(r, ms, attempts, answer) => {
-                  const step = slot.step;
-                  if (step.kind === "exercise") {
-                    void onAnswered(
-                      step.ex,
-                      r,
-                      ms,
-                      true,
-                      attempts,
-                      answer,
-                    );
-                  }
-                }}
               />
             ) : (
               <ExerciseView
@@ -1096,41 +1098,63 @@ function readingTextOf(exercise: Exercise): string | null {
 function ReadingExerciseBlock({
   text,
   exercise,
+  status,
+  progress,
   restoredResult,
+  notices,
+  canAdvance,
+  busy,
+  blocked,
+  nextLabel,
+  onNext,
   onAnswered,
 }: {
   text: string;
   exercise: Exercise;
+  status: React.ReactNode;
+  progress: number;
   restoredResult?: React.ComponentProps<typeof ExerciseView>["restoredResult"];
-  onAnswered: (
-    r: CheckResult,
-    ms: number,
-    attempts: number,
-    answer: string,
-  ) => void;
+  notices: React.ReactNode;
+  canAdvance: boolean;
+  busy: boolean;
+  blocked: boolean;
+  nextLabel: string;
+  onNext: () => void;
+  onAnswered: (r: CheckResult, ms: number, attempts: number, answer: string) => void;
 }) {
-  return (
-    <Card>
-      <Stack gap="lg">
-        <section className="w-full rounded-card bg-soft2 p-4" lang="pl">
-          <p className="mb-2 text-xs tracking-wide text-muted uppercase">
-            Tekst
-          </p>
-          <p className="whitespace-pre-wrap text-left text-base leading-7">
-            {text}
-          </p>
-        </section>
-        <ExerciseView
-          key={exercise.id}
-          exercise={exercise}
-          bare
-          showReadingText={false}
-          restoredResult={restoredResult}
-          onAnswered={onAnswered}
-        />
-      </Stack>
-    </Card>
-  );
+  const [reading, setReading] = useState(true);
+  const [visitedQuestions, setVisitedQuestions] = useState(false);
+  const main = useRef<HTMLElement>(null);
+
+  useEffect(() => {
+    main.current?.scrollTo({ top: 0 });
+  }, [reading, exercise.id]);
+
+  return <LessonLayout status={status} progress={progress} mainRef={main}
+    footer={<footer className="shrink-0 bg-bg px-4 pt-2 pb-[max(0.5rem,env(safe-area-inset-bottom))]">
+      <div className="mx-auto w-full max-w-2xl">
+        {reading
+          ? <Button size="lg" full onClick={() => { setVisitedQuestions(true); setReading(false); }}>
+              {visitedQuestions ? "Wróć do pytania" : "Przejdź do pytań"} →
+            </Button>
+          : <Button size="lg" full disabled={!canAdvance || blocked || busy} busy={busy} busyLabel="Zapisywanie…" onClick={onNext}>
+              {nextLabel}
+            </Button>}
+      </div>
+    </footer>}>
+    <div className={reading ? "flex min-h-0 flex-1 flex-col" : "hidden"}>
+      <PaginatedText text={text} active={reading} />
+    </div>
+    {/* Keep the current question mounted when revisiting the passage. */}
+    <div className={reading ? "hidden" : "flex min-w-0 flex-col gap-3"}>
+      <Button variant="outline" full onClick={() => setReading(true)}>← Wróć do tekstu</Button>
+      {notices}
+      <Card>
+        <ExerciseView key={exercise.id} exercise={exercise} bare showReadingText={false}
+          restoredResult={restoredResult} onAnswered={onAnswered} />
+      </Card>
+    </div>
+  </LessonLayout>;
 }
 
 function Centered({ children }: { children: React.ReactNode }) {
