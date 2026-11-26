@@ -1,3 +1,4 @@
+import { contextualDrills, sentenceSourceKey } from './contextual-exercises';
 import { reconcileLessonAssignments } from './lesson-assignments';
 import { hashString, type Exercise } from "@polski/engine";
 import {
@@ -26,7 +27,6 @@ import { knownLexemeIds, loadDailyWords, loadState } from "@/lib/data/store";
 import type { Settings, StudyItemRow } from "@/lib/data/types";
 import {
   collocationDrills,
-  exercisesForRule,
   exercisesForReading,
   sentenceDrillsForRule,
   sentenceWriteDrills,
@@ -207,10 +207,10 @@ export async function buildTodayPlan(persistAssignments = false): Promise<TodayP
                 ...state.mastery.map((m) => m.grammarRuleId),
               ]),
             ],
-            practisedPool,
-            morphology,
+            sentences,
             localized,
-            exerciseIdsOf(drillSteps),
+            drillSteps,
+            dayNumber,
           )
         : [];
 
@@ -301,7 +301,7 @@ export async function buildTodayPlan(persistAssignments = false): Promise<TodayP
 
 function missingExamContent(moduleId: string): string {
   if (MODULES_WITH_GENERATOR.has(moduleId)) {
-    return "nie znaleziono form do zadania — słownik jest jeszcze zbyt mały";
+    return "nie znaleziono wystarczającej liczby zdań do zadania";
   }
   const name = MODULE_NAME[moduleId] ?? moduleId;
   const blocker = MISSING_CONTENT_FOR_MODULE[moduleId] ?? "нужен контент";
@@ -479,18 +479,20 @@ function buildDrillSteps(
 
 function buildExamSteps(
   ruleIds: string[],
-  words: Lexeme[],
-  morphology: Record<string, Paradigm>,
+  sentences: SentencePack,
   localized: (id: string) => LocalizedRule | null,
-  alreadyDrilled: Set<string>,
+  alreadyDrilled: Step[],
+  dayNumber: number,
 ): Step[] {
   const steps: Step[] = [];
-  const used = new Set(alreadyDrilled);
-  const pools = ruleIds.map((ruleId) => ({
-    rule: localized(ruleId),
-    exercises: exercisesForRule(ruleId, words, morphology, EXAM_TASK_COUNT),
-    cursor: 0,
-  }));
+  const used = new Set(alreadyDrilled.flatMap(step => step.kind === 'exercise' ? [sentenceSourceKey(step.ex)] : []));
+  const pools = ruleIds.map((ruleId) => {
+    const choices = contextualDrills(sentences, ruleId, 'choice', dayNumber);
+    const typed = contextualDrills(sentences, ruleId, 'typed', dayNumber + 1);
+    const exercises = choices.flatMap((choice, index) => typed[index] ? [choice, typed[index]!] : [choice]);
+    exercises.push(...typed.slice(choices.length));
+    return { rule: localized(ruleId), exercises, cursor: 0 };
+  });
 
   // Round-robin keeps the current rule and older mastered rules in the same
   // exam block instead of exhausting one rule before repeating another.
@@ -500,14 +502,14 @@ function buildExamSteps(
     for (const pool of pools) {
       while (
         pool.cursor < pool.exercises.length &&
-        used.has(pool.exercises[pool.cursor]!.id)
+        used.has(sentenceSourceKey(pool.exercises[pool.cursor]!))
       ) {
         pool.cursor++;
       }
       const ex = pool.exercises[pool.cursor++];
       if (!ex) continue;
-      used.add(ex.id);
-      steps.push({ kind: "exercise", ex, review: false, rule: pool.rule });
+      used.add(sentenceSourceKey(ex));
+      steps.push({ kind: "exercise", ex: { ...ex, attemptsAllowed: 1 }, review: false, rule: pool.rule });
       progressed = true;
       if (steps.length >= EXAM_TASK_COUNT) break;
     }
