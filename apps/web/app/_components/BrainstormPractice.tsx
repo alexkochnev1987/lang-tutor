@@ -200,10 +200,11 @@ export function BrainstormPractice({ id, words, pool, dayNumber, reviewFormats, 
         {loadError && <p role="alert" className="mt-2 text-sm text-danger-ink">{t('error')}</p>}
       </main>
       <WordPracticeFooter
+        showAction={!exercise || Boolean(response)}
         busyLabel={checking ? t('loading') : undefined}
         label={failed ? t('retry')
           : step ? t('next') : canContinue ? t('continue') : t('backToFormats')}
-        disabled={checking || Boolean(exercise && !response)}
+        disabled={checking}
         onNext={step ? advance : canContinue ? onContinue : () => leave(onExit)}
       />
     </WordPracticeScreen>
