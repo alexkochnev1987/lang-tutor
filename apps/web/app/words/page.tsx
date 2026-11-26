@@ -282,9 +282,10 @@ function WordPractice({ initialList, initialFormat }: { initialList?: DailyWordL
           {loadError && <p role="alert" className="mt-2 text-sm text-danger-ink">{t('error')}</p>}
         </main>
         <WordPracticeFooter
+          showAction={canAdvance || status === 'failed' || !exercise}
           busyLabel={status === 'checking' ? t('loading') : undefined}
           label={status === 'failed' ? t('backToFormats') : exercise ? t('next') : canContinue ? t('continue') : t('backToFormats')}
-          disabled={!(canAdvance || status === 'failed' || !exercise) || status === 'checking'}
+          disabled={status === 'checking'}
           onNext={status === 'failed' ? exit
             : exercise ? advance : canContinue ? () => void startBatch(session.list, session.format) : exit}
         />
