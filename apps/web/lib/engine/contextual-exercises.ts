@@ -33,7 +33,7 @@ const canonicalId = (id: string) => id.startsWith('grammar-practice:') ? id.slic
  * the new content ID; the original snapshot and attempt history stay intact.
  * A historical ID alone does not always identify a rule: never guess mastery. */
 export async function contextualizeLegacy(id: string, day: number, ruleIds: readonly string[] = [], expected: readonly string[] = [], used: ReadonlySet<string> = new Set()): Promise<Exercise | null> {
-  const match = /^ex\.(form|infl)\.(.+)\.([^.:]+(?::.+)?)$/.exec(canonicalId(id))
+  const match = /^ex\.(form|infl)\.(.+?)\.([a-z0-9]+:.+)$/.exec(canonicalId(id))
   if (!match) return null
   const [, kind, lemma, tag] = match
   if (!lemma || !tag) return null
