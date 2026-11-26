@@ -182,8 +182,8 @@ body:has(.word-practice-screen) {
   display: none;
 }
 
-/* Keep the footer's layout footprint but do not reveal a newly available action
-   above a closing mobile keyboard. The practice screen owns viewport state. */
+/* Reclaim the footer space while the keyboard is open or settling.
+   The action reappears only after the viewport has recovered. */
 .word-practice-screen[data-keyboard-occluded] > .word-practice-footer {
   display: none;
 }
