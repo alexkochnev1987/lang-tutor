@@ -789,7 +789,7 @@ export function ExerciseView({
       </ExercisePromptArea>
 
       {exercise.mode === "choice" && (
-        <ExerciseOptions practice={practice} options={exercise.options}
+        <ExerciseOptions options={exercise.options}
           outcomeFor={(option) => result && option === exercise.answer ? "correct"
             : wrongTries.includes(option) || (result && !result.correct && option === lastSubmittedAnswer) ? "wrong"
               : !isFormChoice && feedback && !feedback.correct && option === feedback.expected ? "correct" : "none"}
