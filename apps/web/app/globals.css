@@ -182,6 +182,12 @@ body:has(.word-practice-screen) {
   display: none;
 }
 
+/* An idle footer has no layout footprint; outbox feedback stays independent. */
+.word-practice-footer:has([data-practice-next], [data-save-active]) {
+  padding-block-start: 0.25rem;
+  padding-block-end: max(0.5rem, env(safe-area-inset-bottom));
+}
+
 /* Reclaim the footer space while the keyboard is open or settling.
    The action reappears only after the viewport has recovered. */
 .word-practice-screen[data-keyboard-occluded] > .word-practice-footer {
