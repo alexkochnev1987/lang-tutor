@@ -83,7 +83,6 @@ export default function ReviewPage() {
             : row ? await restoreHistoricalExercise(id, row) : null
           if (!exercise) return null
           const key = sentenceSourceKey(exercise)
-          if (used.has(key)) return null
           used.add(key)
           return { ...exercise, attemptsAllowed: 1 }
         } catch (error) {
