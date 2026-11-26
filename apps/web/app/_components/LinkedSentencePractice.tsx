@@ -2,9 +2,9 @@
 
 import { useEffect, useMemo, useRef, useState } from 'react'
 import { SENTENCE_ATTEMPTS, shuffle } from '@polski/engine'
-import { Button, Card, OptionRow, Row, Stack } from '@polski/ui'
+import { Button, Card, Row, Stack } from '@polski/ui'
 import { usePronounce } from '@/lib/speech/usePronounce'
-import { ExerciseCard, ExerciseFeedback } from './exercise/ExerciseCard'
+import { ExerciseCard, ExerciseFeedback, ExerciseOptions } from './exercise/ExerciseCard'
 import { annotatedLinkedSentence, sampleAnnotated } from '@/lib/engine/annotated-corpus'
 import type { CorpusIndex, Paradigm } from '@/lib/content/curriculum'
 import { linkedGapOptions, matchesRulePair, normalizeLinkedAnswer, type LinkedSentence } from '@/lib/engine/sentence-corpus'
@@ -251,23 +251,10 @@ function LinkedSentenceCard({ card, options, last, onNext }: {
                   {index + 1 === card.gaps.length ? 'К результату' : 'Следующее слово'}
                 </Button>
               ) : options ? (
-                <Stack gap="xs">
-                  {options[index].map((option) => {
-                    const tried = wrong.some((answer) => normalizeLinkedAnswer(answer) === normalizeLinkedAnswer(option))
-                    return (
-                      <OptionRow
-                        key={option}
-                        type="button"
-                        outcome={tried ? 'wrong' : 'none'}
-                        selected={false}
-                        disabled={tried}
-                        onClick={() => checkWord(option)}
-                      >
-                        <span lang="pl">{option}</span>
-                      </OptionRow>
-                    )
-                  })}
-                </Stack>
+                <ExerciseOptions options={options[index]}
+                  outcomeFor={(option) => wrong.some((answer) => normalizeLinkedAnswer(answer) === normalizeLinkedAnswer(option)) ? 'wrong' : 'none'}
+                  disabledFor={(option) => wrong.some((answer) => normalizeLinkedAnswer(answer) === normalizeLinkedAnswer(option))}
+                  onSelect={checkWord} />
               ) : (
                 <Row gap="sm" wrap>
                   <input

@@ -189,8 +189,6 @@ function HintButton({ hint, compact }: { hint: string; compact: boolean }) {
 
 function InlineFormControl({
   baseForm,
-  mode,
-  options,
   value,
   disabled,
   autoFocus,
@@ -204,8 +202,6 @@ function InlineFormControl({
   onSubmit,
 }: {
   baseForm: string;
-  mode: "choice" | "typed";
-  options?: string[];
   value: string;
   disabled: boolean;
   autoFocus?: boolean;
@@ -225,7 +221,7 @@ function InlineFormControl({
         ? "border-danger bg-danger-bg"
         : "border-line bg-soft";
   const [focused, setFocused] = useState(false);
-  const answerInput = useAnswerInput(onSubmit, mode === "typed" && !disabled);
+  const answerInput = useAnswerInput(onSubmit, !disabled);
   const focusClass =
     status === "empty" ? "focus-within:border-muted focus-within:bg-card" : "";
   const textClass =
@@ -241,64 +237,40 @@ function InlineFormControl({
     "aria-label": `Forma słowa ${baseForm}${stateLabel}`,
     "aria-invalid": status === "wrong" ? true : undefined,
     disabled,
-    className: `inline-form-control border-0 bg-transparent px-1 text-left font-semibold shadow-none outline-none ring-0 focus:border-0 focus:shadow-none focus:outline-none focus:ring-0 focus-visible:border-0 focus-visible:shadow-none focus-visible:outline-none focus-visible:ring-0 disabled:opacity-100 ${compact ? `min-h-9 min-w-0 text-base ${mode === "typed" ? "w-28" : ""}` : "min-h-12 min-w-24 text-lg"} ${textClass}`,
+    className: `inline-form-control border-0 bg-transparent px-1 text-left font-semibold shadow-none outline-none ring-0 focus:border-0 focus:shadow-none focus:outline-none focus:ring-0 focus-visible:border-0 focus-visible:shadow-none focus-visible:outline-none focus-visible:ring-0 disabled:opacity-100 min-w-0 max-w-full w-28 flex-1 ${compact ? "min-h-9 text-base" : "min-h-12 text-lg"} ${textClass}`,
     lang: "pl",
   } as const;
 
   return (
     <span
-      className={`mx-1 inline-flex max-w-full items-center gap-1 overflow-visible rounded-card border-2 px-2 align-baseline ${compact ? "py-0" : "py-1"} ${statusClass} ${focusClass}`}
+      className={`inline-flex min-w-0 max-w-full flex-wrap items-center gap-1 overflow-visible rounded-card border-2 px-2 align-baseline ${compact ? "py-0" : "py-1"} ${statusClass} ${focusClass}`}
     >
-      <span className="shrink-0 text-sm font-medium text-muted" lang="pl">
+      <span className="min-w-0 max-w-full break-words text-sm font-medium text-muted" lang="pl">
         {baseForm}
       </span>
       <span className="text-muted" aria-hidden>
         →
       </span>
-      {mode === "choice" ? (
-        <select
-          {...common}
-          value={value}
-          onFocus={(event) => {
-            setFocused(true);
-            keepInputVisible(event.currentTarget);
-          }}
-          onBlur={() => setFocused(false)}
-          onChange={(e) => {
-            const next = e.target.value;
-            onChange(next);
-            if (next) onSubmit(next);
-          }}
-        >
-          {compact ? <option value="" disabled hidden /> : <option value="">Wybierz…</option>}
-          {options?.map((option) => (
-            <option key={option} value={option}>
-              {option}
-            </option>
-          ))}
-        </select>
-      ) : (
-        <input
-          {...common}
-          {...answerInput}
-          autoFocus={autoFocus && !disabled}
-          enterKeyHint="done"
-          value={value}
-          placeholder="wpisz formę"
-          autoCapitalize="off"
-          autoCorrect="off"
-          spellCheck={false}
-          onFocus={(event) => {
-            setFocused(true);
-            keepInputVisible(event.currentTarget);
-          }}
-          onChange={(e) => onChange(e.target.value)}
-          onBlur={(event) => {
-            setFocused(false);
-            answerInput.onBlur(event);
-          }}
-        />
-      )}
+      <input
+        {...common}
+        {...answerInput}
+        autoFocus={autoFocus && !disabled}
+        enterKeyHint="done"
+        value={value}
+        placeholder="wpisz formę"
+        autoCapitalize="off"
+        autoCorrect="off"
+        spellCheck={false}
+        onFocus={(event) => {
+          setFocused(true);
+          keepInputVisible(event.currentTarget);
+        }}
+        onChange={(e) => onChange(e.target.value)}
+        onBlur={(event) => {
+          setFocused(false);
+          answerInput.onBlur(event);
+        }}
+      />
       <AttemptDots
         attemptsAllowed={attemptsAllowed}
         wrongCount={wrongCount}
@@ -360,7 +332,7 @@ function InlineSentencePrompt({
   onChange,
   onSubmit,
 }: {
-  exercise: InlineExercise;
+  exercise: Extract<Exercise, { mode: "typed" }>;
   value: string;
   disabled: boolean;
   status: ControlStatus;
@@ -382,8 +354,6 @@ function InlineSentencePrompt({
       <InlineFormControl
         baseForm={baseForm}
         compact={compact}
-        mode={exercise.mode}
-        options={exercise.mode === "choice" ? exercise.options : undefined}
         value={value}
         disabled={disabled}
         status={status}
@@ -412,7 +382,7 @@ function InlineWordPrompt({
   onChange,
   onSubmit,
 }: {
-  exercise: InlineExercise;
+  exercise: Extract<Exercise, { mode: "typed" }>;
   value: string;
   disabled: boolean;
   status: ControlStatus;
@@ -429,8 +399,6 @@ function InlineWordPrompt({
   return (
     <InlineFormControl
       baseForm={baseForm}
-      mode={exercise.mode}
-      options={exercise.mode === "choice" ? exercise.options : undefined}
       value={value}
       disabled={disabled}
       status={status}
@@ -510,6 +478,7 @@ export function ExerciseView({
     setResult(restoredResult.result);
     setFeedback(restoredResult.result);
     setTyped(restoredResult.answer);
+    setLastSubmittedAnswer(restoredResult.answer);
     if (exercise.mode === "assemble") {
       setBuiltIndexes(
         letterIndexesForAnswer(exercise.letters, restoredResult.answer),
@@ -545,7 +514,7 @@ export function ExerciseView({
   const attemptsAllowed = exercise.attemptsAllowed ?? DEFAULT_ATTEMPTS;
 
   const isGapSentence =
-    exercise.kind === "sentence-choice" || exercise.kind === "sentence-typed";
+    exercise.kind === "sentence-choice" || exercise.kind === "sentence-typed" || exercise.kind === "gap-fill";
   const compactSentence = isGapSentence && leadingNumber !== undefined;
   const isReading = exercise.kind === "reading-choice";
   const isListenWrite = exercise.kind === "listen-write";
@@ -558,7 +527,10 @@ export function ExerciseView({
   const isSentence = isGapSentence || exercise.kind === "sentence-write";
   const baseForm =
     exercise.mode === "assemble" ? undefined : baseFormOf(exercise);
-  const isInlineForm = Boolean(baseForm) && exercise.kind !== "sentence-write";
+  const isInlineForm = exercise.mode === "typed" && Boolean(baseForm) && exercise.kind !== "sentence-write";
+  const isFormChoice = exercise.mode === "choice" && (Boolean(baseForm) || isGapSentence);
+  const sentenceTranslation = exercise.mode !== "assemble" && (exercise.kind === "sentence-choice" || exercise.kind === "sentence-typed") ? exercise.explanation : undefined;
+  const choiceHint = isFormChoice && exercise.mode === "choice" ? hintForExercise(exercise) : undefined;
   const inlineStatus: ControlStatus = result
     ? result.correct
       ? "correct"
@@ -568,10 +540,10 @@ export function ExerciseView({
       : wrongTries.includes(typed) && typed
         ? "wrong"
         : "empty";
-  const speakText = compactSentence
+  const speakText = isGapSentence
     ? exercise.prompt.replace(
         GAP_MARK,
-        () => result ? (result.correct ? typed.trim() : result.expected) : "…",
+        () => result ? (result.correct ? lastSubmittedAnswer.trim() || result.expected : result.expected) : "…",
       )
     : speakableTextOf(exercise);
 
@@ -604,7 +576,7 @@ export function ExerciseView({
     if (typeof navigator !== "undefined" && "vibrate" in navigator) {
       navigator.vibrate(r.correct ? 12 : [18, 35, 18]);
     }
-    const spokenAnswer = compactSentence
+    const spokenAnswer = isGapSentence
       ? exercise.prompt.replace(GAP_MARK, () => r.correct ? normalized : r.expected)
       : answerSpeakableText(exercise);
     if (spokenAnswer) pronounce(spokenAnswer);
@@ -670,7 +642,9 @@ export function ExerciseView({
     />
   );
 
-  const answerStatus = feedback?.correct ? (
+  const answerStatus = isGapSentence && result ? (
+    <p className="text-ok-ink">Poprawna odpowiedź: <strong>{result.expected}</strong></p>
+  ) : feedback?.correct ? (
     practice ? <span className="sr-only">{resultLabel(true)}</span> : <p className="font-medium text-ok-ink">Poprawnie</p>
   ) : feedback && exercise.mode !== "choice" && result ? (
     practice ? <p className="flex items-center gap-2 text-ok-ink"><span className="sr-only">Poprawna odpowiedź:</span><ExerciseResultMark correct /><strong>{feedback.expected}</strong></p>
@@ -691,10 +665,14 @@ export function ExerciseView({
       {answerStatus}
       {result && meaningLine}
     </div>
+  ) : isGapSentence ? (
+    <div className="space-y-1">{answerStatus}{result && sentenceTranslation && <p className="text-muted" lang="ru">{sentenceTranslation}</p>}</div>
   ) : answerStatus;
 
   // Reserve feedback before grading so the input and subsequent controls stay put.
-  const feedbackReserve = practice && isListenChoice && speakText ? <p className="font-medium">✓ {speakText}</p> : listeningMeaning ? (
+  const feedbackReserve = isGapSentence && exercise.mode !== "assemble" ? (
+    <div className="space-y-1"><p>Poprawna odpowiedź: <strong>{exercise.mode === "typed" ? exercise.accepted[0] : exercise.answer}</strong></p>{sentenceTranslation && <p>{sentenceTranslation}</p>}</div>
+  ) : practice && isListenChoice && speakText ? <p className="font-medium">✓ {speakText}</p> : listeningMeaning ? (
     <div className="space-y-1">
       <p>Poprawna odpowiedź: <strong>{exercise.mode === "typed" ? exercise.accepted[0] : exercise.answer}</strong></p>
       {meaningLine}
@@ -707,7 +685,7 @@ export function ExerciseView({
   const content = (
     <ExerciseContent compact={compactSentence} practice={practice}>
       <ExercisePromptArea practice={practice} layout={layout}>
-        <Stack gap="sm" align="center">
+        <Stack gap="sm" align="center" className="w-full min-w-0">
           {showInstruction && (
             <div className={practice && (isListenWrite || isListenChoice) ? "flex w-full items-center justify-between gap-2" : "text-center"}>
               <span className="text-xs tracking-wide text-muted uppercase">{exercise.instruction}</span>
@@ -739,7 +717,7 @@ export function ExerciseView({
           {!isListenWrite && !isListenChoice && <ExercisePrompt
             numbered={leadingNumber !== undefined}
             compact={compactSentence}
-            placement={compactSentence || leadingNumber !== undefined || isSentence || isInlineForm ? "inline" : "side"}
+            placement={isGapSentence && !compactSentence ? "stacked" : compactSentence || leadingNumber !== undefined || isSentence || isInlineForm || isFormChoice ? "inline" : "side"}
             audio={promptAudio}
             audioVisible={showSpeakButton}
           >
@@ -751,13 +729,13 @@ export function ExerciseView({
               <span
                 className={
                   isReading
-                    ? "whitespace-pre-wrap text-left text-base leading-7"
+                    ? "min-w-0 max-w-full break-words whitespace-pre-wrap text-left text-base leading-7"
                     : compactSentence
                       ? "min-w-0 flex-1 break-words text-left text-base leading-snug"
-                      : `${leadingNumber !== undefined ? "text-left" : "text-center"} font-semibold ${isSentence ? "text-base sm:text-lg" : "text-lg sm:text-xl"}`
+                      : `min-w-0 max-w-full break-words ${leadingNumber !== undefined ? "text-left" : "text-center"} font-semibold ${isSentence ? "text-base sm:text-lg" : "text-lg sm:text-xl"}`
                 }
               >
-                {isInlineForm && exercise.mode !== "assemble" ? (
+                {isInlineForm && exercise.mode === "typed" ? (
                   isGapSentence ? (
                     <InlineSentencePrompt
                       exercise={exercise}
@@ -786,22 +764,38 @@ export function ExerciseView({
                       onSubmit={submit}
                     />
                   )
+                ) : isGapSentence && exercise.mode === "choice" ? (
+                  <>
+                    {exercise.prompt.split(GAP_MARK)[0]}
+                    <span className="inline-grid max-w-full align-baseline underline underline-offset-4">
+                      <ExerciseSlot as="span" visible={false} className="col-start-1 row-start-1 min-w-0 break-words font-semibold">{exercise.answer}</ExerciseSlot>
+                      <span className={`col-start-1 row-start-1 min-w-0 break-words font-semibold ${result ? "text-ok-ink" : "text-primary"}`}>{result ? result.expected : "____"}</span>
+                    </span>
+                    {exercise.prompt.split(GAP_MARK).slice(1).join(GAP_MARK)}
+                  </>
                 ) : (
                   exercise.prompt
                 )}
               </span>
           </ExercisePrompt>}
+          {isFormChoice && (
+            <Row gap="sm" align="center" justify="center" wrap className="w-full min-w-0">
+              {baseForm && isGapSentence && <span className="max-w-full break-words rounded-card bg-soft px-2 py-1 text-sm text-muted" lang="pl">{baseForm}</span>}
+              <AttemptDots attemptsAllowed={attemptsAllowed} wrongCount={wrongTries.length} result={result} focused={false} />
+              {choiceHint && <ExerciseSlot as="span" visible={!result}><HintButton hint={choiceHint} compact /></ExerciseSlot>}
+            </Row>
+          )}
           {(isListenWrite || isListenChoice) && speakText && (!practice || !showInstruction) && (
             <ExercisePrompt placement="center" audio={<SpeakIcon text={speakText} size={practice ? "compact" : "md"} ariaLabel="Odtwórz wymowę" />} />
           )}
         </Stack>
       </ExercisePromptArea>
 
-      {exercise.mode === "choice" && !isInlineForm && (
-        <ExerciseOptions practice={practice} options={exercise.options}
-          outcomeFor={(option) => feedback && !feedback.correct && option === feedback.expected
-            ? "correct" : result && option === exercise.answer ? "correct"
-              : wrongTries.includes(option) ? "wrong" : "none"}
+      {exercise.mode === "choice" && (
+        <ExerciseOptions options={exercise.options}
+          outcomeFor={(option) => result && option === exercise.answer ? "correct"
+            : wrongTries.includes(option) || (result && !result.correct && option === lastSubmittedAnswer) ? "wrong"
+              : !isFormChoice && feedback && !feedback.correct && option === feedback.expected ? "correct" : "none"}
           disabledFor={(option) => Boolean(result) || wrongTries.includes(option)}
           onSelect={submit} />
       )}
