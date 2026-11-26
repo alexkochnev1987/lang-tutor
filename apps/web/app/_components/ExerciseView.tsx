@@ -251,26 +251,26 @@ function InlineFormControl({
       <span className="text-muted" aria-hidden>
         →
       </span>
-        <input
-          {...common}
-          {...answerInput}
-          autoFocus={autoFocus && !disabled}
-          enterKeyHint="done"
-          value={value}
-          placeholder="wpisz formę"
-          autoCapitalize="off"
-          autoCorrect="off"
-          spellCheck={false}
-          onFocus={(event) => {
-            setFocused(true);
-            keepInputVisible(event.currentTarget);
-          }}
-          onChange={(e) => onChange(e.target.value)}
-          onBlur={(event) => {
-            setFocused(false);
-            answerInput.onBlur(event);
-          }}
-        />
+      <input
+        {...common}
+        {...answerInput}
+        autoFocus={autoFocus && !disabled}
+        enterKeyHint="done"
+        value={value}
+        placeholder="wpisz formę"
+        autoCapitalize="off"
+        autoCorrect="off"
+        spellCheck={false}
+        onFocus={(event) => {
+          setFocused(true);
+          keepInputVisible(event.currentTarget);
+        }}
+        onChange={(e) => onChange(e.target.value)}
+        onBlur={(event) => {
+          setFocused(false);
+          answerInput.onBlur(event);
+        }}
+      />
       <AttemptDots
         attemptsAllowed={attemptsAllowed}
         wrongCount={wrongCount}
@@ -543,7 +543,7 @@ export function ExerciseView({
   const speakText = isGapSentence
     ? exercise.prompt.replace(
         GAP_MARK,
-        () => result ? (result.correct ? typed.trim() : result.expected) : "…",
+        () => result ? (result.correct ? lastSubmittedAnswer.trim() || result.expected : result.expected) : "…",
       )
     : speakableTextOf(exercise);
 
@@ -767,7 +767,10 @@ export function ExerciseView({
                 ) : isGapSentence && exercise.mode === "choice" ? (
                   <>
                     {exercise.prompt.split(GAP_MARK)[0]}
-                    <span className={result ? "font-semibold text-ok-ink underline underline-offset-4" : "text-primary underline underline-offset-4"}>{result ? result.expected : "____"}</span>
+                    <span className="inline-grid max-w-full align-baseline underline underline-offset-4">
+                      <ExerciseSlot as="span" visible={false} className="col-start-1 row-start-1 min-w-0 break-words font-semibold">{exercise.answer}</ExerciseSlot>
+                      <span className={`col-start-1 row-start-1 min-w-0 break-words font-semibold ${result ? "text-ok-ink" : "text-primary"}`}>{result ? result.expected : "____"}</span>
+                    </span>
                     {exercise.prompt.split(GAP_MARK).slice(1).join(GAP_MARK)}
                   </>
                 ) : (
