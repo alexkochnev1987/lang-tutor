@@ -9,6 +9,7 @@ import { loadState, saveExerciseResult, useAppState } from '@/lib/data/store'
 import { recordRuleAttempt } from '@/lib/engine/session'
 import { assignmentReviewRows, latestReviewResults, collectReviewBatch, ASSIGNMENT_REVIEW_PREFIX, type AssignmentMap, type AssignmentReviewData } from '@/lib/engine/assignment-progress'
 
+import { contextualizeLegacy, isLegacyForm, legacyExpected, sentenceSourceKey } from '@/lib/engine/contextual-exercises'
 import { restoreHistoricalExercise } from '@/lib/engine/historical-exercises'
 import { loadLiveReadingCatalog } from '@/lib/content/curriculum'
 import type { ReadingCatalogEntry } from '@/lib/content/reading-catalog'
@@ -70,12 +71,25 @@ export default function ReviewPage() {
         .flatMap(([,stage]) => stage?.steps.flatMap(step => step.kind === 'exercise' ? [step.ex] : step.kind === 'exercise-batch' ? step.exercises : []) ?? [])
         .filter(ex => wanted.has(ex.id)).map(ex => [ex.id, ex])).values()]
       const found = new Map(exercises.map(ex => [ex.id, ex]))
+      const used = new Set<string>()
       const { items: recovered, unavailable: skipped } = await collectReviewBatch([...wanted], async id => {
-        const stored = found.get(id)
-        if (stored) return { ...stored, attemptsAllowed: 1 }
-        const row = latest.get(day + ':' + id)
-        if (!row) return null
-        return restoreHistoricalExercise(id,row)
+        try {
+          const stored = found.get(id)
+          const row = latest.get(day + ':' + id)
+          const exercise = stored
+            ? isLegacyForm(stored)
+              ? await contextualizeLegacy(id, day, stored.grammarRuleIds, legacyExpected(stored), used)
+              : stored
+            : row ? await restoreHistoricalExercise(id, row) : null
+          if (!exercise) return null
+          const key = sentenceSourceKey(exercise)
+          if (used.has(key)) return null
+          used.add(key)
+          return { ...exercise, attemptsAllowed: 1 }
+        } catch (error) {
+          console.error('[review-exercise]', error)
+          return null
+        }
       })
       setUnavailable(skipped.length)
       setUnavailableIds(previous => new Set([...previous, ...skipped.map(id => day + ':' + id)]))
