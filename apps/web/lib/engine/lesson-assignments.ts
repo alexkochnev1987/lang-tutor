@@ -50,10 +50,12 @@ async function restoreLegacyStage(stage: Stage, day: number, expectedById: Reado
     changed = true
     const previous = expectedById.get(ex.id)
     const replacement = await contextualizeLegacy(ex.id, day, ex.grammarRuleIds, legacyExpected(ex), used).catch(() => null)
+    // Reserve the same replacement on every reload, even if the old answer
+    // must be displayed with its original prompt.
+    if (replacement) used.add(sentenceSourceKey(replacement))
     // Never attach an already saved answer to a different expected form.
     if (previous !== undefined && (!replacement || legacyExpected(replacement)[0] !== previous)) return ex
     if (!replacement) { missing = true; return null }
-    used.add(sentenceSourceKey(replacement))
     return { ...replacement, attemptsAllowed: ex.attemptsAllowed ?? 1 }
   }
   const steps: Step[] = []
