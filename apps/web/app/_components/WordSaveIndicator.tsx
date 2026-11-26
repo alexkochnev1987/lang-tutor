@@ -6,7 +6,7 @@ import { AppIcon } from './AppIcon'
 import { loadState, restoreWordAnswers, retryFailedWordAnswers, useWordSaveStatus } from '@/lib/data/store'
 
 /** Shared non-blocking save feedback. Retry stays available after navigating. */
-export function WordSaveIndicator() {
+export function WordSaveIndicator({ compact = false }: { compact?: boolean } = {}) {
   const t = useTranslations('dailyWords')
   const { pending, failed } = useWordSaveStatus()
 
@@ -18,8 +18,10 @@ export function WordSaveIndicator() {
   const pendingLabel = pending > 0 ? t('savingInBackground', { count: pending }) : ''
   const failedLabel = failed > 0 ? t('saveFailed', { count: failed }) : ''
 
+  const active = pending > 0 || failed > 0
+
   return (
-    <div className="flex h-11 shrink-0 items-center gap-2 text-xs text-muted">
+    <div data-save-active={active ? "" : undefined} className={compact && !active ? "sr-only" : "flex h-11 shrink-0 items-center gap-2 text-xs text-muted"}>
       <span role="status" aria-live="polite" className="sr-only">
         {[pendingLabel, failedLabel].filter(Boolean).join(' · ')}
       </span>
