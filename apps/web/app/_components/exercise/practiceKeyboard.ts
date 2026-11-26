@@ -33,3 +33,10 @@ export function createPracticeKeyboardTracker(height: number, layoutHeight: numb
     return { blocked, settling: blocked && baseline - nextHeight <= CLOSED_GAP }
   }
 }
+
+/** Only restore the original screen position if the field is still visible. */
+export function practiceViewportOffset(pan: number, height: number, field: { top: number; bottom: number } | null): number {
+  if (!Number.isFinite(pan) || !Number.isFinite(height) || height <= 0) return 0
+  if (field && (field.top < 0 || field.bottom > height)) return 0
+  return Math.max(0, Math.round(pan))
+}
