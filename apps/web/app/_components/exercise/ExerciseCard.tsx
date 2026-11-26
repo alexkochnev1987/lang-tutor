@@ -57,23 +57,28 @@ export function ExerciseContent({ children, compact = false, practice = false }:
   return <Stack gap={practice ? 'sm' : compact ? 'xs' : 'lg'} className="w-full min-w-0">{children}</Stack>
 }
 
-/** Layout is decided from answer text, never from grading state. Long labels
- * get the entire row; source order stays the same for reading and tabbing. */
+/** Long labels use a single column for the whole exercise. Short labels
+ * can use two columns only when the actual container has enough room. */
 export function isWideExerciseOption(option: string): boolean {
-  return Array.from(option.trim()).length > 22 || option.trim().split(/\s+/).some(word => Array.from(word).length > 16)
+  return Array.from(option.trim()).length > 12
 }
 
-export function ExerciseOptions({ options, practice = false, outcomeFor, disabledFor, onSelect }: {
+export function ExerciseOptions({ options, outcomeFor, disabledFor, onSelect }: {
   options: string[]
-  practice?: boolean
   outcomeFor: (option: string) => 'none' | 'correct' | 'wrong'
   disabledFor: (option: string) => boolean
   onSelect: (option: string) => void
 }) {
-  return <div data-exercise-options="" className={practice ? 'grid grid-cols-2 items-stretch gap-2' : 'grid gap-1'}>
+  const wide = options.some(isWideExerciseOption)
+  const longest = Math.max(0, ...options.map(option => Array.from(option.trim()).length))
+  // Allow at most two tracks. Reserve room for padding and the outcome
+  // marker, and collapse to one track on narrow cards or large fonts.
+  const columns = wide ? 'minmax(0, 1fr)' :
+    `repeat(auto-fit, minmax(min(100%, max(calc(50% - 4px), calc(${longest + 2}ch + 2.5rem))), 1fr))`
+  return <div data-exercise-options="" data-option-layout={wide ? 'single' : 'adaptive'} className="grid w-full min-w-0 items-stretch gap-2" style={{ gridTemplateColumns: columns }}>
     {options.map(option => (
-      <div key={option} className={practice && isWideExerciseOption(option) ? 'col-span-2 min-w-0' : 'min-w-0'}>
-        <OptionRow compact={practice} selected={false} outcome={outcomeFor(option)}
+      <div key={option} className="min-w-0">
+        <OptionRow compact selected={false} outcome={outcomeFor(option)}
           disabled={disabledFor(option)} onClick={() => onSelect(option)}>
           {option}
         </OptionRow>
@@ -93,18 +98,26 @@ export function ExercisePrompt({ children, audio, audioVisible = true, placement
   children?: ReactNode
   audio?: ReactNode
   audioVisible?: boolean
-  placement?: 'side' | 'inline' | 'center'
+  placement?: 'side' | 'inline' | 'center' | 'stacked'
   numbered?: boolean
   compact?: boolean
 }) {
   if (placement === 'center') return <ExerciseSlot visible={audioVisible} className="flex min-h-12 justify-center items-center" >{audio}</ExerciseSlot>
+  if (placement === 'stacked') return (
+    <div data-exercise-prompt="" className="flex w-full min-w-0 flex-col gap-2">
+      {audio && <ExerciseSlot visible={audioVisible} className="flex shrink-0 justify-end">{audio}</ExerciseSlot>}
+      <Row gap="sm" justify={numbered ? 'start' : 'center'} align="baseline" className="w-full min-w-0 [&>span]:max-w-full">
+        {children}
+      </Row>
+    </div>
+  )
   if (placement === 'side' && audio) return (
     <div data-exercise-prompt="" className="relative flex min-h-12 w-full min-w-0 items-center justify-center px-14 [&>span]:min-w-0 [&>span]:break-words">
       {children}
       <ExerciseSlot visible={audioVisible} className="absolute right-0 top-1/2 -translate-y-1/2">{audio}</ExerciseSlot>
     </div>
   )
-  return <Row gap="sm" justify={numbered ? 'start' : 'center'} align="baseline" className={numbered || audio ? 'w-full' : undefined}>
+  return <Row gap="sm" justify={numbered ? 'start' : 'center'} align="baseline" className="w-full min-w-0 [&>span]:max-w-full">
     {children}
     {audio && <ExerciseSlot visible={audioVisible} className={`shrink-0 self-start ${compact ? 'min-w-10' : 'min-w-12'}`}>{audio}</ExerciseSlot>}
   </Row>
