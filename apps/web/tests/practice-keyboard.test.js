@@ -1,4 +1,4 @@
-import { createPracticeKeyboardTracker } from '../app/_components/exercise/practiceKeyboard'
+import { createPracticeKeyboardTracker, practiceViewportOffset } from '../app/_components/exercise/practiceKeyboard'
 
 describe('practice keyboard footer visibility', () => {
   it('keeps the footer hidden during keyboard recovery and reveals it at rest', () => {
@@ -43,5 +43,17 @@ describe('practice keyboard footer visibility', () => {
     track(800, 800)
     track(800, 800)
     expect(track(450, 800)).toEqual({ blocked: true, settling: false })
+  })
+})
+
+describe('native viewport pan compensation', () => {
+  it('anchors a short answer when the keyboard pans the viewport', () => {
+    expect(practiceViewportOffset(40, 480, { top: 240, bottom: 288 })).toBe(40)
+    expect(practiceViewportOffset(0, 480, { top: 240, bottom: 288 })).toBe(0)
+  })
+  it('leaves native panning alone if the field cannot fit', () => {
+    expect(practiceViewportOffset(40, 250, { top: 240, bottom: 288 })).toBe(0)
+    expect(practiceViewportOffset(40, 480, { top: -20, bottom: 28 })).toBe(0)
+    expect(practiceViewportOffset(-10, 480, null)).toBe(0)
   })
 })
