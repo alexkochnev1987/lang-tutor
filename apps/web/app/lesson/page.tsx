@@ -1132,7 +1132,8 @@ function ReadingExerciseBlock({
 
   return <LessonLayout status={status} progress={progress} mainRef={main}
     footer={<footer className="shrink-0 bg-bg px-4 pt-2 pb-[max(0.5rem,env(safe-area-inset-bottom))]">
-      <div className="mx-auto w-full max-w-2xl">
+      <div className="mx-auto flex w-full max-w-2xl flex-col gap-2">
+        {!reading && <Button variant="outline" full onClick={() => setReading(true)}>← Wróć do tekstu</Button>}
         {reading
           ? <Button size="lg" full onClick={() => { setVisitedQuestions(true); setReading(false); }}>
               {visitedQuestions ? "Wróć do pytania" : "Przejdź do pytań"} →
@@ -1147,7 +1148,6 @@ function ReadingExerciseBlock({
     </div>
     {/* Keep the current question mounted when revisiting the passage. */}
     <div className={reading ? "hidden" : "flex min-w-0 flex-col gap-3"}>
-      <Button variant="outline" full onClick={() => setReading(true)}>← Wróć do tekstu</Button>
       {notices}
       <Card>
         <ExerciseView key={exercise.id} exercise={exercise} bare showReadingText={false}
