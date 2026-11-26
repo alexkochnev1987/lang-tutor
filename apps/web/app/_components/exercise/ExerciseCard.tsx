@@ -1,6 +1,6 @@
 import type { ReactNode } from 'react'
 import type { Exercise } from '@polski/engine'
-import { Card, OptionRow, Row, Stack } from '@polski/ui'
+import { Button, Card, OptionRow, Row, Stack } from '@polski/ui'
 
 export type ExerciseLayout = 'adaptive' | 'fixed-input'
 
@@ -149,5 +149,22 @@ export function ExerciseActions({ children, completed, finished = false }: {
   return <div className="grid min-w-0">
     <ExerciseSlot visible={!finished} className="col-start-1 row-start-1">{children}</ExerciseSlot>
     <ExerciseSlot visible={finished} className="col-start-1 row-start-1">{completed}</ExerciseSlot>
+  </div>
+}
+
+/** An unfinished exercise has no next action, not even an invisible button.
+ * Persistence can disable a completed exercise's action independently. */
+export function PracticeNextAction({ visible, label, disabled = false, busyLabel, onNext }: {
+  visible: boolean
+  label: string
+  disabled?: boolean
+  busyLabel?: string
+  onNext?: () => void
+}) {
+  if (!visible) return null
+  return <div data-practice-next="">
+    <Button size="lg" full type="button" onClick={onNext} disabled={disabled} busy={Boolean(busyLabel)} busyLabel={busyLabel}>
+      {label}
+    </Button>
   </div>
 }
