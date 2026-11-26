@@ -51,6 +51,7 @@ import { WeeklyGoalCredit } from "@/app/_components/WeeklyGoal";
 import { WordPracticeFooter } from "@/app/_components/WordPracticeFooter";
 import { WordPracticeScreen } from "@/app/_components/WordPracticeScreen";
 import { PaginatedText } from "@/app/_components/PaginatedText";
+import { PracticeNextAction } from "@/app/_components/exercise/ExerciseCard";
 import { WordSaveIndicator } from "@/app/_components/WordSaveIndicator";
 import { useTranslations } from "next-intl";
 import { assignmentProgress, isAssignedStage, stageExerciseIds } from '@/lib/engine/lesson-assignments';
@@ -308,6 +309,8 @@ export default function LessonPage() {
       });
       return;
     }
+    // The exercise is graded locally; persistence only gates navigation.
+    if (complete) setCanAdvance(true);
     async function persist() {
       if (pendingAnswerIds.current.has(ex.id)) return;
       pendingAnswerIds.current.add(ex.id);
@@ -322,7 +325,6 @@ export default function LessonPage() {
         for (const ruleId of ex.grammarRuleIds) {
           await recordRuleAttempt(ruleId, r.correct, ex.difficulty).catch(error => console.error("[rule-mastery]", error));
         }
-        if (complete) setCanAdvance(true);
       } catch {
         failedAnswerIds.current.add(ex.id);
         setAnswerFailures(previous => ({ ...previous, [ex.id]: () => void persist() }));
@@ -605,11 +607,10 @@ export default function LessonPage() {
       progress={((i + 1) / Math.max(1, slots.length)) * 100}
       footer={wordScreen && slot?.kind === "step" && (
         <WordPracticeFooter
+          showAction={slot.step.kind !== "exercise" || canAdvance || Boolean(restoredResult) || Boolean(failedReview) || lessonSave.status === "saving"}
           busyLabel={lessonSave.status === "saving" ? t("saving") : undefined}
           label={failedReview ? t("retry") : t("next")}
-          disabled={lessonSave.status === "saving"
-            || (wordStudyExercise && slot.step.kind === "exercise"
-              && !canAdvance && !restoredResult && !failedReview)}
+          disabled={lessonSave.status === "saving" || pendingAnswers > 0 || Object.keys(answerFailures).length > 0 || queueStatus === "checking"}
           onNext={failedReview ? failedReview.retry : next}
         />
       )}>
@@ -644,7 +645,7 @@ export default function LessonPage() {
               canReset={pendingAnswers === 0 && Object.keys(answerFailures).length === 0}
               onReset={() => setCanAdvance(false)}
             />
-            {canAdvance && <Button full size="lg" disabled={pendingAnswers > 0 || Object.keys(answerFailures).length > 0} onClick={next}>Dalej</Button>}
+            {!wordScreen && <PracticeNextAction visible={canAdvance} label="Dalej" disabled={pendingAnswers > 0 || Object.keys(answerFailures).length > 0} onNext={next} />}
           </Stack>
         )}
 
@@ -762,11 +763,13 @@ export default function LessonPage() {
             <Row gap="sm" justify="center">
               {slot.step.rule && <RuleSheet rule={slot.step.rule} />}
             </Row>
-            {!wordStudyExercise && (canAdvance || (grammarExerciseIndex !== 1 && Boolean(restoredResult)) || lessonSave.status === "saving") && (
-              <Button size="lg" full disabled={pendingAnswers > 0 || Object.keys(answerFailures).length > 0} busy={lessonSave.status === "saving"} busyLabel="Сохраняем итог…" onClick={next}>
-                {i + 1 < slots.length ? "Dalej" : "Zakończ"}
-              </Button>
-            )}
+            {!wordScreen && <PracticeNextAction
+              visible={canAdvance || (grammarExerciseIndex !== 1 && Boolean(restoredResult)) || lessonSave.status === "saving"}
+              label={i + 1 < slots.length ? "Dalej" : "Zakończ"}
+              disabled={pendingAnswers > 0 || Object.keys(answerFailures).length > 0 || lessonSave.status === "saving"}
+              busyLabel={lessonSave.status === "saving" ? "Сохраняем итог…" : undefined}
+              onNext={next}
+            />}
           </Stack>
         )}
         {wordScreen && screenNotices}
@@ -1138,9 +1141,7 @@ function ReadingExerciseBlock({
           ? <Button size="lg" full onClick={() => { setVisitedQuestions(true); setReading(false); }}>
               {visitedQuestions ? "Wróć do pytania" : "Przejdź do pytań"} →
             </Button>
-          : <Button size="lg" full disabled={!canAdvance || blocked || busy} busy={busy} busyLabel="Zapisywanie…" onClick={onNext}>
-              {nextLabel}
-            </Button>}
+          : <PracticeNextAction visible={canAdvance || busy} label={nextLabel} disabled={blocked || busy} busyLabel={busy ? "Zapisywanie…" : undefined} onNext={onNext} />}
       </div>
     </footer>}>
     <div className={reading ? "flex min-h-0 flex-1 flex-col" : "hidden"}>

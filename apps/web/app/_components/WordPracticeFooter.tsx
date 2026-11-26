@@ -1,24 +1,20 @@
 'use client'
 
-import { Button } from '@polski/ui'
+import { PracticeNextAction } from './exercise/ExerciseCard'
 import { WordSaveIndicator } from './WordSaveIndicator'
 
-export function WordPracticeFooter({ label, busyLabel, onNext, disabled }: {
+export function WordPracticeFooter({ showAction, label, busyLabel, onNext, disabled }: {
+  showAction: boolean
   label: string
   busyLabel?: string
   onNext?: () => void
   disabled?: boolean
 }) {
   return (
-    <footer className="word-practice-footer bg-bg px-4 pt-1 pb-[max(0.5rem,env(safe-area-inset-bottom))]">
+    <footer className="word-practice-footer bg-bg px-4">
       <div className="mx-auto w-full max-w-(--container-exercise)">
-        <WordSaveIndicator />
-        <div className={disabled && !busyLabel ? 'invisible' : undefined} inert={Boolean(disabled && !busyLabel)}>
-          <Button size="lg" full type="button" onClick={onNext}
-            disabled={disabled} busy={Boolean(busyLabel)} busyLabel={busyLabel}>
-            {label}
-          </Button>
-        </div>
+        <WordSaveIndicator compact />
+        <PracticeNextAction visible={showAction} label={label} disabled={disabled} busyLabel={busyLabel} onNext={onNext} />
       </div>
     </footer>
   )

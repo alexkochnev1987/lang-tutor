@@ -1,7 +1,7 @@
 import { paginateText } from '../app/_components/PaginatedText'
 import { createElement as h } from 'react'
 import { renderToStaticMarkup } from 'react-dom/server'
-import { exerciseLayout, ExerciseActions, ExerciseAnswerForm, ExerciseCard, ExerciseFeedback, ExerciseOptions, ExercisePrompt, ExercisePromptArea, ExerciseResultMark, ExerciseSlot } from '../app/_components/exercise/ExerciseCard'
+import { exerciseLayout, ExerciseActions, ExerciseAnswerForm, ExerciseCard, ExerciseFeedback, ExerciseOptions, ExercisePrompt, ExercisePromptArea, ExerciseResultMark, ExerciseSlot, PracticeNextAction } from '../app/_components/exercise/ExerciseCard'
 
 const render = (component, props, children) => renderToStaticMarkup(h(component, props, children))
 const audio = h('button', { type: 'button' }, 'Play')
@@ -157,5 +157,24 @@ describe('reading pagination', () => {
     const pages = paginateText(text, fits(4))
     expect(pages.map(p => text.slice(p.start, p.end)).join('')).toBe(text)
     expect(pages.every(p => p.end > p.start)).toBe(true)
+  })
+})
+
+describe('next action after validation', () => {
+  it('renders no button or placeholder until an exercise is complete', () => {
+    expect(render(PracticeNextAction, { visible: false, label: 'Dalej', disabled: true })).toBe('')
+    expect(render(PracticeNextAction, { visible: false, label: 'Dalej', busyLabel: 'Saving' })).toBe('')
+  })
+  it('renders a usable next action after a final answer', () => {
+    const markup = render(PracticeNextAction, { visible: true, label: 'Dalej' })
+    expect(markup).toContain('data-practice-next')
+    expect(markup).toContain('<button')
+    expect(markup).toContain('Dalej')
+    expect(markup).not.toContain('disabled=""')
+  })
+  it('shows the completed action but prevents navigation during persistence', () => {
+    const markup = render(PracticeNextAction, { visible: true, label: 'Dalej', disabled: true })
+    expect(markup).toContain('Dalej')
+    expect(markup).toContain('disabled=""')
   })
 })
