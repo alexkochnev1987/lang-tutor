@@ -482,6 +482,8 @@ export function ExerciseView({
 
   useEffect(() => {
     if (!restoredResult) return;
+    // Acknowledging a locally graded answer must not erase earlier wrong choices.
+    if (compactBatch && result && lastSubmittedAnswer === restoredResult.answer && result.correct === restoredResult.result.correct && result.expected === restoredResult.result.expected) return;
     setResult(restoredResult.result);
     setFeedback(restoredResult.result);
     setTyped(restoredResult.answer);
@@ -502,7 +504,7 @@ export function ExerciseView({
         () => "",
       ),
     );
-  }, [exercise.id, restoredResult]);
+  }, [exercise.id, restoredResult, compactBatch]);
 
   useEffect(() => {
     if (
@@ -793,16 +795,22 @@ export function ExerciseView({
                 )}
               </span>
           </ExercisePrompt>}
-          {isFormChoice && (
-            <Row gap={compactBatch ? "xs" : "sm"} align="center" justify={compactBatch ? "between" : "center"} wrap className="w-full min-w-0">
-              {baseForm && isGapSentence && <span className={compactBatch ? "min-w-0 max-w-full break-words text-sm text-muted" : "max-w-full break-words rounded-card bg-soft px-2 py-1 text-sm text-muted"} lang="pl">{compactBatch ? `(${baseForm})` : baseForm}</span>}
-              <Row gap="xs" align="center" className={compactBatch ? "ml-auto min-w-0" : "min-w-0"}>
-                {compactBatch && <span className="text-xs text-muted">{result ? (result.correct ? "Poprawnie" : "Koniec prób") : `Próby: ${Math.max(0, attemptsAllowed - wrongTries.length)}`}</span>}
-                <AttemptDots attemptsAllowed={attemptsAllowed} wrongCount={wrongTries.length} result={result} focused={false} horizontal={compactBatch} />
-                {choiceHint && <ExerciseSlot as="span" visible={!result}><HintButton hint={choiceHint} compact batch={compactBatch} /></ExerciseSlot>}
+          {isFormChoice && (compactBatch ? (
+            <Row gap="xs" align="center" justify="between" wrap className="w-full min-w-0">
+              {baseForm && isGapSentence && <span className="min-w-0 max-w-full break-words text-sm text-muted" lang="pl">({baseForm})</span>}
+              <Row gap="xs" align="center" className="ml-auto min-w-0" wrap>
+                <span className="text-xs text-muted">{result ? (result.correct ? "Poprawnie" : "Koniec prób") : `Próby: ${Math.max(0, attemptsAllowed - wrongTries.length)}`}</span>
+                <AttemptDots attemptsAllowed={attemptsAllowed} wrongCount={wrongTries.length} result={result} focused={false} horizontal />
+                {choiceHint && <ExerciseSlot as="span" visible={!result}><HintButton hint={choiceHint} compact batch /></ExerciseSlot>}
               </Row>
             </Row>
-          )}
+          ) : (
+            <Row gap="sm" align="center" justify="center" wrap className="w-full min-w-0">
+              {baseForm && isGapSentence && <span className="max-w-full break-words rounded-card bg-soft px-2 py-1 text-sm text-muted" lang="pl">{baseForm}</span>}
+              <AttemptDots attemptsAllowed={attemptsAllowed} wrongCount={wrongTries.length} result={result} focused={false} />
+              {choiceHint && <ExerciseSlot as="span" visible={!result}><HintButton hint={choiceHint} compact /></ExerciseSlot>}
+            </Row>
+          ))}
           {(isListenWrite || isListenChoice) && speakText && (!practice || !showInstruction) && (
             <ExercisePrompt placement="center" audio={<SpeakIcon text={speakText} size={practice ? "compact" : "md"} ariaLabel="Odtwórz wymowę" />} />
           )}
@@ -1020,14 +1028,12 @@ export function ExerciseBatch({
   }
 
   useEffect(() => {
-    setCompletedIds(
-      new Set(
-        exercises
-          .filter((exercise) => restored.has(exercise.id))
-          .map((exercise) => exercise.id),
-      ),
-    );
-  }, [dayNumber, exercises, state?.exerciseResults]);
+    setCompletedIds(current => new Set(
+      exercises
+        .filter(exercise => restored.has(exercise.id) || (compactGrammar && current.has(exercise.id)))
+        .map(exercise => exercise.id),
+    ));
+  }, [dayNumber, exercises, state?.exerciseResults, compactGrammar]);
 
   function handleAnswered(
     exercise: Exercise,
@@ -1103,7 +1109,7 @@ export function ExerciseBatch({
       </Stack>
       {visibleGroup.exercises.map((exercise, index) => (
         <div
-          key={`${resetVersion}:${exercise.id}`}
+          key={compactGrammar ? `${resetVersion}:${exercise.id}` : exercise.id}
           className={
             compactGrammar ? "w-full min-w-0 border-t border-line pt-3" : showWrongFrame &&
             (answeredCorrectness[exercise.id] ??
