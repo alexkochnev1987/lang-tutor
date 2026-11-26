@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import type { ReactNode } from "react";
 import { useAnswerInput } from "./exercise/useAnswerInput";
-import { Button, Row, Stack } from "@polski/ui";
+import { Button, Card, Row, Stack } from "@polski/ui";
 import { exerciseLayout, ExerciseAnswerForm, ExerciseCard, ExerciseContent, ExerciseFeedback, ExerciseOptions, ExercisePrompt, ExercisePromptArea, ExerciseResultMark, ExerciseSlot } from "./exercise/ExerciseCard";
 import { check, type CheckResult, type Exercise } from "@polski/engine";
 import { usePronounce } from "@/lib/speech/usePronounce";
@@ -160,7 +160,7 @@ function letterIndexesForAnswer(letters: string[], answer: string): number[] {
   });
 }
 
-function HintButton({ hint, compact }: { hint: string; compact: boolean }) {
+function HintButton({ hint, compact, batch = false }: { hint: string; compact: boolean; batch?: boolean }) {
   const [visible, setVisible] = useState(false);
   return (
     <span className="relative shrink-0">
@@ -171,7 +171,7 @@ function HintButton({ hint, compact }: { hint: string; compact: boolean }) {
         title="Pokaż podpowiedź"
         onPointerDown={(event) => event.preventDefault()}
         onClick={() => setVisible((current) => !current)}
-        className={`flex items-center justify-center rounded-pill bg-soft2 text-xs font-semibold text-muted hover:text-ink focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary ${compact ? "size-9" : "size-12"}`}
+        className={`flex items-center justify-center rounded-pill bg-soft2 text-xs font-semibold text-muted hover:text-ink focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary ${batch ? "size-11" : compact ? "size-9" : "size-12"}`}
       >
         ?
       </button>
@@ -287,18 +287,22 @@ function AttemptDots({
   wrongCount,
   result,
   focused,
+  horizontal = false,
 }: {
   attemptsAllowed: number;
   wrongCount: number;
   result: CheckResult | null;
   focused: boolean;
+  horizontal?: boolean;
 }) {
   const remaining = Math.max(0, attemptsAllowed - wrongCount);
+  const label = horizontal && result ? (result.correct ? "Poprawnie" : "Odpowiedź ujawniona") : `Pozostało prób: ${remaining}`;
   return (
     <span
-      className="flex shrink-0 flex-col-reverse items-center gap-1 pl-1"
-      aria-label={`Pozostało prób: ${remaining}`}
-      title={`Pozostało prób: ${remaining}`}
+      className={`flex shrink-0 items-center gap-1 ${horizontal ? "flex-row" : "flex-col-reverse pl-1"}`}
+      role="img"
+      aria-label={label}
+      title={label}
     >
       {Array.from({ length: attemptsAllowed }, (_, index) => {
         const className =
@@ -431,6 +435,7 @@ export function ExerciseView({
   topLeftStatus,
   topRightAction,
   practice = false,
+  compactBatch = false,
 }: {
   exercise: Exercise;
   onAnswered: (
@@ -460,6 +465,8 @@ export function ExerciseView({
   topLeftStatus?: ReactNode;
   topRightAction?: ReactNode;
   practice?: boolean;
+  /** Compact numbered grammar rows, without changing standalone practice. */
+  compactBatch?: boolean;
 }) {
   const t = useTranslations("dailyWords");
   const [result, setResult] = useState<CheckResult | null>(null);
@@ -475,6 +482,8 @@ export function ExerciseView({
 
   useEffect(() => {
     if (!restoredResult) return;
+    // Acknowledging a locally graded answer must not erase earlier wrong choices.
+    if (compactBatch && result && lastSubmittedAnswer === restoredResult.answer && result.correct === restoredResult.result.correct && result.expected === restoredResult.result.expected) return;
     setResult(restoredResult.result);
     setFeedback(restoredResult.result);
     setTyped(restoredResult.answer);
@@ -495,7 +504,7 @@ export function ExerciseView({
         () => "",
       ),
     );
-  }, [exercise.id, restoredResult]);
+  }, [exercise.id, restoredResult, compactBatch]);
 
   useEffect(() => {
     if (
@@ -548,7 +557,7 @@ export function ExerciseView({
     : speakableTextOf(exercise);
 
   const hasPromptAudio = Boolean(speakText) && !isListenChoice && !isListenWrite;
-  const promptAudio = hasPromptAudio && speakText ? <SpeakIcon text={speakText} size={practice ? "compact" : compactSentence ? "sm" : "md"} ariaLabel={compactSentence ? `Odtwórz zdanie: ${speakText}` : undefined} /> : undefined;
+  const promptAudio = hasPromptAudio && speakText ? <SpeakIcon text={speakText} size={practice || compactBatch ? "compact" : compactSentence ? "sm" : "md"} ariaLabel={compactSentence ? `Odtwórz zdanie: ${speakText}` : undefined} /> : undefined;
 
   function updateTyped(value: string) {
     lastCheckedValue.current = null;
@@ -642,7 +651,13 @@ export function ExerciseView({
     />
   );
 
-  const answerStatus = isGapSentence && result ? (
+  const answerStatus = compactBatch && isFormChoice && feedback ? (
+    result ? (
+      <p className={result.correct ? "text-ok-ink" : "text-danger-ink"}>
+        {result.correct ? "Poprawnie" : "Odpowiedź ujawniona"}{!result.correct && <> · <span className="text-ok-ink">Poprawna odpowiedź: <strong>{result.expected}</strong></span></>}
+      </p>
+    ) : <p className="text-danger-ink">Spróbuj jeszcze raz.</p>
+  ) : isGapSentence && result ? (
     <p className="text-ok-ink">Poprawna odpowiedź: <strong>{result.expected}</strong></p>
   ) : feedback?.correct ? (
     practice ? <span className="sr-only">{resultLabel(true)}</span> : <p className="font-medium text-ok-ink">Poprawnie</p>
@@ -670,7 +685,9 @@ export function ExerciseView({
   ) : answerStatus;
 
   // Reserve feedback before grading so the input and subsequent controls stay put.
-  const feedbackReserve = isGapSentence && exercise.mode !== "assemble" ? (
+  const feedbackReserve = compactBatch && isFormChoice && exercise.mode === "choice" ? (
+    <div className="space-y-1"><p>Odpowiedź ujawniona · Poprawna odpowiedź: <strong>{exercise.answer}</strong></p>{sentenceTranslation && <p>{sentenceTranslation}</p>}</div>
+  ) : isGapSentence && exercise.mode !== "assemble" ? (
     <div className="space-y-1"><p>Poprawna odpowiedź: <strong>{exercise.mode === "typed" ? exercise.accepted[0] : exercise.answer}</strong></p>{sentenceTranslation && <p>{sentenceTranslation}</p>}</div>
   ) : practice && isListenChoice && speakText ? <p className="font-medium">✓ {speakText}</p> : listeningMeaning ? (
     <div className="space-y-1">
@@ -683,9 +700,9 @@ export function ExerciseView({
 
   const layout = exerciseLayout(exercise, practice);
   const content = (
-    <ExerciseContent compact={compactSentence} practice={practice}>
+    <ExerciseContent compact={compactSentence || compactBatch} practice={practice}>
       <ExercisePromptArea practice={practice} layout={layout}>
-        <Stack gap="sm" align="center" className="w-full min-w-0">
+        <Stack gap={compactBatch ? "xs" : "sm"} align="center" className="w-full min-w-0">
           {showInstruction && (
             <div className={practice && (isListenWrite || isListenChoice) ? "flex w-full items-center justify-between gap-2" : "text-center"}>
               <span className="text-xs tracking-wide text-muted uppercase">{exercise.instruction}</span>
@@ -778,13 +795,22 @@ export function ExerciseView({
                 )}
               </span>
           </ExercisePrompt>}
-          {isFormChoice && (
+          {isFormChoice && (compactBatch ? (
+            <Row gap="xs" align="center" justify="between" wrap className="w-full min-w-0">
+              {baseForm && isGapSentence && <span className="min-w-0 max-w-full break-words text-sm text-muted" lang="pl">({baseForm})</span>}
+              <Row gap="xs" align="center" className="ml-auto min-w-0" wrap>
+                <span className="text-xs text-muted">{result ? (result.correct ? "Poprawnie" : "Koniec prób") : `Próby: ${Math.max(0, attemptsAllowed - wrongTries.length)}`}</span>
+                <AttemptDots attemptsAllowed={attemptsAllowed} wrongCount={wrongTries.length} result={result} focused={false} horizontal />
+                {choiceHint && <ExerciseSlot as="span" visible={!result}><HintButton hint={choiceHint} compact batch /></ExerciseSlot>}
+              </Row>
+            </Row>
+          ) : (
             <Row gap="sm" align="center" justify="center" wrap className="w-full min-w-0">
               {baseForm && isGapSentence && <span className="max-w-full break-words rounded-card bg-soft px-2 py-1 text-sm text-muted" lang="pl">{baseForm}</span>}
               <AttemptDots attemptsAllowed={attemptsAllowed} wrongCount={wrongTries.length} result={result} focused={false} />
               {choiceHint && <ExerciseSlot as="span" visible={!result}><HintButton hint={choiceHint} compact /></ExerciseSlot>}
             </Row>
-          )}
+          ))}
           {(isListenWrite || isListenChoice) && speakText && (!practice || !showInstruction) && (
             <ExercisePrompt placement="center" audio={<SpeakIcon text={speakText} size={practice ? "compact" : "md"} ariaLabel="Odtwórz wymowę" />} />
           )}
@@ -914,6 +940,7 @@ export function ExerciseBatch({
   blockTitle,
   blockDescription,
   showWrongFrame = false,
+  compactGrammar = false,
 }: {
   exercises: Exercise[];
   onAnswered: (
@@ -933,6 +960,7 @@ export function ExerciseBatch({
   blockDescription?: string;
   /** В лексическом блоке ошибка должна оставаться видимой после ответа. */
   showWrongFrame?: boolean;
+  compactGrammar?: boolean;
 }) {
   const state = useAppState();
   const [completedIds, setCompletedIds] = useState<Set<string>>(
@@ -942,6 +970,7 @@ export function ExerciseBatch({
     Record<string, boolean>
   >({});
   const [resetting, setResetting] = useState(false);
+  const [resetVersion, setResetVersion] = useState(0);
   const completionNotified = useRef(false);
 
   useEffect(() => {
@@ -977,6 +1006,9 @@ export function ExerciseBatch({
     group.exercises.some((exercise) => !completedIds.has(exercise.id)),
   );
   const activeGroup = activeGroupIndex >= 0 ? groups[activeGroupIndex] : null;
+  const visibleGroup = activeGroup ?? (compactGrammar ? groups.at(-1) : undefined);
+  const visibleGroupIndex = activeGroupIndex >= 0 ? activeGroupIndex : groups.length - 1;
+  const completedCount = exercises.filter(exercise => completedIds.has(exercise.id)).length;
 
   async function resetBlock() {
     if (resetting || !canReset) return;
@@ -989,20 +1021,19 @@ export function ExerciseBatch({
       completionNotified.current = false;
       setCompletedIds(new Set());
       setAnsweredCorrectness({});
+      setResetVersion(version => version + 1);
       onReset?.();
     }
     setResetting(false);
   }
 
   useEffect(() => {
-    setCompletedIds(
-      new Set(
-        exercises
-          .filter((exercise) => restored.has(exercise.id))
-          .map((exercise) => exercise.id),
-      ),
-    );
-  }, [dayNumber, exercises, state?.exerciseResults]);
+    setCompletedIds(current => new Set(
+      exercises
+        .filter(exercise => restored.has(exercise.id) || (compactGrammar && current.has(exercise.id)))
+        .map(exercise => exercise.id),
+    ));
+  }, [dayNumber, exercises, state?.exerciseResults, compactGrammar]);
 
   function handleAnswered(
     exercise: Exercise,
@@ -1023,8 +1054,7 @@ export function ExerciseBatch({
     });
   }
 
-  if (!activeGroup) {
-    return (
+  const completion = (
       <Stack
         gap="md"
         className="mx-auto w-full max-w-(--container-exercise)"
@@ -1043,11 +1073,11 @@ export function ExerciseBatch({
           {resetting ? "Przygotowuję…" : "Powtórz blok"}
         </Button>
       </Stack>
-    );
-  }
+  );
+  if (!visibleGroup) return completion;
 
-  return (
-    <Stack gap="lg" className="mx-auto w-full max-w-(--container-exercise)">
+  const content = (
+    <Stack gap={compactGrammar ? "sm" : "lg"} className="mx-auto w-full min-w-0 max-w-(--container-exercise)">
       {blockTitle && (
         <Stack gap="xs">
           <p className="text-left text-sm font-semibold tracking-wide text-muted uppercase">
@@ -1058,19 +1088,30 @@ export function ExerciseBatch({
           )}
         </Stack>
       )}
-      <Stack gap="sm">
+      {compactGrammar && (
+        <Stack gap="xs">
+          <Row justify="between" align="center" wrap>
+            <span className="text-xs text-muted">Ukończone zadania</span>
+            <span className="text-sm font-medium tabular-nums">{completedCount}/{exercises.length}</span>
+          </Row>
+          <div role="progressbar" aria-label="Ukończone zadania" aria-valuemin={0} aria-valuemax={exercises.length} aria-valuenow={completedCount} className="h-1.5 overflow-hidden rounded-full bg-soft2">
+            <div className="h-full rounded-full bg-primary" style={{ width: `${exercises.length ? completedCount / exercises.length * 100 : 0}%` }} />
+          </div>
+        </Stack>
+      )}
+      <Stack gap={compactGrammar ? "xs" : "sm"}>
         <p className="text-left text-sm tracking-wide text-muted uppercase">
-          {activeGroup.exercises[0]!.instruction}
+          {visibleGroup.exercises[0]!.instruction}
         </p>
         <p className="text-left text-xs text-muted">
-          Blok {activeGroupIndex + 1} z {groups.length}
+          Blok {visibleGroupIndex + 1} z {groups.length}
         </p>
       </Stack>
-      {activeGroup.exercises.map((exercise, index) => (
+      {visibleGroup.exercises.map((exercise, index) => (
         <div
-          key={exercise.id}
+          key={compactGrammar ? `${resetVersion}:${exercise.id}` : exercise.id}
           className={
-            showWrongFrame &&
+            compactGrammar ? "w-full min-w-0 border-t border-line pt-3" : showWrongFrame &&
             (answeredCorrectness[exercise.id] ??
               restored.get(exercise.id)?.correct) === false
               ? "w-full rounded-card border-2 border-danger bg-danger-bg px-2 py-1"
@@ -1080,7 +1121,8 @@ export function ExerciseBatch({
           <ExerciseView
             exercise={exercise}
             bare
-            autoFocus={index === 0}
+            compactBatch={compactGrammar}
+            autoFocus={index === 0 && Boolean(activeGroup)}
             showInstruction={false}
             leadingNumber={index + 1}
             restoredResult={
@@ -1103,8 +1145,10 @@ export function ExerciseBatch({
           />
         </div>
       ))}
+      {!activeGroup && completion}
     </Stack>
   );
+  return compactGrammar ? <Card data-grammar-batch="">{content}</Card> : content;
 }
 
 /** Пакет грамматических заданий с прежним текстом интерфейса. */
@@ -1117,6 +1161,7 @@ export function GrammarExerciseBatch(
   return (
     <ExerciseBatch
       {...props}
+      compactGrammar
       completedTitle="Blok gramatyki ukończony"
       completedDescription="Wynik zapisany. Możesz przejść dalej albo powtórzyć blok."
     />
