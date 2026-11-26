@@ -106,14 +106,35 @@ export interface GrammarRule {
 }
 
 const memo = new Map<string, Promise<unknown>>()
+// Keep only recently used resolved corpus chunks; in-flight requests stay
+// deduplicated in memo and failures are never cached.
+const chunkCache = new Map<string, unknown>()
+const MAX_CACHED_CORPUS_CHUNKS = 8
 
 function loadPack<T>(file: string): Promise<T> {
   const key = `${COURSE_ID}/${file}`
+  const chunk = /^sentence-corpus\/[a-f0-9]{12}-\d+\.json$/.test(file)
+  if (chunk && chunkCache.has(key)) {
+    const value = chunkCache.get(key) as T
+    chunkCache.delete(key)
+    chunkCache.set(key, value)
+    return Promise.resolve(value)
+  }
   let hit = memo.get(key)
   if (!hit) {
     hit = fetch(`/content/${key}`).then((res) => {
       if (!res.ok) throw new Error(`content_unavailable:${file}`)
       return res.json()
+    }).then(value => {
+      if (chunk) {
+        memo.delete(key)
+        chunkCache.set(key, value)
+        if (chunkCache.size > MAX_CACHED_CORPUS_CHUNKS) {
+          const oldest = chunkCache.keys().next().value
+          if (oldest !== undefined) chunkCache.delete(oldest)
+        }
+      }
+      return value
     }).catch((e) => {
       memo.delete(key)   // не кэшируем неудачу: следующая попытка должна пойти в сеть
       throw e
